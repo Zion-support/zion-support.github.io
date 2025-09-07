@@ -1,15 +1,15 @@
 {
-  "timestamp": "2025-09-07T02:53:38.382Z",
+  "timestamp": "2025-09-07T05:08:49.763Z",
+  "results": {
+    "mergeConflicts": true,
+    "importErrors": true,
+    "typeScriptErrors": false,
+    "syntaxErrors": false
+  },
   "fixesApplied": [
-    "Applied ESLint auto-fixes for imports",
-    "Applied linting fixes"
+    "Applied ESLint auto-fixes for imports"
   ],
   "fixesFailed": [
     "Failed to fix TypeScript errors: spawnSync /bin/sh ENOBUFS"
-  ],
-  "summary": {
-    "totalFixes": 2,
-    "totalFailures": 1,
-    "successRate": 66.66666666666666
-  }
+  ]
 }

@@ -1,4 +1,3 @@
-:src/pages/features/InstantMessaging.tsx
 
   return (
     <>;
@@ -65,23 +64,6 @@ import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-:src/pages/features/InstantMessaging.tsx
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-export default function InstantMessaging() {
-
-  const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'Instant Messaging'
-    description:
-      'Chat in real time with clients and freelancers using Socket.IO based messaging.'
-    url: 'https://app.ziontechgroup.com/features/instant-messaging',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "Instant Messaging"
-    "description": "Chat in real time with clients and freelancers using Socket.IO based messaging."
-    "url": "https://app.ziontechgroup.com/features/instant-messaging"
-  }
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function InstantMessaging() {
@@ -95,11 +77,6 @@ export default function InstantMessaging() {
   return (
     <>
       <SEO
-:src/pages/features/InstantMessaging.tsx
-        title='Instant Messaging'
-        description='Negotiate deals and collaborate instantly with real-time chat.'
-        keywords='real-time messaging, Socket.IO chat, project communication'
-        canonical='https://app.ziontechgroup.com/features/instant-messaging'
 
         title="Instant Messaging"
         description="Negotiate deals and collaborate instantly with real-time chat."
@@ -227,8 +204,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>
     </>
   )
-:src/pages/features/InstantMessaging.tsx
-}
 ;
 
 ;

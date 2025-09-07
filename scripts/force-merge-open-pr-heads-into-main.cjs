@@ -1,9 +1,19 @@
 <<<<<<< HEAD
 
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 <<<<<<< HEAD
 const fs = require('fs');
+<<<<<<< HEAD
 <<<<<<< HEAD
 ///usr/bin/env node
 const { execSync } = require('child_process')
@@ -19,6 +29,8 @@ const fs = require('fs');
 const fs = require(fs');
 
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 function sh(cmd) {}
   return execSync(cmd, { "stdio: 'pipe, encoding": utf8' }).trim()}
 function getToken() {}
@@ -34,12 +46,13 @@ function getRepo() {}
 async function gh(path, method = 'GET) {}
   const base = https": //api.github.com';
   const token = getToken();
-const res = await fetch(`${base}${path}`, {`});
+  const res = await fetch(`${base}${path}`, {`})
     method,
     "headers: {}
       Authorization: `token ${token}`,`
 <<<<<<< HEAD
       "Accept": 'application/vnd.github.v3+json',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -75,12 +88,28 @@ function autoResolveConflicts() {}
 }
 async function main() {}
   const { owner, repo } = getRepo();
+=======
+      'User-Agent': 'force-merge-script'
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    };
+  }
+});
+  const text = await res.text();
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   let mergedCount = 0; let attempted = 0;
   for (const pr of prs) {}
     attempted++;
     const head = pr.head && pr.head.ref;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -145,3 +174,10 @@ try {}`
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+
+    console.log(`Merging head into "main": PR #${pr.number} (${head})`);"
+    try {}`;
+      sh(`git fetch origin ${head}:${head} || true`);
+
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React from 'react';
@@ -9,19 +10,20 @@ import React from react';
 import { Button } from @/components/ui/button";
 import { Button } from @/components/ui/button';
 import { Upload, FileText } from 'lucide-react;
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Upload, FileText } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 import { Upload, FileText } from 'lucide-react
 interface UploadSectionProps {
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
-:src/components/messaging/resume-selector/UploadSection.tsx
-export function UploadSection({
-  customFile
-  onFileUpload
-}: UploadSectionProps) {
 
   return (
+<<<<<<< HEAD
     <div className=space - y-3'>;
 import { Button  } from '@/components/ui/button;
 import { Upload, FileText  } from lucide-react';
@@ -31,6 +33,12 @@ interface UploadSectionProps  {customFile: File | null;
       <div className=flex flex - col items - center justify - center border - 2 border - dashed border - zion - purple / 30 rounded - lg p - 6 bg - zion - blue - dark / 30'>;
         <Upload className='h - 8 w - 8 text - zion - purple mb - 2 />;
         <p className=text - sm text - zion - slate mb - 2'>;
+=======
+    <div className='space - y-3'>;
+      <div className='flex flex - col items - center justify - center border - 2 border - dashed border - zion - purple / 30 rounded - lg p - 6 bg - zion - blue - dark / 30'>;
+        <Upload className='h - 8 w - 8 text - zion - purple mb - 2' />;
+        <p className='text - sm text - zion - slate mb - 2'>;
+>>>>>>> origin/chore/fix-lint-and-merge
           {custom_file;
             ? custom_file.name;
             : 'Drag & drop your PDF or click to browse'}
@@ -40,11 +48,17 @@ interface UploadSectionProps  {customFile: File | null;
         <Button variant=outline' className='relative>
           Browse Files
           <input
+<<<<<<< HEAD
             type=file'
             className='absolute inset-0 w-full h-full opacity-0 cursor-pointer
 :src/components/messaging/resume-selector/UploadSection.tsx
             accept=.pdf'            onChange={onFileUpload}
             accept='.pdf
+=======
+            type='file'
+            className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
+            accept='.pdf'
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
             onChange={onFileUpload}
           />
@@ -70,6 +84,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <span className='text-xs text-zion-slate>
               {Math.round(customFile.size / 1024)} KB
+<<<<<<< HEAD
 :src/components/messaging/resume-selector/UploadSection.tsx
             </span>          </div>      {customFile && (
         <div className=p-3 bg-zion-blue-dark/30 rounded-md">
@@ -85,6 +100,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   )
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             </span>
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
@@ -127,6 +144,7 @@ import React from react',
 import { Button } from @/components/ui/button",
 interface UploadSectionProps {
   customFile: File | null;
+<<<<<<< HEAD
             : Drag & drop your PDF or click to browse'}</p>;
         <Button variant='outline className=relative'>;
           Browse Files;type="file;
@@ -229,3 +247,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 :src/components/messaging/resume-selector/UploadSection.tsx
 }
       )}
+=======
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+      )}
+>>>>>>> origin/chore/fix-lint-and-merge

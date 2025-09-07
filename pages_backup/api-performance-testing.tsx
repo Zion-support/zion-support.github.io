@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages/api-performance-testing.tsx
 import React from 'react',
 import SEO from '../components/SEO';
@@ -11,6 +12,10 @@ export default function ApiPerformanceTestingPage() {
 							</div>
 						))}
 					</div>
+=======
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function ApiPerformanceTestingPage() {
 
   const features = [
@@ -438,6 +443,7 @@ export default function ApiPerformanceTestingPage(req, res) {}
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 :pages/api-performance-testing.tsx
   );
 import SEO from '../components/SEO',
@@ -563,3 +569,6 @@ export default function ApiPerformanceTestingPage(req, res) {
   }
 }
   );
+=======
+  );
+>>>>>>> origin/chore/fix-lint-and-merge

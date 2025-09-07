@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
                     src = {activeConversation && activeConversation.context_data.image_url}
@@ -101,14 +102,26 @@ import { AspectRatio  } from '@/components/ui/aspect-ratio;
 import { useAuth  } from @/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble;
 import { DateDivider } from ./DateDivider';
+=======
+import React, { useState, useEffect, useRef } from 'react';
+import { format  } from 'date-fns';
+import { MessageSquare } from 'lucide-react'
+import { useMessaging  } from '@/context/MessagingContext';
+import { Button  } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
+import { AspectRatio  } from '@/components/ui/aspect-ratio';
+import { useAuth  } from '@/hooks/useAuth';
+import { MessageBubble  } from './MessageBubble';
+import { DateDivider } from './DateDivider';
+>>>>>>> origin/chore/fix-lint-and-merge
 export function ConversationDetailView() {
-:src/components/messaging/ConversationDetailView.tsx
   const { user } = useAuth();
   const { 
     activeConversation;
     activeMessages;
     sendMessage;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
                     src = {activeConversation && activeConversation.context_data.image_url}
                     alt = {activeConversation && activeConversation.context_data.title || "Context}
 
@@ -117,6 +130,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     activeMessages
     sendMessage
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     loadMessages
   } = useMessaging();
   const [messageText, setMessageText] = useState(');
@@ -304,6 +319,7 @@ export function ConversationDetailView() {
   return (
     <div className="flex-1 flex flex-col h-full>
       {/* Header */}
+<<<<<<< HEAD
 export function ConversationDetailView() {const { user } = useAuth()const { currentConversation, sendMessage, messages, loading } = useMessaging()const [newMessage, setNewMessage] = useState(')const [isSending, setIsSending] = useState(false)const messagesEndRef  = useRef<HTMLDivElement>(null)const scrollToBottom = () => {messagesEndRef.current?.scrollIntoView({ behavior: smooth' })}useEffect(() => {scrollToBottom()}, [messages])const handleSendMessage = async (e: React.FormEvent) => {e.preventDefault()if (!newMessage.trim() || !currentConversation) return;setIsSending(true)try {await sendMessage({content: newMessage,recipientId: currentConversation.participantId,conversationId: currentConversation.id})setNewMessage(')} catch (error) {console.error(Failed to send message:', error)} finally {setIsSending(false)}
   }if (!currentConversation) {return (<div className=flex items-center justify-center h-full">;
         <div className="text-center>;
@@ -384,6 +400,11 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
             <AvatarImage
               src = {activeConversation.other_user.avatar_url}
               alt = {activeConversation.other_user.name}
+=======
+      <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
+        <div className="flex items-center gap-3">
+          <Avatar className="h-10 w-10 border border-zion-purple/20">
+>>>>>>> origin/chore/fix-lint-and-merge
 
             />
             <AvatarFallback className=bg-zion-blue-dark text-white">
@@ -394,6 +415,7 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
             <div className="font-medium text-white>
               {activeConversation.other_user.name}
             </div>
+<<<<<<< HEAD
 :src/components/messaging/ConversationDetailView.tsx
             <div className=text-xs text-zion-slate">
               {activeConversation.other_user.user_type === 'talent ? Talent' :
@@ -403,6 +425,8 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
           </div>
         </div>
       </div>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       {/* Context information (if available) */}
       {hasContextData && (
@@ -412,9 +436,12 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
               <div className="w-16 h-16 flex-shrink-0>
                 <AspectRatio ratio={1/1} className=rounded bg-zion-blue-dark/30 overflow-hidden">
                   <img
+<<<<<<< HEAD
 :src/components/messaging/ConversationDetailView.tsx
                     src = {activeConversation.context_data.image_url}
                     alt = {activeConversation.context_data.title |"Context}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || Context"}
@@ -447,6 +474,7 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
           groupedMessages.map((group, groupIndex,) => (
             <div key={group.date}>
               <DateDivider date={new Date(group.date)} />
+<<<<<<< HEAD
               <div className=space-y-3">
 :src/components/messaging/ConversationDetailView.tsx
                 {group.messages.map((message,) => (
@@ -461,11 +489,15 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
         )}
         <div ref={messagesEndRef} />
       </div>
+=======
+              <div className="space-y-3">
+>>>>>>> origin/chore/fix-lint-and-merge
 
       {/* Input */}
       <div className="p-3 border-t border-zion-purple/20>
         <form onSubmit={handleSendMessage} className=flex items-start gap-2">
           <textarea
+<<<<<<< HEAD
 :src/components/messaging/ConversationDetailView.tsx
             value = {messageText}
             onChange = {(e,) => setMessageText(e.target.value)}
@@ -475,6 +507,8 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
             ref = {inputRef}
           />
           <Button
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
@@ -491,11 +525,14 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
             Send
           </Button>
         </form>
+<<<<<<< HEAD
 :src/components/messaging/ConversationDetailView.tsx
       </div>;
     </div>;
   );
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <div className="p-3 border-t border-zion-purple/20>;
         <form onSubmit={handleSendMessage} className=flex items-start gap-2">;
@@ -508,6 +545,7 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
             ref={inputRef}
           />;
           <Button;
+<<<<<<< HEAD
             type="submit;
             disabled={!newMessage.trim() || isSending}
           >;
@@ -518,15 +556,23 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
       </div>
     </div>
   );
+=======
+            type="submit";
+            className="bg-zion-purple hover: bg-zion-purple-dark text-white";
+          >;
+>>>>>>> origin/chore/fix-lint-and-merge
 
             Send;
           </Button>;
         </form>;
       </div>;
+<<<<<<< HEAD
 :src/components/messaging/ConversationDetailView.tsx
     </div>;
   );
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 });
 <AvatarImage src= {
@@ -555,6 +601,7 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
 }<div ref= {
   messagesEndRef ;
 }/> </div> /> <Button > Send </Button> </form> </div> </div>) ;
+<<<<<<< HEAD
 }"
           </Button>;
         </form>;
@@ -589,3 +636,6 @@ export function ConversationDetailView() {const { user } = useAuth()const { curr
 }/>) )}</div> </div>) ) )}<div ref= {messagesEndRef ;
 }/> </div> /> <Button > Send </Button> </form> </div> </div>)}'";
 
+=======
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from \"next\;
 import fs from \"fs-extra\";
 import path from \path\";"
 import { authenticateRequest, enforceRateLimit, recordRequest } from \../../utils/api/partnerAuth\;
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from \'next\';"
+import fs from \'fs-extra\';"
+import path from \'path\';"
+import { authenticateRequest, enforceRateLimit, recordRequest } from \'../../utils/api/partnerAuth\';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const TALENTS_FILE = null;
   return res.status(200).json({ ok: true });
@@ -10,6 +19,7 @@ const TALENTS_FILE = null;
   return res.status(200).json({ verified })
 }
 
+<<<<<<< HEAD
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
   try {}
@@ -140,27 +150,65 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);'
     res.setHeader('Allow', 'POST');
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
 return res.status(405).json({ "error": 'Method Not Allowed',;'
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+
+import {}
+} from '../../utils/api/partnerAuth';
+
+const TALENTS_FILE = path.join(
+  process.cwd()
+  'data'
+  'talents'
+  'talents.json'
+);
+
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse;
+if (!auth) {}
+    return res.status(401).json({ error: 'Unauthorized'}
 });
   }
-  const { email, programTrack } = req.body |{}
-  if (!email) {
-    }
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-return res.status(400).json({ "error": 'email required',;'
+  if (!(await enforceRateLimit(auth.apiKey))) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);}
+    return res.status(429).json({ error: 'Rate limit exceeded'}
 });
   }
 
-const talents = (await fs.pathExists(TALENTS_FILE));
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);}
+    return res.status(405).json({ error: 'Method Not Allowed'}
+>>>>>>> origin/chore/fix-lint-and-merge
+});
+  }
+
+const { email, programTrack } = req.body |{}
+  if (!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);}
+return res.status(400).json({ error: 'email required'}
+});
+  }
+
+const talents = (await fs.pathExists(TALENTS_FILE))
     ? await fs.readJSON(TALENTS_FILE)
     : [];
 
-const match = talents.find(;
-    ("t": any) =>
+const match = talents.find(
+    (t: any) =>
       t.email === email && (!programTrack |t.programTrack === programTrack)
   );
 
-const verified = Boolean(match && match.certificationStatus === 'completed');'
+const verified = Boolean(match && match.certificationStatus === 'completed');
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({ verified });
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+=======
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge

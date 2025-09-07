@@ -1,5 +1,6 @@
 module.exports = {
   plugins: {
+<<<<<<< HEAD
 
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -26,3 +27,9 @@ main
   }
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+=======
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+>>>>>>> origin/chore/fix-lint-and-merge

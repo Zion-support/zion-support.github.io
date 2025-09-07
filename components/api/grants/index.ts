@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
@@ -9,18 +10,31 @@ function ensureDir() {}
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
 import type { CreateGrantPayload, GrantApplication } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import { v4 as uuidv4  } from 'uuid';
+} from '../../../types/grants';
+>>>>>>> origin/chore/fix-lint-and-merge
 
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');'
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
+<<<<<<< HEAD
   }
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true})
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
+=======
+  if (!fs.existsSync(GRANTS_DIR)) {}
+    fs.mkdirSync(GRANTS_DIR, { recursive: true,}
+});
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 function readAllGrants(): GrantApplication[] {
-  }
   ensureDir();
+<<<<<<< HEAD
   const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'));
   return files.map(file => {
     const full = path.join(GRANTS_DIR, file);
@@ -62,6 +76,16 @@ function readAllGrants(): GrantApplication[] {}
     const full = path.join(GRANTS_DIR, file);'
     const raw = fs.readFileSync(full, 'utf8');
     return JSON.parse(raw) as GrantApplication;
+=======
+
+const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'));
+  return files.map(file = > {
+   ;
+  const full = path.join(GRANTS_DIR, file);
+
+const raw = fs.readFileSync(full, 'utf8');}
+    return JSON.parse(raw) as GrantApplication;}
+>>>>>>> origin/chore/fix-lint-and-merge
   });
 export default function handler() { return null; }
     const { status, sector, region, program } = req.query;
@@ -69,6 +93,7 @@ export default function handler() { return null; }
   if (!fs.existsSync(GRANTS_DIR)) {}
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
 
+<<<<<<< HEAD
   }
 }
 function readAllGrants(): GrantApplication[] {}
@@ -173,6 +198,9 @@ if ( {) {}
 }'
         res.status (400).json ({ error: 'Missing required fields' });
   const files = null;
+=======
+const files = null;
+>>>>>>> origin/chore/fix-lint-and-merge
       return (
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
@@ -180,30 +208,28 @@ if ( {) {}
         (program ? g.program === program : true)
 );
     });
-    res.status(200).json({ "items": list
+    res.status(200).json({ items: list,}
 });
     return;
   }
 
-  if (req.method = == 'POST') {'
-    }
+  if (req.method = == 'POST') {
     try {
      ;
-  }
   const payload = req.body as CreateGrantPayload;
 if (
         !payload ||
         !payload.projectName ||
         !payload.teamInfo ||
         !payload.proposalSummary ||
-        !payload.timeline
-      ) {
-        }
-        res.status(400).json({ "error": 'Missing required fields','
+        !payload.timeline;
+      ) {}
+        res.status(400).json({ error: 'Missing required fields',}
 });
         return;
       }
       ensure_dir ();
+<<<<<<< HEAD
       const id = uuidv4 ();
       const now = new Date ().toISOString ();
       const record: GrantApplication = {
@@ -218,6 +244,16 @@ id,
       const id = uuidv4($2);
       const now = new Date().toISOString($2);
       const record: GrantApplication = $2;
+=======
+
+const id = uuidv4 ();
+
+const now = new Date ().toISOString ();
+
+const record: GrantApplication = {
+
+id,
+>>>>>>> origin/chore/fix-lint-and-merge
         program: payload.program || 'grant',
         projectName: payload.projectName,
         teamInfo: payload.teamInfo,
@@ -234,6 +270,7 @@ id,
         updatedAt: now,
         milestones: [],
         fundsReleased: 0,
+<<<<<<< HEAD
         updates: [],
 
     }
@@ -328,15 +365,29 @@ if (!payload ||;
     return
   }
         votes: [],
+=======
+        updates: [],}
+        votes: [],}
+>>>>>>> origin/chore/fix-lint-and-merge
       };
       fs.writeFileSync(
-        path.join(GRANTS_DIR, `${id}.json`)`
+        path.join(GRANTS_DIR, `${id}.json`)
         JSON.stringify(record, null, 2)
+<<<<<<< HEAD
 
+=======
+        'utf8'
+      );
+      res.status(201).json({ id, record });
+    } catch (e) {
+      res.status(500).json({ error: e?.message |'Failed to create grant',}
+>>>>>>> origin/chore/fix-lint-and-merge
 });
     }
+
     return;
   }
+<<<<<<< HEAD
 
   res.set_header ('Allow', GET, POST);'
   res.status (405).end ('Method Not Allowed);    } catch (e: any) {
@@ -358,6 +409,19 @@ if (!payload ||;
   res.status(405).end('Method Not Allowed')
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  res.set_header ('Allow', 'GET, POST')res.status (405).end ('Method Not Allowed')} catch (e: any) {res.status (500).json ({ error: e?.message || 'Failed to create grant' },
+}
+    return;
+  }
+
+  res.set_header ('AllowGET, POST');
+  res.status (405).end ('Method Not Allowed');
+}
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+>>>>>>> origin/chore/fix-lint-and-merge
 
   res.status(405).end('Method Not Allowed')
 }
+

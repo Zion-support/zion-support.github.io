@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const { execSync, spawn } = require("child_process)
 const fs = require(fs")
@@ -24,6 +25,35 @@ const path = require("path)
     if (level === "error)
   console.error(Failed to write to error log "file": )
       this.log( Running comprehensive error fixer...")
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const { execSync, spawn } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+    this.logFile = path.join(this.projectRoot, """logs/master-error-fixer.log"")
+    this.errorLogFile = path.join(this.projectRoot, ""logs/master-error-fixer-error.log""")
+    this.reportFile = path.join(this.projectRoot, "master-error-fixer-report.json")
+  "typescript"
+      "eslint"
+      "build"
+      "dependency"
+      "syntax"
+      "other"
+  "applied"
+      "failed"
+      "skipped"
+    // Get automation interval from environment variable ("default")
+  fs.mkdirSync(logsDir, { "recursive"})
+  log(message, level = "info")
+  console.error("Failed to write to log "file": ")
+    if (level === "error")
+  console.error("Failed to write to error log "file": ")
+  console.error("Failed to write to log "file": ")
+    if (level === "error")
+  console.error("Failed to write to error log "file": ")
+      this.log(" Running comprehensive error fixer...")
+>>>>>>> origin/chore/fix-lint-and-merge
           __dirname,comprehensive-error-fixer.cjs"
           this.log(    Comprehensive error fixer completed": ${result.fixes || 0} fixes")
       } catch (error) {  this.log(TypeScript errors detected": ${error.stderr  }", error)
@@ -125,4 +155,20 @@ process.on(SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...)
 process.on(SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error(" Failed to start master error "fixer": ")
+  console.error(" Failed to start master error "fixer": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

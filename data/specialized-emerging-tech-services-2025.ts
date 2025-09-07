@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -13,11 +14,14 @@ import { ServiceVariant  } from '../types/service-variants';
 export interface SpecializedEmergingTechService  {id: string;
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants';
 export interface SpecializedEmergingTechService {
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -603,6 +607,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ],
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   id: string;
   name: string;
   tagline: string;
@@ -629,6 +635,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
+<<<<<<< HEAD
+=======
+  contact_info: {}
+    mobile: string;
+    email: string;
+    address: string;
+>>>>>>> origin/chore/fix-lint-and-merge
 
     website: string;
   }
@@ -639,8 +652,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
     website: string;
   },
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -652,6 +668,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   benefits: string[];
   capabilities: string[];
 
+<<<<<<< HEAD
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities
         First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
   id: string;,
@@ -699,6 +716,12 @@ pr-12325
         First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities}];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.;
 
   ];    description: Advanced neuromorphic computing platform that mimics the human brain\'s neural structure;, enabling energy-efficient AI processing and cognitive computing applications.';
+=======
+    }
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
+    },;
+  ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
+>>>>>>> origin/chore/fix-lint-and-merge
 
   market_advantage: string;
 
@@ -723,14 +746,21 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     features: [
       Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications;
       'Advanced pattern recognitionCustom neuromorphic algorithms'
     ];
+<<<<<<< HEAD
     technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];
     integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
     useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities'
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
     popular: true, icon: 🧠,
@@ -739,6 +769,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
     technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];
     integrations: [Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms];
     useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: Average 700% ROI through energy efficiency and cognitive capabilities
@@ -746,6 +777,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 ;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
     variant: 'ai-futuristic', contactInfo: contact
     marketSize: $2.1B neuromorphic computing market, growthRate: '450% annual growth'
@@ -755,12 +789,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8, reviews: 34
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
+<<<<<<< HEAD
   }
 ];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 import { ServiceVariant } from '../types/service-variants',;
 export interface SpecializedEmergingTechService {;
   id: string,;
@@ -859,9 +897,13 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     period: /month','
     description: Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.,
     features: [;
+<<<<<<< HEAD
     ];
 
 
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       'AR/VR content creation and managementMetaverse development tools and SDKs3D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR, web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware',;
       'Custom avatar and environment creationE-commerce integration for virtual stores';
     ],;
@@ -1149,6 +1191,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
 origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
+<<<<<<< HEAD
         First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}];
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -1168,3 +1211,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ];
 
+=======
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
+    },
+  ];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

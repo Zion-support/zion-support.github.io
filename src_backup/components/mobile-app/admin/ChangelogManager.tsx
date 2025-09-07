@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/mobile-app/admin/ChangelogManager.tsx
 import React, { useState } from "react,
 import { Card, CardHeader, CardTitle, CardContent  } from @/components/ui/card";
@@ -6,23 +7,13 @@ import { Input  } from @/components/ui/input";
 import { Textarea } from "@/components/ui/textarea;
 import { Plus, Trash2 } from 'lucide-react
 import { AppPlatform } from ./MetadataManager";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
 
 type ChangelogEntry = {
-:src/components/mobile-app/admin/ChangelogManager.tsx
-  id: string
-  version: string
-  date: string
-  changes: string
-}
-    })
-  }
-  const handleRemoveEntry = (id: string) => {
-    setEntries(entries.filter(entry => entry.id !== id))
-  }
-  )
 
   id: string;
   version: string;
@@ -67,9 +58,12 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       changes: "
     })
   },
+<<<<<<< HEAD
     setEntries(entries.filter(entry => entry.id !== id))
   }
   )
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
     setEntries(entries.filter(entry => entry.id !== id))}
@@ -83,6 +77,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     const { name, value } = e.target,
 
     setNewEntry(prev => ({ ...prev, [name]: value }))
+<<<<<<< HEAD
 :src/components/mobile-app/admin/ChangelogManager.tsx
   }
 
@@ -102,6 +97,8 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from ./Metadat
                 name=version"
                 value = {newEntry.version}
                 onChange = {handleInputChange}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 value={newEntry.version}
                 onChange={handleInputChange}
@@ -111,6 +108,7 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from ./Metadat
               <Input
                 type="date
 
+<<<<<<< HEAD
                 name=date"
 :src/components/mobile-app/admin/ChangelogManager.tsx
                 value = {newEntry.date}
@@ -120,6 +118,9 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from ./Metadat
             <Button
               onClick = {handleAddEntry}
               disabled = {!newEntry.version |!newEntry.changes}
+=======
+                name="date"
+>>>>>>> origin/chore/fix-lint-and-merge
 
               disabled = {!newEntry.version || !newEntry.changes}
 
@@ -163,6 +164,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setEntries(entries.filter(entry => entry.id !== id));
   },
     setNewEntry(prev => ({ ...prev, [name]: value }));
+<<<<<<< HEAD
     <Card className=bg-zion-blue border-zion-purple/30>;
 interface ChangelogManagerProps  {platform: AppPlatform;
 }type ChangelogEntry = {id: string;
@@ -181,6 +183,9 @@ interface ChangelogManagerProps  {platform: AppPlatform;
     setNewEntry(prev => ({ ...prev, [name]: value }))}import { Plus, Trash2 } from 'lucide-react'import { AppPlatform  } from ./MetadataManager;
   return (<Card className=bg-zion-blue border-zion-purple/30>;
   }
+=======
+  };
+>>>>>>> origin/chore/fix-lint-and-merge
   return (;
 
     <Card className="bg-zion-blue border-zion-purple/30">;
@@ -201,6 +206,7 @@ interface ChangelogManagerProps  {platform: AppPlatform;
                 onChange={handleInputChange}
               />;
 
+<<<<<<< HEAD
                 onChange={handleInputChange}/>;
               <Input;
                 type=date";
@@ -228,6 +234,9 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
               />;<Input;
                 type="date;
                 name=date";
+=======
+                name="date";
+>>>>>>> origin/chore/fix-lint-and-merge
                 value={newEntry.date}
                 onChange={handleInputChange}
               />;
@@ -242,6 +251,7 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
               Add;
             </Button>
           </div>
+<<<<<<< HEAD
               />;
             </div>;
             <Button
@@ -273,10 +283,13 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
               <div 
                 key={entry.id}
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <Textarea
             placeholder="Whats new in this version?
 
+<<<<<<< HEAD
             name=changes"
 :src/components/mobile-app/admin/ChangelogManager.tsx
             value = {newEntry.changes}
@@ -318,6 +331,9 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
                     variant="ghost
                     size=sm"
                     onClick = {(,) => handleRemoveEntry(entry.id)}
+=======
+            name="changes"
+>>>>>>> origin/chore/fix-lint-and-merge
 
             value={newEntry.changes}
             onChange={handleInputChange}
@@ -339,16 +355,12 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
                 <p className=text-sm whitespace-pre-wrap>{entry.changes}</p>
               </div>
             ))}
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             )}
-:src/components/mobile-app/admin/ChangelogManager.tsx
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
 
 }
 
@@ -358,6 +370,7 @@ import { AppPlatform } from "./MetadataManager,interface ChangelogManagerProps  
     </Card>;
   );
 
+<<<<<<< HEAD
                   <Button;
                     variant="ghost";
                     size=sm;
@@ -468,6 +481,8 @@ interface ChangelogManagerProps  {platform: AppPlatform;
   )}setEntries ([entry, ...entries])setNewEntry ({version: ;
 date: new Date () .toISOString () .split ('T) [0] || new Date () .toLocaleDateString (en-CA')}";
   handleAddEntry ;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -488,6 +503,7 @@ setNewEntry ({
   version: ";
 date: new Date () .toISOString () .split ('T) [0] || new Date () .toLocaleDateString (en-CA');
 };
+<<<<<<< HEAD
   handleAddEntry ;
 }disabled= {
   !newEntry.version || !newEntry.changes ";
@@ -500,3 +516,6 @@ date: new Date () .toISOString () .split ('T) [0] || new Date () .toLocaleDateSt
 }disabled= {!newEntry.version || !newEntry.changes ";
 }> <Plus className= mr-2 h-4 w-4/> Add </Button> </div> <Textarea key= {entry.id ";
 }className=" p-3 rounded border border-zion-purple/20 bg-zion-blue-dark> > <Trash2 className= h-4 w-4" /> </Button> </div>)}</div> </div> </CardContent> </Card>)}'";
+=======
+'"
+>>>>>>> origin/chore/fix-lint-and-merge

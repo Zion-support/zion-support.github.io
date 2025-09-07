@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
+<<<<<<< HEAD
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:;
 - Greet users warmly and concisely;
@@ -85,3 +86,6 @@ const message = completion.choices?.[0]?.message || {
     return res.status(500).json({ error: 'Assistant request failed'}
 });
   }
+=======
+import OpenAI from 'openai';
+>>>>>>> origin/chore/fix-lint-and-merge

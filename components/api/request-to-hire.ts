@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {}
@@ -27,10 +28,17 @@ return res.status(500).json({ "error": 'Internal error' });'
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {}
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';
+
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
+<<<<<<< HEAD
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
 
     return res.status(400).json({ error: 'Missing required fields' });
@@ -69,4 +77,8 @@ return res.status(200).json({ "ok": true,;
   } catch (err) {
 
 });
+=======
+
+    return res.status(400).json({ error: 'Missing required fields' });
+>>>>>>> origin/chore/fix-lint-and-merge
   }

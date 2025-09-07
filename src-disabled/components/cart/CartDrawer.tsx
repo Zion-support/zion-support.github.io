@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
   }
 import { ShoppingCart } from 'lucide-react;import { useAuth } from @/hooks/useAuth';import { ShoppingCart } from 'lucide-react;
@@ -16,6 +19,7 @@ import { useAuth } from '@/hooks/useAuth;
 import { LoginModal } from @/components/auth/LoginModal';
 export function CartDrawer() {
   const items = null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
     if (!isAuthenticated) {
       e.preventDefault()
@@ -43,36 +47,42 @@ export function CartDrawer() {
       setLoginOpen(true)
     }
   }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }
 import { ShoppingCart } from lucide-react';import { useAuth } from '@/hooks/useAuth;import { ShoppingCart } from lucide-react';
 
-
-
-
-
-origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <Link href="/cart aria-label=Cart" className="relative p-1 onClick={handleClick}>
         <ShoppingCart className=h-5 w-5 text-foreground hover:text-primary" />
         {count > 0 && (
 
+<<<<<<< HEAD
 
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center>
           <span className='absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center>
+=======
+          <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
+          <span className='absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center'>
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
             {count}
           </span>;
         )}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       </Link>;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
 });
 }
+<<<<<<< HEAD
 
   );
 }
@@ -100,16 +110,21 @@ export function CartDrawer() {const items  = null;if (!isAuthenticated) {e.preve
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   )})}<Link;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       <Link ;
         href=/cart';
         aria - label='Cart;
         className=relative p - 1';
         on_click={handle_click} />;
         <ShoppingCart className='h - 5 w - 5 text - foreground hover:text - primary' />;
+<<<<<<< HEAD
         {count > 0 && (<span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}
           <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;
         {count > 0 && (<span className=absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}
           <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         {count > 0 && (
           <span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}',
           <span className=absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;,
@@ -125,6 +140,7 @@ export function CartDrawer() {const items  = null;if (!isAuthenticated) {e.preve
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     </>)}</Link>;
@@ -132,3 +148,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>;
   )}
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

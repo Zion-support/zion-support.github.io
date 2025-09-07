@@ -1,7 +1,39 @@
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class AutomationRunner {
+  constructor() {
+    this.scriptsDir = path.join(__dirname);
+    this.reportFile = path.join(__dirname, '..', 'automation-runner-report.json');
+    this.results = [];
+  }
+
+  log(message) {
+    console.log(`[Automation Runner] ${message}`);
+  }
+
+  async runScript(scriptName) {
+    this.log(`Running ${scriptName}...`);
+    const startTime = Date.now();
+    
+    try {
+      const scriptPath = path.join(this.scriptsDir, scriptName);
+      
+      if (!fs.existsSync(scriptPath)) {
+        throw new Error(`Script ${scriptName} not found`);
+      }
+      
+      execSync(`node ${scriptPath}`, { stdio: 'inherit' });
+      
+      const duration = Date.now() - startTime;
+>>>>>>> origin/chore/fix-lint-and-merge
       this.results.push({
         script: scriptName,
         status: 'success,
@@ -23,10 +55,6 @@
       this.log(`${scriptName} failed: ${error.message}`);
     }
   }
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
   async runAllScripts() {
     this.log('Starting automation runner...);
@@ -62,6 +90,7 @@
   }
 }
 
+<<<<<<< HEAD
 
 	// Security;
 	ok = run(npm run "security": audit') && ok;
@@ -77,3 +106,11 @@
 
 
 
+=======
+if (require.main === module) {
+  const runner = new AutomationRunner();
+  runner.runAllScripts().catch(console.error);
+}
+
+module.exports = AutomationRunner;
+>>>>>>> origin/chore/fix-lint-and-merge

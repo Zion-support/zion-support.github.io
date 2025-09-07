@@ -32,6 +32,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   searchSuggestions?: SearchSuggestion[]
 }
 
+<<<<<<< HEAD
 import { logInfo, logWarn  } from '@/utils/productionLogger;
 import React, { useState, useEffect, useRef, useMemo } from "react,import { useTranslation } from react-i18next",import { Search, X  } from lucide-react';
 import { Input } from "@/components/ui/input,import { AutocompleteSuggestions } from @/components/search/AutocompleteSuggestions",import { SearchSuggestion } from "@/types/search,import { useDebounce } from @/hooks/useDebounce",import { useRouter } from "next/router,import { slugify } from @/lib/slugify",import { debounce } from "lodash,import { logInfo, logWarn } from '@/utils/productionLogger,import { debounce  } from lodash';
@@ -75,6 +76,8 @@ export function EnhancedSearchInput({
         if (!query.trim()) {
           setApiSuggestions([]),
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   value
   onChange
   onSelectSuggestion
@@ -107,6 +110,7 @@ interface EnhancedSearchInputProps {}
           return;
 
         }
+<<<<<<< HEAD
 export function EnhancedSearchInput() {searchSuggestions;
 }: EnhancedSearchInputProps) {import React, { useState, useEffect, useRef, useCallback, useMemo } from react; // Added useMemo;
 import { Search, X   } from lucide-react';
@@ -206,6 +210,8 @@ if ( {) {$2;
 }
       const filtered = suggestions.filter (suggestion =>;
         suggestion.text.toLowerCase ().includes (current_value.toLowerCase ()))filtered.sort ((a, b) => {const aStartsWith = a.text.toLowerCase ().starts_with (current_value.toLowerCase ()) ? -1 : 0;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             }
 
@@ -305,22 +311,19 @@ interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string,) => void,
   /**;
-})setFilteredSuggestions (filtered.slice (0, 8))}, 300),[setFilteredSuggestions] // setFilteredSuggestions from useState is stable)useEffect (() => {// TODO: Add dependencies if needed;return () => {// Cleanup function;}
-}, [])[])debouncedFilterSuggestions (value, search_suggestions)setHighlightedIndex (-1)}}, [])[])debouncedFilterSuggestions(value, searchSuggestions)setHighlightedIndex(-1)return () => {debouncedFilterSuggestions.cancel()}
-}, [value, searchSuggestions, debouncedFilterSuggestions])useEffect(() => {// TODO: Add dependencies if needed;
-  return () => {// Cleanup function;
-}
-}, [])[])function handleClickOutside() {if(containerRef.current && !containerRef.current.contains(event.target as Node)) {setIsFocused(false)}
-    }interface EnhancedSearchInputProps  {value: string,onChange: (value: string,) => void,/**;
    * Optional callback when a suggestion is selected. This allows parent;
    * components to perform actions such as navigation.;
    */;
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,placeholder?: string;  /**;
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
+  placeholder?: string;  /**;
    * Optional list of fallback suggestions (e && e.g. recent searches).;
    * If provided, these will be shown when the input is empty.;
    */;
   searchSuggestions?: SearchSuggestion[];
-}export function EnhancedSearchInput(): any ({value;
+}
+
+export function EnhancedSearchInput(): any ({;
+  value;
   onChange;
   onSelectSuggestion;
   placeholder = Search...";
@@ -422,8 +425,11 @@ export function EnhancedSearchInput(): any ({
         setIsFocused(false),
         // setHighlightedIndex(-1), // Already handled in onBlur generally;
       }
+<<<<<<< HEAD
     }document && document.addEventListener(mousedown", handleClickOutside)return () => document && document.removeEventListener("mousedown, handleClickOutside)}, [])const router  = useRouter()const handleSelectSuggestion = (suggestionObj: SearchSuggestion,) => {logInfo(EnhancedSearchInput handleSelectSuggestion called:, { data: suggestionObj }),onChange(suggestionObj && suggestionObj.text)if (onSelectSuggestion) {logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),onSelectSuggestion(suggestionObj)} else {// Provide a sensible default navigation if the parent did not supply a handler;
       logWarn(onSelectSuggestion callback not provided)if (suggestionObj && suggestionObj.id) {router && router.push(`/marketplace/listing/${suggestionObj && suggestionObj.id}`)} else if (suggestionObj && suggestionObj.type === 'doc' && suggestionObj && suggestionObj.slug?.startsWith(/)) {router && router.push(suggestionObj && suggestionObj.slug)} else if (suggestionObj && suggestionObj.type === 'blog' && suggestionObj && suggestionObj.slug) {router && router.push(`/blog/${suggestionObj && suggestionObj.slug}`)} else {router && router.push(`/search/${suggestionObj && suggestionObj.slug || slugify(suggestionObj && suggestionObj.text)}`)}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
     document && document.addEventListener("mousedown", handleClickOutside);
@@ -562,7 +568,6 @@ if ( {) {}
         setHighlightedIndex (-1);
         input_ref.current?.blur ();
 }
-        e.prevent_default ()setIsFocused (false)setHighlightedIndex (-1)input_ref.current?.blur ()}
       return;
 }
     switch (e.key) {
@@ -681,6 +686,7 @@ if ( {) {}
           name="search
           value={value}
 
+<<<<<<< HEAD
   }
 
       // Provide a sensible default navigation if the parent did not supply a handler
@@ -702,13 +708,59 @@ if ( {) {}
       aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0}
           e.prevent_default ()log_info (EnhancedSearchInput manual submit:, { data: value }),router.push (`/search?q=${encodeURIComponent (value)}`)setIsFocused (false)setHighlightedIndex (-1)input_ref.current?.blur ()} else {// Prevent empty form submission;
           e.preventDefault()}
+=======
+    switch(e && e.key) {;
+      case 'ArrowDown':;
+        e && e.preventDefault();
+        setHighlightedIndex(prev => (prev + 1) % filteredSuggestions && filteredSuggestions.length);
+        break;
+      case 'ArrowUp':;
+        e && e.preventDefault();
+        setHighlightedIndex(prev => (prev - 1 + filteredSuggestions && filteredSuggestions.length) % filteredSuggestions && filteredSuggestions.length);
+        break;
+      case 'Enter':;
+        if(highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;
+          e && e.preventDefault();
+          handleSelectSuggestion(filteredSuggestions[highlightedIndex].text);
+}
+        break;
+      case 'ArrowUp':;
+        if (isFocused && filteredSuggestions && filteredSuggestions.length > 0) {;
+          e && e.preventDefault();
+          setHighlightedIndex(prev => (prev - 1 + filteredSuggestions && filteredSuggestions.length) % filteredSuggestions && filteredSuggestions.length);
+        }
+        break;
+      case 'Enter':;
+        if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;
+          e && e.preventDefault(), // Prevent form submission;
+          handleSelectSuggestion(filteredSuggestions[highlightedIndex]);
+        } else if (value && value.trim()) {;
+          // Manually trigger search navigation to ensure consistent behavior;
+          e && e.preventDefault();
+          logInfo('EnhancedSearchInput manual submit:', { data: value }),;
+          router && router.push(`/search?q=${encodeURIComponent(value)}`);
+          setIsFocused(false);
+          setHighlightedIndex(-1);
+          inputRef && inputRef.current?.blur();
+        } else {;
+          // Prevent empty form submission;
+          e && e.preventDefault();
+        }
+>>>>>>> origin/chore/fix-lint-and-merge
         break;
       case 'Escape':;
-        e.preventDefault()setIsFocused(false)setHighlightedIndex(-1)setValueOnFocus(null)inputRef.current?.blur()break;
+        e && e.preventDefault();
+        setIsFocused(false);
+        setHighlightedIndex(-1);
+        setValueOnFocus(null);
+        inputRef && inputRef.current?.blur();
+        break;
       default:;
         // For other keys (character input), reset enterHandledPostFocus;
-        setEnterHandledPostFocus(false)break;
+        setEnterHandledPostFocus(false);
+        break;
     }
+<<<<<<< HEAD
   }switch(e && e.key) {case ArrowDown:;
         if (isFocused && filteredSuggestions.length > 0) {e.preventDefault(),setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)}
         break,case 'ArrowUp':;
@@ -798,6 +850,12 @@ if ( {) {}
             }
             setValueOnFocus(null)
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+          onChange={(e) => {;
+            onChange(e && e.target.value);
+            setEnterHandledPostFocus(false);
+>>>>>>> origin/chore/fix-lint-and-merge
           }}
           onFocus={(e) => {
             setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus;
@@ -925,6 +983,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         visible = {isFocused}
 
       </div>;
+<<<<<<< HEAD
           on_change={(e) => {on_change (e.target.value)setEnterHandledPostFocus (false)}}
           on_focus={(e) => {setIsFocused (true)setHighlightedIndex (-1), // Explicitly reset on focus;
             const current_val = e.target.value;
@@ -966,6 +1025,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         searchTerm = {value}
         onSelectSuggestion = {handleSelectSuggestion}
         visible = {isFocused}</div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       <AutocompleteSuggestions;
         suggestions={filteredSuggestions}
         searchTerm={value}
@@ -1045,6 +1106,7 @@ default: //For other keys (character input), reset enterHandledPostFocus setEnte
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
+<<<<<<< HEAD
         highlightedIndex={highlightedIndex}
         listId=autocomplete-suggestions-list"
       />
@@ -1079,6 +1141,9 @@ default: //For other keys (character input), reset enterHandledPostFocus setEnte
         onSelectSuggestion = {handleSelectSuggestion }
         visible = {is_focused }
         highlighted_index={highlighted_index} // Pass highlighted_index;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 }
               setIsFocused (false);
               setHighlightedIndex (-1);
@@ -1096,10 +1161,17 @@ default: //For other keys (character input), reset enterHandledPostFocus setEnte
         highlighted_index={highlighted_index} // Pass highlighted_index;
         list_id="autocomplete - suggestions - list" // Pass ID for aria - controls;
       />;
+<<<<<<< HEAD
     </div>)}setIsFocused (false)input_ref.current?.blur ()setHighlightedIndex (-1)}
 const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {switch (e.key) {';
   case 'ArrowDown: // Check condition;
 if ( {) {$2;
+=======
+    </div>);
+}setIsFocused (false);
+input_ref.current?.blur ();
+setHighlightedIndex (-1);
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {'
   switch (e.key) {';
@@ -1149,7 +1221,10 @@ break;
         highlighted_index={highlighted_index}"
         list_id=autocomplete - suggestions - list;
       />;
+<<<<<<< HEAD
 }aria-label="Clear search" > <X className=h-4 w-4 /> </button>)}</div> <AutocompleteSuggestions /> </div>)}";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>);
 
         highlightedIndex={highlightedIndex}

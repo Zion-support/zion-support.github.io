@@ -1,5 +1,13 @@
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 #!/usr/bin/env node;
 ;const fs = require('fs');
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 const fs = require('fs')
 const path = require('path')
         console.log(' Checking system health...')
@@ -11,7 +19,7 @@ const path = require('path')
             "status"
             "message"
             "status"
-            "message"
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -39,22 +47,22 @@ class HealthMonitor {
    */
   async runHealthChecks() {
     console.log('🏥 Starting comprehensive health checks...');
-    
+
     try {
       await this.checkSystemResources();
       await this.checkApplicationHealth();
       await this.checkDependencies();
       await this.checkConfiguration();
       await this.checkPerformance();
-      
+
       this.calculateOverallStatus();
       this.generateRecommendations();
-      
+
       await this.saveHealthReport();
-      
+
       console.log('✅ Health checks completed');
       return this.healthData;
-      
+
     } catch (error) {
       console.error('❌ Error during health checks:', error.message);
       this.healthData.overallStatus = 'error';
@@ -67,7 +75,7 @@ class HealthMonitor {
    */
   async checkSystemResources() {
     console.log('💻 Checking system resources...');
-    
+
     const resources = {
       memory: { status: 'unknown', usage: 0, available: 0 },
       disk: { status: 'unknown', usage: 0, available: 0 },
@@ -80,7 +88,7 @@ class HealthMonitor {
       const totalMem = memInfo.heapTotal + memInfo.external;
       const usedMem = memInfo.heapUsed;
       const memUsage = (usedMem / totalMem) * 100;
-      
+
       resources.memory.usage = Math.round(memUsage);
       resources.memory.available = Math.round((totalMem - usedMem) / 1024 / 1024); // MB
       resources.memory.status = memUsage > 90 ? 'critical' : memUsage > 70 ? 'warning' : 'healthy';
@@ -113,7 +121,7 @@ class HealthMonitor {
    */
   async checkApplicationHealth() {
     console.log('🚀 Checking application health...');
-    
+
     const appHealth = {
       buildStatus: 'unknown',
       dependencies: 'unknown',
@@ -140,18 +148,18 @@ class HealthMonitor {
 
       // Check configuration files
       const configFiles = ['next.config.js', 'tailwind.config.js', 'tsconfig.json'];
-      const existingConfigs = configFiles.filter(file => 
+      const existingConfigs = configFiles.filter(file =>
         fs.existsSync(path.join(this.projectRoot, file))
       );
-      
+
       appHealth.configuration = existingConfigs.length >= 2 ? 'healthy' : 'warning';
 
       // Check critical files
       const criticalFiles = ['app/page.tsx', 'app/layout.tsx'];
-      const existingFiles = criticalFiles.filter(file => 
+      const existingFiles = criticalFiles.filter(file =>
         fs.existsSync(path.join(this.projectRoot, file))
       );
-      
+
       appHealth.files = existingFiles.length === criticalFiles.length ? 'healthy' : 'critical';
 
     } catch (error) {
@@ -166,7 +174,7 @@ class HealthMonitor {
    */
   async checkDependencies() {
     console.log('📦 Checking dependencies...');
-    
+
     const dependencies = {
       installed: 'unknown',
       outdated: 'unknown',
@@ -184,7 +192,7 @@ class HealthMonitor {
 
       // Check for outdated packages
       try {
-        const outdatedCheck = execSync('npm outdated --json', { 
+        const outdatedCheck = execSync('npm outdated --json', {
           encoding: 'utf8',
           cwd: this.projectRoot,
           stdio: 'pipe'
@@ -197,13 +205,13 @@ class HealthMonitor {
 
       // Check for vulnerabilities
       try {
-        const auditCheck = execSync('npm audit --json', { 
+        const auditCheck = execSync('npm audit --json', {
           encoding: 'utf8',
           cwd: this.projectRoot,
           stdio: 'pipe'
         });
         const audit = JSON.parse(auditCheck);
-        dependencies.vulnerabilities = audit.vulnerabilities?.high > 0 ? 'critical' : 
+        dependencies.vulnerabilities = audit.vulnerabilities?.high > 0 ? 'critical' :
                                      audit.vulnerabilities?.moderate > 0 ? 'warning' : 'healthy';
       } catch (error) {
         dependencies.vulnerabilities = 'unknown';
@@ -221,7 +229,7 @@ class HealthMonitor {
    */
   async checkConfiguration() {
     console.log('⚙️ Checking configuration...');
-    
+
     const configuration = {
       environment: 'unknown',
       buildConfig: 'unknown',
@@ -232,34 +240,34 @@ class HealthMonitor {
     try {
       // Check environment variables
       const envFiles = ['.env.local', '.env', '.env.example'];
-      const existingEnvFiles = envFiles.filter(file => 
+      const existingEnvFiles = envFiles.filter(file =>
         fs.existsSync(path.join(this.projectRoot, file))
       );
-      
+
       configuration.environment = existingEnvFiles.length > 0 ? 'healthy' : 'warning';
 
       // Check build configuration
       const buildConfigs = ['next.config.js', 'webpack.config.js'];
-      const existingBuildConfigs = buildConfigs.filter(file => 
+      const existingBuildConfigs = buildConfigs.filter(file =>
         fs.existsSync(path.join(this.projectRoot, file))
       );
-      
+
       configuration.buildConfig = existingBuildConfigs.length > 0 ? 'healthy' : 'warning';
 
       // Check linting configuration
       const lintConfigs = ['.eslintrc.js', 'eslint.config.js', '.eslintrc.json'];
-      const existingLintConfigs = lintConfigs.filter(file => 
+      const existingLintConfigs = lintConfigs.filter(file =>
         fs.existsSync(path.join(this.projectRoot, file))
       );
-      
+
       configuration.linting = existingLintConfigs.length > 0 ? 'healthy' : 'warning';
 
       // Check testing configuration
       const testConfigs = ['jest.config.js', 'vitest.config.js', 'cypress.config.js'];
-      const existingTestConfigs = testConfigs.filter(file => 
+      const existingTestConfigs = testConfigs.filter(file =>
         fs.existsSync(path.join(this.projectRoot, file))
       );
-      
+
       configuration.testing = existingTestConfigs.length > 0 ? 'healthy' : 'warning';
 
     } catch (error) {
@@ -274,7 +282,7 @@ class HealthMonitor {
    */
   async checkPerformance() {
     console.log('⚡ Checking performance...');
-    
+
     const performance = {
       buildTime: 'unknown',
       bundleSize: 'unknown',
@@ -287,13 +295,13 @@ class HealthMonitor {
         const buildStats = fs.statSync(buildDir);
         const buildAge = Date.now() - buildStats.mtime.getTime();
         const hoursOld = buildAge / (1000 * 60 * 60);
-        
+
         performance.buildTime = hoursOld < 24 ? 'healthy' : hoursOld < 168 ? 'warning' : 'critical';
       }
 
       // Check bundle size
       try {
-        const buildSize = execSync('du -sh .next', { 
+        const buildSize = execSync('du -sh .next', {
           encoding: 'utf8',
           cwd: this.projectRoot,
           stdio: 'pipe'
@@ -319,7 +327,7 @@ class HealthMonitor {
    */
   calculateOverallStatus() {
     const allChecks = [];
-    
+
     // Collect all check results
     Object.values(this.healthData.checks).forEach(category => {
       Object.values(category).forEach(check => {
@@ -377,7 +385,7 @@ class HealthMonitor {
    */
   async saveHealthReport() {
     const reportPath = path.join(this.projectRoot, 'health-monitor-report.json');
-    
+
     try {
       fs.writeFileSync(reportPath, JSON.stringify(this.healthData, null, 2));
       console.log(`📄 Health report saved to: ${reportPath}`);
@@ -391,6 +399,7 @@ class HealthMonitor {
    */
   displayStatus() {
     console.log('\n🏥 HEALTH MONITOR REPORT');
+<<<<<<< HEAD
     console.log('===');
     console.log(`Overall Status: ${this.healthData.overallStatus.toUpperCase()}`);
     console.log(`Timestamp: ${this.healthData.timestamp}`);
@@ -424,5 +433,11 @@ const fs = require("fs");"const path = require("path");class EnhancedHealthMonit
             "message"
             "status"
             "message"
+=======
+    console.log('
+>>>>>>> origin/chore/fix-lint-and-merge
 
 module.exports = HealthMonitor;
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

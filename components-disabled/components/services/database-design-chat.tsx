@@ -1,12 +1,13 @@
 ;
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import Link from 'next/link';'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-const "DatabaseDesignChat": NextPage = () => ;
-  return (<div>;
-      <Head>;
+const DatabaseDesignChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
 
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
@@ -14,31 +15,48 @@ const "DatabaseDesignChat": NextPage = () => ;
 ;
   return (<div>;
       <Head></Head>;<meta name="description" content="DatabaseDesignChat service" />;"
-      </Head>;
-      </Head>;<meta name="description" content="DatabaseDesignChat service" />;"
-      </Head>;
-
-import type { NextPage } from "next";"
-import Head from "next/head";"
-import Link from "next/link";"
-
-const "DatabaseDesignChat": NextPage = () => {
- ;
-}
-return (;
-    <div>
-      <Head>
+=======
+const DatabaseDesignChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />DatabaseDesignChat - Zion Tech Solutions</title>;
+        <meta name = \"description\" content=\"DatabaseDesignChat service\" />{\" \"}
 ;
-  const "DatabaseDesignChat": NextPage = () => {;
+  const DatabaseDesignChat: NextPage = () => ;
+  return (<div />;
+      <Head /></Head>;<meta name=\"description\" content=\"DatabaseDesignChat service\" />;
+>>>>>>> origin/chore/fix-lint-and-merge
+      </Head>;
+      </Head>;<meta name=\"description\" content=\"DatabaseDesignChat service\" />;
+      </Head>;
+
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
+
+const DatabaseDesignChat: NextPage = () => {
+ ;
+  return (
+    <div />
+      <Head />
+;
+  const DatabaseDesignChat: NextPage = () => {;
+  return (
+    <div />;
+      <Head />;
+        <title />DatabaseDesignChat - Zion Tech Solutions</title>;
+
+<<<<<<< HEAD
+
 }
 return (;
-    <div>;
-      <Head>;
-        <title>DatabaseDesignChat - Zion Tech Solutions</title>;
-
-
-}
-return (;
+=======
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const DatabaseDesignChat: NextPage = () => {
+  return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <div>
 </div>
       <Head>
@@ -48,23 +66,28 @@ return (;
 
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+=======
+const DatabaseDesignChat: NextPage = () => {
+  return (
+    <div />
+      <Head />
+
+      </Head>;
+
+>>>>>>> origin/chore/fix-lint-and-merge
       <main>
         <h1>DatabaseDesignChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+        <a href="/services">Back to Services</a>
+
       </main>
     </div>
       </Head>;
-      <main>;
-        <h1>DatabaseDesignChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
-      </main>;
-    </div>;
-      </Head>;<main>;
-        <h1>DatabaseDesignChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1 />DatabaseDesignChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
       </Head>;<main />;
@@ -86,19 +109,27 @@ export default DatabaseDesignChat;
 
         <title />DatabaseDesignChat - Zion Tech Solutions</title>
 
-import type { NextPage } from './next';'
-import Head from './next / head';'
-import Link from './next / link';'
+import type { NextPage } from './next';
+import Head from './next / head';
+import Link from './next / link';
 
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title > DatabaseDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="DatabaseDesignChat service" />{" "}"
+=======
+const DatabaseDesignChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title  /> DatabaseDesignChat - Zion Tech Solutions</title>;
+        <meta name=\"description\" content=\"DatabaseDesignChat service\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
-      <main>;
-        <h1 > DatabaseDesignChat</h1>;
-        <p > Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1  /> DatabaseDesignChat</h1>;
+        <p  /> Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>
     </div>
   );
@@ -117,15 +148,23 @@ export default DatabaseDesignChat;<div />;
     </div>;
   )},export default DatabaseDesignChat;
 
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="DatabaseDesignChat service" />{" "}"
+=======
+const DatabaseDesignChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />DatabaseDesignChat - Zion Tech Solutions</title>;
+        <meta name=\"description\" content=\"DatabaseDesignChat service\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
-      <main>;
-        <h1>DatabaseDesignChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1 />DatabaseDesignChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
   )}
@@ -136,18 +175,21 @@ export default DatabaseDesignChat;<title />DatabaseDesignChat - Zion Tech Soluti
 };
 
 export default DatabaseDesignChat;
+<<<<<<< HEAD
+=======
+const DatabaseDesignChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>DatabaseDesignChat - Zion Tech Solutions</title>
-        <meta name="description" content="DatabaseDesignChat service" />{" "}"
+  return (
+    <div />
+      <Head />}
+        <title />DatabaseDesignChat - Zion Tech Solutions</title>}
+        <meta name=\"description\" content=\"DatabaseDesignChat service\" />{\" \"}
       </Head>
-      <main>
-        <h1>DatabaseDesignChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />DatabaseDesignChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );
@@ -158,18 +200,21 @@ export default DatabaseDesignChat;
         <title />DatabaseDesignChat - Zion Tech Solutions</title>
         <title />DatabaseDesignChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
+const DatabaseDesignChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>DatabaseDesignChat - Zion Tech Solutions</title>
-        <meta name="description" content="DatabaseDesignChat service" />{" "}"
+  return (
+    <div />
+      <Head />}
+        <title />DatabaseDesignChat - Zion Tech Solutions</title>}
+        <meta name=\"description\" content=\"DatabaseDesignChat service\" />{\" \"}
       </Head>
-      <main>
-        <h1>DatabaseDesignChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />DatabaseDesignChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );

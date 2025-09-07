@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 :pages.disabled_auto/services/project-management-suite.tsx;
@@ -58,3 +59,5 @@ export default ProjectManagementSuite;
 };
 
 export default ProjectManagementSuite;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

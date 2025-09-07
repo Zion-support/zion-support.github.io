@@ -34,10 +34,7 @@ jobs:
         run: npm ci
       - name: Run Autonomous Meta Orchestrator (once)
         run: node automation/autonomous-meta-orchestrator.cjs once
-:.github/workflows/auto-media-release.yml.backup
-        run: npm ci
-      - name: Run Autonomous Meta Orchestrator (once)
-        run: node automation/autonomous-meta-orchestrator.cjs once
+
         run: npm ci --no-audit --no-fund
       - name: Run automations bundle
         run: |

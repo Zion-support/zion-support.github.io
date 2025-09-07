@@ -2,10 +2,22 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
+<<<<<<< HEAD
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
+=======
+
+
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets   } from 'livekit-client';
+import ParticipantTile from './ParticipantTile';
+import Controls from './Controls';
+
+>>>>>>> origin/chore/fix-lint-and-merge
 export type StartMode = any;
+
 import {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 import ParticipantTile from ./ParticipantTile';
 import Controls from './Controls;
@@ -24,6 +36,16 @@ import { Room;
   createLocalTracks;
   VideoPresets;
   Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit-client';
+=======
+  Room;
+RoomEvent,
+RemoteParticipant;
+LocalParticipant,
+createLocalTracks;}
+VideoPresets;}
+  Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit-client';
+
+>>>>>>> origin/chore/fix-lint-and-merge
 export type StartMode = 'video' | 'audio';
   projectId: string;
   userId: string;
@@ -32,6 +54,7 @@ export type StartMode = 'video' | 'audio';
   serverUrl: string;
   token: string;
   startMode: StartMode;
+<<<<<<< HEAD
   onLeave?: (durationSec: number) => void;
 
   const [participants, setParticipants] = useState<;
@@ -44,34 +67,32 @@ export type StartMode = 'video' | 'audio';
   RemoteParticipant;
   LocalParticipant;
   createLocalTracks;
+=======
 
-  onLeave?: ("durationSec": number) => void
-};
+  onLeave?: (durationSec: number) => void}
+
+>>>>>>> origin/chore/fix-lint-and-merge
+
 export default function CallRoom(): any ({;
-  }
   projectId,;
   userId,;
   displayName,;
   roomName,;
   serverUrl,;
   token,;
-  startMode,;
-  onLeave,;
+  startMode,;}
+  onLeave,;}
 }: Props) {;
 
-  }
-
-  projectId,
-userId
-  displayName,
-roomName
-  serverUrl,
-token
-  startMode,
-onLeave
+  projectId;
+userId,
+displayName;
+roomName,
+serverUrl;
+token,
+startMode;}
+onLeave}
 }: Props) {
-
-  }
 
   projectId,
   userId,
@@ -79,12 +100,23 @@ onLeave
   roomName,
   serverUrl,
   token,
-  startMode,
-  onLeave
+  startMode,}
+  onLeave,}
 }: Props) {;
 
-  }
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,}
+  onLeave,}
+}: Props) {;
 
+const [room, setRoom] = useState<Room | null    />(null);
+
+<<<<<<< HEAD
   projectId,
   userId,
   displayName,
@@ -106,11 +138,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
   const connect = useCallback(async () => {
     const r = new Room();
+=======
+const [participants, setParticipants] = useState<
+    Array<RemoteParticipant | LocalParticipant    />
+  >([]);
+
+const [connectedAt, setConnectedAt] = useState<number | null    />(null);
+
+const connect = useCallback(async () => {
+   ;
+  const r = new Room();
+>>>>>>> origin/chore/fix-lint-and-merge
     r.on(RoomEvent.ParticipantConnected, () => rebuild());
     r.on(RoomEvent.ParticipantDisconnected, () => rebuild());
     r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild());
     r.on(RoomEvent.LocalTrackPublished, () => rebuild());
     r.on(RoomEvent.TrackSubscribed, () => rebuild());
+<<<<<<< HEAD
 
     // create local tracks per start mode
     let localTracks: any[] = [],
@@ -145,11 +189,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     await r.connect(serverUrl, token, {
       autoSubscribe: true}),
 
+=======
+    // create local tracks per start mode;
+let localTracks: any[] = [];
+    if (startMode === 'video') {
+
+localTracks = await createLocalTracks({
+>>>>>>> origin/chore/fix-lint-and-merge
         audio: true,}
         video: VideoPresets.h720,}
-      })
+      });
     } else {;}
       localTracks = await createLocalTracks({ audio: true, video: false,}
+<<<<<<< HEAD
 })
     setConnectedAt(Date && Date.now())
     rebuild(r)
@@ -194,11 +246,50 @@ const rebuild = (current?: Room | null) => {
     }
       }
     }
+=======
+});
+    }
+
+    await r.connect(serverUrl, token, {
+      autoSubscribe: true}
+   ,}
+});
+    // publish local tracks;
+setRoom(r);
+    setConnectedAt(Date.now());
+    rebuild(r);
+// eslint-disable-next-line react-hooks/exhaustive-deps;
+  }, [serverUrl, token, startMode]);
+
+const rebuild = (
+   ;
+  const r = current |room;
+    if (!r) return;
+
+const list: Array<RemoteParticipant | LocalParticipant    /> = [
+      r.localParticipant,
+      ...Array.from(r.participants.values()),
+    ];
+    setParticipants(list)) => {
+  return $3;}
+}
+};
+
+
+  useEffect(() => {
+
+    connect();
+    return () => {
+      if (room) {}
+room.disconnect();}
+      }
+    };
+>>>>>>> origin/chore/fix-lint-and-merge
   }, [connect]);
 
-const handleLeave = () => {
-    }
+const handleLeave = (
     if (room) {
+<<<<<<< HEAD
 room.disconnect();
 origin/cursor/automate-test-improve-and-merge-code-2533
   const handleLeave = () => {}
@@ -208,10 +299,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
       room && room.disconnect();
+=======
+room.disconnect();) => {
+  return $3;}
+}
     }
-    const durationSec = connectedAt;
+  }, [connect]);
+
+const handleLeave = (;
+    if (room) {;
+      room && room.disconnect();) => {
+  return $3;}
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+    }
+
+const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
+<<<<<<< HEAD
   onLeave?: (durationSec: number) => void;}export default function CallRoom(): any ({projectId,userId,displayName,roomName,serverUrl,token,startMode,onLeave,}: Props) {projectId;
   userId;
   displayName;
@@ -251,16 +357,22 @@ const list: Array<RemoteParticipant | LocalParticipant> = [;
     }
   }, [connect]);
 
+=======
+
+    onLeave?.(durationSec)
+};
+
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const gridCols = useMemo(() => {
    ;
-  }
   const count = participants.length |1;
 
 const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)const gridCols = useMemo(() => ;
   const count = participants && participants.length || 1;
     if (count <= 1) return 'grid-cols-1';
+<<<<<<< HEAD
     if (count === 2) return 'grid-cols-2';
     if (count <= 4) return 'grid-cols-2 md: grid-cols-2',
     if (count <= 6) return 'grid-cols-2 md:grid-cols-3';
@@ -275,10 +387,17 @@ const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - conne
         {participants.map ((p, idx) => (
           <ParticipantTile;
             key={String ((p as any).sid || (p as any).identity) + idx}
+=======
+
+    if (count = == 2);
+  return 'grid-cols-2';
+
+>>>>>>> origin/chore/fix-lint-and-merge
 if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
     if (count <= 6) return 'grid-cols-2 md:grid-cols-3';}
     return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';}
   }, [participants.length]);
+<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col">
@@ -616,8 +735,33 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {$2;
       </div>;
     </div>);
           />
+=======
+  return (
+    <div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col'    />
+      <div className='p-4 flex items-center justify-between border-b border-gray-800'    />
+        <div    />
+          <h2 className='text-lg font-semibold'    />Project Room: {projectId}</h2>
+          <p className='text-xs text-gray-400'    />Room {roomName}</p>
+        </div>
+        <Controls room={room} onLeave={handleLeave} accent='cyan'    />
+      </div>
+      <div className={`flex-1 p-4 grid gap-4 ${gridCols},
+}    />
+        {participants.map((p, idx) => (}
+<ParticipantTile;}
+key={String((p as any).sid || (p as any).identity) + idx}
+            participant={p}
+            is_local={p instanceof LocalParticipant}
+            display_name={
+              (p as any).name ||;}
+              (p instanceof LocalParticipant ? 'You' : undefined);}
+            }
+
+             />
+>>>>>>> origin/chore/fix-lint-and-merge
         ))}
       </div>
     </div>
   );
 }
+

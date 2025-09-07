@@ -61,6 +61,7 @@ const [isOpen, setIsOpen] = useState(false)
       {isOpen && (
         <div
           className={cn(
+<<<<<<< HEAD
   return (
     <>
       {/* Fixed button in the bottom right */}
@@ -96,6 +97,13 @@ export function SupportWidget() {
               ? "bg-zion-blue-dark border border-zion-blue-light 
               : bg-white border border-gray-200"
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            'fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col'
+            theme === 'dark'
+              ? 'bg-zion-blue-dark border border-zion-blue-light'
+              : 'bg-white border border-gray-200'
+
+>>>>>>> origin/chore/fix-lint-and-merge
           )}
           style={{ height: 600px', maxHeight: '80vh }}        >
           <div className=flex items-center justify-between p-4 border-b border-zion-purple/20'>
@@ -103,14 +111,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <MessageSquare className=h-5 w-5 text-zion-cyan mr-2' />
               <h3
                 className={cn(
+<<<<<<< HEAD
                   'font-semibold
                   theme === dark' ? 'text-white : text-gray-800'
 
 main
+=======
+                  'font-semibold'
+                  theme === 'dark' ? 'text-white' : 'text-gray-800'
+>>>>>>> origin/chore/fix-lint-and-merge
                 )}
               >
-:src/components/support/SupportWidget.tsx
-                Zion Support
 "
 import React, { useState } from react,"
 import { useRouter } from "next/router,
@@ -147,6 +158,7 @@ export function SupportWidget() { return null; }
           <MessageSquare className=h-6 w-6" />
         </Button>
       )}
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-646c;
 const [isOpen, setIsOpen] = useState(false)const { theme } = useTheme()const router = useRouter()import React, { useState } from react;
 import { useRouter  } from 'next/router';
@@ -166,6 +178,9 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
           <MessageSquare className=h-6 w-6" />;
         </Button>;
       )}
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge
       {/* Support panel */}
       {isOpen && (
         <div;
@@ -187,6 +202,7 @@ export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)cons
             <div className="flex items-center gap-2>
 
               <Button
+<<<<<<< HEAD
 :src/components/support/SupportWidget.tsx
                 variant='ghost'
                 size=icon
@@ -236,6 +252,12 @@ ursor/automate-test-improve-and-merge-code-646c;
                 size=icon";
                 className="h-8 w-8 rounded-full;
                 onClick={() => router.push(/help")}
+=======
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 rounded-full"
+                onClick={() => router.push("/help")}
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 aria-label="Help center
               >
@@ -257,6 +279,7 @@ ursor/automate-test-improve-and-merge-code-646c;
         </div>
       )}
     </>
+<<<<<<< HEAD
   );
               <Button
 ;
@@ -270,3 +293,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button;
 ursor/automate-test-improve-and-merge-code-646c;
 }<Button;
+=======
+  );
+>>>>>>> origin/chore/fix-lint-and-merge

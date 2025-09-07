@@ -3,14 +3,14 @@
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
-
-
-
-
-
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,14 +26,18 @@ const path = require('path')
 const fs = require('fs');
 const path = require('path');
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/chore/fix-lint-and-merge
 // console.log(' Fixing All Final Syntax Issues...')
 console.log('=')
-const problematicFiles = ['pages/docs/integration-examples.tsx'];
+const problematicFiles = ['pages/docs/integration-examples.tsx']
   'pages/sitemap.tsx'
   'pages/solutions/enterprise.tsx'
   'pages/status.tsx'
   'pages/team.tsx'
-let content = '';
+    let content = ''
     if (filePath === 'pages/docs/integration-examples.tsx')
 =======
 
@@ -66,6 +70,7 @@ let content = '';
             <div style={{ "display": 'flex', "gap": '1rem', "justifyContent": 'center', "flexWrap"}
               <Link href="/careers" style={{ "background": 'linear-gradient(135deg, #3b82f6, #8b5cf6)', "color": 'white', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "transition"}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
 =======
       <div style={{ minHeight: 100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%), "color"}
@@ -92,12 +97,17 @@ let content = '';
               <Link href="/contact" style={{ background: transparent', "color": '#3b82f6, padding: 0.75rem 2rem', "borderRadius": '0.5rem, textDecoration: none', "fontWeight": '600, border: 2px solid #3b82f6', "transition"}
 
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+              <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
@@ -106,3 +116,6 @@ let content = '';
 =======
               <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

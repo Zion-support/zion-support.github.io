@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 ;
@@ -266,12 +267,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   contactInfo: {
       
     mobile: string, email: string,
+=======
+mobile: string, email: string,
+>>>>>>> origin/chore/fix-lint-and-merge
     address: string,
     website: string;
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
+<<<<<<< HEAD
   reviews: number
 }
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
@@ -298,6 +303,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     reviews: 950
   }
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     website: string
   contactInfo: {;,
   mobile: string;, email: string;,
@@ -320,6 +328,7 @@ pr-12325
     customers: 1900
     rating: 4.8
     reviews: 950
+<<<<<<< HEAD
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',
     launchDate: '2025-06-20',
     customers: 1900,
@@ -333,10 +342,34 @@ pr-12325
     }
     realImplementation: true
     implementationDetails: 'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
+=======
+  reviews: number;
+}
+      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.
+    launchDate: '2025-06-20;,
+  customers: 1900;
+    rating: 4.8;,
+  reviews: 950;
+pr-12325
+      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',
+    launchDate: '2025-06-20';,
+    customers: 1900;,
+    rating: 4.8;,
+    reviews: 950;,;
+  },];
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com';
+    }
+    realImplementation: true
+    implementationDetails: 'Enterprise-grade sales intelligence platform with AI-powered insights;, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
+>>>>>>> origin/chore/fix-lint-and-merge
     launchDate: '2025-06-20';
     customers: 1900;
     rating: 4.8
 
+<<<<<<< HEAD
     reviews: 950
   }
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -357,6 +390,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
 
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',
     features: [
+=======
+    reviews: 950;
+  }
+
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
@@ -374,9 +412,12 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
 pr-12325
   {
 
+<<<<<<< HEAD
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
     tagline: 'Transform data into actionable insights with AI', price: '$299',
     period: '/month',
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     mobile: string;
     email: string;
     address: string;
@@ -391,6 +432,7 @@ pr-12325
     name: 'AI Business Intelligence Suite';
     tagline: 'Transform data into actionable insights with AI';
     price: '$299';
+<<<<<<< HEAD
     period: '/month';description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',features: [;
       'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models';
       'Collaborative workspace for teamsMobile app for on-the-go insights';
@@ -566,6 +608,11 @@ pr-12325
   contactInfo: {
       
 contactInfo: {
+=======
+
+  contactInfo: {
+
+>>>>>>> origin/chore/fix-lint-and-merge
     mobile: string, email: string,
     address: string,
     website: string
@@ -598,7 +645,10 @@ contactInfo: {
     rating: 4.8
     reviews: 950
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
@@ -607,6 +657,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     tagline: 'Transform data into actionable insights with AI', price: '$299',
     period: '/month',
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',
+<<<<<<< HEAD
     period: '/month';
 origin/cursor/automate-test-improve-and-merge-code-2533
   reviews: number;
@@ -618,10 +669,14 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite','
     tagline: 'Transform data into actionable insights with AI', price: '$299','
     period: '/month','
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',
     features: ['
       'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models';'
       'Collaborative workspace for teamsMobile app for on-the-go insights'
+<<<<<<< HEAD
     ];'
     popular: true, icon: '🧠','
     color: 'from-blue-600 to-purple-700', textColor: 'text-blue-400','
@@ -639,6 +694,9 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 950'
       website: 'https://ziontechgroup.com';
@@ -649,15 +707,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 1900;
     rating: 4.8,
     reviews: 950;
+<<<<<<< HEAD
 ];
 ];
 
 ];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 ];
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 ];
 
 
@@ -702,6 +764,8 @@ pr-12325
     useCases: ['Sales performance analysisCustomer behavior insightsMarket trend predictionOperational efficiency optimizationFinancial forecastingRisk assessment'];, roi: 'Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency.';,
     competitors: ['TableauPower BILookerQlikSisense'];, marketSize: '$29.9B market';,
     growthRate: '220% annual growth';, variant: 'ai-futuristic';,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     contactInfo: {
       mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
 
@@ -710,6 +774,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       address: '364 E Main St STE 1008 Middletown DE 19709';,
     reviews: 950
       website: 'https://ziontechgroup.com';
+<<<<<<< HEAD
     }
     "real_implementation": true,"implementation_details": 'Enterprise - grade sales intelligence platform with AI - powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';'
     "launch_date": '2025 - 06 - 20';'
@@ -874,11 +939,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_implementation: true;,
     implementation_details: 'Enterprise - grade sales intelligence platform with AI - powered insights;, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.;
     launch_date: 2025 - 06 - 20';
+=======
+    }
+    real_implementation: true;,
+    implementation_details: 'Enterprise - grade sales intelligence platform with AI - powered insights;, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
+    launch_date: '2025 - 06 - 20';
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 1900;
     rating: 4.8;,
     reviews: 950;
 ];
 
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants,
 export interface Innovative2026AIService {
   id: string,
@@ -918,10 +990,53 @@ export interface Innovative2026AIService {
   launchDate: string,
   customers: number,
   rating: number];
+=======
+import { ServiceVariant } from '../types/service-variants',;
+export interface Innovative2026AIService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+];
+>>>>>>> origin/chore/fix-lint-and-merge
 
 ];
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
   mobile: +1 302 464 0950';, email: 'kleber@ziontechgroup.com;,
       address: 364 E Main St STE 1008 Middletown DE 19709';,
     reviews: 950;,
@@ -929,6 +1044,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_implementation: true;,
     implementation_details: Enterprise - grade sales intelligence platform with AI - powered insights;, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
     launch_date: '2025 - 06 - 20;,
+=======
+  mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
+      address: '364 E Main St STE 1008 Middletown DE 19709';,
+    reviews: 950;,
+  website: 'https://ziontechgroup.com';
+    real_implementation: true;,
+    implementation_details: 'Enterprise - grade sales intelligence platform with AI - powered insights;, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
+    launch_date: '2025 - 06 - 20';',
+>>>>>>> origin/chore/fix-lint-and-merge
 pr-12325
 import { ServiceVariant } from '../types/service-variants';
   reviews: number;
@@ -1051,8 +1175,9 @@ pr-12325
 }
 pr-12325
 ;
-export const "innovative2026AIServices": Innovative2026AIService[] = [;
+export const innovative2026AIServices: Innovative2026AIService[] = [;
   // AI-Powered Business Intelligence;
+<<<<<<< HEAD
   {;'
     id: 'ai-business-intelligence-suite',;'
     name: 'AI Business Intelligence Suite',;'
@@ -1062,10 +1187,14 @@ export const "innovative2026AIServices": Innovative2026AIService[] = [;
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',;
     features: [;'
       'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models',;'
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       'Collaborative workspace for teamsMobile app for on-the-go insights';
       'Collaborative workspace for teamsMobile app for on-the-go insights';']
 pr-12325
     ],;
+<<<<<<< HEAD
     popular: true,;'
     icon: '🧠',;'
     color: 'from-blue-600 to-purple-700',;'
@@ -1693,6 +1822,9 @@ pr-12325
     customers: 1900;,;
     rating: 4.8;
     reviews: 950;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 ];
   }
@@ -1751,6 +1883,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 ];
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
@@ -2086,3 +2219,6 @@ pr-12325
   }
 
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

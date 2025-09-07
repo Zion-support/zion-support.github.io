@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 
@@ -12,14 +13,22 @@ import { Card;
   CardHeader;
   CardTitle;
  } from '@/components/ui/card';
+=======
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Badge  } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
 import { Button } from @/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react
 
+<<<<<<< HEAD
 
 import React, { useState } from react'
+=======
+import React, { useState } from 'react'
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
   Card
   CardContent
@@ -43,6 +52,7 @@ interface PerformanceMetrics {
   loadTime: number;
   healthStatus: 'healthy | warning' | 'error
 interface Improvement {
+<<<<<<< HEAD
   CheckCircle;
   AlertCircle;
   TrendingUp;
@@ -70,6 +80,8 @@ interface PerformanceMetrics  {buildSize: string;
   loadTime: number;
   healthStatus: healthy' | 'warning | error';interface Improvement  {id: string;
   title: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   id: string;
   title: string,
@@ -94,6 +106,7 @@ import { Button } from @/components / ui / button';
   Search} from 'lucide-react;
 interface PerformanceMetrics {
   build_size: string;
+<<<<<<< HEAD
   category: performance' | 'security | ux' | 'build;
 const PerformanceDashboard: React.FC = () => {const [metrics] = useState<PerformanceMetrics>({buildSize: 959 MB';
     pageCount: 166;
@@ -188,6 +201,8 @@ interface PerformanceMetrics  {build_size: string;
   load_time: number;
   health_status: 'healthy | warning' | 'error;
 interface Improvement  {id: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   page_count: number;
   load_time: number;
   health_status: healthy' | 'warning | error';
@@ -198,6 +213,7 @@ interface Improvement {
   status: 'completed | in - progress' | 'planned;
   impact: high' | 'medium | low';
 
+<<<<<<< HEAD
 const PerformanceDashboard: React.FC = () => {
   const [metrics] = useState<PerformanceMetrics>({
     buildSize: '959 MB
@@ -604,6 +620,8 @@ interface Improvement {
       case low': return 'bg-green-100 text-green-800,
       default: return bg-gray-100 text-gray-800';
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   },
 
@@ -707,6 +725,7 @@ interface Improvement {
                   {getCategoryIcon(improvement.category)}
 
                 </div>
+<<<<<<< HEAD
                 <div className=flex-1 min-w-0">
                   <div className="flex items-center justify-between>
                     <h3 className=text-sm font-medium text-gray-900">
@@ -734,6 +753,17 @@ interface Improvement {
                       <Badge className={getImpactColor(improvement.impact)}>;
                         {improvement.impact} impact;
                       </Badge>;
+=======
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-medium text-gray-900">
+                      {improvement.title}
+                    </h3>
+                    <div className="flex items-center space-x-2">
+                      <Badge className={getImpactColor(improvement.impact)}>
+                        {improvement.impact} impact
+                      </Badge>
+>>>>>>> origin/chore/fix-lint-and-merge
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
@@ -749,6 +779,7 @@ interface Improvement {
       case build': return <TrendingUp className=h-4 w-4" />,
       default: return <CheckCircle className="h-4 w-4 />;
     }
+<<<<<<< HEAD
                     </div>;
                   </div>;
                   <p className=text-sm text-gray-600 mt-1">;
@@ -839,6 +870,8 @@ interface Improvement {
                 Healthy;
               </span>;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </div>;
 
@@ -847,6 +880,7 @@ interface Improvement {
       </div>;
 
       {/* Completed Improvements */}
+<<<<<<< HEAD
               <span className='text - sm font - semibold text - green - 600>;Healthy;
               </span>;</div>;
           </CardContent>;
@@ -864,6 +898,12 @@ interface Improvement {
                     <div className='flex items-center space-x-2>;
           <CardTitle className=flex items-center space-x-2">;
             <CheckCircle className="h-5 w-5 text-green-500 />;
+=======
+      <Card>;
+        <CardHeader>;
+          <CardTitle className="flex items-center space-x-2">;
+            <CheckCircle className="h-5 w-5 text-green-500" />;
+>>>>>>> origin/chore/fix-lint-and-merge
             <span>Completed Improvements</span>;
           </CardTitle>;
           <CardDescription>;
@@ -896,10 +936,6 @@ interface Improvement {
           </div>;
         </CardContent>;
       </Card>;
-          </div>
-        </CardContent>
-      </Card>
-      {/* Action Buttons */}
       {/* Action Buttons */}
 
       <div className=flex space-x-4">
@@ -919,6 +955,7 @@ interface Improvement {
 },
 
 export default PerformanceDashboard, 
+<<<<<<< HEAD
       <div className="flex space-x-4>;
                     </div>;
                   </div>;
@@ -935,23 +972,30 @@ export default PerformanceDashboard,
       </Card>;{/* Action Buttons */}<div className=flex space-x-4">;
         <Button onClick={() => window.open(/api/health/environment_blank')} variant="outline>;
           <Shield className=h-4 w-4 mr-2" />;
-
-
+=======
+      <div className="flex space-x-4">;
+        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
+          <Shield className="h-4 w-4 mr-2" />;
+>>>>>>> origin/chore/fix-lint-and-merge
 
           Bundle Analysis;
         </Button>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 };
 }
 
 export default PerformanceDashboard;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <div className='space - y-4>;
             {completed_improvements.map (improvement => (
               <div;
+<<<<<<< HEAD
   )variant=outline';
         >;
           <TrendingUp className='h-4 w-4 mr-2 />;export default PerformanceDashboard;
@@ -968,6 +1012,8 @@ export default PerformanceDashboard,export default PerformanceDashboard;
     </div>;
   )}export default PerformanceDashboard;<div className=space - y-4'>;
             {completed_improvements.map (improvement => (<div;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 key={improvement.id}
                 className='flex items - start space - x-3 p - 3 border rounded - lg;
               >;
@@ -1016,7 +1062,4 @@ export default PerformanceDashboard;
   );
 }
 
-export default PerformanceDashboard,export default PerformanceDashboard,)}export default PerformanceDashboard;
-
-export default PerformanceDashboard,
 export default PerformanceDashboard;

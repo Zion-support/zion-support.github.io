@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -17,6 +18,8 @@ import { GeneratedContentDisplay } from './GeneratedContentDisplay;
 import { LoadingContentSkeleton } from ./LoadingContentSkeleton';
 import { logErrorToProduction } from '@/utils/productionLogger;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 interface GeneratedContent {
 
 import React, { useState } from react';
@@ -36,12 +39,15 @@ interface GeneratedContent {
     min: number;
 origin/cursor/automate-test-improve-and-merge-code-2533
     max: number
+<<<<<<< HEAD
   description: string,
   tags: string[],
   suggested_price: {
     min: number,
     max: number;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }
 
@@ -50,11 +56,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 interface AIListingGeneratorProps {
 
+<<<<<<< HEAD
 interface GeneratedContent {;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   description: string,;
   tags: string[],;
   suggestedPrice: {;
     min: number,;
+<<<<<<< HEAD
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -69,6 +79,8 @@ interface AIListingGeneratorProps {
   onApplyGenerated?: (content: GeneratedContent,) => void,
   initialValues?: {
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   keyPoints: string[];
 }
@@ -79,6 +91,7 @@ interface AIListingGeneratorProps {
   initialValues?: {
 origin/cursor/automate-test-improve-and-merge-code-2533
     title?: string;
+<<<<<<< HEAD
 
 interface GeneratedContent  {description: string;
   tags: string[];
@@ -104,11 +117,16 @@ interface AIListingGeneratorProps  {interface GeneratedContent  {description: st
     category?: string;
     keyFeatures?: string;
     targetAudience?: string;
+=======
+    category?: string;
+    keyFeatures?: string;
+>>>>>>> origin/chore/fix-lint-and-merge
     targetAudience?: string
 
   }
 }
 
+<<<<<<< HEAD
 
   onApplyGenerated?: (content: GeneratedContent, ) => void,
   initial_values?: {
@@ -142,12 +160,25 @@ function AIListingGenerator() {const { toast } = use_toast ()const [is_loading, 
 
 
   }) => {
+=======
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+  const { toast } = useToast()
+  const [isLoading, setIsLoading] = useState(false)
+  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null)
+  const handleGenerate = async ({
+    title
+    category
+    keyFeatures
+    targetAudience
+  }: {
+>>>>>>> origin/chore/fix-lint-and-merge
     title: string
     category: string
     keyFeatures: string
     targetAudience: string  }) => {
     setIsLoading(true)
     try {
+<<<<<<< HEAD
       const { data, error } = await supabase.functions.invoke(ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
       })
@@ -160,6 +191,21 @@ function AIListingGenerator() {const { toast } = use_toast ()const [is_loading, 
 
 
       toast({
+=======
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (error.message);
+      }
+      if (data && (data as any).error) {
+        throw new Error((data as any).error)
+      }
+
+>>>>>>> origin/chore/fix-lint-and-merge
       setGeneratedContent((data as any)?.generated || null)
 import React, { useState } from "react,
 import { useToast } from @/hooks/use-toast",
@@ -195,6 +241,7 @@ if (.error) {) {
       setGeneratedContent((data as any)?.generated || null),
       toast({
         title: "Content Generated",
+<<<<<<< HEAD
   }: {title: string,category: string,key_features: string,target_audience: string;}) => {setIsLoading(true)try {const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {body: { title, category, key_features, target_audience }
   }: {title: string,category: string,key_features: string,target_audience: string;}) => {setIsLoading(true)try {const { data, error } = await supabase.functions.invoke (ai - listing - generator', {body: { title, category, key_features, target_audience }
       })// Check condition;
@@ -209,6 +256,9 @@ if ( {) {$2;
         variant: "destructive";
       });
         description: AI has created optimized listing content for you."
+=======
+        description: "AI has created optimized listing content for you."
+>>>>>>> origin/chore/fix-lint-and-merge
       })
     } catch (error) {
       logErrorToProduction(Error generating content:', { data: error }),
@@ -221,13 +271,17 @@ if ( {) {$2;
       setIsLoading(false)
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   },
 
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
 
+<<<<<<< HEAD
 
 
       toast({
@@ -236,6 +290,8 @@ if ( {) {$2;
       })
 export function AIListingGenerator({ onApplyGenerated, initialValues;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
     <div className=space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark>
@@ -333,15 +389,22 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         throw new Error((data as any).error);
       }
 
+<<<<<<< HEAD
       setGeneratedContent((data as any)?.generated || null);
 
       toast({
         title: "Content Generated,
         description: AI has created optimized listing content for you.";
+=======
+      toast({;
+        title: "Content Generated",
+        description: "AI has created optimized listing content for you.";
+>>>>>>> origin/chore/fix-lint-and-merge
       });
     } catch (error) {;
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
+<<<<<<< HEAD
         title: "Generation Failed",;
         description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
         title: "Generation Failed,
@@ -388,6 +451,9 @@ if (.error) {) {$2;
     <div className="space-y-6>;
       })export function AIListingGenerator({ onApplyGenerated, initialValues;return (<div className=space-y-6">;
         title: "Generation Failed,
+=======
+        title: "Generation Failed",
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <Card className=border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -411,17 +477,21 @@ if (.error) {) {$2;
             isLoading = {isLoading}
             initialValues = {initialValues}
 
+<<<<<<< HEAD
 
           <AIListingForm 
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       {isLoading && <LoadingContentSkeleton />}
 
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
 
+<<<<<<< HEAD
     <div className="space - y-6">;
     <div className=space - y-6">;
         <CardContent>onSubmit = {handleGenerate}
@@ -467,6 +537,8 @@ if ( {) {$2;
       {generatedContent && !isLoading && (<GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
       )}<div className="space - y-6>;
       <Card className=border border - zion - blue - light bg - zion - blue - dark">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         <CardHeader>;
           <CardTitle className="flex items - center text-white>;
             <Sparkles className=h - 5 w - 5 mr - 2 text - zion-cyan" />;
@@ -478,13 +550,14 @@ if ( {) {$2;
         </CardHeader>;
         <CardContent>;
           <AIListingForm;
-            on_submit = {handle_generate }
-            is_loading = {is_loading }
-            initial_values = {initial_values }
+            on_submit = {handle_generate, }
+            is_loading = {is_loading, }
+            initial_values = {initial_values, }
           />;
         </CardContent>;
       </Card>;
       {is_loading && <LoadingContentSkeleton />}
+<<<<<<< HEAD
       {generated_content && !is_loading && (<GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
     </div>)}: AIListingGeneratorProps) {const {toast;
 }= use_toast ()const [is_loading, setIsLoading] = useState (false)const [generated_content, setGeneratedContent] = useState < GeneratedContent | null> (null)const handle_generate = async ({title;
@@ -494,6 +567,8 @@ target_audience;
 }: {title: string;
 category: string;
 key_features: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       {generated_content && !is_loading && (
         <GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
     </div>);
@@ -514,14 +589,16 @@ category: string;,
 key_features: string;,
 target_audience: string;
 
-
 }) => {
   setIsLoading (true)
 try {
 
   data, error;
+<<<<<<< HEAD
 }= await supabase.functions.invoke ('ai - listing - generator', {
   body: {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }= await supabase.functions.invoke ('ai - listing - generator', {'
 }= await supabase.functions.invoke ('ai - listing - generator, {
   body: {}= await supabase.functions.invoke (ai - listing - generator', {'
@@ -531,6 +608,7 @@ try {
 // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 target_audience: string;}) => {setIsLoading (true)try {const {}catch (error) {';
   logErrorToProduction ('Error generating content:', {data, error;
 }= await supabase.functions.invoke ('ai - listing - generator', {body: {title, category,  key_features, target_audience;
@@ -590,6 +668,8 @@ return (<div className=space-y-6" > <Card className="border border-zion-blue-lig
   isLoading 
 }initialValues= {
   initialValues 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
   throw new Error (error.message);
 }// Check condition
@@ -626,9 +706,12 @@ return (<div className="space-y-6 > <Card className=border border-zion-blue-ligh
   isLoading && <LoadingContentSkeleton /> ;
 }{
   generatedContent && !isLoading && (<GeneratedContentDisplaycontent= {
+<<<<<<< HEAD
   generatedContent 
 }onApply= {
   handleApply 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   generatedContent
 }onApply= {
   handleApply
@@ -636,7 +719,10 @@ return (<div className="space-y-6 > <Card className=border border-zion-blue-ligh
 }</div>) ;
 }";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   data: error;
 
 });
@@ -650,9 +736,13 @@ if ( {) {
   $2
 }
   onApplyGenerated (generated_content);
+<<<<<<< HEAD
 toast ({}
 }'";
 }
+=======
+toast ({
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 return (<div className=space-y-6 > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className=flex items-center text-white > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className=text-sm text-zion-slate-light > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {
@@ -670,6 +760,7 @@ return (<div className=space-y-6 > <Card className="border border-zion-blue-ligh
   handleApply
 }/>)
 }</div>)
+<<<<<<< HEAD
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
 }) => {setIsLoading (true)try {const {data, error ;
@@ -698,3 +789,6 @@ if ( {) {$2;
 }onApply= {handleApply;
 }/>)}</div>)}';
 }'"
+=======
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -55,6 +56,11 @@ import { ChevronDown, Menu, X } from "lucide-react";
 interface NavigationItem {}
   name: string, href: string;
   submenu?: NavigationItem[];
+=======
+interface NavigationItem {
+  name: string, href: string
+  submenu?: NavigationItem[];
+>>>>>>> origin/chore/fix-lint-and-merge
 
 interface NavItem {
   label: string;
@@ -72,6 +78,10 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   items,
   className = "",
 }) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
@@ -191,6 +201,10 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href="/contact className=text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
 
 export default Component}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -297,6 +311,7 @@ export default Component}
       </div>
     </nav>
   );
+<<<<<<< HEAD
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
@@ -309,6 +324,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,";
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
+=======
+
+};
+
+>>>>>>> origin/chore/fix-lint-and-merge
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -317,10 +337,15 @@ const InteractiveNavigation: React.FC: = () => {";
           <div: className="hidden md:flex: space-x-8">",";
             <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
 
+<<<<<<< HEAD
             <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
 
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+=======
+interface InteractiveNavigationProps {
+  items: NavigationItem[], class_name?: string,
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,;
@@ -402,6 +427,7 @@ ursor / automate - test - fix - improve - and - merge - code - 99d1, ";
             <Link: href = /about className="text - gray - 600 hover:text - gray - 900: transition - colors">About</Link>, ;
             <Link: href="/contact" className=text - gray - 600 hover:text - gray - 900: transition - colors>Contact</Link>", ';
 
+<<<<<<< HEAD
 export default Component}
 ;
 
@@ -438,3 +464,6 @@ import Link from 'next/link';
   );
 }
 export default InteractiveNavigation;
+=======
+export default Component}
+>>>>>>> origin/chore/fix-lint-and-merge

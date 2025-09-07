@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -138,6 +139,15 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
         style={{background:;
             radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)';
         }}
+=======
+export default function AnimatedBackground() {return (<div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'    />;
+      <div;
+        className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]';
+        style={{background:;}
+            'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)';}
+        }}
+
+>>>>>>> origin/chore/fix-lint-and-merge
             transform: translateY(0px) rotate(0deg);
           }
           50% {;}
@@ -147,6 +157,7 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
             transform: translateY(0px) rotate(0deg);}
           }
         }
+<<<<<<< HEAD
     </div>);  return (
     <div className="fixed inset - 0 -z-10 overflow-hidden">;
       {/* Gradient Background */}
@@ -206,5 +217,10 @@ export default function AnimatedBackground() {return (<div className='pointer-ev
         style={{}`
           backgroundImage: `
       `}</style>
+=======
+
+      `}</style    />
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>
   );
+

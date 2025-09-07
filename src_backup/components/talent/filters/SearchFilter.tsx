@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 
 import { Input } from '@/components/ui/input;
 import { SearchIcon } from lucide-react';
 import { SearchFilterProps } from '@/types/filters;
-
+=======
+import { Input } from '@/components/ui/input';
+import { SearchIcon } from 'lucide-react';
+import { SearchFilterProps } from '@/types/filters';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 
@@ -19,12 +24,11 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         />
         <p id=talent-search-help' className='sr-only>
 
-
-
           Type a name or skill to filter results
         </p>
       </div>
     </div>
+<<<<<<< HEAD
         <p id="talent-search-help" className="sr-only">;
         <p id="talent-search-help className=sr-only">;
 
@@ -46,6 +50,14 @@ export function SearchFilter() {return (<div className="mb-6>;
           aria-describedby=talent-search-help';
           className='pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light
 }
+=======
+
+          onChange={e => setSearchTerm(e && e.target.value)}
+          aria-describedby='talent-search-help';
+          className='pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light'
+};
+;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { Input } from "@/components/ui/input,
 import { SearchFilterProps } from @/types/filters";
@@ -64,7 +76,10 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           aria-describedby="talent-search-help";
+<<<<<<< HEAD
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";/>;<p id='talent-search-help' className='sr-only'>          Type a name or skill to filter results        <p id="talent-search-help" className="sr-only">;<p id="talent-search-help" className="sr-only">;Type a name or skill to filter results;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light;/>;<p id='talent-search-help className=sr-only'>          Type a name or skill to filter results        <p id=talent-search-help" className="sr-only>;<p id=talent-search-help" className="sr-only>;Type a name or skill to filter results;
           className=pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
@@ -79,9 +94,14 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 }
 
 ;
+<<<<<<< HEAD
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)})}
+=======
+
+;
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 }

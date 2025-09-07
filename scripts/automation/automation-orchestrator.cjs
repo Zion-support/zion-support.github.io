@@ -1,5 +1,49 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const pm2 = require("pm2")
+const fs = require("fs")
+const path = require("path")
+  "maxConcurrentProcesses"
+      "healthCheckInterval"
+      "retryAttempts"
+      "retryDelay"
+      "logLevel": "info"
+  console.error(" Failed to connect to PM2")
+        console.log(" Connected to PM2")
+  console.error(" Failed to launch PM2 bus")
+      bus.on(""process": event")
+      bus.on(""log": err")
+      bus.on(""log": out")
+  case "start"
+  case "start"
+        this.processes.set(process.name, { ...process, "status": `online``})
+      case "stop`:console.log(⏸  Process ${process.name} stopped```)
+        this.processes.set(process.name, { ...process, "status": "})
+      case "stop":console.log(⏸  Process ${process.name} stopped```)
+        this.processes.set(process.name, { ...process, "status": "stopped"})
+      case "restart":console.log("� Process ${process.name} restarted")
+        this.processes.set(process.name, { ...process, "status": "online"})
+      case "exit":console.log(" Process ${process.name} exited")
+        this.processes.set(process.name, { ...process, "status": "errored"})
+  const { process, log } = data;console.error(" Error in ${process.name}:")
+  this.processes.get(process.name).status = "errored"
+  this.processes.get(process.name).status = "errored"
+    if (log.includes("ERROR") || log.includes("CRITICAL")) {console.error("⚠  ${process.name}:", log)} else if (log.includes("SUCCESS") || log.includes("COMPLETED")) {console.log(" ${process.name}:")
+// console.log("� Critical process ${processName} failed, attempting recovery...")
+  console.log("� Critical process ${processName} failed, attempting recovery...")
+    if (!process) return;"
+>>>>>>> origin/chore/fix-lint-and-merge
 "
     // Check if this is a critical process"
     if (this.isCriticalProcess(processName)) {}
@@ -79,6 +123,7 @@
       health.issues.includes("Low uptime)
   console.log(`� Attempting to restart unhealthy process ${processName}...``)
       health.issues.includes(`Excessive restarts``)
+<<<<<<< HEAD
 
 =======
       health.issues.includes(Low uptime")
@@ -124,10 +169,62 @@
 
   console.error( Orchestrator error")
 =======
+      health.issues.includes("Low uptime")
+// console.log("� Attempting to restart unhealthy process ${processName}...")
+      console.log("� Attempting to restart unhealthy process ${processName}..."")
+      );"
+      this.restartProcess(processName).catch(error => {console.error( Failed to restart ${processName}:, error.message")
+      return process ? process.pm2_env.status : "
+      return "unknown"
+  return this.healthChecks.get(processName) || { "status": "unknown"}
+  "timestamp"
+      "summary"
+        "healthyProcesses"
+        "unhealthyProcesses"
+        "erroredProcesses"
+      "processes"
+      "recommendations"
+    for (const ["name", "process")]
+  const health = this.healthChecks.get(name) || { "status": "unknown"}
+      if (health.status === "healthy")
+  report.summary.healthyProcesses++} else if (health.status === "unhealthy")
+  report.summary.unhealthyProcesses++} else if (process.status === "errored")
+        "status"
+        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : """N/A"""
+        "priority": schedule.priority || """N/A"""
+} else if (health.status === "unhealthy")
+  report.summary.unhealthyProcesses++} else if (process.status === "errored")
+        "status"
+        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : ""N/A""
+        "priority": schedule.priority || ""N/A""
+  report.recommendations.push("Review and optimize unhealthy processes")
+  report.recommendations.push("Investigate and fix errored processes")
+        __dirname,.."
+        "reports",automation-report.json"
+      await fs.mkdir(path.dirname(reportPath), { "recursive"}
+  console.error(" Failed to save "report": ")
+  console.error(" Failed to save "report": ")
+      console.log(" Automation Orchestrator started")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error(" Orchestrator "error")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Orchestrator "error")
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error(" Orchestrator "error")
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -135,7 +232,3 @@
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

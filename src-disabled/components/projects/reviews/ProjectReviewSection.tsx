@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/projects/reviews/ProjectReviewSection.tsx
 import { Project  } from '@/types/projects';
 import { useState } from "react",
@@ -48,6 +49,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     : clientProfile?.full_name |'Client'
   const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview
   const hasLeftReview = userReview != null
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 
   const { user } = useAuth(),
@@ -103,13 +106,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       </CardHeader>
 
       <CardContent>
-:src/components/projects/reviews/ProjectReviewSection.tsx
-        {isCompleted ? (
-          <div className='space-y-6'>
-            {(isClient |isTalent) && (
-              <div className='border-b pb-4 mb-4'>
-      <CardContent>
-        {isCompleted ? (
         {isCompleted ? ("
           <div className="space-y-6">
             {(isClient || isTalent) && ("
@@ -120,13 +116,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     <p className="text-sm text-muted-foreground mb-3">
                       Your review is {userReview.status === "approved" ? "published" : "pending approval"}
                     </p>
-:src/components/projects/reviews/ProjectReviewSection.tsx
-                    {userReview.status === 'pending' && (
-                      <Button
-                        variant='outline'
-                        onClick={() => setIsReviewModalOpen(true)}
-                      >                        Edit Review
-                      </Button>
 
                     {userReview.status === "pending" && (
 
@@ -222,22 +211,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                 ) : null}
               </div>
             )}
-:src/components/projects/reviews/ProjectReviewSection.tsx
-            <ReviewsList
-              reviews = {reviews,}
-              isLoading = {isLoading,}
-              onReportReview = {reportReview,}
-            />
-          </div>
-        ) : (
-          <div className="bg-muted/20 rounded-lg p-6 text-center">
-            <h3 className="font-medium mb-2">Reviews will be available once the project is completed</h3>
-            <p className="text-sm text-muted-foreground">
-              After the project is marked as completed, both parties will be able to leave reviews
-            </p>
-          </div>
-        )}
-      </CardContent>
 
               reviews = {reviews,}
               isLoading = {isLoading,}
@@ -253,10 +226,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
           onClose = {(,) => setIsReviewModalOpen(false),}
 
       )}
-:src/components/projects/reviews/ProjectReviewSection.tsx
-    </Card>
-  )
-}
 
     </Card>;
   );

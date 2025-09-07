@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface SpaceMetaverseService {
 export interface SpaceMetaverseService {
   id: string;
@@ -11,6 +12,11 @@ export interface SpaceMetaverseService {;
   id: string;
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/chore/fix-lint-and-merge
   name: string;
 
 ;
@@ -25,6 +31,7 @@ id: string;name: string;
     yearly: number;
     currency: string;
     trialDays: number;
+<<<<<<< HEAD
     setupTime: string;enterprise: string;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -545,9 +552,40 @@ export interface SpaceMetaverseService  {"id": string,"name": string,"tagline": 
     "reviews": 1400;
   }
 ];
+=======
+    setupTime: string;
+>>>>>>> origin/chore/fix-lint-and-merge
 
+    enterprise: string
+  },
 
-export interface SpaceMetaverseService {
+  features: string[];
+    trialDays: number;}
+    setupTime: string;enterprise: string;}
+  },features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  marketPosition: string;
+  competitors: string[];
+  techStack: string[];
+  realImplementation: boolean;
+  implementationDetails: string;
+  roi: string;
+  useCases: string[];
+  integrations: string[];
+  support: string;
+  compliance: string[];
+  link: string;
+  icon: string;
+  color: string;
+  popular: boolean;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+  // TODO: Implement
 }
 export interface SpaceMetaverseService {;
   id: string;,
@@ -562,6 +600,7 @@ export interface SpaceMetaverseService {;
   trialDays: number;
     setupTime: string;
 
+<<<<<<< HEAD
 
   {}
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms',
@@ -578,10 +617,13 @@ export interface SpaceMetaverseService {;
       'Educational simulations''
       'Brand experiences''
       'Social virtual worlds''
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     ],
     realImplementation: true,
 
     implementationDetails:
+<<<<<<< HEAD
       'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.
     roi: Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.'
     useCases: [
@@ -714,6 +756,21 @@ export interface SpaceMetaverseService {;
     integrations: [
       'VR headsets, AR devices, Blockchain wallets, Payment processors'
     ]
+=======
+      'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.'
+    roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.'
+    useCases: [
+      'Virtual reality games'
+      'Virtual events and conferences'
+      'Virtual real estate'
+      'Educational simulations'
+      'Brand experiences'
+      'Social virtual worlds'
+    ]
+    integrations: [
+      'VR headsets, AR devices, Blockchain wallets, Payment processors'
+    ]
+>>>>>>> origin/chore/fix-lint-and-merge
     support:
 
       '24/7 technical support, development consulting, custom development, and dedicated success manager.',
@@ -722,7 +779,11 @@ export interface SpaceMetaverseService {;
     id: 'metaverse - development - platform',
     name: 'Metaverse Development Platform',
     tagline: 'Build immersive virtual worlds with AI - powered tools',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive virtual worlds with AI - powered tools and blockchain integration.',
     category: 'Metaverse & Virtual Reality',
     price: {
@@ -780,6 +841,7 @@ export interface SpaceMetaverseService {;
       'Brand experiences',
       'Social virtual worlds',
     ],
+<<<<<<< HEAD
     integrations: [;
       'VR headsets, AR devices, Blockchain wallets, Payment processors',
     ],
@@ -1481,6 +1543,9 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     integrations: [;
       'VR headsets, AR devices, Blockchain wallets, Payment processors',
     ],
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     support:;
       '24 / 7 technical support, development consulting, custom development, and dedicated success manager.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
@@ -1489,6 +1554,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     icon: '🌐',
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
@@ -1610,12 +1676,112 @@ pr-12325
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    color: 'from - purple - 500 to - pink - 600',
+    popular: true,'
+    launch_date: '2024 - 01 - 15',
+
+    customers: 3200,
+    rating: 4 && 4.7,
+    reviews: 2400,
+  },
+
+      'International space law, Government security requirements, Industry standards',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-space-communications-network',
+    id: 'quantum - space - communications - network',
+    name: 'Quantum Space Communications Network',
+    tagline: 'Ultra - secure space communications with quantum entanglement',
+    description:
+      'Breakthrough quantum communications network that enables ultra - secure, high - speed communications between Earth, satellites, and space stations using quantum entanglement.',
+    category: 'Quantum Space Communications',
+    price: {
+      monthly: 1299,
+      yearly: 12990,
+      currency: 'USD',
+      trial_days: 30,
+      setup_time: '4 - 6 weeks',
+      enterprise: 'Custom pricing',
+    },
+    features: [;
+      'Quantum entanglement communications',
+      'Satellite quantum networks',
+      'Ground station integration',
+      'Real - time quantum key distribution',
+      'Multi - node quantum routing',
+      'Advanced quantum protocols',
+      'Network monitoring',
+      'Security analytics',
+      'API for space agencies',
+      'Custom quantum protocols',
+    ],
+    benefits: [;
+      'Enable unbreakable space communications',
+      'Improve communication reliability',
+      'Reduce communication latency',
+      'Enhance space mission security',
+      'Enable quantum internet in space',
+    ],
+    target_audience: [;
+      'Space agencies',
+      'Satellite companies',
+      'Military organizations',
+      'Research institutions',
+      'Space tourism companies',
+      'Critical infrastructure',
+    ],
+    market_position:;
+      'First - to - market quantum space communications network. No direct competitors in quantum space communications. Traditional competitors: Classical space communications providers. Our advantage: Quantum entanglement security.',
+    competitors: [;
+      'Classical space communications, Satellite communications companies',
+    ],
+    tech_stack: [;
+      'Quantum hardware, Quantum protocols, Python, C++, Custom quantum software',
+    ],
+    real_implementation: true,
+    implementation_details:;
+      'Production - ready quantum space communications network with quantum hardware, satellite integration, and comprehensive monitoring. Includes quantum network management tools.',
+    roi: 'Space organizations achieve unlimited ROI through unbreakable communications and enhanced mission security.',
+    use_cases: [;
+      'Satellite communications',
+      'Space station communications',
+      'Deep space missions',
+      'Military space operations',
+      'Research collaborations',
+      'Space tourism communications',
+    ],
+    integrations: [;
+      'Satellite systems, Ground stations, Space agencies, Custom space systems',
+    ],
+    support:;
+      'Quantum experts, space technology consulting, custom protocol development, and 24 / 7 technical support.',
+    compliance: [;
+      'International space law, Government security requirements, Industry standards',
+    ],
+    link: 'https://ziontechgroup.com / quantum - space - communications - network',
+
+    icon: '🛰️',
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    color: 'from - indigo - 500 to - purple - 600',
+    popular: true,'
+    launch_date: '2024 - 03 - 01',
+
+    customers: 85,
+    rating: 4 && 4.9,
+    reviews: 65,
+  },
+>>>>>>> origin/chore/fix-lint-and-merge
 
       'Prevent 99 && 99.9% of space collisions',
     id: 'ai - powered - space - traffic - management',
     name: 'AI - Powered Space Traffic Management Platform',
     tagline: 'Intelligent space traffic control with collision prevention',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Advanced AI platform that monitors, predicts, and manages space traffic to prevent collisions, optimize orbital paths, and ensure safe space operations.',
     category: 'Space Traffic Management & Safety',
     price: {
@@ -1642,23 +1808,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Prevent 99.9% of space collisions',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 pr-12325
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       'Optimize orbital efficiency',
       'Reduce space debris',
       'Improve mission safety',
       'Ensure regulatory compliance',
     ],
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       'Leading AI-powered space traffic management platform. Competes with LeoLabs ($500-2000/month), Space-Track (free), and commercial space monitoring services. Our advantage: AI intelligence and automated collision prevention.',
     competitors: ['LeoLabs, Space-Track, Commercial space monitoring services'],
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
     implementationDetails:
       'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.'
   {}
@@ -1671,6 +1845,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     "implementationDetails":
       'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.''
+=======
+
+    implementationDetails:
+      'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.'
+
+>>>>>>> origin/chore/fix-lint-and-merge
     roi: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.'
     useCases: ['
       'Satellite collision avoidance''
@@ -1678,13 +1858,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Orbital path optimization''
       'Mission planning''
       'Regulatory compliance''
-      'Insurance risk assessment''
+      'Insurance risk assessment'
     ]
-    "integrations": [
-      'Space agencies, Satellite operators, Ground stations, Custom space systems''
+    integrations: ['
+      'Space agencies, Satellite operators, Ground stations, Custom space systems'
     ]
     support:'
       '24/7 technical support, space safety consulting, custom development, and dedicated success manager.'
+<<<<<<< HEAD
     compliance: [
     implementationDetails:
       'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.'
@@ -1819,6 +2000,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Virtual Reality Enterprise Platform',
     tagline: 'Transform business operations with immersive VR solutions',
     description: 'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.',
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       'International space law, Government regulations, Industry safety standards',
     ],
@@ -1863,6 +2046,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - green - 500 to - emerald - 600',
     popular: true,'
     launch_date: '2024 - 02 - 15',
+<<<<<<< HEAD
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
       'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.
@@ -1907,11 +2091,17 @@ pr-12325
   color: 'from - green - 500 to - emerald - 600','
     popular: true,'
     launch_date: '2024 - 02 - 15','
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 420,
     rating: 4 && 4.8,
     reviews: 320,
   },
+<<<<<<< HEAD
   {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       'Leading enterprise VR platform. Competes with Pico ($299-599), Meta Quest Pro ($999), and HTC Vive ($699-1399). Our advantage: Enterprise-focused features and comprehensive solutions.',
     competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap'],
@@ -1919,11 +2109,18 @@ pr-12325
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
     implementationDetails:
       'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
   {}
     implementationDetails:'
       'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.''
+=======
+
+    implementationDetails:
+      'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
+
+>>>>>>> origin/chore/fix-lint-and-merge
     roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.'
     useCases: ['
       'Employee training''
@@ -1931,34 +2128,34 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Product design review''
       'Safety training''
       'Remote collaboration''
-      'Customer presentations''
+      'Customer presentations'
     ]
-    "integrations": [
-      'HR systems, Learning management systems, Project management tools, Custom enterprise systems''
+    integrations: ['
+      'HR systems, Learning management systems, Project management tools, Custom enterprise systems'
     ]
-    "support":
-      '24/7 technical support, implementation consulting, custom development, and dedicated success manager.''
-    "compliance": [
-      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards''
-    ]
+    support:'
+      '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
+    compliance: []
+'
+      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
+    ],'
 ];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations''
-    "link": '"https"://ziontechgroup && ziontechgroup.com/virtual-reality-enterprise-platform','
-    "id": 'virtual - reality - enterprise - platform','
-    "name": 'Virtual Reality Enterprise Platform','
-    "tagline": 'Transform business operations with immersive VR solutions','
-    "description":;
+    link: 'https://ziontechgroup && ziontechgroup.com/virtual-reality-enterprise-platform','
+    id: 'virtual - reality - enterprise - platform','
+    name: 'Virtual Reality Enterprise Platform','
+    tagline: 'Transform business operations with immersive VR solutions',
+    description:'
       'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.','
-    "category": 'Enterprise VR & Immersive Technology','
-    "price": {
-      }
-      "monthly": 199,
-      "yearly": 1990,
-      "currency": 'USD','
-      "trial_days": 14,
-      "setup_time": '1 - 2 weeks','
-      "enterprise": 'Custom pricing''
+    category: 'Enterprise VR & Immersive Technology',
+    price: {}
+      monthly: 199,
+      yearly: 1990,'
+      currency: 'USD',
+      trial_days: 14,'
+      setup_time: '1 - 2 weeks','
+      enterprise: 'Custom pricing',
     },
-    "features": [;
+    features: [;'
       'VR training simulations','
       'Virtual collaboration spaces','
       '3D visualization tools','
@@ -1968,41 +2165,41 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Mobile VR support','
       'API for integration','
       'Content management system','
-      'Enterprise security features''
+      'Enterprise security features',
     ],
-    "benefits": [;
+    benefits: [;'
       'Improve training effectiveness by 300%','
       'Reduce training costs by 60%','
       'Enhance collaboration','
       'Improve decision making','
-      'Increase employee engagement''
+      'Increase employee engagement',
     ],
-    "target_audience": [;
+    target_audience: [;'
       'Manufacturing companies','
       'Healthcare organizations','
       'Educational institutions','
       'Training companies','
       'Real estate companies','
-      'Architecture firms''
+      'Architecture firms',
     ],
-    "market_position":;
-      'Leading enterprise VR platform. Competes with Pico ($299 - 599), Meta Quest Pro ($999), and HTC Vive ($699 - 1399). Our "advantage": Enterprise - focused features and comprehensive solutions.','
-    "competitors": ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap'],'
-    "tech_stack": ['Unity, Unreal Engine, React, Node.js, PostgreSQL, Redis'],'
-    "real_implementation": true,
-    "implementation_details":;
+    market_position:;'
+      'Leading enterprise VR platform. Competes with Pico ($299 - 599), Meta Quest Pro ($999), and HTC Vive ($699 - 1399). Our advantage: Enterprise - focused features and comprehensive solutions.','
+    competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap'],'
+    tech_stack: ['Unity, Unreal Engine, React, Node.js, PostgreSQL, Redis'],
+    real_implementation: true,
+    implementation_details:;'
       'Production - ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.','
-    "roi": 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.','
-    "use_cases": [;
+    roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.',
+    use_cases: [;'
       'Employee training','
       'Virtual meetings','
       'Product design review','
       'Safety training','
       'Remote collaboration','
-      'Customer presentations''
+      'Customer presentations',
     ],
-    "integrations": [;
-      'HR systems, Learning management systems, Project management tools, Custom enterprise systems''
+    integrations: [;'
+      'HR systems, Learning management systems, Project management tools, Custom enterprise systems',
     ],
     support:;'
       '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
@@ -2014,6 +2211,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: '🥽','
     color: 'from - orange - 500 to - red - 600',
     popular: true,'
+<<<<<<< HEAD
     implementationDetails:
       'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
     roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.'
@@ -2130,6 +2328,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
     reviews: 1400
   }
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     launch_date: '2024 - 01 - 20',
     customers: 1800,
     rating: 4 && 4.7,
@@ -2155,6 +2356,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   icon: string, color: string,
   popular: boolean, launchDate: string,
   customers: number, rating: number,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   reviews: number
 }
 
@@ -2375,12 +2580,16 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
       'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     ];
 '
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];
 '
     icon: '🥽';
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ];
@@ -2391,11 +2600,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     color: 'from - orange - 500 to - red - 600';
     popular: true;'
     launch_date: '2024 - 01 - 20';
     customers: 1800;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     rating: 4.7,
     reviews: 1400;
   }
@@ -2403,16 +2618,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 1400;
   }
 
+<<<<<<< HEAD
 
 ;
 
 
     reviews: 1400
+=======
+;
+
+>>>>>>> origin/chore/fix-lint-and-merge
     rating: 4.7,
     reviews: 1400;
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 export interface SpaceMetaverseService {;
 
   }
@@ -2425,6 +2648,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 export interface SpaceMetaverseService {;
 
+<<<<<<< HEAD
     rating: 4.7,
     reviews: 1400;
     },features: [;
@@ -3602,10 +3826,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
   }
 ];
 export interface SpaceMetaverseService {;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
 ;
@@ -3613,6 +3840,9 @@ export interface SpaceMetaverseService {;
 
   }
 ];
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   id: string,;
   name: string,;
   tagline: string,;
@@ -3620,6 +3850,7 @@ export interface SpaceMetaverseService {;
   category: string,;
   price: {;
     monthly: number,;
+<<<<<<< HEAD
     yearly: number,;
     currency: string,;
     trialDays: number,;
@@ -3627,30 +3858,34 @@ export interface SpaceMetaverseService {;
     enterprise: string;
     setupTime: string,;
     enterprise: string;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   },;
-  "features": string[],;
-  "benefits": string[],;
-  "targetAudience": string[],;
-  "marketPosition": string,;
-  "competitors": string[],;
-  "techStack": string[],;
-  "realImplementation": boolean,;
-  "implementationDetails": string,;
-  "roi": string,;
-  "useCases": string[],;
-  "integrations": string[],;
-  "support": string,;
-  "compliance": string[],;
-  "link": string,;
-  "icon": string,;
-  "color": string,;
-  "popular": boolean,;
-  "launchDate": string,;
-  "customers": number,;
-  "rating": number,;
-  "reviews": number;
+  features: string[],;
+  benefits: string[],;
+  targetAudience: string[],;
+  marketPosition: string,;
+  competitors: string[],;
+  techStack: string[],;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  roi: string,;
+  useCases: string[],;
+  integrations: string[],;
+  support: string,;
+  compliance: string[],;
+  link: string,;
+  icon: string,;
+  color: string,;
+  popular: boolean,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
 }
 ;
+<<<<<<< HEAD
 export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
   {;'
     id: 'ai-powered-space-resource-intelligence',;'
@@ -3693,10 +3928,14 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     color: 'from-blue-500 to-indigo-600',;
     popular: true,;'
     launchDate: '2024-02-01',;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 180,;
     rating: 4.9,;
     reviews: 120;
   },;
+<<<<<<< HEAD
   {;'
     id: 'metaverse-development-platform',;'
     name: 'Metaverse Development Platform',;'
@@ -3738,10 +3977,14 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     color: 'from-purple-500 to-pink-600',;
     popular: true,;'
     launchDate: '2024-01-15',;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 3200,;
     rating: 4.7,;
     reviews: 2400;
   },;
+<<<<<<< HEAD
   {;'
     id: 'quantum-space-communications-network',;'
     name: 'Quantum Space Communications Network',;'
@@ -3783,10 +4026,14 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     color: 'from-indigo-500 to-purple-600',;
     popular: true,;'
     launchDate: '2024-03-01',;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 85,;
     rating: 4.9,;
     reviews: 65;
   },;
+<<<<<<< HEAD
   {;'
     id: 'ai-powered-space-traffic-management',;'
     name: 'AI-Powered Space Traffic Management Platform',;'
@@ -3828,10 +4075,14 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     color: 'from-green-500 to-emerald-600',;
     popular: true,;'
     launchDate: '2024-02-15',;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 420,;
     rating: 4.8,;
     reviews: 320;
   },;
+<<<<<<< HEAD
   {;'
     id: 'virtual-reality-enterprise-platform',;'
     name: 'Virtual Reality Enterprise Platform',;'
@@ -3872,17 +4123,24 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     icon: '🥽',;'
     color: 'from-orange-500 to-red-600',;
     popular: true,;'
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     launchDate: '2024-01-20',;
     customers: 1800,;
     rating: 4.7,;
     reviews: 1400;
+<<<<<<< HEAD
     rating: 4.7,
     reviews: 1400;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
+<<<<<<< HEAD
 
 
 
@@ -3967,11 +4225,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
     rating: 4.7;
+=======
+    rating: 4.7;
+
+>>>>>>> origin/chore/fix-lint-and-merge
     reviews: 1400
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
   }
 ];
     ],
@@ -4053,3 +4316,9 @@ pr-12325
 
 ];
 '
+=======
+    reviews: 1400;
+  }
+
+];
+>>>>>>> origin/chore/fix-lint-and-merge

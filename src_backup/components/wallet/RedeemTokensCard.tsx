@@ -1,21 +1,22 @@
 <div
                   key={option.id}
-                  className='flex justify-between items-center border-b pb-4';
-                >                  <div>;
-                    <h3 className='font-medium'>{option.title}</h3>;
-                    <p className='text-sm text-muted-foreground'>;
+                  className='flex justify-between items-center border-b pb-4'
+                >                  <div>
+                    <h3 className='font-medium'>{option.title}</h3>
+                    <p className='text-sm text-muted-foreground'>
                       {option.description}
-                    </p>;
-                  </div>;
-                  <div className='flex flex-col items-end gap-1'>;
-                    <span className='text-sm font-bold'>;
-                      {option.cost} ZION$;
-                    </span>;
-                    <Button;
-                      size='sm';
-                      variant={wallet && wallet.balance >= option.cost;
-                          ? 'default';
-                          : 'outline';
+                    </p>
+                  </div>
+                  <div className='flex flex-col items-end gap-1'>
+                    <span className='text-sm font-bold'>
+                      {option.cost} ZION$
+                    </span>
+                    <Button
+                      size='sm'
+                      variant={
+                        wallet && wallet.balance >= option.cost
+                          ? 'default'
+                          : 'outline'
                       }
 
                     </Button>

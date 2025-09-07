@@ -1,11 +1,32 @@
+<<<<<<< HEAD
 
 #!/"usr/bin/env" node;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env"" node;
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node
+=======
 #!/usr/bin/env node;"
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require(fs");
 const path = require("path);
 const { execSync } = require(child_process");"
+=======
+#!/usr/bin/env node"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");"
+>>>>>>> origin/chore/fix-lint-and-merge
 class $1 {
   // TODO: Implement
 }
@@ -370,9 +391,23 @@ if (require.main === module) {
   monitor.run().catch(error => {)
 
     process.exit(1)})}
+<<<<<<< HEAD
 
 =======
 
+=======
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+module.exports = TypeScriptErrorMonitor
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = TypeScriptErrorMonitor
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -381,12 +416,18 @@ module.exports = TypeScriptErrorMonitor
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+<<<<<<< HEAD
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 module.exports = TypeScriptErrorMonitor
 
 module.exports = TypeScriptErrorMonitor
 
 
+=======
+module.exports = TypeScriptErrorMonitor
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -11,6 +12,22 @@ const { execSync, spawn } = require("child_process)
       testing": { status: "idle, lastRun": null, "testsPassed}
       deployment": { status: "idle, lastRun": null, "deployments}
   const dirs = [logs", "automation, reports"]
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+    this.logFile = path.join(this.projectRoot, "logs", "master-automation.log")
+    this.dashboardFile = path.join(this.projectRoot, "logs", "automation-dashboard.json")
+  "errorFixer": { status: "idle", "lastRun": null, "errorsFixed"}
+      "performanceMonitor": { status: "idle", "lastRun": null, "optimizations"}
+      "securityScanner": { status: "idle", "lastRun": null, "vulnerabilities"}
+      "codeQuality": { status: "idle", "lastRun": null, "improvements"}
+      "testing": { status: "idle", "lastRun": null, "testsPassed"}
+      "deployment": { status: "idle", "lastRun": null, "deployments"}
+  const dirs = ["logs", "automation", "reports"]
+>>>>>>> origin/chore/fix-lint-and-merge
   const dirPath = path.join(this.projectRoot, ")
   fs.mkdirSync(dirPath, { recursive"})
   fs.mkdirSync(dirPath, { "recursive})
@@ -128,4 +145,20 @@ const { execSync, spawn } = require("child_process)
   process.on("SIGINT)
   console.log(\n� Received SIGINT, shutting down gracefully...")
   process.on("SIGTERM")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.log(")
+  console.log(")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

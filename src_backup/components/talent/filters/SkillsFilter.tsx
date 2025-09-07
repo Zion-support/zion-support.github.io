@@ -20,6 +20,7 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
       {expanded && (
         <div className=mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp  } from 'lucide-react;
 import { Button } from "@/components/ui/button,import { Checkbox  } from @/components/ui/checkbox';
 import { SkillsFilterProps  } from '@/types/filters;
@@ -85,6 +86,9 @@ import { SkillsFilterProps   } from @/types / filters';
   Security";
 ];<Checkbox;
             <div key={skill} className="flex items-center>
+=======
+            <div key={skill} className="flex items-center">
+>>>>>>> origin/chore/fix-lint-and-merge
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills.includes(skill)}
@@ -132,6 +136,7 @@ className=border-zion-slate-light data-[state=checked]:bg-zion-purple data-[stat
 
     </div>;
   );
+<<<<<<< HEAD
                 onCheckedChange={() => toggleSkill(skill)}{skill}
               ">;
                 {skill}
@@ -166,6 +171,8 @@ export /**;
                 onCheckedChange={() => toggle_skill (skill)}
                 className=border - zion - slate - light data-[state = checked]:bg - zion - purple data-[state = checked]:border - zion - purple'              />;
               <label;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }
 
@@ -178,8 +185,10 @@ export /**;
               </label>;
             </div>))}
         </div>)}
-    </div>)}
-        </div>;
+    </div>);
+}
+        </div>
+
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {skill}
@@ -192,3 +201,8 @@ export /**;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+;
+>>>>>>> origin/chore/fix-lint-and-merge

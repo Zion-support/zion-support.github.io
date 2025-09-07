@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Stub talent data - placeholder for missing functionality;
 export const TALENT_PROFILES = [;
@@ -34,11 +35,15 @@ id: '1',
     slug: 'sample-talent',
 origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Sample Talent',
+=======
+name: 'Sample Talent',
+>>>>>>> origin/chore/fix-lint-and-merge
     title: 'Full Stack Developer',
     category: 'Development',
     location: 'Remote',
     timezone: 'UTC',
     region: 'Global',
+<<<<<<< HEAD
     skills: ['React', 'Node && Node.js', 'TypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
@@ -54,8 +59,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export const TALENT_PROFILES = [;
 
   {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
+// Stub talent data - placeholder for missing functionality;
+export const TALENT_PROFILES = [;
 
+<<<<<<< HEAD
 
     rating: 0
     rating: 0
@@ -165,3 +175,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+  {
+>>>>>>> origin/chore/fix-lint-and-merge

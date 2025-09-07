@@ -1,7 +1,22 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const { execSync } = require("child_process)
 const fs = require(fs")
 const path = require("path)
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+console.log(""🤖 Starting intelligent error fixer...")
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+// console.log(""🤖 Starting intelligent error fixer...")
+  console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}
+// console.log(`" Fixing missing dependencies..."`)
+>>>>>>> origin/chore/fix-lint-and-merge
 console.log("🤖 Starting intelligent error fixer...")
 // console.log(🤖 Starting intelligent error fixer...")
   console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}
@@ -104,4 +119,20 @@ console.log(🤖 Starting intelligent error fixer...")
       execSync(command, { "stdio": pipe }
 });console.log(" "Completed: ${command})
       fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  const sourceDirs = ["src", "components", "pages"]
+  const sourceDirs = ["src", "components", "pages"]
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

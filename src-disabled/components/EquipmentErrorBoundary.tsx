@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent  } from '@/components/ui/card';
@@ -8,6 +9,9 @@ import { Card, CardContent  } from '@/components/ui/card;
 import {logErrorToProduction} from @/utils/productionLogger';
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface Props {
+=======
+interface Props {;
+>>>>>>> origin/chore/fix-lint-and-merge
   children: React.ReactNode;
 }
 
@@ -23,8 +27,11 @@ interface Props {
   children: React.ReactNode
 }
 interface State {
+<<<<<<< HEAD
   hasError: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   hasError: boolean
 
@@ -70,6 +77,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                   variant=default
 
                 >
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from @/components/ui/card;
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -105,6 +113,8 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
 
                 <Button onClick={() => window.location.reload()} variant="default>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   <RefreshCw className=h-4 w-4 mr-2" />
                   Try Again
@@ -195,10 +205,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </CardContent>
           </Card>
         </div>
+<<<<<<< HEAD
 
 
 
       )
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     return this.props.children
   }      )
@@ -207,6 +220,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 } ;
 
+<<<<<<< HEAD
 
 
 
@@ -293,6 +307,8 @@ interface Props  {children: React && React.ReactNode;
       )return this.props.children;
   }      )}return this.props.children;
   }}}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
                   onClick={() => window && window.location.reload()}
@@ -300,9 +316,16 @@ interface Props  {children: React && React.ReactNode;
                 >                  Refresh Page;
                 <Button onClick={() => window && window.location.reload()} variant="default">;
               </p>;
+<<<<<<< HEAD
               <div className=flex gap-2 justify-center>;
                 <Button;
                   onClick={() => this && this.setState({ hasError: false, error: undefined })}variant="outline";
+=======
+              <div className="flex gap-2 justify-center">;
+                <Button
+                  onClick={() => this && this.setState({ hasError: false, error: undefined })} ;
+                  variant="outline";
+>>>>>>> origin/chore/fix-lint-and-merge
                 >;
                   <RefreshCw className=h-4 w-4 mr-2 />;
                   Try Again;
@@ -314,6 +337,7 @@ interface Props  {children: React && React.ReactNode;
             </CardContent>;
           </Card>;
         </div>;
+<<<<<<< HEAD
       )}return this && this.props.children;
   }      )}return this && this.props.children;
   }static getDerivedStateFromError (error: Error): State {return { has_error: true, error }
@@ -321,6 +345,8 @@ interface Props  {children: React && React.ReactNode;
   componentDidCatch (error: Error, error_info: React.ErrorInfo) {logErrorToProduction (Equipment page error:, error, { component_stack: error_info.component_stack })}
   render () {// Check condition;
 if ( {) {$2;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       );
     }
     return this && this.props.children;
@@ -338,7 +364,12 @@ if ( {) {$2;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       return (<div className=container py - 8>;
+=======
+      return (
+        <div className='container py - 8'>;
+>>>>>>> origin/chore/fix-lint-and-merge
           <Card className='border - red - 200 bg - red - 50'>;
             <CardContent className=p - 8 text - center>;
               <AlertTriangle className='mx - auto mb - 4 h - 12 w - 12 text - red - 600' />;
@@ -352,9 +383,16 @@ if ( {) {
               <div className=flex gap - 2 justify - center'>;
                 <Button;
                   on_click={() =>;
+<<<<<<< HEAD
                     this.set_state ({ has_error: false, error: undefined })}
                   variant='outline                >;
                   <RefreshCw className=h - 4 w - 4 mr - 2' />;
+=======
+                    this.set_state ({ has_error: false, error: undefined });
+                  }
+                  variant='outline'                >;
+                  <RefreshCw className='h - 4 w - 4 mr - 2' />;
+>>>>>>> origin/chore/fix-lint-and-merge
                   Try Again;
                 </Button>;
                 <Button;
@@ -377,8 +415,10 @@ if ( {) {
               </div>;
             </CardContent>;
           </Card>;
-        </div>)}
+        </div>);
+    }
     return this.props.children;
+<<<<<<< HEAD
   }      );
   });
     }
@@ -388,6 +428,10 @@ if ( {) {
 } ;
 }
 
+=======
+  });
+    }
+>>>>>>> origin/chore/fix-lint-and-merge
 
     return this.props.children;
   }
@@ -398,9 +442,13 @@ if ( {) {
     }
 
     return this.props.children;
+<<<<<<< HEAD
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
   }      )}return this.props.children;
   }})}return this.props.children;
   }
   }
+=======
+  }
+>>>>>>> origin/chore/fix-lint-and-merge

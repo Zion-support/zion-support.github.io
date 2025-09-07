@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',
 export interface NextGenAIService2026 {
 import { ServiceVariant } from '../types/service-variants';
@@ -21,13 +22,25 @@ import { ServiceVariant } from '../types/service-variants';
 
 
 import { ServiceVariant } from '../types/service-variants;
+=======
+name: string;
+  tagline: string;
+  price: string;
+  period: string,
+
+import { ServiceVariant } from '../types/service-variants';
+>>>>>>> origin/chore/fix-lint-and-merge
 export interface NextGenAIService2026 {
 
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   period: string;
   period: string;,
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   description: string;
   features: string[];
   popular: boolean;
@@ -49,12 +62,16 @@ export interface NextGenAIService2026 {
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',
 export interface NextGenAIService2026 {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     website: string;
   }
   customers: number;
+<<<<<<< HEAD
 import { ServiceVariant } from ../types/service-variants';'
 export interface NextGenAIService2026 {
   }
@@ -193,166 +210,101 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
   reviews: number;
     website: string;
   },real_implementation: boolean,implementation_details: string,launch_date: string,customers: number,rating: number,reviews: number;
+=======
+import { ServiceVariant } from '../types/service-variants';'
+export interface NextGenAIService2026 {
+
+  // TODO: Implement;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
-    "popular": true,"icon": '🧠💙',"color": 'from-blue-600 to-purple-700',"textColor": 'text-blue-400',"marketPosition":;'
-      'Competitive with Affectiva and Realeyes, but with more advanced multi-modal fusion and real-time processing capabilities.',"targetAudience":;'
-    "technology": [;
-      'TensorFlow','OpenCV','PyTorch','WebRTC','React','Node.js','PostgreSQL';'
-    ],'Customer sentiment analysis','Employee wellness monitoring','Mental health assessment','Educational engagement tracking';'
-    ],"roi": 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',"integrations": ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],"use_cases": ['Customer sentiment analysis_employee wellness monitoring_mental health assessment_educational engagement tracking'],"roi": 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',"competitors": ['AffectivaRealeyesEmotientNoldus'],"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
-}"website": '"https"://ziontechgroup.com';'
-  "website": '"https"://ziontechgroup.com';'
-},export const "nextGenAIServices2026": NextGenAIService2026[] = [;
-  {"description":;
-      'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.';'
-    }
-    "features": [;
-    "popular": true,"icon": '🧠💙',"color": 'from-blue-600 to-purple-700',"textColor": 'text-blue-400',    "integrations": ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],"use_cases": ['Customer sentiment analysis_employee wellness monitoring_mental health assessment_educational engagement tracking'],"roi": 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',"competitors": ['AffectivaRealeyesEmotientNoldus'],"growthRate": '150% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"launchDate": '2025-06-01',"customers": 45,"reviews": 89  },    "implementationDetails": 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',"launchDate": '2025-06-01',"customers": 45,"reviews": 89  },    "implementationDetails": 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',"launchDate": '2025-06-01',"customers": 45,"reviews": 89  },    "implementationDetails": 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',"launchDate": '2025-06-01',"customers": 45,"rating": 4.9,"reviews": 89;'
-  {"id": 'ai-predictive-maintenance-platform';'
-    }
-    "name": 'AI Predictive Maintenance Platform';'
-    "tagline": 'Predict equipment failures before they happen';'
-    "price": '$899';'
-    "period": '/month';'
-    "description":;
-      'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.';'
-    "features": [;
-      'Real-time sensor data monitoring';'
-      'Machine learning failure prediction models';'
-      'Predictive maintenance scheduling';'
-      'Equipment health scoring';'
-      'Anomaly detection algorithms';'
-      'Maintenance cost optimization';'
-      'Integration with CMMS systems';'
-      'Mobile app for field technicians';'
-      'Custom alerting and notifications';'
-      'Historical performance analytics'    ],    "description": 'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.';'
-  },"growth_rate": '150% annual growth',"variant": 'ai - futuristic',"contact_info": contact,"real_implementation": true,"implementation_details":;'
-      'Production - ready platform with real - time video / audio processing, emotion detection models, and comprehensive analytics dashboard.',"launch_date": '2025 - 06 - 01',"customers": 45,"rating": 4.9,"reviews": 89  },    "implementation_details": 'Production - ready platform with real - time video / audio processing, emotion detection models, and comprehensive analytics dashboard.',"launch_date": '2025 - 06 - 01',"customers": 45,"rating": 4.9,"reviews": 89;'
-  {"id": 'ai - predictive - maintenance - platform',"name": 'AI Predictive Maintenance Platform',"tagline": 'Predict equipment failures before they happen',"price": '$899',"period": '/month',"features": [;'
-      'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians';'
-      'Custom alerting and notificationsHistorical performance analytics';'
-    }
-    "targetAudience": 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Mining operations',"trialDays": 30,"setupTime": '1-2 weeks',"category": 'AI & Industrial IoT','Python','TensorFlow','Apache Kafka','InfluxDB','React','Node.js','Docker';'
-    ],'Equipment failure prediction','Maintenance optimization','Energy efficiency','Quality control';'
-      'Docker';'
-    ],"integrations": [;
-    "useCases": [      'Equipment failure prediction','Maintenance optimization','Energy efficiency','Quality control';'
-    ],"roi": 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',"integrations": ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],"use_cases": ['Equipment failure prediction_maintenance optimization_energy efficiency_quality control'],"roi": 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',"competitors": ['UptakeC3.aiPTCSiemens Mindsphere'],"growthRate": '120% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',"launchDate": '2025-03-15',"customers": 78,{"id": 'ai-content-personalization-engine';'
-    }
-    "name": 'AI Content Personalization Engine';'
-    "tagline": 'Deliver hyper-personalized content experiences';'
-    "price": '$599';'
-    "period": '/month';'
-    "description":;
-      'Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.';'
-    "features": [;
-      'Real-time user behavior tracking';'
-      'Dynamic content personalization';'
-      'A/B testing automation';'
-      'Multi-channel personalization';'
-      'Predictive user modeling';'
-      'Content performance optimization';'
-      'Personalization analytics dashboard';'
-      'API for content delivery';'
-      'GDPR-compliant data handling';'
-      'Custom personalization rules engine'    ],    "description": 'Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.';'
-  },"reviews": 156  },    "implementationDetails": 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',"launchDate": '2025-03-15',"customers": 78,"rating": 4.7,{"id": 'ai - content - personalization - engine',"name": 'AI Content Personalization Engine',"tagline": 'Deliver hyper - personalized content experiences',"price": '$599',"period": '/month',"popular": false,"icon": '🎯✨',"color": 'from-purple-600 to-pink-700',"textColor": 'text-purple-400',"period": '/month',    "marketPosition":;'
-      'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',"targetAudience":;'
-    }
-    "technology": [;
-      'Python','TensorFlow','Redis','PostgreSQL','React','Node.js','AWS Lambda';'
-    ],'Product recommendations','Content personalization','Email marketing','Website optimization';'
-      'AWS Lambda';'
-    ],"integrations": [;
-    "useCases": [      'Product recommendations','Content personalization','Email marketing','Website optimization';'
-    ],"roi": 'Average 35% increase in conversion rates and 40% improvement in user engagement.',"integrations": ['ShopifyWooCommerceWordPressHubSpotMailchimpCustom CMS'],"use_cases": ['Product recommendations_content personalization_email marketing_website optimization'],"roi": 'Average 35% increase in conversion rates and 40% improvement in user engagement.',"competitors": ['Dynamic YieldOptimizelyEvergageAdobe Target'],"growthRate": '140% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"launchDate": '2025-04-20',"customers": 92,"reviews": 203  },    "implementationDetails": 'Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.',"launchDate": '2025-04-20',"customers": 92,"reviews": 203  },    "implementationDetails": 'Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.',"launchDate": '2025-04-20',"customers": 92,"reviews": 203  },    "implementationDetails": 'Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.',"launchDate": '2025-04-20',"customers": 92,"rating": 4.6,"reviews": 203;'
-  {"id": 'ai-voice-cloning-platform';'
-    }
-    "name": 'AI Voice Cloning Platform';'
-    "tagline": 'Create natural-sounding voice clones for content creation';'
-    "price": '$399';'
-    "period": '/month';'
-    "description":;
-      'Professional voice cloning platform that creates high-quality, natural-sounding voice replicas for content creators, marketers, and businesses.';'
-    "features": [;
-      'High-quality voice cloning (5+ minutes of audio)';'
-      'Multiple voice styles and emotions';'
-      'Real-time voice synthesis';'
-      'Text-to-speech with cloned voices';'
-      'Voice customization controls';'
-      'Batch processing capabilities';'
-      'API for integration';'
-      'Voice library management';'
-      'Quality assurance tools';'
-      'Commercial usage rights'    ],    "description": 'Professional voice cloning platform that creates high-quality, natural-sounding voice replicas for content creators, marketers, and businesses.';'
-  },"growth_rate": '140% annual growth',"variant": 'ai - futuristic',"contact_info": contact,"real_implementation": true,"implementation_details":;'
-      'Production - ready personalization engine with real - time processing, comprehensive analytics, and easy integration capabilities.',"launch_date": '2025 - 04 - 20',"customers": 92,"rating": 4.6,"reviews": 203  },    "implementation_details": 'Production - ready personalization engine with real - time processing, comprehensive analytics, and easy integration capabilities.',"launch_date": '2025 - 04 - 20',"customers": 92,"rating": 4.6,"reviews": 203;'
-  {"id": 'ai - voice - cloning - platform',"name": 'AI Voice Cloning Platform',"tagline": 'Create natural - sounding voice clones for content creation',"price": '$399',"period": '/month',"popular": false,"icon": '🎤🎭',"color": 'from-orange-600 to-red-700',"textColor": 'text-orange-400',"marketPosition":;'
-      'Competitive with ElevenLabs and Play.ht, offering better pricing and more customization options.',"targetAudience":;'
-      'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',    "trialDays": 7,"setupTime": '1 day',"category": 'AI & Voice Technology',"targetAudience": 'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',"trialDays": 7,"setupTime": '1 day',"category": 'AI & Voice Technology',"realService": true,'Python',"technology": [      'Python','PyTorch','TensorFlow','React','Node.js','AWS Polly','Google Cloud TTS';'
-    ],'Google Cloud TTS';'
-    ],'Podcast production','Marketing videos','E-learning content','Audiobook narration';'
-    ],"roi": 'Average 60% reduction in voice recording costs and 3x faster content production.',"launchDate": '2025-02-10',"customers": 156,"reviews": 312  },    "implementationDetails": 'Professional-grade voice cloning platform with advanced AI models, comprehensive voice management, and easy integration.',"launchDate": '2025-02-10',"customers": 156,"rating": 4.8,"reviews": 312;'
-  {"id": 'ai - code - review - assistant',"name": 'AI Code Review Assistant',"tagline": 'Automate code reviews and improve code quality',"price": '$299',"period": '/month',"integrations": ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'],"use_cases": ['Code quality improvement_security auditing_performance optimization_team collaboration'],"roi": 'Average 40% reduction in code review time and 30% improvement in code quality scores.',"competitors": ['SonarQubeCodeClimateDeepCodeSnyk'],"growthRate": '110% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"customers": 203,"rating": 4 && 4.7,"reviews": 445;'
-  },"reviews": 445;
-  },"implementationDetails": 'Production-ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',"launchDate": '2025-01-25','Google Cloud TTS';'
-    ],"integrations": [;
-    "useCases": [      'Podcast production','Marketing videos','E-learning content','Audiobook narration';'
-    ],"roi": 'Average 60% reduction in voice recording costs and 3x faster content production.',    "launchDate": '2025-01-25',"customers": 203,"rating": 4 && 4.7,"reviews": 445;'
-  }];
-];
-];    "implementation_details": 'Production - ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',"launch_date": '2025 - 01 - 25',"customers": 203,"rating": 4.7,"reviews": 445;'
-  }"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709';'
-],"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709';'
-},export const "nextGenAIServices2026": NextGenAIService2026[] = [;
-  {"id": 'ai-emotional-intelligence-platform',"name": 'AI Emotional Intelligence Platform',"tagline": 'Understand and respond to human emotions in real-time',"price": '$1,299',"period": '/month',"description": 'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',"features": [;'
-    }
-    "popular": true,"icon": '🧠💙',"color": 'from-blue-600 to-purple-700',"textColor": 'text-blue-400',"link": '"https"://ziontechgroup.com/ai-emotional-intelligence',"targetAudience": 'Customer service platforms, HR tech companies, Mental health apps, E-learning platforms, Healthcare providers',"trialDays": 21,"setupTime": '2-3 days',"category": 'AI & Emotional Intelligence',"realService": true,"integrations": ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],"useCases": ['Customer sentiment analysisEmployee wellness monitoringMental health assessmentEducational engagement tracking'],"roi": 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',"competitors": ['AffectivaRealeyesEmotientNoldus'],"growthRate": '150% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',"launchDate": '2025-06-01',"customers": 45,"rating": 4.9,{"id": 'ai-predictive-maintenance-platform',"name": 'AI Predictive Maintenance Platform',"tagline": 'Predict equipment failures before they happen',"price": '$899',"period": '/month',"description": 'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',"features": [;'
-    }
-    "popular": true,"icon": '⚙️🔮',"color": 'from-green-600 to-teal-700',"textColor": 'text-green-400',"link": '"https"://ziontechgroup.com/ai-predictive-maintenance',"targetAudience": 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Mining operations',"trialDays": 30,"setupTime": '1-2 weeks',"category": 'AI & Industrial IoT',"realService": true,"integrations": ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],"useCases": ['Equipment failure predictionMaintenance optimizationEnergy efficiencyQuality control'],"roi": 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',"competitors": ['UptakeC3.aiPTCSiemens Mindsphere'],"growthRate": '120% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',"launchDate": '2025-03-15',"customers": 78,"rating": 4.7,{"id": 'ai-content-personalization-engine',"name": 'AI Content Personalization Engine',"tagline": 'Deliver hyper-personalized content experiences',"price": '$599',"period": '/month',"description": 'Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.',"features": [;'
-    }
-    "popular": false,"icon": '🎯✨',"color": 'from-purple-600 to-pink-700',"textColor": 'text-purple-400',"link": '"https"://ziontechgroup.com/ai-content-personalization',"targetAudience": 'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',"trialDays": 14,"setupTime": '3-5 days',"category": 'AI & Personalization',"realService": true,"integrations": ['ShopifyWooCommerceWordPressHubSpotMailchimpCustom CMS'],"useCases": ['Product recommendationsContent personalizationEmail marketingWebsite optimization'],"roi": 'Average 35% increase in conversion rates and 40% improvement in user engagement.',"competitors": ['Dynamic YieldOptimizelyEvergageAdobe Target'],"growthRate": '140% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.',"launchDate": '2025-04-20',"customers": 92,"rating": 4.6,{"id": 'ai-voice-cloning-platform',"name": 'AI Voice Cloning Platform',"tagline": 'Create natural-sounding voice clones for content creation',"price": '$399',"period": '/month',"description": 'Professional voice cloning platform that creates high-quality, natural-sounding voice replicas for content creators, marketers, and businesses.',"features": [;'
-    }
-    "popular": false,"icon": '🎤🎭',"color": 'from-orange-600 to-red-700',"textColor": 'text-orange-400',"link": '"https"://ziontechgroup.com/ai-voice-cloning',"targetAudience": 'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',"trialDays": 7,"setupTime": '1 day',"category": 'AI & Voice Technology',"realService": true,"integrations": ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],"useCases": ['Podcast productionMarketing videosE-learning contentAudiobook narration'],"roi": 'Average 60% reduction in voice recording costs and 3x faster content production.',"competitors": ['ElevenLabsPlay.htResemble AIDescript'],"growthRate": '180% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Professional-grade voice cloning platform with advanced AI models, comprehensive voice management, and easy integration.',"launchDate": '2025-02-10',"customers": 156,"rating": 4.8,{"id": 'ai-code-review-assistant',"name": 'AI Code Review Assistant',"tagline": 'Automate code reviews and improve code quality',"price": '$299',"period": '/month',"description": 'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',"features": [;'
-      'Automated code quality analysis','Security vulnerability detection','Performance optimization suggestions','Code style and best practices','Integration with Git platforms','Custom rule configuration','Team collaboration tools','Code review analytics','Pull request automation','Multi-language support'    ],    "description": 'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',"features": [;'
-      'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics','Pull request automationMulti-language support';'
-      'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics','Pull request automationMulti-language support';'
-    ],"popular": true,"icon": '💻🔍',"color": 'from-indigo-600 to-blue-700',"textColor": 'text-indigo-400',"link": '"https"://ziontechgroup.com/ai-code-review',"targetAudience": 'Software development teams, DevOps engineers, Code quality managers, Open source projects',"trialDays": 14,"setupTime": '2-3 days',"category": 'AI & Development',"realService": true,"link": '"https"://ziontechgroup.com/ai-code-review',    "technology": [;'
-      'Python','TensorFlow','React','Node.js','PostgreSQL','Redis','Docker';'
-    ],"integrations": [;
-      'GitHub','GitLab','Bitbucket','Azure DevOps','Slack','Jira','Teams';'
-    ],"useCases": [;
-      'Code quality improvement','Security auditing','Performance optimization','Team collaboration';'
-    ],"roi": 'Average 40% reduction in code review time and 30% improvement in code quality scores.',"competitors": ['SonarQube', 'CodeClimate', 'DeepCode', 'Snyk'],    "marketSize": '$5.4B code quality market',    "technology": ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],"technology": ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],"integrations": ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'],"use_cases": ['Code quality improvement_security auditing_performance optimization_team collaboration'],"roi": 'Average 40% reduction in code review time and 30% improvement in code quality scores.',"competitors": ['SonarQubeCodeClimateDeepCodeSnyk'],"growthRate": '110% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"customers": 203,"reviews": 445;'
-  },"launchDate": '2025-01-25',"customers": 203,"reviews": 445;'
-import { ServiceVariant } from '../types/service-variants',export interface NextGenAIService2026  {"id": string,"name": string,"tagline": string,"price": string,"period": string,,"description": string,"features": string[],"popular": boolean,"icon": string,"color": string,"textColor": string,"link": string,"marketPosition": string,"targetAudience": string,"trialDays": number,"setupTime": string,"category": string,"realService": boolean,"technology": string[],"integrations": string[],"useCases": string[],"roi": string,"competitors": string[],"marketSize": string,"growthRate": string,"variant": ServiceVariant,"contactInfo": {"mobile": string,"email": string,"address": string,"website": string;'
-  },"realImplementation": boolean,"implementationDetails": string,"launchDate": string,"customers": number,"rating": number,"reviews": number;
-}const contact = {"mobile": '+1 302 464 0950',"email": 'kleber@ziontechgroup.com',"address": '364 E Main St STE 1008 Middletown DE 19709',"website": '"https"://ziontechgroup.com';'
-},export const "nextGenAIServices2026": NextGenAIService2026[] = [;
-  {"id": 'ai-emotional-intelligence-platform',"name": 'AI Emotional Intelligence Platform',"tagline": 'Understand and respond to human emotions in real-time',"price": '$1,299',"period": '/month',,"description": 'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',"features": [;'
-      'Real-time emotion detection from video/audioSentiment analysis with emotional contextEmotional response recommendationsMulti-modal emotion fusion (facial, voice, text)Emotional intelligence training modulesCustom emotion models for specific industriesReal-time emotional analytics dashboardAPI for integration with existing systems','Privacy-compliant emotion processingEmotional intelligence scoring and reports';'
-    ],"popular": true,"icon": '🧠💙',"color": 'from-blue-600 to-purple-700',"textColor": 'text-blue-400',"link": '"https"://ziontechgroup.com/ai-emotional-intelligence',"marketPosition": 'Competitive with Affectiva and Realeyes, but with more advanced multi-modal fusion and real-time processing capabilities.',"targetAudience": 'Customer service platforms, HR tech companies, Mental health apps, E-learning platforms, Healthcare providers',"trialDays": 21,"setupTime": '2-3 days',"category": 'AI & Emotional Intelligence',"realService": true,"technology": ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],"integrations": ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],"useCases": ['Customer sentiment analysisEmployee wellness monitoringMental health assessmentEducational engagement tracking'],"roi": 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',"competitors": ['AffectivaRealeyesEmotientNoldus'],"marketSize": '$3.2B emotional AI market',"growthRate": '150% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',"launchDate": '2025-06-01',"customers": 45,"rating": 4.9,"reviews": 89;'
-  },{"id": 'ai-predictive-maintenance-platform',"name": 'AI Predictive Maintenance Platform',"tagline": 'Predict equipment failures before they happen',"price": '$899',"period": '/month',,"description": 'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',"features": [;'
-      'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians','Custom alerting and notificationsHistorical performance analytics';'
-    ],"popular": true,"icon": '⚙️🔮',"color": 'from-green-600 to-teal-700',"textColor": 'text-green-400',"link": '"https"://ziontechgroup.com/ai-predictive-maintenance',"marketPosition": 'Competitive with Uptake and C3.ai, offering more affordable pricing for mid-market manufacturers.',"targetAudience": 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Mining operations',"trialDays": 30,"setupTime": '1-2 weeks',"category": 'AI & Industrial IoT',"realService": true,"technology": ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],"integrations": ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],"useCases": ['Equipment failure predictionMaintenance optimizationEnergy efficiencyQuality control'],"roi": 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',"competitors": ['UptakeC3.aiPTCSiemens Mindsphere'],"marketSize": '$12.3B predictive maintenance market',"growthRate": '120% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',"launchDate": '2025-03-15',"customers": 78,"rating": 4.7,"reviews": 156;'
-  },{"id": 'ai-content-personalization-engine',"name": 'AI Content Personalization Engine',"tagline": 'Deliver hyper-personalized content experiences',"price": '$599',"period": '/month',,"description": 'Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.',"features": [;'
-      'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content delivery','GDPR-compliant data handlingCustom personalization rules engine';'
-    ],"popular": false,"icon": '🎯✨',"color": 'from-purple-600 to-pink-700',"textColor": 'text-purple-400',"link": '"https"://ziontechgroup.com/ai-content-personalization',"marketPosition": 'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',"targetAudience": 'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',"trialDays": 14,"setupTime": '3-5 days',"category": 'AI & Personalization',"realService": true,"technology": ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'],"integrations": ['ShopifyWooCommerceWordPressHubSpotMailchimpCustom CMS'],"useCases": ['Product recommendationsContent personalizationEmail marketingWebsite optimization'],"roi": 'Average 35% increase in conversion rates and 40% improvement in user engagement.',"competitors": ['Dynamic YieldOptimizelyEvergageAdobe Target'],"marketSize": '$8.7B personalization market',"growthRate": '140% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.',"launchDate": '2025-04-20',"customers": 92,"rating": 4.6,"reviews": 203;'
-  },{"id": 'ai-voice-cloning-platform',"name": 'AI Voice Cloning Platform',"tagline": 'Create natural-sounding voice clones for content creation',"price": '$399',"period": '/month',,"description": 'Professional voice cloning platform that creates high-quality, natural-sounding voice replicas for content creators, marketers, and businesses.',"features": [;'
-      'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library management','Quality assurance toolsCommercial usage rights';'
-    ],"popular": false,"icon": '🎤🎭',"color": 'from-orange-600 to-red-700',"textColor": 'text-orange-400',"link": '"https"://ziontechgroup.com/ai-voice-cloning',"marketPosition": 'Competitive with ElevenLabs and Play.ht, offering better pricing and more customization options.',"targetAudience": 'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',"trialDays": 7,"setupTime": '1 day',"category": 'AI & Voice Technology',"realService": true,"technology": ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],"integrations": ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],"useCases": ['Podcast productionMarketing videosE-learning contentAudiobook narration'],"roi": 'Average 60% reduction in voice recording costs and 3x faster content production.',"competitors": ['ElevenLabsPlay.htResemble AIDescript'],"marketSize": '$2.1B voice cloning market',"growthRate": '180% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Professional-grade voice cloning platform with advanced AI models, comprehensive voice management, and easy integration.',"launchDate": '2025-02-10',"customers": 156,"rating": 4.8,"reviews": 312;'
-  },{"id": 'ai-code-review-assistant',"name": 'AI Code Review Assistant',"tagline": 'Automate code reviews and improve code quality',"price": '$299',"period": '/month',,"description": 'Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.',"features": [;'
-      'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics','Pull request automationMulti-language support';'
-    ],"popular": true,"icon": '💻🔍',"color": 'from-indigo-600 to-blue-700',"textColor": 'text-indigo-400',"link": '"https"://ziontechgroup.com/ai-code-review',"marketPosition": 'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',"targetAudience": 'Software development teams, DevOps engineers, Code quality managers, Open source projects',"trialDays": 14,"setupTime": '2-3 days',"category": 'AI & Development',"realService": true,"technology": ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],"integrations": ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'],"useCases": ['Code quality improvementSecurity auditingPerformance optimizationTeam collaboration'],"roi": 'Average 40% reduction in code review time and 30% improvement in code quality scores.',"competitors": ['SonarQubeCodeClimateDeepCodeSnyk'],"marketSize": '$5.4B code quality market',"growthRate": '110% annual growth',"variant": 'ai-futuristic',"contactInfo": contact,"realImplementation": true,"implementationDetails": 'Production-ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',"launchDate": '2025-01-25',"customers": 203,"rating": 4.7;'
-    }
-    "reviews": 445;
+  name: string;,
+
+  tagline: string;
+  price: string;,
+  period: string;
+  description: string;,
+  features: string[];
+  popular: boolean;,
+  icon: string;
+  color: string;,
+  text_color: string;
+  link: string;,
+  market_position: string;
+  target_audience: string;,
+  trial_days: number;
+  setup_time: string;,
+  category: string;
+  real_service: boolean;,
+  technology: string[];
+  integrations: string[];,
+  use_cases: string[];
+  roi: string;,
+  competitors: string[];
+  market_size: string;,
+  growth_rate: string;
+
+  variant: ServiceVariant;,
+  website: string;
+  customers: number;,
+pr-12325
+
   }
+<<<<<<< HEAD
 ];
+=======
+  customers: number;,
+  rating: number;
+
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+
+  customers: number;
+  rating: number;
+
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
+
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+>>>>>>> origin/chore/fix-lint-and-merge
 
   reviews: number;    mobile: string
     email: string
     address: string
+<<<<<<< HEAD
     mobile: string,
     email: string,
     address: string,
@@ -373,6 +325,8 @@ import { ServiceVariant } from '../types/service-variants',export interface Next
     address: string,
 
   contactInfo: {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     mobile: string,
     email: string,
@@ -390,16 +344,25 @@ import { ServiceVariant } from '../types/service-variants',export interface Next
   customers: number
   rating: number
   reviews: number
+<<<<<<< HEAD
     website: string;
 
 
 
+=======
+
+    website: string;
+
+>>>>>>> origin/chore/fix-lint-and-merge
   contactInfo: {;,
   mobile: string;
     email: string;,
   address: string;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 contactInfo: {
     mobile: string;
     email: string;
@@ -433,28 +396,36 @@ rating: number;
 reviews: number;
 website: string;
   },
-  "real_implementation": boolean,
-  "implementation_details": string,
-  "launch_date": string,
-  "customers": number,
-  "rating": number,
-  "reviews": number;
+  real_implementation: boolean;,
+  implementation_details: string;,
+  launch_date: string;,
+  customers: number;,
+  rating: number;,
+  reviews: number;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
 
+<<<<<<< HEAD
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
   website: 'https://ziontechgroup.com',
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 pr-12325
   mobile: '+1 302 464 0950';,
   email: 'kleber@ziontechgroup.com';,
   address: '364 E Main St STE 1008 Middletown DE 19709';,
   website: 'https://ziontechgroup.com';,
+<<<<<<< HEAD
 };  website: 'https://ziontechgroup.com'
   website: 'https://ziontechgroup.com';
 
@@ -474,6 +445,26 @@ pr-12325
   website: 'https://ziontechgroup.com;
 
 },
+=======
+
+};  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
+
+},
+};  website: 'https://ziontechgroup.com;,
+  website: 'https://ziontechgroup.com
+pr-12325
+
+}'
+  mobile: '+1 302 464 0950';,''
+  email: 'kleber@ziontechgroup.com';,''
+  address: '364 E Main St STE 1008 Middletown DE 19709';,''
+  website: 'https://ziontechgroup.com';,''
+};  website: 'https://ziontechgroup.com'';,'
+  website: 'https://ziontechgroup.com'';
+
+},
+>>>>>>> origin/chore/fix-lint-and-merge
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
     description: 'Advanced AI platform that analyzes facial expressions;, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.'
@@ -485,6 +476,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     popular: true,
     icon: '🧠💙',
     color: 'from-blue-600 to-purple-700',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     textColor: 'text-blue-400',
 
     marketPosition:'
@@ -498,10 +493,9 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'WebRTC','
       'React','
       'Node.js','
-      'PostgreSQL''
+      'PostgreSQL',
     ],
-    "integrations": [
-    "useCases": [
+'
       'Customer sentiment analysis','
       'Employee wellness monitoring','
       'Mental health assessment','
@@ -509,6 +503,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     ],'
     roi: 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',
 
+<<<<<<< HEAD
 
     integrations: ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],
     textColor: 'text-blue-400',    integrations: ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],
@@ -610,6 +605,10 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
 
     competitors: ['Affectiva', 'Realeyes', 'Emotient', 'Noldus'],    market_size: '$3.2B emotional AI market',    technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],
     integrations: ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],
+=======
+    integrations: ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],
+
+>>>>>>> origin/chore/fix-lint-and-merge
     use_cases: ['Customer sentiment analysis_employee wellness monitoring_mental health assessment_educational engagement tracking'],
     roi: 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',
     competitors: ['AffectivaRealeyesEmotientNoldus'],
@@ -618,18 +617,27 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     launchDate: '2025-06-01',
     customers: 45,'
     reviews: 89,  },    implementationDetails: 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.','
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4.9,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     launchDate: '2025-06-01',
     customers: 45,
     reviews: 89,  },    implementationDetails: 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4.9,
+<<<<<<< HEAD
     integrations: [;,
   useCases: [
       'Customer sentiment analysis',
@@ -821,10 +829,33 @@ pr-12325
       'Mobile app for field technicians
       Custom alerting and notifications'
       'Historical performance analytics],    description: Industrial IoT platform that uses machine learning to predict equipment failures;, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.'
+=======
+
+    reviews: 89
+  {
+    id: 'ai-predictive-maintenance-platform'
+    name: 'AI Predictive Maintenance Platform'
+    tagline: 'Predict equipment failures before they happen'
+    price: '$899'
+    period: '/month'
+    description: 'Industrial IoT platform that uses machine learning to predict equipment failures;, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.'
+    features: [
+      'Real-time sensor data monitoring'
+      'Machine learning failure prediction models'
+      'Predictive maintenance scheduling'
+      'Equipment health scoring'
+      'Anomaly detection algorithms'
+      'Maintenance cost optimization'
+      'Integration with CMMS systems'
+      'Mobile app for field technicians'
+      'Custom alerting and notifications'
+      'Historical performance analytics',    ],    description: 'Industrial IoT platform that uses machine learning to predict equipment failures;, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.'
+>>>>>>> origin/chore/fix-lint-and-merge
   },
     rating: 4.9;,
     reviews: 89;
     id: 'ai-predictive-maintenance-platform;,
+<<<<<<< HEAD
   name: AI Predictive Maintenance Platform
     tagline: Predict equipment failures before they happen;,
   price: '$899
@@ -853,6 +884,36 @@ pr-12325
     rating: 4.9;,
     reviews: 89;},    implementation_details: Production - ready platform with real - time video / audio processing;, emotion detection models, and comprehensive analytics dashboard.',
     launch_date: '2025 - 06 - 01;,
+=======
+  name: 'AI Predictive Maintenance Platform
+    tagline: 'Predict equipment failures before they happen;,
+  price: '$899
+    period: '/month;,
+      'Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.
+    features: [
+      'Real-time sensor data monitoring
+      'Machine learning failure prediction models
+      'Predictive maintenance scheduling
+      'Equipment health scoring
+      'Anomaly detection algorithms
+      'Maintenance cost optimization
+      'Integration with CMMS systems
+      'Mobile app for field technicians
+      'Custom alerting and notifications]
+      'Historical performance analytics',    ],    description: 'Industrial IoT platform that uses machine learning to predict equipment failures;, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.
+pr-12325
+    growth_rate: '150% annual growth';,
+    variant: 'ai - futuristic';,
+    contact_info: contact;,
+    real_implementation: true;,
+    implementation_details:;
+      'Production - ready platform with real - time video / audio processing, emotion detection models, and comprehensive analytics dashboard.',
+    launch_date: '2025 - 06 - 01';,
+    customers: 45;,
+    rating: 4.9;,
+    reviews: 89;,  },    implementation_details: 'Production - ready platform with real - time video / audio processing;, emotion detection models, and comprehensive analytics dashboard.',
+    launch_date: '2025 - 06 - 01';,
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 45;,
     rating: 4.9;,
     reviews: 89;
@@ -868,6 +929,7 @@ pr-12325
       'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians'
       'Custom alerting and notificationsHistorical performance analytics'
 
+<<<<<<< HEAD
     ],
 
     popular: true,
@@ -2073,6 +2135,28 @@ export const nextGenAIServices2026: NextGenAIService2026[] = []
     trialDays: 30;,
     setupTime: '1-2 weeks';,
     category: 'AI & Industrial IoT';,
+=======
+    ],
+
+    popular: true,
+    icon: '⚙️🔮',
+    color: 'from-green-600 to-teal-700',
+    textColor: 'text-green-400',
+
+    link: 'https://ziontechgroup.com/ai-predictive-maintenance',
+    marketPosition: 'Competitive with Uptake and C3.ai, offering more affordable pricing for mid-market manufacturers.',
+
+    targetAudience: 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Mining operations',
+    trialDays: 30,'
+    setupTime: '1-2 weeks','
+    category: 'AI & Industrial IoT',
+
+    targetAudience: 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Mining operations',
+    trialDays: 30,
+    setupTime: '1-2 weeks',
+    category: 'AI & Industrial IoT',
+
+>>>>>>> origin/chore/fix-lint-and-merge
       'Python',
       'TensorFlow',
       'Apache Kafka',
@@ -2081,6 +2165,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = []
       'Node.js',
       'Docker',
     ],
+<<<<<<< HEAD
     integrations: [;,
   useCases: [
       'Equipment failure prediction',
@@ -2088,6 +2173,36 @@ export const nextGenAIServices2026: NextGenAIService2026[] = []
       'Energy efficiency',
       'Quality control',]
     ],
+=======
+    integrations: [
+
+      'Maintenance optimization',
+      'Energy efficiency',
+      'Quality control',
+    ],
+    roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
+
+    technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
+    competitors: ['Uptake', 'C3.ai', 'PTC', 'Siemens Mindsphere'],    market_size: '$12.3B predictive maintenance market',    technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.js_docker'],
+
+    integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],
+    use_cases: ['Equipment failure prediction_maintenance optimization_energy efficiency_quality control'],
+
+    roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
+'
+    integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],'
+    use_cases: ['Equipment failure prediction_maintenance optimization_energy efficiency_quality control'],'
+    roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.','
+    competitors: ['UptakeC3.aiPTCSiemens Mindsphere'],
+
+    growthRate: '120% annual growth',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',
+    launchDate: '2025-03-15',
+    customers: 78,
+>>>>>>> origin/chore/fix-lint-and-merge
     roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.';,
     integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'];,
     use_cases: ['Equipment failure prediction_maintenance optimization_energy efficiency_quality control'];,
@@ -2101,6 +2216,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = []
     launchDate: '2025-03-15';,
     customers: 78;,
   {
+<<<<<<< HEAD
     id: 'ai-content-personalization-engine';,
   name: 'AI Content Personalization Engine'
     tagline: 'Deliver hyper-personalized content experiences';,
@@ -2108,6 +2224,14 @@ export const nextGenAIServices2026: NextGenAIService2026[] = []
     period: '/month';,
   description:
       'Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.'
+=======
+    id: 'ai-content-personalization-engine'
+    name: 'AI Content Personalization Engine'
+    tagline: 'Deliver hyper-personalized content experiences'
+    price: '$599'
+    period: '/month'
+    description: 'Advanced AI engine that personalizes content;, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.'
+>>>>>>> origin/chore/fix-lint-and-merge
     features: [
       'Real-time user behavior tracking'
       'Dynamic content personalization'
@@ -2117,6 +2241,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = []
       'Content performance optimization'
       'Personalization analytics dashboard'
       'API for content delivery'
+<<<<<<< HEAD
       'GDPR-compliant data handling']
       'Custom personalization rules engine'],    description: Advanced AI engine that personalizes content;, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.'
   },'
@@ -2330,8 +2455,159 @@ export const nextGenAIServices2026: NextGenAIService2026[] = []
     customers: 203;,
     rating: 4.7;,
     reviews: 445;
+=======
+      'GDPR-compliant data handling'
+      'Custom personalization rules engine',    ],    description: 'Advanced AI engine that personalizes content;, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.'
+  },
+    reviews: 156,  },    implementationDetails: 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',
+    launchDate: '2025-03-15',
+    customers: 78,
+    rating: 4.7,
+
+    launchDate: '2025-03-15',
+    customers: 78,
+    rating: 4 && 4.7,
+    reviews: 156
+
+  {
+    id: 'ai - content - personalization - engine',
+    name: 'AI Content Personalization Engine',
+    tagline: 'Deliver hyper - personalized content experiences',
+    price: '$599',
+
+      'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',
+    targetAudience:
+    technology: [
+
+    marketPosition:
+      'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.'
+    targetAudience:
+
+      'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',    trialDays: 14
+    setupTime: '3-5 days'
+    category: 'AI & Personalization'
+    realService: true,    marketPosition: 'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.'
+    targetAudience: 'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms'
+    trialDays: 14
+    setupTime: '3-5 days'
+    category: 'AI & Personalization'
+    realService: true
+
+    technology: [
+
+    description:
+      'Advanced AI engine that personalizes content, recommendations, and user experiences in real - time based on user behavior, preferences, and contextual data.',
+    features: [;
+      'Real - time user behavior tracking',
+      'Dynamic content personalization',
+      'A / B testing automation',
+      'Multi - channel personalization',
+      'Predictive user modeling',
+      'Content performance optimization',
+      'Personalization analytics dashboard',
+      'API for content delivery',
+      'GDPR - compliant data handling',
+      'Custom personalization rules engine',    ],    description: 'Advanced AI engine that personalizes content, recommendations, and user experiences in real - time based on user behavior, preferences, and contextual data.',
+    features: [;
+      'Real - time user behavior tracking_dynamic content personalization_a / B testing automation_multi - channel personalization_predictive user modeling_content performance optimization_personalization analytics dashboardAPI for content delivery',
+      'GDPR - compliant data handling_custom personalization rules engine';
+    popular: false,
+    icon: '🎯✨',
+    color: 'from - purple - 600 to - pink - 700',
+    text_color: 'text - purple - 400',
+    link: 'https://ziontechgroup.com / ai - content - personalization',
+    market_position:;
+      'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',
+    target_audience:;
+      'E - commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',    trial_days: 14,
+    setup_time: '3 - 5 days',
+    category: 'AI & Personalization',
+    real_service: true,    market_position: 'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',
+    target_audience: 'E - commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',
+    trial_days: 14,
+    setup_time: '3 - 5 days',
+    category: 'AI & Personalization',
+    real_service: true,
+    technology: [;
+
+    reviews: 156;,  },    implementationDetails: 'Full-stack IoT platform with edge computing capabilities;, real-time analytics, and comprehensive maintenance management tools.',
+    launchDate: '2025-03-15';,
+    customers: 78;,
+    rating: 4.7;,
+  {
+      'Apache Kafka',
+      'InfluxDB',
+      'Docker',
+      'Equipment failure prediction',
+      'Maintenance optimization',
+      'Energy efficiency',
+      'Quality control',']
+    roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.';,
+    integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'];,
+    use_cases: ['Equipment failure prediction_maintenance optimization_energy efficiency_quality control'];,
+    competitors: ['UptakeC3.aiPTCSiemens Mindsphere'];,
+    growthRate: '120% annual growth';,
+    implementationDetails: 'Full-stack IoT platform with edge computing capabilities;, real-time analytics, and comprehensive maintenance management tools.',
+    launchDate: '2025-03-15';,
+    customers: 78;,
+    id: 'ai-content-personalization-engine;,
+  name: 'AI Content Personalization Engine
+    tagline: 'Deliver hyper-personalized content experiences;,
+  price: '$599
+      'Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.
+      'Real-time user behavior tracking
+      'Dynamic content personalization
+      'A/B testing automation
+      'Multi-channel personalization
+      'Predictive user modeling
+      'Content performance optimization
+      'Personalization analytics dashboard
+      'API for content delivery
+      'GDPR-compliant data handling]
+      'Custom personalization rules engine',    ],    description: 'Advanced AI engine that personalizes content;, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.
+    reviews: 156;,  },    implementationDetails: 'Full-stack IoT platform with edge computing capabilities;, real-time analytics, and comprehensive maintenance management tools.',
+    rating: 4.7;,
+pr-12325
+    id: 'ai - content - personalization - engine';,
+    name: 'AI Content Personalization Engine';,
+    tagline: 'Deliver hyper - personalized content experiences';,
+    price: '$599';,
+    period: '/month';,    marketPosition: 'Competitive with Dynamic Yield and Optimizely;, with more advanced AI capabilities and better pricing.',
+    targetAudience:
+    technology: [
+      'Python',
+      'TensorFlow',
+      'Redis',
+      'PostgreSQL',
+      'React',
+      'Node.js',
+      'AWS Lambda',
+    ],
+    integrations: [
+
+      'Website optimization',
+    ],'
+    roi: 'Average 35% increase in conversion rates and 40% improvement in user engagement.',
+
+      'Marketing videos',
+      'E-learning content',
+      'Audiobook narration',
+    ],
+
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+
+    customers: 203,
+    rating: 4 && 4.7,
+    reviews: 445,
+  },
+
+>>>>>>> origin/chore/fix-lint-and-merge
   }
+
 ],
+<<<<<<< HEAD
   mobile: '+1 302 464 0950;,
   email: kleber@ziontechgroup.com';,
   address: '364 E Main St STE 1008 Middletown DE 19709;},
@@ -3085,11 +3361,37 @@ pr-12325
     textColor: 'text-blue-400','
     link: 'https://ziontechgroup.com/ai-emotional-intelligence',
 '
+=======
+
+    launch_date: '2025 - 01 - 25',
+    customers: 203,
+    rating: 4.7,
+    reviews: 445;
+  }
+
+'
+  mobile: '+1 302 464 0950','
+  email: 'kleber@ziontechgroup.com','
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+},
+
+export const nextGenAIServices2026: NextGenAIService2026[] = []
+  {'
+    id: 'ai-emotional-intelligence-platform','
+    name: 'AI Emotional Intelligence Platform','
+    tagline: 'Understand and respond to human emotions in real-time','
+    price: '$1,299','
+    period: '/month','
+    description: 'Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',
+
+>>>>>>> origin/chore/fix-lint-and-merge
     targetAudience: 'Customer service platforms, HR tech companies, Mental health apps, E-learning platforms, Healthcare providers',
     trialDays: 21,'
     setupTime: '2-3 days','
     category: 'AI & Emotional Intelligence',
     realService: true,
+<<<<<<< HEAD
     technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],
     technology: [
       'TensorFlow',
@@ -3118,18 +3420,24 @@ pr-12325
     roi: 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',
     competitors: ['Affectiva', 'Realeyes', 'Emotient', 'Noldus'],    marketSize: '$3.2B emotional AI market',    technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],
     technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     targetAudience: 'Customer service platforms, HR tech companies, Mental health apps, E-learning platforms, Healthcare providers',
     trialDays: 21,
     setupTime: '2-3 days',
     category: 'AI & Emotional Intelligence',
     realService: true,
+<<<<<<< HEAD
     technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     integrations: ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],
     useCases: ['Customer sentiment analysisEmployee wellness monitoringMental health assessmentEducational engagement tracking'],
     roi: 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',
     competitors: ['AffectivaRealeyesEmotientNoldus'],
+<<<<<<< HEAD
     marketSize: '$3.2B emotional AI market',
     marketSize: '$3.2B emotional AI market',
     marketSize: '$3.2B emotional AI market',
@@ -3145,6 +3453,11 @@ pr-12325
     competitors: ['AffectivaRealeyesEmotientNoldus'],
 '
     growthRate: '150% annual growth','
+=======
+
+    growthRate: '150% annual growth',
+
+>>>>>>> origin/chore/fix-lint-and-merge
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,'
@@ -3152,6 +3465,7 @@ pr-12325
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4.9,
+<<<<<<< HEAD
     reviews: 89
   },
     reviews: 89,  },    implementationDetails: 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',
@@ -3161,6 +3475,8 @@ pr-12325
     reviews: 89
     reviews: 89
   },
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     growthRate: '150% annual growth',
     variant: 'ai-futuristic',
@@ -3170,6 +3486,7 @@ pr-12325
     launchDate: '2025-06-01',
     customers: 45,
     rating: 4.9,
+<<<<<<< HEAD
     reviews: 89
   },
   {
@@ -3208,6 +3525,9 @@ pr-12325
     launchDate: '2025-06-01';,
     customers: 45;,
     rating: 4.9;,
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   {
     id: 'ai-predictive-maintenance-platform';,
     name: 'AI Predictive Maintenance Platform';,
@@ -3216,6 +3536,7 @@ pr-12325
     period: '/month';,
     description: 'Industrial IoT platform that uses machine learning to predict equipment failures;, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',
     features: [
+<<<<<<< HEAD
       'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',
       'Custom alerting and notificationsHistorical performance analytics'
     ],
@@ -3235,12 +3556,15 @@ pr-12325
       'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',
       'Custom alerting and notificationsHistorical performance analytics'
     ],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     popular: true,
     icon: '⚙️🔮',
     color: 'from-green-600 to-teal-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-predictive-maintenance',
+<<<<<<< HEAD
     marketPosition: 'Competitive with Uptake and C3.ai, offering more affordable pricing for mid-market manufacturers.',
     marketPosition: 'Competitive with Uptake and C3.ai, offering more affordable pricing for mid-market manufacturers.',
     marketPosition:
@@ -3266,11 +3590,15 @@ pr-12325
     textColor: 'text-green-400','
     link: 'https://ziontechgroup.com/ai-predictive-maintenance',
 '
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     targetAudience: 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Mining operations',
     trialDays: 30,'
     setupTime: '1-2 weeks','
     category: 'AI & Industrial IoT',
     realService: true,
+<<<<<<< HEAD
     technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
     technology: [
       'Python',
@@ -3299,18 +3627,24 @@ pr-12325
     roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
     competitors: ['Uptake', 'C3.ai', 'PTC', 'Siemens Mindsphere'],    marketSize: '$12.3B predictive maintenance market',    technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
     technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     targetAudience: 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Mining operations',
     trialDays: 30,
     setupTime: '1-2 weeks',
     category: 'AI & Industrial IoT',
     realService: true,
+<<<<<<< HEAD
     technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],
     useCases: ['Equipment failure predictionMaintenance optimizationEnergy efficiencyQuality control'],
     roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',
     competitors: ['UptakeC3.aiPTCSiemens Mindsphere'],
+<<<<<<< HEAD
     marketSize: '$12.3B predictive maintenance market',
     marketSize: '$12.3B predictive maintenance market',
     marketSize: '$12.3B predictive maintenance market',
@@ -3326,6 +3660,11 @@ pr-12325
     competitors: ['UptakeC3.aiPTCSiemens Mindsphere'],
 '
     growthRate: '120% annual growth','
+=======
+
+    growthRate: '120% annual growth',
+
+>>>>>>> origin/chore/fix-lint-and-merge
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,'
@@ -3333,6 +3672,7 @@ pr-12325
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4.7,
+<<<<<<< HEAD
     reviews: 156
   },
     reviews: 156,  },    implementationDetails: 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',
@@ -3342,6 +3682,8 @@ pr-12325
     reviews: 156
     reviews: 156
   },
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     growthRate: '120% annual growth',
     variant: 'ai-futuristic',
@@ -3351,6 +3693,7 @@ pr-12325
     launchDate: '2025-03-15',
     customers: 78,
     rating: 4.7,
+<<<<<<< HEAD
     reviews: 156
   },
   {
@@ -3393,6 +3736,9 @@ pr-12325
     launchDate: '2025-03-15';,
     customers: 78;,
     rating: 4.7;,
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   {
     id: 'ai-content-personalization-engine';,
     name: 'AI Content Personalization Engine';,
@@ -3401,6 +3747,7 @@ pr-12325
     period: '/month';,
     description: 'Advanced AI engine that personalizes content;, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.',
     features: [
+<<<<<<< HEAD
       'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content delivery',
       'GDPR-compliant data handlingCustom personalization rules engine'
     ],
@@ -3420,12 +3767,15 @@ pr-12325
       'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content delivery',
       'GDPR-compliant data handlingCustom personalization rules engine'
     ],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     popular: false,
     icon: '🎯✨',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-content-personalization',
+<<<<<<< HEAD
     marketPosition: 'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',
     marketPosition: 'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',
     marketPosition:
@@ -3451,11 +3801,15 @@ pr-12325
     textColor: 'text-purple-400','
     link: 'https://ziontechgroup.com/ai-content-personalization',
 '
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     targetAudience: 'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',
     trialDays: 14,'
     setupTime: '3-5 days','
     category: 'AI & Personalization',
     realService: true,
+<<<<<<< HEAD
     technology: ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'],
     technology: [
       'Python',
@@ -3483,18 +3837,24 @@ pr-12325
     roi: 'Average 35% increase in conversion rates and 40% improvement in user engagement.',
     competitors: ['Dynamic Yield', 'Optimizely', 'Evergage', 'Adobe Target'],    marketSize: '$8.7B personalization market',    technology: ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'],
     technology: ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     targetAudience: 'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',
     trialDays: 14,
     setupTime: '3-5 days',
     category: 'AI & Personalization',
     realService: true,
+<<<<<<< HEAD
     technology: ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     integrations: ['ShopifyWooCommerceWordPressHubSpotMailchimpCustom CMS'],
     useCases: ['Product recommendationsContent personalizationEmail marketingWebsite optimization'],
     roi: 'Average 35% increase in conversion rates and 40% improvement in user engagement.',
     competitors: ['Dynamic YieldOptimizelyEvergageAdobe Target'],
+<<<<<<< HEAD
     marketSize: '$8.7B personalization market',
     marketSize: '$8.7B personalization market',
     marketSize: '$8.7B personalization market',
@@ -3510,6 +3870,11 @@ pr-12325
     competitors: ['Dynamic YieldOptimizelyEvergageAdobe Target'],
 '
     growthRate: '140% annual growth','
+=======
+
+    growthRate: '140% annual growth',
+
+>>>>>>> origin/chore/fix-lint-and-merge
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,'
@@ -3517,6 +3882,7 @@ pr-12325
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4.6,
+<<<<<<< HEAD
     reviews: 203
   },
     reviews: 203,  },    implementationDetails: 'Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.',
@@ -3526,6 +3892,8 @@ pr-12325
     reviews: 203
     reviews: 203
   },
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     growthRate: '140% annual growth',
     variant: 'ai-futuristic',
@@ -3535,6 +3903,7 @@ pr-12325
     launchDate: '2025-04-20',
     customers: 92,
     rating: 4.6,
+<<<<<<< HEAD
     reviews: 203
   },
   {
@@ -3576,6 +3945,9 @@ pr-12325
     launchDate: '2025-04-20';,
     customers: 92;,
     rating: 4.6;,
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   {
     id: 'ai-voice-cloning-platform';,
     name: 'AI Voice Cloning Platform';,
@@ -3584,6 +3956,7 @@ pr-12325
     period: '/month';,
     description: 'Professional voice cloning platform that creates high-quality;, natural-sounding voice replicas for content creators, marketers, and businesses.',
     features: [
+<<<<<<< HEAD
       'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library management',
       'Quality assurance toolsCommercial usage rights'
     ],
@@ -3603,12 +3976,15 @@ pr-12325
       'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library management',
       'Quality assurance toolsCommercial usage rights'
     ],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     popular: false,
     icon: '🎤🎭',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-voice-cloning',
+<<<<<<< HEAD
     marketPosition: 'Competitive with ElevenLabs and Play.ht, offering better pricing and more customization options.',
     marketPosition: 'Competitive with ElevenLabs and Play.ht, offering better pricing and more customization options.',
     marketPosition:
@@ -3634,11 +4010,15 @@ pr-12325
     textColor: 'text-orange-400','
     link: 'https://ziontechgroup.com/ai-voice-cloning',
 '
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     targetAudience: 'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',
     trialDays: 7,'
     setupTime: '1 day','
     category: 'AI & Voice Technology',
     realService: true,
+<<<<<<< HEAD
     technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
     technology: [
       'Python',
@@ -3665,18 +4045,24 @@ pr-12325
     roi: 'Average 60% reduction in voice recording costs and 3x faster content production.',
     competitors: ['ElevenLabs', 'Play.ht', 'Resemble AI', 'Descript'],    marketSize: '$2.1B voice cloning market',    technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
     technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     targetAudience: 'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',
     trialDays: 7,
     setupTime: '1 day',
     category: 'AI & Voice Technology',
     realService: true,
+<<<<<<< HEAD
     technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],
     useCases: ['Podcast productionMarketing videosE-learning contentAudiobook narration'],
     roi: 'Average 60% reduction in voice recording costs and 3x faster content production.',
     competitors: ['ElevenLabsPlay.htResemble AIDescript'],
+<<<<<<< HEAD
     marketSize: '$2.1B voice cloning market',
     marketSize: '$2.1B voice cloning market',
     marketSize: '$2.1B voice cloning market',
@@ -3692,6 +4078,11 @@ pr-12325
     competitors: ['ElevenLabsPlay.htResemble AIDescript'],
 '
     growthRate: '180% annual growth','
+=======
+
+    growthRate: '180% annual growth',
+
+>>>>>>> origin/chore/fix-lint-and-merge
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,'
@@ -3699,6 +4090,7 @@ pr-12325
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4.8,
+<<<<<<< HEAD
     reviews: 312
   },
     reviews: 312,  },    implementationDetails: 'Professional-grade voice cloning platform with advanced AI models, comprehensive voice management, and easy integration.',
@@ -3708,6 +4100,8 @@ pr-12325
     reviews: 312
     reviews: 312
   },
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
@@ -3717,6 +4111,7 @@ pr-12325
     launchDate: '2025-02-10',
     customers: 156,
     rating: 4.8,
+<<<<<<< HEAD
     reviews: 312
   },
   {
@@ -3750,6 +4145,9 @@ pr-12325
     launchDate: '2025-02-10';,
     customers: 156;,
     rating: 4.8;,
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   {
     id: 'ai-code-review-assistant';,
     name: 'AI Code Review Assistant';,
@@ -3758,6 +4156,7 @@ pr-12325
     period: '/month';,
     description: 'Intelligent code review assistant that automatically analyzes code quality;, identifies potential issues, and provides actionable improvement suggestions.',
     features: [
+<<<<<<< HEAD
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics',
       'Pull request automationMulti-language support'
     ],
@@ -3774,6 +4173,9 @@ pr-12325
     id: 'ai-code-review-assistant';,
     description: 'Intelligent code review assistant that automatically analyzes code quality;, identifies potential issues, and provides actionable improvement suggestions.',
 pr-12325
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       'Automated code quality analysis',
       'Security vulnerability detection',
       'Performance optimization suggestions',
@@ -3791,18 +4193,25 @@ pr-12325
       'Pull request automationMulti-language support'
     ],
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     popular: true,
     icon: '💻🔍',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-code-review',
     marketPosition: 'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',
     targetAudience: 'Software development teams, DevOps engineers, Code quality managers, Open source projects',
     link: 'https://ziontechgroup.com/ai-code-review',
     marketPosition: 'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',
     link: 'https://ziontechgroup.com/ai-code-review',
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     marketPosition:
       'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',
     targetAudience:
@@ -3812,6 +4221,7 @@ pr-12325
     realService: true,    marketPosition: 'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',
     marketPosition: 'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',
 
+<<<<<<< HEAD
 
 
   {'
@@ -3828,26 +4238,38 @@ pr-12325
     textColor: 'text-indigo-400','
     link: 'https://ziontechgroup.com/ai-code-review',
 '
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     targetAudience: 'Software development teams, DevOps engineers, Code quality managers, Open source projects',
     trialDays: 14,'
     setupTime: '2-3 days','
     category: 'AI & Development',
     realService: true,
+<<<<<<< HEAD
     technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],
     technology: [
     link: 'https://ziontechgroup.com/ai-code-review',    technology: [
     link: 'https://ziontechgroup.com/ai-code-review',    technology: [
+=======
+
+    technology: [
+>>>>>>> origin/chore/fix-lint-and-merge
 
     targetAudience: 'Software development teams, DevOps engineers, Code quality managers, Open source projects',
     trialDays: 14,
     setupTime: '2-3 days',
     category: 'AI & Development',
     realService: true,
+<<<<<<< HEAD
     popular: true;,
     icon: '💻🔍';,
     color: 'from-indigo-600 to-blue-700';,
     textColor: 'text-indigo-400';,
     link: 'https://ziontechgroup.com/ai-code-review';,    technology: [
+=======
+    technology: [
+
+>>>>>>> origin/chore/fix-lint-and-merge
       'Python',
       'TensorFlow',
       'React',
@@ -3892,6 +4314,7 @@ pr-12325
     competitors: ['SonarQube', 'CodeClimate', 'DeepCode', 'Snyk'],    marketSize: '$5.4B code quality market',    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],
     technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],
 
+<<<<<<< HEAD
 
 
     integrations: ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'],
@@ -3924,11 +4347,24 @@ pr-12325
 '
     growthRate: '110% annual growth','
     growthRate: '110% annual growth',
+=======
+    integrations: ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'],
+    use_cases: ['Code quality improvement_security auditing_performance optimization_team collaboration'],
+    roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.',
+    competitors: ['SonarQubeCodeClimateDeepCodeSnyk'],
+
+    growthRate: '110% annual growth',
+
+>>>>>>> origin/chore/fix-lint-and-merge
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
     customers: 203,
+<<<<<<< HEAD
     rating: 4.7,
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     reviews: 445,
     roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.';,
     competitors: ['SonarQube';, 'CodeClimate', 'DeepCode', 'Snyk'],    marketSize: '$5.4B code quality market';,    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'];,
@@ -4099,6 +4535,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     link: 'https://ziontechgroup.com/ai-code-review';,'
     marketPosition:'
       'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.','
+<<<<<<< HEAD
     "targetAudience":
       'Software development teams, DevOps engineers, Code quality managers, Open source projects',    "trialDays": 14,'
     "setupTime": '2-3 days','
@@ -4169,6 +4606,75 @@ export interface NextGenAIService2026 {;
   tagline: string,;
   price: string,;
   period: string,,
+=======
+    targetAudience:'
+      'Software development teams, DevOps engineers, Code quality managers, Open source projects',    trialDays: 14;,''
+    setupTime: '2-3 days';,''
+    category: 'AI & Development';,''
+    realService: true;,    marketPosition: 'Competitive with SonarQube and CodeClimate;, with more advanced AI capabilities and better developer experience.',''
+    marketPosition: 'Competitive with SonarQube and CodeClimate;, with more advanced AI capabilities and better developer experience.',''
+    targetAudience: 'Software development teams;, DevOps engineers, Code quality managers, Open source projects','
+    trialDays: 14;,'
+    setupTime: '2-3 days';,''
+    category: 'AI & Development';,'
+    realService: true;,
+    technology: ['
+      'Python',''
+      'TensorFlow',''
+      'React',''
+      'Node.js',''
+      'PostgreSQL',''
+      'Redis',''
+      'Docker',']
+    ],
+    integrations: ['
+      'GitHub',''
+      'GitLab',''
+      'Bitbucket',''
+      'Azure DevOps',''
+      'Slack',''
+      'Jira',''
+      'Teams',']
+    ],
+    useCases: ['
+      'Code quality improvement',''
+      'Security auditing',''
+      'Performance optimization',''
+      'Team collaboration',']
+    ],'
+    roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.';,''
+    competitors: ['SonarQube';, 'CodeClimate', 'DeepCode', 'Snyk'],    marketSize: '$5.4B code quality market';,    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'];,''
+    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'];,''
+    integrations: ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'];,''
+    use_cases: ['Code quality improvement_security auditing_performance optimization_team collaboration'];,''
+    roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.';,''
+    competitors: ['SonarQubeCodeClimateDeepCodeSnyk'];,''
+    growthRate: '110% annual growth';,''
+    variant: 'ai-futuristic';,'
+    contactInfo: contact;,
+    realImplementation: true;,
+    customers: 203;,
+    reviews: 445;,
+  },
+    launchDate: '2025-01-25';,
+    customers: 203;,
+    reviews: 445
+      'Teams',']
+      'Code quality improvement',
+      'Security auditing',
+      'Performance optimization',
+      'Team collaboration',']
+    competitors: ['SonarQube';, 'CodeClimate', 'DeepCode', 'Snyk'],    marketSize: '$5.4B code quality market';,    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'];,
+    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'];,
+pr-12325
+  },'
+    launchDate: '2025-01-25';,'
+    customers: 203;,
+    reviews: 445;'
+
+export interface NextGenAIService2026 {;
+
+>>>>>>> origin/chore/fix-lint-and-merge
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -4190,6 +4696,7 @@ export interface NextGenAIService2026 {;
   marketSize: string,;
   growthRate: string,;
   variant: ServiceVariant,;
+<<<<<<< HEAD
   id: string;,;
   name: string;,;
   tagline: string;,;
@@ -4219,6 +4726,9 @@ pr-12325
   marketSize: string;,;
   growthRate: string;,;
   variant: ServiceVariant;,;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   contactInfo: {;
     mobile: string;,;
     email: string;,;
@@ -4235,24 +4745,25 @@ pr-12325
     address: string;,;}
     website: string;}
   },;
-  "realImplementation": boolean,;
-  "implementationDetails": string,;
-  "launchDate": string,;
-  "customers": number,;
-  "rating": number,;
-  "reviews": number;
+  realImplementation: boolean;,;
+  implementationDetails: string;,;
+  launchDate: string;,;
+  customers: number;,;
+  rating: number;,;
+  reviews: number;
 }
 pr-12325
 ;
 const contact = {;
-  }
-  "mobile": '+1 302 464 0950',;'
-  "email": 'kleber@ziontechgroup.com',;'
-  "address": '364 E Main St STE 1008 Middletown DE 19709',;'
-  "website": '"https"://ziontechgroup.com';'
+  mobile: '+1 302 464 0950';,;
+  email: 'kleber@ziontechgroup.com';,;
+  address: '364 E Main St STE 1008 Middletown DE 19709';,;
+  website: 'https://ziontechgroup.com';
 },;
-export const "nextGenAIServices2026": NextGenAIService2026[] = [;
+pr-12325
+export const nextGenAIServices2026: NextGenAIService2026[] = [;
   {;
+<<<<<<< HEAD
     id: 'ai-emotional-intelligence-platform',;
     name: 'AI Emotional Intelligence Platform',;
     tagline: 'Understand and respond to human emotions in real-time',;
@@ -4265,6 +4776,9 @@ export const "nextGenAIServices2026": NextGenAIService2026[] = [;
     price: '$1;,299',;
     period: '/month';,,
   description: 'Advanced AI platform that analyzes facial expressions;, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     features: [;
       'Real-time emotion detection from video/audioSentiment analysis with emotional contextEmotional response recommendationsMulti-modal emotion fusion (facial, voice, text)Emotional intelligence training modulesCustom emotion models for specific industriesReal-time emotional analytics dashboardAPI for integration with existing systems',;
       'Privacy-compliant emotion processingEmotional intelligence scoring and reports';
@@ -4275,34 +4789,78 @@ export const "nextGenAIServices2026": NextGenAIService2026[] = [;
       'Privacy-compliant emotion processingEmotional intelligence scoring and reports';']
 pr-12325
     ],;
-    "popular": true,;
-    "icon": '🧠💙',;'
-    "color": 'from-blue-600 to-purple-700',;'
-    "textColor": 'text-blue-400',;'
-    "link": '"https"://ziontechgroup.com/ai-emotional-intelligence',;'
-    "marketPosition": 'Competitive with Affectiva and Realeyes, but with more advanced multi-modal fusion and real-time processing capabilities.',;'
-    "targetAudience": 'Customer service platforms, HR tech companies, Mental health apps, E-learning platforms, Healthcare providers',;'
-    "trialDays": 21,;
-    "setupTime": '2-3 days',;'
-    "category": 'AI & Emotional Intelligence',;'
-    "realService": true,;
-    "technology": ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],;'
-    "integrations": ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],;'
-    "useCases": ['Customer sentiment analysisEmployee wellness monitoringMental health assessmentEducational engagement tracking'],;'
-    "roi": 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.',;'
-    "competitors": ['AffectivaRealeyesEmotientNoldus'],;'
-    "marketSize": '$3.2B emotional AI market',;'
-    "growthRate": '150% annual growth',;'
-    "variant": 'ai-futuristic',;'
-    "contactInfo": contact,;
-    "realImplementation": true,;
-    "implementationDetails": 'Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.',;'
-    "launchDate": '2025-06-01',;'
-    "customers": 45,;
-    "rating": 4.9,;
-    "reviews": 89;
+    popular: true;,;
+    icon: '🧠💙';,;
+    color: 'from-blue-600 to-purple-700';,;
+    textColor: 'text-blue-400';,;
+    link: 'https://ziontechgroup.com/ai-emotional-intelligence';,;
+    marketPosition: 'Competitive with Affectiva and Realeyes;, but with more advanced multi-modal fusion and real-time processing capabilities.',;
+    targetAudience: 'Customer service platforms;, HR tech companies, Mental health apps, E-learning platforms, Healthcare providers',;
+    trialDays: 21;,;
+    setupTime: '2-3 days';,;
+    category: 'AI & Emotional Intelligence';,;
+    realService: true;,;
+    technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'];,;
+    integrations: ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'];,;
+    useCases: ['Customer sentiment analysisEmployee wellness monitoringMental health assessmentEducational engagement tracking'];,;
+    roi: 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.';,;
+    competitors: ['AffectivaRealeyesEmotientNoldus'];,;
+    marketSize: '$3.2B emotional AI market';,;
+    growthRate: '150% annual growth';,;
+    variant: 'ai-futuristic';,;
+    contactInfo: contact;,;
+    realImplementation: true;,;
+    implementationDetails: 'Production-ready platform with real-time video/audio processing;, emotion detection models, and comprehensive analytics dashboard.',;
+    launchDate: '2025-06-01';,;
+
+const contact = {;'
+  mobile: '+1 302 464 0950';,;''
+  email: 'kleber@ziontechgroup.com';,;''
+  address: '364 E Main St STE 1008 Middletown DE 19709';,;''
+  website: 'https://ziontechgroup.com';'
+
+},;
+export const nextGenAIServices2026: NextGenAIService2026[] = [;
+  {;'
+    id: 'ai-emotional-intelligence-platform';,;''
+    name: 'AI Emotional Intelligence Platform';,;''
+    tagline: 'Understand and respond to human emotions in real-time';,;''
+    price: '$1;,299',;''
+    period: '/month';,;''
+    description: 'Advanced AI platform that analyzes facial expressions;, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.',;'
+    features: [;'
+      'Real-time emotion detection from video/audioSentiment analysis with emotional contextEmotional response recommendationsMulti-modal emotion fusion (facial, voice, text)Emotional intelligence training modulesCustom emotion models for specific industriesReal-time emotional analytics dashboardAPI for integration with existing systems',;''
+      'Privacy-compliant emotion processingEmotional intelligence scoring and reports';']
+    ],;
+    popular: true;,;'
+    icon: '🧠💙';,;''
+    color: 'from-blue-600 to-purple-700';,;''
+    textColor: 'text-blue-400';,;''
+    link: 'https://ziontechgroup.com/ai-emotional-intelligence';,;''
+    marketPosition: 'Competitive with Affectiva and Realeyes;, but with more advanced multi-modal fusion and real-time processing capabilities.',;''
+    targetAudience: 'Customer service platforms;, HR tech companies, Mental health apps, E-learning platforms, Healthcare providers',;'
+    trialDays: 21;,;'
+    setupTime: '2-3 days';,;''
+    category: 'AI & Emotional Intelligence';,;'
+    realService: true;,;'
+    technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'];,;''
+    integrations: ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'];,;''
+    useCases: ['Customer sentiment analysisEmployee wellness monitoringMental health assessmentEducational engagement tracking'];,;''
+    roi: 'Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.';,;''
+    competitors: ['AffectivaRealeyesEmotientNoldus'];,;''
+    marketSize: '$3.2B emotional AI market';,;''
+    growthRate: '150% annual growth';,;''
+    variant: 'ai-futuristic';,;'
+    contactInfo: contact;,;
+    realImplementation: true;,;'
+    implementationDetails: 'Production-ready platform with real-time video/audio processing;, emotion detection models, and comprehensive analytics dashboard.',;''
+    launchDate: '2025-06-01';,;'
+    customers: 45;,;
+    rating: 4.9;,;}
+    reviews: 89;}
   },;
   {;
+<<<<<<< HEAD
     id: 'ai-predictive-maintenance-platform',;
     name: 'AI Predictive Maintenance Platform',;
     tagline: 'Predict equipment failures before they happen',;
@@ -4316,38 +4874,82 @@ pr-12325
     price: '$899';,;
     period: '/month';,,
   description: 'Industrial IoT platform that uses machine learning to predict equipment failures;, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     features: [;
       'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',;
       'Custom alerting and notificationsHistorical performance analytics';
     ],;
-    "popular": true,;
-    "icon": '⚙️🔮',;'
-    "color": 'from-green-600 to-teal-700',;'
-    "textColor": 'text-green-400',;'
-    "link": '"https"://ziontechgroup.com/ai-predictive-maintenance',;'
-    "marketPosition": 'Competitive with Uptake and C3.ai, offering more affordable pricing for mid-market manufacturers.',;'
-    "targetAudience": 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Mining operations',;'
-    "trialDays": 30,;
-    "setupTime": '1-2 weeks',;'
-    "category": 'AI & Industrial IoT',;'
-    "realService": true,;
-    "technology": ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],;'
-    "integrations": ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],;'
-    "useCases": ['Equipment failure predictionMaintenance optimizationEnergy efficiencyQuality control'],;'
-    "roi": 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.',;'
-    "competitors": ['UptakeC3.aiPTCSiemens Mindsphere'],;'
-    "marketSize": '$12.3B predictive maintenance market',;'
-    "growthRate": '120% annual growth',;'
-    "variant": 'ai-futuristic',;'
-    "contactInfo": contact,;
-    "realImplementation": true,;
-    "implementationDetails": 'Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.',;'
-    "launchDate": '2025-03-15',;'
-    "customers": 78,;
-    "rating": 4.7,;
-    "reviews": 156;
+    popular: true;,;
+    description: 'Industrial IoT platform that uses machine learning to predict equipment failures;, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',;
+      'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',;
+      'Custom alerting and notificationsHistorical performance analytics';']
+pr-12325
+    icon: '⚙️🔮';,;
+    color: 'from-green-600 to-teal-700';,;
+    textColor: 'text-green-400';,;
+    link: 'https://ziontechgroup.com/ai-predictive-maintenance';,;
+    marketPosition: 'Competitive with Uptake and C3.ai;, offering more affordable pricing for mid-market manufacturers.',;
+    targetAudience: 'Manufacturing companies;, Industrial facilities, Energy companies, Transportation companies, Mining operations',;
+    trialDays: 30;,;
+    setupTime: '1-2 weeks';,;
+    category: 'AI & Industrial IoT';,;
+    realService: true;,;
+pr-12325
+    technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'];,;
+    integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'];,;
+    useCases: ['Equipment failure predictionMaintenance optimizationEnergy efficiencyQuality control'];,;
+    roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.';,;
+    competitors: ['UptakeC3.aiPTCSiemens Mindsphere'];,;
+    marketSize: '$12.3B predictive maintenance market';,;
+    growthRate: '120% annual growth';,;
+    variant: 'ai-futuristic';,;
+    contactInfo: contact;,;
+    realImplementation: true;,;
+pr-12325
+    implementationDetails: 'Full-stack IoT platform with edge computing capabilities;, real-time analytics, and comprehensive maintenance management tools.',;
+    launchDate: '2025-03-15';,;
+  {;'
+    id: 'ai-predictive-maintenance-platform';,;''
+    name: 'AI Predictive Maintenance Platform';,;''
+    tagline: 'Predict equipment failures before they happen';,;''
+    price: '$899';,;''
+    period: '/month';,;''
+    description: 'Industrial IoT platform that uses machine learning to predict equipment failures;, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.',;'
+    features: [;'
+      'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',;''
+      'Custom alerting and notificationsHistorical performance analytics';']
+    ],;
+    popular: true;,;'
+    icon: '⚙️🔮';,;''
+    color: 'from-green-600 to-teal-700';,;''
+    textColor: 'text-green-400';,;''
+    link: 'https://ziontechgroup.com/ai-predictive-maintenance';,;''
+    marketPosition: 'Competitive with Uptake and C3.ai;, offering more affordable pricing for mid-market manufacturers.',;''
+    targetAudience: 'Manufacturing companies;, Industrial facilities, Energy companies, Transportation companies, Mining operations',;'
+    trialDays: 30;,;'
+    setupTime: '1-2 weeks';,;''
+    category: 'AI & Industrial IoT';,;'
+    realService: true;,;'
+    technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'];,;''
+    integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'];,;''
+    useCases: ['Equipment failure predictionMaintenance optimizationEnergy efficiencyQuality control'];,;''
+    roi: 'Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.';,;''
+    competitors: ['UptakeC3.aiPTCSiemens Mindsphere'];,;''
+    marketSize: '$12.3B predictive maintenance market';,;''
+    growthRate: '120% annual growth';,;''
+    variant: 'ai-futuristic';,;'
+    contactInfo: contact;,;
+    realImplementation: true;,;'
+    implementationDetails: 'Full-stack IoT platform with edge computing capabilities;, real-time analytics, and comprehensive maintenance management tools.',;''
+    launchDate: '2025-03-15';,;'
+    customers: 78;,;
+    rating: 4.7;,;}
+    reviews: 156;}
   },;
   {;
+<<<<<<< HEAD
     id: 'ai-content-personalization-engine',;
     name: 'AI Content Personalization Engine',;
     tagline: 'Deliver hyper-personalized content experiences',;
@@ -4361,38 +4963,82 @@ pr-12325
     price: '$599';,;
     period: '/month';,,
   description: 'Advanced AI engine that personalizes content;, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.',;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     features: [;
       'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content delivery',;
       'GDPR-compliant data handlingCustom personalization rules engine';
     ],;
-    "popular": false,;
-    "icon": '🎯✨',;'
-    "color": 'from-purple-600 to-pink-700',;'
-    "textColor": 'text-purple-400',;'
-    "link": '"https"://ziontechgroup.com/ai-content-personalization',;'
-    "marketPosition": 'Competitive with Dynamic Yield and Optimizely, with more advanced AI capabilities and better pricing.',;'
-    "targetAudience": 'E-commerce platforms, Media companies, SaaS applications, Marketing agencies, Content platforms',;'
-    "trialDays": 14,;
-    "setupTime": '3-5 days',;'
-    "category": 'AI & Personalization',;'
-    "realService": true,;
-    "technology": ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'],;'
-    "integrations": ['ShopifyWooCommerceWordPressHubSpotMailchimpCustom CMS'],;'
-    "useCases": ['Product recommendationsContent personalizationEmail marketingWebsite optimization'],;'
-    "roi": 'Average 35% increase in conversion rates and 40% improvement in user engagement.',;'
-    "competitors": ['Dynamic YieldOptimizelyEvergageAdobe Target'],;'
-    "marketSize": '$8.7B personalization market',;'
-    "growthRate": '140% annual growth',;'
-    "variant": 'ai-futuristic',;'
-    "contactInfo": contact,;
-    "realImplementation": true,;
-    "implementationDetails": 'Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.',;'
-    "launchDate": '2025-04-20',;'
-    "customers": 92,;
-    "rating": 4.6,;
-    "reviews": 203;
+    description: 'Advanced AI engine that personalizes content;, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.',;
+      'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content delivery',;
+      'GDPR-compliant data handlingCustom personalization rules engine';']
+pr-12325
+    popular: false;,;
+    icon: '🎯✨';,;
+    color: 'from-purple-600 to-pink-700';,;
+    textColor: 'text-purple-400';,;
+    link: 'https://ziontechgroup.com/ai-content-personalization';,;
+    marketPosition: 'Competitive with Dynamic Yield and Optimizely;, with more advanced AI capabilities and better pricing.',;
+    targetAudience: 'E-commerce platforms;, Media companies, SaaS applications, Marketing agencies, Content platforms',;
+    trialDays: 14;,;
+    setupTime: '3-5 days';,;
+    category: 'AI & Personalization';,;
+    realService: true;,;
+pr-12325
+    technology: ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'];,;
+    integrations: ['ShopifyWooCommerceWordPressHubSpotMailchimpCustom CMS'];,;
+    useCases: ['Product recommendationsContent personalizationEmail marketingWebsite optimization'];,;
+    roi: 'Average 35% increase in conversion rates and 40% improvement in user engagement.';,;
+    competitors: ['Dynamic YieldOptimizelyEvergageAdobe Target'];,;
+    marketSize: '$8.7B personalization market';,;
+    growthRate: '140% annual growth';,;
+    variant: 'ai-futuristic';,;
+    contactInfo: contact;,;
+    realImplementation: true;,;
+pr-12325
+    implementationDetails: 'Production-ready personalization engine with real-time processing;, comprehensive analytics, and easy integration capabilities.',;
+    launchDate: '2025-04-20';,;
+  {;'
+    id: 'ai-content-personalization-engine';,;''
+    name: 'AI Content Personalization Engine';,;''
+    tagline: 'Deliver hyper-personalized content experiences';,;''
+    price: '$599';,;''
+    period: '/month';,;''
+    description: 'Advanced AI engine that personalizes content;, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.',;'
+    features: [;'
+      'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content delivery',;''
+      'GDPR-compliant data handlingCustom personalization rules engine';']
+    ],;
+    popular: false;,;'
+    icon: '🎯✨';,;''
+    color: 'from-purple-600 to-pink-700';,;''
+    textColor: 'text-purple-400';,;''
+    link: 'https://ziontechgroup.com/ai-content-personalization';,;''
+    marketPosition: 'Competitive with Dynamic Yield and Optimizely;, with more advanced AI capabilities and better pricing.',;''
+    targetAudience: 'E-commerce platforms;, Media companies, SaaS applications, Marketing agencies, Content platforms',;'
+    trialDays: 14;,;'
+    setupTime: '3-5 days';,;''
+    category: 'AI & Personalization';,;'
+    realService: true;,;'
+    technology: ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'];,;''
+    integrations: ['ShopifyWooCommerceWordPressHubSpotMailchimpCustom CMS'];,;''
+    useCases: ['Product recommendationsContent personalizationEmail marketingWebsite optimization'];,;''
+    roi: 'Average 35% increase in conversion rates and 40% improvement in user engagement.';,;''
+    competitors: ['Dynamic YieldOptimizelyEvergageAdobe Target'];,;''
+    marketSize: '$8.7B personalization market';,;''
+    growthRate: '140% annual growth';,;''
+    variant: 'ai-futuristic';,;'
+    contactInfo: contact;,;
+    realImplementation: true;,;'
+    implementationDetails: 'Production-ready personalization engine with real-time processing;, comprehensive analytics, and easy integration capabilities.',;''
+    launchDate: '2025-04-20';,;'
+    customers: 92;,;
+    rating: 4.6;,;}
+    reviews: 203;}
   },;
   {;
+<<<<<<< HEAD
     id: 'ai-voice-cloning-platform',;
     name: 'AI Voice Cloning Platform',;
     tagline: 'Create natural-sounding voice clones for content creation',;
@@ -4406,38 +5052,82 @@ pr-12325
     price: '$399';,;
     period: '/month';,,
   description: 'Professional voice cloning platform that creates high-quality;, natural-sounding voice replicas for content creators, marketers, and businesses.',;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     features: [;
       'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library management',;
       'Quality assurance toolsCommercial usage rights';
     ],;
-    "popular": false,;
-    "icon": '🎤🎭',;'
-    "color": 'from-orange-600 to-red-700',;'
-    "textColor": 'text-orange-400',;'
-    "link": '"https"://ziontechgroup.com/ai-voice-cloning',;'
-    "marketPosition": 'Competitive with ElevenLabs and Play.ht, offering better pricing and more customization options.',;'
-    "targetAudience": 'Content creators, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',;'
-    "trialDays": 7,;
-    "setupTime": '1 day',;'
-    "category": 'AI & Voice Technology',;'
-    "realService": true,;
-    "technology": ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],;'
-    "integrations": ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],;'
-    "useCases": ['Podcast productionMarketing videosE-learning contentAudiobook narration'],;'
-    "roi": 'Average 60% reduction in voice recording costs and 3x faster content production.',;'
-    "competitors": ['ElevenLabsPlay.htResemble AIDescript'],;'
-    "marketSize": '$2.1B voice cloning market',;'
-    "growthRate": '180% annual growth',;'
-    "variant": 'ai-futuristic',;'
-    "contactInfo": contact,;
-    "realImplementation": true,;
-    "implementationDetails": 'Professional-grade voice cloning platform with advanced AI models, comprehensive voice management, and easy integration.',;'
-    "launchDate": '2025-02-10',;'
-    "customers": 156,;
-    "rating": 4.8,;
-    "reviews": 312;
+    popular: false;,;
+    description: 'Professional voice cloning platform that creates high-quality;, natural-sounding voice replicas for content creators, marketers, and businesses.',;
+      'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library management',;
+      'Quality assurance toolsCommercial usage rights';']
+pr-12325
+    icon: '🎤🎭';,;
+    color: 'from-orange-600 to-red-700';,;
+    textColor: 'text-orange-400';,;
+    link: 'https://ziontechgroup.com/ai-voice-cloning';,;
+    marketPosition: 'Competitive with ElevenLabs and Play.ht;, offering better pricing and more customization options.',;
+    targetAudience: 'Content creators;, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',;
+    trialDays: 7;,;
+    setupTime: '1 day';,;
+    category: 'AI & Voice Technology';,;
+    realService: true;,;
+pr-12325
+    technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'];,;
+    integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'];,;
+    useCases: ['Podcast productionMarketing videosE-learning contentAudiobook narration'];,;
+    roi: 'Average 60% reduction in voice recording costs and 3x faster content production.';,;
+    competitors: ['ElevenLabsPlay.htResemble AIDescript'];,;
+    marketSize: '$2.1B voice cloning market';,;
+    growthRate: '180% annual growth';,;
+    variant: 'ai-futuristic';,;
+    contactInfo: contact;,;
+    realImplementation: true;,;
+pr-12325
+    implementationDetails: 'Professional-grade voice cloning platform with advanced AI models;, comprehensive voice management, and easy integration.',;
+    launchDate: '2025-02-10';,;
+  {;'
+    id: 'ai-voice-cloning-platform';,;''
+    name: 'AI Voice Cloning Platform';,;''
+    tagline: 'Create natural-sounding voice clones for content creation';,;''
+    price: '$399';,;''
+    period: '/month';,;''
+    description: 'Professional voice cloning platform that creates high-quality;, natural-sounding voice replicas for content creators, marketers, and businesses.',;'
+    features: [;'
+      'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library management',;''
+      'Quality assurance toolsCommercial usage rights';']
+    ],;
+    popular: false;,;'
+    icon: '🎤🎭';,;''
+    color: 'from-orange-600 to-red-700';,;''
+    textColor: 'text-orange-400';,;''
+    link: 'https://ziontechgroup.com/ai-voice-cloning';,;''
+    marketPosition: 'Competitive with ElevenLabs and Play.ht;, offering better pricing and more customization options.',;''
+    targetAudience: 'Content creators;, Podcasters, Marketing agencies, E-learning platforms, Audiobook publishers',;'
+    trialDays: 7;,;'
+    setupTime: '1 day';,;''
+    category: 'AI & Voice Technology';,;'
+    realService: true;,;'
+    technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'];,;''
+    integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'];,;''
+    useCases: ['Podcast productionMarketing videosE-learning contentAudiobook narration'];,;''
+    roi: 'Average 60% reduction in voice recording costs and 3x faster content production.';,;''
+    competitors: ['ElevenLabsPlay.htResemble AIDescript'];,;''
+    marketSize: '$2.1B voice cloning market';,;''
+    growthRate: '180% annual growth';,;''
+    variant: 'ai-futuristic';,;'
+    contactInfo: contact;,;
+    realImplementation: true;,;'
+    implementationDetails: 'Professional-grade voice cloning platform with advanced AI models;, comprehensive voice management, and easy integration.',;''
+    launchDate: '2025-02-10';,;'
+    customers: 156;,;
+    rating: 4.8;,;}
+    reviews: 312;}
   },;
   {;
+<<<<<<< HEAD
     id: 'ai-code-review-assistant',;
     name: 'AI Code Review Assistant',;
     tagline: 'Automate code reviews and improve code quality',;
@@ -4451,36 +5141,45 @@ pr-12325
     price: '$299';,;
     period: '/month';,,
   description: 'Intelligent code review assistant that automatically analyzes code quality;, identifies potential issues, and provides actionable improvement suggestions.',;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     features: [;
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics',;
       'Pull request automationMulti-language support';
     ],;
-    "popular": true,;
-    "icon": '💻🔍',;'
-    "color": 'from-indigo-600 to-blue-700',;'
-    "textColor": 'text-indigo-400',;'
-    "link": '"https"://ziontechgroup.com/ai-code-review',;'
-    "marketPosition": 'Competitive with SonarQube and CodeClimate, with more advanced AI capabilities and better developer experience.',;'
-    "targetAudience": 'Software development teams, DevOps engineers, Code quality managers, Open source projects',;'
-    "trialDays": 14,;
-    "setupTime": '2-3 days',;'
-    "category": 'AI & Development',;'
-    "realService": true,;
-    "technology": ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],;'
-    "integrations": ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'],;'
-    "useCases": ['Code quality improvementSecurity auditingPerformance optimizationTeam collaboration'],;'
-    "roi": 'Average 40% reduction in code review time and 30% improvement in code quality scores.',;'
-    "competitors": ['SonarQubeCodeClimateDeepCodeSnyk'],;'
-    "marketSize": '$5.4B code quality market',;'
-    "growthRate": '110% annual growth',;'
-    "variant": 'ai-futuristic',;'
-    "contactInfo": contact,;
-    "realImplementation": true,;
-    "implementationDetails": 'Production-ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.',;'
-    "launchDate": '2025-01-25',;'
-    "customers": 203,;
-    "rating": 4.7;
-    "reviews": 445;
+    popular: true;,;
+    description: 'Intelligent code review assistant that automatically analyzes code quality;, identifies potential issues, and provides actionable improvement suggestions.',;
+      'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics',;
+      'Pull request automationMulti-language support';']
+pr-12325
+    icon: '💻🔍';,;
+    color: 'from-indigo-600 to-blue-700';,;
+    textColor: 'text-indigo-400';,;
+    link: 'https://ziontechgroup.com/ai-code-review';,;
+    marketPosition: 'Competitive with SonarQube and CodeClimate;, with more advanced AI capabilities and better developer experience.',;
+    targetAudience: 'Software development teams;, DevOps engineers, Code quality managers, Open source projects',;
+    trialDays: 14;,;
+    setupTime: '2-3 days';,;
+    category: 'AI & Development';,;
+    realService: true;,;
+    category: 'AI & Development';,;
+pr-12325
+    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'];,;
+    integrations: ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'];,;
+    useCases: ['Code quality improvementSecurity auditingPerformance optimizationTeam collaboration'];,;
+    roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.';,;
+    competitors: ['SonarQubeCodeClimateDeepCodeSnyk'];,;
+    marketSize: '$5.4B code quality market';,;
+    growthRate: '110% annual growth';,;
+    variant: 'ai-futuristic';,;
+    contactInfo: contact;,;
+    realImplementation: true;,;
+    implementationDetails: 'Production-ready code review platform with advanced AI analysis;, comprehensive reporting, and seamless Git integration.',;
+    launchDate: '2025-01-25';,;
+    customers: 203;,;
+    rating: 4.7;
+    reviews: 445;
   }
     implementationDetails: 'Production-ready code review platform with advanced AI analysis;, comprehensive reporting, and seamless Git integration.',;
     launchDate: '2025-01-25';,;
@@ -4940,6 +5639,7 @@ pr-12325
 pr-12325
 ];
 
+<<<<<<< HEAD
 
 ';
 
@@ -4949,3 +5649,7 @@ pr-12325
 '
 
 
+=======
+    rating: 4.7,
+'
+>>>>>>> origin/chore/fix-lint-and-merge

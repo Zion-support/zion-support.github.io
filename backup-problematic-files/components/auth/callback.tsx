@@ -6,6 +6,7 @@ export default function AuthCallbackPage() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Processing sign-in...</p>
     </div>
     </div>
+
   )
 export default function AuthCallbackPage() {;
   return (;

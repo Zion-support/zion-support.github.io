@@ -3,14 +3,14 @@
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
-
-
-
-
-
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,9 +26,13 @@ const path = require('path')
 const fs = require('fs');
 const path = require('path');
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/chore/fix-lint-and-merge
 // console.log(' Final Build Fixer')
 console.log('=====')
-const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx'];
+      const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx']
         'pages/ai-services.tsx'
         'pages/api.tsx'
       console.error('Error fixing "files")
@@ -44,6 +48,7 @@ const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx'
           replacement": 'const Layout = dynamic(() => import("../components/Layout), { ssr"}
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
           "pattern"
+<<<<<<< HEAD
 
 
 
@@ -59,3 +64,13 @@ const filesToFix = ['pages/NotFound.tsx','pages/_document.tsx','pages/about.tsx'
 =======
           "pattern"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

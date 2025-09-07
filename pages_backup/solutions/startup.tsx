@@ -1,15 +1,20 @@
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';
 
+<<<<<<< HEAD
 =======
 import React from 'react;
 import Link from next/link';';
+=======
+import Link from 'next/link';';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { motion } from framer-motion;
 
 import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
 import Layout from "../../components/Layout;;
-
-
-=======
 
 const features = [;
   {}
@@ -47,9 +52,67 @@ const stats = [;
   { number: 300+, label: Projects Delivered' },',
   { number: 300%, label: Average Growth' },',
 
+<<<<<<< HEAD
   { number: 2-4, label: Weeks to MVP' }'];
 }
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
+=======
+  { number: '2-4, label: 'Weeks to MVP' }',
+;];
+
+export default function StartupSolutionsPage() {
+
+  return (;
+    <Layout);"
+      title="Startup Solutions - Zion Tech Group"";"
+      description="Rapid development and scaling solutions for startups. MVP development, tech stack selection, and growth-focused technology solutions."""
+      keywords="startup solutions, MVP development, rapid prototyping, startup technology, scaling solutions""
+    >;"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+        {/* Hero Section */}"
+        <section className="relative bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20 overflow-hidden">""
+          <div className="absolute inset-0">";"
+            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";"
+            <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
+          </div>;
+
+          <div className="container mx-auto px-4 relative z-10">";
+            <motion.div;
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}"
+              className="text-center max-w-4xl mx-auto""
+
+                <h1 className="text-5xl md:text-6xl font-bold">";
+
+                  Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Solutions</span>";
+                </h1>;
+              </div>;"
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">";
+                Rapid development and scaling solutions designed specifically for startups and growing businesses;
+              </p>;"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link;"
+                  href="/contact"";"
+                  className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
+                >;
+                  Start Your MVP;"
+                  <ArrowRight className="ml-2 w-5 h-5" />";
+                </Link>;
+                <Link;"
+                  href="/case-studies"";"
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
+                >;
+
+                  Success Stories;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
+>>>>>>> origin/chore/fix-lint-and-merge
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}

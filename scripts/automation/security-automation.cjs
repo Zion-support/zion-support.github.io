@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #!/"usr/bin/env" node;
 #!/usr/bin/env node;
@@ -17,6 +18,32 @@ const path = require("path);
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env"" node;
+#!/usr/bin/env node;
+const { execSync, spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+#!/usr/bin/env node;"
+#!/usr/bin/env node"
+const { execSync, spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 class $1 {}
   constructor() {}"
   this.projectRoot = path.resolve(__dirname, ../../);"
@@ -36,10 +63,22 @@ class $1 {}
     })}
   log(message, level = INFO") {}"
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     const logEntry = `[${timestamp}] [${level}] ${message}`;`
     console.log(logEntry);
     // Append to log file;
+<<<<<<< HEAD
     fs.appendFileSync(this.logFile, logEntry + \n");
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -53,17 +92,46 @@ class $1 {}
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n)}
     const logEntry = `[${timestamp}] [${level}] ${message}`
+=======
+    fs.appendFileSync(this.logFile, logEntry + "\n");
+<<<<<<< HEAD
+  log(message, level = "INFO") {}
+  const timestamp = new Date().toISOString();
+    const logEntry = "[${timestamp}] [${level}] ${message}";
+=======
+
+  log(message, level = "INFO") {}
+  const timestamp = new Date().toISOString();
+    const logEntry = "[${timestamp}] [${level}] ${message}";
+    
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    // Append to log file;
+    fs.appendFileSync(this.logFile, logEntry + "\n")};
+;
+=======
+    const logEntry = `[${timestamp}] [${level}] ${message};`"
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log("logEntry);"
     // Append to log file;
 
+<<<<<<< HEAD
     const logEntry = "[${timestamp}] [${level}] ${message}";
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")}
+=======
+  const timestamp = new Date().toISOString();"
+    const logEntry = "[${timestamp}] [${level}] ${message}";"
+    // Append to log file;"
+    fs.appendFileSync(this.logFile, logEntry + "\n")};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
   async runCommand(command, cwd = this.projectRoot) {}
   // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n");)});
 ");
   async runCommand(command, cwd = this.projectRoot) {");}
+<<<<<<< HEAD
 
 
 =======
@@ -82,11 +150,67 @@ class $1 {}
 });"
 
 
+=======
+<<<<<<< HEAD
+    return new Promise((resolve, reject) => {this.log(Running "command": ${command}");
+      const child = spawn(command, [], {})
+  "shell": true,
+        cwd,
+        "stdio": ["pipe", "pipe", "pipe"]}
+});
+      let stdout = "";
+      let stderr = "";
+      child.stdout.on("data", data => {})
+  stdout += data.toString();this.log(""STDOUT": ${data.toString().trim()}")}
+});
+      child.stderr.on("data", data => {})
+  stderr += data.toString();this.log(""STDERR": ${data.toString().trim()}")}
+});
+      child.on("close", code => {})
+  if (code === 0) {this.log("Command completed successfully with code ${code}");
+          resolve({ code, stdout, stderr })} else {this.log("Command failed with code ${code}", "ERROR");reject(new Error("Command failed with code ${code}: ${stderr}"))};
+      }
+});
+      child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
+=======
+    return new Promise((resolve, reject) => {this.log(Running "command": ${command}");"
+      const child = spawn(command, [], {})"
+  "shell": true,"
+        cwd,"
+        "stdio": ["pipe", "pipe", "pipe"]}"
+});"
+
+      child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        reject(error)})})};
+  async installDependencies() {}"
+  this.log("Installing dependencies...");"
+    try {}"
+  await this.runCommand("npm ci");
+      this.log("Dependencies installed successfully");
+      return true} catch (error) {  this.log("Failed to install "dependencies": ${error.message  }", "ERROR");"
+      return false};
+  };
+  async runNpmAudit() {}"
+  this.log("Running npm audit...");"
+  const result = await this.runCommand(npm audit --audit-level=moderate --json";)"
+      // Parse the JSON output;
+      const auditData = JSON.parse(result.stdout);
+      // Check for vulnerabilities;
+      const vulnerabilities = auditData.metadata?.vulnerabilities || {};
+      const totalVulnerabilities = Object.values(vulnerabilities).reduce(;)
+>>>>>>> origin/chore/fix-lint-and-merge
         (sum, count) => sum + count,
         0;
       );`;
       this.log( `NPM audit completed. Found ${totalVulnerabilities} vulnerabilities`;`)
       // Save detailed audit report;
+<<<<<<< HEAD
 
 =======
 
@@ -104,10 +228,35 @@ class $1 {}
 
       );
 
+=======
+<<<<<<< HEAD
+      const auditReportFile = path.join(;)
+        this.projectRoot,security-reports",
+        "npm-audit-report.json";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  async runNpmAudit() {}
+  this.log("Running npm audit...");
+    try {}
+  const result = await this.runCommand(npm audit --audit-level=moderate --json";)
+      );
+<<<<<<< HEAD
+      // Parse the JSON output;
+      const auditData = JSON.parse(result.stdout);
+=======
+=======
+      const auditReportFile = path.join(;)"
+
+        "npm-audit-report.json";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
       // Parse the JSON output;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -129,6 +278,22 @@ class $1 {}
       // Save detailed audit report;
 
 =======
+      // Check for vulnerabilities;
+<<<<<<< HEAD
+      const vulnerabilities = auditData.metadata?.vulnerabilities || {};
+      const totalVulnerabilities = Object.values(vulnerabilities).reduce(;)
+        (sum, count) => sum + count,
+        0;
+      );
+<<<<<<< HEAD
+      this.log( "NPM audit completed. Found ${totalVulnerabilities} vulnerabilities";)
+      );
+=======
+
+      this.log( "NPM audit completed. Found ${totalVulnerabilities} vulnerabilities";)
+      );
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
@@ -136,6 +301,7 @@ class $1 {}
       // Save detailed audit report;
 
       fs.writeFileSync(auditReportFile, JSON.stringify(auditData, null, 2));
+<<<<<<< HEAD
 
 =======
 
@@ -145,46 +311,86 @@ class $1 {}
       fs.writeFileSync(auditReportFile, JSON.stringify(auditData, null, 2));
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       return {}
   "success: totalVulnerabilities === 0,
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
       return {}
   "success": totalVulnerabilities === 0,
+<<<<<<< HEAD
+=======
+=======
+      return {}"
+  "success": totalVulnerabilities === 0,"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
         totalVulnerabilities,
         vulnerabilities,
         "reportFile": auditReportFile}
 
+<<<<<<< HEAD
 
   async checkOutdatedPackages() {}
   this.log(Checking for outdated packages...");"
   const result = await this.runCommand(npm outdated --json);"
 
+=======
+        "error": error.message};"
+  async checkOutdatedPackages() {}"
+  this.log("Checking for outdated packages...");"
+  const result = await this.runCommand("npm outdated --json");"
+      // Parse the JSON output;
+      const outdatedData = JSON.parse(result.stdout);
+      const outdatedCount = Object.keys(outdatedData).length;`;
+this.log(`Found ${outdatedCount} outdated packages`);
+      // Save outdated packages report;
+<<<<<<< HEAD
+      const outdatedReportFile = path.join(;)
+        this.projectRoot,security-reports",
+        "outdated-packages.json"} catch (error) {}
+  this.log(`NPM audit "failed": ${error.message}`, "ERROR");
+      return {}
+  "success": false,
+        "error": error.message};
+    };
+  };
+;
+  async checkOutdatedPackages() {}
+  this.log("Checking for outdated packages...");
+    try {}
+  const result = await this.runCommand("npm outdated --json");
+<<<<<<< HEAD
+=======
+=======
+      const outdatedReportFile = path.join(;)"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Parse the JSON output;
+<<<<<<< HEAD
       const outdatedData = JSON.parse(result.stdout);
       const outdatedCount = Object.keys(outdatedData).length;
 this.log(`Found ${outdatedCount} outdated packages");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
       const outdatedCount = Object.keys(outdatedData).length;`;
 this.log(`Found ${outdatedCount} outdated packages);"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       // Save outdated packages report;
 
+<<<<<<< HEAD
 fs.writeFileSync(;)
         outdatedReportFile,
         JSON.stringify(outdatedData, null, 2);
@@ -196,14 +402,35 @@ fs.writeFileSync(;)
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+        "outdated-packages.json";"
+      );"`;
+        `outdated-packages.json";"
+fs.writeFileSync(;)
+        outdatedReportFile,
+        JSON.stringify(outdatedData, null, 2);
+<<<<<<< HEAD
+      );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       return {}
   success": true,
         outdatedCount,
+=======
 
   "success: true,
         outdatedCount,"
+<<<<<<< HEAD
         "packages: outdatedData,
         reportFile": outdatedReportFile}"
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        "packages": outdatedData,
+        "reportFile": outdatedReportFile};"
+>>>>>>> origin/chore/fix-lint-and-merge
     } catch (error) {}
   // npm outdated returns exit code 1 when there are outdated packages, which is not an error;
       if (error.message.includes(exit code 1")) {}
@@ -213,11 +440,42 @@ fs.writeFileSync(;)
   async runSecurityScan() {}"
   this.log(Running comprehensive security scan...);"
     const results = []} catch (error) {}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  // npm outdated returns exit code 1 when there are outdated packages, which is not an error;
+      if (error.message.includes("exit code 1")) {}
+  this.log(NPM outdated check completed (some packages are outdated)",
+          "WARN";
+        );
+        return {}
+  "success": true,
+          "outdatedCount": "unknown",
+          "note": "Some packages are outdated"};
+      };
+;
+      this.log(`NPM outdated check "failed": ${error.message}`, "ERROR");
+      return {}
+  "success": false,
+        "error": error.message};
+    };
+  };
+;
+  async runSecurityScan() {}
+  this.log("Running comprehensive security scan...");
+<<<<<<< HEAD
+    const results = [];
+=======
+=======
+  // npm outdated returns exit code 1 when there are outdated packages, which is not an error;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
     const results = [];
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
 =======
 
 
@@ -227,12 +485,15 @@ fs.writeFileSync(;)
 
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     // Run npm audit;
     const auditResult = await this.runNpmAudit();
     results.push({})"
   step: "npm-audit",
       success: auditResult.success,
       "details": auditResult,
+<<<<<<< HEAD
       timestamp: new Date().toISOString()}"
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -245,6 +506,27 @@ fs.writeFileSync(;)
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     return results}
+=======
+      "timestamp": new Date().toISOString()}"
+});
+    // Check outdated packages;
+    const outdatedResult = await this.checkOutdatedPackages();
+<<<<<<< HEAD
+    results.push({})
+  "step": "outdated-packages",
+      "success": outdatedResult.success,
+      "details": outdatedResult,
+      "timestamp": new Date().toISOString()}
+});
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    return results};
+>>>>>>> origin/chore/fix-lint-and-merge
   async generateSecurityReport(results) {}
   const report = {}"
   timestamp: new Date().toISOString(),
@@ -263,6 +545,7 @@ fs.writeFileSync(;)
   switch (result.step) {}
   case "npm-audit":;
             if (result.details.totalVulnerabilities > 0) {}
+<<<<<<< HEAD
 
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -271,6 +554,22 @@ fs.writeFileSync(;)
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+<<<<<<< HEAD
+  report.recommendations.push({})
+  "priority": "HIGH",
+                "action": "Update vulnerable packages","details": `Found ${result.details.totalVulnerabilities} security vulnerabilities`})};
+            break;
+          case "outdated-packages":;
+            report.recommendations.push({})
+  "priority": "MEDIUM",
+              "action": "Update outdated packages",
+              "details": "Some packages have newer versions available",
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     // Generate recommendations based on results;
     results.forEach(result => {})
   if (!result.success) {}
@@ -287,14 +586,32 @@ fs.writeFileSync(;)
               "action: Update outdated packages",
               "details: Some packages have newer versions available"}
 });
+=======
   report.recommendations.push({})"
 
+<<<<<<< HEAD
               details: "Some packages have newer versions available"}
             break}
     // Add general security recommendations;
+=======
+              "details": "Some packages have newer versions available"}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            break};
+    // Add general security recommendations;
+<<<<<<< HEAD
+    report.recommendations.push({})
+  "priority": "LOW",
+      "action": "Regular security audits",
+      "details": "Run security scans weekly to maintain security posture"}
+});
+<<<<<<< HEAD
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Security report "generated": ${this.reportFile}`);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+<<<<<<< HEAD
 =======
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log(`Security report generated": ${this.reportFile}`);
@@ -309,6 +626,35 @@ fs.writeFileSync(;)
     return report}
   async run() {}
   this.log("Starting security automation...");
+=======
+    return report};
+  async run() {}"
+  this.log("Starting security automation...");"
+    // Install dependencies first;
+    const depsResult = await this.installDependencies();
+    if (!depsResult) {}"
+  this.log(Skipping security scan due to dependency installation failure")
+        "ERROR";"
+      return};
+    // Run security scan;
+    const scanResults = await this.runSecurityScan();
+    // Generate final report;
+<<<<<<< HEAD
+    const report = await this.generateSecurityReport(scanResults);
+this.log("Security automation completed. "Status": ${report.status}");this.log("Secure "checks": ${report.summary.secure}/${report.summary.total}");
+    if (report.status === "VULNERABILITIES_FOUND") {}
+  this.log(Security vulnerabilities detected. Check the report for details.",)
+        "WARN";
+<<<<<<< HEAD
+  async run() {}
+  this.log("Starting security automation...");
+=======
+
+  async run() {}
+  this.log("Starting security automation...");
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     // Install dependencies first;
     const depsResult = await this.installDependencies();
     if (!depsResult) {}
@@ -317,14 +663,25 @@ fs.writeFileSync(;)
       return}
     // Run security scan;
     const scanResults = await this.runSecurityScan();
+<<<<<<< HEAD
     // Generate final report;
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
+    // Generate final report;
+    const report = await this.generateSecurityReport(scanResults);
+this.log(`Security automation completed. "Status": ${report.status}`);this.log(`Secure "checks": ${report.summary.secure}/${report.summary.total}`);
+=======
+=======
+    const report = await this.generateSecurityReport(scanResults);"
+>>>>>>> origin/chore/fix-lint-and-merge
 
   async run() {}
   this.log("Starting security automation...");
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     // Install dependencies first;
@@ -347,10 +704,17 @@ this.log(`Security automation completed. "Status: ${report.status}`);this.log(`S
 
     if (report.status === "VULNERABILITIES_FOUND) {}
   this.log(Security vulnerabilities detected. Check the report for details.,)
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    if (report.status === "VULNERABILITIES_FOUND") {}
+  this.log(Security vulnerabilities detected. Check the report for details.",)
+>>>>>>> origin/chore/fix-lint-and-merge
         "WARN";
       );
       this.log(Recommendations": ");
       report.recommendations.forEach(rec => {this.log(`  [${rec.priority}] ${rec.action}: ${rec.details}`)})} else {`}
+<<<<<<< HEAD
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   this.log(No security vulnerabilities found. System is secure., "INFO")}
   }
@@ -371,16 +735,54 @@ this.log(`Security automation completed. "Status: ${report.status}`);this.log(`S
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
 } else {}
+=======
+  this.log("No security vulnerabilities found. System is secure.", "INFO")};
+  };
+};
+;
+// Run the automation if this script is executed directly;
+if (require.main === module) {}
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+} else {}
+  this.log("No security vulnerabilities found. System is secure.", "INFO")};
+  };
+};
+;
+=======
+  this.log("No security vulnerabilities found. System is secure.", "INFO")};"
+// Run the automation if this script is executed directly;
+if (require.main === module) {}
+} else {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 // Run the automation if this script is executed directly;
   const security = new SecurityAutomation();
 security.run().catch(error => {})"
 
+<<<<<<< HEAD
     process.exit(1)})}
 
 module.exports = SecurityAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+=======
+    process.exit(1)})};
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+module.exports = SecurityAutomation;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = SecurityAutomation;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -389,10 +791,15 @@ module.exports = SecurityAutomation;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+
+module.exports = SecurityAutomation;
+<<<<<<< HEAD
+
+module.exports = SecurityAutomation;
+
 =======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-module.exports = SecurityAutomation;
-
-module.exports = SecurityAutomation;
-
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

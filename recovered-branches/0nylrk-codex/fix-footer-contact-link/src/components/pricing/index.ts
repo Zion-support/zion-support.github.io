@@ -1,7 +1,7 @@
-// Index utility,
+// Index utility
 export const Index = () => {
   // Implementation here
-}
-return null;
-}
-}
+  return null
+};
+
+export * from './TalentRateRecommender';

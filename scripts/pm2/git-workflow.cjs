@@ -1,9 +1,34 @@
-#!/usr/bin/env node;
-/**
- * PM2 Git Workflow Service;
- * Manages git operations and branch cleanup;
- */
-const { execSync } = require('child_process');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/git-workflow.cjs
+
+<<<<<<< HEAD
+
+=======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/git-workflow.cjs
+=======
+=======
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/git-workflow.cjs
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/git-workflow.cjs
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 class GitWorkflowAutomator {
@@ -15,48 +40,63 @@ class GitWorkflowAutomator {
   }
   log(message) {
     const timestamp = new Date().toISOString();
-const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`;
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
-  };
-  async getCurrentBranch() {}
-    try {}
-const branch = execSync('git branch --show-current', { });
-        "encoding": 'utf8',
-        "stdio": 'pipe'
+    const logMessage = `[${timestamp}] ${message}\n`;
+    try {
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {
+      console.error('Error writing to log file:', error.message);
+    }
+  }
+  async getCurrentBranch() {
+    try {
+      const branch = execSync('git branch --show-current', {
+        cwd: this.projectRoot,
+        encoding: 'utf8'
       }).trim();
       return branch;
     } catch (error) {
       this.log(`Error getting current branch: ${error.message}`);
       return null;
-    };
-  };
-  async getBranches() {}
-    try {}
-const branches = execSync('git branch -a', { });
-        "encoding": 'utf8',
-        "stdio": 'pipe'
-      }).split('\n');
-        .map(b => b.trim());
-        .filter(b => b && !b.startsWith('*'));
-        .map(b => b.replace(/^remotes\/origin\//, ''));
-      return [...new Set(branches)]; // Remove duplicates;
-    } catch (error) {}
-      this.log(`Failed to get "branches": ${error.message}`);
+    }
+  }
+  async getBranchList() {
+    try {
+      const branches = execSync('git branch -a', {
+        cwd: this.projectRoot,
+        encoding: 'utf8'
+      });
+      return branches.split('\n')
+        .map(line => line.trim())
+        .filter(line => line && !line.includes('HEAD'))
+        .map(line => line.replace(/^\*?\s*/, ''))
+        .map(line => line.replace(/^remotes\/origin\//, ''));
+    } catch (error) {
+      this.log(`Error getting branch list: ${error.message}`);
       return [];
-    };
-  };
-  async getMergedBranches() {}
-    try {}
-const mergedBranches = execSync('git branch --merged', { });
-        "encoding": 'utf8',
-        "stdio": 'pipe'
-      }).split('\n');
-        .map(b => b.trim());
-        .filter(b => b && !b.startsWith('*') && b !== 'main' && b !== 'master');
-      return mergedBranches;
-    } catch (error) {}
-      this.log(`Failed to get merged "branches": ${error.message}`);
+    }
+  }
+  async getStaleBranches() {
+    try {
+      this.log('🧹 Checking for stale branches...');
+      // Get merged branches
+      const mergedBranches = execSync('git branch --merged main', {
+        cwd: this.projectRoot,
+        encoding: 'utf8'
+      }).split('\n')
+        .map(line => line.trim())
+        .filter(line => line && !line.includes('main') && !line.includes('master'))
+        .map(line => line.replace(/^\*?\s*/, ''));
+      // Get remote branches that are merged
+      const remoteMerged = execSync('git branch -r --merged origin/main', {
+        cwd: this.projectRoot,
+        encoding: 'utf8'
+      }).split('\n')
+        .map(line => line.trim())
+        .filter(line => line && !line.includes('origin/main') && !line.includes('origin/HEAD'))
+        .map(line => line.replace(/^origin\//, ''));
+      return [...new Set([...mergedBranches, ...remoteMerged])];
+    } catch (error) {
+      this.log(`Error getting stale branches: ${error.message}`);
       return [];
     }
   }
@@ -151,9 +191,9 @@ const mergedBranches = execSync('git branch --merged', { });
       this.log('📋 Checking pull requests...');
       // This would typically use GitHub API, but for now we'll check local branches
       const branches = await this.getBranchList();
-      const featureBranches = branches.filter(branch => 
-        branch.includes('feature/') || 
-        branch.includes('fix/') || 
+      const featureBranches = branches.filter(branch =>
+        branch.includes('feature/') ||
+        branch.includes('fix/') ||
         branch.includes('hotfix/')
       );
       return {
@@ -324,70 +364,152 @@ automator.run().catch(error => {
   process.exit(1);
 });
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class GitWorkflow { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "git-workflow";" this.autoBranchCleanup = process.env.AUTO_BRANCH_CLEANUP === "true";" this.autoMergeSafe = process.env.AUTO_MERGE_SAFE === "true";" this.conflictResolution = process.env.CONFLICT_RESOLUTION === "true";" this.branchStrategy = process.env.BRANCH_STRATEGY | "gitflow";" this.logFile = path.join(__dirname, "././logs/pm2/git-workflow.log"); this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile, logMessage); } async getCurrentBranch() { try {" const branch = execSync("git branch --show-current", { "" encoding: "utf8","" stdio: "pipe" }).trim(); return branch; } catch (error) {"` this.log(`Failed to get current branch: ${error.message}`); return null; } } async getBranches() { try {" const branches = execSync("git branch -a", { "" encoding: "utf8","" stdio: "pipe"" }).split("\n") .map(b => b.trim())" .filter(b => b && !b.startsWith("*"))" .map(b => b.replace(/^remotes\/origin\/, "")); return [.new Set(branches)]; / Remove duplicates } catch (error) {"` this.log(`Failed to get branches: ${error.message}`); return []; } } async getMergedBranches() { try {" const mergedBranches = execSync("git branch --merged", { "" encoding: "utf8","" stdio: "pipe"" }).split("\n") .map(b => b.trim())" .filter(b => b && !b.startsWith("*") && b !== "main" && b !== "master"); return mergedBranches; } catch (error) {"` this.log(`Failed to get merged branches: ${error.message}`); return []; } } async cleanupBranches() { if (!this.autoBranchCleanup) {" this.log("Branch cleanup disabled");" return { cleaned: false }; } try {" this.log("Starting branch cleanup."); const mergedBranches = await this.getMergedBranches(); const deletedBranches = []; for (const branch of mergedBranches) { try { / Skip protected branches" if (["main", "master", "develop", "dev"].includes(branch)) { continue; }"` this.log(`Deleting merged branch: ${branch}`);""` execSync(`git branch -d ${branch}`, { stdio: "pipe" }); deletedBranches.push(branch); } catch (error) {` this.log(`Failed to delete branch ${branch}: ${error.message}`); } }` this.log(`Cleaned up ${deletedBranches.length} branches`); return {" cleaned: true, deletedBranches," totalDeleted: deletedBranches.length }; } catch (error) {"` this.log(`Branch cleanup failed: ${error.message}`);" return { cleaned: false, error: error.message }; } } async checkForConflicts() { try {" this.log("Checking for merge conflicts."); / Check if there are any unmerged files" const unmergedFiles = execSync("git diff --name-only --diff-filter=U", { "" encoding: "utf8","" stdio: "pipe" }).trim(); if (unmergedFiles) {" const files = unmergedFiles.split("\n").filter(f => f.trim());""` this.log(`Found merge conflicts in ${files.length} files: ${files.join(", ")}`);" return { hasConflicts: true, files }; }" this.log("No merge conflicts found");" return { hasConflicts: false, files: [] }; } catch (error) {"` this.log(`Conflict check failed: ${error.message}`);" return { hasConflicts: false, error: error.message }; } } async resolveConflicts() { if (!this.conflictResolution) {" this.log("Conflict resolution disabled");" return { resolved: false }; } try { const conflictCheck = await this.checkForConflicts(); if (!conflictCheck.hasConflicts) {" this.log("No conflicts to resolve");"" return { resolved: true, message: "No conflicts found" }; }` this.log(`Resolving conflicts in ${conflictCheck.files.length} files.`); " / For automated conflict resolution, we"ll use a simple strategy / In practice, you might want more sophisticated conflict resolution for (const file of conflictCheck.files) { try {` this.log(`Resolving conflicts in ${file}.`); / Read the file and resolve conflicts (simplified approach)" let content = fs.readFileSync(file, "utf8"); / Remove conflict markers and keep both versions (simplified)""`"`
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/git-workflow.cjs
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/git-workflow.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
 /**
- * PM2 Git Workflow Service
- * Manages git operations and branch cleanup
+ * PM2 Git Workflow Service;
+ * Manages git operations and branch cleanup;
  */
-const { execSync } = require('child_process')
-
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 class GitWorkflow {}
-class AutoGeneratedClass {
-  constructor($2) {}
-    this.processName = process.env.PM2_PROCESS_NAME ||git-workflow'
-    this.autoBranchCleanup = process.env.AUTO_BRANCH_CLEANUP ===true
-    this.autoMergeSafe = process.env.AUTO_MERGE_SAFE ===true
-    this.conflictResolution = process.env.CONFLICT_RESOLUTION ===true
-    this.branchStrategy = process.env.BRANCH_STRATEGY ||gitflow'
-    this.logFile = path.join(__dirname,../../logs/pm2/git-workflow.log')
-    this.ensureLogDir()
-  }
-  ensureLogDir($2) {}
-    const logDir = path.dirname(this.logFile)
+  constructor() {}
+    this.processName = process.env.PM2_PROCESS_NAME ||git-workflow';
+    this.autoBranchCleanup = process.env.AUTO_BRANCH_CLEANUP ===true;
+    this.autoMergeSafe = process.env.AUTO_MERGE_SAFE ===true;
+    this.conflictResolution = process.env.CONFLICT_RESOLUTION ===true;
+    this.branchStrategy = process.env.BRANCH_STRATEGY ||gitflow';
+    this.logFile = path.join(__dirname,../../logs/pm2/git-workflow.log');
+    this.ensureLogDir();
+  };
+  ensureLogDir() {}
+    const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { "recursive": true }")
 });
   log(message) {}
+<<<<<<< HEAD
+=======
+    const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/git-workflow.cjs
+>>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/git-workflow.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
+    );
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 
 
+<<<<<<< HEAD
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
-    console.log(logMessage.trim())
-    fs.appendFileSync(this.logFile, logMessage)
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
   async getCurrentBranch() {}
     try {}"
 
-      return null
+      return null;
   async getBranches() {}
 
-      return []
+      return [];
   async getMergedBranches() {}
 
   async cleanupBranches() {}
-  if($2) {}"
-      this.log('Branch cleanup disabled')
+    if (!this.autoBranchCleanup) {}"
+      this.log('Branch cleanup disabled');
       return { "cleaned": false };"
 
-      const mergedBranches = await this.getMergedBranches()
-      const deletedBranches = []
-  for($2) {}
+      const mergedBranches = await this.getMergedBranches();
+      const deletedBranches = [];
+      for (const branch of mergedBranches) {}
         try {}
-          // Skip protected branches
+          // Skip protected branches;
           if ([main,master,develop,dev].includes(branch)) {}
-            continue
-      this.log(`Cleaned up ${deletedBranches.length} branches`)
+            continue;
+
+      this.log(`Cleaned up ${deletedBranches.length} branches`);
       return {}
         "cleaned": true,"
         deletedBranches,"
@@ -395,12 +517,12 @@ main
 
         return { "hasConflicts": true, files };"
       };"
-      this.log('No merge conflicts found')
+      this.log('No merge conflicts found');
       return { "hasConflicts": false, "files": [] };"
 
   async resolveConflicts() {}
-  if($2) {}"
-      this.log('Conflict resolution disabled')
+    if (!this.conflictResolution) {}"
+      this.log('Conflict resolution disabled');
       return { "resolved": false };"
 
       this.log(`Resolving conflicts in ${conflictCheck.files.length} files...`);
@@ -411,12 +533,64 @@ main
           this.log(`Resolving conflicts in ${file}...`);
           // Read the file and resolve conflicts (simplified approach);
           let content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/git-workflow.cjs
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          // Remove conflict markers and keep both versions (simplified)
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/git-workflow.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+<<<<<<< HEAD
+          // Remove conflict markers and keep both versions (simplified)
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+
+
+<<<<<<< HEAD
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           // Remove conflict markers and keep both versions (simplified);
           content = content.replace(/\n/g, );
 
   async safeMerge() {}
-    if (!this.autoMergeSafe) {}
+    if (!this.autoMergeSafe) {}"
       this.log('Safe merge disabled');
+<<<<<<< HEAD
       return { "merged": false };
     };
     try {}
@@ -484,6 +658,14 @@ const status = execSync('git status --porcelain', { });
     const reportFile = path.join(__dirname, '../../logs/pm2/git-workflow-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Git workflow report "generated": ${reportFile}`);
+=======
+      return { "merged": false };"
+
+      const currentBranch = await this.getCurrentBranch();
+      if (!currentBranch || currentBranch ===main' || currentBranch ===master') {}
+        this.log('Cannot merge main/master branch');
+
+>>>>>>> origin/chore/fix-lint-and-merge
     return report;
   async start() {}`;
     this.log(`${this.processName} started`);
@@ -494,6 +676,52 @@ if (require.main === module) {}
   const gitWorkflow = new GitWorkflow();
   gitWorkflow.start().catch(console.error);
 module.exports = GitWorkflow;
+=======
 cursor/website-audit-and-update-with-deployment-76dc;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/pm2/git-workflow.cjs
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/git-workflow.cjs
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,8 +1,19 @@
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+import { supabase as supabaseClient  } from '@/utils/supabase/client';
+import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
+
+import type { TalentProfile } from '@/utils/types/talent';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const hasSupabase =;
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
+<<<<<<< HEAD
 
 const hasSupabase =
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
@@ -56,32 +67,65 @@ export default async function handler() {if (req && req.method === 'GET') {try {
 if (throw error) {$2;
 }
         return res.status (201).json ({ slug: item.slug })return res.status(500).json({ error: e.message })}
+=======
+const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
+  .split(',')
+  .map(x => x.trim());
+
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse;
+) {
+  if (req && req.method = == 'GET') {
+    try {
+      if (hasSupabase) {}
+       ;}
+  const { data, error } = await supabaseClient;
+          .from('talent_profiles')
+          .order('created_at', { ascending: false,}
+});
+        if (error) throw error;
+        return res && res.status(200).json({ items: data as TalentProfile[],}
+});
+      }
+      return res && res.status(200).json({ items: LOCAL,}
+});
+    } catch (e) {
+      return res.status(500).json({ error: e.message,}
+});
+    }
+
+>>>>>>> origin/chore/fix-lint-and-merge
   }
-  if (req.method = == 'POST') {try ;'
-  }
-  const payload = req.body as Partial<TalentProfile>;
+  if (req.method = == 'POST') {try ;
+  const payload = req.body as Partial<TalentProfile    />;
 
 const slug =;
-        (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') +;'
-        '-' +;'
+        (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') +;
+        '-' +;
         uuid().slice(0, 6)...payload;
-        "id": uuid()slug;
-        "verified": false;
-        "rating": 0;
-        "reviewsCount": 0;
-        "createdAt": new Date().toISOString()"summary": payload.summary |'';'
-        "skills": payload.skills |[];
-        "name": payload.name |'Unnamed';'
-        "title": payload.title |'Professional';'
-        "location": payload.location |'Remote';'
-        "availability": (payload.availability as any) |'Open';'
+        id: uuid()slug;
+        verified: false;
+        rating: 0;
+        reviewsCount: 0;
+        createdAt: new Date().toISOString()summary: payload.summary |'';
+        skills: payload.skills |[];
+        name: payload.name |'Unnamed';
+        title: payload.title |'Professional';
+        location: payload.location |'Remote';}
+        availability: (payload.availability as any) |'Open';}
       } as TalentProfile;
       // Auto-translate;
-      const originalLang =;
-        payload.originalLanguage |;
 
+const originalLang =;
+        payload.originalLanguage |;
+<<<<<<< HEAD
+
+=======
+        detectLanguageSimple([item.title, item.summary, item.bio |''].join('\n'))const translations: TalentProfile['translations'] = {}
+>>>>>>> origin/chore/fix-lint-and-merge
         translations.summary = translations.summary |{}
-        translations.bio = translations.bio |
+        translations.bio = translations.bio |,
 }
         if (item.title)translations.title[lang] = await translateText(item.title;
             lang;
@@ -101,8 +145,13 @@ const slug =;
       item.originalLanguage = originalLang;
       item.translations = translations;
 
+<<<<<<< HEAD
 
         const { error } = await supabaseClient.from(talent_profiles').insert({
+=======
+      if (hasSupabase) {}
+        const { error } = await supabaseClient.from('talent_profiles').insert({
+>>>>>>> origin/chore/fix-lint-and-merge
 id: item.id,
           slug: item.slug,
           name: item.name,
@@ -124,6 +173,7 @@ id: item.id,
           rating: item.rating ?? null,
           reviews_count: item.reviewsCount ?? null,
           created_at: item.createdAt,
+<<<<<<< HEAD
           // i18n
 
       // Auto-translate
@@ -301,6 +351,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 return res;
     .setHeader('Allow, GET, POST')
+=======
+          // i18n;
+original_language: item.originalLanguage,}
+          translations: item.translations as any,}
+        } as any);
+        if (error) throw error;
+        return res.status(201).json({ slug: item.slug,}
+});
+      }
+      // Fallback: return the slug as if saved;
+      return res.status (201).json ({ slug: item.slug,}
+});
+    } catch (e) {
+      return res.status (500).json ({ error: e.message,}
+});
+    }
+
+  }
+return res;
+    .setHeader('Allow', 'GET, POST')
+>>>>>>> origin/chore/fix-lint-and-merge
     .status(405)
-    .end('Method Not Allowed');'
+    .end('Method Not Allowed');
 

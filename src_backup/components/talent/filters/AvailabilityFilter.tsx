@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
 import { Checkbox } from "@/components/ui/checkbox;
@@ -21,6 +22,8 @@ export function AvailabilityFilter({
   return (
     <div className=mb-6 border-b border-zion-blue-light pb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 return (
     <div className='mb-6 border-b border-zion-blue-light pb-6>;
 
@@ -99,6 +102,7 @@ import { AvailabilityFilterProps } from "@/types/filters";
 
   { id: project, label: "Project-based" }
 
+<<<<<<< HEAD
         {expanded ? (<ChevronUp className=h - 4 w - 4 text - zion - slate - light' />) : (<ChevronDown className='h - 4 w - 4 text - zion - slate - light />)}
       </button>;{expanded && (<div className=mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (<div key={option.id} className='flex items - center>              <Checkbox;
@@ -288,6 +292,8 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
 }</label> </div>) )}</div>)}</div>)}";
 
   option.label 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 htmlFor={`availability-${option.id}`}
 
   option.label;

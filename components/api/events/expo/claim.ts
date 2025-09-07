@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 });
   // In "production": verify signature, mint or issue POAP,
@@ -74,3 +75,19 @@ function handler() {
 }
 
 "
+=======
+console.log(
+    "[NFT Claim] address:"
+    address"
+    "signature:""
+    signature.slice(0, 18) + "…"
+  );
+
+    signature && signature.slice(0, 18) + "…",
+  );
+import type { NextApiRequest, NextApiResponse } from './next';
+;
+export default async /**;
+ * handler - Function description;
+ */
+>>>>>>> origin/chore/fix-lint-and-merge

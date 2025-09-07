@@ -1,25 +1,38 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Quality Checks Script for PM2;
  * Replaces GitHub Actions quality assurance workflows;
  * Runs every 3 hours to ensure code quality standards;
  */
-
 const { execSync } = require('child_process');
 const fs = require(fs');
 const path = require('path');
-
 const log = (message) => {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
   
 }
 
+=======
+};
+>>>>>>> origin/chore/fix-lint-and-merge
 const runCommand = (command, description) => {}
   try {}
+<<<<<<< HEAD
     log(`Starting: ${description}`);
+<<<<<<< HEAD
     const output = execSync(command, {})
       encoding: utf8', 
       stdio: 'pipe,
+=======
+    const output = execSync(command, { })
+<<<<<<< HEAD
+      encoding: 'utf8',
+=======
+      encoding: 'utf8', 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      stdio: 'pipe',
+>>>>>>> origin/chore/fix-lint-and-merge
       cwd: process.cwd();
     }
 });
@@ -27,6 +40,7 @@ const runCommand = (command, description) => {}
     return { success: true, output }
   } catch (error) {}
     log(`Failed: ${description} - ${error.message}`);
+<<<<<<< HEAD
     return { success: false, error: error.message }
   }
 }
@@ -45,10 +59,19 @@ const runLinting = () => {}
   
   lintCommands.forEach(cmd => {})
     const result = runCommand(cmd, `Running ${cmd}`);
+=======
+    return { success: false, error: error.message };
+  };
+};
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> origin/chore/fix-lint-and-merge
     if (result.success) {}
       lintPassed++;
     } else {}
       lintFailed++;
+<<<<<<< HEAD
     }
   }
 });
@@ -71,9 +94,14 @@ const runTypeChecking = () => {}
   
   typeCheckCommands.forEach(cmd => {})
     if (result.success) {}
+=======
+  log(`Linting results: ${lintPassed} passed, ${lintFailed} failed`);
+  return { passed: lintPassed, failed: lintFailed };
+
+>>>>>>> origin/chore/fix-lint-and-merge
       typeCheckPassed++;
-    } else {}
       typeCheckFailed++;
+<<<<<<< HEAD
     }
   }
 });
@@ -97,9 +125,14 @@ const runCodeQualityChecks = () => {}
   
   qualityCommands.forEach(cmd => {})
     if (result.success) {}
+=======
+  log(`Type checking results: ${typeCheckPassed} passed, ${typeCheckFailed} failed`);
+  return { passed: typeCheckPassed, failed: typeCheckFailed };
+
+>>>>>>> origin/chore/fix-lint-and-merge
       qualityPassed++;
-    } else {}
       qualityFailed++;
+<<<<<<< HEAD
     }
   }
 });
@@ -122,9 +155,14 @@ const checkCodeCoverage = () => {}
   
   coverageCommands.forEach(cmd => {})
     if (result.success) {}
+=======
+  log(`Code quality results: ${qualityPassed} passed, ${qualityFailed} failed`);
+  return { passed: qualityPassed, failed: qualityFailed };
+
+>>>>>>> origin/chore/fix-lint-and-merge
       coveragePassed++;
-    } else {}
       coverageFailed++;
+<<<<<<< HEAD
     }
   }
 });
@@ -133,6 +171,10 @@ const checkCodeCoverage = () => {}
   return { passed: coveragePassed, failed: coverageFailed }
 }
 
+=======
+  log(`Code coverage results: ${coveragePassed} passed, ${coverageFailed} failed`);
+  return { passed: coveragePassed, failed: coverageFailed };
+>>>>>>> origin/chore/fix-lint-and-merge
 const generateQualityReport = (results) => {}
   const report = {}
     timestamp: new Date().toISOString(),
@@ -141,10 +183,17 @@ const generateQualityReport = (results) => {}
     codeQuality: results.codeQuality,
     coverage: results.coverage,
     overall: {}
+<<<<<<< HEAD
+      passed: results.linting.passed + results.typeChecking.passed +
+              results.codeQuality.passed + results.coverage.passed,
+      failed: results.linting.failed + results.typeChecking.failed +
+=======
       passed: results.linting.passed + results.typeChecking.passed + 
               results.codeQuality.passed + results.coverage.passed,
       failed: results.linting.failed + results.typeChecking.failed + 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               results.codeQuality.failed + results.coverage.failed;
+<<<<<<< HEAD
     }
   }
   
@@ -159,36 +208,48 @@ const generateQualityReport = (results) => {}
 const main = async () => {}
   log(Starting Quality Checks Process');
   
+=======
+
+const main = async () => {}
+  log('Starting Quality Checks Process');
+>>>>>>> origin/chore/fix-lint-and-merge
   // Run all quality checks;
   const lintingResults = runLinting();
   const typeCheckingResults = runTypeChecking();
   const codeQualityResults = runCodeQualityChecks();
   const coverageResults = checkCodeCoverage();
-  
   // Generate comprehensive report;
   const results = {}
     linting: lintingResults,
     typeChecking: typeCheckingResults,
     codeQuality: codeQualityResults,
+<<<<<<< HEAD
     coverage: coverageResults;
   }
   
+=======
+    coverage: coverageResults,
+>>>>>>> origin/chore/fix-lint-and-merge
   const report = generateQualityReport(results);
-  
   // Check if any quality checks failed;
-  if (report.overall.failed > 0) {}
+  if (report.overall.failed > 0) {}`;
     log(`Quality checks failed: ${report.overall.failed} failures detected`);
-    
     // Attempt to fix issues automatically;
+<<<<<<< HEAD
     log('Attempting to fix quality issues automatically);
     runCommand(npm run fix', 'Running automatic fixes);
     runCommand(npm run lint:fix', 'Fixing linting issues);
     runCommand(npx prettier --write .', 'Fixing formatting issues);
     
+=======
+    log('Attempting to fix quality issues automatically');
+
+>>>>>>> origin/chore/fix-lint-and-merge
     // Re-run checks after fixes;
     log(Re-running quality checks after fixes');
     runLinting();
     runTypeChecking();
+<<<<<<< HEAD
   } else {}
     log('All quality checks passed successfully);
   }
@@ -208,9 +269,35 @@ process.on('SIGTERM, () => {}
 }
 });
 
+=======
+
+});
+process.on('SIGTERM', () => {}
+  log('Quality Checks Process terminated');
+>>>>>>> origin/chore/fix-lint-and-merge
 // Run the main function;
+<<<<<<< HEAD
 main().catch(error => {})
   log(`Quality Checks Process failed: ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+});
+});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+  process.exit(1);
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

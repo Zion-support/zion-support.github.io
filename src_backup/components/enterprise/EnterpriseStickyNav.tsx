@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/enterprise/EnterpriseStickyNav.tsx
 import { useState } from "react;
 import { Menu } from 'lucide-react
@@ -9,6 +10,11 @@ import Link from 'next/link
 import { useState } from react';
 import { Menu } from 'lucide-react;
 import Link from next/link';
+=======
+import { useState } from 'react';
+import { Menu } from 'lucide-react';
+import Link from 'next/link';
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const [ open, setOpen ] = useState(false),
 
@@ -124,6 +130,7 @@ export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
 
   return (
+<<<<<<< HEAD
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
         <div className="flex items-center justify-between h-12">;
@@ -142,6 +149,11 @@ export function EnterpriseStickyNav() {
     <nav className="sticky top-16 z-40 bg-card border-b border-border>
       <div className=container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-12>
+=======
+    <nav className="sticky top-16 z-40 bg-card border-b border-border">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between h-12">
+>>>>>>> origin/chore/fix-lint-and-merge
           <button
 
           </button>
@@ -163,6 +175,7 @@ export function EnterpriseStickyNav() {
         </div>
       </div>
 
+<<<<<<< HEAD
 import { useState  } from 'react;
 import { Menu  } from lucide-react';
   const [ open, setOpen ]  = useState(false),import Link from next / link';
@@ -270,6 +283,13 @@ export function EnterpriseStickyNav() {const [open, setOpen]  = useState(false)i
 import { useState } from "react,
 import Link from next/link",
 export function EnterpriseStickyNav() {
+=======
+import { useState } from "react",;
+import { Menu } from 'lucide-react';
+import Link from "next/link",;
+export function EnterpriseStickyNav() {;
+  const [open, setOpen] = useState(false);
+>>>>>>> origin/chore/fix-lint-and-merge
   return (;
     <nav className="sticky top-16 z-40 bg-card border-b border-border>;
       <div className=container mx-auto px-4 md:px-6">;
@@ -277,8 +297,12 @@ export function EnterpriseStickyNav() {
           <button;
             className=md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
             onClick={() => setOpen(!open)}
+<<<<<<< HEAD
             aria-label="Toggle navigation;
             aria-expanded={open}
+=======
+            aria-label="Toggle navigation";
+>>>>>>> origin/chore/fix-lint-and-merge
 
     </nav>
 
@@ -297,6 +321,7 @@ export function EnterpriseStickyNav() {
               <Link href="#testimonials className=text-sm font-medium hover:text-primary">Testimonials</Link>;
             </li>;
             <li>;
+<<<<<<< HEAD
               <Link href="#contact className=text-sm font-medium hover:text-primary">Contact Us</Link>;
 
 
@@ -335,11 +360,14 @@ function EnterpriseStickyNav() {const [open, set_open] = useState (false)return 
               <Link href="#contact" className="text - sm font - medium hover:text - primary">Contact Us</Link>;
               <Link href="#contact className=text - sm font - medium hover:text - primary">Contact Us</Link>;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </li>;
           </ul>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
   );
@@ -354,5 +382,10 @@ function EnterpriseStickyNav() {const [open, set_open] = useState (false)return 
 }
 :src/components/enterprise/EnterpriseStickyNav.tsx
 ;
+=======
+
+  );
+}
+>>>>>>> origin/chore/fix-lint-and-merge
     </nav>);
 }

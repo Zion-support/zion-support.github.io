@@ -74,5 +74,5 @@ export function getDisputeUploadDir(caseId: string): string {
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId)
   await mkdir(dir, { recursive: true }),
-  return dir
+
 }

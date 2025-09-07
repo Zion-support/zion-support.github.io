@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/NotificationCenter.tsx
 import React, { useState, useEffect } from 'react;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -25,6 +26,10 @@ export const NotificationCenter: React.FC;
     <Popover open={open} onOpenChange={(v,) => setOpen(v ?? false)}>
 unreadCount,
     markAsRead,
+=======
+unreadCount, ;
+    markAsRead, ;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React, { useState, useEffect } from react',
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -126,6 +131,7 @@ export const NotificationCenter: React.FC = () => {
         <Button variant=ghost" size="icon className=relative" aria-label="Open notifications>
           <Bell className=h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
+<<<<<<< HEAD
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium>
 :src/components/NotificationCenter.tsx
               {unreadCount > 9 ? '9+ : unreadCount}
@@ -143,6 +149,9 @@ export const NotificationCenter: React.FC = () => {
           onFilterChange = {handleFilterChange}
         />
         <NotificationList
+=======
+            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }, [open, loadedOnce, fetchNotifications]),
     try {
@@ -152,16 +161,22 @@ export const NotificationCenter: React.FC = () => {
       logErrorToProduction('Failed to mark notifications as read:, { data: err }),
       enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: error' });
     }
+<<<<<<< HEAD
   },
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any);
   }
 
+=======
+  },;
+  const handleFilterChange = (newFilter: FilterType) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
 
         />;
 
         <NotificationList
 
+<<<<<<< HEAD
           loading = {loading}
           error = {error}
           notifications = {filteredNotifications}
@@ -238,6 +253,14 @@ export const NotificationCenter: React.FC;<PopoverTrigger asChild>;
           onMarkAsRead={markAsRead}
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
+=======
+          loading = {loading,}
+          error = {error,}
+          notifications = {filteredNotifications,}
+          onMarkAsRead = {markAsRead,}
+          onDismiss = {dismissNotification,}
+          onRetry = {fetchNotifications,}
+>>>>>>> origin/chore/fix-lint-and-merge
 
         </Button>;
       </PopoverTrigger>;
@@ -251,8 +274,11 @@ export const NotificationCenter: React.FC;<PopoverTrigger asChild>;
       </PopoverContent>;
     </Popover>;
   );
+<<<<<<< HEAD
 :src/components/NotificationCenter.tsx
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   );
 }
@@ -262,6 +288,7 @@ export const NotificationCenter: React.FC;<PopoverTrigger asChild>;
   logErrorToProduction ('Failed to mark notifications as read:, {
   data: err ;
 });
+<<<<<<< HEAD
 enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {;
     </Popover>)},
         <NotificationHeader;
@@ -270,6 +297,9 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
   variant: error' ;
 })}(v) => setOpen (v ?? false)}> <PopoverTrigger asChild> {';
   unreadCount > 9 ? '9+' : unreadCount ;
+=======
+enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
+>>>>>>> origin/chore/fix-lint-and-merge
   variant: 'error' ;
 });
 
@@ -302,6 +332,7 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 }/> <NotificationFooter onClose= {
   () => setOpen (false) ;
 }/> </PopoverContent> </Popover>) ;
+<<<<<<< HEAD
 }
 '
 }</span>)}</Button> </PopoverTrigger> <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col" > <NotificationHeader unreadCount= {unreadCount ;
@@ -315,3 +346,7 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 }onDismiss= {dismissNotification ;
 }onRetry= {fetchNotifications ;
 }/> <NotificationFooter onClose= {() => setOpen (false)}/> </PopoverContent> </Popover>)}'";
+=======
+};
+'"
+>>>>>>> origin/chore/fix-lint-and-merge

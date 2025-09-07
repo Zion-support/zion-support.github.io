@@ -1,6 +1,30 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/usr/bin/env node;
+const { execSync, spawn } = require("child_process")
+const fs = require("child_process")
+const path = require("path")
+    this.reportsDir = path.join(this.projectRoot, "automation-reports")
+    this.logFile = path.join(this.reportsDir, "enhanced-build-test.log")
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       "timestamp"
       summary: { total: 0, "passed": 0, "failed": 0, "warnings"}
       fs.mkdirSync(this.reportsDir, { "recursive"})
@@ -9,7 +33,7 @@
     this.log(` "Starting"`)
     const step = {"name": description,command,"startTime"}
       status: "running"
-const result = execSync(command, {"cwd": this.projectRoot,"encoding": "utf8"});
+      const result = execSync(command, {"cwd": this.projectRoot,"encoding": "utf8"})
       step.status = "success"
       this.log(` "Completed"`)
       return { "success": true, "output": result, "duration"}
@@ -17,17 +41,24 @@ const result = execSync(command, {"cwd": this.projectRoot,"encoding": "utf8"});
       this.log(` "Failed": ${description} - ${error.message}`, "error"`)
       return { "success": false, "error": error.message, "duration"}
     this.log(" Running linting checks...")
-return await this.runCommand("npm run lint", "ESLint Check");
+    return await this.runCommand("npm run lint", "ESLint Check")
     this.log(" Running TypeScript type checking...")
-return await this.runCommand("npm run type-check", "TypeScript Type Check");
+    return await this.runCommand("npm run type-check", "TypeScript Type Check")
     this.log("� Running build process...")
-return await this.runCommand("npm run build", "Next.js Build");
+    return await this.runCommand("npm run build", "Next.js Build")
     this.log("🧪 Running tests...")
-return await this.runCommand("npm test", "Jest Tests");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      return await this.runCommand("npm test", "Jest Tests")
       this.log("⚠ Tests not configured or failed, continuing...", "warning")
       return { "success": true, "output": "Tests skipped", "duration"}
     this.log("� Running security audit...")
-return await this.runCommand("npm audit --audit-level=moderate", "Security Audit");
+    return await this.runCommand("npm audit --audit-level=moderate", "Security Audit")
     this.log(" Generating build and test report...")
     this.log(`� Report saved "to"`)
 // console.log("\n" + "=")
@@ -45,6 +76,7 @@ return await this.runCommand("npm audit --audit-level=moderate", "Security Audit
       this.log("� Enhanced Build & Test Automation completed successfully")
       return { "success": true, "results"}
       this.log(`� Build automation "failed": ${error.message}`, "error"`)
+<<<<<<< HEAD
 
 =======
 const { execSync, spawn } = require("child_process)
@@ -109,6 +141,23 @@ const path = require("path)
 =======
       return { "success: false, error"}
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      return { "success": false, "error"}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+      return { "success": false, "error"}
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      return { "success": false, "error"}
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -116,7 +165,3 @@ const path = require("path)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

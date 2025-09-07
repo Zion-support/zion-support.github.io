@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 :src/components/enterprise/admin/TeamActivity.tsx
 import React from "react;
 import {
 
 import React from react";
+=======
+import {
+>>>>>>> origin/chore/fix-lint-and-merge
 
   Table
   TableBody
@@ -17,6 +21,7 @@ import { CalendarIcon, Search } from 'lucide-react
   TableCell
   TableHead
   TableHeader
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table
 import { Button } from @/components/ui/button"
 import { Input } from "@/components/ui/input
@@ -77,6 +82,11 @@ export function TeamActivity() {
     const diffMins = Math.floor(diffMs / (1000 * 60))
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60))
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24))
+=======
+  TableRow} from "@/components/ui/table"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React from "react,
 
@@ -103,6 +113,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } else {
       return date.toLocaleDateString()
     }
+<<<<<<< HEAD
 :src/components/enterprise/admin/TeamActivity.tsx
   }
   const getCategoryBadge = (category: string,) => {
@@ -115,6 +126,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return <Badge variant={style.variant}>{category}</Badge>
   }
       jobs: { variant: "default }},
+=======
+  },
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<string { variant: default" | "outline | secondary" | "destructive }> = {
@@ -133,6 +147,7 @@ import { Button } from '@/components/ui/button;
 import { Input } from @/components/ui/input';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 
 ;
 import { Table;
@@ -143,6 +158,8 @@ import { Table;
   TableRow } from '@/components/ui/table;
 import { Badge  } from @/components/ui/badge';
 import { CalendarIcon, Search  } from 'lucide-react;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   Table;
   TableBody;
   TableCell;
@@ -151,8 +168,6 @@ import { CalendarIcon, Search  } from 'lucide-react;
 
     const style = categoryStyles[category] || { variant: "default as const },
     return <Badge variant={style.variant}>{category}</Badge>
-:src/components/enterprise/admin/TeamActivity.tsx
-  },
 
   TableRow} from @/components/ui/table",
 import { Badge } from "@/components/ui/badge,
@@ -161,6 +176,7 @@ import { Input } from "@/components/ui/input;
 export function TeamActivity() {
   // Mock activity data
   const activities = null;
+<<<<<<< HEAD
   TableRow} from @/components/ui/table";
 import { Button  } from '@/components/ui/button;
 import { Input  } from @/components/ui/input';
@@ -277,6 +293,8 @@ import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from @/compone
     </div>)}
 const getCategoryBadge = (category: string) =>: any {}";
   activities.map ( (activity) => (<TableRow key= {/>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return (
     <div className=space-y-6>
@@ -296,6 +314,7 @@ const getCategoryBadge = (category: string) =>: any {}";
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 :src/components/enterprise/admin/TeamActivity.tsx
       <div className=rounded-md border>
         <Table>
@@ -321,6 +340,8 @@ const getCategoryBadge = (category: string) =>: any {}";
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React from react,
   Table,
@@ -440,7 +461,6 @@ export function TeamActivity() {
           </TableBody>
         </Table>
       </div>
-:src/components/enterprise/admin/TeamActivity.tsx
 
       <div className="flex items-center justify-between">
         <Button variant=outline size="sm">
@@ -454,6 +474,7 @@ export function TeamActivity() {
         </Button>
 
     </div>
+<<<<<<< HEAD
 :src/components/enterprise/admin/TeamActivity.tsx
   )
 }
@@ -463,6 +484,8 @@ const getCategoryBadge = (category: string) => {}"
 }> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </div> <div className=flex items-center justify-between > <Button variant="outline" size=sm > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant=outline size="sm" > Next </Button> </div> </div>)
 }}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 
 }
@@ -470,6 +493,7 @@ const getCategoryBadge = (category: string) => {};
   activities.map ( (activity) => (<TableRow key= {
   activity.id ;
 }> </TableCell> </TableRow>) ) ";
+<<<<<<< HEAD
 }</TableBody> </Table> </div> <div className="flex items-center justify-between > <Button variant=outline" size="sm > Previous </Button> <div className=text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline size=sm" > Next </Button> </div> </div>) ;
 }"
           </TableBody>;
@@ -491,3 +515,7 @@ const getCategoryBadge = (category: string) => {};
   activities.map ( (activity) => (<TableRow key= {activity.id ;
 }> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant=outline size="sm" > Previous </Button> <div className=text-sm text-muted-foreground > Page 1 of 10 </div> <Button variant="outline" size=sm > Next </Button> </div> </div>)}";
+=======
+}</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
+}"
+>>>>>>> origin/chore/fix-lint-and-merge

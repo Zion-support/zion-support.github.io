@@ -1,5 +1,7 @@
+
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
+<<<<<<< HEAD
 
 
 
@@ -11,12 +13,16 @@ import { motion, AnimatePresence  } from 'framer-motion';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react;
 import { motion, AnimatePresence  } from framer-motion';
+=======
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Activity, Zap, Clock, TrendingUp, TrendingDown;
-  }
-  AlertTriangle, CheckCircle, X, Settings, RefreshCw;
-  BarChart3, Gauge, HardDrive, Wifi, Cpu;
-  } from 'lucide-react';'
+  AlertTriangle, CheckCircle, X, Settings, RefreshCw;}
+  BarChart3, Gauge, HardDrive, Wifi, Cpu;}
+  } from 'lucide-react';
 
+<<<<<<< HEAD
 interface PerformanceMetrics  {"loadTime": number;
   }
   "firstContentfulPaint": number;
@@ -26,66 +32,77 @@ interface PerformanceMetrics  {"loadTime": number;
   "timeToInteractive": number;
   memoryUsage?: number;
   networkLatency?: number;
+=======
+interface PerformanceMetrics  {loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  memoryUsage?: number;}
+  networkLatency?: number;}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 interface PerformanceMonitorProps {
-  }
   showUI?: boolean;
   autoRefresh?: boolean;
+<<<<<<< HEAD
   refreshInterval?: number;
 
+=======
+  refreshInterval?: number;}
+}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
-const "PerformanceMonitor": React.FC<PerformanceMonitorProps> = ({showUI;
-
+const PerformanceMonitor: React.FC<PerformanceMonitorProps    /> = ({showUI;}
 }
-
-const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document.readyState === 'complete') {})return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document.readyState === 'complete') {})const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => ;'
-  return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document && document.readyState === 'complete') {})})}, [])//Check for performance issues and add alerts;'
-  const "newAlerts": string[] = [];
-if (newMetrics && newMetrics.loadTime > 3000) {const formatTime = ("ms": number) : (string) => {if (ms === 0);
-  }
-  return 'N/A';if (ms < 1000) return `$ {Math.round (ms)}ms`;if (ms < 1000) return `$ {Math.round (ms)}ms`;}}}}}}//Get device icon const getDeviceIcon = ("deviceType": string) => {switch (deviceType) {case 'mobile':;'  }
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics    /> => {const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics    /> => {return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document.readyState === 'complete') {})return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document.readyState === 'complete') {})const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics    /> => ;
+  return new Promise ( (resolve) => {if (typeof window !== 'undefined' && 'performance' in window) {//Wait for page to be fully loaded if (document && document.readyState === 'complete') {})})}, [])//Check for performance issues and add alerts;
+  const newAlerts: string[] = [];
+if (newMetrics && newMetrics.loadTime > 3000) {const formatTime = (ms: number) : string => {if (ms === 0);}
+  return 'N/A';if (ms < 1000) return `$ {Math.round (ms)}ms`;if (ms < 1000) return `$ {Math.round (ms)}ms`;}}}}}}//Get device icon const getDeviceIcon = (switch (deviceType) {case 'mobile':;
   return Smartphone;
-case 'tablet': return Tablet;'
-"default": return Laptop;
+case 'tablet': return Tablet;
+default: return Laptop;) => {
+  return $3;}
+}
 }}
 
-const getPerformanceScore = () => {let score = 0;
-}
+const getPerformanceScore = (let score = 0;
 let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {totalMetrics++;if (metrics.fcp < 1800) score += 100;
-}
 else if (metrics.fcp < 3000) score += 75;
 else if (metrics.fcp < 4000) score += 50;
 else score += 25;
 if (metrics.fcp < 1800) score += 100;
 else if (metrics.fcp < 3000) score += 75;
 else if (metrics.fcp < 4000) score += 50;
-else score += 25;
-}//LCP scoring (0-100) if (metrics.lcp !== null) {totalMetrics++;
+else score += 25;) => {
+  return $3;}
 }
+}//LCP scoring (0-100) if (metrics.lcp !== null) {totalMetrics++;
 if (metrics.lcp < 2500) score += 100;
 else if (metrics.lcp < 4000) score += 75;
 else if (metrics.lcp < 6000) score += 50;
-else score += 25;
-else score += 25;
+else score += 25;}
+else score += 25;}
 }//FID scoring (0-100) if (metrics.fid !== null) {totalMetrics++;
-}
 if (metrics.fid < 100) score += 100;
 else if (metrics.fid < 300) score += 75;
 else if (metrics.fid < 500) score += 50;
-else score += 25;
-else score += 25;
+else score += 25;}
+else score += 25;}
 }//CLS scoring (0-100) if (metrics.cls !== null) {totalMetrics++;
-}
 if (metrics.cls < 0.1) score += 100;
-else if (metrics.cls < 0.25) score += 75;
-else if (metrics.cls < 0.4) score += 50;else score += 25;
+else if (metrics.cls < 0.25) score += 75;}
+else if (metrics.cls < 0.4) score += 50;else score += 25;}
 }else score += 25;
 }else score += 25;
-}//Don't render anything in production return (<AnimatePresence> {isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';'
+}//Don't render anything in production return (<AnimatePresence    /> {isVisible && (<motion.div </div    /> <div className=\"flex items-center space-x-2\"     /> <button     /> <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';
 
+<<<<<<< HEAD
 }
 
 interface PerformanceMonitorProps {
@@ -252,6 +269,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
  }
+=======
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics    /> => {
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics    /> => {
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
@@ -260,6 +281,7 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 
 
  ;
+<<<<<<< HEAD
   }
   return new Promise ( (resolve) => {
   }
@@ -365,11 +387,45 @@ case 'tablet': return Tablet;'
 "default": return Laptop;
 }
 const getPerformanceScore = () => {
+=======
+  return new Promise ( (resolve) => {}
+  if (typeof window !== 'undefined' && 'performance' in window) {}
+  //Wait for page to be fully loaded if (document.readyState === 'complete') {})
+;
+  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics    /> => {;
+  return new Promise ( (resolve) => {;
+  if (typeof window !== 'undefined' && 'performance' in window) {;
+  //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;}
+}
+}) ;
+}, []);
+//Check for performance issues and add alerts const newAlerts: string[] = [];
+if (newMetrics && newMetrics.loadTime > 3000) {;
+
+const formatTime = (ms: number) : string => {;
+  if (ms = == 0);}
+  return 'N/A'}
+};
+
+
+
+//Get device icon const getDeviceIcon = (
+  switch (deviceType) {
+  case 'mobile':;
+  return Smartphone;
+case 'tablet': return Tablet;
+default: return Laptop;) => {
+  return $3;}
+}
+}
+
+const getPerformanceScore = (
+>>>>>>> origin/chore/fix-lint-and-merge
   let score = 0;
 let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
-  }
   totalMetrics++;
+<<<<<<< HEAD
 pr-12243
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
@@ -628,10 +684,18 @@ else score += 25
 else score += 25 
 
 }
+=======
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-else score += 25 
 
+else score += 25;
+) => {
+  return $3;}
+}
+};
+>>>>>>> origin/chore/fix-lint-and-merge
+
+
+<<<<<<< HEAD
 };
 
 pr-12243
@@ -649,28 +713,56 @@ else score += 25;
   /* Expanded View */}
 }<AnimatePresence /> {}
   isExpanded && (<motion.div </div />)}
+=======
+//Don't render anything in production return (<AnimatePresence    /> {"
+  isVisible && (<motion.div </div    /> <div className = \"flex items-center space-x-2\"     /> <button     /> <RefreshCw className= {
+  `w-4 h-4 $ {}
+  isLoading ? 'animate-spin': ''}
+}`"
+}   /> </button> <button     /> <BarChart3 className=\"w-4 h-4\"    /> </button> <button     /> <X className=\"w-4 h-4\"    /> </button> </div> </div> </div> </div> </div> </div> {}
+  /* Expanded View */}
+}<AnimatePresence    /> {}
+  isExpanded && (<motion.div </div    />)}
+>>>>>>> origin/chore/fix-lint-and-merge
 }</div> </div> </div>) )
 }</div> </div>)
-}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>)
-}{
-  }
-  getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>)
+}<> <div    />• Optimize images and assets</div> <div    />• Minimize JavaScript bundles</div> <div    />• Enable compression and caching</div> <   />)
+}{}
+  getPerformanceScore () >= 90 && (<div    />• Excellent performance! Keep monitoring for any regressions.</div>)}
 }</div> </div> </div> </motion.div>)
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
 }
+<<<<<<< HEAD
 // Helper functions const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent';
+=======
+// Helper functions;
+  const getScoreLabel = (
+  if (score >= 90);
+  return 'Excellent';
+>>>>>>> origin/chore/fix-lint-and-merge
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
+<<<<<<< HEAD
 if (score >= 50) return 'Needs Improvement';
+=======
+if (score >= 50) return 'Needs Improvement';) => {
+  return $3;}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
+}
+
 export default PerformanceMonitor;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
  ;
-  }
   return new Promise ( (resolve) => {
+<<<<<<< HEAD
   // Check condition
 }
 if ( {) {
@@ -712,12 +804,15 @@ if (score >= 50) return Needs Improvement';
 export default PerformanceMonitor;
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {}
   return new Promise ( (resolve) => {}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   // Check condition;
 if ( {) {}
-  $2;
+  $2}
 }
   //Wait for page to be fully loaded // Check condition;
 if ( {) {}
+<<<<<<< HEAD
   $2;
 }
 });
@@ -988,19 +1083,155 @@ if ( {) {
   //Wait for page to be fully loaded // Check condition
 if ( {) {
   $2
+=======
+  $2}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 });
 }, []);
 //Check for performance issues and add alerts const new_alerts: string[] = [];
+<<<<<<< HEAD
 
 }
   Math.round (ms);`
+=======
+// Check condition;
+if ( {) {}
+  $2}
+}
+
+const format_time = (ms: number) : string => {
+  // Check condition;
+if (return 'N / A') {}
+  $2}
+}
+// Check condition;
+if ;
+  return `$ {) {}
+  $2}
+}
+  Math.round (ms);
+>>>>>>> origin/chore/fix-lint-and-merge
 }ms`;
 }
+<<<<<<< HEAD
 
 case 'tablet': return Tablet;
 default: return Laptop;
 }
+=======
+//Get device icon const getDeviceIcon = (device_type: string) =>: any {
+  switch (device_type) {
+  case 'mobile':;
+  return Smartphone;
+case 'tablet': return Tablet;
+default: return Laptop;}
+;}
+}
+
+const getPerformanceScore = () =>: any {
+  let score = 0;
+let total_metrics = 0;
+//FCP scoring (0 - 100) // Check condition;
+if ( {) {}
+  $2}
+}
+  total_metrics++;
+// Check condition;
+if (score += 100) {}
+  $2}
+}
+else // Check condition;
+if (score += 75) {}
+  $2}
+}
+else // Check condition;
+if (score += 50) {}
+  $2}
+}
+else score += 25;
+}//LCP scoring (0 - 100) // Check condition;
+if ( {) {}
+  $2}
+}
+  total_metrics++;
+// Check condition;
+if (score += 100) {}
+  $2}
+}
+else // Check condition;
+if (score += 75) {}
+  $2}
+}
+else // Check condition;
+if (score += 50) {}
+  $2}
+}
+else score += 25;
+}//FID scoring (0 - 100) // Check condition;
+if ( {) {}
+  $2}
+}
+  total_metrics++;
+// Check condition;
+if (score += 100) {}
+  $2}
+}
+else // Check condition;
+if (score += 75) {}
+  $2}
+}
+else // Check condition;
+if (score += 50) {}
+  $2}
+}
+else score += 25;
+}//CLS scoring (0 - 100) // Check condition;
+if ( {) {}
+  $2}
+}
+  total_metrics++;
+// Check condition;
+if (score += 100) {}
+  $2}
+}
+else // Check condition;
+if (score += 75) {}
+  $2}
+}
+else // Check condition;
+if (score += 50) {}
+  $2}
+}
+else score += 25;
+}
+//Don't render anything in production return (<AnimatePresence    /> {"
+  is_visible && (<motion.div </div    /> <div className=\"flex items - center space - x-2\"     /> <button     /> <RefreshCw className= {
+  `w - 4 h - 4 $ {}
+  is_loading ? 'animate - spin': '';}
+}`;"
+}   /> </button> <button     /> <BarChart3 className=\"w-4 h-4\"    /> </button> <button     /> <X className=\"w-4 h-4\"    /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;}
+}<AnimatePresence    /> {isExpanded && (<motion.div </div    />)}</div> </div> </div>) )}</div> </div>)}<> <div    />• Optimize images and assets</div> <div    />• Minimize JavaScript bundles</div> <div    />• Enable compression and caching</div> <   />)}{getPerformanceScore () >= 90 && (<div    />• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}
+else score += 25;
+}
+else score += 25;
+}else score += 25;"
+}//Don't render anything in production return (<AnimatePresence    /> {isVisible && (<motion.div </div    /> <div className=\"flex items-center space-x-2\"     /> <button     /> <RefreshCw className= {`w-4 h-4 $ {isLoading ? 'animate-spin': '';}
+}`;"
+}   /> </button> <button     /> <BarChart3 className=\"w-4 h-4\"    /> </button> <button     /> <X className=\"w-4 h-4\"    /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;}
+}<AnimatePresence    /> {isExpanded && (<motion.div </div    />)}</div> </div> </div>) )}</div> </div>)}<> <div    />• Optimize images and assets</div> <div    />• Minimize JavaScript bundles</div> <div    />• Enable compression and caching</div> <   />)}{getPerformanceScore () >= 90 && (<div    />• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}// Helper functions const getScoreLabel = (if (score >= 90);
+  return 'Excellent';
+if (score >= 70) return 'Good';
+if (score >= 50) return 'Needs Improvement';
+  if (score >= 90) return 'Excellent';
+if (score >= 70) return 'Good';
+if (score >= 50) return 'Needs Improvement';) => {
+  return $3;}
+}
+}
+
+export default PerformanceMonitor;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }
   //Wait for page to be fully loaded // Check condition;
@@ -1017,8 +1248,10 @@ if (return 'N / A') {$2;}
 // Check condition;
 if (return `$ {) {$2;
 ;
+
 export default PerformanceMonitor;
 ;
+<<<<<<< HEAD
 
 }
 
@@ -1029,3 +1262,93 @@ pr-12243
 }
 
 
+=======
+}
+export default PerformanceMonitor;}
+}
+  Math.round (ms)}ms`;}
+//Get device icon const getDeviceIcon = (device_type: string) =>: any {switch (device_type) {case 'mobile':;
+  return Smartphone;}
+case 'tablet': return Tablet;}
+default: return Laptop;}
+
+const getPerformanceScore = () =>: any {let score = 0;
+let total_metrics = 0;
+//FCP scoring (0 - 100) // Check condition;}
+if ( {) {$2;}
+}
+  total_metrics++;
+// Check condition;
+if (score += 100) {$2;}
+}
+else // Check condition;
+if (score += 75) {$2;}
+}
+else // Check condition;
+if (score += 50) {$2;}
+}
+else score += 25;
+}//LCP scoring (0 - 100) // Check condition;
+if ( {) {$2;}
+}
+  total_metrics++;
+// Check condition;
+if (score += 100) {$2;}
+}
+else // Check condition;
+if (score += 75) {$2;}
+}
+else // Check condition;
+if (score += 50) {$2;}
+}
+else score += 25;
+}//FID scoring (0 - 100) // Check condition;
+if ( {) {$2;}
+}
+  total_metrics++;
+// Check condition;
+if (score += 100) {$2;}
+}
+else // Check condition;
+if (score += 75) {$2;}
+}
+else // Check condition;
+if (score += 50) {$2;}
+}
+else score += 25;
+}//CLS scoring (0 - 100) // Check condition;
+if ( {) {$2;}
+}
+  total_metrics++;
+// Check condition;
+if (score += 100) {$2;}
+}
+else // Check condition;
+if (score += 75) {$2;}
+}
+else // Check condition;
+if (score += 50) {$2;}
+}
+else score += 25;
+}"
+//Don't render anything in production return (<AnimatePresence    /> {is_visible && (<motion.div </div    /> <div className=\"flex items - center space - x-2\"     /> <button     /> <RefreshCw className= {`w - 4 h - 4 $ {is_loading ? 'animate - spin': '';}
+}`;"
+}   /> </button> <button     /> <BarChart3 className=\"w - 4 h - 4\"    /> </button> <button     /> <X className=\"w - 4 h - 4\"    /> </button> </div> </div> </div> </div> </div> </div> {/* Expanded View */;}
+}<AnimatePresence    /> {is_expanded && (<motion.div </div    />)}</div> </div> </div>) )}</div> </div>)}<> <div    />• Optimize images and assets</div> <div    />• Minimize JavaScript bundles</div> <div    />• Enable compression and caching</div> <   />)}{getPerformanceScore () >= 90 && (<div    />• Excellent performance! Keep monitoring for any regressions.</div>)}</div> </div> </div> </motion.div>)}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)}
+// Helper functions const getScoreLabel = (score: number) =>: any {// Check condition;}
+if (return 'Excellent') {$2;}
+}
+// Check condition;
+if (return 'Good') {$2;}
+}
+// Check condition;
+if (return 'Needs Improvement') {$2;}
+}
+}
+
+export default PerformanceMonitor;
+
+export default PerformanceMonitor;
+}}}
+"
+>>>>>>> origin/chore/fix-lint-and-merge

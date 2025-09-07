@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { CreditCard, Plus, Trash } from 'lucide-react'
 import { CreditCard, Plus, Trash } from 'lucide-react
 
@@ -10,6 +11,11 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import React from "react,
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from @/components/ui/card",
 import { Button } from "@/components/ui/button,
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React from react",
 
@@ -17,6 +23,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from @/components/ui/button";
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
 
 
 
@@ -34,6 +41,8 @@ id: pm-1',
       type: 'credit_card,
       brand: Visa',
       last4: '4242,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 export function PaymentMethods() {
   // Mock payment methods
 
@@ -52,11 +61,14 @@ export function PaymentMethods() {
       last4: 8888",
       expMonth: 4,
       expYear: 2026,
+<<<<<<< HEAD
       isDefault: false,
     },
   ];
       isDefault: false}];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export function PaymentMethods() {
   // Mock payment methods
@@ -77,6 +89,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {paymentMethods.map((method,) => (
           <div
             key = {method.id,}
+<<<<<<< HEAD
 
 ;
 import { CreditCard, Plus, Trash  } from lucide-react';
@@ -88,6 +101,8 @@ export function PaymentMethods() {// Mock payment methods;
   const paymentMethods = [;
     {id: 'pm-1,type: credit_card',brand: 'Visa,last4: 4242',id: pm-1,type: "credit_card",brand: Visa,last4: "4242",expMonth: 12,expYear: 2025,isDefault: true},{id: pm-2,type: "credit_card",brand: Mastercard,last4: "8888",expMonth: 4,expYear: 2026,isDefault: false}
   ],id: 'pm-1,type: credit_card',brand: 'Visa,last4: 4242',expMonth: 12,expYear: 2025,isDefault: true},{id: 'pm-2,type: credit_card',brand: 'Mastercard,last4: 8888',expMonth: 4,expYear: 2026,isDefault: false}];return (<Card>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return (
     <Card>
@@ -144,6 +159,7 @@ pr-12325
     <Card>;
       <CardHeader>;
         <CardTitle>Payment Methods</CardTitle>;
+<<<<<<< HEAD
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>;
 <CardDescription>Manage your payment methods for automatic billing;
         </CardDescription>;
@@ -158,17 +174,25 @@ export function PaymentMethods() {// Mock payment methods;
       <CardHeader>;
         <CardTitle>Payment Methods</CardTitle>;
         <CardDescription>Manage your payment methods for automatic billing;
+=======
+        <CardDescription>;
+          Manage your payment methods for automatic billing;
+>>>>>>> origin/chore/fix-lint-and-merge
         </CardDescription>;
       </CardHeader>;
       <CardContent className='space-y-4'>;
-        {paymentMethods && paymentMethods.map(method => (<div            key={method && method.id}
+        {paymentMethods && paymentMethods.map(method => (;
+          <div            key={method && method.id}
       <CardContent className="space-y-4">;
+<<<<<<< HEAD
         {paymentMethods && paymentMethods.map((method,) => (<div;
             key = {method && method.id}<CardDescription>Manage your payment methods for automatic billing</CardDescription>;
       </CardHeader>;
       <CardContent className=space-y-4">;
         {paymentMethods.map((method) => (<div;
             key={method.id}className={`flex items-center justify-between p-4 rounded-lg border ${method.isDefault ? "bg-muted border-primary : border-border";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         {paymentMethods && paymentMethods.map((method,) => (;
           <div
             key = {method && method.id}
@@ -198,6 +222,7 @@ export function PaymentMethods() {// Mock payment methods;
             className={`flex items-center justify-between p-4 rounded-lg border ${
               method.isDefault ? bg-muted border-primary : "border-border"
             }`}
+<<<<<<< HEAD
           >;
             <div className=flex items-center space-x-4>;
               <div className="h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background">;
@@ -211,6 +236,22 @@ export function PaymentMethods() {// Mock payment methods;
                   )}
                 </p>
 
+=======
+          >
+            <div className="flex items-center space-x-4">
+              <div className="h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background">
+                <CreditCard className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="font-medium">
+                  {method.brand} •••• {method.last4}
+                  {method.isDefault && (
+
+                      Default
+                    </span>
+                  )}
+                </p>
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 <p className=text-sm text-muted-foreground>
 
@@ -219,6 +260,7 @@ export function PaymentMethods() {// Mock payment methods;
               </div>
             </div>
 
+<<<<<<< HEAD
 
             <div className="flex gap-2">
               {!method.isDefault && (
@@ -226,6 +268,9 @@ export function PaymentMethods() {// Mock payment methods;
 
 
             <div className=flex gap-2>
+=======
+            <div className="flex gap-2">
+>>>>>>> origin/chore/fix-lint-and-merge
               {!method.isDefault && (
 
                 <Button size="sm" variant=ghost>Set Default</Button>
@@ -250,6 +295,7 @@ export function PaymentMethods() {// Mock payment methods;
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
+<<<<<<< HEAD
                 </p>;
                 <p className=text-sm text-muted-foreground>;
                   Expires {method.expMonth}/{method.expYear}
@@ -329,6 +375,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         ))}
 
+=======
+      </CardFooter>;
+    </Card>;
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 }
 
@@ -377,13 +427,19 @@ export function PaymentMethods() {
   );
 });
 }
+<<<<<<< HEAD
 
 import React from react;
+=======
+import React from 'react';
+import {
+>>>>>>> origin/chore/fix-lint-and-merge
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
   CardTitle} from '@/components/ui/ card';
 import { Button } from @/components/ui/ button;
                   {method.isDefault && (<span className=ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5>                      Default;
@@ -449,6 +505,15 @@ function PaymentMethods() {// Mock payment methods;
         {payment_methods.map ((method, ) => (<div;
             key = {method.id }
             className={`flex items - center justify - between p - 4 rounded - lg border ${method.is_default ? 'bg - muted border - primary' : border - border;
+=======
+  CardTitle,
+} from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { CreditCard, Plus, Trash } from 'lucide-react';
+import React from './react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 export /**
  * PaymentMethods - Function description
@@ -561,6 +626,7 @@ pr-12325
               <div>;
                 <p className=font-medium">;
                   {method.brand} •••• {method.last4}
+<<<<<<< HEAD
                   {method.is_default && (<span className='ml - 2 text - xs rounded - full bg - primary / 20 text - primary px - 2 py - 0.5'>                      Default;
                     </span>)}
                 </p>;
@@ -569,6 +635,8 @@ pr-12325
               </div>;
             </div>;
             <div className='flex gap - 2'>                    <span className="ml - 2 text - xs rounded - full bg - primary / 20 text - primary px - 2 py - 0.5>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                       Default;
                     </span>;
@@ -579,6 +647,7 @@ pr-12325
                 </p>;
               </div>;
             </div>;
+<<<<<<< HEAD
             <div className='flex gap - 2'>;
               {!method.is_default && (<Button size='sm' variant='ghost'>;
             <div className=flex gap - 2>;
@@ -589,6 +658,8 @@ pr-12325
                 <Trash className=h - 4 w - 4 />              </Button>              {!method.is_default && (<Button size="sm variant=ghost">Set Default</Button>)}
               <Button size="sm variant=ghost" className="text - destructive>;
                 <Trash className=h - 4 w - 4" />;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               </Button>;
             </div>;
@@ -601,7 +672,10 @@ pr-12325
           Add Payment Method;
         </Button>;
       </CardFooter>;
+<<<<<<< HEAD
     </Card>);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     </Card>;
   );
 }
@@ -615,6 +689,7 @@ pr-12325
       </CardFooter>
     </Card>
   );
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>)}</CardContent>;
@@ -627,3 +702,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>;
   )}
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

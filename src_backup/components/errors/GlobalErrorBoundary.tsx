@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import {
+  AlertTriangle,
+  RefreshCw,
+  Home,
+  Bug,
+  Send,
+>>>>>>> origin/chore/fix-lint-and-merge
 
   Clipboard} from 'lucide-react;
 import { Button } from @/components / ui / button';
@@ -28,12 +37,15 @@ interface ErrorBoundaryProps {
 
     this.state;
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
 
     this.state;
   }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
@@ -72,6 +84,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return null;
       }
     }
+<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {return {hasError: true,error;
     }this.state;
   }
@@ -223,6 +236,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       environment: process.env.NODE_ENV,
 buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || unknown'}
   }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       showDetails: false;
     }
@@ -319,6 +334,7 @@ buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || unknown'}
         errorInfo: null,
         errorId: null,
         retryCount: this.state.retryCount + 1,
+<<<<<<< HEAD
     return null;return null;}
   private getBuildInfo () {return {version: process.env.NEXT_PUBLIC_APP_VERSION || unknown',environment: process.env.NODE_ENV,return 'This appears to be a temporary issue. Please try again.;
       build_time: process.env.NEXT_PUBLIC_BUILD_TIME || unknown'}
@@ -496,6 +512,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/automate-test-improve-and-merge-code-2533
       if (response.ok) {})
+=======
+
+      })
+>>>>>>> origin/chore/fix-lint-and-merge
     }, retryDelay)
     this.retryTimeouts.push(timeout)
   }        showDetails: false
@@ -509,6 +529,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Check condition
 if (return) {
   $2
+<<<<<<< HEAD
     const timeout = set_timeout (() => {      this.set_state ({has_error: false,error: null,error_info: null,error_id: null,retry_count: this.state.retry_count + 1,show_details: false})}, retry_delay)this.retry_timeouts.push (timeout)}        show_details: false;
       })}, retry_delay)this.retry_timeouts.push (timeout)}const error_details = {error_id: this.state.error_id,message: this.state.error?.message,stack: this.state.error?.stack,component_stack: this.state.error_info?.component_stack,timestamp: new Date ().toISOString (),url: typeof window !== 'undefined ? window.location.href : unknown',user_agent:;
         typeof window !== 'undefined ? navigator.user_agent : unknown'}
@@ -545,6 +566,8 @@ if (return) {$2;
 if ( {) {$2;
 }
         // Show success message;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
     try {
       // Report to your error reporting service;
@@ -574,6 +597,7 @@ if ( {) {
 
     this.setState({
       errorInfo,
+<<<<<<< HEAD
       errorId}
     } catch (err) {
       logErrorToProduction ('Failed to report error:, { data: err });
@@ -593,10 +617,14 @@ if ( {) {
 
 
 logErrorToProduction(Failed to report error:', { data: err });
+=======
+      errorId,
+
+logErrorToProduction('Failed to report error:', { data: err });
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
 
-origin/cursor/automate-test-improve-and-merge-code-2533
   private goHome = () => {
 
     if (typeof window !== 'undefined) {
@@ -755,6 +783,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>
                 </div>
 
+<<<<<<< HEAD
         // Show success message;}
     } catch (err) {logErrorToProduction (Failed to report error:', { data: err })}    }
   }if (this.props.onError) {this.props.onError(error, errorInfo)}})}componentWillUnmount() {// Clear any pending retry timeouts;
@@ -974,8 +1003,14 @@ return this.props.fallback;
                 </div>;
                   <Button onClick={this && this.goHome} variant=outline" className="flex items-center gap-2>;
                     <Home className=h-4 w-4" />;
+=======
+                  <Button onClick={this && this.goHome} variant="outline" className="flex items-center gap-2">;
+                    <Home className="h-4 w-4" />;
+>>>>>>> origin/chore/fix-lint-and-merge
                     Go Home;
-                  </Button>;<Button;
+                  </Button>;
+
+                  <Button
                     onClick={() => this && this.setState({ showDetails: !this && this.state.showDetails })}
                     variant="ghost ;
                     size=sm";
@@ -987,7 +1022,6 @@ return this.props.fallback;
                 </div>;
 
                 {/* Error Details */}
-                </div>;{/* Error Details */}
                 <AnimatePresence>;
                   {this.state.showDetails && (;
                     <motion.div;
@@ -1015,6 +1049,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
                       exit={{ opacity: 0, height: 0 }}>;
                       <div className=space-y-4'>;
                         <div>;
@@ -1038,6 +1073,8 @@ className='border-t pt-4;
                         {process.env.NODE_ENV === 'development &&;
   private go_home = () => {// Check condition;
 if ( {) {$2;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
       window.location.href = /';
     }
@@ -1204,9 +1241,13 @@ if ( {) {
 
                           this.state.error.stack && (
                             <div>;
+<<<<<<< HEAD
                         {process.env.NODE_ENV === development' &&;{process.env.NODE_ENV === 'development &&;
                           this.state.error.stack && (<div>;
                               <h4 className=font - semibold text - sm mb - 2'>;
+=======
+                              <h4 className='font - semibold text - sm mb - 2'>;
+>>>>>>> origin/chore/fix-lint-and-merge
                                 Stack Trace:;
                               </h4>;
                               <pre className='p - 3 bg - gray - 50 dark:bg - gray - 800 rounded text - xs overflow - auto max - h-32>;
@@ -1228,23 +1269,48 @@ if ( {) {
                           <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto>;
                             {this && this.state.error && error.message}
                           </code>;
+<<<<<<< HEAD
                         </div>;{process && process.env.NODE_ENV === development' &&;
                           this && this.state.error && error.stack && (<div>;
                               <h4 className='font-semibold text-sm mb-2>;
+=======
+                        </div>;
+
+                        {process && process.env.NODE_ENV === 'development' &&;
+                          this && this.state.error && error.stack && (;
+                            <div>;
+                              <h4 className='font-semibold text-sm mb-2'>;
+>>>>>>> origin/chore/fix-lint-and-merge
                                 Stack Trace:;
                               </h4>;
                               <pre className=p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32'>;
                                 {this && this.state.error && error.stack}
                               </pre>;
                             </div>;
+<<<<<<< HEAD
                           )}<div className='flex gap-2>;
                           <Button;
                             onClick={this && this.copyErrorDetails}
                             variant=outline';
                             size='sm>;
                             <Clipboard className=h-4 w-4 mr-2' />;
+=======
+                          )}
+
+                        <div className='flex gap-2'>;
+                          <Button
+                            onClick={this && this.copyErrorDetails}
+                            variant='outline'
+
+                            size='sm'>;
+                            <Clipboard className='h-4 w-4 mr-2' />;
+>>>>>>> origin/chore/fix-lint-and-merge
                             Copy Details;
-                          </Button>;{this && this.props.showReportButton !== false && (<Button;
+                          </Button>;
+
+                          {this && this.props.showReportButton !== false && (;
+
+                            <Button
                               onClick={this && this.reportError}
                               variant='outline'
                               variant='outline
@@ -1278,6 +1344,7 @@ if ( {) {
 origin/cursor/automate-test-improve-and-merge-code-2533
                               Report Issue
                             </Button>
+<<<<<<< HEAD
                               variant='outline;
                         {process.env.NODE_ENV === development' && this.state.error.stack && (<div>;
                             <h4 className="font-semibold text-sm mb-2>Stack Trace:</h4>;
@@ -1319,6 +1386,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </Button>;
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                           )}
 
@@ -1397,6 +1466,7 @@ export const useErrorBoundary = () => {
 
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
 
+<<<<<<< HEAD
                             </Button>;)}
                         </div>;
                       </div>;
@@ -1422,5 +1492,9 @@ export const withErrorBoundary = <P extends object>(Component: React.ComponentTy
 }export default GlobalErrorBoundary;export const useErrorBoundary = () => {)WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;return WrappedComponent;
 }export default GlobalErrorBoundary;
 }
+=======
+  return WrappedComponent;
+};
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export default GlobalErrorBoundary;

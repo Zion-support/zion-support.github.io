@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const { execSync, spawn } = require("child_process)
 const fs = require(fs")
@@ -16,6 +17,27 @@ const { promisify } = require(util")
   async log(message, type = INFO")
   const timestamp = new Date().toISOString();const logMessage = "[${timestamp}] [${type}] ${message}
     console.log()
+=======
+#!/usr/bin/env
+const { execSync, spawn } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+const { promisify } = require("util")
+<<<<<<< HEAD
+    this.logDir = path.join(this.projectRoot, """automation/logs"")
+    this.reportsDir = path.join(this.projectRoot, ""automation/reports""")
+// console.log("" Master Error Detector & Fixer Started")
+    console.log("� Project "Root": ${this.projectRoot}
+});console.log( Log "Directory": ${this.logDir}"")
+  ["this.logDir", "this.reportsDir"]
+  console.log(`� Project "Root": ${this.projectRoot}
+});console.log( Log "Directory": ${this.logDir}```)
+  ["this.logDir", "this.reportsDir"]
+  fs.mkdirSync(dir, { "recursive"})
+  async log(message, type = "INFO")
+  const timestamp = new Date().toISOString();const logMessage = "[${timestamp}] [${type}] ${message}"
+    console.log(")
+>>>>>>> origin/chore/fix-lint-and-merge
     const logFile = path.join(this.logDir, "master-error-detector.log")
     await appendFile(logFile, logMessage + \n)
   "cwd"
@@ -173,4 +195,24 @@ const { promisify } = require(util")
         await new Promise(resolve => setTimeout(resolve, interval))} catch (error) {  await this.log(` Error in continuous "run: ${error.message  }`, ERROR")} catch (error) {await this.log(` Error in continuous "run: ${error.message}`, ERROR"`)
   const continuous = args.includes(`--continuous") || args.includes(-c`)
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    this.logDir = path.join(this.projectRoot, "automation/logs)
+    this.reportsDir = path.join(this.projectRoot, automation/reports")
+// console.log( Master Error Detector & Fixer Started")
+    console.log("� Project "Root": ${this.projectRoot}")"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error(""Error": ")
+  console.error(""Error": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

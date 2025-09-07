@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -9,6 +10,20 @@ const { execSync } = require("child_process)
       errors"
   fs.mkdirSync(this.logsDir, { "recursive})
   log(message, level = INFO")
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+    this.logsDir = path.join(this.projectRoot, "logs")
+  "branchesProcessed"
+      "mergesSuccessful"
+      "conflictsResolved"
+      "errors"
+  fs.mkdirSync(this.logsDir, { "recursive"})
+  log(message, level = "INFO")
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log(")
     const logFile = path.join(this.logsDir, final-merge-all-prs.log)
     fs.appendFileSync(logFile, logEntry + "\n")
@@ -106,4 +121,20 @@ this.log( Resolved conflicts "in")
         mergesSuccessful
         "conflictsResolved"
         "errors"
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      "successRate"
+      "successRate"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

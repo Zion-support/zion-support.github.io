@@ -1,19 +1,42 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
 const path = require(path');
 
-// Function to fix hover syntax errors
-function fixHoverSyntax(filePath) {
+console.log('🔧 Fixing remaining syntax errors...');
+
+// Function to fix syntax errors in a file
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     
+<<<<<<< HEAD
 
+=======
+    // Fix common syntax issues
+    content = content.replace(/import\s*{\s*{\s*([^}]+)\s*}/g, 'import { $1 }');
+    content = content.replace(/^\s*{\s*$/gm, '');
+    content = content.replace(/^\s*}\s*$/gm, '');
+    content = content.replace(/^\s*;\s*$/gm, '');
+    content = content.replace(/^\s*icon,\s*$/gm, '');
+    content = content.replace(/^\s*title,\s*$/gm, '');
+    content = content.replace(/^\s*description,\s*$/gm, '');
+    content = content.replace(/^\s*features,\s*$/gm, '');
+    content = content.replace(/^\s*icon:\s*string;\s*$/gm, '');
+    content = content.replace(/^\s*title:\s*string;\s*$/gm, '');
+    content = content.replace(/^\s*description:\s*string;\s*$/gm, '');
+    content = content.replace(/^\s*features:\s*string\[\];\s*$/gm, '');
+    content = content.replace(/^\s*}\s*$/gm, '');
+    content = content.replace(/^\s*;\s*$/gm, '');
+>>>>>>> origin/chore/fix-lint-and-merge
     
     // Fix unterminated regexp literals
     content = content.replace(/^\s*<\/p>\s*$/gm,         </p>');
@@ -77,6 +100,7 @@ const path = require('path');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       }`);
       totalFixes++;
       modified = true;
@@ -95,6 +119,15 @@ const path = require('path');
       console.log(`✅ Fixed syntax errors in ${filePath}`);
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+  );
+}`;
+    }
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed: ${filePath}`);
+>>>>>>> origin/chore/fix-lint-and-merge
       return true;
     }
     return false;
@@ -105,6 +138,7 @@ const path = require('path');
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 // Function to find and fix all TypeScript/JSX files
 function fixAllFiles() {
 <<<<<<< HEAD
@@ -139,19 +173,47 @@ const filesToCheck = [;
     if (fs.existsSync(filePath)) {
       if (fixHoverSyntax(filePath)) {
         totalFixed++;
+=======
+// Function to find all service page files
+function findServicePages(dir) {
+  const files = [];
+  
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        let stat;
+        try {
+          stat = fs.statSync(fullPath);
+        } catch (error) {
+          continue;
+        }
+        
+        if (stat.isDirectory()) {
+          scanDirectory(fullPath);
+        } else if (stat.isFile() && item === 'page.tsx') {
+          files.push(fullPath);
+        }
+>>>>>>> origin/chore/fix-lint-and-merge
       }
     } catch (error) {
       // Skip directories that cant be read
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 });
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   
   scanDirectory(dir);
   return files;
 }
 
+<<<<<<< HEAD
 
 try {
   console.log('🔍 Scanning for syntax errors...');
@@ -160,6 +222,12 @@ try {
   console.log(🔍 Scanning for syntax errors...);
   
 
+=======
+// Main execution
+async function main() {
+  console.log('🚀 Starting syntax error resolution...');
+  
+>>>>>>> origin/chore/fix-lint-and-merge
   // Find all service page files
   const servicePages = findServicePages('/workspace/app/services');
   console.log(`Found ${servicePages.length} service page files`);
@@ -168,6 +236,7 @@ try {
   let fixedCount = 0;
   for (const file of servicePages) {
     if (fixSyntaxErrors(file)) {
+<<<<<<< HEAD
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 } catch (error) {
@@ -201,3 +270,22 @@ try {
   process.exit(1);
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+      fixedCount++;
+    }
+  }
+  
+  // Also fix the research page
+  const researchPage = '/workspace/app/research/page.tsx';
+  if (fs.existsSync(researchPage)) {
+    if (fixSyntaxErrors(researchPage)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`\n✅ Fixed ${fixedCount} files`);
+  console.log('\n🎉 Syntax error resolution completed!');
+}
+
+main().catch(console.error);
+>>>>>>> origin/chore/fix-lint-and-merge

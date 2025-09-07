@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export type EnhancedLayoutProps = any;
 
@@ -85,6 +86,9 @@ document.documentElement.setAttribute('lang', lng);
       <header>
   }, []);
 
+=======
+}, []);
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
       </main>      <main id="main" className=flex-1 container mx-auto px-4 py-6>{children}</main>;
@@ -93,10 +97,8 @@ document.documentElement.setAttribute('lang', lng);
       </footer>;
     </div>;
 }
-}
-  );
-}
-  );
+});
+});
 }"
     <div className="min - h-screen flex flex - col>;
         <EnhancedNavigation />;
@@ -110,10 +112,10 @@ document.documentElement.setAttribute('lang', lng);
       </footer>;
     </div>);
 }
-}
-  );
+});
 }
 
+<<<<<<< HEAD
 
   return (
     <div className='min-h-screen flex flex-col' />
@@ -122,11 +124,21 @@ document.documentElement.setAttribute('lang', lng);
         <LanguageSwitchPrompt />
       </header>
 
+=======
+  return (
+    <div className='min-h-screen flex flex-col'    />
+      <header    />
+        <EnhancedNavigation    />
+        <LanguageSwitchPrompt    />
+      </header>
+<main id='main' className='flex-1 container mx-auto px-4 py-6'    />
+>>>>>>> origin/chore/fix-lint-and-merge
         {children}
       </main>
-      <footer>
-        <EnhancedFooter />
+      <footer    />
+        <EnhancedFooter    />
       </footer>
     </div>
   );
 }
+origin/cursor/automate-test-improve-and-merge-code-2533

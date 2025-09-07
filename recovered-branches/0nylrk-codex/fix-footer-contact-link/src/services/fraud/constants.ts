@@ -1,6 +1,28 @@
-// Common constants used across fraud detection modules
-// Phrases that might indicate fraud
-export const suspiciousPhrases = $2;
+// Common constants used across fraud detection modules;
+// Phrases that might indicate fraud;
+export const suspicious_phrases = [;
+
+  "whatsapp me";
+  "contact me outside";
+  "cashapp only";
+  "western union";
+  "pay directly";
+  "bypass";
+  "telegram";
+  "signal me";
+  "avoid fees";
+  "payment link";
+  "urgent payment";
+
+  "deal outside";
+];
+
+;
+// Email domains often used for throwaway accounts;
+export const suspiciousEmailDomains = [;
+
+export const suspiciousPhrases = [
+  "whatsapp me",
   "contact me outside",
   "cashapp only",
   "western union",
@@ -11,22 +33,77 @@ export const suspiciousPhrases = $2;
   "avoid fees",
   "payment link",
   "urgent payment",
-  "deal outside"
-// Phrases that might indicate fraud;
-export const suspicious_phrases = [;
+
+];
+
+],
+
+// Email domains often used for throwaway accounts
+export const suspiciousEmailDomains = [;
+
+  "tempmail";
+
   "throwaway";
   "fakeemail";
   "mailinator";
   "guerrillamail";
+"10minutemail"
 export const suspiciousEmailDomains = [
   "tempmail",
-],
-
-// Email domains often used for throwaway accounts
-export const suspiciousEmailDomains = $2;
   "throwaway",
   "fakeemail",
   "mailinator",
   "guerrillamail",
   "10minutemail"
+
 ],
+
+// Common constants used across fraud detection modules;
+// Phrases that might indicate fraud;
+export const suspiciousPhrases = [;"
+  "whatsapp me",;"
+  "contact me outside",;"
+  "cashapp only",;"
+  "western union",;"
+  "pay directly",;"
+  "bypass",;"
+  "telegram",;"
+  "signal me",;"
+  "avoid fees",;"
+  "payment link",;"
+  "urgent payment",;"
+  "deal outside";
+],;
+// Email domains often used for throwaway accounts;
+export const suspiciousEmailDomains = [;"
+  "tempmail",;"
+  "throwaway",;"
+  "fakeemail",;"
+  "mailinator",;"
+  "guerrillamail",;"
+  "10minutemail";
+
+// Common constants used across fraud detection modules;
+// Phrases that might indicate fraud;
+export const suspicious_phrases = [;
+
+  "10minutemail";
+];
+
+;
+
+  "deal outside"
+
+],
+
+// Email domains often used for throwaway accounts
+
+export const suspiciousEmailDomains = [
+  "tempmail",
+  "throwaway",
+  "fakeemail",
+  "mailinator",
+  "guerrillamail",
+  "10minutemail"
+
+];

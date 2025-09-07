@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   contactInfo: {
     mobile: string;
     email: string;
@@ -13,6 +14,13 @@
     address: string;
 
     mobile: string;
+=======
+contactInfo: {
+  contactInfo: {
+
+    mobile: string;
+
+>>>>>>> origin/chore/fix-lint-and-merge
     email: string;
     address: string;
 
@@ -21,6 +29,7 @@
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
     id: 'neuromorphic-computing-platform';
     name: 'Neuromorphic Computing Platform';
     tagline: 'Brain-inspired computing for next-generation AI applications';
@@ -161,11 +170,95 @@ export interface EmergingTech2026ServiceV4  {{mobile: '+1 302 464 0950',email: '
       address: 364 E Main St STE 1008 Middletown DE 19709';
 
   contactInfo: {
+=======
+
+    period: '/month';
+    description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure;, enabling ultra-efficient AI processing, real-time learning, and energy-efficient computing solutions.',
+    features: [
+      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesSpiking neural networksAdaptive processingHardware accelerationEdge computing optimizationAI model training';
+      'Performance analyticsCustom chip design'
+    ];
+    popular: false;
+    icon: '🧠';
+    color: 'from-indigo-600 to-purple-600';
+    textColor: 'text-indigo-400';
+    link: 'https://ziontechgroup.com/neuromorphic-computing-platform';
+    marketPosition: 'First commercial neuromorphic computing platform. Competitive advantage: Brain-inspired architecture;, ultra-efficiency, and real-time learning.',
+    targetAudience: 'AI research institutions;, Technology companies, Government agencies, Healthcare organizations, Automotive companies',
+    trialDays: 7;
+    setupTime: '1 month';
+    category: 'Neuromorphic Computing';
+    realService: true;
+    technology: ['Neuromorphic ChipsSpiking Neural NetworksPythonC++CUDAAWSCustom Hardware'];
+    integrations: ['TensorFlowPyTorchAI frameworksIoT devicesEdge computing platforms'];
+    useCases: ['AI accelerationEdge computingAutonomous systemsHealthcare AIRobotics'];
+    roi: 'Reduce AI processing costs by 80%;, improve energy efficiency by 90%, accelerate AI training by 10x',
+    competitors: ['Intel LoihiIBM TrueNorthBrainChip'];
+    marketSize: '$8B neuromorphic computing market by 2030';
+    growthRate: '150% annual growth';
+    variant: 'quantum-futuristic';
+    contactInfo: {
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com';
+>>>>>>> origin/chore/fix-lint-and-merge
     },
-    "realImplementation": true, "implementationDetails": 'Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.','
-    "launchDate": '2026-04-01', "customers": 15,'
-    "rating": 4.9,
-    "reviews": 12
+    realImplementation: true;
+    implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.';
+    launchDate: '2026-04-01';
+    customers: 15;
+    rating: 4.9;
+
+  },
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+contactInfo: {    ;},
+
+export interface EmergingTech2026ServiceV4 {
+
+  {
+
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number;
+    },
+    realImplementation: true, implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.','
+    launchDate: '2026-04-01', customers: 15,
+    rating: 4.9,
+    reviews: 12;
+  };
+
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    },
+    realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
+    launchDate: '2026-05-15', customers: 30,
+    rating: 4.8,
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    reviews: 25;
+    reviews: 25;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+    },
+    realImplementation: true, implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.',
+    launchDate: '2026-04-01', customers: 15,
+    rating: 4.9,
+    reviews: 12
   };
   // Quantum Internet Security Gateway
   {
@@ -188,6 +281,7 @@ export interface EmergingTech2026ServiceV4  {{mobile: '+1 302 464 0950',email: '
     roi: 'Eliminate encryption vulnerabilities, ensure future-proof security, reduce security incidents by 99%',
     competitors: ['CiscoPalo Alto NetworksFortinet'], marketSize: '$45B cybersecurity market',
     growthRate: '60% annual growth', variant: 'quantum-futuristic',
+<<<<<<< HEAD
     contactInfo: {},
     realImplementation: true, implementationDetails: 'Quantum internet security gateway with unbreakable encryption and quantum-resistant algorithms.',
       website: 'https://ziontechgroup.com';
@@ -256,6 +350,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: {}
     },'
     realImplementation: true, implementationDetails: 'Quantum internet security gateway with unbreakable encryption and quantum-resistant algorithms.','
+=======
+    contactInfo: {
+    },
+    realImplementation: true, implementationDetails: 'Quantum internet security gateway with unbreakable encryption and quantum-resistant algorithms.',
+>>>>>>> origin/chore/fix-lint-and-merge
     launchDate: '2026-03-15', customers: 45,
     rating: 4.8,
     reviews: 38
@@ -282,7 +381,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Accelerate research by 10x, reduce development costs by 70%, increase success rates by 300%',
     competitors: ['Ginkgo BioworksTwist BioscienceBenchling'], marketSize: '$15B synthetic biology market',
     growthRate: '80% annual growth', variant: 'ai-futuristic',
+<<<<<<< HEAD
     contactInfo: {},
+=======
+    contactInfo: {
+    },
+>>>>>>> origin/chore/fix-lint-and-merge
     realImplementation: true, implementationDetails: 'AI-powered synthetic biology platform with genetic engineering and lab automation integration.',
     launchDate: '2026-04-15', customers: 25,
     rating: 4.9,
@@ -309,7 +413,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Reduce operational costs by 60%, increase coverage by 300%, eliminate human error',
     competitors: ['DroneDeployPrecisionHawkAirMap'], marketSize: '$50B drone services market',
     growthRate: '70% annual growth', variant: 'ai-autonomous',
+<<<<<<< HEAD
     contactInfo: {},
+=======
+    contactInfo: {
+    },
+>>>>>>> origin/chore/fix-lint-and-merge
     realImplementation: true, implementationDetails: 'Autonomous drone fleet management platform with AI-powered navigation and fleet coordination.',
     launchDate: '2026-03-01', customers: 80,
     rating: 4.7,
@@ -337,7 +446,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Accelerate BCI research by 5x, reduce development costs by 80%, enable new applications',
     competitors: ['NeuralinkKernelCTRL-labs'], marketSize: '$3B BCI market by 2030',
     growthRate: '200% annual growth', variant: 'ai-futuristic',
+<<<<<<< HEAD
     contactInfo: {},
+=======
+    contactInfo: {
+    },
+>>>>>>> origin/chore/fix-lint-and-merge
     realImplementation: true, implementationDetails: 'Comprehensive brain-computer interface development kit with neural processing and device control.',
     launchDate: '2026-05-01', customers: 20,
     rating: 4.9,
@@ -365,7 +479,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Solve previously intractable problems, accelerate ML training by 100x, achieve quantum advantage',
     competitors: ['IBM QiskitGoogle CirqRigetti'], marketSize: '$20B quantum computing market',
     growthRate: '120% annual growth', variant: 'quantum-futuristic',
+<<<<<<< HEAD
     contactInfo: {},
+=======
+    contactInfo: {
+    },
+>>>>>>> origin/chore/fix-lint-and-merge
     realImplementation: true, implementationDetails: 'Advanced quantum machine learning platform with quantum algorithms and hybrid ML capabilities.',
     launchDate: '2026-04-01', customers: 35,
     rating: 4.8,
@@ -393,7 +512,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Eliminate driver costs, improve safety by 99%, increase efficiency by 300%',
     competitors: ['WaymoTeslaCruise'], marketSize: '$2T autonomous vehicle market by 2030',
     growthRate: '150% annual growth', variant: 'ai-autonomous',
+<<<<<<< HEAD
     contactInfo: {},
+=======
+    contactInfo: {
+    },
+>>>>>>> origin/chore/fix-lint-and-merge
     realImplementation: true, implementationDetails: 'Next-generation autonomous vehicle AI platform with level 5 autonomy and advanced safety systems.',
     launchDate: '2026-06-01', customers: 15,
     rating: 4.9,
@@ -406,6 +530,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$1,499',
     period: '/month',
     description: 'Comprehensive digital twin platform that creates real-time digital replicas of cities, enabling urban planning, infrastructure monitoring, traffic optimization, and citizen services through AI-powered simulation and analytics.',
+<<<<<<< HEAD
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -675,6 +800,12 @@ pr-12325
       '3D city modelingReal-time data integrationIoT sensor networksTraffic optimizationInfrastructure monitoringCitizen servicesPredictive analyticsUrban planning tools';
       'API accessCustom dashboards'
     ];
+=======
+    features: [
+      '3D city modelingReal-time data integrationIoT sensor networksTraffic optimizationInfrastructure monitoringCitizen servicesPredictive analyticsUrban planning tools';
+      'API accessCustom dashboards'
+    ];
+>>>>>>> origin/chore/fix-lint-and-merge
     color: 'from-gray-600 to-slate-600', textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/digital-twin-smart-cities',
     marketPosition: 'First comprehensive smart city digital twin platform. Competitive advantage: Complete city modeling, real-time data, and predictive analytics.',
@@ -686,14 +817,19 @@ pr-12325
     roi: 'Reduce infrastructure costs by 30%, improve traffic flow by 40%, enhance citizen satisfaction by 60%',
     competitors: ['Bentley SystemsAutodeskSiemens'], marketSize: '$30B smart city market',
     growthRate: '90% annual growth', variant: 'ai-futuristic',
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
 
+=======
+    contactInfo: {
+>>>>>>> origin/chore/fix-lint-and-merge
     },
     realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15', customers: 30,
     rating: 4.8,
+<<<<<<< HEAD
     contactInfo: {},
     realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15', customers: 30,
@@ -2048,6 +2184,15 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     reviews: 25;
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: "address",
+    website: 'https://ziontechgroup.com'
+    }
+
+pr-12325
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 ];
 

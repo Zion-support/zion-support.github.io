@@ -1,7 +1,20 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 
+=======
+/**
+ * Search Index Generator;
+ * Generates search index for the application;
+ */
+
+const fs = require('fs');
+const path = require('path');
+>>>>>>> origin/chore/fix-lint-and-merge
 class SearchIndexGenerator {
+  // TODO: Implement
+}
   constructor() {
+<<<<<<< HEAD
     this.index = {
       pages: [],
       metadata: {
@@ -244,3 +257,17 @@ class SearchIndexGenerator {
 
 
 module.exports = SearchIndexGenerator;
+=======
+
+
+  generateIndex() {
+    try {
+  // TODO: Implement
+      const pages = [
+        {
+
+      return { success: false, error: error.message };
+
+const generator = new SearchIndexGenerator();
+generator.generateIndex();
+>>>>>>> origin/chore/fix-lint-and-merge

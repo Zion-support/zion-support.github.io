@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 }
   const items = listPipelineForVendor (vendor_id)res.status (200).json ({ items })res.status (200).json ({ items })const vendorId = null;
@@ -29,3 +30,5 @@ export default /**
   res.status (200).json ({ items });
 
 "
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

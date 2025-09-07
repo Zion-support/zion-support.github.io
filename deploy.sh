@@ -1,11 +1,12 @@
 #!/bin/bash
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 # Deployment script for production
 set -e
 
-# Deployment script for production
-set -e
-
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 echo "🚀 Starting deployment process..."
 
 # Check if we're in the right directory
@@ -49,16 +50,21 @@ else
     echo "❌ Deployment failed!"
     exit 1
 fi
+=======
 echo "🚀 Deploying Zion Tech Group Application..."
 
 # Build the application
 npm run build
 
+<<<<<<< HEAD
 # Deploy to production
 echo "🚀 Deploying to production..."
 # Add your deployment commands here
 
 echo "✅ Deployment completed successfully!"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
 # Check if build was successful
 if [ $? -eq 0 ]; then
   echo "✅ Build successful"
@@ -71,3 +77,5 @@ else
   echo "❌ Build failed"
   exit 1
 fi
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

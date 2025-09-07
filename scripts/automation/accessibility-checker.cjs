@@ -1,14 +1,41 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
+=======
 #!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Accessibility Checker Automation;
  * Checks and improves accessibility compliance;
  */
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class AccessibilityChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -21,30 +48,74 @@ class AccessibilityChecker {}
     ) {}"
         const timestamp = new Date().toISOString(})
 });
-const logMessage = `[${timestamp}] ${message}\;n;`;`;
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 
         console.log(message)}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+        console.log(message)};
+>>>>>>> origin/chore/fix-lint-and-merge
     checkAccessibilityIssues() {}
         this.log(Checking accessibility issues...');
         const files = this.findSourceFiles(;);
         const issues = [];
+<<<<<<< HEAD
         console.log(message)}
     checkAccessibilityIssues() {}"
 
 
+=======
+=======
+        console.log(message)};
+    checkAccessibilityIssues() {}"
+
+        const files = this.findSourceFiles(;);
+        const issues = [];
+<<<<<<< HEAD
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
         for (const file of files) {}
             try {}
 
         const files = [];
+<<<<<<< HEAD
 
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+=======
+        
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
 
                 if (&& !item.startsWith('.) && item !== node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
@@ -57,15 +128,56 @@ const logMessage = `[${timestamp}] ${message}\;n;`;`;
             }
 
         }}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+                if (&& !item.startsWith('.') && item !== 'node_modules') {}
+                    scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
+                    files.push(fullPath)};
+            };
+        }) {}
+    && !item.startsWith('.') && item !== 'node_modules') {}
+                    scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
+                    files.push(fullPath)};
+            };
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        }};
+>>>>>>> origin/chore/fix-lint-and-merge
         scanDirectory(this.projectRoot);
         return files}
     analyzeFileForAccessibility(content, file) {}
 
+<<<<<<< HEAD
         const lines = content.split('\n;);
 
         for (let i = ;0; i < lines.length i++) {}
             const line = lines[i];
             const lineNumber = i +;1;
+=======
+        const lines = content.split('\n';);
+<<<<<<< HEAD
+<<<<<<< HEAD
+        for (let i = ;0; i < lines.length i++) {}
+            const line = lines[i];
+            const lineNumber = i +;1;
+=======
+        
+        for (let i = ;0; i < lines.length i++) {}
+            const line = lines[i];
+            const lineNumber = i +;1;
+            
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        for (let i = ;0; i < lines.length i++) {}
+            const line = lines[i];
+            const lineNumber = i +;1;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
             // Check for missing alt attributes;
             if (&& !line.includes(alt=')) {}
                 issues.push({})
@@ -77,30 +189,136 @@ const logMessage = `[${timestamp}] ${message}\;n;`;`;
 
             // Check for heading hierarchy;
             if (line.match(/<h[1-6]/)) {}
-const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}];
+                const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}]
      {}
+<<<<<<< HEAD
 
         const utilsDir = path.join(this.projectRoot, utils';);
+=======
+<<<<<<< HEAD
+                    issues.push({})
+                        "file": path.relative(this.projectRoot, file),
+                        "line": lineNumber,
+                        "type": 'missing_form_label',
+                        "severity": 'error',
+                        "message": 'Input missing label',
+                        "suggestion": 'Add label element or aria-label to input'
+                    })};
+            };
+            // Check for heading hierarchy;
+            if (line.match(/<h[1-6]/)) {}
+                const headingLevel = parseInt(line.match(/<h([1-6])/)[1}];);
+                // This is a simplified check - in practice, you'd track heading hierarchy;
+                if ( {})
+                    const hasH1 = lines.slice(0, i).some(l => l.includes('<h1') {}
+     {}
+                    const hasH1 = lines.slice(0, i).some(l => l.includes('<h1'}
+}););
+                    if ( {})
+                        issues.push({})
+                            "file": path.relative(this.projectRoot, file),
+                            "line": lineNumber,
+                            "type": 'missing_h1',
+                            "severity": 'warning',
+                            "message": 'Page should have an H1 heading',
+                            "suggestion": 'Add H1 heading to page'
+                        })};
+                };
+            };
+            // Check for color contrast issues (simplified);
+            if (line.includes('"color": ') || line.includes('background-color:')) {}
+                issues.push({})
+                    file: path.relative(this.projectRoot, file),
+                    "line": lineNumber,
+                    "type": 'color_contrast',
+                    "severity": 'warning',
+                    "message": 'Check color contrast ratio',
+                    "suggestion": 'Ensure color contrast meets WCAG AA standards (4.5:1)'
+                })};
+        };
+        return issues) {}
+     {}
+                        issues.push({})
+                            "file": path.relative(this.projectRoot, file),
+                            "line": lineNumber,
+                            "type": 'missing_h1',
+                            "severity": 'warning',
+                            "message": 'Page should have an H1 heading',
+                            "suggestion": 'Add H1 heading to page'
+                        })};
+                };
+            };
+            // Check for color contrast issues (simplified);
+            if (line.includes('"color": ') || line.includes('background-color:')) {}
+                issues.push({})
+                    file: path.relative(this.projectRoot, file),
+                    "line": lineNumber,
+                    "type": 'color_contrast',
+                    "severity": 'warning',
+                    "message": 'Check color contrast ratio',
+                    "suggestion": 'Ensure color contrast meets WCAG AA standards (4.5:1)'
+                })};
+        };
+        return issues}};
+    createAccessibilityUtilities() {}
+        this.log('Creating accessibility utilities...');
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        const utilsDir = path.join(this.projectRoot, 'utils';);
+>>>>>>> origin/chore/fix-lint-and-merge
         if () {}
             fs.mkdirSync(utilsDir, { recursive: true })}
         // Accessibility utilities;
-const accessibilityUtils = "/**;
+        const accessibilityUtils = "/**
  * Accessibility Utilities;
  * Helper functions for accessibility compliance;
  */
+<<<<<<< HEAD
+=======
+=======
 
             fs.mkdirSync(utilsDir, { "recursive: true })}
         // Accessibility utilities;"
 
  * Accessibility Utilities;
  * Helper functions for accessibility compliance;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export const accessibility = {}
+<<<<<<< HEAD
   // Generate unique IDs for form elements;
 
+=======
+  // Generate unique IDs for form elements;"
+  "generateId": (prefix = 'element') => {}
+<<<<<<< HEAD
+    return \"\${prefi) {}
+    ) {}
+            fs.mkdirSync(utilsDir, { "recursive": true })};
+        // Accessibility utilities;
+        const accessibilityUtils = "/**
+ * Accessibility Utilities;
+ * Helper functions for accessibility compliance;
+ */
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+export const accessibility = {}
+  // Generate unique IDs for form elements;
+  "generateId": (prefix = 'element') => {}
+    return \"\${prefi}x}-\${Math.random().toString(36).substr(2, 9)}\"},
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   // Check if element is focusable;
   "isFocusable": (element) => {}
-const focusableSelectors = ['a[href]',;
+    const focusableSelectors = ['a[href]',
       '"button": not([disabled])',
       '"input": not([disabled])',
       '"select": not([disabled])',
@@ -128,11 +346,35 @@ export const accessibility = {}
       summary'
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
    ];
+<<<<<<< HEAD
 
   // Trap focus within an element;
 
    ;);
 
+=======
+<<<<<<< HEAD
+    return focusableSelectors.some(selector => element.matches(selector))},
+=======
+    
+    return focusableSelectors.some(selector => element.matches(selector))},
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  // Trap focus within an element;
+  "trapFocus": (element) => {}
+    const focusableElements = element.querySelectorAll()
+      'a[href], "button": not([disabled]), "input": not([disabled]), "select": not([disabled]), "textarea": not([disabled]), [tabindex]:not([tabindex="-1"])"
+   ;);
+<<<<<<< HEAD
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+=======
+    
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     const handleTabKey = (e) => {}
       if ( {})
         if (e.shiftKey) {}
@@ -148,12 +390,32 @@ export const accessibility = {}
           if ( {})
             firstElement.focus()) {}
      {}
+<<<<<<< HEAD
             firstElement.focus()}
             e.preventDefault()}
         }
       }
     }
 
+=======
+            firstElement.focus()};
+            e.preventDefault()};
+        };
+      };
+    };
+<<<<<<< HEAD
+    element.addEventListener('keydown', handleTabKey);
+    return () => {;}
+      element.removeEventListener('keydown', handleTabKey)}},
+=======
+    
+    element.addEventListener('keydown', handleTabKey);
+    
+    return () => {;}
+      element.removeEventListener('keydown', handleTabKey)}},
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   // Announce message to screen readers;
   announce": (message, priority = polite) => {}
     const announcement = document.createElement('div';);
@@ -161,7 +423,22 @@ export const accessibility = {}
     announcement.setAttribute('aria-atomic', true);
     announcement.className = 'sr-only';
     announcement.textContent = message;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+    document.body.appendChild(announcement);
+    setTimeout(() => {}
+      document.body.removeChild(announcement)}, 1000)},
+=======
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {}
+      document.body.removeChild(announcement)}, 1000)},
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   // Skip to main content link;
   "createSkipLink: (targetId = main) => {}
     const skipLink = document.createElement('a';);
@@ -178,8 +455,35 @@ export const accessibility = {}
       text-decoration: none;
       z-index: 1000;
       transition: top 0.3s;
+<<<<<<< HEAD
     \;
 
+=======
+    \";
+<<<<<<< HEAD
+    skipLink.addEventListener('focus', () => {}
+      skipLink.style.top = '6px'}
+});
+    skipLink.addEventListener('blur', () => {}
+      skipLink.style.top = '-40px'}
+});
+    return skipLink};
+};
+=======
+    
+    skipLink.addEventListener('focus', () => {}
+      skipLink.style.top = '6px'}
+});
+    
+    skipLink.addEventListener('blur', () => {}
+      skipLink.style.top = '-40px'}
+});
+    
+    return skipLink};
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 // Screen reader only class;
 export const srOnly = \
 .sr-only {}
@@ -196,30 +500,69 @@ export const srOnly = \
   position: absolute;
   top: 6px;
   left: 6px;
+<<<<<<< HEAD
   z-index: 1000}
 \;
 ;
 
+=======
+  z-index: 1000};
+\";
+";
+<<<<<<< HEAD
+        fs.writeFileSync(path.join(utilsDir, 'accessibility.js'), accessibilityUtils);
+        // Accessibility testing component;
+        const accessibilityTest = "import React, { useEffect, useState } from 'reac;t;';
+=======
+
+        fs.writeFileSync(path.join(utilsDir, 'accessibility.js'), accessibilityUtils);
+        
+        // Accessibility testing component;
+        const accessibilityTest = "import React, { useEffect, useState } from 'reac;t;';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 interface AccessibilityTestProps {}
   "children": React.ReactNode}
 export const AccessibilityTest: React.FC<AccessibilityTestProps> = ({ children }) => {}
   const [issues, setIssues] = useState<string[]>([]);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   useEffect(() => {}
     if ( {})
       // Run accessibility checks in development;
       const checkAccessibility = () => {}
-const "newIssues": string[] = [) {}];
+        const "newIssues": string[] = [) {}]
      {}
       // Run accessibility checks in development;
         const newIssues: string[] = [}];
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         // Check for missing alt attributes;
         const images = document.querySelectorAll('img: not([alt]);';);
         images.forEach((img, index) => {}
           newIssues.push(\"Image \${index + 1} missing alt attribute\")}
 });
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         // Check for missing form labels;
         const inputs = document.querySelectorAll(input: not([aria-label]):not([aria-labelledby]);;);
         inputs.forEach((input, index) => {}
@@ -228,19 +571,48 @@ const "newIssues": string[] = [) {}];
             newIssues.push(\"Input \${index + 1} missing label\")}
         })) {}
      {}
+<<<<<<< HEAD
             newIssues.push(\Input \${index + 1} missing label\)}
         })}
         setIssues(newIssues)}
 
+=======
+            newIssues.push(\"Input \${index + 1} missing label\")};
+        })};
+        setIssues(newIssues)};
+<<<<<<< HEAD
+      checkAccessibility();
+=======
+      
+      checkAccessibility();
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       // Re-check when DOM changes;
       const observer = new MutationObserver(checkAccessibilit;y;);
       observer.observe(document.body, { "childList": true, subtree: true }
 });
+<<<<<<< HEAD
 
   if ( {})
     return () {}
      {}
 
+=======
+<<<<<<< HEAD
+      return () => observer.disconnect()};
+  }, []);
+=======
+      
+      return () => observer.disconnect()};
+  }, []);
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  if ( {})
+    return () {}
+     {}
+    return (};)
+>>>>>>> origin/chore/fix-lint-and-merge
       <div>
         <div style={{}
           "position": 'fixed',
@@ -261,6 +633,7 @@ const "newIssues": string[] = [) {}];
         </div>
         {children}
       </div>
+<<<<<<< HEAD
     )}
   return <>{children}</>}
 ;
@@ -288,6 +661,58 @@ const "newIssues": string[] = [) {}];
         return report}
     generateAccessibilityRecommendations(issues) {}
 
+=======
+    )};
+  return <>{children}</>};
+";
+<<<<<<< HEAD
+        fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
+=======
+
+        fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        this.log('Accessibility utilities created');
+        return { "status": 'success' }};
+    generateAccessibilityReport() {}
+        this.log('Generating accessibility report...');
+<<<<<<< HEAD
+        const issues = this.checkAccessibilityIssues(;);
+        const utilities = this.createAccessibilityUtilities(;);
+=======
+        
+        const issues = this.checkAccessibilityIssues(;);
+        const utilities = this.createAccessibilityUtilities(;);
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        const report = {}
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "accessibility": {}
+                issues: issues,
+                "utilities": utilities,
+                "summary": {}
+                    total: issues.length,
+                    "errors": issues.filter(i => i.severity === 'error').length,
+                    "warnings": issues.filter(i => i.severity === 'warning').length;
+                };
+            },
+            "recommendations": this.generateAccessibilityRecommendations(issues);
+       };
+<<<<<<< HEAD
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Accessibility report saved to ${this.reportFile}`);
+=======
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Accessibility report saved to ${this.reportFile}`);
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+        return report};
+    generateAccessibilityRecommendations(issues) {}
+        const recommendations = ['Use semantic HTML elements (header, nav, main, section, article, aside, footer)',]
+            'Ensure all images have descriptive alt text',
+>>>>>>> origin/chore/fix-lint-and-merge
             'Provide labels for all form inputs',
             Use proper heading hierarchy (H1, H2, H3, etc.),
             'Ensure sufficient color contrast (4."5: 1 for normal text, 3": 1 for large text)',
@@ -297,7 +722,14 @@ const "newIssues": string[] = [) {}];
             'Test with screen readers and keyboard-only navigation',
             Implement skip links for main content
         ];
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         if () {}
             recommendations.push('Add alt attributes to all images')}
         if (issues.some(i => i.type === missing_form_label)) {}
@@ -310,12 +742,24 @@ const "newIssues": string[] = [) {}];
         return recommendations}}
     async run() {}
         this.log('Accessibility Checker started');
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         try {}
             const report = this.generateAccessibilityReport(;);
             this.log('Accessibility Checker completed successfully');
             return report} catch (error) {}
+<<<<<<< HEAD
             this.log(`Accessibility Checker "failed: ${error.message}`);
+=======
+            this.log(`Accessibility Checker "failed": ${error.message}`);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export const AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children }) => {}"
 
@@ -337,27 +781,46 @@ export const AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children 
             "recommendations": this.generateAccessibilityRecommendations(issues);"
 
 
+<<<<<<< HEAD
             throw error}
 // Run the checker if this script is executed directly;
     const checker = new AccessibilityChecker) {}
     const checker = new AccessibilityChecker}(;);
     checker.run().catch(console.error)}
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            throw error};
+// Run the checker if this script is executed directly;
+    const checker = new AccessibilityChecker) {}
+    const checker = new AccessibilityChecker}(;);
+    checker.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
+=======
 module.exports = AccessibilityChecker;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = AccessibilityChecker;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = AccessibilityChecker;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

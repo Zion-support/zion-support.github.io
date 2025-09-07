@@ -1,48 +1,64 @@
 
+<<<<<<< HEAD
 import React from "react";
 export type Badge = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
   id: string;
 label: string;
+=======
+
+import React from \'react\';
+
+export type Badge = any;
+import React from 'react';
+  id: string;
+label: string;
+
+>>>>>>> origin/chore/fix-lint-and-merge
 
 ;
-import React from 'react';'
+import React from 'react';
 
-export type Badge = any;"id": string;
-"label": string;
+export type Badge = any;id: string;
+label: string;
 
-export function currentBadge("balance": number): Badge | null {let "current": Badge | null = null;
+export function currentBadge(balance: number): Badge | null {let current: Badge | null = null;}
+threshold: number, //token balance threshold;}
 }
-"threshold": number, //token balance threshold;
-}
 
-const "BADGES": Badge[] = [;
-  { "id": 'starter', "label": 'Starter', "threshold": 50,'
-},{ "id": 'rising', "label": 'Rising Star', "threshold": 200,'
-},{ "id": 'pro', "label": 'Pro', "threshold": 500,'
-},{ "id": 'elite', "label": 'Elite', "threshold": 1000,'
+const BADGES: Badge[] = [;
+  { id: 'starter'}
+  label: 'Starter', threshold: 50}
+},{ id: 'rising'}
+  label: 'Rising Star', threshold: 200}
+},{ id: 'pro'}
+  label: 'Pro', threshold: 500}
+},{ id: 'elite'}
+  label: 'Elite', threshold: 1000}
 }];
 
-export type Badge = {"id": string,"label": string,"threshold": number, // token balance threshold;
+export type Badge = {id: string,label: string,threshold: number, // token balance threshold;}
 }
 
-const "BADGES": Badge[] = [;
-  { "id": "starter", "label": "Starter", "threshold": 50,"
-},{ "id": "rising", "label": "Rising Star", "threshold": 200,"
-},{ "id": "pro", "label": "Pro", "threshold": 500,"
-},{ "id": "elite", "label": "Elite", "threshold": 1000,"
-}],export function currentBadge("balance": number): Badge | null {let "current": Badge | null  = null,"id": string;
+const BADGES: Badge[] = [;"
+  { id: \"starter\", label: \"Starter\", threshold: 50}"
+},{ id: \"rising\", label: \"Rising Star\", threshold: 200}"
+},{ id: \"pro\", label: \"Pro\", threshold: 500}"
+},{ id: \"elite\", label: \"Elite\", threshold: 1000}
+}],export function currentBadge(balance: number): Badge | null {let current: Badge | null  = null,id: string;
+label: string;}
+threshold: number, //token balance threshold;}
 }
-"label": string;
-"threshold": number, //token balance threshold;
-}
-  return (<div className='flex gap - 2 items - center flex - wrap'>;'
-      {BADGES.map (boolean => { return (        <span; }
-          }
+  return (<div className='flex gap - 2 items - center flex - wrap'    />;
+      {BADGES.map (boolean => (        <span;}
           key={b.id}
-          className={`px - 3 py - 1 rounded - full text - xs border ${balance >= b.threshold;`              ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';'
+          className={`px - 3 py - 1 rounded - full text - xs border ${balance     />= b.threshold;
+              ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';}
+}
+              : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null,
 
+<<<<<<< HEAD
 export default function Badges({ balance }: { balance: number }) {
   const active = currentBadge(balance);
   return (
@@ -166,6 +182,32 @@ if (current = b) {$2;
       ))}
       {active && (<span className='ml-2 text-xs text-green-600'>;
           Current: {active && active.label}
+=======
+  for ;
+  const b of BADGES) {
+    // Check condition;
+if (current = b) {}
+  $2}
+}
+
+ ;
+  return current;
+
+export default function Badges({ balance }: { balance: number}
+}) {
+  const active = currentBadge(balance);
+  return (
+<div className='flex gap-2 items-center flex-wrap'    />
+      {BADGES.map(b => (}
+        <span;}
+key={b.id}
+          className={`px-3 py-1 rounded-full text-xs border ${
+            balance     />= b.threshold;
+? 'bg-yellow-100 border-yellow-300 text-yellow-800'
+              : 'bg-gray-100 border-gray-200 text-gray-500'}
+}
+          }`}
+>>>>>>> origin/chore/fix-lint-and-merge
           title={`Requires ${b.threshold} ZION$`}
         >;
           {b.label}
@@ -173,11 +215,9 @@ if (current = b) {$2;
 
       {active && (
 
-<span className='ml-2 text-xs text-green-600'>'
-
-          }
-
-          "Current": {active.labe
+<span className='ml-2 text-xs text-green-600'    />
+}
+          Current: {active.labe}
 }
         </span>;
       )}
@@ -185,6 +225,7 @@ if (current = b) {$2;
     </div>
   );
 
+<<<<<<< HEAD
 <span className='ml-2 text-xs text-green-600' />
 }
   );
@@ -297,3 +338,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
 }
 "
+=======
+"
+>>>>>>> origin/chore/fix-lint-and-merge

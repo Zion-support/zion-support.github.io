@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 :src/components/GlobalServiceSection.tsx
 import { GradientHeading } from "./GradientHeading;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react
 import { Button } from ./ui/button";
+=======
+import { GradientHeading } from "./GradientHeading";
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
+import { Button } from "./ui/button";
+>>>>>>> origin/chore/fix-lint-and-merge
 const services = null;
 import { GradientHeading } from ./GradientHeading'
 import {
@@ -11,12 +17,17 @@ import {
   Clock
   Recycle
   Truck
+<<<<<<< HEAD
 } from 'lucide-react
 import { Button } from ./ui/button'
   Truck} from 'lucide-react;
 import { Button } from ./ui/button';
 
 import { GradientHeading } from "./GradientHeading,
+=======
+} from 'lucide-react'
+import { Button } from './ui/button'
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const services = [
   {
@@ -40,6 +51,7 @@ const services = [
     description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices,
     icon: <Recycle className=h-10 w-10" />},
   {
+<<<<<<< HEAD
 :src/components/GlobalServiceSection.tsx
     title: 'Equipment Rentals
     description:
@@ -53,6 +65,8 @@ const services = [
 
   Truck} from lucide-react';
 import { Button } from './ui/button;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { GradientHeading } from ./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from lucide-react'
@@ -78,6 +92,7 @@ import { Button } from "./ui/button,
     description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices,
     icon: <Recycle className=h-10 w-10" />},
   {
+<<<<<<< HEAD
     title: "Equipment Rentals,
     description: Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10 />}],
@@ -148,6 +163,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>            </div>;
 
           ))}
+=======
+    title: "Equipment Rentals",
+    description: "Flexible rental options for temporary projects and scaling requirements",
+    icon: <Truck className="h-10 w-10" />}],
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export function GlobalServiceSection() {
   return (
@@ -158,6 +178,7 @@ export function GlobalServiceSection() {
           <p className=mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes
           </p>
+<<<<<<< HEAD
         </div>
 
 
@@ -191,6 +212,8 @@ export function GlobalServiceSection() {
         </div>
         <div className=flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8>        <div className=flex justify-center mt-12">
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </div>
           ))}
@@ -198,6 +221,7 @@ export function GlobalServiceSection() {
 
         <div className="flex justify-center mt-12>
 
+<<<<<<< HEAD
           <Button className=bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
             Get Your Free Commercial Proposal
           </Button>
@@ -219,10 +243,16 @@ export function GlobalServiceSection() {
           </p>;
 <div className=flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8>
+=======
+          <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
+<div className='flex justify-center mt-12'>
+          <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
             Get Your Free Commercial Proposal
           </Button>
         </div>
+<<<<<<< HEAD
 :src/components/GlobalServiceSection.tsx
       </div>;
     </section>;
@@ -255,16 +285,31 @@ import { Server, HardDrive, Network, Clock, Recycle, Truck } from lucide-react';
           <Button className=bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>;
           {services && services.map((service, index) => (<div key={index} className=bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">;
               <div className="text-zion-cyan mb-4>;
+=======
+
+        </div>;
+
+        <div className='flex justify-center mt-12'>;
+          <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          {services && services.map((service, index) => (;
+            <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">;
+              <div className="text-zion-cyan mb-4">;
+>>>>>>> origin/chore/fix-lint-and-merge
                 {service && service.icon}
               </div>;
               <h3 className=text-xl font-bold text-white mb-2">{service && service.title}</h3>;
               <p className="text-zion-slate-light mb-4>{service && service.description}</p>;
           ))}
-        </div>;<div className='flex justify-center mt-12'>;
+        </div>;
+
+        <div className='flex justify-center mt-12'>;
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">;
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
+<<<<<<< HEAD
 import { Server,HardDrive,Network,Clock,Recycle,Truck} from 'lucide-react';
 import { Button  } from './ui / button';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import { GradientHeading } from './GradientHeading';
 import {
 import { Server,HardDrive,Network,Clock,Recycle,Truck} from 'lucide-react;
@@ -336,6 +381,7 @@ export function GlobalServiceSection() {
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes;
           </p>;
         </div>;
+<<<<<<< HEAD
         <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {services.map((service, index) => (<div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300>;
               <div className=text-zion-cyan mb-4">;
@@ -343,10 +389,18 @@ export function GlobalServiceSection() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2>{service.title}</h3>
               <p className=text-zion-slate-light mb-4">{service.description}</p>
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          {services.map((service, index) => (;
+            <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">;
+              <div className="text-zion-cyan mb-4">;
+                {service.icon}
+>>>>>>> origin/chore/fix-lint-and-merge
 
             Get Your Free Commercial Proposal;
           </Button>;
         </div>;
+<<<<<<< HEAD
 :src/components/GlobalServiceSection.tsx
       </div>;
           <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px - 8">;Get Your Free Commercial Proposal;
@@ -362,3 +416,6 @@ export function GlobalServiceSection() {
   );
 }
       </div>;
+=======
+      </div>;
+>>>>>>> origin/chore/fix-lint-and-merge

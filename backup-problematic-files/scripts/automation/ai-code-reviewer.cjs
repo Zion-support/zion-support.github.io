@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -5,6 +6,16 @@ const { execSync, spawn } = require("child_process)
 const crypto = require(crypto")
     this.logFile = path.join(this.projectRoot, "logs, ai-code-reviewer.log")
     this.reviewsLog = path.join(this.projectRoot, "logs, ai-reviews.json")
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+const crypto = require("crypto")
+    this.logFile = path.join(this.projectRoot, "logs", "ai-code-reviewer.log")
+    this.reviewsLog = path.join(this.projectRoot, "logs", "ai-reviews.json")
+>>>>>>> origin/chore/fix-lint-and-merge
       this.projectRoot,logs"
       ai-learning-data.json
   fs.mkdirSync(logsDir, { "recursive"})
@@ -191,5 +202,22 @@ this.log( AI Review Report generated": ${reportPath}")
           item !== "node_modules"
   this.log( AI Code Reviewer starting...)
 this.log(")
+<<<<<<< HEAD
   this.log(` AI Code Review "failed: ${error.message  }`, ERROR"`)
 
+=======
+  this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

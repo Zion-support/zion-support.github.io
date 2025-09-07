@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Health Check Automation Script;
  * Monitors system health and reports status;
@@ -7,10 +7,10 @@
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
-
 class HealthChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
+<<<<<<< HEAD
         this.logFile = path.join(this.projectRoot, logs', 'health-check.log);
         this.reportFile = path.join(this.projectRoot, health-check-report.json');
         this.ensureLogsDir()}
@@ -19,23 +19,56 @@ class HealthChecker {}
         if (!fs.existsSync(logsDir)) {}
             fs.mkdirSync(logsDir, { "recursive: true })}
     }
+=======
+
+        this.ensureLogsDir()};
+    ensureLogsDir() {}
+        const logsDir = path.dirname(this.logFile);
+        if (!fs.existsSync(logsDir)) {}
+            fs.mkdirSync(logsDir, { "recursive": true })};"
+    };
+>>>>>>> origin/chore/fix-lint-and-merge
     log(message) {}
         const timestamp = new Date().toISOString();
         const logMessage = `[${timestamp}] ${message}\n`;`
         console.log(logMessage.trim());
+<<<<<<< HEAD
         fs.appendFileSync(this.logFile, logMessage)}
     async checkSystemHealth() {}
         this.log('Starting health check...);
+=======
+        fs.appendFileSync(this.logFile, logMessage)};
+<<<<<<< HEAD
+    async checkSystemHealth() {}
+        this.log('Starting health check...');
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         const healthReport = {}
+<<<<<<< HEAD
             timestamp": new Date().toISOString(),
             "status: healthy',
             checks": {}
         }
+=======
+            "timestamp": new Date().toISOString(),
+            "status": 'healthy',
+            "checks": {};
+        };
+=======
+    async checkSystemHealth() {}"
+
+            "checks": {};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
         try {}
             // Check Node.js version;
             const nodeVersion = process.version;
+<<<<<<< HEAD
             healthReport.checks.nodeVersion = {}
                 "status: 'pass,
                 value": nodeVersion;
@@ -63,6 +96,20 @@ class HealthChecker {}
                     "value: diskUsage.split('\n)[1] || Unknown'
                 }
                 this.log('Disk space check completed)} catch (error) {}
+=======
+            healthReport.checks.nodeVersion = {}"
+
+            // Check disk space;
+            try {}"
+                const diskUsage = execSync('df -h ., { "encoding": utf8})
+});
+                healthReport.checks.diskSpace = {}
+<<<<<<< HEAD
+                    "status": 'pass',
+                    "value": diskUsage.split('\n')[1] || 'Unknown'
+                };
+                this.log('Disk space check completed')} catch (error) {}
+>>>>>>> origin/chore/fix-lint-and-merge
                 healthReport.checks.diskSpace = {}
                     status": warning',
                     "value: 'Could not check disk space
@@ -116,13 +163,29 @@ class HealthChecker {}
             healthReport.error = error.message}
         // Save report;
         fs.writeFileSync(this.reportFile, JSON.stringify(healthReport, null, 2));
+<<<<<<< HEAD
+
+=======
         
+<<<<<<< HEAD
         this.log(`Health check completed. "Status: ${healthReport.status}`);
         return healthReport}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        this.log(`Health check completed. "Status": ${healthReport.status}`);
+=======
+
+                    "value": `${onlineProcesses} processes online;"
+                this.log(`PM2 "processes": ${onlineProcesses} online`)} catch (error) {`}"
+                healthReport.checks.pm2Processes = {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        return healthReport};
+>>>>>>> origin/chore/fix-lint-and-merge
     async run() {}
-        try {}
             await this.checkSystemHealth();
             // Exit after successful completion;
+<<<<<<< HEAD
             setTimeout(() => {}
                 this.log(Health check completed successfully, exiting...');
                 process.exit(0)}, 1000)} catch (error) {}
@@ -135,3 +198,28 @@ if (require.main === module) {}
     const healthChecker = new HealthChecker();
     healthChecker.run()}
 
+=======
+            setTimeout(() => {}"
+
+            process.exit(1)};
+// Run if called directly;
+if (require.main === module) {}
+    const healthChecker = new HealthChecker();
+    healthChecker.run()};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = HealthChecker;
+module.exports = HealthChecker;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = HealthChecker;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

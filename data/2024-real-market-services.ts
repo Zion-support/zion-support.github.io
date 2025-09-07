@@ -5,7 +5,7 @@ export interface RealMarketService {
   name: string;
   tagline: string;
   price: string;
-  period: string;
+
   description: string;
   features: string[];
   popular: boolean;
@@ -27,23 +27,23 @@ export interface RealMarketService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {mobile: string;
-    email: string;
-    address: string;
-    website: string;
-}realImplementation: boolean;
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   }
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
 }export const realMarketServices: RealMarketService[] = [;
   {id: ai-business-intelligence-pro",name: "AI Business Intelligence Pro,tagline: Transform data into actionable insights with AI",price: "$299,period: /month",description: "Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.,features: [;
       Real-time data analytics dashboard","AI-powered trend prediction,Custom KPI tracking and alerts","Automated report generation,Multi-source data integration","Predictive analytics modeling,Executive summary automation","Mobile-responsive interface,White-label reporting","API access for custom integrations;
@@ -51,6 +51,8 @@ export interface RealMarketService {
     },realImplementation: true,implementationDetails: Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools.",launchDate: "2024-03-01,customers: 1800,rating: 4.7,reviews: 950;
   }
 ];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export const realMarketServices: RealMarketService[] = [
@@ -104,5 +106,3 @@ export const realMarketServices: RealMarketService[] = [
     customers: 1800,
     rating: 4.7,
     reviews: 950
-  }
-];

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -6,10 +7,23 @@ import { randomUUID } from 'crypto';
 import fs from 'fs';'
 import path from 'path';'
 import fse from 'fs - extra';'
+=======
+import fs from 'fs';
+import path from 'path';
+import fse from 'fs - extra';
+
+import { randomUUID } from 'crypto';
+
+// Lazy import to avoid serverless cold start cost unless needed;
+async function summarizeAndTag(input: {
+  fullName: string;
+async function summarizeAndTag(input: {fullName: string;
+>>>>>>> origin/chore/fix-lint-and-merge
   professionalTitle: string;
   bio: string;
   projects?: string;
   skills: string;
+<<<<<<< HEAD
 // Lazy import to avoid serverless cold start cost unless needed
 async function summarizeAndTag(input: {
   fullName: string, professionalTitle: string,
@@ -31,29 +45,43 @@ async function summarizeAndTag(input: {}
     )
   );
   if (!openaiApiKey) {
+=======
+// Lazy import to avoid serverless cold start cost unless needed;
+async function summarizeAndTag(input: {
+  fullName: string, professionalTitle: string,
+  bio: string, projects?: string,
+  skills: string,}
+  tools?: string}
+}) {}
+}
+    return { summary, tags: basicTags.slice(0, 24) };
+>>>>>>> origin/chore/fix-lint-and-merge
   }
-  try {
-    }
-    const { OpenAI } = await import('openai');'
+  try {}
+    const { OpenAI } = await import('openai');
 
-const client = new OpenAI({ "apiKey": openaiApiKey,;
+const client = new OpenAI({ apiKey: openaiApiKey,}
 });
 
-const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with "keys": summary, tags.\n\"nTEXT": \n${combinedTex,;`}`;`
+const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT: \n${combinedTex,}
+}`;
+
 const response = await client.chat.completions.create({
-      }
-      "model": 'gpt-4o-mini''
-      "messages": [
-{ "role": 'system', "content": 'You are an expert technical recruiter.','
+      model: 'gpt-4o-mini',
+  messages: [
+{ role: 'system',}
+  content: 'You are an expert technical recruiter.',}
 },
-        { "role": 'user', "content": prompt,'
-}
+        { role: 'user',}
+  content: prompt,}
+},
       ],
-      "temperature": 0.4
+      temperature: 0.4,
     });
 
-const content = response.choices?.[0]?.message?.content || '';'
+const content = response.choices?.[0]?.message?.content || '';
     try {
+<<<<<<< HEAD
       const parsed = JSON.parse(content)
 if (
         parsed &&
@@ -90,12 +118,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     res.setHeader($2);
     return res.status(405).json({ error: Method not allowed })
+=======
+      const parsed = JSON.parse(content);
+if (
+        parsed &&
+        typeof parsed.summary = == 'string' &&
+        Array.isArray(parsed.tags)
+      ) {}
+       ;}
+  return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };
+      }
+    } catch (e) {
+      // fall through to heuristic;}
+    }
+  } catch (e) {
+// ignore and fallback}
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
-const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;`  return { "summary": fallbackSummary, "tags": basicTags.slice(0, 24) }
+const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 
-export default async function handler() {
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse;
+) {
 
+<<<<<<< HEAD
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
   if (!openaiApiKey) {
     return { summary, tags: basicTags.slice(0, 24) };
@@ -187,9 +236,18 @@ if ( {) {
     res.set_header ('AllowPOST');
     return res.status (405).json ({ error: 'Method not allowed' });
   }
+=======
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');}
+    return res.status(405).json({ error: 'Method not allowed',}
+});
+  }
+  try {
+>>>>>>> origin/chore/fix-lint-and-merge
     const id = randomUUID ();
 
 
+<<<<<<< HEAD
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -270,6 +328,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       professionalTitle,
       profilePicture,
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+fullName,
+      professionalTitle,
+      profilePicture,
+>>>>>>> origin/chore/fix-lint-and-merge
       bio,
       projects,
       yearsOfExperience,
@@ -277,7 +340,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       tools,
       availability,
       timezone,
+
       hourlyRate,
+<<<<<<< HEAD
       portfolioLinks,
       cvFile} = req.body || {},
 
@@ -415,11 +480,34 @@ if ( {) {$2;
     }
     const uploadsDir = path.join(process.cwd(), 'publicuploads');
     const dataDir = path.join(process.cwd(), 'datatalent-submissions');
+=======
+      portfolioLinks,}
+      cvFile,}
+    } = req.body || {};
+
+    if (
+      !fullName |
+      !professionalTitle |
+      !bio |
+      !yearsOfExperience |
+      !skills |
+      !availability |
+      !timezone;
+    ) {}
+      return res.status(400).json({ error: 'Missing required fields',}
+});
+    }
+
+const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
+
+const dataDir = path.join(process.cwd(), 'data', 'talent-submissions');
+>>>>>>> origin/chore/fix-lint-and-merge
     await fse.ensureDir(uploadsDir);
     await fse.ensureDir(dataDir);
 
-    let "savedProfileImagePath": string | null = null;
+    let savedProfileImagePath: string | null = null;
     if (profilePicture?.base64 && profilePicture?.name) {
+<<<<<<< HEAD
       const ext = path.extname(profilePicture.name) || '.png';
       const filename = `${id}-profile${ext}`;
       const filePath = path.join(uploadsDir, filename);
@@ -441,35 +529,63 @@ const filePath = path.join(uploadsDir, filename;
       if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`;`      }
 
     return res.status(200).json({ ok: true, id, summary, tags })
+=======
+      const ext = path.extname(profilePicture.name) || '.png';}
+}
+const filename = `${id}-profile${ext}`;
+
+const filePath = path.join(uploadsDir, filename;
+  const base64Data = profilePicture.base64.split(',')[1];
+      if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedProfileImagePath = `/uploads/${filename}`;
+      }
+    }let savedCvPath: string | null = null;
+    if (cvFile?.base64 && cvFile?.name) {const ext = path.extname(cvFile.name) || '.pdf';}
+}
+const filename = `${id}-cv${ext}`;
+
+const filePath = path.join(uploadsDir, filename;
+  const base64Data = cvFile.base64.split(',')[1];
+      if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedCvPath = `/uploads/${filename}`;
+      }
+
+    }
+
+const { summary, tags } = await summarizeAndTag({
+>>>>>>> origin/chore/fix-lint-and-merge
 fullName,
       professionalTitle,
       bio,
       projects,
       skills,}
       tools,}
+<<<<<<< HEAD
     })
+=======
+    });
+
+>>>>>>> origin/chore/fix-lint-and-merge
 const record = {
       id,
-      "createdAt": new Date().toISOString(),
+      createdAt: new Date().toISOString(),
       fullName,
       professionalTitle,
       bio,
       projects,
-      "yearsOfExperience": Number(yearsOfExperience) || 0,
+      yearsOfExperience: Number(yearsOfExperience) || 0,
       skills,
       tools,
       availability,
       timezone,
-      "hourlyRate": hourlyRate ? Number(hourlyRate) : null,
+      hourlyRate: hourlyRate ? Number(hourlyRate) : null,
       portfolioLinks,
-      "assets": {
-        }
-        "profileImage": savedProfileImagePath,
-        "cv": savedCvPath
+      assets: {
+        profileImage: savedProfileImagePath,}
+        cv: savedCvPath,}
       },
       ai: {
         summary,}
         tags,}
+<<<<<<< HEAD
       } }
 
     const perRecordPath = path.join(dataDir, `${id}.json`);
@@ -510,17 +626,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       try {const content = await fse.readJSON(aggregatePath)if (Array.isArray(content)) aggregate = content;} catch (_) {// ignore;
       }
     };
+=======
+      }}
+>>>>>>> origin/chore/fix-lint-and-merge
 
-const perRecordPath = path.join(dataDir, `${id}.json`);`
-    await fse.writeJSON(perRecordPath, record, { "spaces": 2
+const perRecordPath = path.join(dataDir, `${id}.json`);
+    await fse.writeJSON(perRecordPath, record, { spaces: 2,}
 });
 
-const aggregatePath = path.join(;
+const aggregatePath = path.join(
       process.cwd(),
-      'data','
-      'talent-submissions.json''
+      'data',
+      'talent-submissions.json'
     );
 
+<<<<<<< HEAD
     let "aggregate": any[] = [];
     if () {) {$2;
 }
@@ -591,14 +711,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
 
+=======
+    let aggregate: any[] = [];
+    if () {) {$2;}
+}
+
+      try {
+
+>>>>>>> origin/chore/fix-lint-and-merge
         const content = await fse.readJSON(aggregatePath);}
 if (Array.isArray(content)) aggregate = content;}
-      } catch (_) {}
+      } catch (e) {
         // ignore;}
       }
     }
 
     aggregate.push(record);
+<<<<<<< HEAD
 
+=======
+    await fse.writeJSON(aggregatePath, aggregate, { spaces: 2,}
+});
+    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
+    // For now, just return success with AI data;
+return res.status(200).json({ ok: true, id, summary, tags });
+  } catch (e) {
+    return res.status(500).json({ error: 'Internal server error',}
+>>>>>>> origin/chore/fix-lint-and-merge
 });
   }
+

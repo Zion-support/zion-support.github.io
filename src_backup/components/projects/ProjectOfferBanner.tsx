@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
   const handleViewOffer = (project_id: string, ) =>: any {
     router.push (`/project/${project_id}`);
@@ -8,6 +9,9 @@
 import { useEffect, useState } from "react,
 import { useRouter } from 'next/router,
 import { useEffect, useState } from react",
+=======
+import { useEffect, useState } from "react",
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { useEffect, useState } from "react;
 import { useRouter  } from next/router';
@@ -33,12 +37,6 @@ export function ProjectOfferBanner() {
   const [dismissed, setDismissed] = useState<Set<string>>(new Set())
   useEffect((,) => {
 origin/cursor/automate-test-improve-and-merge-code-2533
-  const router = useRouter(),
-  const { projects, isLoading } = useProjects(),
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
-  
-  useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === offer_sent'),
       setPendingOffers(offers)
@@ -50,6 +48,7 @@ export function ProjectOfferBanner() { return null; }
       const offers = projects.filter(p => p.status === offer_sent),
       setPendingOffers(offers);
     }
+<<<<<<< HEAD
   }, [projects, isLoading]),
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
     e.stopPropagation(),
@@ -62,6 +61,8 @@ export function ProjectOfferBanner() { return null; }
   const handleViewOffer = (projectId: string) => {
     router.push(`/project/${projectId}`);
   }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
     return null;
@@ -145,6 +146,7 @@ export function ProjectOfferBanner() { return null; }
     return null;
   }
 
+<<<<<<< HEAD
   return (
     <div className=mb-6 space-y-3">;
 
@@ -164,6 +166,10 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
   const handleViewOffer = (projectId: string,) => {router.push(`/project/${projectId}`)}
   if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {return null;
   }return (<div className=mb-6 space-y-3">;
+=======
+  return ("
+    <div className="mb-6 space-y-3">;
+>>>>>>> origin/chore/fix-lint-and-merge
       {pendingOffers;
         .filter(offer => !dismissed && dismissed.has(offer && offer.id));
         .map(offer => (;
@@ -191,6 +197,7 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
                 </Button>;
 
         ))}
+<<<<<<< HEAD
     </div>
   );
 
@@ -219,6 +226,9 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
               </div>;
               <div className=flex items - center gap - 2">;
                 <Button size="sm className=whitespace - nowrap">;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   if ()) {) {}
   $2;
 }
@@ -241,6 +251,7 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
               </div>;
             </CardContent>;
           </Card>))}
+<<<<<<< HEAD
     </div>)}, [projects, is_loading])const handle_dismiss = (project_id: string, e: React.MouseEvent) =>: any {e.stop_propagation ()set_dismissed (prev => {const updated = new Set (prev)updated.add (project_id)return updated;
 })}
 const handleViewOffer = (project_id: string) =>: any {router.push (`/project/$ {</div>;
@@ -260,6 +271,8 @@ if () ) {) {$2;
 }`)}if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismissed.has (p.id) ) ) {return null;
 }return (<div className=mb-6 space-y-3" > {pendingOffers offer.id ";
 }> <CardContent className=p-4 flex items-center justify-between > <div className="flex items-center gap-2" > <div className=bg-primary/10 rounded-full p-2 > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className=flex items-center gap-2 > <Button size="sm" className=whitespace-nowrap > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )}</div>)};
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>);
 }, [projects, is_loading]);
 const handle_dismiss = (project_id: string, e: React.MouseEvent) =>: any {}

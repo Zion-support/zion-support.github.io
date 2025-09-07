@@ -1,13 +1,25 @@
+<<<<<<< HEAD
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {}
+  const token = null;}
+      return res.status(500).json({ error: 'Reflex failure' })
+   ,
+}
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
-  }
-  appendLog,
-evaluateReflexes
-  readState,
-writeState;
-  appendLog,evaluateReflexes,readState,writeState} from '@/utils/zionBrain';'
-function isAuthorized("req": NextApiRequest): boolean {const token = req.headers['x-admin-token'] |req.query.token;'
+  appendLog;
+evaluateReflexes,
+readState;}
+writeState;}
+  appendLog,evaluateReflexes,readState,writeState,} from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {const token = req.headers['x-admin-token'] |req.query.token;
 
+<<<<<<< HEAD
   appendLog
   evaluateReflexes
   readState
@@ -32,19 +44,33 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res.status(401).json($2);
   if (req.method = $2;
     return res.status(200).json({ metrics: state.metrics || {} })
+=======
+const superToken = process.env.SUPERADMIN_TOKEN;
+
+return !superToken || token === superToken;
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized',}
+});
+
+  if (req && req.method = == 'GET') {}
+   ;}
+  const state = readState<{ metrics?: unknown }>();
+
+    return res.status(200).json({ metrics: state.metrics || {},
+});
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
-  if (req && req.method = == 'POST') {'
+  if (req && req.method = == 'POST') {
    ;
-  }
-  const started = Date && Date.now();
-    try {
-      }
+  const started = Date && Date.now();}
+    try {}
       const metrics = req && req.body || {};
 
 const triggers = evaluateReflexes(metrics);
 
-const state = readState<any>();
+const state = readState<any    />();
       state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state);
@@ -52,17 +78,16 @@ const state = readState<any>();
 const latencyMs = Date.now() - started;
 
 appendLog({
-        }
-        "module": 'reflex','
-        "type": 'metrics','
-        "status": 'ok','
-        latencyMs,
-        "payload": { metrics, triggers }
+        module: 'reflex',
+  type: 'metrics',
+        status: 'ok',}
+        latencyMs,}
+        payload: { metrics, triggers },
       });
       return res && res.status(200).json({ triggers });
-    } catch ("e": any) {
-      }
+    } catch (e: any) {
       appendLog({
+<<<<<<< HEAD
         module: 'reflex'
         type: 'metrics'
         status: 'error'
@@ -178,9 +203,24 @@ function handler() {
     return res.status (401).json ({ error: 'Unauthorized' });
 ;
   // Check condition
+=======
+        module: 'reflex',
+  type: 'metrics'}
+        status: 'error'}
+        payload: { error: e?.message |'unknown' }
+     ,
+});
+
+      return res.status(500).json({ error: 'Reflex failure',}
+});
+    }
+  }
+  // Check condition;
+>>>>>>> origin/chore/fix-lint-and-merge
 if ( {) {
-  $2
+  $2}
 }
+<<<<<<< HEAD
     const state = read_state<{ metrics?: unknown }>();
     return res.status (200).json ({ metrics: state.metrics || {} });  }
 export default /**
@@ -189,14 +229,23 @@ export default /**
 function handler() {
   if () return res.status (401).json ({ error: 'Unauthorized' })) {
   $2
+=======
+}
+
+const started = Date.now ()try {const metrics = req.body || ;}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 const triggers = evaluate_reflexes (metrics;
   const state = read_state < any>()state.metrics = metrics;
       state.last_triggers = triggers;
-      write_state (state)const latency_ms  = Date.now () - started;append_log ({"module": 'reflex',"type": 'metrics',"status": 'ok',latency_ms,"payload": { metrics, triggers }})return res.status (200).json ({ triggers })} catch ("e": any) {append_log ({"module": 'reflex',"type": 'metrics',"status": 'error',"payload": { "error": e?.message || 'unknown','
-}})return res.status (500).json ({ "error": 'Reflex failure' })}'
+      write_state (state)const latency_ms  = Date.now () - started;append_log ({module: 'reflex',}
+  type: 'metrics',status: 'ok',latency_ms,payload: { metrics, triggers },})return res.status (200).json ({ triggers })} catch (e: any) {append_log ({module: 'reflex',
+  type: 'metrics',status: 'error',}
+  payload: { error: e?.message || 'unknown',}
+},})return res.status (500).json ({ error: 'Reflex failure' })}
   }
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -365,21 +414,31 @@ return res.status (405).json ({ error: 'Method not allowed' });'
 
   }
 
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 return res.status (405).json ({ error: 'Method not allowed',}
 });
-}      append_log ({ "module": 'reflex', "type": 'metrics', "status": 'ok', latency_ms, "payload": { metrics, triggers } });'
+}      append_log ({ module: 'reflex',}
+  type: 'metrics', status: 'ok', latency_ms, payload: { metrics, triggers } });
       return res.status (200).json ({ triggers });
-    } catch ("e": any) {
-      }
-      append_log ({ "module": 'reflex', "type": 'metrics', "status": 'error', "payload": { "error": e?.message || 'unknown' },'
+    } catch (e) {
+      append_log ({ module: 'reflex',
+  type: 'metrics', status: 'error',}
+  payload: { error: e?.message || 'unknown' },
 });
-return res.status (500).json ({ "error": 'Reflex failure',;'
+      return res.status (500).json ({ error: 'Reflex failure',}
 });
   }
-return res.status (405).json ({ "error": 'Method not allowed',;'
+  return res.status (405).json ({ error: 'Method not allowed',}
 });
 
 
+<<<<<<< HEAD
+=======
+  return res.status(405).json({ error: 'Method not allowed',}
+>>>>>>> origin/chore/fix-lint-and-merge
 });
 
 }
+

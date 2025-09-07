@@ -1,13 +1,13 @@
-import React from 'react';"";
+import React from 'react';\"\";
 
 const Card = (
 
 ;) => {
   return $3;}
 }
-  return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}"  />";
+  return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}\"  />\";
       {children}
-    </div>)}"";
+    </div>)}\"\";
 
 const CardHeader = (
 
@@ -15,9 +15,9 @@ const CardHeader = (
 `;) => {
   return $3;}
 }
-    return (<div className={`flex flex-col space-y-1.5 p-6 ${className}`}"  />";
+    return (<div className={`flex flex-col space-y-1.5 p-6 ${className}`}\"  />\";
       {children}
-    </div>)}"";
+    </div>)}\"\";
 
 const CardTitle = (
 
@@ -25,9 +25,9 @@ const CardTitle = (
 `;) => {
   return $3;}
 }
-    return (<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}"  />";
+    return (<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}\"  />\";
       {children}
-    </h3>)}"";
+    </h3>)}\"\";
 
 const CardDescription = (
 
@@ -35,9 +35,9 @@ const CardDescription = (
 `;) => {
   return $3;}
 }
-    return (<p className={`text-sm text-muted-foreground ${className}`}"  />";
+    return (<p className={`text-sm text-muted-foreground ${className}`}\"  />\";
       {children}
-    </p>)}"";
+    </p>)}\"\";
 
 const CardContent = (
 
@@ -45,9 +45,9 @@ const CardContent = (
 `;) => {
   return $3;}
 }
-    return (<div className={`p-6 pt-0 ${className}`}"  />";
+    return (<div className={`p-6 pt-0 ${className}`}\"  />\";
       {children}
-    </div>)}"";
+    </div>)}\"\";
 
 const CardFooter = (
 
@@ -55,7 +55,7 @@ const CardFooter = (
 `;) => {
   return $3;}
 }
-    return (<div className={`flex items-center p-6 pt-0 ${className}`}"  />";
+    return (<div className={`flex items-center p-6 pt-0 ${className}`}\"  />\";
       {children}
     </div>)}
 
@@ -63,16 +63,17 @@ export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 
 const __rest = (this && this.__rest) || function (s, e) ;
   const t = {}
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)t[p] = s[p];"";
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")for (var i = 0, p = Object.getOwnPropertySymbols(s)i < p.length; i++) {if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))t[p[i]] = s[p[i]]}
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)t[p] = s[p];\"\";
+    if (s != null && typeof Object.getOwnPropertySymbols === \"function\")for (var i = 0, p = Object.getOwnPropertySymbols(s)i < p.length; i++) {if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))t[p[i]] = s[p[i]]}
     return t}import { jsx as _jsx  } from 'react/jsx-runtime';
 import { cn  } from '@/lib/utils';
 
-const Card = React.forwardRef((_a, ref) => {"";}
-    let { className } = _a, props = __rest(_a, ["className"])"";
-    return (_jsx("div", Object.assign({ ref: ref, className: cn('rounded-lg border bg-card text-card-foreground shadow-sm', className) }, props)))})"";
+const Card = React.forwardRef((_a, ref) => {\"\";}
+    let { className } = _a, props = __rest(_a, [\"className\"])\"\";
+    return (_jsx(\"div\", Object.assign({ ref: ref, className: cn('rounded-lg border bg-card text-card-foreground shadow-sm', className) }, props)))})\"\";
 Card.displayName = 'Card';
 
+<<<<<<< HEAD
 const CardHeader = React.forwardRef((_a, ref) => {"";}
     return (_jsx("div", Object.assign({ ref: ref, className: cn('flex flex-col space-y-1.5 p-6', className) }, props)))})"";
 CardHeader.displayName = 'CardHeader';
@@ -91,6 +92,31 @@ CardContent.displayName = 'CardContent';
 
 const CardFooter = React.forwardRef((_a, ref) => {"";}
     return (_jsx("div", Object.assign({ ref: ref, className: cn('flex items-center p-6 pt-0', className) }, props)))})"";
+=======
+const CardHeader = React.forwardRef((_a, ref) => {\"\";}
+    let { className } = _a, props = __rest(_a, [\"className\"])\"\";
+    return (_jsx(\"div\", Object.assign({ ref: ref, className: cn('flex flex-col space-y-1.5 p-6', className) }, props)))})\"\";
+CardHeader.displayName = 'CardHeader';
+
+const CardTitle = React.forwardRef((_a, ref) => {\"\";}
+    let { className } = _a, props = __rest(_a, [\"className\"])\"\";
+    return (_jsx(\"h3\", Object.assign({ ref: ref, className: cn('text-2xl font-semibold leading-none tracking-tight', className) }, props)))})\"\";
+CardTitle.displayName = 'CardTitle';
+
+const CardDescription = React.forwardRef((_a, ref) => {\"\";}
+    let { className } = _a, props = __rest(_a, [\"className\"])\"\";
+    return (_jsx(\"p\", Object.assign({ ref: ref, className: cn('text-sm text-muted-foreground', className) }, props)))})\"\";
+CardDescription.displayName = 'CardDescription';
+
+const CardContent = React.forwardRef((_a, ref) => {\"\";}
+    let { className } = _a, props = __rest(_a, [\"className\"])\"\";
+    return (_jsx(\"div\", Object.assign({ ref: ref, className: cn('p-6 pt-0', className) }, props)))})\"\";
+CardContent.displayName = 'CardContent';
+
+const CardFooter = React.forwardRef((_a, ref) => {\"\";}
+    let { className } = _a, props = __rest(_a, [\"className\"])\"\";
+    return (_jsx(\"div\", Object.assign({ ref: ref, className: cn('flex items-center p-6 pt-0', className) }, props)))})\"\";
+>>>>>>> origin/chore/fix-lint-and-merge
 CardFooter.displayName = 'CardFooter';
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }

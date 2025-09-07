@@ -1,15 +1,25 @@
+<<<<<<< HEAD
 
 ;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import React from 'react';
-import { Button  } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { ArrowLeft } from lucide-react';
 
+<<<<<<< HEAD
 import React from 'react,
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Button } from "@/components/ui/button;
 import Link from next/link";
+=======
+import React from 'react',
+
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export function BackToDirectoryButton() {
 import { Button } from "@/components/ui/button;"
@@ -24,6 +34,7 @@ export function BackToDirectoryButton() {
         <Link
           href=/talents
 
+<<<<<<< HEAD
 import { ArrowLeft  } from 'lucide-react';
 import React from react,export function BackToDirectoryButton() {export function BackToDirectoryButton() {return (<div className='container mx-auto px-4 md:px-6 mb-12'>;
       <Button variant=outline asChild className='my-8'>;
@@ -48,6 +59,8 @@ import React from react,export function BackToDirectoryButton() {export function
       </Button>;
     </div>;
   )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           Back to Talent Directory
 
 import React from 'react',
@@ -100,6 +113,7 @@ import { Button } from '@/components / ui / button';
 
 import { ArrowLeft } from lucide-react;
 import { Button  } from '@/components / ui / button';
+<<<<<<< HEAD
 import Link from next / link;
 import { Button   } from '@/components / ui / button';
 import Link from ./next / link;
@@ -108,6 +122,16 @@ export /**;
  */;
 function BackToDirectoryButton() {return (<div className='container mx - auto px - 4 md:px - 6 mb - 12'>;
       <Button variant=outline as_child className='my - 8'>;
+=======
+import Link from './next / link';
+export /**
+ * BackToDirectoryButton - Function description
+ */
+function BackToDirectoryButton() {
+  return (
+    <div className='container mx - auto px - 4 md:px - 6 mb - 12'>;
+      <Button variant='outline' as_child className='my - 8'>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <Link ;
           href=/talents;
 
@@ -116,6 +140,7 @@ function BackToDirectoryButton() {return (<div className='container mx - auto px
     </div>);
 });
 }
+<<<<<<< HEAD
   );
 }
           className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
@@ -137,5 +162,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Button>;
     </div>;
   )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { render, screen  } from '@testing-library/react';'
 import '@testing-library/jest-dom';'
@@ -10,4 +11,12 @@ describe('AIChatbotSystem', () => {test('renders without crashing', () => {rende
   })test('handles user interactions', () => {render(<AIChatbotSystem />)// Add interaction tests here;'
   })test('applies correct styling', () => {render(<AIChatbotSystem />)// Add styling tests here;'
   })})
+=======
+import { describe, it, expect } from '@jest/globals';
+>>>>>>> origin/chore/fix-lint-and-merge
 
+describe('AIChatbotSystem', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});

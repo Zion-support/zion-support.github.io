@@ -1,12 +1,13 @@
 ;
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import Link from 'next/link';'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-const "ApiDevelopmentChat": NextPage = () => ;
-  return (<div>;
-      <Head>;
+const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
 
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
@@ -14,31 +15,48 @@ const "ApiDevelopmentChat": NextPage = () => ;
 ;
   return (<div>;
       <Head></Head>;<meta name="description" content="ApiDevelopmentChat service" />;"
-      </Head>;
-      </Head>;<meta name="description" content="ApiDevelopmentChat service" />;"
-      </Head>;
-
-import type { NextPage } from "next";"
-import Head from "next/head";"
-import Link from "next/link";"
-
-const "ApiDevelopmentChat": NextPage = () => {
- ;
-}
-return (;
-    <div>
-      <Head>
+=======
+const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name = \"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
 ;
-  const "ApiDevelopmentChat": NextPage = () => {;
+  const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head /></Head>;<meta name=\"description\" content=\"ApiDevelopmentChat service\" />;
+>>>>>>> origin/chore/fix-lint-and-merge
+      </Head>;
+      </Head>;<meta name=\"description\" content=\"ApiDevelopmentChat service\" />;
+      </Head>;
+
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
+
+const ApiDevelopmentChat: NextPage = () => {
+ ;
+  return (
+    <div />
+      <Head />
+;
+  const ApiDevelopmentChat: NextPage = () => {;
+  return (
+    <div />;
+      <Head />;
+        <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
+
+<<<<<<< HEAD
+
 }
 return (;
-    <div>;
-      <Head>;
-        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
-
-
-}
-return (;
+=======
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const ApiDevelopmentChat: NextPage = () => {
+  return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <div>
 </div>
       <Head>
@@ -48,23 +66,28 @@ return (;
 
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+=======
+const ApiDevelopmentChat: NextPage = () => {
+  return (
+    <div />
+      <Head />
+
+      </Head>;
+
+>>>>>>> origin/chore/fix-lint-and-merge
       <main>
         <h1>ApiDevelopmentChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+        <a href="/services">Back to Services</a>
+
       </main>
     </div>
       </Head>;
-      <main>;
-        <h1>ApiDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
-      </main>;
-    </div>;
-      </Head>;<main>;
-        <h1>ApiDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1 />ApiDevelopmentChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
       </Head>;<main />;
@@ -86,19 +109,27 @@ export default ApiDevelopmentChat;
 
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>
 
-import type { NextPage } from './next';'
-import Head from './next / head';'
-import Link from './next / link';'
+import type { NextPage } from './next';
+import Head from './next / head';
+import Link from './next / link';
 
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title > ApiDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="ApiDevelopmentChat service" />{" "}"
+=======
+const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title  /> ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name=\"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
-      <main>;
-        <h1 > ApiDevelopmentChat</h1>;
-        <p > Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1  /> ApiDevelopmentChat</h1>;
+        <p  /> Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>
     </div>
   );
@@ -117,15 +148,23 @@ export default ApiDevelopmentChat;<div />;
     </div>;
   )},export default ApiDevelopmentChat;
 
+<<<<<<< HEAD
   return (<div>;
       <Head>;
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="ApiDevelopmentChat service" />{" "}"
+=======
+const ApiDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name=\"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
-      <main>;
-        <h1>ApiDevelopmentChat</h1>;
-        <p>Service details coming soon...</p>;
-        <a href="/services">Back to Services</a>;"
+      <main />;
+        <h1 />ApiDevelopmentChat</h1>;
+        <p />Service details coming soon...</p>;
+        <a href=\"/services\" />Back to Services</a>;
       </main>;
     </div>;
   )}
@@ -136,18 +175,21 @@ export default ApiDevelopmentChat;<title />ApiDevelopmentChat - Zion Tech Soluti
 };
 
 export default ApiDevelopmentChat;
+<<<<<<< HEAD
+=======
+const ApiDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>ApiDevelopmentChat - Zion Tech Solutions</title>
-        <meta name="description" content="ApiDevelopmentChat service" />{" "}"
+  return (
+    <div />
+      <Head />}
+        <title />ApiDevelopmentChat - Zion Tech Solutions</title>}
+        <meta name=\"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
       </Head>
-      <main>
-        <h1>ApiDevelopmentChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />ApiDevelopmentChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );
@@ -158,18 +200,21 @@ export default ApiDevelopmentChat;
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
+const ApiDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
-}
-return (;
-    <div>
-      <Head>
-        <title>ApiDevelopmentChat - Zion Tech Solutions</title>
-        <meta name="description" content="ApiDevelopmentChat service" />{" "}"
+  return (
+    <div />
+      <Head />}
+        <title />ApiDevelopmentChat - Zion Tech Solutions</title>}
+        <meta name=\"description\" content=\"ApiDevelopmentChat service\" />{\" \"}
       </Head>
-      <main>
-        <h1>ApiDevelopmentChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>"
+      <main />
+        <h1 />ApiDevelopmentChat</h1>
+        <p />Service details coming soon...</p>
+        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
   );

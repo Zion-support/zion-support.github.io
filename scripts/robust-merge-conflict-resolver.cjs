@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 <<<<<<< HEAD
@@ -9,6 +10,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 
@@ -17,6 +20,7 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 
@@ -27,6 +31,8 @@
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 =======
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       { "encoding": "utf8" }
 =======
 
@@ -37,6 +43,7 @@
     );
     return result;
       .trim();"
+<<<<<<< HEAD
       .split(\n);"
       .filter(line => line.trim())} catch (error) {"
     log(Error finding conflicted files, "red");
@@ -61,6 +68,31 @@ function resolveMergeConflict(filePath) {
     // Remove malformed React imports;
     content = content.replace();      /import\s+React[^]*?from\s+[]react["]\s*;?\s*/g,import React from "react;\n);
 
+=======
+      .split("\n");"
+      .filter(line => line.trim())} catch (error) {;"
+    log("Error finding conflicted files", "red");"
+    return []}
+}
+;
+function main() {;"
+  log("🚀 Starting robust merge conflict resolution...", "cyan");
+  const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, "yellow");"
+  if (conflictedFiles.length === 0) {;"
+    log("✅ No merge conflicts found!", "green");"
+    return}"
+const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process");// ANSI color codes for better output;"
+const colors = {;"
+
+function resolveMergeConflict(filePath) {;
+  try {;
+    if (!fs.existsSync(filePath)) {;
+      return false}
+;"
+
+    // Remove malformed React imports;"
+    content = content.replace();      /import\s+React[^]*?from\s+["]react[]\s*;?\s*/g,import React from "react";\n");
+>>>>>>> origin/chore/fix-lint-and-merge
     // Strategy "3": Fix common syntax issues;    // Remove duplicate semicolons and quotes;
     content = content.replace(/;+/, );;    content = content.replace(/[]+/g, );    // Remove empty lines and normalize spacing;
     content = content.replace(/\n\s*\n\s*\n/g, \n\n");";    content = content.replace(/^\s+$/gm, );    // Strategy 4: Ensure basic React component structure;    if();      content.includes(export default") &&";      !content.includes(import React)") {";      content = import React from react;\n\n + content}";"
@@ -72,6 +104,7 @@ function findConflictedFiles() {
 
   let resolvedCount = 0;
   let errorCount = 0;
+<<<<<<< HEAD
 
         resolvedCount++;log(` "Resolved": ${filePath}`, "green");"} else {log(`⚠  No changes "needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
   log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors "encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
@@ -107,6 +140,32 @@ const fs = require("$1");
 const path = require("$1");
 const { execSync } = require("child_process");
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+  for (const filePath of conflictedFiles) {;
+      if (resolveMergeConflict(filePath)) {;"
+        resolvedCount++;log("✅ "Resolved": ${filePath}", "green")} else {log("⚠️  No changes "needed": ${filePath}", "yellow")}"
+    } catch (error) {;"
+
+  main()}
+module.exports = { resolveMergeConflict, findConflictedFiles }))
+
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require("$1")
+const path = require("$1")
+const { execSync } = require("child_process")
+>>>>>>> origin/chore/fix-lint-and-merge
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -115,6 +174,7 @@ const { execSync } = require("child_process");
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const fs = require("$1")
@@ -127,6 +187,11 @@ const fs = require("$1");
 const path = require("$1");
 const { execSync } = require("child_process");
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+const fs = require("$1")
+const path = require("$1")
+const { execSync } = require("child_process")
+>>>>>>> origin/chore/fix-lint-and-merge
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -135,7 +200,7 @@ const { execSync } = require("child_process");
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-let content = fs.readFileSync(filePath, "utf8");
+    let content = fs.readFileSync(filePath, "utf8")
     // Strategy "1"
     // Handle corrupted markers like "
       content.includes("      content.includes("")
@@ -154,11 +219,11 @@ let content = fs.readFileSync(filePath, "utf8");
       content.includes("export default") &&";      !content.includes("import React")") {";      content = import React from "react";\n\n + content}"
       // Additional "cleanup": remove any remaining corrupted content;";      content = content.replace(/[^\x00-\x7F]/g, ); // Remove non-ASCII characters";      content = content.replace(/\s+/g, " "); // Normalize whitespace;      fs.writeFileSync(filePath, content, "utf8");";      return true,"
     return false} catch (error) {log("Error processing ${filePath}: ${error.message}", "red");    return false;"}"
-const result = execSync(git status --porcelain | grep "^UU | awk {print $2}", ";      { ""encoding": "utf8" }");
-const result = execSync(git status --porcelain | grep "^UU | awk {print $2}", ";      { "encoding": "utf8" }");";
+    const result = execSync(git status --porcelain | grep "^UU | awk {print $2}", ";      { encoding": "utf8" }")
+    const result = execSync(git status --porcelain | grep "^UU | awk {print $2}", ";      { "encoding": "utf8" }");"
       .split("\n")";      .filter(line => line.trim()),"
     log("Error finding conflicted files", "red");    return [],"
-  log(" Starting robust merge conflict resolution...", "cyan");"";  const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, "yellow");";";  if (conflictedFiles.length === 0) {";    log(" No merge conflicts found!", "green");";    return,"`}
+  log(" Starting robust merge conflict resolution...", "cyan");;  const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, "yellow");";";  if (conflictedFiles.length === 0) {";    log(" No merge conflicts found!", "green");";    return,"`}
         resolvedCount++;log(" "Resolved": ${filePath}", "green")} else {log("⚠  No changes "needed": ${filePath}", "yellow")
       errorCount++;log(" Error processing ${filePath }: ${error.message}", "red")
   log("\n Resolution "Summary": ", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red")
@@ -170,12 +235,9 @@ const result = execSync(git status --porcelain | grep "^UU | awk {print $2}", ";
         resolvedCount++;log(" "Resolved": ${filePath}", "green")} else {log("⚠  No changes "needed": ${filePath}", "yellow")}"} catch (error) {      errorCount++;log(` Error processing ${filePath}: ${error.message}, "red")}"}"
 <<<<<<< HEAD
   log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
         resolvedCount++;log(` "Resolved": ${filePath}, "green");"} else {log(`⚠  No changes "needed": ${filePath}, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
   log("\n Resolution "Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}, "blue");log(`Successfully "resolved": ${resolvedCount}, "green");log(`Errors "encountered": ${errorCount}, "red");";`;  if (resolvedCount > 0) {";    log("\n Next "steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m "Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"`}
+<<<<<<< HEAD
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
@@ -207,3 +269,6 @@ resolvedCount++;log(` "Resolved": ${filePath}, "green");"} else {log(`⚠  No ch
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,23 +1,30 @@
-#!/usr/bin/env node;
+
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
-
 class ErrorDetectionMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs);
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     this.errorThreshold = parseInt(process.env.ERROR_THRESHOLD) || 10;
     this.checkInterval = parseInt(process.env.ERROR_DETECTION_INTERVAL) || 300000; // 5 minutes;
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
+<<<<<<< HEAD
         fs.mkdirSync(dir, { "recursive: true })}
+=======
+        fs.mkdirSync(dir, { "recursive": true })};"
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 });
-    
     this.errorHistory = [];
+<<<<<<< HEAD
     this.lastCheck = null}
   log(message, level = INFO') {}
     const timestamp = new Date().toISOString();
@@ -111,12 +118,27 @@ class ErrorDetectionMonitor {}
     ];
 
     const results = {}
-    let totalErrors = 0;
+=======
+    this.lastCheck = null};"
+  log(message, level = 'INFO') {}
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] [${level}] ${message})};
+  async runTypeScriptCheck() {}
+    try {}
 
+      return { "success": false, errors, "count": errors.length }};"
+  };
+  async runLintCheck() {}
+    try {}"
+
+    ];
+    const results = {};
+>>>>>>> origin/chore/fix-lint-and-merge
+    let totalErrors = 0;
     for (const check of checks) {}
-      try {}
         const result = await check.check();
         results[check.name] = result;
+<<<<<<< HEAD
         totalErrors += result.count} catch (error) {}
         this.log(`Error running ${check.name} check": ${error.message}`, 'ERROR);
         results[check.name] = { "success: false, errors": [], "count: 0 }}
@@ -130,12 +152,23 @@ class ErrorDetectionMonitor {}
     }
 
     // Save error report;
+=======
+
+        results[check.name] = { "success": false, "errors": [], "count": 0 }};"
+    const errorReport = {}"
+      "timestamp": new Date().toISOString(),"
+      totalErrors,"
+      "checks": results,
+      "threshold": this.errorThreshold,
+      "exceeded": totalErrors > this.errorThreshold;"
+    // Save error report;`;
+>>>>>>> origin/chore/fix-lint-and-merge
     const reportPath = path.join(this.reportsDir, `error-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
-
     // Update error history;
     this.errorHistory.push(errorReport);
     if (this.errorHistory.length > 100) {}
+<<<<<<< HEAD
       this.errorHistory = this.errorHistory.slice(-100)}
     // Save error history;
     const historyPath = path.join(this.reportsDir, error-history.json');
@@ -166,11 +199,16 @@ class ErrorDetectionMonitor {}
   async startMonitoring() {}
     this.log(Starting error detection monitor...');
     
+=======
+      this.errorHistory = this.errorHistory.slice(-100)};
+    // Save error history;"
+
+>>>>>>> origin/chore/fix-lint-and-merge
     // Run initial check;
     await this.checkForErrors();
-    
     // Set up periodic checking;
     setInterval(async () => {}
+<<<<<<< HEAD
       try {}
         await this.checkForErrors()} catch (error) {}
         this.log(`Error in periodic check": ${error.message}`, 'ERROR)}
@@ -206,3 +244,30 @@ if (require.main === module) {}
     monitor.log(`Failed to start monitoring": ${error.message}`, ERROR');
     process.exit(1)})}
 
+=======
+
+      "checkInterval": this.checkInterval;"
+    }};
+// Main execution;
+if (require.main === module) {}
+  const monitor = new ErrorDetectionMonitor();
+  // Handle graceful shutdown;"
+
+    process.exit(1)})};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ErrorDetectionMonitor;
+module.exports = ErrorDetectionMonitor;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = ErrorDetectionMonitor;
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

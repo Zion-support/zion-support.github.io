@@ -1,10 +1,23 @@
 {
+<<<<<<< HEAD
   "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+=======
+  "extends": [
+    "@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+>>>>>>> origin/chore/fix-lint-and-merge
   "env": {
     "browser": true,
     "node": true,
     "es6": true,
+<<<<<<< HEAD
     "jest": true
+=======
+    "jest": true,
+    "es2021": true
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   globals": {
     "IntersectionObserver: readonly",
@@ -14,6 +27,7 @@
     "HTMLImageElement: readonly",
     "alert: readonly"
   },
+<<<<<<< HEAD
   "rules: {
     no-unused-vars": "warn,
     react/no-unescaped-entities": "off,
@@ -21,12 +35,23 @@
     no-console": "warn,
     react/react-in-jsx-scope": "off,
     no-undef": "error
+=======
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "error"
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   "ignorePatterns": [
     "node_modules/",
     ".next/",
     "out/",
     "dist/",
+<<<<<<< HEAD
     "components-disabled/",
     "src-disabled/",
     "src_backup/",
@@ -55,9 +80,12 @@
     "providers/",
     "scripts/",
     "components/",
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     "*.config.js",
     "*.config.cjs",
     "*.config.mjs",
+    "fix-critical-files.js",
     "fix-*.js",
     "fix-*.cjs",
     "*-fix*.cjs",
@@ -68,15 +96,38 @@
     "app-improvement-*.cjs",
     "analyze-*.cjs",
     "code-quality-*.js",
+<<<<<<< HEAD
     "automation/**",
+=======
+    "components/*.dynamic.jsx",
+    "components/Accessibility*.tsx",
+    "components/Accessibility*.jsx",
+    "components/AdvancedAIAssistant.tsx",
+    "components/AdvancedDataVisualization.tsx",
+    "components/AdvancedNotificationCenter.tsx",
+    "components/Analytics.tsx",
+    "components/AnalyticsManager.tsx",
+    "components/AnalyticsTracker.tsx",
+    "components/ContactForm.tsx",
+    "api/create-payment-intent.js",
+    "api/newsletter/subscribe.js",
+    "api/quotes.js",
+    "api/shipping-rates.js",
+    "api/wallet.js",
+    "automation/comprehensive-app-improver.cjs",
+    "automation/dependency-fixer.cjs",
+    "automation/deployment-automator.cjs",
+    "automation/master-automation-orchestrator.cjs",
+    "automation/performance-optimizer.js",
+    "automation/typescript-fixer.cjs",
+>>>>>>> origin/chore/fix-lint-and-merge
     "*.report.json",
     "temp_*/",
     "test_build/",
     "tests.disabled/",
+    "pages.disabled/",
     "src.disabled/",
-    "src.broken/",
-    "src.corrupted/",
-    "src.pages.disabled/",
+    "components.disabled/",
     "hooks.disabled/",
     "types.disabled/",
     "contracts.disabled/",
@@ -84,6 +135,8 @@
     "zion-os.disabled/",
     "zion_academy/",
     "automation_backup/",
+    "automation/backups/",
+    "backup-pages/",
     "backup/",
     "lib_backup/",
     "data_backup/",
@@ -98,8 +151,12 @@
     "test-results/",
     "security-reports/",
     "pages.__backup/",
+<<<<<<< HEAD
+=======
+    "pages-disabled/",
+    "pages.disabled_auto/",
+>>>>>>> origin/chore/fix-lint-and-merge
     "src_backup_temp/",
-    "temp-backup/",
     "tests/",
     "supabase/",
     "*.test.js",
@@ -116,6 +173,7 @@
     "vite.config.ts",
     "types/empty.ts",
     "pages_backup_conflicts/",
+<<<<<<< HEAD
     "pages_backup_conflict/",
     "pages_disabled/",
     "pages-disabled-2/",
@@ -131,6 +189,12 @@
     "scripts/",
     "providers/",
     "protocol/",
+=======
+    "pages_disabled/",
+    "src.broken/",
+    "src.corrupted/",
+    "src.pages.disabled/",
+>>>>>>> origin/chore/fix-lint-and-merge
     "performance-monitor.js",
     "performance-optimization.js",
     "playwright.config.ts",
@@ -215,6 +279,7 @@
     "app-optimizer.js",
     "apps.backup/**",
     "automated-merge-conflict-resolver.cjs",
+<<<<<<< HEAD
     "backup-problematic-files/**",
     "blog/",
     "app/",
@@ -266,6 +331,10 @@
     "components/iam-access-review.tsx",
     "components/incident-automation-suite.tsx",
     "pages_api.disabled/"
+=======
+    "automation/**",
+    "backup-problematic-files/**"
+>>>>>>> origin/chore/fix-lint-and-merge
   ]
   ignorePatterns": [
     "node_modules/,

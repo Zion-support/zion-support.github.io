@@ -82,6 +82,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       setListings([]);
       return;
     }
+<<<<<<< HEAD
 import { useEffect, useState  } from react';
 import { QuoteFormData, ListingItem, ServiceType  } from '@/types/quotes;
 import { Input  } from @/components/ui/input';
@@ -130,6 +131,8 @@ import { useEffect, useState } from react",import { QuoteFormData, ListingItem, 
     fetchServices();
   }, [formData.serviceType, debouncedQuery, isMounted]);
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     const fetchServices = async () => {
       setLoading(true);
@@ -264,6 +267,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
            item.category.toLowerCase().includes(searchQuery.toLowerCase());
   });
   return (;
+<<<<<<< HEAD
     <div className=space-y-6">;
     }fetchServices()}, [formData.serviceType, debouncedQuery, isMounted])const handleTypeSelect = (type: ServiceType) => {updateFormData({ serviceType: type })}const handleItemSelect = (item: ListingItem) => {updateFormData({specificItem: item,serviceCategory: item.category,serviceType: item.category.toLowerCase() as ServiceType})}const sourceListings  = listings;const filteredListings = sourceListings.filter(item => {// Filter by category only when a service type has been selected;
     if (formData.serviceType !== ') {const categoryMatch =;
@@ -271,13 +275,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }if (searchQuery.trim() === ') return true;
     return (item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       item.category.toLowerCase().includes(searchQuery.toLowerCase()))})return (<div className="space-y-6>;
+=======
+    <div className="space-y-6">;
+>>>>>>> origin/chore/fix-lint-and-merge
       <div>;
         <h3 className=text-xl font-semibold text-white mb-4">What are you looking for?</h3>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4>;
           <Card;
+<<<<<<< HEAD
             className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === service";
                 ? "bg-zion-purple/20 border-zion-purple;
                 : bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
+=======
+            className={`p-4 cursor-pointer border-2 transition-colors ${;
+              formData.serviceType === "service";
+                ? "bg-zion-purple/20 border-zion-purple";
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
+>>>>>>> origin/chore/fix-lint-and-merge
             }`}
             onClick={() => handleTypeSelect("service)}
           >;
@@ -285,9 +299,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-sm text-zion-slate-light>AI solutions, consulting, development</p>;
           </Card>;
           <Card;
+<<<<<<< HEAD
             className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === talent";
                 ? "bg-zion-purple/20 border-zion-purple;
                 : bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
+=======
+            className={`p-4 cursor-pointer border-2 transition-colors ${;
+              formData.serviceType === "talent";
+                ? "bg-zion-purple/20 border-zion-purple";
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
+>>>>>>> origin/chore/fix-lint-and-merge
             }`}
             onClick={() => handleTypeSelect("talent)}
           >;
@@ -295,6 +316,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-sm text-zion-slate-light>AI specialists, developers, consultants</p>;
           </Card>;
           <Card;
+<<<<<<< HEAD
             className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === equipment";
                 ? "bg-zion-purple/20 border-zion-purple;
                 : bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
@@ -335,6 +357,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className={`p-4 cursor-pointer border-2 transition-colors ${formData.serviceType === "equipment;
                 ? bg-zion-purple/20 border-zion-purple";
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50;
+=======
+            className={`p-4 cursor-pointer border-2 transition-colors ${;
+              formData.serviceType === "equipment";
+                ? "bg-zion-purple/20 border-zion-purple";
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
+>>>>>>> origin/chore/fix-lint-and-merge
             }`}
             onClick={() => handleTypeSelect(equipment")}
           >;
@@ -343,10 +371,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>;
         </div>;
       </div>;
+<<<<<<< HEAD
       {formData.serviceType && (<div className="space-y-4>;
           <h3 className=text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>;
           <div className="relative>;
             <Search className=absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
+=======
+      {formData.serviceType && (;
+        <div className="space-y-4">;
+          <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>;
+          <div className="relative">;
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
+>>>>>>> origin/chore/fix-lint-and-merge
             <Input;
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
@@ -368,6 +404,7 @@ fetchServices () ;
 return (<div className=space-y-6"> <div> <h3 className="text-xl font-semibold text-white mb-4>What are you looking for?</h3> <div className=grid grid-cols-1 md:grid-cols-3 gap-4"> <Card > <h4 className="font-medium text-white>Services</h4> <p className=text-sm text-zion-slate-light">AI solutions, consulting, development</p> </Card> <Card > <h4 className="font-medium text-white>Talent</h4> <p className=text-sm text-zion-slate-light">AI specialists, developers, consultants</p> </Card> <Card > <h4 className="font-medium text-white>Equipment</h4> <p className=text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p> </Card> </div> </div> {";
   formData.serviceType && (<div className=space-y-4> <h3 className="text-xl font-semibold text-white">Select a specific {
   formData.serviceType ;
+<<<<<<< HEAD
 }</h3> <div className=relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4 /> <Input placeholder= {
   `Search $ {
   formData.serviceType ;
@@ -419,6 +456,8 @@ return (<div className=space-y-6"> <div> <h3 className="text-xl font-semibold te
 }</div>) ;
 }<div className="grid grid-cols-1 gap-4 mt-4" aria-busy= {loading ;
 }> {";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }...` ;
 }value= {
   searchQuery ;
@@ -438,7 +477,11 @@ return (<div className=space-y-6"> <div> <h3 className="text-xl font-semibold te
 }</div>) ;
 }
   )
+<<<<<<< HEAD
   loading ? (<> <Skeleton className=h-[120px] w-full" /> <Skeleton className="h-[120px] w-full /> <Skeleton className=h-[120px] w-full" /> </>) : filteredListings.length > 0 ? (filteredListings.map ( (item) => (<div key= {item.id ";
 }/> </div>) ) ) : (<div className=text-center py-8 text-zion-slate-light > No items found. Please try a different search. </div>)}</div> </div>)}</div>)}";
   )}
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

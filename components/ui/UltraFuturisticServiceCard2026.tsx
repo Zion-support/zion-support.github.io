@@ -1,11 +1,18 @@
-id: string;
 
 
+<<<<<<< HEAD
+=======
+  id: string;
+
+  name: string;
+  tagline: string;
+  description: string;
+>>>>>>> origin/chore/fix-lint-and-merge
   price?: string | {monthly?: number;
-    }
     yearly?: number;
     currency?: string;
     trialDays?: number;
+<<<<<<< HEAD
 import React from react';
     monthly?: number;
     yearly?: number;
@@ -391,6 +398,18 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         
         {/* Benefits Section */}
     </motion.div>),})UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';export default UltraFuturisticServiceCard2026;category: string;
+=======
+}
+    setupTime?: string}
+  },
+  period?: string;
+  pricing?: any;
+  features: string[],;
+  popular?: boolean;
+
+  category: string;
+
+>>>>>>> origin/chore/fix-lint-and-merge
   icon: string;
   marketPrice?: string;
   competitors?: string[];
@@ -398,6 +417,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
   useCases?: string[];
   integration?: string[],benefits?: string[];
 }
+<<<<<<< HEAD
 interface ServiceCardProps  {service: Service;
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
 }const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps>  = ({ service, variant;
@@ -420,3 +440,15 @@ export default UltraFuturisticServiceCard2026;
                 <div key = $2;
 UltraFuturisticServiceCard2026.displayName = $2;
 export default UltraFuturisticServiceCard2026,
+=======
+
+interface ServiceCardProps {
+  service: Service;
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'}
+}
+}
+
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps    /> = ({ service, variant;
+}
+}
+>>>>>>> origin/chore/fix-lint-and-merge

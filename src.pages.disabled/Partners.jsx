@@ -26,10 +26,8 @@ pr-12325
   }
 }
 import React from 'react';
-
 interface PartnersProps {
   // Add props here as needed
-
 
 }
 
@@ -41,10 +39,15 @@ export default function Partners({ }: PartnersProps) {
     </div>
   );
 
-
 }
 
+:src.pages.disabled/Partners.jsx
 }
+}
+ursor/add-new-services-and-deploy-updates-0462
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 :src.pages.disabled/Partners.jsx
 }
 }
@@ -52,10 +55,7 @@ export default function Partners({ }: PartnersProps) {
 }
 }
 
-
-
-
-
+}
 
 :src.pages.disabled/Partners.jsx
 }
@@ -63,4 +63,3 @@ export default function Partners({ }: PartnersProps) {
 }
 }
 }
-:temp_exclude/src.pages.disabled/Partners.jsx;

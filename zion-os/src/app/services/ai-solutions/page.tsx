@@ -1,21 +1,263 @@
+<<<<<<< HEAD
 
 }
 const "ai_services": AIService[] = [;
   {
 
+=======
+"use client",;
+import { useState } from "react",;
+interface AIService {;
+  id: string,;
+  name: string,;
+  description: string,;
+  technicalSpecs: string[],;
+  useCases: string[],;
+  pricing: string,;
+  startingPrice: number,;
+  contactLink: string,;
+  icon: string,;
+  features: string[],;
+  integration: string[];
+}
+;
+const aiServices: AIService[] = [;
+  {;
+    id: "zion-gpt-enterprise",;
+    name: "ZionGPT Enterprise",;
+    description: "Enterprise-grade AI assistant with custom knowledge base integration, advanced reasoning, and compliance features.",;
+    technicalSpecs: [;
+      "GPT-4/Claude-3 integration",;
+      "Custom fine-tuning capabilities",;
+      "Multi-tenant architecture",;
+      "Enterprise SSO integration",;
+      "Real-time learning from feedback",;
+      "Advanced prompt engineering";
+    ],;
+    useCases: [;
+      "Customer support automation",;
+      "Knowledge management",;
+      "Document analysis and summarization",;
+      "Code review and assistance",;
+      "Research and data analysis",;
+      "Training and onboarding";
+    ],;
+    pricing: "Starting at $499/month",;
+    startingPrice: 499,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=ZionGPT%20Enterprise%20Inquiry",;
+    icon: "🤖",;
+    features: [;
+      "Custom knowledge base training",;
+      "Multi-language support (100+ languages)",;
+      "Advanced reasoning and problem-solving",;
+      "API integration and webhooks",;
+      "Real-time learning and adaptation",;
+      "Enterprise security and compliance",;
+      "Audit trails and logging",;
+      "Custom branding and theming";
+    ],;
+    integration: [;
+      "REST API with webhooks",;
+      "Slack, Teams, Discord bots",;
+      "Chrome extension",;
+      "Mobile SDK (iOS/Android)",;
+      "WordPress plugin",;
+      "Shopify app";
+    ];
+  },;
+  {;
+    id: "ai-content-generation",;
+    name: "AI Content Generation Suite",;
+    description: "Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.",;
+    technicalSpecs: [;
+      "Multi-model AI integration",;
+      "Brand voice training",;
+      "SEO optimization",;
+      "Plagiarism detection",;
+      "Multi-format output",;
+      "Collaborative editing";
+    ],;
+    useCases: [;
+      "Marketing copy and campaigns",;
+      "Blog posts and articles",;
+      "Product descriptions",;
+      "Email marketing",;
+      "Social media content",;
+      "Technical documentation";
+    ],;
+    pricing: "Starting at $199/month",;
+    startingPrice: 199,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Content%20Generation%20Inquiry",;
+    icon: "✍️",;
+    features: [;
+      "AI-powered content creation",;
+      "Brand voice consistency",;
+      "SEO optimization tools",;
+      "Multi-language support",;
+      "Content calendar management",;
+      "Performance analytics",;
+      "A/B testing capabilities",;
+      "Team collaboration tools";
+    ],;
+    integration: [;
+      "WordPress integration",;
+      "Shopify product descriptions",;
+      "Mailchimp email campaigns",;
+      "Social media platforms",;
+      "CMS systems",;
+      "Marketing automation tools";
+    ];
+  },;
+  {;
+    id: "ai-data-analytics",;
+    name: "AI-Powered Business Intelligence",;
+    description: "Advanced analytics platform with predictive modeling, natural language queries, and automated insights generation.",;
+    technicalSpecs: [;
+      "Machine learning models",;
+      "Real-time data processing",;
+      "Predictive analytics",;
+      "Natural language queries",;
+      "Automated reporting",;
+      "Data visualization";
+    ],;
+    useCases: [;
+      "Sales forecasting",;
+      "Customer behavior analysis",;
+      "Risk assessment",;
+      "Performance optimization",;
+      "Market trend analysis",;
+      "Operational efficiency";
+    ],;
+    pricing: "Starting at $599/month",;
+    startingPrice: 599,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Analytics%20Inquiry",;
+    icon: "📊",;
+    features: [;
+      "Predictive analytics",;
+      "Natural language queries",;
+      "Automated reporting",;
+      "Real-time dashboards",;
+      "Data visualization",;
+      "Custom ML models",;
+      "Anomaly detection",;
+      "Trend forecasting";
+    ],;
+    integration: [;
+      "Database connectors",;
+      "API integrations",;
+      "BI tools (Tableau, Power BI)",;
+      "CRM systems",;
+      "ERP systems",;
+      "Cloud data warehouses";
+    ];
+  },;
+  {;
+    id: "ai-automation",;
+    name: "AI Process Automation",;
+    description: "Intelligent automation platform for business processes, workflows, and repetitive tasks with learning capabilities.",;
+    technicalSpecs: [;
+      "RPA with AI enhancement",;
+      "Process mining",;
+      "Workflow automation",;
+      "Document processing",;
+      "Decision automation",;
+      "Learning algorithms";
+    ],;
+    useCases: [;
+      "Invoice processing",;
+      "Customer onboarding",;
+      "Data entry automation",;
+      "Report generation",;
+      "Quality control",;
+      "Compliance monitoring";
+    ],;
+    pricing: "Starting at $399/month",;
+    startingPrice: 399,;
+    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Automation%20Inquiry",;
+    icon: "⚡",;
+    features: [;
+      "Process mining and discovery",;
+      "Workflow automation",;
+      "Document processing",;
+      "Decision automation",;
+      "Learning and optimization",;
+      "Integration capabilities",;
+      "Monitoring and analytics",;
+      "Compliance tracking";
+    ],;
+    integration: [;
+      "ERP systems",;
+      "CRM platforms",;
+      "Accounting software",;
+      "HR systems",;
+      "Email platforms",;
+      "Cloud services";
+    ];
+  }
+],;
+export default function AISolutionsPage() {;
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+
+  return (;
+    <div className="space-y-8">;
+
+"use client",
+import { useState  } from './react';,
+interface AIService {}
+
+  id: string,
+  name: string,
+  description: string,
+  technical_specs: string[],
+  use_cases: string[],
+  pricing: string,
+  starting_price: number,
+  contact_link: string,
+  icon: string,
+  features: string[],
+
+"use client";
+import { useState } from "react";
+interface AIService {id: string;
+  name: string;
+  description: string;
+  technicalSpecs: string[];
+  useCases: string[];
+  pricing: string;
+  startingPrice: number;
+  contactLink: string;
+  icon: string;
+  features: string[];
+
+  integration: string[];
+
+}
+const ai_services: AIService[] = [;
+  {"
+    id: "zion - gpt - enterprise","
+    name: "ZionGPT Enterprise","
+    description: "Enterprise - grade AI assistant with custom knowledge base integration, advanced reasoning, and compliance features.",
+    technical_specs: [;"
+      "GPT - 4/Claude - 3 integration","
+      "Custom fine - tuning capabilities","
+      "Multi - tenant architecture","
+      "Enterprise SSO integration","
+      "Real - time learning from feedback","
+      "Advanced prompt engineering";
+>>>>>>> origin/chore/fix-lint-and-merge
     ],
-    "use_cases": [;
+    use_cases: [;"
       "Customer support automation","
       "Knowledge management","
       "Document analysis and summarization","
       "Code review and assistance","
       "Research and data analysis","
-      "Training and onboarding";"
-    ],
-    "pricing": "Starting at $499 / month","
-    "starting_price": 499,
-    "contact_link": ""mailto":kleber@ziontechgroup.com?subject = ZionGPT%20Enterprise%20Inquiry","
-    "features": [;
+      "Training and onboarding";
+    ],"
+    pricing: "Starting at $499 / month",
+    starting_price: 499,"
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = ZionGPT%20Enterprise%20Inquiry",
+    features: [;"
       "Custom knowledge base training","
       "Multi - language support (100+ languages)","
       "Advanced reasoning and problem - solving","
@@ -23,16 +265,17 @@ const "ai_services": AIService[] = [;
       "Real - time learning and adaptation","
       "Enterprise security and compliance","
       "Audit trails and logging","
-      "Custom branding and theming";"
+      "Custom branding and theming";
     ],
-    "integration": [;
+    integration: [;"
       "REST API with webhooks","
       "Slack, Teams, Discord bots","
       "Chrome extension","
       "Mobile SDK (iOS / Android)","
       "WordPress plugin","
-      "Shopify app";"
+      "Shopify app";
     ];
+<<<<<<< HEAD
   },{"id": "ai-content-generation","name": "AI Content Generation Suite","description": "Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.","technicalSpecs": [;"
       "Multi-model AI integration","Brand voice training","SEO optimization","Plagiarism detection","Multi-format output","Collaborative editing";"
     ],"useCases": [;
@@ -116,33 +359,237 @@ function AISolutionsPage() {const [selected_service, setSelectedService] = useSt
         </p>;
       </div>;
       {/* AI Services Grid */}
+=======
+  },
+  {"
+    id: "ai - content - generation","
+    name: "AI Content Generation Suite","
+    description: "Comprehensive content creation platform for marketing, documentation, and creative writing with brand voice consistency.",
+    technical_specs: [;"
+      "Multi - model AI integration","
+      "Brand voice training","
+      "SEO optimization","
+      "Plagiarism detection","
+      "Multi - format output","
+      "Collaborative editing";
+    ],
+    use_cases: [;"
+      "Marketing copy and campaigns","
+      "Blog posts and articles","
+      "Product descriptions","
+      "Email marketing","
+      "Social media content","
+      "Technical documentation";
+    ],"
+    pricing: "Starting at $199 / month",
+    starting_price: 199,"
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Content%20Generation%20Inquiry",
+    features: [;"
+      "AI - powered content creation","
+      "Brand voice consistency","
+      "SEO optimization tools","
+      "Multi - language support","
+      "Content calendar management","
+      "Performance analytics","
+      "A / B testing capabilities","
+      "Team collaboration tools";
+    ],
+    integration: [;"
+      "WordPress integration","
+      "Shopify product descriptions","
+      "Mailchimp email campaigns","
+      "Social media platforms","
+      "CMS systems","
+      "Marketing automation tools";
+    ];
+  },
+  {"
+    id: "ai - data - analytics","
+    name: "AI - Powered Business Intelligence","
+    description: "Advanced analytics platform with predictive modeling, natural language queries, and automated insights generation.",
+    technical_specs: [;"
+      "Machine learning models","
+      "Real - time data processing","
+      "Predictive analytics","
+      "Natural language queries","
+      "Automated reporting","
+      "Data visualization";
+    ],
+    use_cases: [;"
+      "Sales forecasting","
+      "Customer behavior analysis","
+      "Risk assessment","
+      "Performance optimization","
+      "Market trend analysis","
+      "Operational efficiency";
+    ],"
+    pricing: "Starting at $599 / month",
+    starting_price: 599,"
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Analytics%20Inquiry",
+    features: [;"
+      "Predictive analytics","
+      "Natural language queries","
+      "Automated reporting","
+      "Real - time dashboards","
+      "Data visualization","
+      "Custom ML models","
+      "Anomaly detection","
+      "Trend forecasting";
+    ],
+    integration: [;"
+      "Database connectors","
+      "API integrations","
+      "BI tools (Tableau, Power BI)","
+      "CRM systems","
+      "ERP systems","
+      "Cloud data warehouses";
+    ];
+  },
+  {"
+    id: "ai - automation","
+    name: "AI Process Automation","
+    description: "Intelligent automation platform for business processes, workflows, and repetitive tasks with learning capabilities.",
+    technical_specs: [;"
+      "RPA with AI enhancement","
+      "Process mining","
+      "Workflow automation","
+      "Document processing","
+      "Decision automation","
+      "Learning algorithms";
+    ],
+    use_cases: [;"
+      "Invoice processing","
+      "Customer onboarding","
+      "Data entry automation","
+      "Report generation","
+      "Quality control","
+      "Compliance monitoring";
+    ],"
+    pricing: "Starting at $399 / month",
+    starting_price: 399,"
+    contact_link: "mailto:kleber@ziontechgroup.com?subject = AI%20Automation%20Inquiry",
+    features: [;"
+      "Process mining and discovery","
+      "Workflow automation","
+      "Document processing","
+      "Decision automation","
+      "Learning and optimization","
+      "Integration capabilities","
+      "Monitoring and analytics","
+      "Compliance tracking";
+    ],
+    integration: [;"
+      "ERP systems","
+      "CRM platforms","
+      "Accounting software","
+      "HR systems","
+      "Email platforms","
+      "Cloud services";
+    ];
+  }
+
+],
+export default /**
+ * AISolutionsPage - Function description
+ */
+function AISolutionsPage() {
+  const [selected_service, setSelectedService] = useState < string | null>(null);
+  return (
+
+  return (;
+    <div className="space-y-8">;
+
+      {/* Header */}
+      <div className="text-center space-y-4">;
+        <h1 className="text-4xl font-bold">AI Solutions & Services</h1>;
+        <p className="text-xl opacity-80 max-w-3xl mx-auto">;
+          Cutting-edge artificial intelligence solutions designed to transform your business operations;
+
+      <div className="text - center space-y-4">;
+        <h1 className="text - 4xl font-bold">AI Solutions & Services</h1>;
+        <p className="text - xl opacity - 80 max - w-3xl mx-auto">;
+
+        {ai_services.map (service => (
+          <div;
+            key={service.id}
+            className="rounded - lg border border - white / 10 bg - white / 5 p - 6 space-y-6";
+          >;
+            {/* Service Header */}
+            <div className="text - center space-y-3">;
+              <div className="text-4xl">{service.icon}</div>;
+              <h2 className="text - 2xl font-bold">{service.name}</h2>;
+              <p className="opacity-80">{service.description}</p>;
+              <div className="text - 2xl font - bold text - blue-400">{service.pricing}</div>;
+            </div>;
+            {/* Features */}
+            <div>;
+
+              <h3 className="font - semibold mb - 3 text - blue-400">Key Features</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
+                {service.features.map ((feature, index) => (
+                  <div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - green-400">✓</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     <span>{feature}</span>;
                   </div>))}
+
               </div>;
             </div>;
             {/* Technical Specifications */}
+<<<<<<< HEAD
             <div>;
+=======
+
+              <h3 className="font - semibold mb - 3 text - purple-400">Technical Specifications</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
+                {service.technical_specs.map ((spec, index) => (
+                  <div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - blue-400">⚙️</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     <span>{spec}</span>;
                   </div>))}
+
               </div>;
             </div>;
             {/* Use Cases */}
+<<<<<<< HEAD
             <div>;
+=======
+
+              <h3 className="font - semibold mb - 3 text - green-400">Use Cases</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
+                {service.use_cases.map ((use_case, index) => (
+                  <div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - yellow-400">💡</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     <span>{use_case}</span>;
                   </div>))}
+
               </div>;
             </div>;
             {/* Integration */}
+<<<<<<< HEAD
             <div>;
+=======
+
+              <h3 className="font - semibold mb - 3 text - orange-400">Integration Options</h3>;
+              <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-2">;
+                {service.integration.map ((integration, index) => (
+                  <div key={index} className="flex items - center gap - 2 text-sm">;
+                    <span className="text - purple-400">🔗</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     <span>{integration}</span>;
                   </div>))}
               </div>;
             </div>;
+<<<<<<< HEAD
             {/* CTA */}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               >;
                 Get Started;
@@ -153,30 +600,62 @@ function AISolutionsPage() {const [selected_service, setSelectedService] = useSt
                 Learn More;
               </a>;
             </div>;
+<<<<<<< HEAD
           </div>))}
       </div>;
       {/* AI Capabilities Overview */}
+=======
+
+          <div className="text - center p - 6 rounded - lg bg - white / 5 border border-white / 10">;
+            <div className="text - 3xl mb-3">📈</div>;
+            <h3 className="font - semibold mb-2">Predictive Analytics</h3>;
+            <p className="text - sm opacity-80">Machine learning models for forecasting, trend analysis, and decision support</p>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
           </div>;
         </div>;
       </div>;
       {/* CTA Section */}
 
+<<<<<<< HEAD
+=======
+        <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
+          <a;
+            href="mailto:kleber@ziontechgroup.com?subject = AI%20Solutions%20Consultation";
+            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text-lg";
+
+          Let's discuss how our AI solutions can transform your business operations and drive innovation.;
+          Get in touch for a personalized AI strategy consultation.;
+        </p>;
+        <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
+          <a;
+            href="mailto:kleber@ziontechgroup.com?subject = AI%20Solutions%20Consultation";
+            className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 8 py - 3 rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all font - semibold text - lg";
+
+>>>>>>> origin/chore/fix-lint-and-merge
           >;
             Schedule AI Consultation;
           </a>;
           <a;
+<<<<<<< HEAD
+=======
+            href="tel:+13024640950";
+>>>>>>> origin/chore/fix-lint-and-merge
 
           >;
-            "Call": +1 302 464 0950;
+            Call: +1 302 464 0950;
           </a>;
         </div>;
       </div>;
+<<<<<<< HEAD
       {/* Back to Services */}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         >;
           ← Back to All Services;
         </a>;
+<<<<<<< HEAD
       </div>;
     </div>)}
       Training and onboarding"
@@ -487,3 +966,6 @@ export default function AISolutionsPage() {
     </div>
   )
 }
+=======
+      </div>;
+>>>>>>> origin/chore/fix-lint-and-merge

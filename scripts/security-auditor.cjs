@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
@@ -32,13 +33,32 @@ class SecurityAuditor {
         this.vulnerabilities = Object.values(auditData.vulnerabilities);
         console.log(`Found ${this.vulnerabilities.length} vulnerabilities`);
 =======
+=======
+    this.projectRoot = process.cwd();
+
+    this.ensureDirectories()}
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}"
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+
+  async runNpmAudit() {"
+
+        "timeout": 120000;")
+      });
+      const auditData = JSON.parse(result);
+      const vulnerabilities = auditData.vulnerabilities || {};
+      const vulnerabilityCount = Object.keys(vulnerabilities).length;
+>>>>>>> origin/chore/fix-lint-and-merge
       this.log(`🔍 Found ${vulnerabilityCount} vulnerabilities`);
-      
       return {
-<<<<<<< HEAD
-<<<<<<< HEAD
   // TODO: Implement
         vulnerabilities,"
+<<<<<<< HEAD
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 
@@ -54,6 +74,12 @@ class SecurityAuditor {
     this.log(🔐 Checking environment variables...');
     try {
       const envFiles = ['.env, .env.local', '.env.development, .env.production'];
+=======
+
+      return { "error": error.message }}"
+
+  async checkEnvironmentVariables() {"
+>>>>>>> origin/chore/fix-lint-and-merge
 
       const foundEnvFiles = [];
       const sensitiveVars = [];
@@ -63,10 +89,15 @@ class SecurityAuditor {
         if (fs.existsSync(envPath)) {
           foundEnvFiles.push(envFile);
 
+<<<<<<< HEAD
 =======
 
           const sensitivePatterns = [/API_KEY/i,
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+          // Check for sensitive variables;
+          const sensitivePatterns = [/API_KEY/i,
+>>>>>>> origin/chore/fix-lint-and-merge
             /SECRET/i,
             /PASSWORD/i,
             /TOKEN/i,
@@ -84,6 +115,7 @@ class SecurityAuditor {
                   "line: index + 1,)"
                   "variable: key.trim()
                 })}
+<<<<<<< HEAD
 
             }
           })}
@@ -117,11 +149,24 @@ class SecurityAuditor {
 
       const foundVulnerable = Object.keys(dependencies).filter(dep => 
 
+=======
+`;
+      this.log(`🔐 Found ${foundEnvFiles.length} environment files`);`;
+      this.log(`🔐 Found ${sensitiveVars.length} potentially sensitive variables`);
+
+  // TODO: Implement
+}"
+        "envFiles": foundEnvFiles,"
+        sensitiveVars,"
+
+
+      const foundVulnerable = Object.keys(dependencies).filter(dep => )
+>>>>>>> origin/chore/fix-lint-and-merge
         vulnerablePackages.some(vuln => dep.includes(vuln))
       );
-
       this.log(`📦 Found ${foundVulnerable.length} potentially vulnerable packages`);
 
+<<<<<<< HEAD
 
       return {
         "totalDependencies": Object.keys(dependencies).length,
@@ -159,11 +204,19 @@ class SecurityAuditor {
           "severity": 'high
         }
       ];
+=======
+  // TODO: Implement
+
+  // TODO: Implement
+      const securityIssues = [];
+      // Check for common security issues in code;
+      const patterns = [{
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
       const files = this.findSourceFiles();
-      
       for (const file of files) {
+<<<<<<< HEAD
 
         try {
           const content = fs.readFileSync(file, utf8');
@@ -196,6 +249,22 @@ class SecurityAuditor {
     const sourceFiles = [];
     const extensions = [.ts, '.tsx', .js, '.jsx'];
     
+=======
+  // TODO: Implement
+
+          patterns.forEach(pattern => {)
+            const matches = content.match(pattern.pattern);
+            if (matches) {
+              securityIssues.push({)
+
+                "count": matches.length;"
+          })} catch (error) {"
+          // Skip files that can't be read;
+
+      this.log(`🔍 Found ${securityIssues.length} potential security issues`);
+
+  // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
 
     const scanDirectory = (dir) => {
   // TODO: Implement
@@ -203,6 +272,7 @@ class SecurityAuditor {
         this.fixes.push(Applied automatic security fixes);
         console.log('✅ Security fixes applied');
       } catch (error) {
+<<<<<<< HEAD
         console.log(❌ Could not apply automatic fixes);
 
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
@@ -217,9 +287,19 @@ class SecurityAuditor {
       vulnerabilities: this.vulnerabilities,
       recommendations: this.recommendations
 <<<<<<< HEAD
+=======
+        console.log('❌ Could not apply automatic fixes');
+
+      "analysis": {"
+        npmAudit: await this.runNpmAudit(),"
+        "environmentVariables": await this.checkEnvironmentVariables(),
+        "dependencies": await this.checkDependencies(),
+        "codeSecurity": await this.checkCodeSecurity()"
+>>>>>>> origin/chore/fix-lint-and-merge
     };
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
@@ -247,22 +327,28 @@ class SecurityAuditor {
 =======
     // Generate recommendations
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+    // Generate recommendations;
+>>>>>>> origin/chore/fix-lint-and-merge
     report.recommendations = this.generateRecommendations(report.analysis);
-
     const reportFile = path.join(this.reportsDir, `security-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
 =======
     
     this.log(`📄 Security report generated: ${reportFile}`);
     
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     return report}
 
   generateRecommendations(analysis) {
     const recommendations = [];
 
     if (analysis.npmAudit && analysis.npmAudit.count > 0) {
+<<<<<<< HEAD
 
       recommendations.push({
         "type": npm_audit,
@@ -295,11 +381,16 @@ class SecurityAuditor {
         impact: 'Improves code security'
       })}
 
+=======
+      recommendations.push({"
+
+>>>>>>> origin/chore/fix-lint-and-merge
 
     return recommendations}
 
   async run() {
 
+<<<<<<< HEAD
     this.log(🔒 Starting Security Auditor...);
     
     try {
@@ -318,6 +409,12 @@ class SecurityAuditor {
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   }
 }
+=======
+  // TODO: Implement
+      const report = await this.generateSecurityReport();
+
+      throw error}
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
   }
@@ -327,6 +424,7 @@ if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.run()
     .then((report) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -341,8 +439,15 @@ if (require.main === module) {
       process.exit(0)})
     .catch((error) => {
       console.error(\n💥 Security Auditor "failed": , error.message);
+=======
+
+      process.exit(0)})
+    .catch((error) => {"
+
+>>>>>>> origin/chore/fix-lint-and-merge
       process.exit(1)})}
 module.exports = SecurityAuditor;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -403,3 +508,21 @@ module.exports = SecurityAuditor;
 =======
       console.error('\n� Security Auditor "failed")
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+
+
+
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+main
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+
+>>>>>>> origin/chore/fix-lint-and-merge

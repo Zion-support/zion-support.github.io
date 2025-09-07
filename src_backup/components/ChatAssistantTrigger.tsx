@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   // Handle sending messages to the AI chat assistant
 :src/components/ChatAssistantTrigger.tsx
 import { useState } from "react,
@@ -9,6 +10,8 @@ export function ChatAssistantTrigger() {
 
   const [isOpen, setIsOpen] = useState(false)
   // Handle sending messages to the AI chat assistant
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 // Handle sending messages to the AI chat assistant
 
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -17,6 +20,7 @@ export function ChatAssistantTrigger() {
       const response = await fetch(https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST,
         headers: {
+<<<<<<< HEAD
 :src/components/ChatAssistantTrigger.tsx
           Content-Type": "application/json}
         body: JSON.stringify({
@@ -36,6 +40,8 @@ export function ChatAssistantTrigger() {
     <>
       <Button
         onClick = {(,) => setIsOpen(true)}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         body: JSON.stringify({
           messages: [{ role: user", content: message }] ;
@@ -73,11 +79,14 @@ export function ChatAssistantTrigger() {
       if (!response.ok) {
         throw new Error(Failed to get response from AI assistant");
       }
+<<<<<<< HEAD
       return Promise.resolve()
     } catch (error) {
       logErrorToProduction(Error in AI chat:', { data: error })
       return Promise.resolve()
     }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   },
 
@@ -100,7 +109,6 @@ export function ChatAssistantTrigger() {
       >
         <MessageSquare className=h-5 w-5" />
       </Button>
-      
 
       return Promise.resolve()
     } catch (error) {
@@ -108,6 +116,7 @@ export function ChatAssistantTrigger() {
       return Promise.resolve()
     }
   },
+<<<<<<< HEAD
   // Handle sending messages to the AI chat assistant;
 // Handle sending messages to the AI chat assistant;
   const handleSendMessage = async (message: string): Promise<void> => {try {const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat, {method: POST";
@@ -138,13 +147,19 @@ import { Button } from @/components/ui/button",import { ChatAssistant } from "@/
       >
         <MessageSquare className="h-5 w-5 />
       </Button>
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
         <ChatAssistant
 
           isOpen = {isOpen}
           onClose = {(,) => setIsOpen(false)}
 
+<<<<<<< HEAD
 :src/components/ChatAssistantTrigger.tsx
             role: Virtual Assistant'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           recipient={{
@@ -168,25 +183,26 @@ export function ChatAssistantTrigger() {
   const handleSendMessage = null;
             role: Virtual Assistant'
 
-      {isOpen && (
-        <ChatAssistant
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
-:src/components/ChatAssistantTrigger.tsx
-    </>
-  )
-}
 
     </>;
   );
 }
 
+<<<<<<< HEAD
 import { useState  } from './react;
 import { MessageSquare } from lucide-react'import { Button  } from '@/components/ui/ button;
 import { ChatAssistant  } from @/components/ ChatAssistant';
 import {logErrorToProduction} from '@/utils/ production_logger;
+=======
+import { useState  } from './react';
+import { MessageSquare } from 'lucide-react'import { Button  } from '@/components / ui / button';
+import { ChatAssistant  } from '@/components / ChatAssistant';
+import {logErrorToProduction} from '@/utils / production_logger';
+>>>>>>> origin/chore/fix-lint-and-merge
 export /**
  * ChatAssistantTrigger - Function description
  */
@@ -217,6 +233,7 @@ if ( {) {
   },
   return (
     <>;
+<<<<<<< HEAD
       return Promise.resolve()} catch (error) {logErrorToProduction('Error in AI chat:, { data: error }),return Promise.resolve()}
   },size="icon;
         variant=outline";
@@ -269,6 +286,14 @@ if ( {) {$2;
         variant=outline";
         className="fixed bottom - 4 right - 4 h - 12 w - 12 rounded - full shadow - lg bg - zion - purple text - white hover:bg - zion - purple - light z - 50;
         aria - label=Open chat assistant";
+=======
+      <Button;
+        on_click = {(, ) => setIsOpen (true), }
+        size="icon";
+        variant="outline";
+        className="fixed bottom - 4 right - 4 h - 12 w - 12 rounded - full shadow - lg bg - zion - purple text - white hover:bg - zion - purple - light z - 50";
+        aria - label="Open chat assistant";
+>>>>>>> origin/chore/fix-lint-and-merge
       >;
         <MessageSquare className="h - 5 w - 5 />;
       </Button>;
@@ -282,12 +307,15 @@ if ( {) {$2;
             avatar_url: https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant;
           }}
+<<<<<<< HEAD
           onSendMessage = {handleSendMessage, }
           onSendMessage = {handleSendMessage}
         />)}
     </>);
 }
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           onSendMessage = {handleSendMessage}
         />)}
@@ -316,6 +344,7 @@ return (<> <Button > <MessageSquare className=h-5 w-5" /> </Button> {
   handleSendMessage ;
 }/>) ;
 }</>) ;
+<<<<<<< HEAD
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
       {is_open && (<ChatAssistant;
@@ -331,3 +360,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }onClose= {() => setIsOpen (false)}recipient= {{';
   id: ai-assistant, name: 'AI Assistant',  avatarUrl: https://placehold.co/64x64?text=AI, role: 'Virtual Assistant' ;}onSendMessage= {handleSendMessage ;
 }/>)}</>)}'";
+=======
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge

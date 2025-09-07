@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 
 }
@@ -27,6 +28,8 @@ interface LazyComponentProps  {children: ReactNode;
   )}export default LazyComponent;ursor/automate-test-improve-and-merge-code-646c;
   return (
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 interface LazyComponentProps {
   fallback?: React.ReactNode;
   children: React.ReactNode;
@@ -41,12 +44,16 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
       {children}
     </Suspense>
   );
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 };
 
 export default LazyComponent;
 
+<<<<<<< HEAD
 
 import React from 'react
 }
@@ -61,17 +68,27 @@ interface LazyComponentProps {
   children: ReactNode;
   fallback?: ReactNode;
 }
+=======
+interface LazyComponentProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return (
+
     <Suspense fallback={fallback}>
-      <LazyLoadedComponent {...props} />
+      {children}
     </Suspense>
   );
 };
 
+<<<<<<< HEAD
 export default LazyComponent;
 import React from 'react';
 },
 
   return (
 
+=======
+export default LazyComponent;
+>>>>>>> origin/chore/fix-lint-and-merge

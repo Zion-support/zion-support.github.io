@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 default:
 
       default:
@@ -7,6 +8,9 @@ default:
 import {ApplicationStatus} from "@/types/jobs";
 :src/components/jobs/MyApplications.tsx
 return <Badge variant="outline>{status}</Badge>
+=======
+return <Badge variant="outline">{status}</Badge>
+>>>>>>> origin/chore/fix-lint-and-merge
 
     }
 
@@ -20,6 +24,7 @@ import { formatDistanceToNow } from 'date-fns;
 import Link from next/link';
 import { ApplicationStatus } from '@/types/jobs;
 
+<<<<<<< HEAD
 import { useState } from react",
 import { useJobApplications } from "@/hooks/useJobApplications,
 import { Card, CardContent, CardHeader, CardTitle } from @/components/ui/card",
@@ -39,6 +44,17 @@ export function MyApplications() {
         return <Badge className=bg-red-100 text-red-800">Rejected</Badge>
 import Link from "next/link,
 import { ApplicationStatus } from @/types/jobs",
+=======
+import { useState } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns",
+import Link from "next/link",
+import { ApplicationStatus } from "@/types/jobs",
+>>>>>>> origin/chore/fix-lint-and-merge
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications(),
   const getStatusBadge = (status: ApplicationStatus) => {
@@ -69,7 +85,10 @@ export function MyApplications() {
   const getStatusBadge = null;
 
   if (isLoading) {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     return (
       <div className="flex justify-center items-center p-8>
@@ -96,18 +115,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     )
   }
 
+<<<<<<< HEAD
     <div className=grid gap-4 md:grid-cols-2">
 :src/components/jobs/MyApplications.tsx
       {applications.map((application,) => (
+=======
+    <div className="grid gap-4 md:grid-cols-2">
+>>>>>>> origin/chore/fix-lint-and-merge
 
       {applications.map((application) => (
 
         <Card key={application.id}>
+<<<<<<< HEAD
           <CardHeader className="pb-2>
             <div className=flex justify-between items-start">
               <CardTitle className="text-lg>
 :src/components/jobs/MyApplications.tsx
                 {application.job?.title |Unknown Job"}
+=======
+          <CardHeader className="pb-2">
+            <div className="flex justify-between items-start">
+              <CardTitle className="text-lg">
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 {application.job?.title || "Unknown Job}
               </CardTitle>
@@ -120,8 +149,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             <div className=space-y-3>
               {application.cover_letter && ("
+<<<<<<< HEAD
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2>
 :src/components/jobs/MyApplications.tsx
+=======
+                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
 import { formatDistanceToNow } from "date-fns",;
@@ -131,6 +164,7 @@ export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications(),;
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
+<<<<<<< HEAD
       case "new": return <Badge variant="secondary">New</Badge>;
 
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
@@ -144,9 +178,14 @@ default:;
         return <Badge variant="outline">{status}</Badge>;
     }
   },
+=======
+
+        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
   if (isLoading) {
 
+<<<<<<< HEAD
       <div className="flex justify-center items-center p-8">;
     }import { ApplicationStatus } from '@/types/jobs';
       <div className=flex justify-center items-center p-8">;
@@ -171,6 +210,9 @@ import { useState } from "react,import { useJobApplications } from @/hooks/useJo
     )}
   if (applications.length === 0) {return (<Card className=bg-muted/30">;
         <Loader2 className="h-8 w-8 animate-spin text-primary />;
+=======
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+>>>>>>> origin/chore/fix-lint-and-merge
       </div>;
     );
   }
@@ -195,6 +237,7 @@ import { useState } from "react,import { useJobApplications } from @/hooks/useJo
           </Button>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
     )}
   return (<div className="grid gap-4 md:grid-cols-2>;
       {applications.map((application) => (<Card key={application.id}>;
@@ -236,6 +279,8 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
           <CardHeader className=pb-2">;
             <div className="flex justify-between items-start>;
               <CardTitle className=text-lg">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     );
   }
   return (;"
@@ -252,6 +297,7 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
           </CardHeader>;
           <CardContent>;"
             <div className="space-y-3">;
+<<<<<<< HEAD
               {application.cover_letter && (<p className="text-sm text-muted-foreground line-clamp-2 mb-2">;{application.cover_letter}
                 </p>;
               )}<div className=flex justify-between items-center>;
@@ -260,6 +306,8 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
                   size=sm;
                   {application.cover_letter}
                 </p>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               {application.cover_letter && (;"
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2>;
 
@@ -267,15 +315,20 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
                 </p>;
               )}
 
+<<<<<<< HEAD
               <div className=flex justify-between items-center">
 :src/components/jobs/MyApplications.tsx
                 <Button
                   variant="outline
                   size=sm"
+=======
+              <div className="flex justify-between items-center">
+>>>>>>> origin/chore/fix-lint-and-merge
                 <Button "
                   variant=outline "
                   size="sm 
 
+<<<<<<< HEAD
 
                   className=text-xs"
                   asChild
@@ -313,6 +366,11 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
             </div>;
                 <Button
                   variant="default
+=======
+                  className="text-xs"
+                  asChild;
+                >
+>>>>>>> origin/chore/fix-lint-and-merge
 
               </CardTitle>;
               {getStatusBadge(application && application.status)}
@@ -321,6 +379,7 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
               Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
             </p>;
           </CardHeader>;
+<<<<<<< HEAD
           <CardContent>;
             <div className=space-y-3>;
               {application && application.cover_letter && (<p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
@@ -355,6 +414,8 @@ import Link from "next/link,import { ApplicationStatus } from @/types/jobs",expo
                 </p>
               )}
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           <CardContent>;"
             <div className="space-y-3>;
               {application && application.cover_letter && (;
@@ -432,14 +493,12 @@ if ( {) {}
 }
 
     </div>
-:src/components/jobs/MyApplications.tsx
-  )
-}
   );
 
 }
 <p> {
   error ;
+<<<<<<< HEAD
       ))}</div>;
   )}},// Check condition;
 if ( {) {$2;
@@ -524,3 +583,14 @@ if ( {) {$2;
 }'
 origin/cursor/automate-test-improve-and-merge-code-2533
 }<div className="flex justify-between items-center" > <Button variant=outline size="sm" className=text-xs asChild > </Link> </Button> <Button variant="default" size=sm className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) )}</div>)}'";
+=======
+}</p> </div>) ";
+}You haven't submitted any applications yet. </p> <Button className="mt-4" asChild> <Link href="/jobs" >Browse Jobs</Link> </Button> </CardContent> </Card> </CardTitle> {;
+  getStatusBadge (application.status) ;
+}</div> {;
+  application.cover letter ;
+}</p>) ";
+}<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
+}</div>) ;
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge

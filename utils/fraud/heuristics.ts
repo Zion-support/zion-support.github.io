@@ -1,12 +1,10 @@
-import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
-const suspiciousLinkHosts = $2;
-const suspiciousPhrases = $2;
-const vagueScammyJobPhrases = $2;
-function containsSuspiciousHost(text: string): boolean {
-  const lower = text.toLowerCase($2);
-  return suspiciousLinkHosts.some((host) => lower.includes(host))
+export interface FraudCheckResult {
+  isFraud: boolean;
+  confidence: number;
+  reasons: string[];
 }
 
+<<<<<<< HEAD
 function containsSuspiciousPhrase(text: string): string[] {
   return suspiciousPhrases.filter((p) => lower.includes(p))
 }
@@ -33,25 +31,44 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
       reasons.push($2);
       severity = recent >= 10 ? 'high' : 'medium'
     }
+=======
+export function checkFraudHeuristics(data: any): FraudCheckResult {
+  const reasons: string[] = [];
+  let confidence = 0;
+
+  // Check for suspicious patterns
+  if (data.email && data.email.includes('+')) {
+    reasons.push('Email contains suspicious characters');
+    confidence += 0.3;
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
-  if ((event.source === 'message' || event.source === 'job_post' || event.source === 'quote' || event.source === 'review') && event.content) {
-    if (containsSuspiciousHost(event.content)) {
-      reasons.push($2);
-      severity = 'high'
-    }
-    const phrases = containsSuspiciousPhrase($2);
-    if (phrases.length > 0) {
-      reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"`)),
-      if (severity === 'low') severity = 'medium'
-    }
+  if (data.phone && data.phone.length < 10) {
+    reasons.push('Phone number too short');
+    confidence += 0.2;
   }
 
-  if (event.source === 'job_post' && event.content) {
-    const vague = containsVagueJobClaims($2);
-    if (vague.length > 0) {
-      reasons.push($2);
-      if (severity = $2;
-    reasons,
-    severity}
+  if (data.name && data.name.length < 2) {
+    reasons.push('Name too short');
+    confidence += 0.4;
+  }
+
+  if (data.ip && data.ip.startsWith('192.168.')) {
+    reasons.push('Internal IP address');
+    confidence += 0.1;
+  }
+
+  // Check for duplicate submissions
+  if (data.submissionCount && data.submissionCount > 5) {
+    reasons.push('Multiple submissions detected');
+    confidence += 0.5;
+  }
+
+  const isFraud = confidence > 0.5;
+  
+  return {
+    isFraud,
+    confidence: Math.min(confidence, 1),
+    reasons
+  };
 }

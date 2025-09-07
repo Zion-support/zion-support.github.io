@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react;
 import Link from next/link';';
@@ -7,6 +8,26 @@ import React from 'react';
 import Link from next/link;';
 import { motion } from 'framer-motion;
 import {
+=======
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';';
+
+import { motion } from 'framer-motion';
+import { DollarSign, 
+  Brain, 
+  Shield, 
+  BarChart3, 
+
+import Link from 'next/link';';
+
+import { motion } from 'framer-motion';
+import {}
+
+>>>>>>> origin/chore/fix-lint-and-merge
   DollarSign,
   Brain,
   Shield,
@@ -17,6 +38,7 @@ import {
   Lock,
   CreditCard,
   Database,
+<<<<<<< HEAD
   FileText,
   Users;
 } from lucide-react';
@@ -24,6 +46,19 @@ import {
 =======
 import Layout from '../../components/Layout;
 import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from lucide-react';
+=======
+
+import Layout from '../../components/Layout';';
+const services = [;
+  {}
+    title: 'Blockchain Solutions,',
+    description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',
+
+import Layout from '../../components/Layout';
+import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { motion } from framer-motion;import Layout from '../../components/Layout';
 
@@ -108,7 +143,6 @@ const services = [
     ];
   }
 
-=======
 ];
 const benefits = []
   {
@@ -133,6 +167,7 @@ const benefits = []
     icon: FileText;
   }
 
+<<<<<<< HEAD
 =======
 ];
 export default function FinancePage() {
@@ -172,21 +207,98 @@ export default function FinancePage() {
                 </Link>
                 <Link href="/case-studies className=px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
                   View Finance Case Studies
+=======
+      description="Transform financial services with blockchain solutions, AI trading algorithms, digital payments, and risk management systems.""
+      keywords="fintech, blockchain solutions, AI trading, digital payments, risk management, financial technology""
+    >;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">"
+          <div className="absolute inset-0">";
+            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
+            <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
+          </div>;
+          <div className="container mx-auto px-4 relative z-10">";
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+
+              className="text-center max-w-4xl mx-auto"
+            >"
+              <div className="flex items-center justify-center mb-6">"
+                <DollarSign className="w-12 h-12 text-green-400 mr-4" />"
+                <h1 className="text-5xl md:text-6xl font-bold">
+                  Financial"
+                  <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                    Technology Solutions;
+                  </span>
+                </h1>
+              </div>"
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Revolutionizing financial services with cutting-edge blockchain, AI, and digital payment solutions.
+                Enhance security, efficiency, and compliance in your financial operations.
+              </p>"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get Fintech Consultation;
+                </Link>"
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                  View Finance Case Studies;
+>>>>>>> origin/chore/fix-lint-and-merge
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20 bg-white>
           <div className="container mx-auto px-4">;
+=======
+        {/* Services Section */}"
+        <section className="py-20 bg-white">""
+          <div className="container mx-auto px-4">";
+>>>>>>> origin/chore/fix-lint-and-merge
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
 
+<<<<<<< HEAD
 =======
               className=text-center mb-16"
+=======
+              className="text-center mb-16"
+
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center max-w-4xl mx-auto"">;
+
+              <div className="flex items-center justify-center mb-6">";
+                <DollarSign className="w-12 h-12 text-green-400 mr-4" />";
+                <h1 className="text-5xl md:text-6xl font-bold">";
+                  Financial;
+                  <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">";
+                    Technology Solutions;
+                  </span>;
+                </h1>;
+              </div>;
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">";
+                Revolutionizing financial services with cutting-edge blockchain, AI, and digital payment solutions. 
+                Enhance security, efficiency, and compliance in your financial operations.,
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Get Fintech Consultation;
+                </Link>;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">";
+                  View Finance Case Studies;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+
+>>>>>>> origin/chore/fix-lint-and-merge
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6>
@@ -203,13 +315,27 @@ export default function FinancePage() {
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
 
+<<<<<<< HEAD
 =======
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
                     <service.icon className=w-6 h-6 text-white" />
+=======
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
+                >;
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">";
+                    <service.icon className="w-6 h-6 text-white" />";
+                  </div>;
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
+
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
+                >"
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">"
+                    <service.icon className="w-6 h-6 text-white" />
+>>>>>>> origin/chore/fix-lint-and-merge
                   </div>"
                   <h3 className=text-2xl font-bold text-gray-900 mb-4>{service.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed>{service.description}</p>
@@ -225,7 +351,6 @@ export default function FinancePage() {
                 </motion.div>;
               ))}
 
-=======
             </div>
           </div>
         </section>
@@ -234,10 +359,27 @@ export default function FinancePage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
 
+<<<<<<< HEAD
 =======
               className=text-center mb-16"
+=======
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Why Choose Our Fintech Solutions?;
+              </h2>;
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+
+                and regulatory compliance for financial institutions.;
+              </p>;
+            </motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+              {benefits.map((benefit, index) => (,
+                <motion.div}),
+
+              className="text-center mb-16"
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </div>,
           </div>;
@@ -266,6 +408,7 @@ export default function FinancePage() {
               {benefits.map((benefit, index) => (
                 <motion.div;
                   key={benefit.title}
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -278,8 +421,9 @@ export default function FinancePage() {
                   <p className=text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
+
             </div>
           </div>
         </section>
@@ -308,11 +452,27 @@ export default function FinancePage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
 
-=======
+              </h2>;
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">";
+                Let our fintech experts help you implement cutting-edge financial technology;
+                solutions that enhance security and efficiency.;
+              </p>;
+
             >
+<<<<<<< HEAD
               <h2 className=text-4xl md:text-5xl font-bold mb-6">
+=======
+
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+>>>>>>> origin/chore/fix-lint-and-merge
                 Ready to Transform Financial Services?
               </h2>"
               <p className=text-xl text-green-100 mb-8 max-w-3xl mx-auto>
@@ -333,3 +493,26 @@ export default function FinancePage() {
       </div>
     </Layout>
   );
+
+            >;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">;
+                Ready to Transform Financial Services?;
+              </h2>;
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">;
+                Let our fintech experts help you implement cutting-edge financial technology;
+                solutions that enhance security and efficiency.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+                  Start Your Fintech Project;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
+                  Learn About Our Expertise;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  ),;

@@ -1,12 +1,12 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Advanced Testing Automation;
  * Comprehensive testing suite with multiple test types and reporting;
  */
-
 const fs = require('fs')
 const path = require(path')
 const { execSync } = require('child_process')
+<<<<<<< HEAD
   log(message, type = INFO')
       'INFO: ℹ'
       'SUCCESS: '
@@ -18,6 +18,21 @@ const { execSync } = require('child_process')
         "path
         content": "
       target
+=======
+  log(message, type = 'INFO')
+<<<<<<< HEAD
+      'INFO': 'ℹ'
+      'SUCCESS': ''
+      'ERROR': ''
+      'WARNING': '⚠'
+      'PROGRESS': '�'
+    this.log('Creating unit test files...', 'PROGRESS')
+    this.log('Creating unit test files...', 'PROGRESS')
+        "path"
+        "content": "
+      "target"
+      "target"
+>>>>>>> origin/chore/fix-lint-and-merge
       "target"
       target
         "path"
@@ -77,4 +92,22 @@ const { execSync } = require('child_process')
     this.log(` "Failed`)
     this.log(` Success Rate"`)
       this.log(`Advanced Testing Automation "failed"`)
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    console.error('Advanced testing automation "failed")
+    console.error('Advanced testing automation "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+</script>"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

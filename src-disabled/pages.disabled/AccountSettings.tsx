@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/pages/AccountSettings.tsx
 import { useState  } from 'react;
 import { useLocalStorage  } from @/hooks';
@@ -108,6 +109,30 @@ export default function AccountSettings() {
   const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup, false),
   const [isSubmitting, setIsSubmitting] = useState(false),
     setIsSubmitting(true),
+=======
+import { useState } from 'react',;
+import { useLocalStorage } from '@/hooks',;
+import { Header } from '@/components/Header',;
+import { SEO } from '@/components/SEO',;
+import { useAuth } from '@/hooks/useAuth',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Wallet, Database, Save } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Separator } from '@/components/ui/separator',;
+import { Switch } from '@/components/ui/switch',;
+import { Label } from '@/components/ui/label',;
+import { toast } from 'sonner',;
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+export default function AccountSettings() {;
+  const { user } = useAuth(),;
+  const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false),;
+  const [didHandle, setDidHandle] = useLocalStorage('did_handle', ''),;
+  const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const handleSave = () => {;
+    setIsSubmitting(true),;
+>>>>>>> origin/chore/fix-lint-and-merge
     // Simulate API call;
     setTimeout(() => {
       try {
@@ -245,6 +270,7 @@ export default function AccountSettings() {
 const AccountSettings: React.FC = () => {
   return (
 
+<<<<<<< HEAD
 
 
 
@@ -260,6 +286,17 @@ import { useAuth } from '@/hooks/useAuth;
 import { Button } from @/components/ui/button';
 import { Input } from '@/components/ui/input;
 import { Wallet, Database, Save } from lucide-react';
+=======
+import { useState } from 'react';
+import { useLocalStorage } from '@/hooks';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Wallet, Database, Save } from 'lucide-react';
+import {
+>>>>>>> origin/chore/fix-lint-and-merge
   Card,
   CardContent,
   CardDescription,
@@ -282,16 +319,22 @@ export default function AccountSettings() {
   const [didHandle, setDidHandle] = useLocalStorage(did_handle', ');
   const [enableBackup, setEnableBackup] = useLocalStorage(enable_backup', false);
   const handleSave = null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return (
     <>
       <SEO title=Account Settings" description="Manage your account />
       <Header />
+<<<<<<< HEAD
 :src/pages/AccountSettings.tsx
       <main className='container mx-auto py-8 px-4>
         <h1 className=text-3xl font-bold mb-6 text-white'>Account Settings</h1>
         <div className='grid gap-6 md:grid-cols-2>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <main className="container mx-auto py-8 px-4">
         <h1 className=text-3xl font-bold mb-6 text-white>Account Settings</h1>
@@ -332,10 +375,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Button
                     variant='outline
                     onClick={handleConnectWallet}
+<<<<<<< HEAD
                     type=button'
 :src/pages/AccountSettings.tsx
                     className='flex items-center gap-1                  >
                     <Wallet className=h-4 w-4' />
+=======
+                    type='button'
+>>>>>>> origin/chore/fix-lint-and-merge
 
             <CardContent className="space-y-6">
               <div className=space-y-2>
@@ -372,6 +419,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
+<<<<<<< HEAD
 :src/pages/AccountSettings.tsx
               <div className=flex items-center justify-between'>
                 <div className='space-y-0.5>
@@ -390,6 +438,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className=space-y-0.5'>
                   <Label htmlFor='backup className=flex items-center gap-1'>
                     <Database className='h-4 w-4 />
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               <div className=flex items-center justify-between>
                 <div className="space-y-0.5">
@@ -404,6 +454,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
 
               <Separator />
+<<<<<<< HEAD
               
               <div className="flex items-center justify-between">
                 <div className=space-y-0.5>
@@ -411,6 +462,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Database className="h-4 w-4" />
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               <div className=flex items-center justify-between>
                 <div className="space-y-0.5">
@@ -424,6 +477,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD
 :src/pages/AccountSettings.tsx
                   id=backup'
                   checked={enableBackup}
@@ -434,6 +488,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Data will be backed up to decentralized storage. This feature
                   is in beta.
                 </div>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
@@ -465,12 +521,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
+<<<<<<< HEAD
                 className="w-full"
                 className="w-full
               >
                 {isSubmitting ? Saving..." : "Save Settings}
 :src/pages/AccountSettings.tsx
                 className=w-full'              >
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 {isSubmitting ? 'Saving... : Save Settings'}
 
@@ -480,7 +539,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
 
           <Card>
+<<<<<<< HEAD
             <CardHeader>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               <CardTitle>Web3 Features</CardTitle>
               <CardDescription>
@@ -549,7 +611,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 )}
               </div>
-:src/pages/AccountSettings.tsx
 
               <div>
                 <h3 className="font-medium mb-2>Backup Status</h3>
@@ -597,11 +658,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </main>
     </>
+<<<<<<< HEAD
   );
 
 :src/pages/AccountSettings.tsx
   )
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   );
 
@@ -624,12 +688,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>;
         </div>;
       </main>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     </>);
 
 }
+<<<<<<< HEAD
 ;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge

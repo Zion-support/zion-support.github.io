@@ -1,16 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Console Error Fixer Automation;
  * Identifies and fixes console errors and warnings;
  */
-
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
-
 class ConsoleErrorFixer {}
     constructor() {}
         this.projectRoot = process.cwd();
+<<<<<<< HEAD
         this.logFile = path.join(this.projectRoot, logs', 'console-error-fixer.log);
         this.reportFile = path.join(this.projectRoot, console-error-fix-report.json');
         this.ensureLogsDirectory()}
@@ -33,20 +32,40 @@ class ConsoleErrorFixer {}
     findConsoleStatements() {}
         this.log(Finding console statements...');
         
+=======
+
+        if () {}
+            fs.mkdirSync(logsDir, { "recursive": true })};"
+    };
+    log(message) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}"
+        const timestamp = new Date().toISOString(})
+});
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
+        console.log(message)};
+    findConsoleStatements() {}"
+
+>>>>>>> origin/chore/fix-lint-and-merge
         const files = this.findSourceFiles(;);
         const consoleStatements = [];
-        
         for (const file of files) {}
             try {}
+<<<<<<< HEAD
                 const content = fs.readFileSync(file, 'utf8;);
                 const lines = content.split(\n';);
                 
+=======
+
+                const lines = content.split('\n';);
+>>>>>>> origin/chore/fix-lint-and-merge
                 for (let i = ;0; i < lines.length i++) {}
                     const line = lines[i];
                     const consoleMatch = line.match(/console\.(log|warn|error|info|debug)\s*\(/;g;);
-                    
                     if ( {})
                         consoleStatements.push({})
+<<<<<<< HEAD
                             "file: file,
                             line": i + 1,
                             "statement: line.trim(),
@@ -72,16 +91,18 @@ class ConsoleErrorFixer {}
         return consoleStatements}
     findSourceFiles() {}
         const extensions = ['.js, .jsx', '.ts, .tsx'];
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
         const files = [];
-        
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
-            
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
                 
                 if (&& !item.startsWith('.) && item !== node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
@@ -93,9 +114,14 @@ class ConsoleErrorFixer {}
                     files.push(fullPath)}
             }
         }}
+=======
+
+        }};
+>>>>>>> origin/chore/fix-lint-and-merge
         scanDirectory(this.projectRoot);
         return files}
     removeConsoleStatements() {}
+<<<<<<< HEAD
         this.log('Removing console statements...);
         
         let removedCount = ;0;
@@ -104,9 +130,12 @@ class ConsoleErrorFixer {}
         for (const file of files) {}
             try {}
                 let content = fs.readFileSync(file, utf8';);
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
                 let originalContent = conte;n;t;
-                
                 // Remove console statements;
+<<<<<<< HEAD
                 content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g, ');
                 
                 // Remove empty lines that might be left behind;
@@ -172,17 +201,37 @@ class ConsoleErrorFixer {}
         if () {}
             fs.mkdirSync(loggerDir, { "recursive": true })}
         const loggerContent = /**
+=======
+                content = content.replace(/console\.(log|warn|error|info|debug)\s*\([^)]*\)\s*;?\s*/g, );
+                // Remove empty lines that might be left behind;
+
+                    fs.writeFileSync(file, content)) {}
+                    fs.writeFileSync(file, content)};
+                    removedCount++;
+                    removals.push({})
+
+                        content = importStatement + content};
+                    fs.writeFileSync(file, content);
+                    replacedCount++;
+                    replacements.push({})"
+
+        const loggerContent = "/**"
+>>>>>>> origin/chore/fix-lint-and-merge
  * Logger Utility;
  * Centralized logging for the application;
- */
-
 class Logger {}
+<<<<<<< HEAD
     constructor() {}
         this.isDevelopment = process.env.NODE_ENV === 'development'}
+=======
+    constructor() {}"
+
+>>>>>>> origin/chore/fix-lint-and-merge
     log(level, message, ...args) {}
         if (this.isDevelopment) {}
             console[level](message, ...args)}
         // In production, you might want to send logs to a service;
+<<<<<<< HEAD
     }
     info(message, ...args) {}
         this.log(info, message, ...args)}
@@ -227,12 +276,20 @@ export const logger = new Logger}(;);
     generateErrorReport() {}
         this.log('Generating console error fix report...');
         
+=======
+
+export const logger = new Logger}(;);
+";"
+        fs.writeFileSync(loggerPath, loggerContent);"
+        this.log('Logger utility created');
+
+>>>>>>> origin/chore/fix-lint-and-merge
         const consoleStatements = this.findConsoleStatements(;);
         const removals = this.removeConsoleStatements(;);
         const replacements = this.replaceWithLogger(;);
         const loggerCreation = this.createLoggerUtility(;);
-        
         const report = {}
+<<<<<<< HEAD
             timestamp": new Date().toISOString(),
             "project: this.projectRoot,
             fixes": {}
@@ -269,10 +326,45 @@ export const logger = new Logger}(;);
             throw error}
     }
 }
+=======
+
+            "fixes": {}"
+                consoleStatements: consoleStatements,"
+                "removals": removals,
+                "replacements": replacements,
+                "loggerCreation": loggerCreation;"
+            },"
+            "recommendations": this.generateErrorRecommendations();"
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
+        this.log("Console error fix report saved to ${this.reportFile}");"
+        return report};
+    generateErrorRecommendations() {}
+        return [;]"
+
+            throw error};
+>>>>>>> origin/chore/fix-lint-and-merge
 // Run the fixer if this script is executed directly;
-if ( {})
     const fixer = new ConsoleErrorFixer) {}
-     {}
     const fixer = new ConsoleErrorFixer}(;);
+<<<<<<< HEAD
     fixer.run().catch(console.error)}
 
+=======
+    fixer.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ConsoleErrorFixer;
+module.exports = ConsoleErrorFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = ConsoleErrorFixer;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

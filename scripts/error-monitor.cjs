@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 
@@ -13,7 +14,38 @@ const { execSync } = require("child_process);
 #!/usr/bin/env node;
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require("child_process");
+const path = require("child_process");
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+const path = require("child_process");
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+const { execSync } = require("child_process");
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorMonitor {}
   constructor() {}
     this.logDir = path.join(process.cwd(), "logs");
@@ -32,13 +64,27 @@ class ErrorMonitor {}
     const logFile = path.join(this.logDir, error-monitor.log);
     fs.appendFileSync(logFile, logMessage + "\n")}
   async checkTypeScriptErrors() {}
+<<<<<<< HEAD
 
+=======
+    try {}"
+      this.log("info", "Checking TypeScript errors...");
+      const result = execSync("npx tsc --noEmit", {"cwd": this.projectRoot,"encoding": "utf8";})
+        stdio: "pipe"}"
+});"
+      return { "status": "clean", "errors": [] };"
+>>>>>>> origin/chore/fix-lint-and-merge
     } catch (error) {}
 
       return { status": "errors, errors": errors.toString() }"
     }
   async checkLintingErrors() {}
 
+<<<<<<< HEAD
+=======
+  async scanLogFiles() {}"
+    this.log("info", "Scanning log files for errors...");"
+>>>>>>> origin/chore/fix-lint-and-merge
     const logFiles = [];
     // Find all log files;
     const findLogFiles = (dir) => {}
@@ -48,7 +94,15 @@ class ErrorMonitor {}
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
         if (stat.isDirectory()) {}"
+<<<<<<< HEAD
 
+=======
+          findLogFiles(filePath)} else if (file.endsWith(".log") || file.endsWith(".txt")) {}"
+          logFiles.push(filePath)};
+    findLogFiles(this.logDir);"
+    findLogFiles(path.join(this.projectRoot, "logs"));"
+    const errorPatterns = [/error/i,/exception/i,/failed/i;]
+>>>>>>> origin/chore/fix-lint-and-merge
       /fatal/i;
       /critical/i;
       /timeout/i;
@@ -62,9 +116,28 @@ class ErrorMonitor {}
         lines.forEach((line, index) => {}
           errorPatterns.forEach(pattern => {})
             if (pattern.test(line)) {}"
+<<<<<<< HEAD
               foundErrors.push({file: logFile,"line": index + 1,content: line.trim();}"
                 timestamp: new Date().toISOString()})}
 
+=======
+              foundErrors.push({"file": logFile,"line": index + 1,"content": line.trim();}"
+                timestamp: new Date().toISOString()})};
+<<<<<<< HEAD
+          })})} catch (error) {}
+        this.log("warn", `Could not read log file ${logFile}: ${error.message}`);
+const fs = require("fs").promises;
+const path = require("child_process");
+const { exec } = require("child_process");
+const util = require("child_process");
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 const execAsync = util.promisify(exec);
   constructor() {}
     this.logFile = path.join(__dirname, "../logs/error-monitor.log);
@@ -72,12 +145,14 @@ const execAsync = util.promisify(exec);
     this.lastCheck = new Date()}
   async log(message, level = "INFO) {}
     const logEntry = `[${timestamp}] [${level}] ${message}\n
+=======
 
     this.reportFile = path.join(__dirname, ../logs/error-report.json");"
     this.lastCheck = new Date()}
   async log(message, level = INFO") {}"
     const timestamp = new Date().toISOString();`;
     const logEntry = `[${timestamp}] [${level}] ${message}\n;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {}
       await fs.appendFile(this.logFile, logEntry);
       console.log(logEntry.trim())} catch (error) {}
@@ -134,6 +209,7 @@ const execAsync = util.promisify(exec);
     report.summary.warnings = report.logErrors.length;
     report.summary.totalIssues = report.summary.totalErrors + report.summary.warnings;
     // Save report;
+<<<<<<< HEAD
 
 
       `error-report-${new Date().toISOString().replace(/[:.]/g, -)}.json`);
@@ -147,6 +223,31 @@ const execAsync = util.promisify(exec);
     return report}
   async run() {}
     this.log("info", Starting error monitoring...);"
+=======
+    const reportFile = path.join()
+<<<<<<< HEAD
+      this.reportsDir;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      `error-report-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log("info", `Error report saved to ${reportFile}`);
+    this.log("info", `"Summary": ${report.summary.totalIssues} total issues (${report.summary.criticalIssues} critical, ${report.summary.warnings} warnings)`);
+=======
+      this.reportsDir;"`;
+      `error-report-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);"
+
+    this.log("info", `"Summary": ${report.summary.totalIssues} total issues (${report.summary.criticalIssues} critical, ${report.summary.warnings} warnings)`);"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    return report};
+  async run() {}"
+    this.log("info", "Starting error monitoring...");"
+>>>>>>> origin/chore/fix-lint-and-merge
       const report = await this.generateErrorReport();
       // If there are critical issues, try to fix them;
       if (report.summary.criticalIssues > 0) {}"
@@ -177,23 +278,37 @@ module.exports = ErrorMonitor;
   // Keep process alive;"
 
     monitor.log("Error monitor shutting down", "INFO');
+<<<<<<< HEAD
     process.exit(0)})}
 
+=======
+    process.exit(0)})};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
+=======
 module.exports = ErrorMonitor;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = ErrorMonitor;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = ErrorMonitor;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

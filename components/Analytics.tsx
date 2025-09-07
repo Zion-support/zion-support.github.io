@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 import React, { useEffect } from 'react'
@@ -88,10 +89,57 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters)
+=======
+<<<<<<< HEAD
+import React from 'react';
+=======
+'use client';
+
+import React, { useEffect } from 'react';
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+
+interface AnalyticsProps {
+  trackingId: string;
+}
+
+<<<<<<< HEAD
+const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
+  return (
+    <>
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${trackingId}`}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${trackingId}');
+          `,
+        }}
+      />
+    </>
+  );
+};
+
+export default Analytics;
+=======
+export default function Analytics({ trackingId }: AnalyticsProps) {
+  useEffect(() => {
+    // Load Google Analytics
+    if (typeof window !== 'undefined' && trackingId) {
+>>>>>>> origin/chore/fix-lint-and-merge
       const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
+<<<<<<< HEAD
       // Initialize gtag
       window.dataLayer = window.dataLayer |[];
       function gtag(...args: unknown[]) {
@@ -190,12 +238,33 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   )
 }
 export default Analytics
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-const trackPerformance = () => {if (typeof window.gtag !== 'undefined' && 'performance' in window) ;'
-  }
-  const perf = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;'
-        if (perf) {const loadTime = (perf.loadEventEnd || 0) - (perf.fetchStart || 0)window.gtag('event', 'page_load_time', {"event_category": 'Performance',"event_label": 'Page Load',"value": Math.round(loadTime)})}'
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: any[]) {
+        (window as any).dataLayer.push(args);
       }
+<<<<<<< HEAD
 
   return null;
 }
+=======
+      gtag('js', new Date());
+      gtag('config', trackingId, {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+
+      // Track page views
+      gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+    }
+  }, [trackingId]);
+
+  return null;
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

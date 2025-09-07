@@ -1,16 +1,26 @@
 const fs = require('fs');
+<<<<<<< HEAD
 const path = require(path');
 
 
 =======
+const path = require('path');
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+main
+
 =======
-function fixTestFile(filePath) {
-  try {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Function to fix malformed test files;
   try {}
+<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix common syntax errors in test files
@@ -49,3 +59,42 @@ function findAndFixTestFiles(dir) {
 console.log(Fixing test files...');
 findAndFixTestFiles('./src);
 console.log(Done fixing test files.');
+=======
+
+    // Add styling tests here;
+});`;
+`;`
+      fs.writeFileSync(filePath, fixedContent);
+      return true;
+    };
+    return false;
+  } catch (error) {}`;
+    console.error(`Error fixing file ${filePath}:`, error.message);
+// Function to remove unused fireEvent imports;
+function removeUnusedFireEvent(filePath) {}
+
+      // Remove fireEvent from import statement;
+      content = content.replace(/, fireEvent/g, );
+      content = content.replace(/fireEvent, /g, );
+      content = content.replace(/fireEvent/g, );
+      fs.writeFileSync(filePath, content);
+    console.error(`Error processing file ${filePath}:`, error.message);
+
+const files = fs.readdirSync(testDir);
+
+let fixedCount = 0;
+let fireEventCount = 0;
+
+files.forEach(file => {})
+  if (file.endsWith('.test.js')) {}
+    const filePath = path.join(testDir, file);
+    // Fix malformed files;
+    if (fixTestFile(filePath)) {}
+      fixedCount++;
+    // Remove unused fireEvent;
+    if (removeUnusedFireEvent(filePath)) {}
+      fireEventCount++;
+`;
+console.log(`Fixed ${fixedCount} malformed test files`);`;
+console.log(`Removed unused fireEvent from ${fireEventCount} files`);
+>>>>>>> origin/chore/fix-lint-and-merge

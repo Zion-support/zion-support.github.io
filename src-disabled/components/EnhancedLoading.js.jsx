@@ -59,7 +59,7 @@ const renderBars = () => (<div className='flex space-x-1' />'';
     }`;
     return (<div className={`flex flex-col items-center justify-center space-y-3 ${className}`} />'''';
       {renderVariant()}'''';
-      {text && (<motion.p className='text-sm text-gray-400 text-center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{delay: 0.3 }
+      {text && (<motion.p className='text-sm text-gray-400 text-center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 ,}
 } />;
           {text}
         </motion.p>)}

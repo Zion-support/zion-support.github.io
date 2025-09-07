@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/community/ForumCategories.tsx
 import Link from "next/link,
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from @/components/ui/card",
@@ -6,6 +7,8 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-reac
 import { ForumCategoryInfo } from @/types/community";
 const categories: ForumCategoryInfo[] = [
   {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 {
 
     id: "getting-hired
@@ -14,6 +17,7 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
     icon: Briefcase"
   }
+import { ForumCategoryInfo } from "@/types/community",
   {
     id: "project-help
     name: Project Help"
@@ -27,14 +31,14 @@ const categories: ForumCategoryInfo[] = [
     name: "Feedback & Feature Requests
     description: Share your feedback and suggest new features."
     adminOnly: false
+<<<<<<< HEAD
 :src/components/community/ForumCategories.tsx
     icon: "Code
   }
     icon: FileText"
-
-
-  },
-
+=======
+    icon: "FileText"
+>>>>>>> origin/chore/fix-lint-and-merge
 
   {
     id: "announcements
@@ -46,6 +50,7 @@ const categories: ForumCategoryInfo[] = [
 const categories: ForumCategoryInfo[] = [;
 
   {
+<<<<<<< HEAD
   {id: "getting-hired;
     name: Getting Hired";
     description: "Tips, strategies, and questions about getting hired on the platform.;
@@ -89,6 +94,11 @@ import { ForumCategoryInfo } from "@/types/community,{id: project-help";
     id: "project-help,
     name: Project Help",
     description: "Get help with your ongoing projects and collaboration.,
+=======
+    id: "project-help",
+    name: "Project Help",
+    description: "Get help with your ongoing projects and collaboration.",
+>>>>>>> origin/chore/fix-lint-and-merge
     adminOnly: false,
     icon: MessageSquare"
   },
@@ -104,9 +114,13 @@ import { ForumCategoryInfo } from "@/types/community,{id: project-help";
     name: Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.,
     adminOnly: false,
+<<<<<<< HEAD
     icon: FileText"
 :src/components/community/ForumCategories.tsx
   }
+=======
+    icon: "FileText"
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   {
     id: "announcements,
@@ -115,6 +129,7 @@ import { ForumCategoryInfo } from "@/types/community,{id: project-help";
     adminOnly: true,
     icon: Megaphone"
   }
+<<<<<<< HEAD
 :src/components/community/ForumCategories.tsx
 ]
 const iconMap = {
@@ -134,6 +149,8 @@ export const ForumCategories = () => {
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3>;
       {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap]; return (
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 ],
 
@@ -157,7 +174,6 @@ export const ForumCategories = () => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
 
-
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer>
               <CardHeader className=flex flex-row items-center gap-4">
@@ -172,6 +188,7 @@ export const ForumCategories = () => {
             </Card>
           </Link>
         )
+<<<<<<< HEAD
 :src/components/community/ForumCategories.tsx
       })}
     </div>
@@ -180,6 +197,8 @@ export const ForumCategories = () => {
 export default ForumCategories
 "
 export default ForumCategories
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import Link from next/link,
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
@@ -188,7 +207,6 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone } from lucide-react
 import { ForumCategoryInfo } from "@/types/community",
   {
     id: getting-hired,
-
 
     description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,
@@ -218,9 +236,13 @@ import { ForumCategoryInfo } from "@/types/community",
     adminOnly: false,
     icon: FileText;
 
+<<<<<<< HEAD
   }
 
   {
+=======
+  {;
+>>>>>>> origin/chore/fix-lint-and-merge
 
     id: "announcements",
     name: Announcements,,
@@ -253,18 +275,22 @@ export const ForumCategories = () => {
           <Link key={category && category.id} href={`/community/category/${category && category.id}`}>;
             <Card className=h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer>;
 
+<<<<<<< HEAD
           </Link>)})}
     </div>)}],const iconMap = {Briefcase,MessageSquare,Code,FileText,Megaphone;
 },export const ForumCategories = () => {const { user } = useAuth(),const isAdmin = user?.userType === 'admin || user?.role === admin',const visibleCategories = categories.filter(category => !category.adminOnly || isAdmin;
   ),return (<div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
       {visibleCategories.map((category) => {const Icon = iconMap[category.icon as keyof typeof iconMap],return (<Link key={category.id} href={`/community/category/${category.id}`}>;
             <Card className=h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               <CardHeader className="flex flex-row items-center gap-4">;
 
                 <div className=p-2 bg-zion-purple/10 rounded-full>;
                   <Icon className="h-6 w-6 text-zion-purple" />;
                 </div>;
 
+<<<<<<< HEAD
 
                 <CardTitle className=text-xl>{category && category.name}</CardTitle>;
               </CardHeader>;
@@ -274,10 +300,17 @@ export const ForumCategories = () => {
               </CardHeader>;
               <CardContent>;
                 <CardDescription className="text-base">{category.description}</CardDescription>;
+=======
+                <CardTitle className="text-xl">{category && category.name}</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <CardDescription className="text-base">{category && category.description}</CardDescription>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
               </CardContent>;
             </Card>;
           </Link>;
+<<<<<<< HEAD
         )const isAdmin = user?.userType === 'admin || user?.role === admin';
 export default ForumCategories;import Link from next/link,import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",import { useAuth } from @/hooks/useAuth,import { MessageSquare, Briefcase, Code, FileText, Megaphone  } from 'lucide-react;
   {id: "getting-hired",name: Getting Hired,description: "Tips, strategies, and questions about getting hired on the platform.";
@@ -303,11 +336,11 @@ export default ForumCategories;import Link from next/link,import { Card, CardCon
             </Card>;
           </Link>;
         )})}
+=======
+        );
+      })}
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>;
-
-export default ForumCategories;
-
-
   )
 }
 
@@ -332,6 +365,7 @@ import { useAuth } from @/hooks/useAuth';
   Megaphone} from 'lucide-react;
 import { ForumCategoryInfo } from @/types/community';
 
+<<<<<<< HEAD
   {
   )}export default ForumCategories;export default ForumCategories;export default ForumCategories;
 ";
@@ -341,3 +375,7 @@ import { useAuth  } from '@/hooks/useAuth;
 import { MessageSquare,Briefcase,Code,FileText,Megaphone} from lucide-react';
 import { ForumCategoryInfo  } from '@/types/community';
   {
+=======
+const categories: ForumCategoryInfo[] = [
+  {
+>>>>>>> origin/chore/fix-lint-and-merge

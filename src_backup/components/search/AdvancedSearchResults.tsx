@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:, error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
     }return this.props.children;
   }
@@ -99,6 +100,9 @@ import { logErrorToProduction, logInfo } from @/utils/productionLogger'
 import { logErrorToProduction, log_info } from '@/utils/ production_logger;
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface SearchResult {
+=======
+class ErrorBoundary extends React.Component {
+>>>>>>> origin/chore/fix-lint-and-merge
   constructor(props) {
 
     super(props);
@@ -155,7 +159,6 @@ import { EnhancedSearchInput } from './EnhancedSearchInput;
 import { generateSearchSuggestions } from '@/data/marketplaceData';
 
   id: string;
-interface SearchResult  {id: string;
   title: string;
   description: string;'
   type: product | 'talent' | blog | 'service';
@@ -165,11 +168,23 @@ interface SearchResult  {id: string;
   price?: number;
   currency?: string;
   rating?: number;
-  tags?: string[];date?: string;interface SearchFilters  {types: string[];
+  tags?: string[];
+
+  date?: string;
+
+interface SearchFilters {;
+
+  types: string[];
   category: string;
   minPrice: number;
   maxPrice: number;
-  minRating: number;sort: string;interface SearchResponse  {results: SearchResult[];
+  minRating: number;
+
+  sort: string;
+
+interface SearchResponse {;
+
+  results: SearchResult[];
   totalCount: number;
   page: number;
   limit: number;
@@ -187,6 +202,7 @@ interface SearchResult  {id: string;
         part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded>
 
+<<<<<<< HEAD
   query: string;hasMore: boolean;hasMore: boolean;// Highlight search terms in text;
 const HighlightText: React.FC<{text: string;
   searchTerm: string;
@@ -286,6 +302,8 @@ const SearchResultCard: React.FC<{result: SearchResult,searchTerm: string,viewMo
             </Badge>;
           </div>;
           {result.price && (<div className=flex-1>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             {part}
 
       )}
@@ -452,6 +470,7 @@ const FilterSidebar: React.FC<{
               />"
               <label htmlFor={option.id} className=text-sm>
 
+<<<<<<< HEAD
   )}// Filter Sidebar Component;
 const FilterSidebar: React.FC<{filters: SearchFilters;
   onFiltersChange: (filters: SearchFilters) => void;
@@ -550,6 +569,8 @@ const FilterSidebar: React.FC<{filters: SearchFilters,onFiltersChange: (filters:
       <Separator />;
       <div>;
             className=mb-2          />;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 {option.label}
               </label>;
             </div>;
@@ -642,7 +663,8 @@ const FilterSidebar: React.FC<{filters: SearchFilters,onFiltersChange: (filters:
         <Select;
           value={filters.min_rating.to_string ()}
           onValueChange={value =>;
-            onFiltersChange ({ ...filters, min_rating: parse_float (value) })}
+            onFiltersChange ({ ...filters, min_rating: parse_float (value) });
+          }
         >          <SelectTrigger>;
             <SelectValue />;
           </SelectTrigger>;
@@ -656,7 +678,9 @@ const FilterSidebar: React.FC<{filters: SearchFilters,onFiltersChange: (filters:
           </SelectContent>;
         </Select>;
       </div>;
-    </div>)}
+    </div>);
+
+}
 // No Results Component;
 
 },
@@ -813,8 +837,11 @@ if ( {) {}
     new_filters?: SearchFilters) => {    if () {) {}
   $2;
 }
-      set_results ([])setTotalCount (0)return;
+      set_results ([]);
+      setTotalCount (0);
+      return;
     }
+<<<<<<< HEAD
         <div className="text-sm text-muted-foreground>;
           <p>Tips for better results: </p>;
           <ul className=mt-2 space-y-1">;<div className=text-sm text-muted-foreground>;
@@ -823,6 +850,8 @@ if ( {) {}
         <div className="text-sm text-muted-foreground>;
           <p>Tips for better results: </p>;
           <ul className=mt-2 space-y-1">;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     set_loading (true);
     try {}
       const search_filters = new_filters || filters;
@@ -1030,6 +1059,7 @@ if ( {) {}
         <div className="flex gap-4 mb-4">
           <div className=flex-1">
 
+<<<<<<< HEAD
   )}// Main Search Results Page Component;
 export const AdvancedSearchResults: React.FC = () => {const router = useRouter()const [searchTerm, setSearchTerm] = useState(')const [results, setResults] = useState<SearchResult[]>([])const [loading, setLoading] = useState(false)const [totalCount, setTotalCount] = useState(0)const [currentPage, setCurrentPage] = useState(1)const [hasMore, setHasMore] = useState(false)const [viewMode, setViewMode] = useState<grid' | 'list>(grid')const [showFilters, setShowFilters]  = useState(false)},// Main Search Results Page Component;
 export const AdvancedSearchResults: React.FC = () => {const router = useRouter(),const [searchTerm, setSearchTerm] = useState('),const [results, setResults] = useState<SearchResult[]>([]),const [loading, setLoading] = useState(false),const [totalCount, setTotalCount] = useState(0),const [currentPage, setCurrentPage] = useState(1),const [hasMore, setHasMore] = useState(false),const [viewMode, setViewMode] = useState<grid' | 'list>(grid'),const [showFilters, setShowFilters] = useState(false),const [filters, setFilters] = useState<SearchFilters>({types: [],category: ',minPrice: 0,maxPrice: 10000,minRating: 0,sort: relevance'})const suggestions  = generateSearchSuggestions()// Extract available categories from results for filter;
@@ -1148,6 +1178,8 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
                 </SelectContent>;
               </Select>;
               >;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               value={searchTerm}
               onChange={setSearchTerm}
               onSelectSuggestion={(suggestion) => handleSearch(suggestion.text)}
@@ -1276,6 +1308,7 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
       {searchTerm && (
         <div className=flex gap-6">
           {/* Desktop Filters Sidebar */}
+<<<<<<< HEAD
             </div>;</div>;)}</div>;{searchTerm && (<div className=flex gap-6'>;{/* Desktop Filters Sidebar */}
           <div className='hidden lg:block w-64 flex-shrink-0>;
             <div className=bg-card border rounded-lg p-4 sticky top-4'>;
@@ -1300,6 +1333,8 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
                 availableCategories = {availableCategories}variant="ghost;
                     size=sm";
                     onClick={() => setFilters({types: [],category: ',minPrice: 0,maxPrice: 10000,minRating: 0,sort: relevance';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     size="sm
                     onClick={() => setFilters({}
@@ -1324,6 +1359,7 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
           </div>;
           {/* Main Content */}
 
+<<<<<<< HEAD
           </div>;{/* Main Content */}</div>;{/* Load More Button */}
                 {hasMore && ({hasMore && (<div className=text-center'>;
                     <Button;
@@ -1341,19 +1377,31 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
               </div>;
             ) : results.length === 0 && searchTerm ? (<NoResultsState;
                 searchTerm={searchTerm}onNewSearch={handleSearch}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 {hasMore && (
 
               <NoResultsState 
                 searchTerm={searchTerm} 
                 onNewSearch={handleSearch}
               />;
-            ) : (<>;
+            ) : (;
+              <>;
                 {/* Results Grid/List */}
+<<<<<<< HEAD
                 <div className={viewMode === grid';
                   ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6;
                   : space-y-4 mb-6";
                 }>;
                   {results.map((result) => (<SearchResultCard;
+=======
+                <div className={viewMode === 'grid' 
+                  ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6"
+                  : "space-y-4 mb-6"
+                }>
+                  {results.map((result) => (
+                    <SearchResultCard
+>>>>>>> origin/chore/fix-lint-and-merge
                       key={`${result.type}-${result.id}`}
                       result={result}
                       searchTerm={searchTerm}
@@ -1362,6 +1410,7 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
                   ))}
                 </div>;
                 {/* Load More Button */}
+<<<<<<< HEAD
                 {hasMore && (<div className="text-center>;
                     <Button;
                       onClick={loadMore}disabled={loading}
@@ -1372,6 +1421,24 @@ export const AdvancedSearchResults: React.FC = () => {const router = useRouter()
                           Loading...;
                         </>;
                       ) : ('Load More Results;
+=======
+                {hasMore && (
+
+                  <div className="text-center">
+                    <Button 
+                      onClick={loadMore} 
+                      disabled={loading}
+                      variant="outline"
+                    >
+
+                      {loading ? (
+                        <>
+                          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                          Loading...
+                        </>
+                      ) : (
+                        'Load More Results'
+>>>>>>> origin/chore/fix-lint-and-merge
                       )}
                     </Button>;
                   </div>;
@@ -1448,67 +1515,115 @@ export default AdvancedSearchResults;
 
           </div>)}
       </div>;
-      {search_term && (<div className='flex gap - 6'>;
+      {search_term && (
+        <div className='flex gap - 6'>;
           {/* Desktop Filters Sidebar */}
           <div className=hidden lg:block w - 64 flex - shrink - 0>;
             <div className='bg - card border rounded - lg p - 4 sticky top - 4'>;
               <div className=flex items - center justify - between mb - 4>;
                 <h2 className='font - semibold'>Filters</h2>;
+<<<<<<< HEAD
                 {activeFiltersCount > 0 && (<Button;
                     variant=ghost;
                     size='sm';
                     on_click={() =>;
                       set_filters ({types: [],category: ,min_price: 0,max_price: 10000,min_rating: 0,sort: 'relevance';
                       })}                  >;
+=======
+                {activeFiltersCount > 0 && (
+                  <Button;
+                    variant='ghost';
+                    size='sm';
+                    on_click={() =>;
+                      set_filters ({
+                        types: [],
+                        category: '',
+                        min_price: 0,
+                        max_price: 10000,
+                        min_rating: 0,
+                        sort: 'relevance',
+                      });
+                    }                  >;
+>>>>>>> origin/chore/fix-lint-and-merge
                     Clear All;
                   </Button>)}
               </div>;
               <FilterSidebar;
-                filters = {filters }
-                onFiltersChange = {handleFiltersChange }
-                available_categories = {available_categories }
+                filters = {filters, }
+                onFiltersChange = {handleFiltersChange, }
+                available_categories = {available_categories, }
               />;
             </div>;
           </div>;
           {/* Main Content */}
+<<<<<<< HEAD
           <div className=flex - 1>;
             {loading && results.length === 0 ? (<div className='flex justify - center py - 12'>;
                 <Loader2 className=h - 8 w - 8 animate - spin />;
               </div>) : results.length === 0 && search_term ? (<NoResultsState;
+=======
+          <div className='flex - 1'>;
+            {loading && results.length === 0 ? (
+              <div className='flex justify - center py - 12'>;
+                <Loader2 className='h - 8 w - 8 animate - spin' />;
+              </div>) : results.length === 0 && search_term ? (
+              <NoResultsState;
+>>>>>>> origin/chore/fix-lint-and-merge
                 search_term={search_term}
-                onNewSearch={handle_search}              />) : (<>;
+                onNewSearch={handle_search}              />) : (
+              <>;
                 {/* Results Grid / List */}
                 <div;
+<<<<<<< HEAD
                   className={view_mode === 'grid';
                       ? grid grid - cols - 1 md:grid - cols - 2 xl:grid - cols - 3 gap - 4 mb - 6;
+=======
+                  className={
+                    view_mode === 'grid';
+                      ? 'grid grid - cols - 1 md:grid - cols - 2 xl:grid - cols - 3 gap - 4 mb - 6';
+>>>>>>> origin/chore/fix-lint-and-merge
                       : 'space - y-4 mb - 6';
                   }
                 >;
                   {results.map (result => (                    <SearchResultCard;
                       key={`${result.type}-${result.id}`}
-                      result = {result }
-                      search_term = {search_term }
-                      view_mode = {view_mode }
+                      result = {result, }
+                      search_term = {search_term, }
+                      view_mode = {view_mode, }
                     />))}
                 </div>;
                 {/* Load More Button */}
+<<<<<<< HEAD
                 {has_more && (<div className=text - center>;
+=======
+                {has_more && (
+                  <div className='text - center'>;
+>>>>>>> origin/chore/fix-lint-and-merge
                     <Button;
                       on_click={load_more}
                       disabled={loading}
                       variant='outline'                    >;
+<<<<<<< HEAD
                       {loading ? (<>;
                           <Loader2 className=h - 4 w - 4 mr - 2 animate - spin />;
+=======
+                      {loading ? (
+                        <>;
+                          <Loader2 className='h - 4 w - 4 mr - 2 animate - spin' />;
+>>>>>>> origin/chore/fix-lint-and-merge
                           Loading...;
-                        </>) : ('Load More Results')}
+                        </>) : (
+                        'Load More Results')}
                     </Button>;
                   </div>)}
               </>)}
           </div>;
         </div>)}
-    </div>)}
+    </div>);
+}
 export default AdvancedSearchResults;
   suggestion;
+<<<<<<< HEAD
 }</Button>) )}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>)}
 //Main Search Results Page Component setTotalCount (data.total_count)setCurrentPage (data.page)setHasMore (data.has_more)//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.min_price > 0 || filters.max_price < 10000 ? 1 : 0) + (filters.min_rating > 0 ? 1 : 0);
 }> <SelectTrigger className=w - 40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance >Relevance</SelectItem> <SelectItem value=price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc >Price: High to Low</SelectItem> <SelectItem value=rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h - 4 w - 4 /> </Button> <Button > <List className=h - 4 w - 4" /> </Button> </div> {/* Mobile Filter Toggle */;
@@ -1533,6 +1648,63 @@ export default AdvancedSearchResults;
 }view_mode= {view_mode;
 }/>) )}</div> > {";
   loading ? (<> <Loader2 className=h - 4 w - 4 mr - 2 animate - spin /> Loading... </>) : ('Load More Results')}</Button> </div>)}</>)}</div> </div>)}</div>)}
+=======
+}</Button>) );
+}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>);
+}
+//Main Search Results Page Component setTotalCount (data.total_count);
+setCurrentPage (data.page);
+setHasMore (data.has_more);
+//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.min_price > 0 || filters.max_price < 10000 ? 1 : 0) + (filters.min_rating > 0 ? 1 : 0);";
+}> <SelectTrigger className="w - 40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h - 4 w - 4" /> </Button> <Button > <List className="h - 4 w - 4" /> </Button> </div> {
+  /* Mobile Filter Toggle */;
+}<Sheet open= {
+  show_filters;
+}onOpenChange= {
+  setShowFilters ";
+}> <SheetTrigger as_child> </Button> </SheetTrigger> <SheetContent side="left" className="w - 80" > <SheetHeader> <SheetTitle > Search Filters</SheetTitle> </SheetHeader> <div className="mt - 6" > <FilterSidebar filters= {
+  filters;
+}onFiltersChange= {
+  handleFiltersChange;
+}available_categories= {
+  available_categories;
+}/> </div> </SheetContent> </Sheet> </div> </div>) ";
+}</div> <Button variant="ghost" size="sm" on_click={
+  () => set_filters ({';
+  types: [], category: '', min_price: 0, max_price: 10000,  min_rating: 0, sort: 'relevance';
+});
+}> Clear All </Button>);
+}</div> <FilterSidebar filters= {
+  filters;
+}onFiltersChange= {
+  handleFiltersChange;
+}available_categories= {
+  available_categories;
+}/> </div> </div> </div>) : results.length === 0 && search_term ? (<NoResultsState search_term= {
+  search_term;
+}onNewSearch= {
+  handle_search;
+}/> <SearchResultCard key= {
+  `$ {
+  result.type;
+}-$ {
+  result.id;
+}`;
+}result= {
+  result;
+}search_term= {
+  search_term;
+}view_mode= {
+  view_mode;
+}/>) );
+}</div> > {'";
+  loading ? (<> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Loading... </>) : ('Load More Results');
+}</Button> </div>);
+}</>);
+}</div> </div>);
+}</div>);
+}
+>>>>>>> origin/chore/fix-lint-and-merge
 export default AdvancedSearchResults;
 '";
 export default AdvancedSearchResults,

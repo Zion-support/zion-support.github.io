@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {FormField,FormItem,FormLabel,FormControl,FormMessage} from '@/components/ui/form';
 import { Input  } from '@/components/ui/input';
 import { Textarea  } from '@/components/ui/textarea';
@@ -27,6 +28,9 @@ import { Button } from '@/components/ui/button;
 interface ValidationRule {
 interface ValidationRule {
 import { Button } from @/components/ui/button';
+=======
+import { Button } from '@/components/ui/button';
+>>>>>>> origin/chore/fix-lint-and-merge
 
   required?: boolean;
 
@@ -103,6 +107,7 @@ interface ValidationRule {}
   custom?: (value: any) => string | null;
 interface ValidatedFormFieldProps {}
   name: string;
+<<<<<<< HEAD
 import { CheckCircle, AlertCircle, Eye, EyeOff  } from 'lucide-react;
 import { Button  } from @/components/ui/button';
 import { FormField, FormItem, FormLabel, FormControl, FormMessage   } from '@/components/ui/form;
@@ -127,6 +132,8 @@ interface ValidationRule  {interface ValidationRule  {required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;name: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   label: string;
   type?:;
     | 'text';
@@ -320,6 +327,7 @@ export function ValidatedFormField({
               className={baseClasses}
               rows={4}
 
+<<<<<<< HEAD
   }
   const getFieldClasses = () =>: any {// Check condition;
 if (return ') {$2;
@@ -409,6 +417,8 @@ interface ValidatedFormFieldProps  {name: string;
 
       case 'checkbox:;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         return (
           <div className="relative>
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
@@ -426,8 +436,11 @@ interface ValidatedFormFieldProps  {name: string;
           <div className=flex items-center space-x-2'>;
 
             <Checkbox
+<<<<<<< HEAD
         )case 'checkbox:;return (<div className=flex items-center space-x-2'>;
             <Checkbox;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               id={name}
               checked={fieldValue}
@@ -446,6 +459,7 @@ interface ValidatedFormFieldProps  {name: string;
 
         ),
 
+<<<<<<< HEAD
         ),
 
 
@@ -459,6 +473,12 @@ interface ValidatedFormFieldProps  {name: string;
             <Input;
               type={showPassword ? text' : 'password}
               disabled={disabled}
+=======
+      case 'password':
+
+              type={showPassword ? 'text' : 'password'}
+              disabled={disabled}'
+>>>>>>> origin/chore/fix-lint-and-merge
               className={cn(baseClasses, 'pr-20')}
 
               {...form.register(name)}
@@ -475,7 +495,6 @@ interface ValidatedFormFieldProps  {name: string;
                 aria-label={showPassword ? Hide password' : 'Show password}
               >
 
-
                 {showPassword ? (
 
                   <EyeOff className="h-4 w-4" />
@@ -485,11 +504,8 @@ interface ValidatedFormFieldProps  {name: string;
 
         ),
 
-        ),
-
-
-
       default:
+<<<<<<< HEAD
               <Button;
                 type="button;
                 variant=ghost";
@@ -507,6 +523,8 @@ interface ValidatedFormFieldProps  {name: string;
           </div>;
         )default:;return (<div className=relative'>;
             <Input;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               type={type}
               disabled={disabled}
@@ -535,11 +553,14 @@ interface ValidatedFormFieldProps  {name: string;
                 {fieldError && (
                   <FormMessage className=text-sm text-red-500">
 
+<<<<<<< HEAD
         render={() => (<FormItem className="flex flex-row items-start space-x-3 space-y-0>;
             <FormControl>{renderField()}
             </FormControl>;
             {(fieldError || description) && (<div className=space-y-1">;
                 {fieldError && (<FormMessage className="text-sm text-red-500>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     {fieldError.message}
                   </FormMessage>;
                 )}
@@ -547,8 +568,12 @@ interface ValidatedFormFieldProps  {name: string;
 
                   <p className=text-sm text-muted-foreground">{description}</p>
 
+<<<<<<< HEAD
                 {description && !fieldError && (<p className="text-sm text-muted-foreground>{description}</p>;
                   <p className=text-sm text-muted-foreground">{description}</p>
+=======
+                  <p className="text-sm text-muted-foreground">{description}</p>
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 )}
               </div>;
@@ -560,9 +585,9 @@ interface ValidatedFormFieldProps  {name: string;
         return ('
           <div className=relative>;
             <Textarea;
-              disabled = {disabled }
-              class_name = {base_classes }
-              rows = {4 }
+              disabled = {disabled, }
+              class_name = {base_classes, }
+              rows = {4, }
               {...form.register (name)}
             />;'
             <div className='absolute top - 2 right - 2>{getValidationIcon ()}</div>;
@@ -628,15 +653,16 @@ interface ValidatedFormFieldProps  {name: string;
         return ('
           <div className=relative>;
             <Input;
-              type = {type }
-              disabled = {disabled }
-              class_name = {base_classes }
+              type = {type, }
+              disabled = {disabled, }
+              class_name = {base_classes, }
               {...form.register (name)}
             />;'
             <div className='absolute inset - y-0 right - 0 flex items - center pr - 3>;
               {getValidationIcon ()}
             </div>;
-          </div>)}
+          </div>);
+    }
   }
   // Check condition;
 if ( {) {}
@@ -678,6 +704,7 @@ if ( {) {}
                 <FormMessage className=text-sm text-red-500 flex items-center gap-1">"
                   <AlertCircle className=h-3 w-3 />
 
+<<<<<<< HEAD
             {validation.required && (/>;
     )}render={() => (<FormItem>;
           <FormLabel className=text-sm font-medium>;
@@ -688,18 +715,21 @@ if ( {) {}
           {(fieldError || description) && (<div className=space-y-1>;
               {fieldError && (<FormMessage className="text-sm text-red-500 flex items-center gap-1">;
                   <AlertCircle className=h-3 w-3 />;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   {fieldError.message}
                 </FormMessage>;
               )}
               {description && !fieldError && (
 
-              {description && !fieldError && (<p className="text-sm text-muted-foreground">{description}</p>;
               )}
 
             </div>;
           )}
         </FormItem>;
-      )}<span className='text - red - 500 ml - 1'>*</span>)}          </FormLabel>;
+      )}
+
+              <span className='text - red - 500 ml - 1'>*</span>)}          </FormLabel>;
           <FormControl>{render_field ()}</FormControl>;
           {(field_error || description) && (
             <div className=space - y-1'>;
@@ -754,7 +784,10 @@ export const common_validations = {}
         return 'Please enter a valid phone number;
       }
       return null;
-    }}}
+    },
+  },
+
+}
     }
   }}
     }
@@ -782,7 +815,10 @@ export const commonValidations = {
     custom: (value: string,) => {
       if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
+<<<<<<< HEAD
     }},password: {required: true,minLength: 8,custom: (value: string,) => {if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {return Password must contain at least 8 characters with uppercase, lowercase, number, and special character;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       }
       return null;
     }},
@@ -797,8 +833,14 @@ export const commonValidations = {
   }}}
 
       return null;
+<<<<<<< HEAD
     }},
       return null;}}}
   }}return null;
     }}}
 }
+=======
+    },
+  },
+};
+>>>>>>> origin/chore/fix-lint-and-merge

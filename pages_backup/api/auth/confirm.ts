@@ -1,6 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import type { NextApiRequest, NextApiResponse } from 'next'
-main
 ;
 export default /**
  * handler - Function description
@@ -28,11 +25,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET' && req.method !== 'POST') {
     res.status(405).end();
+<<<<<<< HEAD
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET' && req.method !== 'POST') {
     res.status(405).end(),
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     return
   }

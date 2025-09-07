@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 ;
@@ -34,6 +35,10 @@ import type { QuoteRequest } from "@/types/quotes"
 import {format} from "date-fns"
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from "react;
+=======
+import React from "react";
+import { 
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog;
   DialogContent;
   DialogHeader;
@@ -70,7 +75,6 @@ interface QuoteDetailsProps {
   quote: QuoteRequest | null,
   isOpen: boolean,
   onClose: () => void;
-}export const QuoteDetails = null;
 }
 
       return format(new Date(dateString), 'PPP);
@@ -192,7 +196,8 @@ if (return 'Not specified') {}
             <span>{quote.project_name}</span>;
             <QuoteStatusBadge status={quote.status} />;
           </DialogTitle>;
-          <DialogDescription>Quote request submitted on {format_date (quote.created_at)}
+          <DialogDescription>;
+            Quote request submitted on {format_date (quote.created_at)}
           </DialogDescription>;
 
                   <span>{quote.requester_email}</span>;
@@ -219,6 +224,7 @@ if (return 'Not specified') {}
           <Button on_click={on_close}>Close</Button>;
         </div>;
       </DialogContent>;
+<<<<<<< HEAD
   quote.project description && (<> <h4 className="font - medium mt - 4 >Additional Details</h4> <p> {quote.project description;
 }</p> </>)}(quote.budget min && quote.budget max ? `$$ {quote.budget min;
 }- $$ {quote.budget max;
@@ -226,6 +232,8 @@ if (return 'Not specified') {}
 }` : 'Not specified)}</div> </CardContent> </Card> </div> </DialogContent> </Dialog>)};'";
 
 '";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     </Dialog>);
 }
 

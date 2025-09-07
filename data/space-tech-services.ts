@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export interface SpaceTechService {
 
@@ -22,6 +23,9 @@ export interface SpaceTechService {
 
 
 export interface SpaceTechService {
+=======
+export interface SpaceTechService {
+>>>>>>> origin/chore/fix-lint-and-merge
 id: string;
   name: string;
   tagline: string;
@@ -53,6 +57,7 @@ id: string;
     email: string;
     address: string;
 
+<<<<<<< HEAD
     website: string;
   }
     trialDays: 30
@@ -617,20 +622,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   {
 
+=======
+  {
+
+>>>>>>> origin/chore/fix-lint-and-merge
       'Multi-satellite coordination',
     id: 'satellite - constellation - management',
     name: 'Satellite Constellation Management System',
     tagline: 'Manage large satellite networks with AI - powered optimization',
     price: '$3, 999',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Advanced satellite constellation management system that optimizes large networks of satellites for maximum coverage, efficiency, and performance. Manage thousands of satellites like SpaceX and OneWeb.',
     features: [;
       'Multi - satellite coordination',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       'Coverage optimization',
       'Interference management',
       'Power optimization',
@@ -639,6 +655,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Predictive maintenance',
       'Real - time monitoring',
       'Mobile management app',
+<<<<<<< HEAD
       'API for integration'
     ],
     popular: true,
@@ -1023,11 +1040,15 @@ export const spaceTechServices: SpaceTechService[] = [
     reviews: 15},
   {
     id: 'space-education-platform',
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       'API for integration',
     ],
     popular: true,'
     icon: '🛰️',
 
+<<<<<<< HEAD
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / satellite - constellation',
@@ -1613,12 +1634,15 @@ export const spaceTechServices: SpaceTechService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
 
+<<<<<<< HEAD
 
 export const spaceTechServices: SpaceTechService[] = [
   {
@@ -1700,6 +1724,35 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     price: '$3,999'
     period: '/month'
     description:
+=======
+export const spaceTechServices: SpaceTechService[] = [
+  {
+    id: 'space-mission-management-platform';
+    name: 'Space Mission Management Platform';
+    tagline: 'Complete space mission planning and execution platform';
+    price: '$5,999',
+
+    period: '/month';
+origin/cursor/automate-test-improve-and-merge-code-2533
+    description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',
+    features: [
+      'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard';
+      'Regulatory compliance toolsMulti-satellite operations'
+    ];
+    popular: true, icon: '🚀',
+    color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/space-technology', marketPosition: 'Revolutionary technology with no direct competitors. SpaceX Starlink ($99/month) and OneWeb ($50/month) offer basic internet services. Our advantage: Complete mission management platform.',
+    targetAudience: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions, Aerospace companies',
+    trialDays: 30, setupTime: '2 weeks',
+    category: 'Space Technology', realService: true,
+    technology: ['Orbital MechanicsSatellite TrackingSpace WeatherReactNode.jsPostgreSQLReal-time Data'], integrations: ['Satellite networksLaunch providersGround stationsWeather servicesRegulatory databasesTracking systems'],
+    useCases: ['Mission planningSatellite operationsLaunch coordinationSpace monitoringRegulatory compliancePerformance optimization'], roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',
+    competitors: ['SpaceX StarlinkOneWebBasic satellite services'], marketSize: '$469B space economy',
+    growthRate: '400% annual growth', variant: 'space-futuristic',
+    contactInfo: {
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+>>>>>>> origin/chore/fix-lint-and-merge
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -1740,6 +1793,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 
+<<<<<<< HEAD
 ;
 
 export interface SpaceTechService {;
@@ -1760,6 +1814,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true;
     implementationDetails:'
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.''
+=======
+    realImplementation: true
+    implementationDetails:
+      'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'
+
+>>>>>>> origin/chore/fix-lint-and-merge
     launchDate: '2024-01-15'
     customers: 25;
     rating: 5.0;
@@ -1783,8 +1843,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Predictive maintenance''
       'Real-time monitoring''
       'Mobile management app''
-      'API for integration''
+      'API for integration'
     ]
+<<<<<<< HEAD
     popular: true
     icon: '🛰️'
     color: 'from-blue-600 to-indigo-700'
@@ -1804,15 +1865,37 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Ground stations'
       'Internet infrastructure'
       'Telecom systems'
+=======
+    popular: true'
+    icon: '🛰️''
+    color: 'from-blue-600 to-indigo-700''
+    textColor: 'text-blue-400''
+    link: 'https://ziontechgroup.com/satellite-constellation'
+    marketPosition:'
+      'Revolutionary technology with no direct competitors. Traditional satellite management uses basic tools. Our advantage: AI-powered optimization and large-scale management.'
+    targetAudience:'
+      'Satellite operators, Internet service providers, Telecommunications companies, Government agencies, Research institutions'
+    trialDays: 30'
+    setupTime: '1 week''
+    category: 'Space Technology'
+    realService: true;
+    technology: []
+    integrations: ['
+      'Satellite networks''
+      'Ground stations''
+      'Internet infrastructure''
+      'Telecom systems''
+>>>>>>> origin/chore/fix-lint-and-merge
       'Monitoring tools'
     ]
-    "useCases": [
+    useCases: ['
       'Constellation management''
       'Coverage optimization''
       'Performance monitoring''
       'Maintenance planning''
       'Traffic management''
       'Efficiency optimization'
+<<<<<<< HEAD
     ]
     roi: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.'
     competitors: ['Traditional satellite management', 'Basic monitoring tools']
@@ -1834,15 +1917,39 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Tracking systems'
       'Launch providers'
       'Insurance platforms'
+=======
+    ]'
+    roi: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.''
+    competitors: ['Traditional satellite management', 'Basic monitoring tools']'
+    marketSize: '$150B satellite services market''
+    growthRate: '300% annual growth''
+    variant: 'space-futuristic'
+    contactInfo: {}
+    marketPosition:'
+      'Revolutionary technology with no direct competitors. Basic debris tracking exists but lacks AI-powered risk assessment. Our advantage: Comprehensive monitoring and avoidance.'
+    targetAudience:'
+      'Satellite operators, Space agencies, Launch providers, Insurance companies, Research institutions'
+    trialDays: 30'
+    setupTime: '1 week''
+    category: 'Space Technology'
+    realService: true;
+    technology: []
+    integrations: ['
+      'Satellite networks''
+      'Tracking systems''
+      'Launch providers''
+      'Insurance platforms''
+>>>>>>> origin/chore/fix-lint-and-merge
       'Research databases'
     ]
-    "useCases": [
+    useCases: ['
       'Debris monitoring''
       'Collision avoidance''
       'Risk assessment''
       'Insurance underwriting''
       'Research analysis''
       'Safety planning'
+<<<<<<< HEAD
     ]
     roi: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.'
     competitors: ['Basic debris tracking', 'Manual monitoring']
@@ -1864,15 +1971,39 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Satellite networks'
       'Power grids'
       'Telecom systems'
+=======
+    ]'
+    roi: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.''
+    competitors: ['Basic debris tracking', 'Manual monitoring']'
+    marketSize: '$50B space safety market''
+    growthRate: '250% annual growth''
+    variant: 'space-futuristic'
+    contactInfo: {}
+    marketPosition:'
+      'Revolutionary technology with no direct competitors. Basic space weather data exists but lacks predictive capabilities. Our advantage: AI-powered forecasting and impact assessment.'
+    targetAudience:'
+      'Satellite operators, Telecommunications companies, Power grid operators, Aviation companies, Research institutions'
+    trialDays: 30'
+    setupTime: '1 week''
+    category: 'Space Technology'
+    realService: true;
+    technology: []
+    integrations: ['
+      'Solar observatories''
+      'Satellite networks''
+      'Power grids''
+      'Telecom systems''
+>>>>>>> origin/chore/fix-lint-and-merge
       'Aviation systems'
     ]
-    "useCases": [
+    useCases: ['
       'Weather forecasting''
       'Impact assessment''
       'Risk mitigation''
       'Operational planning''
       'Research analysis''
       'Safety planning'
+<<<<<<< HEAD
     ]
     roi: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.'
     competitors: ['Basic weather data', 'Manual monitoring']
@@ -1894,15 +2025,39 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Ground stations'
       'Tracking systems'
       'Mission control'
+=======
+    ]'
+    roi: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.''
+    competitors: ['Basic weather data', 'Manual monitoring']'
+    marketSize: '$30B space weather market''
+    growthRate: '200% annual growth''
+    variant: 'space-futuristic'
+    contactInfo: {}
+    marketPosition:'
+      'Revolutionary technology with no direct competitors. Basic launch coordination exists but lacks precision timing. Our advantage: Advanced coordination and optimization.'
+    targetAudience:'
+      'Launch providers, Space agencies, Satellite operators, Government agencies, Research institutions'
+    trialDays: 30'
+    setupTime: '2 weeks''
+    category: 'Space Technology'
+    realService: true;
+    technology: []
+    integrations: ['
+      'Launch vehicles''
+      'Ground stations''
+      'Tracking systems''
+      'Mission control''
+>>>>>>> origin/chore/fix-lint-and-merge
       'Satellite networks'
     ]
-    "useCases": [
+    useCases: ['
       'Launch coordination''
       'Mission planning''
       'Timing optimization''
       'Trajectory planning''
       'Mission tracking''
       'Performance analysis'
+<<<<<<< HEAD
     ]
     roi: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.'
     competitors: ['Basic coordination', 'Manual planning']
@@ -1924,15 +2079,39 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Satellite networks'
       'Telecom systems'
       'Monitoring tools'
+=======
+    ]'
+    roi: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.''
+    competitors: ['Basic coordination', 'Manual planning']'
+    marketSize: '$20B launch services market''
+    growthRate: '180% annual growth''
+    variant: 'space-futuristic'
+    contactInfo: {}
+    marketPosition:'
+      'Revolutionary technology with no direct competitors. Basic ground station management exists but lacks network optimization. Our advantage: Global coordination and optimization.'
+    targetAudience:'
+      'Satellite operators, Telecommunications companies, Space agencies, Research institutions, Commercial space companies'
+    trialDays: 30'
+    setupTime: '1 week''
+    category: 'Space Technology'
+    realService: true;
+    technology: []
+    integrations: ['
+      'Ground stations''
+      'Satellite networks''
+      'Telecom systems''
+      'Monitoring tools''
+>>>>>>> origin/chore/fix-lint-and-merge
       'Control systems'
     ]
-    "useCases": [
+    useCases: ['
       'Network management''
       'Traffic optimization''
       'Performance monitoring''
       'Maintenance planning''
       'Failover management''
       'Global coordination'
+<<<<<<< HEAD
     ]
     roi: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.'
     competitors: ['Basic management', 'Manual coordination']
@@ -1954,15 +2133,39 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Research databases'
       'Educational platforms'
       'Media systems'
+=======
+    ]'
+    roi: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.''
+    competitors: ['Basic management', 'Manual coordination']'
+    marketSize: '$25B ground station market''
+    growthRate: '220% annual growth''
+    variant: 'space-futuristic'
+    contactInfo: {}
+    marketPosition:'
+      'Revolutionary technology with no direct competitors. Basic data access exists but lacks AI analysis. Our advantage: Comprehensive data and AI-powered insights.'
+    targetAudience:'
+      'Researchers, Educational institutions, Government agencies, Space companies, Media organizations, Students'
+    trialDays: 30'
+    setupTime: '1 hour''
+    category: 'Space Technology'
+    realService: true;
+    technology: []
+    integrations: ['
+      'Satellite networks''
+      'Research databases''
+      'Educational platforms''
+      'Media systems''
+>>>>>>> origin/chore/fix-lint-and-merge
       'Government databases'
     ]
-    "useCases": [
+    useCases: ['
       'Research analysis''
       'Educational content''
       'Media reporting''
       'Policy development''
       'Scientific discovery''
       'Data exploration'
+<<<<<<< HEAD
     ]
     roi: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.'
     competitors: ['Basic data access', 'Manual research']
@@ -1984,15 +2187,39 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Blockchain networks'
       'Space services'
       'Financial systems'
+=======
+    ]'
+    roi: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.''
+    competitors: ['Basic data access', 'Manual research']'
+    marketSize: '$15B space research market''
+    growthRate: '180% annual growth''
+    variant: 'space-futuristic'
+    contactInfo: {}
+    marketPosition:'
+      'Revolutionary technology with no direct competitors. Traditional space services use manual contracts. Our advantage: Automated trading and secure marketplace.'
+    targetAudience:'
+      'Satellite operators, Launch providers, Space companies, Investors, Insurance companies, Government agencies'
+    trialDays: 30'
+    setupTime: '1 week''
+    category: 'Space Technology'
+    realService: true;
+    technology: []
+    integrations: ['
+      'Payment systems''
+      'Blockchain networks''
+      'Space services''
+      'Financial systems''
+>>>>>>> origin/chore/fix-lint-and-merge
       'Compliance platforms'
     ]
-    "useCases": [
+    useCases: ['
       'Asset trading''
       'Service procurement''
       'Capacity trading''
       'Investment trading''
       'Insurance trading''
       'Market making'
+<<<<<<< HEAD
     ]
     roi: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.'
     competitors: ['Manual contracts', 'Traditional procurement']
@@ -2014,15 +2241,39 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'VR systems'
       'Learning management'
       'Career platforms'
+=======
+    ]'
+    roi: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.''
+    competitors: ['Manual contracts', 'Traditional procurement']'
+    marketSize: '$100B space services market''
+    growthRate: '300% annual growth''
+    variant: 'space-futuristic'
+    contactInfo: {}
+    marketPosition:'
+      'Revolutionary technology with no direct competitors. Basic space education exists but lacks interactivity. Our advantage: Interactive courses and real-world simulations.'
+    targetAudience:'
+      'Students, Professionals, Space enthusiasts, Educational institutions, Companies, Government agencies'
+    trialDays: 30'
+    setupTime: '1 hour''
+    category: 'Space Technology'
+    realService: true;
+    technology: []
+    integrations: ['
+      'Educational platforms''
+      'VR systems''
+      'Learning management''
+      'Career platforms''
+>>>>>>> origin/chore/fix-lint-and-merge
       'Social networks'
     ]
-    "useCases": [
+    useCases: ['
       'Space education''
       'Career training''
       'Skill development''
       'Professional certification''
       'Academic learning''
       'Personal development'
+<<<<<<< HEAD
     ]
     roi: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.'
     competitors: ['Basic education', 'Traditional courses']
@@ -2031,6 +2282,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'space-futuristic'
     contactInfo: {
     contactInfo: {
+=======
+    ]'
+    roi: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.''
+    competitors: ['Basic education', 'Traditional courses']'
+    marketSize: '$8B space education market''
+    growthRate: '200% annual growth''
+    variant: 'space-futuristic'
+
+>>>>>>> origin/chore/fix-lint-and-merge
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2044,53 +2304,81 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9
     reviews: 250
   }
-];      "mobile": '+1 302 464 0950';'
-      "email": 'kleber@ziontechgroup.com';'
-      "address": '364 E Main St STE 1008 Middletown DE 19709''
-      "website": '"https"://ziontechgroup.com''
+      'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.',
+    launchDate: '2024-03-10',
+    customers: 500,
+    rating: 4.9,
+    reviews: 250,
+  },;
+
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
     }
     realImplementation: true
+<<<<<<< HEAD
     implementationDetails:
       'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.'
     launchDate: '2024-03-10'
     customers: 500
     rating: 4.9
     reviews: 250
+=======
+    implementationDetails: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.';
+    launchDate: '2024-03-10';
+    customers: 500;
+    rating: 4.9
+
+    reviews: 250
+
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 ];
-  "id": string,;
-  "name": string,;
-  "tagline": string,;
-  "price": string,;
-  "period": string,;
-  "description": string,;
-  "features": string[],;
-  "popular": boolean,;
-  "icon": string,;
-  "color": string,;
-  "textColor": string,;
-  "link": string,;
-  "marketPosition": string,;
-  "targetAudience": string,;
-  "trialDays": number,;
-  "setupTime": string,;
-  "category": string,;
-  "realService": boolean,;
-  "technology": string[],;
-  "integrations": string[],;
-  "useCases": string[],;
-  "roi": string,;
-  "competitors": string[],;
-  "marketSize": string,;
-  "growthRate": string,;
-  "variant": string,;
-  "contactInfo": {;
-    }
-    "mobile": string,;
-    "email": string,;
-    "address": string,;
-    "website": string;
+
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  contactInfo: {;,
+  mobile: string,;
+    email: string,;
+    address: string,;
+pr-12325
+  contactInfo: {;,
+  mobile: string,;
+    email: string,;
+    address: string,;}
+    website: string;}
   },;
+<<<<<<< HEAD
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2813,8 +3101,30 @@ pr-12325
     "period": '/month',;'
     "description": 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',;'
     "features": [;
+=======
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
+pr-12325
+export const spaceTechServices: SpaceTechService[] = [;
+  {;'
+    id: 'space-mission-management-platform',;'
+    name: 'Space Mission Management Platform',;'
+    tagline: 'Complete space mission planning and execution platform',;'
+    price: '$5,999',;'
+    period: '/month',;'
+    description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',;
+    features: [;'
+>>>>>>> origin/chore/fix-lint-and-merge
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',;'
-      'Regulatory compliance toolsMulti-satellite operations';'
+      'Regulatory compliance toolsMulti-satellite operations';
+      'Regulatory compliance toolsMulti-satellite operations';']
+pr-12325
     ],;
     popular: true,;'
     icon: '🚀',;'
@@ -2835,10 +3145,17 @@ pr-12325
     marketSize: '$469B space economy',;'
     growthRate: '400% annual growth',;'
     variant: 'space-futuristic',;
+<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+=======
+    contactInfo: {;'
+      mobile: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com',;'
+      address: '364 E Main St STE 1008 Middletown DE 19709',;'
+>>>>>>> origin/chore/fix-lint-and-merge
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,'
@@ -2848,6 +3165,7 @@ pr-12325
     rating: 4.9,
     reviews: 250;
 
+<<<<<<< HEAD
   }
   }
 
@@ -3306,10 +3624,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 '
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 ;
   }
 ];
+<<<<<<< HEAD
   mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
@@ -3377,6 +3698,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/chore/fix-lint-and-merge
     popular: true;
     icon: '🚀';
     color: 'from-cyan-600 to-blue-700';
@@ -3408,12 +3732,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 25;
     rating: 5.0;
     reviews: 12
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   {
     id: 'satellite-constellation-management';
     name: 'Satellite Constellation Management System';
     tagline: 'Manage large satellite networks with AI-powered optimization';
     price: '$3,999',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     period: '/month';
     description: 'Advanced satellite constellation management system that optimizes large networks of satellites for maximum coverage, efficiency, and performance. Manage thousands of satellites like SpaceX and OneWeb.',
     features: [
@@ -3451,12 +3783,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 40;
     rating: 4.9;
     reviews: 20
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   {
     id: 'space-debris-monitoring-system';
     name: 'Space Debris Monitoring & Avoidance System';
     tagline: 'Protect satellites from space debris with AI-powered monitoring';
     price: '$2,499',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     period: '/month';
     description: 'Advanced space debris monitoring system that tracks orbital debris and provides collision avoidance recommendations. Protect your satellites and ensure safe space operations.';
     features: [
@@ -3494,12 +3834,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 60;
     rating: 4.9;
     reviews: 30
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   {
     id: 'space-weather-forecasting';
     name: 'Space Weather Forecasting & Alert System';
     tagline: 'Predict space weather events that impact satellite operations';
     price: '$1,999',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     period: '/month';
     description: 'Advanced space weather forecasting system that predicts solar storms, radiation events, and other space weather phenomena that can impact satellite operations and communications.',
     features: [
@@ -3537,12 +3885,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 80;
     rating: 4.8;
     reviews: 40
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   {
     id: 'orbital-launch-coordination';
     name: 'Orbital Launch Coordination Platform';
     tagline: 'Coordinate complex orbital launches with precision timing';
     price: '$4,999',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     period: '/month';
     description: 'Advanced orbital launch coordination platform that manages complex launch sequences, orbital insertions, and mission timing. Coordinate launches like SpaceX and NASA with precision.',
     features: [
@@ -3580,12 +3936,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 35;
     rating: 4.9;
     reviews: 18
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   {
     id: 'ground-station-network-management';
     name: 'Ground Station Network Management System';
     tagline: 'Manage global ground station networks for satellite operations';
     price: '$3,499',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     period: '/month';
     description: 'Advanced ground station network management system that coordinates global networks of ground stations for satellite communications, tracking, and control.',
     features: [
@@ -3623,12 +3987,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 50;
     rating: 4.8;
     reviews: 25
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   {
     id: 'space-research-data-platform';
     name: 'Space Research Data & Analytics Platform';
     tagline: 'Access and analyze space research data with AI-powered insights';
     price: '$1,499',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     period: '/month';
     description: 'Comprehensive space research data platform that provides access to satellite imagery, space weather data, and research findings with AI-powered analysis and insights.',
     features: [
@@ -3666,12 +4038,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 200;
     rating: 4.9;
     reviews: 100
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   {
     id: 'space-commerce-platform';
     name: 'Space Commerce & Trading Platform';
     tagline: 'Trade space assets and services in a secure marketplace';
     price: '$2,999',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     period: '/month';
     description: 'Revolutionary space commerce platform that enables trading of satellite capacity, launch services, and space assets in a secure, blockchain-powered marketplace.',
     features: [
@@ -3751,6 +4131,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2024-03-10';
     customers: 500;
     rating: 4.9;
+<<<<<<< HEAD
     reviews: 250
   }
 ];
@@ -3767,3 +4148,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.9,
     reviews: 250}
 ],
+=======
+
+    reviews: 250
+  }
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

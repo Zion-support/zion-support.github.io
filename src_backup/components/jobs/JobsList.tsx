@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 
 import { useState, useEffect } from 'react;
 import { useAuth } from @/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client;
 import { Job, JobStatus } from @/types/jobs';
 import { Button } from '@/components/ui/button;
+=======
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { Job, JobStatus } from '@/types/jobs';
+import { Button } from '@/components/ui/button';
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
   Card,
   CardContent,
@@ -17,6 +25,7 @@ import { format } from 'date-fns;
 import Link from next/link';
 import { logErrorToProduction } from '@/utils/productionLogger;
 
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react,
 import { useAuth } from @/hooks/useAuth",
@@ -24,6 +33,14 @@ import { supabase } from "@/integrations/supabase/client,
 import { Job, JobStatus } from @/types/jobs",
 import { Button } from "@/components/ui/button,
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from @/components/ui/card",
+=======
+import { useState, useEffect } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client",
+import { Job, JobStatus } from "@/types/jobs",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { Badge } from "@/components/ui/badge,
 import { Loader2, Edit, X, Eye } from lucide-react'
@@ -32,7 +49,6 @@ import { format } from "date-fns",
 import Link from next/link,
 import {logErrorToProduction} from '@/utils/productionLogger,
 interface JobsListProps {
-  filter?: JobStatus,
   filter?: JobStatus;
 origin/cursor/automate-test-improve-and-merge-code-2533
   onSelectJob?: (jobId: string, jobTitle: string) => void
@@ -44,6 +60,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {}
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
+<<<<<<< HEAD
     const fetchJobs = async () => {
       if (!user) return,
 
@@ -141,6 +158,9 @@ if ( {) {$2;
           {filter 
             ? `No jobs with status ${filter} found.` 
             : "You havent posted any jobs yet."
+=======
+            : "You haven't posted any jobs yet."
+>>>>>>> origin/chore/fix-lint-and-merge
           }
 
         </p>
@@ -158,8 +178,6 @@ if ( {) {$2;
 
     }
 
-
-    const fetchJobs = null;
   return (
 
     <div className=grid gap-6 md:grid-cols-2>
@@ -196,6 +214,7 @@ if ( {) {$2;
     },
     fetchJobs();
 
+<<<<<<< HEAD
       <div className=flex justify-center items-center p-8>;
       </div>)}.order("created_at", { ascending: false }),if (isLoading) {return (<div className=flex justify-center items-center p-8>;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -252,6 +271,9 @@ interface JobsListProps  {filter?: JobStatus;
           {filter ;
             ? `No jobs with status "${filter}" found.` ;
             : You havent posted any jobs yet. }
+=======
+      <div className="flex justify-center items-center p-8">;
+>>>>>>> origin/chore/fix-lint-and-merge
 
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
@@ -356,6 +378,7 @@ return (<div className=grid gap-6 md:grid-cols-2" > {
               <Button variant="outline" size=sm>"
                 <X className="h-4 w-4 />
               </Button>
+<<<<<<< HEAD
             </div>;
           </CardContent>;
           <CardFooter className=flex justify-between p-4 pt-0 gap-2">;
@@ -403,3 +426,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
             </div>
+=======
+            </div>
+>>>>>>> origin/chore/fix-lint-and-merge

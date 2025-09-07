@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+
+
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function HelpPage() {
+  return (
+    <MainLayout title="Help & Support">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Help & Support</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the help page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React, { useState } from "react";
 import Head from "next/head";
@@ -22,6 +41,29 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
+import React, { useState } from "react";"
+import Head from "next/head";"
+import Link from "next/link";"
+import { motion, AnimatePresence } from "framer-motion";
+
+import React, { useState } from 'react';'
+import Head from 'next/head';'
+import Link from 'next/link';'
+import { motion, AnimatePresence } from 'framer-motion';
+
+  Search;
+  HelpCircle;
+  BookOpen;
+  MessageCircle;
+  Phone;
+  Mail;
+  FileText;
+  Video;
+  Download;
+  ExternalLink;
+  ChevronDown;
+  Cloud;
+import {}
   Search,
   HelpCircle,
   BookOpen,
@@ -32,23 +74,26 @@ import {
   Video,
   Download,
   ExternalLink,
-  ChevronDown,
+  ChevronDown,;
   Cloud,;
+
+"
+
 } from "lucide-react";
 
-const helpArticles = [
-  {
-    id: "overview"
-    title: "Understanding Our Services"
-    description: "Overview of all available services and solutions"
-    readTime: "7 min read"
+const helpArticles = []
+  {"
+    id: "overview""
+    title: "Understanding Our Services""
+    description: "Overview of all available services and solutions""
+    readTime: "7 min read""
     type: "Overview"
   }
-  {
-    id: "ai-services"
-    title: "AI Services"
+  {"
+    id: "ai-services""
+    title: "AI Services""
     description: "Everything about our AI and machine learning solutions."
-    icon: HelpCircle
+    icon: HelpCircle"
     color: "green"
     articles: [
       {
@@ -82,102 +127,15 @@ export default function HelpPage() {
 ];
 
     color: 'blue',
-    articles: helpArticles
+    articles: helpArticles;
   }
 ];
 
 export default function HelpPage() {;
-
-import {;
-  Search,;
-  HelpCircle,;
-  BookOpen,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  FileText,;
-  Video,;
-  Download,;
-  ExternalLink,;
-  ChevronDown,;
-  Cloud,;
-} from "lucide-react";
-
-const helpArticles = [;
-  {;
-    id: "overview",;
-    title: "Understanding Our Services",;
-    description: "Overview of all available services and solutions",;
-    readTime: "7 min read",;
-    type: "Overview",;
-  },;
-  {;
-    id: "ai-services",;
-    title: "AI Services",;
-    description: "Everything about our AI and machine learning solutions.",;
-    icon: HelpCircle,;
-    color: "green",;
-    articles: [;
-      {;
-        title: "AI Implementation Guide",;
-        description: "How to implement AI solutions in your business",;
-        readTime: "10 min read",;
-        type: "Guide",;
-      },;
-      {;
-        title: "Machine Learning Models",;
-        description: "Understanding different ML models and their applications",;
-        readTime: "8 min read",;
-        type: "Technical",;
-      },;
-      {;
-        title: "AI Best Practices",;
-        description: "Tips and best practices for AI development",;
-        readTime: "6 min read",;
-        type: "Best Practice",;
-      },;
-    ],;
-  },;
-  {;
-    id: "cloud-services",;
-    title: "Cloud Services",;
-    description: "Cloud infrastructure and deployment solutions.",;
-    icon: Cloud,;
-    color: "blue",;
-    articles: [;
-      {;
-        title: "Cloud Migration Guide",;
-        description: "Step-by-step guide to migrating to the cloud",;
-        readTime: "12 min read",;
-        type: "Guide",;
-      },;
-      {;
-        title: "Cloud Security",;
-        description: "Best practices for securing your cloud infrastructure",;
-        readTime: "9 min read",;
-        type: "Security",;
-      },;
-    ],;
-  },;
-];
-
-const helpCategories = [;
-  {;
-    title: "Getting Started",;
-    description: "New to our platform? Start here.",;
-    icon: BookOpen,;
-    color: "blue",;
-    articles: helpArticles,;
-  },;
-];
-
-export default function HelpPage() {;
-  const [searchTerm, setSearchTerm] = useState("");
-
   }
-  const filteredCategories = helpCategories
-    .map((category) => ({
-      ...category
+  const filteredCategories = helpCategories;
+    .map((category) => ({}
+      ...category;
       articles: category.articles.filter(
         (article) =>
           article.title.toLowerCase().includes(searchTerm.toLowerCase()) |
@@ -190,35 +148,35 @@ export default function HelpPage() {;
     <>;
       <Head>;
         <title>Help Center - Zion Tech Group</title>;
-        <meta
-          name="description"
+        <meta"
+          name="description""
           content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources."
         />;
-        <meta
-          name="keywords"
+        <meta"
+          name="keywords""
           content="help, support, documentation, FAQ, tutorials, guides"
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div
+            <motion&& motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6 }}
-              className="text-center max-w-4xl mx-auto">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+              transition={{ duration: 0 && 0.6 }}"
+              className="text-center max-w-4xl mx-auto">;"
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;"
                 Help <span className="text-blue-600">Center</span>;
-              </h1>;
+              </h1>;"
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
                 Find answers, get support, and learn how to make the most of our;
                 services.;
-              </p>;
-              <div className="relative max-w-md mx-auto">;
+              </p>;"
+              <div className="relative max-w-md mx-auto">;"
                 <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />;
-                <input
-                  type="text"
+                <input"
+                  type="text""
                   placeholder="Search help articles..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e && e.target.value)}
+                  onChange={(e) => setSearchTerm(e && e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500";
                 />;
               </div>;
@@ -229,19 +187,16 @@ export default function HelpPage() {;
     </>;
   );
 ;
-export default /**
- * HelpPage - Function description
+export default /**;
+ * HelpPage - Function description;
  */
-function HelpPage() {
-  const [search_term, setSearchTerm] = useState ("");
-  const [expanded_category, setExpandedCategory] = useState < number | null>(null);
-;
-  const toggle_category = (index: number) =>: any {
+function HelpPage() { return null; }
+  const toggle_category = (index: number) =>: any {}
     setExpandedCategory (expanded_category === index ? null : index);
   }
 ;
   const filtered_categories = help_categories;
-    .map ((category) => ({
+    .map ((category) => ({}
       ...category,
       articles: category.articles.filter (
         (article) =>;
@@ -255,39 +210,39 @@ function HelpPage() {
     <>;
       <Head>;
         <title > Help Center - Zion Tech Group</title>;
-        <meta;
-          name="description";
+        <meta;"
+          name="description";"
           content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources.";
         />;
-        <meta;
-          name="keywords";
+        <meta;"
+          name="keywords";"
           content="help, support, documentation, FAQ, tutorials, guides";
         />;
-      </Head>;
+      </Head>;"
       <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - blue - 50">;
-        {/* Hero Section */}
-        <section className="relative py - 20 px - 4">;
+        {/* Hero Section */}"
+        <section className="relative py - 20 px - 4">;"
           <div className="max - w-7xl mx - auto">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6 }}"
               className="text - center max - w-4xl mx - auto";
-            >;
-              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+            >;"
+              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;"
                 Help <span className="text - blue - 600">Center</span>;
-              </h1>;
+              </h1>;"
               <p className="text - xl text - gray - 600 mb - 8 max - w-3xl mx - auto">;
                 Find answers, get support, and learn how to make the most of our;
                 services.;
-              </p>;
-              <div className="relative max - w-md mx - auto">;
+              </p>;"
+              <div className="relative max - w-md mx - auto">;"
                 <Search className="w - 5 h - 5 absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400" />;
-                <input;
-                  type="text";
+                <input;"
+                  type="text";"
                   placeholder="Search help articles...";
                   value={search_term}
-                  on_change={(e) => setSearchTerm (e.target.value)}
+                  on_change={(e) => setSearchTerm (e.target.value)}"
                   className="w - full pl - 10 pr - 4 py - 3 rounded - lg border border - gray - 300 focus:outline - none focus:ring - 2 focus:ring - blue - 500";
                 />;
               </div>;
@@ -297,4 +252,25 @@ function HelpPage() {
       </div>;
     </>);
 
+<<<<<<< HEAD
 }
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function HelpPage() {}
+  return ("
+    <MainLayout title="Help & Support">"
+      <div className="container mx-auto px-4 py-16">"
+        <h1 className="text-4xl font-bold mb-8">Help & Support</h1>"
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the help page.
+        </p>
+      </div>
+    </MainLayout>;
+  );
+
+}
+
+}'"
+
+>>>>>>> origin/chore/fix-lint-and-merge

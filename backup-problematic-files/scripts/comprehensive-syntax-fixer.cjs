@@ -2,14 +2,15 @@
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async runCommand(command, options = {}) {
     try {
-      const { stdout, stderr } = await execAsync(command, { 
+  // TODO: Implement
+      const { stdout, stderr } = await execAsync(command, { )
         cwd: process.cwd(), 
         timeout: 30000, 
-        ...options 
+        ...options;
       });
+<<<<<<< HEAD
       return { success: true, stdout, stderr }
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`);
@@ -39,13 +40,40 @@
       /======/, // Git merge markers
     ];
     
-    return syntaxErrorPatterns.some(pattern => pattern.test(content));
-  }
+=======
+      return { success: true, stdout, stderr };
 
-  // Fix common syntax errors
+      return {
+  // TODO: Implement
+        success: false, 
+        stdout: error.stdout || ,"
+        stderr: error.stderr || error.message;
+      };
+  // Check if file has merge conflicts;
+  hasMergeConflicts(content) {
+  // Check if file has syntax errors;
+  hasSyntaxErrors(content) {
+    // Check for common syntax error patterns;
+    const syntaxErrorPatterns = ["
+      /,\s*"/,  // Comma followed by quote;
+      /;\s*"/,  // Semicolon followed by quote;
+      /:\s*"/,  // Colon followed by quote;
+      /\(\s*"/, // Opening parenthesis followed by quote;
+      /\[\s*"/, // Opening bracket followed by quote;
+      /{\s*"/,  // Opening brace followed by quote;"
+      />>>>>/,  // Git merge markers;
+      /<<<<<</, // Git merge markers;
+      /======/, // Git merge markers;]
+    ];)
+>>>>>>> origin/chore/fix-lint-and-merge
+    return syntaxErrorPatterns.some(pattern => pattern.test(content));
+  // Fix common syntax errors;
   fixSyntaxErrors(content) {
     let fixed = content;
+<<<<<<< HEAD
+    
     // Fix merge conflicts by keeping the HEAD version
+<<<<<<< HEAD
 
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
     
@@ -63,43 +91,32 @@
     // Fix missing semicolons
     fixed = fixed.replace(/([^;}])\n\s*}/g, $1;\n}');
     
+=======
+<<<<<<< HEAD
+    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
+    // Fix merge conflicts by keeping the HEAD version
+=======
+
+=======
+    // Fix merge conflicts by keeping the HEAD version;
+    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n;
+    // Fix merge conflicts by keeping the HEAD version;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    fixed = fixed.replace(/
+    // Fix common syntax patterns;)"
+
+>>>>>>> origin/chore/fix-lint-and-merge
     return fixed;
-  }
-
-  // Process a single file
+  // Process a single file;
   async processFile(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      
-      if (this.hasMergeConflicts(content)) {
-        this.mergeConflictFiles.push(filePath);
-        this.log(`Found merge conflicts in: ${filePath}`);
-      }
-      
-      if (this.hasSyntaxErrors(content)) {
-        this.syntaxErrorFiles.push(filePath);
-        this.log(`Found syntax errors in: ${filePath}`);
-        
-        const fixedContent = this.fixSyntaxErrors(content);
-        if (fixedContent !== content) {
-          fs.writeFileSync(filePath, fixedContent);
-          this.fixedFiles.push(filePath);
-          this.log(`Fixed syntax errors in: ${filePath}`);
-        }
-      }
-      
-      return true;
-    } catch (error) {
-      this.corruptedFiles.push(filePath);
-      this.log(`Error processing file ${filePath}: ${error.message}`);
-      return false;
-    }
-  }
+  // TODO: Implement
 
-  // Get all files to process
+      return false;
+  // Get all files to process;
   async getAllFiles() {
     const files = [];
     const directories = [
+<<<<<<< HEAD
       pages',
       'src,
       components',
@@ -117,40 +134,34 @@
       integrations',
       'tests
     ];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
+    ];
     for (const dir of directories) {
       if (fs.existsSync(dir)) {
         const dirFiles = await this.getFilesInDirectory(dir);
         files.push(...dirFiles);
-      }
-    }
-
     return files;
-  }
-
-  // Get files in directory recursively
+  // Get files in directory recursively;
   async getFilesInDirectory(dir) {
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     const items = fs.readdirSync(dir);
-    
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory()) {
         const subFiles = await this.getFilesInDirectory(fullPath);
         files.push(...subFiles);
       } else if (item.endsWith(.tsx') || item.endsWith('.ts) || item.endsWith(.js') || item.endsWith('.jsx)) {
         files.push(fullPath);
-      }
-    }
-    
-    return files;
-  }
-
-  // Clean up corrupted directories
+  // Clean up corrupted directories;
   async cleanCorruptedDirectories() {
     const corruptedDirs = [
+<<<<<<< HEAD
       pages.disabled',
       'pages.disabled_auto,
       pages.corrupted.1756905863',
@@ -167,36 +178,33 @@
       'temp-backup,
       temp_working'
     ];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     for (const dir of corruptedDirs) {
-      if (fs.existsSync(dir)) {
-        try {
-          await this.runCommand(`rm -rf ${dir}`);
-          this.log(`Removed corrupted directory: ${dir}`);
-        } catch (error) {
-          this.log(`Failed to remove directory ${dir}: ${error.message}`);
-#!/usr/bin/env node
+  // TODO: Implement
+
 const fs = require('fs')
+<<<<<<< HEAD
 const path = require(path')
 
+=======
+const path = require('path')
+>>>>>>> origin/chore/fix-lint-and-merge
 class ComprehensiveSyntaxFixer {
+  // TODO: Implement
   constructor() {
     this.projectRoot = process.cwd()
     this.fixedFiles = []
     this.errors = []
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`)
-  }
 
   fixFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8')
-      let originalContent = content;
+  // TODO: Implement
 
-      // Fix common syntax errors
+      let originalContent = content;
+      // Fix common syntax errors;
       const fixes = [
+<<<<<<< HEAD
         // Remove extra semicolons after braces
         { pattern: /{\s*;/g, replacement: {' },
         { pattern: /}\s*;/g, replacement: '} },
@@ -257,33 +265,29 @@ class ComprehensiveSyntaxFixer {
       // Apply all fixes
       fixes.forEach(fix => {
         if (typeof fix.replacement === function) {
+=======
+        // Remove extra semicolons after braces;
+
+        // Fix merge conflict markers;
+        { pattern: /^
+        // Fix malformed object literals;
+
+>>>>>>> origin/chore/fix-lint-and-merge
           content = content.replace(fix.pattern, fix.replacement)
         } else {
-          content = content.replace(fix.pattern, fix.replacement)
-        }
+  // TODO: Implement
       })
 
-      // Additional specific fixes for common patterns
+      // Additional specific fixes for common patterns;
       content = this.fixSpecificPatterns(content)
 
       if (content !== originalContent) {
-        fs.writeFileSync(filePath, content, 'utf8')
-        this.fixedFiles.push(filePath)
-        this.log(`✅ Fixed syntax errors in: ${filePath}`)
-        return true;
-      }
 
-      return false;
-    } catch (error) {
-      this.errors.push({ file: filePath, error: error.message })
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`)
-      return false;
-    }
-  }
 
   fixSpecificPatterns(content) {
-    // Fix specific malformed patterns
+    // Fix specific malformed patterns;
     const specificFixes = [
+<<<<<<< HEAD
       // Fix ecosystem.config.cjs structure
       {
         pattern: /module\.exports\s*=\s*{\s*apps:\s*\[\s*{\s*name:\s*[^]*',\s*script:\s*'[^]*,\s*args:\s*'[^']*,\s*cwd:\s*[^']*',\s*instances:\s*\d+,\s*autorestart:\s*(true|false),\s*watch:\s*(true|false),\s*max_memory_restart:\s*[^]*',\s*env:\s*{\s*NODE_ENV:\s*'[^]*,\s*PORT:\s*\d+\s*}\s*}\s*}/s,
@@ -297,70 +301,65 @@ class ComprehensiveSyntaxFixer {
         }
       }
     ]
+=======
+      // Fix ecosystem.config.cjs structure;
+      {]
+>>>>>>> origin/chore/fix-lint-and-merge
 
-    specificFixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement)
-    })
+
+    specificFixes.forEach(fix => {)
 
     return content;
-  }
 
   async fixAllScripts() {
+<<<<<<< HEAD
     this.log(🔧 Starting comprehensive syntax fixing...)
     
     const scriptDirs = ['scripts', automation]
     const extensions = ['.js', .cjs, '.mjs', .ts]
     
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const dir of scriptDirs) {
       const dirPath = path.join(this.projectRoot, dir)
       if (fs.existsSync(dirPath)) {
         await this.fixDirectory(dirPath, extensions)
-      }
-    }
 
+<<<<<<< HEAD
     // Fix root config files
     const configFiles = ['ecosystem.config.cjs', package.json]
+=======
+    // Fix root config files;
+
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const file of configFiles) {
       const filePath = path.join(this.projectRoot, file)
       if (fs.existsSync(filePath)) {
         this.fixFile(filePath)
-      }
-    }
-
+`;
     this.log(`✅ Fixed ${this.fixedFiles.length} files`)
-    if (this.errors.length > 0) {
+    if (this.errors.length > 0) {`;
       this.log(`❌ ${this.errors.length} errors encountered`)
-      this.errors.forEach(error => {
-        this.log(`  - ${error.file}: ${error.error}`)
-      })
-    }
 
-    return {
+
+  // TODO: Implement
       fixedFiles: this.fixedFiles,
-      errors: this.errors
-    }
-  }
+      errors: this.errors;
 
   async fixDirectory(dirPath, extensions) {
     const files = fs.readdirSync(dirPath)
-    
     for (const file of files) {
       const filePath = path.join(dirPath, file)
       const stat = fs.statSync(filePath)
-      
-      if (stat.isDirectory()) {
         await this.fixDirectory(filePath, extensions)
       } else if (stat.isFile()) {
         const ext = path.extname(file)
         if (extensions.includes(ext)) {
-          this.fixFile(filePath)
-        }
-      }
-    }
-  }
 
-  // Run TypeScript compiler to check for errors
+  // Run TypeScript compiler to check for errors;
   async runTypeCheck() {
+<<<<<<< HEAD
     this.log('Running TypeScript type check...');
     const result = await this.runCommand(npx tsc --noEmit);
     if (result.success) {
@@ -384,22 +383,25 @@ class ComprehensiveSyntaxFixer {
       return false;
     }
   }
+=======
 
-  // Generate report
+>>>>>>> origin/chore/fix-lint-and-merge
+
+  // Generate report;
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      summary: {
-        totalFilesProcessed: this.fixedFiles.length + this.corruptedFiles.length + this.mergeConflictFiles.length + this.syntaxErrorFiles.length,
+      summary: {,
+  totalFilesProcessed: this.fixedFiles.length + this.corruptedFiles.length + this.mergeConflictFiles.length + this.syntaxErrorFiles.length,
         fixedFiles: this.fixedFiles.length,
         corruptedFiles: this.corruptedFiles.length,
         mergeConflictFiles: this.mergeConflictFiles.length,
-        syntaxErrorFiles: this.syntaxErrorFiles.length
+        syntaxErrorFiles: this.syntaxErrorFiles.length;
       },
-      details: {
-        fixedFiles: this.fixedFiles,
+      details: {,
         corruptedFiles: this.corruptedFiles,
         mergeConflictFiles: this.mergeConflictFiles,
+<<<<<<< HEAD
         syntaxErrorFiles: this.syntaxErrorFiles
       }
     }
@@ -407,65 +409,68 @@ class ComprehensiveSyntaxFixer {
     const reportFile = path.join(__dirname, '..', automation, 'logs', syntax-fixer-report.json);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report saved to ${reportFile}`);
-    return report;
-  }
+=======
+        syntaxErrorFiles: this.syntaxErrorFiles;
 
-  // Main execution method
+>>>>>>> origin/chore/fix-lint-and-merge
+    return report;
+
+  // Main execution method;
   async run() {
+<<<<<<< HEAD
     this.log('Starting comprehensive syntax fixing...');
     
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, .., 'automation', logs);
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
-    }
 
-    // Clean up corrupted directories
+    // Clean up corrupted directories;
     await this.cleanCorruptedDirectories();
 
-    // Get all files to process
-    const files = await this.getAllFiles();
+    // Get all files to process;
+    const files = await this.getAllFiles();`;
     this.log(`Found ${files.length} files to process`);
 
-    // Process each file
-    for (const file of files) {
+    // Process each file;
       await this.processFile(file);
-    }
 
-    // Run type check
+    // Run type check;
     await this.runTypeCheck();
 
-    // Run lint check
+    // Run lint check;
     await this.runLintCheck();
 
-    // Generate report
+    // Generate report;
     const report = this.generateReport();
-    
-    this.log('Comprehensive syntax fixing completed');
-    this.log(`Fixed ${report.summary.fixedFiles} files`);
-    this.log(`Found ${report.summary.corruptedFiles} corrupted files`);
-    this.log(`Found ${report.summary.mergeConflictFiles} files with merge conflicts`);
+
     this.log(`Found ${report.summary.syntaxErrorFiles} files with syntax errors`);
 
-    return report;
-  }
-}
 
-// Handle command line arguments
+// Handle command line arguments;
 if (require.main === module) {
   const fixer = new ComprehensiveSyntaxFixer();
   const command = process.argv[2];
 
   switch (command) {
+<<<<<<< HEAD
     case "run":
       fixer.run().catch(error => {
         console.error(Syntax fixing failed: , error);
+=======
+    case "run":"
+      fixer.run().catch(error => {)"
+        console.error("Syntax fixing failed: ", error);"
+>>>>>>> origin/chore/fix-lint-and-merge
         process.exit(1);
-      });
-      break;
-    case "report":
+      break;"
+    case "report":"
       fixer.generateReport();
       break;
+<<<<<<< HEAD
     default:
       console.log(Usage: node comprehensive-syntax-fixer.cjs [run|report]);
       process.exit(1);
@@ -476,11 +481,17 @@ if (require.main === module) {
 const { execSync } = require(child_process);
 
 console.log('🔧 Starting Comprehensive Syntax Fixer...');
+=======
+    default:"
+      console.log("Usage: node comprehensive-syntax-fixer.cjs [run|report]");"
+
+>>>>>>> origin/chore/fix-lint-and-merge
 
   constructor() {}
     this.fixedFiles = [];
     this.errors = [];
     this.processedFiles = 0;
+<<<<<<< HEAD
   }
   async fixAll() {}
     try {}
@@ -489,13 +500,17 @@ console.log('🔧 Starting Comprehensive Syntax Fixer...');
       // Get all JS/JSX/TS/TSX files;
       const files = this.getAllFiles('.', [.js, '.jsx', .ts, '.tsx']);
       
+=======
+  async fixAll() {}
+    try {}
+
+>>>>>>> origin/chore/fix-lint-and-merge
       console.log(`Found ${files.length} files to process`);
-      
       for (const file of files) {}
-        try {}
           this.processedFiles++;
           if (this.fixFile(file)) {}
             this.fixedFiles.push(file);
+<<<<<<< HEAD
           }
         } catch (error) {}
           this.errors.push({ file, error: error.message }
@@ -532,15 +547,29 @@ console.log('🔧 Starting Comprehensive Syntax Fixer...');
     }
     return files;
   }
+=======
+        } catch (error) {}
+          this.errors.push({ file, error: error.message })
+
+  getAllFiles(dir, extensions) {}
+    if (!fs.existsSync(dir)) {}
+    for (const item of items) {}
+      if (stat.isDirectory()) {}
+        // Skip node_modules, .next, dist, etc.
+
+          files.push(...this.getAllFiles(fullPath, extensions));
+      } else if (stat.isFile()) {}
+        const ext = path.extname(fullPath);
+        if (extensions.includes(ext)) {}
+>>>>>>> origin/chore/fix-lint-and-merge
   fixFile(filePath) {}
-    try {}
-      const content = fs.readFileSync(filePath, 'utf8');
+
       let fixedContent = content;
       let hasChanges = false;
-
       // Fix common syntax errors;
       const fixes = []
         // Fix missing semicolons;
+<<<<<<< HEAD
         { pattern: /(\w+)\s*$/gm, replacement: $1; },
         
         // Fix missing closing braces;
@@ -563,17 +592,23 @@ console.log('🔧 Starting Comprehensive Syntax Fixer...');
           }
         },
         
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
         // Fix missing closing tags;
-        { pattern: /<(\w+)[^>]*>[\s\S]*?$/gm, replacement: (match, tag) => {}
-          if (!match.includes(`</${tag}>`)) {`}
+        { pattern: /<(\w+)[^>]*>[\s\S]*?$/gm, replacement: (match, tag) => {}`;
+          if (!match.includes(`</${tag}>`)) {`}`;
             return match + `\n</${tag}>`;`
+<<<<<<< HEAD
           }
           return match;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         }},
-        
         // Fix extra content after closing tags;
         { pattern: /<\/\w+>\s*[^<\s][^<]*$/gm, replacement: (match) => {}
           const lines = match.split('\n');
+<<<<<<< HEAD
           const lastTagIndex = lines.findIndex(line => line.includes(</));
           if (lastTagIndex >= 0) {}
             return lines.slice(0, lastTagIndex + 1).join('\n');
@@ -581,11 +616,15 @@ console.log('🔧 Starting Comprehensive Syntax Fixer...');
           return match;
         }},
         
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
         // Fix duplicate function declarations;
         { pattern: /export\s+default\s+function\s+\w+[\s\S]*?}\s*export\s+default\s+function\s+\w+/g, 
           replacement: (match) => {}
             const parts = match.split(export default function);
             return 'export default function' + parts[1];
+<<<<<<< HEAD
           }
         },
         
@@ -601,12 +640,15 @@ console.log('🔧 Starting Comprehensive Syntax Fixer...');
         // Fix missing closing quotes;
         { pattern: /(['"])[^'"]*$/gm, replacement: (match) => match + match[0] }
       ];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       for (const fix of fixes) {}
         const newContent = fixedContent.replace(fix.pattern, fix.replacement);
         if (newContent !== fixedContent) {}
           fixedContent = newContent;
           hasChanges = true;
+<<<<<<< HEAD
         }
       }
       if (hasChanges) {}
@@ -620,16 +662,22 @@ console.log('🔧 Starting Comprehensive Syntax Fixer...');
       return false;
     }
   }
+=======
+      if (hasChanges) {}"
+
+>>>>>>> origin/chore/fix-lint-and-merge
   generateReport() {}
     const report = {}
-      timestamp: new Date().toISOString(),
       processedFiles: this.processedFiles,
-      fixedFiles: this.fixedFiles.length,
       errors: this.errors.length,
       fixedFileList: this.fixedFiles,
       errorList: this.errors;
+<<<<<<< HEAD
     }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
+<<<<<<< HEAD
     const reportPath = 'syntax-fix-report.json';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
@@ -644,3 +692,6 @@ if (require.main === module) {}
 });
 }
 module.exports = ComprehensiveSyntaxFixer;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

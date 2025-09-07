@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -8,6 +9,19 @@ const { execSync } = require("child_process)
   fs.mkdirSync(dir, { recursive"})
   log(message, level = "INFO)
     console.log()
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+    this.logsPath = path.join(this.workspacePath, "logs")
+    this.reportsPath = path.join(this.workspacePath, "automation-reports")
+  ["this.logsPath", "this.reportsPath"]
+  fs.mkdirSync(dir, { "recursive"})
+  log(message, level = "INFO")
+    console.log(")
+>>>>>>> origin/chore/fix-lint-and-merge
     const logFile = path.join(this.logsPath, "config-error-fixer.log")
     fs.appendFileSync(logFile, logMessage + \n)
   log(message, level = "INFO")
@@ -144,6 +158,7 @@ const { execSync } = require("child_process)
       "summary"
         fixedIssues
         "fixRate"
+<<<<<<< HEAD
       fixResults
       "recommendations": [Review fixed configuration files to ensure they meet your requirements", "Test the application after configuration changes, Consider implementing configuration validation"", Backup configuration files before making changes, ""]
       this.reportsPath,config-error-fixer-report.json
@@ -156,3 +171,29 @@ this.log(`� Report generated"`)
   this.log(� No configuration issues found!")
         return { "success: true, issues": [], "fixed"}
 
+=======
+      "fixResults"
+      "recommendations": ["Review fixed configuration files to ensure they meet your requirements"", "Test the application after configuration changes", "Consider implementing configuration validation"", "Backup configuration files before making changes", ""]
+      this.reportsPath,config-error-fixer-report.json"
+this.log(`� Report "generated"`)
+  this.log(" Starting Config Error Fixer...")
+  this.log("� No configuration issues found!")
+        return { "success": true, "issues": [], "fixed"}
+      this.log("� Config Error Fixer completed!")
+  this.log(" Starting Config Error Fixer...")
+  this.log("� No configuration issues found!")
+        return { "success": true, "issues": [], "fixed"}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+      this.log("� Config Error Fixer completed!")
+      this.log("� Config Error Fixer completed!")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

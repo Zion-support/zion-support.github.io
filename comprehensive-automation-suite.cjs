@@ -6,6 +6,7 @@ class ComprehensiveAutomationSuite {
   constructor() {
     this.projectRoot = process.cwd();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this.startTime = new Date();
     this.results = {
@@ -430,6 +431,8 @@ class ComprehensiveAutomationSuite {
 
     return recommendations;
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
   async run() {

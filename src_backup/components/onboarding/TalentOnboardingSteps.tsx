@@ -1,10 +1,23 @@
+import React from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
 
+return <OnboardingTracker steps={steps} />
+
+<<<<<<< HEAD
 import React from "react,import { useAuth } from @/hooks/useAuth",import { useOnboardingStatus  } from '@/hooks/useOnboardingStatus;
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon  } from lucide-react';
 return <OnboardingTracker steps={steps} />;
 import React from 'react';
 import { use_auth } from '@/hooks/ use_auth';
 import { useOnboardingStatus } from '@/hooks/ useOnboardingStatus';
+=======
+import React from 'react';
+import { use_auth } from '@/hooks / use_auth';
+import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
+
+>>>>>>> origin/chore/fix-lint-and-merge
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
 import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
 import { use_auth } from @/hooks/ use_auth';
@@ -19,6 +32,7 @@ function TalentOnboardingSteps() {
   const onboarding_status = useOnboardingStatus ();
   const steps: OnboardingStep[] = [;
 
+<<<<<<< HEAD
 
 
 
@@ -39,15 +53,27 @@ export function TalentOnboardingSteps() {
       action: Update"},
 
 main
+=======
+  const steps: OnboardingStep[] = [
+    {
+      id: "profile",
+      label: "Complete your profile",
+      completed: onboardingStatus.profileCompleted,
+      link: "/profile",
+>>>>>>> origin/chore/fix-lint-and-merge
 
     {
       id: "skills,
       label: Add your top skills",
       completed: onboardingStatus.skillsAdded,
+<<<<<<< HEAD
       link: "/profile/skills,
       action: Add Skills"},
 
 main
+=======
+      link: "/profile/skills",
+>>>>>>> origin/chore/fix-lint-and-merge
 
     {
       id: "availability,
@@ -58,6 +84,7 @@ main
       id: match",
       label: "Receive your first job match,
       completed: onboardingStatus.matchReceived,
+<<<<<<< HEAD
       link: /talent-dashboard",
       action: "Set},
     {
@@ -67,10 +94,13 @@ main
       id: match",
       label: "Receive your first job match,
       completed: onboardingStatus.matchReceived,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const { user } = useAuth();
   const onboardingStatus = null;
   return <OnboardingTracker steps={steps} />
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { use_auth  } from '@/hooks / use_auth;
@@ -110,3 +140,6 @@ export /**;
   
   return <OnboardingTracker steps={steps} />
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

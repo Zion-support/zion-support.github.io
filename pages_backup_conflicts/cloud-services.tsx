@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 import React from 'react;
@@ -11,6 +12,11 @@ interface CloudservicesProps {
   // Add props here as needed
 }
 export default function Cloudservices({}: CloudservicesProps) {
+=======
+import React from 'react';
+
+export default function Cloudservices({ }: CloudservicesProps) {
+>>>>>>> origin/chore/fix-lint-and-merge
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -43,8 +49,5 @@ export default function Cloudservices(): any ({}: CloudservicesProps) {  return 
     <div>
       <h1>Cloudservices</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
-
-}
-}

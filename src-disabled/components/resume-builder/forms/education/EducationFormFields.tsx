@@ -10,6 +10,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { format } from 'date-fns';
 import { Loader2 } from 'lucide-react';
+<<<<<<< HEAD
 import { Button } from '@/components / ui / button';
 import { Textarea } from '@/components / ui / textarea';
 import { Input } from '@/components / ui / input';
@@ -20,11 +21,14 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { format } from 'date-fns';
 import { Loader2 } from 'lucide-react';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+<<<<<<< HEAD
 import { Button } from '@/components/ui/ button';
 import { Textarea } from '@/components/ui/ textarea';
 import { Input } from '@/components/ui/ input';
@@ -46,6 +50,8 @@ import { Input } from '@/components/ui/ input;
 import { Checkbox } from @/components/ui/ checkbox';
 import { Alert, AlertDescription } from '@/components/ui/ alert;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
 
@@ -54,6 +60,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage,
 } from '@/components/ui/ form';
 import { useState } from 'react';
@@ -63,6 +70,8 @@ import { Education } from '@/types/ resume';
 import { useState } from 'react;
 import { EducationFormFieldsProps } from ./types';
 import { Education } from '@/types/ resume;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { Education } from @/types / resume';
 // Define schema for form validation;
@@ -126,6 +135,7 @@ import { EducationFormFieldsProps  } from ./types';
 // Define schema for form validation
 const educationSchema = null;
 
+<<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';
 import { useState } from 'react';
@@ -195,6 +205,11 @@ import { EducationFormFieldsProps   } from './types;
 // Define schema for form validation;
 const educationSchema  = null;return (<Form {...form}>;<form on_submit={form.handle_submit (handle_submit)} className=space - y-4'>;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4>;
+=======
+  return (
+
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+>>>>>>> origin/chore/fix-lint-and-merge
 </div>
 pr-12325
           <FormField;
@@ -203,13 +218,17 @@ pr-12325
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel > Institution</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
                   <Input;
                     placeholder=University of California, MIT, etc.;{...field}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   <Input;'
                     placeholder='University of California, MIT, etc.;
                     {...field}
                   />;
                 </FormControl>;
+<<<<<<< HEAD
                 <FormMessage />;control={form.control}name="institution;
             render={({ field }: { field: any }) => (<FormItem>;
                 <FormLabel>Institution</FormLabel>;
@@ -269,6 +288,9 @@ pr-12325
                   <Input type=date' {...field} value={field && field.value || '} />                </FormControl>;
                 <FormMessage />;
               </FormItem>;<Input type=date' {...field} value={field.value || '} />                </FormControl>;
+=======
+                <FormMessage />;
+>>>>>>> origin/chore/fix-lint-and-merge
             control={form.control}
             name=institution""
 
@@ -335,8 +357,11 @@ pr-12325
               </FormItem>;
 
             )}
+<<<<<<< HEAD
           />
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           />;
           />
 
@@ -360,6 +385,7 @@ pr-12325
             <FormField
               control={form.control}
 
+<<<<<<< HEAD
 
 
                     <Checkbox
@@ -380,10 +406,13 @@ pr-12325
                     <FormLabel>I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               )}
 
             />;
 
+<<<<<<< HEAD
             {!form && form.watch(is_current') && (;
 
               <FormField
@@ -441,6 +470,8 @@ pr-12325
         </div>;<FormField;
           control={form.control}
           name=location';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               <FormField;
                 control={form && form.control}'
                 name=end_date
@@ -487,7 +518,8 @@ pr-12325
           <FormField;
             control={form.control}
             name='start_date';
-            render={({ field }: { field: any }) => (<FormItem>;
+            render={({ field }: { field: any }) => (
+              <FormItem>;
                 <FormLabel > Start Date</FormLabel>;
                 <FormControl>;
                   <Input type=date' {...field} value={field.value || '} />                </FormControl>;
@@ -498,28 +530,35 @@ pr-12325
             <FormField;
               control={form.control}'
               name='is_current';
+<<<<<<< HEAD
               render={({ field }: { field: any }) => (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               render={({ field }: { field: any }) => ('
               render={({ field }: { field: any }) => (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2>                  <FormControl>;
               render={({ field }: { field: any }) => (
                 <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
                     <Checkbox;
-                      checked = {field.value }
-                      onCheckedChange = {field.on_change }
+                      checked = {field.value, }
+                      onCheckedChange = {field.on_change, }
                     />;
                   </FormControl>;
                   <div className=space - y-1 leading - none'>;
                     <FormLabel > I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>)}
+<<<<<<< HEAD
             />;
             {!form.watch ('is_current) && (<FormField;
                 control={form.control}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               <FormField;
                 control={form.control}
                 name='end_date';
-                render={({ field }: { field: any }) => (<FormItem>;
+                render={({ field }: { field: any }) => (
+                  <FormItem>;
                     <FormLabel > End Date</FormLabel>;
                     <FormControl>;
                       <Input type=date' {...field} value={field.value || '} />                    </FormControl>;
@@ -532,6 +571,7 @@ pr-12325
         <FormField;
           control={form.control}
 
+<<<<<<< HEAD
         />;
 
 
@@ -540,6 +580,9 @@ pr-12325
 
           control={form && form.control}
           name=description'
+=======
+          name='description'
+>>>>>>> origin/chore/fix-lint-and-merge
 
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
@@ -547,6 +590,7 @@ pr-12325
                 <Textarea'
                   placeholder='Notable achievements, courses, activities...''
                   className='min-h-[100px]'
+<<<<<<< HEAD
           control={form.control}/>;<FormField;
           control={form && form.control}control={form.control}name=description';
           render={({ field }: { field: any }) => (            <FormItem>;
@@ -555,6 +599,8 @@ pr-12325
                 <Textarea;
                   placeholder='Notable achievements, courses, activities...;
                   className=min-h-[100px]';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </FormItem>)}
         />;
@@ -564,6 +610,7 @@ pr-12325
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel > Description (Optional)</FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
                 <Textarea;
                   placeholder='Notable achievements, courses, activities...';
                   className=min - h-[100px];
@@ -585,6 +632,8 @@ pr-12325
                 <Textarea;
                   placeholder="Notable achievements, courses, activities...;
                   className=min-h-[100px]";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           name="location
           render={({ field }: { field: any }) => (
@@ -631,6 +680,7 @@ pr-12325
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
               <FormMessage />;{isEditing ? 'Update' : Add} Education;
@@ -640,6 +690,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Form>;
   )/>;{error && (<Alert variant='destructive'>;
   )
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   )
         />;
@@ -647,10 +699,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Alert variant=destructive>;
             <AlertDescription>{error}</AlertDescription>;
           </Alert>;
+<<<<<<< HEAD
         )}<div className='flex justify-between pt-2'>;
           <Button type=button variant='outline' onClick={onCancel}>            {isEditing ? Cancel : 'Back'}
           </Button>;<Button type=submit disabled={isLoading}>;
             {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         )}
 
             {isLoading && <Loader2 className=mr-2 h-4 w-4 animate-spin />}'
@@ -659,9 +714,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </form>;
     </Form>;
+<<<<<<< HEAD
   )}</FormItem>)}
         />;
         {error && (<Alert variant='destructive>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   );
 
@@ -676,9 +734,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>;
         </div>;
       </form>;
+<<<<<<< HEAD
     </Form>)}})
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     </Form>);
 }
 }
 }})
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export interface InnovativeITService {
 
@@ -59,6 +60,9 @@ export const innovativeITServices: InnovativeITService[] = [
 
 
 export interface InnovativeITService {
+=======
+export interface InnovativeITService {
+>>>>>>> origin/chore/fix-lint-and-merge
 id: string;
   name: string;
   tagline: string;
@@ -90,11 +94,14 @@ id: string;
     email: string;
     address: string;
 
+<<<<<<< HEAD
     website: string;
   }
   {
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   {
 
     id: 'edge - computing - platform',
@@ -102,11 +109,16 @@ id: string;
     tagline: 'Distributed computing at the network edge',
     price: '$299',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.',
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 export interface InnovativeITService {
 id: string;
   name: string;
@@ -418,14 +430,79 @@ export const innovativeITServices: InnovativeITService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
+=======
+
+      'Distributed edge nodes',
+      'Real - time data processing',
+      'Low - latency computing',
+      'Edge AI capabilities',
+      'Automatic scaling',
+      'Geographic distribution',
+      'Load balancing',
+      'Edge analytics',
+      'IoT integration',
+
+      '5G optimization',
+    ],
+    popular: true,'
+    icon: '🌐',
+
+      'Edge Computing',
+      'IoT',
+      '5G',
+      'Kubernetes',
+      'Docker',
+      'React',
+      'Node && Node.js',
+      'Python',
+      'AWS',
+    ],
+
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+
+  reviews: number
+}
+export const innovativeITServices: InnovativeITService[] = [
+  {
+    id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
+    tagline: 'Next-generation cybersecurity with zero trust architecture', price: '$599',
+    period: '/month',
+    description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',
+    features: [
+      'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management';
+      'Compliance reportingReal-time monitoring'
+    ];
+    popular: true, icon: '🔒',
+    color: 'from-red-500 to-pink-600', textColor: 'text-red-400',
+    link: 'https://ziontechgroup.com/zero-trust-security-platform',
+    marketPosition: 'Competitive with Palo Alto Networks ($50,000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.',
+    targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure',
+    trialDays: 30, setupTime: '2 hours',
+    category: 'IT & Cybersecurity', realService: true,
+    technology: ['Zero Trust ArchitectureMachine LearningAIKubernetesDockerReactNode.jsAWS'], integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk'],
+    useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection'], roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.',
+    competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'], marketSize: '$45B cybersecurity market',
+    growthRate: '110% annual growth', variant: 'cyberpunk',
+    contactInfo: {
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+>>>>>>> origin/chore/fix-lint-and-merge
       website: 'https://ziontechgroup.com';
     }
-    "mobile": string;
-    "email": string;
-    "address": string;
-    "website": string;
+    real_implementation: true,
+    implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.';
+    launch_date: '2024 - 01 - 20';
+    customers: 2500;
+
   }
   {
+<<<<<<< HEAD
 
 
   {
@@ -1282,6 +1359,53 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9;
     reviews: 400;
   }
+=======
+      'Distributed edge nodes',''
+      'Real - time data processing',''
+      'Low - latency computing',''
+      'Edge AI capabilities',''
+      'Automatic scaling',''
+      'Geographic distribution',''
+      'Load balancing',''
+      'Edge analytics',''
+      'IoT integration',''
+      '5G optimization','
+    ],
+
+    popular: true,'
+    icon: '🌐',''
+      'Edge Computing',''
+      'IoT',''
+      '5G',''
+      'Kubernetes',''
+      'Docker',''
+      'React',''
+      'Node && Node.js',''
+      'Python',''
+      'AWS','
+    ],'
+      address: '364 E Main St STE 1008 Middletown DE 19709',''
+      website: 'https://ziontechgroup.com';'
+    }
+    real_implementation: true,'
+    implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.';''
+    launch_date: '2024 - 01 - 20';',
+  customers: 2500;
+    rating: 4.7,
+    reviews: 1250;
+
+  }
+
+    realImplementation: true
+    implementationDetails:
+      'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
+
+    launchDate: '2024-01-01'
+    customers: 800;
+    rating: 4.9;
+    reviews: 400;
+  }
+>>>>>>> origin/chore/fix-lint-and-merge
   {'
     id: 'edge-computing-platform''
     name: 'Edge Computing Platform''
@@ -1300,8 +1424,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Load balancing''
       'Edge analytics''
       'IoT integration''
-      '5G optimization''
+      '5G optimization'
     ]
+<<<<<<< HEAD
     popular: true
     icon: '🌐'
     color: 'from-blue-500 to-cyan-600'
@@ -1324,9 +1449,33 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'React'
       'Node.js'
       'Python'
+=======
+    popular: true'
+    icon: '🌐''
+    color: 'from-blue-500 to-cyan-600''
+    textColor: 'text-blue-400''
+    link: 'https://ziontechgroup.com/edge-computing-platform'
+    marketPosition:'
+      'Competitive with AWS Greengrass ($0.16-0.50), Azure IoT Edge ($0.40-0.50), and Google Cloud IoT Edge ($0.40-0.50). Our advantage: Better performance, lower costs, and comprehensive features.'
+    targetAudience:'
+      'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications'
+    trialDays: 14'
+    setupTime: '1 hour''
+    category: 'IT & Edge Computing'
+    realService: true;
+    technology: ['
+      'Edge Computing''
+      'IoT''
+      '5G''
+      'Kubernetes''
+      'Docker''
+      'React''
+      'Node.js''
+      'Python''
+>>>>>>> origin/chore/fix-lint-and-merge
       'AWS'
     ]
-    "integrations": [
+    integrations: ['
       'AWS IoT''
       'Azure IoT''
       'Google Cloud IoT''
@@ -1334,15 +1483,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'CoAP''
       'HTTP/2''
       'WebSocket''
-      'REST API''
+      'REST API'
     ]
-    "useCases": [
+    useCases: ['
       'IoT applications''
       'Real-time analytics''
       'Edge AI''
       '5G services''
       'Smart manufacturing''
       'Autonomous vehicles'
+<<<<<<< HEAD
     ]
     roi: 'Average customer sees 300% ROI within 8 months through reduced latency and improved performance.'
     competitors: [
@@ -1371,15 +1521,46 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Julia'
       'API'
       'Webhooks'
+=======
+    ]'
+    roi: 'Average customer sees 300% ROI within 8 months through reduced latency and improved performance.'
+    competitors: ['
+      'AWS Greengrass''
+      'Azure IoT Edge''
+      'Google Cloud IoT Edge''
+      'FogHorn''
+      'ClearBlade'
+    ]'
+    marketSize: '$15B edge computing market''
+    growthRate: '180% annual growth''
+    variant: 'quantum'
+    contactInfo: {}
+    targetAudience:'
+      'Research institutions, Pharmaceutical companies, Financial services, Logistics companies, Technology companies, Universities'
+    trialDays: 7'
+    setupTime: '30 minutes''
+    category: 'IT & Quantum Computing'
+    realService: true;
+    technology: []
+    integrations: ['
+      'Jupyter Notebooks''
+      'Python''
+      'MATLAB''
+      'R''
+      'Julia''
+      'API''
+      'Webhooks''
+>>>>>>> origin/chore/fix-lint-and-merge
       'SDK'
     ]
-    "useCases": [
+    useCases: ['
       'Drug discovery''
       'Financial modeling''
       'Logistics optimization''
       'Machine learning''
       'Cryptography''
       'Material science'
+<<<<<<< HEAD
     ]
     roi: 'Average customer sees 500% ROI within 18 months through breakthrough discoveries and optimizations.'
     competitors: [
@@ -1411,15 +1592,49 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Salesforce'
       'AWS'
       'Azure'
+=======
+    ]'
+    roi: 'Average customer sees 500% ROI within 18 months through breakthrough discoveries and optimizations.'
+    competitors: ['
+      'IBM Quantum''
+      'AWS Braket''
+      'Google Quantum''
+      'Rigetti''
+      'D-Wave'
+    ]'
+    marketSize: '$8B quantum computing market''
+    growthRate: '250% annual growth''
+    variant: 'quantum-advanced'
+    contactInfo: {}
+    marketPosition:'
+      'Competitive with Hyperledger Fabric ($free), Ethereum Enterprise ($variable), and Corda ($variable). Our advantage: Better enterprise features, support, and integration capabilities.'
+    targetAudience:'
+      'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Energy companies, Real estate'
+    trialDays: 21'
+    setupTime: '4 hours''
+    category: 'IT & Blockchain'
+    realService: true;
+    technology: []
+    integrations: ['
+      'Ethereum''
+      'Hyperledger''
+      'Corda''
+      'Oracle''
+      'SAP''
+      'Salesforce''
+      'AWS''
+      'Azure''
+>>>>>>> origin/chore/fix-lint-and-merge
       'Google Cloud'
     ]
-    "useCases": [
+    useCases: ['
       'Supply chain tracking''
       'Digital identity''
       'Smart contracts''
       'Tokenization''
       'Voting systems''
       'Asset management'
+<<<<<<< HEAD
     ]
     roi: 'Average customer sees 350% ROI within 12 months through improved efficiency and transparency.'
     competitors: [
@@ -1451,15 +1666,49 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Google Cloud'
       'Slack'
       'Teams'
+=======
+    ]'
+    roi: 'Average customer sees 350% ROI within 12 months through improved efficiency and transparency.'
+    competitors: ['
+      'Hyperledger Fabric''
+      'Ethereum Enterprise''
+      'Corda''
+      'Quorum''
+      'Multichain'
+    ]'
+    marketSize: '$19B blockchain market''
+    growthRate: '160% annual growth''
+    variant: 'quantum-blockchain'
+    contactInfo: {}
+    marketPosition:'
+      'Competitive with GitLab ($19-99), Jenkins ($free), and CircleCI ($15-300). Our advantage: Better automation, comprehensive features, and competitive pricing.'
+    targetAudience:'
+      'Development teams, DevOps engineers, IT operations, Software companies, Startups, Enterprises'
+    trialDays: 30'
+    setupTime: '1 hour''
+    category: 'IT & DevOps'
+    realService: true;
+    technology: []
+    integrations: ['
+      'GitHub''
+      'GitLab''
+      'Bitbucket''
+      'AWS''
+      'Azure''
+      'Google Cloud''
+      'Slack''
+      'Teams''
+>>>>>>> origin/chore/fix-lint-and-merge
       'Jira'
     ]
-    "useCases": [
+    useCases: ['
       'Software development''
       'Deployment automation''
       'Infrastructure management''
       'Testing automation''
       'Monitoring''
       'Security'
+<<<<<<< HEAD
     ]
     roi: 'Average customer sees 250% ROI within 6 months through improved development velocity and reduced deployment time.'
     competitors: [
@@ -1474,6 +1723,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'cyberpunk'
     contactInfo: {
     contactInfo: {
+=======
+    ]'
+    roi: 'Average customer sees 250% ROI within 6 months through improved development velocity and reduced deployment time.'
+    competitors: ['
+      'GitLab''
+      'Jenkins''
+      'CircleCI''
+      'GitHub Actions''
+      'Azure DevOps'
+    ]'
+    marketSize: '$12B DevOps market''
+    growthRate: '130% annual growth''
+    variant: 'cyberpunk'
+
+>>>>>>> origin/chore/fix-lint-and-merge
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1487,53 +1751,81 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7
     reviews: 1250
   }
-];      "mobile": '+1 302 464 0950';'
-      "email": 'kleber@ziontechgroup.com';'
-      "address": '364 E Main St STE 1008 Middletown DE 19709''
-      "website": '"https"://ziontechgroup.com''
+      'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.',
+    launchDate: '2024-01-20',
+    customers: 2500,
+    rating: 4.7,
+    reviews: 1250,
+  },;
+
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
     }
     realImplementation: true
+<<<<<<< HEAD
     implementationDetails:
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
     launchDate: '2024-01-20'
     customers: 2500
     rating: 4.7
     reviews: 1250
+=======
+    implementationDetails: 'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.';
+    launchDate: '2024-01-20';
+    customers: 2500;
+    rating: 4.7
+
+    reviews: 1250
+
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 ];
-  "id": string,;
-  "name": string,;
-  "tagline": string,;
-  "price": string,;
-  "period": string,;
-  "description": string,;
-  "features": string[],;
-  "popular": boolean,;
-  "icon": string,;
-  "color": string,;
-  "textColor": string,;
-  "link": string,;
-  "marketPosition": string,;
-  "targetAudience": string,;
-  "trialDays": number,;
-  "setupTime": string,;
-  "category": string,;
-  "realService": boolean,;
-  "technology": string[],;
-  "integrations": string[],;
-  "useCases": string[],;
-  "roi": string,;
-  "competitors": string[],;
-  "marketSize": string,;
-  "growthRate": string,;
-  "variant": string,;
-  "contactInfo": {;
-    }
-    "mobile": string,;
-    "email": string,;
-    "address": string,;
-    "website": string;
+
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  contactInfo: {;,
+  mobile: string,;
+    email: string,;
+    address: string,;
+pr-12325
+  contactInfo: {;,
+  mobile: string,;
+    email: string,;
+    address: string,;}
+    website: string;}
   },;
+<<<<<<< HEAD
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2135,8 +2427,30 @@ pr-12325
     "period": '/month',;'
     "description": 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',;'
     "features": [;
+=======
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
+pr-12325
+export const innovativeITServices: InnovativeITService[] = [;
+  {;'
+    id: 'zero-trust-security-platform',;'
+    name: 'Zero Trust Security Platform',;'
+    tagline: 'Next-generation cybersecurity with zero trust architecture',;'
+    price: '$599',;'
+    period: '/month',;'
+    description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',;
+    features: [;'
+>>>>>>> origin/chore/fix-lint-and-merge
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management',;'
-      'Compliance reportingReal-time monitoring';'
+      'Compliance reportingReal-time monitoring';
+      'Compliance reportingReal-time monitoring';']
+pr-12325
     ],;
     popular: true,;'
     icon: '🔒',;'
@@ -2157,10 +2471,17 @@ pr-12325
     marketSize: '$45B cybersecurity market',;'
     growthRate: '110% annual growth',;'
     variant: 'cyberpunk',;
+<<<<<<< HEAD
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+=======
+    contactInfo: {;'
+      mobile: '+1 302 464 0950',;'
+      email: 'kleber@ziontechgroup.com',;'
+      address: '364 E Main St STE 1008 Middletown DE 19709',;'
+>>>>>>> origin/chore/fix-lint-and-merge
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,'
@@ -2170,6 +2491,7 @@ pr-12325
     rating: 4.7,
     reviews: 1250;
 
+<<<<<<< HEAD
   mobile: '+1 302 464 0950,
       email: kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709,
@@ -2419,10 +2741,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 '
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 ;
   }
 ];
+<<<<<<< HEAD
   mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
@@ -2490,6 +2815,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/chore/fix-lint-and-merge
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2672,6 +3000,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2024-01-20';
     customers: 2500;
     rating: 4.7;
+<<<<<<< HEAD
     reviews: 1250
   }
 ];
@@ -2688,3 +3017,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.7,
     reviews: 1250}
 ],
+=======
+
+    reviews: 1250
+  }
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

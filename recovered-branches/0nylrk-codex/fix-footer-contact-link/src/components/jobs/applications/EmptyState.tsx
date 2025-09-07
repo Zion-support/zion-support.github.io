@@ -1,55 +1,66 @@
-import { Button } from "@/components/ui/button","
+import { Button } from "@/components/ui/button",";
 import { Card, CardContent } from "@/components/ui/card";"
 import { Link } from "react-router-dom";"
 import { Card, CardContent } from "@/components/ui/card","
-import { Link } from "react-router-dom","
-import { Button  } from '@/components / ui / button';'
-import { Card, CardContent  } from '@/components / ui / card';'
-import { Link  } from './react-router-dom';'
-export /**
- * EmptyState - Function description
+import { Link } from "react-router-dom",
+
+import { Button } from "@/components/ui/button",""
+import { Card, CardContent } from "@/components/ui/card";""
+import { Link } from "react-router-dom";""
+import { Card, CardContent } from "@/components/ui/card",""
+import { Link } from "react-router-dom",""
+pr-12325
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent  } from '@/components / ui / card';
+
+import { Link  } from './react-router-dom';
+export /**;
+ * EmptyState - Function description;
  */
-function EmptyState() {
-}
-return (;
+function EmptyState() {}
+  return ("
     <Card className="bg-muted/30">;"
       <CardContent className="pt-6 text-center">;"
         <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>;"
-        <p className="text-muted-foreground mb-4">;"
-          You haven't submitted any applications yet. Browse available jobs to;'
+        <p className="text-muted-foreground mb-4">;'
+          You haven't submitted any applications yet. Browse available jobs to;
           get started!;
-        </p>;
+        </p>;"
         <Button className="mt-4" asChild>;"
-          <Link to="/jobs">Browse Jobs</Link>;"
+          <Link to="/jobs">Browse Jobs</Link>;
         </Button>;
       </CardContent>;
-    </Card>);
-}export function EmptyState() {
-}
-return (;
+
+export function EmptyState() {
+
+          You haven't submitted any applications yet. Browse available jobs to get started!
+        </p>"
+        <Button className="mt-4" asChild>"
+          <Link to="/jobs">Browse Jobs</Link>
+        </Button>
+
+";
+import { Button } from "@/components/ui/button";"
+import { Card, CardContent } from "@/components/ui/card";"
+import { Link } from "react-router-dom";
+"
+import { Button } from "@/components/ui/button",";
+import { Card, CardContent } from "@/components/ui/card";"
+import { Link } from "react-router-dom";"
+import { Card, CardContent } from "@/components/ui/card","
+import { Link } from "react-router-dom",
+export function EmptyState() {}
+  return ("
     <Card className="bg-muted/30">"
       <CardContent className="pt-6 text-center">"
         <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>"
-        <p className="text-muted-foreground mb-4">"
-          You haven't submitted any applications yet. Browse available jobs to get started!'
-        </p>
-        <Button className="mt-4" asChild>"
-          <Link to="/jobs">Browse Jobs</Link>"
-        </Button>
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
-export function EmptyState() {
-  return (
-    <Card className="bg-muted/30">
-      <CardContent className="pt-6 text-center">
-        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>
-        <p className="text-muted-foreground mb-4">
+        <p className="text-muted-foreground mb-4">'
           You haven't submitted any applications yet. Browse available jobs to get started!
-        </p>
-        <Button className="mt-4" asChild>
+        </p>"
+        <Button className="mt-4" asChild>"
           <Link to="/jobs">Browse Jobs</Link>
         </Button>
+<<<<<<< HEAD
       </CardContent>
     </Card>
       </CardContent>    </Card>;
@@ -70,8 +81,16 @@ export function EmptyState() {;
         <Button className="mt-4" asChild>;"
           <Link to="/jobs">Browse Jobs</Link>;"
         </Button>;
+=======
+
+    </Card>;
+
+>>>>>>> origin/chore/fix-lint-and-merge
       </CardContent>;
     </Card>;
   );
 }
-;
+
+    </Card>;
+  );
+}

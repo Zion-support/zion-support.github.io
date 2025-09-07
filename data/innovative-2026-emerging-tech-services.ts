@@ -1,4 +1,9 @@
+origin/cursor/expand-services-advertise-and-build-project-c28b
+import { ServiceVariant } from '../types/service-variants';
+export interface Innovative2026EmergingTechService {
+origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 ;
@@ -81,6 +86,56 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       price: '$1, 499',
       period: '/month',
       description:;
+=======
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  variant: ServiceVariant;
+  contact_info: {}
+    mobile: string;
+    email: string;
+    address: string;
+
+    website: string;
+  }
+
+        'Brain-inspired neural architecture',
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+;
+export const innovative2026EmergingTechServices: Innovative2026EmergingTechService[] =;
+  [;
+    // Neuromorphic Computing Platform;
+    {
+
+      description:
+>>>>>>> origin/chore/fix-lint-and-merge
         "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra - efficient AI processing, cognitive computing, and adaptive learning systems.",
       features: [;
         'Brain - inspired neural architecture',
@@ -89,11 +144,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Spiking neural networks (SNNs)',
         'Ultra - low power consumption',
         'Real - time learning and adaptation',
+<<<<<<< HEAD
     website: string
   },
     website: string;
   },
   realImplementation: boolean;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -108,8 +167,15 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     id: 'neuromorphic-computing-platform-2026';
     name: 'Neuromorphic Computing Platform 2026';
     tagline: 'Brain-inspired computing for next-generation AI and cognitive systems';
+<<<<<<< HEAD
     price: '$1,499',period: '/month';
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, cognitive computing, and adaptive learning systems.',features: [;
+=======
+    price: '$1;,499',
+    period: '/month';
+    description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing;, cognitive computing, and adaptive learning systems.',
+    features: [
+>>>>>>> origin/chore/fix-lint-and-merge
       'Brain-inspired neural architectureSpiking neural networks (SNNs)Ultra-low power consumptionReal-time learning and adaptationCognitive computing capabilitiesAdvanced pattern recognitionNeuromorphic hardware integrationCustom neural model development';
       'Performance optimization toolsResearch collaboration platform'
     ];
@@ -118,7 +184,13 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     color: 'from-purple-500 to-indigo-600';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/services/neuromorphic-computing-platform-2026';
+<<<<<<< HEAD
     marketPosition: 'Competitive with Intel Loihi ($2,000+/chip), IBM TrueNorth ($1,500+/chip), and BrainChip ($500+/chip). Our advantage: Cloud-based platform, comprehensive tools, and 70% cost savings.',targetAudience: 'AI researchers, Technology companies, Universities, Government agencies, Defense contractors, Healthcare organizations',trialDays: 30;
+=======
+    marketPosition: 'Competitive with Intel Loihi ($2;,000+/chip), IBM TrueNorth ($1,500+/chip), and BrainChip ($500+/chip). Our advantage: Cloud-based platform;, comprehensive tools, and 70% cost savings.',
+    targetAudience: 'AI researchers;, Technology companies, Universities, Government agencies, Defense contractors, Healthcare organizations',
+    trialDays: 30;
+>>>>>>> origin/chore/fix-lint-and-merge
     setupTime: '2-3 weeks';
     category: 'Emerging Technology & Neuromorphic Computing';
     realService: true;
@@ -135,8 +207,15 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
+<<<<<<< HEAD
     },realImplementation: true;
     implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',launchDate: '2026-01-10';
+=======
+    },
+    realImplementation: true;
+    implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture;, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',
+    launchDate: '2026-01-10';
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 80;
     rating: 4.9;
     reviews: 40;
@@ -147,8 +226,15 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     id: 'dna-computing-platform-2026';
     name: 'DNA Computing Platform 2026';
     tagline: 'Molecular computing for complex problem solving and data storage';
+<<<<<<< HEAD
     price: '$2,999',period: '/month';
     description: 'Groundbreaking DNA computing platform that leverages molecular biology for ultra-dense data storage, complex problem solving, and next-generation computational capabilities.',features: [;
+=======
+    price: '$2;,999',
+    period: '/month';
+    description: 'Groundbreaking DNA computing platform that leverages molecular biology for ultra-dense data storage;, complex problem solving, and next-generation computational capabilities.',
+    features: [
+>>>>>>> origin/chore/fix-lint-and-merge
       'DNA-based data storageMolecular problem solvingUltra-dense information encodingBiomolecular algorithmsDNA synthesis and sequencingMolecular computing workflowsAdvanced bioinformatics toolsCustom DNA program development';
       'Laboratory integrationProfessional bioengineering support'
     ];
@@ -157,7 +243,13 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     color: 'from-green-500 to-emerald-600';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/services/dna-computing-platform-2026';
+<<<<<<< HEAD
     marketPosition: 'Competitive with Microsoft DNA Storage ($10,000+/setup), Catalog DNA ($5,000+/setup), and Twist Bioscience ($3,000+/setup). Our advantage: Cloud-based platform, comprehensive tools, and 60% cost savings.',targetAudience: 'Biotechnology companies, Research institutions, Pharmaceutical companies, Data storage companies, Government agencies, Healthcare organizations',trialDays: 45;
+=======
+    marketPosition: 'Competitive with Microsoft DNA Storage ($10;,000+/setup), Catalog DNA ($5,000+/setup), and Twist Bioscience ($3,000+/setup). Our advantage: Cloud-based platform;, comprehensive tools, and 60% cost savings.',
+    targetAudience: 'Biotechnology companies;, Research institutions, Pharmaceutical companies, Data storage companies, Government agencies, Healthcare organizations',
+    trialDays: 45;
+>>>>>>> origin/chore/fix-lint-and-merge
     setupTime: '4-6 weeks';
     category: 'Emerging Technology & DNA Computing';
     realService: true;
@@ -174,8 +266,15 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
+<<<<<<< HEAD
     },realImplementation: true;
     implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.',launchDate: '2026-01-20';
+=======
+    },
+    realImplementation: true;
+    implementationDetails: 'Advanced DNA computing platform with molecular biology integration;, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.',
+    launchDate: '2026-01-20';
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 45;
     rating: 4.9;
     reviews: 25;
@@ -186,8 +285,15 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     id: 'photonic-computing-platform-2026';
     name: 'Photonic Computing Platform 2026';
     tagline: 'Light-speed computing with photonic processors and optical interconnects';
+<<<<<<< HEAD
     price: '$1,999',period: '/month';
     description: 'Next-generation photonic computing platform that uses light instead of electricity for ultra-fast processing, low power consumption, and high-bandwidth data transfer.',features: [;
+=======
+    price: '$1;,999',
+    period: '/month';
+    description: 'Next-generation photonic computing platform that uses light instead of electricity for ultra-fast processing;, low power consumption, and high-bandwidth data transfer.',
+    features: [
+>>>>>>> origin/chore/fix-lint-and-merge
       'Photonic processorsOptical interconnectsLight-based computingUltra-fast data processingLow power consumptionHigh-bandwidth communicationPhotonic neural networksOptical memory systems';
       'Custom photonic designProfessional engineering support'
     ];
@@ -196,7 +302,13 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     color: 'from-yellow-500 to-orange-600';
     textColor: 'text-yellow-400';
     link: 'https://ziontechgroup.com/services/photonic-computing-platform-2026';
+<<<<<<< HEAD
     marketPosition: 'Competitive with Lightmatter ($5,000+/setup), PsiQuantum ($10,000+/setup), and Xanadu ($3,000+/setup). Our advantage: Cloud-based platform, comprehensive tools, and 65% cost savings.',targetAudience: 'Technology companies, Research institutions, Telecommunications companies, Data centers, Government agencies, Defense contractors',trialDays: 21;
+=======
+    marketPosition: 'Competitive with Lightmatter ($5;,000+/setup), PsiQuantum ($10,000+/setup), and Xanadu ($3,000+/setup). Our advantage: Cloud-based platform;, comprehensive tools, and 65% cost savings.',
+    targetAudience: 'Technology companies;, Research institutions, Telecommunications companies, Data centers, Government agencies, Defense contractors',
+    trialDays: 21;
+>>>>>>> origin/chore/fix-lint-and-merge
     setupTime: '3-4 weeks';
     category: 'Emerging Technology & Photonic Computing';
     realService: true;
@@ -213,8 +325,15 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
+<<<<<<< HEAD
     },realImplementation: true;
     implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.',launchDate: '2026-02-01';
+=======
+    },
+    realImplementation: true;
+    implementationDetails: 'Advanced photonic computing platform with optical processors;, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.',
+    launchDate: '2026-02-01';
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 120;
     rating: 4.8;
     reviews: 60;
@@ -227,7 +346,12 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     tagline: 'Next-generation 3D holographic visualization and interaction';
     price: '$699';
     period: '/month';
+<<<<<<< HEAD
     description: 'Revolutionary holographic display platform that creates immersive 3D visualizations, interactive holograms, and next-generation display experiences for entertainment, education, and business.',features: [;
+=======
+    description: 'Revolutionary holographic display platform that creates immersive 3D visualizations;, interactive holograms, and next-generation display experiences for entertainment, education, and business.',
+    features: [
+>>>>>>> origin/chore/fix-lint-and-merge
       '3D holographic projectionInteractive holographic displaysReal-time 3D renderingGesture and touch interactionMulti-user collaborationHolographic content creationAugmented reality integrationMobile holographic apps';
       'Custom content developmentProfessional installation services'
     ];
@@ -236,7 +360,13 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     color: 'from-pink-500 to-rose-600';
     textColor: 'text-pink-400';
     link: 'https://ziontechgroup.com/services/holographic-display-platform-2026';
+<<<<<<< HEAD
     marketPosition: 'Competitive with Looking Glass ($600-6,000/display), Light Field Lab ($2,000-10,000/display), and RealView ($1,500-8,000/display). Our advantage: Cloud-based platform, comprehensive tools, and 50% cost savings.',targetAudience: 'Entertainment companies, Educational institutions, Healthcare providers, Retail businesses, Museums, Event planners',trialDays: 14;
+=======
+    marketPosition: 'Competitive with Looking Glass ($600-6;,000/display), Light Field Lab ($2,000-10,000/display), and RealView ($1,500-8,000/display). Our advantage: Cloud-based platform;, comprehensive tools, and 50% cost savings.',
+    targetAudience: 'Entertainment companies;, Educational institutions, Healthcare providers, Retail businesses, Museums, Event planners',
+    trialDays: 14;
+>>>>>>> origin/chore/fix-lint-and-merge
     setupTime: '1-2 weeks';
     category: 'Emerging Technology & Holographic Displays';
     realService: true;
@@ -253,8 +383,15 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
+<<<<<<< HEAD
     },realImplementation: true;
     implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.',launchDate: '2026-02-15';
+=======
+    },
+    realImplementation: true;
+    implementationDetails: 'Advanced holographic display platform with 3D projection;, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.',
+    launchDate: '2026-02-15';
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 200;
     rating: 4.7;
     reviews: 100;
@@ -267,7 +404,12 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     tagline: 'Advanced biometric security with AI-powered recognition and authentication';
     price: '$899';
     period: '/month';
+<<<<<<< HEAD
     description: 'Next-generation biometric authentication platform that uses AI-powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.',features: [;
+=======
+    description: 'Next-generation biometric authentication platform that uses AI-powered facial recognition;, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.',
+    features: [
+>>>>>>> origin/chore/fix-lint-and-merge
       'Multi-modal biometric authenticationAI-powered recognitionFacial recognition technologyFingerprint and palm scanningVoice and speech recognitionBehavioral biometricsLiveness detectionMulti-factor authentication';
       'API and SDK accessEnterprise security features'
     ];
@@ -276,7 +418,13 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     color: 'from-blue-500 to-indigo-600';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/services/biometric-authentication-platform-2026';
+<<<<<<< HEAD
     marketPosition: 'Competitive with Face ID ($0.50-2.00/user/month), Touch ID ($0.30-1.50/user/month), and Voice ID ($0.40-1.80/user/month). Our advantage: Multi-modal authentication, AI-powered recognition, and comprehensive security.',targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Technology companies, Retail businesses, Educational institutions',trialDays: 21;
+=======
+    marketPosition: 'Competitive with Face ID ($0.50-2.00/user/month);, Touch ID ($0.30-1.50/user/month), and Voice ID ($0.40-1.80/user/month). Our advantage: Multi-modal authentication;, AI-powered recognition, and comprehensive security.',
+    targetAudience: 'Financial institutions;, Healthcare organizations, Government agencies, Technology companies, Retail businesses, Educational institutions',
+    trialDays: 21;
+>>>>>>> origin/chore/fix-lint-and-merge
     setupTime: '1-2 weeks';
     category: 'Emerging Technology & Biometric Security';
     realService: true;
@@ -293,8 +441,15 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
+<<<<<<< HEAD
     },realImplementation: true;
     implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.',launchDate: '2026-03-01';
+=======
+    },
+    realImplementation: true;
+    implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition;, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.',
+    launchDate: '2026-03-01';
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 350;
     rating: 4.8;
     reviews: 175;
@@ -305,8 +460,15 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     id: 'quantum-internet-platform-2026';
     name: 'Quantum Internet Platform 2026';
     tagline: 'Ultra-secure quantum communication network for the future';
+<<<<<<< HEAD
     price: '$5,999',period: '/month';
     description: 'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.',features: [;
+=======
+    price: '$5;,999',
+    period: '/month';
+    description: 'Revolutionary quantum internet platform that provides ultra-secure communication;, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.',
+    features: [
+>>>>>>> origin/chore/fix-lint-and-merge
       'Quantum key distribution (QKD)Quantum secure communicationQuantum network infrastructureEntanglement-based protocolsQuantum repeaters and nodesAdvanced cryptographyReal-time quantum monitoringProfessional installation services';
       '24/7 network operationsGovernment compliance features'
     ];
@@ -315,7 +477,13 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     color: 'from-cyan-500 to-blue-600';
     textColor: 'text-cyan-400';
     link: 'https://ziontechgroup.com/services/quantum-internet-platform-2026';
+<<<<<<< HEAD
     marketPosition: 'Competitive with Quantum Xchange ($50,000+/setup), ID Quantique ($30,000+/setup), and Toshiba Quantum ($40,000+/setup). Our advantage: Modern architecture, faster deployment, and 70% cost savings.',targetAudience: 'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies',trialDays: 60;
+=======
+    marketPosition: 'Competitive with Quantum Xchange ($50;,000+/setup), ID Quantique ($30,000+/setup), and Toshiba Quantum ($40,000+/setup). Our advantage: Modern architecture;, faster deployment, and 70% cost savings.',
+    targetAudience: 'Government agencies;, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies',
+    trialDays: 60;
+>>>>>>> origin/chore/fix-lint-and-merge
     setupTime: '6-8 weeks';
     category: 'Emerging Technology & Quantum Internet';
     realService: true;
@@ -332,12 +500,20 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com';
+<<<<<<< HEAD
     },realImplementation: true;
     implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',launchDate: '2026-01-25';
+=======
+    },
+    realImplementation: true;
+    implementationDetails: 'Advanced quantum internet platform with quantum key distribution;, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
+    launchDate: '2026-01-25';
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 60;
     rating: 4.9;
     reviews: 30;
   }
+<<<<<<< HEAD
 ],export const getPopularEmergingTechServices = null;
 export const "innovative2026EmergingTechServices": Innovative2026EmergingTechService[] =;
   [;
@@ -917,10 +1093,17 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
 ],
 
 export const getPopularEmergingTechServices = null;
+=======
+],
+
+export const getPopularEmergingTechServices = null;
+
+>>>>>>> origin/chore/fix-lint-and-merge
 export const innovative2026EmergingTechServices: Innovative2026EmergingTechService[] =
   [
     // Neuromorphic Computing Platform
     {
+<<<<<<< HEAD
       id: 'neuromorphic-computing-platform-2026',
       name: 'Neuromorphic Computing Platform 2026',
       tagline:
@@ -946,12 +1129,16 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       period: '/month',
       description:
         "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing, cognitive computing, and adaptive learning systems.",
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       features: [
         'Brain-inspired neural architecture',
         'Spiking neural networks (SNNs)',
         'Ultra-low power consumption',
         'Real-time learning and adaptation',
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
   id: string;,
   name: string;
   tagline: string;,
@@ -991,12 +1178,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Ultra - low power consumption',
         'Real - time learning and adaptation',
 pr-12325
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
         'Cognitive computing capabilities',
         'Advanced pattern recognition',
         'Neuromorphic hardware integration',
         'Custom neural model development',
         'Performance optimization tools',
         'Research collaboration platform',
+<<<<<<< HEAD
       ],
       popular: true,
       icon: '🧠',
@@ -1168,32 +1359,90 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Custom neural model development','
         'Performance optimization tools','
         'Research collaboration platform''
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       ],
-      "popular": true,
-        'Intel Loihi','
-        'IBM TrueNorth','
-        'BrainChip','
-        'SpiNNaker','
-        'BrainScaleS''
+      popular: true,
+
+      icon: '🧠',
+
+      color: 'from - purple - 500 to - indigo - 600',
+      text_color: 'text - purple - 400',
+      link: 'https://ziontechgroup.com / services / neuromorphic - computing - platform - 2026',
+
+      technology: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Spiking Neural Networks',
+        'Neuromorphic Algorithms',
+        'Python',
+        'PyTorch',
+        'TensorFlow',
+        'CUDA',
       ],
+<<<<<<< HEAD
 '
         mobile: '+1 302 464 0950','
         email: 'kleber@ziontechgroup && ziontechgroup.com','
         address: '364 E Main St STE 1008 Middletown DE 19709','
+=======
+      integrations: [;
+      integrations: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Cloud platforms',
+        'Edge devices',
+        'IoT systems',
+        'Research tools',
+        'AI frameworks',
+        'Hardware platforms',
+      ],
+      use_cases: [;
+        'Cognitive computing',
+        'Pattern recognition',
+        'Adaptive learning',
+        'Real - time processing',
+      useCases: [
+        'Cognitive computing',
+        'Pattern recognition',
+        'Adaptive learning',
+        'Real-time processing',
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Edge AI',
+        'Research applications',
+      ],
+
+      competitors: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      competitors: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+        'Intel Loihi',
+        'IBM TrueNorth',
+        'BrainChip',
+        'SpiNNaker',
+        'BrainScaleS',
+      ],
+
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+
+>>>>>>> origin/chore/fix-lint-and-merge
         website: 'https://ziontechgroup && ziontechgroup.com',
       },
-      "real_implementation": true,
-      "implementation_details":;
+      real_implementation: true,
+      implementation_details:;'
         'Advanced neuromorphic computing platform with brain - inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.','
-      "launch_date": '2026 - 01 - 10','
-      "customers": 80,
-      "rating": 4 && 4.9,
-      "reviews": 40
+      launch_date: '2026 - 01 - 10',
+      customers: 80,
+      rating: 4 && 4.9,
+      reviews: 40,
     },
 
         'DNA-based data storage',
     // DNA Computing Platform;
     {
+<<<<<<< HEAD
       id: 'dna - computing - platform - 2026',
       name: 'DNA Computing Platform 2026',
       tagline:;
@@ -1201,12 +1450,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       price: '$2, 999',
       period: '/month',
       description:;
+=======
+
+      description:
+>>>>>>> origin/chore/fix-lint-and-merge
         'Groundbreaking DNA computing platform that leverages molecular biology for ultra - dense data storage, complex problem solving, and next - generation computational capabilities.',
       features: [;
         'DNA - based data storage',
 
         'Molecular problem solving',
         'Ultra - dense information encoding',
+<<<<<<< HEAD
       marketSize: '$12.8B market',
       growthRate: '380% annual growth',
       variant: 'quantum-futuristic',
@@ -1223,10 +1477,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       customers: 80,
       rating: 4.9,
       reviews: 40,
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     },
 
     // DNA Computing Platform
     {
+<<<<<<< HEAD
       id: 'dna-computing-platform-2026',
       name: 'DNA Computing Platform 2026',
       tagline:
@@ -1235,6 +1493,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       period: '/month',
       description:
         'Groundbreaking DNA computing platform that leverages molecular biology for ultra-dense data storage, complex problem solving, and next-generation computational capabilities.',
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       features: [
         'DNA-based data storage',
         'Molecular problem solving',
@@ -1247,6 +1508,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Custom DNA program development',
         'Laboratory integration',
         'Professional bioengineering support',
+<<<<<<< HEAD
       ],
       popular: false,
       icon: '🧬',
@@ -1646,36 +1908,267 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Mobile holographic apps','
         'Custom content development','
         'Professional installation services''
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       ],
-      "popular": false,
-        'Looking Glass','
-        'Light Field Lab','
-        'RealView','
-        'Hologram USA','
-        'HoloLens''
+
+      color: 'from - green - 500 to - emerald - 600',
+      text_color: 'text - green - 400',
+      link: 'https://ziontechgroup.com / services / dna - computing - platform - 2026',
+
+      technology: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'DNA Synthesis',
+        'DNA Sequencing',
+        'Bioinformatics',
+        'Molecular Biology',
+        'Python',
+        'R',
       ],
+<<<<<<< HEAD
 '
         mobile: '+1 302 464 0950','
         email: 'kleber@ziontechgroup && ziontechgroup.com','
         address: '364 E Main St STE 1008 Middletown DE 19709','
+=======
+      integrations: [;
+      integrations: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Laboratory equipment',
+        'Bioinformatics platforms',
+        'Cloud storage',
+        'Research databases',
+        'Analysis tools',
+        'Sequencing platforms',
+      ],
+      use_cases: [;
+      useCases: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Data storage',
+        'Complex problem solving',
+        'Drug discovery',
+        'Genetic research',
+        'Information encoding',
+        'Molecular computing',
+      ],
+
+      competitors: [;
+
+      competitors: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Microsoft DNA Storage',
+        'Catalog DNA',
+        'Twist Bioscience',
+        'Illumina',
+        'Pacific Biosciences',
+      ],
+
+    },
+
+    // Photonic Computing Platform;
+    {
+
+      description:
+        'Next - generation photonic computing platform that uses light instead of electricity for ultra - fast processing, low power consumption, and high - bandwidth data transfer.',
+      features: [;
+
+        'Photonic processors',
+        'Optical interconnects',
+        'Light - based computing',
+        'Ultra - fast data processing',
+        'Low power consumption',
+        'High - bandwidth communication',
+
+    },
+
+    // Photonic Computing Platform
+    {
+
+      features: [
+        'Photonic processors',
+        'Optical interconnects',
+        'Light-based computing',
+        'Ultra-fast data processing',
+        'Low power consumption',
+        'High-bandwidth communication',
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Photonic neural networks',
+        'Optical memory systems',
+        'Custom photonic design',
+        'Professional engineering support',
+      ],
+
+      color: 'from - yellow - 500 to - orange - 600',
+      text_color: 'text - yellow - 400',
+      link: 'https://ziontechgroup.com / services / photonic - computing - platform - 2026',
+
+      technology: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Photonic Integrated Circuits',
+        'Optical Computing',
+        'Silicon Photonics',
+        'Python',
+        'MATLAB',
+        'Optical Design Tools',
+      ],
+      integrations: [;
+      integrations: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Data centers',
+        'Telecommunications networks',
+        'Research equipment',
+        'Cloud platforms',
+        'AI frameworks',
+        'High - performance computing',
+      ],
+      use_cases: [;
+        'High - speed computing',
+        'High-performance computing',
+      ],
+      useCases: [
+        'High-speed computing',
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Data center optimization',
+        'Telecommunications',
+        'AI acceleration',
+        'Scientific computing',
+        'Real - time processing',
+      ],
+
+      competitors: [;
+
+        'Real-time processing',
+      ],
+
+      competitors: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Lightmatter',
+        'PsiQuantum',
+        'Xanadu',
+        'Intel Silicon Photonics',
+        'IBM Photonics',
+      ],
+
+    },
+
+    // Holographic Display Platform;
+    {
+
+      description:
+        'Revolutionary holographic display platform that creates immersive 3D visualizations, interactive holograms, and next - generation display experiences for entertainment, education, and business.',
+      features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+        '3D holographic projection',
+        'Interactive holographic displays',
+        'Real - time 3D rendering',
+        'Gesture and touch interaction',
+        'Multi - user collaboration',
+
+    },
+
+    // Holographic Display Platform
+    {
+
+      features: [
+        '3D holographic projection',
+        'Interactive holographic displays',
+        'Real-time 3D rendering',
+        'Gesture and touch interaction',
+        'Multi-user collaboration',
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+        'Holographic content creation',
+        'Augmented reality integration',
+        'Mobile holographic apps',
+        'Custom content development',
+        'Professional installation services',
+      ],
+      popular: false,
+
+      icon: '🌟',
+
+      color: 'from - pink - 500 to - rose - 600',
+      text_color: 'text - pink - 400',
+      link: 'https://ziontechgroup.com / services / holographic - display - platform - 2026',
+
+      technology: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Holographic Projection',
+        '3D Rendering',
+        'Computer Vision',
+        'Unity',
+        'Unreal Engine',
+        'Python',
+      ],
+      integrations: [;
+        'Content creation tools',
+        '3D modeling software',
+        'AR / VR platforms',
+      integrations: [
+        'Content creation tools',
+        '3D modeling software',
+        'AR/VR platforms',
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Mobile devices',
+        'Cloud platforms',
+        'Social media',
+      ],
+      use_cases: [;
+      useCases: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Entertainment displays',
+        'Educational content',
+        'Product visualization',
+        'Virtual events',
+        'Interactive experiences',
+        'Marketing campaigns',
+      ],
+
+      competitors: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      competitors: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+        'Looking Glass',
+        'Light Field Lab',
+        'RealView',
+        'Hologram USA',
+        'HoloLens',
+      ],
+
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+
+>>>>>>> origin/chore/fix-lint-and-merge
         website: 'https://ziontechgroup && ziontechgroup.com',
       },
-      "real_implementation": true,
-      "implementation_details":;
+      real_implementation: true,
+      implementation_details:;'
         'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.','
       launch_date: '2026 - 02 - 15',
       customers: 200,
       rating: 4 && 4.7,
+<<<<<<< HEAD
       reviews: 100
     },
 
 
 
 
+=======
+      reviews: 100,
+    },
+
+>>>>>>> origin/chore/fix-lint-and-merge
         'Multi-modal biometric authentication',
         'AI-powered recognition',
     // Biometric Authentication Platform;
     {
+<<<<<<< HEAD
       id: 'biometric - authentication - platform - 2026',
       name: 'Biometric Authentication Platform 2026',
       tagline:;
@@ -1683,12 +2176,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       price: '$899',
       period: '/month',
       description:;
+=======
+
+      description:
+>>>>>>> origin/chore/fix-lint-and-merge
         'Next - generation biometric authentication platform that uses AI - powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.',
       features: [;
         'Multi - modal biometric authentication',
         'AI - powered recognition',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
       marketSize: '$23.4B market',
       growthRate: '280% annual growth',
       variant: 'ai-futuristic',
@@ -1837,16 +2335,105 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     // Quantum Internet Platform;
     {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+    },
+
+    // Biometric Authentication Platform
+    {
+
+      features: [
+        'Multi-modal biometric authentication',
+        'AI-powered recognition',
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+        'Facial recognition technology',
+        'Fingerprint and palm scanning',
+        'Voice and speech recognition',
+        'Behavioral biometrics',
+        'Liveness detection',
+
+        'Multi-factor authentication',
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+        'API and SDK access',
+        'Enterprise security features',
+      ],
+      popular: true,
+
+      icon: '🔐',
+
+      color: 'from - blue - 500 to - indigo - 600',
+      text_color: 'text - blue - 400',
+      link: 'https://ziontechgroup.com / services / biometric - authentication - platform - 2026',
+
+      technology: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Computer Vision',
+        'Deep Learning',
+        'Biometric Algorithms',
+        'Python',
+        'TensorFlow',
+        'OpenCV',
+      ],
+      integrations: [;
+      integrations: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+        'Mobile apps',
+        'Web applications',
+        'IoT devices',
+        'Security systems',
+        'Cloud platforms',
+        'Enterprise systems',
+      ],
+      use_cases: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      useCases: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+        'User authentication',
+        'Access control',
+        'Identity verification',
+        'Payment security',
+        'Employee management',
+
+        'Customer verification',
+      ],'
+      roi: 'Average customer sees 350% ROI within 4 months through improved security and user experience.',
+
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+
+        website: 'https://ziontechgroup && ziontechgroup.com',
+      },
+      real_implementation: true,
+      implementation_details:;'
+        'Advanced biometric authentication platform with multi - modal recognition, AI - powered security, and comprehensive enterprise features. Includes API access and professional support.','
+      launch_date: '2026 - 03 - 01',
+      customers: 350,
+      rating: 4 && 4.8,
+      reviews: 175,
+    },
+
+>>>>>>> origin/chore/fix-lint-and-merge
       id: 'quantum - internet - platform - 2026',
       name: 'Quantum Internet Platform 2026',
       tagline: 'Ultra - secure quantum communication network for the future',
       price: '$5, 999',
+<<<<<<< HEAD
       period: '/month',
       description:;
         'Revolutionary quantum internet platform that provides ultra - secure communication, quantum key distribution, and next - generation networking capabilities for government, financial, and critical infrastructure.',
       features: [;
       period: '/month',
       description:;'
+=======
+
+      period: '/month',
+      description:'
+>>>>>>> origin/chore/fix-lint-and-merge
         'Revolutionary quantum internet platform that provides ultra - secure communication, quantum key distribution, and next - generation networking capabilities for government, financial, and critical infrastructure.',
       features: [;
 '
@@ -1859,11 +2446,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Real - time quantum monitoring','
         'Professional installation services','
         '24 / 7 network operations','
-        'Government compliance features''
+        'Government compliance features',
       ],
       popular: false,'
       icon: '🌐',
 
+<<<<<<< HEAD
         'Quantum key distribution (QKD)',
         'Quantum secure communication',
         'Quantum network infrastructure',
@@ -1890,6 +2478,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       setup_time: '6 - 8 weeks',
       category: 'Emerging Technology & Quantum Internet',
       real_service: true,
+=======
+      color: 'from - cyan - 500 to - blue - 600',
+      text_color: 'text - cyan - 400',
+      link: 'https://ziontechgroup.com / services / quantum - internet - platform - 2026',
+
+>>>>>>> origin/chore/fix-lint-and-merge
       technology: [;
         'Quantum Key Distribution',
         'Quantum Networks',
@@ -1914,8 +2508,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Healthcare data',
         'Critical infrastructure',
       ],
+<<<<<<< HEAD
       roi: 'Average customer sees 500% ROI within 12 months through improved security and new capabilities.',
       roi: 'Average customer sees 500% ROI within 12 months through improved security and new capabilities.',
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       competitors: [;
 
         'Quantum Xchange',
@@ -1925,6 +2523,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Chinese Quantum Network',
       ],
 
+<<<<<<< HEAD
       market_size: '$18.7B market',
       growth_rate: '480% annual growth',
       variant: 'quantum - futuristic',
@@ -2091,15 +2690,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       rating: 4.9
       reviews: 30
     }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
-      launchDate: '2026-01-25',
+
+      launch_date: '2026 - 01 - 25',
       customers: 60,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 30,
     },
-origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
+<<<<<<< HEAD
 export const getPopularEmergingTechServices = () => {
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launchDate: '2026-01-25',
@@ -3489,6 +4091,34 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.';
 // Photonic Computing Platform realImplementation: true;'
 implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.';'
+=======
+export const getPopularEmergingTechServices = () => {;
+
+  return innovative2026EmergingTechServices.filter(service => service.popular);
+}
+
+        'Government compliance features'
+      ]
+      popular: false'
+      icon: '🌐''
+      color: 'from-cyan-500 to-blue-600''
+      textColor: 'text-cyan-400''
+      link: 'https://ziontechgroup.com/services/quantum-internet-platform-2026'
+
+launchDate: '2026-01-20';
+;
+export const getPopularEmergingTechServices = () =>: any {};
+  return innovative2026EmergingTechServices.filter (service => service.popular);
+}
+// DNA Computing Platform real_implementation: true;'
+implementation_details: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';'
+launch_date: '2026 - 01 - 20';
+customers: 45;
+
+// Photonic Computing Platform realImplementation: true;
+implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.';
+
+>>>>>>> origin/chore/fix-lint-and-merge
 launchDate: '2026-02-01';
 reviews: 25;
 }
@@ -3497,6 +4127,7 @@ implementation_details: 'Advanced photonic computing platform with optical proce
 launch_date: '2026 - 02 - 01';
 customers: 120;
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -3510,6 +4141,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.';
 // Holographic Display Platform realImplementation: true;'
 implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.';'
+=======
+// Holographic Display Platform realImplementation: true;
+implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.';
+
+>>>>>>> origin/chore/fix-lint-and-merge
 launchDate: '2026-02-15';
 reviews: 60;
 }
@@ -3518,6 +4154,7 @@ implementation_details: 'Advanced holographic display platform with 3D projectio
 launch_date: '2026 - 02 - 15';
 customers: 200;
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -3531,6 +4168,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.';
 // Biometric Authentication Platform realImplementation: true;'
 implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.';'
+=======
+// Biometric Authentication Platform realImplementation: true;
+implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.';
+
+>>>>>>> origin/chore/fix-lint-and-merge
 launchDate: '2026-03-01';
 reviews: 100;
 }
@@ -3539,6 +4181,7 @@ implementation_details: 'Advanced biometric authentication platform with multi -
 launch_date: '2026 - 03 - 01';
 customers: 350;
 
+<<<<<<< HEAD
 rating: 4 && 4.8;
 reviews: 175 
 };
@@ -3612,12 +4255,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';
 // Quantum Internet Platform realImplementation: true;'
 implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';'
+=======
+// Quantum Internet Platform realImplementation: true;
+implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';
+
+>>>>>>> origin/chore/fix-lint-and-merge
 launchDate: '2026-01-25';
 reviews: 175;
 }
 // Quantum Internet Platform real_implementation: true;'
 implementation_details: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.';'
 launch_date: '2026 - 01 - 25';
+<<<<<<< HEAD
 
 rating: 4 && 4.9;
 reviews: 30 
@@ -4880,41 +5529,66 @@ export const getEmergingTechServicesByPriceRange = ("minPrice": number, "maxPric
 return price >= minPrice && price <= maxPrice;
   })
 import { ServiceVariant } from '../types/service-variants';'
+=======
+customers: 60;
+
+    return price >= minPrice && price <= maxPrice;
+
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+
+import { ServiceVariant } from '../types/service-variants',;
+>>>>>>> origin/chore/fix-lint-and-merge
 export interface Innovative2026EmergingTechService {;
-  }
-  "id": string,;
-  "name": string,;
-  "tagline": string,;
-  "price": string,;
-  "period": string,;
-  "description": string,;
-  "features": string[],;
-  "popular": boolean,;
-  "icon": string,;
-  "color": string,;
-  "textColor": string,;
-  "link": string,;
-  "marketPosition": string,;
-  "targetAudience": string,;
-  "trialDays": number,;
-  "setupTime": string,;
-  "category": string,;
-  "realService": boolean,;
-  "technology": string[],;
-  "integrations": string[],;
-  "useCases": string[],;
-  "roi": string,;
-  "competitors": string[],;
-  "marketSize": string,;
-  "growthRate": string,;
-  "variant": ServiceVariant,;
-  "contactInfo": {;
-    }
-    "mobile": string,;
-    "email": string,;
-    "address": string,;
-    "website": string;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
   },;
+<<<<<<< HEAD
   "realImplementation": boolean,;
   "implementationDetails": string,;
   "launchDate": string,;
@@ -4925,26 +5599,46 @@ export interface Innovative2026EmergingTechService {;
 
 reviews: 30;
 reviews: 30;
+=======
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+
+reviews: 30;
+>>>>>>> origin/chore/fix-lint-and-merge
 }];
-export const getEmergingTechServicesByCategory = ("category": string) =>: any {
-  }
+export const getEmergingTechServicesByCategory = (category: string) =>: any {};
   return innovative2026EmergingTechServices.filter (service =>;
     service.category.toLowerCase ().includes (category.toLowerCase ()));
 }
 export const getEmergingTechServicesByPriceRange = (
   min_price: number,
+<<<<<<< HEAD
   max_price: number) =>: any {
   return innovative2026EmergingTechServices.filter (service => {
+=======
+  max_price: number) =>: any {}
+  return innovative2026EmergingTechServices.filter (service => {';
+>>>>>>> origin/chore/fix-lint-and-merge
     const price = parse_int (service.price.replace ('$', '').replace (', ', ''));
     return price >= min_price && price <= max_price;
   });}
 ;
+<<<<<<< HEAD
 export const getEmergingTechServicesByPriceRange = (min_price: number, max_price: number) =>: any {
   return innovative2026EmergingTechServices.filter (service => {
+=======
+export const getEmergingTechServicesByPriceRange = (min_price: number, max_price: number) =>: any {}
+  return innovative2026EmergingTechServices.filter (service => {';
+>>>>>>> origin/chore/fix-lint-and-merge
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;
   });
 
+<<<<<<< HEAD
 
 
 
@@ -4976,6 +5670,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 '
+=======
+};
+
+};
+
+>>>>>>> origin/chore/fix-lint-and-merge
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
@@ -4993,6 +5693,7 @@ export const getEmergingTechServicesByPriceRange = (
 export const getEmergingTechServicesByPriceRange = (min_price: number, max_price: number) =>: any {
   return innovative2026EmergingTechServices.filter (service => {
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
+<<<<<<< HEAD
   min_price: number,
   max_price: number) =>: any {
   return innovative2026EmergingTechServices.filter (service => {
@@ -5032,3 +5733,15 @@ pr-12325
 pr-12325
 '
 
+=======
+    return price >= min_price && price <= max_price;
+  });
+
+};
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  });
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

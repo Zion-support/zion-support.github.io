@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+const crypto = require("crypto")
+>>>>>>> origin/chore/fix-lint-and-merge
       this.projectRoot,logs"
       intelligent-performance-optimizer.log
       this.projectRoot,logs"
@@ -78,7 +94,20 @@
   log(message, level = "INFO")
   this.log( Starting intelligent performance optimization...)
   this.log(" Starting intelligent performance optimization...")
+<<<<<<< HEAD
 
+=======
+  this.log(" Starting intelligent performance optimization...")
+    } catch (error) {  this.log(`Performance optimization "failed": ${error.message  }`, "ERROR"`)
+    const sourceDir = path.join(this.projectRoot, "src")
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, "utf8")
+  this.log(Error analyzing React performance in ${file  }: ${error.message}")
+          "
+    const sourceDir = path.join(this.projectRoot, "src")
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log(Error analyzing React performance in ${file}: ${error.message}")
           "WARN
     for (const [`category, "patterns"`)]
@@ -107,11 +136,83 @@
     // Check for inline ""object/function
     if (content.includes("style={{") || content.includes(onClick={() =>}
   "file"
+<<<<<<< HEAD
 
+=======
+        "category": "react"
+        "pattern": "inline-objects-functions"
+        "optimization": Extract inline objects and functions to prevent unnecessary re-renders"
+        "impact": "MEDIUM"
+        "matches"
+        "lineNumbers"
+        "timestamp"
+  const varMatch = match.match(/const\s+\["([^", "")]
+        return varMatch ? varMatch[1].trim() : ""
+  const varMatch = match.match(/const\s+\["([^", ")]
+        return varMatch ? varMatch[1].trim() : "
+        return depsMatch ? depsMatch[1].split(",")
+  const expensivePatterns = ["/Math\.random\(\)/g", "/JSON\.parse\(/g", "/JSON\.stringify\(/g", "/\.sort\(/g", "/\.filter\([^)"]*\)\."length/g"
+      this.log("� Building project for bundle analysis...")
+      execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe"})
+      this.log("� Building project for bundle analysis...")
+      execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe"})
+      const distDir = path.join(this.projectRoot, "dist")
+  "file": "bundle"
+            "category": "bundle"
+            "pattern": "large-bundle","optimization"
+            "impact": "HIGH"
+            "matches"
+            "lineNumbers"
+            "timestamp"
+  "file": "bundle"
+            "category": "bundle"
+            "pattern": "large-files","optimization": `Large files detected: ${largeFiles.map(f => `${f.name} (${(f.size / 1024).toFixed(2)}KB)").join(", ")}"
+            "impact": "MEDIUM"
+            "matches"
+            "lineNumbers"
+            "timestamp"
+  "file": "dependencies"
+          "category": "bundle"
+          "pattern": "duplicate-dependencies","optimization": `Duplicate dependencies found: ${dependencyAnalysis.duplicates.join(", "`})
+          "impact": "MEDIUM"
+          "matches"
+          "lineNumbers"
+          "timestamp"
+    } catch (error) {  this.log(`Bundle analysis "failed": ${error.message  }`, "ERROR"`)
+  const fullPath = path.join(dir, ")
+  const fullPath = path.join(dir, ")
+  "name": path.relative(distDir")
+>>>>>>> origin/chore/fix-lint-and-merge
             "path"
   total
       "files"
+<<<<<<< HEAD
 
+=======
+  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+  return { "duplicates": [], "outdated": [], "large"}
+      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8")
+  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+  return { "duplicates": [], "outdated": [], "large"}
+      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8")
+    } catch (error) {  this.log(`Dependency analysis "failed": ${error.message  }`, "ERROR"`)
+      return { "duplicates": [], "outdated": [], "large"}
+    for (const ["name", "pkg")]
+  const output = execSync("npm outdated --json")
+  "cwd"
+        "stdio": "pipe"
+        "encoding": "utf8"
+    for (const ["name", "pkg")]
+          "size"
+          "sizeMB"
+    const sourceDir = path.join(this.projectRoot, "src")
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, "utf8")
+  this.log(Error analyzing rendering performance in ${file  }: ${error.message}")
+          "
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log(Error analyzing rendering performance in ${file}: ${error.message}")
           "WARN
       content.includes(`.map(``)
@@ -125,7 +226,34 @@
         "matches"
         lineNumbers
         "timestamp"
+<<<<<<< HEAD
 
+=======
+    if (content.includes("&&") && content.includes("return")
+  "file"
+        "category": "rendering"
+        "pattern": "conditional-rendering"
+        "optimization": Consider using conditional rendering with proper fallbacks"
+        "impact": "MEDIUM"
+        "matches"
+        "lineNumbers"
+        "timestamp"
+    // Check for unnecessary re-renders due to object creationif (content.includes("style={{") || content.includes("className={""})
+  "file"
+        "category": "rendering"
+        "pattern": "dynamic-objects"
+        "optimization": Extract dynamic objects to prevent unnecessary re-renders"
+        "impact": "MEDIUM"
+        "matches"
+        "lineNumbers"
+        "timestamp"
+    const sourceDir = path.join(this.projectRoot, "src")
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, ")
+          "WARN"
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js")]
+  const content = fs.readFileSync(file, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log(Error analyzing memory usage in ${file}: ${error.message}")
           "WARN
       content.includes(addEventListener")
@@ -179,7 +307,13 @@
         [missing-keys, "conditional-rendering", ]
           ERROR"
   this.log(Failed to apply optimization for ${optimization.file}: ${error.message}")
+<<<<<<< HEAD
 
+=======
+          "ERROR"
+  const content = fs.readFileSync(optimization.file, "utf8")
+  case "missing-keys"
+>>>>>>> origin/chore/fix-lint-and-merge
         case "
         "default
           INFO"
@@ -196,7 +330,31 @@
         return { "lighthouse}
     // In production, you
     // In production, you"
+<<<<<<< HEAD
 
+=======
+  this.log("🧪 Running performance tests...")
+        return { "lighthouse"}
+    // In production, you"
+    // In production, you"
+  this.log("🧪 Running performance tests...")
+        return { "lighthouse"}
+      return { "basic"}
+    } catch (error) {  this.log("Performance tests "failed": ${error.message  }", "ERROR")
+  execSync("lighthouse-ci --version", { "stdio": "pipe"})
+  const output = execSync("lighthouse-ci autorun")
+  "cwd"
+        "stdio": "pipe"
+        "encoding": "utf8"
+      return { "success"}
+  return { "success": false, "error"}
+  return { "success": false, "error"}
+      execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe"})
+      const distDir = path.join(this.projectRoot, "dist")
+      const distDir = path.join(this.projectRoot, "dist")
+    } catch (error) {  this.log("Basic performance checks "failed": ${error.message  }", ")
+  "timestamp"
+>>>>>>> origin/chore/fix-lint-and-merge
       "summary"
         totalRecommendations
         "appliedOptimizations"
@@ -213,6 +371,7 @@
   cwd"
         "stdio: pipe"
       this.log(Committed ${appliedOptimizations.length} performance optimizations")
+<<<<<<< HEAD
 
   files.push(...this.getAllFiles(fullPath")
       this.log( Intelligent Performance Optimization completed successfully")
@@ -224,10 +383,40 @@
 
   this.log( `Intelligent Performance Optimization "failed": ${error.message},ERROR`)
 =======
+        "INFO"
+      execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe"})
+      // Commit with descriptive messageconst commitMessage = " Performance "Optimizations": ${appliedOptimizations.length} automatic optimizations applied";execSync("git commit -m ${commitMessage}")
+  "cwd"
+        "stdio": "pipe"
+      this.log(Committed ${appliedOptimizations.length} performance optimizations")
+        "INFO"
+      )} catch (error) {  this.log(`Failed to commit "optimizations": ${error.message  }", "ERROR"`)
+  const lines = content.split("\n")
+  const fullPath = path.join(dir, ")
+  files.push(...this.getAllFiles(fullPath")
+      this.log( Intelligent Performance Optimization completed successfully")
+  this.log( "Intelligent Performance Optimization "failed": ${error.message  }",ERROR")
+      this.log( Intelligent Performance Optimization completed successfully")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -235,7 +424,3 @@
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

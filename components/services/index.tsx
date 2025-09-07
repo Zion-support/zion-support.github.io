@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import React from 'react',
 import SEO from '../../components/SEO',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+=======
+
+
+import type { NextPage } from 'next',
+import Head from 'next/head';,
+import React from 'react';,
+import SEO from '../../components/SEO';,
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';,
+>>>>>>> origin/chore/fix-lint-and-merge
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
 import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
@@ -20,20 +30,31 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 
 const mapLocalToServiceItem = null;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {}
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (}
 }React;
   useEffect ( () => {
+<<<<<<< HEAD
 export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handleSubmit = async (values: QuoteFormValues) => {
+=======
+  const next = services.filter ( (s) => {
+  //Category const handleSubmit = async (values: QuoteFormValues) => {
+ ;
+>>>>>>> origin/chore/fix-lint-and-merge
   const res = await fetch ('/api/quote-request', {
   method: 'POST',
   headers: {
 body: JSON.stringify ({
+<<<<<<< HEAD
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
 }
@@ -248,11 +269,20 @@ body: JSON.stringify ({}
 budgetRange: values.budgetRange;
 }"
 <Head> <title>Zion AI Marketplace - Services</title> <meta name=description content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )
+=======
+  service: values.serviceTitle, description: values.projectDescription, timeline: {}
+  start: values.timelineStart, end: values.timelineEnd}
+}
+budgetRange: values.budgetRange;
+}
+<Head><title>Zion AI Marketplace - Services</title> <meta name=\"description\" content=\"Discover curated IT services. Request quotes with AI-assisted summaries.\"    /> </Head>) )
+>>>>>>> origin/chore/fix-lint-and-merge
 }</div> </div> </div> </div> <QuoteRequestModal open= {}
-  modalOpen;
+  modalOpen}
 }onClose= {}
-  () => setModalOpen (false)
+  () =    /> setModalOpen (false)}
 }service= {}
+<<<<<<< HEAD
   selected;
 }onSubmit= {}
   handleSubmit;
@@ -589,3 +619,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default ServicesPage;
 
 
+=======
+  selected}
+}onSubmit= {
+}
+  handleSubmit }
+}/> </div>) 
+};
+
+export default ServicesPage;
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge

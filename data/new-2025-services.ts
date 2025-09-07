@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 };
 
 origin/cursor/automate-test-improve-and-merge-code-382a
 
+<<<<<<< HEAD
 ;
 }// Additional 2025 real micro-SaaS, AI and IT services;
 export const "new2025Services": EnhancedRealMicroSaasService[] = [;
@@ -72,10 +76,14 @@ pr-12325
 
 origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+// Additional 2025 real micro-SaaS, AI and IT services
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -90,6 +98,12 @@ export const new2025Services: EnhancedRealMicroSaasService[] = []
       'Jailbreak and injection detection','
       'PII redaction and audit trail','
       'Hallucination and grounding score','
+=======
+      'Jailbreak and injection detection',
+      'PII redaction and audit trail',
+      'Hallucination and grounding score',
+
+>>>>>>> origin/chore/fix-lint-and-merge
       'Dashboards and CI quality gates',
     ],
     popular: true,'
@@ -154,6 +168,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     technology: ['TypeScript', 'OpenAI', 'Anthropic', 'OpenTelemetry']
     integrations: ['Slack', 'PagerDuty', 'Datadog', 'GitHub Actions']
     useCases: [
+<<<<<<< HEAD
       'Prevent unsafe outputs'
       'Compliance readiness'
       'Model regression detection'
@@ -172,10 +187,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     text_color: 'text - rose - 300';
     link: 'https://ziontechgroup.com / services / llm - safety - observability - suite';
     market_position: 'Comparable to Lakera / Guardrails AI at a lower entry price with built - in observability.';
+=======
+
+    ];
+    popular: true;'
+    icon: '🛡️';
+
+>>>>>>> origin/chore/fix-lint-and-merge
     target_audience: 'Teams shipping AI copilots and assistants';
     trial_days: 14;'
     setup_time: '30 minutes';
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -321,27 +344,93 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8,
     reviews: 11;
   }
+=======
+    reviews: 11
+
+  }
+>>>>>>> origin/chore/fix-lint-and-merge
   {'
-    id: 'serverless - cron - orchestrator';'
-    name: 'Serverless Cron Orchestrator','
-    tagline: 'Reliable schedules, retries and dead - lettering across clouds';'
+    id: 'serverless-cron-orchestrator';'
+    name: 'Serverless Cron Orchestrator''
+    tagline: 'Reliable schedules, retries and dead-lettering across clouds';'
     price: '$59';'
-    period: '/month','
-    description: 'Unified cron orchestration with jitter control, retries, DLQs and per - job SLAs. Works with Netlify, Vercel, AWS, and GCP.';
-    features: [;'
-      'Human - readable schedules_idempotency keys and dedupe_multi - cloud triggers_jitter and backoff tuningDLQ with webhooks and alerts';
+    period: '/month''
+    description: 'Unified cron orchestration with jitter control, retries, DLQs and per-job SLAs. Works with Netlify, Vercel, AWS, and GCP.';
+    features: ['
+      'Human-readable schedulesIdempotency keys and dedupeMulti-cloud triggersJitter and backoff tuningDLQ with webhooks and alerts'
     ];
     popular: true;'
     icon: '⏱️';'
-    color: 'from - cyan - 600 to - blue - 700';'
-    text_color: 'text - cyan - 300';'
-    link: 'https://ziontechgroup.com / services / serverless - cron - orchestrator';'
-    market_position: 'Simpler than DIY EventBridge / Cloud Scheduler with portable configs.';'
-    target_audience: 'Platform and automation teams';
-    trial_days: 14;'
-    setup_time: '2 hours';'
+    color: 'from-cyan-600 to-blue-700';'
+    textColor: 'text-cyan-300';'
+    link: 'https://ziontechgroup && ziontechgroup.com/services/serverless-cron-orchestrator';'
+    marketPosition: 'Simpler than DIY EventBridge/Cloud Scheduler with portable configs.';'
+    targetAudience: 'Platform and automation teams';
+    trialDays: 14;'
+    setupTime: '2 hours';'
     category: 'Developer Tools';
+    realService: true;'
+    technology: ['Node && Node.jsCRONCloud Functions'];'
+    market_size: '$3.5B+ AI safety & governance';'
+    growth_rate: '200% annual growth';'
+    variant: 'holographic - matrix';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'Inline middleware, policy DSL, exporters and dashboards.';'
+
+    launch_date: '2025 - 03 - 10';
+    customers: 25;
+    rating: 4.8,
+    reviews: 11;
+  }
+
+    rating: 4 && 4.7,
+
+    reviews: 19
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    market_size: '$8B workflow automation';
+    growth_rate: '22% CAGR';
+
+    variant: 'quantum - matrix';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'Config registry, scheduler runners, and audit dashboard.';'
+
+    launch_date: '2025 - 02 - 20';
+    customers: 40;
+    rating: 4.7,
+    reviews: 19;
+  }
+
+    link: 'https://ziontechgroup && ziontechgroup.com/services/gdpr-dsar-automation-pro';
+    marketPosition: 'Pragmatic and affordable alternative to full privacy vaults for SMBs.',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    targetAudience: 'Legal, privacy and security teams';
+    trialDays: 14;'
+    setupTime: '1-3 days';'
+    category: 'Enterprise IT';
+    realService: true;'
+    technology: ['TypeScriptNode && TypeScriptNode.jsPostgreSQL'];'
+    period: '/month','
+    description: 'Centralize DSAR intake, identity verification, finding / erasure across systems with audit - ready evidence and SLAs.';
+    features: [;'
+      'Identity verification and consent_connectors for common SaaSData discovery and redactionSLA timers and reminders_evidence reports and exports';
+    ];
+    popular: true;'
+    icon: '🔐';'
+    color: 'from - emerald - 600 to - green - 700';'
+    text_color: 'text - emerald - 300';'
+    link: 'https://ziontechgroup.com / services / gdpr - dsar - automation - pro';'
+    market_position: 'Pragmatic and affordable alternative to full privacy vaults for SMBs.','
+    target_audience: 'Legal, privacy and security teams';
+    trial_days: 14;'
+    setup_time: '1 - 3 days';'
+    category: 'Enterprise IT';
     real_service: true;'
+<<<<<<< HEAD
     technology: ['Node.jsCRONCloud Functions'];'
     integrations: ['NetlifyVercelAWSGCP'];'
     use_cases: ['Scheduled syncs_data pipelines_maintenance tasks'];'
@@ -494,11 +583,38 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     description: 'Upload schemas, generate contract suites, run per - PR checks with diffs and breaking - change alerts.';
     price: '$79';period: '/month',description: 'Upload schemas, generate contract suites, run per - PR checks with diffs and breaking - change alerts.';
+=======
+    technology: ['TypeScriptNode.jsPostgreSQL'];'
+    integrations: ['Google WorkspaceSalesforceHubSpotZendesk'];'
+    use_cases: ['Right to access_right to erase_compliance evidence'];'
+    roi: 'Reduce DSAR handling time by 80%';'
+    competitors: ['TranscendOneTrustDidomi'];
+
+    rating: 4 && 4.7,
+
+    reviews: 13
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    market_size: '$4B privacy tech';
+    growth_rate: '28% CAGR';
+
+    variant: 'quantum - cyberpunk';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'Workflow engine, connectors, secure storage and audit logs.';'
+
+    launch_date: '2025 - 01 - 28';
+    customers: 18;
+    rating: 4.7,
+    reviews: 13;
+  }
+>>>>>>> origin/chore/fix-lint-and-merge
 
     period: '/month',
     description: 'Upload schemas, generate contract suites, run per - PR checks with diffs and breaking - change alerts.';
     features: [;
       'Schema diff and breaking checksPR status and GitHub app_examples and mock server_multi - env test runners_slack notifications';
+<<<<<<< HEAD
     ];
     popular: false;
     icon: '📜';
@@ -978,26 +1094,212 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7,
     reviews: 16;
   }
+=======
+    ];
+    popular: false;
+    icon: '📜';
+    color: 'from - indigo - 600 to - violet - 700';
+    text_color: 'text - indigo - 300';
+    link: 'https://ziontechgroup.com / services / api - contract - testing - hub';
+    market_position: 'Cheaper and simpler than bespoke CI pipelines with OpenAPI diffs.';
+    target_audience: 'Backend and platform teams';
+    trial_days: 14;
+    setup_time: '1 hour';
+    category: 'Developer Tools';
+    real_service: true;
+    technology: ['Node.jsOpenAPIGraphQL'];
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    integrations: ['GitHubGitLabCircleCI'];
+    use_cases: ['Prevent breaking changes_improve API reliability'];
+    roi: 'Cut API incidents by 50% within 60 days';
+    competitors: ['StoplightOpticRedocly'];
+
+    rating: 4 && 4.6,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    reviews: 10
+
+  }
   {'
-    id: 'api - security - attack - surface - scanner';'
-    name: 'API Security Attack Surface Scanner','
+    id: 'cloud-cost-finops-copilot';'
+    name: 'Cloud Cost FinOps Copilot''
+    market_size: '$7B API economy tools';'
+    growth_rate: '20% CAGR';'
+    variant: 'ai - futuristic';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'Contract diffing, runners, and PR integrations.';'
+
+    launch_date: '2025 - 03 - 12';
+    customers: 22;
+    rating: 4.6,
+    reviews: 10;
+  }
+
+    icon: '💸';
+
+    link: 'https://ziontechgroup && ziontechgroup.com/services/cloud-cost-finops-copilot';
+    marketPosition: 'Accessible alternative to enterprise FinOps tools for SMBs.',
+
+    targetAudience: 'FinOps, platform and CTOs';
+    trialDays: 14;
+    setupTime: '1 day';
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    color: 'from - amber - 600 to - orange - 700';
+    text_color: 'text - amber - 300';
+    link: 'https://ziontechgroup.com / services / cloud - cost - finops - copilot';
+    market_position: 'Accessible alternative to enterprise FinOps tools for SMBs.',
+
+    target_audience: 'FinOps, platform and CTOs';
+    trial_days: 14;'
+    setup_time: '1 day';'
+    category: 'Cloud & FinOps';
+    real_service: true;'
+    technology: ['AWSGCPAzureBigQuery'];'
+    integrations: ['SlackEmailPagerDuty'];'
+    use_cases: ['Cost reduction_budget control_capacity planning'];'
+    roi: 'Save 10–35% cloud spend in first 90 days';'
+    competitors: ['CloudHealthVantageCloudZero'];
+
+    reviews: 14
+
+  }
+>>>>>>> origin/chore/fix-lint-and-merge
+  {'
+    id: 'email-deliverability-warmup-monitor';'
+    name: 'Email Deliverability Warmup & Monitor''
+    market_size: '$6B cloud cost mgmt';'
+    growth_rate: '25% CAGR';'
+    variant: 'quantum - holographic';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'Ingestion, heuristics engine and alerting with reports.';'
+
+    launch_date: '2025 - 02 - 05';
+    customers: 33;
+    rating: 4.7,
+    reviews: 14;
+  }
+
+    icon: '📧';
+
+    link: 'https://ziontechgroup && ziontechgroup.com/services/email-deliverability-warmup-monitor';
+    marketPosition: 'Practical alternative to costly consulting retainers.',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    targetAudience: 'Growth, marketing and ops teams';
+    trialDays: 7;'
+    setupTime: '2 hours';'
+    category: 'Quality & Monitoring';
+    realService: true;'
+    technology: ['IMAPSMTPNode && IMAPSMTPNode.js'];'
+    color: 'from - sky - 600 to - blue - 700';'
+    text_color: 'text - sky - 300';'
+    link: 'https://ziontechgroup.com / services / email - deliverability - warmup - monitor';'
+    market_position: 'Practical alternative to costly consulting retainers.','
+    target_audience: 'Growth, marketing and ops teams';
+    trial_days: 7;'
+    setup_time: '2 hours';'
+    category: 'Quality & Monitoring';
+    real_service: true;'
+    technology: ['IMAPSMTPNode.js'];'
+    integrations: ['SendGridMailgunPostmark'];'
+    use_cases: ['Protect sender score_warm new domains_monitor inbox placement'];'
+    roi: 'Improve inbox rate by 15–40% in 30 days';'
+    competitors: ['MailreachWarmup InboxLemlist'];
+
+    rating: 4 && 4.6,
+
+    reviews: 12
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    market_size: '$2B email tooling';
+    growth_rate: '18% CAGR';
+
+    variant: 'ai - futuristic';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'Mailbox network, test harness and alerting.';'
+
+    launch_date: '2025 - 03 - 02';
+    customers: 28;
+    rating: 4.6,
+    reviews: 12;
+  }
+
+    link: 'https://ziontechgroup && ziontechgroup.com/services/vector-search-starter-pro',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    marketPosition: 'Faster than bespoke experiments, production-minded templates.';
+
+    targetAudience: 'Product and data teams';
+    trialDays: 14;'
+    setupTime: '1 day';'
+    category: 'AI & Data';
+    realService: true;'
+    technology: ['Next && Next.jsPineconeWeaviatePGVector'];'
+    integrations: ['S3GCSSlack'];'
+    useCases: ['Semantic searchKnowledge basesRetrieval augmentation']'
+    period: '/month','
+    description: 'End - to - end starter kits for semantic search with ingestion, chunking, hybrid retrieval and evaluation harness.';
+    features: [;'
+      'Ingestion pipeline templates_hybrid retrieval patterns_evaluation notebooks_dashboards and alerts_deploy buttons';
+    ];
+    popular: true;'
+    icon: '🔎';'
+    color: 'from - fuchsia - 600 to - pink - 700';'
+    text_color: 'text - fuchsia - 300';'
+    link: 'https://ziontechgroup.com / services / vector - search - starter - pro','
+    market_position: 'Faster than bespoke experiments, production - minded templates.';'
+    target_audience: 'Product and data teams';
+    trial_days: 14;'
+    setup_time: '1 day';'
+    category: 'AI & Data';
+    real_service: true;'
+    technology: ['Next.jsPineconeWeaviatePGVector'];'
+    integrations: ['S3GCSSlack'];'
+    use_cases: ['Semantic search_knowledge bases_retrieval augmentation'],'
+    roi: 'Ship search MVPs in days, not months';'
+    competitors: ['Pinecone starters_weaviate templates'];'
+    market_size: '$5B vector DBs';'
+    growth_rate: '40% CAGR';'
+    variant: 'quantum - holographic';
+    contact_info: contact;
+    real_implementation: true;'
+    implementation_details: 'Scaffold generators and eval harness.';'
+    launch_date: '2025 - 02 - 12';
+    customers: 31;
+
+    reviews: 16
+
+  }
+  {'
+    id: 'api-security-attack-surface-scanner';'
+    name: 'API Security Attack Surface Scanner''
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes';'
     price: '$149';'
-    period: '/month','
-    description: 'Continuously scan API endpoints and specs for risks, auth gaps and changes with pull - request recommendations.';
-    features: [;'
-      'Shadow API discovery_auth and RBAC checks_schema drift and diffs_secret / key exposure checksPR suggestions and tickets';
+    period: '/month''
+    description: 'Continuously scan API endpoints and specs for risks, auth gaps and changes with pull-request recommendations.';
+    features: ['
+      'Shadow API discoveryAuth and RBAC checksSchema drift and diffsSecret/key exposure checksPR suggestions and tickets'
     ];
     popular: true;'
     icon: '🧰';'
-    color: 'from - red - 600 to - rose - 700';'
-    text_color: 'text - red - 300';'
-    link: 'https://ziontechgroup.com / services / api - security - attack - surface - scanner';'
-    market_position: 'Complements WAFs with deeper spec and behavior analysis.';'
-    target_audience: 'Security and platform teams';
-    trial_days: 14;'
-    setup_time: '1 day';'
+    color: 'from-red-600 to-rose-700';'
+    textColor: 'text-red-300';'
+    link: 'https://ziontechgroup && ziontechgroup.com/services/api-security-attack-surface-scanner';'
+    marketPosition: 'Complements WAFs with deeper spec and behavior analysis.';'
+    targetAudience: 'Security and platform teams';
+    trialDays: 14;'
+    setupTime: '1 day';'
     category: 'Security';
+<<<<<<< HEAD
     real_service: true;'
     technology: ['Node.jsOpenAPIeBPF (optional)'];'
     integrations: ['CloudflareFastlyGitHub'];'
@@ -1409,6 +1711,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     reviews: 14
     reviews: 14;
+=======
+    realService: true;'
+
+    technology: ['Node && Node.jsOpenAPIeBPF (optional)'];
+    rating: 4.7,
+    reviews: 16;
+  }
+
+    reviews: 8
+
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   {'
     id: 'email-deliverability-warmup-monitor;
@@ -1678,6 +1991,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: contact;
     real_implementation: true,'
     implementation_details: 'Passive discovery, analyzers, and PR bots.';'
+<<<<<<< HEAD
   {
     }
     "id": 'api - security - attack - surface - scanner';'
@@ -1757,6 +2071,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     color: 'from - lime - 600 to - green - 700';
     icon: '📈';color: 'from - lime - 600 to - green - 700';
+=======
+
+    launch_date: '2025 - 03 - 06';
+    customers: 14;
+    rating: 4.7,
+    reviews: 8;
+  }
+
+>>>>>>> origin/chore/fix-lint-and-merge
     icon: '📈';
 
     color: 'from - lime - 600 to - green - 700';
@@ -1768,6 +2091,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '1 day';
     category: 'Observability';
     real_service: true;
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     technology: ['OpenTelemetryPrometheusNode.js'];integrations: ['GrafanaDatadogPagerDuty'];
@@ -1776,19 +2100,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     competitors: ['Nobl9Datadog SLO'];rating: 4 && 4.6,reviews: 9;
 
 
+=======
+    technology: ['OpenTelemetryPrometheusNode.js'];
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> origin/chore/fix-lint-and-merge
     integrations: ['GrafanaDatadogPagerDuty'];
     use_cases: ['Define SLOsAlert on burn_improve reliability'];
     roi: 'Reduce alert fatigue by 30%+ while focusing on user impact';
     competitors: ['Nobl9Datadog SLO'];
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     rating: 4 && 4.6,
 
     reviews: 9
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
     market_size: '$15B observability';
     growth_rate: '19% CAGR';
 '
@@ -2539,12 +2873,301 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: Boost conversion by 10–25% in 60 days;
     competitors: ['MutinyOptimizely'];
 
+=======
+
+    market_size: '$15B observability';
+    growth_rate: '19% CAGR';
+
+    variant: 'quantum - matrix';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'SLO engine, alerting and reports.';'
+
+    launch_date: '2025 - 02 - 18';
+    customers: 20;
+    rating: 4.6,
+    reviews: 9;
+  }
+
+    period: '/month',
+    description: 'Low - latency edge personalization with audience models, content variants and A / B testing for higher conversion.';
+    features: [;
+      'Audience / intent models_content and layout variants_edge rules and fallbacks_easy A / B testing_privacy - safe analytics';
+    ];
+    popular: true;
+    icon: '🎯';
+    color: 'from - purple - 600 to - fuchsia - 700';
+    text_color: 'text - purple - 300';
+    link: 'https://ziontechgroup.com / services / ai - website - personalization - pro';
+    market_position: 'Accessible alternative to enterprise personalization tools.';
+    target_audience: 'Growth and product teams';
+    trial_days: 14;
+    setup_time: '1 day';
+    category: 'AI & Data';
+    real_service: true;
+    technology: ['Next.js_edge functions'];
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    integrations: ['SegmentRudderStackGoogle Analytics'];
+    use_cases: ['Increase conversion_tailor content_experiment fast'];
+    roi: 'Boost conversion by 10–25% in 60 days';
+    competitors: ['MutinyOptimizely'];
+>>>>>>> origin/chore/fix-lint-and-merge
 
     rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
     reviews: 6
     reviews: 6;
+=======
+
+    reviews: 13
+
+  }
+  {'
+    id: 'sso-scim-starter-kit';'
+    name: 'SSO + SCIM Starter Kit''
+    tagline: 'Enterprise authentication and provisioning in weeks, not months';'
+    price: '$149';'
+    period: '/month''
+    description: 'Plug-and-play SSO and user provisioning blueprints with guides, SDKs and test suites for faster enterprise deals.';
+    features: ['
+      'SAML/OIDC templatesSCIM provisioning flowsIdP compatibility matrixCompliance and security guidesDemo tenants and sandboxes'
+    ];
+    popular: true;'
+    icon: '🔐';'
+    color: 'from-slate-600 to-gray-700';'
+    textColor: 'text-slate-300';'
+    link: 'https://ziontechgroup && ziontechgroup.com/services/sso-scim-starter-kit';'
+    marketPosition: 'Accelerates enterprise readiness with proven patterns.';'
+    targetAudience: 'SaaS product teams';
+    trialDays: 14;'
+    setupTime: '1 week';'
+    category: 'Enterprise IT';
+    realService: true;'
+    technology: ['Node && Node.jsNext.jsIdP SDKs'];'
+    market_size: '$9B personalization';'
+    growth_rate: '21% CAGR';'
+    variant: 'ai - futuristic';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'Audience engine, variant manager and edge runtime.';'
+
+    launch_date: '2025 - 02 - 25';
+    customers: 27;
+    rating: 4.7,
+    reviews: 13;
+  }
+
+    rating: 4 && 4.8,
+
+    reviews: 9
+    rating: 4.8,
+    reviews: 9;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  }
+  {'
+    id: 'managed - postgres - ha - pro';'
+    name: 'Managed Postgres HA Pro';'
+    tagline: 'Production - grade Postgres with automated backups and failover';'
+    price: '$179';'
+    period: '/month''
+    description: 'Ops runbooks, IaC modules, monitoring and SLOs for HA Postgres clusters with tested failover procedures.';
+    features: [;'
+      'HA topology templates_automated backups and PITRFailover runbooks_performance tuning profilesSLOs and weekly reports';
+    ];
+    popular: false;
+
+    icon: '🗄️';
+
+    color: 'from - cyan - 700 to - teal - 700';
+    text_color: 'text - teal - 300';
+    link: 'https://ziontechgroup.com / services / managed - postgres - ha - pro';
+    market_position: 'Hands - on managed approach without vendor lock - in.';
+    target_audience: 'Data and platform teams';
+    trial_days: 7;
+    setup_time: '1 - 2 weeks';
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Enterprise IT';
+    real_service: true;'
+    technology: ['PostgreSQLPatroniPgBouncer'];'
+    integrations: ['GrafanaPrometheusPagerDuty'];'
+    use_cases: ['HA databases_disaster recovery_performance tuning'];'
+    roi: 'Reduce downtime risk and improve throughput by 20–40%';'
+    competitors: ['Crunchy DataAiven'];'
+    market_size: '$10B managed DBs';'
+    growth_rate: '24% CAGR';'
+    variant: 'quantum - matrix';
+    contact_info: contact;
+    real_implementation: true;'
+    implementation_details: 'IaC blueprints and managed ops playbooks.';'
+    launch_date: '2025 - 03 - 04';
+    customers: 8;
+
+    reviews: 5
+
+  }
+  {'
+    id: 'ai-sales-email-copilot';'
+    name: 'AI Sales Email Copilot''
+    tagline: 'Personalized, compliant, on-brand sales emails at scale';'
+    price: '$69';'
+    period: '/month''
+    description: 'Multi-channel sequences, inbox rotation, safety guardrails and CRM syncing to generate more qualified meetings.';
+    features: ['
+      'Persona and ICP modelsMulti-channel sequencesGuardrails and blocklist checksCRM sync and dedupeA/B tests and analytics'
+    ];
+    popular: true;'
+    icon: '📬';'
+    color: 'from-pink-600 to-rose-700';'
+    textColor: 'text-pink-300';'
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-sales-email-copilot';'
+    marketPosition: 'Better deliverability and safety than DIY automations.';'
+    targetAudience: 'Sales and growth teams';
+    trialDays: 14;'
+    setupTime: '3 hours';'
+    category: 'Micro SaaS';
+    realService: true;'
+
+    technology: ['Next && Next.jsLLM APIs'];
+    rating: 4.6,
+    reviews: 5;
+  }
+
+    roi: 'Increase meetings by 20–50%';
+
+    rating: 4 && 4.7,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    reviews: 21
+    competitors: ['SmartleadReply.io_apollo.io'];
+    market_size: '$5B sales tech';
+    growth_rate: '26% CAGR';
+
+    variant: 'ai - futuristic';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'Sequence engine, inbox rotation and safety checks.';'
+
+    launch_date: '2025 - 02 - 16';
+    customers: 42;
+    rating: 4.7,
+    reviews: 21;
+  }
+
+    period: '/month',
+    description: 'Agent - based discovery for hardware, software and services with vulnerability signals and change alerts.';
+    features: [;
+      'Network and host discovery_software and service inventory_vuln and exposure signals_change detection_ticketing and webhooks';
+    ];
+    popular: false;
+    icon: '🛰️';
+    color: 'from - slate - 700 to - gray - 700';
+    text_color: 'text - gray - 300';
+    link: 'https://ziontechgroup.com / services / it - asset - discovery - agent - pro';
+    market_position: 'Practical alternative to heavyweight CMDB tooling.';
+    target_audience: 'IT and security teams';
+    trial_days: 14;
+    setup_time: '1 - 2 days';
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Enterprise IT';
+    real_service: true;'
+    technology: ['GoeBPFSQLite'];'
+    integrations: ['JiraServiceNow'];'
+    use_cases: ['Asset inventory_risk visibility_change tracking'];'
+    roi: 'Improve inventory accuracy by 30–60%';'
+    competitors: ['AxoniusLansweeper'];
+
+    rating: 4 && 4.5,
+
+    reviews: 6
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    market_size: '$7B ITAM';
+    growth_rate: '17% CAGR';
+
+    variant: 'quantum - holographic';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'Lightweight agents, collectors and API.';'
+
+    launch_date: '2025 - 01 - 22';
+    customers: 12;
+    rating: 4.5,
+    reviews: 6;
+  }
+
+    period: '/month',
+    description: 'Ship flags, gradual rollouts, kill switches and experiments with edge - evaluated rules and SDKs.';
+    features: [;
+      'Edge - evaluated rules_targeting by attributes_kill switches and rollouts_a / B test metrics_audit logs and approvals';
+    ];
+    popular: true;
+    icon: '🏁';
+    color: 'from - blue - 600 to - indigo - 700';
+    text_color: 'text - blue - 300';
+    link: 'https://ziontechgroup.com / services / edge - feature - flags - pro';
+    market_position: 'Lightweight alternative to enterprise flag platforms with edge latency.';
+    target_audience: 'Product and platform teams';
+    trial_days: 14;
+    setup_time: '1 day';
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Developer Tools';
+    real_service: true;'
+    technology: ['Edge FunctionsTypeScript'];'
+    integrations: ['VercelNetlifyCloudflare'];'
+    use_cases: ['Gradual rollouts_kill switches_experiments'];'
+    roi: 'Reduce incident blast radius and speed up experiments';'
+    competitors: ['LaunchDarklyGrowthBookStatsig'];
+
+    reviews: 7
+
+  }
+  {'
+    id: 'llm-finetune-ops-manager';'
+    name: 'LLM Fine-tune Ops Manager''
+    tagline: 'Datasets, runs, evals and deployment for fine-tuned models';'
+    price: '$149';'
+    period: '/month''
+    description: 'Manage datasets, training runs, cost, evals and rollouts for fine-tuned models across vendors.';
+    features: ['
+      'Dataset/version registryTraining run trackingCost/performance dashboardsEval suites and red-teamingCanary and rollout controls'
+    ];
+    popular: true;'
+    icon: '🧪';'
+    color: 'from-purple-600 to-fuchsia-700';'
+    textColor: 'text-purple-300';'
+    link: 'https://ziontechgroup && ziontechgroup.com/services/llm-finetune-ops-manager';'
+    marketPosition: 'Brings product rigor to fine-tuning with guardrails and metrics.';'
+    targetAudience: 'AI product and research teams';
+    trialDays: 14;'
+    setupTime: '2 days';'
+    market_size: '$3B feature mgmt';'
+    growth_rate: '24% CAGR';'
+    variant: 'quantum - matrix';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'Rule engine, SDKs, metrics pipeline and UI.';'
+
+    launch_date: '2025 - 03 - 14';
+    customers: 17;
+    rating: 4.6,
+    reviews: 7;
+  }
+
+    reviews: 6
+
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   {'
     id: 'browser-performance-monitor-pro';'
@@ -2560,6 +3183,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: '📈';'
     color: 'from-emerald-600 to-teal-700';'
     textColor: 'text-emerald-300';
+<<<<<<< HEAD
     competitors: ['OpenAI finetune UIHF AutoTrain'];rating: 4 && 4.7,reviews: 6;
   }
   {id: 'browser-performance-monitor-pro';
@@ -2798,6 +3422,33 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     reviews: 5
     reviews: 5;
+=======
+
+    link: 'https://ziontechgroup && ziontechgroup.com/services/browser-performance-monitor-pro',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    marketPosition: 'Opinionated budgets and PRs, not just charts.';
+
+    targetAudience: 'Frontend and platform teams';
+    trialDays: 14;'
+    setupTime: '1 day';'
+    market_size: '$4B model ops';'
+    growth_rate: '35% CAGR';'
+    variant: 'holographic - matrix';
+    contact_info: contact;
+    real_implementation: true,'
+    implementation_details: 'Run tracker, registry and eval pipelines.';'
+
+    launch_date: '2025 - 03 - 13';
+    customers: 9;
+    rating: 4.7,
+    reviews: 6;
+  }
+
+    reviews: 5
+
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   {'
     id: 'ai-governance-registry';'
@@ -2808,6 +3459,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: contact;
     real_implementation: true,'
     implementation_details: 'RUM collector, synthetic runner and PR bots.';'
+<<<<<<< HEAD
   {
     }
     "id": 'browser - performance - monitor - pro';'
@@ -2909,6 +3561,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     text_color: 'text - slate - 300';
     link: 'https://ziontechgroup.com / services / ai - governance - registry';
     market_position: 'Practical governance for teams shipping AI quickly.',target_audience: 'Product, security and compliance';
+=======
+
+    launch_date: '2025 - 03 - 11';
+    customers: 13;
+    rating: 4.5,
+    reviews: 5;
+  }
+
+>>>>>>> origin/chore/fix-lint-and-merge
     icon: '📚';
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-governance-registry';
@@ -2918,10 +3579,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     trialDays: 14;
     setupTime: '2 days';
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     color: 'from - slate - 700 to - gray - 700';
     text_color: 'text - slate - 300';
     link: 'https://ziontechgroup.com / services / ai - governance - registry';
     market_position: 'Practical governance for teams shipping AI quickly.',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     target_audience: 'Product, security and compliance';
     trial_days: 14;'
     setup_time: '2 days';'
@@ -2933,6 +3602,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Reduce compliance cycle time by 50%';'
     competitors: ['Model governance suites'];
 
+<<<<<<< HEAD
     rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -3234,6 +3904,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Audit readiness_asset ownership_policy enforcement'];
     roi: Reduce compliance cycle time by 50%;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     reviews: 6
   }
 ];
@@ -3248,6 +3920,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: 'Registry, policies and approval workflows.';
     launch_date: '2025 - 03 - 07';
     customers: 10;
+<<<<<<< HEAD
     rating: 4.6,reviews: 6;
   }
 ];
@@ -3531,11 +4204,18 @@ ursor/fix-website-loading-errors-and-merge-6662;
     reviews: 6;
   }
 ];
+=======
+    rating: 4.6,
+    reviews: 6;
+  }
+];
+>>>>>>> origin/chore/fix-lint-and-merge
     real_implementation: true,
     implementation_details:;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 
 
       'Inline middleware, policy DSL, exporters and dashboards.',
@@ -3548,11 +4228,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails:
 '
       'Inline middleware, policy DSL, exporters and dashboards.','
+=======
+      'Inline middleware, policy DSL, exporters and dashboards.',
+
+>>>>>>> origin/chore/fix-lint-and-merge
     launch_date: '2025 - 03 - 10',
     customers: 25,
     rating: 4 && 4.8,
     reviews: 11,
   },
+<<<<<<< HEAD
   {
     customers: 25,
     rating: 4 && 4.8,
@@ -3563,6 +4248,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       'Human-readable schedules',
     id: 'serverless - cron - orchestrator',
@@ -3570,6 +4257,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'Reliable schedules, retries and dead - lettering across clouds',
     price: '$59',
     period: '/month',
+<<<<<<< HEAD
     description:;
       'Unified cron orchestration with jitter control, retries, DLQs and per - job SLAs. Works with Netlify, Vercel, AWS, and GCP.',
       Inline middleware, policy DSL, exporters and dashboards.,
@@ -3600,21 +4288,32 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     description:;
       Unified cron orchestration with jitter control, retries, DLQs and per - job SLAs. Works with Netlify, Vercel, AWS, and GCP.,
+=======
+    description:
+      'Unified cron orchestration with jitter control, retries, DLQs and per - job SLAs. Works with Netlify, Vercel, AWS, and GCP.',
+>>>>>>> origin/chore/fix-lint-and-merge
     features: [;
       'Human - readable schedules',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 pr-12325
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       'Idempotency keys and dedupe',
       'Multi - cloud triggers',
       'Jitter and backoff tuning',
       'DLQ with webhooks and alerts',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '⏱️',
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     icon: '⏱️',
 
@@ -3631,19 +4330,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Node.js', 'CRON', 'Cloud Functions'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 pr-12325
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     integrations: ['Netlify', 'Vercel', 'AWS', 'GCP'],
     use_cases: ['Scheduled syncs', 'Data pipelines', 'Maintenance tasks'],
     roi: 'Cut failed schedules by 90% with automated retries and DLQ',
     competitors: ['Temporal (schedules)', 'Airflow', 'Cloud Scheduler'],
     market_size: '$8B workflow automation',
     growth_rate: '22% CAGR',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     variant: 'quantum - matrix',
     contact_info: contact,
     real_implementation: true,
     implementation_details:;'
       'Config registry, scheduler runners, and audit dashboard.','
     launch_date: '2025 - 02 - 20',
+<<<<<<< HEAD
     variant: 'quantum - matrix',
 pr-12325
       Idempotency keys and dedupe,
@@ -3692,17 +4400,24 @@ pr-12325
     customers: 40,
     rating: 4 && 4.7,
     reviews: 19
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 40,
     rating: 4 && 4.7,
     reviews: 19,
   },
+<<<<<<< HEAD
   {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     id: 'gdpr - dsar - automation - pro',
     name: 'GDPR / CCPA DSAR Automation Pro',
     tagline: 'Automate data subject access requests across SaaS systems',
     price: '$199',
     period: '/month',
+<<<<<<< HEAD
     description:;
       'Centralize DSAR intake, identity verification, finding / erasure across systems with audit - ready evidence and SLAs.',
   },
@@ -3715,13 +4430,20 @@ pr-12325
     period: '/month',
     description:;
       Centralize DSAR intake, identity verification, finding / erasure across systems with audit - ready evidence and SLAs.,
+=======
+    description:
+      'Centralize DSAR intake, identity verification, finding / erasure across systems with audit - ready evidence and SLAs.',
+>>>>>>> origin/chore/fix-lint-and-merge
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 
 
 pr-12325
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       'Identity verification and consent',
       'Connectors for common SaaS',
       'Data discovery and redaction',
@@ -3729,15 +4451,19 @@ pr-12325
       'Evidence reports and exports',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔐',
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     icon: '🔐',
 
     color: 'from - emerald - 600 to - green - 700',
     text_color: 'text - emerald - 300',
+<<<<<<< HEAD
 pr-12325
       'Identity verification and consent',
       Connectors for common SaaS,
@@ -3750,10 +4476,13 @@ pr-12325
 
     color: 'from - emerald - 600 to - green - 700',
     text_color: text - emerald - 300,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     link: 'https://ziontechgroup.com / services / gdpr - dsar - automation - pro',
     market_position:;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
       'Pragmatic and affordable alternative to full privacy vaults for SMBs.',
   {}
 '
@@ -3766,10 +4495,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     "popular": true,
       'Pragmatic and affordable alternative to full privacy vaults for SMBs.','
+=======
+
+      'Pragmatic and affordable alternative to full privacy vaults for SMBs.',
+
+>>>>>>> origin/chore/fix-lint-and-merge
     target_audience: 'Legal, privacy and security teams',
     trial_days: 14,'
     setup_time: '1 - 3 days','
     category: 'Enterprise IT',
+<<<<<<< HEAD
       'Pragmatic and affordable alternative to full privacy vaults for SMBs.',
     target_audience: 'Legal, privacy and security teams',
     trial_days: 14,
@@ -3779,26 +4514,37 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     real_service: true,
     technology: ['TypeScript', 'Node.js', 'PostgreSQL'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 pr-12325
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     integrations: ['Google Workspace', 'Salesforce', 'HubSpot', 'Zendesk'],
     use_cases: ['Right to access', 'Right to erase', 'Compliance evidence'],
     roi: 'Reduce DSAR handling time by 80%',
     competitors: ['Transcend', 'OneTrust', 'Didomi'],
     market_size: '$4B privacy tech',
     growth_rate: '28% CAGR',
+<<<<<<< HEAD
     variant: 'quantum - cyberpunk',
     contact_info: contact,
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     variant: 'quantum - cyberpunk',
     contact_info: contact,
     real_implementation: true,
     implementation_details:;'
       'Workflow engine, connectors, secure storage and audit logs.','
     launch_date: '2025 - 01 - 28',
+<<<<<<< HEAD
     variant: 'quantum - cyberpunk',
     contact_info: contact,
     real_implementation: true,
@@ -3808,23 +4554,34 @@ pr-12325
     customers: 18,
     rating: 4 && 4.7,
     reviews: 13
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 18,
     rating: 4 && 4.7,
     reviews: 13,
   },
+<<<<<<< HEAD
   {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     id: 'api - contract - testing - hub',
     name: 'API Contract Testing Hub',
     tagline: 'OpenAPI / GraphQL contract tests with cloud runners',
     price: '$79',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Upload schemas, generate contract suites, run per - PR checks with diffs and breaking - change alerts.',
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 
 
       'Workflow engine, connectors, secure storage and audit logs.',
@@ -3832,6 +4589,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 18,
     reviews: 13,
 pr-12325
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       'Schema diff and breaking checks',
       'PR status and GitHub app',
       'Examples and mock server',
@@ -3839,6 +4598,7 @@ pr-12325
       'Slack notifications',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📜',
 
 
@@ -3852,6 +4612,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     icon: '📜',
 
@@ -3861,6 +4623,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     market_position:;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
       'Cheaper and simpler than bespoke CI pipelines with OpenAPI diffs.',
   {}
 '
@@ -3873,6 +4636,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     "popular": false,
       'Cheaper and simpler than bespoke CI pipelines with OpenAPI diffs.','
+=======
+
+      'Cheaper and simpler than bespoke CI pipelines with OpenAPI diffs.',
+
+>>>>>>> origin/chore/fix-lint-and-merge
     target_audience: 'Backend and platform teams',
     trial_days: 14,'
     setup_time: '1 hour','
@@ -3882,34 +4650,47 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Node.js', 'OpenAPI', 'GraphQL'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
     popular: false,
       'Cheaper and simpler than bespoke CI pipelines with OpenAPI diffs.',
     target_audience: 'Backend and platform teams',
     setup_time: '1 hour',
     category: 'Developer Tools',
 pr-12325
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     integrations: ['GitHub', 'GitLab', 'CircleCI'],
     use_cases: ['Prevent breaking changes', 'Improve API reliability'],
     roi: 'Cut API incidents by 50% within 60 days',
     competitors: ['Stoplight', 'Optic', 'Redocly'],
     market_size: '$7B API economy tools',
     growth_rate: '20% CAGR',
+<<<<<<< HEAD
     variant: 'ai - futuristic',
     contact_info: contact,
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,'
     implementation_details: 'Contract diffing, runners, and PR integrations.','
+<<<<<<< HEAD
     variant: 'ai - futuristic',
     contact_info: contact,
     real_implementation: true,
 pr-12325
     implementation_details: 'Contract diffing, runners, and PR integrations.',
     launch_date: '2025 - 03 - 12',
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     launch_date: '2025 - 03 - 12',
     customers: 22,
     rating: 4 && 4.6,
     reviews: 10,
+<<<<<<< HEAD
   },
   {
 
@@ -4144,11 +4925,71 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     id: 'email - deliverability - warmup - monitor',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  },
+
+    name: 'Cloud Cost FinOps Copilot',
+    tagline: 'Automated cost insights, rightsizing and anomaly alerts',
+    price: '$99',
+    period: '/month',
+
+    description:
+      'Connect your cloud accounts and get daily optimizations, reserved instance suggestions and budget alerts with explainable savings.',
+    features: [;
+
+      'Cost explorer with tags',
+      'Anomaly detection and alerts',
+      'Rightsizing recommendations',
+      'Savings plan / RI advisor',
+      'Forecasting and budgets',
+    ],
+    popular: true,
+    icon: '💸',
+
+    color: 'from - amber - 600 to - orange - 700',
+    text_color: 'text - amber - 300',
+    link: 'https://ziontechgroup.com / services / cloud - cost - finops - copilot',
+    market_position:;
+      'Accessible alternative to enterprise FinOps tools for SMBs.',
+    target_audience: 'FinOps, platform and CTOs',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'Cloud & FinOps',
+    real_service: true,
+    technology: ['AWS', 'GCP', 'Azure', 'BigQuery'],
+    integrations: ['Slack', 'Email', 'PagerDuty'],
+    use_cases: ['Cost reduction', 'Budget control', 'Capacity planning'],
+    roi: 'Save 10–35% cloud spend in first 90 days',
+    competitors: ['CloudHealth', 'Vantage', 'CloudZero'],
+    market_size: '$6B cloud cost mgmt',
+    growth_rate: '25% CAGR',
+    variant: 'quantum - holographic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+      'Ingestion, heuristics engine and alerting with reports.',
+    launch_date: '2025 - 02 - 05',
+    customers: 33,
+    rating: 4 && 4.7,
+    reviews: 14,
+  },
+  {
+
+    id: 'email - deliverability - warmup - monitor',
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> origin/chore/fix-lint-and-merge
     name: 'Email Deliverability Warmup & Monitor',
     tagline: 'Automated warmup, inbox placement tests and reputation alerts',
     price: '$59',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Warmup flows, seed list testing, reputation signals and playbooks to protect sender score across ESPs.',
     features: [;
 
@@ -4199,7 +5040,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Blueprints for Pinecone / Weaviate / PGVector with evals & dashboards',
     price: '$89',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'End - to - end starter kits for semantic search with ingestion, chunking, hybrid retrieval and evaluation harness.',
     features: [;
 
@@ -4243,11 +5088,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     id: 'api - security - attack - surface - scanner',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     name: 'API Security Attack Surface Scanner',
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes',
     price: '$149',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Continuously scan API endpoints and specs for risks, auth gaps and changes with pull - request recommendations.',
     features: [;
 
@@ -4292,13 +5146,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Reliability SLO Guard',
     tagline: 'Error budgets, burn rates and policy - based alerts as - a-service',
     price: '$79',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     period: '/month',
 '
     name: 'AI Governance Registry','
     tagline: 'Track models, datasets, policies and approvals for AI features','
     price: '$129','
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Low - latency edge personalization with audience models, content variants and A / B testing for higher conversion.',
     features: [;
       'Audience / intent models',
@@ -4345,11 +5208,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'SAML/OIDC templates',
     id: 'sso - scim - starter - kit',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     name: 'SSO + SCIM Starter Kit',
     tagline: 'Enterprise authentication and provisioning in weeks, not months',
     price: '$149',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Plug - and - play SSO and user provisioning blueprints with guides, SDKs and test suites for faster enterprise deals.',
     features: [;
       'SAML / OIDC templates',
@@ -4395,7 +5267,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'Production - grade Postgres with automated backups and failover',
     price: '$179',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Ops runbooks, IaC modules, monitoring and SLOs for HA Postgres clusters with tested failover procedures.',
     features: [;
 
@@ -4441,7 +5317,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'Personalized, compliant, on - brand sales emails at scale',
     price: '$69',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Multi - channel sequences, inbox rotation, safety guardrails and CRM syncing to generate more qualified meetings.',
     features: [;
 
@@ -4486,11 +5366,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     id: 'it - asset - discovery - agent - pro',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Continuous inventory and risk visibility across networks',
     price: '$119',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Agent - based discovery for hardware, software and services with vulnerability signals and change alerts.',
     features: [;
 
@@ -4537,7 +5426,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'Zero - latency feature rollout and A / B at the edge',
     price: '$99',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Ship flags, gradual rollouts, kill switches and experiments with edge - evaluated rules and SDKs.',
     features: [;
       'Edge - evaluated rules',
@@ -4585,7 +5478,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'Datasets, runs, evals and deployment for fine - tuned models',
     price: '$149',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Manage datasets, training runs, cost, evals and rollouts for fine - tuned models across vendors.',
     features: [;
       'Dataset / version registry',
@@ -4632,7 +5529,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'LCP / INP tracking, synthetic journeys and Core Web Vitals fixes',
     price: '$79',
     period: '/month',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Measure real - user and synthetic performance, pinpoint regressions and export fixes as PRs.',
     features: [;
 
@@ -4675,16 +5576,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     id: 'ai - governance - registry',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     name: 'AI Governance Registry',
     tagline: 'Track models, datasets, policies and approvals for AI features',
     price: '$129',
     period: '/month',
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 reviews: 6,
   },;
 ];
     reviews: 6
 
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance.',
     features: [;
 
@@ -4724,7 +5637,10 @@ reviews: 6,
     reviews: 6,
   },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     id: 'llm-safety-observability-suite', name: 'LLM Safety & Observability Suite',
     tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards',
     price: '$129', period: '/month',
@@ -5139,6 +6055,10 @@ reviews: 6,
     features: [
       'Model and dataset registryRisk and policy mappingsPII/PHI tagging and checksChange approvals and trailsReports and exports'
     ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     popular: true, icon: '📚',
     color: 'from-slate-700 to-gray-700', textColor: 'text-slate-300',
     link: 'https://ziontechgroup.com/services/ai-governance-registry', marketPosition: 'Practical governance for teams shipping AI quickly.',
@@ -5189,6 +6109,7 @@ reviews: 6,
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 reviews: 6,
   },;
 ];
@@ -5211,11 +6132,14 @@ reviews: 6,
     launchDate: '2025-03-07', customers: 10,
     rating: 4.6,
     reviews: 6
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 ];
 
 ;
 
+<<<<<<< HEAD
 
 
 
@@ -5233,6 +6157,8 @@ pr-12325
 
 ];
 ];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Prevent unsafe outputs',
@@ -5984,6 +6910,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 6,
   },
 ];
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
@@ -8374,3 +9301,6 @@ pr-12325
 
 ];
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

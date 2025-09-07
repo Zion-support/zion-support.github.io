@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState, useMemo } from "react;
 import { onsiteServicePricing, CountryPricing } from @/data/onsiteServicePricing";
@@ -5,19 +6,72 @@ import { Input } from "@/components/ui/input;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from @/components/ui/table";
 import { Globe, Search, ArrowUpDown } from 'lucide-react
 import { Button } from "@/components/ui/button;
+=======
+import { useState, useMemo } from "react",
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Globe, Search, ArrowUpDown } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/chore/fix-lint-and-merge
 export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState($2);
+  const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
+<<<<<<< HEAD
     key: keyof CountryPricing, direction: ascending" | "descending}>({
     key: country",
     direction: "ascending}),
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+    key: keyof CountryPricing;
+    direction: 'ascending' | 'descending';
+  }>({;
+    key: 'country',;
+    direction: 'ascending',;
+  });
+>>>>>>> origin/chore/fix-lint-and-merge
 
-  const sortedData = $2;
+  const sortedData = useMemo(() => {;
+    let filteredData = [...onsiteServicePricing];
+    // Filter by search query;
+    if (searchQuery) {;
+      filteredData = filteredData && filteredData.filter(item =>;
+        item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+      );
+
+  const sortedData = null;
+import { useState, useMemo } from 'react'
+import {
+  onsiteServicePricing
+  CountryPricing
+} from '@/data/onsiteServicePricing'
+import { Input } from '@/components/ui/input'
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import { Globe, Search, ArrowUpDown } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+export function ITServicePricingTable() {
+  const [searchQuery, setSearchQuery] = useState('')
+  const [sortConfig, setSortConfig] = useState<{
+    key: keyof CountryPricing
+    direction: 'ascending' | 'descending'
+  }>({
+    key: 'country'
+    direction: 'ascending'
+  })
+  const sortedData = useMemo(() => {
+    let filteredData = [...onsiteServicePricing]
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter(item =>
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       )
+<<<<<<< HEAD
 import { useState, useMemo  } from react';
 import {onsiteServicePricing,CountryPricing} from '@/data/onsiteServicePricing;
 import { Input  } from @/components/ui/input';
@@ -108,6 +162,36 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
         return sortConfig.direction === "ascending ? -1 : 1}
       if (a[sortConfig.key] > b[sortConfig.key]) {
         return sortConfig.direction === ascending" ? 1 : -1}
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+    }
+
+    // Sort data;
+    filteredData && filteredData.sort((a, b,) => {;
+      if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
+        return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
+
+      }
+
+  const handleSort = (key: keyof CountryPricing) => {
+    setSortConfig({
+
+      key
+      direction:
+        sortConfig.key === key && sortConfig.direction === 'ascending'
+          ? 'descending'
+          : 'ascending'
+    })
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+
+        return sortConfig.direction === "ascending" ? -1 : 1
+      }
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? 1 : -1
+      }
+>>>>>>> origin/chore/fix-lint-and-merge
       return 0
     }),
     
@@ -115,12 +199,18 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
   }, [onsiteServicePricing, searchQuery, sortConfig]),
 
   const handleSort = (key: keyof CountryPricing) => {
-    setSortConfig({,
+    setSortConfig({
       key,
       direction: 
+<<<<<<< HEAD
         sortConfig.key === key && sortConfig.direction === "ascending 
           ? descending",
           : "ascending})
+=======
+        sortConfig.key === key && sortConfig.direction === "ascending" 
+          ? "descending" 
+          : "ascending"})
+>>>>>>> origin/chore/fix-lint-and-merge
   },
 
   return (
@@ -145,7 +235,7 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
 
               <TableHead className=text-zion-cyan font-medium">
                 <Button 
-                  variant="ghost",
+                  variant="ghost" 
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light
@@ -155,6 +245,7 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
                 </Button>
 
               </TableHead>
+<<<<<<< HEAD
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light;
                 >;
                   <span>Country</span>;
@@ -193,6 +284,13 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
                   onClick={() => handleSort("pricePerIncident)}
                   className=hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
+=======
+              <TableHead className='text-right text-zion-cyan font-medium'>
+                <Button
+                  variant='ghost'
+                  onClick={() => handleSort('pricePerIncident')}
+                  className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'                >
+>>>>>>> origin/chore/fix-lint-and-merge
                   <span>Price Per Incident</span>
                   <ArrowUpDown className='h-4 w-4 />
 
@@ -200,6 +298,7 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
               </TableHead>
             </TableRow>
           </TableHeader>
+<<<<<<< HEAD
           <TableBody className="bg-zion-blue-dark>
             {sortedData.length > 0 ? (
               sortedData.map((item) => (,
@@ -209,6 +308,9 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
                     <span className="text-white>{item.country}</span>
                   </TableCell>
                   <TableCell className=text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
                 </TableRow>
               ))
             ) : (
@@ -216,16 +318,25 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
 
                 <TableCell
                   colSpan={2}
+<<<<<<< HEAD
                   className=text-center py-10 text-zion-slate-light';
                 >;
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
+=======
+                  className='text-center py-10 text-zion-slate-light'
+                >
+                  No countries match your search
+                </TableCell>
+              </TableRow>
+>>>>>>> origin/chore/fix-lint-and-merge
             )}
           </TableBody>
         </Table>
       </div>
     </div>
+<<<<<<< HEAD
           </TableBody>;
         </Table>;
       </div>;
@@ -233,3 +344,6 @@ export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = u
   )
   )
 }
+=======
+  );
+>>>>>>> origin/chore/fix-lint-and-merge

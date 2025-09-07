@@ -17,8 +17,12 @@
   <h1>Metadata Optimizer</h1>
   <p>Checks pages for essential meta tags and proposes titles/descriptions if missing.</p>
   <div class="card">
+<<<<<<< HEAD
+<<<<<<< HEAD
     <div><strong>Generated:</strong> 8/14/2025, 6:38:10 AM</div>
     <div><strong>Pages scanned:</strong> 2974</div>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <div><strong>Generated:</strong> 8/14/2025, 6:38:10 AM</div>
     <div><strong>Pages scanned:</strong> 2974</div>
   </div>
@@ -26,6 +30,7 @@
     <div><strong>Pages scanned:</strong> 2974</div>  </div>
     <div><strong>Generated:</strong> 8/14/2025, 6:38:10 AM</div>
     <div><strong>Pages scanned:</strong> 2974</div>  </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <table>
     <thead><tr><th>Route</th><th>Missing</th><th>Suggested Title</th><th>Suggested Description</th></tr></thead>
     <tbody>
@@ -999,13 +1004,23 @@
 <tr>
   <td><code>/reports/blueprints/blueprint-2025-08-14-004331</code></td>
   <td>og:image</td>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td>Reference Architecture — Autonomous Content Mesh</td>
   <td>Reference Architecture — Autonomous Content Mesh — auto-suggested description</td>
 </tr>
   <td>Reference Architecture — Autonomous Content Mesh</td>
   <td>Reference Architecture — Autonomous Content Mesh — auto-suggested description</td></tr>
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
   <td>Reference Architecture — Autonomous Content Mesh</td>
   <td>Reference Architecture — Autonomous Content Mesh — auto-suggested description</td></tr>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <tr>
   <td><code>/reports/blueprints/blueprint-2025-08-14-004342</code></td>
@@ -1344,10 +1359,20 @@
 </tr>
 
 <tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <td><code>/reports/blueprints/blueprint-2025-08-14-083015</code></td>
+  <td>og:image</td>
+  <td><code>/reports/blueprints/blueprint-2025-08-14-083015</code></td>  <td>og:image</td>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
   <td><code>/reports/blueprints/blueprint-2025-08-14-083015</code></td>
   <td>og:image</td>
   <td><code>/reports/blueprints/blueprint-2025-08-14-083015</code></td>  <td>og:image</td>
   <td><code>/reports/blueprints/blueprint-2025-08-14-083015</code></td>  <td>og:image</td>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td>Reference Architecture — Autonomous Content Mesh</td>
   <td>Reference Architecture — Autonomous Content Mesh — auto-suggested description</td>
 </tr>
@@ -4587,19 +4612,42 @@
 </tr>
 
 <tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td><code>/reports/guides/guide-2025-08-14-093629</code></td>
   <td>og:image</td>
   <td>Guide — Techcrunch Pebble Implementation</td>
   <td>Guide — Techcrunch Pebble Implementation — auto-suggested description</td>
+<<<<<<< HEAD
+=======
 </tr>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td><code>/reports/guides/guide-2025-08-14-093629</code></td>
   <td>og:image</td>
   <td>Guide — Techcrunch Pebble Implementation</td>
   <td>Guide — Techcrunch Pebble Implementation — auto-suggested description</td></tr>
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
   <td><code>/reports/guides/guide-2025-08-14-093629</code></td>
   <td>og:image</td>
   <td>Guide — Techcrunch Pebble Implementation</td>
   <td>Guide — Techcrunch Pebble Implementation — auto-suggested description</td></tr>
+
+<tr>
+  <td><code>/reports/guides/guide-2025-08-14-093631</code></td>
+  <td>og:image</td>
+  <td>Guide — Techcrunch Pebble Implementation</td>
+  <td>Guide — Techcrunch Pebble Implementation — auto-suggested description</td>
+</tr>
+
+<tr>
   <td><code>/reports/guides/guide-2025-08-14-093727</code></td>
   <td>og:image</td>
   <td>Guide — Techcrunch Pebble Implementation</td>
@@ -4642,6 +4690,7 @@
 </tr>
   <td>Guide — Techcrunch Pebble Implementation — auto-suggested description</td></tr>
   <td>Guide — Techcrunch Pebble Implementation — auto-suggested description</td></tr>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <tr>
   <td><code>/reports/guides/ultra-1755542895120-axdhf1</code></td>
@@ -4882,10 +4931,20 @@
 </tr>
 
 <tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <td><code>/reports/innovations/insight-2025-08-13-2021</code></td>
+  <td>og:image</td>
+  <td><code>/reports/innovations/insight-2025-08-13-2021</code></td>  <td>og:image</td>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
   <td><code>/reports/innovations/insight-2025-08-13-2021</code></td>
   <td>og:image</td>
   <td><code>/reports/innovations/insight-2025-08-13-2021</code></td>  <td>og:image</td>
   <td><code>/reports/innovations/insight-2025-08-13-2021</code></td>  <td>og:image</td>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td>Blueprint: MLOps</td>
   <td>Blueprint: MLOps — auto-suggested description</td>
 </tr>
@@ -7999,10 +8058,20 @@
 </tr>
 
 <tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <td><code>/reports/patterns/pattern-2025-08-14-093258</code></td>
+  <td>og:image</td>
+  <td><code>/reports/patterns/pattern-2025-08-14-093258</code></td>  <td>og:image</td>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
   <td><code>/reports/patterns/pattern-2025-08-14-093258</code></td>
   <td>og:image</td>
   <td><code>/reports/patterns/pattern-2025-08-14-093258</code></td>  <td>og:image</td>
   <td><code>/reports/patterns/pattern-2025-08-14-093258</code></td>  <td>og:image</td>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td>Pattern — Trigger Homepage Sitemap</td>
   <td>Pattern — Trigger Homepage Sitemap — auto-suggested description</td>
 </tr>
@@ -8143,13 +8212,23 @@
 <tr>
   <td><code>/reports/playbooks/playbook-2025-08-13-223010</code></td>
   <td>og:image</td>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td>Playbook — Autonomous Delivery</td>
   <td>Playbook — Autonomous Delivery — auto-suggested description</td>
 </tr>
   <td>Playbook — Autonomous Delivery</td>
   <td>Playbook — Autonomous Delivery — auto-suggested description</td></tr>
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
   <td>Playbook — Autonomous Delivery</td>
   <td>Playbook — Autonomous Delivery — auto-suggested description</td></tr>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <tr>
   <td><code>/reports/playbooks/playbook-2025-08-13-223717</code></td>
@@ -9181,19 +9260,42 @@
 </tr>
 
 <tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td><code>/reports/playbooks/playbook-2025-08-14-025018</code></td>
   <td>og:image</td>
   <td>Playbook — Autonomous Delivery</td>
   <td>Playbook — Autonomous Delivery — auto-suggested description</td>
+<<<<<<< HEAD
+=======
 </tr>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td><code>/reports/playbooks/playbook-2025-08-14-025018</code></td>
   <td>og:image</td>
   <td>Playbook — Autonomous Delivery</td>
   <td>Playbook — Autonomous Delivery — auto-suggested description</td></tr>
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
   <td><code>/reports/playbooks/playbook-2025-08-14-025018</code></td>
   <td>og:image</td>
   <td>Playbook — Autonomous Delivery</td>
   <td>Playbook — Autonomous Delivery — auto-suggested description</td></tr>
+
+<tr>
+  <td><code>/reports/playbooks/playbook-2025-08-14-032139</code></td>
+  <td>og:image</td>
+  <td>Playbook — Autonomous Delivery</td>
+  <td>Playbook — Autonomous Delivery — auto-suggested description</td>
+</tr>
+
+<tr>
   <td><code>/reports/playbooks/playbook-2025-08-14-033014</code></td>
   <td>og:image</td>
   <td>Playbook — Autonomous Delivery</td>
@@ -9240,6 +9342,7 @@
   <td>og:image</td>
   <td><code>/reports/playbooks/playbook-2025-08-14-043123</code></td>  <td>og:image</td>
   <td><code>/reports/playbooks/playbook-2025-08-14-043123</code></td>  <td>og:image</td>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td>Playbook — Autonomous Delivery</td>
   <td>Playbook — Autonomous Delivery — auto-suggested description</td>
 </tr>
@@ -12857,10 +12960,20 @@
 </tr>
 
 <tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <td><code>/reports/updates/update-2025-08-13-0544</code></td>
+  <td>og:image</td>
+  <td><code>/reports/updates/update-2025-08-13-0544</code></td>  <td>og:image</td>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
   <td><code>/reports/updates/update-2025-08-13-0544</code></td>
   <td>og:image</td>
   <td><code>/reports/updates/update-2025-08-13-0544</code></td>  <td>og:image</td>
   <td><code>/reports/updates/update-2025-08-13-0544</code></td>  <td>og:image</td>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td>Autonomous Update — 2025-08-13 05:44</td>
   <td>Autonomous Update — 2025-08-13 05:44 — auto-suggested description</td>
 </tr>
@@ -16114,19 +16227,42 @@
 </tr>
 
 <tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td><code>/reports/updates/update-2025-08-13-1940</code></td>
   <td>og:image</td>
   <td>Autonomous Update — 2025-08-13 19:40</td>
   <td>Autonomous Update — 2025-08-13 19:40 — auto-suggested description</td>
+<<<<<<< HEAD
+=======
 </tr>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td><code>/reports/updates/update-2025-08-13-1940</code></td>
   <td>og:image</td>
   <td>Autonomous Update — 2025-08-13 19:40</td>
   <td>Autonomous Update — 2025-08-13 19:40 — auto-suggested description</td></tr>
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
   <td><code>/reports/updates/update-2025-08-13-1940</code></td>
   <td>og:image</td>
   <td>Autonomous Update — 2025-08-13 19:40</td>
   <td>Autonomous Update — 2025-08-13 19:40 — auto-suggested description</td></tr>
+
+<tr>
+  <td><code>/reports/updates/update-2025-08-13-1941</code></td>
+  <td>og:image</td>
+  <td>Autonomous Update — 2025-08-13 19:41</td>
+  <td>Autonomous Update — 2025-08-13 19:41 — auto-suggested description</td>
+</tr>
+
+<tr>
   <td><code>/reports/updates/update-2025-08-13-1942</code></td>
   <td>og:image</td>
   <td>Autonomous Playbook — Edge AI &amp; IoT (2025-08-13 19:42 UTC)</td>
@@ -16173,6 +16309,7 @@
   <td>og:image</td>
   <td><code>/reports/updates/update-2025-08-13-1948</code></td>  <td>og:image</td>
   <td><code>/reports/updates/update-2025-08-13-1948</code></td>  <td>og:image</td>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td>Autonomous Update — 2025-08-13 19:48</td>
   <td>Autonomous Update — 2025-08-13 19:48 — auto-suggested description</td>
 </tr>
@@ -21022,10 +21159,20 @@
 </tr>
 
 <tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <td><code>/reports/updates/update-2025-08-14T09-30</code></td>
+  <td>og:image</td>
+  <td><code>/reports/updates/update-2025-08-14T09-30</code></td>  <td>og:image</td>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
   <td><code>/reports/updates/update-2025-08-14T09-30</code></td>
   <td>og:image</td>
   <td><code>/reports/updates/update-2025-08-14T09-30</code></td>  <td>og:image</td>
   <td><code>/reports/updates/update-2025-08-14T09-30</code></td>  <td>og:image</td>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td>Autonomous Update — 2025-08-14 09-30</td>
   <td>Autonomous Update — 2025-08-14 09-30 — auto-suggested description</td>
 </tr>
@@ -21073,6 +21220,10 @@
 </tr>
 
 <tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td><code>/services/</code></td>
   <td>description, og:title, og:description, og:image, twitter:card</td>
   <td>Services</td>
@@ -21082,10 +21233,28 @@
   <td>description, og:title, og:description, og:image, twitter:card</td>
   <td>Services</td>
   <td>Services — auto-suggested description</td></tr>
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <td><code>/services/</code></td>
   <td>description, og:title, og:description, og:image, twitter:card</td>
   <td>Services</td>
   <td>Services — auto-suggested description</td></tr>
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
+
+<tr>
+  <td><code>/site-health</code></td>
+  <td>og:image</td>
+  <td>Site Health</td>
+  <td>Site Health — auto-suggested description</td>
+</tr>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <tr>
   <td><code>/sitemap</code></td>
@@ -22990,6 +23159,14 @@
   <td>User Management</td>
   <td>User Management — auto-suggested description</td>
 </tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/build-fix-and-push-changes-8412
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </tbody>
   </table>
 </body>

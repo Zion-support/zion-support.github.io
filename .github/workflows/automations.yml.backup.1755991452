@@ -6,13 +6,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '*/30 * * * *' # every 30 minutes
-name: Autonomous Automations
-
-on:
-  schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch: {}
-
 
 permissions:
   contents: write
@@ -34,5 +27,6 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run workflow
+
         run: echo "Workflow completed successfully"
         run: echo "Workflow completed successfully"

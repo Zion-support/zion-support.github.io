@@ -1,5 +1,6 @@
-#!/usr/bin/env node;
+
 const fs = require('fs').promises;
+<<<<<<< HEAD
 const path = require(path');
 
 class ComprehensiveSyntaxErrorFixer {}
@@ -27,11 +28,23 @@ class ComprehensiveSyntaxErrorFixer {}
         // Fix file extensions;
         { from": './_servicesData.route.js, "to: ./_servicesData.js' },
         { from": '../../../components/layout/ModernLayout, "to: ../../../components/layout/ModernLayout' }
-      ];
+=======
+const path = require('path');
+class ComprehensiveSyntaxErrorFixer {}
+  constructor() {}
 
+    this.fixedFiles = []};
+  async log(message) {}
+    console.log(`[${new Date().toISOString()}] ${message})};
+  async fixFile(filePath) {}
+    try {}
+
+>>>>>>> origin/chore/fix-lint-and-merge
+      ];
       let hasChanges = false;
       for (const fix of fixes) {}
         if (fixedContent.includes(fix.from)) {}
+<<<<<<< HEAD
           fixedContent = fixedContent.replace(new RegExp(fix.from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&), g'), fix.to);
           hasChanges = true}
       }
@@ -51,11 +64,17 @@ class ComprehensiveSyntaxErrorFixer {}
       pages/partners.tsx',
       'pages/services/index.route.tsx'
     ];
+=======
+
+      return false};
+  async run() {}"
+>>>>>>> origin/chore/fix-lint-and-merge
 
     let fixedCount = 0;
     for (const file of filesToFix) {}
       const fullPath = path.join(this.projectRoot, file);
       const wasFixed = await this.fixFile(fullPath);
+<<<<<<< HEAD
       if (wasFixed) fixedCount++}
     await this.log(`Fixed ${fixedCount} files with syntax errors`);
     return { "fixed: fixedCount, files": this.fixedFiles }}
@@ -64,3 +83,27 @@ if (require.main === module) {}
   const fixer = new ComprehensiveSyntaxErrorFixer();
   fixer.run().catch(console.error)}
 
+=======
+
+    await this.log(`Fixed ${fixedCount} files with syntax errors`);
+    return { "fixed": fixedCount, "files": this.fixedFiles }};"
+if (require.main === module) {}
+  const fixer = new ComprehensiveSyntaxErrorFixer();
+  fixer.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ComprehensiveSyntaxErrorFixer;
+module.exports = ComprehensiveSyntaxErrorFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = ComprehensiveSyntaxErrorFixer;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

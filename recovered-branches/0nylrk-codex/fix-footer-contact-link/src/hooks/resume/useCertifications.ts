@@ -1,141 +1,126 @@
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Certification  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 
-
-import { useState  } from 'react';'
-import { supabase  } from '@/integrations/supabase/client';'
-import { Certification  } from '@/types/resume';'
-import { useAuth  } from '@/hooks/useAuth';'
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';'
-export function useCertifications() {
-}
-import {useState} from 'react';'
-import {supabase} from '@/integrations/supabase/client';'
-import {Certification} from '@/types/resume';'
-import {useAuth} from '@/hooks/useAuth';'
-import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';'
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Certification} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useCertifications() {;
-
-
-  }
-
 
   const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
 
-  const [error, setError] = useState<string | null>(null);
-  const addCertification = async ("resumeId": string, "cert": Certification): Promise<boolean> => {
-    }
-    if (!user) {
-      }
-      setError('You must be logged in to add certifications')'
-return false;
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Certification } from '@/types/resume',;
+import { useAuth } from '@/hooks/useAuth',;
 
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;
+export function useCertifications() { return null; }
 
-
-import { useState } from 'react',;'
-import { supabase } from '@/integrations/supabase/client',;'
-import { Certification } from '@/types/resume',;'
-import { useAuth } from '@/hooks/useAuth',;'
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;'
-export function useCertifications() {;
-  }
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
-  const addCertification = async ("resumeId": string, "cert": Certification): Promise<boolean> => {;
-    }
-    if (!user) {;
-      }
-      setError('You must be logged in to add certifications'),;'
-      return false;
-
-
+  const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {;
 
     }
-    
+
     setIsLoading(true),
     setError(null),
-    
-    
+
     try {
-}
-const { error } = await supabase;
-        .from('certifications')'
+      const { error } = await supabase
+        .from('certifications')
         .insert({
 
-          }
+      return showSuccessToast("Certification added", "Your certification has been added to your resume")
+    } catch (e: any) {'
+      return handleResumeError(e, 'Could not add certification')
 
-          "name": cert && cert.name;
-          "issuing_organization": cert && cert.issuing_organization;
-          "issue_date": cert && cert.issue_date ? formatDateForDB(cert && cert.issue_date) : null;
-          "expiration_date": cert && cert.expiration_date ? formatDateForDB(cert && cert.expiration_date) : null;
-          "credential_id": cert && cert.credential_id,
-          "credential_url": cert && cert.credential_url
-
-        });
-      if (error) throw error;
-      return showSuccessToast("Certification added", "Your certification has been added to your resume")"
-    } catch ("e": any) {
-      }
-      return handleResumeError(e, 'Could not add certification')'
+      return showSuccessToast("Certification added", "Your certification has been added to your resume")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not add certification')
     } finally {
-      }
+
       setIsLoading(false)
 
-
+    }
+  }
+  const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update certifications')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
+
     setIsLoading(true),;
     setError(null),;
     try {;
+<<<<<<< HEAD
       }
         .from('certifications');'
+=======
+      const { error } = await supabase;'
+        .from('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
-          }
-          "resume_id": resumeId,;
-          "name": cert.name,;
-          "issuing_organization": cert.issuing_organization,;
-          "issue_date": cert.issue_date ? formatDateForDB(cert.issue_date) : null,;
-          "expiration_date": cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,;
-          "credential_id": cert.credential_id,;
-          "credential_url": cert.credential_url;
+          resume_id: resumeId,;
+          name: cert.name,;
+          issuing_organization: cert.issuing_organization,;
+          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,;
+          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,;
+          credential_id: cert.credential_id,;
+          credential_url: cert.credential_url;
         }),;
-      if (error) throw error,;
-      return showSuccessToast("Certification added", "Your certification has been added to your resume");"
-    } catch ("e": any) {;
-      }
-      return handleResumeError(e, 'Could not add certification');'
+      if (error) throw error,;"
+      return showSuccessToast("Certification added", "Your certification has been added to your resume");
+    } catch (e: any) {;'
+      return handleResumeError(e, 'Could not add certification');
     } finally {;
-      }
       setIsLoading(false);
     }
   },;
-  const updateCertification = async ("certId": string, "cert": Certification): Promise<boolean> => {;
-    }
-    if (!user) {;
-      }
-      setError('You must be logged in to update certifications'),;'
+  const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {;
+    if (!user) {;'
+      setError('You must be logged in to update certifications'),;
       return false;
 
     }
     
     setIsLoading(true),
-    setError(null)
-    
-    }
-    
-    setIsLoading(true),
     setError(null),
-    
 
+<<<<<<< HEAD
 ;
 export function useCertifications() {;
   }
-  ;
-  const addCertification = async ("resumeId":string, "cert":Certification):Promise<boolean> => {;
+=======
     }
+    
+    setIsLoading(true),
+    setError(null),
+
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Certification } from '@/types/resume',;
+import { useAuth } from '@/hooks/useAuth',;
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;
+;
+export function useCertifications() {;
+  const { user } = useAuth(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+>>>>>>> origin/chore/fix-lint-and-merge
+  ;
+  const addCertification = async (resumeId:string, cert:Certification):Promise<boolean> => {;
     if (!user) {;
-      }
-      setError('You must be logged in to add certifications'),;'
+      setError('You must be logged in to add certifications'),;
       return false;
     }
     ;
@@ -143,35 +128,35 @@ export function useCertifications() {;
     setError(null),;
     ;
     try {;
+<<<<<<< HEAD
       }
         .from('certifications');'
+=======
+      const { error } = await supabase;
+        .from('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
-          }
-          "resume_id":resumeId,;
-          "name":cert.name,;
-          "issuing_organization":cert.issuing_organization,;
-          "issue_date":cert.issue_date ? formatDateForDB(cert.issue_date) :null,;
-          "expiration_date":cert.expiration_date ? formatDateForDB(cert.expiration_date) :null,;
-          "credential_id":cert.credential_id,;
-          "credential_url":cert.credential_url;
+          resume_id:resumeId,;
+          name:cert.name,;
+          issuing_organization:cert.issuing_organization,;
+          issue_date:cert.issue_date ? formatDateForDB(cert.issue_date) :null,;
+          expiration_date:cert.expiration_date ? formatDateForDB(cert.expiration_date) :null,;
+          credential_id:cert.credential_id,;
+          credential_url:cert.credential_url;
         }),;
       ;
       if (error) throw error,;
       ;
-      return showSuccessToast("Certification added", "Your certification has been added to your resume"),;"
-    } catch ("e":any) {;
-      }
-      return handleResumeError(e, 'Could not add certification'),;'
+      return showSuccessToast("Certification added", "Your certification has been added to your resume"),;
+    } catch (e:any) {;
+      return handleResumeError(e, 'Could not add certification'),;
     } finally {;
-      }
       setIsLoading(false),;    }
   },;
   ;
-  const updateCertification = async ("certId":string, "cert":Certification):Promise<boolean> => {;
-    }
+  const updateCertification = async (certId:string, cert:Certification):Promise<boolean> => {;
     if (!user) {;
-      }
-      setError('You must be logged in to update certifications'),;'
+      setError('You must be logged in to update certifications'),;
       return false;
     }
     ;
@@ -179,35 +164,35 @@ export function useCertifications() {;
     setError(null),;
     ;
     try {;
+<<<<<<< HEAD
       }
         .from('certifications');'
+=======
+      const { error } = await supabase;
+        .from('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .update({;
-          }
-          "name":cert.name,;
-          "issuing_organization":cert.issuing_organization,;
-          "issue_date":cert.issue_date ? formatDateForDB(cert.issue_date) :null,;
-          "expiration_date":cert.expiration_date ? formatDateForDB(cert.expiration_date) :null,;
-          "credential_id":cert.credential_id,;
-          "credential_url":cert.credential_url;
+          name:cert.name,;
+          issuing_organization:cert.issuing_organization,;
+          issue_date:cert.issue_date ? formatDateForDB(cert.issue_date) :null,;
+          expiration_date:cert.expiration_date ? formatDateForDB(cert.expiration_date) :null,;
+          credential_id:cert.credential_id,;
+          credential_url:cert.credential_url;
         });
-        .eq('id', certId),;'
+        .eq('id', certId),;
       ;
       if (error) throw error,;
       ;
-      return showSuccessToast("Certification updated", "Your certification has been updated"),;"
-    } catch ("e":any) {;
-      }
-      return handleResumeError(e, 'Could not update certification'),;'
+      return showSuccessToast("Certification updated", "Your certification has been updated"),;
+    } catch (e:any) {;
+      return handleResumeError(e, 'Could not update certification'),;
     } finally {;
-      }
       setIsLoading(false),;    }
   },;
   ;
-  const deleteCertification = async ("certId":string):Promise<boolean> => {;
-    }
+  const deleteCertification = async (certId:string):Promise<boolean> => {;
     if (!user) {;
-      }
-      setError('You must be logged in to delete certifications'),;'
+      setError('You must be logged in to delete certifications'),;
       return false;
     }
     ;
@@ -215,268 +200,375 @@ export function useCertifications() {;
     setError(null),;
     ;
     try {;
+<<<<<<< HEAD
       }
         .from('certifications');'
+=======
+      const { error } = await supabase;
+        .from('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .delete();
-        .eq('id', certId),;'
+        .eq('id', certId),;
       ;
       if (error) throw error,;
       ;
-      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume"),;"
-    } catch ("e":any) {;
-      }
-      return handleResumeError(e, 'Could not delete certification'),;'
+      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume"),;
+    } catch (e:any) {;
+      return handleResumeError(e, 'Could not delete certification'),;
     } finally {;
-      }
       setIsLoading(false),;
     }
-    
-    setIsLoading($2);
-    setError($2);
+
     try {
+<<<<<<< HEAD
 }
         .from('certifications')'
+=======
+      const { error } = await supabase
+        .from('certifications')
+>>>>>>> origin/chore/fix-lint-and-merge
         .update({
 
-          }
+          name: cert && cert.name;
+          issuing_organization: cert && cert.issuing_organization;
+          issue_date: cert && cert.issue_date ? formatDateForDB(cert && cert.issue_date) : null;
+          expiration_date: cert && cert.expiration_date ? formatDateForDB(cert && cert.expiration_date) : null;
+          credential_id: cert && cert.credential_id,
 
-          "name": cert && cert.name;
-          "issuing_organization": cert && cert.issuing_organization;
-          "issue_date": cert && cert.issue_date ? formatDateForDB(cert && cert.issue_date) : null;
-          "expiration_date": cert && cert.expiration_date ? formatDateForDB(cert && cert.expiration_date) : null;
-          "credential_id": cert && cert.credential_id,
-          "credential_url": cert && cert.credential_url
+          name: cert.name,
+          issuing_organization: cert.issuing_organization,
+          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,
+          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,
+          credential_id: cert.credential_id,
 
-        })
-        .eq('id', certId);'
-      if (error) throw error;
-          "name": cert.name,
-          "issuing_organization": cert.issuing_organization,
-          "issue_date": cert.issue_date ? formatDateForDB(cert.issue_date) : null,
-          "expiration_date": cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,
-          "credential_id": cert.credential_id,
-          "credential_url": cert.credential_url
-        })
-        .eq('id', certId),'
+        .eq('id', certId),
       
       if (error) throw error,
-      
 
-      return showSuccessToast("Certification updated", "Your certification has been updated")"
-    } catch ("e": any) {
-      }
-      return handleResumeError(e, 'Could not update certification')'
-    } finally {
-      }
+      return showSuccessToast("Certification updated", "Your certification has been updated")
+    } catch (e: any) {'
+      return handleResumeError(e, 'Could not update certification')
+    } finally {}
       setIsLoading(false)
 
-
+    }
+  }
+  const deleteCertification = async (certId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete certifications')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
     setIsLoading(true),;
     setError(null),;
     try {;
+<<<<<<< HEAD
       }
         .from('certifications');'
+=======
+      const { error } = await supabase;'
+        .from('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .update({;
-          }
-          "name": cert.name,;
-          "issuing_organization": cert.issuing_organization,;
-          "issue_date": cert.issue_date ? formatDateForDB(cert.issue_date) : null,;
-          "expiration_date": cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,;
-          "credential_id": cert.credential_id,;
-          "credential_url": cert.credential_url;
-        });
-        .eq('id', certId),;'
-      if (error) throw error,;
-      return showSuccessToast("Certification updated", "Your certification has been updated");"
-    } catch ("e": any) {;
-      }
-      return handleResumeError(e, 'Could not update certification');'
+          name: cert.name,;
+          issuing_organization: cert.issuing_organization,;
+          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,;
+          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,;
+          credential_id: cert.credential_id,;
+          credential_url: cert.credential_url;
+        });'
+        .eq('id', certId),;
+      if (error) throw error,;"
+      return showSuccessToast("Certification updated", "Your certification has been updated");
+    } catch (e: any) {;'
+      return handleResumeError(e, 'Could not update certification');
     } finally {;
-      }
       setIsLoading(false);
     }
   },;
-  const deleteCertification = async ("certId": string): Promise<boolean> => {;
-    }
-    if (!user) {;
-      }
-      setError('You must be logged in to delete certifications'),;'
+  const deleteCertification = async (certId: string): Promise<boolean> => {;
+    if (!user) {;'
+      setError('You must be logged in to delete certifications'),;
       return false;
-
-
 
     }
     
-    setIsLoading($2);
-    setError($2);
+    setIsLoading(true),
+    setError(null),
+
     try {
+<<<<<<< HEAD
 }
         .from('certifications')'
+=======
+      const { error } = await supabase
+        .from('certifications')
+>>>>>>> origin/chore/fix-lint-and-merge
         .delete()
 
-
-        .eq('id', certId),'
+        .eq('id', certId),
       
       if (error) throw error,
-      
 
-
-      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")"
-    } catch ("e": any) {
-      }
-      return handleResumeError(e, 'Could not delete certification')'
-    } finally {
-      }
+      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")
+    } catch (e: any) {'
+      return handleResumeError(e, 'Could not delete certification')
+    } finally {}
       setIsLoading(false)
 
+import {useState} from 'react';
 
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not update certification')
+    } finally {
+      setIsLoading(false)
 
+;
+    setIsLoading(true),;
+    setError(null),;
+    try {;
+      const { error } = await supabase;
+        .from('certifications');
+        .update({;
+          name: cert.name,;
+          issuing_organization: cert.issuing_organization,;
+          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,;
+          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,;
+          credential_id: cert.credential_id,;
+          credential_url: cert.credential_url;
+        });
+        .eq('id', certId),;
+      if (error) throw error,;
+      return showSuccessToast("Certification updated", "Your certification has been updated");
+    } catch (e: any) {;
+      return handleResumeError(e, 'Could not update certification');
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const deleteCertification = async (certId: string): Promise<boolean> => {;
+    if (!user) {;
+      setError('You must be logged in to delete certifications'),;
+      return false;
 
+<<<<<<< HEAD
 import {supabase} from '@/integrations / supabase / client';'
 import {Certification} from '@/types / resume';'
 import {use_auth} from '@/hooks / use_auth';'
 export /**
  * use_certifications - Function description
+=======
+    }
+    
+    setIsLoading(true),
+    setError(null),
+
+    try {
+      const { error } = await supabase
+        .from('certifications')
+
+import {supabase} from '@/integrations / supabase / client';
+import {Certification} from '@/types / resume';
+import {use_auth} from '@/hooks / use_auth';
+
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export /**;
+ * use_certifications - Function description;
+>>>>>>> origin/chore/fix-lint-and-merge
  */
-function use_certifications() {
-  }
+function use_certifications() {}
   const { user } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
+
 ;
-  const add_certification = async ("resume_id": string, "cert": Certification): Promise < boolean> => {
-    // Check condition
+  const add_certification = async (resume_id: string, cert: Certification): Promise < boolean> => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to add certifications'),'
-      return false;
-    }
 
   },;
   return {;
-    }
     isLoading,;
     error,;
     addCertification;
     updateCertification;
     deleteCertification;
+
   }
 }
 ;
+
+        .from ('certifications');
+        .insert ({}
+
+  }
+}
+    setIsLoading (true);
+    set_error (null);
+;
+
     try {
+<<<<<<< HEAD
       }
         .from ('certifications');'
+=======
+  // TODO: Implement
+      const { error } = await supabase;
+        .from ('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert ({
-          }
-          "resume_id": resume_id;
-          "name": cert.name;
-          "issuing_organization": cert.issuing_organization;
-          "issue_date": cert.issue_date ? formatDateForDB (cert.issue_date) : null;
-          "expiration_date": cert.expiration_date ? formatDateForDB (cert.expiration_date) : null;
-          "credential_id": cert.credential_id,
-          "credential_url": cert.credential_url;
-        });
-;
-      // Check condition,
+
 if (throw error) {
-  $2
-}
       return showSuccessToast ("Certification added", "Your certification has been added to your resume");"
-    } catch ("e": any) {
-      }
-      return handleResumeError (e, 'Could not add certification');'
+    } catch (e: any) {"
+      return handleResumeError (e, 'Could not add certification');
     } finally {
-      }
+
       setIsLoading (false);
+  const update_certification = async (cert_id: string, cert: Certification): Promise < boolean> => {
+    // Check condition;
+      set_error ('You must be logged in to update certifications'),
+    setIsLoading (true);
+    set_error (null);
+
     }
   }
 ;
-  const update_certification = async ("cert_id": string, "cert": Certification): Promise < boolean> => {
-    // Check condition
-}
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to update certifications'),'
+
+      set_error ('You must be logged in to update certifications'),
+
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
+
     try {
+<<<<<<< HEAD
       }
         .from ('certifications');'
+=======
+  // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
         .update ({
-          }
-          "name": cert.name;
-          "issuing_organization": cert.issuing_organization;
-          "issue_date": cert.issue_date ? formatDateForDB (cert.issue_date) : null;
-          "expiration_date": cert.expiration_date ? formatDateForDB (cert.expiration_date) : null;
-          "credential_id": cert.credential_id,
-          "credential_url": cert.credential_url;
-        });
-        .eq ('id', cert_id);'
-;
-      // Check condition,
-if (throw error) {
-  $2
-}
+
+        .eq ('id', cert_id);
+      // Check condition;
       return showSuccessToast ("Certification updated", "Your certification has been updated");"
-    } catch ("e": any) {
-      }
-      return handleResumeError (e, 'Could not update certification');'
-    } finally {
-      }
+      return handleResumeError (e, 'Could not update certification');
+
       setIsLoading (false);
+
     }
   }
 ;
-  const delete_certification = async ("cert_id": string): Promise < boolean> => {
-    // Check condition
-}
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to delete certifications'),'
+
+      set_error ('You must be logged in to delete certifications'),
+
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
+
     try {
+<<<<<<< HEAD
       }
         .from ('certifications');'
+=======
+  // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
         .delete ();
-        .eq ('id', cert_id);'
-;
-      // Check condition,
-if (throw error) {
-  $2
-}
+      // Check condition;
       return showSuccessToast ("Certification deleted", "Your certification has been removed from your resume");"
-    } catch ("e": any) {
-      }
-      return handleResumeError (e, 'Could not delete certification');'
-    } finally {
-      }
+      return handleResumeError (e, 'Could not delete certification');
+
       setIsLoading (false);
+
     }
   }
 ;
-  return {
-    }
+
     is_loading;
     error;
-    addCertification;
-    updateCertification;
+    add_certification;
+    update_certification;
+    delete_certification;
 
-    deleteCertification
+  },;
+;
+  return {;
+    isLoading,;
+    error,;
+    addCertification,;
+    updateCertification,;
+    deleteCertification;
+  },; setIsLoading (true);
+setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('certifications') if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not add certification') 
+}finally {
+  setIsLoading (false) 
+}
+};
+const updateCertification = async (certId: string, cert: Certification) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to update certifications');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('certifications') if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not update certification') 
+}finally {
+  setIsLoading (false) 
+}
+};
+const deleteCertification = async (certId: string) : Promise<boolean> => {
+  if (!user) {
+  setError ('You must be logged in to delete certifications');
+return false;
+}setError (null);
+try {
+  const {
+  error 
+}= await supabase .from ('certifications') .delete () .eq ('id', certId);
+if (error) throw error;
+}catch (e: any) {
+  return handleResumeError (e, 'Could not delete certification') 
+}finally {
+  setIsLoading (false) 
+}
+};
+return {
+  isLoading;
+error;
+addCertification;
+updateCertification;
+deleteCertification 
+}
+}
+
   }
 }
+;
   }
 }
+;
+
+  }
+}
+    setIsLoading (true);
+    set_error (null);
 ;

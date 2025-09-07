@@ -1,107 +1,100 @@
-import fs from 'fs',import path from 'path',import { v4 as uuidv4 } from 'uuid',export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed',export type ProposalMeta = {id: string,createdAt: string,updatedAt: string,title: string,targetInstitution: string,type: string,regionalScope: string,budgetOrResolution: string,supportingMultiverses: string[],languages: string[],status: ProposalStatus,import fs from 'fs';
-import path from 'path';
-import { v4 as uuidv4  } from 'uuid';
-export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
-export type ProposalMeta = {id: string;
-export type ProposalMeta = {id: string;
+import fs from 'fs',;
+import path from 'path',;
+import { v4 as uuidv4 } from 'uuid',;
+export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed',;
+export type ProposalMeta = {;
+  id: string,;
+  createdAt: string,;
+  updatedAt: string,;
+  title: string,;
+  targetInstitution: string,;
+  type: string,;
+  regionalScope: string,;
+  budgetOrResolution: string,;
+  supportingMultiverses: string[],;
+  languages: string[],;
+  status: ProposalStatus,;
 
-import fs from 'fs';'
-import path from 'path';'
-import { v4 as uuidv4 } from 'uuid';'
-export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';'
-export type ProposalMeta = {"id": string;
-}
-export type ProposalMeta = {
-  }
-  "id": string;
-  "createdAt": string;
-  "updatedAt": string;
-  "title": string;
-  "targetInstitution": string;
-  "type": string;
-  "regionalScope": string;
-  "budgetOrResolution": string;
-  "supportingMultiverses": string[];
-  "languages": string[];
-  "status": ProposalStatus;
-  "artifacts": {;
-    }
+import fs from 'fs';
+import path from 'path';
+import { v4 as uuidv4 } from 'uuid';
+
+export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
+
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  title: string;
+  targetInstitution: string;
+  type: string;
+  regionalScope: string;
+  budgetOrResolution: string;
+  supportingMultiverses: string[];
+  languages: string[];
+  status: ProposalStatus;
+
     markdownPath?: string;
     jsonPath?: string;
     pdfPath?: string;
     ipfsCid?: string;
     ensRecordHash?: string;
     signature?: string;
-  }
+
 }
-export type ProposalPayload = {"title": string;
-  }
-  "targetInstitution": string;
-  "type": string;
-  "regionalScope": string;
-  "budgetOrResolution": string;
-  "supportingMultiverses": string[];
-  "contentMarkdown": string;
+export type ProposalPayload = {title: string;
+
+  targetInstitution: string;
+  type: string;
+  regionalScope: string;
+  budgetOrResolution: string;
+export type ProposalPayload = {title: string;,
+  targetInstitution: string;
+  type: string;,
+  regionalScope: string;
+  budgetOrResolution: string;,
+pr-12325
+  supportingMultiverses: string[];
+  contentMarkdown: string;
   language?: string;
   metadata?: Record<string, any>;
+
+const publicDir = path.join(process.cwd(), 'publicproposals');
+function ensureDirs() {if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+
+  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 }
-const dataDir = path.join(process.cwd(), 'dataproposals');'
-const publicDir = path.join(process.cwd(), 'publicproposals');'
-function ensureDirs() {if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { "recursive": true });
-  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { "recursive": true });
-}
-export function createProposal("payload": ProposalPayload): ProposalMeta {ensureDirs();
-  }
+
+export function createProposal(payload: ProposalPayload): ProposalMeta {
+  ensureDirs();
   const id = uuidv4();
   const createdAt = new Date().toISOString();
   const updatedAt = createdAt;
+  const proposalDir = path.join(dataDir, id);
   const publicProposalDir = path.join(publicDir, id);
-  fs.mkdirSync(proposalDir, { "recursive": true });
-  fs.mkdirSync(publicProposalDir, { "recursive": true });
-  const markdownPath = path.join(publicProposalDir, 'proposal.md');'
-  const jsonPath = path.join(proposalDir, 'proposal.json');'
-  const "meta": ProposalMeta = {id;
-    }
-    createdAt;
-    updatedAt;
-    "title": payload.title;
-    "targetInstitution": payload.targetInstitution;
-    "type": payload.type;
-    "regionalScope": payload.regionalScope;
-    "budgetOrResolution": payload.budgetOrResolution;
-    "supportingMultiverses": payload.supportingMultiverses |[];
-    "languages": payload.language ? [payload.language] : ['en'];'
-    "status": 'Draft';'
-    "artifacts": {;
-      }
-      "markdownPath": `/proposals/${id}/proposal.md`;`      "jsonPath": path.relative(process.cwd(), jsonPath)}}
-  fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8');'
-  fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8');'
-  const metaPath = path.join(proposalDir, 'meta.json');'
-  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');'
+  fs.mkdirSync(proposalDir, { recursive: true });
+
+  const jsonPath = path.join(proposalDir, 'proposal.json');
+
+  fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8');
+  fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8');
+  const metaPath = path.join(proposalDir, 'meta.json');
+
+  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
   return meta;
 }
-export function updateProposalMeta("id": string, "updater": ("meta": ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
-}
-export function updateProposalMeta(
-  "id": string,
-  "updater": ("meta": ProposalMeta) => ProposalMeta
-): ProposalMeta {
-  }
-  ensureDirs();
-  const metaPath = path.join(dataDir, id, 'meta.json');'
-  if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');'
-  const "current": ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));'
-  const next = updater({ ...current, "updatedAt": new Date().toISOString() });
-  fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');'
-  return next;
-}
 
+<<<<<<< HEAD
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;'
+=======
+export function updateProposalMeta(
+
+    return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
+>>>>>>> origin/chore/fix-lint-and-merge
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
 }
 
+<<<<<<< HEAD
     if (!fs.existsSync(metaPath)) return null;
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;'
   } catch {return null;
@@ -143,20 +136,13 @@ export type ProposalPayload = {
 }export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs()const metaPath = path.join(dataDir, id, 'meta.json')if (!fs.existsSync(metaPath)) throw new Error('Proposal not found')const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'))const next = updater({ ...current, updatedAt: new Date().toISOString() })fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8')return next;
 }export function listProposals(): ProposalMeta[] {ensureDirs()const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')))const metas: ProposalMeta[]  = entries.map((id) => {const metaPath = path.join(dataDir, id, 'meta.json')return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   })return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))}export function getProposal(id: string): ProposalMeta | null {try {const metaPath = path.join(dataDir, id, 'meta.json')if (!fs.existsSync(metaPath)) return null;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   } catch {return null;
   }
-}artifacts: {export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs()markdownPath?: string,jsonPath?: string,pdfPath?: string,ipfsCid?: string,ensRecordHash?: string,signature?: string;}
-},export type ProposalPayload = {title: string,targetInstitution: string,type: string,regionalScope: string,budgetOrResolution: string,supportingMultiverses: string[],contentMarkdown: string,language?: string,metadata?: Record<string any>;
-},const dataDir = path.join(process.cwd(), 'dataproposals')const dataDir = path.join(process.cwd(), 'dataproposals'),const publicDir = path.join(process.cwd(), 'publicproposals'),function ensureDirs() {if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true }),if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true })}export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDirs(),const id = uuidv4(),const createdAt = new Date().toISOString(),const updatedAt = createdAt,const proposalDir = path.join(dataDir, id),const publicProposalDir = path.join(publicDir, id),fs.mkdirSync(proposalDir, { recursive: true }),fs.mkdirSync(publicProposalDir, { recursive: true }),const markdownPath = path.join(publicProposalDir, 'proposal.md'),const jsonPath = path.join(proposalDir, 'proposal.json'),const meta: ProposalMeta = {id,createdAt,updatedAt,title: payload.title,targetInstitution: payload.targetInstitution,type: payload.type,regionalScope: payload.regionalScope,budgetOrResolution: payload.budgetOrResolution,supportingMultiverses: payload.supportingMultiverses || [],languages: payload.language ? [payload.language] : ['en'],status: 'Draft',artifacts: {markdownPath: `/proposals/${id}/proposal.md`,jsonPath: path.relative(process.cwd(), jsonPath)}},fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8'),fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8'),const metaPath = path.join(proposalDir, 'meta.json'),fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8'),return meta;
-}export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs(),const metaPath = path.join(dataDir, id, 'meta.json'),if (!fs.existsSync(metaPath)) throw new Error('Proposal not found'),const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8')),const next = updater({ ...current, updatedAt: new Date().toISOString() }),fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8'),return next;
-}export function listProposals(): ProposalMeta[] {ensureDirs(),const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json'))),const metas: ProposalMeta[] = entries.map((id) => {const metaPath = path.join(dataDir, id, 'meta.json'),return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
-  }),return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))}export function getProposal(id: string): ProposalMeta | null {try {const metaPath = path.join(dataDir, id, 'meta.json'),if (!fs.existsSync(metaPath)) return null,return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
-  } catch {return null;
-  }
-}export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs(),const publicProposalDir = path.join(publicDir, id),fs.mkdirSync(publicProposalDir, { recursive: true }),const pdfPath = path.join(publicProposalDir, 'proposal.pdf'),fs.writeFileSync(pdfPath, Buffer.from(pdfBytes))return `/proposals/${id}/proposal.pdf`;
-}} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
+<<<<<<< HEAD
 },export type ProposalPayload = {title: string;
 };
 const dataDir = path.join(process.cwd(), 'dataproposals'),;'
@@ -241,6 +227,9 @@ export function updateProposalMeta("id": string, "updater": ("meta": ProposalMet
 
     }
 
+=======
+export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
+>>>>>>> origin/chore/fix-lint-and-merge
     markdownPath?: string,;
     jsonPath?: string,;
     pdfPath?: string,;
@@ -248,9 +237,36 @@ export function updateProposalMeta("id": string, "updater": ("meta": ProposalMet
     ensRecordHash?: string,;
     signature?: string;
 
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
 },;
+
+  title: string;
+  targetInstitution: string;
+  type: string;
+  regionalScope: string;
+  budgetOrResolution: string;
+  supportingMultiverses: string[];
+  contentMarkdown: string;
+  language?: string;
+
+const publicDir = path.join(process.cwd(), 'publicproposals'),;
+function ensureDirs() { return null; }
+  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+  } catch (error) {"
+    console.error("Error:", error);"
+
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export function createProposal(payload: ProposalPayload): ProposalMeta {;
+  ensureDirs(),;
+};
 export type ProposalPayload = {;
+<<<<<<< HEAD
   }
   "title": string,;
   "targetInstitution": string,;
@@ -420,17 +436,26 @@ export function update_artifacts (id: string, artifacts: Partial < ProposalMeta[
     artifacts: { ...meta.artifacts, ...artifacts }}))}}
 }}
 };
+=======
+  title: string;
+  targetInstitution: string;
+  type: string;
+  regionalScope: string;
+  budgetOrResolution: string;
+  supportingMultiverses: string[];
+  contentMarkdown: string;
+  language?: string;
+  metadata?: Record<string, any>;
+};
+const dataDir = path.join(process.cwd(), 'dataproposals');
+const publicDir = path.join(process.cwd(), 'publicproposals');
+>>>>>>> origin/chore/fix-lint-and-merge
 function ensureDirs() {;
-  }
-  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { "recursive": true });
-  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { "recursive": true });
-  } catch (error) {
-    }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
-  }
+  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 }
 ;
+<<<<<<< HEAD
 export function createProposal("payload": ProposalPayload): ProposalMeta {;
   }
   ensureDirs(),;
@@ -467,13 +492,76 @@ export function updateProposalMeta("id": string, "updater": ("meta": ProposalMet
   ensureDirs(),;
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');'
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8'),;'
+=======
+export function createProposal(payload: ProposalPayload): ProposalMeta {;
+  ensureDirs();
+  const id = uuidv4();
+  const createdAt = new Date().toISOString();
+  const updatedAt = createdAt;
+  const proposalDir = path.join(dataDir, id);
+  const publicProposalDir = path.join(publicDir, id);
+  fs.mkdirSync(proposalDir, { recursive: true });
+
+  const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+  const next = updater({ ...current, updatedAt: new Date().toISOString() });'
+  fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
   return next;
-  } catch (error) {
-    }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
-  }
 }
+
+    return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
+  });
+  return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+}
+
+    const metaPath = path.join(dataDir, id, 'meta.json');
+    if (!fs.existsSync(metaPath)) return null;'
+    return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
+  } catch {return null;
+  }
+
+export type ProposalPayload = {;
+  title: string;
+  targetInstitution: string;
+  type: string;
+  regionalScope: string;
+  budgetOrResolution: string;
+  supportingMultiverses: string[];
+  contentMarkdown: string;
+  language?: string;
+  metadata?: Record<string, any>;
+};
+const dataDir = path.join(process.cwd(), 'dataproposals');
+const publicDir = path.join(process.cwd(), 'publicproposals');
+function ensureDirs() {;
+  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+}
+;
+export function createProposal(payload: ProposalPayload): ProposalMeta {;
+  ensureDirs();
+  const id = uuidv4();
+  const createdAt = new Date().toISOString();
+  const updatedAt = createdAt;
+  const proposalDir = path.join(dataDir, id);
+  const publicProposalDir = path.join(publicDir, id);
+  fs.mkdirSync(proposalDir, { recursive: true });
+
+  fs.mkdirSync(publicProposalDir, { recursive: true });
+  const markdownPath = path.join(publicProposalDir, 'proposal.md');
+  const jsonPath = path.join(proposalDir, 'proposal.json');
+  const meta: ProposalMeta = {;
+    id;
+    createdAt;
+
+  const metaPath = path.join(dataDir, id, 'meta.json');
+  if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
+  const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+  const next = updater({ ...current, updatedAt: new Date().toISOString() });
+  fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
+>>>>>>> origin/chore/fix-lint-and-merge
+  return next;
+}
+<<<<<<< HEAD
 ;
 export function listProposals(): ProposalMeta[] {;
   }
@@ -481,13 +569,15 @@ export function listProposals(): ProposalMeta[] {;
     }
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;'
   }),;
+=======
+
+    const metaPath = path.join(dataDir, id, 'meta.json');
+    return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
+  });
+>>>>>>> origin/chore/fix-lint-and-merge
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
-  } catch (error) {
-    }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
-  }
 }
+<<<<<<< HEAD
 ;
 export function getProposal("id": string): ProposalMeta | null {;
   }
@@ -495,49 +585,52 @@ export function getProposal("id": string): ProposalMeta | null {;
     }
     if (!fs.existsSync(metaPath)) return null,;
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;'
+=======
+
+    return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
+>>>>>>> origin/chore/fix-lint-and-merge
   } catch {;
-    }
     return null;
-    } catch (error) {
-    }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
-  }
-}
-  } catch (error) {
-    }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
   }
 }
 ;
-export function savePdf("id": string, "pdfBytes": Uint8Array): string {;
-  }
-  ensureDirs(),;
+export function savePdf(id: string, pdfBytes: Uint8Array): string {;
 
+<<<<<<< HEAD
   fs.mkdirSync(publicProposalDir, { "recursive": true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');'
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;`
+=======
+  const publicProposalDir = path.join(publicDir, id);
+  fs.mkdirSync(publicProposalDir, { recursive: true });'
+  const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
+  fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));`
+  return `/proposals/${id}/proposal.pdf`;
+>>>>>>> origin/chore/fix-lint-and-merge
 
+}}
+export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
+    ...meta;
+    artifacts: { ...meta.artifacts, ...artifacts }}));
 
   } catch (error) {
-    }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+
 }
+
 ;
 
-export function updateArtifacts("id": string, "artifacts": Partial<ProposalMeta['artifacts']>): ProposalMeta {;'
-  }
+export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
   return updateProposalMeta(id, (meta) => ({;
     ...meta;
-    }
-    "artifacts": { ...meta.artifacts, ...artifacts }}));
+    artifacts: { ...meta.artifacts, ...artifacts }}));
 
-
+  return `/proposals/${id}/proposal.pdf`;
 }
+<<<<<<< HEAD
 }
 }
 export function updateArtifacts("id": string, "artifacts": Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;'
@@ -564,88 +657,43 @@ export function savePdf("id": string, "pdfBytes": Uint8Array): string {
   fs.mkdirSync(publicProposalDir, { "recursive": true });
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;`}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export function updateArtifacts(
-  "id": string,
-  "artifacts": Partial<ProposalMeta['artifacts']>'
-): ProposalMeta {
-  }
-  return updateProposalMeta(id, meta => ({
-    ...meta
-    }
-    "artifacts": { ...meta.artifacts, ...artifacts }
-  }));
-}
-import fs from 'fs','
-import path from 'path','
-import { v4 as uuidv4 } from 'uuid','
-export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed','
-export type ProposalMeta = {
-  }
-  "id": string,
-  "created_at": string,
-  "updated_at": string,
-  "title": string,
-  "target_institution": string,
-  "type": string,
-  "regional_scope": string,
-  "budgetOrResolution": string,
-  "supporting_multiverses": string[],
-  "languages": string[],
-  "status": ProposalStatus,
-  "artifacts": {
-    }
-    markdown_path?: string,
-    json_path?: string,
-    pdf_path?: string,
-    ipfs_cid?: string,
-    ensRecordHash?: string,
-    signature?: string;
-  }
-},
-export type ProposalPayload = {
-  }
-  "title": string,
-  "target_institution": string,
-  "type": string,
-  "regional_scope": string,
-  "budgetOrResolution": string,
-  "supporting_multiverses": string[],
-  "content_markdown": string,
-  language?: string,
-  metadata?: Record < string any>;
-},
-const data_dir = path.join (process.cwd (), 'dataproposals'),'
-const public_dir = path.join (process.cwd (), 'publicproposals'),'
-/**
- * ensure_dirs - Function description
- */
-function ensure_dirs() {
-  }
-  if () fs.mkdir_sync (data_dir, { "recursive": true }), ) {
-  $2
-}
-  if () fs.mkdir_sync (public_dir, { "recursive": true })) {
-  $2
-}
-}
-export function create_proposal ("payload": ProposalPayload): ProposalMeta {
-  }
+
+  id: string,
+  created_at: string,
+  updated_at: string,
+  title: string,
+  target_institution: string,
+  type: string,
+  regional_scope: string,
+  budgetOrResolution: string,
+  supporting_multiverses: string[],
+  languages: string[],
+  status: ProposalStatus,
+
+  title: string,
+  target_institution: string,
+  type: string,
+  regional_scope: string,
+  budgetOrResolution: string,
+  supporting_multiverses: string[],
+  content_markdown: string,
+
   ensure_dirs (),
   const id = uuidv4 (),
   const created_at = new Date ().toISOString (),
   const updated_at = created_at,
   const proposal_dir = path.join (data_dir, id),
   const publicProposalDir = path.join (public_dir, id),
-  fs.mkdir_sync (proposal_dir, { "recursive": true }),
-  fs.mkdir_sync (publicProposalDir, { "recursive": true }),
-  const markdown_path = path.join (publicProposalDir, 'proposal.md'),'
-  const json_path = path.join (proposal_dir, 'proposal.json'),'
-  const "meta": ProposalMeta = {
-    }
+  fs.mkdir_sync (proposal_dir, { recursive: true }),
+
     id,
     created_at,
     updated_at,
+<<<<<<< HEAD
     "title": payload.title,
     "target_institution": payload.target_institution,
     "type": payload.type,
@@ -682,34 +730,51 @@ export function list_proposals (): ProposalMeta[] {
   const "metas": ProposalMeta[] = entries.map ((id) => {
     }
     return JSON.parse (fs.readFileSync (meta_path, 'utf8')) as ProposalMeta;'
+=======
+    title: payload.title,
+    target_institution: payload.target_institution,
+    type: payload.type,
+    regional_scope: payload.regional_scope,
+    budgetOrResolution: payload.budgetOrResolution,
+
+    return JSON.parse (fs.readFileSync (meta_path, 'utf8')) as ProposalMeta;
+>>>>>>> origin/chore/fix-lint-and-merge
   }),
   return metas.sort ((a, b) => (a.created_at < b.created_at ? 1 : -1));
 }
-export function get_proposal ("id": string): ProposalMeta | null {
-  }
+
+export function get_proposal (id: string): ProposalMeta | null {
   try {
+<<<<<<< HEAD
     }
+=======
+    const meta_path = path.join (data_dir, id, 'meta.json'),
+>>>>>>> origin/chore/fix-lint-and-merge
     if () return null, ) {
   $2
 }
-    return JSON.parse (fs.readFileSync (meta_path, 'utf8')) as ProposalMeta;'
+    return JSON.parse (fs.readFileSync (meta_path, 'utf8')) as ProposalMeta;
   } catch {
-    }
     return null;
   }
 }
-export function save_pdf ("id": string, "pdf_bytes": Uint8Array): string {
-  }
+export function save_pdf (id: string, pdf_bytes: Uint8Array): string {
   ensure_dirs (),
+<<<<<<< HEAD
   fs.mkdir_sync (publicProposalDir, { "recursive": true }),
   const pdf_path = path.join (publicProposalDir, 'proposal.pdf'),'
+=======
+  const publicProposalDir = path.join (public_dir, id),
+  fs.mkdir_sync (publicProposalDir, { recursive: true }),
+  const pdf_path = path.join (publicProposalDir, 'proposal.pdf'),
+>>>>>>> origin/chore/fix-lint-and-merge
   fs.writeFileSync (pdf_path, Buffer.from (pdf_bytes));
-  return `/proposals/${id}/proposal.pdf`;`
+  return `/proposals/${id}/proposal.pdf`;
 }
-export function update_artifacts ("id": string, "artifacts": Partial < ProposalMeta['artifacts']>): ProposalMeta {'
-  }
+export function update_artifacts (id: string, artifacts: Partial < ProposalMeta['artifacts']>): ProposalMeta {
   return updateProposalMeta (id, (meta) => ({
     ...meta;
+<<<<<<< HEAD
     }
     "artifacts": { ...meta.artifacts, ...artifacts }}));
 }
@@ -832,3 +897,14 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
     ...meta,
     artifacts: { ...meta.artifacts, ...artifacts }}))
 }
+=======
+    artifacts: { ...meta.artifacts, ...artifacts }}));
+}
+
+;
+export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
+  return updateProposalMeta(id, (meta) => ({;
+    ...meta;
+    artifacts: { ...meta.artifacts, ...artifacts }}));
+}
+>>>>>>> origin/chore/fix-lint-and-merge

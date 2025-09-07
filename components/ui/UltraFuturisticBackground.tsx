@@ -1,17 +1,24 @@
+<<<<<<< HEAD
 
 
 
 pr-12243
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import React from 'react';
 
 interface UltraFuturisticBackgroundProps {}
   children: React.ReactNode;
+<<<<<<< HEAD
   variant?: 'quantum' | 'matrix' | 'neon';
   variant?: 'quantum' | 'neon' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
 
 pr-12243
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   intensity?: 'low' | 'medium' | 'high';
 
 import React from 'react;
@@ -60,14 +67,18 @@ export default function UltraFuturisticBackground({
   enableSpaceTime?: boolean;
   variant?: 'quantum' | 'neon' | 'cyber';
 
+<<<<<<< HEAD
 
 variant?: 'quantum' | 'neon' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   className?: string;
 }
 
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children,
+<<<<<<< HEAD
   variant = 'quantum',
   intensity = 'medium',
 
@@ -121,15 +132,23 @@ return `${baseClasses} bg-gradient-to-br from-green-900 via-slate-900 to-blue-90
       default:
 
       default:`
+=======
+
+      default:
+
+>>>>>>> origin/chore/fix-lint-and-merge
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
     }
   }
 
 
+<<<<<<< HEAD
   return (
     <div className={`${getBackgroundClasses()} ${className}`}>
       <div className="absolute inset-0 bg-black/20" />
   const getIntensityClasses = () => {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     switch (intensity) {
       case low':
         return 'opacity-30;
@@ -154,15 +173,25 @@ return `${baseClasses} bg-gradient-to-br from-green-900 via-slate-900 to-blue-90
       </div>
       
       {/* Content */}
+<<<<<<< HEAD
 pr-12243
   return (
     <div className={`${getBackgroundClasses()} ${className}`}>
       <div className="absolute inset-0 bg-black/20" />
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
       <div className="relative z-10">
       <div className=relative z-10">
         {children}
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 export default UltraFuturisticBackground;"
+=======
+};
+
+export default UltraFuturisticBackground;
+>>>>>>> origin/chore/fix-lint-and-merge

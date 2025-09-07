@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const { execSync } = require("child_process)
 const fs = require(fs")
 const path = require("path)
 console.log(" Starting Smart Deployment Optimizer...")
 // Get automation interval from environment variable (default)
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+console.log("" Starting Smart Deployment Optimizer...")
+// Get automation interval from environment variable ("default")
+>>>>>>> origin/chore/fix-lint-and-merge
       "bundleSizes"
       deploymentFrequency
       "successRate"
@@ -166,8 +176,31 @@ async function runContinuous() {}
 process.on("SIGINT")
   console.log(� Received SIGINT, shutting down gracefully...)
   "
+<<<<<<< HEAD
 process.on("SIGINT)
   console.log(� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM)
   console.log(� Received SIGTERM, shutting down gracefully...")
 
+=======
+process.on("SIGINT")
+  console.log("� Received SIGINT, shutting down gracefully...")
+process.on("SIGTERM")
+  console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error(" Failed to start smart deployment "optimizer": ")
+  console.error(" Failed to start smart deployment "optimizer": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+          if (!htmlContent.includes("<title>")"
+</title>"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

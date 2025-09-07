@@ -1,5 +1,6 @@
 import { ArrowRight, Smartphone } from 'lucide-react
 
+<<<<<<< HEAD
 :src/components/mobile-app/MobileLaunchHero.tsx
 import React from react'
 import Link from 'next/link
@@ -8,6 +9,11 @@ import { ArrowRight, Smartphone } from lucide-react'
 import { Button } from "@/components/ui/button,
 import { AppStoreButtons } from ./AppStoreButtons";
 import { Card, CardContent } from "@/components/ui/card;
+=======
+import { Button } from "@/components/ui/button",
+import { AppStoreButtons } from "./AppStoreButtons";
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/chore/fix-lint-and-merge
 export const MobileLaunchHero: React.FC;
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const MobileLaunchHero: React.FC = () => {
@@ -24,6 +30,7 @@ export const MobileLaunchHero: React.FC = () => {
               The Power of <span className="text-zion-cyan>Zion</span><br />
 
               In Your Pocket
+<<<<<<< HEAD
 :src/components/mobile-app/MobileLaunchHero.tsx
             </h1>
 
@@ -44,6 +51,8 @@ return (
             <p className='text-lg md:text-xl opacity-90 mb-8>
               Find top AI talent or global IT jobs on the go. Track projects
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               message candidates, and get AI-powered matches instantly with our
 
@@ -52,6 +61,7 @@ return (
             <div className='mb-8'>
               <AppStoreButtons
                 appStoreUrl={appStoreUrl}
+<<<<<<< HEAD
             <div className=mb-8">
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}              />
@@ -108,14 +118,21 @@ export const MobileLaunchHero: React.FC = () => {
               <AppStoreButtons 
                 appStoreUrl={appStoreUrl}
                 >                  See Features
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 googlePlayUrl={googlePlayUrl}
               />
             </div>
 
+<<<<<<< HEAD
               <Link href=#features">
                 <Button variant="ghost size=lg" className="text-white hover:bg-white/10>
 
                 >
+=======
+              <Link href="#features">
+                <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
+>>>>>>> origin/chore/fix-lint-and-merge
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
                   See Features
@@ -124,12 +141,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
           
           <div className=flex-1 flex justify-center md:justify-end">
             <div className="relative>
               {/* Phone mockup with glow effect */}
               <div className=absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
               
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <div className="flex-1 flex justify-center md:justify-end>
 
@@ -137,16 +157,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Phone mockup with glow effect */}"
               <div className=absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2></div>
 
+<<<<<<< HEAD
 
 
 
 <div className=flex-1 flex justify-center md:justify-end>
+=======
+<div className='flex-1 flex justify-center md:justify-end'>
+>>>>>>> origin/chore/fix-lint-and-merge
             <div className='relative'>
               {/* Phone mockup with glow effect */}
               <div className=absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2></div>
               <Card className='relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3'>
                 <CardContent className=p-0>
                   <div className='w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center'>
+<<<<<<< HEAD
 :src/components/mobile-app/MobileLaunchHero.tsx
                     <Smartphone className=w-40 h-40 text-white opacity-40 />                    {/* In production, replace with actual app screenshot */}              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
               <Card className=relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3>
@@ -155,6 +180,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     <Smartphone className='w-40 h-40 text-white opacity-40' />
                     {/* In production, replace with actual app screenshot */}
 
@@ -167,6 +194,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </section>
 
+<<<<<<< HEAD
 ;
 import { ArrowRight, Smartphone  } from lucide-react;
 import { Button } from @/components/ui/button,import { AppStoreButtons  } from './AppStoreButtons';
@@ -335,6 +363,10 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
               {/* Phone mockup with glow effect */}
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>;<Card className=relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3>;
 
+=======
+import React from 'react';
+import Link from 'next/link';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React from "react",
 import Link from next/link,
@@ -417,9 +449,16 @@ export const MobileLaunchHero: React.FC = () => {}
               The Power of <span className='text - zion - cyan'>Zion</span>;
               <br />;
               In Your Pocket;
+<<<<<<< HEAD
             </h1>;
             <p className=text - lg md:text - xl opacity - 90 mb - 8'>;
               Find top AI talent or global IT jobs on the go. Track projects,message candidates, and get AI - powered matches instantly with our;
+=======
+            </h1>;'
+            <p className='text - lg md:text - xl opacity - 90 mb - 8'>;
+              Find top AI talent or global IT jobs on the go. Track projects,
+              message candidates, and get AI - powered matches instantly with our;
+>>>>>>> origin/chore/fix-lint-and-merge
               mobile app.;
             </p>;'
             <div className=mb - 8>;
@@ -467,8 +506,12 @@ export const MobileLaunchHero: React.FC = () => {}
       </div>;
     </section>);
 }"
+<<<<<<< HEAD
   );
     </section>)}
   )})}";
 
 }
+=======
+"  );
+>>>>>>> origin/chore/fix-lint-and-merge

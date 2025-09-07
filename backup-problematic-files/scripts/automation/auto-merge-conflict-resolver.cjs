@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -6,6 +7,17 @@ const { execSync, spawn } = require("child_process)
     this.reportFile = path.join(this.projectRoot, auto-merge-resolver-report.json")
   fs.mkdirSync(logsDir, { "recursive})
   log(message, level = INFO")
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+    this.logFile = path.join(this.projectRoot, ""automation/logs/auto-merge-resolver.log"")
+    this.reportFile = path.join(this.projectRoot, "auto-merge-resolver-report.json")
+  fs.mkdirSync(logsDir, { "recursive"})
+  log(message, level = "INFO")
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log(")
     fs.appendFileSync(this.logFile, logMessage + \n)
   "cwd"
@@ -131,4 +143,20 @@ this.log( Found ${branches.length} cursor branches to process")
       this.log(� Auto Merge Conflict Resolver completed!);this.log(" "Summary: );this.log("   - Branches processed: ${report.summary.totalBranches}");this.log(   - Successful merges": ${report.summary.successfulBranches}");this.log(   - Failed merges": ${report.summary.failedBranches}");this.log(   - Conflicts resolved": ${report.summary.totalConflicts}");this.log(   - Duration": ${Math.round(report.duration / 1000)}s"
       return report} catch (error) {this.log( Fatal error": ${error.message}", ERROR)
   console.log(")
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+  console.error(" Auto merge conflict resolution "failed": ")
+  console.error(" Auto merge conflict resolution "failed": ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

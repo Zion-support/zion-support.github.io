@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync, spawn } = require("child_process")
+const crypto = require("crypto")
+>>>>>>> origin/chore/fix-lint-and-merge
       this.projectRoot,logs"
       smart-dependency-optimizer.log
       this.projectRoot,logs"
@@ -26,20 +42,49 @@
   "direct"
       indirect
       "unused"
+<<<<<<< HEAD
 
+=======
+      "usagePatterns"
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
+  const depName = dep.split("@")
+  const depName = dep.split("@")
+>>>>>>> origin/chore/fix-lint-and-merge
   "name"
             version
             "usageCount"
             files
             "lastUsed"
+<<<<<<< HEAD
 
+=======
+  this.log(`Dependency usage analysis "failed": ${error.message  }`, "ERROR"`)
+  const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
+  const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
+  const fullPath = path.join(this.projectRoot, ")
+          fullPath", [".ts", ".tsx", ".js", ".jsx"]
+        !item.startsWith(".")
+        item !== "node_modules"
+  const content = fs.readFileSync(file, "utf8")
+        const lines = content.split("\n")
+  if (line.includes("import") && line.includes("from")
+  const importMatch = line.match(/from\s+[""]([^""]+)[""]
+              if (packageName && !packageName.startsWith(".")
+>>>>>>> origin/chore/fix-lint-and-merge
   "count"
                     files
                     "lastUsed"
   // Skip files that can
   // Skip files that can
     if (importPath.startsWith("@")
+<<<<<<< HEAD
 
+=======
+  const parts = importPath.split("/")
+  return importPath.split("/")
+  const usage = { "count": 0, "files": [], "lastUsed"}
+  if (pkg === depName || pkg.startsWith(depName + "/")
+>>>>>>> origin/chore/fix-lint-and-merge
   if (pkg === depName || pkg.startsWith(depName + "/")
   if (pkg === depName || pkg.startsWith(depName + /)
   "mostUsed"
@@ -56,7 +101,13 @@
       "lastUsed"
       usageCount
   this.log(" Identifying unused dependencies...")
+<<<<<<< HEAD
 
+=======
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
+  const depName = dep.split("@")
+>>>>>>> origin/chore/fix-lint-and-merge
   "name"
             version
             "type"
@@ -78,11 +129,50 @@
             "suggestion: Consider using package resolution to avoid duplicates"
   this.log(Dependency conflict analysis "failed: ${error.message  })
         "ERROR"
+<<<<<<< HEAD
 
+=======
+  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+          fs.readFileSync(packageLockPath, "utf8")
+  const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+          fs.readFileSync(packageLockPath, "utf8")
+  this.log("⚡ Analyzing dependency conflicts...")
+      const packageLockPath = path.join(this.projectRoot, "package-lock.json")
+          fs.readFileSync(packageLockPath, "utf8")
+  "type": "DUPLICATE_PACKAGE"
+            "package"
+            "versions"
+            "severity": "MEDIUM"
+            "suggestion": "Consider using package resolution to avoid duplicates"
+  this.log(Dependency conflict analysis "failed": ${error.message  }")
+        "ERROR"
+    const traverse = (deps, path = "")
+  const traverse = (deps, path = ")
+  Object.keys(deps).forEach(pkg => {const fullPath = path ? "${path}.${pkg}")
+          "path"
+  "package"
+            "versions"
+            "paths"
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
+  "type": "MISSING_PEER_DEPENDENCY"
+              "package"
+              "required"
+              "severity": "HIGH","suggestion"
+  "type": "MISSING_PEER_DEPENDENCY"
+              "package"
+              "required"
+              "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency
+        "package.json"
+>>>>>>> origin/chore/fix-lint-and-merge
         this.projectRoot,node_modules"
         package.json
         "package.json"
+<<<<<<< HEAD
 
+=======
+        "package.json"
+  const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log("� Checking for outdated dependencies...")
       // For now, we
         fs.readFileSync(path.join(this.projectRoot, package.json"), "utf8
@@ -95,7 +185,36 @@
   "package"
             current
             "latest"
+<<<<<<< HEAD
 
+=======
+            "severity": "LOW"
+            "suggestion": Consider updating to latest version for security and features"
+  this.log(`Outdated dependency check "failed": ${error.message  }`, "ERROR"`)
+  "package"
+            "current"
+            "latest"
+            "severity": "LOW"
+            "suggestion": Consider updating to latest version for security and features"
+  this.log(`Outdated dependency check "failed": ${error.message}`, "ERROR"`)
+    const versionParts = currentVersion.replace(/^[\^~]/, "").split(".")
+  this.log("� Analyzing bundle impact...")
+  "totalSize"
+      "largestPackages"
+      "optimizationOpportunities"
+  if (fs.existsSync("dist")
+  "type": "BUNDLE_SIZE"
+            "severity": "MEDIUM"
+            "message": "Bundle size is large"
+            "suggestion": Consider code splitting, tree shaking, and removing unused dependencies"
+    } catch (error) {  this.log(`Bundle impact analysis "failed": ${error.message  }`, "ERROR"`)
+  "totalSize"
+      "largestPackages"
+  const distPath = path.join(this.projectRoot, "dist")
+  const distPath = path.join(this.projectRoot, "dist")
+    } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }`, "ERROR"`)
+  const fullPath = path.join(directory, ")
+>>>>>>> origin/chore/fix-lint-and-merge
     usageAnalysis"
   this.log(" Generating optimization recommendations...)
   type": "REMOVE_UNUSED
@@ -189,6 +308,7 @@
 this.log(` Optimization Report "generated"`)
   this.log( Smart Dependency Optimizer starting...)
 this.log(" Smart Dependency Optimization completed successfully")
+<<<<<<< HEAD
       this.log(� Total savings: ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization failed: ${error.message  }",ERROR"
 
@@ -197,10 +317,28 @@ this.log(" Smart Dependency Optimization completed successfully")
 
         ` Smart Dependency Optimization "failed: ${error.message}
 =======
+      this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
+        " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+        ` Smart Dependency Optimization "failed": ${error.message}"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+        ` Smart Dependency Optimization "failed": ${error.message}"
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
         ` Smart Dependency Optimization "failed": ${error.message}"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -208,7 +346,3 @@ this.log(" Smart Dependency Optimization completed successfully")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

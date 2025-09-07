@@ -49,6 +49,7 @@ const FALLBACK_RESPONSES = [
             id: Date.now().toString() + -a
             role: 'assistant'
             message: finalMsg
+<<<<<<< HEAD
 
 ;
 }
@@ -94,6 +95,13 @@ const FALLBACK_RESPONSES = [
         ]) } else if (res.body) {const botId = Date.now().toString() + '-a;
         setMessages(prev => [;
           ...prev;
+=======
+          }
+        ]) } else if (res.body) {
+        const botId = Date.now().toString() + '-a'
+        setMessages(prev => [
+          ...prev
+>>>>>>> origin/chore/fix-lint-and-merge
           { id: botId, role: 'assistant', message: '' }
         ])
         const reader = res.body.getReader()
@@ -128,6 +136,7 @@ const FALLBACK_RESPONSES = [
                       m.id === botId ? { ...m, message: accumulated } : m
                     )
                   )
+<<<<<<< HEAD
 interface Msg {
   id: string;
         ])const reader = res.body.getReader()const decoder = new TextDecoder()let done = false;
@@ -148,6 +157,12 @@ interface Msg {
                       m.id === botId ? { ...m, message: accumulated } : m;
                     ))interface Msg  {id: string;
   role: user' | 'assistant;
+=======
+
+interface Msg {;
+  id: string;
+  role: 'user' | 'assistant';
+>>>>>>> origin/chore/fix-lint-and-merge
   message: string;
 
 // Fallback responses when API is unavailable;
@@ -250,6 +265,7 @@ export function SupportChatbot() {
         id: Date.now().toString() + -e
         role: 'assistant'
 
+<<<<<<< HEAD
                       m.id === bot_id ? { ...m, message: accumulated } : m))accumulated += token,setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m))}
               } catch (_) {// ignore parse errors;
               }
@@ -274,6 +290,8 @@ export function SupportChatbot() {
       const errorMsg: Msg = {id: Date.now().toString() + '-e';
         role: assistant;
         message: fallbackResponse;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         message: fallbackResponse
 
           buffer = lines[lines.length - 1] || '';
@@ -281,8 +299,14 @@ export function SupportChatbot() {
         const final =;
           accumulated.trim () ||;
           FALLBACK_RESPONSES[;
+<<<<<<< HEAD
             Math.floor (Math.random () * FALLBACK_RESPONSES.length)] ||;
           Im experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
+=======
+            Math.floor (Math.random () * FALLBACK_RESPONSES.length);
+          ] ||;
+          "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
+>>>>>>> origin/chore/fix-lint-and-merge
         set_messages (prev =>;
           prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)));
       }
@@ -309,6 +333,7 @@ export function SupportChatbot() {
 
       }
     } catch (err) {
+<<<<<<< HEAD
           prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)))}
       setMessages(prev => [...prev, errorMsg])} finally {setLoading(false)setTyping(false)}}
   if (!open) {onClick={() => setOpen(true)}
@@ -337,6 +362,9 @@ export function SupportChatbot() {
 
     }
       logErrorToProduction(Chatbot error:', { data: err }),
+=======
+      logErrorToProduction('Chatbot error:', { data: err }),
+>>>>>>> origin/chore/fix-lint-and-merge
       
       // Provide a helpful fallback response instead of generic error
       const fallbackResponse = FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.,
@@ -388,6 +416,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   return (
+<<<<<<< HEAD
     <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40>
       <div className=bg-zion-blue-dark p-2 flex justify-between items-center">
         <span className="text-white font-medium>Help Bot</span>
@@ -401,6 +430,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <X className=h-5 w-5" />
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40>
       <div className=bg-zion-blue-dark p-2 flex justify-between items-center">
@@ -441,11 +472,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setLoading(false);
       setTyping(false);
     }
+<<<<<<< HEAD
   }
   if (!open) {
           prev && prev.map(m => (m && m.id === botId ? { ...m, message: final } : m)))}
   },if (!open) {return (<Button;
         onClick={() => setOpen(true)}size=icon";
+=======
+  };
+  if (!open) {;
+>>>>>>> origin/chore/fix-lint-and-merge
     return (;
       <Button;
         onClick={() => setOpen(true)}
@@ -484,6 +520,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <ChatMessage key={m.id} role={m.role} message={m.message} />;
         ))}
 
+<<<<<<< HEAD
         {messages && messages.length === 0 && (<ChatMessage;
             role=assistant;
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?;
@@ -595,3 +632,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {typing && (
           <ChatMessage role=assistant" message="..." />
         )}
+=======
+        {typing && (
+          <ChatMessage role="assistant" message="..." />
+        )}
+>>>>>>> origin/chore/fix-lint-and-merge

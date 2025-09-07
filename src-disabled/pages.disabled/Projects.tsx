@@ -1,4 +1,3 @@
-:src/pages/Projects.tsx
 
 
 
@@ -84,20 +83,12 @@ function ProjectsContent() {
 
   return (
     <>
-      <SEO
-        title='My Projects | Zion AI Marketplace'
-        description='View and manage your projects.'
-      />
-      <main className='container mx-auto px-4 py-8'>
-        <div className='mb-8'>
-          <h1 className='text-3xl font-bold'>My Projects</h1>
-          <p className='text-muted-foreground mt-1'>
-            All of your current and past projects
-          </p>        </div>      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />
+      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">My Projects</h1>
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>
+        </div>
         {isLoading ? (
           <p>Loading projects...</p>
 } from '@/components/ui/card'
@@ -138,12 +129,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {projects.map((project) => (
 <div className='grid gap-6'>
             {projects.map(project => (
-:src/pages/Projects.tsx
-              <Card key={project.id}>
-                <CardHeader>
-                  <CardTitle className='flex items-center gap-2'>
-                    <Briefcase className='h-5 w-5 text-primary' />
-                    <span>{project.job?.title |'Project'}</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <Card key={project.id}>
                 <CardHeader>
@@ -151,15 +136,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Briefcase className="h-5 w-5 text-primary" />
                     <span>{project.job?.title || "Project"}</span>
                   </CardTitle>
-                  <CardDescription className='flex items-center gap-2 mt-1'>
-                    <Badge variant='outline'>{project.status}</Badge>
-                    <span className='flex items-center gap-1 text-xs text-muted-foreground'>
-                      <Clock className='h-3 w-3' />
-                      Started{' '}
-                      {new Date(project.start_date).toLocaleDateString()}                    </span>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>                  <CardDescription className="flex items-center gap-2 mt-1">
+                  <CardDescription className="flex items-center gap-2 mt-1">
                     <Badge variant="outline">{project.status}</Badge>
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3" />
@@ -168,14 +145,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-:src/pages/Projects.tsx
-                  <p className='text-sm text-muted-foreground line-clamp-2'>
-                    {project.job?.description |'Project details'}
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {project.job?.description |"Project details"}
                   <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`} />View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">"
             ))}
           </div>
@@ -190,10 +159,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant="outline" className="w-full">
-:src/pages/Projects.tsx
-                  </Button>
-                </CardFooter>
-              </Card>
                     <Link href={`/project/${project.id}`}>View Details</Link>
                   </Button>
                 </CardFooter>
@@ -252,14 +217,6 @@ function ProjectsContent() {;
             ))}
           </div>
         )}
-:src/pages/Projects.tsx
-      </main>
-    </>
-  )
-export default function Projects() {
-  return <ProjectsContent /> }
-export default function Projects() {
-  return <ProjectsContent />
       </main>;
     </>;
   );
@@ -267,10 +224,6 @@ export default function Projects() {
 ;
 export default function Projects() {;
   return <ProjectsContent />;
-:src/pages/Projects.tsx
-};
-}
-}
 }
 ;
 };

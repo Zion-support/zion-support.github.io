@@ -3,14 +3,14 @@
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
-
-
-
-
-
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,14 +26,18 @@ const path = require('path')
 const fs = require('fs');
 const path = require('path');
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/chore/fix-lint-and-merge
 // console.log(' Fixing Final Corrupted Files...')
 console.log('')
-const corruptedFiles = ['pages/docs/integration-examples.tsx'];
+const corruptedFiles = ['pages/docs/integration-examples.tsx']
   'pages/marketplace.tsx'
   'pages/privacy.tsx'
   'pages/request-quote.tsx'
   'pages/schedule-demo.tsx'
-let content = '';
+    let content = ''
     if (filePath === 'pages/docs/integration-examples.tsx')
 =======
 
@@ -45,6 +49,7 @@ let content = '';
     "phone"
     service
     "message"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"]
@@ -71,3 +76,15 @@ const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2
 =======
         <meta name="description" content="
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+  const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"]
+        <meta name="description" content="
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

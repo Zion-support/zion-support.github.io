@@ -1,10 +1,104 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+  "production"
+      "development"
+      "peer"
+      "optional"
+  "conflicts"
+      "vulnerabilities"
+      "outdated"
+      "unused"
+      "recommendations"
+    this.reportDir = path.join(process.cwd(), "dependency-reports"
+    this.backupDir = path.join(process.cwd(), "dependency-backups"
+    console.log("� Smart Dependency Manager initialized")
+  await fs.mkdir(this.reportDir, { "recursive"})
+    await fs.mkdir(this.backupDir, { "recursive"})
+// console.log("" Starting Smart Dependency Analysis...")
+      console.log("" Smart Dependency Analysis completed successfully")
+  console.log(" Smart Dependency Analysis completed successfully")
+  console.error(" Smart Dependency Analysis "failed": ")
+  console.error(" Smart Dependency Analysis "failed": ")
+  console.log("� Loading current dependencies...")
+  const packageJsonPath = path.join(process.cwd(), "package.json"
+        await fs.readFile(packageJsonPath, "utf8")
+  const packageJsonPath = path.join(process.cwd(), "package.json"
+        await fs.readFile(packageJsonPath, "utf8")
+      console.log( Loaded "dependencies")
+        "Development"
+        "Peer": ${Object.keys(this.dependencies.peer).length}"Optional"
+  console.error(" Failed to load "dependencies": ")
+  console.log(" Analyzing dependency patterns...")
+      const outdatedOutput = execSync("npm outdated --json")
+  "encoding": "utf8"
+        "cwd"
+  "name"
+        "current"
+        "wanted"
+        "latest"
+        "location"
+>>>>>>> origin/chore/fix-lint-and-merge
       console.log( Found ${this.analysis.outdated.length} outdated packages")
       
 // console.log("⚠  Could not check outdated "packages: )
   console.log("⚠  Detecting dependency conflicts...")
+<<<<<<< HEAD
 
+=======
+      for (const ["pkg", "version")]
+  console.log( Found ${this.analysis.outdated.length} outdated packages")
+      "
+// console.log(""⚠  Could not check outdated "packages": ")
+  console.log("⚠  Detecting dependency conflicts...")
+      for (const ["pkg", "version")]
+  "type": "peer"
+            "package"
+            "required"
+            "installed"
+            "severity": "high"
+      for (const ["pkg", "version")]
+  "type": "version"
+            "package"
+            "version1"
+            "version2"
+            "severity": "medium"
+// console.log("⚠  Could not detect "conflicts": ")
+  console.log("�  Checking for vulnerabilities..."")
+  const auditOutput = execSync("npm audit --audit-level moderate --json")
+  "encoding": "utf8"
+        "cwd": process.cwd(),    console.log("�  Checking for vulnerabilities..."")
+  const auditOutput = execSync("npm audit --audit-level moderate --json")
+  "encoding": "utf8"
+        "cwd"
+// console.log(`�  Found ${this.analysis.vulnerabilities.length} vulnerabilities``)
+      console.log(`�  Found ${this.analysis.vulnerabilities.length} vulnerabilities``)
+// console.log("⚠  Could not check "vulnerabilities": ")
+  console.log(" Finding unused dependencies...")
+      const depcheckOutput = execSync("npx depcheck --json")
+  "encoding": "utf8"
+        "cwd"
+// console.log("⚠  Could not check "vulnerabilities": ")
+  console.log(" Finding unused dependencies...")
+      const depcheckOutput = execSync("npx depcheck --json")
+  "encoding": "utf8"
+        "cwd"
+  "dependencies"
+        "devDependencies"
+>>>>>>> origin/chore/fix-lint-and-merge
 // console.log( Found ${this.analysis.unused.dependencies.length} unused production dependencies")
   console.log(⚠  Could not find unused dependencies": ")
   
@@ -38,6 +132,7 @@
           updatesApplied++} catch (error) {  console.log("⚠  Failed to remove ${pkg  }:")
 console.log( Applied ${updatesApplied} smart updates)
   try {const packageJsonPath = require.resolve("${packageName}/package.json")
+<<<<<<< HEAD
 
 =======
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, utf8)
@@ -71,6 +166,43 @@ console.log( Applied ${updatesApplied} smart updates)
 =======
   console.error(` Smart Dependency Manager failed": "`)
 
+=======
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
+    const requiredMajor = required.split(".")
+    const installedMajor = installed.split(".")
+  const currentMajor = current.split(".")
+    const latestMajor = latest.split(")
+    const requiredMajor = required.split(".")
+    const installedMajor = installed.split(".")
+  const currentMajor = current.split(".")
+    const latestMajor = latest.split(".")
+  "timestamp"
+      "summary"
+        "outdated"
+        "vulnerabilities"
+        "conflicts"
+        "unused"
+      "analysis"
+      "recommendations"
+      "dependencies"
+// console.log("� Starting Smart Dependency Manager...")
+  console.log("� Starting Smart Dependency Manager...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error(` Smart Dependency Manager "failed": "`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(` Smart Dependency Manager "failed": "`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(` Smart Dependency Manager "failed": "`)
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -78,7 +210,3 @@ console.log( Applied ${updatesApplied} smart updates)
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

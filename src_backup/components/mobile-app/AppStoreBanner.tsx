@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 :src/components/mobile-app/AppStoreBanner.tsx
 import React, { useState, useEffect } from "react,
 import { safeStorage } from @/utils/safeStorage";
 import { X } from 'lucide-react
 import { useIsMobile } from "@/hooks/use-mobile;
+=======
+import React, { useState, useEffect } from "react",
+import { safeStorage } from "@/utils/safeStorage";
+import { X } from 'lucide-react'
+import { useIsMobile } from "@/hooks/use-mobile";
+>>>>>>> origin/chore/fix-lint-and-merge
 export const AppStoreBanner: React.FC;
 }
 import React, { useState, useEffect } from react"
@@ -12,6 +19,7 @@ export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
   useEffect((,) => {
+<<<<<<< HEAD
 :src/components/mobile-app/AppStoreBanner.tsx
 import { safeStorage } from @/utils/safeStorage",
 import { useIsMobile } from "@/hooks/use-mobile,
@@ -20,12 +28,15 @@ export const AppStoreBanner: React.FC = () => {
   const isMobile = useIsMobile(),
   
   useEffect(() => {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     // Only show banner on mobile devices and if it hasnt been dismissed before
     if (isMobile && !safeStorage.getItem(appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
       const timer = setTimeout(() => {
         setIsVisible(true)
+<<<<<<< HEAD
 :src/components/mobile-app/AppStoreBanner.tsx
       }, 2000)
       return () => clearTimeout(timer)
@@ -39,6 +50,8 @@ export const AppStoreBanner: React.FC = () => {
   // Only render on mobile devices
   if (!isMobile |!isVisible) return null
   return (
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       }, 2000),
       
       return () => clearTimeout(timer)
@@ -53,9 +66,13 @@ export const AppStoreBanner: React.FC = () => {
   // Only render on mobile devices
   if (!isMobile || !isVisible) return null,
 
+<<<<<<< HEAD
 return (
 
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40>
+=======
+    <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <div className=flex items-center">
         <div className="w-12 h-12 bg-zion-cyan rounded-lg mr-3 flex-shrink-0></div>
@@ -80,11 +97,6 @@ return (
         </div>
       </div>
     </div>
-:src/components/mobile-app/AppStoreBanner.tsx
-  )
-}
-'"}
-}
 
 },
 import React, { useState, useEffect } from react,
@@ -95,6 +107,7 @@ import React, { useState, useEffect } from "react";
 import { safeStorage } from @/utils/safeStorage;
 import { X } from lucide-react'import { useIsMobile } from "@/hooks/use-mobile";
 
+<<<<<<< HEAD
 export const AppStoreBanner: React.FC = () => {
 import React, { useState, useEffect } from 'react;
 import { X } from lucide-react'import { useIsMobile  } from '@/hooks/use-mobile;
@@ -105,6 +118,12 @@ export const AppStoreBanner: React.FC = () => {const [isVisible, setIsVisible] =
   }, [isMobile]),const dismissBanner = () => {setIsVisible(false),safeStorage.setItem("appBannerDismissed", true)},// Only render on mobile devices;
   if (!isMobile || !isVisible) return null,return (return (<div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">;
   useEffect(() => {
+=======
+export const AppStoreBanner: React.FC = () => {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const isMobile = useIsMobile(),;
+  useEffect(() => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     // Only show banner on mobile devices and if it hasn't been dismissed before;
     if (isMobile && !safeStorage.getItem(appBannerDismissed)) {
       // Delay showing the banner by 2 seconds;
@@ -136,7 +155,7 @@ export const AppStoreBanner: React.FC = () => {const [isVisible, setIsVisible] =
             className="px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium";
           >;
             View;
-          </Link>;
+          </a>;
           <button;
             onClick={dismissBanner}
             className=text-gray-400 focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded;
@@ -148,6 +167,7 @@ export const AppStoreBanner: React.FC = () => {const [isVisible, setIsVisible] =
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
             <X className="h-5 w-5" />;
           >;<X className=h-5 w-5 />;
           </button>;
@@ -167,6 +187,8 @@ if (return null) {$2;
 :src/components/mobile-app/AppStoreBanner.tsx
   );
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   )
 }
 "}}
@@ -202,9 +224,14 @@ if (return null) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 }}
     </div>)}
 '}}))}'";
   );
 }
 '"
+=======
+'"},
+}
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { NextPage } from 'next';
@@ -18,8 +19,16 @@ const WebDevelopmentChat: NextPage = () => {return (<div>;
 <div> <Head> <title>WebDevelopmentChat - Zion Tech Solutions</title> <meta name="description" content="WebDevelopmentChat blog post" /> </Head> <main> <h1>WebDevelopmentChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div> export default WebDevelopmentChat
 import type { NextPage } from "next";
 import Head from "next/head";
+=======
+import type { NextPage } from "next";"
+import Head from "next/head";"
+>>>>>>> origin/chore/fix-lint-and-merge
 import Link from "next/link";
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
+import Link from 'next/link';
 
+<<<<<<< HEAD
 
 
 
@@ -40,6 +49,9 @@ import Link from "next/link;
 
 
 const WebDevelopmentChat: NextPage = () => {
+=======
+const WebDevelopmentChat: NextPage = () => {}
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
     <div>;
       <Head>;
@@ -56,81 +68,83 @@ const WebDevelopmentChat: NextPage = () => {
     <div>
       <Head>
 
-      </Head>;
+import type { NextPage } from "next";
+import Head from "next/head";
 
+import Link from "next/link";
+const WebDevelopmentChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>;"
+        <meta name="description" content="WebDevelopmentChat blog post" />{" "}
+
+      </Head>;
 
         <meta name="description content=WebDevelopmentChat blog post" />
       </Head>
-
-      </Head>;
+pr-12243
 
       <main>
         <h1>WebDevelopmentChat</h1>
+<<<<<<< HEAD
         <p>Blog content coming soon...</p>
         <a href="/blog>Back to Blog</a>
+=======
+        <p>Blog content coming soon...</p>"
+        <a href="/blog">Back to Blog</a>
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>
     </div>
       </Head>;
 
-
-
-
       <main>;
         <h1>WebDevelopmentChat</h1>;
+<<<<<<< HEAD
         <p>Blog content coming soon...</p>;
         <a href=/blog">Back to Blog</a>;
+=======
+        <p>Blog content coming soon...</p>;"
+        <a href="/blog">Back to Blog</a>;
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>;
     </div>;
   );
 }
 export default WebDevelopmentChat;
+<<<<<<< HEAD
 
 
 
 
 
 
-
-        <title>WebDevelopmentChat - Zion Tech Solutions</title>
-
-
-
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         <title>WebDevelopmentChat - Zion Tech Solutions</title>
-
-ursor/fix-website-loading-errors-and-merge-6662
-
-        <title>WebDevelopmentChat - Zion Tech Solutions</title>
-
-
-
-
-
-
-
-
-        <title>WebDevelopmentChat - Zion Tech Solutions</title>
-
 
 import type { NextPage } from './next';
 import Head from './next / head';
+
 import Link from './next / link';
-const WebDevelopmentChat: NextPage = () => {
+const WebDevelopmentChat: NextPage = () => {}
   return (
     <div>;
       <Head>;
-        <title > WebDevelopmentChat - Zion Tech Solutions</title>;
+        <title > WebDevelopmentChat - Zion Tech Solutions</title>;"
         <meta name="description" content="WebDevelopmentChat blog post" />{" "}
       </Head>;
       <main>;
         <h1 > WebDevelopmentChat</h1>;
-        <p > Blog content coming soon...</p>;
+        <p > Blog content coming soon...</p>;"
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>);
 }
 ;
 export default WebDevelopmentChat;
+<<<<<<< HEAD
 ;
     <div>
       <Head>
@@ -165,3 +179,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <title>WebDevelopmentChat - Zion Tech Solutions</title>
         <title>WebDevelopmentChat - Zion Tech Solutions</title>
 
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge

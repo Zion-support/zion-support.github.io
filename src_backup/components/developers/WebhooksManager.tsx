@@ -15,6 +15,7 @@ loading,
 import { useState, useEffect } from 'react';'
 import { format } from 'date - fns';
 
+<<<<<<< HEAD
 
 ;
 loading,testResult,fetchWebhooks,createWebhook,toggleWebhook,deleteWebhook,testWebhook,const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application),// Load webhooks on mount;
@@ -41,11 +42,14 @@ import { useState, useEffect } from 'react'
 import { format } from 'date-fns'
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   Globe,
   MoreVertical,
   PlayCircle,
   Plus,
   RefreshCw,
+<<<<<<< HEAD
   Webhook} from 'lucide-react
 import { useWebhooks, type WebhookEventType } from @/hooks/useWebhooks'
 import { Button } from '@/components/ui/button
@@ -105,6 +109,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 export function WebhooksManager() {
   X} from 'lucide-react;
 import { useWebhooks, type WebhookEventType } from @/hooks/useWebhooks';
+=======
+  Webhook,
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { Button } from '@/components / ui / button;
   Card,
@@ -262,14 +269,6 @@ if (=== ' ||) {}
 
   const handleCreateWebhook = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
-  const handleDeleteWebhook = async (webhookId: string,) => {
-    await deleteWebhook(webhookId)
-    setShowDeleteConfirm(null)
-  }
-  const handleTestWebhook = async (webhookId: string,) => {
-    await testWebhook(webhookId, testEventType)
-    setShowTestResult(true)
-  }
   const resetWebhookForm = () => {
     setWebhookName()
     setWebhookUrl('')
@@ -281,6 +280,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     value: WebhookEventType
     label: string
     description: string
+<<<<<<< HEAD
     clearTestResult;
   } = useWebhooks()const [showCreateDialog, setShowCreateDialog] = useState(false)const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),const [showTestDialog, setShowTestDialog] = useState<string | null>(null),const [showTestResult, setShowTestResult] = useState(false)import { format  } from 'date-fns';
 import { Globe,MoreVertical,PlayCircle,Plus,RefreshCw,Webhook} from lucide-react;
@@ -390,6 +390,8 @@ if (===  ||) {$2;
     description: string;
   }[] = [;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     {
 
@@ -450,10 +452,13 @@ if (===  ||) {$2;
     setShowDeleteConfirm(null)
   },
 
+<<<<<<< HEAD
 
   const handleTestWebhook = async (webhookId: string) => {
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     await testWebhook(webhookId, testEventType),
 
     setShowTestResult(true)
@@ -472,6 +477,7 @@ if (===  ||) {$2;
         </CardDescription>
       </CardHeader>
 
+<<<<<<< HEAD
       <CardContent>
         <div className=flex justify-between items-center mb-6>
           <p className='text-sm text-zinc-400'>
@@ -586,6 +592,8 @@ export function WebhooksManager() {;
   // Load webhooks on mount;
   useEffect(() => {
     fetchWebhooks();
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }, []);
   const handleCreateWebhook = async () => {
     if (;'
@@ -678,6 +686,7 @@ export function WebhooksManager() {;
             You have {webhooks && webhooks.length}{' '}
             {webhooks && webhooks.length === 1 ? webhook' : 'webhooks}
           </p>;
+
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>;
             <DialogTrigger asChild>;
               <Button variant='default'>;
@@ -712,8 +721,14 @@ export function WebhooksManager() {;
       value: talent_hired,
       label: 'Talent Hired',
 
+<<<<<<< HEAD
       description: When talent is hired for a project}];
                   <p className='text-xs text-zinc-500'>;value: talent_hired,label: 'Talent Hired',description: When talent is hired for a project}];
+=======
+      description: 'When talent is hired for a project',
+    },
+  ];
+>>>>>>> origin/chore/fix-lint-and-merge
   // Toggle an event selection;
   const toggle_event = (event: WebhookEventType) =>: any {}
     setSelectedEvents (prev =>;
@@ -772,6 +787,7 @@ export function WebhooksManager() {;
                     occur.;
                   </p>;
                 </div>;
+<<<<<<< HEAD
                 </div>;setWebhookName(),setWebhookUrl(""),setWebhookSecret(),setWebhookName(""),setWebhookUrl(),setWebhookSecret(""),setSelectedEvents([])},onChange={e => setWebhookSecret(e && e.target.value)}
                     placeholder=Enter secret key;
                     aria-label='Secret key';
@@ -812,6 +828,8 @@ export function WebhooksManager() {;
     await toggleWebhook(webhookId, !currentStatus)
   }
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     onChange={e => setWebhookSecret(e && e.target.value)}
                     placeholder=Enter secret key';'
@@ -869,6 +887,7 @@ export function WebhooksManager() {;
     setShowTestResult(true)
   }
 
+<<<<<<< HEAD
     setWebhookName(),
     setWebhookUrl(""),
     setWebhookSecret(),
@@ -880,6 +899,12 @@ export function WebhooksManager() {;
     setWebhookName(");"
     setWebhookUrl();"
     setWebhookSecret(");
+=======
+  const resetWebhookForm = () => {"
+    setWebhookName("");"
+    setWebhookUrl("");"
+    setWebhookSecret("");
+>>>>>>> origin/chore/fix-lint-and-merge
 
     setSelectedEvents([])
 
@@ -889,6 +914,7 @@ export function WebhooksManager() {;
         : [...prev, event]
     )
 
+<<<<<<< HEAD
   return (
     <Card className=bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -903,6 +929,8 @@ export function WebhooksManager() {;
 
 
       
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       <CardContent>
         <div className=flex justify-between items-center mb-6">
           <p className="text-sm text-zinc-400>
@@ -924,6 +952,7 @@ export function WebhooksManager() {;
                 </DialogDescription>
               </DialogHeader>
 
+<<<<<<< HEAD
   }const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {await toggleWebhook(webhookId, !currentStatus)}const handleDeleteWebhook = async (webhookId: string) => {await deleteWebhook(webhookId)setShowDeleteConfirm(null)}const handleTestWebhook = async (webhookId: string) => {await testWebhook(webhookId, testEventType)setShowTestResult(true)}const resetWebhookForm = () => {setWebhookName(")setWebhookUrl(")setWebhookSecret(")setSelectedEvents([])}// Event type options;
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [;
     { value: 'new_application', label: New Application, description: 'When a talent applies to a job' },{ value: quote_received, label: 'Quote Received', description: When a quote is received from talent },{ value: 'milestone_approved', label: Milestone Approved, description: 'When a project milestone is approved' },{ value: talent_hired, label: 'Talent Hired', description: When talent is hired for a project }],// Toggle an event selection;
@@ -977,6 +1006,9 @@ export function WebhooksManager() {;
                     placeholder=https: //example.com/webhook"
 
                     className="bg-zinc-800 border-zinc-700
+=======
+                    className="bg-zinc-800 border-zinc-700"
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   />
 
@@ -1004,6 +1036,7 @@ export function WebhooksManager() {;
                 <div className=space-y-2>
 
                   <Label>Event Types</Label>
+<<<<<<< HEAD
                     onChange={(e) => setWebhookUrl(e.target.value)}placeholder="https: //example.com/webhook";
                     className=bg-zinc-800 border-zinc-700;
                   />;
@@ -1035,6 +1068,8 @@ export function WebhooksManager() {const {webhooks,loading,testResult,fetchWebho
   const [webhookName, setWebhookName] = useState(""),const [webhookUrl, setWebhookUrl] = useState(),const [webhookSecret, setWebhookSecret] = useState(""),const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),// Load webhooks on mount;
   useEffect(() => {fetchWebhooks()}, []),const handleCreateWebhook = async () => {if (webhookName.trim() ===  || webhookUrl.trim() === "" || selectedEvents.length === 0) return,await createWebhook(webhookName,webhookUrl,selectedEvents,webhookSecret.trim() ===  ? undefined : webhookSecret;
     ),setShowCreateDialog(false),resetWebhookForm()},const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {await toggleWebhook(webhookId, !currentStatus)},const handleDeleteWebhook = async (webhookId: string) => {await deleteWebhook(webhookId),setShowDeleteConfirm(null)},const handleTestWebhook = async (webhookId: string) => {await testWebhook(webhookId, testEventType),setShowTestResult(true)},const resetWebhookForm = () => {setWebhookName(""),setWebhookUrl(),setWebhookSecret(""),setSelectedEvents([])},// Event type options;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   <div className=grid gap-2 pt-2>
                     {eventOptions.map((event) => ("
@@ -1100,9 +1135,27 @@ export function WebhooksManager() {
     setSelectedEvents([]);
   },
   // Event type options;
+<<<<<<< HEAD
     { value: new_application, label: 'New Application', description: When a talent applies to a job },{ value: 'quote_received', label: Quote Received, description: 'When a quote is received from talent' },{ value: milestone_approved, label: 'Milestone Approved', description: When a project milestone is approved },{ value: 'talent_hired', label: Talent Hired, description: 'When talent is hired for a project' }],// Toggle an event selection;
       prev.includes(event)? prev.filter(e => e !== event): [...prev, event];
     )},return (<Card className=bg-zinc-900 border-zinc-800 text-white">;
+=======
+  const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [;
+    { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },;
+    { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },;
+    { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },;
+    { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }],;
+  // Toggle an event selection;
+  const toggleEvent = (event: WebhookEventType) => {;
+    setSelectedEvents(prev =>;
+      prev.includes(event);
+        ? prev.filter(e => e !== event);
+        : [...prev, event];
+    );
+  },;
+  return (;
+    <Card className="bg-zinc-900 border-zinc-800 text-white">;
+>>>>>>> origin/chore/fix-lint-and-merge
       <CardHeader>;
         <CardTitle className="text-xl flex items-center>;
           <Webhook className=mr-2" size={20} /> Webhooks;
@@ -1170,6 +1223,7 @@ export function WebhooksManager() {
                 </div>;
                 <div className=space-y-2">;
                   <Label>Event Types</Label>;
+<<<<<<< HEAD
                   <div className="grid gap-2 pt-2>;
                     {eventOptions.map((event) => (<div key={event.value} className=flex items-center space-x-2">;
                         <Checkbox;
@@ -1177,6 +1231,13 @@ export function WebhooksManager() {
                           id={event.value}<div className=grid gap-2 pt-2>;
                     {eventOptions.map(event => (<div;
                           id={event.value}
+=======
+                  <div className="grid gap-2 pt-2">;
+                    {eventOptions.map((event) => (;
+                      <div key={event.value} className="flex items-center space-x-2">;
+                        <Checkbox;
+                          id={event.value} ;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                         <Checkbox;
                           id={event.value} 
@@ -1185,6 +1246,7 @@ export function WebhooksManager() {
                     {eventOptions.map(event => (
                       <div
                         key={event.value}
+<<<<<<< HEAD
                         className=flex items-center space-x-2;
                       >;
                         <Checkbox;
@@ -1202,6 +1264,13 @@ export function WebhooksManager() {
 
                           <span className=block text-xs text-zinc-400 mt-1">{event.description}</span>
                         </Label>
+=======
+                        className='flex items-center space-x-2'
+                      >
+                        <Checkbox
+                          id={event.value}
+                          checked={selectedEvents.includes(event.value)}
+>>>>>>> origin/chore/fix-lint-and-merge
 
                           onCheckedChange={() => toggleEvent(event.value)}
                         />;
@@ -1215,9 +1284,6 @@ export function WebhooksManager() {
                           <span className=block text-xs text-zinc-400 mt-1">{event.description}</span>
                         </Label>
 
-
-
-
 className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
                         >
                           {event.label}
@@ -1230,6 +1296,7 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                 </div>;
               </div>;
 
+<<<<<<< HEAD
                       </div>
                     ))}
                   </div>
@@ -1240,10 +1307,13 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                 <Button variant="outline onClick={() => {
                   setShowCreateDialog(false),
                 <Button
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   variant='outline'
                   onClick={() => {
                     setShowCreateDialog(false);
                     resetWebhookForm();
+<<<<<<< HEAD
 
                 <div className=space - y-2'>;
                           checked={selectedEvents.includes(event.value)}onCheckedChange={() => toggleEvent(event.value)}
@@ -1276,6 +1346,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                     {event_options.map (event => (<div;
                         key={event.value}
                   <Label > Event Types</Label>;
+=======
+'
+                <div className='space - y-2'>;
+                  <Label > Event Types</Label>;'
+>>>>>>> origin/chore/fix-lint-and-merge
                   <div className='grid gap - 2 pt - 2'>;
                     {event_options.map (event => (
                       <div;
@@ -1313,6 +1388,7 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                   }}
                 >;
                   Cancel;
+<<<<<<< HEAD
                 </Button>;<DialogFooter>;
                 <Button variant="outline onClick={() => {setShowCreateDialog(false)resetWebhookForm()}}>;
                   Cancel;
@@ -1336,6 +1412,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
 
                 <Button onClick={handleCreateWebhook} disabled={
                   webhookName.trim() === " || 
+=======
+                </Button>;
+
+                  setShowCreateDialog(false);
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   resetWebhookForm()
                 }}>
@@ -1360,6 +1441,7 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
             </DialogContent>
           </Dialog>
         </div>
+<<<<<<< HEAD
                 <Button onClick={handleCreateWebhook} disabled={webhookName.trim() === " ||;
                   webhookUrl.trim() === " ||;
                   selectedEvents.length === 0;
@@ -1372,6 +1454,8 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                   }
                 >;
                   Create Webhook;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     webhookName && webhookName.trim() ===  ||
 
@@ -1399,11 +1483,11 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
             </DialogContent>;
           </Dialog>;
         </div>;
-          {loading ? (
 
         {/* Webhooks List */}'
         <div className='space - y-4>;
 
+<<<<<<< HEAD
             <div className=text - center py - 8 text - zinc - 500'>;
                     webhookName && webhookName.trim() === ' ||;
                     webhookUrl && webhookUrl.trim() === ' ||;
@@ -1428,6 +1512,9 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
         <div className='space - y-4>;{/* Webhooks List */}
         <div className=space-y-4'>;
           {loading ? (<div className='text - center py - 8 text - zinc - 500>;
+=======
+            <div className='text - center py - 8 text - zinc - 500'>;
+>>>>>>> origin/chore/fix-lint-and-merge
               Loading webhooks...;
             </div>) : webhooks.length === 0 ? (
             <div className='text - center py - 8 text - zinc - 500'>;
@@ -1508,7 +1595,10 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                           <PlayCircle size={14} className='mr-2 /> Test;
                         </DropdownMenuItem>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         {/* Webhooks List */}
 
         <div className=space-y-4">
@@ -1521,7 +1611,6 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
               <p className=text-sm mt-1">Create one to receive event notifications.</p>
             </div>
           ) : (
-
 
             webhooks.map((webhook) => (
 
@@ -1536,6 +1625,7 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                     </div>
                   </div>
 
+<<<<<<< HEAD
                         <DropdownMenuItem;
         {/* Webhooks List */}
         <div className=space-y-4">;
@@ -1573,11 +1663,15 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
 
                       <DropdownMenuTrigger asChild>
                         <Button variant="ghost size=icon" aria-label="More options>
+=======
+                        <Button variant="ghost" size="icon" aria-label="More options">
+>>>>>>> origin/chore/fix-lint-and-merge
                           <MoreVertical size={16} />
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end" className=bg-zinc-900 border-zinc-800 text-white>
 
+<<<<<<< HEAD
                       </span>;
                     </div>;
                       <DropdownMenu>;
@@ -1589,6 +1683,9 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                       <DropdownMenuContent align=end className="bg-zinc-900 border-zinc-800 text-white">;
                         <DropdownMenuItem;
                           <span className=block text-xs text-zinc-400 mt-1>{event.description}</span>;
+=======
+                          <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
                         </Label>;
                       </div>;
                     ))}
@@ -1613,6 +1710,7 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
             </DialogContent>;
           </Dialog>;
         </div>;
+<<<<<<< HEAD
         </div>;onClick={() => setShowDeleteConfirm(webhook.id)}className=cursor-pointer text-red-500'                        >;
                           <X size={14} className='mr-2 /> Delete                        </DropdownMenuItem>                          <X size={14} className="mr-2 /> Delete;
         {/* Webhooks List */}
@@ -1668,6 +1766,8 @@ className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed pee
                           <X size={14} className='mr-2 /> Delete
 origin/cursor/automate-test-improve-and-merge-code-2533
                           onClick={() => setShowDeleteConfirm(webhook.id)}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         {/* Webhooks List */}
 
@@ -1717,6 +1817,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </DropdownMenuItem>;
                         <DropdownMenuItem;
 
+<<<<<<< HEAD
                         <DropdownMenuItem;onClick={() => setShowDeleteConfirm(webhook.id)}
                           className=cursor-pointer text-red-500;
                         >;
@@ -1751,6 +1852,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
                 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                         </DropdownMenuItem>
 
                 <div className="mt-3 flex flex-wrap gap-2">
@@ -1761,6 +1864,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       className=bg-zinc-800 text-zinc-300 hover:bg-zinc-800
                     >
 
+<<<<<<< HEAD
 
 <div className='mt-3 flex flex-wrap gap-2>
                   {webhook.event_types.map((event: WebhookEventType) => (
@@ -1791,6 +1895,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
 <div className=mt-3 text-xs text-zinc-500 flex items-center space-x-4'>
                   <span>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     </Badge>;
                   ))}
 
@@ -1807,6 +1913,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
                   {webhook.last_triggered_at && ('
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH: mm')}</span>
+<<<<<<< HEAD
 
                   )}
 
@@ -1818,6 +1925,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </span>
                   )}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 </div>
 
@@ -1826,6 +1935,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
         </div>
       </CardContent>
+<<<<<<< HEAD
                       variant=secondary';
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800>                    <Badge;
                       key = {event}
@@ -1852,6 +1962,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>;
                   {webhook && webhook.last_triggered_at && (<span>;
                       Last triggered:{' }</div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                         </DropdownMenuItem>;
                       </DropdownMenuContent>;
@@ -1902,12 +2014,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
 
+<<<<<<< HEAD
                   <span>Created: {format(new Date(webhook.created_at), MMM d, yyyy)}</span>;
                 </div>;
         open={showTestDialog !== null}</div>;
                 <div className=mt-3 text-xs text-zinc-500 flex items-center space-x-4>;
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>;
                   {webhook.last_triggered_at && (<span>Last triggered: {format(new Date(webhook.last_triggered_at), MMM d, yyyy HH:mm)}</span>;
+=======
+                  <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
                   {webhook.last_triggered_at && (;'
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm)}</span>;
                   )}
@@ -1922,6 +2038,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="text-xs text-zinc-500">
           Webhooks will be sent with HTTPS POST requests to your endpoint.
 
+<<<<<<< HEAD
             )))}
         </div>;
       </CardContent>;
@@ -2012,6 +2129,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 clearTestResult();
             }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         </Button>
 
       </CardFooter>
@@ -2104,10 +2223,14 @@ if ( {) {}
         <DialogContent className='bg - zinc - 900 border - zinc - 800 text - white'>              clearTestResult ();
 
             }
+<<<<<<< HEAD
             }
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white>
 
 
+=======
+            , }
+>>>>>>> origin/chore/fix-lint-and-merge
 
               setShowTestResult(false);
 clearTestResult();
@@ -2127,6 +2250,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {!showTestResult ? (
             <>
 
+<<<<<<< HEAD
         open={showTestDialog !== null}onOpenChange={(open) => {if (!open) {setShowTestDialog(null)setTestEventType('new_application)if (showTestResult) {setShowTestResult(false)}
         }}onOpenChange={(open) => {// Check condition;
 if ( {) {$2;
@@ -2257,6 +2381,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </SelectContent>;
                   </Select>;
                   <p className='text-xs text-zinc-500>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       >;
 
         <DialogContent className=bg-zinc-900 border-zinc-800 text-white'>;
@@ -2334,9 +2460,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <DialogFooter>;
                 <Button;
                   variant='outline';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     </SelectContent>
                   </Select>
@@ -2359,8 +2488,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={() =>;
                     showTestDialog && handleTestWebhook(showTestDialog);
                   }
+<<<<<<< HEAD
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               <DialogFooter>
 
@@ -2379,6 +2511,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </>
           ) : (
             <>
+<<<<<<< HEAD
                     showTestDialog && handleTestWebhook(showTestDialog)}<DialogFooter>;
                 <Button variant=outline" onClick={() => setShowTestDialog(null)}>;
                   Cancel;
@@ -2397,6 +2530,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >                  Send Test                  </p>;
                 </div>;
               </div>;<DialogFooter>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 >                  Send Test                  </p>;
                 </div>;
@@ -2411,8 +2546,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>;
               </DialogFooter>;
             </>;
-                    <Badge
-                      className={
           ) : (;
             <>;
               <div className=space-y-4 py-4'>;'
@@ -2472,6 +2605,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {testResult?.responseBody || 'No response body}
                       </pre>
 
+<<<<<<< HEAD
 
 <div className=space-y-4 py-4'>
                 <div className='space-y-2>
@@ -2516,10 +2650,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {testResult?.responseBody || 'No response body}
                       </pre>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     </ScrollArea>
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
                     </Badge>;
                   </div>;
 <div className=space-y-2 mt-4'>;
@@ -2544,6 +2681,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <pre className=text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">;
                         {testResult?.responseBody || "No response body}<DialogFooter>;
                 <Button;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     </Badge>;
                   </div>;
@@ -2568,7 +2707,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>;
                 <Button;
                   on_click={() =>;
-                    showTestDialog && handleTestWebhook (showTestDialog)}
+                    showTestDialog && handleTestWebhook (showTestDialog);
+                  }
                 >                  Send Test                  </p>;
                 </div>;
               </div>;
@@ -2598,10 +2738,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <Label > Response Status</Label>;
                     <Badge;
                       class_name = {}
+<<<<<<< HEAD
                         test_result && test_result.status >= 200 && test_result.status < 300;
                           ? "bg - green - 700";
                           : bg - red - 700";
                        }
+=======
+                        test_result && test_result.status >= 200 && test_result.status < 300;"
+                          ? "bg - green - 700";"
+                          : "bg - red - 700";
+                      , }
+>>>>>>> origin/chore/fix-lint-and-merge
                     >;
                       {test_result?.status} {test_result?.status_text}
                     </Badge>;
@@ -2630,6 +2777,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setShowTestResult(false)
                     clearTestResult()
 
+<<<<<<< HEAD
 <DialogFooter>
                 <Button
                   variant=default'
@@ -2638,6 +2786,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setShowTestResult(false)
                     clearTestResult()
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   }}
 
                 >                  Close;
@@ -2658,6 +2808,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </DialogFooter>
             </>
 
+<<<<<<< HEAD
 
               </div>;<DialogFooter>;
                 <Button;
@@ -2674,6 +2825,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>;
               </DialogFooter>;
             </>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     </Badge>;
 
                   </div>;
@@ -2717,6 +2870,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   setShowTestResult(false);
                   clearTestResult();
                 }}>;
+<<<<<<< HEAD
             </>;)}
         </DialogContent>;
       </Dialog>;
@@ -2776,6 +2930,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         open={showDeleteConfirm !== null} 
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 </Button>;
               </DialogFooter>;
             </>;
@@ -2823,6 +2979,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Cancel;
             </AlertDialogCancel>;
 
+<<<<<<< HEAD
 
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
@@ -3062,6 +3219,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<Dialogopen= {
   showTestDialog !== null 
 }onOpenChange= {
+=======
+              onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
+>>>>>>> origin/chore/fix-lint-and-merge
 
               className="bg-red-600 hover: bg-red-700;
             >;
@@ -3091,6 +3251,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   setShowTestDialog (null);;
 setTestEventType ('new application');
 if (showTestResult) {;
+<<<<<<< HEAD
   ;
 
 };
@@ -3109,6 +3270,8 @@ if (showTestResult) {;
 }</SelectItem>) ) ;
 }</SelectContent> </Select> <p className=text-xs text-zinc-500"> The event type will determine the structure of the test payload. </p> </div> </div> <DialogFooter> Cancel </Button> <Button onClick={
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }> Send Test </Button> </DialogFooter> </>) : (<> <div className="space-y-4 py-4> <div className=space-y-2"> <div className="flex items-center justify-between> <Label>Response Status</Label> <Badge > {
   testResult?.status ;
@@ -3121,12 +3284,15 @@ clearTestResult ();
 }> Close </Button> Test Another Event </Button> </DialogFooter> </>) ;
 }</DialogContent> </Dialog> {
   /* Delete Webhook Confirmation Dialog */ ;
+<<<<<<< HEAD
 }<AlertDialogopen= {
   showDeleteConfirm !== null 
 }onOpenChange= {
   (open) => !open && setShowDeleteConfirm (null) ;
 }> <AlertDialogContent className=bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className=bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
 }"  );
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }
 
@@ -3264,6 +3430,7 @@ clearTestResult ()
 }'  )
 }
 }
+<<<<<<< HEAD
 
             <AlertDialogCancel className=bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
   loading ? (<div className="text-center py-8 text-zinc-500">Loading webhooks...</div>) : webhooks.length === 0 ? (<div className=text-center py-8 text-zinc-500> <Webhook className="mx-auto mb-2 opacity-30"size= {24 ;
@@ -3370,16 +3537,23 @@ setTestEventType (new application')if (showTestResult) {}";
 }<AlertDialog open= {showDeleteConfirm !== null;
 }onOpenChange= {(open) => !open && setShowDeleteConfirm (null) ;
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className=text-zinc-400> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>)}'  )}}<AlertDialogCancel className=bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700>;
+=======
+'
+            <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
+>>>>>>> origin/chore/fix-lint-and-merge
               Cancel;
             </AlertDialogCancel>;
             <AlertDialogAction;
               on_click={() =>;
+<<<<<<< HEAD
       <AlertDialog;
         open={showDeleteConfirm !== null}
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
       >;
         <AlertDialogContent className=bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm);
               }'
               className='bg - red - 600 hover:bg - red - 700            >;
@@ -3398,6 +3572,7 @@ setTestEventType (new application')if (showTestResult) {}";
             </AlertDialogDescription>;
           </AlertDialogHeader>;
 
+<<<<<<< HEAD
             <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700>;
               on_click = {() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm) }
               className=bg - red - 600 hover: bg - red - 700";<AlertDialog;
@@ -3420,6 +3595,9 @@ setTestEventType (new application')if (showTestResult) {}";
               className="bg - red - 600 hover: bg - red - 700";
               className="bg - red - 600 hover: bg - red - 700;
 
+=======
+            <AlertDialogCancel className="bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700">;
+>>>>>>> origin/chore/fix-lint-and-merge
 
               Cancel;
             </AlertDialogCancel>;
@@ -3428,18 +3606,24 @@ setTestEventType (new application')if (showTestResult) {}";
               className=bg - red - 600 hover: bg - red - 700";
 
             >;
+<<<<<<< HEAD
               className="bg - red - 600 hover: bg - red - 700;>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+<<<<<<< HEAD
     </Card>);
   value: WebhookEventType,  label: string, description: string;
 }[] = [ {
   value: new application',  label: 'New Application, description: When a talent applies to a job';
 }
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     </Card>);
   value: WebhookEventType,  label: string, description: string;
@@ -3449,6 +3633,7 @@ setTestEventType (new application')if (showTestResult) {}";
 
 }<AlertDialog open= {
   showDeleteConfirm !== null ;
+<<<<<<< HEAD
 }onOpenChange= {
   (open) => !open && setShowDeleteConfirm (null) ;
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className=text-zinc-400> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
@@ -3458,3 +3643,9 @@ setTestEventType (new application')if (showTestResult) {}";
 }onOpenChange= {(open) => !open && setShowDeleteConfirm (null) ;
 }> <AlertDialogContent className=bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className=bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>)}'";
 }'"
+=======
+}onOpenChange= {;
+  (open) => !open && setShowDeleteConfirm (null) ";
+}> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge

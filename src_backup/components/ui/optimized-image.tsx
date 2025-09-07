@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import React, { useState, useRef, useEffect } from 'react';
@@ -13,6 +14,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import { ImageIcon, AlertTriangle } from lucide-react'
 import { cn  } from '@/lib/utils;
 import { imageOptimization  } from @/utils/performance';
+=======
+import { ImageIcon, AlertTriangle } from 'lucide-react'
+import { cn  } from '@/lib/utils';
+import { imageOptimization  } from '@/utils/performance';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { logWarn } from '@/utils/productionLogger;
 interface OptimizedImageProps {
@@ -29,6 +35,7 @@ interface OptimizedImageProps {}
   width?: number;
   height?: number;
 
+<<<<<<< HEAD
 import { cn  } from '@/lib / utils';
 import { image_optimization  } from @/utils / performance;
 import { log_warn  } from '@/utils / production_logger';
@@ -63,6 +70,8 @@ if (return) {$2;
     observer_ref.current = new IntersectionObserver (
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       entries => {
 
         const [entry] = entries;        // Check condition
@@ -123,12 +132,14 @@ if ( {) {
                 size: `${(fileSize / 1024).toFixed(2)}KB``
                 loadTime: `${loadTime.toFixed(2)}ms`
               })
+
   }, [lazy, priority, isInView]);
   // Start load time tracking;
   useEffect (() => {}
     loadStartTime.current = performance.now ();
   }, [src]);
   // Monitor image performance;
+<<<<<<< HEAD
     observer_ref.current = new IntersectionObserver (entries => {const [entry] = entries;        // Check condition;
 if ( {) {$2;
 }
@@ -164,6 +175,8 @@ if ( {) {$2;
 }
       const observer = new PerformanceObserver (list => {const entries = list.get_entries ()entries.for_each (entry => {          // Check condition;
 if ( {) {$2;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   useEffect ((, ) => {}
     // Check condition;
 if ( {) {}
@@ -246,7 +259,6 @@ if ( {) {}
 }
       setCurrentSrc (fallback_src);
       set_retries (0);
-
 
     } else {
 
@@ -378,8 +390,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     setHasError(false),
     setLoadProgress(100),
     onLoad?.();
+<<<<<<< HEAD
   },
   const handle_load = () =>: any {setIsLoading (false)setHasError (false)setLoadProgress (100)on_load?.()}
+=======
+  },;
+>>>>>>> origin/chore/fix-lint-and-merge
   // Handle image error with retry logic;
   const handleError = () => {
     if (retries < retryCount) {
@@ -443,6 +459,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
             transition={{ duration: 0.3 }}
 
+<<<<<<< HEAD
     return (
 
   // Simulate loading progress for demo purposes;
@@ -501,6 +518,9 @@ if ( {) {$2;
 
 
             className="absolute inset-0
+=======
+            className="absolute inset-0"
+>>>>>>> origin/chore/fix-lint-and-merge
           >
             {generatePlaceholder()}
 
@@ -510,6 +530,7 @@ if ( {) {$2;
 
                   className=h-full bg-blue-500
 
+<<<<<<< HEAD
                   className="h-full bg-blue-500"
 
 
@@ -523,6 +544,8 @@ if ( {) {$2;
             {showLoadingProgress && isLoading && loadProgress > 0 && (<div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">;
                 <motion.div;
                   className=h-full bg-blue-500;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   initial={{ width: 0 }}
 
                   animate={{ width: `${loadProgress}%` }}
@@ -548,6 +571,7 @@ if ( {) {$2;
 
               <span className=text-xs mt-1>Retried {retries} times</span>
 
+<<<<<<< HEAD
             animate={{ opacity: 1 }}className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400";
           >;
             <AlertTriangle className=h-8 w-8 mb-2 />;
@@ -563,6 +587,8 @@ if ( {) {$2;
         {isInView && !hasError && (;
           <motion.img;
         {/* Actual image */}<motion.img;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               <span className="text-xs mt-1">Retried {retries} times</span>
 
             )}
@@ -620,6 +646,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   aspectRatio = '16/9',
   className,
 
+<<<<<<< HEAD
 
 
   return (
@@ -659,6 +686,11 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
         {images.map((image, index) => (;
           <motion.div;
             key={index}
+=======
+  const handleImageLoad = () => {
+    setLoadedCount(prev => prev + 1)
+  },
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return ('
     <div className={cn('space-y-4, className)}>
@@ -680,8 +712,6 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
             key={index}
 
             initial={{ opacity: 0, y: 20 }}
-        {images.map((image, index) => (<motion.div;
-            key={index}initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             className="group cursor-pointer"
@@ -695,6 +725,7 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
                 alt={image.alt}
                 aspectRatio={aspectRatio}
 
+<<<<<<< HEAD
                 aspectRatio={aspectRatio}</div>;
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300;
                 onLoad={handleImageLoad}
@@ -703,6 +734,8 @@ interface ImageGalleryProps  {images: Array<{src: string,alt: string,caption?: s
               {image.caption && (<div className=absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">;
                   <p className="text-sm>{image.caption}</p>;
                 </div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300"
                 className=rounded-lg group-hover:scale-105 transition-transform duration-300"
                 onLoad={handleImageLoad}
@@ -742,15 +775,25 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
         <OptimizedImage
           src={src}
           alt={alt}
+<<<<<<< HEAD
           aspectRatio=1/1'
           objectFit='cover
+=======
+          aspectRatio='1/1'
+          objectFit='cover'
+
+>>>>>>> origin/chore/fix-lint-and-merge
           fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
           placeholder=color'
           placeholderColor='#f3f4f6
           priority={true}
 
+<<<<<<< HEAD
 
           className=rounded-full"
+=======
+          className="rounded-full"
+>>>>>>> origin/chore/fix-lint-and-merge
         />
       ) : ("
         <div className=w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold>
@@ -764,6 +807,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
 
         {(is_loading || !isInView) && !has_error && (
           <motion.div;
+<<<<<<< HEAD
               />;{image && image.caption && (<div className=absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>;
                   <p className='text-sm>{image && image.caption}</p>;
                 </div>;)}
@@ -796,6 +840,8 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 
           {initials}</div>;
       )}}}}</div>;
   )}{(is_loading || !isInView) && !has_error && (<motion.div;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}'
@@ -814,7 +860,8 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 
               </div>)}
           </motion.div>)}
         {/* Error state */}
-        {has_error && (<motion.div;
+        {has_error && (
+          <motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className=absolute inset - 0 flex flex - col items - center justify - center bg - gray - 100 text - gray - 400';
@@ -842,7 +889,8 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({src,alt,size = 
             transition={{ duration: 0.3 }}
           />)}
       </AnimatePresence>;
-    </div>)}
+    </div>);
+}
 //Container styles;
 }> <AnimatePresence> {}
   /* Placeholder */;
@@ -902,8 +950,9 @@ export const ImageGallery: React.FC < ImageGalleryProps> = ({}
         style={{}`
           gridTemplateColumns: `repeat (${columns}, 1fr)`}}
       >;
-        {images.map ((image, index, ) => (<motion.div;
-            key = {index }
+        {images.map ((image, index, ) => (
+          <motion.div;
+            key = {index, }
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ delay: index * 0.1 }}'
@@ -969,8 +1018,6 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({}
     </div>);
 }
 },
-    </div>)}
-}},className?: string;
 
   className?: string;
   placeholder?: blur' | 'shimmer | color' | 'none | empty';
@@ -1002,6 +1049,10 @@ interface ImageMetrics {
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
+<<<<<<< HEAD
   wasOptimized: boolean;
 }export const OptimizedImage: React.FC<OptimizedImageProps> = ({)}
 }
+=======
+};
+>>>>>>> origin/chore/fix-lint-and-merge

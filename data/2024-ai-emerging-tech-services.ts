@@ -5,7 +5,7 @@ export interface AIEmergingTechService {
   name: string;
   tagline: string;
   price: string;
-  period: string;
+
   description: string;
   features: string[];
   popular: boolean;
@@ -27,23 +27,23 @@ export interface AIEmergingTechService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {mobile: string;
-    email: string;
-    address: string;
-    website: string;
-}realImplementation: boolean;
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   }
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
 }export const aiEmergingTechServices: AIEmergingTechService[] = [;
   {id: ai-video-generation-platform",name: "AI Video Generation Platform,tagline: Create professional videos with AI in minutes",price: "$499,period: /month",description: "Advanced AI-powered video generation platform that creates professional-quality videos from text, images, and audio inputs. Perfect for marketers, content creators, and businesses.,features: [;
       Text-to-video generation","Image-to-video conversion,AI voice synthesis","Automatic scene generation,Professional templates library","Multi-language support,4K video export","Brand customization,Social media optimization","API access for developers;
@@ -51,6 +51,8 @@ export interface AIEmergingTechService {
     },realImplementation: true,implementationDetails: "Production-ready AI video generation platform with state-of-the-art models, GPU acceleration, and comprehensive video editing tools. Includes mobile apps and API access.,launchDate: 2024-02-01",customers: 3200,rating: 4.8,reviews: 1800;
   }
 ];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export const aiEmergingTechServices: AIEmergingTechService[] = [
@@ -104,5 +106,3 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     customers: 3200,
     rating: 4.8,
     reviews: 1800
-  }
-];

@@ -1,8 +1,35 @@
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 interface TryItProps  {path: string; // full URL or relative;
   requiresAuth: boolean;
 export default function TryItConsole() {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';}
+=======
+
+
+
+import React, { useMemo, useState } from 'react';
+
+interface TryItProps  {path: string; // full URL or relative;
+  requiresAuth: boolean;
+
+export default function TryItConsole() {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
+  const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';}
+}
+interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',method,path,requiresAuth}: TryItProps) {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
+  const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',const [baseUrl, setBaseUrl]  = useState('https://api.zion.os')path: string, // full URL or relative;
+  requiresAuth: boolean;
+
+export default function TryItConsole({
+  method;
+path}
+requiresAuth}
+}: TryItProps) {
+
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
+  path: string, // full URL or relative;}
+requiresAuth: boolean}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 interface TryItProps  {method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',method,path,requiresAuth}: TryItProps) {const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   const [token, setToken] = useState('')method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',const [baseUrl, setBaseUrl]  = useState('https://api.zion.os')path: string, // full URL or relative;
@@ -14,6 +41,7 @@ requiresAuth}
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
 
+<<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
   path: string, // full URL or relative;}
 requiresAuth: boolean}
@@ -80,12 +108,26 @@ export default function TryItConsole() { return null; }
   const [body, setBody] = useState();
   const [response, setResponse] = useState<string>(''),
 return baseUrl.replace(/\/$/, ) + path;
+=======
+export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
+
+const [token, setToken] = useState('');
+
+const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
+  const [body, setBody] = useState('');
+
+const [response, setResponse] = useState<string    />(''),
+  const [loading, setLoading] = useState(false);}
+return baseUrl.replace(/\/$/, '') + path;}
+>>>>>>> origin/chore/fix-lint-and-merge
   }, [baseUrl, path]);
   async function onSend() {
-    }
     setLoading(true);
-    setResponse('');'
+    setResponse('');
     try {
+<<<<<<< HEAD
       const headers: Record<string, string> = { 'Content-Type': 'application/json' },
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`,
       const res = await fetch($2);
@@ -116,11 +158,53 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onChange={e = /> setBaseUrl(e.target.value}
 }
 
+=======
+const headers: Record<string, string    /> = {}
+        'Content-Type': 'application/json'}
+      };
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+
+const res = await fetch(url, {
+        method;
+headers,
+body: method === 'GET' |method === 'DELETE'
+            ? undefined;
+            : body |undefined}
+     }
+});
+
+const text = await res.text();
+      setResponse(text);
+    } catch (e) {
+      setResponse(String(e?.message |e));}
+    } finally {
+      setLoading(false);}
+      setResponse(text)}
+    } catch (e) {
+      setResponse(String(e?.message |e))}
+    } finally {}
+      setLoading(false)}
+    }
+  }
+  return (
+<div className='space-y-2'    />
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'    />
+        <div    />
+
+          <label className='block text-sm mb-1'    />Base URL</label>
+          <input;
+className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
+
+            value={baseUrl}
+            onChange={e =    /> setBaseUrl(e.target.value}
+}
+>>>>>>> origin/chore/fix-lint-and-merge
           />;
         </div>;
-        <div>;
-          <label className='block text-sm mb-1'>Method</label>;'
+        <div    />;
+          <label className='block text-sm mb-1'    />Auth Token</label>;
           <input;
+<<<<<<< HEAD
 
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
@@ -171,12 +255,52 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
       )}
       <button
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary'
+=======
+            className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary';
+            value={token}
+            onChange={e =    /> setToken(e.target.value)}
+            placeholder='Optional';
+          />;
+        </div>;
+        <div    />;
+          <label className='block text-sm mb-1'    />Method</label>;
+          <input;
+            className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary';
             value={method}
-            read_only
-          />        </div>
+
+            readOnly;
+             />
         </div>
+      </div>
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+        <div    />
+
+<label className='block text-sm mb-1'    />Request Body (JSON)</label>
+          <textarea;
+className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'}
+}
+            value={body}
+      )}
+      <button;
+        onClick={onSend}
+        className='px-3 py-2 rounded bg-high-contrast-accent text-black';
+          <label className='block text - sm mb - 1'    />Method</label>;
+          <input;
+            className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
+>>>>>>> origin/chore/fix-lint-and-merge
+            value={method}
+            read_only;
+             />        </div>;
+      </div>;
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div    />        <div    />;}
+          <label className=\"block text-sm mb-1\" html_for=\"input - Base URL\"    />Base URL</label>;}"
+          <input className=\"w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary\" value={base_url} on_change={(e) =    /> setBaseUrl (e.target.value)} />;
+        </div>;
         <div    />;"
           <label className=\"block text-sm mb-1\" html_for=\"input - Auth Token\"    />Auth Token</label>;"
+<<<<<<< HEAD
           <input className=\"w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary\" value={token} on_change={(e) =    /> set_token (e.target.value)} placeholder=\"Optional\" />
         </div>
         </div>
@@ -226,21 +350,32 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
         <div />;"
           <label className=\"block text-sm mb-1\" html_for=\"input - Method\" />Method</label>;"
           <input className=\"w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary\" value={method} read_only />;
+=======
+          <input className=\"w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary\" value={token} on_change={(e) =    /> set_token (e.target.value)} placeholder=\"Optional\" />;
+        </div>;
+        <div    />;"
+          <label className=\"block text-sm mb-1\" html_for=\"input - Method\"    />Method</label>;"
+          <input className=\"w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high-contrast-secondary\" value={method} read_only    />;
+>>>>>>> origin/chore/fix-lint-and-merge
         </div>;
       </div>;
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div>;'
-          <label className='block text - sm mb - 1'>Request Body (JSON)</label>;'
-          <textarea;
-            }
-            className='w - full h - 32 px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary font - mono text - sm';'
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div    />;
+          <label className='block text - sm mb - 1'    />Request Body (JSON)</label>;
+          <textarea;}
+            className='w - full h - 32 px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary font - mono text - sm';}
             value={body}
+<<<<<<< HEAD
             on_change={e = /> set_body (e.target.value)}
+=======
+            on_change={e =    /> set_body (e.target.value)}
+>>>>>>> origin/chore/fix-lint-and-merge
             placeholder='{ }';
           />)}
       <button;
         on_click={on_send}
         className='px - 3 py - 2 rounded bg - high - contrast - accent text - black';
         disabled={loading}
+<<<<<<< HEAD
       >;'
         {loading ? 'Sending…' : 'Send Request'}
       </button>;
@@ -262,6 +397,26 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
       <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}>'
         {loading ? 'Sending…' : 'Send Request'}
         {loading ? Sending… : 'Send Request'}
+=======
+          />;
+        {loading ? 'Sending…' : 'Send Request'}
+      </button>;
+      <div    />;
+        <label className='block text - sm mb - 1'    />Response</label>;
+        <pre className='p - 3 rounded bg - high - contrast - tertiary overflow - auto text - sm max - h-80'    />;
+          <code    />{response}</code>;
+        </pre>;
+      </div>;
+    </div>)</div>;
+      </div>;
+      {_(method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div    />;}
+          <label className=&quot;block text-sm mb-1&quot;    />Request Body (JSON)</label>;}
+          <textarea className=&quot;w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm&quot; value={body} onChange={(e) =    /> setBody(e.target.value)} placeholder=&quot;{ }&quot; />;
+        </div>;
+      )}
+      <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}    />;
+        {loading ? 'Sending…' : 'Send Request'}
+>>>>>>> origin/chore/fix-lint-and-merge
 
       </button>
       <div    />
@@ -269,6 +424,7 @@ className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border
         <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80&quot;    /><code    />{response}</code></pre>
       </div>
     </div>
+<<<<<<< HEAD
     <div className='space-y-2'>
 
 }
@@ -292,3 +448,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
 );
 }
+=======
+
+  );
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge

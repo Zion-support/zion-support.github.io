@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react;
 import { useRouter  } from 'next/router;
@@ -41,12 +42,21 @@ import { toast } from @/hooks/use-toast",
 import { cleanupAuthState } from "@/utils/authUtils,
 import { logErrorToProduction } from '@/utils/productionLogger,
 import { logErrorToProduction } from @/utils/productionLogger',
+=======
+FormMessage} from "@/components/ui/form",
+import { toast } from "@/hooks/use-toast",
+import { cleanupAuthState } from "@/utils/authUtils",
+import { logErrorToProduction } from '@/utils/productionLogger',
+import { toast } from "@/hooks/use-toast",;
+import { cleanupAuthState } from "@/utils/authUtils",;
+import { logErrorToProduction } from '@/utils/productionLogger',;
+>>>>>>> origin/chore/fix-lint-and-merge
 // Form validation schema
-const updatePasswordSchema = null;
 const updatePasswordSchema = z
   .object({
     password: z
       .string()
+<<<<<<< HEAD
 :src/pages/UpdatePassword.tsx
       .min(8, 'Password must be at least 8 characters)
       .max(64, Password must be less than 64 characters'),
@@ -66,6 +76,10 @@ export default function UpdatePassword() {
   const router = useRouter();
       .min(8, Password must be at least 8 characters")
       .max(64, "Password must be less than 64 characters),
+=======
+      .min(8, "Password must be at least 8 characters")
+      .max(64, "Password must be less than 64 characters"),
+>>>>>>> origin/chore/fix-lint-and-merge
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
     message: Passwords do not match",
@@ -84,6 +98,7 @@ export default function UpdatePassword() {
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema),
     defaultValues: {
+<<<<<<< HEAD
       password: ',
       confirmPassword: '}});
 
@@ -95,34 +110,52 @@ export default function UpdatePassword() {
     const token = hashParams.get('access_token);
 
     const hash = typeof window !== undefined' ? window.location.hash : ",
+=======
+      password: "",
+      confirmPassword: ""}}),
+
+  useEffect(() => {
+    // Extract access token from URL hash on the client
+    const hash = typeof window !== 'undefined' ? window.location.hash : "",
+>>>>>>> origin/chore/fix-lint-and-merge
     const hashParams = new URLSearchParams(hash.substring(1)),
     const token = hashParams.get("access_token),
     if (token) {
-      setAccessToken(token);
+      setAccessToken(token)
     } else {
+<<<<<<< HEAD
       setError(
         'No access token found. Please request a new password reset link.
       );
+=======
+      setError("No access token found. Please request a new password reset link.")
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
     // Clean up auth state to prevent issues
-    cleanupAuthState();
-  }, []);
+    cleanupAuthState()
+  }, []),
 
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
+<<<<<<< HEAD
       setError(
         No access token found. Please request a new password reset link.'
       );
       return;
+=======
+      setError("No access token found. Please request a new password reset link."),
+      return
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
-    setIsLoading(true);
+    setIsLoading(true),
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
         access_token: accessToken,
+<<<<<<< HEAD
         refresh_token: '});
 
       // Update the password
@@ -136,17 +169,38 @@ export default function UpdatePassword() {
           variant: 'destructive});
         setError(error.message);
         return;
+=======
+        refresh_token: ''}),
+
+      // Update the password
+      const { error } = await supabase.auth.updateUser({
+        password: data.password}),
+
+      if (error) {
+        toast({
+          title: "Password update failed",
+          description: error.message,
+          variant: "destructive"}),
+        setError(error.message),
+        return
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 
       // Show success message and clean up auth state
-      setSuccess(true);
+      setSuccess(true),
       toast({
+<<<<<<< HEAD
         title: Password updated successfully',
         description: 'You can now log in with your new password.});
+=======
+        title: "Password updated successfully",
+        description: "You can now log in with your new password."}),
+>>>>>>> origin/chore/fix-lint-and-merge
 
       // Clean auth state and redirect after a delay
-      cleanupAuthState();
+      cleanupAuthState(),
       setTimeout(() => {
+<<<<<<< HEAD
 :src/pages/UpdatePassword.tsx
         router.push(/login');
       }, 3000);
@@ -163,6 +217,9 @@ export default function UpdatePassword() {
       setError(error.message || 'An unexpected error occurred);
     } finally {
         router.push(/login")
+=======
+        router.push("/login")
+>>>>>>> origin/chore/fix-lint-and-merge
       }, 3000)
     } catch (error: any) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: Password update error' }),
@@ -252,14 +309,23 @@ export default function UpdatePassword() {
     } finally {
       setIsLoading(false);
     }
+<<<<<<< HEAD
   }
 
   const onInvalid = (errors: any) => {
+=======
+  },;
+  const onInvalid = (errors: any) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     const firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues;
-    if (firstError) {
+    if (firstError) {;
       form.setFocus(firstError);
     }
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return (
     <>
@@ -406,7 +472,10 @@ export default function UpdatePassword() {
                   </form>
                 </Form>
               )}
+<<<<<<< HEAD
 :src/pages/UpdatePassword.tsx
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </div>
           </div>
@@ -425,9 +494,6 @@ export default function UpdatePassword() {
         </div>
       </div>
     </>
-:src/pages/UpdatePassword.tsx
-  )
-}
 
   );
   password: z .string () if (token) {

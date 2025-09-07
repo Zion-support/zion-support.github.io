@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App() { return <Component {...pageProps} />}';'
@@ -50,6 +51,42 @@ ursor/automate-test-improve-and-merge-code-646c;
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
 
+=======
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+</Component>'
+
+import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+>>>>>>> origin/chore/fix-lint-and-merge
 </Component>'
 </Component>'
+<<<<<<< HEAD
+=======
+
+import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+</Component>'import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+const type { AppProps } from "next/app"; import "./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''";
+import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
+</Component>';
+import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
+</Component>';
+import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+const type { AppProps } from "next/app"; import "./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''";
+import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
+</Component>'
+
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+>>>>>>> origin/chore/fix-lint-and-merge
+</Component>'
+
+';
+import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'";
+const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"';
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}''
+</Component>'
+
+import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'

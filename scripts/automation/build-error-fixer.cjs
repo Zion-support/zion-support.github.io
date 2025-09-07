@@ -1,5 +1,22 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env""
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+    this.logFile = path.join(this.projectRoot, ""automation/logs/build-error-fixer.log"")
+    console.log(")
+>>>>>>> origin/chore/fix-lint-and-merge
     await fs.appendFile(this.logFile, logMessage + "\n")
   cwd
         "encoding": utf8
@@ -17,16 +34,51 @@
     await this.log(�  Clearing npm cache...)
     await this.runCommand("npm cache clean --force", { silent})
     await this.log("� Reinstalling dependencies...")
+<<<<<<< HEAD
 
+=======
+    const installResult = await this.runCommand("npm install --legacy-peer-deps")
+>>>>>>> origin/chore/fix-lint-and-merge
   await this.log(" Dependencies reinstalled successfully")
   type: "dependency-reinstall"
         action: "npm install --legacy-peer-deps"
         timestamp
   await this.log(" Fixing Next.js configuration...")
+<<<<<<< HEAD
 
+=======
+  const nextConfigPath = path.join(this.projectRoot, "next.config.js")
+      let nextConfig = "
+  nextConfig = await fs.readFile(nextConfigPath, "utf8")
+      // Create or update Next.js configconst fixedConfig = /** @type {import("next"})
+  "reactStrictMode"
+  "swcMinify"
+  "experimental"
+  "typescript"
+  "eslint"
+  "webpack"
+  // Create or update Next.js configconst fixedConfig = /** @type {import("next"})
+  "reactStrictMode"
+  "swcMinify"
+  "experimental"
+  "typescript"
+  "eslint"
+  "webpack"
+      await fs.writeFile(nextConfigPath, fixedConfig")
+>>>>>>> origin/chore/fix-lint-and-merge
       await this.log(" Next.js configuration fixed")
   type: "next-config-fix"
+<<<<<<< HEAD
 
+=======
+        "file": "next.config.js"
+        "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing Next.js "config"`})
+  await this.log(" Fixing TypeScript configuration...")
+  const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
+      const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, "utf8")
+        "target": "es5"
+        "lib": ["dom", "dom.iterable", "es6"]
+>>>>>>> origin/chore/fix-lint-and-merge
         "allowJs"
         skipLibCheck
         "strict"
@@ -49,6 +101,7 @@
         "file": tsconfig.json
         "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing TypeScript config`})
   await this.log(" Fixing package.json...")
+<<<<<<< HEAD
 
 =======
   const packageJsonPath = path.join(this.projectRoot, package.json)
@@ -89,6 +142,50 @@
 =======
   console.error("Build error fixer failed: ")
 
+=======
+  const packageJsonPath = path.join(this.projectRoot, "package.json")
+      const packageJson = JSON.parse(await fs.readFile(packageJsonPath, "utf8")
+        "dev": "next dev"
+        "build": "next build"
+        "start": "next start"
+        "lint": "next lint",type-check": "tsc --noEmit"
+      await this.log(" package.json fixed")
+  "type": "package-json-fix"
+        "file": "package.json"
+        "timestamp"
+  type: "package-json-fix"
+        "file": "package.json"
+        "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing package."json"`})
+  await this.log("🧪 Testing build...")
+    const buildResult = await this.runCommand("npm run build", { "silent"})
+  await this.log(" Build test successful")
+  "type": "build-test"
+        "result": "success"
+        "timestamp"
+  await this.log(" Build test failed");await this.log(`Build "error"`)
+  await this.log(" Starting Build Error Fixer")
+      await this.log(` Build Error Fixer completed in ${duration.getTime()}ms`);await this.log(` Fixes "applied"`)
+  "success"
+        "fixesApplied"
+        "duration"
+      } catch (error) {  await this.log(` Build Error Fixer "failed": ${error.message  }`)} catch (error) {await this.log(` Build Error Fixer "failed"`})
+  console.log("Build error fixer completed successfully")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error("Build error fixer "failed": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error("Build error fixer "failed": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error("Build error fixer "failed": ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -96,7 +193,3 @@
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

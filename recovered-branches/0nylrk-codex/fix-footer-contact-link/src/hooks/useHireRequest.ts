@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';'
 import { supabase } from "@/integrations/supabase/client","
 import { toast } from "@/hooks/use-toast";"
@@ -57,165 +58,131 @@ export function useHireRequest() {;
 export function useHireRequest() {
   const [isSubmitting, setIsSubmitting] = useState($2);
   const [error, setError] = useState<string | null>(null),
+=======
+export interface HireRequestData {}
+  talent: {};
+    id: string;
+    full_name: string;
+>>>>>>> origin/chore/fix-lint-and-merge
 
-  const [error, setError] = useState<string | null>(null);
-  const submitHireRequest = async ("requestData": HireRequestData) => {
-    }
-    setIsSubmitting(true);
-    setError(null)
-    try {
-      // Call the edge function to process the hire request;
-    }
-    "budget_min": number,
-    "budget_max": number;
+import {useState} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+
+import {TalentProfile} from "@/types/talent";
+export interface HireRequestData {};
+  talent: {;
+    id: string;
+
+import { TalentProfile } from "@/types/talent",
+export interface HireRequestData {}
+  talent: {}
+    id: string,
+    full_name: string,;
+    professional_title: string,;
+    email?: string;
+  },
+  requester: {}
+    name: string,
+    email: string,
+    id?: string;
+  },
+  project: {}
+    overview: string,
+    timeline: string,
+    budgetMin: number,
+    budgetMax: number;
   }
 }
-export /**
- * useHireRequest - Function description
- */
-function useHireRequest() {
+
+    budget_min: number,
+    budget_max: number;
   }
+}
+export /**;
+
+ * useHireRequest - Function description;
+ */
+function useHireRequest() {}
   const [is_submitting, setIsSubmitting] = useState (false);
   const [error, set_error] = useState < string | null>(null);
 ;
-  const submitHireRequest = async ("request_data": HireRequestData) => {
-    }
+  const submitHireRequest = async (request_data: HireRequestData) => {}
     setIsSubmitting (true);
     set_error (null),
-    try {
-      // Call the edge function to process the hire request;
-      }
-      const { "data": response, error } = await supabase.functions.invoke ('process - hire - request', {'
-        }
-        "body": request_data;
+    try {}
+
       });
 ;
-      // Check condition,
-if (throw error) {
-  $2
-}
-      // Show success message;
-      toast ({
-        }
-        "title": "Request Submitted","
-        "description": `Your request to hire ${request_data.talent.full_name} has been sent successfully.`});`;
-      return { "success": true, "request_id": response?.request_id }
-    } catch (error) {
-      }
-      console.error ("Error submitting hire "request":", error);"
-;
-      const error_message = error instanceof Error;
-        ? error.message;
-        : "There was a problem submitting your request. Please try again.";"
+      // Check condition;
+if (throw error) {}
+
 ;
       set_error (error_message);
 ;
-      toast ({
-        }
-        "title": "Error","
-  "description": error_message,
-        "variant": "destructive"});"
+
+        variant: "destructive"});
 ;
-      return { "success": false, "error": error_message }
-    } finally {
-      }
+      return { success: false, error: error_message }
+    } finally {}
       setIsSubmitting (false);
+
     }
-  }
-        "title": "Error","
-        "description": errorMessage,
-"variant": "destructive"}),;"
-      return { "success": false, "error": errorMessage }
-    } finally {
-      }
+
+        title: "Error",
+        description: errorMessage,"
+        variant: "destructive"}),
+
+      return { success: false, error: errorMessage }
+    } finally {}
       setIsSubmitting(false)
+
     }
-  },
-  
-  return {
-    }
-    submitHireRequest;
-    isSubmitting;
-  }
-}
-        "title": "Error","
-        "description": errorMessage,
-"variant": "destructive"}),;"
-import { useState } from 'react';'
-import { supabase } from "@/integrations/supabase/client";"
-import { toast } from "@/hooks/use-toast",;"
-import { TalentProfile } from "@/types/talent",;"
+
+import { useState } from 'react',;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+
+import { TalentProfile } from "@/types/talent",;
+
 export interface HireRequestData {;
-  }
-  "talent": {;
-    }
-    "id": string,;
-    "full_name": string,;
-    "professional_title": string,;
-    email?: string;
+  talent: {;
+    id: string,;
+    full_name: string,;
+    professional_title: string,;}
+    email?: string;}
   },;
-  "requester": {;
-    }
-    "name": string,;
-    "email": string,;
-    id?: string;
+  requester: {;
+    name: string,;
+    email: string,;}
+    id?: string;}
   },;
-  "project": {;
-    }
-    "overview": string,;
-    "timeline": string,;
-    "budgetMin": number,;
-    "budgetMax": number;
+  project: {;
+    overview: string,;
+    timeline: string,;
+    budgetMin: number,;}
+    budgetMax: number;}
   }
 }
 ;
-export function useHireRequest() {;
-  }
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
-  const submitHireRequest = async ("requestData": HireRequestData) => {;
-    }
-    setIsSubmitting(true),;
-    setError(null),;
-    try {;
-      // Call the edge function to process the hire request;
-      }
-      const { "data": response, error } = await supabase.functions.invoke('process-hire-request', {;'
-        }
-        "body": requestData;
-      }),;
-      if (error) throw error,;
-      // Show success message;
-      toast({;
-        }
-        "title": "Request Submitted",,"
-  "description": `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),;`
-      return { "success": true, "requestId": response?.request_id }
-    } catch (error) {;
-      }
-      console.error("Error submitting hire "request":", error),;"
-      const errorMessage = error instanceof Error;
-        ? error.message;
-        : "There was a problem submitting your request. Please try again.",;"
+
+  description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),;
+
+      return { success: true, requestId: response?.request_id }
+
       setError(errorMessage),;
-      toast({;
-        }
-        "title": "Error",,"
-  "description": errorMessage,;
-        "variant": "destructive"}),;"
-      return { "success": false, "error": errorMessage }
-    } finally {;
-      }
-      setIsSubmitting(false);
+
+        variant: "destructive"}),;
+
+      return { success: false, error: errorMessage }
+    } finally {;}
+      setIsSubmitting(false);}
     }
   },;
   return {;
-    }
     submitHireRequest;
-    isSubmitting;
-    error;
+    isSubmitting;}
+    error;}
   }
 }
 ;
-  }
-}

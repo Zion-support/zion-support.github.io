@@ -1,19 +1,77 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 #!/usr/bin/env node;
 /**
- * Deployment Automation
- * Automates deployment processes
+ * Deployment Automation;
+ * Automates deployment processes;
  */
+<<<<<<< HEAD
+const fs = require('fs')
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+<<<<<<< HEAD
+const fs = require('fs')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+const { execSync } = require('child_process')
+  log(message, type = 'INFO')
+      'INFO': 'ℹ'
+      'SUCCESS': ''
+      'ERROR': ''
+      'WARNING': '⚠'
+      'PROGRESS': '�'
+    fs.writeFileSync('Dockerfile')
+    this.deployments.push('Created Dockerfile')
+    this.log('Created Dockerfile', 'SUCCESS')
+    const dockerCompose = ""version"
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
     console.error('Deployment automation "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
     console.error('Deployment automation "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+    console.error('Deployment automation "failed")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+const { execSync, spawn } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 #!/usr/bin/env node
-/**
- * Deployment Automation Script
- * Automated deployment pipeline for Zion Tech Group application
- */
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -21,346 +79,161 @@ const { execSync } = require('child_process');
 class DeploymentAutomation {
   constructor() {
     this.projectRoot = process.cwd();
-    this.deploymentSteps = [];
-    this.errors = [];
-    this.warnings = [];
-  }
 
-  log(message, type = 'info') {
-    const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
-    console.log(`${prefix} ${message}`);
-  }
-
-  async preDeploymentChecks() {
-    this.log('🔍 Running pre-deployment checks...');
-    
-    const checks = [
-      {
-        name: 'Dependencies Check',
-        command: 'npm ci',
-        description: 'Installing dependencies'
-      },
-      {
-        name: 'Type Check',
-        command: 'npm run type-check',
-        description: 'Running TypeScript type checking'
-      },
-      {
-        name: 'Lint Check',
-        command: 'npm run lint',
-        description: 'Running ESLint checks'
-      },
-      {
-        name: 'Build Test',
-        command: 'npm run build',
-        description: 'Testing production build'
-      }
-    ];
-
-    for (const check of checks) {
-      try {
-        this.log(`Running ${check.name}...`);
-        execSync(check.command, { 
-          cwd: this.projectRoot,
-          encoding: 'utf8',
-          stdio: 'pipe',
-          cwd: process.cwd()
-        });
-        this.log(`✅ ${check.name} passed`, 'success');
-        this.deploymentSteps.push({
-          step: 'pre-deployment',
-          check: check.name,
-          status: 'passed',
-          timestamp: new Date().toISOString()
-        });
-        
-        this.deploymentSteps.push({
-          step: check.name,
-          status: 'success',
-          description: check.description
-        });
-        this.log(`${check.name} passed`, 'success');
-      } catch (error) {
-        this.deploymentSteps.push({
-          step: check.name,
-          status: 'failed',
-          description: check.description,
-          error: error.message
-        });
-        this.errors.push(`${check.name}: ${error.message}`);
-        this.log(`${check.name} failed: ${error.message}`, 'error');
-      }
-    }
-  }
-
-  async optimizeForProduction() {
-    this.log('⚡ Optimizing for production...');
-    
-    try {
-      // Remove development dependencies from build
-      this.log('Cleaning up development files...');
-      
-      const devFiles = [
-        'src_backup_temp',
-        'test-reports',
-        'coverage',
-        '.nyc_output'
-      ];
-      
-      for (const file of devFiles) {
-        const filePath = path.join(this.projectRoot, file);
-        if (fs.existsSync(filePath)) {
-          execSync(`rm -rf "${filePath}"`, { cwd: this.projectRoot });
-          this.log(`Removed ${file}`, 'success');
-        }
-      }
-      
-      // Optimize images if any exist
-      this.log('Checking for image optimization...');
-      const publicDir = path.join(this.projectRoot, 'public');
-      if (fs.existsSync(publicDir)) {
-        const images = fs.readdirSync(publicDir).filter(file => 
-          /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
-        );
-        
-        if (images.length > 0) {
-          this.log(`Found ${images.length} images in public directory`);
-          this.warnings.push('Consider optimizing images for better performance');
-        }
-      }
-      
-      this.deploymentSteps.push({
-        step: 'Production Optimization',
-        status: 'success',
-        description: 'Optimized application for production'
-      });
-      
-      this.log('Production optimization completed', 'success');
-      return true;
-    } catch (error) {
-      this.deploymentSteps.push({
-        step: 'Production Optimization',
-        status: 'failed',
-        description: 'Failed to optimize for production',
-        error: error.message
-      });
-      this.errors.push(`Production optimization failed: ${error.message}`);
-      this.log(`Production optimization failed: ${error.message}`, 'error');
-      return false;
-    }
-  }
-
-  async generateDeploymentPackage() {
-    this.log('📦 Generating deployment package...');
-    
-    try {
-      // Create deployment directory
-      const deployDir = path.join(this.projectRoot, 'deployment');
-      if (fs.existsSync(deployDir)) {
-        execSync(`rm -rf "${deployDir}"`, { cwd: this.projectRoot });
-      }
-      fs.mkdirSync(deployDir, { recursive: true });
-      
-      // Copy necessary files
-      const filesToCopy = [
-        '.next',
-        'public',
-        'package.json',
-        'package-lock.json',
-        'next.config.js',
-        'middleware.ts',
-        'app',
-        'pages',
-        'components',
-        'utils',
-        'styles',
-        'tailwind.config.js',
-        'postcss.config.js',
-        'tsconfig.json'
-      ];
-      
-      for (const file of filesToCopy) {
-        const sourcePath = path.join(this.projectRoot, file);
-        const destPath = path.join(deployDir, file);
-        
-        if (fs.existsSync(sourcePath)) {
-          if (fs.statSync(sourcePath).isDirectory()) {
-            execSync(`cp -r "${sourcePath}" "${destPath}"`, { cwd: this.projectRoot });
-          } else {
-            fs.copyFileSync(sourcePath, destPath);
-          }
-          this.log(`Copied ${file}`, 'success');
-        }
-      }
-      
-      // Create deployment script
-      const deployScript = `#!/bin/bash
-# Zion Tech Group Deployment Script
-echo "Starting deployment..."
-
-# Install production dependencies
-npm ci --only=production
-
-# Start the application
-npm start
-
-echo "Deployment completed successfully!"
-`;
-      
-      fs.writeFileSync(path.join(deployDir, 'deploy.sh'), deployScript);
-      execSync(`chmod +x "${path.join(deployDir, 'deploy.sh')}"`, { cwd: this.projectRoot });
-      
-      this.deploymentSteps.push({
-        step: 'Deployment Package',
-        status: 'success',
-        description: 'Generated deployment package'
-      });
-      
-      this.log('Deployment package generated successfully', 'success');
-      return true;
-    } catch (error) {
-      this.deploymentSteps.push({
-        step: 'Deployment Package',
-        status: 'failed',
-        description: 'Failed to generate deployment package',
-        error: error.message
-      });
-      this.errors.push(`Deployment package generation failed: ${error.message}`);
-      this.log(`Deployment package generation failed: ${error.message}`, 'error');
-      return false;
-    }
-  }
-
-  async createDockerConfiguration() {
-    this.log('🐳 Creating Docker configuration...');
-    
-    try {
-      const dockerfile = `FROM node:18-alpine
-
-WORKDIR /app
-
-# Copy package files
-COPY package*.json ./
-
-# Install dependencies
-RUN npm ci --only=production
-
-# Copy application files
-COPY . .
-
-# Build the application
-RUN npm run build
-
-# Expose port
-EXPOSE 3000
-
-# Start the application
-CMD ["npm", "start"]
-`;
-
-      const dockerCompose = `version: '3.8'
-
-services:
-  zion-app:
-    build: .
-    ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=production
-    restart: unless-stopped
-`;
-
-      fs.writeFileSync(path.join(this.projectRoot, 'Dockerfile'), dockerfile);
-      fs.writeFileSync(path.join(this.projectRoot, 'docker-compose.yml'), dockerCompose);
-      
-      this.deploymentSteps.push({
-        step: 'Docker Configuration',
-        status: 'success',
-        description: 'Created Docker configuration files'
-      });
-      
-      this.log('Docker configuration created', 'success');
-      return true;
-    } catch (error) {
-      this.deploymentSteps.push({
-        step: 'Docker Configuration',
-        status: 'failed',
-        description: 'Failed to create Docker configuration',
-        error: error.message
-      });
-      this.errors.push(`Docker configuration failed: ${error.message}`);
-      this.log(`Docker configuration failed: ${error.message}`, 'error');
-      return false;
-    }
-  }
-
-  async generateDeploymentReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      deploymentSteps: this.deploymentSteps,
-      errors: this.errors,
-      warnings: this.warnings,
-      summary: {
-        totalSteps: this.deploymentSteps.length,
-        successfulSteps: this.deploymentSteps.filter(step => step.status === 'success').length,
-        failedSteps: this.deploymentSteps.filter(step => step.status === 'failed').length,
-        errorCount: this.errors.length,
-        warningCount: this.warnings.length
-      }
+    this.results = {
+      startTime: new Date().toISOString(),
+      endTime: null,
+      steps: [],
+      success: false,
+      errors: [],
+      warnings: []
     };
 
-    const reportPath = path.join(this.projectRoot, 'deployment-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Deployment report saved to ${reportPath}`, 'success');
+    // Check if we're in a git repository
+    const gitCheck = await this.runStep('Git Repository Check,git status');
+    if (!gitCheck.success) {
+      this.log('❌ Not in a git repository,ERROR');
+      return false;
 
-    return report;
-  }
+    // Check if there are uncommitted changes
+    const uncommittedCheck = await this.runStep('Uncommitted Changes Check,git diff --quiet');
+    if (uncommittedCheck.success) {
+      this.log('✅ No uncommitted changes');
+    } else {
+      this.log('⚠️  Uncommitted changes detected,WARNING');
+      this.results.warnings.push('Uncommitted changes detected');
 
-  async run() {
-    this.log('🚀 Starting Deployment Automation');
-    
-    try {
-      await this.preDeploymentChecks();
-      await this.optimizeForProduction();
-      await this.generateDeploymentPackage();
-      await this.createDockerConfiguration();
-      
-      const report = await this.generateDeploymentReport();
-      
-      this.log('✅ Deployment automation completed', 'success');
-      this.log(`📊 Successful steps: ${report.summary.successfulSteps}/${report.summary.totalSteps}`);
-      
-      if (report.summary.failedSteps > 0) {
-        this.log(`❌ Failed steps: ${report.summary.failedSteps}`, 'error');
-      }
-      
-      if (report.summary.warningCount > 0) {
-        this.log(`⚠️ Warnings: ${report.summary.warningCount}`);
-      }
-      
-      return report;
-    } catch (error) {
-      this.log(`❌ Deployment automation failed: ${error.message}`, 'error');
-      throw error;
-    }
-  }
-}
+    // Check if we're on the main branch
+    const branchCheck = await this.runStep('Branch Check,git branch --show-current');
+    if (branchCheck.success) {
+      const currentBranch = branchCheck.output.trim();
 
-// Main execution
-if (require.main === module) {
-  const deployment = new DeploymentAutomation();
-  deployment.run().catch(error => {
-    console.error('Deployment automation failed:', error);
-    process.exit(1);
-  });
-}
+        this.log('✅ On main branch');
 
+    return true;
+
+  async runTests() {
+    this.log('🧪 Running tests...);
+    // Run lint check
+    const lintCheck = await this.runStep('Lint Check,npm run lint');
+    if (!lintCheck.success) {
+
+
+    // Run type check
+    const typeCheck = await this.runStep('Type Check,npm run type-check');
+    if (!typeCheck.success) {
+
+
+    // Run build
+    const buildCheck = await this.runStep('Build Check,npm run build');
+    if (!buildCheck.success) {
+
+
+    // Run smoke tests
+    const smokeTests = await this.runStep('Smoke Tests,npm run test:smoke');
+    if (!smokeTests.success) {
+
+
+
+  async deployToNetlify() {
+    this.log('🚀 Deploying to Netlify...);
+    // Check if Netlify CLI is installed
+    const netlifyCheck = await this.runStep('Netlify CLI Check,netlify --version');
+    if (!netlifyCheck.success) {
+
+
+    // Deploy to Netlify
+    const deployResult = await this.runStep('Netlify Deploy,netlify deploy --prod --dir=dist');
+    if (!deployResult.success) {
+
+
+  async deployToVercel() {
+    this.log('🚀 Deploying to Vercel...);
+
+
+    // Check if Vercel CLI is installed
+    const vercelCheck = await this.runStep('Vercel CLI Check,vercel --version');
+    if (!vercelCheck.success) {
+
+
+
+  async postDeploymentTasks() {
+    this.log('📋 Running post-deployment tasks...);
+    // Generate deployment report
+    this.generateReport();
+    // Send notification (if configured)
+
+
+
+  async runDeployment(platform = 'netlify') {
+    this.log('🚀 Starting Deployment Automation...);
+    // Ensure logs directory exists
+    const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+
+    // Clear previous logs
+    if (fs.existsSync(this.logFile)) {
+      fs.writeFileSync(this.logFile, );
+
+
+      // Pre-deployment checks
+      const preChecks = await this.preDeploymentChecks();
+      if (!preChecks) {
+
+
+<<<<<<< HEAD
+module.exports = DeploymentAutomation;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+#!/usr/bin/env node;
+/**
+ * Deployment Automation;
+ * Automates deployment processes;
+ */
+=======
+      // Run tests
+      const testsPassed = await this.runTests();
+      if (!testsPassed) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-// Run the automation
-const automation = new DeploymentAutomation();
-automation.run();
 
+<<<<<<< HEAD
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      // Deploy to specified platform
+      let deploySuccess = false;
+      if (platform ===netlify') {
+        deploySuccess = await this.deployToNetlify();
+      } else if (platform ===vercel') {
+        deploySuccess = await this.deployToVercel();
+
+
+      // Post-deployment tasks
+      await this.postDeploymentTasks();
+
+      this.results.success = true;
+      this.log('🎉 Deployment completed successfully!);
+
+
+  generateReport() {
+    this.results.endTime = new Date().toISOString();
+    this.results.duration = new Date(this.results.endTime) - new Date(this.results.startTime);
+    const report = {
+      ...this.results,
+      summary: {
+        success: this.results.success,
+        totalSteps: this.results.steps.length,
+        successfulSteps: this.results.steps.filter(s => s.success).length,
+        failedSteps: this.results.steps.filter(s => !s.success).length,
 
 
     const reportFile = path.join(this.projectRoot,deployment-report.json');
@@ -369,3 +242,4 @@ automation.run();
     const summary = `
 Deployment Automation Report
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

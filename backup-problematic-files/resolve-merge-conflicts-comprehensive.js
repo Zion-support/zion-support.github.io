@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }}}main()},main(),main()#!/usr/bin/env node,import fs from 'fs;'
 import path from 'path';'
 import { execSync } from child_process';console.log(' Resolving merge conflicts comprehensively...)// Get list of conflicted files,const getConflictedFiles = () => {,try {,const result = execSync('git diff --name-only --diff-filter=U', { "encoding": utf8' }),return result.trim().split('\n).filter(file => file)} catch (error) {,return [];'
@@ -9,3 +10,5 @@ import { execSync } from child_process';console.log(' Resolving merge conflicts 
 }console.log(`\n "Resolved": ${resolvedCount} files`),console.log(` "Failed": ${failedCount} files`),,if (resolvedCount > 0) {,console.log('\n Adding resolved files...),try {,execSync('git add .', { "stdio": inherit' }),console.log(' Files added to staging area)} catch (error) {,console.error(' Error adding "files":', error.message)}'
 }
 },main(),
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,11 +1,32 @@
+<<<<<<< HEAD
 
 #!/"usr/bin/env" node;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env"" node;
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
+=======
 #!/usr/bin/env node;"
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require(fs");
 const path = require("path);
 const { execSync, spawn } = require(child_process");"
+=======
+#!/usr/bin/env node"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");"
+>>>>>>> origin/chore/fix-lint-and-merge
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -23,16 +44,41 @@ class $1 {}
     )}"
   log(message, level = INFO) {}"
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
     console.log("logMessage);
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + \n);
     // Write errors to error file;
     const logMessage = `[${timestamp}] [${level}] ${message}`"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    const logMessage = `[${timestamp}] [${level}] ${message}`;`
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log("logMessage);
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + "\n");
     // Write errors to error file;
+<<<<<<< HEAD
+=======
+=======
+    const logMessage = `[${timestamp}] [${level}] ${message};`"
+    console.log("logMessage);"
+    // Write to log file;"
+    fs.appendFileSync(this.logFile, logMessage + "\n");"
+    // Write errors to error file;"
+    if (level === "ERROR") {}"
+  // Write to log file;"
+    // Write errors to error file;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
     if (level === "ERROR") {}
   // Write to log file;
     // Write errors to error file;"
@@ -118,7 +164,27 @@ class $1 {}
   return marker.endMarker}
     return "}"
   isPackageJsonConflict(startContent, endContent) {}
+<<<<<<< HEAD
 
+=======
+  return (;)"
+      startContent.includes("package.json") ||;
+      endContent.includes("package.json");"
+  isLockFileConflict(startContent, endContent) {}
+
+      endContent.includes("yarn.lock");"
+  isConfigFileConflict(startContent, endContent) {}
+
+      startContent.includes("eslint");"
+  isComponentConflict(startContent, endContent) {}
+
+      startContent.includes("className");"
+  isImportConflict(startContent, endContent) {}"
+  return startContent.includes("import ") || startContent.includes("export ")};"
+  isStyleConflict(startContent, endContent) {}
+
+      startContent.includes("tailwind");"
+>>>>>>> origin/chore/fix-lint-and-merge
   canAutoResolve(markers) {}
   // Can auto-resolve package.json, lock files, and some config conflicts;
     const autoResolvableTypes = [package-json", "lock-file, config-file"];"
@@ -168,7 +234,12 @@ class $1 {}
       if (endJson.devDependencies) {}
   merged.devDependencies = {}
   ...merged.devDependencies,
+<<<<<<< HEAD
 
+=======
+          ...endJson.devDependencies};
+      return content.replace(;)
+>>>>>>> origin/chore/fix-lint-and-merge
         this.getConflictRange(content, marker),
 
       return content}
@@ -180,12 +251,8 @@ class $1 {}
 
     // Simple strategy: take the section with more configuration options;"
     if (startSection.length > endSection.length) {}
-return content.replace(;);
-        this.getConflictRange(content, marker),
         startSection;
       )} else {}
-return content.replace(;);
-        this.getConflictRange(content, marker),
         endSection;
   getConflictSection(content, marker, side) {}"
 
@@ -196,6 +263,7 @@ return content.replace(;);
   async generateConflictReport(conflicts) {}"
   this.log(Generating conflict resolution report...);"
   const report = {}"
+<<<<<<< HEAD
   timestamp: new Date().toISOString(),
         "summary": {}
   totalConflicts: conflicts.length,
@@ -203,6 +271,19 @@ return content.replace(;);
           manualReview: conflicts.filter(c => !c.resolvable).length},
         "conflicts": conflicts,
 
+=======
+  "timestamp": new Date().toISOString(),
+        "summary": {}"
+  totalConflicts: conflicts.length,"
+          "autoResolvable": conflicts.filter(c => c.resolvable).length,
+          "manualReview": conflicts.filter(c => !c.resolvable).length},
+        "conflicts": conflicts,
+        "recommendations": this.generateOverallRecommendations(conflicts)};"
+      const reportPath = path.join(;)"
+        this.projectRoot,conflict-resolution-report.json";"
+
+      throw error};
+>>>>>>> origin/chore/fix-lint-and-merge
   generateOverallRecommendations(conflicts) {}
   const recommendations = [];
     if (conflicts.length === 0) {}"
@@ -258,29 +339,40 @@ return content.replace(;);
       ); // Every 30 minutes;
       this.log("Intelligent conflict resolver started successfully");
       // Keep the process running;
-      setInterval(() => {}
-  this.log("Conflict resolver heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start conflict "resolver": ${error.message  }`, "ERROR");
-      throw error};
-  };
-};
-;
+
 // Main execution;
 if (require.main === module) {}
   const resolver = new IntelligentConflictResolver();
-  // Handle graceful shutdown;
+  // Handle graceful shutdown;"
   process.on("SIGINT", () => {}
+<<<<<<< HEAD
 
+=======
+  resolver.log("Shutting down gracefully...");"
+>>>>>>> origin/chore/fix-lint-and-merge
     process.exit(0)}
-});
-  process.on("SIGTERM", () => {}
-  resolver.log("Shutting down gracefully...");
-    process.exit(0)}
-});
-  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
+
 // Main execution;
+<<<<<<< HEAD
 
 =======
 
+=======
+  // Handle graceful shutdown;"
+
+    process.exit(1)})};
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+module.exports = IntelligentConflictResolver;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = IntelligentConflictResolver;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -289,6 +381,7 @@ module.exports = IntelligentConflictResolver;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
@@ -300,3 +393,11 @@ module.exports = IntelligentConflictResolver;
 
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+
+module.exports = IntelligentConflictResolver;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

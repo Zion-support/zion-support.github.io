@@ -1,31 +1,25 @@
-/* Accessibility and Performance Enhancements */
 
-/* High contrast mode */
-.high-contrast {
-  --tw-bg-opacity: 1;
-  --tw-text-opacity: 1;
+/* Accessibility improvements */
+
+/* Skip links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
 }
 
-.high-contrast * {
-  background-color: white !important;
-  color: black !important;
-  border-color: black !important;
+.skip-link:focus {
+  transform: translateY(0%);
 }
 
-/* Reduced motion */
-.reduced-motion * {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-}
-
-/* Focus improvements */
-.focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* Skip link */
+/* Screen reader only content */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -38,38 +32,37 @@
   border: 0;
 }
 
-.sr-only:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  padding: 0.5rem 1rem;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-  background: #3b82f6;
-  color: white;
-  border-radius: 0.25rem;
-  font-weight: 600;
+/* Focus indicators */
+*:focus {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
 }
 
-/* Performance optimizations */
-.will-change-transform {
-  will-change: transform;
-}
-
-.will-change-opacity {
-  will-change: opacity;
-}
-
-/* Print styles */
-@media print {
-  .no-print {
-    display: none !important;
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  * {
+    border-color: ButtonText;
   }
-  
-  body {
-    background: white !important;
-    color: black !important;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Color contrast improvements */
+.text-low-contrast {
+  color: #666;
+}
+
+@media (prefers-contrast: high) {
+  .text-low-contrast {
+    color: #000;
   }
 }

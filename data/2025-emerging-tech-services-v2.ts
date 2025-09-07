@@ -1,5 +1,39 @@
+export interface EmergingTechService {
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+<<<<<<< HEAD
 
 
+;
+  {'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS';
+    ],realImplementation: true,id: string;
+export interface EmergingTechService  {id: string;name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {monthly: number;
+    yearly: number;
+    currency: string;trialDays: number;
+    setupTime: string;
+    enterprise: number;
+  },features: string[];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+  id: string;
+export interface EmergingTechService {
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+  id: string;
+
+export interface EmergingTechService {
+id: string;
+  id: string;
+export interface EmergingTechService {
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  id: string;
 
 ;
   {'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS';
@@ -18,33 +52,9 @@ export interface EmergingTechService  {id: string;name: string;
 export interface EmergingTechService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
-  id: string;
+=======
 
-export interface EmergingTechService {
-id: string;
-  id: string;
-export interface EmergingTechService {
-id: string;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  id: string;
-
-;
-  {'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS';
-    ],realImplementation: true,id: string;
-export interface EmergingTechService  {id: string;name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {monthly: number;
-    yearly: number;
-    currency: string;trialDays: number;
-    setupTime: string;
-    enterprise: number;
-  },features: string[];
-  id: string;
-export interface EmergingTechService {
-id: string;
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge
   name: string;
   tagline: string;
   description: string;
@@ -54,19 +64,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     yearly: number;
     currency: string;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     trialDays: number;
     setupTime: string;
     enterprise: number
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
 
 
 
     trialDays: number;
     setupTime: string;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   features: string[];
   benefits: string[];
   target_audience: string[];
@@ -88,6 +104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
     implementationDetails:;
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.';
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.';
@@ -338,6 +355,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Asteroid miningResource extractionSpace logisticsResource processingMarket analysisRegulatory compliance';'
     ];
     integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'],support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.',compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'],link: 'https://ziontechgroup.com/space-mining-platform';
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     implementationDetails:
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
@@ -349,13 +369,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Market analysis'
       'Regulatory compliance'
     ]
-    "integrations": [
-      'Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications''
+    integrations: [
+      'Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'
     ]
     support:
       '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
     compliance: [
     icon: '🚀',
+<<<<<<< HEAD
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 01 - 05',
@@ -385,6 +406,49 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Molecular dynamics'
       'Biological optimization'
       'Research acceleration'
+=======
+
+  id: string;,
+  name: string;
+  tagline: string;,
+
+  description: string;
+  category: string;,
+  price: {
+
+features: string[];
+  benefits: string[];
+  target_audience: string[];
+  market_position: string;,
+  competitors: string[];
+  tech_stack: string[];,
+  real_implementation: boolean;
+  implementation_details: string;,
+  roi: string;
+  use_cases: string[];,
+  integrations: string[];
+  support: string;,
+  compliance: string[];
+  link: string;,
+  icon: string;
+  color: string;,
+  popular: boolean;
+  launch_date: string;,
+  customers: number;
+  rating: number;,
+  reviews: number;
+
+    implementationDetails:
+      'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.
+    roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.,
+  useCases: [
+      'Asteroid mining
+      'Resource extraction
+      'Space logistics
+      'Resource processing
+      'Market analysis
+      'Regulatory compliance]
+>>>>>>> origin/chore/fix-lint-and-merge
     ]
     integrations: [
       'Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications]
@@ -413,18 +477,22 @@ pr-12325
 
     support:'
       '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.''
-    "compliance": [
-    "icon": '🚀','
-    "color": 'from - purple - 500 to - pink - 600','
-    "popular": true,
-    "launch_date": '2024 - 01 - 05','
-    "customers": 120,
-    "rating": 4 && 4.9,
-    "reviews": 45
+    compliance: [,'
+  icon: '🚀',''
+    color: 'from - purple - 500 to - pink - 600','
+    popular: true,'
+    launch_date: '2024 - 01 - 05','
+    customers: 120,
+
+    rating: 4 && 4.9,
+    reviews: 45,
   },
   {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   {
 
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS',
@@ -432,10 +500,15 @@ pr-12325
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     implementationDetails:
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
     useCases: [
+<<<<<<< HEAD
     implementationDetails:
       Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.
@@ -467,6 +540,8 @@ pr-12325
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.,
   useCases: ['
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       'Asteroid mining'
       'Resource extraction'
       'Space logistics'
@@ -476,6 +551,7 @@ pr-12325
     ]
     integrations: [
       'Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'
+<<<<<<< HEAD
 
 
   {
@@ -498,10 +574,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ]
     integrations: [
       Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     ]
     support:
       '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
     compliance: [
+<<<<<<< HEAD
     icon: '🚀',
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
@@ -516,6 +595,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     implementationDetails:
       'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.''
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
     useCases: ['
       'Drug discovery''
@@ -523,13 +605,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Protein folding''
       'Molecular dynamics''
       'Biological optimization''
-      'Research acceleration''
+      'Research acceleration'
     ]
-    "integrations": [
-      'Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software''
+    integrations: ['
+      'Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'
     ]
     support:'
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
+<<<<<<< HEAD
     compliance: [
 
 
@@ -1218,17 +1301,114 @@ pr-12325
     growth_rate: '65% annually',
   },
   {
+=======
+
+      'Research ethics, Data privacy, Scientific standards, Industry regulations',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',
+    id: 'quantum - bio - computing - platform',
+    name: 'Quantum Bio - Computing Platform',
+    tagline: 'Quantum computing meets biological systems',
+    description:
+      'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
+    category: 'Quantum & Emerging Tech',
+    price: {
+      monthly: 599,
+      yearly: 5990,
+      currency: 'USD',
+      trial_days: 14,
+      setup_time: '8 hours',
+      enterprise: 2499,
+    },
+    features: [;
+      'Quantum - biological hybrid processing',
+      'DNA sequence analysis',
+      'Protein folding simulation',
+      'Drug discovery algorithms',
+      'Genetic optimization',
+      'Biological data processing',
+      'Quantum molecular dynamics',
+      'Bioinformatics tools',
+      'Custom biological models',
+      'API for research',
+    ],
+    benefits: [;
+      'Solve biological problems 1000x faster',
+      'Accelerate drug discovery',
+      'Improve genetic analysis',
+      'Enable new research capabilities',
+      'Reduce research costs',
+    ],
+    target_audience: [;
+      'Pharmaceutical companies',
+      'Research institutions',
+      'Biotechnology firms',
+      'Healthcare organizations',
+      'Universities',
+      'Government agencies',
+    ],
+    market_position:;
+      'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio - computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.',
+    competitors: [;
+      'IBM Quantum, Google Quantum AI, D - Wave, Rigetti, Specialized bio - computing platforms',
+    ],
+    tech_stack: [;
+      'Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS',
+    ],
+    real_implementation: true,
+    implementation_details:;
+      'Advanced quantum - bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
+    roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
+    use_cases: [;
+      'Drug discovery',
+      'Genetic analysis',
+      'Protein folding',
+      'Molecular dynamics',
+      'Biological optimization',
+      'Research acceleration',
+    ],
+    integrations: [;
+      'Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software',
+    ],
+    support:;
+      '24 / 7 research support, dedicated bio - quantum specialist, training programs, and quarterly research reviews.',
+    compliance: [;
+      'Research ethics, Data privacy, Scientific standards, Industry regulations',
+    ],
+    link: 'https://ziontechgroup.com / quantum - bio - computing - platform',
+
+    icon: '🧬',
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    color: 'from - green - 500 to - emerald - 600',
+    popular: true,'
+
+    launch_date: '2024 - 02 - 01',
+    customers: 280,
+    rating: 4 && 4.8,
+    reviews: 85,'
+    market_size: '$12B quantum bio - computing market','
+    growth_rate: '65% annually',
+  },
+>>>>>>> origin/chore/fix-lint-and-merge
 
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
     ],
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
     implementationDetails:
       'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
   {}
     implementationDetails:'
       'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.''
+=======
+
+    implementationDetails:
+      'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
+
+>>>>>>> origin/chore/fix-lint-and-merge
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
     useCases: ['
       'Accessibility assistance''
@@ -1236,14 +1416,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Medical research''
       'Communication aids''
       'Prosthetic control''
-      'Cognitive enhancement''
+      'Cognitive enhancement'
     ]
-    "integrations": [
-      'Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms''
+    integrations: ['
+      'Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'
     ]
     support:'
       '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
+<<<<<<< HEAD
     compliance: [
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
@@ -1251,7 +1434,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'brain - computer - interface - platform',
     name: 'Brain - Computer Interface Platform',
     tagline: 'Direct neural interface for human - computer interaction',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
     category: 'Emerging Tech',
     price: {
@@ -1324,6 +1511,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,'
+<<<<<<< HEAD
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
       'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.
@@ -1338,6 +1526,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.
   color: 'from - blue - 500 to - indigo - 600',
 pr-12325
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
     launch_date: '2024 - 01 - 15',
     customers: 450,
     rating: 4 && 4.7,
@@ -1345,18 +1536,28 @@ pr-12325
     market_size: '$18B BCI market','
     growth_rate: '55% annually',
   },
+<<<<<<< HEAD
   {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
     ],
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
     implementationDetails:
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
   {}
     implementationDetails:'
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.''
+=======
+
+    implementationDetails:
+      'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
+
+>>>>>>> origin/chore/fix-lint-and-merge
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
     useCases: ['
       'Energy system optimization''
@@ -1364,14 +1565,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Grid optimization''
       'Energy storage optimization''
       'Renewable integration''
-      'Energy research''
+      'Energy research'
     ]
-    "integrations": [
-      'Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications''
+    integrations: ['
+      'Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'
     ]
     support:'
       '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
+<<<<<<< HEAD
     compliance: [
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
@@ -1379,7 +1583,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'quantum - energy - platform',
     name: 'Quantum Energy Platform',
     tagline: 'Quantum - enhanced energy optimization and fusion simulation',
+<<<<<<< HEAD
     description:;
+=======
+    description:
+>>>>>>> origin/chore/fix-lint-and-merge
       'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
     category: 'Quantum & Emerging Tech',
     price: {
@@ -1459,18 +1667,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     market_size: '$25B quantum energy market','
     growth_rate: '45% annually',
   },
+<<<<<<< HEAD
   {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
     ],
     realImplementation: true,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
     implementationDetails:
       'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
   {}
     implementationDetails:'
       'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.''
+=======
+
+    implementationDetails:
+      'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
+
+>>>>>>> origin/chore/fix-lint-and-merge
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
     useCases: ['
       'Autonomous driving''
@@ -1478,13 +1696,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Safety systems''
       'Traffic optimization''
       'Transportation logistics''
-      'Research and development''
+      'Research and development'
     ]
-    "integrations": [
-      'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications''
+    integrations: ['
+      'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'
     ]
     support:'
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
+<<<<<<< HEAD
     compliance: [
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1748,6 +1967,98 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: '🚗',
 '
     icon: '🚗','
+=======
+
+      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
+    ],'
+    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform','
+    icon: '🚗','
+    color: 'from-red-500 to-pink-600',
+    popular: true,'
+
+    launchDate: '2024-01-25',
+    customers: 180,
+    rating: 4.9,
+    reviews: 65,'
+    marketSize: '$35B autonomous vehicle market','
+    growthRate: '75% annually',
+  },;
+
+];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
+
+  marketSize: string;
+
+  growthRate: string
+}
+
+export const emergingTechServicesV2: EmergingTechService[] = [
+  {
+    id: 'space-mining-platform';
+    name: 'Space Mining Platform';
+    tagline: 'Revolutionary asteroid mining and space resource extraction';
+    description: 'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting-edge robotics and AI technology.',
+    category: 'Space & Emerging Tech';
+    price: {
+      monthly: 999;
+      yearly: 9990;
+      currency: 'USD';
+      trialDays: 7;
+      setupTime: '24 hours';
+      enterprise: 4999
+    },
+    features: [
+      'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';
+      'Risk assessmentRegulatory compliance tools'
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+    ];
+    benefits: ['
+      'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
+    ];
+    targetAudience: ['
+      'Space agenciesMining companiesInvestment firmsResearch institutionsGovernment agenciesTechnology companies'
+    ];'
+    marketPosition: 'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.','
+    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+'],'
+    techStack: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems'],
+    realImplementation: true;'
+    implementationDetails: 'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.','
+    roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.';
+    useCases: ['
+      'Asteroid miningResource extractionSpace logisticsResource processingMarket analysisRegulatory compliance'
+    ];'
+    integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'],'
+    support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.','
+    compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'],'
+    link: 'https://ziontechgroup.com/space-mining-platform';'
+    icon: '🚀';'
+    color: 'from-purple-500 to-pink-600';
+    popular: true;'
+    launchDate: '2024-01-05';
+    customers: 120;
+    rating: 4.9;
+
+  },
+  {'
+    id: 'quantum-bio-computing-platform';'
+    name: 'Quantum Bio-Computing Platform';'
+    tagline: 'Quantum computing meets biological systems';'
+    description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.','
+    category: 'Quantum & Emerging Tech';
+
+    price: {
+
+      monthly: 799,
+      yearly: 7990,'
+      currency: 'USD',
+      trial_days: 14,'
+      setup_time: '12 hours',
+      enterprise: 2999,
+    },
+
+    icon: '🚗',
+
+>>>>>>> origin/chore/fix-lint-and-merge
     color: 'from - red - 500 to - pink - 600',
     ];
     benefits: ['
@@ -1846,11 +2157,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations: [Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications],
     support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],
+<<<<<<< HEAD
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform';
     integrations: [Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications];
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
     compliance: [Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards];
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   id: string, name: string,
   tagline: string, description: string,
@@ -1875,8 +2189,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   growthRate: string
 }
 
+<<<<<<< HEAD
 
 ];      Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development;
+=======
+];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
+>>>>>>> origin/chore/fix-lint-and-merge
     ];
 
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
@@ -1885,16 +2203,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+    icon: '🚗';
 
+<<<<<<< HEAD
     icon: '🚗';
 '
     icon: '🚗';'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     color: 'from - red - 500 to - pink - 600';
     popular: true;'
     launch_date: '2024 - 01 - 25';
     customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
+<<<<<<< HEAD
   }
 
     market_size: '$35B autonomous vehicle market',
@@ -1941,6 +2264,9 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
 
   }
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   id: string,;
   name: string,;
   tagline: string,;
@@ -1952,6 +2278,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
     currency: string,;
     trialDays: number,;
     setupTime: string,;
+<<<<<<< HEAD
     enterprise: number;
 
 export interface EmergingTechService {;
@@ -2083,6 +2410,8 @@ export interface EmergingTechService {
     currency: string,
     trialDays: number,
     setupTime: string,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     enterprise: number;
   },
   features: string[],
@@ -2109,11 +2438,15 @@ export interface EmergingTechService {
   marketSize: string,
   growthRate: string;
 }
+<<<<<<< HEAD
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
+=======
+;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export interface EmergingTechService {}
 
@@ -2123,15 +2456,15 @@ export interface EmergingTechService {}
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
-
-
-
     marketSize: '$35B autonomous vehicle market';
-    growthRate: '75% annually'
+    growthRate: '75% annually';
   }
 ];
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   }
 ],
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

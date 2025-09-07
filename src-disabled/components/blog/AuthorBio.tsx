@@ -5,14 +5,6 @@ interface AuthorBioProps {;
 }
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
-:src/components/blog/AuthorBio.tsx
-interface AuthorBioProps {
-  author: BlogAuthor
-}
-export function AuthorBio({ author }: AuthorBioProps) {
-  if (!author.bio) return null,
-  return (
-    <div className;
 
 
 export function AuthorBio({ author }: AuthorBioProps) {
@@ -87,17 +79,6 @@ export function AuthorBio({ author }: AuthorBioProps) {
       </div>
     </div>
   )
-:src/components/blog/AuthorBio.tsx
-}/> <div> <p className="font-medium text-lg" > {
-  author.name
-}</p> {"
-  author.title && <p className="text-sm text-muted-foreground mb-2" > {
-  author.title
-}</p>
-}<p> {
-  author.bio
-}</p>
-}'"}
 ;
 export function AuthorBio({ author }: AuthorBioProps) {;
   if (!author.bio) return null;

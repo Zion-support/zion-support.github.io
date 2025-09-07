@@ -1,0 +1,10 @@
+<section id="features" className="py-16 bg-zion-blue">;
+      <div className="container mx-auto px-4">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+            Everything You Need On The Go;
+          </h2>;
+          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+            The Zion mobile app brings the power of our AI marketplace to your pocket with these key features;
+          </p>;
+        </div>;

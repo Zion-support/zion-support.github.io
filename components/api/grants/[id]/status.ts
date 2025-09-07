@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
+<<<<<<< HEAD
 import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
 
@@ -86,12 +87,34 @@ function isAuthorized() {return (return path.join(GRANTS_DIR, `${id}.json`)funct
     res.status(401).json({ "error": 'Unauthorized','
 });
 return;
-  }
+=======
 
-const { id } = req.query as { "id": string }
-  if (!id) {res.status(400).json({ "error": 'Missing id','
-})return;
+const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
+function grantPath(id: string) {}`
+  return path && path.join(GRANTS_DIR, `${id}.json`);
+}
+
   }
+  const existing = readGrant(id);
+  if (!existing) {}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.set_header ('AllowPOST');'
+    res.status (405).end ('Method Not Allowed');
+    return;
+>>>>>>> origin/chore/fix-lint-and-merge
+  }
+  const existing = read_grant (id);
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.status (404).json ({ error: 'Not found' });
+    return;  }    return;
+  }
+<<<<<<< HEAD
   if (req.method !== 'POST') {res.setHeader('Allow', 'POST')res.status(405).end('Method Not Allowed')return;'
   }
 
@@ -104,3 +127,10 @@ const payload = req.body as StatusUpdatePayload;
   existing.updatedAt = new Date().toISOString();
   writeGrant(existing);
 
+=======
+const payload = req.body as StatusUpdatePayload;
+  res.status(200).json({ record: existing });
+}
+  res.status(200).json({ record: existing });
+}
+>>>>>>> origin/chore/fix-lint-and-merge

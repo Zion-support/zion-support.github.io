@@ -1,10 +1,16 @@
+import * as React from 'react';
 
+<<<<<<< HEAD
 
 =======
 =======
 import React from 'react;
 import Head from next/head';
 import Link from 'next/link;
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { motion } from framer-motion';
 import {}
@@ -17,10 +23,10 @@ import {}
   ArrowRight ';
 } from lucide-react;
 
-
 const features = [
   {
     icon: DollarSign,
+<<<<<<< HEAD
     title: 'Financial Data Management,',
     description: Secure, real-time financial data processing and analytics for informed decision making.},
   {}
@@ -31,33 +37,69 @@ const features = [
     icon: TrendingUp,
     title: 'Risk Management,',
     description: Advanced risk assessment and management tools powered by AI and machine learning.';
+=======
+    title: 'Financial Analytics',
+    description: 'Advanced analytics and reporting for financial institutions'
   },
-  {}
+  {
+    icon: Shield,
+    title: 'Security & Compliance',
+    description: 'Bank-grade security with regulatory compliance built-in'
+  },
+  {
+    icon: TrendingUp,
+    title: 'Risk Management',
+    description: 'Comprehensive risk assessment and management tools'
+>>>>>>> origin/chore/fix-lint-and-merge
+  },
+  {
     icon: Users,
 
+<<<<<<< HEAD
 
 =======
 =======
     title: 'User Management,
     description: Secure user management with role-based access control',
     benefits: ['User provisioning, Role management', 'Access control, Audit logs']
+=======
+    title: 'User Management',
+    description: 'Secure user management with role-based access control',
+
+    benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 ];
 
-export default function FinanceSolutionsPage() {
-
   return (
     <Layout
+<<<<<<< HEAD
       title="Finance Solutions - Zion Tech Group
       description=Secure financial technology solutions for banks, fintech companies, and financial institutions. Regulatory compliant and secure."
       keywords="finance solutions, fintech, banking technology, financial services, regulatory compliance, risk management
+=======
+      title="Finance Solutions - Zion Tech Group"
+      description="Secure financial technology solutions for banks, fintech companies, and financial institutions. Regulatory compliant and secure."
+      keywords="finance solutions, fintech, banking technology, financial services, regulatory compliance, risk management">;
+      <div className="min-h-screen bg-white">;
+        {/* Hero Section */}
+
+>>>>>>> origin/chore/fix-lint-and-merge
     >
       <div className=min-h-screen bg-white">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-600 to-green-700 text-white py-20>
           <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center>
               <h1 className=text-4xl md:text-6xl font-bold mb-6">
+=======
+
+        <section className="bg-gradient-to-r from-blue-600 to-green-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+>>>>>>> origin/chore/fix-lint-and-merge
                 Finance Solutions
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto>
@@ -98,6 +140,7 @@ export default function FinanceSolutionsPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className=py-20 bg-gray-50>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,6 +167,13 @@ export default function FinanceSolutionsPage() {
 =======
 =======
                   <h3 className=text-xl font-semibold mb-2>{feature.title}</h3>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+              {features.map((feature, index) => (
+
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+>>>>>>> origin/chore/fix-lint-and-merge
                   <p className="text-gray-600 mb-4">{feature.description}</p>
 
                   <div className=space-y-2>
@@ -137,6 +187,7 @@ export default function FinanceSolutionsPage() {
                 </motion.div>
               ))}
 
+<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -157,6 +208,11 @@ export default function FinanceSolutionsPage() {
           <div className="container mx-auto px-4>;
             <div className="max-w-4xl mx-auto">;
               <h2 className=text-3xl font-bold text-white text-center mb-12">";
+=======
+          <div className="container mx-auto px-4">";
+            <div className="max-w-4xl mx-auto">";
+              <h2 className="text-3xl font-bold text-white text-center mb-12">";
+>>>>>>> origin/chore/fix-lint-and-merge
                 Our Financial Services Solutions;
               </h2>;
 
@@ -275,8 +331,4 @@ export default function FinanceSolutionsPage() {
         </section>
       </div>
 
-
-    </>
-    </>
-    </>
   );

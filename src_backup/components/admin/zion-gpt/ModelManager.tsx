@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 // If activating, deactivate all other models with the same purpose;
@@ -10,6 +11,8 @@ if ( {) {$2;
           .update({ active: false });
           .eq(purpose', purpose);
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 // If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
@@ -50,10 +53,13 @@ import { ModelConfig } from @/utils/zion-gpt';
 import { logErrorToProduction } from '@/utils/productionLogger;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from lucide-react'
 import { supabase  } from '@/integrations/supabase/client;
 import { ModelConfig  } from @/utils/zion-gpt';
 import {logErrorToProduction} from '@/utils/productionLogger;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ModelVersionData extends ModelConfig {
   trainingStatus: queued' | 'running | succeeded' | 'failed;
   errorMessage?: string
@@ -66,6 +72,7 @@ interface ModelVersionData extends ModelConfig {
       // Refresh the model list;
       fetch_models ();
 
+<<<<<<< HEAD
       }
       // Update this model
       await supabase
@@ -74,6 +81,8 @@ interface ModelVersionData extends ModelConfig {
         .eq('id, modelId)
       // Refresh the model list
       fetchModels()
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     } catch (error) {
       logErrorToProduction (Error toggling model active state:', { data: error });
     }
@@ -167,6 +176,7 @@ export function ZionGPTModelManager() {
   const fetchModels = null;
 
   return (
+<<<<<<< HEAD
         await supabase;.from('model_versions).update({ active: false }).eq(purpose', purpose)}// Update this model;import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle  } from 'lucide-react;
 import { supabase   } from @/integrations/supabase/client';
 import { ModelConfig   } from '@/utils/zion-gpt;
@@ -248,6 +258,10 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: queued' | 'runn
 
     <Card className=w-full">
       <CardHeader className="flex flex-row items-center justify-between>
+=======
+    <Card className="w-full">
+      <CardHeader className="flex flex-row items-center justify-between">
+>>>>>>> origin/chore/fix-lint-and-merge
         <div>
           <CardTitle>ZionGPT Models</CardTitle>
           <CardDescription>
@@ -305,6 +319,7 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: queued' | 'runn
                         ) : (
                           <RefreshCw className=h-4 w-4" />
                         )}
+<<<<<<< HEAD
                         {activeJobs[model && model.id] ? (<Loader2 className="h-4 w-4 animate-spin />;
                         ) : (<RefreshCw className=h-4 w-4" />;{model.trainingStatus === queued' || model.trainingStatus === 'running ? (<Button;
                         variant="ghost;
@@ -322,6 +337,8 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: queued' | 'runn
 
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                       <Button
 
@@ -339,8 +356,6 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: queued' | 'runn
                             <Play className="h-4 w-4 mr-1 /> Activate
                           </>
                         )}
-                      </Button>
-                    ) : (
 
                       <Button
 
@@ -353,18 +368,18 @@ interface ModelVersionData extends ModelConfig  {trainingStatus: queued' | 'runn
                         <AlertCircle className=h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
+<<<<<<< HEAD
 
                   </TableCell>;
                 </TableRow>;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
               ))}
             </TableBody>;
           </Table>;
         )}
-      </CardContent>;
-    </Card>;
-  );
 }
 
 }
@@ -478,6 +493,7 @@ return (<Card className="w-full > <CardHeader className=flex flex-row items-cent
 }</TableCell> </TableRow>) ) ;
 }</TableBody> </Table>) ;
 }</CardContent> </Card>) ;
+<<<<<<< HEAD
                         size="sm";
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}>;
                         {model.active ? (<>;
@@ -585,3 +601,6 @@ return (<Card className="w-full > <CardHeader className=flex flex-row items-cent
   model.active ? (<> <CheckCircle className="h-4 w-4 mr-1" /> Active </>) : (<> <Play className=h-4 w-4 mr-1 /> Activate </>) ";
 }</Button>) : (<Button > <AlertCircle className="h-4 w-4 mr-1 /> Error </Button>)}</TableCell> </TableRow>) )}</TableBody> </Table>)}</CardContent> </Card>)};
 }'"
+=======
+}'"
+>>>>>>> origin/chore/fix-lint-and-merge

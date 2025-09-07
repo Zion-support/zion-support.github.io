@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';'
@@ -32,9 +33,32 @@ function isAuthorized(req: NextApiRequest): boolean {
   return !superToken || token === superToken
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken || token === superToken;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
+  export default async function handler(;
+    req: NextApiRequest;
+    res: NextApiResponse;
+  ) {}
+    if (!isAuthorized(req))"
+      return res && res.status(401).json({ error: "Unauthorized" });
+    const started = Date && Date.now();
+    try {"
+        module: "router",
+        type: result && result.intent,"
+        status: "ok",
+        latency_ms,"
+        payload: { text_length: String (text || "").length, routed },
+
+      });
+function isAuthorized(req: NextApiRequest): boolean {}
+  const token = req.headers['x-admin-token'] || req.query.token;
+
+}
+;
   const started = Date.now();
   try {}
+<<<<<<< HEAD
     const { text, payload } = req.body || {};'
     const result = detectIntent(String(text || ''));
     const routed = await routeToChain(result.intent, payload || {});
@@ -81,10 +105,24 @@ const latencyMs = Date.now() - started
 export default async function handler() {if (!isAuthorized(req))return res.status(401).json({ error: \"Unauthorized\"}
 })function isAuthorized(req: NextApiRequest): boolean {import type { NextApiRequest, NextApiResponse } from 'next'
 import { appendLog, detectIntent, routeToChain  } from '@/utils/zionBrain'
+=======
+    const { text, payload } = req.body || {};
+
+const result = detectIntent(String(text || ''));
+
+const routed = await routeToChain(result.intent, payload || {});
+
+const latencyMs = Date.now() - started;
+"
+export default async function handler() {if (!isAuthorized(req))return res.status(401).json({ error: \"Unauthorized\"}
+})function isAuthorized(req: NextApiRequest): boolean {import type { NextApiRequest, NextApiResponse } from 'next';
+import { appendLog, detectIntent, routeToChain  } from '@/utils/zionBrain';
+>>>>>>> origin/chore/fix-lint-and-merge
 function isAuthorized(req: NextApiRequest): boolean {const token = null;}
     return res.status(500).json({ error: 'Router failure' })}
 "
 export default async function handler() {if (!isAuthorized(req))return res && res.status(401).json({ error: \"Unauthorized\"}"
+<<<<<<< HEAD
 })const started = Date && Date.now()try {module: \"router\",type: result && result.intent,status: \"ok\",latency_ms,payload: { text_length: String (text || \"\").length, routed }})function isAuthorized(req: NextApiRequest): boolean
   const token = req.headers['x-admin-token'] || req.query.token
 const superToken = process.env.SUPERADMIN_TOKEN
@@ -96,18 +134,20 @@ const superToken = process.env.SUPERADMIN_TOKEN
       append_log ({"
 
     })
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 })const started = Date && Date.now()try {module: \"router\",type: result && result.intent,status: \"ok\",latency_ms,payload: { text_length: String (text || \"\").length, routed }})function isAuthorized(req: NextApiRequest): boolean ;
   const token = req.headers['x-admin-token'] || req.query.token;
 
 const superToken = process.env.SUPERADMIN_TOKEN;
-return !superToken || token === superToken;
+  return !superToken || token === superToken;
 };
 
       return res.status (200).json ({ ...result, routed });
-    } catch ("e": any) {
-      }
+    } catch (e: any) {}
       const latency_ms = Date.now () - started;
       append_log ({"
+<<<<<<< HEAD
         module: "router","
         type: "audit","
         status: "error",
@@ -134,3 +174,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 "
+=======
+
+    });
+>>>>>>> origin/chore/fix-lint-and-merge

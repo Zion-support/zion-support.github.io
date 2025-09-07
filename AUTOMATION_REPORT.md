@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 Zion Tech Group - Complete Automation Suite Report
 
 **Timestamp:** 2025-09-07T02:53:54.838Z
@@ -27,8 +28,34 @@
 - ✅ Restored working Next.js 15.5.2 build system
 - ✅ Fixed TypeScript configuration
 - ✅ Resolved ESLint configuration issues
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Comprehensive Automation Report
 
-SyntaxError: Invalid regular expression flags
+## Summary
+- **Timestamp**: 2025-09-07T02:33:22.872Z
+- **Duration**: 1285ms
+- **Successful**: 3
+- **Errors**: 14
+- **Warnings**: 3
+
+## Results
+
+### Successful Operations
+- Pre-automation checks passed
+- performance-monitor.cjs (performance-monitoring) completed
+- security-audit.cjs (security-audit) completed
+>>>>>>> origin/chore/fix-lint-and-merge
+
+### Errors
+- comprehensive-error-fixer.cjs failed: Command failed: node scripts/comprehensive-error-fixer.cjs
+/workspace/scripts/comprehensive-error-fixer.cjs:10
+  constructor() {}
+                ^
+
+SyntaxError: Unexpected token '{'
     at wrapSafe (node:internal/modules/cjs/loader:1662:18)
     at Module._compile (node:internal/modules/cjs/loader:1704:20)
     at Object..js (node:internal/modules/cjs/loader:1895:10)
@@ -38,6 +65,39 @@ SyntaxError: Invalid regular expression flags
     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
     at node:internal/main/run_main_module:36:49
+<<<<<<< HEAD
+=======
+
+Node.js v22.16.0
+
+- auto-fixer.js failed: Command failed: node scripts/auto-fixer.js
+=======
+# Automation Report
+
+<<<<<<< HEAD
+**Timestamp:** 2025-09-07T05:22:55.964Z
+**Duration:** 28320ms
+=======
+**Timestamp:** 2025-09-07T05:09:16.275Z
+**Duration:** NaNms
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
+
+## Summary
+- ✅ Successful: 3
+- ❌ Errors: 5
+- ⚠️ Warnings: 0
+
+## Successful Operations
+- Operation
+<<<<<<< HEAD
+- ESLint
+- Build
+=======
+- scripts/performance-monitor-enhanced.js
+- scripts/auto-fixer.js
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
+
+>>>>>>> origin/chore/fix-lint-and-merge
 ## Errors
 - scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs,
   Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'
@@ -59,6 +119,12 @@ SyntaxError: Invalid regular expression flags
 
 - scripts/auto-fixer.js: Command failed: node scripts/auto-fixer.js
 /workspace/scripts/auto-fixer.js:3
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge
 file:///workspace/scripts/auto-fixer.js:3
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';
 ^
@@ -73,6 +139,12 @@ file:///workspace/scripts/auto-fixer.js:3
 - **Linting**: ESLint 8.57.0
 - **Package Manager**: npm
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 - syntax-fixer.cjs failed: Command failed: node scripts/syntax-fixer.cjs
 /workspace/scripts/syntax-fixer.cjs:9
   async log(message, level = "INFO")
@@ -103,6 +175,12 @@ file:///workspace/scripts/auto-fixer.js:3
 
 - advanced-build-optimizer.js failed: Command failed: node scripts/advanced-build-optimizer.js
 /workspace/scripts/advanced-build-optimizer.js:3
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge
 file:///workspace/scripts/advanced-build-optimizer.js:3
 ursor/integrate-build-improve-and-re-verify-8f7d;
                                             ^
@@ -119,6 +197,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 - Dependency security checks
 - Code quality analysis
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 - build-optimizer.cjs failed: Command failed: node scripts/build-optimizer.cjs
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
@@ -143,6 +227,12 @@ sh: 1: next: not found
 
 - performance-monitor-enhanced.js failed: Command failed: node scripts/performance-monitor-enhanced.js
 /workspace/scripts/performance-monitor-enhanced.js:3
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge
 file:///workspace/scripts/performance-monitor-enhanced.js:3
 ursor/fix-syntax-push-and-merge-to-main-40de;
                                         ^^
@@ -157,6 +247,21 @@ SyntaxError: Invalid or unexpected token
     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
     at node:internal/main/run_main_module:36:49
+<<<<<<< HEAD
+=======
+=======
+    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
+    at #translate (node:internal/modules/esm/loader:534:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
+
+Node.js v22.16.0
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 - performance-optimizer.js failed: Command failed: node scripts/performance-optimizer.js
 file:///workspace/scripts/performance-optimizer.js:2
 ursor/automate-test-improve-and-merge-code-646c;
@@ -204,6 +309,38 @@ SyntaxError: Invalid or unexpected token
 
 Node.js v22.16.0
 
+- seo-enhancer.js failed: Command failed: node scripts/seo-enhancer.js
+file:///workspace/scripts/seo-enhancer.js:2
+ursor/automate-test-improve-and-merge-code-646c;
+                                           ^^^
+
+SyntaxError: Invalid or unexpected token
+    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
+    at #translate (node:internal/modules/esm/loader:534:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
+
+Node.js v22.16.0
+
+- generate-dynamic-sitemap.js failed: Command failed: node scripts/generate-dynamic-sitemap.js
+file:///workspace/scripts/generate-dynamic-sitemap.js:5
+const __filename = fileURLToPath(import.meta.url;
+                                             ^^^
+
+SyntaxError: missing ) after argument list
+    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)
+    at #translate (node:internal/modules/esm/loader:534:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)
+
+Node.js v22.16.0
+
+
+### Warnings
+- ESLint had issues: Command failed: npm run lint
+=======
 - scripts/performance-optimizer.js: Command failed: node scripts/performance-optimizer.js
 file:///workspace/scripts/performance-optimizer.js:2
 const fs = require('fs');
@@ -215,14 +352,27 @@ This file is being treated as an ES module because it has a '.js' file extension
     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/chore/fix-lint-and-merge
 
 Node.js v22.16.0
 
+- TypeScript: spawnSync /bin/sh ENOBUFS
+=======
+- scripts/advanced-build-optimizer.js: spawnSync /bin/sh ENOBUFS
 - ESLint: Command failed: npm run lint
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
+<<<<<<< HEAD
 node:internal/modules/cjs/loader:1404
   throw err;
   ^
@@ -243,10 +393,22 @@ Error: Cannot find module '/workspace/node_modules/.bin/eslint'
 Node.js v22.16.0
 
 - TypeScript: Command failed: npm run type-check
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 node:internal/modules/cjs/loader:1404
   throw err;
   ^
@@ -266,12 +428,20 @@ Error: Cannot find module '/workspace/node_modules/.bin/tsc'
 
 Node.js v22.16.0
 
-- Build: Command failed: npm run build
+- Smoke Tests had issues: Command failed: npm run test:smoke
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
 npm warn config       Default value does install optional deps unless otherwise omitted.
-sh: 1: next: not found
+sh: 1: jest: not found
+=======
+Failed to compile.
+>>>>>>> main
+
+> Build error occurred
+ReferenceError: module is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at <unknown> (next.config.js:58:1)
 
 
 - ESLint: Command failed: npm run lint,
@@ -458,13 +628,19 @@ Caused by:
 ./app/layout.tsx
 > Build failed because of webpack errors
 ## Warnings
+<<<<<<< HEAD
 - ESLint had issues
 - TypeScript had issues
 
+=======
+>>>>>>> origin/main
+
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge
 
 ## Recommendations
 - Address all errors before deployment
-- Review and address warnings for better code quality
+
 - Implement continuous integration for automated testing
 - Set up automated deployment pipeline
 - Monitor performance metrics in production
@@ -475,5 +651,9 @@ Caused by:
 - Implement recommended optimizations
 - Set up monitoring for production environment
 - Schedule regular automation runs
+<<<<<<< HEAD
 - Document any custom automation workflows
 *Generated on 2025-09-07T09:42:29.025Z*
+=======
+- Document any custom automation workflows
+>>>>>>> origin/chore/fix-lint-and-merge

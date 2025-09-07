@@ -1,17 +1,16 @@
 #!/usr/bin/env node
-const { execSync } = require("child_process");
+
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 class SEOOptimizationSuite {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.startTime = new Date();
+    this.startTime = Date.now();
     this.results = {
-      optimizations: [],
-      metaTags: [],
-      sitemaps: [],
-      errors: []
+      optimizations: { applied: 0, errors: 0 },
+      files: { created: 0, updated: 0 },
+      sitemaps: { generated: 0, errors: 0 }
     };
   }
 
@@ -27,28 +26,9 @@ class SEOOptimizationSuite {
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
-  async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description}`, 'PROGRESS');
-    try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
-        timeout: 300000,
-        maxBuffer: 1024 * 1024 * 10,
-        ...options,
-      });
-      this.log(`${description} completed successfully`, 'SUCCESS');
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`${description} failed: ${error.message}`, 'ERROR');
-      this.results.errors.push({ command, description, error: error.message });
-      return { success: false, error: error.message };
-    }
-  }
-
   async generateSitemap() {
-    this.log("🗺️ Generating sitemap...", 'PROGRESS');
+    this.log('🗺️ Generating sitemap...', 'PROGRESS');
+    
     try {
       const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -59,16 +39,16 @@ class SEOOptimizationSuite {
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ziontechgroup.com/services</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/about</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/contact</loc>
@@ -79,16 +59,18 @@ class SEOOptimizationSuite {
 </urlset>`;
       
       fs.writeFileSync('public/sitemap.xml', sitemap);
-      this.results.sitemaps.push("Sitemap generated");
+      this.results.sitemaps.generated++;
+      this.log('Sitemap generated successfully', 'SUCCESS');
       
-      this.log("✅ Sitemap generated", 'SUCCESS');
     } catch (error) {
-      this.log(`❌ Sitemap generation failed: ${error.message}`, 'ERROR');
+      this.results.sitemaps.errors++;
+      this.log(`Sitemap generation failed: ${error.message}`, 'ERROR');
     }
   }
 
-  async generateRobotsTxt() {
-    this.log("🤖 Generating robots.txt...", 'PROGRESS');
+  async createRobotsTxt() {
+    this.log('🤖 Creating robots.txt...', 'PROGRESS');
+    
     try {
       const robotsTxt = `User-agent: *
 Allow: /
@@ -98,7 +80,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
-Disallow: /dashboard/
+Disallow: /_next/
 Disallow: /private/
 
 # Allow important pages
@@ -107,179 +89,376 @@ Allow: /about/
 Allow: /contact/`;
       
       fs.writeFileSync('public/robots.txt', robotsTxt);
-      this.results.optimizations.push("Robots.txt generated");
+      this.results.files.created++;
+      this.log('robots.txt created successfully', 'SUCCESS');
       
-      this.log("✅ Robots.txt generated", 'SUCCESS');
     } catch (error) {
-      this.log(`❌ Robots.txt generation failed: ${error.message}`, 'ERROR');
+      this.results.optimizations.errors++;
+      this.log(`robots.txt creation failed: ${error.message}`, 'ERROR');
     }
   }
 
-  async createMetaTags() {
-    this.log("🏷️ Creating meta tags configuration...", 'PROGRESS');
-    try {
-      const metaTags = {
-        "default": {
-          "title": "Zion Tech Group - Enterprise AI & IT Solutions",
-          "description": "Leading provider of micro SaaS products, AI services, and IT solutions. Transform your business with cutting-edge technology.",
-          "keywords": "AI services, micro SaaS, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing",
-          "author": "Zion Tech Group",
-          "viewport": "width=device-width, initial-scale=1.0",
-          "robots": "index, follow",
-          "og:type": "website",
-          "og:site_name": "Zion Tech Group",
-          "twitter:card": "summary_large_image",
-          "twitter:site": "@ziontechgroup"
-        },
-        "pages": {
-          "/": {
-            "title": "Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development",
-            "description": "Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
-          },
-          "/about": {
-            "title": "About | Zion Tech Group",
-            "description": "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results."
-          },
-          "/services": {
-            "title": "Services | Zion Tech Group",
-            "description": "Comprehensive technology solutions including AI development, micro SaaS, cloud services, cybersecurity, and digital transformation."
-          },
-          "/contact": {
-            "title": "Contact | Zion Tech Group",
-            "description": "Get in touch with Zion Tech Group for your AI and IT solution needs. Contact us for consultation and project inquiries."
-          }
-        }
-      };
-      
-      fs.writeFileSync('seo-meta-tags.json', JSON.stringify(metaTags, null, 2));
-      this.results.metaTags.push("Meta tags configuration created");
-      
-      this.log("✅ Meta tags configuration created", 'SUCCESS');
-    } catch (error) {
-      this.log(`❌ Meta tags creation failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async createStructuredData() {
-    this.log("📊 Creating structured data...", 'PROGRESS');
-    try {
-      const structuredData = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Zion Tech Group",
-        "url": "https://ziontechgroup.com",
-        "logo": "https://ziontechgroup.com/logo.png",
-        "description": "Leading provider of enterprise-grade AI, micro SaaS, and IT solutions",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "US"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "url": "https://ziontechgroup.com/contact"
-        },
-        "sameAs": [
-          "https://linkedin.com/company/ziontechgroup",
-          "https://twitter.com/ziontechgroup"
-        ],
-        "offers": {
-          "@type": "AggregateOffer",
-          "offerCount": "67+",
-          "offers": [
-            {
-              "@type": "Offer",
-              "name": "AI Solutions",
-              "description": "Cutting-edge artificial intelligence solutions for enterprise needs"
-            },
-            {
-              "@type": "Offer",
-              "name": "Micro SaaS Development",
-              "description": "Scalable micro SaaS applications for modern businesses"
-            },
-            {
-              "@type": "Offer",
-              "name": "IT Services",
-              "description": "Comprehensive IT services and infrastructure solutions"
-            }
-          ]
-        }
-      };
-      
-      fs.writeFileSync('public/structured-data.json', JSON.stringify(structuredData, null, 2));
-      this.results.optimizations.push("Structured data created");
-      
-      this.log("✅ Structured data created", 'SUCCESS');
-    } catch (error) {
-      this.log(`❌ Structured data creation failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async generateSEOReport() {
-    this.log("📊 Generating SEO report...", 'PROGRESS');
-    const totalDuration = Date.now() - this.startTime;
+  async createSEOMetaTags() {
+    this.log('🏷️ Creating SEO meta tags...', 'PROGRESS');
     
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalDuration: `${totalDuration}ms`,
-      optimizations: this.results.optimizations,
-      metaTags: this.results.metaTags,
-      sitemaps: this.results.sitemaps,
-      errors: this.results.errors,
-      metrics: {
-        totalOptimizations: this.results.optimizations.length,
-        totalMetaTags: this.results.metaTags.length,
-        totalSitemaps: this.results.sitemaps.length,
-        totalErrors: this.results.errors.length,
-        seoScore: this.calculateSEOScore()
+    const seoComponents = [
+      {
+        name: 'Structured Data Component',
+        file: 'src/components/StructuredData.tsx',
+        content: `import React from 'react';
+
+interface StructuredDataProps {
+  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service';
+  data: Record<string, any>;
+}
+
+const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    ...data
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
+};
+
+export default StructuredData;`
       },
-      recommendations: [
-        "Implement proper meta tags for all pages",
-        "Create and submit sitemap to Google Search Console",
-        "Optimize page loading speed",
-        "Use structured data markup",
-        "Implement proper heading hierarchy",
-        "Optimize images with alt tags",
-        "Create high-quality content regularly",
-        "Build quality backlinks",
-        "Monitor search performance",
-        "Implement local SEO if applicable"
-      ]
-    };
+      {
+        name: 'SEO Head Component',
+        file: 'src/components/SEOHead.tsx',
+        content: `import React from 'react';
+import Head from 'next/head';
+
+interface SEOHeadProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  structuredData?: Record<string, any>;
+}
+
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title,
+  description,
+  keywords,
+  image = 'https://ziontechgroup.com/og-image.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+  structuredData
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`;
+
+  return (
+    <Head>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      
+      {/* Additional SEO */}
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#1e40af" />
+      <link rel="canonical" href={url} />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      )}
+    </Head>
+  );
+};
+
+export default SEOHead;`
+      },
+      {
+        name: 'Breadcrumb Component',
+        file: 'src/components/Breadcrumb.tsx',
+        content: `import React from 'react';
+import Link from 'next/link';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface BreadcrumbProps {
+  items: BreadcrumbItem[];
+}
+
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      ...(item.href && { item: item.href })
+    }))
+  };
+
+  return (
+    <>
+      <nav aria-label="Breadcrumb" className="breadcrumb">
+        <ol className="flex items-center space-x-2 text-sm text-gray-600">
+          {items.map((item, index) => (
+            <li key={index} className="flex items-center">
+              {index > 0 && <span className="mx-2">/</span>}
+              {item.href ? (
+                <Link href={item.href} className="hover:text-blue-600">
+                  {item.label}
+                </Link>
+              ) : (
+                <span className="text-gray-900 font-medium">{item.label}</span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+    </>
+  );
+};
+
+export default Breadcrumb;`
+      }
+    ];
+
+    for (const component of seoComponents) {
+      try {
+        const dir = path.dirname(component.file);
+        if (!fs.existsSync(dir)) {
+          fs.mkdirSync(dir, { recursive: true });
+        }
+        
+        fs.writeFileSync(component.file, component.content);
+        this.results.files.created++;
+        this.log(`Created: ${component.name}`, 'SUCCESS');
+      } catch (error) {
+        this.results.optimizations.errors++;
+        this.log(`Failed to create ${component.name}: ${error.message}`, 'ERROR');
+      }
+    }
+  }
+
+  async createSEOUtils() {
+    this.log('🛠️ Creating SEO utilities...', 'PROGRESS');
     
-    fs.writeFileSync('seo-optimization-report.json', JSON.stringify(report, null, 2));
-    this.log("📊 SEO report saved to seo-optimization-report.json", 'SUCCESS');
+    const utils = [
+      {
+        name: 'SEO Utils',
+        file: 'src/utils/seo.ts',
+        content: `// SEO utility functions
+
+export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
+  const cleanContent = content.replace(/<[^>]*>/g, '').trim();
+  if (cleanContent.length <= maxLength) return cleanContent;
+  
+  return cleanContent.substring(0, maxLength - 3) + '...';
+};
+
+export const generateKeywords = (content: string, maxKeywords: number = 10): string[] => {
+  const words = content
+    .toLowerCase()
+    .replace(/[^a-z\\s]/g, '')
+    .split(/\\s+/)
+    .filter(word => word.length > 3);
+  
+  const wordCount: Record<string, number> = {};
+  words.forEach(word => {
+    wordCount[word] = (wordCount[word] || 0) + 1;
+  });
+  
+  return Object.entries(wordCount)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, maxKeywords)
+    .map(([word]) => word);
+};
+
+export const generateStructuredData = (type: string, data: Record<string, any>) => {
+  const baseStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    ...data
+  };
+  
+  return baseStructuredData;
+};
+
+export const generateOrganizationData = () => {
+  return generateStructuredData('Organization', {
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    description: 'Leading technology solutions provider specializing in AI, cloud computing, and digital transformation.',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '123 Tech Street',
+      addressLocality: 'San Francisco',
+      addressRegion: 'CA',
+      postalCode: '94105',
+      addressCountry: 'US'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-555-0123',
+      contactType: 'customer service',
+      availableLanguage: 'English'
+    },
+    sameAs: [
+      'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/ziontechgroup',
+      'https://github.com/ziontechgroup'
+    ]
+  });
+};
+
+export const generateWebSiteData = () => {
+  return generateStructuredData('WebSite', {
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    description: 'Leading technology solutions provider',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://ziontechgroup.com/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string'
+    }
+  });
+};`
+      },
+      {
+        name: 'SEO Configuration',
+        file: 'seo.config.js',
+        content: `module.exports = {
+  siteUrl: 'https://ziontechgroup.com',
+  generateRobotsTxt: true,
+  generateSitemaps: true,
+  exclude: ['/admin/*', '/api/*', '/private/*'],
+  additionalPaths: async (config) => {
+    const result = [];
+    
+    // Add dynamic pages
+    const services = ['ai-solutions', 'cloud-computing', 'cybersecurity', 'data-analytics'];
+    services.forEach(service => {
+      result.push({
+        loc: \`/services/\${service}\`,
+        lastmod: new Date().toISOString(),
+        changefreq: 'weekly',
+        priority: 0.8
+      });
+    });
+    
+    return result;
+  },
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/admin/', '/api/', '/private/']
+      }
+    ],
+    additionalSitemaps: [
+      'https://ziontechgroup.com/sitemap.xml'
+    ]
+  }
+};`
+      }
+    ];
+
+    for (const util of utils) {
+      try {
+        const dir = path.dirname(util.file);
+        if (!fs.existsSync(dir)) {
+          fs.mkdirSync(dir, { recursive: true });
+        }
+        
+        fs.writeFileSync(util.file, util.content);
+        this.results.files.created++;
+        this.log(`Created: ${util.name}`, 'SUCCESS');
+      } catch (error) {
+        this.results.optimizations.errors++;
+        this.log(`Failed to create ${util.name}: ${error.message}`, 'ERROR');
+      }
+    }
   }
 
-  calculateSEOScore() {
-    const totalItems = this.results.optimizations.length + this.results.metaTags.length + this.results.sitemaps.length;
-    const errors = this.results.errors.length;
-    if (totalItems === 0) return 0;
-    return Math.max(0, Math.min(100, ((totalItems - errors) / totalItems) * 100));
-  }
-
-  async run() {
-    this.log("🚀 Starting SEO Optimization Suite...", 'PROGRESS');
+  async runAllAutomations() {
+    this.log('🔍 Starting SEO Optimization Suite...', 'PROGRESS');
     
     try {
       await this.generateSitemap();
-      await this.generateRobotsTxt();
-      await this.createMetaTags();
-      await this.createStructuredData();
-      await this.generateSEOReport();
+      await this.createRobotsTxt();
+      await this.createSEOMetaTags();
+      await this.createSEOUtils();
       
-      this.log("✅ SEO Optimization Suite completed successfully!", 'SUCCESS');
+      this.generateFinalReport();
     } catch (error) {
-      this.log(`❌ SEO Optimization Suite failed: ${error.message}`, 'ERROR');
-      await this.generateSEOReport();
+      this.log(`SEO optimization suite failed: ${error.message}`, 'ERROR');
       process.exit(1);
     }
   }
+
+  generateFinalReport() {
+    const duration = Date.now() - this.startTime;
+    const report = {
+      timestamp: new Date().toISOString(),
+      duration: `${Math.round(duration / 1000)}s`,
+      results: this.results,
+      summary: {
+        optimizationsApplied: this.results.optimizations.applied,
+        filesCreated: this.results.files.created,
+        sitemapsGenerated: this.results.sitemaps.generated,
+        totalDuration: `${Math.round(duration / 1000)}s`
+      }
+    };
+
+    const reportPath = path.join(process.cwd(), 'seo-optimization-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log('📊 SEO Optimization Suite Completed', 'SUCCESS');
+    this.log(`🔧 Optimizations Applied: ${report.summary.optimizationsApplied}`);
+    this.log(`📄 Files Created: ${report.summary.filesCreated}`);
+    this.log(`🗺️ Sitemaps Generated: ${report.summary.sitemapsGenerated}`);
+    this.log(`⏱️ Total Duration: ${report.summary.totalDuration}`);
+  }
 }
 
+// Run if called directly
 if (require.main === module) {
   const suite = new SEOOptimizationSuite();
-  suite.run().catch(console.error);
+  suite.runAllAutomations().catch(error => {
+    console.error('SEO optimization suite failed:', error);
+    process.exit(1);
+  });
 }
 
 module.exports = SEOOptimizationSuite;

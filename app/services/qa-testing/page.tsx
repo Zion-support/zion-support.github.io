@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Metadata } from 'next'
 
@@ -70,4 +71,13 @@ export default function ServicePage() {
       </div>
     </div>
   )
+=======
+export default function ServicePage() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <h1>Page</h1>
+      <p>Learn about our page services.</p>
+    </main>
+  );
+>>>>>>> origin/chore/fix-lint-and-merge
 }

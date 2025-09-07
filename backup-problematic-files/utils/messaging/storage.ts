@@ -175,6 +175,7 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
   if (input.conversationId) {
 
   if (input.conversationId) {
+
     conversation = conversations.find((c) => c.id === input.conversationId)
   }
   if (!conversation) {

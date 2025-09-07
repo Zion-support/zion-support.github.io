@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from "react,
@@ -68,6 +69,11 @@ export function TalentDashboard() {
               </div>
             </CardContent>
           </Card>
+=======
+import React from "react",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <Card>
             <CardContent className=p-4">
@@ -87,6 +93,7 @@ export function TalentDashboard() {
                   <span className=text-xs text-muted-foreground mt-1">4 hours ago</span>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className='flex gap-2 mt-3'>
                 <Button size='sm'>Apply Now</Button>
                 <Button size='sm' variant='outline'>
@@ -96,6 +103,8 @@ export function TalentDashboard() {
                   View Details
                 </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 <Button size="sm>Apply Now</Button>
                 <Button size=sm" variant="outline>View Details</Button>
@@ -104,10 +113,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button size=sm'>Apply Now</Button>
                 <Button size='sm variant=outline'>
                   View Details
+<<<<<<< HEAD
 :src/mobile/components/dashboard/TalentDashboard.tsx
                 </Button>              </div>              <div className=flex gap-2 mt-3">
                 <Button size="sm>Apply Now</Button>
                 <Button size=sm" variant="outline>View Details</Button>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
@@ -115,11 +127,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
         </div>
       </section>
-
-
-      
-
-:src/mobile/components/dashboard/TalentDashboard.tsx
 
       <section>
         <h2 className=text-lg font-medium mb-4">Application Tracker</h2>
@@ -180,6 +187,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
       </section>
 
+<<<<<<< HEAD
 :src/mobile/components/dashboard/TalentDashboard.tsx
       <section>
         <h2 className="text-lg font-medium mb-4>Quick Actions</h2>
@@ -439,6 +447,9 @@ export function TalentDashboard() {return (<div className="space-y-6 px-4 pb-24>
         </Card>;
       </section>;
     <div className='space-y-6 px-4 pb-24>;
+=======
+    <div className='space-y-6 px-4 pb-24'>;
+>>>>>>> origin/chore/fix-lint-and-merge
       <section>;
         <div className=flex items-center justify-between mb-4'>;
           <h2 className='text-lg font-medium>New Job Matches</h2>;
@@ -447,7 +458,13 @@ export function TalentDashboard() {return (<div className="space-y-6 px-4 pb-24>
               View all <ChevronRight className=h-4 w-4' />;
             </Button>;
           </Link>;
+<<<<<<< HEAD
         </div>;<div className='space-y-3>;
+=======
+        </div>;
+
+        <div className='space-y-3'>;
+>>>>>>> origin/chore/fix-lint-and-merge
           <Card>;
             <CardContent className=p-4'>;
               <div className='flex justify-between items-start>;
@@ -489,11 +506,22 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from @/com
 import { Button  } from '@/components / ui / button;
 import { Badge  } from @/components / ui / badge';
 
+<<<<<<< HEAD
 import Link from ./next / link';
 export /**;
  * TalentDashboard - Function description;
  */;
 function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24>;
+=======
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react';
+import Link from './next / link';
+export /**
+ * TalentDashboard - Function description
+ */
+function TalentDashboard() {
+  return (
+    <div className='space - y-6 px - 4 pb - 24'>;
+>>>>>>> origin/chore/fix-lint-and-merge
       <section>;
         <div className=flex items - center justify - between mb - 4'>;
           <h2 className='text - lg font - medium>New Job Matches</h2>;
@@ -593,6 +621,7 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24>;
             <span>Update Resume</span>;
           </Button>;
 
+<<<<<<< HEAD
       </section>;<section>;
         <h2 className=text-lg font-medium mb-4">Quick Actions</h2>;
         <div className="grid grid-cols-2 gap-4>;
@@ -611,6 +640,8 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24>;
             aria-label="View Portfolio";
           >;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           <Button;
             variant="outline;
             className=h-auto py-4 flex flex-col gap-1";
@@ -631,9 +662,14 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24>;
             <span>Availability</span>
           </Button>
 
+<<<<<<< HEAD
           <Button variant="outline className=h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost>
             <Zap className=h-5 w-5 mb-1" aria-hidden="true />
 
+=======
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
+            <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
+>>>>>>> origin/chore/fix-lint-and-merge
 <section>
         <h2 className=text-lg font-medium mb-4'>Quick Actions</h2>
         <div className='grid grid-cols-2 gap-4>
@@ -672,11 +708,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
         </div>
       </section>
+<<<<<<< HEAD
 <section>
         <div className=flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium>Learning Hub</h2>
           <Button variant=ghost' size='sm className=h-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <section>
         <div className=flex items-center justify-between mb-4">
@@ -692,7 +731,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
         </div>
         <Card>
+<<<<<<< HEAD
           <CardContent className="p-4>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <CardContent className=p-4'>
             <div className='flex items-center gap-3>
@@ -714,6 +756,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
       </section>
 
+<<<<<<< HEAD
           >;<Image className=h-5 w-5 mb-1" aria-hidden="true />;
             <span>Portfolio</span>;
           </Button>;
@@ -805,6 +848,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>;
       </section>;
             aria-label=Set Availability">;
+=======
+            aria-label="Set Availability">;
+>>>>>>> origin/chore/fix-lint-and-merge
 
             <Clock className="h-5 w-5 mb-1 aria-hidden=true" />;
             <span>Availability</span>;
@@ -838,9 +884,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
     </div>;
   );
+<<<<<<< HEAD
 :src/mobile/components/dashboard/TalentDashboard.tsx
 }
 }
       </section>;)}</div>)}</div>;
   ))}
   )
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

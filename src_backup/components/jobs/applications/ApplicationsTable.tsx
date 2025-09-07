@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   TableBody,TableCell,TableHead,TableHeader,import { format } from "date-fns,import { JobApplication  } from '@/types/jobs;
@@ -26,6 +27,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   TableHead,
   TableHeader,
   TableRow
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 TableRow
 } from @/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions,
@@ -36,8 +39,11 @@ import React, { useState } from react", // Import React and useState
 import { toast } from "@/hooks/use-toast,
 import Image from next/image', // Import next/image
 
+<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ApplicationsTableProps {
   applications: JobApplication[],
   processingId: string | null,
@@ -102,6 +108,7 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast'
 import Image from 'next/image'; // Import next/image
+<<<<<<< HEAD
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;
@@ -150,6 +157,8 @@ import Image from next/image'; // Import next/image;
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface ApplicationsTableProps {
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
   TableBody,
@@ -175,6 +184,7 @@ import { ClickableBadge } from '@/components / ui / clickable - badge;
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
 import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow} from @/components/ui/table';interface ApplicationsTableProps  {applications: JobApplication[];
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
@@ -188,6 +198,8 @@ import { HireConfirmationModal  } from @/components / hiring - tracker / HireCon
 import { toast  } from '@/hooks / use - toast;
 import Image from next / image'; // Import next / image;
 interface ApplicationsTableProps  {applications: JobApplication[];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   TableRow,';
 } from @/components / ui / table;'
 import { HireConfirmationModal } from @/components / hiring - tracker / HireConfirmationModal;'
@@ -198,11 +210,14 @@ interface ApplicationsTableProps {}
   onViewApplication: (application_id: string) => Promise < void>;
   onStatusChange: (application_id: string, new_status: string) => Promise < void>;
   onViewScore: (application: JobApplication) => void;
+<<<<<<< HEAD
 
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
   const [avatarError, setAvatarError] = useState(false)
   const talentName = application.talent_profile?.full_name |Candidate"
   return (
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 // Sub - component for avatar to handle its own error state;
 
 const ApplicationAvatar = ({}
@@ -228,6 +243,7 @@ interface ApplicationsTableProps {
 
     <AvatarPrimitive className=h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (
+<<<<<<< HEAD
 // Sub - component for avatar to handle its own error state;const ApplicationAvatar = ({application;
 }: {// Sub-component for avatar to handle its own error state;
 const ApplicationAvatar = ({application}: {application: JobApplication;
@@ -237,6 +253,8 @@ interface ApplicationsTableProps  {applications: JobApplication[],processingId: 
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {const [avatarError, setAvatarError] = useState(false),const talentName  = application && application.talent_profile?.full_name || "Candidate,const ApplicationAvatar = ({ application }: { application: JobApplication },) => {const [avatarError, setAvatarError] = useState(false)const talentName = application.talent_profile?.full_name |Candidate";
   return (<AvatarPrimitive className="h-8 w-8> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (<Image;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         <Image;
           src={application.talent_profile.profile_picture_url}
           alt={talentName}
@@ -248,6 +266,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
           priority={false}
         />
 
+<<<<<<< HEAD
       ) : (
         <User className=h-4 w-4 />
       )}
@@ -379,6 +398,8 @@ export /**;
 // Sub-component for avatar to handle its own error state;
 const ApplicationAvatar  = null;return (<>;<div>;
                       <div className='font-medium'>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         <User className="h-4 w-4" />
       )}
 
@@ -430,10 +451,13 @@ const ApplicationAvatar  = null;return (<>;<div>;
         onClose = {() => setHireModalOpen(false),}
         application = {selectedApplication |undefined,}
         onConfirm = {handleHireConfirmed,}
+<<<<<<< HEAD
             {applications.map((application) => (
               <TableRow key={application.id}>
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   applications,
   processingId,
@@ -479,6 +503,7 @@ export function ApplicationsTable({}
 
                 <TableCell>
 
+<<<<<<< HEAD
                   <div className=flex items-center gap-3">
                 </TableCell>;</TableBody>;
         </Table>;
@@ -503,6 +528,9 @@ export function ApplicationsTable({}
             {applications.map((application) => (<TableRow key={application.id}>;
                 <TableCell>;
                   <div className=flex items-center gap-3">;
+=======
+                  <div className="flex items-center gap-3">
+>>>>>>> origin/chore/fix-lint-and-merge
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
 
@@ -561,11 +589,14 @@ export function ApplicationsTable({}
   handleHireConfirmed;
 }/> </>)'"
 }'"}
+<<<<<<< HEAD
       />;
     </>;
       />
     </>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       />
     </>
@@ -573,6 +604,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
   /* Using Renamed AvatarPrimitive */ ;
+<<<<<<< HEAD
 }{
                 </TableCell>;
 }h-4 w-4/>)}</AvatarPrimitive>)};
@@ -597,6 +629,9 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell >Applied</T
                   {format (new Date (application.created_at), 'PP)}
                 </TableCell>;
                 <TableCell className="hidden md:table-cell">;
+=======
+}{;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   {format(new Date(application.created_at), PP)}
                 </TableCell>;"
@@ -604,7 +639,10 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell >Applied</T
                   <StatusBadge status={application.status} />;
                 </TableCell>;
                 <TableCell className="hidden lg:table-cell">;
+<<<<<<< HEAD
                   {application.match_score !== undefined && application.match_score !== null ? (<ClickableBadge;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   {application.match_score !== undefined && application.match_score !== null ? (;
                     <ClickableBadge;
                       variant=outline";"
@@ -613,7 +651,6 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell >Applied</T
                     >;
                       {application.match_score}%;
                     </ClickableBadge>;
-                  ) : (;
                   ) : (;"
                     <span className="text-muted-foreground text-sm>Not scored</span>;
                   )}
@@ -645,6 +682,7 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell >Applied</T
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication || undefined}
         onConfirm={handleHireConfirmed}
+<<<<<<< HEAD
       />;32;
 }//for h - 8 w - 8 height= {32 ;
 }//for h - 8 w - 8 className=rounded - full object - cover" on_error= {() => setAvatarError (true)}priority= {false ";
@@ -677,6 +715,8 @@ return (<> <div className= rounded-md border> hidden md:table-cell" >Applied</Ta
 }onClose= {() => setHireModalOpen (false)}application= {selectedApplication || undefined ;
 }onConfirm= {handleHireConfirmed ;
 }/> </>)}'";
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       />;
 
   () => setAvatarError (true);

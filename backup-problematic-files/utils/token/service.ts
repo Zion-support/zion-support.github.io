@@ -13,7 +13,7 @@ export function earnTokens(
   userId: string,
   amount: number,
   reason: string,
-  metadata?: Record<string any>
+
 ): TokenTransaction {
   if (amount <= 0) throw new Error("Amount must be positive"),
   const newBalance = wallet.balance + amount
@@ -34,7 +34,7 @@ export function burnTokens(
   userId: string,
   amount: number,
   reason: string,
-  metadata?: Record<string any>
+
 ): TokenTransaction {
   if (amount <= 0) throw new Error("Amount must be positive"),
   if (wallet.balance < amount) throw new Error("Insufficient balance"),
@@ -103,5 +103,5 @@ export function getConfig() {
 
 export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void {
   const current = tokenStore.getConfig()
-  tokenStore.setConfig({ ...current, ...partial })
+
 }

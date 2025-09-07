@@ -1,0 +1,12 @@
+interface Cloud-finopsProps {
+  className?: string;
+}
+
+const Cloud-finops: React.FC<Cloud-finopsProps> = ({ className }) => {
+
+  return (
+    <div>
+      <h1>Cloudfinops</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );

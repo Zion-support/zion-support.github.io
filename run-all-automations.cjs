@@ -1,13 +1,17 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 class AutomationRunner {
   constructor() {
     this.projectRoot = process.cwd();
     this.results = [];
     this.startTime = Date.now();
+<<<<<<< HEAD
   }
 
   log(message) {
@@ -46,6 +50,15 @@ class AutomationRunner {
         encoding: 'utf8',
         timeout: 120000
       });
+=======
+
+  log(message) {
+
+      this.results.push({ script: scriptPath, success: false, description, error: error.message });
+      return { success: false, error: error.message };
+
+
+>>>>>>> origin/chore/fix-lint-and-merge
       this.log(`✅ ${description} - Success`);
       this.results.push({
         command,
@@ -53,6 +66,7 @@ class AutomationRunner {
         success: true,
         output: result
       });
+<<<<<<< HEAD
       return { success: true, output: result };
     } catch (error) {
       this.log(`❌ ${description} - Failed: ${error.message}`);
@@ -65,10 +79,14 @@ class AutomationRunner {
       return { success: false, error: error.message };
     }
   }
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 
   async runAllAutomations() {
     this.log('🎯 Starting Comprehensive Automation Suite');
     const automationScripts = [
+<<<<<<< HEAD
       // Main orchestrators
       { path: 'final-automation-orchestrator.cjs', desc: 'Final Automation Orchestrator' },
       { path: 'final-automation-suite.cjs', desc: 'Final Automation Suite' },
@@ -101,10 +119,14 @@ class AutomationRunner {
       { cmd: 'npm run lint', desc: 'Lint Check' },
       { cmd: 'npm test -- --passWithNoTests', desc: 'Run Tests' }
     ];
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 
     // Run scripts
     for (const script of automationScripts) {
       await this.runScript(script.path, script.desc);
+<<<<<<< HEAD
 =======
 ;
     const results = [];
@@ -136,11 +158,16 @@ class AutomationRunner {
       }
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     // Run npm commands
     for (const cmd of npmCommands) {
       await this.runCommand(cmd.cmd, cmd.desc);
+<<<<<<< HEAD
     }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     // Generate report
     const endTime = Date.now();
@@ -149,7 +176,11 @@ class AutomationRunner {
     const failed = this.results.filter(r => !r.success).length;
 
     const report = {
+<<<<<<< HEAD
       timestamp: new Date().toISOString(),
+=======
+      timestamp: new Date().toISOString(),`;
+>>>>>>> origin/chore/fix-lint-and-merge
       duration: `${Math.round(duration / 1000)}s`,
       summary: {
         total: this.results.length,
@@ -160,6 +191,7 @@ class AutomationRunner {
       results: this.results
     };
 
+<<<<<<< HEAD
     // Ensure reports directory exists
     const reportsDir = path.join(this.projectRoot, 'automation-reports');
     if (!fs.existsSync(reportsDir)) {
@@ -184,10 +216,24 @@ class AutomationRunner {
     return report;
   }
 }
+=======
+
+    if (!fs.existsSync(reportsDir)) {
+      fs.mkdirSync(reportsDir, { recursive: true });
+
+
+    this.log(`📊 Summary: ${successful}/${this.results.length} scripts successful (${report.summary.successRate}%)`);
+    if (failed > 0) {`;
+      this.log(`⚠️ ${failed} scripts failed`);
+
+
+    return report;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 // Run the automation suite
 if (require.main === module) {
   const runner = new AutomationRunner();
+<<<<<<< HEAD
   runner.runAllAutomations().catch(error => {
     console.error('❌ Error:', error);
     process.exit(1);
@@ -195,3 +241,9 @@ if (require.main === module) {
 }
 
 module.exports = AutomationRunner;
+=======
+
+    process.exit(1);
+
+
+>>>>>>> origin/chore/fix-lint-and-merge

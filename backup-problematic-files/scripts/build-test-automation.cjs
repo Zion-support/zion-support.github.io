@@ -1,9 +1,8 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Build and Test Automation;
  * Comprehensive build and testing automation;
  */
-
 const { execSync } = require('child_process');
 const fs = require(fs');
 const path = require('path');
@@ -11,6 +10,7 @@ class BuildTestAutomation {}
   constructor() {}
     this.startTime = new Date();
     this.report = {}
+<<<<<<< HEAD
       "timestamp: this.startTime.toISOString(),
       status": running',
       "steps: [],
@@ -20,13 +20,41 @@ class BuildTestAutomation {}
   log(message, type = 'info) {}
     const timestamp = new Date().toISOString(;);
 
+=======
+
+      "summary": {};"
+    }};"
+  log(message, type = 'info') {}
+    const timestamp = new Date().toISOString(;);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+    console.log(logMessage);
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    
+    
+    
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+    console.log(logMessage);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
     this.report.steps.push({})
       timestamp,
       type,
       message;
     })}
   async runCommand(command, description) {}
+<<<<<<< HEAD
     try {}
+<<<<<<< HEAD
       this.log(`Starting": ${description}`);
       const output = execSync(command, {})
         "encoding: utf8', 
@@ -34,17 +62,41 @@ class BuildTestAutomation {}
         "stdio: pipe'
       });
       this.log(`Completed": ${description}`, 'success);
+=======
+      this.log(`"Starting": ${description}`);
+      const output = execSync(command, { })
+<<<<<<< HEAD
+        "encoding": 'utf8',
+=======
+        "encoding": 'utf8', 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        "cwd": '/workspace',
+        "stdio": 'pipe'
+      };);
+      this.log(`"Completed": ${description}`, 'success');
+>>>>>>> origin/chore/fix-lint-and-merge
       return output} catch (error) {}
       this.log(`"Failed: ${description} - ${error.message}`, error');
       this.report.errors.push({})
+<<<<<<< HEAD
         step": description,
         "error: error.message,
         timestamp": new Date().toISOString();
+=======
+        "step": description,
+        "error": error.message,
+        "timestamp": new Date().toISOString();
+=======
+
+        "timestamp": new Date().toISOString();"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 });
       throw error}
   }
   async cleanBuild() {}
+<<<<<<< HEAD
     try {}
       await this.runCommand('rm -rf .next dist build, Clean previous builds')} catch (error) {}
       // Ignore if directories don't exist;
@@ -112,33 +164,64 @@ class BuildTestAutomation {}
     try {}
       this.log(Starting Build and Test Automation);
       
+=======
+    try {}"
+
+      this.report.summary.tests = 'failed';
+      // Continue with build even if tests fail;
+  async runLinting() {}
+
+      this.report.summary.linting = 'failed';
+      // Continue with build even if linting fails;
+  async buildApplication() {}
+
+      this.log('Starting Build and Test Automation');
+>>>>>>> origin/chore/fix-lint-and-merge
       // Clean previous builds;
       await this.cleanBuild();
-      
       // Install dependencies;
       await this.installDependencies();
-      
       // Run tests;
       await this.runTests();
-      
       // Run linting;
       await this.runLinting();
-      
       // Build application;
       await this.buildApplication();
-      
       // Check build output;
       await this.checkBuildOutput();
+<<<<<<< HEAD
       
       this.log('Build and Test Automation completed successfully', success)} catch (error) {}
       this.log(`Build and Test Automation failed": ${error.message}`, 'error')} finally {`}
       await this.generateReport()}
   }
 }
+=======
+
+      await this.generateReport()};
+>>>>>>> origin/chore/fix-lint-and-merge
 // Run the automation;
-if ( {})
   const automation = new BuildTestAutomation) {}
-     {}
   const automation = new BuildTestAutomation}(;);
+<<<<<<< HEAD
   automation.run().catch(console.error)}
 
+=======
+  automation.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = BuildTestAutomation;
+module.exports = BuildTestAutomation;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = BuildTestAutomation;
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

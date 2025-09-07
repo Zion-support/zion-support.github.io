@@ -2,15 +2,30 @@ import Head from \'next/head\'; import Link from \'next/link\'; export default f
 import React from 'react';
 interface IndexProps {
   // Add props here as needed
+
 }
-export default function Index() {
-}
-return (;
+
+export default function Index({ }: IndexProps) {
+  return (
     <div>
       <h1>Index</h1>
       <p>This component is currently under development.</p>
     </div>
   );
 
+}
+
+<<<<<<< HEAD
+}
+=======
+export default function Index({ }: IndexProps) {
+  return (
+    <div>
+      <h1>Index</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
 
 }
+>>>>>>> origin/chore/fix-lint-and-merge

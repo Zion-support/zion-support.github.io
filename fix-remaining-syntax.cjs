@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
+<<<<<<< HEAD
 const path = require(path');
 
     let content = fs.readFileSync(filePath, 'utf8');
@@ -50,11 +50,55 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       fs.writeFileSync(filePath, newContent);
       console.log(`Fixed: ${filePath}`);
     }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
+=======
 
+console.log('🔧 Fixing remaining syntax errors...');
+
+// Fix specific files
+const filesToFix = [
+  'components/layout/Layout.tsx',
+  'pages/pricing.tsx',
+  'pages/privacy.tsx',
+  'pages/team.tsx',
+  'pages/zion-global-2025.tsx'
+];
+
+filesToFix.forEach(file => {
+  try {
+    let content = fs.readFileSync(file, 'utf8');
+    
+    // Fix malformed import statements
+    content = content.replace(/import\s+([^"]*)\s+from\s+"([^"]*)"\s*;/g, (match, imports, module) => {
+      return `import ${imports} from '${module}';`;
+    });
+    
+    // Fix malformed string literals
+    content = content.replace(/"([^"]*)"\s*;/g, (match, str) => {
+      return `'${str}';`;
+    });
+    
+    // Fix malformed interface declarations
+    content = content.replace(/interface\s+LayoutProps\s*\{[^}]*\}\s*interface\s+LayoutProps\s*\{/g, 'interface LayoutProps {');
+    
+    // Fix malformed object properties
+    content = content.replace(/,\s*\}\s*;/g, '}');
+    
+    // Fix malformed JSX
+    content = content.replace(/<([^>]*)\s*\/>/g, (match, tag) => {
+      return `<${tag} />`;
+    });
+    
+    fs.writeFileSync(file, content);
+    console.log(`✅ Fixed: ${file}`);
+>>>>>>> origin/chore/fix-lint-and-merge
+  } catch (error) {
+    console.error(`❌ Error fixing ${file}:`, error.message);
+  }
+});
+
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+console.log('✨ Remaining syntax fixes completed!');
+>>>>>>> origin/chore/fix-lint-and-merge

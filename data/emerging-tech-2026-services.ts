@@ -1,4 +1,15 @@
+mobile: string;, email: string;,
+    address: string;,
 
+    website: string
+  
+  contactInfo: {;,
+  mobile: string;, email: string;,
+    address: string;,
+    website: string;
+pr-12325
+
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';'
@@ -1837,6 +1848,223 @@ contactInfo: {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+=======
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+    realImplementation: boolean;, implementationDetails: string;,
+  launchDate: string;, customers: number;,
+  rating: number;,
+  reviews: number;
+}
+      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.'
+    launchDate: '2026-04-20'
+    customers: 180
+    rating: 4.8
+    reviews: 120;
+  }
+  reviews: number;
+}
+      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.
+    launchDate: '2026-04-20;,
+  customers: 180;
+    rating: 4.8;,
+  reviews: 120;
+pr-12325
+      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.',
+    launchDate: '2026-04-20';,
+    customers: 180;,
+    rating: 4.8;,
+    reviews: 120;,
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com';
+    }
+    realImplementation: true
+    implementationDetails: 'Advanced quantum energy platform with energy optimization;, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.';
+    launchDate: '2026-04-20';
+    customers: 180;
+    rating: 4.8
+
+    reviews: 120;
+  }
+];      mobile: '+1 302 464 0950';',
+  email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709;,
+  website: 'https://ziontechgroup.com
+    realImplementation: true;,
+  implementationDetails: 'Advanced quantum energy platform with energy optimization;, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.';
+    launchDate: '2026-04-20';',
+pr-12325
+];
+import { ServiceVariant } from '../types/service-variants';
+  reviews: number;
+}
+
+      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.'''
+    launchDate: '2026-04-20'';,
+  customers: 180;
+    rating: 4.8;,
+  reviews: 120;
+  }'
+      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.',''
+    launchDate: '2026-04-20';,'
+    customers: 180;,
+    rating: 4.8;,
+    reviews: 120;,
+  },;'
+];      mobile: '+1 302 464 0950';','
+  email: 'kleber@ziontechgroup.com';''
+      address: '364 E Main St STE 1008 Middletown DE 19709'';,'
+  website: 'https://ziontechgroup.com'';
+    }
+    realImplementation: true;,'
+  implementationDetails: 'Advanced quantum energy platform with energy optimization;, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.';''
+    launchDate: '2026-04-20';',
+  customers: 180;
+    rating: 4.8;,
+  reviews: 120;
+  }
+];'
+import { ServiceVariant } from '../types/service-variants';'
+
+export interface EmergingTech2026Service {;
+  id: string;,;
+  name: string;,;
+  tagline: string;,;
+  price: string;,;
+  period: string;,;
+  description: string;,;
+  features: string[];,;
+  popular: boolean;,;
+  icon: string;,;
+  color: string;,;
+  textColor: string;,;
+  link: string;,;
+  marketPosition: string;,;
+  targetAudience: string;,;
+  trialDays: number;,;
+  setupTime: string;,;
+  category: string;,;
+  realService: boolean;,;
+  technology: string[];,;
+  integrations: string[];,;
+  useCases: string[];,;
+  roi: string;,;
+  competitors: string[];,;
+  marketSize: string;,;
+  growthRate: string;,;
+  variant: ServiceVariant;,;
+  contactInfo: {;
+    mobile: string;,;
+  contactInfo: {;,
+  mobile: string;,;
+    email: string;,;
+    address: string;,;}
+    website: string;}
+  },;
+  contactInfo: {;,
+  mobile: string;,;
+    email: string;,;
+    address: string;,;
+pr-12325
+  realImplementation: boolean;,;
+  implementationDetails: string;,;
+  launchDate: string;,;
+  customers: number;,;
+  rating: number;,;
+  reviews: number;
+}
+
+}
+
+export const emergingTech2026Services: EmergingTech2026Service[] = [
+  // Neuromorphic Computing Platform
+
+export const emergingTech2026Services: EmergingTech2026Service[] = [
+  // Neuromorphic Computing Platform;
+pr-12325
+  {
+
+    id: 'neuromorphic-computing-platform-2026';, name: 'Neuromorphic Computing Platform 2026';,
+    tagline: 'Brain-inspired computing for next-generation AI and robotics';,
+    price: '$2;,499',
+    period: '/month';, description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural architecture for ultra-efficient AI processing and autonomous robotics.';,
+    features: [
+      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesAutonomous decision makingAdaptive behavior patternsMulti-modal sensory processingContinuous learning algorithmsEnergy-efficient computing';
+      'Real-time pattern recognitionAutonomous robotics control'
+    ];
+      'Real-time pattern recognitionAutonomous robotics control]
+pr-12325
+    popular: true;, icon: '🧠';,
+    color: 'from-purple-600 to-indigo-700';, textColor: 'text-purple-400';,
+    link: 'https://ziontechgroup.com/neuromorphic-computing-platform-2026';,
+    marketPosition: 'Competitive with Intel Loihi ($500-2000);, IBM TrueNorth ($1000-5000), and BrainChip ($200-1000). Our advantage: Advanced neural architecture;, real-time learning, and autonomous capabilities.',
+    targetAudience: 'AI research institutions;, Robotics companies, Autonomous vehicle manufacturers, Defense contractors, Healthcare technology companies, Research laboratories',
+    trialDays: 14;, setupTime: '16 hours';,
+    category: 'Emerging Technology & AI';, realService: true;,
+    technology: ['Neuromorphic ComputingSpiking Neural NetworksReactNode.jsPostgreSQLRedisAWSCustom Hardware'];, integrations: ['ROS (Robot Operating System)TensorFlowPyTorchOpenCVGazebo SimulatorUnity3DUnreal Engine'];,
+    useCases: ['Autonomous roboticsEdge AI processingReal-time pattern recognitionAutonomous vehiclesSmart sensorsCognitive computing'];, roi: 'Average customer sees 600% ROI within 18 months through improved AI performance and energy efficiency.';,
+    competitors: ['Intel LoihiIBM TrueNorthBrainChipQualcomm ZerothSpiNNaker'];, marketSize: '$8.7B market';,
+    growthRate: '400% annual growth';, variant: 'ai-futuristic';,
+    contactInfo: {
+
+    mobile: string, email: string,
+    address: string,
+    website: string;
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+
+    reviews: 120
+  }
+];
+import { ServiceVariant } from '../types/service-variants',;
+export interface EmergingTech2026Service {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
       'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.
     launchDate: 2026-04-20'
@@ -2050,93 +2278,45 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   contactInfo: {
 
 }
-export const "emergingTech2026Services": EmergingTech2026Service[] = [
-  // Neuromorphic Computing Platform
-  {
-    }
-    "id": 'neuromorphic-computing-platform-2026', "name": 'Neuromorphic Computing Platform 2026','
-    "tagline": 'Brain-inspired computing for next-generation AI and robotics','
-    "price": '$2,499','
-    "period": '/month', "description": 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural architecture for ultra-efficient AI processing and autonomous robotics.','
-    "features": [
-      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesAutonomous decision makingAdaptive behavior patternsMulti-modal sensory processingContinuous learning algorithmsEnergy-efficient computing';'
-      'Real-time pattern recognitionAutonomous robotics control''
-    ];
-    "popular": true, "icon": '🧠','
-    "color": 'from-purple-600 to-indigo-700', "textColor": 'text-purple-400','
-    "link": '"https"://ziontechgroup.com/neuromorphic-computing-platform-2026','
-    "marketPosition": 'Competitive with Intel Loihi ($500-2000), IBM TrueNorth ($1000-5000), and BrainChip ($200-1000). Our "advantage": Advanced neural architecture, real-time learning, and autonomous capabilities.','
-    "targetAudience": 'AI research institutions, Robotics companies, Autonomous vehicle manufacturers, Defense contractors, Healthcare technology companies, Research laboratories','
-    "trialDays": 14, "setupTime": '16 hours','
-    "category": 'Emerging Technology & AI', "realService": true,'
-    "technology": ['Neuromorphic ComputingSpiking Neural NetworksReactNode.jsPostgreSQLRedisAWSCustom Hardware'], "integrations": ['ROS (Robot Operating System)TensorFlowPyTorchOpenCVGazebo SimulatorUnity3DUnreal Engine'],'
-    "useCases": ['Autonomous roboticsEdge AI processingReal-time pattern recognitionAutonomous vehiclesSmart sensorsCognitive computing'], "roi": 'Average customer sees 600% ROI within 18 months through improved AI performance and energy efficiency.','
-    "competitors": ['Intel LoihiIBM TrueNorthBrainChipQualcomm ZerothSpiNNaker'], "marketSize": '$8.7B market','
-    "growthRate": '400% annual growth', "variant": 'ai-futuristic','
-    "contactInfo": {
-      }
-      "mobile": '+1 302 464 0950', "email": 'kleber@ziontechgroup.com','
-      "address": '364 E Main St STE 1008 Middletown DE 19709','
-      "website": '"https"://ziontechgroup.com';'
-    }
-    "real_implementation": true,
-    "implementation_details": 'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real - time monitoring and predictive analytics.';'
-    "launch_date": '2026 - 04 - 20';'
-    "customers": 180;
-    "rating": 4.8,
-    "reviews": 120;
-export interface EmergingTech2026Service {;
-  }
-  "id": string,;
-  "name": string,;
-  "tagline": string,;
-  "price": string,;
-  "period": string,;
-  "description": string,;
-  "features": string[],;
-  "popular": boolean,;
-  "icon": string,;
-  "color": string,;
-  "textColor": string,;
-  "link": string,;
-  "marketPosition": string,;
-  "targetAudience": string,;
-  "trialDays": number,;
-  "setupTime": string,;
-  "category": string,;
-  "realService": boolean,;
-  "technology": string[],;
-  "integrations": string[],;
-  "useCases": string[],;
-  "roi": string,;
-  "competitors": string[],;
-  "marketSize": string,;
-  "growthRate": string,;
-  "variant": ServiceVariant,;
-  "contactInfo": {;
-    }
-    "mobile": string,;
-    "email": string,;
-    "address": string,;
-    "website": string;
-  },;
-  "realImplementation": boolean,;
-  "implementationDetails": string,;
-  "launchDate": string,;
-  "customers": number,;
-  "rating": number,;
-  "reviews": number;
-}
-;
-export const "emergingTech2026Services": EmergingTech2026Service[] = [;
+
+export const emergingTech2026Services: EmergingTech2026Service[] = [;
   // Neuromorphic Computing Platform;
+<<<<<<< HEAD
 
       address: 364 E Main St STE 1008 Middletown DE 19709,
+=======
+  {}
+    id: 'neuromorphic-computing-platform-2026', name: 'Neuromorphic Computing Platform 2026','
+    tagline: 'Brain-inspired computing for next-generation AI and robotics','
+    price: '$2,499','
+    period: '/month', description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural architecture for ultra-efficient AI processing and autonomous robotics.',
+    features: ['
+      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesAutonomous decision makingAdaptive behavior patternsMulti-modal sensory processingContinuous learning algorithmsEnergy-efficient computing';'
+      'Real-time pattern recognitionAutonomous robotics control'
+    ];'
+    popular: true, icon: '🧠','
+    color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400','
+    link: 'https://ziontechgroup.com/neuromorphic-computing-platform-2026','
+    marketPosition: 'Competitive with Intel Loihi ($500-2000), IBM TrueNorth ($1000-5000), and BrainChip ($200-1000). Our advantage: Advanced neural architecture, real-time learning, and autonomous capabilities.','
+    targetAudience: 'AI research institutions, Robotics companies, Autonomous vehicle manufacturers, Defense contractors, Healthcare technology companies, Research laboratories','
+    trialDays: 14, setupTime: '16 hours','
+    category: 'Emerging Technology & AI', realService: true,'
+    technology: ['Neuromorphic ComputingSpiking Neural NetworksReactNode.jsPostgreSQLRedisAWSCustom Hardware'], integrations: ['ROS (Robot Operating System)TensorFlowPyTorchOpenCVGazebo SimulatorUnity3DUnreal Engine'],'
+    useCases: ['Autonomous roboticsEdge AI processingReal-time pattern recognitionAutonomous vehiclesSmart sensorsCognitive computing'], roi: 'Average customer sees 600% ROI within 18 months through improved AI performance and energy efficiency.','
+    competitors: ['Intel LoihiIBM TrueNorthBrainChipQualcomm ZerothSpiNNaker'], marketSize: '$8.7B market','
+    growthRate: '400% annual growth', variant: 'ai-futuristic',
+    contactInfo: {}
+      '
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> origin/chore/fix-lint-and-merge
 
       address: '364 E Main St STE 1008 Middletown DE 19709';,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
       address: 364 E Main St STE 1008 Middletown DE 19709,
 
       website: 'https://ziontechgroup.com';
@@ -2148,10 +2328,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_implementation: true;,
     implementation_details: 'Advanced quantum energy platform with energy optimization;, renewable energy management, and smart grid capabilities. Includes real - time monitoring and predictive analytics.';
     launch_date: 2026 - 04 - 20;
+=======
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true,'
+    implementation_details: 'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real - time monitoring and predictive analytics.';'
+
+    launch_date: '2026 - 04 - 20';
+>>>>>>> origin/chore/fix-lint-and-merge
     customers: 180;
     rating: 4.8;,
     reviews: 120;
 
+<<<<<<< HEAD
 
 
 import { ServiceVariant } from '../types/service-variants',
@@ -2241,11 +2430,64 @@ export interface EmergingTech2026Service {
     real_implementation: true;,
     implementation_details: 'Advanced quantum energy platform with energy optimization;, renewable energy management, and smart grid capabilities. Includes real - time monitoring and predictive analytics.';
     launch_date: 2026 - 04 - 20;',
+=======
+import { ServiceVariant } from '../types/service-variants',;
+
+export interface EmergingTech2026Service {;
+  id: string;,;
+  name: string;,;
+  tagline: string;,;
+  price: string;,;
+  period: string;,;
+  description: string;,;
+  features: string[];,;
+  popular: boolean;,;
+  icon: string;,;
+  color: string;,;
+  textColor: string;,;
+  link: string;,;
+  marketPosition: string;,;
+  targetAudience: string;,;
+  trialDays: number;,;
+  setupTime: string;,;
+  category: string;,;
+  realService: boolean;,;
+  technology: string[];,;
+  integrations: string[];,;
+  useCases: string[];,;
+  roi: string;,;
+  competitors: string[];,;
+  marketSize: string;,;
+  growthRate: string;,;
+  variant: ServiceVariant;,;
+  contactInfo: {;
+    mobile: string;,;
+  contactInfo: {;,
+  mobile: string;,;
+    email: string;,;
+    address: string;,;
+    website: string;
+  },;
+  realImplementation: boolean;,;
+  implementationDetails: string;,;
+  launchDate: string;,;
+  customers: number;,;
+  rating: number;,;
+  reviews: number;
+}
+  mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
+      address: '364 E Main St STE 1008 Middletown DE 19709';,
+      website: 'https://ziontechgroup.com';
+    real_implementation: true;,
+    implementation_details: 'Advanced quantum energy platform with energy optimization;, renewable energy management, and smart grid capabilities. Includes real - time monitoring and predictive analytics.';
+    launch_date: '2026 - 04 - 20';',
+>>>>>>> origin/chore/fix-lint-and-merge
 pr-12325
 ;
 export const emergingTech2026Services: EmergingTech2026Service[] = [;
   // Neuromorphic Computing Platform;
 
+<<<<<<< HEAD
       'Real-time pattern recognitionAutonomous robotics control;
       Real-time pattern recognitionAutonomous robotics control';']
 pr-12325
@@ -2965,6 +3207,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     email: string;
     address: string;
     website: string
+=======
+      'Real-time pattern recognitionAutonomous robotics control';
+      'Real-time pattern recognitionAutonomous robotics control';']
+pr-12325
+    ],;
+
+  }
+;
+];
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   realImplementation: boolean;
   implementationDetails: string;
@@ -2974,7 +3231,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'neuromorphic-computing-platform-2026';
     name: 'Neuromorphic Computing Platform 2026';
     tagline: 'Brain-inspired computing for next-generation AI and robotics';
+<<<<<<< HEAD
     price: '$2,499',
+=======
+    price: '$2;,499',
+>>>>>>> origin/chore/fix-lint-and-merge
     period: '/month';
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural architecture for ultra-efficient AI processing and autonomous robotics.';
     features: [
@@ -2986,8 +3247,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/neuromorphic-computing-platform-2026';
+<<<<<<< HEAD
     marketPosition: 'Competitive with Intel Loihi ($500-2000), IBM TrueNorth ($1000-5000), and BrainChip ($200-1000). Our advantage: Advanced neural architecture, real-time learning, and autonomous capabilities.',
     targetAudience: 'AI research institutions, Robotics companies, Autonomous vehicle manufacturers, Defense contractors, Healthcare technology companies, Research laboratories',
+=======
+    marketPosition: 'Competitive with Intel Loihi ($500-2000);, IBM TrueNorth ($1000-5000), and BrainChip ($200-1000). Our advantage: Advanced neural architecture;, real-time learning, and autonomous capabilities.',
+    targetAudience: 'AI research institutions;, Robotics companies, Autonomous vehicle manufacturers, Defense contractors, Healthcare technology companies, Research laboratories',
+>>>>>>> origin/chore/fix-lint-and-merge
     trialDays: 14;
     setupTime: '16 hours';
     category: 'Emerging Technology & AI';
@@ -3004,6 +3270,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3324,6 +3591,93 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
     reviews: 120}
 ],
+=======
+      website: 'https://ziontechgroup.com';
+    },
+    realImplementation: true;
+    implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture;, real-time learning, and autonomous decision-making capabilities. Includes custom hardware integration and robotics control.',
+    launchDate: '2026-04-01';
+    customers: 150;
+    rating: 4.9;
+    reviews: 100;
+
+  contactInfo: {
+
+    mobile: string, email: string,
+    address: string,
+    website: string
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
+      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.'
+    launchDate: "launchDate",
+    customers: 180;
+    rating: 4.8
+    reviews: 120
+  }
+      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.',
+    launchDate: '2026-04-20',
+    customers: 180,
+    rating: 4.8,
+    reviews: 120,
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.';
+    launchDate: '2026-04-20';
+    customers: 180;
+    rating: 4.8
+    reviews: 120
+  }
+];
+import { ServiceVariant } from '../types/service-variants';
+export interface EmergingTech2026Service {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
   // DNA Computing Platform
@@ -3725,6 +4079,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.9;,
     reviews: 80;,
   },
+<<<<<<< HEAD
     mobile: string, email: string,
     address: string,
     website: string
@@ -4456,6 +4811,8 @@ export interface EmergingTech2026Service {
     customers: 100;,
     rating: 4.9;,
     reviews: 80;},
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   // Biometric AI Platform
   {
@@ -4623,6 +4980,7 @@ export interface EmergingTech2026Service {
     reviews: 120;
   }
 ];
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
@@ -4732,3 +5090,6 @@ pr-12325
   }
 '
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

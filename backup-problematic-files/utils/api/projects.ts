@@ -86,5 +86,5 @@ export function updateMilestone(
   project.milestones[idx] = next,
   project.updatedAt = now,
   saveProject(project),
-  return next
+
 }

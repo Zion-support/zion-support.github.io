@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -116,48 +117,35 @@ const { execSync } = require('child_process')
   console.error(' Optimization "failed")
   console.error(' Optimization "failed")
 #!/usr/bin/env node
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-const fs = require('fs');
-const path = require('path');
-
-console.log('⚡ Performance Optimizer Started...');
-
-// Optimize application performance
+// Optimize application performance;
 function optimizePerformance() {
   const optimizations = [];
   const issues = [];
-  
-  // Check bundle size
+  // Check bundle size;
   const nextDir = '/workspace/.next';
   if (fs.existsSync(nextDir)) {
-    const staticDir = path.join(nextDir, 'static');
+
     if (fs.existsSync(staticDir)) {
       const files = fs.readdirSync(staticDir, { recursive: true });
       let totalSize = 0;
-      
-      files.forEach(file => {
+      files.forEach(file => {)
         const filePath = path.join(staticDir, file);
         if (fs.statSync(filePath).isFile()) {
           totalSize += fs.statSync(filePath).size;
         }
       });
-      
       const sizeInMB = (totalSize / (1024 * 1024)).toFixed(2);
-      
-      if (totalSize > 5 * 1024 * 1024) { // 5MB
+      if (totalSize > 5 * 1024 * 1024) { // 5MB;
         issues.push({
-          type: 'large_bundle',
-          severity: 'high',
-          message: `Bundle size is ${sizeInMB}MB, consider code splitting`
-        });
-      }
-    }
-  }
-  
-  // Check for performance issues in code
+
+  // Check for performance issues in code;
   const pagesDir = '/workspace/pages_minimal';
   if (fs.existsSync(pagesDir)) {
     const files = fs.readdirSync(pagesDir);
+<<<<<<< HEAD
     
     files.forEach(file => {
       if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
@@ -197,27 +185,18 @@ function optimizePerformance() {
   }
   
   // Generate performance report
+=======
+
+  // Generate performance report;
+  const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
     timestamp: new Date().toISOString(),
     issues,
     optimizations,
     recommendations: [
-      'Implement code splitting with dynamic imports',
-      'Use React.memo for expensive components',
-      'Optimize images with next/image',
-      'Implement lazy loading',
-      'Use CDN for static assets',
-      'Minimize bundle size',
-      'Implement caching strategies',
-      'Use performance monitoring tools'
-    ],
-    performanceScore: Math.max(0, 100 - (issues.length * 10))
-  };
-  
-  fs.writeFileSync('/workspace/performance-optimization-report.json', JSON.stringify(report, null, 2));
-  console.log(`⚡ Performance optimization completed. Score: ${report.performanceScore}/100`);
-  
-  return report;
-}
 
-// Run performance optimization
+  console.log(`⚡ Performance optimization completed. Score: ${report.performanceScore}/100`);
+  return report;
+// Run performance optimization;
 optimizePerformance();
+`;

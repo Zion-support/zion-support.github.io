@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react;
 import { Card, CardContent, CardFooter  } from @/components/ui/card';
 import { Button  } from '@/components/ui/button;
@@ -37,6 +38,12 @@ import { useState } from 'react;
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from @/components/ui/button';'
 import { Badge } from @/components/ui/badge;
+=======
+import { useState } from 'react';'
+import { Card, CardContent, CardFooter } from '@/components/ui/card';'
+import { Button } from '@/components/ui/button';'
+import { Badge } from '@/components/ui/badge';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }
 
@@ -44,6 +51,7 @@ import { Badge } from @/components/ui/badge;
 
 interface ProjectCardProps {
   project: PortfolioProject;
+<<<<<<< HEAD
   onDelete: (projectId: string) => void;
 }}interface ProjectCardProps  {project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
@@ -145,6 +153,14 @@ import { PortfolioProject } from @/types/resume;
 interface ProjectCardProps {
   project: PortfolioProject,
   onEdit: (project: PortfolioProject,) => void,
+=======
+  onEdit: (project: PortfolioProject) => void;'
+  onDelete: (projectId: string) => void;import Image from 'next/image';'
+import { PortfolioProject } from '@/types/resume';
+interface ProjectCardProps {;
+  project: PortfolioProject,;
+  onEdit: (project: PortfolioProject,) => void,;
+>>>>>>> origin/chore/fix-lint-and-merge
   onDelete: (projectId: string,) => void;
 }
 
@@ -293,12 +309,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
           )}
+<<<<<<< HEAD
         </div>
       </CardContent>
 <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
         <div className=flex gap-2>
           {project.github_url && (
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         </div>
       </CardContent>
@@ -328,6 +347,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </Link>
           )}
+<<<<<<< HEAD
           {project.demo_url && (
             <a
             alt={project.title}className=object-cover";
@@ -413,6 +433,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 <div className=flex gap-2>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         </div>;
 '
@@ -436,6 +458,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Button
             variant='ghost
 
+<<<<<<< HEAD
             size=icon'
         </div>;
 <div className='flex gap-2>;
@@ -444,6 +467,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             size='icon;
             onClick={() => onEdit(project)}
             onClick={() => onEdit(project)}
+=======
+            size='icon'
+            onClick={() => onEdit(project)}'
+>>>>>>> origin/chore/fix-lint-and-merge
             aria-label='Edit project';
           >;
             <Edit className=h-4 w-4' />;
@@ -471,6 +498,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
+<<<<<<< HEAD
 Are you sure you want to delete this project? This action cannot
               be undone.
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -505,10 +533,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogDescription>;
             aria-label='Delete project;
           >;
+=======
+
+            aria-label='Delete project';
+          >;'
+>>>>>>> origin/chore/fix-lint-and-merge
             <Trash2 className='h-4 w-4' />;
           </Button>;
         </div>;
-      </CardFooter>;<AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
+      </CardFooter>;
+
+      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Project</AlertDialogTitle>;
@@ -575,7 +610,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
-            <AlertDialogTitle > Delete Project</AlertDialogTitle>;<AlertDialogDescription>Are you sure you want to delete this project? This action cannot;
+            <AlertDialogTitle > Delete Project</AlertDialogTitle>;
+
+            <AlertDialogDescription>;
+              Are you sure you want to delete this project? This action cannot;
               be undone.            </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
@@ -587,6 +625,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
             <AlertDialogAction;
               onClick={handleDelete}
+<<<<<<< HEAD
               className='bg-destructive text-destructive-foreground';
             >;
               Delete;
@@ -595,6 +634,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </AlertDialogContent>;
       </AlertDialog>;
     </Card>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </AlertDialogDescription>
           </AlertDialogHeader>
@@ -634,6 +675,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 }
+<<<<<<< HEAD
     </Card>)})}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
     </Card>);

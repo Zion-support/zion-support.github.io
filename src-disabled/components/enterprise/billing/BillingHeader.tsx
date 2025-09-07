@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :src/components/enterprise/billing/BillingHeader.tsx
 import React from 'react'
 import { Button } from '@/components/ui/button'
@@ -31,6 +32,8 @@ import Link from "next/link"
 import React from "react",
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 export function BillingHeader() {
   return (
     <div className="space-y-2">"
@@ -71,23 +74,6 @@ export function BillingHeader() {
           </Button>
         </div>
       </div>
-:src/components/enterprise/billing/BillingHeader.tsx
-      <p className='text-muted-foreground'>
-        Manage your subscription, view invoice history, and update payment
-        methods.
-      </p>
-    </div>
-  ) <p className="text-muted-foreground">
-        Manage your subscription, view invoice history, and update payment methods.
-      </p>
-    </div>
-  ) <p className="text-muted-foreground">
-        Manage your subscription, view invoice history, and update payment methods.
-      </p>
-    </div>;
-  );
-};
-}
 
       <p className="text-muted-foreground">
 

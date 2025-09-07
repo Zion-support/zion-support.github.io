@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react;
 import { useRouter  } from next/router';
 import { useAuth  } from '@/hooks/useAuth;
@@ -17,6 +18,13 @@ import { Card;
 } from lucide-react';
 import { cn  } from '@/lib/utils;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from @/components/ui/card';
+=======
+import { useState, useEffect  } from 'react';
+import { useRouter  } from 'next/router';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+>>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState, useEffect } from 'react
 import { useRouter } from next/router'
@@ -36,6 +44,7 @@ import {}
   Calendar;
   Eye;
   MessageSquare'
+<<<<<<< HEAD
 } from 'lucide-react
 import { cn } from '@/lib/utils'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from @/components/ui/card'
@@ -64,6 +73,11 @@ interface WizardStep  {title: string;
 
 interface OnboardingWizardProps {
 
+=======
+} from 'lucide-react''
+import { cn } from '@/lib/utils''
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { cn } from '@/lib/utils;
 
@@ -255,6 +269,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
 
       <CardHeader>
+<<<<<<< HEAD
         <CardTitle className=text-center text-white>
           {type === client' ? 
             "Ready to find top IT talent?" : 
@@ -263,6 +278,16 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       </CardHeader>
       <CardContent>
         <div className="flex items-center mb-6">
+=======
+        <CardTitle className='text-center text-white'>
+          {type === 'client'
+            ? 'Ready to find top IT talent?'
+            : "Let's build your professional profile"}
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='flex items-center mb-6'>;
+>>>>>>> origin/chore/fix-lint-and-merge
           {/* Step dots */}
 
           <div className=flex items-center justify-center flex-1>
@@ -278,6 +303,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     : index < currentStep"
                     ? "bg-zion-cyan
                     : "bg-zion-blue-light"
+<<<<<<< HEAD
 interface OnboardingWizardProps  {url: string;
   }skipText?: string;interface OnboardingWizardProps  {type: client | 'talent';
   onComplete: () => void;
@@ -349,6 +375,8 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
                     : index < currentStep;
                     ? "bg-zion-cyan";
                     : bg-zion-blue-light;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                 )}
               />;
             ))}
@@ -366,17 +394,20 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
 
         {steps[currentStep]?.skipText && (;
 
-
           <Button
             variant=ghost'
             className='text-zion-slate-light hover:text-white
             onClick={handleSkip}>;
 
+<<<<<<< HEAD
           className=w-full bg-zion-purple hover:bg-zion-purple-light
         </Button>;{steps[currentStep]?.skipText && (<Button;
             variant=ghost';
             className='text-zion-slate-light hover:text-white;
             onClick={handleSkip}>;className="w-full bg-zion-purple hover:bg-zion-purple-light";
+=======
+          className="w-full bg-zion-purple hover:bg-zion-purple-light"
+>>>>>>> origin/chore/fix-lint-and-merge
           onClick={handleAction}
         >;
           {steps[currentStep]?.action.text}
@@ -392,13 +423,17 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
             {steps[currentStep]?.skipText}
           </Button>
         )}
+<<<<<<< HEAD
 }
 
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       </CardFooter>;
     </Card>;
   );
+<<<<<<< HEAD
           >;{steps[currentStep]?.skipText}
           </Button>;
         )}}</CardFooter>;
@@ -494,3 +529,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>;
   )
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge
