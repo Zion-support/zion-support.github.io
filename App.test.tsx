@@ -1,6 +1,4 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import App from './App';
 
 describe('App', () => {
@@ -16,6 +14,6 @@ describe('App', () => {
 
   it('handles user interactions', () => {
     render(<App />);
-    // Add interaction tests here
+    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
 });
