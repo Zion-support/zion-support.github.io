@@ -8,25 +8,15 @@ export default function Home() {
 import React from 'react';
 import Link from 'next/link';
 import {
-  LightBulbIcon,
   CpuChipIcon,
-  GlobeAltIcon,
   ShieldCheckIcon,
   ChartBarIcon,
   UserGroupIcon,
   ArrowRightIcon,
-  CheckCircleIcon,
   StarIcon,
   RocketLaunchIcon
 } from '@heroicons/react/24/outline';
 
-interface CardProps {
-  title: string;
-  href: string;
-  description: string;
-  bullets?: string[];
-  icon?: string;
-}
 
 const stats = [
   { label: 'Companies Served', value: '500+' },
@@ -224,7 +214,7 @@ export default function HomePage() {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our clients have to say about working with us.
+              Don&apos;t just take our word for it. Here&apos;s what our clients have to say about working with us.
             </p>
           </div>
 
@@ -236,7 +226,7 @@ export default function HomePage() {
                     <StarIcon key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-6 italic">"{testimonial.content}"</p>
+                <p className="text-gray-600 mb-6 italic">&ldquo;{testimonial.content}&rdquo;</p>
                 <div>
                   <div className="font-semibold text-gray-900">{testimonial.author}</div>
                   <div className="text-gray-500 text-sm">{testimonial.role}</div>
@@ -255,7 +245,7 @@ export default function HomePage() {
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Join hundreds of companies already using our AI-powered solutions to drive innovation and growth.
-            Let's build something amazing together.
+            Let&apos;s build something amazing together.
           </p>
           <Link
             href="/contact"

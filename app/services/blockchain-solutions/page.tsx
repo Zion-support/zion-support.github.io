@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 export const metadata = {
   title: "Blockchain Solutions | Zion Tech Group",
@@ -157,7 +156,7 @@ function CTA() {
         Ready to Build Your Decentralized Future?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Contact us today for a free consultation and let's explore how blockchain can transform your business.
+        Contact us today for a free consultation and let&apos;s explore how blockchain can transform your business.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a

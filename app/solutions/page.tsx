@@ -68,7 +68,7 @@ export default function SolutionsPage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our solutions can help you achieve your business goals and drive growth.
+            Let&apos;s discuss how our solutions can help you achieve your business goals and drive growth.
           </p>
           <Link
             href="/contact"
