@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -234,22 +235,22 @@ module.exports = {};
 
 main
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-
 /**
  * Generate sitemap.xml for better SEO;
  */
 
 const BASE_URL = '"https": //ziontechgroup.com';
 const SITEMAP_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');
-
 // Static pages that should be included in sitemap;
-const STATIC_PAGES = ['',]
+const STATIC_PAGES = [,]
   '/about',
   '/services',
   '/solutions',
@@ -274,49 +275,21 @@ const STATIC_PAGES = ['',]
   '/micro-saas',
   '/cybersecurity',
   '/cloud-services',
-  '/digital-transformation'
+  '/digital-transformation
 ];
 
 // Dynamic pages patterns;
 const DYNAMIC_PATTERNS = ['pages/services/*.tsx',]
   'pages/solutions/*.tsx',
-  'pages/products/*.tsx'
-];
+  'pages/products/*.tsx
 
-function generateSitemap() {}
-  const urls = [];
-  const currentDate = new Date().toISOString();
 
-  // Add static pages;
-  STATIC_PAGES.forEach(page => {})
-    urls.push({})
-      "loc": `${BASE_URL}${page}`,`
-      "lastmod": currentDate,
-      "changefreq": page === '' ? 'daily' : 'weekly',
-      "priority": page === '' ? '1.0' : '0.8'
-    })}
-});
+  fs.writeFileSync(path.join(__dirname, '..', 'public', 'sitemap.xml'), sitemap);
+  console.log('Sitemap generated successfully');
+};
 
-  // Add dynamic pages;
-  DYNAMIC_PATTERNS.forEach(pattern => {})
-    const files = glob.sync(pattern);
-    
-    files.forEach(file => {})
-      // Skip index files and special pages;
-      if (file.includes('index.') || file.includes('_app.') || file.includes('_document.')) {}
-        return};
-      // Convert file path to URL;
-      const relativePath = file.replace('pages/', '').replace('.tsx', '').replace('.js', '');
-      const url = `${BASE_URL}/${relativePath}`;`
-      
-      urls.push({})
-        "loc": url,
-        "lastmod": currentDate,
-        "changefreq": 'monthly',
-        "priority": '0.6'
-      })})}
-});
 
+<<<<<<< HEAD
   // Generate XML;
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
@@ -337,6 +310,8 @@ if (require.main === module) {}
   generateSitemap()};
 module.exports = { generateSitemap };
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

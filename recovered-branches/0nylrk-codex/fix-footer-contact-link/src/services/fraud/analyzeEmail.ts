@@ -35,6 +35,7 @@ const domain = email && email.split('@')[1]?.toLowerCase();
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 // Email analysis functionality
+<<<<<<< HEAD
 import { suspiciousEmailDomains } from "./constants";
 =======
 // Email analysis functionality;
@@ -60,9 +61,11 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 =======
   const domain = email.split("@")[1]?.toLowerCase();
   const reasons: string[] = [];
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -262,3 +265,5 @@ export const analyzeEmail = (email:string):EmailAnalysisResult => {;'
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

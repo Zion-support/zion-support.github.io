@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Brain, Shield, Rocket, Cpu, Database, Atom, Users;
   CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
@@ -1121,3 +1122,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React, { useState } from 'react';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

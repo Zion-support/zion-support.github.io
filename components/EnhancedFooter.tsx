@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Brain,
   Mail,
   Phone,
@@ -30,6 +31,9 @@ class ErrorBoundary extends React.Component {}
   }
 }'
 import React from 'react';'
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 import {;
   Brain,;
@@ -39,9 +43,14 @@ import {;
   Globe,;
   Github,;
   Linkedin,;
+<<<<<<< HEAD
   Twitter,;'
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';'
 import React from 'react';
+=======
+  Twitter,;
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {
   Facebook,
   Twitter,
@@ -62,8 +71,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
+<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {}
     return { hasError: true };
@@ -75,15 +85,28 @@ class ErrorBoundary extends React.Component {}
   
   render() {}
     if (this.state.hasError) {}
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true ;};
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: ';, error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
+<<<<<<< HEAD
 }'
 import React from 'react';'
 import Link from 'next/link';
 import {;
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Brain,;
   Mail,;
   Phone,;
@@ -98,6 +121,7 @@ const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear(),;
 
   const footerSections = [;
+<<<<<<< HEAD
     {;'
       title: 'Services',;
       links: [;'
@@ -108,86 +132,32 @@ const EnhancedFooter: React.FC = () => {;
         {;'
           name: 'View All Services',;'
           href: '/comprehensive-2025-services-showcase',;
+=======
+    {;
+      title: 'Services';,;
+      links: [;
+        { name: 'AI Business Intelligence';, href: '/ai-business-intelligence' ;},;
+        { name: 'Quantum Cybersecurity';, href: '/quantum-cybersecurity' ;},;
+        { name: 'Edge Computing';, href: '/edge-computing-orchestration' ;},;
+        { name: 'Space Technology';, href: '/space-technology' ;},;
+        {;
+          name: 'View All Services';,;
+          href: '/comprehensive-2025-services-showcase';,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         },;
 <<<<<<< HEAD
       ],;
+<<<<<<< HEAD
     },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
 import React from 'react',
 import Link from 'next/link';
+=======
+    },    {        { name: 'View All Services';, href: '/comprehensive-2025-services-showcase' ;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 const EnhancedFooter: React.FC;
-const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear()
-  const footerSections = [
-    {
-      title: 'Services'
-      links: [
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
-        { name: 'Edge Computing', href: '/edge-computing-orchestration' },
-        { name: 'Space Technology', href: '/space-technology' },
-{
-          name: 'View All Services',
-          href: '/comprehensive-2025-services-showcase',
-        },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Work', href: '/portfolio' },
-        { name: 'Blog & Insights', href: '/blog' },
-        { name: 'Careers', href: '/careers' },
-{ name: 'Contact', href: '/contact' },
-      ],
-    },
-    {
-      title: 'Resources',
-      links: [
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Support Center', href: '/support' },
-        { name: 'Privacy Policy', href: '/privacy' },
-{ name: 'Terms of Service', href: '/terms' },
-      ],
-  const footerLinks = {
-    services: [
-      { name: 'AI Services', href: '/services/ai-services' },
-      { name: 'IT Services', href: '/services/it-services' },
-      { name: 'Micro SaaS', href: '/services/micro-saas' },
-      { name: 'Web Development', href: '/services/web-development' },
-      { name: 'Cloud Services', href: '/services/cloud-services' },
-      { name: 'AI Development', href: '/services/ai-development' },
-    ],
-    solutions: [
-      { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
-      { name: 'Customer Support', href: '/solutions/customer-support' },
-      { name: 'Email Automation', href: '/solutions/email-automation' },
-      { name: 'Event Management', href: '/solutions/event-management' },
-      { name: 'Project Management', href: '/solutions/project-management' },
-      { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Blog', href: '/blog' },
-    ],
-    resources: [
-      { name: 'Help Center', href: '/help' },
-      { name: 'Pricing Guide', href: '/pricing-guide' },
-      { name: 'Search', href: '/search' },
-      { name: 'Sitemap', href: '/sitemap' },
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-    ],
-  };
 
+<<<<<<< HEAD
   const socialLinks = [
     {
       name: 'Facebook',
@@ -870,3 +840,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

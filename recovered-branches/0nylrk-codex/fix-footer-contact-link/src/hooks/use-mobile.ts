@@ -29,7 +29,9 @@ import {useState, useEffect} from 'react';
 =======
 
 
+  return isMobile
 import {useState, useEffect} from 'react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -99,10 +101,24 @@ function useIsMobile() {
     const handle_resize = () =>: any {
       setIsMobile (window.inner_width < 768);
     }
+=======
+export /**
+ * useIsMobile - Function description
+ */
+function useIsMobile() {
+  const [is_mobile, setIsMobile] = useState (
+    typeof window !== 'undefined' ? window.inner_width < 768 : false);
+;
+  useEffect (() => {
+    const handle_resize = () =>: any {
+      setIsMobile (window.inner_width < 768);
+    }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
     // Check condition
 if ( {) {
   $2}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -111,6 +127,8 @@ if ( {) {
   return isMobile;
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       window.addEventListener ('resize', handle_resize);
 =======
   useEffect(() => {}
@@ -125,6 +143,7 @@ if ( {) {
     return undefined;
   }, []);
 
+<<<<<<< HEAD
   return isMobile;
 }'
       window.addEventListener ('resize', handle_resize);'
@@ -143,6 +162,9 @@ if ( {) {
 =======
 =======
       setIsMobile(window.innerWidth < 768)
+=======
+setIsMobile(window.innerWidth < 768)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', handleResize);
@@ -150,6 +172,7 @@ if ( {) {
     }
     return undefined
   }, []);
+<<<<<<< HEAD
 
   return isMobile
 }
@@ -167,9 +190,17 @@ import { useState, useEffect } from 'react',;
 =======
   }, []);
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+  return isMobile
+}
 import { useState, useEffect } from 'react',;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  }, []);import { useState, useEffect } from 'react',;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;
@@ -177,6 +208,36 @@ export function useIsMobile() {;
   useEffect(() => {;
     const handleResize = () => {;
       setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 768);
+    };
+"
+    if (typeof window !== "undefined") {""
+      window.addEventListener("resize", handleResize);""
+      return () => window.removeEventListener("resize", handleResize);"
+    }
+
+    return undefined;
+  }, []);
+
+  return isMobile;
+
+}"
+      window.addEventListener ('resize', handle_resize);
+      return () => window.removeEventListener ('resize', handle_resize);
+
+
+import { useState, useEffect } from 'react',;
+'
+import { useState, useEffect } from 'react',;'
+
+export function useIsMobile() {;
+  const [isMobile, setIsMobile] = useState(;
+    typeof window !== 'undefined' ? window.innerWidth < 768 : false;')
+  ),;
+  useEffect(() => {;
+
+    const handleResize = () => {;
+pr-12325
     },;
     if (typeof window !== 'undefined') {;
       window.addEventListener('resize', handleResize);
@@ -189,10 +250,17 @@ export function useIsMobile() { return null; }
       window.addEventListener('resize', handleResize);'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return () => window.removeEventListener('resize', handleResize);
+      setIsMobile(window.innerWidth < 768);
+    },;'
+    if (typeof window !== 'undefined') {;''
+      window.addEventListener('resize', handleResize);''
+      return () => window.removeEventListener('resize', handleResize);'
+
     }
     return undefined;
   }, []);
   return isMobile;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -205,6 +273,10 @@ export function useIsMobile() { return null; }
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 ;
@@ -218,30 +290,32 @@ export function useIsMobile() { return null; }
 =======
 }
 }
+}}
+;
 
-import { useState, useEffect } from 'react',;
+
+
+
+}
+}
+'
+import { useState, useEffect } from 'react',;'
 ;
-export function useIsMobile() {;
-  const [isMobile, setIsMobile] = useState(;
-    typeof window !== 'undefined' ? window.innerWidth < 768 :false;
-  ),;
-;
-  useEffect(() => {;
-    const handleResize = () => {;
+  return is_mobile;
+
+    typeof window !== 'undefined' ? window.innerWidth < 768 :false;')
       setIsMobile(window.innerWidth < 768),;
-    },;
-;
-    if (typeof window !== 'undefined') {;
       window.addEventListener('resize', handleResize),;
       return () => window.removeEventListener('resize', handleResize),;
-    }
     return undefined,;
   }, []),;
-;
   return isMobile,;}
  export function useIsMobile () {
   const [isMobile, setIsMobile] = useState (typeof window !== 'undefined' ? window.innerWidth < 768 : false);
-return isMobile 
+pr-12325
+ export function useIsMobile () {'
+  const [isMobile, setIsMobile] = useState (typeof window !== 'undefined' ? window.innerWidth < 768 : false);'
+return isMobile;
 }
 }
 ;
@@ -250,6 +324,7 @@ return isMobile
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function useIsMobile() {;
@@ -296,3 +371,7 @@ return isMobile
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

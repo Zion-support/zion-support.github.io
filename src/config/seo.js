@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // SEO Meta Tags Configuration;
 export const defaultSEO = {}
     type: 'website','
@@ -67,3 +68,8 @@ export default defaultSEO;
 =======
 }'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+// SEO Meta Tags Configuration
+export const defaultSEO = {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

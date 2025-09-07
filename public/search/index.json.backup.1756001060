@@ -65,10 +65,58 @@
     "h1": "Service not found"
   },
   {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "route": "/_app",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/_document",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/about",
+    "title": "About Us - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/ai-autonomous-research-assistant",
+    "title": "AI Autonomous Research Assistant - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/ai-business-intelligence",
+    "title": "AI Business Intelligence - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/blog",
+    "title": "Blog & Insights - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/comprehensive-2025-services-showcase",
+    "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
+    "h1": "2025 Innovative Services Showcase"
+  },
+  {
+    "route": "/contact",
+    "title": "Contact Us - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/edge-computing-orchestration",
+    "title": "Edge Computing Orchestration - Zion Tech Group",
+    "h1": ""
+    "title": "Edge Computing Orchestration - Zion Tech Group",    "h1": ""
+    "title": "Edge Computing Orchestration - Zion Tech Group",    "h1": ""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   {
     "route": "/",
@@ -77,9 +125,59 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
     "h1": ""  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 ]
+=======
+    "route": "/portfolio",
+    "title": "Our Portfolio - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/pricing-2025",
+    "title": "Pricing 2025 - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/privacy",
+    "title": "Privacy Policy - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/quantum-cybersecurity",
+    "title": "Quantum Cybersecurity - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/resources",
+    "title": "Resources - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/solutions",
+    "title": "Technology Solutions - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/space-technology",
+    "title": "Space Technology - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/team",
+    "title": "Our Team - Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/terms",
+    "title": "Terms of Service - Zion Tech Group",
+    "h1": ""
+  }
+    "h1": ""  }
+    "h1": ""  }
+]
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

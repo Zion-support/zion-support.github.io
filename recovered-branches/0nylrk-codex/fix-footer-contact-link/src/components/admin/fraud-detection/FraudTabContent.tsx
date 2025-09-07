@@ -1,15 +1,19 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
 
@@ -95,11 +99,14 @@ import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
 
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -109,9 +116,12 @@ import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface FraudTabContentProps {
-  tab_value: string;
+  tabValue: string
 }
+<<<<<<< HEAD
 
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 
@@ -564,3 +574,8 @@ default:
   }
 };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React from "react";
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

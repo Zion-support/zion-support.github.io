@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
@@ -7,6 +8,19 @@ const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {}
   if (!fs.existsSync(GRANTS_DIR)) {}
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import { v4 as uuidv4  } from 'uuid';
+} from '../../../types/grants';
+
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {}
+    fs.mkdirSync(GRANTS_DIR, { recursive: true,}
+});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 function readAllGrants(): GrantApplication[] {}
   ensureDir();'
@@ -16,12 +30,18 @@ function readAllGrants(): GrantApplication[] {}
     const raw = fs.readFileSync(full, 'utf8');
     return JSON.parse(raw) as GrantApplication;
   });
+<<<<<<< HEAD
 export default function handler() { return null; }
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter(g => {      return (function ensureDir() {}
   if (!fs.existsSync(GRANTS_DIR)) {}
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
 
+<<<<<<< HEAD
   }
 }
 function readAllGrants(): GrantApplication[] {}
@@ -59,6 +79,15 @@ function readAllGrants (): GrantApplication[] {}
     const full = path.join (GRANTS_DIR, file);'
     const raw = fs.readFileSync (full, 'utf8');
     return JSON.parse (raw) as GrantApplication;
+=======
+const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'));
+  return files.map(file = > {
+   ;
+  const full = path.join(GRANTS_DIR, file);
+
+const raw = fs.readFileSync(full, 'utf8');}
+    return JSON.parse(raw) as GrantApplication;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   });
 export default /**;
  * handler - Function description;
@@ -79,6 +108,7 @@ function ensure_dir() {}
     fs.mkdir_sync (GRANTS_DIR, { recursive: true });
   }
 }
+<<<<<<< HEAD
 function readAllGrants (): GrantApplication[] {}
   ensure_dir ();'
   const files = fs.readdir_sync (GRANTS_DIR).filter ((f) => f.ends_with ('.json'));
@@ -215,3 +245,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  res.status(405).end('Method Not Allowed')
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+  res.status(405).end('Method Not Allowed')
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

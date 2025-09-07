@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -22,8 +26,9 @@ class BuildMonitor {}
     this.interval = 60000; // 1 minute;
     this.lastBuildTime = null};
   async start() {}
-    console.log('Starting Build Monitor...');
+
     this.isRunning = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Initial build check;
     await this.runBuildCheck();
@@ -33,6 +38,10 @@ class BuildMonitor {}
     await this.runBuildCheck();
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    // Initial build check;
+    await this.runBuildCheck();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
@@ -54,13 +63,13 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-    
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
       console.log('Running build check...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,10 +79,13 @@ class BuildMonitor {}
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const child = spawn('npm', ['run', 'build'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
+        "cwd": process.cwd();"
       };);
+<<<<<<< HEAD
 <<<<<<< HEAD
       let output = ;';';
       let errorOutput = ;';';
@@ -86,16 +98,18 @@ class BuildMonitor {}
 
 =======
 
+=======
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
-});
+
 
 
 <<<<<<< HEAD
@@ -106,11 +120,13 @@ class BuildMonitor {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       child.on('close', (code) => {}
         if ( {})
+
           console.log('Build check passed ✓')) {}
      {}
           console.log('Build check passed ✓')};
           this.lastBuildTime = new Date()} else {}
           console.log('Build check failed ✗');
+<<<<<<< HEAD
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
 <<<<<<< HEAD
@@ -153,37 +169,35 @@ class BuildMonitor {}
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       cleanChild.on('close', (code) => {}
-        if ( {})
           console.log('Clean completed, retrying build...')) {}
-     {}
           console.log('Clean completed, retrying build...')};
           this.runBuildCheck()} else {}
           console.log('Clean failed')};
-      })} catch (error) {}
       console.error('Error running build "fix": ', error.message)};
-  };
   stop() {}
     console.log('Stopping Build Monitor...');
+<<<<<<< HEAD
     this.isRunning = false;
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if ( {})
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       clearInterval(this.intervalId)};
     console.log('Build Monitor stopped')) {}
-     {}
-      clearInterval(this.intervalId)};
     console.log('Build Monitor stopped')}};
-};
+
 // Start the monitor if run directly;
-if ( {})
   const monitor = new BuildMonitor) {}
-     {}
   const monitor = new BuildMonitor}(;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -221,5 +235,11 @@ module.exports = BuildMonitor;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+  // Handle graceful shutdown;
+
+  monitor.start().catch(console.error)};
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

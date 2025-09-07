@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Accessibility Checker Automation;
  * Checks and improves accessibility compliance;
@@ -19,26 +23,22 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class AccessibilityChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'accessibility-checker.log');
-        this.reportFile = path.join(this.projectRoot, 'accessibility-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
@@ -54,25 +54,20 @@ class AccessibilityChecker {}
         const issues = [];
 =======
         console.log(message)};
-    checkAccessibilityIssues() {}
-        this.log('Checking accessibility issues...');
-        
+    checkAccessibilityIssues() {}"
+
         const files = this.findSourceFiles(;);
         const issues = [];
+<<<<<<< HEAD
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         for (const file of files) {}
             try {}
-                const content = fs.readFileSync(file, 'utf8';);
-                const fileIssues = this.analyzeFileForAccessibility(content, file;);
-                issues.push(...fileIssues)} catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
-        };
-        this.log(`Found ${issues.length} accessibility issues`);
-        return issues};
-    findSourceFiles() {}
-        const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+
         const files = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
         const scanDirectory = (dir) => {}
             if () retu) {}
@@ -84,10 +79,16 @@ class AccessibilityChecker {}
     ) retu}r;n;
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 
@@ -101,12 +102,16 @@ class AccessibilityChecker {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
             };
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }};
         scanDirectory(this.projectRoot);
         return files};
     analyzeFileForAccessibility(content, file) {}
-        const issues = [];
+
         const lines = content.split('\n';);
+<<<<<<< HEAD
 <<<<<<< HEAD
         for (let i = ;0; i < lines.length i++) {}
             const line = lines[i];
@@ -118,73 +123,25 @@ class AccessibilityChecker {}
             const lineNumber = i +;1;
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        for (let i = ;0; i < lines.length i++) {}
+            const line = lines[i];
+            const lineNumber = i +;1;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             // Check for missing alt attributes;
             if (&& !line.includes('alt=')) {}
                 issues.push({})
-                    "file": path.relative(this.projectRoot, file),
-                    "line": lineNumber,
-                    "type": 'missing_alt',
-                    "severity": 'error',
-                    "message": 'Image missing alt attribute',
-                    "suggestion": 'Add alt attribute to image tag'
+
                 })};
             // Check for missing aria-labels;
             if (line.includes('<button') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {}
                 if (!line.includes('>') || line.trim().endsWith('/>')) {}
-                    issues.push({})
-                        "file": path.relative(this.projectRoot, file),
-                        "line": lineNumber,
-                        "type": 'missing_aria_label',
-                        "severity": 'warning',
-                        "message": 'Button missing aria-label',
-                        "suggestion": 'Add aria-label or aria-labelledby to button'
-                    })};
-            };
-            // Check for missing form labels;
-            if (line.includes('<input') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {}
-                const hasLabel = lines.slice(Math.max(0, i - 5), i + 1).some(l => )
-                    l.includes('<label') && l.includes('for=');
-               ) {}
-    && !line.includes('alt=')) {}
-                issues.push({})
-                    "file": path.relative(this.projectRoot, file),
-                    "line": lineNumber,
-                    "type": 'missing_alt',
-                    "severity": 'error',
-                    "message": 'Image missing alt attribute',
-                    "suggestion": 'Add alt attribute to image tag'
-                })};
-            // Check for missing aria-labels;
-            if (line.includes('<button') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {}
-                if (!line.includes('>') || line.trim().endsWith('/>')) {}
-                    issues.push({})
-                        "file": path.relative(this.projectRoot, file),
-                        "line": lineNumber,
-                        "type": 'missing_aria_label',
-                        "severity": 'warning',
-                        "message": 'Button missing aria-label',
-                        "suggestion": 'Add aria-label or aria-labelledby to button'
-                    })};
-            };
-            // Check for missing form labels;
-            if (line.includes('<input') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {}
-                const hasLabel = lines.slice(Math.max(0, i - 5), i + 1).some(l => )
-                    l.includes('<label') && l.includes('for=');
-               } ;);
-                if ( {})
-                    issues.push({})
-                        "file": path.relative(this.projectRoot, file),
-                        "line": lineNumber,
-                        "type": 'missing_form_label',
-                        "severity": 'error',
-                        "message": 'Input missing label',
-                        "suggestion": 'Add label element or aria-label to input'
-                    })};
-            };
+
             // Check for heading hierarchy;
             if (line.match(/<h[1-6]/)) {}
                 const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}]
      {}
+<<<<<<< HEAD
                     issues.push({})
                         "file": path.relative(this.projectRoot, file),
                         "line": lineNumber,
@@ -265,11 +222,20 @@ class AccessibilityChecker {}
  */
 <<<<<<< HEAD
 =======
+=======
+
+            fs.mkdirSync(utilsDir, { "recursive": true })};"
+        // Accessibility utilities;"
+        const accessibilityUtils = "/**"
+ * Accessibility Utilities;
+ * Helper functions for accessibility compliance;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export const accessibility = {}
-  // Generate unique IDs for form elements;
+  // Generate unique IDs for form elements;"
   "generateId": (prefix = 'element') => {}
+<<<<<<< HEAD
     return \"\${prefi) {}
     ) {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
@@ -613,13 +579,34 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
             this.log('Accessibility Checker completed successfully');
             return report} catch (error) {}
             this.log(`Accessibility Checker "failed": ${error.message}`);
+=======
+
+export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children }) => {}"
+
+  const [issues, setIssues] = useState<string[]>([]);
+</string>
+      <div>
+</div>
+        <div style={{}"
+
+        const issues = this.checkAccessibilityIssues(;);
+        const utilities = this.createAccessibilityUtilities(;);
+        const report = {}
+
+            "accessibility": {}"
+                issues: issues,"
+                "utilities": utilities,
+                "summary": {}"
+                    total: issues.length,"
+
+            },
+            "recommendations": this.generateAccessibilityRecommendations(issues);"
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
-    };
-};
 // Run the checker if this script is executed directly;
-if ( {})
     const checker = new AccessibilityChecker) {}
-     {}
     const checker = new AccessibilityChecker}(;);
     checker.run().catch(console.error)};
 <<<<<<< HEAD
@@ -640,6 +627,5 @@ module.exports = AccessibilityChecker;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-module.exports = AccessibilityChecker;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

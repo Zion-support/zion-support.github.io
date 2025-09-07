@@ -5,6 +5,7 @@
 #!/usr/bin/env node
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -23,11 +24,14 @@ console.log('==================');
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const fs = require('fs');
 const path = require('path');
-
 console.log('🔧 Final Syntax Fix');
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log('==================');
 
@@ -111,23 +115,26 @@ function fixSpecificErrors(content) {
     // Clean up whitespace
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     .replace(/\s+$/gm, '');
+=======
+
+function fixSpecificErrors(content) {
+  return content;
+    // Fix JSX closing tags;
+
+    .replace(/\s+$/gm, );
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Files to fix
+=======
+// Files to fix;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const filesToFix = [
-  'pages/about.tsx',
-  'pages/blog.tsx',
-  'pages/ai-services.tsx',
-  'pages/api.tsx',
-  'pages/accessibility.tsx',
-  'pages/careers.tsx',
-  'components/Header.tsx',
-  'components/Footer.tsx',
-  'components/Layout.tsx',
-  'components/layout/MainLayout.tsx'
+
 ];
 <<<<<<< HEAD
 let totalFixed = 0;
@@ -137,6 +144,9 @@ let totalFixed = 0;
 let totalFixed = 0;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -144,20 +154,24 @@ let totalFixed = 0;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 for (const file of filesToFix) {
   try {
+  // TODO: Implement
     if (!fs.existsSync(file)) {
-      console.log(`⚠️  File not found: ${file}`);
+      console.log(`⚠️  File not found: ${file});
       continue;
-    }
 
-    let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
+<<<<<<< HEAD
 <<<<<<< HEAD
     content = fixSpecificErrors(content);
 =======
@@ -202,3 +216,10 @@ console.log('🎉 Final syntax fix completed!');
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    content = fixSpecificErrors(content);
+    if (content !== originalContent) {
+
+console.log(`\n✅ Fixed ${totalFixed} files`);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

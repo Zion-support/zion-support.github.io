@@ -1,33 +1,8 @@
-#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class AutomationScriptFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.scriptsDir = path.join(this.projectRoot, 'scripts');
-    this.fixedCount = 0;
-    this.errors = [];
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  fixMergeConflicts(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-
-      if (
-        content.includes('>>>>>>>')
-      ) {
-        this.log(`Fixing merge conflicts in: ${filePath}`);
-
-        // Simple merge conflict resolution - take the HEAD version
-        let fixedContent = content
+            '$1'
+          )
           .replace(
+            /
             '$1'
           );
 
@@ -193,4 +168,6 @@ fixer
     );
     process.exit(1);
   });
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+
+

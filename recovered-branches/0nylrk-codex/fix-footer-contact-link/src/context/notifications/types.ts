@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -342,3 +343,7 @@ export type FilterType = | 'all' | 'unread' | 'messages' | 'onboarding' | 'syste
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

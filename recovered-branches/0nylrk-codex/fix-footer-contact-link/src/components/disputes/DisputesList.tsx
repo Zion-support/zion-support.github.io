@@ -16,6 +16,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react";
@@ -277,9 +278,14 @@ export function DisputesList() { return null; }
         </div>
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="border rounded-md">
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Table>
+
             <TableHeader>
+
               <TableRow>
+<<<<<<< HEAD
                 <TableHead>Case ID</TableHead>
                 <TableHead>Project</TableHead>
                 <TableHead>Parties</TableHead>
@@ -474,6 +480,27 @@ function DisputesList() {
   const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");
 ;
   const filtered_disputes = status_filter === "all";
+=======
+
+                <TableHead>Case ID
+                <TableHead>Project
+                <TableHead>Parties
+                <TableHead>Created
+                <TableHead>Status"
+                <TableHead className="text-right">Actions"
+            <TableBody>
+
+                <TableRow key={i}>
+                  <TableCell><Skeleton className="h-4 w-24" />""
+                  <TableCell><Skeleton className="h-4 w-40" />""
+                  <TableCell><Skeleton className="h-4 w-32" />""
+                  <TableCell><Skeleton className="h-6 w-20" />""
+                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" />"
+  const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");"
+;"
+  const filtered_disputes = status_filter === "all";"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ? disputes;
     : disputes.filter (dispute => dispute.status === status_filter);
 ;
@@ -575,11 +602,13 @@ function DisputesList() { return null; }
         return "default";
     }
 
-
-
               ))}
             </TableBody>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      case "closed":;            </TableBody>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </Table>;
         </div>;
       </div>;
@@ -781,7 +810,202 @@ function DisputesList() { return null; }
 =======
           onClick={() => setStatusFilter("closed")}
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+if (disputes && disputes.length === 0) {;
+    return (
+        return "outline",;
+      default:;
+        return "default";
+    }
+  },;
+;
+  };
+  if (isLoading) {;
+    return (;
+      <div className="space-y-4">;
+        <div className="flex gap-2 mb-4">;
+          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (;
+            <Skeleton key={status} className="h-10 w-24" />;
+          ))}
+        </div>;
+        <div className="border rounded-md">;
+          <Table>;
+            <TableHeader>;
+              <TableRow>;
+                <TableHead>Case ID</TableHead>;
+                <TableHead>Project</TableHead>;
+                <TableHead>Parties</TableHead>;
+                <TableHead>Created</TableHead>;
+                <TableHead>Status</TableHead>;
+                <TableHead className="text-right">Actions</TableHead>;
+              </TableRow>;
+            </TableHeader>;
+            <TableBody>;
+              {[...Array(5)].map((_, i) => (;
+                <TableRow key={i}>;
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
+                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
+                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
+                </TableRow>;
+
+  if (disputes && disputes.length === 0) {;
+
+  if (disputes.length === 0) {
+    return (
+;
+  if (disputes.length === 0) {;
+    return (;
+      <div className="text-center py-12 border rounded-md bg-muted/20">;
+        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
+        <h3 className="text-xl font-medium">No disputes found</h3>;
+        <p className="text-muted-foreground mt-2">;
+          No active disputes match the selected filter;
+        </p>;
+      </div>;
+    ),;
+  }
+;
+  return (;
+    <div className="space-y-4">;
+      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">;
+        <Button;
+          variant={statusFilter === "all" ? "default" :"outline"}
+          onClick={() => setStatusFilter("all")}
+          size="sm";
+        >;
+          All;
+        </Button>;
+        <Button;
+          variant={statusFilter === "open" ? "default" :"outline"}
+          onClick={() => setStatusFilter("open")}
+          size="sm";
+        >;
+          Open;
+        </Button>;
+        <Button;
+          variant={statusFilter === "under_review" ? "default" :"outline"}
+          onClick={() => setStatusFilter("under_review")}
+          size="sm";
+        >;
+          Under Review;
+        </Button>;
+        <Button;
+          variant={statusFilter === "resolved" ? "default" :"outline"}
+          onClick={() => setStatusFilter("resolved")}
+          size="sm";
+        >;
+          Resolved;
+        </Button>;
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      </div>
+    )
+  }
+
+  if (disputes.length === 0) {
+    return (
+      <div className="text-center py-12 border rounded-md bg-muted/20">
+        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
+        <h3 className="text-xl font-medium">No disputes found</h3>
+        <p className="text-muted-foreground mt-2">
+          No active disputes match the selected filter
+        </p>
+      </div>
+    )
+  }
+  return (
+    <div className="space-y-4">
+      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
+        <Button
+          variant={statusFilter === "all" ? "default" : "outline"}
+          onClick={() => setStatusFilter("all")}
+          size="sm"
+        >
+          All
+        </Button>
+        <Button
+          variant={statusFilter === "open" ? "default" : "outline"}
+          onClick={() => setStatusFilter("open")}
+          size="sm"
+        >
+          Open
+        </Button>
+        <Button
+          variant={statusFilter === "under_review" ? "default" : "outline"}
+          onClick={() => setStatusFilter("under_review")}
+          size="sm"
+        >
+          Under Review
+        </Button>
+        <Button
+          variant={statusFilter === "resolved" ? "default" : "outline"}
+          onClick={() => setStatusFilter("resolved")}
+          size="sm"
+        >
+          Resolved
+        </Button>
+        <Button
+          variant={statusFilter === "closed" ? "default" : "outline"}
+          onClick={() => setStatusFilter("closed")}
+          size="sm"
+        >
+          Closed
+        </Button>
+      </div>
+      <div className="border rounded-md overflow-hidden">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Case ID</TableHead>
+              <TableHead>Project</TableHead>
+              <TableHead>Parties</TableHead>
+              <TableHead>Created</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead className="text-right">Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {filteredDisputes.map((dispute) => (
+              <TableRow key={dispute.id}>
+                <TableCell className="font-mono text-xs">
+                  {dispute.id.split('-')[0]}
+                </TableCell>
+                <TableCell>
+                  {dispute.project?.title |"Unknown Project"}
+                </TableCell>
+                <TableCell>
+                  <div className="flex flex-col text-sm">
+                    <span>
+                      Client: {dispute.client_profile?.display_name |"Unknown Client"}
+                    </span>
+                    <span>
+                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
+                    </span>
+                  </div>
+                </TableCell>
+                <TableCell>
+                  {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
+                </TableCell>
+                <TableCell>
+                  <Badge variant={getStatusBadgeVariant(dispute.status)}>
+                    {dispute.status.replace('_ ')}
+                  </Badge>
+                </TableCell>
+                <TableCell className="text-right">
+                  <Button asChild size="sm">
+                    <Link to={`/dashboard/disputes/${dispute.id}`}>View Details</Link>
+                  </Button>
+                </TableCell>
+              </TableRow>
+            ))}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ;
   // Check condition
@@ -941,7 +1165,13 @@ if ( {) {
           variant={status_filter === "closed" ? "default" : "outline"}
           on_click={() => setStatusFilter ("closed")}
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<Button;
+          variant={statusFilter === "closed" ? "default" :"outline"}
+          onClick={() => setStatusFilter("closed")}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           size="sm";
         >;
           Closed;
@@ -972,6 +1202,24 @@ if ( {) {
               <TableRow key={dispute.id}>;
                 <TableCell className="font - mono text - xs">;
                   {dispute.id.split ('-')[0]}
+;
+      <div className="border rounded-md overflow-hidden">;
+        <Table>;
+          <TableHeader>;
+            <TableRow>;
+              <TableHead>Case ID</TableHead>;
+              <TableHead>Project</TableHead>;
+              <TableHead>Parties</TableHead>;
+              <TableHead>Created</TableHead>;
+              <TableHead>Status</TableHead>;
+              <TableHead className="text-right">Actions</TableHead>;
+            </TableRow>;
+          </TableHeader>;
+          <TableBody>;
+            {filteredDisputes.map((dispute) => (;
+              <TableRow key={dispute.id}>;
+                <TableCell className="font-mono text-xs">;
+                  {dispute.id.split('-')[0]}
                 </TableCell>;
                 <TableCell>;
                   {dispute.project?.title || "Unknown Project"}
@@ -985,13 +1233,23 @@ if ( {) {
                       Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<div className="flex flex-col text-sm">;
+                    <span>;
+                      Client:{dispute.client_profile?.display_name || "Unknown Client"}
+                    </span>;
+                    <span>;
+                      Talent:{dispute.talent_profile?.display_name || "Unknown Talent"}
                     </span>;
                   </div>;
                 </TableCell>;
                 <TableCell>;
 
-
-
+</TableBody>
+        </Table>
+      </div>
+    </div>
+  )
+}
           </TableBody>;
         </Table>;
       </div>;
@@ -1021,6 +1279,7 @@ if ( {) {
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+;
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix:true })}
                 </TableCell>;
                 <TableCell>;
@@ -1047,7 +1306,11 @@ if ( {) {
                 </TableCell>;
                 <TableCell>;
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          onClick={() => setStatusFilter("closed")}                  <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {dispute.status.replace('_ ')}
                   </Badge>;
                 </TableCell>;"
@@ -1072,9 +1335,17 @@ type DisputesListProps = {}
   disputes: Dispute[];
 isLoading: boolean;
 };
+<<<<<<< HEAD
 export function DisputesList() { return null; }
   const filteredDisputes = statusFilter === "all" const getStatusBadgeVariant = (status: DisputeStatus) => {}
   switch (status) {}
+=======
+export function DisputesList ({
+  disputes, isLoading 
+}: DisputesListProps) {
+  const filteredDisputes = statusFilter === "all" const getStatusBadgeVariant = (status: DisputeStatus) => {
+  switch (status) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 
@@ -1104,6 +1375,7 @@ if (isLoading) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1119,3 +1391,142 @@ if (isLoading) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+    switch (status) {"
+      case "open": return "default";""
+      case "under_review":;""
+        return "secondary",""
+      case "resolved":;""
+        return "outline", // Changed from './success'; to "outline";""
+      case "closed":;""
+        return "outline";"
+      default:;"
+        return "default";"
+
+
+
+              ))}
+        </div>;
+      </div>;"
+      <div className="text-center py-12 border rounded-md bg-muted/20">;"
+        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;"
+        <h3 className="text-xl font-medium">No disputes found</h3>;""
+        <p className="text-muted-foreground mt-2">;"
+</p>
+        </p>;
+    <div className="space-y-4">;"
+      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">;"
+        <Button;"
+          variant={statusFilter === "all" ? "default" : "outline"}""
+          onClick={() => setStatusFilter("all")}"
+
+          variant={statusFilter === "open" ? "default" : "outline"}""
+          onClick={() => setStatusFilter("open")}"
+
+          variant={statusFilter === "under_review" ? "default" : "outline"}""
+          onClick={() => setStatusFilter("under_review")}"
+
+          variant={statusFilter === "resolved" ? "default" : "outline"}""
+          onClick={() => setStatusFilter("resolved")}"
+
+      <div className="space - y-4">;"
+        <div className="flex gap - 2 mb - 4">;"
+            <Skeleton key={status} className="h - 10 w - 24" />))}"
+
+        <div className="border rounded - md">;"
+          <Table>;
+
+            <TableHeader>;
+
+              <TableRow>;
+
+                <TableHead > Case ID;
+                <TableHead > Project;
+                <TableHead > Parties;
+                <TableHead > Created;
+                <TableHead > Status;"
+                <TableHead className="text - right">Actions;"
+            <TableBody>;
+
+                <TableRow key={i}>;
+                  <TableCell><Skeleton className="h - 4 w - 24" />;""
+                  <TableCell><Skeleton className="h - 4 w - 40" />;""
+                  <TableCell><Skeleton className="h - 4 w - 32" />;""
+                  <TableCell><Skeleton className="h - 6 w - 20" />;""
+                  <TableCell className="text - right"><Skeleton className="h - 9 w - 20 ml - auto" />;"
+      </div>);"
+      <div className="text - center py - 12 border rounded - md bg - muted / 20">;"
+        <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;"
+        <h3 className="text - xl font - medium">No disputes found</h3>;""
+        <p className="text - muted - foreground mt - 2">;"
+      <div className="flex gap - 2 mb - 4 overflow - x-auto pb - 2">;"
+          variant={status_filter === "all" ? "default" : "outline"}""
+          on_click={() => setStatusFilter ("all")}"
+
+          variant={status_filter === "open" ? "default" : "outline"}""
+          on_click={() => setStatusFilter ("open")}"
+
+          variant={status_filter === "under_review" ? "default" : "outline"}""
+          on_click={() => setStatusFilter ("under_review")}"
+
+          variant={status_filter === "resolved" ? "default" : "outline"}""
+          on_click={() => setStatusFilter ("resolved")}"
+
+          variant={status_filter === "closed" ? "default" : "outline"}""
+          on_click={() => setStatusFilter ("closed")}"
+
+      <div className="border rounded - md overflow - hidden">;"
+
+
+
+
+              <TableRow key={dispute.id}>;
+                <TableCell className="font - mono text - xs">;"
+
+                <TableCell>;
+
+                  <div className="flex flex - col text - sm">;"
+                    <span>;
+</span>
+                    </span>;
+
+
+
+
+
+                  <Badge variant={getStatusBadgeVariant (dispute.status)}>;
+
+                <TableCell className="text - right">;"
+                  <Button as_child size="sm">;"
+
+                    <Link to={`/dashboard / disputes/${dispute.id}`}>View Details;
+    </div>);
+
+
+                  <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+
+                <TableCell className="text-right">;"
+                  <Button asChild size="sm">;"
+`;
+                    <Link to={`/dashboard/disputes/${dispute.id}`}>View Details;
+  return (<div className="space-y-4" > <div className="flex gap-2 mb-4" > {"
+</div>)"
+  ["All", "Open", "Under Review", "Resolved", "Closed" ].map ( (status) => (<Skeleton key= {"
+  status;"
+}className="h-10 w-24" />"
+}</div> <div className="border rounded-md" > <Table> <TableHeader> <TableRow> <TableHead>Case ID <TableHead>Project <TableHead>Parties <TableHead>Created <TableHead>Status <TableHead className="text-right" >Actions   <TableBody> {"
+</div>)
+  [...Array (5) ].map ( (, i) => (<TableRow key= {
+  i;)"
+}> <TableCell><Skeleton className="h-4 w-24" /> <TableCell><Skeleton className="h-4 w-40" /> <TableCell><Skeleton className="h-4 w-32" /> <TableCell><Skeleton className="h-4 w-24" /> <TableCell><Skeleton className="h-6 w-20" /> <TableCell className="text-right" ><Skeleton className="h-9 w-20 ml-auto" /> ) )"
+}  </div> </div>) "
+}> All  <Button > Open  <Button > Under Review  <Button > Resolved  <Button > Closed  </div> <div className="border rounded-md overflow-hidden" > <Table> <TableHeader> <TableRow> <TableHead>Case ID <TableHead>Project <TableHead>Parties <TableHead>Created <TableHead>Status <TableHead className="text-right" >Actions   <TableBody> {"
+  filteredDisputes.map ( (dispute) => (<TableRow key= {
+  dispute.id;"
+}>  <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div>  <TableCell> {"
+)
+} <TableCell>   ) ) 
+}  </div> </div>) "`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

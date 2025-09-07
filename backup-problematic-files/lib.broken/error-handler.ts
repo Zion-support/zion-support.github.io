@@ -7,29 +7,33 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface ApiError extends Error {
+  // TODO: Implement
+}
   statusCode?: number;
   isOperational?: boolean}
 export class AppError extends Error implements ApiError {
-  public "statusCode": number;
-  public isOperational: boolean;
-  constructor(message: string, "statusCode": number = 500) {
+  // TODO: Implement
+  public "statusCode": number;"
+  public isOperational: boolean;"
+  constructor(message: string, "statusCode": number = 500) {"
     super(message);
     this && this.statusCode = statusCode;
     this && this.isOperational = true;
-    Error && Error.captureStackTrace(this, this && this.constructor)}
-export const errorHandler = ("err": ApiError, "req": NextApiRequest, "res": NextApiResponse) => {
+    Error && Error.captureStackTrace(this, this && this.constructor)}"
+export const errorHandler = ("err": ApiError, "req": NextApiRequest, "res": NextApiResponse) => {"
   const { statusCode = 500, message } = err;
-  // Log error for monitoring
-  console && console.error(`API Error [${statusCode}]: ${message}`, {
+  // Log error for monitoring;
+  console && console.error(`API Error [${statusCode}]: ${message}`, {"
     "url": 'req && req.url',
-    "method": 'req && req.method',
-    "timestamp": new Date().toISOString(),
+    "method": 'req && req.method',')
+    "timestamp": new Date().toISOString(),""
     "userAgent": req && req.headers['user-agent'],
-    "ip": req && req.headers['x-forwarded-for'] || req && req.connection.remoteAddress
+    "ip": req && req.headers['x-forwarded-for'] || req && req.connection.remoteAddress;
   });
   res && res.status(statusCode).json({
-    "error": {
+    "error": {""
       message: process && process.env.NODE_ENV === 'production' ? 'Internal Server Error' : message,
+<<<<<<< HEAD
       statusCode,
       "timestamp": new Date().toISOString()
     }
@@ -64,3 +68,9 @@ import { NextApiRequest,NextApiResponse } from 'next'; export interface ApiError
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/error-handler.ts
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      statusCode,)
+      "timestamp": new Date().toISOString()"
+  })}"
+export const asyncHandler = ("fn": Function) => (req: NextApiRequest, "res": NextApiResponse, "next": Function) => {""`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

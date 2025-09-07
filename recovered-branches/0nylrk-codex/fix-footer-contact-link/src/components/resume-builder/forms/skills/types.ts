@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Skill } from '@/types/resume';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface SkillsFormProps {
 import {Skill} from '@/types/resume';
 export interface SkillsFormProps {;
@@ -25,9 +29,8 @@ export interface SkillsFormProps {};
   resumeId: string;
   skills: Skill[];
   onComplete: () => void;
-  onBack: () => void;
-}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   resumeId: string;
 <<<<<<< HEAD
@@ -278,27 +281,21 @@ export interface BulkAddSkillsProps {};
   defaultCategory?: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export interface BulkAddSkillsProps {
-  resumeId: string;
-  onSuccess: () => Promise<void>;
-}
-export interface AddSkillFormProps {
-  resume_id: string;
-  onAddSkill: (skill: Skill) => Promise < boolean>;
-  default_category?: string;
-}
-export interface BulkAddSkillsProps {
-  resume_id: string;
+
+  // TODO: Implement
+  resume_id: string;,
   on_success: () => Promise < void>;
-}
-
 
 ;
 
 ;
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 <<<<<<< HEAD
@@ -308,3 +305,14 @@ export interface BulkAddSkillsProps {
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+;
+
+
+pr-12325
+;
+;
+'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,6 +39,9 @@ import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title=
 import React from \'react\'; const NewsPage = () => { return ( <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News</h1> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
 const React from "react"; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;'"'"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 import React from \'react\'; const NewsPage = () => { return ( <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News</h1> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
@@ -70,6 +74,7 @@ import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title=
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
 =======
 =======
@@ -157,9 +162,42 @@ import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title=
 import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
 
+
+
+import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+
+
+
+
+
+
+import React from \'react\'; const NewsPage = () => { return ( <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News</h1> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+const React from "react"; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;'"'"
+
+
+
+
+
+
+
+
+import React from \'react\'; const NewsPage = () => { return ( <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News</h1> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+const React from "react"; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;'"'"
+import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+
+
+
+import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+
+
+
+import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
 import React from \'react\'; const NewsPage = () => { return ( <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News</h1> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
 const React from "react"; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;'"'"
 import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
@@ -176,10 +214,43 @@ const React from "react"; const NewsPage = () => { return ( <> <SEOHead title="N
 import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
 import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+
 import React from \'react\'; const NewsPage = () => { return ( <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News</h1> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
 const React from "react"; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;'"'"
 import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+
+
+
 import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+
+
+
 import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+
+import React from \'react\'; const NewsPage = () => { return ( <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News</h1> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+const React from "react"; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;'"'"
+import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+
+import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;import _React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;
+import React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;"
+"
+import React from \'react\'; const NewsPage = () => { return ( <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News</h1> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;"
+import React from 'react'; const NewsPage = () => { return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News</h1> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.</p> </main> </> )}; export default NewsPage;'"'""
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

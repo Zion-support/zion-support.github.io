@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/health-monitor.cjs
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -394,6 +395,8 @@ monitor.run().catch(error => {
 
 <<<<<<< HEAD
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -408,6 +411,7 @@ main
 
 const { execSync } = require('child_process');
 const fs = require('fs');
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/health-monitor.cjs
 const log = (message) => {}
   const timestamp = new Date().toISOString();
@@ -431,16 +435,18 @@ const log = (message) => {}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const log = (message) => {}
   const timestamp = new Date().toISOString();
-  
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/health-monitor.cjs
 const runCommand = (command, description) => {}
   try {}
-    log(`Starting: ${description}`);
+    log(`Starting: ${description});
     const output = execSync(command, { })
+<<<<<<< HEAD
       encoding: 'utf8',
       stdio: 'pipe',
       cwd: process.cwd();
@@ -460,10 +466,15 @@ const runCommand = (command, description) => {}
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/health-monitor.cjs
+=======
+
+    return { success: false, error: error.message };
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const checkSystemHealth = () => {}
   log('Checking system health');
   // Check if the application is running;
+<<<<<<< HEAD
   const appCheck = runCommand('curl -f http://localhost:3000 || echo "App not responding"', 'Checking application health');
   // Check disk space;
   const diskCheck = runCommand('df -h .', 'Checking disk space');
@@ -489,13 +500,15 @@ const checkSystemHealth = () => {}
 =======
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/health-monitor.cjs
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return {}
     app: appCheck.success,
     disk: diskCheck.success,
     memory: memoryCheck.success,
     overall: appCheck.success && diskCheck.success && memoryCheck.success;
-  };
-};
+
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/health-monitor.cjs
 <<<<<<< HEAD
@@ -511,6 +524,7 @@ const generateHealthReport = (results) => {}
     timestamp: new Date().toISOString(),
     system: results.system,
     overall: {}
+<<<<<<< HEAD
       status: results.system.overall ? 'HEALTHY' : 'UNHEALTHY'
     };
   };
@@ -549,11 +563,14 @@ const main = async () => {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/health-monitor.cjs
   
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return report;
-};
 
 const main = async () => {}
   log('Starting Health Monitor Process');
+<<<<<<< HEAD
 
   // Check system health;
   const systemResults = checkSystemHealth();
@@ -587,12 +604,19 @@ const main = async () => {}
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/health-monitor.cjs
   if (report.overall.status === 'HEALTHY') {}
+=======
+  // Check system health;
+  const systemResults = checkSystemHealth();
+  // Generate comprehensive report;
+  const results = {}
+    system: systemResults;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     log('System health check passed: All systems operational');
   } else {}
     log('System health check failed: Issues detected');
-  };
   log('Health Monitor Process completed');
-};
+
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/health-monitor.cjs
 <<<<<<< HEAD
@@ -606,10 +630,9 @@ const main = async () => {}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/health-monitor.cjs
 // Handle process termination;
-process.on('SIGINT', () => {}
+process.on('SIGINT, () => {}
   log('Health Monitor Process interrupted');
   process.exit(0);
-}
 });
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/health-monitor.cjs
@@ -626,6 +649,7 @@ process.on('SIGINT', () => {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/health-monitor.cjs
 process.on('SIGTERM', () => {}
   log('Health Monitor Process terminated');
+<<<<<<< HEAD
   process.exit(0);
 }
 });
@@ -640,12 +664,15 @@ process.on('SIGTERM', () => {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/health-monitor.cjs
 // Run the main function;
-main().catch(error => {})
+main().catch(error => {})`;
   log(`Health Monitor Process failed: ${error.message}`);
   process.exit(1);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/health-monitor.cjs
 <<<<<<< HEAD
 =======
@@ -677,6 +704,10 @@ main().catch(error => {})
 =======
 
 main
+=======
+
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

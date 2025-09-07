@@ -19,6 +19,7 @@ const { execSync } = require("child_process");
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -273,6 +274,9 @@ module.exports = BuildErrorDetector;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/""usr/bin/env""
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -312,7 +316,7 @@ const { execSync } = require("child_process")
   "line"
           "severity": "error"
           "timestamp"
-          "timestamp": new Date().toISOString()})} catch (fixError) {this.log(` Error fixing build "error": ${fixError.message}`, "ERROR"`)
+          "timestamp": new Date().toISOString()})} catch (fixError) {this.log(` Error fixing build "error": ${fixError.message}, "ERROR"`)
           "fixed"
           "error"
           "timestamp"
@@ -324,14 +328,14 @@ const { execSync } = require("child_process")
   return await this.fixDependencyError()} else if (errorLine.includes("syntax") || errorLine.includes("parse")
   return await this.fixSyntaxError()} else if (errorLine.includes("type") || errorLine.includes("ts")
   this.log(" Fixing memory error...")
-      execSync("rm -rf dist build .next ""node_modules/.cache""")
+      execSync("rm -rf dist build .next node_modules/.cache")
   "cwd"
         "stdio": "pipe"
       execSync("npm install")
   "cwd"
         "stdio": "pipe"
       this.log(" Memory error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix memory "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix memory "error": ${error.message  }, "ERROR"`)
   this.log(" Fixing dependency error...")
       execSync("rm -rf node_modules package-lock.json")
   "cwd"
@@ -348,13 +352,13 @@ const { execSync } = require("child_process")
   "cwd"
         "stdio": "pipe"
       this.log(" Dependency error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix dependency "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix dependency "error": ${error.message  }, "ERROR"`)
   this.log(" Fixing syntax error...")
       execSync("npm run "lint": fix")
   "cwd"
         "stdio": "pipe"
       this.log(" Syntax error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix syntax "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix syntax "error": ${error.message  }, "ERROR"`)
   this.log(" Fixing type error...")
       execSync("npm run type-check")
   "cwd"
@@ -365,14 +369,14 @@ const { execSync } = require("child_process")
   "cwd"
         "stdio": "pipe"
       this.log(" Type error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix type "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix type "error": ${error.message  }, "ERROR"`)
   this.log(" Generating build error detection report...")
   "timestamp"
       "summary"
         "fixedErrors"
         "successRate"
       "fixResults"
-      "recommendations": ["Review any remaining build errors manually"", "Check for memory constraints in build process", "Verify all dependencies are properly installed"", "Monitor build performance and optimize if needed", ""]
+      "recommendations": ["Review any remaining build errors manually, "Check for memory constraints in build process", "Verify all dependencies are properly installed, "Monitor build performance and optimize if needed", ]
       this.reportsPath,build-error-detector-report.json"
 this.log("� Report "generated": ${reportFile}")
   this.log(" Starting Build Error Detector...")
@@ -386,6 +390,7 @@ this.log("� Report "generated": ${reportFile}")
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
       this.log("� Build Error Detector completed!")
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
@@ -416,3 +421,6 @@ this.log("� Report "generated": ${reportFile}")
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

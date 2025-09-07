@@ -21,6 +21,11 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export * from "./Sidebar.tsx";
 
+// Export components from their respective files;
+export * from "./Sidebar.tsx";
+
+// Export components from their respective files
+export * from "./Sidebar.tsx";
 export * from "./SidebarItem";
 export * from "./SidebarSection";
 export * from "./SidebarContent";
@@ -33,6 +38,7 @@ export * from "./SidebarMenuButton";
 export * from "./SidebarProvider";
 export * from "./SidebarTrigger";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Export components from their respective files
 export * from "./Sidebar.tsx";
@@ -76,6 +82,8 @@ export * from "./SidebarTrigger";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export * from "./SidebarTrigger";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Export components from their respective files
@@ -175,10 +183,10 @@ export * from "./SidebarTrigger";
 export * from "./SidebarTrigger";
 export * from "./SidebarTrigger";
 
-
 export * from "./SidebarTrigger";
 export * from "./SidebarTrigger";
 export * from "./SidebarTrigger";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -188,3 +196,45 @@ export * from "./SidebarTrigger";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+// Export components from their respective files;
+export * from "./Sidebar.tsx";""
+export * from "./SidebarItem";""
+export * from "./SidebarSection";""
+export * from "./SidebarContent";""
+export * from "./SidebarGroup";""
+export * from "./SidebarGroupLabel";""
+export * from "./SidebarGroupContent";""
+export * from "./SidebarMenu";""
+export * from "./SidebarMenuItem";""
+export * from "./SidebarMenuButton";""
+export * from "./SidebarProvider";""
+export * from "./SidebarTrigger";""
+export * from "./SidebarTrigger";"
+// Export components from their respective files;"
+export * from "./Sidebar.tsx",""
+export * from "./SidebarItem",""
+export * from "./SidebarSection",""
+export * from "./SidebarContent",""
+export * from "./SidebarGroup",""
+export * from "./SidebarGroupLabel",""
+export * from "./SidebarGroupContent",""
+export * from "./SidebarMenu",""
+export * from "./SidebarMenuItem",""
+export * from "./SidebarMenuButton",""
+export * from "./SidebarProvider",""
+export * from "./SidebarTrigger","
+// Export components from their respective files;"
+export * from "./Sidebar.tsx",;""
+export * from "./SidebarItem",;""
+export * from "./SidebarSection",;""
+export * from "./SidebarContent",;""
+export * from "./SidebarGroup",;""
+export * from "./SidebarGroupLabel",;""
+export * from "./SidebarGroupContent",;""
+export * from "./SidebarMenu",;""
+export * from "./SidebarMenuItem",;""
+export * from "./SidebarMenuButton",;""
+export * from "./SidebarProvider",;""
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

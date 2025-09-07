@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },;
 module.exports = {;
   plugins: {;
@@ -43,3 +44,11 @@ export default {
   },
 }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

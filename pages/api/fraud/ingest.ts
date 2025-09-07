@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -239,6 +240,9 @@ if ( {) {}
 =======
       ip_address: ip
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { evaluateHeuristics } from '[^']*';
 import { classifyWithGPT } from '[^']*';
@@ -252,6 +256,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(405).json({ error: 'Method not allowed' });
     return
   }
+<<<<<<< HEAD
   try {
       res.status(400).json({ error: 'Invalid source' });
 return;
@@ -747,3 +752,16 @@ export default async function handler(req, res) {
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  try {
+    const body = null;
+      createdAt: saved.createdAt})
+
+  } catch (e: any) {
+    res
+      .status(500)
+      .json({ error: "Internal error", details: e?.message || String(e) });
+  }
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

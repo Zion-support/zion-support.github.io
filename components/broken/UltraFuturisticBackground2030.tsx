@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
@@ -16,9 +17,12 @@ const UltraFuturisticBackground2030: React.FC<
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
 import { motion } from 'framer-motion';
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface UltraFuturisticBackground2030Props {
-  children: React.ReactNode
+  children: React.ReactNode;}
 }
+<<<<<<< HEAD
 const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props> = ({ children }) => {
   const canvasRef = null;
   useEffect(() => {
@@ -776,3 +780,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

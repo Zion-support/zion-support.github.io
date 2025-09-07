@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Advanced App Optimizer Automation;
  * Advanced optimization for Next.js applications;
@@ -7,29 +7,22 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class AdvancedAppOptimizer {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'advanced-app-optimizer.log');
-        this.reportFile = path.join(this.projectRoot, 'advanced-app-optimization-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
+<<<<<<< HEAD
     optimizeNextConfig() {}
         this.log('Optimizing Next.js configuration...');
 <<<<<<< HEAD
@@ -90,35 +83,18 @@ const nextConfig = {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Bundle optimization;
   "webpack": (config, { dev, isServer }) => {}
+=======
+    optimizeNextConfig() {}"
+
+  // Bundle optimization;"
+  "webpack": (config, { dev, isServer }) => {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Production optimizations;
     if ( {})
-      config.optimization.splitChunks = {}
-        "chunks": 'all',
-        "cacheGroups": {}
-          vendor: {}
-            test: /[\\\\/]node_modules[\\\\/]/,
-            "name": 'vendors',
-            "chunks": 'all'},
-          "common": {}
-            name: 'common',
-            "minChunks": 2,
-            "chunks": 'all',
-            "enforce": true}}}};
-    return config) {}
-     {}
-      config.optimization.splitChunks = {}
-        "chunks": 'all',
-        "cacheGroups": {}
-          vendor: {}
-            test: /[\\\\/]node_modules[\\\\/]/,
-            "name": 'vendors',
-            "chunks": 'all'},
-          "common": {}
-            name: 'common',
-            "minChunks": 2,
-            "chunks": 'all',
-            "enforce": true}}}};
+      config.optimization.splitChunks = {}"
+
     return config}},
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -160,12 +136,18 @@ const nextConfig = {}
         "source": '/home',
         "destination": '/',
         "permanent": true}]}};
+=======
+  // Experimental features for performance;"
+  "experimental": {}"
+    optimizeCss: true,"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-module.exports = nextConfig;
-";
-
-        fs.writeFileSync(nextConfigPath, optimizedConfig);
+        "permanent": true}]}};"
+module.exports = nextConfig;"
+";"
+        fs.writeFileSync(nextConfigPath, optimizedConfig);"
         this.log('Next.js configuration optimized');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         return { "status": 'success', "message": 'Next.js config optimized' }};
@@ -314,39 +296,36 @@ module.exports = {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
         // Performance monitoring utility;
         const performanceMonitor = "/**
+=======
+
+  "theme": {}"
+    extend: {}
+      colors: {}
+        primary: {}"
+
+            fs.mkdirSync(utilsDir, { "recursive": true })};"
+        // Performance monitoring utility;"
+        const performanceMonitor = "/**"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  * Performance Monitoring Utility;
  * Tracks and reports performance metrics;
- */
 
 export class PerformanceMonitor {}
-  constructor() {}
     this.metrics = new Map) {}
-    ) {}
-            fs.mkdirSync(utilsDir, { "recursive": true })};
-        // Performance monitoring utility;
-        const performanceMonitor = "/**
- * Performance Monitoring Utility;
- * Tracks and reports performance metrics;
- */
+        // Performance monitoring utility;"
 
-export class PerformanceMonitor {}
-  constructor() {}
-    this.metrics = new Map}(;);
-    this.isClient = typeof window !== 'undefined'};
+    this.metrics = new Map}(;);"
+
   startTiming(name) {}
-    if ( {})
+    if ( {})`;
       performance.mark(\`\${name}-start\`)};
-  };
   endTiming(name) {}
-    if (this.isClient) {}
+    if (this.isClient) {}`;
       performance.mark(\`\${name}-end\`)) {`}
-     {}
-      performance.mark(\`\${name}-start\`)};
-  };
-  endTiming(name) {}
-    if (this.isClient) {}
-      performance.mark(\`\${name}-end\`)};
+     {}`;
+      performance.mark(\`\${name}-end\`)};`;
       performance.measure(name, \`\${name}-start\`, \`\${name}-end\`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const measure = performance.getEntriesByName(name)[0];
@@ -365,76 +344,49 @@ export class PerformanceMonitor {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      const measure = performance.getEntriesByName(name)[0];
+      this.metrics.set(name, measure.duration);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Log slow operations;
-      if ( {})
-        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};
-    };
-  };
+
+        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};"
   getMetrics() {}
     return Object.fromEntries(this.metrics)) {}
-     {}
-        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};
-    };
-  };
-  getMetrics() {}
+     {}"`;
     return Object.fromEntries(this.metrics)}};
   clearMetrics() {}
     this.metrics.clear();
-    if ( {})
       performance.clearMarks()) {}
-     {}
       performance.clearMarks()};
       performance.clearMeasures()};
-  };
-};
-export const performanceMonitor = new PerformanceMonitor;(;);
-";
+export const performanceMonitor = new PerformanceMonitor;(;);"
 
+<<<<<<< HEAD
         fs.writeFileSync(path.join(utilsDir, 'performance-monitor.js'), performanceMonitor);
 <<<<<<< HEAD
 
 =======
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Web Vitals utility;
-        const webVitals = "/**
+        const webVitals = "/**"
  * Web Vitals Utility;
  * Measures Core Web Vitals;
- */
+"
 
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vital;s;';
-
-export function reportWebVitals(metric) {}
-  // Send to analytics service;
-  if ( {})
-    window.gtag('event', metric.name, {})
-      "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      "event_label": metric.id,
-      "non_interaction": true})};
-  // Log to console in development;
-  if (process.env.NODE_ENV === 'development') {}
-    console.log(metric)) {}
-     {}
-    window.gtag('event', metric.name, {})
-      "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      "event_label": metric.id,
-      "non_interaction": true})};
-  // Log to console in development;
-  if (process.env.NODE_ENV === 'development') {}
     console.log(metric)}};
-};
 export function initWebVitals() {}
-  if ( {})
     getCLS(reportWebVitals)) {}
-     {}
     getCLS(reportWebVitals)};
     getFID(reportWebVitals);
     getFCP(reportWebVitals);
     getLCP(reportWebVitals);
     getTTFB(reportWebVitals)};
-};
-";
 
+<<<<<<< HEAD
         fs.writeFileSync(path.join(utilsDir, 'web-vitals.js'), webVitals);
 <<<<<<< HEAD
 
@@ -456,55 +408,41 @@ export function initWebVitals() {}
 =======
         
         const publicDir = path.join(this.projectRoot, 'public';);
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const imageFiles = this.findImageFiles(publicDir;);
-        
         let optimizedCount = ;0;
         const optimizations = [];
+<<<<<<< HEAD
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         for (const file of imageFiles) {}
             try {}
                 const stats = fs.statSync(file;);
                 const sizeKB = Math.round(stats.size / 1024;);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 if ( { // Only optimize large images;})
                     optimizations.push({})
-                        "file": path.relative(this.projectRoot, file),
-                        "originalSize": sizeKB,
-                        "status": 'needs_optimization'
-                    })} else {}
-                    optimizations.push({})
-                        "file": path.relative(this.projectRoot, file),
-                        "originalSize": sizeKB,
-                        "status": 'already_optimized'
+
                     })};
                 optimizedCount++} catch (error) {}
-                this.log("Error processing image ${file}: ${error.message}")};
-        };
-        this.log("Processed ${optimizedCount} images")) {}
+                this.log("Error processing image ${file}: ${error.message}")};"
+        };"
+        this.log("Processed ${optimizedCount} images")) {}"
      { // Only optimize large images;}
-                    optimizations.push({})
-                        "file": path.relative(this.projectRoot, file),
-                        "originalSize": sizeKB,
-                        "status": 'needs_optimization'
-                    })} else {}
-                    optimizations.push({})
-                        "file": path.relative(this.projectRoot, file),
-                        "originalSize": sizeKB,
-                        "status": 'already_optimized'
-                    })};
-                optimizedCount++} catch (error) {}
-                this.log("Error processing image ${file}: ${error.message}")};
-        };
-        this.log("Processed ${optimizedCount} images")};
-        return { optimizedCount, optimizations }};
-    findImageFiles(dir) {}
-        const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+                    optimizations.push({})"
+
         const files = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         if () return file) {}
@@ -516,26 +454,29 @@ export function initWebVitals() {}
     ) return file}s;
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        if () return file) {}
+    ) return file}s;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const items = fs.readdirSync(dir;);
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             if () {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
                 files.push(fullPath)};
-        };
         return files) {}
-    ) {}
-                files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
-                files.push(fullPath)};
-        };
         return files}};
     generateOptimizationReport() {}
+<<<<<<< HEAD
         this.log('Generating advanced app optimization report...');
 <<<<<<< HEAD
 
@@ -547,13 +488,18 @@ export function initWebVitals() {}
             "project": this.projectRoot,
             "optimizations": {}
                 nextConfig: this.optimizeNextConfig(),
+=======
+
+            "optimizations": {}"
+                nextConfig: this.optimizeNextConfig(),"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 "tailwindConfig": this.optimizeTailwindConfig(),
                 "performanceMonitoring": this.createPerformanceMonitoring(),
-                "images": this.optimizeImages();
-            },
-            "recommendations": this.generateOptimizationRecommendations();
-       };
+                "images": this.optimizeImages();"
+            },"
+            "recommendations": this.generateOptimizationRecommendations();"
 
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log("Advanced app optimization report saved to ${this.reportFile}");
 <<<<<<< HEAD
@@ -587,15 +533,20 @@ export function initWebVitals() {}
             this.log('Advanced App Optimizer completed successfully');
             return report} catch (error) {}
             this.log("Advanced App Optimizer "failed": ${error.message}`);
+=======
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
+        this.log("Advanced app optimization report saved to ${this.reportFile}");"
+        return report};
+    generateOptimizationRecommendations() {}
+        return [;]"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
-    };
-};
 // Run the optimizer if this script is executed directly;
-if ( {})
     const optimizer = new AdvancedAppOptimizer) {}
-     {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -607,3 +558,7 @@ module.exports = AdvancedAppOptimizer;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = AdvancedAppOptimizer;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

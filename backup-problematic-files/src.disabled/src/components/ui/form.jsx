@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/ui/form.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/ui/form.jsx
 <<<<<<< HEAD:backup-merge-conflicts/form.jsx.backup
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 const React from "react"; import React from "react"; export const Form = ({ children,.props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>'"'"
@@ -10,6 +13,7 @@ import _React from 'react'; import _React from "react"; export const Form = ({ c
 import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
 
 import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
@@ -26,3 +30,11 @@ const React from "react"; import React from "react"; export const Form = ({ chil
 =======
 import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/src/components/ui/form.jsx
+=======
+import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
+import React from \'react\'; import React from \"react\"; export const Form = ({ children,...props }) => {} \"; export const FormControl = ({ children,className = }) => {};\"; \"; export const FormLabel = ({ children,className = }) => {};\"; \"; export const FormMessage = ({ className = }) => {}; return <div className=\"{className}\"> <div>Broken JSX</div>
+const React from "react"; import React from "react"; export const Form = ({ children,.props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>'"'"
+import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
+import React from \'react\'
+const React from "react"; import React from "react"; export const Form = ({ children,.props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

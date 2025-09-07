@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { motion } from 'framer-motion';
 
@@ -614,46 +615,125 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
                       href={service.href}"
+=======
+
+              </p>
+
+              {/* Contact Info */}
+              <div className='space-y-3' />;
+                <div className='flex items-center text-gray-300' />;
+                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span />{contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300' />;
+                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />;
+                  <span />{contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300' />;
+                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />;
+                  <span />{contactInfo.address}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300' />;
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />;
+                  <span />{contactInfo.website}</span>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+              </p>;
+              {/* Contact Info */}"
+                  <Globe className=\"w-4 h-4 mr-3 text-cyan-400\" />;
+                  <span />{contactInfo.website}</span>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+              <div className='space-y-3' />;
+                <div className='flex items-center text-gray-300' />;
+                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span />{contactInfo && contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300' />;
+                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />;
+                  <span />{contactInfo && contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300' />;
+                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />;
+                  <span />{contactInfo && contactInfo.address}</span>;
+                </div>;
+                <div className='flex items-center text-gray-300' />;"
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span />{contactInfo && contactInfo.website}</span>                <div className=\"flex items-center text-gray-300\" />;"
+                  <Globe className=\"w-4 h-4 mr-3 text-cyan-400\" />;
+                  <span />{contactInfo && contactInfo.website}</span>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;{/* Service Categories */}
+          {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;}
+              key={index}
+              initial={{ opacity: 0;, y: 20 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+                      href={service.href}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm flex items - center group";
                     >;"
                       <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
+<<<<<<< HEAD
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+=======
+              initial={{ opacity: 0;, y: 20 ;}
+}
+
+              whileInView={{ opacity: 1;, y: 0 ;}
+}
+
+              transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+             />
+<h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {category.title === 'AI & Automation' && (
                   <Brain className='w-5 h-5 mr-2 text-cyan-400' />
+}
+                }
+}
+                {category.title === 'Cybersecurity & Quantum' && (<Shield className='w-5 h-5 mr-2 text-red-400' />;}
                 )}
-                {category.title === 'Cybersecurity & Quantum' && (
-                  <Shield className='w-5 h-5 mr-2 text-red-400' />
+                {category.title === 'Fintech & Blockchain' && (<DollarSign className='w-5 h-5 mr-2 text-green-400' />;}
                 )}
-                {category.title === 'Fintech & Blockchain' && (
-                  <DollarSign className='w-5 h-5 mr-2 text-green-400' />
-                )}
-                {category.title === 'Healthcare & Biotech' && (
-                  <Dna className='w-5 h-5 mr-2 text-blue-400' />
+                {category.title === 'Healthcare & Biotech' && (<Dna className='w-5 h-5 mr-2 text-blue-400' />;}
                 )}
                 {category.title}
-              </h4>
-              <ul className='space-y-2'>
-                {category.services.map((service, serviceIndex) => (
-                  <li key={serviceIndex}>
-                    <Link
+              </h4>;
+              <ul className='space-y-2' />;
+                {category.services.map((service, serviceIndex) => (<li key={serviceIndex} />;
+                    <Link;
                       href={service.href}
-                      className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group'
-                    >
+
+                      className='text-gray-400 hover: text-cyan-400 transition-colors duration-300 text-sm flex items-center group'
+                     />
                       <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+
                       {service.name}
-                ))}
+                )
+}
               </ul>;
             </motion && motion.div>;
           ))}
+
         {/* Additional Links */}
 
+<div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12' />
 
 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+          {/* Company Links *}
+}
+          <motion&& motion.div;
+        <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12' />          {/* Company Links */;}{/* Company Links *}
+}<motion.div;
           {/* Company Links */}
+<<<<<<< HEAD
           <motion&& motion.div'
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}
 
@@ -680,6 +760,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li key={index}>
                   <Link;
             </h4>"
+=======
+          <motion&& motion.div;
+            initial={{ opacity: 0;, y: 20 ;}
+}
+            whileInView={{ opacity: 1;, y: 0 ;}
+}
+            transition={{ duration: 0.6;, delay: 0.2 ;}
+}
+
+           />
+<h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
+              <Users className='w-5 h-5 mr-2 text-purple-400' />
+              Company;
+            </h4>
+            <ul className='space-y-2'>
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+            </h4>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
@@ -700,6 +800,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {link.name}
           {/* Resources */}
+<<<<<<< HEAD
           <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -707,10 +808,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm";
                   >;
             transition={{ duration: 0.6, delay: 0.3 }}
+=======
+          <motion&& motion.div
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+                    href={link.href}
+                    className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm";
+                  >;
+            transition={{ duration: 0.6;, delay: 0.3 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+            <ul className='space-y-2' />
+              {companyLinks.map((link, index) => (}
+                <li key={index} />
+                  <Link;
+href={link.href}
+                    className='text-gray-400 hover: text-cyan-400 transition-colors duration-300 text-sm'
+                   />
+
+                    {link.name}
+          {/* Resources *}
+}
+          <motion&& motion.div;
+            initial={{ opacity: 0;, y: 20 ;}
+}
+
+            whileInView={{ opacity: 1;, y: 0 ;}
+}
+
+            transition={{ duration: 0.6;, delay: 0.3 ;}
+}
+           />
+<h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
               <Award className='w-5 h-5 mr-2 text-yellow-400' />
-              Resources
+              Resources;
             </h4>
             <ul className='space-y-2'>
               {resourceLinks.map((link, index) => (
@@ -722,22 +854,51 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {link.name}
           {/* Social Media */}
+<<<<<<< HEAD
           <motion&& motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
+=======
+          <motion&& motion.div
+            initial={{ opacity: 0;, y: 20 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.6;, delay: 0.4 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+            <ul className='space-y-2' />
+              {resourceLinks.map((link, index) => (}
+                <li key={index} />
+                  <Link;
+href={link.href}
+                    className='text-gray-400 hover: text-cyan-400 transition-colors duration-300 text-sm'
+                   />
+
+                    {link.name}
+          {/* Social Media *}
+}
+          <motion&& motion.div;
+            initial={{ opacity: 0;, y: 20 ;}
+}
+
+            whileInView={{ opacity: 1;, y: 0 ;}
+}
+
+            transition={{ duration: 0.6;, delay: 0.4 ;}
+}
+           />
+<h4 className='text-lg font-semibold text-white mb-4 flex items-center' />
               <Rocket className='w-5 h-5 mr-2 text-pink-400' />
-              Follow Us
+              Follow Us;
             </h4>
-            <div className='grid grid-cols-3 gap-4'>
-              {socialLinks.map((social, index) => (
-                <Link
-                  key={index}
+            <div className='grid grid-cols-3 gap-4' />
+              {socialLinks.map((social, index) => (}
+                <Link;}
+key={index}
                   href={social.href}
-className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
-                >
+className='w-12 h-12 bg-gray-800 hover: bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
+                 />
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />
                 </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -746,31 +907,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         </div>
 
+              )
+}
+            </div>;
+          </motion.div>;
+        </div>;
             </div>;
           </motion && motion.div>;
-        </div>;
-
-
-
-
-
-              ))}
+        </div>;))}
         {/* Newsletter Signup */}
+<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.5 }}
+=======
+        <motion&& motion.div
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.6;, delay: 0.5 ;}}
+        <motion&& motion.div;
+          initial={{ opacity: 0;, y: 20 ;}
+}
+
+          whileInView={{ opacity: 1;, y: 0 ;}
+}
+
+          transition={{ duration: 0.6;, delay: 0.5 ;}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
-        >
-          <div className='text-center'>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Stay Updated with Latest Innovations
+         />
+          <div className='text-center' />
+            <h3 className='text-2xl font-bold text-white mb-4' />
+              Stay Updated with Latest Innovations;
             </h3>
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Get exclusive access to our latest AI, quantum computing, and
-              emerging technology insights. Be the first to know about
-              breakthrough solutions and industry trends.
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto' />
+              Get exclusive access to our latest AI, quantum computing, and;
+emerging technology insights. Be the first to know about;
+breakthrough solutions and industry trends.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -812,13 +988,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               />"
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               />
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 Subscribe
+<<<<<<< HEAD
 =======
                 Subscribe;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto' />
+              <input;
+type='email'
+                placeholder='Enter your email'
+                className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
+
+              />
+              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300' />
+                Subscribe;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </button>
             </div>
           </div>
@@ -830,6 +1021,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         {/* Bottom Bar */}
         <motion&& motion.div;
+<<<<<<< HEAD
         </motion.div>;
         {/* Bottom Bar */}
         <motion.div;
@@ -842,10 +1034,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               © 2026 Zion Tech Group. All rights reserved. |;
 <<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.6 }}
+=======
+        </motion.div />;
+        {/* Bottom Bar */}
+        <motion.div;
+          initial={{ opacity: 0 ;}}
+          whileInView={{ opacity: 1 ;}}
+          transition={{ duration: 0 && 0.6;, delay: 0 && 0.6 ;}}
+          className='border-t border-gray-800 pt-8'>;
+          <div className='flex flex-col md:flex-row justify-between items-center'>;
+            <div className='text-gray-400 text-sm mb-4 md:mb-0'>;
+              © 2026 Zion Tech Group. All rights reserved. |;
+          transition={{ duration: 0.6;, delay: 0.6 ;}}
+
+          whileInView={{ opacity: 1 ;}
+}
+
+          transition={{ duration: 0.6;, delay: 0.6 ;}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='border-t border-gray-800 pt-8'
-        >
-          <div className='flex flex-col md:flex-row justify-between items-center'>
-            <div className='text-gray-400 text-sm mb-4 md:mb-0'>
+         />
+          <div className='flex flex-col md:flex-row justify-between items-center' />
+            <div className='text-gray-400 text-sm mb-4 md:mb-0' />
               © 2026 Zion Tech Group. All rights reserved.
 origin/cursor/automate-test-improve-and-merge-code-2533
               <Link
@@ -858,9 +1069,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Privacy Policy;
               </Link>;'
               <span className='mx-2'>|</span>;
+<<<<<<< HEAD
               <Link'
                 href='/terms'"
           <div className="flex flex-col md: flex-row justify-between items-center">"
+=======
+              <Link
+                href='/terms'
+          <div className="flex flex-col md: flex-row justify-between items-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © 2026 Zion Tech Group. All rights reserved."
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">
@@ -879,28 +1096,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>"
               <div className="text-cyan-400 text-sm font-semibold">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <Link;
+href='/privacy'
+
+                className='hover:text-cyan-400 transition-colors duration-300 ml-2' />;
+                Privacy Policy;
+              </Link>;
+              <span className='mx-2' />|</span>;
+
+              <Link;
+href='/terms'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='hover:text-cyan-400 transition-colors duration-300'
-              >
-                Terms of Service
+               />
+                Terms of Service;
               </Link>
             </div>
-            <div className='flex items-center space-x-2'>
-              <div className='flex items-center text-gray-400 text-sm'>
+            <div className='flex items-center space-x-2' />
+              <div className='flex items-center text-gray-400 text-sm' />
                 <Star className='w-4 h-4 text-yellow-400 mr-1' />
-                Trusted by 2500+ Companies
+                Trusted by 2500+ Companies;
               </div>
               <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse'></div>
               <div className='text-cyan-400 text-sm font-semibold'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 99.9% Uptime
+<<<<<<< HEAD
 =======
                 99.9% Uptime;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse' /></div>
+              <div className='text-cyan-400 text-sm font-semibold' />
+                99.9% Uptime;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>
             </div>
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
     </footer>;
   );
 }
@@ -949,14 +1187,62 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;"
               <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;"
               <div className="text - cyan - 400 text - sm font - semibold">;
+=======
+
+    </footer>;
+  )}className='border - t border - gray - 800 pt - 8'>
+
+          <div className='flex flex - col md:flex - row justify - between items - center' />;
+            <div className='text - gray - 400 text - sm mb - 4 md:mb - 0' />;
+              © 2026 Zion Tech Group. All rights reserved. |;
+              <Link;
+                href='/privacy';
+                className='hover:text - cyan - 400 transition - colors duration - 300 ml - 2' />
+
+                Privacy Policy;
+              </Link>;
+              <span className='mx - 2' />|</span>;
+              <Link;
+                href='/terms';
+                className='hover:text - cyan - 400 transition - colors duration - 300' />
+
+                Terms of Service;
+              </Link>;
+            </div>;
+            <div className='flex items - center space - x-2' />;
+              <div className='flex items - center text - gray - 400 text - sm' />;
+                <Star className='w - 4 h - 4 text - yellow - 400 mr - 1' />;
+                Trusted by 2500+ Companies;
+              </div>;
+              <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse' /></div>;
+              <div className='text - cyan - 400 text - sm font - semibold' />                99.9% Uptime        >;"
+          <div className=\"flex flex - col md: flex - row justify - between items - center\" />;"
+            <div className=\"text - gray - 400 text - sm mb - 4 md:mb - 0\" />;
+              © 2026 Zion Tech Group. All rights reserved. |;"
+              <Link href=\"/privacy\" className=\"hover:text - cyan - 400 transition - colors duration - 300 ml - 2\" />;
+                Privacy Policy;
+              </Link>;"
+              <span className=\"mx - 2\" />|</span>;"
+              <Link href=\"/terms\" className=\"hover:text - cyan - 400 transition - colors duration - 300\" />;
+                Terms of Service;
+              </Link>;
+            </div>;"
+            <div className=\"flex items - center space - x-2\" />;"
+              <div className=\"flex items - center text - gray - 400 text - sm\" />;"
+                <Star className=\"w - 4 h - 4 text - yellow - 400 mr - 1\" />;
+                Trusted by 2500+ Companies;
+              </div>;"
+              <div className=\"w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse\" /></div>;"
+              <div className=\"text - cyan - 400 text - sm font - semibold\" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 99.9% Uptime;
               </div>;
             </div>;
           </div>;
         </motion.div>;
       </div>;
-  );
 
+  );
 
     </footer>
   );
@@ -964,7 +1250,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -62,6 +63,8 @@
 
 <<<<<<< HEAD
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -80,6 +83,7 @@ const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -136,13 +140,16 @@ main
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ESLintErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
     this.fixInterval = parseInt(process.env.FIX_INTERVAL) || 600000; // 10 minutes default;
-    this.autoFix = process.env.AUTO_FIX === 'true';
-    this.fixOnSave = process.env.FIX_ON_SAVE === 'true';
+    this.autoFix = process.env.AUTO_FIX ===true;
+    this.fixOnSave = process.env.FIX_ON_SAVE ===true;
     this.maxWarnings = parseInt(process.env.MAX_WARNINGS) || 0;
+<<<<<<< HEAD
     this.ignorePatterns = (process.env.IGNORE_PATTERNS || 'node_modules,dist,build,.git').split(',');
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
@@ -210,6 +217,9 @@ class ESLintErrorFixer {}
 
 <<<<<<< HEAD
 main
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -223,6 +233,7 @@ main
       level,
       message,
       data,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
@@ -241,6 +252,8 @@ main
     };
       "service": 'eslint-error-fixer'
     };
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
@@ -252,6 +265,7 @@ main
     };
 =======
 
+<<<<<<< HEAD
 
       "service": 'eslint-error-fixer'
     };
@@ -337,12 +351,15 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (level === 'error') {}
-      console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
-      console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
-      console.log(`[${timestamp}] "INFO": ${message}`, data)} else if (level === 'debug') {`}
-      console.log(`[${timestamp}] "DEBUG": ${message}`, data)};
+      console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}`;
+      console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}`;
+      console.log(`[${timestamp}] "INFO": ${message}`, data)} else if (level === 'debug') {`}`;
+      console.log(`[${timestamp}] "DEBUG": ${message}`, data)};"
     this.writeToLog(logEntry)};
+<<<<<<< HEAD
   writeToLog(logEntry) {}
     const logDir = path.join(this.projectRoot, 'logs', 'pm2');
     if (!fs.existsSync(logDir)) {}
@@ -361,11 +378,17 @@ main
     
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+  writeToLog(logEntry) {}"
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {}
       this.ensureDirectories();
       await this.performESLintFixes();
       this.startContinuousFixing();
       this.setupSignalHandlers();
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -540,6 +563,10 @@ main
 =======
 
 main
+=======
+      this.log('info', 'ESLint Error Fixer Service started successfully');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -552,16 +579,17 @@ main
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setInterval(async () => {}
         await this.performESLintFixes()}, this.fixInterval)} catch (error) {}
-      this.log('error', 'Failed to start ESLint Error Fixer Service', error);
+      this.log('error,Failed to start ESLint Error Fixer Service, error);
       process.exit(1)};
   };
   ensureDirectories() {}
-    const dirs = ['logs/pm2', 'backups/eslint-fixes', 'temp', 'fixed-files'];
+    const dirs = [logs/pm2,backups/eslint-fixes,temp,fixed-files];
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
-        fs.mkdirSync(fullPath, { "recursive": true })};
+        fs.mkdirSync(fullPath, { "recursive": true })};"
     })};
+<<<<<<< HEAD
   async performESLintFixes() {}
     this.log('info', 'Starting ESLint error fixing process...');
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
@@ -608,36 +636,37 @@ main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+  async performESLintFixes() {}"
+
+      this.resetCounters();
+      const errors = await this.getESLintErrors();
+      if (errors.length === 0) {}
+
+      // Group errors by file for efficient processing;
+      const errorsByFile = this.groupErrorsByFile(errors);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       for (const [filePath, fileErrors] of Object.entries(errorsByFile)) {}
         if (this.fixesApplied >= 100) break; // Limit fixes per run;
-        try {}
-          await this.fixFileESLintErrors(filePath, fileErrors)} catch (fixError) {}
-          this.log('error', `Failed to fix ESLint errors in ${filePath}`, fixError);
-          this.fixesFailed++};
-      };
-      await this.generateFixReport();
-      this.log('info', `ESLint fixing completed. "Applied": ${this.fixesApplied}, "Failed": ${this.fixesFailed}, "Skipped": ${this.fixesSkipped}`)} catch (error) {`}
-      this.log('error', 'Error during ESLint fixing process', error)};
-  };
+
   resetCounters() {}
-    this.fixesApplied = 0;
-    this.fixesFailed = 0;
-    this.fixesSkipped = 0;
     this.fixedFiles.clear()};
   async getESLintErrors() {}
-    try {}
       // First try to run ESLint with auto-fix;
       if (this.autoFix) {}
+<<<<<<< HEAD
         try {}
           execSync('npx eslint . --fix --format json', { })
             "cwd": this.projectRoot,
             "encoding": 'utf8',
             "stdio": 'pipe'
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           })} catch (error) {}
           // Auto-fix completed, now get remaining errors;
-        };
-      };
       // Get remaining errors after auto-fix;
+<<<<<<< HEAD
       const result = execSync('npx eslint . --format json', { })
         "cwd": this.projectRoot,
         "encoding": 'utf8',
@@ -655,17 +684,23 @@ main
       
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+
+      }
+});
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (result) {}
         const parsed = JSON.parse(result);
         return parsed || []};
       return []} catch (error) {}
       // Parse stderr for errors;
-      const stderr = error.stderr ? error.stderr.toString() : '';
+      const stderr = error.stderr ? error.stderr.toString() : ;
       return this.parseESLintErrors(stderr)};
-  };
   parseESLintErrors(stderr) {}
     const errors = [];
     const lines = stderr.split('\n');
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
 <<<<<<< HEAD
@@ -680,10 +715,14 @@ main
     
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     lines.forEach(line => {})
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {}
         errors.push({})
+<<<<<<< HEAD
           "filePath": match[1].trim(),
           "line": parseInt(match[2]),
           "column": parseInt(match[3]),
@@ -718,10 +757,17 @@ main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+
+    return errors};
+  groupErrorsByFile(errors) {}
+    const errorsByFile = {};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     errors.forEach(error => {})
       if (!errorsByFile[error.filePath]) {}
         errorsByFile[error.filePath] = []};
       errorsByFile[error.filePath].push(error)}
+<<<<<<< HEAD
 });
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 <<<<<<< HEAD
@@ -737,10 +783,16 @@ main
     
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return errorsByFile};
   async fixFileESLintErrors(filePath, fileErrors) {}
     if (!fs.existsSync(filePath)) {}
       this.fixesSkipped++;
+<<<<<<< HEAD
       return};
     this.log('info', `Fixing ESLint errors "in": ${filePath}`);
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
@@ -844,12 +896,23 @@ main
       const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+
+      const content = fs.readFileSync(filePath, 'utf8');
+      const lines = content.split('\n');
+      let hasChanges = false;
+
+
+
+      // Process errors in reverse order to maintain line numbers;
+      const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       for (const error of sortedErrors) {}
         if (error.line > lines.length) {}
-          this.fixesSkipped++;
           continue};
         const lineIndex = error.line - 1;
         const line = lines[lineIndex];
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
 <<<<<<< HEAD
@@ -863,10 +926,12 @@ main
         
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         if (this.shouldSkipLine(line)) {}
-          this.fixesSkipped++;
-          continue};
         const fixedLine = await this.fixESLintError(line, error, lines, lineIndex);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
 <<<<<<< HEAD
@@ -881,14 +946,17 @@ main
         
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
           hasChanges = true;
           this.fixesApplied++};
-      };
       if (hasChanges) {}
         // Create backup;
         await this.createBackup(filePath);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
         // Write fixed content;
@@ -985,28 +1053,36 @@ main
         this.log('info', `Successfully fixed ESLint errors "in": ${filePath}`);
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+        // Write fixed content;
+        const fixedContent = lines.join('\n');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Verify the fix;
-        if (await this.verifyFix(filePath)) {}
-          this.log('info', `Fix verification passed "for": ${filePath}`)} else {`}
-          this.log('warn', `Fix verification failed "for": ${filePath}`);
-          this.fixesFailed++};
+        if (await this.verifyFix(filePath)) {}"`;
+          this.log('info', `Fix verification passed "for": ${filePath}`)} else {`}""`;
+          this.log('warn', `Fix verification failed "for": ${filePath}`);"
       } else {}
         this.fixesSkipped++};
-    } catch (error) {}
+    } catch (error) {}"`;
       this.log('error', `Error fixing ESLint errors in ${filePath}`, error);
-      this.fixesFailed++};
-  };
   shouldSkipLine(line) {}
     const trimmed = line.trim();
+<<<<<<< HEAD
     return !trimmed ||
+=======
+    return !trimmed || 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
            trimmed.startsWith('//') ||
            trimmed.startsWith('/*') ||
            trimmed.startsWith('*') ||
+
            trimmed.startsWith('import') ||
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
+<<<<<<< HEAD
            trimmed.startsWith('export')};
   async fixESLintError(line, error, allLines, lineIndex) {}
     let fixedLine = line;
@@ -1091,6 +1167,11 @@ main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+           trimmed.startsWith('export')};
+  async fixESLintError(line, error, allLines, lineIndex) {}
+    let fixedLine = line;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Fix common ESLint errors;
     if (error.message.includes('no-unused-vars') || error.message.includes('@typescript-eslint/no-unused-vars')) {}
       fixedLine = this.fixUnusedVariable(line, error)} else if (error.message.includes('no-console')) {}
@@ -1103,8 +1184,9 @@ main
     return fixedLine};
   fixUnusedVariable(line, error) {}
     // Extract variable name from error message;
-    const varMatch = error.message.match(/'(.*?)'/);
+    const varMatch = error.message.match(/(.*?)/);
     if (!varMatch) return line;
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1222,6 +1304,9 @@ main
 =======
 
 main
+=======
+    const varName = varMatch[1];
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1234,50 +1319,42 @@ main
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     // Add underscore prefix to indicate intentionally unused;
     if (line.includes(varName)) {}
-      return line.replace(new RegExp(`\\b${varName}\\b`, 'g'), `_${varName}`)};
+      return line.replace(new RegExp(`\\b${varName}\\b`,g'), `_${varName})};
+
     return line};
   fixConsoleStatement(line, error) {}
     // Comment out console statements;
-    if (line.includes('console.log') || line.includes('console.warn') || line.includes('console.error')) {}
+    if (line.includes('console.log') || line.includes('console.warn') || line.includes('console.error')) {}`;
       return `// ${line} // eslint-disable-line no-console`};
-    return line};
   fixPreferConst(line, error) {}
     // Change 'let' to 'const' if the variable is never reassigned;
     if (line.includes('let ')) {}
-      return line.replace(/\blet\b/, 'const')};
-    return line};
+
   fixNoVar(line, error) {}
-    // Change 'var' to 'const' or 'let'
+    // Change 'var' to 'const' or 'let
     if (line.includes('var ')) {}
       // Check if it's reassigned later;
       const varMatch = line.match(/var\s+(\w+)/);
       if (varMatch) {}
-        const varName = varMatch[1];
         // Default to 'const' for now;
-        return line.replace(/\bvar\b/, 'const')};
-    };
-    return line};
+
   fixDebuggerStatement(line, error) {}
     // Comment out debugger statements;
-    if (line.includes('debugger')) {}
+    if (line.includes('debugger')) {}`;
       return `// ${line} // eslint-disable-line no-debugger`};
-    return line};
   fixUnreachableCode(line, error, allLines, lineIndex) {}
     // Check if there's unreachable code after return/throw;
     if (line.includes('return') || line.includes('throw')) {}
       // Look for code after this line that might be unreachable;
       for (let i = lineIndex + 1; i < allLines.length; i++) {}
         const nextLine = allLines[i].trim();
-        if (nextLine && !nextLine.startsWith('//') && !nextLine.startsWith('/*')) {}
-          // Comment out unreachable code;
+
           allLines[i] = `// ${allLines[i]} // eslint-disable-line no-unreachable`};
-      };
-    };
-    return line};
   fixExtraSemicolon(line, error) {}
     // Remove extra semicolons;
-    return line.replace(/;+$/, ';')};
+    return line.replace(/;+$/,;)};
   async createBackup(filePath) {}
+<<<<<<< HEAD
     try {}
       const backupDir = path.join(this.projectRoot, 'backups', 'eslint-fixes');
       const fileName = path.basename(filePath);
@@ -1371,6 +1448,8 @@ main
       fs.copyFileSync(filePath, backupPath);
 
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1384,9 +1463,10 @@ main
   };
   async verifyFix(filePath) {}
     try {}
-      // Run ESLint on the fixed file to verify;
+      // Run ESLint on the fixed file to verify;"
       const result = execSync(`npx eslint "${filePath}" --format json`, { `})
         "cwd": this.projectRoot,
+<<<<<<< HEAD
         "encoding": 'utf8',
         "stdio": 'pipe'
       }
@@ -1401,15 +1481,22 @@ main
       
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+        "encoding": utf8,
+        "stdio": pipe
+      }
+});
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (result) {}
         const parsed = JSON.parse(result);
+
         return parsed.length === 0; // No errors means fix was successful;
-      };
       return true} catch (error) {}
       return false};
-  };
   async generateFixReport() {}
     const report = {}
+<<<<<<< HEAD
       "timestamp": new Date().toISOString(),
       "summary": {}
         totalFixes: this.fixesApplied + this.fixesFailed + this.fixesSkipped,
@@ -1541,6 +1628,8 @@ fixer.start().catch(error => {
 
 
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -1549,10 +1638,12 @@ main
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     this.log('info', `ESLint fix report "generated": ${reportPath}`);
+
     return report};
   generateRecommendations() {}
     const recommendations = [];
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1598,17 +1689,22 @@ main
     
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+    if (this.fixesFailed > 0) {}
+      recommendations.push({})"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     setInterval(async () => {}
+
       await this.performESLintFixes()}, 300000); // 5 minutes;
-  };
   setupSignalHandlers() {}
-    process.on('SIGUSR2', async () => {}
-      this.log('info', 'Received SIGUSR2 signal, triggering immediate ESLint fix...');
+    process.on('SIGUSR2, async () => {}
+      this.log('info,Received SIGUSR2 signal, triggering immediate ESLint fix...);
       await this.performESLintFixes()})};
-};
 // Start the service;
 const fixer = new ESLintErrorFixer();
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1621,11 +1717,12 @@ const fixer = new ESLintErrorFixer();
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Handle graceful shutdown;
-process.on('SIGINT', () => {}
-  fixer.log('info', 'Received SIGINT, shutting down gracefully...');
+process.on('SIGINT, () => {}
+  fixer.log('info,Received SIGINT, shutting down gracefully...);
   process.exit(0)}
-});
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 <<<<<<< HEAD
@@ -1641,8 +1738,6 @@ process.on('SIGINT', () => {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
 process.on('SIGTERM', () => {}
   fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
-  process.exit(0)}
-});
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 <<<<<<< HEAD
@@ -1657,9 +1752,10 @@ process.on('SIGTERM', () => {}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
 // Handle uncaught errors;
-process.on('uncaughtException', (error) => {}
-  fixer.log('error', 'Uncaught exception', error);
+process.on('uncaughtException, (error) => {}
+  fixer.log('error,Uncaught exception, error);
   process.exit(1)}
+<<<<<<< HEAD
 });
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
@@ -1679,6 +1775,8 @@ process.on('unhandledRejection', (reason, promise) => {}
 });
   process.exit(1)}
 });
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/eslint-error-fixer.cjs
 <<<<<<< HEAD
@@ -1696,6 +1794,7 @@ process.on('unhandledRejection', (reason, promise) => {}
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
+<<<<<<< HEAD
   process.exit(1)}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1734,6 +1833,8 @@ fixer.start().catch(error => {})
 =======
 
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

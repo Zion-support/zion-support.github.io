@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -24,11 +25,16 @@ const features = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React from "react";
 import { Brain, Clock, Award, Zap } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 const features = null;
+<<<<<<< HEAD
 }
 const features = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -429,3 +435,7 @@ export const AppFeatures: React.FC = () => {";"
 }"
 ";'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

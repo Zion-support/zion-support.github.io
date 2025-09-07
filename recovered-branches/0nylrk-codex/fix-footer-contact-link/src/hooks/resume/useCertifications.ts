@@ -6,6 +6,7 @@
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -18,6 +19,9 @@
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Certification  } from '@/types/resume';
@@ -84,8 +88,8 @@ export function useCertifications() {  const { user } = useAuth();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
   const { user } = useAuth();
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [isLoading, setIsLoading] = useState(false);
 
@@ -935,13 +939,25 @@ if ( {) {}
 
 
 
+=======
+export function useCertifications() {  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
+    setIsLoading (true);
+    set_error (null);
 ;
+
+
+
     try {
+  // TODO: Implement
       const { error } = await supabase;
         .from ('certifications');
         .insert ({
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           resume_id: resume_id;
           name: cert.name;
@@ -963,15 +979,34 @@ if (throw error) {}
     } finally {}
 =======
       // Check condition
+=======
+          resume_id: resume_id;,
+  name: cert.name;
+          issuing_organization: cert.issuing_organization;,)
+  issue_date: cert.issue_date ? formatDateForDB (cert.issue_date) : null;
+          expiration_date: cert.expiration_date ? formatDateForDB (cert.expiration_date) : null;,
+  credential_id: cert.credential_id,
+          credential_url: cert.credential_url;
+        });
+      // Check condition;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (throw error) {
-  $2
-}
-      return showSuccessToast ("Certification added", "Your certification has been added to your resume");
-    } catch (e: any) {
+      return showSuccessToast ("Certification added", "Your certification has been added to your resume");"
+    } catch (e: any) {"
       return handleResumeError (e, 'Could not add certification');
     } finally {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setIsLoading (false);
+  const update_certification = async (cert_id: string, cert: Certification): Promise < boolean> => {
+    // Check condition;
+      set_error ('You must be logged in to update certifications'),
+    setIsLoading (true);
+    set_error (null);
+
     }
   }
 ;
@@ -983,27 +1018,39 @@ if ( {) {}
 }'
 =======
   const update_certification = async (cert_id: string, cert: Certification): Promise < boolean> => {
-    // Check condition
+    // Check condition;
+
 if ( {) {
+<<<<<<< HEAD
   $2
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       set_error ('You must be logged in to update certifications'),
+=======
+  $2;
+}'
+      set_error ('You must be logged in to update certifications'),'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
     try {}
       const { error } = await supabase;'
         .from ('certifications');
         .update ({}
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
-      const { error } = await supabase;
-        .from ('certifications');
+  // TODO: Implement
         .update ({
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           name: cert.name;
           issuing_organization: cert.issuing_organization;
@@ -1025,18 +1072,28 @@ if (throw error) {}
     } finally {}
 =======
         });
+=======
+          name: cert.name;,
+  issuing_organization: cert.issuing_organization;)
+          issue_date: cert.issue_date ? formatDateForDB (cert.issue_date) : null;,
+  expiration_date: cert.expiration_date ? formatDateForDB (cert.expiration_date) : null;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         .eq ('id', cert_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Certification updated", "Your certification has been updated");
-    } catch (e: any) {
+      // Check condition;
+      return showSuccessToast ("Certification updated", "Your certification has been updated");"
       return handleResumeError (e, 'Could not update certification');
+<<<<<<< HEAD
     } finally {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+  const delete_certification = async (cert_id: string): Promise < boolean> => {
+    // Check condition;
+      set_error ('You must be logged in to delete certifications'),
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setIsLoading (false);
+
     }
   }
 ;
@@ -1048,17 +1105,26 @@ if ( {) {}
 }'
 =======
   const delete_certification = async (cert_id: string): Promise < boolean> => {
-    // Check condition
+    // Check condition;
+
 if ( {) {
+<<<<<<< HEAD
   $2
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       set_error ('You must be logged in to delete certifications'),
+=======
+  $2;
+}'
+      set_error ('You must be logged in to delete certifications'),'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
     try {}
       const { error } = await supabase;'
@@ -1075,22 +1141,24 @@ if (throw error) {}
       return handleResumeError (e, 'Could not delete certification');
     } finally {}
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
-      const { error } = await supabase;
-        .from ('certifications');
+  // TODO: Implement
         .delete ();
-        .eq ('id', cert_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Certification deleted", "Your certification has been removed from your resume");
-    } catch (e: any) {
+      // Check condition;
+      return showSuccessToast ("Certification deleted", "Your certification has been removed from your resume");"
       return handleResumeError (e, 'Could not delete certification');
+<<<<<<< HEAD
     } finally {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setIsLoading (false);
+
     }
   }
 ;
@@ -1098,12 +1166,17 @@ if (throw error) {
   return {}
 =======
   return {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     is_loading;
     error;
     add_certification;
     update_certification;
     delete_certification;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -1111,6 +1184,10 @@ if (throw error) {
 <<<<<<< HEAD
 }
 =======
+=======
+}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },;
 ;
   return {;
@@ -1170,6 +1247,18 @@ updateCertification;
 deleteCertification 
 }
 }
+<<<<<<< HEAD
+=======
+  }
+}
+;
+  }
+}
+;
+pr-12325
+    update_certification;}
+    delete_certification;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 ;
@@ -1199,6 +1288,7 @@ deleteCertification
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1213,3 +1303,6 @@ deleteCertification
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

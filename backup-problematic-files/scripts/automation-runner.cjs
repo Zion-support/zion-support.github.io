@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
 'use strict';
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ function run(command, options = {}) {}
 	const result = spawnSync(command, {})
 		"shell": true,
 		"stdio": 'inherit',
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 		...options}
 });
 	return result.status === 0};
@@ -27,36 +30,29 @@ function main() {}
 	let ok = true;
 
 	// Ensure deps are installed;
-	ok = run('corepack enable >/dev/null 2>&1 || true') && ok;
-	ok = run('yarn install --frozen-lockfile --check-files --non-interactive || yarn install --non-interactive') && ok;
 
+	ok = run('yarn install --frozen-lockfile --check-files --non-interactive || yarn install --non-interactive') && ok;
 	// Lint, type-check, tests;
 	ok = run('npm run lint') && ok;
 	ok = run('npm run type-check') && ok;
 	ok = run('npm run test') && ok;
-
 	// Security;
 	ok = run('npm run "security": audit') && ok;
-
 	// Selected automations (best-effort);
-	run('node scripts/code-quality-checks.cjs || true');
-	run('node scripts/performance-monitor.cjs || true');
-	run('node scripts/security-audit.cjs || true');
-	run('node scripts/seo-optimizer.cjs || true');
 
-	if (!ok) {}
-		console.error('\nAutomation runner encountered failures. See logs above.');
-
-		process.exitCode = 1} else {}
-		console.log('\nAutomation runner completed successfully.')};
 };
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 main();
 
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 main();
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/pm2/simple-monitor.js
 ========
 <<<<<<< HEAD:scripts/pm2/simple-monitor.js
@@ -73,6 +74,30 @@ class SimpleMonitor {}
   constructor() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+
+:scripts/pm2/simple-monitor.js
+
+<
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class SimpleMonitor { constructor() {" this.processName = "simple-monitor";" this.logFile = "logs/pm2/simple-monitor.log";" this.errorFile = "logs/pm2/simple-monitor-error.log"; this.ensureLogDirectory(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile, logMessage); } catch (error) {" console.error("Failed to write to log file:", error.message); } } error(message) {" this.log(message, "ERROR"); try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`); } catch (err) {" console.error("Failed to write to error file:", err.message); } } async checkSystemHealth() { try {" const os = require("os"); const health = { timestamp: new Date().toISOString(), uptime: os.uptime(), totalMemory: os.totalmem(), freeMemory: os.freemem(), loadAverage: os.loadavg(), platform: os.platform(), nodeVersion: process.version }; const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;` this.log(`System Health Check:`);` this.log(` - Uptime: ${Math.floor(health.uptime / 3600)} hours`);` this.log(` - Memory Usage: ${memoryUsage.toFixed(1)}%`);` this.log(` - Load Average: ${health.loadAverage[0].toFixed(2)}`);` this.log(` - Platform: ${health.platform}`);` this.log(` - Node Version: ${health.nodeVersion}`); return health; } catch (error) {` this.error(`Health check failed: ${error.message}`); return null; } } async start() {` this.log(`Starting ${this.processName}.`); / Run initial health check await this.checkSystemHealth(); / Set up periodic monitoring (every 5 minutes) const interval = 5 * 60 * 1000; setInterval(async () => {" this.log("Running scheduled health check."); await this.checkSystemHealth(); }, interval);` this.log(`${this.processName} started successfully`); }}/ Start the automation if this script is run directlyif (require.main === module) { const monitor = new SimpleMonitor(); monitor.start().catch(error => {" console.error("Simple monitor failed to start:", error); process.exit(1); });}module.exports = SimpleMonitor;"`"`
+
+
+
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class SimpleMonitor { constructor() {" this.processName = "simple-monitor";" this.logFile = "logs/pm2/simple-monitor.log";" this.errorFile = "logs/pm2/simple-monitor-error.log"; this.ensureLogDirectory(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile, logMessage); } catch (error) {" console.error("Failed to write to log file:", error.message); } } error(message) {" this.log(message, "ERROR"); try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`); } catch (err) {" console.error("Failed to write to error file:", err.message); } } async checkSystemHealth() { try {" const os = require("os"); const health = { timestamp: new Date().toISOString(), uptime: os.uptime(), totalMemory: os.totalmem(), freeMemory: os.freemem(), loadAverage: os.loadavg(), platform: os.platform(), nodeVersion: process.version }; const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;` this.log(`System Health Check:`);` this.log(` - Uptime: ${Math.floor(health.uptime / 3600)} hours`);` this.log(` - Memory Usage: ${memoryUsage.toFixed(1)}%`);` this.log(` - Load Average: ${health.loadAverage[0].toFixed(2)}`);` this.log(` - Platform: ${health.platform}`);` this.log(` - Node Version: ${health.nodeVersion}`); return health; } catch (error) {` this.error(`Health check failed: ${error.message}`); return null; } } async start() {` this.log(`Starting ${this.processName}.`); / Run initial health check await this.checkSystemHealth(); / Set up periodic monitoring (every 5 minutes) const interval = 5 * 60 * 1000; setInterval(async () => {" this.log("Running scheduled health check."); await this.checkSystemHealth(); }, interval);` this.log(`${this.processName} started successfully`); }}/ Start the automation if this script is run directlyif (require.main === module) { const monitor = new SimpleMonitor(); monitor.start().catch(error => {" console.error("Simple monitor failed to start:", error); process.exit(1); });}module.exports = SimpleMonitor;"`"`"
+#!/usr/bin/env node,
+/**;
+ * Simple PM2 Monitor Script;
+ * A basic monitoring script that works reliably;
+ */;"
+const fs = require('fs');';
+const path = require('path');';
+class SimpleMonitor {}
+  constructor() {}
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this && this.processName = 'simple-monitor';',
     this && this.logFile = 'logs/pm2/simple-monitor && monitor.log';';,
     this && this.errorFile = 'logs/pm2/simple-monitor-error && error.log';';
@@ -82,8 +107,12 @@ class SimpleMonitor {}
     const logDir = path && path.dirname(this && this.logFile);,
     if (!fs && fs.existsSync(logDir)) {}
       fs && fs.mkdirSync(logDir, { recursive: true });,
+<<<<<<< HEAD
 =======
     this.processName = 'simple-monitor';',
+=======
+this.processName = 'simple-monitor';',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.logFile = 'logs/pm2/simple-monitor.log';';,
     this.errorFile = 'logs/pm2/simple-monitor-error.log';';
     this.ensureLogDirectory();
@@ -92,6 +121,7 @@ class SimpleMonitor {}
     const logDir = path.dirname(this.logFile);,
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true });,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   constructor() {}
@@ -151,6 +181,32 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    }
+  }
+
+  log(message, level = 'INFO') {'}
+    const timestamp = new Date().toISOString();,`;
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
+    );
+
+    _console && _console.log(logMessage && logMessage.trim());
+
+
+    _console.log(logMessage.trim());
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
+
+:scripts/pm2/simple-monitor.js
+
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class SimpleMonitor { constructor() {" this.processName = "simple-monitor";" this.logFile = "logs/pm2/simple-monitor.log";" this.errorFile = "logs/pm2/simple-monitor-error.log"; this.ensureLogDirectory(); } ensureLogDirectory() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); try { fs.appendFileSync(this.logFile, logMessage); } catch (error) {" console.error("Failed to write to log file:", error.message); } } error(message) {" this.log(message, "ERROR"); try {` fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`); } catch (err) {" console.error("Failed to write to error file:", err.message); } } async checkSystemHealth() { try {" const os = require("os"); const health = { timestamp: new Date().toISOString(), uptime: os.uptime(), totalMemory: os.totalmem(), freeMemory: os.freemem(), loadAverage: os.loadavg(), platform: os.platform(), nodeVersion: process.version }; const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;` this.log(`System Health Check:`);` this.log(` - Uptime: ${Math.floor(health.uptime / 3600)} hours`);` this.log(` - Memory Usage: ${memoryUsage.toFixed(1)}%`);` this.log(` - Load Average: ${health.loadAverage[0].toFixed(2)}`);` this.log(` - Platform: ${health.platform}`);` this.log(` - Node Version: ${health.nodeVersion}`); return health; } catch (error) {` this.error(`Health check failed: ${error.message}`); return null; } } async start() {` this.log(`Starting ${this.processName}.`); / Run initial health check await this.checkSystemHealth(); / Set up periodic monitoring (every 5 minutes) const interval = 5 * 60 * 1000; setInterval(async () => {" this.log("Running scheduled health check."); await this.checkSystemHealth(); }, interval);` this.log(`${this.processName} started successfully`); }}/ Start the automation if this script is run directlyif (require.main === module) { const monitor = new SimpleMonitor(); monitor.start().catch(error => {" console.error("Simple monitor failed to start:", error); process.exit(1); });}module.exports = SimpleMonitor;"`"`
+#!/usr/bin/env node,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * Simple PM2 Monitor Script;
  * A basic monitoring script that works reliably;
@@ -166,6 +222,7 @@ class SimpleMonitor {}
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;,
     );
     _console.log(logMessage.trim());
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -227,6 +284,55 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   }
   async checkSystemHealth() {}
     try {}'
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
+
+
+
+
+:scripts/pm2/simple-monitor.js
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
+    _console && _console.log(logMessage && logMessage.trim());
+
+`;
+/**;
+    _console.log(logMessage.trim());
+
+
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+    try {}
+      fs.appendFileSync(this.logFile, logMessage);,
+    } catch (error) {}
+      _console.error('Failed to write to log file:', error.message);',
+  error(message) {}
+    this.log(message, 'ERROR');',
+    try {}`;
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);,
+    } catch (err) {}
+      _console.error('Failed to write to error file:', err.message);',
+  async checkSystemHealth() {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const os = require('os');',
       const health = {}
         timestamp: new Date().toISOString(),
@@ -237,6 +343,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         platform: os.platform(),
         nodeVersion: process.version,
 ;      };,
+<<<<<<< HEAD
       const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;`
       this.log(`System Health Check:`);`
       this.log(`  - Uptime: ${Math.floor(health.uptime / 3600)} hours`);,`
@@ -251,11 +358,26 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     }
   }
   async start() {}`
+=======
+      const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;`;
+      this.log(`System Health Check:`);`;
+      this.log(`  - Uptime: ${Math.floor(health.uptime / 3600)} hours`);,`;
+      this.log(`  - Memory Usage: ${memoryUsage.toFixed(1)}%`);,`;
+      this.log(`  - Load Average: ${health.loadAverage[0].toFixed(2)}`);,`;
+      this.log(`  - Platform: ${health.platform}`);,`;
+      this.log(`  - Node Version: ${health.nodeVersion}`);,
+      return health;
+    } catch (error) {}`;
+      this.error(`Health check failed: ${error.message}`);,
+      return null;,
+  async start() {}`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Starting ${this.processName}...`);,
     // Run initial health check;
     await this.checkSystemHealth();
     // Set up periodic monitoring (every 5, minutes),
     const interval = 5 * 60 * 1000;,
+<<<<<<< HEAD
     setInterval(async () => {}'
       this.log('Running scheduled health check...');',
       await this.checkSystemHealth();,
@@ -298,11 +420,25 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
+=======
+    setInterval(async () => {}
+      this.log('Running scheduled health check...');',
+      await this.checkSystemHealth();,
+    }, interval);,`;
+    this.log(`${this.processName} started successfully`);,
+  }
+
+}
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 // Start the automation if this script is run directly;
 <<<<<<< HEAD
@@ -382,10 +518,29 @@ module && module.exports = SimpleMonitor;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 
 module.exports = SimpleMonitor;
+=======
+
+
+:scripts/pm2/simple-monitor.js
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+
+// Start the automation if this script is run directly;
+if (require.main === module) {}
+  const monitor = new SimpleMonitor();,
+  monitor.start().catch(error => {}),
+    _console.error('Simple monitor failed to start:', error);',
+    process.exit(1);,
+  });
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 module.exports = SimpleMonitor;
 
 module.exports = SimpleMonitor;
 
+<<<<<<< HEAD
 module.exports = SimpleMonitor;
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/simple-monitor.js
 =======
@@ -394,10 +549,15 @@ module.exports = SimpleMonitor;
 
 module && module.exports = SimpleMonitor;
 module && module.exports = SimpleMonitor;
+=======
+
+module.exports = SimpleMonitor;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 module.exports = SimpleMonitor;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 module && module.exports = SimpleMonitor;
@@ -423,10 +583,17 @@ module.exports = SimpleMonitor;=======}
 module && module.exports = SimpleMonitor;
 
 module && module.exports = SimpleMonitor;
+=======
+
+}
+<
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 module.exports = SimpleMonitor;
 module.exports = SimpleMonitor;
 
 module.exports = SimpleMonitor;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 module.exports = SimpleMonitor;
 module.exports = SimpleMonitor;
@@ -483,3 +650,11 @@ module.exports = SimpleMonitor;
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+module.exports = SimpleMonitor;
+module.exports = SimpleMonitor;
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

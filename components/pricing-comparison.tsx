@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Button from '../components/ui/Button';'
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 <<<<<<< HEAD
@@ -394,6 +395,9 @@ icon: <DollarSign className='w-6 h-6' />,
       color: 'text-yellow-400',
     },
   ];
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -441,6 +445,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               prices.;
             </p>;'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+<<<<<<< HEAD
               <Button'
                 href='#comparison''
                 variant='primary''
@@ -449,6 +454,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 View Comparison;
               </Button>;
 <<<<<<< HEAD
+=======
+              <Button
+                href='#comparison'
+                variant='primary'
+                size='lg'
+                className='bg-indigo-600 hover:bg-indigo-700 text-white'>;
+                View Comparison;
+              </Button>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='bg-indigo-600 hover:bg-indigo-700 text-white'
               >
                 View Comparison
@@ -528,7 +542,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
 
         {/* Detailed Comparison */}
+<<<<<<< HEAD
 "
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <section id="comparison" className="py-24 bg-gray-800">
 
               ))}"
@@ -540,6 +558,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See exactly how each service compares in features, pricing, and value.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
@@ -675,6 +696,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </div>;
                           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <span className='text-purple-400 font-semibold'>
                         {service.zionPricing.enterprise}
                       </span>
@@ -744,6 +768,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             ))}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <span className='text-sm text-gray-400 ml-2'>
                               {competitor.rating}
                             </span>
@@ -765,11 +792,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               </p>'
                               <ul className='text-gray-300 space-y-1'>
                                 {competitor.pros.map((pro, proIndex) => (
+<<<<<<< HEAD
                                   <li;
                                     key={proIndex}'
                                     className='flex items-center'>;'
                                     <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />                                    {pro}                          </div>;"
                           <div className="mb-4">;"
+=======
+                                  <li
+                                    key={proIndex}
+                                    className='flex items-center'>;
+                                    <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />                                    {pro}                          </div>;
+                          <div className="mb-4">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                             <p className="text-lg font-semibold text-white">{competitor && competitor.pricing}</p>;
                           </div>;"
                           <div className="space-y-2 mb-4 text-xs">;
@@ -801,8 +836,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                               </ul>
                             </div>
+<<<<<<< HEAD
                             <div>"
                               <p className="text-red-400 font-medium mb-1">Cons:</p>"
+=======
+                            <div>
+                              <p className="text-red-400 font-medium mb-1">Cons:</p>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                               <ul className="text-gray-300 space-y-1">
                                 {competitor.cons.map((con, conIndex) => ("
                                   <li key={conIndex} className="flex items-center">"
@@ -851,7 +891,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                               </ul>
                             </div>
+<<<<<<< HEAD
                           </div>"
+=======
+                          </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                             <p className="text-green-400 font-semibold text-sm">{competitor.savings}</p>
 <div className='text-center'>
                             <p className='text-green-400 font-semibold text-sm'>
@@ -866,9 +910,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
         {/* CTA Section */}'
         <section className='py - 24 bg - gradient - to - r from - indigo - 600 to - purple - 600'>;'
           <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;'
+=======
+        {/* CTA Section */}
+        <section className='py - 24 bg - gradient - to - r from - indigo - 600 to - purple - 600'>;
+          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
             </h2>;'
             <p className='text - xl text - indigo - 100 mb - 12'>;
@@ -876,6 +926,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               choose Zion.;
             </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
@@ -933,7 +986,11 @@ href='/devops-automation'
                 variant='secondary''
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 size='lg'
+<<<<<<< HEAD
                 Try DevOps Automation;
+=======
+                Try DevOps Automation
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </Button>;
             </div>;
           </div>;
@@ -947,6 +1004,9 @@ href='/devops-automation'
               </Button>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='bg-white text-indigo-600 hover:bg-gray-100'
               >
                 Try DevOps Automation

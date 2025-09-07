@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -56,9 +57,17 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 =======
+=======
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -179,8 +188,9 @@ serve(async (req) => {
   try {
 
     const { user_id, notification_id } = await req && req.json() as EmailRequest;
-    
+const { user_id, notification_id } = await req && req.json() as EmailRequest;
 
+    const { user_id, notification_id } = await req && req.json() as EmailRequest;
     // Create Supabase client with the service role key
     const supabaseClient = createClient(
       Deno && Deno.env.get("SUPABASE_URL") ?? "";
@@ -188,9 +198,27 @@ serve(async (req) => {
     );
 
     const { user_id, notification_id } = await req.json() as EmailRequest,
-    
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+    const { user_id, notification_id } = await req.json() as EmailRequest;
+    const { user_id, notification_id } = await req.json() as EmailRequest,
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Create Supabase client with the service role key
     const supabaseClient = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
@@ -211,6 +239,7 @@ serve(async (req) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -228,6 +257,10 @@ serve(async (req) => {
     ),
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+);
+    ),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Get notification details and user email
     const { data: notification, error: notificationError } = await supabaseClient
       .from('notifications')
@@ -294,21 +327,24 @@ serve(async (req) => {
 
       .single(),
 
-      
     if (notificationError) throw new Error(`Error fetching notification: ${notificationError && notificationError.message}`);
 
-
-
-
+.single();
+    if (notificationError) throw new Error(`Error fetching notification: ${notificationError && notificationError.message}`);
+      .single();
+    if (notificationError) throw new Error(`Error fetching notification: ${notificationError.message}`);
+      .single(),
+    if (notificationError) throw new Error(`Error fetching notification: ${notificationError.message}`),
     const { data: userProfile, error: userError } = await supabaseClient
       .from('profiles')
+      .eq('id', notification_id)      .from('profiles')
       .select('display_name, email')
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       .eq('id', user_id)
 
-
       .single(),
 
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 `
@@ -320,6 +356,9 @@ serve(async (req) => {
     console && console.log(`Subject: ${notification && notification.title}`);`
     console && console.log(`Body: ${notification && notification.message}`);`
 =======
+=======
+.single();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (userError) throw new Error(`Error fetching user: ${userError && userError.message}`);
 
     // In a real implementation, here you would use a service like Resend, SendGrid, etc.
@@ -330,6 +369,7 @@ serve(async (req) => {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console && console.log(`Type: ${notification && notification.type}`);
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -347,6 +387,8 @@ serve(async (req) => {
 "
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return new Response(
       JSON && JSON.stringify({ success: true });
       {
@@ -359,7 +401,11 @@ serve(async (req) => {
       JSON && JSON.stringify({ error: error && error.message });
       {
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+headers: { ...corsHeaders, "Content-Type": "application/json" }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         headers: { ...corsHeaders, "Content-Type": "application/json" }
         status: 500}
     )
@@ -371,7 +417,11 @@ import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {"
   "Access - Control - Allow - Origin": "*","
@@ -415,6 +465,7 @@ interface EmailRequest {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
   }
 });
 =======
@@ -428,6 +479,47 @@ interface EmailRequest {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+.single();
+    if (userError) throw new Error(`Error fetching user: ${userError.message}`);
+    // In a real implementation, here you would use a service like Resend, SendGrid, etc.
+    // to send the actual email. For this example, we'll simulate the email sending.
+    console.log(`Email would be sent to ${userProfile.email}`);
+    console.log(`Subject: ${notification.title}`);
+    console.log(`Body: ${notification.message}`);
+    console.log(`Type: ${notification.type}`);
+      .single(),
+    if (userError) throw new Error(`Error fetching user: ${userError.message}`),
+
+    // In a real implementation, here you would use a service like Resend, SendGrid, etc.
+    // to send the actual email. For this example, we'll simulate the email sending.
+    // // // console.log(`Email would be sent to ${userProfile.email}`),
+    // // // console.log(`Subject: ${notification.title}`),
+    // // // console.log(`Body: ${notification.message}`),
+    // // // console.log(`Type: ${notification.type}`),
+
+    return new Response(
+      JSON.stringify({ success: true }),
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 200}
+    )
+  } catch (error) {
+    console.error("Error sending email notification:", error.message),
+    return new Response(
+      JSON.stringify({ error: error.message }),
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+        status: 500}
+    )
+  }
+});
+
+        headers: { ...corsHeaders, "Content-Type": "application/json" };
+        status: 500}
+    )
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         headers: { ...corsHeaders, "Content-Type": "application/json" },
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 =======
@@ -570,6 +662,7 @@ if ( {) {
         status: 500}
     );
 
+<<<<<<< HEAD
 
 
 
@@ -584,6 +677,8 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;
 ;
@@ -619,6 +714,193 @@ serve(async (req) => {;
       .single(),;
     if (notificationError) throw new Error(`Error fetching notification: ${notificationError.message}`),;
     const { data: userProfile, error: userError } = await supabaseClient;
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
+import {createClient} from "https: //esm ;"
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*"""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",""
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;""
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2","
+  "Access-Control-Allow-Origin": "*",""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+interface EmailRequest {
+  // TODO: Implement
+}
+  user_id: string;,
+  notification_id: string;
+serve(async (req) => {
+  // Handle CORS preflight requests;"
+  if (req && req.method === "OPTIONS") {"
+    return new Response(null, { headers: corsHeaders })
+  try {
+  // TODO: Implement
+    const { user_id, notification_id } = await req && req.json() as EmailRequest;
+
+    // Create Supabase client with the service role key;
+    const supabaseClient = createClient()"
+      Deno && Deno.env.get("SUPABASE_URL") ?? "";""
+      Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? """
+    );
+
+    const { user_id, notification_id } = await req.json() as EmailRequest,
+
+    // Create Supabase client with the service role key;
+      Deno.env.get("SUPABASE_URL") ?? "",""
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? """
+    ),
+
+
+
+    // Get notification details and user email;
+    const { data: notification, error: notificationError } = await supabaseClient;"
+      .from('notifications')
+      .select('title, message, type')
+      .eq('id', notification_id)
+      .single(),
+
+    if (notificationError) throw new Error(`Error fetching notification: ${notificationError && notificationError.message}`);
+
+
+
+
+    const { data: userProfile, error: userError } = await supabaseClient;
+      .from('profiles')
+      .select('display_name, email')
+      .eq('id', user_id)
+
+      `;
+    if (userError) throw new Error(`Error fetching user: ${userError && userError.message}`);
+
+    // In a real implementation, here you would use a service like Resend, SendGrid, etc.
+    // to send the actual email. For this example, we'll simulate the email sending.`;
+    console && console.log(`Email would be sent to ${userProfile && userProfile.email}`);`;
+    console && console.log(`Subject: ${notification && notification.title}`);`;
+    console && console.log(`Body: ${notification && notification.message}`);`;
+    console && console.log(`Type: ${notification && notification.type}`);
+
+
+
+
+    return new Response()
+      JSON && JSON.stringify({ success: true });
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" }"
+        status: 200}
+    )
+  } catch (error) {"
+    console && console.error("Error sending email notification:", error && error.message);"
+      JSON && JSON.stringify({ error: error && error.message });
+"
+        status: 500}
+});"
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*",""
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}"
+;
+  // TODO: Implement
+  user_id: string,
+        headers: { ...corsHeaders, "Content-Type": "application/json" };"
+        headers: { ...corsHeaders, "Content-Type": "application/json" },""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;"
+const corsHeaders = {;"
+  "Access-Control-Allow-Origin": "*",;""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;"
+interface EmailRequest {;
+  user_id: string,;
+
+serve (async (req) => {
+  // Handle CORS preflight requests;
+  // Check condition;
+if ( {) {
+  $2;
+    return new Response (null, { headers: cors_headers });
+  // TODO: Implement
+    const { user_id, notification_id } = await req.json () as EmailRequest;
+    // Create Supabase client with the service role key;
+    const supabase_client = create_client ()"
+      Deno.env.get ("SUPABASE_URL") ?? "";""
+      Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY") ?? "");"
+    // Get notification details and user email;
+    const { data: notification, error: notification_error } = await supabase_client;"
+      .from ('notifications');
+      .select ('title, message, type');
+      .eq ('id', notification_id);
+      .single ();
+;`;
+    if (throw new Error (`Error fetching notification: ${notification_error.message}`)) {
+    const { data: user_profile, error: user_error } = await supabase_client;
+      .from ('profiles');
+      .select ('display_name, email');
+      .eq ('id', user_id);
+    if (throw new Error (`Error fetching user: ${user_error.message}`)) {
+    // In a real implementation, here you would use a service like Resend, SendGrid, etc.;
+    // to send the actual email. For this example, we'll simulate the email sending.;`;
+    console.log (`Email would be sent to ${user_profile.email}`);`;
+    console.log (`Subject: ${notification.title}`);`;
+    console.log (`Body: ${notification.message}`);`;
+    console.log (`Type: ${notification.type}`);
+    return new Response ()
+      JSON.stringify ({ success: true });
+        headers: { ...cors_headers, "Content - Type": "application / json" }"
+    console.error ("Error sending email notification:", error.message);"
+      JSON.stringify ({ error: error.message });
+      {"
+
+
+
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;""
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;"
+  "Access-Control-Allow-Origin":"*",;""
+  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;"
+  user_id:string,;
+  notification_id:string;
+serve(async (req) => {;
+  // Handle CORS preflight requests;"
+  if (req.method === "OPTIONS") {;"
+    return new Response(null, { headers: corsHeaders });
+  try {;
+    const { user_id, notification_id } = await req.json() as EmailRequest,;
+    // Create Supabase client with the service role key;
+
+;
+interface EmailRequest {;
+  user_id:string,;}
+  notification_id:string;}
+}
+  notification_id: string;
+}
+;
+serve(async (req) => {;
+
+  // Handle CORS preflight requests;"
+  if (req.method === "OPTIONS") {;"
+
+    return new Response(null, { headers: corsHeaders });
+  }
+;
+  try {;}
+    const { user_id, notification_id } = await req.json() as EmailRequest,;
+    // Create Supabase client with the service role key;
+
+    const supabaseClient = createClient(;)"
+      Deno.env.get("SUPABASE_URL") ?? "",;""
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";"
+
+    ),;
+    // Get notification details and user email;
+      .from('notifications');
+      .select('title, message, type');
+      .eq('id', notification_id);
+      .single(),;`;
+    if (notificationError) throw new Error(`Error fetching notification: ${notificationError.message}`),;
+pr-12325
       .from('profiles');
       .select('display_name, email');
       .eq('id', user_id);
@@ -626,10 +908,9 @@ serve(async (req) => {;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
   }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -644,10 +925,35 @@ serve(async (req) => {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
+  }
 
+if (userError) throw new Error(`Error fetching user: ${userError.message}`),;
+    // In a real implementation, here you would use a service like Resend, SendGrid, etc.;
+    // to send the actual email. For this example, we'll simulate the email sending.;
+    // // // console.log(`Email would be sent to ${userProfile.email}`),;
+    // // // console.log(`Subject: ${notification.title}`),;
+    // // // console.log(`Body: ${notification.message}`),;
+    // // // console.log(`Type: ${notification.type}`),;
+    return new Response(;
+      JSON.stringify({ success: true }),;
+      {;
+        headers: { ...corsHeaders, "Content-Type": "application/json" },;
+        status: 200}
+    );
+  } catch (error) {;
+    console.error("Error sending email notification:", error.message),;
+    return new Response(;
+      JSON.stringify({ error: error.message }),;
+      {;
+        headers: { ...corsHeaders, "Content-Type": "application/json" },;
+        status: 500}
+    );
   }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -668,3 +974,16 @@ serve(async (req) => {;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+});
+});
+
+
+});
+
+pr-12325
+'
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

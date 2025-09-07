@@ -1,13 +1,11 @@
 const fs = require('fs')
 const path = require('path')
-console.log(' Fixing pages syntax errors...')
-const pagesDir = path.join(__dirname, '..', 'pages')
-const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
-  let content = fs.readFileSync(filePath, 'utf8')
+
   if (content.includes('import React') && !content.includes('const ') && !content.includes('function ')
     const lines = content.split('\n')
     const importLines = lines.filter(line => line.startsWith('import')
     const otherLines = lines.filter(line => !line.startsWith('import')
+<<<<<<< HEAD
     if (otherLines.length > 0 && otherLines[0].includes('{'})
       const componentName = file.replace('.tsx', '').replace(/-/g, '')
       content = importLines.join('\n') + '\n\n'
@@ -15,6 +13,8 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
         '};\n\n'
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

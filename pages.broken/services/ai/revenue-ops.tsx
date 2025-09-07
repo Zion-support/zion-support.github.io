@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -41,10 +42,22 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function RevenueOpsAI() { return ( <Article title=\"Revenue Ops Intelligence\" subtitle=\"Forecasting,pipeline health,and pricing guidance powered by AI\" price=\"projects from $12k\" bullets={[\'Win-rate modeling and pipeline risk scoring by buyer segment\',\'Dynamic discount guardrails and pricing recommendations\',\'Anomaly detection on deal slippage and stage aging\',\'Native HubSpot/SFDC integration and dbt/Snowflake support\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 import React from 'react';
 interface RevenueopsProps {
   // Add props here as needed
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +74,11 @@ export default function Revenueops({ }: RevenueopsProps) {
 }
 export default function Revenueops({ }: RevenueopsProps) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -91,11 +109,16 @@ interface RevenueopsProps {;
 }
 export default function Revenueops(): any ({ }: RevenueopsProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -109,6 +132,7 @@ export default function Revenueops(): any ({ }: RevenueopsProps) {;
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,3 +196,40 @@ export default function Revenueops(): any ({ }: RevenueopsProps) {;
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export default function RevenueOpsAI() { return ( <Article title=\"Revenue Ops Intelligence\" subtitle=\"Forecasting,pipeline health,and pricing guidance powered by AI\" price=\"projects from $12k\" bullets={[\'Win-rate modeling and pipeline risk scoring by buyer segment\',\'Dynamic discount guardrails and pricing recommendations\',\'Anomaly detection on deal slippage and stage aging\',\'Native HubSpot/SFDC integration and dbt/Snowflake support\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }"
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+      return <div>Something went wrong.</div>;"
+export default function RevenueOpsAI() { return ( <Article title=\"Revenue Ops Intelligence\" subtitle=\"Forecasting,pipeline health,and pricing guidance powered by AI\" price=\"projects from $12k\" bullets={[\'Win-rate modeling and pipeline risk scoring by buyer segment\',\'Dynamic discount guardrails and pricing recommendations\',\'Anomaly detection on deal slippage and stage aging\',\'Native HubSpot/SFDC integration and dbt/Snowflake support\' ]} /> ) } function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets && bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }"
+"
+export default function RevenueOpsAI() { return ( <Article title=\"Revenue Ops Intelligence\" subtitle=\"Forecasting,pipeline health,and pricing guidance powered by AI\" price=\"projects from $12k\" bullets={[\'Win-rate modeling and pipeline risk scoring by buyer segment\',\'Dynamic discount guardrails and pricing recommendations\',\'Anomaly detection on deal slippage and stage aging\',\'Native HubSpot/SFDC integration and dbt/Snowflake support\' ]} /> ) } function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string, price: string, bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets && bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }"
+
+    <div>
+</div>
+      <h1>Revenueops</h1>
+      <p>This component is currently under development.</p>
+    </div>"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

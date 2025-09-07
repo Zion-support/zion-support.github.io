@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import React, { useState } from 'react';
@@ -10,12 +11,16 @@ import { ThumbsUp, ThumbsDown } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { HELP_CATEGORIES } from './help-content';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { ThumbsUp, ThumbsDown } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast",
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { HELP_CATEGORIES } from "./help-content",
 =======
@@ -24,6 +29,10 @@ import { HELP_CATEGORIES } from "./help-content",
 import { HELP_CATEGORIES } from "./help-content";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import { HELP_CATEGORIES } from "./help-content";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface HelpArticleViewProps {
   articleId: string
 =======
@@ -32,6 +41,7 @@ interface HelpArticleViewProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,9 +91,15 @@ export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
 
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
   
+=======
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Find the article in all categories
-  let article,
+  let article = null;
   for (const category of HELP_CATEGORIES) {
+<<<<<<< HEAD
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
       article = found,
@@ -409,13 +425,20 @@ function formatDate(date: string): string {;"
 <<<<<<< HEAD
 ;
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const found = null;
     day: "numeric"
   })
+
 }
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 ;'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

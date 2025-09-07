@@ -17,6 +17,7 @@
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -170,13 +171,104 @@ export default function Index() {}
 export default function Index() {;
 
 
+=======
+export default function Index() {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 
+        keywords={t("home.seo_keywords")}
+        canonical="https://app.ziontechgroup.com/";
+      />;
+      <Header />;
+      <HeroSection />;
+      {/* Quick Access Tools Section */}
+      <section className="py-16 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">
+              {t("home.explore_tools")}
+            </h2>
+            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
+              {t("home.tools_description")}
+                </div>;
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>;
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>;
+                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>;
+                  <span>{t("general.explore")}</span>;
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
+                </div>;
+              </Link>;
 
-    },
+            ))}
+  // Tools and features showcase;
+  const toolsFeatures = [
+    {"
+      title: t("home.tool_ai_matcher")","
+  description: t("home.tool_ai_matcher_desc")""
+      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />"
+</Sparkles>"
+      icon: <Users className="h-6 w-6 text-zion-purple" />"
+</Users>"
+      icon: <Zap className="h-6 w-6 text-zion-cyan" />"
+</Zap>"
+      icon: <Settings className="h-6 w-6 text-zion-purple" />"
+</Settings>"
+      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />"
+</BarChart3>"
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />"
+</Smartphone>"
+      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,;"
+</Sparkles>"
+      icon: <Users className="h-6 w-6 text-zion-purple" />,;"
+</Users>"
+      icon: <Zap className="h-6 w-6 text-zion-cyan" />,;"
+</Zap>"
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,;"
+</Settings>"
+      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,;"
+</BarChart3>"
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,;"
+</Smartphone>"
+      icon: <Sparkles className="h - 6 w - 6 text - zion - cyan" />,"
+</Sparkles>"
+      icon: <Users className="h - 6 w - 6 text - zion - purple" />,"
+</Users>"
+      icon: <Zap className="h - 6 w - 6 text - zion - cyan" />,"
+</Zap>"
+      icon: <Settings className="h - 6 w - 6 text - zion - purple" />,"
+</Settings>"
+      icon: <BarChart3 className="h - 6 w - 6 text - zion - cyan" />,"
+</BarChart3>"
+      icon: <Smartphone className="h - 6 w - 6 text - zion - purple" />,"
+</Smartphone>"
+      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,;"
+</Sparkles>"
+      icon: <Users className="h-6 w-6 text-zion-purple" />,;"
+</Users>"
+      icon: <Zap className="h-6 w-6 text-zion-cyan" />,;"
+</Zap>"
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,;"
+</Settings>"
+      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,;"
+</BarChart3>"
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />;"
+</Smartphone>"
+    <div className="min-h-screen bg-zion-blue text-white">;"
+</div>
+      <SEO;"
+        title={t("home.seo_title")} ;""
+        description={t("home.seo_description")} ;""
+        keywords={t("home.seo_keywords")}""
+        canonical="https://app.ziontechgroup.com/";"
 
+      />;
+</SEO>
+      <Header />;
+</Header>
+      <HeroSection />;
 
+<<<<<<< HEAD
     }
     },
 <<<<<<< HEAD
@@ -204,8 +296,62 @@ export default function Index() {;
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+</HeroSection>"
+      <section className="py-16 bg-zion-blue-dark">"
+</section>"
+        <div className="container mx-auto px-4">"
+</div>"
+          <div className="text-center mb-12">"
+</div>"
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">"
+</h2>
+            </h2>"
+            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">"
+</p>
+                </div>;"
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>;""
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>;""
+                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>;'
+</div>'
+                  <span>{t("general.explore")}</span>;""
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;'
+</ArrowRight>
+                </div>;
+              </Link>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+          </div>
+        </div>
+      </section>
+      <CategoriesSection />
+      <BenefitsSection />
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <TestimonialCarousel />
+      <TrustedBySection />
+      <BlogSection />
+      {/* Add social share section to encourage users to spread the word */}
+      <SocialShareSection />
+      <WaitlistSection />
+      <FloatingCTA />
+      <Footer />
+    </div>
+  )
+}
+    <div className="min-h-screen bg-zion-blue text-white">;
+      <SEO
+        title={t("home && home.seo_title")} 
+        description={t("home && home.seo_description")} 
+        keywords={t("home && home.seo_keywords")}
+        canonical="https://app && app.ziontechgroup.com/"
+      />;
+      <Header />;
+      <HeroSection />;
 
+<<<<<<< HEAD
     },
 <<<<<<< HEAD
 =======
@@ -454,6 +600,38 @@ export default function Index() {;
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { TrustedBySection } from "@/components/TrustedBySection",;
+import { TestimonialCarousel } from "@/components/TestimonialCarousel",;
+import { FloatingCTA } from "@/components/FloatingCTA",;
+import { HeroSection } from "@/components/HeroSection",;
+import { CategoriesSection } from "@/components/CategoriesSection",;
+import { BenefitsSection } from "@/components/BenefitsSection",;
+import { HowItWorksSection } from "@/components/HowItWorksSection",;
+import { WaitlistSection } from "@/components/WaitlistSection",;
+import { BlogSection } from "@/components/BlogSection",;
+import { SEO } from "@/components/SEO",;
+import { Button } from "@/components/ui/button",;
+import { Link } from "react-router-dom",;
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
+import { FeaturesGuideSection } from "@/components/FeaturesGuideSection",;
+import { SocialShareSection } from "@/components/SocialShareSection",;
+import { useTranslation } from "react-i18next",;
+import { useLanguage } from "@/context/LanguageContext",;
+import { ;
+  ArrowRight,;
+  Users, ;
+  Zap, ;
+  Settings, ;
+  Search,;
+  MessageSquare, ;
+  Sparkles,;
+  BarChart3,;
+  Smartphone;
+} from "lucide-react",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { TrustedBySection } from '@/components / TrustedBySection';
@@ -635,6 +813,7 @@ function Index() {
     }
   ];
 ;
+<<<<<<< HEAD
   return (
 
 
@@ -1006,6 +1185,8 @@ export default function Index() { return null; }
 <<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (;
     <div className="min-h-screen bg-zion-blue text-white">;
       <SEO ;
@@ -1020,6 +1201,7 @@ export default function Index() { return null; }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Quick Access Tools Section */}
+<<<<<<< HEAD
 =======
   )      {/* Quick Access Tools Section */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1029,6 +1211,9 @@ export default function Index() { return null; }
 =======
       {/* Quick Access Tools Section */}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  )      {/* Quick Access Tools Section */}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section className="py-16 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">;
           <div className="text-center mb-12">;
@@ -1061,8 +1246,34 @@ export default function Index() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
+{t("home.explore_tools")}
+            </h2>;
+            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              {t("home.tools_description")}
+            </p>;
+          </div>;
+          ;
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' :''}`}>;
+            {toolsFeatures.map((feature, index) => (;
+              <Link ;
+                key={index} ;
+                to={feature.link} ;
+                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300";
+              >;
+                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">;
+                  {feature.icon}
                 </div>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>;
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>;
+                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' :''}`}>;
+                  <span>{t("general.explore")}</span>;
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' :'ml-2'} h-4 w-4`} />;
+                </div>;
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;                </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </Link>;
             ))}
           </div>;
@@ -1094,6 +1305,7 @@ export default function Index() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -1111,6 +1323,11 @@ export default function Index() { return null; }
   return (
     <div className="min - h-screen bg - zion - blue text - white">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+return (
+    <div className="min - h-screen bg - zion - blue text - white">;
+    <div className="min - h-screen bg - zion - blue text-white">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <SEO;
         title={t ("home.seo_title")}
         description={t ("home.seo_description")}
@@ -1129,13 +1346,13 @@ export default function Index() { return null; }
       <HeroSection />;
 <<<<<<< HEAD
       {/* Quick Access Tools Section */}
-      <section className="py - 16 bg - zion - blue - dark">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h2 className="text - 3xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb - 4">;
+      <section className="py - 16 bg - zion - blue-dark">;
+        <div className="container mx - auto px-4">;
+          <div className="text - center mb-12">;
+            <h2 className="text - 3xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb-4">;
               {t ("home.explore_tools")}
             </h2>;
-            <p className="text - zion - slate - light text - xl max - w-3xl mx - auto">;
+            <p className="text - zion - slate - light text - xl max - w-3xl mx-auto">;
               {t ("home.tools_description")}
             </p>;
           </div>;
@@ -1144,16 +1361,194 @@ export default function Index() { return null; }
               <Link;
                 key={index}
                 to={feature.link}
-                className="bg - zion - blue border border - zion - blue - light hover:border - zion - purple / 50 rounded - lg p - 6 transition - all duration - 300";
+                className="bg - zion - blue border border - zion - blue - light hover:border - zion - purple / 50 rounded - lg p - 6 transition - all duration-300";
               >;
-                <div className="bg - zion - blue - dark rounded - full w - 12 h - 12 flex items - center justify - center mb - 4">;
+                <div className="bg - zion - blue - dark rounded - full w - 12 h - 12 flex items - center justify - center mb-4">;
                   {feature.icon}
                 </div>;
-                <h3 className="text - xl font - bold text - white mb - 2">{feature.title}</h3>;
-                <p className="text - zion - slate - light mb - 4">{feature.description}</p>;
+                <h3 className="text - xl font - bold text - white mb-2">{feature.title}</h3>;
+                <p className="text - zion - slate - light mb-4">{feature.description}</p>;
                 <div className={`flex items - center text - zion - cyan ${isRTL ? 'flex - row - reverse' : ''}`}>;
                   <span>{t ("general.explore")}</span>;
                   <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`} />;
+</CategoriesSection>
+      <BenefitsSection />
+</BenefitsSection>
+      <FeaturesGuideSection />
+</FeaturesGuideSection>
+      <HowItWorksSection />
+</HowItWorksSection>
+      <FeaturedListingsSection />
+</FeaturedListingsSection>
+      <TestimonialCarousel />
+</TestimonialCarousel>
+      <TrustedBySection />
+</TrustedBySection>
+      <BlogSection />
+</BlogSection>
+      <SocialShareSection />
+</SocialShareSection>
+      <WaitlistSection />
+</WaitlistSection>
+      <FloatingCTA />
+</FloatingCTA>
+      <Footer />
+
+</Footer>
+    </div>'
+    <div className="min-h-screen bg-zion-blue text-white">;"
+</div>
+      <SEO;"
+        title={t("home && home.seo_title")}""
+        description={t("home && home.seo_description")}""
+        keywords={t("home && home.seo_keywords")}""
+        canonical="https://app && app.ziontechgroup.com/""
+      />;
+</SEO>
+      <Header />;
+</Header>
+      <HeroSection />;
+</HeroSection>"
+      icon: <Sparkles className="h - 6 w - 6 text - zion - cyan" />,"
+</Sparkles>"
+      icon: <Users className="h - 6 w - 6 text - zion - purple" />,"
+</Users>"
+      icon: <Zap className="h - 6 w - 6 text - zion - cyan" />,"
+</Zap>"
+      icon: <Settings className="h - 6 w - 6 text - zion - purple" />,"
+</Settings>"
+      icon: <BarChart3 className="h - 6 w - 6 text - zion - cyan" />,"
+</BarChart3>"
+      icon: <Smartphone className="h - 6 w - 6 text - zion - purple" />,"
+</Smartphone>"
+    <div className="min-h-screen bg-zion-blue text-white">;"
+</div>
+      <SEO ;"
+        title={t("home.seo_title")} ;""
+        description={t("home.seo_description")} ;""
+        keywords={t("home.seo_keywords")}""
+        canonical="https://app.ziontechgroup.com/";"
+      />;
+</SEO>
+      <Header />;
+</Header>
+      <HeroSection />;
+</HeroSection>"
+      <section className="py-16 bg-zion-blue-dark">;"
+</section>"
+        <div className="container mx-auto px-4">;"
+</div>"
+          <div className="text-center mb-12">;"
+</div>"
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">;"
+</h2>
+            </h2>;"
+            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">;"
+</p>
+            </p>;
+          </div>;"
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>;'
+</div>
+              <Link;
+                key={index} 
+                to={feature && feature.link} '
+                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300">;"
+</Link>"
+                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">;"
+</div>
+                </div>;"
+                <h3 className="text-xl font-bold text-white mb-2">{feature && feature.title}</h3>;""
+                <p className="text-zion-slate-light mb-4">{feature && feature.description}</p>;""
+                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>;'
+</div>'
+                  <span>{t("general && general.explore")}</span>;""
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;'
+</ArrowRight>
+                </div>;
+
+              </Link>;
+          </div>;
+        </div>;
+      </section>;
+      <CategoriesSection />;
+</CategoriesSection>
+      <BenefitsSection />;
+
+</BenefitsSection>
+      <FeaturesGuideSection />;
+</FeaturesGuideSection>
+
+
+      <HowItWorksSection />;
+</HowItWorksSection>
+      <FeaturedListingsSection />;
+</FeaturedListingsSection>
+      <TestimonialCarousel />;
+</TestimonialCarousel>
+      <TrustedBySection />;
+</TrustedBySection>
+      <BlogSection />;
+
+</BlogSection>
+      <SocialShareSection />;
+</SocialShareSection>
+
+
+      <WaitlistSection />;
+</WaitlistSection>
+      <FloatingCTA />;
+</FloatingCTA>
+      <Footer />;
+
+</Footer>
+    </div>;'
+    <div className="min - h-screen bg - zion - blue text - white">;"
+</div>
+      <SEO;"
+        title={t ("home.seo_title")}""
+        description={t ("home.seo_description")}""
+        keywords={t ("home.seo_keywords")}""
+        canonical="https://app.ziontechgroup.com/";"
+
+      />;
+</SEO>
+      <Header />;
+</Header>
+      <HeroSection />;
+
+</HeroSection>"
+      <section className="py - 16 bg - zion - blue - dark">;"
+</section>"
+        <div className="container mx - auto px - 4">;"
+</div>"
+          <div className="text - center mb - 12">;"
+</div>"
+            <h2 className="text - 3xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb - 4">;"
+</h2>
+            </h2>;"
+            <p className="text - zion - slate - light text - xl max - w-3xl mx - auto">;"
+</p>
+            </p>;
+          </div>;"
+          <div className={`grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 max - w-6xl mx - auto ${isRTL ? 'rtl' : ''}`}>;'
+</div>
+              <Link;
+                key={index}
+                to={feature.link}'
+                className="bg - zion - blue border border - zion - blue - light hover:border - zion - purple / 50 rounded - lg p - 6 transition - all duration - 300";"
+              >;
+</Link>"
+                <div className="bg - zion - blue - dark rounded - full w - 12 h - 12 flex items - center justify - center mb - 4">;"
+</div>
+                </div>;"
+                <h3 className="text - xl font - bold text - white mb - 2">{feature.title}</h3>;""
+                <p className="text - zion - slate - light mb - 4">{feature.description}</p>;""
+                <div className={`flex items - center text - zion - cyan ${isRTL ? 'flex - row - reverse' : ''}`}>;'
+</div>'
+                  <span>{t ("general.explore")}</span>;""
+                  <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`} />;'
+</ArrowRight>
+
                 </div>;
               </Link>))}
           </div>;
@@ -1172,8 +1567,19 @@ export default function Index() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
       <FeaturesGuideSection />;
+;
+      <CategoriesSection />;
+      <BenefitsSection />;
+      ;
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />;
+      ;
       <HowItWorksSection />;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <FeaturesGuideSection />;      <HowItWorksSection />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <FeaturedListingsSection />;
       <TestimonialCarousel />;
       <TrustedBySection />;
@@ -1186,83 +1592,249 @@ export default function Index() { return null; }
       <Footer />;
     </div>);
 }
-      ;
+;
       {/* Add social share section to encourage users to spread the word */}
+}
+  // Tools and features showcase;
+  const toolsFeatures = [
+    {"
+      title: t("home.tool_ai_matcher")","
+  description: t("home.tool_ai_matcher_desc")""
+      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />"
+"
+      icon: <Users className="h-6 w-6 text-zion-purple" />"
+      icon: <Zap className="h-6 w-6 text-zion-cyan" />"
+      icon: <Settings className="h-6 w-6 text-zion-purple" />"
+      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />"
+</CategoriesSection>
+      <BenefitsSection />;
+
+</BenefitsSection>
+      <FeaturesGuideSection />;
+</FeaturesGuideSection>
+      <HowItWorksSection />;
+</HowItWorksSection>
+
+      <FeaturedListingsSection />;
+</FeaturedListingsSection>
+      <TestimonialCarousel />;
+</TestimonialCarousel>
+      <TrustedBySection />;
+</TrustedBySection>
+      <BlogSection />;
+</BlogSection>
       <SocialShareSection />;
-      ;
+</SocialShareSection>
       <WaitlistSection />;
+</WaitlistSection>
       <FloatingCTA />;
+</FloatingCTA>
       <Footer />;
-    </div>;
-  ),;}
- import {
-  ArrowRight;
-Users;
-Zap;
-Settings;
-Search;
-MessageSquare;
-Sparkles;
-BarChart3;
-Smartphone export default function Index () {
-  const {
-  t 
-}= useTranslation ();
-const {
-  isRTL 
-}= useLanguage ();
-//Tools and features showcase const toolsFeatures = [ {
-  title: t ("home.tool ai matcher");
-description: t ("home.tool ai matcher desc");
-icon: <Sparkles className="h-6 w-6 text-zion-cyan" />;
-link: "/match" 
-};
-{
-  title: t ("home.tool talent");
-description: t ("home.tool talent desc");
-icon: <Users className="h-6 w-6 text-zion-purple" />;
-link: "/talent" 
-};
-{
-  title: t ("home.tool services");
-description: t ("home.tool services desc");
-icon: <Zap className="h-6 w-6 text-zion-cyan" />;
-link: "/services" 
-};
-{
-  title: t ("home.tool equipment");
-description: t ("home.tool equipment desc");
-icon: <Settings className="h-6 w-6 text-zion-purple" />;
-link: "/equipment" 
-};
-{
-  title: t ("home.tool analytics");
-description: t ("home.tool analytics desc");
-icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />;
-link: "/analytics" 
-};
-{
-  title: "Mobile App";
-description: "Take Zion with you on the go with our mobile app for iOS and Android";
-icon: <Smartphone className="h-6 w-6 text-zion-purple" />;
-link: "/mobile-launch" 
-}];
-min-h-screen bg-zion-blue text-white" > <SEO /> <Header /> <HeroSection /> </p> </div> <div className= {
-  `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto $ {
-  isRTL ? 'rtl' : '' 
-}` 
-}> {
+</Footer>
+    </div>);
+
+      <SocialShareSection />;
+</SocialShareSection>
+      <WaitlistSection />;
+</WaitlistSection>
+      <FloatingCTA />;
+</FloatingCTA>
+      <Footer />;
+</Footer>
+    </div>;'
+icon: <Sparkles className="h-6 w-6 text-zion-cyan" />;"
+</Sparkles>"
+icon: <Users className="h-6 w-6 text-zion-purple" />;"
+</Users>"
+icon: <Zap className="h-6 w-6 text-zion-cyan" />;"
+</Zap>"
+icon: <Settings className="h-6 w-6 text-zion-purple" />;"
+</Settings>"
+icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />;"
+</BarChart3>"
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />"
+      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,;"
+      icon: <Users className="h-6 w-6 text-zion-purple" />,;"
+      icon: <Zap className="h-6 w-6 text-zion-cyan" />,;"
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,;"
+      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,;"
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,;"
+      icon: <Sparkles className="h - 6 w - 6 text - zion - cyan" />,"
+      icon: <Users className="h - 6 w - 6 text - zion - purple" />,"
+      icon: <Zap className="h - 6 w - 6 text - zion - cyan" />,"
+      icon: <Settings className="h - 6 w - 6 text - zion - purple" />,"
+      icon: <BarChart3 className="h - 6 w - 6 text - zion - cyan" />,"
+      icon: <Smartphone className="h - 6 w - 6 text - zion - purple" />,"
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />;"
+    <div className="min-h-screen bg-zion-blue text-white">;"
+</div>
+      <SEO;"
+        title={t("home.seo_title")} ;""
+        description={t("home.seo_description")} ;""
+        keywords={t("home.seo_keywords")}""
+        canonical="https://app.ziontechgroup.com/";"
+      />;
+
+      <Header />;
+
+      <HeroSection />;
+      <section className="py-16 bg-zion-blue-dark">"
+</section>"
+        <div className="container mx-auto px-4">"
+</div>"
+          <div className="text-center mb-12">"
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">"
+</h2>
+            </h2>"
+            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">"
+</p>
+                </div>;"
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>;""
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>;""
+                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : }`}>;
+                  <span>{t("general.explore")}</span>;""`;
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
+
+                </div>;
+              ;
+      </section>
+      <CategoriesSection />
+
+      <BenefitsSection />
+
+      <FeaturesGuideSection />
+
+      <HowItWorksSection />
+
+      <FeaturedListingsSection />
+
+      <TestimonialCarousel />
+
+      <TrustedBySection />
+
+      <BlogSection />
+
+      <SocialShareSection />
+
+      <WaitlistSection />
+
+      <FloatingCTA />
+
+      <Footer />
+
+        title={t("home && home.seo_title")}""
+        description={t("home && home.seo_description")}""
+        keywords={t("home && home.seo_keywords")}""
+        canonical="https://app && app.ziontechgroup.com/""
+
+
+      <SEO ;"
+
+
+      <section className="py-16 bg-zion-blue-dark">;"
+        <div className="container mx-auto px-4">;"
+          <div className="text-center mb-12">;"
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">;"
+            </h2>;"
+            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">;"
+            </p>;
+          </div>;"`;
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : }`}>;
+              <Link;
+                key={index} 
+                to={feature && feature.link} 
+                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300">;"
+                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">;"
+                <h3 className="text-xl font-bold text-white mb-2">{feature && feature.title}</h3>;""
+                <p className="text-zion-slate-light mb-4">{feature && feature.description}</p>;""`;
+                  <span>{t("general && general.explore")}</span>;""`;
+
+      </section>;
+      <CategoriesSection />;
+
+      <BenefitsSection />;
+
+      <FeaturesGuideSection />;
+
+
+      <HowItWorksSection />;
+
+      <FeaturedListingsSection />;
+
+      <TestimonialCarousel />;
+
+      <TrustedBySection />;
+
+      <BlogSection />;
+
+      <SocialShareSection />;
+
+
+      <WaitlistSection />;
+
+      <FloatingCTA />;
+
+      <Footer />;
+
+    <div className="min - h-screen bg - zion - blue text - white">;"
+        title={t ("home.seo_title")}""
+        description={t ("home.seo_description")}""
+        keywords={t ("home.seo_keywords")}""
+
+
+      <section className="py - 16 bg - zion - blue - dark">;"
+        <div className="container mx - auto px - 4">;"
+          <div className="text - center mb - 12">;"
+            <h2 className="text - 3xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb - 4">;"
+            <p className="text - zion - slate - light text - xl max - w-3xl mx - auto">;"
+          <div className={`grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 max - w-6xl mx - auto ${isRTL ? 'rtl' : }`}>;
+                to={feature.link}
+                className="bg - zion - blue border border - zion - blue - light hover:border - zion - purple / 50 rounded - lg p - 6 transition - all duration - 300";"
+              >;
+                <div className="bg - zion - blue - dark rounded - full w - 12 h - 12 flex items - center justify - center mb - 4">;"
+                <h3 className="text - xl font - bold text - white mb - 2">{feature.title}</h3>;""
+                <p className="text - zion - slate - light mb - 4">{feature.description}</p>;""`;
+                <div className={`flex items - center text - zion - cyan ${isRTL ? 'flex - row - reverse' : }`}>;
+                  <span>{t ("general.explore")}</span>;""`;
+                  <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`} />;
+
+              ))}
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>);
+
+
+
+
+icon: <Sparkles className="h-6 w-6 text-zion-cyan" />;"
+icon: <Users className="h-6 w-6 text-zion-purple" />;"
+icon: <Zap className="h-6 w-6 text-zion-cyan" />;"
+icon: <Settings className="h-6 w-6 text-zion-purple" />;"
+icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />;"
+min-h-screen bg-zion-blue text-white" > <SEO /> <Header /> <HeroSection /> </p> </div> <div className= {"
+
   toolsFeatures.map ( (feature, index) => (<Link key= {
-  index 
-}</div> </Link>) ) 
+  index;)
+}</div> ) ) 
 }</div> </div> </section> <CategoriesSection /> <BenefitsSection /> {
-  /* Add the comprehensive features guide section */ 
+
 }<FeaturesGuideSection /> <HowItWorksSection /> <FeaturedListingsSection /> <TestimonialCarousel /> <TrustedBySection /> <BlogSection /> {
-  /* Add social share section to encourage users to spread the word */ 
+
 }<SocialShareSection /> <WaitlistSection /> <FloatingCTA /> <Footer /> </div>) 
 }
 }
 }
+<<<<<<< HEAD
 =======
 
 
@@ -1270,3 +1842,9 @@ min-h-screen bg-zion-blue text-white" > <SEO /> <Header /> <HeroSection /> </p> 
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+]"`;
+pr-12325
+</SocialShareSection>]"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

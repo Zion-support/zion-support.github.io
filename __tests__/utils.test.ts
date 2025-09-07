@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,20 +14,29 @@
 =======
 
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 module.exports = {};
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Mock test for utils
 describe("Utils", () => {
   it("should work correctly", () => {
     expect(true).toBe(true);
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -86,9 +96,45 @@ describe('Utils', () => {
 =======
 });
 export {};'
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export {};
 
+
+
+
 module.exports = {};
 module.exports = {};
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+module.exports = {};
+
+// Mock test for utils
+describe("Utils", () => {
+  it("should work correctly", () => {
+    expect(true).toBe(true);
+  });
+});
+
+
+
+// Mock test for utils;
+describe('Utils', () => {
+  it('should work correctly', () => {
+    expect(true).toBe(true);
+  });
+
+describe("Utils", () => {""
+  it("should work correctly", () => {"
+});"
+export {};
+
+module.exports = {};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

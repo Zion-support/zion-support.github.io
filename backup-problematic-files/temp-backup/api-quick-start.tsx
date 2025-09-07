@@ -14,15 +14,17 @@ export default function Apiquickstart({ }: ApiquickstartProps) {
       <p>This component is currently under development.</p>
 =======
 import React from 'react';
-
 interface Api-quick-startProps {
-  className?: string;
+  // TODO: Implement
 }
+  className?: string;
 
 const Api-quick-start: React.FC<Api-quick-startProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
+
+    <div className={className || }>
+</div>
       <h1>Api-quick-start</h1>
+<<<<<<< HEAD
       <p>This component is under development.</p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>
@@ -30,3 +32,6 @@ const Api-quick-start: React.FC<Api-quick-startProps> = ({ className }) => {
 }
 }
 }
+=======
+      <p>This component is under development.</p>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

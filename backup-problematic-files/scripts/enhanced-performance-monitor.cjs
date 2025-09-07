@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/enhanced-performance-monitor.cjs
 =======
 <<<<<<< HEAD
@@ -96,10 +97,19 @@ main();
 #!/usr/bin/env node;
 main();#!/usr/bin/env node;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    process.exit(1)}
+
+// Run the enhanced performance monitor;
+main();
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 const os = require('os')
+<<<<<<< HEAD
 // console.log(' Enhanced Performance Monitor v2.0')
 console.log('=')
   if (level === 'error')
@@ -159,3 +169,6 @@ console.log('=')
       log('info', 'Performance "Recommendations")
       log('info', 'Performance "Recommendations")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -30,7 +30,11 @@ export default function LeadershipPage() {}
         <meta'
           name='description''
           content="Meet the leadership team guiding Zion Tech Group's vision and execution."
+<<<<<<< HEAD
         />;'
+=======
+        />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/leadership' />;
       </Head>;'
       <div className='max-w-5xl mx-auto'>;'

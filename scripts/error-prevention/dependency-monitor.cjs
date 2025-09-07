@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -20,10 +24,9 @@ class DependencyMonitor {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.interval = 600000; // 10 minutes;
-    this.packageJsonPath = path.join(process.cwd(), 'package.json')};
-  async start() {}
-    console.log('Starting Dependency Monitor...');
+
     this.isRunning = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Initial dependency check;
     await this.runDependencyCheck();
@@ -33,6 +36,10 @@ class DependencyMonitor {}
     await this.runDependencyCheck();
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    // Initial dependency check;
+    await this.runDependencyCheck();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
@@ -54,13 +61,13 @@ class DependencyMonitor {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-    
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
       console.log('Running dependency check...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,11 +77,14 @@ class DependencyMonitor {}
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Check for outdated packages;
       const child = spawn('npm', ['outdated'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
+        "cwd": process.cwd();"
       };);
+<<<<<<< HEAD
 <<<<<<< HEAD
       let output = ;';';
       let errorOutput = ;';';
@@ -87,16 +97,18 @@ class DependencyMonitor {}
 
 =======
 
+=======
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
-});
+
 
 
 <<<<<<< HEAD
@@ -107,10 +119,12 @@ class DependencyMonitor {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       child.on('close', (code) => {}
         if ( {})
+
           console.log('Dependency check passed ✓')) {}
      {}
           console.log('Dependency check passed ✓')}} else {}
           console.log('Dependency check found outdated packages ✗');
+<<<<<<< HEAD
           console.log('"Output": ', output);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +139,9 @@ class DependencyMonitor {}
           this.logOutdatedPackages(output)};
       })} catch (error) {}
       console.error('Error running dependency "check": ', error.message)};
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
   logOutdatedPackages(output) {}
     const lines = output.split('\n';);
@@ -149,19 +166,19 @@ class DependencyMonitor {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-    
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if ( {})
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       console.log('Outdated packages "found": ')) {}
-     {}
       console.log('Outdated packages found:')};
       outdatedPackages.forEach(pkg => {})
         console.log(`  ${pkg}`)})};
-  };
   async checkPackageIntegrity() {}
-    try {}
       console.log('Checking package integrity...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -207,33 +224,35 @@ class DependencyMonitor {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       child.on('close', (code) => {}
         if ( {})
+=======
+      const child = spawn('npm', ['ls'], {})
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.log('Package integrity check passed ✓')) {}
-     {}
           console.log('Package integrity check passed ✓')}} else {}
           console.log('Package integrity issues found ✗');
           console.log('"Errors": ', errorOutput)};
-      })} catch (error) {}
       console.error('Error checking package "integrity": ', error.message)};
-  };
   stop() {}
     console.log('Stopping Dependency Monitor...');
+<<<<<<< HEAD
     this.isRunning = false;
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if ( {})
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       clearInterval(this.intervalId)};
     console.log('Dependency Monitor stopped')) {}
-     {}
-      clearInterval(this.intervalId)};
     console.log('Dependency Monitor stopped')}};
-};
+
 // Start the monitor if run directly;
-if ( {})
   const monitor = new DependencyMonitor) {}
-     {}
   const monitor = new DependencyMonitor}(;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -271,5 +290,11 @@ module.exports = DependencyMonitor;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+  // Handle graceful shutdown;
+
+  monitor.start().catch(console.error)};
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -21,7 +21,13 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+
+
+
+
+
 import { describe, it, expect } from 'vitest';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -36,6 +42,10 @@ import { describe, it, expect } from 'vitest';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 describe('Team Builder Invite API', () => {
   it('should work', () => {
     expect(true).toBe(true);
@@ -43,6 +53,7 @@ describe('Team Builder Invite API', () => {
 });
 const { describe,it,expect } from "vitest"; describe("Team Builder Invite API",() => { it("should work",() => { expect(true).toBe(true)})});''"
 import { describe,it,expect } from 'vitest'; describe('Team Builder Invite API',() => { it('should work',() => { expect(true).toBe(true)})}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +94,16 @@ const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', 
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+import { describe, it, expect } from 'vitest'
+describe('Team Builder Invite API'
+  it('should work'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { describe, it, expect } from 'vitest'
 describe('Team Builder Invite API'
   it('should work'
@@ -101,8 +122,7 @@ describe('Team Builder Invite API', () => {
   it('should work', () => {
     expect(true).toBe(true);
   });
-});
-const { describe,it,expect } from "vitest"; describe("Team Builder Invite API",() => { it("should work",() => { expect(true).toBe(true)})});''"
+const { describe,it,expect } from "vitest"; describe("Team Builder Invite API",() => { it("should work",() => { expect(true).toBe(true)})});"""
 import { describe,it,expect } from 'vitest'; describe('Team Builder Invite API',() => { it('should work',() => { expect(true).toBe(true)})}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -122,6 +142,7 @@ import { describe, it, expect } from 'vitest'
 describe('Team Builder Invite API'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -160,9 +181,33 @@ const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 });''
+
+
+
+
+const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"
+
 });''
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { describe, it, expect } from 'vitest
+describe('Team Builder Invite API
+  it('should work)
+const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"""
+import { describe, it, expect } from 'vitest';')
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"")"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

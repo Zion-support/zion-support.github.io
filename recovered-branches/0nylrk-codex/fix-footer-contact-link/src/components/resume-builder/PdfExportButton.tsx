@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState  } from 'react';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu;
@@ -10,12 +14,13 @@ import { DropdownMenu;
   DropdownMenuTrigger;
   DropdownMenuSeparator;
   DropdownMenuLabel;
-  DropdownMenuRadioGroup;
-  DropdownMenuRadioItem;
+  DropdownMenuRadioGroup;}
+  DropdownMenuRadioItem;}
   DropdownMenuCheckboxItem } from '@/components/ui/dropdown-menu';
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -34,14 +39,20 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Use the centralized icon wrapper to avoid missing icon issues
+=======
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+// Use the centralized icon wrapper to avoid missing icon issues;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
 import { Resume  } from '@/types/resume';
 import { exportResumeToPDF, ExportOptions  } from '@/utils/pdfExport';
 import { toast  } from '@/hooks/use-toast';
 import { FontFamily } from '@/utils/pdf/fontConfig';
-interface PdfExportButtonProps {
-  resume: Resume
+
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false);
@@ -290,24 +301,29 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
         <Button;
           variant="outline";
           className="gap-2";
+=======
+  const [isExporting, setIsExporting] = useState(false);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           disabled={isExporting}
-        >;
+         />;
           {isExporting ? (;
-            <Loader2 className="h-4 w-4 animate-spin" />;
-          ) : (;
-            <FileText className="h-4 w-4" />;
+            <Loader2 className=\"h-4 w-4 animate-spin\" />;
+          ) : (;}
+            <FileText className=\"h-4 w-4\" />;}
           )}
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           Export PDF;
-          <ChevronDown className="h-4 w-4" />;
+          <ChevronDown className=\"h-4 w-4\" />;
         </Button>;
       </DropdownMenuTrigger>;
-      <DropdownMenuContent align="end" className="w-56">;
-        <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel>;
+      <DropdownMenuContent align=\"end\" className=\"w-56\" />;
+        <DropdownMenuLabel />PDF Export Options</DropdownMenuLabel>;
         <DropdownMenuSeparator />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -316,18 +332,24 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
         <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>;
           <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>;
           <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>;
+=======
+        <DropdownMenuLabel className=\"text-xs font-normal text-muted-foreground\" />Theme</DropdownMenuLabel>;
+        <DropdownMenuRadioGroup value={theme} onValueChange={(value) = /> setTheme(value as 'light' | 'dark')}>;
+          <DropdownMenuRadioItem value=\"light\" />Light</DropdownMenuRadioItem>;
+          <DropdownMenuRadioItem value=\"dark\" />Dark</DropdownMenuRadioItem>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </DropdownMenuRadioGroup>;
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         <DropdownMenuSeparator />;
-        <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Font</DropdownMenuLabel>;
-        <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) => setFontFamily(value as FontFamily)}>;
-          <DropdownMenuRadioItem value="default">Default</DropdownMenuRadioItem>;
-          <DropdownMenuRadioItem value="montserrat">Montserrat</DropdownMenuRadioItem>;
-          <DropdownMenuRadioItem value="open-sans">Open Sans</DropdownMenuRadioItem>;
-          <DropdownMenuRadioItem value="roboto">Roboto</DropdownMenuRadioItem>;
+        <DropdownMenuLabel className=\"text-xs font-normal text-muted-foreground\" />Font</DropdownMenuLabel>;
+        <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) = /> setFontFamily(value as FontFamily)}>;
+          <DropdownMenuRadioItem value=\"default\" />Default</DropdownMenuRadioItem>;
+          <DropdownMenuRadioItem value=\"montserrat\" />Montserrat</DropdownMenuRadioItem>;
+          <DropdownMenuRadioItem value=\"open-sans\" />Open Sans</DropdownMenuRadioItem>;
+          <DropdownMenuRadioItem value=\"roboto\" />Roboto</DropdownMenuRadioItem>;
         </DropdownMenuRadioGroup>;
 <<<<<<< HEAD
 
@@ -357,14 +379,13 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
         <DropdownMenuSeparator />;
-        <DropdownMenuItem onClick={handleExport}>;
-          <Download className="h-4 w-4 mr-2" />;
+        <DropdownMenuItem onClick={handleExport} />;
+          <Download className=\"h-4 w-4 mr-2\" />;
           Download PDF;
         </DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
-
 }
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
@@ -375,16 +396,21 @@ import {Resume} from '@/types / resume';
 import {exportResumeToPDF, ExportOptions} from '@/utils / pdf_export';
 import {toast} from '@/hooks / use - toast';
 import {FontFamily} from '@/utils / pdf / font_config';
-interface PdfExportButtonProps {
-  resume: Resume;
+interface PdfExportButtonProps {}
+  resume: Resume;}
 }
 export /**
- * PdfExportButton - Function description
+ * PdfExportButton - Function description;
  */
 function PdfExportButton() {
   const [is_exporting, setIsExporting] = useState (false);
   const [theme, set_theme] = useState<'light' | 'dark'>('light');
   const [include_portfolio, setIncludePortfolio] = useState (true);
+<<<<<<< HEAD
   const [font_family, setFontFamily] = useState < FontFamily>('default');
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const [font_family, setFontFamily] = useState < FontFamily>('default');}
+;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

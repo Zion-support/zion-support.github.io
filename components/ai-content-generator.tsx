@@ -3,68 +3,8 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
-export default function AIContentGeneratorPage() {
-  const features = null;
-  const pricingPlans = [
-    {
-      name: 'Starter'
-      price: '$29'
-      period: '/month'
-      description: 'Perfect for individuals and small blogs'
-      features: [
-'1,000 words per month',
-        '5 content templates',
-        'Basic SEO optimization',
-        'Email support',
-        'API access (100 calls/month)',
-        'Content analytics dashboard',
-      ],
-      popular: false,
-      color: 'border-gray-600',
-      buttonColor: 'bg-gray-600 hover:bg-gray-700',
-    },
-    {
-      name: 'Professional',
-      price: '$99',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
-      features: [
-'10,000 words per month',
-        '25+ content templates',
-        'Advanced SEO tools',
-        'Priority support',
-        'API access (1,000 calls/month)',
-        'Advanced analytics',
-        'Team collaboration',
-        'Custom branding',
-      ],
-      popular: true,
-      color: 'border-blue-500',
-      buttonColor: 'bg-blue-600 hover:bg-blue-700',
-    },
-    {
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'For large organizations and enterprises',
-      features: [
-'Unlimited words',
-        'All templates + custom',
-        'Full SEO suite',
-        'Dedicated support',
-        'Unlimited API access',
-        'Advanced analytics',
-        'White-label solution',
-        'Custom integrations',
-        'SLA guarantee',
-      ],
-      popular: false,
-      color: 'border-purple-600',
-      buttonColor: 'bg-purple-600 hover:bg-purple-700',
-    },
-  ];
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   const useCases = [
     {
@@ -431,6 +371,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' }
     { name: 'Slack', icon: '💬', description: 'Team collaboration' }
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -527,6 +469,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variant="outline""
               size="lg"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
               <Play className='w-5 h-5 mr-2' />
@@ -586,7 +531,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
                 style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;'
                 <div className='relative'>;
+<<<<<<< HEAD
                   <div;`
+=======
+                  <div
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
                     {feature && feature.icon}
                   </div>;
@@ -628,11 +577,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='text-center mb-20'>'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+<<<<<<< HEAD
               Use Cases;
             </h2>'
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose;`
                 style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;"
                 <div className="relative">;`
+=======
+              Use Cases
+            </h2>
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
+                style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
+                <div className="relative">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
                     {feature && feature.icon}
                   </div>;
@@ -923,6 +880,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>"
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Versatile content creation for every industry and purpose
             </p>
@@ -953,9 +913,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>;'
                     <div className='grid grid-cols-2 gap-2'>;
                       {useCase && useCase.examples.map((example, exampleIndex) => (;
+<<<<<<< HEAD
                         <div;
                           key={exampleIndex}'
                           className='flex items-center text-sm text-gray-300'>;'
+=======
+                        <div
+                          key={exampleIndex}
+                          className='flex items-center text-sm text-gray-300'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {example}            {useCases && useCases.map((useCase, index) => (;
               <Card;
                 key={index}"
@@ -986,7 +952,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>;
             ))}
       {/* Pricing Section */}
+<<<<<<< HEAD
 "
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
 "
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">"
@@ -1110,9 +1080,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 </ul>
 
+<<<<<<< HEAD
                 <Button"
                   href="/contact"`
                   className={`w-full ${plan.buttonColor} text-white`}"
+=======
+                <Button
+                  href="/contact"
+                  className={`w-full ${plan.buttonColor} text-white`}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   size="lg"
                 >
                   Get Started"
@@ -1128,7 +1104,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>
             ))}
       {/* Integrations Section */}
+<<<<<<< HEAD
 "
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section className="py-24 bg-black relative overflow-hidden">
 
             ))}"
@@ -1238,10 +1218,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='#demo''
               variant='outline''
               size='lg'
+<<<<<<< HEAD
             <Button"
               href="/contact""
               variant="secondary""
               size="lg""
+=======
+            <Button
+              href="/contact"
+              variant="secondary"
+              size="lg"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="bg-white text-purple-600 hover:bg-gray-100 shadow-2xl">;
               Start Free Trial;"
               <ArrowRight className="w-5 h-5 ml-2" />;
@@ -1259,6 +1246,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >"
               <Play className="w-5 h-5 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'
             >
               <Play className='w-5 h-5 mr-2' />

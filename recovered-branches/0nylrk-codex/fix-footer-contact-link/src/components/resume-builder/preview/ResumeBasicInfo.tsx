@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {ResumeBasicInfo} from '@/types/resume';
 interface ResumeBasicInfoSectionProps {
@@ -148,6 +149,9 @@ export function ResumeBasicInfoSection({
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { ResumeBasicInfo } from "@/types/resume";
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
 }
@@ -188,6 +192,7 @@ export function ResumeBasicInfoSection({
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -196,3 +201,24 @@ export function ResumeBasicInfoSection({
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { ResumeBasicInfo } from "@/types/resume";"
+interface ResumeBasicInfoSectionProps {
+  // TODO: Implement
+}
+  basicInfo: ResumeBasicInfo;
+
+export function ResumeBasicInfoSection({
+  basicInfo,)
+}: ResumeBasicInfoSectionProps) {
+  return ("
+    <div className="space-y-2 border-b pb-4 mb-6">"
+</div>"
+      <h1 className="text-2xl font-bold">"
+</h1>
+      </h1>"
+      {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}"
+    </div>)"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

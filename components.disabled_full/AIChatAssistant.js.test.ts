@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 =======
@@ -48,18 +49,65 @@ import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { describe, it, expect } from 'vitest';
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+
+
+
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+
+
+
+
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+
+import { describe, it, expect } from 'vitest';
+pr-12325
+import { render, screen  } from '@testing-library/react';
+import { describe, it, expect  } from 'vitest';
+;
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Page from './AIChatAssistant.js';
+describe('Page', () => {it('renders without crashing', () => {render(<Page />)expect(screen.getByRole('main')).toBeInTheDocument()})it('displays correct content', () => {render(<Page />)// Add specific content checks based on component functionality})it('handles user interactions', () => {render(<Page />)import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js';describe('Page',() => {it('renders without crashing',() => {render(<Page />)expect(screen.getByRole('main')).toBeInTheDocument()})it('displays correct content',() => {render(<Page />)})it('handles user interactions',() => {render(<Page />)})})// Add interaction tests based on component functionality})})import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js';describe('Page',() => {it('renders without crashing',() => {render(<Page />)expect(screen.getByRole('main')).toBeInTheDocument()})it('displays correct content',() => {render(<Page />)})it('handles user interactions',() => {render(<Page />)})})// Add interaction tests based on component functionality})})ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+;
+    // Add interaction tests based on component functionality})})ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+    // Add interaction tests based on component functionality})})import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js';describe('Page',() => {it('renders without crashing',() => {render(<Page />)expect(screen.getByRole('main')).toBeInTheDocument()})it('displays correct content',() => {render(<Page />)})it('handles user interactions',() => {render(<Page />)})})import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js';describe('Page',() => {it('renders without crashing',() => {render(<Page />)expect(screen.getByRole('main')).toBeInTheDocument()})it('displays correct content',() => {render(<Page />)})it('handles user interactions',() => {render(<Page />)})})import Page from './AIChatAssistant && AIChatAssistant.js';
+describe('Page';
+  it('renders without crashing';
+    expect(screen ; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant ;describe(';Page', () => {it('renders without crashing', () => {render(<Page />)expect(screen && screen.getByRole('main')).toBeInTheDocument()})it('displays correct content', () => {render(<Page />)})it('handles user interactions';
+ursor/automate-test-improve-and-merge-code-2480;
+    // Add interaction tests based on component functionality})});
+  it('renders without crashing'    // Add interaction tests based on component functionality})})
+import { render, screen } from '@testing-library/react';
+
 describe('Page', () => {;
+<<<<<<< HEAD
 =======
 
 '
@@ -129,8 +177,29 @@ import { render,screen } from '@testing-library/react'; import { describe,it,exp
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+=======
+  it('renders without crashing', () => {;}
+    render(<Page />);}
+    expect(screen.getByRole('main')).toBeInTheDocument()});
+  it('displays correct content', () => {;}
+    render(<Page />);}
+    // Add specific content checks based on component functionality});
+  it('handles user interactions', () => {;
+    render(<Page />);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+
+
+
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+
+
+
+
+
+
+
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)});,});
     // Add interaction tests based on component functionality})});
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
@@ -140,11 +209,27 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+  it('handles user interactions', () => {;}
+    render(<Page />);}
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument();}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)});});
+    // Add interaction tests based on component functionality})});
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument()}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)})});
+    // Add interaction tests based on component functionality})});
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import Page from './AIChatAssistant && AIChatAssistant.js'
+import Page from './AIChatAssistant && AIChatAssistant.js';
 describe('Page'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -223,13 +308,47 @@ import { render,screen } from '@testing-library/react'; import { describe,it,exp
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+  it('renders without crashing'    // Add interaction tests based on component functionality})});
+import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+
+
+
+import { render, screen, describe, it, expect } from 'lucide-react'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)});,});
+
+import { render, screen, describe, it, expect } from 'lucide-react'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+
+
+
+
+
+
+
+    expect(screen ; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant ; ; describe('Page', () => {; it('renders without crashing', () => {; render(<Page />); expect(screen && screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content', () => {; render(<Page />)}); ; it('handles user interactions
+)
+
+
+
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   it('renders without crashing'
 
-    expect(screen ; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant ; ; describe('Page', () => {; it('renders without crashing', () => {; render(<Page />); expect(screen && screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content', () => {; render(<Page />)}); ; it('handles user interactions'
+
+
+
 
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)});,});
     // Add interaction tests based on component functionality})});
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
 import { render,screen } from '@testing-library/react'; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant.js'; ; describe('Page',() => {; it('renders without crashing',() => {; render(<Page />); expect(screen.getByRole('main')).toBeInTheDocument(),}); ; it('displays correct content',() => {; render(<Page />)}); ; it('handles user interactions',() => {; render(<Page />)}),});
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+expect(screen ; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant ; ; describe('Page', () => {; it('renders without crashing', () => {; render(<Page />); expect(screen && screen.getByRole('main')).toBeInTheDocument();,}); ; it('displays correct content', () => {; render(<Page />)}); ; it('handles user interactions'
+
+
+    expect(screen ; import { describe,it,expect } from 'vitest'; import Page from './AIChatAssistant ; ; describe(';Page', () => {; it('renders without crashing', () => {; render(<Page />); expect(screen && screen.getByRole('main')).toBeInTheDocument();}); ; it('displays correct content', () => {; render(<Page />)}); ; it('handles user interactions'
+
+    // Add interaction tests based on component functionality})});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

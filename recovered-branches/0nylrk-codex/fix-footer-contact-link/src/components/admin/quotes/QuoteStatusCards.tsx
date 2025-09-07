@@ -6,12 +6,8 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 =======
 
-import React from './react';
-import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
-interface QuoteStatusCardsProps {
-  status_counts: {
-
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 <<<<<<< HEAD
@@ -126,6 +122,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 interface QuoteStatusCardsProps {
   statusCounts: {
+status_counts: {
   status_counts: {
 
 =======
@@ -151,6 +148,7 @@ interface QuoteStatusCardsProps {}
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 
     closed: number;
 
@@ -177,6 +175,8 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface QuoteStatusCardsProps {
   statusCounts: {
 =======
@@ -191,8 +191,10 @@ interface QuoteStatusCardsProps {}
     accepted: number,;
     closed: number;
   }
+
 }
   return (
+<<<<<<< HEAD
 "
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">"
       <Card className="bg-zion-blue-dark border border-zion-blue-light">"
@@ -750,3 +752,8 @@ export default QuoteStatusCards;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

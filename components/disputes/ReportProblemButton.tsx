@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
-export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
+export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string;, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
   const query = null;
+<<<<<<< HEAD
 export default function ReportProblemButton({
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -95,6 +101,9 @@ pr-12243
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   });
 
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 pr-12243
     <Link href={`/disputes/new?${query && query.toString()}`}>;
@@ -143,8 +152,38 @@ pr-12243
   return (`
     <Link href={`/disputes/new?${query && query.toString()}`}>;"
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>;
+  });
+
+  return (
+    <Link href={`/disputes/new?${query && query.toString()}`} />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm\" />;"
+        {\" \"}
+        Report a Problem;
+      </a>;
+    </Link>;
+  )}
+
+export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;"
+  entityType?: \"milestone\" | \"contract\" | \"thread\";}
+  entityId?: string;}
+}) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
+  return (<Link href={`/disputes/new?${query && query.toString()}`} />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm\" />;"
+        {\" \"}
+        Report a Problem;
+      </a>;
+    </Link>;
+  )}
+
+export default function ReportProblemButton(): any ({projectId,entityType,entityId}: {projectId: string;"
+  entityType?: \"milestone\" | \"contract\" | \"thread\";}
+  entityId?: string;}
+}) {const query = new URLSearchParams({projectId,...(entityType ? { entityType } : {}),...(entityId ? { entityId } : {})};
+  return (<Link href={`/disputes/new?${query && query.toString()}`} />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>;
     </Link>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -165,14 +204,91 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
 }
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  );
+}
+import Link from 'next/link';
+export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
+  const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
+  });
+
+export default function ReportProblemButton() {const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
+}
+
+export default function ReportProblemButton() ;
+  const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) })};
+  return (<Link href={`/disputes/new?${query.toString()}`} />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" />;
+        Report a Problem;
+      </a>;
+    </Link>;
+import Link from './next / link';
+
+export default /**;
+ * ReportProblemButton - Function description;
+ */;
+function ReportProblemButton() {const query = new URLSearchParams ({project_id,...(entity_type ? { entity_type } : {}),...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})};
+  return (<Link href={`/disputes/new?${query.toString()}`} />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>;
+    </Link>;
+  )}
+
+export default /**;
+ * ReportProblemButton - Function description;
+ */;
+function ReportProblemButton() {const query = new URLSearchParams ({project_id,...(entity_type ? { entity_type } : {}),...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})...(entity_id ? { entity_id } : {})};
+  return (<Link href={`/disputes / new?${query.to_string ()}`} />;"
+      <a className=\"inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm\" /></a>;
+    </Link>)}ursor/fix-website-loading-errors-and-merge-6662;
+  )}
+  )return (<Link href={`/disputes/new?${query.toString()}`} />;
+      <a className='inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm' />;
+        Report a Problem;
+      </a>;
+    </Link>;
+  )}
+  );
+}
+
+export default function ReportProblemButton(): any ({;
+  projectId,;
+  entityType,;}
+  entityId,;}
+}: {;
+  projectId: string;"
+  entityType?: \"milestone\" | \"contract\" | \"thread\";}
+  entityId?: string;}
+}) {;
+
+const query = new URLSearchParams({;}
+    projectId,;}
+    ...(entityType ? { entityType } : {}),;
+    ...(entityId ? { entityId } : {}),;
+
+  });
+  return (
+    <Link href={`/disputes/new?${query && query.toString()}`} />;"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>;
+    </Link>;
+
+  );
+}
+pr-12243
+export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string;, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
+  const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   });
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return (
@@ -182,10 +298,18 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
     <Link href={`/disputes/new?${query.toString()}`}>"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm">
+=======
+  });
+
+  return (
+    <Link href={`/disputes/new?${query.toString()}`} />"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         Report a Problem;
       </a>
     </Link>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
@@ -199,17 +323,31 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from './next / link';
+pr-12243
 ;
+<<<<<<< HEAD
 export default /**;
  * ReportProblemButton - Function description;
  */
 function ReportProblemButton() {}
   const query = new URLSearchParams ({}
     project_id,
+=======
+
+export default /**
+ * ReportProblemButton - Function description;
+ */
+function ReportProblemButton() {
+  const query = new URLSearchParams ({}
+    project_id}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ...(entity_type ? { entity_type } : {}),
-    ...(entity_id ? { entity_id } : {}),
+    ...(entity_id ? { entity_id } : {})
   });
+<<<<<<< HEAD
   return (`
     <Link href={`/disputes/new?${query.toString()}`}>"
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>
@@ -222,15 +360,42 @@ export default /**;
 function ReportProblemButton() {}
   const query = new URLSearchParams ({}
     project_id,
+=======
+  return (
+    <Link href={`/disputes/new?${query.toString()}`} />"
+      <a className=\"inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm\" /></a>
+    </Link>
+  );
+}
+
+export default /**
+ * ReportProblemButton - Function description;
+ */
+function ReportProblemButton() {
+  const query = new URLSearchParams ({}
+    project_id}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ...(entity_type ? { entity_type } : {}),
-    ...(entity_id ? { entity_id } : {}),
+    ...(entity_id ? { entity_id } : {})
   });
+<<<<<<< HEAD
   return (`
     <Link href={`/disputes / new?${query.to_string ()}`}>;"
       <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm"></a>;
     </Link>);
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  return (
+    <Link href={`/disputes / new?${query.to_string ()}`} />;"
+      <a className=\"inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm\" /></a>;
+    </Link>);
+}
+
+  );
+}
+);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 }
@@ -238,6 +403,7 @@ function ReportProblemButton() {}
 pr-12243
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -255,6 +421,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
+=======
+
+
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 }
   );
@@ -262,11 +434,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
       <a className='inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm'>
@@ -276,6 +451,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
 =======
@@ -288,3 +464,7 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

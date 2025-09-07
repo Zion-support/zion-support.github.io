@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 
 const fs = require('fs');
 const { execSync } = require('child_process');
@@ -9,6 +8,7 @@ console.log('=');
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -133,23 +133,14 @@ function fixAllSyntax(content) {
     // Clean up whitespace
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     .replace(/\s+$/gm, '');
+=======
+console.log('🔧 Resolving Final Conflicts');
+console.log(
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
-// Files with merge conflicts and syntax errors
-const filesToFix = [
-  'pages/about.tsx',
-  'pages/blog.tsx',
-  'pages/ai-services.tsx',
-  'pages/api.tsx',
-  'pages/accessibility.tsx',
-  'pages/careers.tsx',
-  'pages/docs/api.tsx',
-  'components/Header.tsx',
-  'components/Footer.tsx',
-  'components/Layout.tsx',
-  'components/layout/MainLayout.tsx'
-];
 
+<<<<<<< HEAD
 let totalFixed = 0;
 
 console.log('🔍 Resolving merge conflicts and fixing syntax errors...');
@@ -265,3 +256,5 @@ console.log('\n🎉 Final build fix completed!');
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Performance Monitor Script for PM2;
  * Replaces GitHub Actions performance monitoring workflows;
@@ -7,18 +7,21 @@
 
 const { execSync } = require('child_process');
 const fs = require('fs');
-
 const log = (message) => {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 
 const runCommand = (command, description) => {}
   try {}
+<<<<<<< HEAD
     log(`Starting: ${description}`);
     const output = execSync(command, { })
 <<<<<<< HEAD
@@ -34,12 +37,14 @@ const runCommand = (command, description) => {}
     return { success: true, output };
   } catch (error) {}
     log(`Failed: ${description} - ${error.message}`);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return { success: false, error: error.message };
-  };
-};
 
 const checkBuildPerformance = () => {}
   log('Checking build performance');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const startTime = Date.now();
@@ -53,21 +58,19 @@ const checkBuildPerformance = () => {}
     success: buildResult.success,
 =======
   
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const startTime = Date.now();
-  const buildResult = runCommand('npm run build', 'Building project for performance check');
+
   const endTime = Date.now();
-  
-  const buildTime = endTime - startTime;
+  const buildTime = endTime - startTime;`;
   log(`Build completed in ${buildTime}ms`);
-  
   return { }
     success: buildResult.success, 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     buildTime: buildTime,
-    performance: buildTime < 60000 ? 'GOOD' : buildTime < 120000 ? 'FAIR' : 'POOR'
-  };
-};
 
+<<<<<<< HEAD
 const checkMemoryUsage = () => {}
   log('Checking memory usage');
 <<<<<<< HEAD
@@ -90,25 +93,27 @@ const checkMemoryUsage = () => {}
 
 =======
     
+=======
+});
+    const lines = memInfo.split('\n');
+    const memLine = lines[1].split(/\s+/);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const totalMem = parseInt(memLine[1]);
     const usedMem = parseInt(memLine[2]);
     const memUsagePercent = (usedMem / totalMem) * 100;
-    
+    `;
     log(`Memory usage: ${memUsagePercent.toFixed(2)}% (${usedMem}MB / ${totalMem}MB)`);
+<<<<<<< HEAD
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return {}
       success: true,
       total: totalMem,
       used: usedMem,
       usagePercent: memUsagePercent,
-      status: memUsagePercent < 80 ? 'GOOD' : memUsagePercent < 90 ? 'WARNING' : 'CRITICAL'
-    };
-  } catch (error) {}
-    log(`Memory check failed: ${error.message}`);
-    return { success: false, error: error.message };
-  };
-};
+
 
 const generatePerformanceReport = (results) => {}
   const report = {}
@@ -116,8 +121,9 @@ const generatePerformanceReport = (results) => {}
     build: results.build,
     memory: results.memory,
     overall: {}
-      status: 'GOOD',
+
       issues: 0;
+<<<<<<< HEAD
     };
   };
 <<<<<<< HEAD
@@ -143,11 +149,15 @@ const generatePerformanceReport = (results) => {}
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Calculate overall status;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return report;
-};
 
 const main = async () => {}
   log('Starting Performance Monitor Process');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   // Run performance checks;
@@ -161,10 +171,16 @@ const main = async () => {}
   const memoryResults = checkMemoryUsage();
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Run performance checks;
+  const buildResults = checkBuildPerformance();
+  const memoryResults = checkMemoryUsage();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Generate comprehensive report;
   const results = {}
     build: buildResults,
     memory: memoryResults;
+<<<<<<< HEAD
   };
 <<<<<<< HEAD
 
@@ -206,6 +222,10 @@ main().catch(error => {})
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  const report = generatePerformanceReport(results);
+  // Handle performance issues;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
   };
@@ -108,6 +109,10 @@ import React from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -143,6 +148,7 @@ interface HTMLElement {;
   textContent: string | null;
   style: { [key: string]: string }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -222,28 +228,40 @@ function resolveHref(href: Href): string {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 };
+=======
+
+interface HTMLAnchorElement extends HTMLElement {
+  tagName: "A";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
-  className: string;
-  id: string;
-  innerHTML: string;
-  textContent: string | null;
-  style: { [key: string]: string }
-}
-  tagName: 'A';
+import Link from 'next/link';
+
+interface NextLinkShimProps {
   href: string;
-  target: string;
+  className?: string;
+  children: React.ReactNode;
+  [key: string]: any;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (typeof href === 'string') return href;
   return href?.pathname |(href as { href?: string })?.href |'#';
+=======
+function resolveHref(href: Href): string {
+  if (typeof href === "string") return href;
+  return href?.pathname || (href as { href?: string })?.href || "#";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
-export default function Link({ href, children, className, ...rest }: LinkProps) {
-  const resolved = resolveHref(href);
-  if (React.isValidElement(children)) {
-    const existingClass = (children.props as { className?: string })?.className |'';
-    const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
-    return React.cloneElement(children as React.ReactElement<{ href?: string; className?: string }>, {
 
+export default function Link({
+  href,
+  children,
+  className,
+  ...rest
+}: LinkProps) {
+  const resolved = resolveHref(href);
+
+<<<<<<< HEAD
       href: resolved
       className: mergedClassName
       ...rest
@@ -307,10 +325,13 @@ function resolveHref(href: Href): string {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function Link({ href, children, className, ...rest }: LinkProps) {;
+
 
   const resolved = resolveHref(href);
   if (React.isValidElement(children)) {
@@ -320,89 +341,15 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       .filter(Boolean)
       .join(" ");
 
-export default function Link(): any ({ href, children, className, ...rest }: LinkProps) {;
-  const resolved = resolveHref(href);
-
-  if (React && React.isValidElement(children)) {;
-    const existingClass = (children && children.props as { className?: string })?.className || '';
-    const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
-
-    return React && React.cloneElement(children as React && React.ReactElement<{ href?: string; className?: string }>, {;
-      href: resolved,;
-      className: mergedClassName,;
-      ...rest,;
-    });
+    return React.cloneElement(
+      children as React.ReactElement<{ href?: string; className?: string }>,
+      {
+        href: resolved,
+        className: mergedClassName,
+        ...rest,
+      },
+    );
   }
-
-  return (
-    <a href={resolved} className={className} {...rest}>;
-      {children}
-    </a>;
-  );
-}
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
-}
-import React from 'react'; type Href = string | { pathname?: string; href?: string }; type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode}; function resolveHref(href: Href): string { if (typeof href === 'string') return href; return href?.pathname || (href as { href?: string })?.href || '#'} export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '); return React.cloneElement(children as React.ReactElement,{ href: resolved,className: mergedClassName,...rest,})} return ( <a href={resolved} className={className} {...rest}> {children} </a> )}
-}
-import React from 'react'; type Href = string | { pathname?: string; href?: string }; type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode}; function resolveHref(href: Href): string { if (typeof href === 'string') return href; return href?.pathname || (href as { href?: string })?.href || '#'} export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '); return React.cloneElement(children as React.ReactElement,{ href: resolved,className: mergedClassName,...rest,})} return ( <a href={resolved} className={className} {...rest}> {children} </a> )}
-}
-}
-}
-
-}
-
-}
-
-}
-
-}
-
-;
-// Define HTMLAnchorElement if not available;
-interface HTMLElement {
-  class_name: string;
-  id: string;
-  innerHTML: string;
-  text_content: string | null;
-  style: { [key: string]: string }
-}
-interface HTMLAnchorElement extends HTMLElement {
-  tag_name: 'A';
-  href: string;
-  target: string;
-}
-type Href = string | { pathname?: string; href?: string }
-;
-type LinkProps = React.AnchorHTMLAttributes < HTMLAnchorElement> & {
-  href: Href;
-  children: React.ReactNode;
-}
-;
-function resolve_href (href: Href): string {
-  // Check condition
-if (return href) {
-  $2
-}
-  return href?.pathname || (href as { href?: string })?.href || '#';
-}
-export default /**
- * Link - Function description
- */
-function Link() {
-  const resolved = resolve_href (href);
-;
-  if () {) {
-  $2
-}
-    const existing_class = (children.props as { class_name?: string })?.class_name || '';
-    const mergedClassName = [existing_class, class_name].filter (Boolean).join (' ');
-;
-    return React.clone_element (children as React.ReactElement<{ href?: string; class_name?: string }>, {
-      href: resolved,
-      class_name: mergedClassName,
-      ...rest,
-    });  }
   return (
     <a href={resolved} className={class_name} {...rest}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -410,6 +357,7 @@ function Link() {
     </a>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
@@ -452,3 +400,25 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+export function NextLinkShim({ href, className, children, ...rest }: NextLinkShimProps) {
+  // Check if it's an external link
+  const isExternal = href.startsWith('http') || href.startsWith('//');
+  
+  if (isExternal) {
+    return (
+      <a href={href} className={className} {...rest}>
+        {children}
+      </a>
+    );
+  }
+  
+  // Internal link - use Next.js Link
+  return (
+    <Link href={href} className={className} {...rest}>
+      {children}
+    </Link>
+  );
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

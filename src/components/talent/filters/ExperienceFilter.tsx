@@ -1,17 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 return (
-
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
         on_click={toggle_section}'
         className='flex w - full items - center justify - between text - white font - medium'      >;
         <span > Years of Experience</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Slider } from "@/components/ui/slider";
 import { ExperienceFilterProps } from "@/types/filters";
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
@@ -32,14 +37,29 @@ export function ExperienceFilter({
         onClick={toggleSection}
         className='flex w-full items-center justify-between text-white font-medium'      >
         <span>Years of Experience</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {expanded ? (
-          <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (
-          <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
+          <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : ('
+          <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}'
       </button>;
       {expanded && (
-<<<<<<< HEAD
+return (
+
+    <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
+</div>
+      <button;
+        on_click={toggle_section}
+        className='flex w - full items - center justify - between text - white font - medium'      >;
+</button>
+        <span > Years of Experience</span>;)
+          <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (
+)
+          <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
+
+      </button>;
+pr-12325
         <div className='mt - 6'>;
+<<<<<<< HEAD
 =======
         {expanded ? ('
           <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : ('
@@ -56,10 +76,21 @@ export function ExperienceFilter({
         <div className="mt - 6">;"
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;'
 import { Slider  } from '@/components / ui / slider';'
+=======
+          <div className='flex justify - between text - sm text - zion - slate - light mb - 2'>            <span>{experience_range[0]} years</span>;,
+            <span>{experience_range[1]} years</span>;
+          </div>;
+          <Slider;,
+            aria - label='Experience range'            value={[experience_range[0], experience_range[1]]}',
+        <div className="mt - 6">;
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
+import { Slider  } from '@/components / ui / slider';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ExperienceFilterProps  } from '@/types / filters';
 export /**;
  * ExperienceFilter - Function description;
  */
+<<<<<<< HEAD
 function ExperienceFilter() {}
   const handle_change = (values: number[]) =>: any {}
     setExperienceRange ([values[0] || 0, values[1] || 15]);
@@ -81,10 +112,63 @@ function ExperienceFilter() {}
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+function ExperienceFilter() {,
+  const handle_change = (values: number[]) =>: any {,
+    setExperienceRange ([values[0] || 0, values[1] || 15]);,
+  }
+      </button>;
+      {expanded && (;
+        <div className='mt-6'>;,
+          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>{experienceRange[0]} years</span>;,
+            <span>{experienceRange[1]} years</span>;
+          </div>;
+          <Slider,
+            aria-label='Experience range'            value={[experienceRange[0], experienceRange[1]]}',
+        <div className="mt-6">;
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
+import { ChevronDown, ChevronUp } from 'lucide-react''
+import { Slider } from "@/components/ui/slider","
+import { ExperienceFilterProps } from "@/types/filters","
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }:,  ExperienceFilterProps) {,
+  const handleChange = (values: number[]) => {,
+    setExperienceRange([values[0] || 0, values[1] || 15]),
+  },
+  return (
+    <div className="mb-6 border-b border-zion-blue-light pb-6">"
+      <button
+        onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium""
+      >
+        <span>Years of Experience</span>
+        {expanded ? (
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />"
+        ) : (
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />"
+        )}
+      </button>
+      {expanded && (
+        <div className="mt-6">"
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">"
+            <span>{experienceRange[0]} years</span>,
+            <span>{experienceRange[1]} years</span>
+          </div>
+          <Slider
+            aria-label="Experience range""
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Slider } from "@/components/ui/slider",;
+import { ExperienceFilterProps } from "@/types/filters",;
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }:,  ExperienceFilterProps) {;,
+  const handleChange = (values: number[]) => {;,
+    setExperienceRange([values[0] || 0, values[1] || 15]);,
+  };
+  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { ChevronDown, ChevronUp } from 'lucide-react'
+<<<<<<< HEAD
 import { Slider } from "@/components/ui/slider",
 =======
 '
@@ -111,10 +195,17 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <div className='flex justify-between text-sm text-zion-slate-light mb-2'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Slider } from "@/components/ui/slider",;
+import { ExperienceFilterProps } from "@/types/filters",;
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
 <<<<<<< HEAD
         className="flex w-full items-center justify-between text-white font-medium"
       >
@@ -131,6 +222,10 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
       >
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+        className="flex w-full items-center justify-between text-white font-medium"
+      >
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <span>Years of Experience</span>
         {expanded ? ("
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -142,12 +237,16 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {expanded && (
 <<<<<<< HEAD
+=======
+      {expanded && (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="mt-6">
 =======
 "
@@ -161,6 +260,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <Slider
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -169,11 +269,22 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             aria-label="Experience range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
+=======
+            aria-label="Experience range"
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Slider } from "@/components/ui/slider";
+import { ExperienceFilterProps } from "@/types/filters";
+export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
+import { Slider } from "@/components/ui/slider",;
+import { ExperienceFilterProps } from "@/types/filters",;
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleChange = (values: number[]) => {;
     setExperienceRange([values[0] || 0, values[1] || 15]);
   };
   return (;
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
+<<<<<<< HEAD
 
 =======
           <Slider;
@@ -187,11 +298,19 @@ export function ExperienceFilter() { return null; }
 
   return ("
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
+=======
+      <button
+        onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <button;
         onClick={toggleSection}"
         className="flex w-full items-center justify-between text-white font-medium";
       >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <span>Years of Experience</span>;
         {expanded ? (;"
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
@@ -199,6 +318,12 @@ export function ExperienceFilter() { return null; }
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          <Slider;
+            aria-label="Experience range";
+            value={[experienceRange[0], experienceRange[1]]},
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </button>;
       {expanded && (;
         <div className="mt-6">;
@@ -206,10 +331,13 @@ export function ExperienceFilter() { return null; }
             <span>{experienceRange[0]} years</span>;
             <span>{experienceRange[1]} years</span>;
           </div>;
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Slider;
 =======
 
@@ -219,15 +347,61 @@ export function ExperienceFilter() { return null; }
 <<<<<<< HEAD
 =======
 
-=======
 aria-label='Experience range'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+        <div className="mt - 6">;"
+"
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;"
+      </button>;"
+        <div className='mt-6'>;
+          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>{experienceRange[0]} years</span>;
+            <span>{experienceRange[1]} years</span>;
+            aria-label='Experience range'            value={[experienceRange[0], experienceRange[1]]}
+        <div className="mt-6">;"
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">;"
+</div>"
+    <div className="mb-6 border-b border-zion-blue-light pb-6">"
+        onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium""
+      >
+
+        <span>Years of Experience</span>"
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />"
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />"
+
+      </button>"
+        <div className="mt-6">"
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">"
+            <span>{experienceRange[0]} years</span>
+            <span>{experienceRange[1]} years</span>
+          <Slider;"
+            aria-label="Experience range"""
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Slider } from "@/components/ui/slider",;""
+import { ExperienceFilterProps } from "@/types/filters",;"
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
+  const handleChange = (values: number[]) => {;
+    <div className="mb-6 border-b border-zion-blue-light pb-6">;"
+        onClick={toggleSection}"
+        className="flex w-full items-center justify-between text-white font-medium";"
+      >;
+        <span>Years of Experience</span>;"
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
+
+            aria-label="Experience range";"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
             step={1}
             onValueChange={handleChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -237,19 +411,23 @@ aria-label='Experience range'
 
     </div>;
   );
+=======
+    </div>;
+  );
+}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
             className="mt-6"
-=======
 className='mt-6'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           />
         </div>
       )}
     </div>
   );
 }
-<<<<<<< HEAD
 
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
@@ -271,9 +449,9 @@ className='mt-6'
 }
 
 ;
-=======
 };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -281,10 +459,14 @@ className='mt-6'
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+}}}})))))
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             className="mt-6"
           />
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -330,3 +512,12 @@ className='mt-6'
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </div>;
+  );
+}
+;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

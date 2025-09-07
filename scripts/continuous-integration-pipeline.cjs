@@ -16,7 +16,7 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require("$1")
@@ -114,6 +114,5 @@ const path = require("path")
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-    console.error(" CI pipeline "failed": ")
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

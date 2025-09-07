@@ -22,10 +22,12 @@ class GitWorkflow {,;
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+    this.startTime = Date.now(),;
+  };
+pr-12325
   log(message) {,;
     const timestamp = new Date().toISOString(),;
     const logMessage = `[${timestamp}] ${message}\n`,;
-,;
     try {,;
       fs.appendFileSync(this.logFile, logMessage),;
     } catch (error) {,;
@@ -42,26 +44,22 @@ class GitWorkflow {,;
 }
 };
 ,;
+      console.error('Error writing to log:file:', error.message),;
+pr-12325
   async checkGitStatus() {,;
-    try {,;
       this.log(' Checking git status...'),;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const status = execSync('git status --porcelain', {,;
         cw:d:this.projectRoot,;
-        encodin:g:'utf8',;
+        encodin:g:'utf8',;')
       }),;
-,;
       const branches = execSync('git branch -a', {,;
-        cw:d:this.projectRoot,;
-        encodin:g:'utf8',;
-      }),;
-,;
       const currentBranch = execSync('git branch --show-current', {,;
-        cw:d:this.projectRoot,;
-        encodin:g:'utf8',;
       }).trim(),;
-,;
       return {,;
         succes:s:true,;
         hasChange:s:status.trim().length > 0,;
@@ -76,6 +74,8 @@ class GitWorkflow {,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {,;
       return {,;
+        currentBranc:h:currentBranch,;
+pr-12325
         succes:s:false,;
         erro:r:error.message,;
         hasChange:s:false,;
@@ -96,35 +96,29 @@ class GitWorkflow {,;
     }
 };
 ,;
+        currentBranc:h:null,;
+pr-12325
   async checkBranchHealth() {,;
-    try {,;
       this.log(' Checking branch health...'),;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const branches = execSync('git branch -r', {,;
-        cw:d:this.projectRoot,;
-        encodin:g:'utf8',;
       }).trim().split('\n'),;
-,;
       const branchInfo = [],;
-,;
       for (const branch of branches) {,;
-        const branchName = branch.replace('origin/', '').trim(),;
+        const branchName = branch.replace('origin/', ).trim(),;
         if (branchName && !branchName.includes('HEAD')) {,;
-          try {,;
-            const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {,;
-              cw:d:this.projectRoot,;
-              encodin:g:'utf8',;
-            }).trim(),;
-,;
+          try {,;`;
+            const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {,;"
+              cw:d:this.projectRoot,;"
+,;`;
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,;
-              cw:d:this.projectRoot,;
-              encodin:g:'utf8',;
-            }).trim(),;
-,;
             branchInfo.push({,;
               nam:e:branchName,;
-              lastCommi:t:lastCommit,;
+              lastCommi:t:lastCommit,;)
               commitCoun:t:parseInt(commitCount),;
               isActiv:e:true,;
             }),;
@@ -169,9 +163,12 @@ class GitWorkflow {,;
     }
 };
 ,;
+            // Skip if can't access branch,;
+        branche:s:branchInfo,;
+pr-12325
   async checkMergeConflicts() {,;
-    try {,;
       this.log(' Checking for merge conflicts...'),;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       const status = execSync('git status --porcelain', {,;
@@ -179,13 +176,12 @@ class GitWorkflow {,;
         encodin:g:'utf8',;
       }),;
 ,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const conflictFiles = status,;
         .split('\n'),;
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD')),;
         .map(line => line.trim().split(/\s+/)[1]),;
-,;
-      return {,;
-        succes:s:true,;
         hasConflict:s:conflictFiles.length > 0,;
 <<<<<<< HEAD
         conflictFile:s:conflictFiles,;
@@ -214,9 +210,13 @@ class GitWorkflow {,;
     }
 };
 ,;
+        conflictFile:s:conflictFiles,;
+        hasConflict:s:false,;
+        conflictFile:s:[],;
+pr-12325
   async checkStaleBranches() {,;
-    try {,;
       this.log(' Checking for stale branches...'),;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       const branches = execSync('git branch -r', {,;
@@ -224,25 +224,16 @@ class GitWorkflow {,;
         encodin:g:'utf8',;
       }).trim().split('\n'),;
 ,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const staleBranches = [],;
       const mainBranch = 'main',;
-,;
-      for (const branch of branches) {,;
-        const branchName = branch.replace('origin/', '').trim(),;
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {,;
-          try {,;
-            const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,;
-              cw:d:this.projectRoot,;
-              encodin:g:'utf8',;
-            }).trim(),;
-,;
+            const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,;"
             const lastCommitDate = new Date(lastCommit),;
             const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24),;
-,;
             if (daysSinceLastCommit > 30) {,;
               staleBranches.push({,;
-                nam:e:branchName,;
-                lastCommi:t:lastCommit,;
                 daysSinceLastCommi:t:Math.floor(daysSinceLastCommit),;
 <<<<<<< HEAD
               }),;
@@ -287,6 +278,10 @@ class GitWorkflow {,;
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+            // Skip if can't access branch,;
+        staleBranche:s:staleBranches,;
+        staleBranche:s:[],;
+pr-12325
   async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {,;
     const report = {,;
       timestam:p:new Date().toISOString(),;
@@ -300,7 +295,6 @@ class GitWorkflow {,;
       },;
       detail:s:{,;
         statu:s:statusInfo,;
-        branche:s:branchInfo,;
         conflict:s:conflictInfo,;
         stal:e:staleInfo,;
       },;
@@ -312,15 +306,15 @@ class GitWorkflow {,;
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+      recommendation:s:[],;
+pr-12325
     // Calculate health score,;
     let score = 100,;
     if (statusInfo.hasChanges) score -= 10,;
     if (conflictInfo.hasConflicts) score -= 30,;
     if (staleInfo.staleBranches?.length > 0) score -= 20,;
     if (branchInfo.branches?.length > 10) score -= 10,;
-,;
     report.summary.healthScore = Math.max(score, 0),;
-,;
     // Generate recommendations,;
     if (statusInfo.hasChanges) {,;
       report.recommendations.push({,;
@@ -335,8 +329,9 @@ class GitWorkflow {,;
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+        actio:n:'Commit or stash changes before switching branches',;')
+pr-12325
     if (conflictInfo.hasConflicts) {,;
-      report.recommendations.push({,;
         priorit:y:'high',;
         messag:e:'Merge conflicts detected',;
         actio:n:'Resolve merge conflicts before continuing',;
@@ -348,9 +343,10 @@ class GitWorkflow {,;
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+        actio:n:'Resolve merge conflicts before continuing',;')
+pr-12325
     if (staleInfo.staleBranches?.length > 0) {,;
-      report.recommendations.push({,;
-        priorit:y:'low',;
+        priorit:y:'low',;`;
         messag:e:`${staleInfo.staleBranches.length} stale branches found`,;
         actio:n:'Consider deleting or updating stale branches',;
 <<<<<<< HEAD
@@ -361,8 +357,9 @@ class GitWorkflow {,;
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+        actio:n:'Consider deleting or updating stale branches',;')
+pr-12325
     if (branchInfo.branches?.length > 10) {,;
-      report.recommendations.push({,;
         priorit:y:'low',;
         messag:e:'Many branches detected',;
         actio:n:'Consider cleaning up unused branches',;
@@ -380,8 +377,10 @@ class GitWorkflow {,;
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+        actio:n:'Consider cleaning up unused branches',;')
+    return report,;
+pr-12325
   async saveReport(report) {,;
-    try {,;
       const reportDir = path.dirname(this.reportFile),;
       if (!fs.existsSync(reportDir)) {,;
 <<<<<<< HEAD
@@ -407,12 +406,20 @@ class GitWorkflow {,;
 }
 };
 ,;
+        fs.mkdirSync(reportDir, { recursiv:e:true }),;
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;`;
+      this.log(`Report saved:to:${this.reportFile}`),;
+    } catch (error) {,;`;
+      this.log(`Error saving:report:${error.message}`),;
+pr-12325
   async run() {,;
+<<<<<<< HEAD
     this.log(' Starting Git Workflow Monitor...'),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    this.log(' Starting Git Workflow Monitor...'),;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project:root:${this.projectRoot}`),;
-,;
-    try {,;
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
@@ -424,12 +431,13 @@ class GitWorkflow {,;
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+        fs.mkdirSync(logsDir, { recursiv:e:true }),;
+pr-12325
       // Run all git checks,;
       const statusInfo = await this.checkGitStatus(),;
       const branchInfo = await this.checkBranchHealth(),;
       const conflictInfo = await this.checkMergeConflicts(),;
       const staleInfo = await this.checkStaleBranches(),;
-,;
       // Generate report,;
 <<<<<<< HEAD
       this.log('📊 Generating git workflow report...'),;
@@ -437,13 +445,11 @@ class GitWorkflow {,;
       this.log(' Generating git workflow report...'),;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateReport(statusInfo, branchInfo, conflictInfo, staleInfo),;
-,;
       // Save report,;
       await this.saveReport(report),;
-,;
       const duration = Date.now() - this.startTime,;
-,;
       // Log summary,;
+<<<<<<< HEAD
 <<<<<<< HEAD
       this.log('\n📊 Git Workflow:Summary:'),;
 =======
@@ -455,18 +461,30 @@ class GitWorkflow {,;
       this.log(`Has:conflicts:${report.summary.hasConflicts ? 'Yes' :'No'}`),;
       this.log(`Stale:branches:${report.summary.staleBranches}`),;
       this.log(`Health:score:${report.summary.healthScore}/100`),;
+=======
+      this.log('\n Git Workflow:Summary:'),;`;
+      this.log(`Current:branch:${report.summary.currentBranch}`),;`;
+      this.log(`Has:changes:${report.summary.hasChanges ? 'Yes' :'No'}`),;`;
+      this.log(`Total:branches:${report.summary.totalBranches}`),;`;
+      this.log(`Has:conflicts:${report.summary.hasConflicts ? 'Yes' :'No'}`),;`;
+      this.log(`Stale:branches:${report.summary.staleBranches}`),;`;
+      this.log(`Health:score:${report.summary.healthScore}/100`),;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`Duratio:n:${duration}ms`),;
-,;
       if (report.recommendations.length > 0) {,;
 <<<<<<< HEAD
         this.log('\n💡 Recommendation:s:'),;
 =======
         this.log('\n Recommendation:s:'),;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         report.recommendations.forEach(rec => {,;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
+=======
+        report.recommendations.forEach(rec => {,;)`;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.log(`    Actio:n:${rec.action}`),;
-        }),;
       } else {,;
 <<<<<<< HEAD
         this.log('\n✨ Git workflow is healthy!'),;
@@ -489,16 +507,17 @@ class GitWorkflow {,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ,;
+        this.log('\n Git workflow is healthy!'),;
+      this.log(` Error running git workflow:monitor:${error.message}`),;
+      process.exit(1),;
+pr-12325
 // Run the git workflow monitor,;
 const gitWorkflow = new GitWorkflow(),;
-gitWorkflow.run().catch(error => {,;
-  process.exit(1),;
-}),;
+gitWorkflow.run().catch(error => {,;)
 ;#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-;
 class GitWorkflow {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -511,10 +530,11 @@ class GitWorkflow {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
+    this.startTime = Date.now();
+pr-12325
   log(message) {;
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();`;
     const logMessage = `[${timestamp}] ${message}\n`;
-;
     try {;
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {;
@@ -527,7 +547,10 @@ class GitWorkflow {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
+      console.error('Error writing to log file:', error.message);
+pr-12325
   async checkGitStatus() {;
+<<<<<<< HEAD
     try {;
 <<<<<<< HEAD
       this.log('📋 Checking git status...');
@@ -535,26 +558,21 @@ class GitWorkflow {;
       this.log(' Checking git status...');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
+=======
+      this.log(' Checking git status...');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const status = execSync('git status --porcelain', {;
-        cwd: this.projectRoot;
-        encoding: 'utf8';
+        cwd: this.projectRoot;,
+  encoding: 'utf8';')
       });
-;
       const branches = execSync('git branch -a', {;
-        cwd: this.projectRoot;
-        encoding: 'utf8';
-      });
-;
       const currentBranch = execSync('git branch --show-current', {;
-        cwd: this.projectRoot;
-        encoding: 'utf8';
       }).trim();
-;
       return {;
-        success: true;
-        hasChanges: status.trim().length > 0;
-        changes: status.trim().split('\n').filter(line => line.trim());
-        branches: branches.trim().split('\n');
+        success: true;,
+  hasChanges: status.trim().length > 0;
+        changes: status.trim().split('\n').filter(line => line.trim());',
+  branches: branches.trim().split('\n');
         currentBranch: currentBranch;
       ;
     } catch (error) {;
@@ -573,7 +591,15 @@ class GitWorkflow {;
 };
 };
 ;
+        success: false;,
+  error: error.message;
+        hasChanges: false;,
+  changes: [];
+        branches: [];,
+  currentBranch: null;
+pr-12325
   async checkBranchHealth() {;
+<<<<<<< HEAD
     try {;
 <<<<<<< HEAD
       this.log('🌿 Checking branch health...');
@@ -581,27 +607,20 @@ class GitWorkflow {;
       this.log(' Checking branch health...');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
+=======
+      this.log(' Checking branch health...');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const branches = execSync('git branch -r', {;
-        cwd: this.projectRoot;
-        encoding: 'utf8';
       }).trim().split('\n');
-;
       const branchInfo = [];
-;
       for (const branch of branches) {;
-        const branchName = branch.replace('origin/', '').trim();
+        const branchName = branch.replace('origin/', ).trim();
         if (branchName && !branchName.includes('HEAD')) {;
-          try {;
-            const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {;
-              cwd: this.projectRoot;
-              encoding: 'utf8';
-            }).trim();
-;
+          try {;`;
+            const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {;"
+              cwd: this.projectRoot;,"
+;`;
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {;
-              cwd: this.projectRoot;
-              encoding: 'utf8';
-            }).trim();
-;
             branchInfo.push({;
               name: branchName;
               lastCommit: lastCommit;
@@ -638,7 +657,16 @@ class GitWorkflow {;
 };
 };
 ;
+              name: branchName;,
+  lastCommit: lastCommit;)
+              commitCount: parseInt(commitCount);,
+  isActive: true;
+            // Skip if can't access branch;
+  branches: branchInfo;
+        branches: [];
+pr-12325
   async checkMergeConflicts() {;
+<<<<<<< HEAD
     try {;
 <<<<<<< HEAD
       this.log('🔀 Checking for merge conflicts...');
@@ -651,14 +679,14 @@ class GitWorkflow {;
         encoding: 'utf8';
       });
 ;
+=======
+      this.log(' Checking for merge conflicts...');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const conflictFiles = status;
         .split('\n');
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'));
         .map(line => line.trim().split(/\s+/)[1]);
-;
-      return {;
-        success: true;
-        hasConflicts: conflictFiles.length > 0;
+  hasConflicts: conflictFiles.length > 0;
         conflictFiles: conflictFiles;
       ;
     } catch (error) {;
@@ -675,7 +703,11 @@ class GitWorkflow {;
 };
 };
 ;
+        hasConflicts: false;,
+  conflictFiles: [];
+pr-12325
   async checkStaleBranches() {;
+<<<<<<< HEAD
     try {;
 <<<<<<< HEAD
       this.log('🍂 Checking for stale branches...');
@@ -688,25 +720,17 @@ class GitWorkflow {;
         encoding: 'utf8';
       }).trim().split('\n');
 ;
+=======
+      this.log(' Checking for stale branches...');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const staleBranches = [];
       const mainBranch = 'main';
-;
-      for (const branch of branches) {;
-        const branchName = branch.replace('origin/', '').trim();
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {;
-          try {;
-            const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {;
-              cwd: this.projectRoot;
-              encoding: 'utf8';
-            }).trim();
-;
+            const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {;"
             const lastCommitDate = new Date(lastCommit);
             const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24);
-;
             if (daysSinceLastCommit > 30) {;
               staleBranches.push({;
-                name: branchName;
-                lastCommit: lastCommit;
                 daysSinceLastCommit: Math.floor(daysSinceLastCommit);
 <<<<<<< HEAD
               });
@@ -743,23 +767,25 @@ class GitWorkflow {;
 };
 };
 ;
+            // Skip if can't access branch;
+  staleBranches: staleBranches;
+        staleBranches: [];
+pr-12325
   async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {;
     const report = {;
-      timestamp: new Date().toISOString();
-      summary: {;
-        hasChanges: statusInfo.hasChanges;
-        currentBranch: statusInfo.currentBranch;
-        totalBranches: branchInfo.branches?.length || 0;
-        hasConflicts: conflictInfo.hasConflicts;
-        staleBranches: staleInfo.staleBranches?.length || 0;
-        healthScore: 0;
-      ;
-      details: {;
-        status: statusInfo;
-        branches: branchInfo;
-        conflicts: conflictInfo;
+      timestamp: new Date().toISOString();,
+  summary: {;
+        hasChanges: statusInfo.hasChanges;,
+  currentBranch: statusInfo.currentBranch;
+        totalBranches: branchInfo.branches?.length || 0;,
+  hasConflicts: conflictInfo.hasConflicts;
+        staleBranches: staleInfo.staleBranches?.length || 0;,
+  healthScore: 0;
+      details: {;,
+  status: statusInfo;
+        branches: branchInfo;,
+  conflicts: conflictInfo;
         stale: staleInfo;
-      ;
       recommendations: [];
     // Calculate health score;
     let score = 100;
@@ -767,9 +793,7 @@ class GitWorkflow {;
     if (conflictInfo.hasConflicts) score -= 30;
     if (staleInfo.staleBranches?.length > 0) score -= 20;
     if (branchInfo.branches?.length > 10) score -= 10;
-;
     report.summary.healthScore = Math.max(score, 0);
-;
     // Generate recommendations;
     if (statusInfo.hasChanges) {;
       report.recommendations.push({;
@@ -825,8 +849,24 @@ class GitWorkflow {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
+        priority: 'medium';',
+  message: 'Uncommitted changes detected';
+        action: 'Commit or stash changes before switching branches';')
+    if (conflictInfo.hasConflicts) {;
+        priority: 'high';',
+  message: 'Merge conflicts detected';
+        action: 'Resolve merge conflicts before continuing';')
+    if (staleInfo.staleBranches?.length > 0) {;
+        priority: 'low';',`;
+  message: `${staleInfo.staleBranches.length} stale branches found`;
+        action: 'Consider deleting or updating stale branches';')
+    if (branchInfo.branches?.length > 10) {;
+        priority: 'low';',
+  message: 'Many branches detected';
+        action: 'Consider cleaning up unused branches';')
+    return report;
+pr-12325
   async saveReport(report) {;
-    try {;
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {;
 <<<<<<< HEAD
@@ -852,12 +892,20 @@ class GitWorkflow {;
 }
 };
 ;
+        fs.mkdirSync(reportDir, { recursive: true });
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`;
+      this.log(`Report saved to: ${this.reportFile}`);
+    } catch (error) {;`;
+      this.log(`Error saving report: ${error.message}`);
+pr-12325
   async run() {;
+<<<<<<< HEAD
     this.log(' Starting Git Workflow Monitor...');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    this.log(' Starting Git Workflow Monitor...');`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project root: ${this.projectRoot}`);
-;
-    try {;
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {;
@@ -869,12 +917,13 @@ class GitWorkflow {;
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
+        fs.mkdirSync(logsDir, { recursive: true });
+pr-12325
       // Run all git checks;
       const statusInfo = await this.checkGitStatus();
       const branchInfo = await this.checkBranchHealth();
       const conflictInfo = await this.checkMergeConflicts();
       const staleInfo = await this.checkStaleBranches();
-;
       // Generate report;
 <<<<<<< HEAD
       this.log('📊 Generating git workflow report...');
@@ -882,13 +931,11 @@ class GitWorkflow {;
       this.log(' Generating git workflow report...');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateReport(statusInfo, branchInfo, conflictInfo, staleInfo);
-;
       // Save report;
       await this.saveReport(report);
-;
       const duration = Date.now() - this.startTime;
-;
       // Log summary;
+<<<<<<< HEAD
 <<<<<<< HEAD
       this.log('\n📊 Git Workflow Summary: ');
 =======
@@ -900,18 +947,30 @@ class GitWorkflow {;
       this.log(`Has conflicts: ${report.summary.hasConflicts ? 'Yes' : 'No'}`);
       this.log(`Stale branches: ${report.summary.staleBranches}`);
       this.log(`Health score: ${report.summary.healthScore}/100`);
+=======
+      this.log('\n Git Workflow Summary: ');`;
+      this.log(`Current branch: ${report.summary.currentBranch}`);`;
+      this.log(`Has changes: ${report.summary.hasChanges ? 'Yes' : 'No'}`);`;
+      this.log(`Total branches: ${report.summary.totalBranches}`);`;
+      this.log(`Has conflicts: ${report.summary.hasConflicts ? 'Yes' : 'No'}`);`;
+      this.log(`Stale branches: ${report.summary.staleBranches}`);`;
+      this.log(`Health score: ${report.summary.healthScore}/100`);`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`Duration: ${duration}ms`);
-;
       if (report.recommendations.length > 0) {;
 <<<<<<< HEAD
         this.log('\n💡 Recommendations: ');
 =======
         this.log('\n Recommendations: ');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         report.recommendations.forEach(rec => {;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
+=======
+        report.recommendations.forEach(rec => {;)`;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.log(`    Action: ${rec.action}`);
-        });
       } else {;
 <<<<<<< HEAD
         this.log('\n✨ Git workflow is healthy!');
@@ -934,22 +993,31 @@ class GitWorkflow {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ;
+        this.log('\n Git workflow is healthy!');
+      this.log(` Error running git workflow monitor: ${error.message}`);
+      process.exit(1);
+pr-12325
 // Run the git workflow monitor;
 const gitWorkflow = new GitWorkflow();
-gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
+gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,`;
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
               cwd: this.projectRoot,
+<<<<<<< HEAD
               encoding: 'utf8'
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              encoding: 'utf8)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }).trim(),
 ,
             branchInfo.push({,
               name: branchName,
-              lastCommit: lastCommit,
+              lastCommit: lastCommit,)
               commitCount: parseInt(commitCount),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -962,6 +1030,8 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 
 =======
               isActive: true
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             })
           } catch (error) {,
             // Skip if can't access branch
@@ -969,13 +1039,18 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 }
 };
 ,
+            // Skip if can't access branch;
+pr-12325
       return {,
         success: true,
+<<<<<<< HEAD
         branches: branchInfo
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       };
     } catch (error) {,
       return {,
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         success: false,
         error: error.message,
 <<<<<<< HEAD
@@ -997,24 +1072,24 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 }
 };
 ,
+pr-12325
   async checkMergeConflicts() {,
     try {,
       this.log(' Checking for merge conflicts...'),
-,
       const status = execSync('git status --porcelain', {,
+<<<<<<< HEAD
         cwd: this.projectRoot,
         encoding: 'utf8'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }),
-,
       const conflictFiles = status,
         .split('\n'),
         .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD')),
         .map(line => line.trim().split(/\s+/)[1]),
-,
-      return {,
-        success: true,
         hasConflicts: conflictFiles.length > 0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1025,6 +1100,8 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
       return {,
         success: false,
         error: error.message,
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         hasConflicts: false,
 <<<<<<< HEAD
 
@@ -1045,35 +1122,41 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 }
 };
 ,
+pr-12325
   async checkStaleBranches() {,
-    try {,
       this.log(' Checking for stale branches...'),
-,
       const branches = execSync('git branch -r', {,
+<<<<<<< HEAD
         cwd: this.projectRoot,
         encoding: 'utf8'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }).trim().split('\n'),
-,
       const staleBranches = [],
       const mainBranch = 'main',
-,
       for (const branch of branches) {,
-        const branchName = branch.replace('origin/', '').trim(),
+        const branchName = branch.replace('origin/', ).trim(),
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {,
+<<<<<<< HEAD
           try {,
             const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,
 <<<<<<< HEAD
 
 =======
               cw: d: this.projectRoot,
+=======
+          try {,`;
+            const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,"
+              cw: d: this.projectRoot,)"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               encodin: g: 'utf8'            }).trim(),,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             const lastCommitDate = new Date(lastCommit),
             const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24),
-,
             if (daysSinceLastCommit > 30) {,
               staleBranches.push({,
+<<<<<<< HEAD
                 name: branchName,
                 lastCommit: lastCommit,
 <<<<<<< HEAD
@@ -1086,6 +1169,8 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
         success: true,
 
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 daysSinceLastCommit: Math.floor(daysSinceLastCommit)
               })
             };
@@ -1116,6 +1201,9 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
+            // Skip if can't access branch;
+        staleBranches: []
+pr-12325
   async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {,
     const report = {,
       timestamp: new Date().toISOString(),
@@ -1126,15 +1214,19 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
         hasConflicts: conflictInfo.hasConflicts,
         staleBranches: staleInfo.staleBranches?.length || 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         healthScore: 0
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       },
       details: {,
         status: statusInfo,
         branches: branchInfo,
         conflicts: conflictInfo,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1144,20 +1236,22 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     };
 ,
+=======
+      recommendations: []
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Calculate health score,
     let score = 100,
     if (statusInfo.hasChanges) score -= 10,
     if (conflictInfo.hasConflicts) score -= 30,
     if (staleInfo.staleBranches?.length > 0) score -= 20,
     if (branchInfo.branches?.length > 10) score -= 10,
-,
     report.summary.healthScore = Math.max(score, 0),
-,
     // Generate recommendations,
     if (statusInfo.hasChanges) {,
       report.recommendations.push({,
         priority: 'medium',
         message: 'Uncommitted changes detected',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1166,10 +1260,13 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     };
 ,
+=======
+        action: 'Commit or stash changes before switching branches)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (conflictInfo.hasConflicts) {,
-      report.recommendations.push({,
         priority: 'high',
         message: 'Merge conflicts detected',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1178,10 +1275,13 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     };
 ,
+=======
+        action: 'Resolve merge conflicts before continuing)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (staleInfo.staleBranches?.length > 0) {,
-      report.recommendations.push({,
-        priority: 'low',
+        priority: 'low',`;
         message: `${staleInfo.staleBranches.length} stale branches found`,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1190,10 +1290,13 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     };
 ,
+=======
+        action: 'Consider deleting or updating stale branches)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (branchInfo.branches?.length > 10) {,
-      report.recommendations.push({,
         priority: 'low',
         message: 'Many branches detected',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1205,8 +1308,10 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   };
 ,
+=======
+        action: 'Consider cleaning up unused branches)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async saveReport(report) {,
-    try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
 <<<<<<< HEAD
@@ -1218,21 +1323,22 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
     this.log('🌿 Starting Git Workflow Monitor...'),
 =======
         fs.mkdirSync(reportDir, { recursive: true })
-      };
-,
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),`;
       this.log(`Report saved to: ${this.reportFile}`)
-    } catch (error) {,
+    } catch (error) {,`;
       this.log(`Error saving report: ${error.message}`)
     }
 };
 ,
+pr-12325
   async run() {,
+<<<<<<< HEAD
     this.log(' Starting Git Workflow Monitor...'),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    this.log(' Starting Git Workflow Monitor...'),`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project root: ${this.projectRoot}`),
-,
-    try {,
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
@@ -1240,15 +1346,17 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 
 =======
         fs.mkdirSync(logsDir, { recursive: true })
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       };
 ,
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Run all git checks,
       const statusInfo = await this.checkGitStatus(),
       const branchInfo = await this.checkBranchHealth(),
       const conflictInfo = await this.checkMergeConflicts(),
       const staleInfo = await this.checkStaleBranches(),
-,
       // Generate report,
 <<<<<<< HEAD
       this.log('📊 Generating git workflow report...'),
@@ -1256,13 +1364,11 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
       this.log(' Generating git workflow report...'),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateReport(statusInfo, branchInfo, conflictInfo, staleInfo),
-,
       // Save report,
       await this.saveReport(report),
-,
       const duration = Date.now() - this.startTime,
-,
       // Log summary,
+<<<<<<< HEAD
 <<<<<<< HEAD
       this.log('\n📊 Git Workflow Summary: '),
 =======
@@ -1274,8 +1380,16 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
       this.log(`Has conflicts: ${report.summary.hasConflicts ? 'Yes' : 'No'}`),
       this.log(`Stale branches: ${report.summary.staleBranches}`),
       this.log(`Health score: ${report.summary.healthScore}/100`),
+=======
+      this.log('\n Git Workflow Summary: '),`;
+      this.log(`Current branch: ${report.summary.currentBranch}`),`;
+      this.log(`Has changes: ${report.summary.hasChanges ? 'Yes' : 'No'}`),`;
+      this.log(`Total branches: ${report.summary.totalBranches}`),`;
+      this.log(`Has conflicts: ${report.summary.hasConflicts ? 'Yes' : 'No'}`),`;
+      this.log(`Stale branches: ${report.summary.staleBranches}`),`;
+      this.log(`Health score: ${report.summary.healthScore}/100`),`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`Duration: ${duration}ms`),
-,
       if (report.recommendations.length > 0) {,
 <<<<<<< HEAD
         this.log('\n💡 Recommendations: '),
@@ -1286,15 +1400,12 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
   };
 =======
         this.log('\n Recommendations: '),
-        report.recommendations.forEach(rec => {,
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
+        report.recommendations.forEach(rec => {,)`;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),`;
           this.log(`    Action: ${rec.action}`)
-        })
       } else {,
         this.log('\n Git workflow is healthy!')
-      };
 
-    } catch (error) {,
       this.log(` Error running git workflow monitor: ${error.message}`),
       process.exit(1)
     }
@@ -1302,8 +1413,10 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ,
+pr-12325
 // Run the git workflow monitor,
 const gitWorkflow = new GitWorkflow(),
+<<<<<<< HEAD
 gitWorkflow.run().catch(error => {,
 <<<<<<< HEAD
 
@@ -1314,3 +1427,10 @@ gitWorkflow.run().catch(error => {,
 const _gitWorkflow = new GitWorkflow();
 gitWorkflow.run().catch(error = > {_; process.exit(1)});
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+gitWorkflow.run().catch(error => {,)
+
+const _gitWorkflow = new GitWorkflow();
+gitWorkflow.run().catch(error = > {_; process.exit(1)});
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

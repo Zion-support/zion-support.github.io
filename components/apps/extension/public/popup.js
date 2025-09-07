@@ -1,7 +1,10 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const API_BASE = 'http: //localhost:4000',
-origin/cursor/automate-test-improve-and-merge-code-2533
+
 function getUserId(cb) {
 =======
 function getUserId(cb) {}
@@ -135,13 +138,21 @@ document && document.getElementById('viewNotifications').addEventListener('click
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
+
   const id = crypto.randomUUID();
   setUserId(id);
   document.getElementById('result').textContent = 'Signed in (local).'
 });
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

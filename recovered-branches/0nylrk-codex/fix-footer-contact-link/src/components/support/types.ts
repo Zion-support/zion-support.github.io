@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ReactNode } from "react";
 <<<<<<< HEAD
@@ -22,6 +23,9 @@ import { ReactNode } from "react";
 =======
 import { ReactNode } from "react";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface HelpArticle {
 =======
 export interface HelpArticle {};
@@ -29,6 +33,7 @@ export interface HelpArticle {};
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,8 +113,42 @@ export interface HelpCategory {;
 
 export interface HelpCategory {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import {ReactNode} from "react";
+export interface HelpArticle {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
+  title: string;
+  content: string;
+}
+
+export interface HelpCategory {;  lastUpdated: string;
+  tags: string[];
+}
+
+export interface HelpCategory {;
+
+import { ReactNode } from "react";"
+
+export interface HelpArticle {
+  // TODO: Implement
+}
+  id: string;,
+  title: string;
+
+  content: string;,
+  lastUpdated: string;
+  tags: string[];
+
+export interface HelpCategory {;
+
+  lastUpdated: string;,
+
+
+
   name: string;
+<<<<<<< HEAD
   description: string;
   icon: ReactNode;
 <<<<<<< HEAD
@@ -250,5 +289,7 @@ export interface SupportTicket {;
 }
 ;
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

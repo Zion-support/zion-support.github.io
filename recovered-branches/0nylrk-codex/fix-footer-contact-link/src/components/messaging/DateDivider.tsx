@@ -18,18 +18,10 @@ import React from 'react';'
 =======
 
 
-import React from "react";
-import { format } from "date-fns";
-interface DateDividerProps {
-
-
 import React from 'react';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { format } from 'date-fns';
 
-  date: Date;
-
-}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,14 +42,28 @@ import React from "react";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { format } from "date-fns";
 interface DateDividerProps {;
+
   date: Date;
 }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export function DateDivider(): any ({ date }: DateDividerProps) {;
+  return (
+    <div className="flex items-center my-4">;
+      <div className="flex-1 border-t border-zion-purple/20"></div>;
+      <div className="px-3 text-xs text-zion-slate">;
+        {format(date, "MMM d, yyyy")}
+      </div>;
+      <div className="flex-1 border-t border-zion-purple/20"></div>;
+    </div>;
+  );
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from './react';
 =======
 '
@@ -67,8 +73,6 @@ import { format  } from './date - fns';
 interface DateDividerProps {}
   date: Date;
 
-
-
 }
 export /**;
  * DateDivider - Function description;
@@ -76,12 +80,12 @@ export /**;
 <<<<<<< HEAD
 function DateDivider() {
   return (
-    <div className="flex items - center my - 4">;
-      <div className="flex - 1 border - t border - zion - purple / 20"></div>;
-      <div className="px - 3 text - xs text - zion - slate">;
+    <div className="flex items - center my-4">;
+      <div className="flex - 1 border - t border - zion-purple / 20"></div>;
+      <div className="px - 3 text - xs text - zion-slate">;
         {format (date, "MMM d, yyyy")}
       </div>;
-      <div className="flex - 1 border - t border - zion - purple / 20"></div>;
+      <div className="flex - 1 border - t border - zion-purple / 20"></div>;
     </div>);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -117,7 +121,11 @@ import React from "react";
 import { format } from "date-fns";
 interface DateDividerProps {
   date: Date;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}  date: Date;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 import React from 'react',;
@@ -214,9 +222,12 @@ export function DateDivider({ date }: DateDividerProps) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 =======
 '
@@ -250,6 +261,7 @@ interface DateDividerProps {}
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 }
@@ -273,3 +285,50 @@ interface DateDividerProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+import React from "react";""
+import { format } from "date-fns";"
+interface DateDividerProps {
+  // TODO: Implement
+}"
+import React from 'react';
+import { format } from 'date-fns';
+  date: Date;
+
+}
+
+interface DateDividerProps {;
+
+"
+import React from './react';
+import { format  } from './date - fns';
+  // TODO: Implement
+
+
+
+export /**
+ * DateDivider - Function description;
+ */
+function DateDivider() {
+  return (
+    <div className="flex items - center my - 4">;"
+</div>"
+      <div className="flex - 1 border - t border - zion - purple / 20"></div>;""
+      <div className="px - 3 text - xs text - zion - slate">;"
+</div>
+      </div>;"
+      <div className="flex - 1 border - t border - zion - purple / 20"></div>;")
+    </div>);"
+    <div className="flex items-center my-4">;"
+      <div className="flex-1 border-t border-zion-purple/20"></div>;""
+      <div className="px-3 text-xs text-zion-slate">;"
+      <div className="flex-1 border-t border-zion-purple/20"></div>;"
+ </div> <div className="flex-1 border-t border-zion-purple/20" ></div> </div>)""
+    <div className="flex items-center my-4">"
+      <div className="flex-1 border-t border-zion-purple/20"></div>""
+      <div className="px-3 text-xs text-zion-slate">"
+      <div className="flex-1 border-t border-zion-purple/20"></div>"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

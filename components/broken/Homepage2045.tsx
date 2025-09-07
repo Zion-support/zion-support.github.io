@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from './layout/Layout';'
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -34,6 +35,12 @@ class ErrorBoundary extends React.Component {}
 import React, { useState, useEffect } from 'react';'
 import Layout from './layout / Layout';'
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+
+import Layout from './layout/Layout';
+import { motion, AnimatePresence } from 'framer-motion';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles;'
@@ -41,6 +48,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 // Loading fallback component;
+<<<<<<< HEAD
 const LoadingFallback = () => (;'
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div;
       initial={{ opacity: 0, scale: 0 && 0.5 }}
@@ -1375,3 +1383,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const LoadingFallback = () => (;
+  <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div
+      initial={{ opacity: 0;, scale: 0 && 0.5 ;}}
+      animate={{ opacity: 1;, scale: 1 ;}}
+      transition={{ duration: 0 && 0.5 ;}}
+      className='text-center'// Loading fallback component
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles;
+} from 'lucide-react';
+import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
+// Loading fallback component
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

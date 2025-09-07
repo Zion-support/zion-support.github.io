@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';'
 import { useForm  } from 'react-hook-form';'
 import { zodResolver  } from '@hookform/resolvers/zod';'
@@ -6,10 +7,22 @@ import { Button  } from '@/components/ui/button';'
 import { Textarea  } from '@/components/ui/textarea';'
 import { Input  } from '@/components/ui/input';'
 import { Checkbox  } from '@/components/ui/checkbox';'
+=======
+
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { format } from 'date-fns';
 import { Form;
   FormControl;
   FormField;
+<<<<<<< HEAD
   FormItem;
   FormLabel;'
   FormMessage } from '@/components/ui/form';'
@@ -517,6 +530,18 @@ export function WorkExperienceForm() { return null; }
                 onClick={() => {;
                   if (editingId) {;
                     setEditingId(null);
+=======
+  FormItem;}
+  FormLabel;}
+  FormMessage } from '@/components/ui/form';
+import { WorkExperience  } from '@/types/resume';
+import { Loader2, Edit, Trash2  } from 'lucide-react';
+import { useResume  } from '@/hooks/useResume';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { Card, CardContent  } from '@/components/ui/card';
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   }
                 }}
               >;'
@@ -526,6 +551,7 @@ export function WorkExperienceForm() { return null; }
             </div>;
           </form>;
         </Form>;
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -546,3 +572,6 @@ export function WorkExperienceForm() { return null; }
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

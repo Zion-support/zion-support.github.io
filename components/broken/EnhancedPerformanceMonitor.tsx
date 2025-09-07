@@ -1,31 +1,33 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Activity;
   AlertTriangle;
   CheckCircle;
   X;
   RefreshCw;
-  BarChart3;
-  Gauge
- } from 'lucide-react';
-interface PerformanceMetrics {
-  fcp: number;
+  BarChart3;}
+  Gauge;}
+  } from 'lucide-react';
+
+interface PerformanceMetrics  {fcp: number;
   lcp: number;
   fid: number;
   cls: number;
   ttfb: number;
   domLoad: number;
   windowLoad: number;
-  memoryUsage?: {
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number
-  },
-  networkInfo?: {
-    effectiveType: string;
-    downlink: number;
-    rtt: number
+  memoryUsage?: {usedJSHeapSize: number;
+    totalJSHeapSize: number;}
+    jsHeapSizeLimit: number;}
+  },networkInfo?: {effectiveType: string;
+    downlink: number;}
+    rtt: number;}
   }
 }
 
@@ -36,10 +38,13 @@ interface PerformanceRecommendation {
   priority: 'high' | 'medium' | 'low';
   impact: string;
   solution: string;
-  category: 'performance' | 'accessibility' | 'seo' | 'user-experience'
+
+  category: 'performance' | 'accessibility' | 'seo' | 'user-experience'}
+}
 }
 
 const EnhancedPerformanceMonitor: React.FC;
+<<<<<<< HEAD
 //FCP recommendations if (metrics.fcp > 2000) {
 origin/cursor/automate-test-improve-and-merge-code-2533
   recs.push ({
@@ -168,3 +173,6 @@ if ( {) {}
 }> {}
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

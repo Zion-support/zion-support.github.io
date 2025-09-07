@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,6 +12,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   name: string;
   tagline: string;
@@ -41,6 +45,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     mobile: string;
     email: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     address: string,
@@ -51,23 +56,32 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   launch_date: string;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     address: string;
-    website: string
+    website: string;
   },
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2231,3 +2245,6 @@ export default comprehensiveInnovativeServices;
 export default comprehensiveInnovativeServices;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

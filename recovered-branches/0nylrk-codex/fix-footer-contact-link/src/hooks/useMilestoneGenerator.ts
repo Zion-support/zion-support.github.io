@@ -1,11 +1,18 @@
+scope: string;
   scope: string;
+  scope: string;,
+pr-12325
   startDate: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 =======
@@ -13,6 +20,7 @@ import { useState  } from 'react';'
 import { supabase  } from '@/integrations/supabase/client';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from 'sonner';
+<<<<<<< HEAD
 export interface MilestoneInput {';
 import {useState} from 'react';'
 import {supabase} from '@/integrations / supabase / client';'
@@ -81,6 +89,21 @@ export interface GeneratedMilestone {;
 =======
   title: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export interface MilestoneInput {
+
+}
+  scope: string;,
+  start_date: string;
+  end_date: string | null,}
+  project_type: string;}
+}
+export interface GeneratedMilestone {;
+
+
+  title: string;,
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: string;
 <<<<<<< HEAD
 
@@ -95,6 +118,7 @@ export interface GeneratedMilestone {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 
+<<<<<<< HEAD
 export function useMilestoneGenerator() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -420,3 +444,41 @@ export function useMilestoneGenerator() {;
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
+export interface MilestoneInput {
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {toast} from 'sonner';
+export interface MilestoneInput {;
+  scope: string;
+  startDate: string;
+
+  endDate: string | null
+
+  projectType: string
+}
+export interface GeneratedMilestone {
+
+export interface GeneratedMilestone {;
+  title: string;
+  description: string;
+  dueDate: string;
+
+  estimatedHours: number
+
+  isAiGenerated: boolean
+}
+  const [isGenerating, setIsGenerating] = useState(false);
+
+      setIsGenerating(true),
+      const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {')
+pr-12325
+export function useMilestoneGenerator() {
+
+export function useMilestoneGenerator() {
+  const [isGenerating, setIsGenerating] = useState(false);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

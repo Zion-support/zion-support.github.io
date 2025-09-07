@@ -9,6 +9,7 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",
 =======
@@ -206,9 +207,67 @@ interface AnalyzeRequest {
   contentType: string,
   flagId?: string
 
+=======
+
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",;
+import {corsHeaders} from "../_shared/cors ;
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
+import {corsHeaders} from "../_shared/cors.ts";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import { corsHeaders } from "../_shared/cors.ts",;
+  content: string,
+  contentType: string,
+  flagId?: string  if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
+    throw new Error("Missing required environment variables")
+    throw new Error("Missing required environment variables")
+;
+
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,;
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.4';,;
+import { cors_headers } from '../_shared / cors.ts';
+interface AnalyzeRequest {
+  content: string;
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",""
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",""
+import {corsHeaders} from "../_shared/cors ;"
+interface AnalyzeRequest {
+  // TODO: Implement
+}
+  content: string;,
+  contentType: string;
+  flagId?: string;
+}
+interface AnalysisResult {
+  // TODO: Implement
+}
+  classification: string;
+
+"
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",""
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;""
+import {corsHeaders} from "../_shared/cors.ts";""
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",""
+import { corsHeaders } from "../_shared/cors.ts",""
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",""
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;""
+import {corsHeaders} from "../_shared/cors.ts";""
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",""
+import { corsHeaders } from "../_shared/cors.ts","
+interface AnalyzeRequest {
+  // TODO: Implement
+}
+  content: string,
+  contentType: string,
+  flagId?: string;"
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;""
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",;""
+import { corsHeaders } from "../_shared/cors.ts",;"
 interface AnalyzeRequest {;
   content: string,;
   contentType: string,;
@@ -220,15 +279,19 @@ interface AnalysisResult {;
   explanation: string,;
   success: boolean;
 
+
 }
 
-  explanation: string
-  success: boolean
+  explanation: string;,
+  success: boolean;
 }
-// Initialize environment and clients
+// Initialize environment and clients;
 const initializeServices = () => {
 
   const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL");
+  const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+  const openaiApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL");
   const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
   const openaiApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
@@ -236,7 +299,9 @@ const initializeServices = () => {
   const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"),
   const openaiApiKey = Deno.env.get("OPENAI_API_KEY"),
 
-  
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL");
+  const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+  const openaiApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
   if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     throw new Error("Missing required environment variables")
@@ -261,13 +326,38 @@ import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,'
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.4';,'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cors_headers } from '../_shared / cors.ts';
+<<<<<<< HEAD
 interface AnalyzeRequest {}
   content: string;
+=======
+"
+  const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL");""
+  const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");""
+  const openaiApiKey = Deno && Deno.env.get("OPENAI_API_KEY");""
+  const supabaseUrl = Deno.env.get("SUPABASE_URL"),""
+  const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"),""
+  const openaiApiKey = Deno.env.get("OPENAI_API_KEY"),"
+  if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {"
+    throw new Error("Missing required environment variables")""
+    throw new Error("Missing required environment variables")"
+;
+"
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,''
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.4';,''
+import { cors_headers } from '../_shared / cors.ts';'
+interface AnalyzeRequest {
+  // TODO: Implement
+}
+  content: string;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   content_type: string,
   flag_id?: string;
 }
 interface AnalysisResult {}
   classification: string;
+
+}
+  classification: string;,
   explanation: string,
   success: boolean;
 }
@@ -313,13 +403,12 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
     throw new Error("No content provided for analysis")
   }
   if (!request.contentType) {
-  
+}
   if (!request && request.content) {
     throw new Error("No content provided for analysis")
   }
-  
   if (!request && request.contentType) {
-    throw new Error("No content type provided")
+throw new Error("No content type provided")
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.4",;
@@ -358,11 +447,9 @@ const initializeServices = () => {
   const supabaseUrl = Deno.env.get("SUPABASE_URL"),
   const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"),
   const openaiApiKey = Deno.env.get("OPENAI_API_KEY"),
-  
   if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
     throw new Error("Missing required environment variables")
   }
-  
   return {
     supabase: createClient(supabaseUrl, supabaseServiceKey);
     openaiApiKey
@@ -390,15 +477,17 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
     throw new Error("Invalid request body")
   }
   const request = data as AnalyzeRequest;
-  
   const request = data as AnalyzeRequest,
-  
   if (!request.content) {
     throw new Error("No content provided for analysis")
   }
   if (!request.contentType) {
     throw new Error("No content type provided")
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    throw new Error ("Missing required environment variables");    throw new Error("No content type provided")
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
   return {}
     supabase: create_client (supabase_url, supabaseServiceKey);
@@ -440,6 +529,7 @@ interface AnalysisResult {;
   explanation:string,;
   success:boolean;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2000,3 +2090,20 @@ serve(_async (req) => {_// Handle CORS preflight requests
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+// Create prompt for OpenAI
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",""
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",""
+import {corsHeaders} from "../_shared/cors ;"
+interface AnalyzeRequest {
+  // TODO: Implement
+}
+  content: string;,
+  contentType: string;
+  flagId?: string;
+interface AnalysisResult {
+  // TODO: Implement
+  classification: string;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -43,12 +44,18 @@ import { cn } from "@/lib/utils"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+import * as React from "react"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
+import * as React from &quot;react&quot;
+import { cn } from &quot;@/lib/utils&quot;
+export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -64,10 +71,19 @@ export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>
 export type TextareaProps = React.ComponentProps<"textarea">
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>
+export type TextareaProps = React.ComponentProps<"textarea">
+
+
+import { cn } from "@/lib/utils"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
       <textarea
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,29 +119,51 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
 
 =======
         className={cn(
+=======
+        className={cn(export { Textarea }
+export { Textarea };
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+import * as React from "react"""
+import { cn } from "@/lib/utils""
+export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>"
+export type TextareaProps = React.ComponentProps<"textarea">"
+const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
+
+      <textarea;
+        className={cn(
 
           "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
 
-
           className
         )}
           className
         )}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"
+          "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50","
+          className;)
+        )}
+          className;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import * as React from &quot;react & quot;
 ;
 import { cn } from &quot;@/lib / utils & quot;
-;
 export type TextareaProps = React.ComponentProps<&quot;textarea & quot;>;
+<<<<<<< HEAD
 const Textarea = React.forward_ref < HTMLTextAreaElement TextareaProps>(
 <<<<<<< HEAD
   ({ class_name, ...props }, ref) => {}
 =======
+=======
+</textarea>
+const Textarea = React.forward_ref < HTMLTextAreaElement TextareaProps>()
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ({ class_name, ...props }, ref) => {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return (
-      <textarea;
         className={cn (
           &quot;flex min - h-[80px] w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 & quot;,
           class_name)}
@@ -221,7 +259,7 @@ export { Textarea };
 );
 Textarea.display_name = &quot;Textarea & quot;
 
-
+export { Textarea }
 export { Textarea };
 
 Textarea.displayName = "Textarea"
@@ -232,23 +270,33 @@ export { Textarea }
 Textarea.displayName = "Textarea";
 ;
 export { Textarea }import * as React from "react" export type TextareaProps = React.ComponentProps<"textarea" >) 
-}ref= {
-  ref 
-}{
-  ...props 
-}/>) 
-}) Textarea.displayName = "Textarea" export {
-  Textarea 
-}
-          &quot;flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;
-          "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-          className
-        )}
+          &quot;flex min - h-[80px] w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 & quot;,)
+          class_name)}"
+import * as React from "react";"
+;"
+import { cn } from "@/lib/utils";"
+export type TextareaProps = React.ComponentProps<"textarea">;"
+const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(;
+
+        className={cn(;"
+          "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",;"
         ref={ref}
         {...props}
+      />);
+</textarea>"
+export { Textarea }import * as React from "react" export type TextareaProps = React.ComponentProps<"textarea" >)"
+}ref= {
+  ref;
+}{
+  ...props;
+}/>) "
+}) Textarea.displayName = "Textarea" export {"
+  // TODO: Implement
+}
+  Textarea;
+          &quot;flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;"
       />;
     );
-  }
 )
 Textarea.displayName = &quot;Textarea&quot;
 export { Textarea }
@@ -257,6 +305,21 @@ export { Textarea };
 Textarea.displayName = "Textarea"
 
 export { Textarea }
+
+;
+Textarea.displayName = "Textarea"
+
+export { Textarea }
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+Textarea.displayName = "Textarea""
+pr-12325
+export { Textarea }
+;
+;
+"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

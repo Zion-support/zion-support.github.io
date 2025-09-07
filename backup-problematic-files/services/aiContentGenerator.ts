@@ -1,11 +1,17 @@
 export interface ContentGenerationRequest {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   type:'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic:string;
   tone:'professional' | 'casual' | 'friendly' | 'formal';
   length:'short' | 'medium' | 'long';
   keywords?:string[];
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   type:'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
   topic:string,;
   tone:'professional' | 'casual' | 'friendly' | 'formal',;
@@ -17,6 +23,9 @@ export interface ContentGenerationRequest {;
 ;
 export interface ContentGenerationResponse {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   content:string;
   wordCount:number;
   seoScore:number;
@@ -34,7 +43,78 @@ export interface ContentTemplate {;
   description:string;
   type:string;
   preview:string;
+<<<<<<< HEAD
 =======
+=======
+  price:number;
+}
+;
+export class AIContentGeneratorService {;
+  private apiKey:string;
+  private baseUrl:string;
+;
+  constructor(apiKey:string, baseUrl:string = 'https://api.ziontech.ai') {;
+    this.apiKey = apiKey;
+    this.baseUrl = baseUrl;
+  }
+;
+  async generateContent(request:ContentGenerationRequest):Promise<ContentGenerationResponse> {;
+    try {;
+      // In a real implementation, this would call OpenAI, Claude, or similar API;
+      const response = await fetch(`${this.baseUrl}/content/generate`, {;
+        method:'POST';
+        headers:{;
+          'Authorization':`Bearer ${this.apiKey}`;
+          'Content-Type':'application/json'};
+        body:JSON.stringify(request)});
+;
+      if (!response.ok) {;
+        throw new Error(`Content generation failed:${response.statusText}`);
+      }
+;
+      return await response.json();
+    } catch (error) {;
+      // Fallback to mock data for demo purposes;
+      return this.generateMockContent(request);
+    }
+  }
+;
+  async getTemplates():Promise<ContentTemplate[]> {;
+    return [;
+      {;
+        id:'blog-post-starter';
+        name:'Blog Post Starter';
+        description:'Professional blog post template with SEO optimization';
+        type:'blog-post';
+        preview:'Create engaging blog posts that rank well in search engines...';
+        price:29;
+      };
+      {;
+        id:'social-media-campaign';
+        name:'Social Media Campaign';
+        description:'Complete social media content strategy and posts';
+        type:'social-media';
+        preview:'Engage your audience with compelling social media content...';
+        price:49;
+      };
+      {;
+        id:'email-sequence';
+        name:'Email Sequence';
+        description:'Convert prospects with persuasive email sequences';
+        type:'email';
+        preview:'Build relationships and drive sales with email automation...';
+        price:39;
+      };
+      {;
+        id:'landing-page-copy';
+        name:'Landing Page Copy';
+        description:'High-converting landing page content';
+        type:'landing-page';
+        preview:'Turn visitors into customers with compelling copy...';
+        price:59;
+      }
+    ];
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   content:string,;
   wordCount:number,;
   seoScore:number,;
@@ -43,19 +123,22 @@ export interface ContentTemplate {;
   metadata:{;
     title:string,,
   description:string,;
+  metadata: {;,
+  title:string,;
+    description:string,;
+pr-12325
     tags:string[];
   },;}
-;
 export interface ContentTemplate {;
   id:string,;
   name:string,,
   description:string,;
+  name:string,;
+pr-12325
   type:string,;
   preview:string,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   price:number;
-}
-;
 export class AIContentGeneratorService {;
 <<<<<<< HEAD
   private apiKey:string;
@@ -66,14 +149,12 @@ export class AIContentGeneratorService {;
 =======
   private apiKey:string,;
   private baseUrl:string,;
-;
   constructor(apiKey:string, baseUrl:string = 'https://api.ziontech.ai') {;
     this.apiKey = apiKey,;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.baseUrl = baseUrl;
-  }
-;
   async generateContent(request:ContentGenerationRequest):Promise<ContentGenerationResponse> {;
+<<<<<<< HEAD
     try {;
       // In a real implementation, this would call OpenAI, Claude, or similar API;
       const response = await fetch(`${this.baseUrl}/content/generate`, {;
@@ -111,6 +192,9 @@ export class AIContentGeneratorService {;
     }
   }
 ;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async getTemplates():Promise<ContentTemplate[]> {;
     return [;
       {;
@@ -197,6 +281,7 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
 ## Conclusion;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
 ;
     return {;
@@ -276,47 +361,90 @@ export const AI_CONTENT_PRICING = {;
 }; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
 =======
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`,;
+=======
+${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
     return {;
-      content:mockContent,;
-      wordCount:mockContent.split(' ').length,;
-      seoScore:85,;
-      readabilityScore:78,;
+      content:mockContent;
+      wordCount:mockContent.split(' ').length;
+      seoScore:85;
+      readabilityScore:78;
       suggestions:[;
-        'Add more specific examplesInclude relevant statistics',;
+        'Add more specific examplesInclude relevant statistics';
         'Optimize for target keywords';
-      ],;
+      ];
       metadata:{;
-        title:`${request.topic} - Complete Guide`,,
-  description:`Learn everything about ${request.topic} and how to implement it effectively.`,;
+        title:`${request.topic} - Complete Guide`;
+        description:`Learn everything about ${request.topic} and how to implement it effectively.`;
         tags:[request.topic, request.type, 'guidetutorial'];
       }
-    },;
+    };
   }
 ;
   async analyzeContent(content:string):Promise<{;
-    seoScore:number,;
-    readabilityScore:number,;
-    suggestions:string[],;
-    keywordDensity:Record<string number>;
+    seoScore:number;
+    readabilityScore:number;
+    suggestions:string[];
+    keywordDensity:Record<string, number>;
   }> {;
     // Mock content analysis;
     return {;
-      seoScore:Math.floor(Math.random() * 30) + 70,;
-      readabilityScore:Math.floor(Math.random() * 30) + 70,;
+      seoScore:Math.floor(Math.random() * 30) + 70;
+      readabilityScore:Math.floor(Math.random() * 30) + 70;
       suggestions:[;
-        'Add more headings for better structureInclude internal links to related content',;
+        'Add more headings for better structureInclude internal links to related content';
         'Optimize meta description';
-      ],;
+      ];
       keywordDensity:{;
-        'content':2.1,;
-        'seo':1.8,;
+        'content':2.1;
+        'seo':1.8;
         'marketing':1.5;
       }
-    },;
+    };
   }
+<<<<<<< HEAD
 },; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+;
+// Pricing tiers for the AI Content Generator;
+export const AI_CONTENT_PRICING = {;
+  starter:{;
+    name:'Starter';
+    price:29;
+    period:'/month';
+    features:[;
+      '100 content generations per monthBasic templates';
+      'SEO analysisEmail support';
+      'Standard quality';
+    ];
+  };
+  professional:{;
+    name:'Professional';
+    price:99;
+    period:'/month';
+    features:[;
+      '500 content generations per monthPremium templates';
+      'Advanced SEO analysisPriority support';
+      'High quality outputCustom branding';
+      'API access';
+    ];
+  };
+  enterprise:{;
+    name:'Enterprise';
+    price:299;
+    period:'/month';
+    features:[;
+      'Unlimited content generationsCustom templates';
+      'Advanced analyticsDedicated support';
+      'Highest qualityWhite-label options';
+      'Custom integrationsSLA guarantee';
+    ];
+  }
+}; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   try {
   // In a real implementation, this would call OpenAI, Claude, or similar API const response = await fetch (`$ {
   this.baseUrl 
@@ -351,6 +479,7 @@ body: JSON.stringify (request)
   request.topic 
 }implementation ## Conclusion 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     ];
@@ -393,3 +522,40 @@ body: JSON.stringify (request)
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+}
+}
+}
+}// Pricing tiers for the AI Content Generator 
+${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`,;
+;
+    return {;
+      content:mockContent,;
+      wordCount:mockContent.split(' ').length,;
+      seoScore:85,;
+      readabilityScore:78,;
+      suggestions:[;
+        'Add more specific examplesInclude relevant statistics',;
+        'Optimize for target keywords';
+      ],;
+      metadata:{;
+        title:`${request.topic} - Complete Guide`,,
+  description:`Learn everything about ${request.topic} and how to implement it effectively.`,;
+        tags:[request.topic, request.type, 'guidetutorial'];
+      }
+    },;
+  }
+;
+  async analyzeContent(content:string):Promise<{;
+    seoScore:number,;
+    readabilityScore:number,;
+    suggestions:string[],;
+
+  async analyzeContent(content: string):Promise<{;,
+pr-12325
+    keywordDensity:Record<string number>;
+</string>
+},; async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
+
+}async getTemplates () : Promise<ContentTemplate[]> {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

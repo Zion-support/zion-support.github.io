@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -55,9 +56,14 @@ export type NotificationType =
   | "hire_request"
   | "onboarding"
   | "system";
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-export interface CreateNotificationParams {
+}
+}
+export interface SystemNotificationParams {
   user_id: string;
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface CreateNotificationParams {;
@@ -208,6 +214,10 @@ export interface HireRequestNotificationParams {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  title: string;
+  message: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -231,6 +241,7 @@ export interface OnboardingNotificationParams {;
   send_email?: boolean;
   action_url?: string | null,
   action_text?: string | null;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 export interface CreateNotificationResult {};
@@ -246,12 +257,20 @@ export interface HireRequestNotificationParams {};
 =======
 export interface HireRequestNotificationParams {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export interface CreateNotificationResult {
+  // TODO: Implement
+  notification_id?: string,
+export interface HireRequestNotificationParams {
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   talent_id: string;
   admin_id?: string;
-  requester_name: string;
+  requester_name: string;,
   requester_email: string;
   project_type?: string;
   project_summary?: string,
+<<<<<<< HEAD
   hireRequestId: string;
 }
 <<<<<<< HEAD
@@ -299,18 +318,20 @@ export interface SystemNotificationParams {;
 =======
 }  userId: string;
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface OnboardingNotificationParams {
-  user_id: string;
+  // TODO: Implement
+  user_id: string;,
   missing_milestone: string,
   user_role: 'talent' | 'client';
-
-}
 export interface SystemNotificationParams {
-  user_id: string;
+  // TODO: Implement
 
 
 export interface OnboardingNotificationParams {;
 
+<<<<<<< HEAD
   userId: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   missingMilestone: string;
@@ -347,10 +368,15 @@ export interface SystemNotificationParams {;
   userRole: "talent" | "client";
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  missingMilestone: string;
+  userRole: "talent" | "client";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 export interface SystemNotificationParams {;
 
+<<<<<<< HEAD
   userId: string;
 <<<<<<< HEAD
 =======
@@ -457,3 +483,7 @@ export interface SystemNotificationParams {
   sendEmail?: boolean;
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  message: string;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

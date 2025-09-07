@@ -22,6 +22,7 @@ describe('WalletPage', () => {
       spendTokens: vi.fn()
     } as any);
 
+<<<<<<< HEAD
     render(<WalletPage />);
     expect(
       screen.getByRole('heading', { name: /balance/i })
@@ -122,6 +123,9 @@ import * as useWalletHook from '@/hooks/useWallet',;
 
 describe('WalletPage', () => {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   it('renders balance heading', () => {
     vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({
 =======
@@ -174,4 +178,29 @@ describe('WalletPage', () => {'
 =======
 });
 });
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      wallet: { user_id: '1', balance: 100, updated_at:  }
+
+import { render, screen } from '@testing - library / react';''
+import WalletPage from '@/pages / Wallet';''
+import { vi } from 'vitest';''
+import * as useWalletHook from '@/hooks / use_wallet';''
+describe ('WalletPage', () => {''
+  it ('renders balance heading', () => {''
+    vi.spy_on (useWalletHook, 'use_wallet').mockReturnValue ({''
+      wallet: { user_id: '1', balance: 100, updated_at: '' }'
+      transactions: [];,
+  loading: false;)
+      fetch_wallet: vi.fn ();,
+  fetch_transactions: vi.fn ();
+      earn_tokens: vi.fn ();,
+  spend_tokens: vi.fn ()} as any);
+    render (<WalletPage />);
+
+    render(<WalletPage />);
+pr-12325
+</WalletPage>'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

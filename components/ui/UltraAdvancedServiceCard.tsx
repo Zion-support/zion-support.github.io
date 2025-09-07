@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {}
   ArrowRight,
   ExternalLink,
@@ -72,6 +73,8 @@ import {;
 interface UltraAdvancedServiceCardProps {;
   service: {;
     id: string;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     name: string;
     tagline: string;
     price: string;
@@ -80,6 +83,7 @@ interface UltraAdvancedServiceCardProps {;
     features: string[];
     popular: boolean;
     icon: string;
+
     color: string;
 
       website: string;
@@ -92,6 +96,7 @@ interface UltraAdvancedServiceCardProps {;
 
 
 
+<<<<<<< HEAD
   service: {}
     id: string,
     name: string,
@@ -123,6 +128,39 @@ interface UltraAdvancedServiceCardProps {;
       mobile: string,
       email: string,
       address: string,
+=======
+  service: {
+    id: string;,
+    name: string;,
+    tagline: string;,
+    price: string;,
+    period: string;,
+    description: string;,
+    features: string[];,
+    popular: boolean;,
+    icon: string;,
+    color: string;,
+    textColor: string;,
+    link: string;,
+    marketPosition: string;,
+    targetAudience: string;,
+    trialDays: number;,
+    setupTime: string;,
+    category: string;,
+    realService: boolean;,
+    technology: string[];,
+    integrations: string[];,
+    useCases: string[];,
+    roi: string;,
+    competitors: string[];,
+    marketSize: string;,
+    growthRate: string;,
+    variant: string;,
+    contactInfo: {
+      mobile: string;,
+      email: string;,
+      address: string;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       website: string;
     }
@@ -148,9 +186,9 @@ interface UltraAdvancedServiceCardProps {;
     marketSize: string;
     growthRate: string;
     variant: string;
-    contactInfo: {
-      mobile: string;
+    contactInfo: {mobile: string;
       email: string;
+<<<<<<< HEAD
       address: string;
       website: string
     },
@@ -939,3 +977,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+    reviews: number
+    reviews: number;
+  }
+}
+
+const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps /> = ({ service   ;}
+}) => {
+
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

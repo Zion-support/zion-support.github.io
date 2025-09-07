@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -10,6 +11,19 @@
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+export interface FeedbackRecord {;
+
+// Mock feedback store utility
+export function tryWriteToFirestore(doc: any): Promise<boolean> {
+  // Mock implementation - in a real app, this would write to Firestore
+  return Promise.resolve(true);
+}
+
+export type FeedbackRecord = {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -30,6 +44,7 @@ export type FeedbackRecord = {;
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,11 +71,13 @@ export interface FeedbackRecord {;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import fs from 'fs';
 import path from 'path';
 
-export type FeedbackRecord = {
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 export type FeedbackRecord = {
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -86,6 +103,14 @@ export type FeedbackRecord = {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+export interface Feedback {
+  id: string;
+  userId: string;
+  content: string;
+  rating: number;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   comment?: string;
   kind: "general" | "bug" | "feature";
   context?: { actionType?: string, metadata?: any }
@@ -109,10 +134,27 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {;
 }
 =======
 
+const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime');
+const DB_PATH = path && path.join(DATA_DIR, 'feedback && feedback.json');
+
+function ensureDataFile(): void {
+  if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true });
+  if (!fs && fs.existsSync(DB_PATH))
+    fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items: [] }, null, 2), 'utf-8');
+
+export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
+  ensureDataFile();
+  const raw = fs && fs.readFileSync(DB_PATH, 'utf-8');
+  const data = JSON && JSON.parse(raw || '{}');
+  const items: FeedbackRecord[] = Array && Array.isArray(data && data.items) ? data && data.items : [];
+  items && items.push(rec);
+  fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items }, null, 2), 'utf-8');
+  return rec;
 
 export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
   feedbackData.push(feedback);
   console.log('Feedback saved:', feedback.id);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -178,10 +220,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+
+export interface FeedbackStore {
+  feedback: Feedback[];
+  addFeedback: (feedback: Omit<Feedback, 'id' | 'createdAt'>) => void;
+  updateFeedback: (id: string, updates: Partial<Feedback>) => void;
+  getFeedback: (id: string) => Feedback | undefined;
+  getAllFeedback: () => Feedback[];
+}
+
+export function getAllFeedback(): FeedbackRecord[] {;
+  return [...feedbackData];
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   metadata: Record < string, any>;
   created_at: string;
   ip: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -207,6 +264,9 @@ main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const feedbackData: FeedbackRecord[] = [];
 
@@ -215,8 +275,21 @@ export async function saveFeedbackFallback(
 ): Promise<void> {
   feedbackData.push(feedback);
   console.log("Feedback saved:", feedback.id);
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+const feedback_data: FeedbackRecord[] = [];
+;
+export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise < void> {
+  feedback_data.push (feedback);
+  console.log ('Feedback saved:', feedback.id);
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export function writeAll(rows: any[]): void {";
@@ -235,6 +308,7 @@ export function writeAll(rows: any[]): void {";
 export function getAllFeedback(): FeedbackRecord[] {};
   return [...feedbackData];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function getAllFeedback (): FeedbackRecord[] {
   return [...feedback_data];
@@ -261,18 +335,38 @@ const DATA_DIR = path.join(process.cwd(), 'data', 'runtime');
 const DB_PATH = path.join(DATA_DIR, 'feedback.json');
 
 function ensureDataFile(): void {
+=======
+export function getAllFeedback (): FeedbackRecord[] {
+  return [...feedback_data];
+}
+import fs from "fs";
+import path from "path";
+export type FeedbackRecord = {;
+  id: string;
+  createdAtIso: string;
+  user: { id?: string, role?: string, talentSlug?: string };
+  rating: number;
+  comment?: string;
+  kind: "general" | "bug" | "feature";
+  context?: { actionType?: string, metadata?: any }
+};
+const DATA_DIR = path.join(process.cwd(), "data", "runtime");
+const DB_PATH = path.join(DATA_DIR, "feedback.json");
+function ensureDataFile(): void {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  if (!fs.existsSync(DB_PATH))
-    fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), 'utf-8');
-
-export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
+  if (!fs.existsSync(DB_PATH)) fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), "utf-8");
+}
+;
+export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {;
   ensureDataFile();
-  const raw = fs.readFileSync(DB_PATH, 'utf-8');
-  const data = JSON.parse(raw || '{}');
+  const raw = fs.readFileSync(DB_PATH, "utf-8");
+  const data = JSON.parse(raw || "{}");
   const items: FeedbackRecord[] = Array.isArray(data.items) ? data.items : [];
   items.push(rec);
-  fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), 'utf-8');
+  fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), "utf-8");
   return rec;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -290,3 +384,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

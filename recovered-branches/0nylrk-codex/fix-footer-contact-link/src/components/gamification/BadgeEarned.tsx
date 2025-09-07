@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,9 +15,13 @@ interface BadgeEarnedProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from './react';
 import { getBadgeMeta, BadgeKey } from './badge_config';
 
+import React from './react';
+import { getBadgeMeta, BadgeKey } from './badge_config';
 interface BadgeEarnedProps {
   badge: BadgeKey
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -57,6 +62,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 }
 export const BadgeEarned: React.FC < BadgeEarnedProps> = ({};
   badge;
+<<<<<<< HEAD
 <<<<<<< HEAD
   size = 44;
   showDesc = false,;
@@ -643,3 +649,6 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
 =======
 };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

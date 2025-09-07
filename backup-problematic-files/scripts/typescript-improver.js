@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/typescript-improver.js
 ========
 <<<<<<< HEAD
@@ -16,14 +17,17 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
+=======
+#!/usr/bin/env node;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 let totalImprovements = 0;
 let filesProcessed = 0;
-// Common type replacements
+// Common type replacements;
 const typeReplacements = {
-  // React types
+  // React types;
   'any[]': 'React.ReactNode[]',
   "any": 'unknown',
   'any)': 'unknown)',
@@ -36,30 +40,18 @@ const typeReplacements = {
   'any<': 'unknown<',
   'any}': 'unknown}',
   'any{': 'unknown{',
-  // Specific React component types
+  // Specific React component types;
   'React.ComponentType<any>': 'React.ComponentType<Record<string, unknown>>',
+</any>
   'React.FC<any>': 'React.FC<Record<string, unknown>>',
   'React.Component<any>': 'React.Component<Record<string, unknown>>',
-  // Event types
   'React.ChangeEvent<any>': 'React.ChangeEvent<HTMLInputElement>',
   'React.MouseEvent<any>': 'React.MouseEvent<HTMLButtonElement>',
   'React.FormEvent<any>': 'React.FormEvent<HTMLFormElement>',
-  // Function types
-  '() => any': '() => void',
-  '("value": any)': '(value: unknown)',
-  '("item": any)': '(item: unknown)',
-  '("data": any)': '(data: unknown)',
   '("props": any)': '(props: Record<string, unknown>)',
-  '("event": any)': '(event: React.SyntheticEvent)',
-  // Array types
-  'any[]': 'unknown[]',
+</string>
   'Array<any>': 'Array<unknown>',
-  // Object types
   'Record<string, any>': 'Record<string, unknown>',
-  '{ ["key": string]: any }': '{ ["key": string]: unknown }'};
-// Interface definitions for common patterns
-const commonInterfaces = "
-// Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   "data": T;
   status: number;
@@ -135,10 +127,13 @@ function improveTypeScriptFile(content, filePath) {
       return match.replace(": any", ': unknown')});
     changes += destructuringMatches.length}
   // Add proper typing for useState
+
+pr-12325
   const useStateRegex = /useState\s*<\s*any\s*>/g;
   const useStateMatches = improved.match(useStateRegex);
   if (useStateMatches) {
     improved = improved.replace(useStateRegex, 'useState<unknown>');
+<<<<<<< HEAD
     changes += useStateMatches.length}
   // Add proper typing for useEffect
   const useEffectRegex =
@@ -275,3 +270,6 @@ main().catch(console.error);
 // Run the script
 main().catch(console.error);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+</unknown>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

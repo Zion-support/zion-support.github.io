@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -147,29 +148,56 @@ export function HelpArticleList({}
   const filteredArticles = searchQuery;
 =======
 import React from "react";
+=======
+
+
+
+    day: "numeric"
+
+    </div>;
+  );
+})
+    day: "numeric",
+  });
+function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("en-US", {
+}
+  );  })
+  })
+
+import React from "react";"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {
+  // TODO: Implement
+}
   Card,
   CardContent,
   CardDescription,
+
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { HELP_CATEGORIES } from "./help-content";
+  CardTitle,"
+} from "@/components/ui/card";""
+import { HELP_CATEGORIES } from "./help-content";"
 interface HelpArticleListProps {
-  categoryId: string;
-  onArticleSelect: (articleId: string) => void;
+  // TODO: Implement
+  categoryId: string;,
+  onArticleSelect: (articleId: string) => void;,
   searchQuery: string;
+
 }
 
 export function HelpArticleList({
   categoryId,
+
   onArticleSelect,
-  searchQuery,
+  searchQuery,)
 }: HelpArticleListProps) {
   const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
 
   if (!category) {
     return <div>Category not found</div>;
+<<<<<<< HEAD
   }
 
   // Filter articles based on search query
@@ -614,23 +642,98 @@ if ( {) {
         </div>) : (
         <div className="space - y-4">;
           {filtered_articles.map ((article) => (
+=======
+    <div>
+</div>"
+      <div className="mb-6">"
+        <h2 className="text-2xl font-bold mb-2">{category.name}</h2>""
+        <p className="text-zion-slate-light">{category.description}</p>"
+        <div className="text-center py-8">"
+          <h3 className="text-lg font-medium mb-2">No articles found</h3>""
+          <p className="text-zion-slate-light">"
+</p>
+        <div className="space-y-4">"
+</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Card;
-              key={article.id}
-              className="cursor - pointer hover:border - zion - purple / 50 transition - colors";
-              on_click={() => onArticleSelect (article.id)}
+              key={article.id}"
+              className="cursor-pointer hover:border-zion-purple/50 transition-colors""
+              onClick={() => onArticleSelect(article.id)}
+"
+              <CardHeader className="pb-2">"
+                <CardTitle className="text-lg">{article.title}""
+                <CardDescription className="text-zion-slate-light text-sm">"
+
+              <CardContent>
+                <p className="text-sm text-zion-slate-light truncate">"
+
+</p>
+
+                </p>
+              </CardContent>
+            </Card>
+        </div>
+    </div>
+
+            <Card;
+              key={article.id}"
+              className="cursor-pointer hover:border-zion-purple/50 transition-colors""
+              onClick={() => onArticleSelect(article.id)}
+</Card>"
+              <CardHeader className="pb-2">"
+</CardHeader>"
+                <CardTitle className="text-lg">{article.title}</CardTitle>""
+                <CardDescription className="text-zion-slate-light text-sm">"
+</CardDescription>
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+</CardContent>"
+                <p className="text-sm text-zion-slate-light truncate">"
+</p>
+                </p>
+              </CardContent>
+            </Card>
+        </div>
+    </div>
+    return <div>Category not found</div>;
+    <div>;
+      <div className="mb-6">;"
+        <h2 className="text-2xl font-bold mb-2">{category && category.name}</h2>;""
+        <p className="text-zion-slate-light">{category && category.description}</p>;"
+      </div>;"
+        <div className="text-center py-8">;"
+          <h3 className="text-lg font-medium mb-2">No articles found</h3>;""
+          <p className="text-zion-slate-light">;"
+          </p>;
+        <div className="space-y-4">;"
+              key={article && article.id}"
             >;
-              <CardHeader className="pb - 2">;
-                <CardTitle className="text - lg">{article.title}</CardTitle>;
-                <CardDescription className="text - zion - slate - light text - sm">;
-                  Last updated: {format_date (article.last_updated)}
-                </CardDescription>;
-              </CardHeader>;
+              <CardHeader className="pb-2">;"
+                <CardTitle className="text-lg">{article && article.title};""
+                <CardDescription className="text-zion-slate-light text-sm">;"
+
+                ;
               <CardContent>;
-                <p className="text - sm text - zion - slate - light truncate">;
-                  {article.content.substring (0, 120)}...;
-                </p>;
-              </CardContent>;
-            </Card>))}
+                <p className="text-sm text-zion-slate-light truncate">;"
+        </div>;
+    return <div > Category not found</div>;
+      <div className="mb - 6">;"
+        <h2 className="text - 2xl font - bold mb - 2">{category.name}</h2>;""
+        <p className="text - zion - slate - light">{category.description}</p>;"
+        <div className="text - center py - 8">;"
+          <h3 className="text - lg font - medium mb - 2">No articles found</h3>;""
+          <p className="text - zion - slate - light">;"
+        </div>) : ("
+        <div className="space - y-4">;"
+              className="cursor - pointer hover:border - zion - purple / 50 transition - colors";")
+              on_click={() => onArticleSelect (article.id)}
+              <CardHeader className="pb - 2">;"
+                <CardTitle className="text - lg">{article.title};""
+                <CardDescription className="text - zion - slate - light text - sm">;"
+
+                <p className="text - sm text - zion - slate - light truncate">;"
+            ))}
         </div>)}
     </div>);
 }
@@ -675,12 +778,12 @@ searchQuery: string
 }: HelpArticleListProps) {
   const category = HELP CATEGORIES.find (cat => cat.id === categoryId);
 if (!category) {
+            ;          ))}
   return <div>Category not found</div> 
-}return (<div> </p> </CardContent> </Card>) ) 
+}return (<div> </p>  ) ) 
 }</div>) 
-}</div>) 
-}
-}
+}</div>) "
+pr-12325
 
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
@@ -695,7 +798,7 @@ year: "numeric"
 }
 
   })
-  })
+})
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }

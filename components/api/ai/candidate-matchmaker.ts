@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 ) {'
   const method = (req.method |'POST').toUpperCase();'
   if (method !== 'POST')'
@@ -17,10 +18,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   try {';
   const method = (req && req.method || 'POST').toUpperCase();'
   if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = null;
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -103,3 +109,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+  return res.status(200).json({ matches: text })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+    `Job Description: \n${jobDescriptio,}
+}\n\n` +
+    `Candidates:\n${candidateProfiles.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n',
+}`;
+
+const text = await generateText(
+    prompt;
+    'You are a matching engine. Output strictly valid JSON.'
+  );
+
+  return res.status(200).json({ matches: text,}
+});
+  return res.status(200).json({ matches: text }),
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

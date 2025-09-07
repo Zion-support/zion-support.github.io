@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -290,6 +291,9 @@ export default function SearchPage() {;    if (initial) {
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
         <form onSubmit={handleSubmit} className="mb-6">;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <EnhancedSearchInput
 =======
     <AppLayout>;"
@@ -336,8 +340,13 @@ export default function SearchPage() {;    if (initial) {
           />;
         </form>;
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+/>
+        </form>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
@@ -476,7 +485,13 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
+<<<<<<< HEAD
 ;
+=======
+
+/>;
+        </form>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -504,7 +519,53 @@ export default function SearchPage() {;
 =======
 }
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}, [initial]),;
+;
+  const handleSubmit = (e:React.FormEvent) => {;
+    e.preventDefault(),;
+    navigate(`/search?q=${encodeURIComponent(query)}`),;
+    search(query),;
+  },;
+;
+  return (;
+    <AppLayout>;
+
+      <main className="container mx-auto px-4 py-8">;"
+</main>"
+        <form onSubmit={handleSubmit} className="mb-6">;"
+</form>
+          <EnhancedSearchInput;
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={suggestions}"
+            placeholder="Search talent, jobs, and projects...""
+          />;
+
+        </form>;
+"
+            placeholder="Search talent, jobs, and projects...";"
+
+        </form>;"
+        {loading && <p className="text-zion-slate-light">Searching...</p>}""
+          <p className="text-zion-slate-light">No results found.</p>;""
+          <div className="space-y-4">;"
+</div>
+              <div;
+                key={`${r && r.type}-${r && r.id}`}"
+                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;"
+</div>"
+                <p className="text-xs uppercase text-zion-slate-light mb-1">;"
+</p>
+                </p>;"
+                <h3 className="text-lg font-bold text-white">{r && r.title}</h3>;""
+                <p className="text-zion-slate-light">{r && r.description}</p>;"
+              </div>;
+      </main>;
+    </AppLayout>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
@@ -581,7 +642,11 @@ if ( {) {
         <form on_submit={handle_submit} className="mb - 6">;
           <EnhancedSearchInput;
             value={query}
+    ;
+      <main className="container mx - auto px - 4 py - 8">;"
+        <form on_submit={handle_submit} className="mb - 6">;"
             on_change={set_query}
+<<<<<<< HEAD
 <<<<<<< HEAD
             search_suggestions={suggestions}"
             placeholder="Search talent, jobs, and projects...";
@@ -622,6 +687,20 @@ if ( {) {
                 <h3 className="text - lg font - bold text - white">{r.title}</h3>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 <p className="text - zion - slate - light">{r.description}</p>;
+=======
+            search_suggestions={suggestions}"
+
+        {loading && <p className="text - zion - slate - light">Searching...</p>}""
+          <p className="text - zion - slate - light">No results found.</p>)}""
+          <div className="space - y-4">;"
+              <div;`;
+                key={`${r.type}-${r.id}`}"
+                className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4";"
+              >;
+                <p className="text - xs uppercase text - zion - slate - light mb - 1">;"
+                <h3 className="text - lg font - bold text - white">{r.title}</h3>;""
+                <p className="text - zion - slate - light">{r.description}</p>;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>))}
           </div>)}
       </main>;
@@ -643,45 +722,38 @@ if ( {) {
 }{
   !loading && results.length > 0 && (<div className="space-y-4"> {
   results.map ( (r) => (<div key= {
+    );"
+  loading && <p className="text-zion-slate-light">Searching...</p>""
+  !loading && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>)""
+  !loading && results.length > 0 && (<div className="space-y-4"> {"
+</div>)
+  results.map ( (r) => (<div key= {`;
   `$ {
-  r.type 
+  r.type;
 }-$ {
-  r.id 
-}` 
-}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > <p className="text-xs uppercase text-zion-slate-light mb-1"> {
-  r.type 
-}</p> <h3 className="text-lg font-bold text-white"> {
-  r.title 
-}</h3> <p className="text-zion-slate-light"> {
-  r.description 
+  r.id;`;
+}` "
+}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > <p className="text-xs uppercase text-zion-slate-light mb-1"> {"
+}</p> <h3 className="text-lg font-bold text-white"> {"
+</h3>"
+}</h3> <p className="text-zion-slate-light"> {"
+</p>)
 }</p> </div>) ) 
 }</div>) 
-}</main> </AppLayout>) 
-}
-        {loading && <p className="text-zion-slate-light">Searching...</p>}
-        {!loading && results.length === 0 && (
-          <p className="text-zion-slate-light">No results found.</p>
-        )}
-        {!loading && results.length > 0 && (
-          <div className="space-y-4">
-            {results.map((r) => (
-              <div
-                key={`${r.type}-${r.id}`}
-                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
+}</main> ) "
+          <p className="text-zion-slate-light">No results found.</p>""
+          <div className="space-y-4">"
+                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4""
               >
-                <p className="text-xs uppercase text-zion-slate-light mb-1">
-                  {r.type}
-                </p>
-                <h3 className="text-lg font-bold text-white">{r.title}</h3>
-                <p className="text-zion-slate-light">{r.description}</p>
-              </div>
-            ))}
-          </div>
-        )}
+                <p className="text-xs uppercase text-zion-slate-light mb-1">"
+                </p>"
+                <h3 className="text-lg font-bold text-white">{r.title}</h3>""
+                <p className="text-zion-slate-light">{r.description}</p>"
       </main>
     </AppLayout>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -701,3 +773,7 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    "`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

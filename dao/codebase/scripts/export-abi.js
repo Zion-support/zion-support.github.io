@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  
 }else {
@@ -77,6 +78,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/expand-services-advertise-and-build-project-c28b
 const fs = require('fs');
 const path = require('path');
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function main() {
   const outDir = path.join(__dirname, '../abi');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
@@ -96,8 +99,11 @@ function main() {
       fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2));
       console.log('Exported ABI for', name)
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } else {
 =======
 
@@ -117,6 +123,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -139,3 +146,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}main ();main(),
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

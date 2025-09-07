@@ -13,9 +13,8 @@ const path = require("path")
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-const fs = require("child_process")
-const path = require("path")
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const fs = require("child_process")
 const path = require("path")
@@ -76,5 +75,7 @@ Allow: /contact"
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
     console.log(" SEO improvement completed!")
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

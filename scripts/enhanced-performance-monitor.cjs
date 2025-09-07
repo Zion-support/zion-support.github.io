@@ -1,4 +1,6 @@
 
+
+
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -8,41 +10,41 @@
     log('info', `Server response "time": ${performanceMetrics.metrics.runtime.responseTime}ms`);
     log('info', `Total "alerts": ${performanceMetrics.summary.totalAlerts}`);
     log('info', `Performance "score": ${performanceMetrics.summary.performanceScore}/100`);
-    
     if (performanceMetrics.alerts.length > 0) {
+
       log('warn', 'Performance "Alerts": ');
-      performanceMetrics.alerts.forEach(alert => {
+      performanceMetrics.alerts.forEach(alert => {)`;
         log('warn', `- [${alert.level.toUpperCase()}] ${alert.message}`)})}
-    
     if (performanceMetrics.recommendations.length > 0) {
       log('info', 'Performance "Recommendations": ');
-      performanceMetrics.recommendations.forEach(rec => {
-        log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
-        log('info', `  "Action": ${rec.action}`)})}
-    
-    // Save performance report
+      performanceMetrics.recommendations.forEach(rec => {)`;
+        log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);`;
+        log('info', `  "Action": ${rec.action}`)})}"
+    // Save performance report;`;
     const reportPath = path.join(process.cwd(), `enhanced-performance-report-${performanceMetrics.sessionId}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(performanceMetrics, null, 2));
-    
-    log('info', `Enhanced performance report saved "to": enhanced-performance-report-${performanceMetrics.sessionId}.json`);
-    
-    // Exit with appropriate status
-    if (performanceMetrics.summary.performanceScore < 50) {
+    "`;
+    log('info', `Enhanced performance report saved "to": enhanced-performance-report-${performanceMetrics.sessionId}.json`);"
+    // Exit with appropriate status;
+    if (performanceMetrics.summary.performanceScore < 50) {"
       log('error', 'Performance score is below 50% - immediate attention required');
       process.exit(1)} else if (performanceMetrics.summary.performanceScore < 80) {
       log('warn', 'Performance score is below 80% - optimization recommended');
       process.exit(0)} else {
+  // TODO: Implement
+}
       log('info', 'Performance monitoring completed successfully');
       process.exit(0)}
-    
   } catch (error) {
     log('error', 'Fatal error in enhanced performance monitor', error.message);
-    process.exit(1)}
-}
 
-// Run the enhanced performance monitor
+
+    process.exit(1)}
+
+// Run the enhanced performance monitor;
 main();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -56,17 +58,19 @@ main();
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 const os = require('os')
-// console.log(' Enhanced Performance Monitor v2.0')
+// console.log(' Enhanced Performance Monitor v2.0)
 console.log('=')
-  if (level === 'error')
-    console.error(logMessage)} else if (level === 'warn')
-    const output = execSync('df -h /', { "encoding"})
+
       "percentage"
-    const output = execSync('cat /proc/net/dev', { "encoding"})
+    const output = execSync('cat /proc/net/dev, { "encoding"})
       "encoding"
       "stdio"
       "stdio"
@@ -106,24 +110,17 @@ console.log('=')
       "priority"
       "message"
       "action"
+<<<<<<< HEAD
       log('warn', 'Performance "Alerts")
       log('info', 'Performance "Recommendations")
 <<<<<<< HEAD
 #!/usr/bin/env node
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
-class PerformanceMonitor {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportFile = path.join(
-      this.projectRoot,
-      'performance-monitor-report.json'
-    );
-  }
 
+<<<<<<< HEAD
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
@@ -304,3 +301,5 @@ monitor
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

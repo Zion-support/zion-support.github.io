@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function DevOpsAutopilot() { return ( <Article title=\"DevOps Autopilot\" subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\" price=\"from $15k\" bullets={[\'Automated rollback and canary based on error budgets\',\'Kubernetes policy-as-code with security baselines\',\'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',\'Observability map with RCA suggestions and runbook generation\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 module.exports = default function DevOpsAutopilot() { return ( <Article title="DevOps Autopilot" subtitle="SLO-aware remediation,cost controls,and deployment guardrails" price="from $15k" bullets={["Automated rollback and canary based on error budgets","Kubernetes policy-as-code with security baselines","FinOps guardrails: right-sizing and scheduled scale-downs","Observability map with RCA suggestions and runbook generation" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
 =======
@@ -25,6 +26,18 @@ module.exports = default function DevOpsAutopilot() { return ( <Article title="D
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+export default function DevOpsAutopilot() { return ( <Article title=\"DevOps Autopilot\" subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\" price=\"from $15k\" bullets={[\'Automated rollback and canary based on error budgets\',\'Kubernetes policy-as-code with security baselines\',\'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',\'Observability map with RCA suggestions and runbook generation\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
+module.exports = default function DevOpsAutopilot() { return ( <Article title="DevOps Autopilot" subtitle="SLO-aware remediation,cost controls,and deployment guardrails" price="from $15k" bullets={["Automated rollback and canary based on error budgets","Kubernetes policy-as-code with security baselines","FinOps guardrails: right-sizing and scheduled scale-downs","Observability map with RCA suggestions and runbook generation" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
+
+export default function DevOpsAutopilot() { return ( <Article title=\"DevOps Autopilot\" subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\" price=\"from $15k\" bullets={[\'Automated rollback and canary based on error budgets\',\'Kubernetes policy-as-code with security baselines\',\'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',\'Observability map with RCA suggestions and runbook generation\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
+module.exports = default function DevOpsAutopilot() { return ( <Article title="DevOps Autopilot" subtitle="SLO-aware remediation,cost controls,and deployment guardrails" price="from $15k" bullets={["Automated rollback and canary based on error budgets","Kubernetes policy-as-code with security baselines","FinOps guardrails: right-sizing and scheduled scale-downs","Observability map with RCA suggestions and runbook generation" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function DevOpsAutopilot() { return ( <Article title=\"DevOps Autopilot\" subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\" price=\"from $15k\" bullets={[\'Automated rollback and canary based on error budgets\',\'Kubernetes policy-as-code with security baselines\',\'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',\'Observability map with RCA suggestions and runbook generation\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 module.exports = default function DevOpsAutopilot() { return ( <Article title="DevOps Autopilot" subtitle="SLO-aware remediation,cost controls,and deployment guardrails" price="from $15k" bullets={["Automated rollback and canary based on error budgets","Kubernetes policy-as-code with security baselines","FinOps guardrails: right-sizing and scheduled scale-downs","Observability map with RCA suggestions and runbook generation" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
 import React from 'react';
@@ -65,8 +78,43 @@ import React from 'react';
 =======
 
 
+
+
+export default function DevOpsAutopilot() { return ( <Article title=\"DevOps Autopilot\" subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\" price=\"from $15k\" bullets={[\'Automated rollback and canary based on error budgets\',\'Kubernetes policy-as-code with security baselines\',\'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',\'Observability map with RCA suggestions and runbook generation\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
+module.exports = default function DevOpsAutopilot() { return ( <Article title="DevOps Autopilot" subtitle="SLO-aware remediation,cost controls,and deployment guardrails" price="from $15k" bullets={["Automated rollback and canary based on error budgets","Kubernetes policy-as-code with security baselines","FinOps guardrails: right-sizing and scheduled scale-downs","Observability map with RCA suggestions and runbook generation" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
+
+
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+import React from 'react';
+import * as React from 'react';
+
+
+
+interface DevopsautopilotProps {
+  // Add props here as needed
+}
+}
+
+
+}
+
+
+
+}
+
+
+
+
+export default function Devopsautopilot({ }: DevopsautopilotProps) {
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import * as React from 'react';
 
@@ -94,6 +142,7 @@ export default function Devopsautopilot({ }: DevopsautopilotProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,6 +180,9 @@ export default function Devopsautopilot({ }: DevopsautopilotProps) {
 }
 export default function Devopsautopilot({ }: DevopsautopilotProps) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -242,7 +294,47 @@ export default function Devopsautopilot(): any ({ }: DevopsautopilotProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   );
+
+
+
+
+
+}
+
+
+}
+
+
+
+}
+
+
+
 }
 }
+<<<<<<< HEAD
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export default function DevOpsAutopilot() { return ( <Article title=\"DevOps Autopilot\" subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\" price=\"from $15k\" bullets={[\'Automated rollback and canary based on error budgets\',\'Kubernetes policy-as-code with security baselines\',\'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',\'Observability map with RCA suggestions and runbook generation\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }"
+"
+module.exports = default function DevOpsAutopilot() { return ( <Article title="DevOps Autopilot" subtitle="SLO-aware remediation,cost controls,and deployment guardrails" price="from $15k" bullets={["Automated rollback and canary based on error budgets","Kubernetes policy-as-code with security baselines","FinOps guardrails: right-sizing and scheduled scale-downs","Observability map with RCA suggestions and runbook generation" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'""
+
+    <div>
+</div>
+      <h1>Devopsautopilot</h1>
+      <p>This component is currently under development.</p>
+      return <div>Something went wrong.</div>;"
+export default function DevOpsAutopilot() { return ( <Article title=\"DevOps Autopilot\" subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\" price=\"from $15k\" bullets={[\'Automated rollback and canary based on error budgets\',\'Kubernetes policy-as-code with security baselines\',\'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',\'Observability map with RCA suggestions and runbook generation\' ]} /> ) } function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets && bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }"
+module && module.exports = default function DevOpsAutopilot() { return ( <Article title="DevOps Autopilot" subtitle="SLO-aware remediation,cost controls,and deployment guardrails" price="from $15k" bullets={["Automated rollback and canary based on error budgets","Kubernetes policy-as-code with security baselines","FinOps guardrails: right-sizing and scheduled scale-downs","Observability map with RCA suggestions and runbook generation" ]} /> ) } function Article(): any ({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets && bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup && ziontechgroup.com">kleber@ziontechgroup && ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'";"
+export default function DevOpsAutopilot() { return ( <Article title=\"DevOps Autopilot\" subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\" price=\"from $15k\" bullets={[\'Automated rollback and canary based on error budgets\',\'Kubernetes policy-as-code with security baselines\',\'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',\'Observability map with RCA suggestions and runbook generation\' ]} /> ) } function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string, price: string, bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets && bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }"
+module && module.exports = default function DevOpsAutopilot() { return ( <Article title="DevOps Autopilot" subtitle="SLO-aware remediation,cost controls,and deployment guardrails" price="from $15k" bullets={["Automated rollback and canary based on error budgets","Kubernetes policy-as-code with security baselines","FinOps guardrails: right-sizing and scheduled scale-downs","Observability map with RCA suggestions and runbook generation" ]} /> ) } function Article(): any ({ title,subtitle,price,bullets }: { title: "string, subtitle: string, price: string,;"
+)"
+    bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets && bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup && ziontechgroup.com">kleber@ziontechgroup && ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'";""
+    bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets && bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup && ziontechgroup.com">kleber@ziontechgroup && ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'";"
+    <div>;
+      <h1>Devopsautopilot</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

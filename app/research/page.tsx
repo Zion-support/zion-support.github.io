@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1245,6 +1246,14 @@ export const metadata: Metadata = {
   description: 'Explore our cutting-edge research in AI, machine learning, and technology innovation. Leading the future of intelligent systems.',
   keywords: 'AI research, machine learning, technology innovation, research publications, academic collaboration',
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React from 'react';
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const metadata = {
+  title: "Research | Zion Tech Group",
+  description: "Explore our cutting-edge research in AI, quantum computing, and autonomous systems."
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 
 export default function ResearchPage() {

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ContractTemplate {
@@ -102,11 +103,18 @@ export interface ContractTemplate {};
 =======
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface ContractTemplate {
-  id: string;
+
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+export interface ContractTemplate {;
+export interface ContractTemplate {  id: string;
   title: string;
   template_data: ContractFormValues;
   is_default: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface ContractTemplate {  id: string;
@@ -117,12 +125,19 @@ export interface ContractTemplate {  id: string;
 
   created_at: string,
   updated_at: string;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
   created_at: string,
   updated_at: string
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",
+=======
+import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface ContractTemplate {
   id: string,
   title: string,
@@ -136,8 +151,11 @@ export interface ContractTemplate {;
   title: string,;
   template_data: ContractFormValues,;
   is_default: boolean;
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   created_at: string;
   updated_at: string;
 <<<<<<< HEAD
@@ -166,6 +184,8 @@ export interface ContractTemplate {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 ;
+}}
+;
 }
 ;
 }
@@ -173,6 +193,7 @@ export interface ContractTemplate {;
 <<<<<<< HEAD
 ;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -184,3 +205,51 @@ export interface ContractTemplate {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+}
+}
+
+import { ContractFormValues } from "@/components/contracts/components/ContractForm";"
+export interface ContractTemplate {
+  // TODO: Implement
+}
+  id: string;,
+
+  title: string;
+  template_data: ContractFormValues;,
+  is_default: boolean;
+
+  created_at: string;,
+
+  updated_at: string;
+;
+"
+pr-12325
+import { ContractFormValues } from \"@/components/contracts/components/ContractForm\",;
+export interface ContractTemplate {
+  id: string,
+  title: string,
+  template_data: ContractFormValues,
+  is_default: boolean,
+  created_at: string,}
+  updated_at: string;}
+import { ContractFormValues } from \"@/components/contracts/components/ContractForm\";
+export interface ContractTemplate {;
+  id: string,;
+  title: string,;
+  template_data: ContractFormValues,;
+  is_default: boolean;
+  created_at: string;}
+  updated_at: string;}
+}
+;
+}}
+;
+}
+;
+}
+;
+}
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types';
 import { v4 as uuidv4  } from 'uuid';
 import { supabase as client  } from '../../../utils/supabase/client';
@@ -47,10 +48,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
     sort;'
+=======
+
+    sort;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
 
+<<<<<<< HEAD
     filters;
     format: (format as any) |undefined}
 
@@ -411,6 +417,8 @@ return res.status(200).json({ ok: true });
       if (idx === -1) return res.status(404).json({ error: 'Not found' });
       list.splice(idx, 1);
       return res.status(200).json({ ok: true });
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   }
 
@@ -424,6 +432,10 @@ return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (pageItems) );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

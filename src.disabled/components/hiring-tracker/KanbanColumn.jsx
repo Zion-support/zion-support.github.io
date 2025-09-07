@@ -3,6 +3,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+'\"export\": function KanbanColumn({ id,title,description,applications,count }) {\''\'";\";
+"export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -47,6 +52,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 '\"export\": function KanbanColumn({ id,title,description,applications,count }) {\''\'";\";
 "export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 <<<<<<< HEAD
@@ -72,3 +78,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 '\"export\": function KanbanColumn({ id,title,description,applications,count }) {\''\'";\";
 "export: function KanbanColumn({ id,title,description,applications,count }) {"""";";'"'"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

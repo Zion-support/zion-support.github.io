@@ -1,27 +1,24 @@
 export const trackError = (error,context = {}) => { console && console.error('Error tracked:',error,context); if (typeof window !== 'undefined' && window && window.gtag) { window && window.gtag('event','exception',{ description: error && error.message,fatal: false,...context })} }; export const trackPerformance = (metric,value) => {  if (typeof window !== 'undefined' && window && window.gtag) { window && window.gtag('event','timing_complete',{ name: metric,value: Math && Math.round(value) })} }; export const trackUserAction = (action,category,label) => {  if (typeof window !== 'undefined' && window && window.gtag) { window && window.gtag('event',action,{ event_category: category,event_label: label })} };
-// Monitoring utilities
+// Monitoring utilities;
 export const trackError = (error, context = {}) => {
   console && console.error('Error "tracked": ', error, context);
-  // Send to monitoring service
+  // Send to monitoring service;
   if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('event', 'exception', {
-      "description": error && error.message,
-      "fatal": false,
-      ...context
+      "description": error && error.message,""
+      "fatal": false,"
+      ...context;)
     })}
 };
-export const trackPerformance = (metric, value) => {
-  console && console.log(`Performance "metric": ${metric} = ${value}`);
-  if (typeof window !== 'undefined' && window && window.gtag) {
+export const trackPerformance = (metric, value) => {"
+  console && console.log(`Performance "metric": ${metric} = ${value}`);""
     window && window.gtag('event', 'timing_complete', {
-      "name": metric,
-      "value": Math && Math.round(value)
-    })}
-};
-export const trackUserAction = (action, category, label) => {
-  console && console.log(`User "action": ${action} in ${category}`);
-  if (typeof window !== 'undefined' && window && window.gtag) {
+      "name": metric,")"
+      "value": Math && Math.round(value)"
+export const trackUserAction = (action, category, label) => {"`;
+  console && console.log(`User "action": ${action} in ${category}`);""
     window && window.gtag('event', action, {
+<<<<<<< HEAD
       "event_category": category,
       "event_label": label
     })}
@@ -55,3 +52,8 @@ export const trackError = (error,context = {}) => { console.error('Error tracked
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/monitoring.js
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      "event_category": category,""
+      "event_label": label;")
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

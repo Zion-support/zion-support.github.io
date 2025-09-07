@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
@@ -29,26 +30,41 @@ import { Card } from "@/components/ui/card",;
 =======
 =======
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from "next/link";
 import { TalentProfile } from "@/types/talent";
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface TalentCardProps {
   talent: TalentProfile;
   onViewProfile: (id: string) => void;
   onRequestHire: (talent: TalentProfile) => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
   is_saved: boolean;
   onToggleSave: (id: string, is_saved: boolean) => void;
   is_authenticated: boolean;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  is_saved: boolean;
+  onToggleSave: (id: string, is_saved: boolean) => void;
+  is_authenticated: boolean;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface TalentCardProps {
 
       onViewProfile(talent.id)
 
+<<<<<<< HEAD
 =======
   isSaved: boolean;
   onToggleSave: (id: string, isSaved: boolean) => void;
@@ -70,6 +86,11 @@ export function TalentCard({
   isAuthenticated: boolean
 }
 export function TalentCard({
+=======
+  isSaved: boolean;
+  onToggleSave: (id: string, isSaved: boolean) => void;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   talent;
   onViewProfile;
   onRequestHire;
@@ -85,6 +106,7 @@ export function TalentCard({
         <div className="flex items-start">
           <div className="relative mr-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
@@ -376,6 +398,10 @@ export interface TalentCardProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {talent.profile_picture_url && !avatarError ? (
                 <Image
                   src={talent.profile_picture_url}
@@ -411,13 +437,18 @@ export interface TalentCardProps {
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick = {handleToggleSave,}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
               </Button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -437,21 +468,39 @@ export interface TalentCardProps {
 <<<<<<< HEAD
                 <div className="flex items-center text-zion-slate-light">
 <<<<<<< HEAD
+=======
+
+
+
+            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+            <div className="mt-2 flex flex-wrap gap-3 text-sm">
+              {talent.location && (
+                <div className="flex items-center text-zion-slate-light">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
                   <MapPin className="h-4 w-4 mr-1" />
+<<<<<<< HEAD
 =======
                 <div className='flex items-center text-zion-slate-light'>
                   <MapPin className='h-4 w-4 mr-1' />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                <div className='flex items-center text-zion-slate-light'>
+                  <MapPin className='h-4 w-4 mr-1' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <span>{talent.location}</span>
                 </div>
                 />;
@@ -471,10 +520,13 @@ export interface TalentCardProps {
 
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {talent && talent.availability_type && (;
                 <div className='flex items-center text-zion-slate-light'>;
                   <Clock className='h-4 w-4 mr-1' />                  <span>{talent && talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">;
@@ -499,9 +551,12 @@ export interface TalentCardProps {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {talent.availability_type && (;
                 <div className="flex items-center text-zion-slate-light">;
                   <Clock className="h-4 w-4 mr-1" />;
@@ -519,7 +574,10 @@ export interface TalentCardProps {
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
                 >;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {talent.availability_type && (
 <div className='flex items-center text-zion-slate-light'>
                   <Clock className='h-4 w-4 mr-1' />
@@ -537,39 +595,61 @@ export interface TalentCardProps {
                   key={index}
                   className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'
                 >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   {skill}
                 </span>;
               ))}
 <<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+                  {skill}
+                </span>;
+              ))}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {(talent.skills?.length || 0) > 5 && (;
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
                   +{(talent.skills?.length || 0) - 5} more;
                 </span>;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {(talent.skills?.length || 0) > 5 && (
 <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>
                   +{(talent.skills?.length || 0) - 5} more
                 </span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               )}
             </div>;
           </div>;
         )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
         <div className="mt-5 flex items-center justify-between">;
           <div>;
             {talent.hourly_rate ? (;
               <div className="text-white font-bold">;
                 ${talent.hourly_rate}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className='mt-5 flex items-center justify-between'>
           <div>
             {talent.hourly_rate ? (
@@ -583,12 +663,19 @@ export interface TalentCardProps {
           </div>
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Button
                 size='sm'
                 variant='secondary'
                 onClick={handleRequestHire}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className="bg-zion-purple hover:bg-zion-purple-light text-white";
 ;
         <div className="mt-5 flex items-center justify-between">;
@@ -596,16 +683,24 @@ export interface TalentCardProps {
             {talent && talent.hourly_rate ? (;
               <div className="text-white font-bold">;
                 ${talent && talent.hourly_rate}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <span className="text-zion-slate-light font-normal">/hr</span>;
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             )}
           </div>
           
+=======
+            )}
+          </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
@@ -613,6 +708,7 @@ export interface TalentCardProps {
                 variant="secondary"
                 onClick={handleRequestHire}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
+<<<<<<< HEAD
               >
                 Hire
               </Button>
@@ -629,6 +725,9 @@ export interface TalentCardProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
         
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="mt-5 flex items-center justify-between">
           <div>
                 <span className='text - zion - slate - light font - normal'>/hr</span>;
@@ -646,10 +745,14 @@ export interface TalentCardProps {
 
             {talent.hourly_rate ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="text-white font-bold">
 =======
               <div className="text - white font - bold">;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <div className="text - white font - bold">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 ${talent.hourly_rate}
 
           </div>;
@@ -666,13 +769,17 @@ export interface TalentCardProps {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </Card>;
@@ -698,12 +805,34 @@ export interface TalentCardProps {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 =======
+=======
+
+
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='bg-zion-purple hover:bg-zion-purple-light text-white'
               >
                 Hire
               </Button>
             )}
             <Button
+<<<<<<< HEAD
+=======
+              size="sm"
+              variant="ghost"
+              onClick={handleViewProfile}
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
+            >;
+              View <ArrowRight className="ml-1 h-4 w-4" />;
+            </Button>;
+          </div>;
+        </div>;
+      </div>;
+    </Card>;
+  );
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 size='sm'
               variant='ghost'
               onClick={handleViewProfile}
@@ -717,8 +846,12 @@ size='sm'
     </Card>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   isAuthenticated: boolean;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

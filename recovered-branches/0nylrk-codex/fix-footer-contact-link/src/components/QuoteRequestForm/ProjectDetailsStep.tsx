@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {QuoteFormData} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
@@ -58,6 +59,10 @@ import { Label } from "@/components/ui/label";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Textarea } from "@/components/ui/textarea";
 interface ProjectDetailsStepProps {}
+=======
+
+interface ProjectDetailsStepProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
@@ -120,7 +125,13 @@ export function ProjectDetailsStep({}
 =======
 
         <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<h3 className="text-xl font-semibold text-white mb-4">
+          Tell us about your project
+        </h3>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="space-y-4">
           <div>"
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -151,6 +162,56 @@ export function ProjectDetailsStep({}
               }"
               className="min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
+
+import { QuoteFormData } from "@/types/quotes";""
+import { Input } from "@/components/ui/input";""
+import { Label } from "@/components/ui/label";""
+import { Textarea } from "@/components/ui/textarea";"
+interface ProjectDetailsStepProps {
+  // TODO: Implement
+}
+  formData: QuoteFormData;,
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+</QuoteFormData>"
+    <div className="space-y-6">"
+</div>
+      <div>
+</div>"
+        <h3 className="text-xl font-semibold text-white mb-4">"
+</h3>
+        </h3>
+"
+        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>""
+        <div className="space-y-4">"
+</div>
+          <div>
+</div>"
+            <Label htmlFor="projectName" className="text-zion-slate-light">"
+</Label>
+            </Label>
+            <Input;"
+              id="projectName"""
+              placeholder="Enter a name for your project""
+              value={formData.projectName}
+              onChange={(e) => updateFormData({ projectName: e.target.value })}
+</Input>
+          </div>
+
+          <div>
+</div>
+            <Label;"
+              htmlFor="projectDescription"""
+              className="text-zion-slate-light""
+            >
+</Label>
+            </Label>
+            <Textarea;"
+              id="projectDescription"""
+              placeholder="Describe your project in detail...""
+              value={formData.projectDescription}
+              onChange={(e) =>
+</Textarea>
+
           </div>
         </div>
       </div>
@@ -168,7 +229,11 @@ export function ProjectDetailsStep({}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div>
 =======
       <div>"
@@ -221,9 +286,7 @@ export function ProjectDetailsStep({}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-
         <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
-
 
 <div>
 <h3 className="text-xl font-semibold text-white mb-4">
@@ -288,6 +351,68 @@ export function ProjectDetailsStep() { return null; }
               onChange={(e) => updateFormData({ projectDescription: e.target.value })}"
               className="min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
             />;
+</div>"
+        <h3 className="text-xl font-semibold text-white mb-4">"
+</h3>
+        </h3>
+
+"
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>"
+<div>
+</div>"
+<h3 className="text-xl font-semibold text-white mb-4">"
+</h3>
+        </h3>
+      <div>
+</div>"
+        <h3 className="text-xl font-semibold text-white mb-4">"
+</h3>
+        </h3>
+"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
+</div>
+          <div>
+</div>"
+            <Label htmlFor="name" className="text-zion-slate-light">"
+</Label>
+            </Label>
+            <Input;"
+              id="name"""
+              placeholder="Your name"""
+import { QuoteFormData } from "@/types/quotes",;""
+import { Input } from "@/components/ui/input",;""
+import { Label } from "@/components/ui/label",;""
+import { Textarea } from "@/components/ui/textarea",;"
+interface ProjectDetailsStepProps {;
+  formData: QuoteFormData;,
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+</Input>"
+    <div className="space-y-6">;"
+</div>
+      <div>;
+</div>"
+        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>;""
+        <div className="space-y-4">;"
+</div>
+          <div>;
+</div>"
+            <Label htmlFor="projectName" className="text-zion-slate-light">Project Name</Label>;"
+            <Input;"
+              id="projectName";""
+              placeholder="Enter a name for your project";"
+              value={formData.projectName}
+              onChange={(e) => updateFormData({ projectName: e.target.value })}
+</Input>
+          </div>;
+          <div>;
+</div>"
+            <Label htmlFor="projectDescription" className="text-zion-slate-light">Project Description</Label>;"
+            <Textarea;"
+              id="projectDescription";""
+              placeholder="Describe your project in detail...";"
+              value={formData.projectDescription}
+              onChange={(e) => updateFormData({ projectDescription: e.target.value })}
+</Textarea>
           </div>;
         </div>;
       </div>;
@@ -310,7 +435,6 @@ export function ProjectDetailsStep() { return null; }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
 value={formData.contactInfo.name}
               onChange={(e) =>
@@ -336,6 +460,7 @@ value={formData.contactInfo.name}
 
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               value={formData.contactInfo.name}          <div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -344,6 +469,9 @@ value={formData.contactInfo.name}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              value={formData.contactInfo.name}          <div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
             </Label>
@@ -492,10 +620,65 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
               }
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
             />
+</div>"
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>;""
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+</div>
+          <div>;
+</div>"
+            <Label htmlFor="name" className="text-zion-slate-light">Name</Label>;"
+            <Input;"
+              id="name";""
+              placeholder="Your name";"
+value={formData.contactInfo.name}
+              onChange={(e) =>
+</Input>
+          </div>
+
+          <div>
+</div>"
+            <Label htmlFor="company" className="text-zion-slate-light">"
+</Label>
+            </Label>
+            <Input;"
+              id="company"""
+              placeholder="Your company name""
+              value={formData.contactInfo.company}
+              onChange={(e) =>
+</Input>
+          </div>
+
+          <div>
+</div>"
+            <Label htmlFor="email" className="text-zion-slate-light">"
+</Label>
+            </Label>
+            <Input;"
+              id="email"""
+              type="email"""
+              placeholder="Your email address""
+              value={formData.contactInfo.email}
+              onChange={(e) =>
+</Input>
+          </div>
+
+          <div>
+</div>"
+            <Label htmlFor="phone" className="text-zion-slate-light">"
+</Label>
+            </Label>
+            <Input;"
+              id="phone"""
+              placeholder="Your phone number""
+              value={formData.contactInfo.phone}
+              onChange={(e) =>
+</Input>
+
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -539,6 +722,8 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 import { QuoteFormData  } from '@/types / quotes';
 import { Input  } from '@/components / ui / input';
@@ -546,6 +731,7 @@ import { Label  } from '@/components / ui / label';
 import { Textarea  } from '@/components / ui / textarea';
 interface ProjectDetailsStepProps {
   form_data: QuoteFormData;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   updateFormData: (data: Partial < QuoteFormData>) => void;
@@ -563,7 +749,11 @@ interface ProjectDetailsStepProps {
   );
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  updateFormData: (data: Partial < QuoteFormData>) => void;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />;
+
           </div>;
         </div>;
       </div>;
@@ -580,12 +770,12 @@ interface ProjectDetailsStepProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <div>;
-        <h3 className="text - xl font - semibold text - white mb - 4">;
+        <h3 className="text - xl font - semibold text - white mb-4">;
           Contact Information;
         </h3>;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
           <div>;
-            <Label html_for="name" className="text - zion - slate - light">;
+            <Label html_for="name" className="text - zion - slate-light">;
               Name;
             </Label>;
             <Input;
@@ -600,11 +790,11 @@ interface ProjectDetailsStepProps {
                   },
                 });
               }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
             />;
           </div>;
           <div>;
-            <Label html_for="company" className="text - zion - slate - light">;
+            <Label html_for="company" className="text - zion - slate-light">;
               Company;
             </Label>;
             <Input;
@@ -619,11 +809,11 @@ interface ProjectDetailsStepProps {
                   },
                 });
               }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
             />;
           </div>;
           <div>;
-            <Label html_for="email" className="text - zion - slate - light">;
+            <Label html_for="email" className="text - zion - slate-light">;
               Email;
             </Label>;
             <Input;
@@ -639,11 +829,11 @@ interface ProjectDetailsStepProps {
                   },
                 });
               }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
             />;
           </div>;
           <div>;
-            <Label html_for="phone" className="text - zion - slate - light">;
+            <Label html_for="phone" className="text - zion - slate-light">;
               Phone;
             </Label>;
             <Input;
@@ -658,13 +848,14 @@ interface ProjectDetailsStepProps {
                   },
                 });
               }
-              className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text - white";
+              className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text-white";
 
             />;
           </div>;
         </div>;
       </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>);}
 =======
@@ -688,17 +879,154 @@ interface ProjectDetailsStepProps {
 =======
     </div>);
 }
+=======
+    </div>);}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+  )
+import { QuoteFormData } from "@/types/quotes";""
+import { Input } from "@/components/ui/input";""
+import { Label } from "@/components/ui/label";""
+import { Textarea } from "@/components/ui/textarea";"
+interface ProjectDetailsStepProps {
+  // TODO: Implement
+}
+  formData: QuoteFormData;,
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+"
+    <div className="space-y-6">"
+</div>"
+        <h3 className="text - xl font - semibold text - white mb - 4">;"
+</h3>
+        </h3>;"
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
+</div>
+      <div>
+</div>"
+        <h3 className="text-xl font-semibold text-white mb-4">"
+</h3>
+        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>""
+        <div className="space-y-4">"
+            <Label htmlFor="projectName" className="text-zion-slate-light">"
+
+            <Input;"
+              id="projectName"""
+              placeholder="Enter a name for your project""
+              value={formData.projectName}
+              onChange={(e) => updateFormData({ projectName: e.target.value })}
+
+
+            <Label;"
+              htmlFor="projectDescription"""
+              className="text-zion-slate-light""
+            >
+
+            <Textarea;"
+              id="projectDescription"""
+              placeholder="Describe your project in detail...""
+              value={formData.projectDescription}
+              onChange={(e) =>
+
+
+
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
+            <Label htmlFor="name" className="text-zion-slate-light">"
+
+              id="name"""
+              placeholder="Your name"""
+import { QuoteFormData } from "@/types/quotes",;""
+import { Input } from "@/components/ui/input",;""
+import { Label } from "@/components/ui/label",;""
+import { Textarea } from "@/components/ui/textarea",;"
+interface ProjectDetailsStepProps {;
+    <div className="space-y-6">;"
+      <div>;
+        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>;""
+        <div className="space-y-4">;"
+            <Label htmlFor="projectName" className="text-zion-slate-light">Project Name;"
+              id="projectName";""
+              placeholder="Enter a name for your project";"
+
+          </div>;
+            <Label htmlFor="projectDescription" className="text-zion-slate-light">Project Description;"
+              id="projectDescription";""
+              placeholder="Describe your project in detail...";"
+              onChange={(e) => updateFormData({ projectDescription: e.target.value })}
+
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>;""
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+            <Label htmlFor="name" className="text-zion-slate-light">Name;"
+              id="name";""
+              placeholder="Your name";"
+value={formData.contactInfo.name}
+
+
+            <Label htmlFor="company" className="text-zion-slate-light">"
+
+              id="company"""
+              placeholder="Your company name""
+              value={formData.contactInfo.company}
+
+
+            <Label htmlFor="email" className="text-zion-slate-light">"
+
+              id="email"""
+              type="email"""
+              placeholder="Your email address""
+              value={formData.contactInfo.email}
+
+
+            <Label htmlFor="phone" className="text-zion-slate-light">"
+
+              id="phone"""
+              placeholder="Your phone number""
+              value={formData.contactInfo.phone}
+
+        <h3 className="text - xl font - semibold text - white mb - 4">;"
+        </h3>;"
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;"
+            <Label html_for="name" className="text - zion - slate - light">;"
+
+            ;
+              value={form_data.contact_info.name}
+              on_change={(e) =>;
+
+            <Label html_for="company" className="text - zion - slate - light">;"
+
+              id="company";""
+              placeholder="Your company name";"
+              value={form_data.contact_info.company}
+
+            <Label html_for="email" className="text - zion - slate - light">;"
+
+              id="email";""
+              type="email";""
+              placeholder="Your email address";"
+              value={form_data.contact_info.email}
+
+            <Label html_for="phone" className="text - zion - slate - light">;"
+
+              id="phone";""
+              placeholder="Your phone number";"
+              value={form_data.contact_info.phone}
+
+    </div>);
+);
+}
 
   )
 
-    </div>;
+</div>;
   );
   );
 }
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   )
 
     </div>;
@@ -753,6 +1081,7 @@ updateFormData: (data: Partial<QuoteFormData>) => void
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -773,3 +1102,14 @@ updateFormData: (data: Partial<QuoteFormData>) => void
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  return (<div className="space-y-6" > text-xl font-semibold text-white mb-4">Tell us about your project</h3> <div className=" space-y-4"> <div> <Label htmlFor=" projectName"className=" text-zion-slate-light">Project Name <Input id=" projectName"placeholder=" Enter a name for your project"value= {"
+}/> </div> <div> <Label htmlFor=" projectDescription"className=" text-zion-slate-light">Project Description <Textarea /> </div> </div> </div> <div> <h3 className=" text-xl font-semibold text-white mb-4">Contact Information</h3> <div className=" grid grid-cols-1 md:grid-cols-2 gap-4"> <div> <Label htmlFor=" name"className=" text-zion-slate-light">Name <Input;")
+}) "
+}className=" bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"/> </div> <div> <Label htmlFor=" company"className=" text-zion-slate-light">Company <Input;"
+}className=" bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"/> </div> <div> <Label htmlFor=" email"className=" text-zion-slate-light">Email <Input;"
+}className=" bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"/> </div> <div> <Label htmlFor=" phone"className=" text-zion-slate-light" >Phone <Input;"
+}/> </div> </div> </div> </div>) "
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -39,6 +39,7 @@
 
 
 }}}
+}}}
 ;
 
 
@@ -86,6 +87,7 @@ import React from 'react';
 interface Jest.setupProps {
   // Add props here as needed
 }
+}}},;
 import React from 'react';
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -250,10 +252,25 @@ origin/automation-improvements-final
 }
 }
 }
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+}}};
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}}}
+origin/main
+origin/automation-improvements-final
+}}}
+}}},;
+}}};
+}}},;
 }}};
 }}}
 }}}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -273,3 +290,6 @@ origin/automation-improvements-final
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}}},;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

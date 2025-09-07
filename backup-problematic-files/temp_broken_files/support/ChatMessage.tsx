@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
 
 =======
@@ -20,12 +21,22 @@ import { format } from "date-fns",;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useTheme } from "@/hooks/useTheme",;
+=======
+import React, { useMemo } from "react";""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";""
+import { cn } from "@/lib/utils";""
+import { format } from "date-fns";"
+// Use the wrapper hook so TypeScript properly infers the return type;
+// from the ThemeProvider context;"
+import { useTheme } from "@/hooks/useTheme";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 interface ChatMessageProps {;
-  message:string,;
-  isUser:boolean,;
+  message: string;,;
+  isUser: boolean;,;
   timestamp:Date;
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
@@ -76,10 +87,35 @@ export const ChatMessage:React.FC<ChatMessageProps> = ({;
               src="https://placehold.co/40x40?text=AI";
               alt="Zion Support";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-            />;
-            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
+=======
+export const ChatMessage:React.FC<ChatMessageProps> = ({;
+
+  const sanitizedHtml = useMemo<{ __html: string;}>(;)
+    () => ({ __html: formatMessageWithLinks(message) ;}),;
+    [message];
+  ),;
+  return (;)"
+    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>;"
+</div>"
+      <Avatar className="h-8 w-8">;"
+
+          <>;"
+            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />;"
+
+            <AvatarFallback>U;
           </>;
+        ) :(;
+          <>;
+            <AvatarImage;"
+              src="https://placehold.co/40x40?text=AI";""
+              alt="Zion Support";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            />;
+"
+            <AvatarFallback className="bg-zion-purple text-white">Z;"
+          </>;)
         )}
+<<<<<<< HEAD
       </Avatar>;
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
@@ -95,8 +131,19 @@ export const ChatMessage:React.FC<ChatMessageProps> = ({;
           :theme === "dark";
             ? "bg-zion-blue-light text-white";
             :"bg-gray-100 text-gray-800";
+=======
+      <div className={cn(;"
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm",;"
+        isUser ;"
+          ? "bg-zion-purple text-white" ;""
+          :theme === "dark";""
+            ? "bg-zion-blue-light text-white";""
+            :"bg-gray-100 text-gray-800";")
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       )}>;
+</div>
         <div dangerouslySetInnerHTML={sanitizedHtml} />;
+<<<<<<< HEAD
         <div className={cn(;
           "text-xs mt-1",;
           isUser ;
@@ -135,30 +182,28 @@ function escapeHtml(unsafe:string):string {;
     .replace(/'/g, "&#039,"),;
 }
 ;
+=======
+          "text-xs mt-1",;"
+            ? "text-white/70" ;""
+              ? "text-gray-300";""
+              :"text-gray-500";")
+        </div>;
+    </div>;"
+    .replace(/</g, "<");""
+    .replace(/>/g, ">");""
+    .replace(/"/g, """);""
+    .replace(/'/g, "&#039,"),;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function formatMessageWithLinks(message:string):string {;
   // First, escape any HTML so that user input cannot break out of the intended;
   // markup.;
   const safeText = escapeHtml(message),;
-;
   // Replace URLs;
   const urlRegex = /(https?:\/\/[^\s]+)/g,;
   let formattedMessage = safeText.replace(;
-    urlRegex,;
+    urlRegex,;"
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>';
-  ),;
-;
-  // Replace help-center references like [Getting Started];
-  const helpCenterRegex = /\[([^\]]+)\]/g,;
-  formattedMessage = formattedMessage.replace(;
-    helpCenterRegex,;
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>';
-  ),;
-;
-  return formattedMessage;
-} interface ChatMessageProps {;
-  message: string;
-isUser: boolean;
-timestamp: Date ;
 }export const ChatMessage: React.FC<ChatMessageProps> = ({;
   message;
 isUser;
@@ -187,4 +232,12 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatMessage.ts
 };
 //A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy //dependency like DOMPurify for now and instead escape the five critical //characters. This ensures any user-supplied string is rendered harmless //before we perform our link replacements below. ;
 }//First, escape any HTML so that user input cannot break out of the intended //markup.);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+)
+return (<> <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" /> <AvatarFallback>U </>) : (<> <AvatarImage src="https://placehold.co/40x40?text=AI" alt="Zion Support" /> <AvatarFallback className="bg-zion-purple text-white" >Z </>) ;"
+
+} </div> </div> </div>) ;"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

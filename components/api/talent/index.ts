@@ -1,9 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
-import type { TalentProfile } from '@/utils/types/talent';
 
+<<<<<<< HEAD
 const hasSupabase =
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -150,12 +154,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 <<<<<<< HEAD
+=======
+      }
+      // Fallback: return the slug as if saved;
+      return res.status (201).json ({ slug: item.slug,}
+});
+    } catch (e: any) {}
+      return res.status (500).json ({ error: e.message,}
+});
+    }
+    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+}
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
-return res
+return res;
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

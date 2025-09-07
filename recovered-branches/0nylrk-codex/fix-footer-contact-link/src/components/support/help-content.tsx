@@ -1,4 +1,6 @@
+import React from "react";
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,6 +30,10 @@ import { HelpCategory } from "./types",
 import {}
 =======
 
+=======
+import {HelpCategory} from "./types";
+import {HelpCircle, CreditCard, Users, Calendar, Briefcase} from "lucide-react";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { HelpCategory } from "./types",
 import { 
@@ -62,9 +68,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   Briefcase 
 } from "lucide-react",
 
-
-
 export const HELP_CATEGORIES: HelpCategory[] = [
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   {
     id: "getting-started"
@@ -1824,3 +1829,11 @@ tags: ["prevention", "best practices", "communication" ]
 ;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+  {
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

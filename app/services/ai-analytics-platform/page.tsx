@@ -1,7 +1,14 @@
-export const metadata = { title: "AI Analytics Platform | Zion Tech Group" };
 
-export default function AIAnalyticsPlatformPage() {
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const metadata = {
+  title: 'Ai Analytics Platform - Zion Tech Group',
+  description: 'Advanced ai analytics platform solutions for modern businesses.',
+};
+
+export default function ServicePage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -260,10 +267,31 @@ export default function AIAnalyticsPlatformPage() {
           >
             Email Us
           </a>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Ai Analytics Platform
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your business with our advanced ai analytics platform solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
+              Get Started
+              <ArrowRightIcon className="h-5 w-5 ml-2" />
+            </Link>
+            <Link href="/services" className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors">
+              View All Services
+            </Link>
+          </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -432,3 +460,6 @@ function ContactSection() {}
 }
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

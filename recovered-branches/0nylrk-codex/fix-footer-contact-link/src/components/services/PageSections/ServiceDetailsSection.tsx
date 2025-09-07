@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
@@ -55,6 +56,18 @@ import { CountryPricing } from "@/data/onsiteServicePricing";"
 import { CountryServiceSelector } from "../CountryServiceSelector";
 interface ServiceDetailsSectionProps {}
   selectedCountry: CountryPricing | null;
+=======
+
+interface ServiceDetailsSectionProps {
+  selectedCountry: CountryPricing | null;
+
+import { CountryPricing } from "@/data/onsiteServicePricing";""
+import { CountryServiceSelector } from "../CountryServiceSelector";"
+interface ServiceDetailsSectionProps {
+  // TODO: Implement
+}
+  selectedCountry: CountryPricing | null;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   setSelectedCountry: (country: CountryPricing | null) => void;
 }
 
@@ -79,6 +92,7 @@ export function ServiceDetailsSection({}
             pricing;
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,10 +124,15 @@ function ServiceDetailsSection() {
   return (
     <div id="service - details" className="mt-12">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return (
+    <div id="service - details" className="mt-12">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {selected_country ? (
         <CountryServiceSelector;
           selected_country={selected_country}
           onCountryChange={setSelectedCountry}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -173,6 +192,23 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
       )}
     </div>
   );
+=======
+        />) : (
+        <div className="text-center">;
+          <h2 className="text - 2xl font - bold text - white mb-4">;
+            Select a Country for Details;
+          </h2>;
+          <p className="text - zion - slate - light mb-6">;
+            Choose a country from the options above to see service details and;
+            pricing;
+          </p>;
+        </div>)}
+    </div>);
+import { CountryPricing } from "@/data/onsiteServicePricing";""
+import { CountryServiceSelector } from "../CountryServiceSelector";"
+interface ServiceDetailsSectionProps {
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 =======
@@ -257,6 +293,7 @@ setSelectedCountry: (country: CountryPricing | null) => void
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -273,3 +310,30 @@ setSelectedCountry: (country: CountryPricing | null) => void
 =======
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  selectedCountry: CountryPricing | null;,
+  setSelectedCountry: (country: CountryPricing | null) => void;
+
+export function ServiceDetailsSection({
+  selectedCountry,
+  setSelectedCountry,)
+}: ServiceDetailsSectionProps) {
+  return ("
+    <div id="service-details" className="mt-12">"
+</div>
+        <CountryServiceSelector;
+          selectedCountry={selectedCountry}
+          onCountryChange={setSelectedCountry}
+        />
+"
+        <div className="text-center">"
+</div>"
+          <h2 className="text-2xl font-bold text-white mb-4">"
+</h2>
+          </h2>"
+          <p className="text-zion-slate-light mb-6">"
+</p>
+    </div>)"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

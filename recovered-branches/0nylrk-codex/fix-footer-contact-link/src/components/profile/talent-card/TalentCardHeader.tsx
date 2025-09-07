@@ -33,6 +33,7 @@ import { BadgeCheck } from "lucide-react",
 
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import {BadgeCheck} from "lucide-react";
@@ -179,9 +180,12 @@ interface TalentCardHeaderProps {
   availabilityType,
 <<<<<<< HEAD
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   yearsExperience
 }: TalentCardHeaderProps) {
   return (
+  return (  return (
 
     <div className="flex items-start gap-4 mb-4">;
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;
@@ -363,8 +367,7 @@ yearsExperience: number;
 =======
 
   return (
-
-  availabilityType;
+availabilityType;
   yearsExperience;
 }: TalentCardHeaderProps) {;
   return (
@@ -406,6 +409,7 @@ export function TalentCardHeader({ ;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
             {fullName}
@@ -421,8 +425,37 @@ export function TalentCardHeader({ ;
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+export function TalentCardHeader({ ;
+  fullName;
+export function TalentCardHeader({ 
+  fullName,
+  professionalTitle, 
+  profilePicture, 
+  availabilityType,
+  yearsExperience
+}: TalentCardHeaderProps) {
+  return (
+    <div className="flex items-start gap-4 mb-4">
+      <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
+      <div className="flex-1">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-white flex items-center gap-1">
+            {fullName}
+            {/* AI score could be used for verification badge */}
+            {yearsExperience > 5 && (
+              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
+            )}
+          </h3>
+          <TalentCardAvailability availabilityType={availabilityType} />
+        </div>
+        <p className="text-zion-cyan text-sm">{professionalTitle}</p>
+      </div>
+    </div>
+  )
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
+}
 import React from "react",;
 import { BadgeCheck } from "lucide-react",;
 import { TalentCardAvatar } from "./TalentCardAvatar",;
@@ -456,6 +489,8 @@ export function TalentCardHeader({;
 
           </h3>;
 
+</h3>;
+          </h3>;
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
 
@@ -499,6 +534,7 @@ function TalentCardHeader() {
 }
 
 ;
+;
 
           ;
           <TalentCardAvailability availabilityType={availabilityType} />;
@@ -520,20 +556,60 @@ professionalTitle;
 profilePicture;
 availabilityType;
 yearsExperience 
+  yearsExperience: number;
+}
+  professionalTitle, 
+  profilePicture, 
+  availabilityType,
+  yearsExperience;
 }: TalentCardHeaderProps) {
-  return (<div className="flex items-start gap-4 mb-4" > <TalentCardAvatar profilePicture= {
-  profilePicture 
-}fullName= {
-  fullName 
-}/> <div className="flex-1" > <div className="flex items-center justify-between" > <h3 className="text-lg font-semibold text-white flex items-center gap-1" > {
-  fullName 
-}{
-  /* AI score could be used for verification badge */ 
-}{
-  yearsExperience > 5 && (<BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" /> 
+
+  return (
+"
+    <div className="flex items-start gap-4 mb-4">;"
+</div>
+      <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;
+
+      <div className="flex-1">;"
+</div>"
+        <div className="flex items-center justify-between">;"
+          <h3 className="text-lg font-semibold text-white flex items-center gap-1">;"
+</h3>"
+              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;"
+              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />"
+
+          </h3>;
+          <TalentCardAvailability availabilityType={availabilityType} />;
+
+        </div>;"
+        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;"
+      </div>;
+    <div className="flex items - start gap - 4 mb - 4">;"
+      <TalentCardAvatar profile_picture={profile_picture} full_name={full_name} />;
+      <div className="flex - 1">;"
+        <div className="flex items - center justify - between">;"
+          <h3 className="text - lg font - semibold text - white flex items - center gap - 1">;"
+</h3>)"
+              <BadgeCheck className="h - 4 w - 4 text - zion - cyan" aria - label="Verified Expert" />)}"
+
+          <TalentCardAvailability availability_type={availability_type} />;
+
+        <p className="text - zion - cyan text - sm">{professional_title}</p>;"
+    </div>);
+
+  return (<div className="flex items-start gap-4 mb-4" > <TalentCardAvatar profilePicture= {"
+}/> <div className="flex-1" > <div className="flex items-center justify-between" > <h3 className="text-lg font-semibold text-white flex items-center gap-1" > {"
+  yearsExperience > 5 && (<BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />"
+
 }</h3> <TalentCardAvailability availabilityType= {
-  availabilityType 
+  availabilityType;)
 }/> </div> </div> </div>) 
 }
 ;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12325
+</TalentCardAvailability>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

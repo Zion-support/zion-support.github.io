@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,10 +15,13 @@
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // This component handles deep linking to the mobile app
 
 const OpenAppRedirect: React.FC = () => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -177,11 +181,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
 // This component handles deep linking to the mobile app;
 const OpenAppRedirect: React.FC = () => {;
   const navigate = useNavigate(),;
@@ -248,6 +255,15 @@ const OpenAppRedirect: React.FC = () => {;
 import React, { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
+=======
+import React, { useEffect, useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { SEO } from "@/components/SEO",
+
+
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Button } from "@/components/ui/button",;
 <<<<<<< HEAD
 =======
@@ -263,6 +279,7 @@ const OpenAppRedirect: React.FC = () => {;
   const navigate = useNavigate(),;'
 =======
 import { Link } from "react-router-dom",;
+<<<<<<< HEAD
 // This component handles deep linking to the mobile app;
 const OpenAppRedirect: React.FC = () => {;
   const navigate = useNavigate(),;
@@ -775,3 +792,7 @@ export default OpenAppRedirect;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+// This component handles deep linking to the mobile app
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

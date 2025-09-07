@@ -1,6 +1,7 @@
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink;
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -275,6 +276,9 @@ return categoryData?.icon || '🚀';
   return (
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
       <div className='max-w-7xl mx-auto'>
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto">
@@ -295,6 +299,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
         {/* Header */}
+<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -302,6 +307,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           viewport={{ once: true }}
 
 <<<<<<< HEAD
+=======
+        <motion&& motion.div
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0.8 ;}}
+          viewport={{ once: true ;}}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='text-center mb-16'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
@@ -345,8 +358,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='text-3xl font-bold text-purple-400'>24/7</div>'
                 <div className='text-white/60'>Support Available</div>
               </div>
+<<<<<<< HEAD
               <div>'
                 <div className='text-3xl font-bold text-orange-400'>500%+</div>'
+=======
+              <div>
+                <div className='text-3xl font-bold text-orange-400'>500%+</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div className='text-white/60'>Average ROI</div>              </div>        >
           className="text-center mb-16"
         >"
@@ -477,6 +495,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion && motion.div>;
 
         {/* Search and Filters */}
+<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -484,6 +503,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           viewport={{ once: true }}
 
 <<<<<<< HEAD
+=======
+        <motion&& motion.div
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.6 ;}}
+          viewport={{ once: true ;}}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='mb-12'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
@@ -498,8 +525,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 type='text''
                 placeholder='Search services...'
                 value={searchTerm}
+<<<<<<< HEAD
             {/* Search */}"
             <div className="relative flex-1 max-w-md">;"
+=======
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />;
               <input"
                 type="text""
@@ -512,6 +544,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <option value='newest'>Newest First</option>;
               </select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20'
               />
@@ -550,7 +585,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className={`p-2 rounded-lg transition-all ${
 viewMode === 'list'
                       ? 'bg-blue-600 text-white'
-                      : 'text-white/60 hover:text-white'
+                      : 'text-white/60 hover: text-white';
                   }`}
                 >
                   <List className='w-5 h-5' />
@@ -573,11 +608,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </motion && motion.div>;
 
         {/* Category Filter */}
+<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+=======
+        <motion&& motion.div
+          initial={{ opacity: 0;, y: 20 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.6 ;}}
+          viewport={{ once: true ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='mb-12'
         >
           <div className='flex flex-wrap justify-center gap-3'>
@@ -600,8 +643,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
+<<<<<<< HEAD
         {/* Services Display */}'
         {viewMode === 'grid' ? (;'"
+=======
+        {/* Services Display */}
+        {viewMode === 'grid' ? (;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
               {filteredServices && filteredServices.map((service, index) => (;
@@ -614,10 +662,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.div
                   key={service.id}
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}'
+=======
+                  initial={{ opacity: 0;, y: 30 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  exit={{ opacity: 0;, y: -30 ;}}
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
                   {/* Popular Badge */}
         {/* Services Display */}'
@@ -650,11 +705,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filtered_services.map ((service, index) => (
                 <motion.div;
                   key={service.id}
+<<<<<<< HEAD
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   exit={{ opacity: 0, coordinate_y: -30 }}
 <<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+=======
+                  initial={{ opacity: 0;, coordinate_y: 30 ;}}
+                  animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                  exit={{ opacity: 0;, coordinate_y: -30 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
@@ -711,9 +773,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* Features */}'
                     <div className='space-y-2 mb-6'>;
                       {service && service.features.slice(0, 3).map((feature, idx) => (;
+<<<<<<< HEAD
                         <div;
                           key={idx}'
                           className='flex items-center gap-2 text-sm text-white/60'>;'
+=======
+                        <div
+                          key={idx}
+                          className='flex items-center gap-2 text-sm text-white/60'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           <CheckCircle className='w-4 h-4 text-green-400' />                          {feature}                      </div>;
                     </div>;
 "
@@ -755,8 +823,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* Stats */}"
                     <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                       <div>
+<<<<<<< HEAD
 "
                         <div className="text-lg font-bold text-blue-400">{service.rating}</div>"
+=======
+
+                        <div className="text-lg font-bold text-blue-400">{service.rating}</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <div className="text-xs text-white/60">Rating</div>
                       </div>
                       <div>"
@@ -847,15 +920,25 @@ target='_blank'
               {filteredServices.map((service, index) => (
                 <motion.div;
                   key={service.id}
+<<<<<<< HEAD
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}'
+=======
+                  initial={{ opacity: 0;, x: -30 ;}}
+                  animate={{ opacity: 1;, x: 0 ;}}
+                  exit={{ opacity: 0;, x: 30 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
 
                       )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
@@ -874,9 +957,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       )}
                     </div>
                     {/* CTA */}
+<<<<<<< HEAD
                     <a;
                     {/* Center - Service Details */}'
                     <div className='flex - 1'>;'
+=======
+                    <a
+                    {/* Center - Service Details */}
+                    <div className='flex - 1'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <div className='flex items - start justify - between mb - 4'>;
                         <div>;'
                           <h3 className='text - 2xl font - bold text - white mb - 2'>;
@@ -900,6 +989,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="flex items-start justify-between mb-4">
                         <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1018,7 +1110,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="flex items-center gap-2">"
                           <Users className="w-4 h-4 text-blue-400" />
                           <span>{service.customers}+ customers</span>
+<<<<<<< HEAD
                         </div>"
+=======
+                        </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           <Clock className="w-4 h-4 text-green-400" />
                         <div className='flex items-center gap-2'>
                           <Users className='w-4 h-4 text-blue-400' />
@@ -1031,9 +1127,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
                     </div>
+<<<<<<< HEAD
                     {/* Right Side - CTA and Category */}"
                       <div className="text-right">"
                         <div className="text-sm text-white/60 mb-1">Category</div>"
+=======
+                    {/* Right Side - CTA and Category */}
+                      <div className="text-right">
+                        <div className="text-sm text-white/60 mb-1">Category</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <div className="flex items-center gap-2 text-white">
                           <span>{getCategoryIcon(service.category)}</span>"
                           <span className="text-sm">{service.category}</span>
@@ -1104,10 +1206,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
+<<<<<<< HEAD
           <motion&& motion.div;
             initial={{ opacity: 0 }}
 <<<<<<< HEAD
             animate={{ opacity: 1 }}
+=======
+          <motion&& motion.div
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='text-center py-20'
           >
             <div className='text-6xl mb-4'>🔍</div>
@@ -1121,7 +1229,11 @@ className='text-center py-20'
               No services found;
             </h3>'
             <p className='text-white/60'>
+<<<<<<< HEAD
               Try adjusting your search or filter criteria;
+=======
+              Try adjusting your search or filter criteria
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         )}
             </p>          </motion.div>
 
@@ -1140,6 +1252,7 @@ className='text-center py-20'
 origin/cursor/automate-test-improve-and-merge-code-2533
         )}
         {/* Contact CTA */}
+<<<<<<< HEAD
         <motion&& motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1147,6 +1260,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           viewport={{ once: true }}
 
 <<<<<<< HEAD
+=======
+        <motion&& motion.div
+          initial={{ opacity: 0;, y: 30 ;}}
+          whileInView={{ opacity: 1;, y: 0 ;}}
+          transition={{ duration: 0 && 0.8 ;}}
+          viewport={{ once: true ;}}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='mt-20 text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
         >
@@ -1170,8 +1291,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Contact Sales Team'
                 <ArrowRight className='w-5 h-5' />
               </a>
+<<<<<<< HEAD
               <a'
                 href='tel:+13024640950'"
+=======
+              <a
+                href='tel:+13024640950'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
                 className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1199,6 +1325,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

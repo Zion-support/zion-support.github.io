@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import {
@@ -70,10 +71,23 @@ import {}
 import { useState } from "react";
 import {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+  currentResume: Resume;
+import { useState } from "react";"
+
+import {
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+
   DropdownMenuSeparator,
+<<<<<<< HEAD
 <<<<<<< HEAD
   DropdownMenuTrigger,";
 } from "@/components/ui/dropdown-menu";"
@@ -87,10 +101,22 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  DropdownMenuTrigger,"
+} from "@/components/ui/dropdown-menu";""
+import { Button } from "@/components/ui/button";""
+import { Input } from "@/components/ui/input";"
+
+import {
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Dialog,
   DialogContent,
   DialogFooter,
+
   DialogHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
   DialogTitle,";
 } from "@/components/ui/dialog";"
@@ -117,9 +143,22 @@ import { useResume } from "@/hooks/useResume";
 interface ResumeVersionSelectorProps {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   currentResume: Resume;
+=======
+  DialogTitle,"
+} from "@/components/ui/dialog";""
+import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";""
+import { Resume } from "@/types/resume";""
+import { useResume } from "@/hooks/useResume";"
+interface ResumeVersionSelectorProps {
+  // TODO: Implement
+}
+  currentResume: Resume;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   onResumeChange: (resumeId: string) => void;
+
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,7 +178,11 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ResumeVersionSelector({
+
   currentResume,
   onResumeChange,
 }: ResumeVersionSelectorProps) {
@@ -161,6 +204,7 @@ export function ResumeVersionSelector({}
 }: ResumeVersionSelectorProps) {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { createResume, fetchResume } = useResume();
+<<<<<<< HEAD
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);"
   const [newResumeTitle, setNewResumeTitle] = useState("");
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
@@ -454,6 +498,10 @@ onClick={handleCreateNewVersion}
 
               className="gap-2"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
 =======
@@ -533,4 +581,164 @@ onClick={handleCreateNewVersion}
 =======
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  )
+}
+
+import { useState } from "react";"
+import {
+  // TODO: Implement
+}
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,"
+} from "@/components/ui/dropdown-menu";""
+import { Button } from "@/components/ui/button";""
+import { Input } from "@/components/ui/input";"
+  // TODO: Implement
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,"
+} from "@/components/ui/dialog";""
+import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";""
+import { Resume } from "@/types/resume";""
+import { useResume } from "@/hooks/useResume";"
+interface ResumeVersionSelectorProps {
+  // TODO: Implement
+  currentResume: Resume;,
+  onResumeChange: (resumeId: string) => void;
+
+export function ResumeVersionSelector({
+  currentResume,
+  onResumeChange,)
+}: ResumeVersionSelectorProps) {
+  const { createResume, fetchResume } = useResume();
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false);"
+  const [newResumeTitle, setNewResumeTitle] = useState("");"
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
+
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),;
+"
+    <div className="flex items-center gap-2">"
+</div>"
+      <span className="text-sm text-muted-foreground">Resume:</span>"
+      <DropdownMenu>
+
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" size="sm" className="gap-2">"
+            <ChevronDown className="h-4 w-4" />"
+
+        <DropdownMenuContent align="end">"
+
+            <DropdownMenuItem;
+              key={resume.id}
+              onClick={() => onResumeChange(resume.id!)}
+
+          <DropdownMenuSeparator />
+
+</DropdownMenuItem>
+
+            </DropdownMenuItem>
+          <DropdownMenuSeparator />
+
+</DropdownMenuSeparator>
+          <DropdownMenuItem;
+            onClick={() => setSaveDialogOpen(true)}
+            <Plus className="h-4 w-4 mr-2" />"
+
+</Plus>
+
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+
+
+      <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
+        <DialogContent className="sm:max-w-md">"
+
+          <DialogHeader>
+
+            <DialogTitle>Save as new resume version
+          <div className="py-4">"
+</div>
+            <Input;
+              value={newResumeTitle}
+              onChange={(e) => setNewResumeTitle(e.target.value)}
+
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>"
+
+            <Button;
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() || isLoading}
+        setNewResumeTitle("");"
+      setIsLoading(false);
+  };
+  },
+
+
+
+
+
+              disabled={!newResumeTitle.trim() |isLoading}
+      <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
+</Button>"
+        <DialogContent className="sm:max-w-md">"
+</DialogContent>
+          <DialogHeader>
+</DialogHeader>
+            <DialogTitle>Save as new resume version</DialogTitle>
+          </DialogHeader>"
+          <div className="py-4">"
+</div>
+            <Input;
+              value={newResumeTitle}
+              onChange={(e) => setNewResumeTitle(e.target.value)}
+</Input>
+          </div>
+          <DialogFooter>
+</DialogFooter>"
+            <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>"
+</Button>
+            </Button>
+            <Button;
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() || isLoading}
+"
+            <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>"
+</Button>
+            </Button>
+            <Button;
+
+onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() || isLoading}
+
+"
+              className="gap-2""
+            >
+              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}"
+</Loader2>"
+              <Save className="h-4 w-4" />"
+
+}) ) "
+}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version    <DialogHeader> <DialogTitle>Save as new resume version  <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel  <Button Save     </div>)"
+pr-12325
+</Save>
+
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </div>
+
+}</DropdownMenuItem>) ) "
+}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>)"
+</DropdownMenuSeparator>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

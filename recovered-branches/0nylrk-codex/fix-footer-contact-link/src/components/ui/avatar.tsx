@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -58,15 +59,24 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar"
 =======
 
 
+=======
+import * as React from 'react';
+import * as AvatarPrimitive from '@radix-ui/react-avatar';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {cn} from '@/lib/utils';
+import {cn} from '@/lib/utils';
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
+<<<<<<< HEAD
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { cn } from "@/lib/utils"
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -115,6 +125,7 @@ const Avatar = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       'relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full'
@@ -130,22 +141,74 @@ Avatar.displayName = AvatarPrimitive.Root.displayName;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
+=======
+import { cn } from "@/lib/utils"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+import * as React from "react";
+import * as AvatarPrimitive from "@radix-ui/react-avatar";
+;
+import { cn } from "@/lib/utils";
+;
+const Avatar = React.forwardRef<;
+  React.ElementRef<typeof AvatarPrimitive.Root>,;
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>;
+>(({ className, ...props }, ref) => (;
+  <AvatarPrimitive.Root;
+    ref={ref}
 
       "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
 
-
       className
+className={cn(;
+      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",;
+      className;
       className
     )}
     {...props}
   />;
 ));
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { cn } from "@/lib/utils"
+
+    className={cn(    {...props}
+  />;
+));
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
+import {cn} from '@/lib/utils';
+import * as React from "react"""
+import * as AvatarPrimitive from "@radix-ui/react-avatar"""
+import { cn } from "@/lib/utils""
+const Avatar = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Root>
+</typeof>
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
+  <AvatarPrimitive.Root;
+const Avatar = React && React.forwardRef<;
+  React && React.ElementRef<typeof AvatarPrimitive && AvatarPrimitive.Root>,;
 
+  React && React.ComponentPropsWithoutRef<typeof AvatarPrimitive && AvatarPrimitive.Root>;
+></typeof>(({ className, ...props }, ref) => (;
+  <AvatarPrimitive&& AvatarPrimitive.Root;
+    ref={ref}
+    className={cn(
+
+"
+      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full","
+      className;
+      className;)
+    )}
+    {...props}
+  />
+));
+Avatar.displayName = AvatarPrimitive.Root.displayName;
+  />;
+pr-12325
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -204,13 +267,24 @@ const AvatarImage = React.forwardRef<;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   <AvatarPrimitive.Image
+Avatar && Avatar.displayName = AvatarPrimitive && AvatarPrimitive.Root.displayName;
+const AvatarImage = React && React.forwardRef<;
+  React && React.ElementRef<typeof AvatarPrimitive && AvatarPrimitive.Image>,;
+  React && React.ComponentPropsWithoutRef<typeof AvatarPrimitive</typeof>.Image>;
+>(({ className, ...props }, ref) => (;
+  <AvatarPrimitive&& AvatarPrimitive.Image
 const AvatarImage = React.forwardRef<;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  <AvatarPrimitive.Imageconst AvatarImage = React.forwardRef<;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   React.ElementRef<typeof AvatarPrimitive.Image>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Image;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -226,6 +300,8 @@ const AvatarImage = React.forwardRef<;
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ref={ref}
 =======
     ref={ref}'
@@ -255,9 +331,29 @@ const AvatarFallback = React.forwardRef<
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
 =======
   <AvatarPrimitive.Fallback;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  <AvatarPrimitive.Image;
+const AvatarImage = React.forwardRef<;
+  React.ElementRef<typeof AvatarPrimitive.Image>,;
+
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
+
+
+
+    ref={ref}"
+    className={cn('aspect-square h-full w-full', className)}
+  />
+
+const AvatarFallback = React.forwardRef<
+  React.ElementRef<typeof AvatarPrimitive.Fallback>
+  React.ComponentPropsWithoutRef<typeof AvatarPri</typeof>mitive.Fallback>
+  <AvatarPrimitive.Fallback;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 AvatarImage && AvatarImage.displayName = AvatarPrimitive && AvatarPrimitive.Image.displayName;
 
 const AvatarFallback = React && React.forwardRef<;
@@ -320,12 +416,19 @@ const AvatarImage = React.forwardRef<;
 =======
 
 const AvatarImage = React.forwardRef<;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    ref={ref}
+    className={cn(
+      'flex h-full w-full items-center justify-center rounded-full bg-muted'const AvatarImage = React.forwardRef<;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   React.ElementRef<typeof AvatarPrimitive.Image>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Image;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -335,6 +438,8 @@ const AvatarImage = React.forwardRef<;
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ref={ref}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     className={cn('aspect-square h-full w-full', className)}
@@ -342,9 +447,6 @@ const AvatarImage = React.forwardRef<;
   />
 ));
 AvatarImage.displayName = AvatarPrimitive.Image.displayName;
-
-
-
 
 const AvatarFallback = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>
@@ -355,7 +457,13 @@ const AvatarFallback = React.forwardRef<
 =======
   <AvatarPrimitive.Fallback
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+ref={ref}
+    className={cn ('aspect - square h - full w - full', class_name)}
+    {...props}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 AvatarImage && AvatarImage.displayName = AvatarPrimitive && AvatarPrimitive.Image.displayName;
 
 const AvatarFallback = React && React.forwardRef<;
@@ -374,12 +482,15 @@ const AvatarFallback = React && React.forwardRef<;
     className={cn(
       'flex h-full w-full items-center justify-center rounded-full bg-muted'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 Avatar.displayName = AvatarPrimitive.Root.displayName;
 ;
 const AvatarImage = React.forwardRef<;
@@ -397,18 +508,27 @@ AvatarImage.displayName = AvatarPrimitive.Image.displayName;
     ref={ref}
     className={cn(
       'flex h-full w-full items-center justify-center rounded-full bg-muted'
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   <AvatarPrimitive&& AvatarPrimitive.Fallback;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+  React && React.ComponentPropsWithoutRef<typeof AvatarPri</typeof>mitive && mitive.Fallback>;
+  <AvatarPrimitive&& AvatarPrimitive.Fallback;
+      'flex h-full w-full items-center justify-center rounded-full bg-muted
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const AvatarFallback = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Fallback>,;
+
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Fallback;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -420,11 +540,13 @@ const AvatarFallback = React.forwardRef<;
       'flex h-full w-full items-center justify-center rounded-full bg-muted'
       className;
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ref={ref}
     className={cn(
       "flex h-full w-full items-center justify-center rounded-full bg-muted",
       className
-    ref={ref}
+ref={ref}
     className={cn(
       "flex h-full w-full items-center justify-center rounded-full bg-muted",
     ref={ref}
@@ -448,9 +570,16 @@ export { Avatar, AvatarImage, AvatarFallback }
 export { Avatar, AvatarImage, AvatarFallback };
 =======
 export { Avatar, AvatarImage, AvatarFallback }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      "flex h-full w-full items-center justify-center rounded-full bg-muted",""
+import * as AvatarPrimitive from '@radix - ui / react - avatar';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
-
+import {cn} from '@/lib / utils';
+const Avatar = React.forward_ref<;
+  React.ElementRef < typeof AvatarPrimitive.Root>,
 
 AvatarFallback && AvatarFallback.displayName = AvatarPrimitive && AvatarPrimitive.Fallback.displayName;
 
@@ -461,16 +590,46 @@ export { Avatar, AvatarImage, AvatarFallback }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+AvatarFallback && AvatarFallback.displayName = AvatarPrimitive && AvatarPrimitive.Fallback.displayName;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export { Avatar, AvatarImage, AvatarFallback };
+  React.ComponentPropsWithoutRef < typeof AvatarPrimitive.Root>;)
+></typeof>(({ class_name, ...props }, ref) => (
+    className={cn (
+      'relative flex h - 10 w - 10 shrink - 0 overflow - hidden rounded - full',')
+      class_name)}
   />));
-AvatarImage.display_name = AvatarPrimitive.Image.display_name;
-;
+
+const AvatarImage = React.forward_ref<;
+  React.ElementRef < typeof AvatarPrimitive.Image>,
+  React.ComponentPropsWithoutRef < typeof AvatarPrimitive</typeof>.Image>;
+
+    className={cn ('aspect - square h - full w - full', class_name)}
+
+
+
+
+
+
+
+
+
+
+
+      "flex h-full w-full items-center justify-center rounded-full bg-muted","
+    className={cn("
+    className={cn(;"
+      "flex h-full w-full items-center justify-center rounded-full bg-muted",;"
+    ref={ref})"
+
 const AvatarFallback = React.forward_ref<;
   React.ElementRef < typeof AvatarPrimitive.Fallback>,
   React.ComponentPropsWithoutRef < typeof AvatarPri</typeof > mitive.Fallback>;
@@ -503,12 +662,16 @@ export { Avatar, AvatarImage, AvatarFallback }
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 ;
 export { Avatar, AvatarImage, AvatarFallback }import * as React from "react" import * as AvatarPrimitive from "@radix-ui/react-avatar" const Avatar = React.forwardRef< React.ElementRef<typeof AvatarPrimitive.Root>;
+      'flex h - full w - full items - center justify - center rounded - full bg - muted',')
+
+export { Avatar, AvatarImage, AvatarFallback }import * as React from "react" import * as AvatarPrimitive from "@radix-ui/react-avatar" const Avatar = React.forwardRef< React.ElementRef<typeof AvatarPrimitive.Root>;"
 React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> > ( ({
-  className, ...props 
+</typeof>)
 }, ref) => (<AvatarPrimitive.Root) 
 }{
-  ...props 
+  ...props;
 }/>) ) Avatar.displayName = AvatarPrimitive.Root.displayName const AvatarImage = React.forwardRef< React.ElementRef<typeof AvatarPrimitive.Image>;
+<<<<<<< HEAD
 React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> > ( ({
   className, ...props 
 }, ref) => (<AvatarPrimitive.Image />) ) AvatarImage.displayName = AvatarPrimitive.Image.displayName const AvatarFallback = React.forwardRef< React.ElementRef<typeof AvatarPrimitive.Fallback>;
@@ -547,10 +710,13 @@ export { Avatar, AvatarImage, AvatarFallback }
 export { Avatar, AvatarImage, AvatarFallback }
 export { Avatar, AvatarImage, AvatarFallback }
 ;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export { Avatar, AvatarImage, AvatarFallback };
 export { Avatar, AvatarImage, AvatarFallback }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -570,3 +736,12 @@ export { Avatar, AvatarImage, AvatarFallback };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> > ( ({
+}, ref) => (<AvatarPrimitive.Image />) ) AvatarImage.displayName = AvatarPrimitive.Image.displayName const AvatarFallback = React.forwardRef< React.ElementRef<typeof AvatarPrimitive.Fallback>;
+
+React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback> > ( ({
+}, ref) => (<AvatarPrimitive.Fallback) 
+}/>) ) AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName export {
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

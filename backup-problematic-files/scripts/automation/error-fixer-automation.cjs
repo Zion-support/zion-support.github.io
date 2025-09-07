@@ -1,14 +1,15 @@
-#!/""usr/bin/env""
+#!/usr/bin/env
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
 const glob = require("glob")
     this.reportsDir = path.join(this.projectRoot, "error-reports")
-// console.log("" Starting Error Fixer Automation...")
-      console.log("" Error Fixer Automation completed successfully!")
-      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues"")
+// console.log( Starting Error Fixer Automation...")
+      console.log( Error Fixer Automation completed successfully!")
+      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues)
   console.error(" Error Fixer Automation "failed": ")
       this.logError("Error Fixer Automation failed")
+<<<<<<< HEAD
 // console.log("" Error Fixer Automation completed successfully!")
       console.log(")
       console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)
@@ -183,6 +184,11 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
         "successRate"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+// console.log( Error Fixer Automation completed successfully!")
+      console.log(")"
+      console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues```)"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

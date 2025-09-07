@@ -1,13 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   customers: number;
   rating: number;
   reviews: number;
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -24,6 +30,7 @@ export interface RealMarketService {
 ;
 const contact = {
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
@@ -35,6 +42,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   reviews: number;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -42,13 +51,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export const realMarketServices: RealMarketService[] = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/expand-services-advertise-and-build-project-c28b
+  customers: number;,
+  rating: number;
+  reviews: number;,
+pr-12325
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+  website: 'https://ziontechgroup.com';,};
+
+export const realMarketServices: RealMarketService[] = [;
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -60,12 +84,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export const realMarketServices: RealMarketService[] = [;
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+  website: 'https://ziontechgroup.com';, }
+;
+export const realMarketServices: RealMarketService[] = [;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   mobile: '+1 302 464 0950',
@@ -98,6 +132,15 @@ export const realMarketServices: RealMarketService[] = [;
   address: '364 E Main St STE 1008 Middletown DE 19709','
   website: 'https://ziontechgroup && ziontechgroup.com',};
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    tagline:
+      'Centralize model access, control spend, add observability and guardrails'
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup && ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+  website: 'https://ziontechgroup && ziontechgroup.com';,};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ServiceVariant } from '../types/service-variants';
 export interface RealMarketService {
   id: string;
@@ -130,16 +173,14 @@ export interface RealMarketService {
     mobile: string;
     email: string;
     address: string;
-    website: string
-  },
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number
-}
 
+<<<<<<< HEAD
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -12801,3 +12842,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

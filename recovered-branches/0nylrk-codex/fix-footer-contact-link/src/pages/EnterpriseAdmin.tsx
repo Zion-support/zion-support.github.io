@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -155,19 +156,43 @@ import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {
   const { user } = useAuth();
 
   // Check if user has enterprise admin role
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   if (!isEnterpriseAdmin) {
-    return <Navigate to="/unauthorized" />;
+    return <Navigate to="/unauthorized" />
   }
   return (
-    <ProtectedRoute>
+
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+export default function EnterpriseAdmin() {;
+  const { user } = useAuth();
+  // Check if user has enterprise admin role;
+  const isEnterpriseAdmin = user?.role === "enterprise_admin";
+  if (!isEnterpriseAdmin) {;
+    return <Navigate to="/unauthorized" />;
+  }
+;
+  return (;
+    <ProtectedRoute>;
       <SEO
         title="Enterprise Admin - Zion AI Marketplace"
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace."
@@ -275,10 +300,20 @@ export default function EnterpriseAdmin() {};
 =======
   );
 }
+<<<<<<< HEAD
 
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      />;
+      <Header />;
+      <main className="min-h-screen bg-background">;
+        <AdminDashboard />;
+      </main>;
+      <Footer />;
+    </ProtectedRoute>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
   }
@@ -314,7 +349,7 @@ if ( {) {
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace.";
       />;
       <Header />;
-      <main className="min - h-screen bg - background">;
+      <main className="min - h-screen bg-background">;
         <AdminDashboard />;
       </main>;
       <Footer />;
@@ -340,6 +375,7 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -356,3 +392,65 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import React from "react";""
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";""
+import { useAuth } from "@/hooks/useAuth";""
+import { Navigate } from "react-router-dom";""
+import { SEO } from "@/components/SEO";""
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+export default function EnterpriseAdmin() {
+  const { user } = useAuth();
+
+  // Check if user has enterprise admin role;"
+  const isEnterpriseAdmin = user?.role === "enterprise_admin";"
+  if (!isEnterpriseAdmin) {"
+    return <Navigate to="/unauthorized" />;"
+
+    <ProtectedRoute>
+
+      <SEO;"
+        title="Enterprise Admin - Zion AI Marketplace"""
+        description="Manage your team's access, roles, and usage on the Zion AI Marketplace.""
+      />
+
+      <Header />
+"
+      <main className="min-h-screen bg-background">"
+</main>
+        <AdminDashboard />
+
+      <Footer />
+
+
+    <ProtectedRoute>;
+
+        title="Enterprise Admin - Zion AI Marketplace";""
+        description="Manage your team's access, roles, and usage on the Zion AI Marketplace.";"
+
+      />;
+
+      <Header />;
+      <main className="min - h-screen bg - background">;"
+
+</Header>"
+      <main className="min - h-screen bg - background">;"
+</main>
+
+        <AdminDashboard />;
+
+      </main>;
+      <Footer />;
+
+    );"
+}Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> )"
+pr-12325
+</Footer>
+    </ProtectedRoute>);"
+}Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> </ProtectedRoute>)"
+</Header>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

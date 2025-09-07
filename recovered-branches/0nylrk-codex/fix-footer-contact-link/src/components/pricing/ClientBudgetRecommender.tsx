@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,9 @@ import {Sparkles} from "lucide-react";
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -31,6 +35,7 @@ import {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   getClientBudgetSuggestion;
   PricingSuggestion;
+<<<<<<< HEAD
   ClientBudgetParams;
   trackPricingSuggestion"
 } from "@/services/pricingSuggestionService","
@@ -38,6 +43,14 @@ import { PricingSuggestionBox } from "./PricingSuggestionBox",";
 import { useAuth } from "@/hooks/useAuth";"
 import { Sparkles } from "lucide-react";
 <<<<<<< HEAD
+=======
+  ClientBudgetParams;}
+  trackPricingSuggestion}
+} from \"@/services/pricingSuggestionService\",
+import { PricingSuggestionBox } from \"./PricingSuggestionBox\",;
+import { useAuth } from \"@/hooks/useAuth\";
+import { Sparkles } from \"lucide-react\";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ClientBudgetRecommenderProps {
 
 <<<<<<< HEAD
@@ -69,10 +82,8 @@ interface ClientBudgetRecommenderProps {}
   category;
   timeline;
   scope;
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
-  const { user } = useAuth();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -433,3 +444,5 @@ if ( {) {}
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

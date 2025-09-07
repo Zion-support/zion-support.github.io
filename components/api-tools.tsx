@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';
 
@@ -34,6 +35,9 @@ import {}
   Zap,
   Bot,
   BarChart3,
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Code;
   Database;
   Globe;
@@ -41,7 +45,7 @@ import { Code;
   Zap;
   Bot;
   BarChart3;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   Lock;
   ArrowRight;
   CheckCircle;
@@ -49,6 +53,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ExternalLink;
   Play;
   BookOpen;
+<<<<<<< HEAD
   Github;'
         free: '1,000 operations/month''
         pro: '$119/month''
@@ -61,6 +66,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       status: 'Live''
       users: '4,200+''
       responseTime: '<20ms'
+=======
+  Github;
+        free: '1;,000 operations/month'
+        pro: '$119/month'
+        enterprise: 'Custom';
+      }
+      category: 'Security';,      color: 'bg-gradient-to-br from-gray-500 to-slate-600';,      gradient: 'from-gray-400 to-slate-500'
+      website: 'https://encrypt.api'
+      docs: 'https://docs.encrypt.api'
+      github: 'https://github.com/encrypt-api'
+      status: 'Live'
+      users: '4;,200+'
+      responseTime: '<20ms';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 
 
@@ -68,6 +87,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 
   Terminal
+<<<<<<< HEAD
  } from 'lucide-react';
 export default function ApiToolsPage() {
   const apiTools = null;
@@ -810,6 +830,9 @@ function ApiToolsPage() {}
     <>
       <Head>
 <title>
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -905,6 +928,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredTools && filteredTools.map((tool, index) => (;
+<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300'`
@@ -913,6 +937,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='relative'>;
                     <div;`
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool && tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
+=======
+              <Card
+                key={index}
+                className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300'
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className='flex items-start space-x-6'>;
+                  <div className='relative'>;
+                    <div
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool && tool.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {tool && tool.icon}
                     </div>;
                     <div;
@@ -960,11 +994,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {feature}
                           </li>;
                         ))}
+<<<<<<< HEAD
                       <Button;
                         href={tool && tool.website}'
                         variant='primary''
                         size='sm''
                         className='bg-indigo-600 hover:bg-indigo-700'>;'
+=======
+                      <Button
+                        href={tool && tool.website}
+                        variant='primary'
+                        size='sm'
+                        className='bg-indigo-600 hover:bg-indigo-700'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <ExternalLink className='w-4 h-4 mr-2' />                        Visit API;
                       </Button>;
                       <Button;
@@ -998,6 +1040,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         size="sm"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='bg-indigo-600 hover:bg-indigo-700'
                       >
                         <ExternalLink className='w-4 h-4 mr-2' />
@@ -1013,11 +1058,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <ExternalLink className="w-4 h-4 mr-2" />;
                         Visit API;
                       </Button>;
+<<<<<<< HEAD
                       <Button;
                         href={tool && tool.docs}'
                         variant='outline''
                         size='sm''
                         className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400'>;'
+=======
+                      <Button
+                        href={tool && tool.docs}
+                        variant='outline'
+                        size='sm'
+                        className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <BookOpen className='w-4 h-4 mr-2' />                        Documentation;
                       </Button>;
                       <Button"
@@ -1133,10 +1186,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Developer Resources */}'
       <section className='py-24 bg-gray-800'>;'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;'
           <div className='text-center mb-20'>;'
+=======
+      {/* Developer Resources */}
+      <section className='py-24 bg-gray-800'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='text-center mb-20'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>;
               Developer Resources;
             </h2>;'
@@ -1178,6 +1238,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />

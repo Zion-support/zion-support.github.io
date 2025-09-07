@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -357,6 +358,8 @@ optimizer.run().catch(error => {
 
 <<<<<<< HEAD
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -375,6 +378,7 @@ main
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 >>>>>>> origin/automation-improvements-final
@@ -382,23 +386,23 @@ const path = require('path');
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class BuildOptimizer {}
   constructor() {}
-    this.processName = process.env.PM2_PROCESS_NAME || 'build-optimizer';
-    this.optimizeBundles = process.env.OPTIMIZE_BUNDLES === 'true';
-    this.treeShaking = process.env.TREE_SHAKING === 'true';
-    this.codeSplitting = process.env.CODE_SPLITTING === 'true';
-    this.minification = process.env.MINIFICATION === 'true';
-    this.logFile = path.join(__dirname, '../../logs/pm2/build-optimizer.log');
+    this.processName = process.env.PM2_PROCESS_NAME ||build-optimizer';
+    this.optimizeBundles = process.env.OPTIMIZE_BUNDLES ===true;
+    this.treeShaking = process.env.TREE_SHAKING ===true;
+    this.codeSplitting = process.env.CODE_SPLITTING ===true;
+    this.minification = process.env.MINIFICATION ===true;
+    this.logFile = path.join(__dirname,../../logs/pm2/build-optimizer.log');
     this.ensureLogDir();
   };
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { "recursive": true }
+      fs.mkdirSync(logDir, { "recursive": true }")
 });
-    };
-  };
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
@@ -437,6 +441,7 @@ class BuildOptimizer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
 =======
@@ -447,6 +452,8 @@ class BuildOptimizer {}
 
 <<<<<<< HEAD
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -455,8 +462,8 @@ main
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
-  };
   async analyzeBundleSize() {}
+<<<<<<< HEAD
     try {}
       this.log('Analyzing bundle size...');
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
@@ -471,12 +478,15 @@ main
       
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+    try {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         this.log('No dist directory found, running build first...');
-        execSync('npm run build', { "stdio": 'pipe' }
-});
-      };
+        execSync('npm run build', { "stdio": 'pipe' }')
+
       const bundleFiles = this.getBundleFiles(distDir);
       const totalSize = bundleFiles.reduce((total, file) => {}
         const stats = fs.statSync(file.path);
@@ -487,28 +497,30 @@ main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+<<<<<<< HEAD
       this.log(`Total bundle "size": ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
       
 
       this.log(`Total bundle "size": ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return {}
-        totalSize,
-        "totalSizeMB": (totalSize / 1024 / 1024).toFixed(2),
-        "files": bundleFiles.map(f => ({})
-          name: f.name,
-          "size": f.size,
-          "sizeMB": (f.size / 1024 / 1024).toFixed(2);
+        totalSize,"
+        "totalSizeMB": (totalSize / 1024 / 1024).toFixed(2),""
+        "files": bundleFiles.map(f => ({})"
+          name: f.name,"
+          "size": f.size,""
+          "sizeMB": (f.size / 1024 / 1024).toFixed(2);"
         }));
-      };
-    } catch (error) {}
-      this.log(`Bundle analysis "failed": ${error.message}`);
-      return { "error": error.message };
-    };
-  };
+    } catch (error) {}"`;
+      this.log(`Bundle analysis "failed": ${error.message}`);""
+      return { "error": error.message };"
+
   getBundleFiles(dir) {}
     const files = [];
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 
 <<<<<<< HEAD
@@ -522,12 +534,16 @@ main
     
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const scanDir = (currentDir) => {}
       try {}
         const items = fs.readdirSync(currentDir);
         for (const item of items) {}
           const itemPath = path.join(currentDir, item);
           const stat = fs.statSync(itemPath);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 
 <<<<<<< HEAD
@@ -542,21 +558,14 @@ main
           
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           if (stat.isDirectory()) {}
             scanDir(itemPath);
           } else if (stat.isFile() && this.isBundleFile(item)) {}
-            files.push({})
-              "name": item,
-              "path": itemPath,
-              "size": stat.size;
-            }
-});
-          };
-        };
-      } catch (err) {}
-        // Skip directories that can't be read;
-      };
-    };
+            files.push({})"
+
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 <<<<<<< HEAD
@@ -572,12 +581,11 @@ main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
     scanDir(dir);
     return files;
-  };
   isBundleFile(filename) {}
-    const bundleExtensions = ['.js', '.css', '.mjs', '.chunk.js'];
+    const bundleExtensions = [.js,.css,.mjs,.chunk.js];
     return bundleExtensions.some(ext => filename.endsWith(ext));
-  };
   async optimizeBuild() {}
+<<<<<<< HEAD
     try {}
       this.log('Starting build optimization...');
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
@@ -594,12 +602,14 @@ main
       
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Clean previous build;
       if (fs.existsSync('dist')) {}
-        fs.rmSync('dist', { "recursive": true, "force": true }
-});
-      };
+        fs.rmSync('dist', { "recursive": true, "force": true }")
       // Run optimized build;
+<<<<<<< HEAD
       const buildCommand = this.getOptimizedBuildCommand();
       this.log(`"Running": ${buildCommand}`);
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
@@ -634,16 +644,22 @@ main
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+      const buildCommand = this.getOptimizedBuildCommand();"`;
+      this.log(`"Running": ${buildCommand}`);"
+      execSync(buildCommand, { })"
+        "stdio": 'pipe',
+        "cwd": process.cwd();"
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log('Build optimization completed');
-      return { "success": true };
-    } catch (error) {}
-      this.log(`Build optimization "failed": ${error.message}`);
-      return { "success": false, "error": error.message };
-    };
-  };
-  getOptimizedBuildCommand() {}
+      return { "success": true };"
+      this.log(`Build optimization "failed": ${error.message}`);""
+      return { "success": false, "error": error.message };"
+  getOptimizedBuildCommand() {}"
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
     const buildScript = packageJson.scripts?.build || 'npm run build';
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 
 <<<<<<< HEAD
@@ -658,17 +674,19 @@ main
     
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Add optimization flags if supported;
-    if (buildScript.includes('vite')) {}
+    if (buildScript.includes('vite')) {}`;
       return `${buildScript} --minify`;`
-    } else if (buildScript.includes('webpack')) {}
+    } else if (buildScript.includes('webpack')) {}`;
+
       return `${buildScript} --mode production`;`
-    };
     return buildScript;
-  };
   async checkTreeShaking() {}
     if (!this.treeShaking) {}
       this.log('Tree shaking check disabled');
+<<<<<<< HEAD
       return { "checked": false };
     };
     try {}
@@ -687,15 +705,20 @@ main
       
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+      return { "checked": false };"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // This is a simplified check - in practice, you'd analyze the bundle;
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
-        return { "checked": false, "error": 'No dist directory found' };
+        return { "checked": false, "error": No dist directory found};
       };
+
       // Look for unused code patterns;
-      const bundleFiles = this.getBundleFiles(distDir);
       let unusedCodeFound = 0;
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -708,18 +731,18 @@ main
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       for (const file of bundleFiles) {}
-        try {}
-          const content = fs.readFileSync(file.path, 'utf8');
+
           // Simple check for common unused code patterns;
           if (content.includes('console.log') && !content.includes('production')) {}
             unusedCodeFound++;
-          };
         } catch (err) {}
           // Skip files that can't be read;
-        };
-      };
+      };`;
       this.log(`Tree shaking check completed. Potential unused code in ${unusedCodeFound} files`);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 
 <<<<<<< HEAD
@@ -734,21 +757,26 @@ main
       
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return {}
         "checked": true,
         "unusedCodeFiles": unusedCodeFound,
-        "recommendation": unusedCodeFound > 0 ? 'Consider enabling tree shaking' : 'Tree shaking appears effective'
+        "recommendation": unusedCodeFound > 0 ? 'Consider enabling tree shaking: Tree shaking appears effective
       };
     } catch (error) {}
-      this.log(`Tree shaking check "failed": ${error.message}`);
-      return { "checked": false, "error": error.message };
+      this.log(`Tree shaking check "failed": ${error.message});
+      return { "checked": false, "error": error.message };"
     };
   };
   async checkCodeSplitting() {}
-    if (!this.codeSplitting) {}
+    if (!this.codeSplitting) {}"
       this.log('Code splitting check disabled');
-      return { "checked": false };
+      return { "checked": false };"
     };
+<<<<<<< HEAD
     try {}
       this.log('Checking code splitting implementation...');
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
@@ -765,12 +793,16 @@ main
       
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
-        return { "checked": false, "error": 'No dist directory found' };
+        return { "checked": false, "error": No dist directory found};
       };
       const bundleFiles = this.getBundleFiles(distDir);
       const chunkFiles = bundleFiles.filter(f => f.name.includes('chunk') || f.name.includes('vendor'));
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 
 =======
@@ -788,32 +820,38 @@ main
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
+=======
+      this.log(`Found ${chunkFiles.length} chunk files`);
+
+      this.log(`Found ${chunkFiles.length} chunk files`);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return {}
         "checked": true,
         "chunkFiles": chunkFiles.length,
-        "recommendation": chunkFiles.length > 1 ? 'Code splitting appears to be working' : 'Consider implementing code splitting'
+        "recommendation": chunkFiles.length > 1 ? 'Code splitting appears to be working: Consider implementing code splitting
       };
     } catch (error) {}
-      this.log(`Code splitting check "failed": ${error.message}`);
-      return { "checked": false, "error": error.message };
+      this.log(`Code splitting check "failed": ${error.message});
+      return { "checked": false, "error": error.message };"
     };
   };
   async generateReport() {}
-    const report = {}
+    const report = {}"
       "timestamp": new Date().toISOString(),
       "processName": this.processName,
       "bundleAnalysis": await this.analyzeBundleSize(),
       "optimization": await this.optimizeBuild(),
       "treeShaking": await this.checkTreeShaking(),
       "codeSplitting": await this.checkCodeSplitting(),
-      "environment": {}
-        NODE_ENV: process.env.NODE_ENV,
+      "environment": {}"
+        NODE_ENV: process.env.NODE_ENV,"
         "optimizeBundles": this.optimizeBundles,
         "treeShaking": this.treeShaking,
         "codeSplitting": this.codeSplitting,
-        "minification": this.minification;
+        "minification": this.minification;"
       };
     };
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 
     const reportFile = path.join(__dirname, '../../logs/pm2/build-optimizer-report.json');
@@ -838,10 +876,18 @@ main
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/build-optimizer.cjs
     this.log(`Build optimization report "generated": ${reportFile}`);
+=======
+"
+    const reportFile = path.join(__dirname,../../logs/pm2/build-optimizer-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    '
+    this.log(`Build optimization report "generated": ${reportFile});"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return report;
-  };
-  async start() {}
+  async start() {}`;
     this.log(`${this.processName} started`);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 
 <<<<<<< HEAD
@@ -882,10 +928,17 @@ main
     };
   };
 };
+=======
+      const report = await this.generateReport();
+      if (report.optimization.success) {}"
+        this.log('Build optimization completed successfully');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Start the service;
 if (require.main === module) {}
   const buildOptimizer = new BuildOptimizer();
   buildOptimizer.start().catch(console.error);
+<<<<<<< HEAD
 =======
 };
 <<<<<<< HEAD
@@ -928,3 +981,7 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

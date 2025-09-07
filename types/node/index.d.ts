@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -28,6 +29,12 @@ interface Buffer {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 declare const __dirname: string;
 declare const __filename: string;
 export {}
@@ -57,8 +64,8 @@ declare const __filename: string,;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
-declare const __dirname: string,;
-declare const __filename: string,;
+
+
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface Buffer {  } catch (error) {
@@ -68,6 +75,7 @@ interface Buffer {  } catch (error) {
 }
 declare const __dirname: string;
 declare const __filename: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export {};
@@ -88,10 +96,18 @@ export {};
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
+=======
+
+
+
+export {};
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export {};
 export {};
 export {};
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 // eslint - disable - next - line @typescript - eslint / no - empty - object - type;
@@ -104,10 +120,28 @@ export {}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+
+// eslint - disable - next - line @typescript - eslint / no - empty - object - type;
+interface Buffer {}
+export {}
+
+
+
+
+
+export {};
+// eslint - disable - next - line @typescript - eslint / no - empty - object - type;
+interface Buffer {}
+export {}
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 declare module 'node:*' {
   const value: any;
   export = value;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 // eslint - disable - next - line @typescript - eslint / no - empty - object - type;
@@ -124,3 +158,20 @@ declare module 'node:*' {}
   export = value;
 }'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+interface Buffer {  } catch (error) {
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+  }
+// eslint - disable - next - line @typescript - eslint / no - empty - object - type;
+interface Buffer {}
+"
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface Buffer {}
+
+declare const __dirname: string;
+declare const __filename: string;
+
+export {};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

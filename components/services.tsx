@@ -1,3 +1,4 @@
+
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Search, Filter, Star, Users, TrendingUp;
   DollarSign, Clock, CheckCircle, ArrowRight;
@@ -5,7 +6,7 @@ import { Search, Filter, Star, Users, TrendingUp;
   Package, Bot, Car, Building2, Monitor, Cpu;
   Zap, Atom, Database, Cloud, Lock, Code
  } from 'lucide-react';
-import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground',
+import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
 import { additionalEnhancedServices  } from '../data/additional-real-services';
@@ -23,8 +24,8 @@ import { realMarketServices  } from '../data/real-market-services';
 import { new2025Services  } from '../data/new-2025-services';
 import { newRealInnovations  } from '../data/new-real-innovations';
 import { serviceExpansions2025  } from '../data/service-expansions-2025';
-import React, { useState } from 'react',
-import Head from 'next/head',
+import React, { useState } from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Search, Grid, List;
@@ -32,8 +33,8 @@ import { Search, Grid, List;
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap;
   Users, DollarSign, Settings, TrendingUp, BarChart3, ChevronDown
  } from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 // Import all the new 2025 service data
 import { realMicroSaasServices2025  } from '../data/2025-real-micro-saas-services';
@@ -49,11 +50,11 @@ import { innovativeEducationServices2025  } from '../data/2025-innovative-educat
 import { innovativeSustainabilityServices2025  } from '../data/2025-innovative-sustainability-services';
 import { innovativeLogisticsServices2025  } from '../data/2025-innovative-logistics-services';
 // Import existing services for comprehensive coverage
-import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
 import { innovativeMicroSaasServices  } from '../data/innovative-micro-saas-services';
 import { quantumSpaceServices  } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
 const allServices = null;
+<<<<<<< HEAD
 ...realMicroSaasServices2025;
 origin/cursor/automate-test-improve-and-merge-code-2533
 ...innovativeAIServices2025;
@@ -798,6 +799,9 @@ and micro SAAS services designed to transform your business and drive innovation
 <<<<<<< HEAD
   /* Enhanced CTA Section */ 
 }<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     setSelectedCategory('All')
 origin/cursor/automate-test-improve-and-merge-code-2533
                   }}
@@ -888,10 +892,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {sortedServices && sortedServices.map((service, index) => (;
                     <motion&& motion.div;
                       key={service && service.id}
+<<<<<<< HEAD
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0 && 0.8, delay: 1 + index * 0 && 0.05 }}"
                       className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all duration-300">;"
+=======
+                      initial={{ opacity: 0;, x: -20 ;}}
+                      animate={{ opacity: 1;, x: 0 ;}}
+                      transition={{ duration: 0 && 0.8;, delay: 1 + index * 0 && 0.05 ;}}
+                      className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all duration-300">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <div className="flex flex-col lg:flex-row gap-6">;
                         {/* Service Info */}"
                         <div className="flex-1">;"
@@ -972,19 +983,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               )}
             {/* Enhanced CTA Section */}
+<<<<<<< HEAD
             <motion&& motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 1 && 1.2 }}"
               className="text-center mt-24">;"
+=======
+            <motion&& motion.div
+              initial={{ opacity: 0;, y: 30 ;}}
+              animate={{ opacity: 1;, y: 0 ;}}
+              transition={{ duration: 0 && 0.8;, delay: 1 && 1.2 ;}}
+              className="text-center mt-24">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="relative overflow-hidden bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16 shadow-2xl shadow-cyan-500/10">;
                 {/* Animated Background Elements */}
             {/* Enhanced Category Overview */}
             <motion.div;
+<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
               transition={{ duration: 0.8, delay: 0.4 }}
+=======
+              initial={{ opacity: 0;, coordinate_y: 20 ;}}
+              animate={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8;, delay: 0.4 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="mb-20";
             >;
               <div className="text-center mb-16">;
@@ -1020,22 +1045,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   return (
                     <motion.div;
                       key={category.id}
+<<<<<<< HEAD
                       initial={{ opacity: 0, coordinate_y: 20 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
                       transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+=======
+                      initial={{ opacity: 0;, coordinate_y: 20 ;}}
+                      animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                      transition={{ duration: 0.8;, delay: 0.6 + index * 0.1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className="bg - gray - 900 / 60 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 hover:border - cyan - 500 / 30 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration-500 cursor-pointer group";
 =======
                       transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}"
                       className="bg - gray - 900 / 60 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 hover:border - cyan - 500 / 30 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration - 500 cursor - pointer group";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       on_click={() => setSelectedCategory (category.id)}
+<<<<<<< HEAD
                     >;`
                       <div className={`w - 20 h - 20 bg - gradient - to - r ${category.color} rounded - 3xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300 shadow - lg`}>;
+=======
+                    >;
+                      <div className={`w - 20 h - 20 bg - gradient - to - r ${category.color} rounded - 3xl flex items - center justify - center mb - 6 group - hover: scale - 110 transition - transform duration - 300 shadow - lg`;}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         {category.icon}
 <<<<<<< HEAD
                       </div>;
-                      <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - cyan - 300 transition-colors duration-300">{category.name}</h3>;
+                      <h3 className="text - 2xl font - bold text - white mb - 3 group - hover: text - cyan - 300 transition-colors duration-300">{category.name;}</h3>;
                       <p className="text - gray - 300 text - base mb-6 leading-relaxed">{category.description}</p>;
                       <div className="grid grid - cols - 3 gap-6 text-center">;
                         <div className="group - hover:scale - 105 transition-transform duration-300">;
@@ -1079,10 +1115,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
             {/* Services Grid / List */}
             <motion.div;
+<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
 <<<<<<< HEAD
+=======
+              initial={{ opacity: 0;, coordinate_y: 20 ;}}
+              animate={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8;, delay: 0.8 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >;
               <h2 className="text - 3xl font - bold text-center mb-12">;
                 <span className="bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip-text text-transparent">;
@@ -1104,10 +1146,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {sorted_services.map ((service, index) => (
                     <motion.div;
                       key={service.id}
+<<<<<<< HEAD
                       initial={{ opacity: 0, coordinate_y: 20 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
                       transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
+=======
+                      initial={{ opacity: 0;, coordinate_y: 20 ;}}
+                      animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                      transition={{ duration: 0.8;, delay: 1 + index * 0.05 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className="bg - gray - 900 / 60 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 hover:border - cyan - 500 / 30 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration - 500 hover:transform hover:scale-105 group relative overflow-hidden";
                     >;
                       {/* Animated Background */}
@@ -1158,9 +1206,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </motion.div>))}
               </div>) : (
               <motion.div;
+<<<<<<< HEAD
                 initial={{ opacity: 0 }}
 <<<<<<< HEAD
                 animate={{ opacity: 1 }}
+=======
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className="text-center py-20";
               >;
                 <Search className="w - 16 h - 16 text - gray - 400 mx-auto mb-4" />;
@@ -1290,10 +1343,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {sorted_services.map ((service, index) => (
                     <motion.div;
                       key={service.id}
+<<<<<<< HEAD
                       initial={{ opacity: 0, coordinate_x: -20 }}
                       animate={{ opacity: 1, coordinate_x: 0 }}
 <<<<<<< HEAD
                       transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
+=======
+                      initial={{ opacity: 0;, coordinate_x: -20 ;}}
+                      animate={{ opacity: 1;, coordinate_x: 0 ;}}
+                      transition={{ duration: 0.8;, delay: 1 + index * 0.05 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className="bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - 2xl p - 6 hover:border - gray - 600 / 50 transition-all duration-300";
                     >;
                       <div className="flex flex - col lg:flex-row gap-6">;
@@ -1390,10 +1449,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>;
             {/* Enhanced CTA Section */}
             <motion.div;
+<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
 <<<<<<< HEAD
               transition={{ duration: 0.8, delay: 1.2 }}
+=======
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              animate={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8;, delay: 1.2 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="text-center mt-24";
             >;
               <div className="relative overflow - hidden bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 border border - cyan - 500 / 20 rounded - 3xl p - 16 shadow - 2xl shadow-cyan-500 / 10">;
@@ -1412,10 +1477,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="relative z - 10">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <motion.div;
+<<<<<<< HEAD
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 1.4 }}
 <<<<<<< HEAD
+=======
+                    initial={{ opacity: 0;, scale: 0.9 ;}}
+                    animate={{ opacity: 1;, scale: 1 ;}}
+                    transition={{ duration: 1;, delay: 1.4 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className="mb-8"
                   >
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6">
@@ -1434,16 +1505,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="flex flex-col sm:flex-row gap-6 justify-center">
                     <motion.a
                       href="/contact"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05 ;}}
+                      whileTap={{ scale: 0.95 ;}}
                       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40"
                     >
                       🚀 Get Started Today
                     </motion.a>
                     <motion.a
                       href="/pricing"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05 ;}}
+                      whileTap={{ scale: 0.95 ;}}
                       className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover: border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"
                     >
                       💰 View Pricing

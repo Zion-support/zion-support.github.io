@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -147,10 +148,13 @@ export function ChatAssistantTrigger() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState} from "react";
 import {MessageSquare} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {ChatAssistant} from "@/components/ChatAssistant";
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       console.error("Error in AI chat:", error),
@@ -479,3 +483,17 @@ export function ChatAssistantTrigger() {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export function ChatAssistantTrigger() {;
+  const [isOpen, setIsOpen] = useState(false);
+import { useState } from "react",
+import { MessageSquare } from "lucide-react",
+
+
+
+import { Button } from "@/components/ui/button";
+import { ChatAssistant } from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {
+  const [isOpen, setIsOpen] = useState(false);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

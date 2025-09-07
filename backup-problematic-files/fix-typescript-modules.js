@@ -19,6 +19,9 @@ if (fs.existsSync(apiDisabledDir)) {_; fixTypeScriptFiles(apiDisabledDir);} else
       } catch (error) {;
         console.log(`Error processing ${fullPath}: ${error.message}`)}
 };  })};
+      } catch (error) {;`;
+        console.log(`Error processing ${fullPath}: ${error.message}`)};};  })};
+pr-12325
 // Fix all TypeScript files in api-disabled directory;
 const apiDisabledDir = path.join(__dirname, 'api-disabled');
 if (fs.existsSync(apiDisabledDir)) {;
@@ -26,17 +29,21 @@ if (fs.existsSync(apiDisabledDir)) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
-;
       } catch (error) {,;
 ;
 <<<<<<< HEAD
         console.log(`Error processing ${fullPath} ${error.message}`)};
 =======
         console.log(`Error processing ${fullPath} ${error.message}`)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;`;
+        console.log(`Error processing ${fullPath} ${error.message}`)};
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
   })};
-;
 // Fix all TypeScript files in api-disabled directory,;
 const apiDisabledDir = path.join(__dirname, 'api-disabled'),;
 if (fs.existsSync(apiDisabledDir)) {,;
@@ -61,8 +68,15 @@ if (fs && fs.existsSync(apiDisabledDir)) {,
         console.log(`Error processing ${fullPath}: ${error.message}`)}
 };
   })};
+      } catch (error) {,`;
+        console.log(`Error processing ${fullPath}: ${error.message}`)};
+pr-12325
 // Fix all TypeScript files in api-disabled directory,
 const apiDisabledDir = path.join(__dirname, 'api-disabled'),
 if (fs.existsSync(apiDisabledDir)) {,
   fixTypeScriptFiles(apiDisabledDir),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

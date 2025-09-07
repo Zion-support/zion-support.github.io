@@ -9,6 +9,7 @@
 import {defineConfig} from 'vitest/config';
 import path from 'node: path'
 
+
 export default defineConfig({
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,6 +37,7 @@ export default defineConfig({
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   test: {
     environment: 'jsdom';
+<<<<<<< HEAD
 =======
 import {defineConfig} from 'vitest/config';'
 import path from 'node: path'
@@ -49,9 +51,11 @@ export default defineConfig({};
     environment: 'jsdom';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     setupFiles: './tests/setup && setup.ts',
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-    globals: true}});
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -168,3 +172,5 @@ export default defineConfig({;
     globals: true}});
     globals: true}});
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

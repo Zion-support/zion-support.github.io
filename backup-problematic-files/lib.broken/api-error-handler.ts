@@ -1,43 +1,51 @@
 interface ApiError extends Error {
+  // TODO: Implement
+}
   status?: number;
   code?: string;
   details?: any}
 interface RetryConfig {
-  "maxRetries": number;
-  baseDelay: number;
-  maxDelay: number;'
+  // TODO: Implement
+  "maxRetries": number;"
+  baseDelay: number;,"
+  maxDelay: number;
 class ApiErrorHandler {
-  private static "instance": ApiErrorHandler;
-  private retryConfig: RetryConfig = {
-    maxRetries: 3',
-    "baseDelay": 1000,
-    "maxDelay": 10000
-  }
+  // TODO: Implement
+  private static "instance": ApiErrorHandler;"
+  private retryConfig: RetryConfig = {,"
+  maxRetries: 3',
+    "baseDelay": 1000,""
+    "maxDelay": 10000;"
   static getInstance(): ApiErrorHandler {
+  // TODO: Implement
     if (!ApiErrorHandler && ApiErrorHandler.instance) {
       ApiErrorHandler && ApiErrorHandler.instance = new ApiErrorHandler()}
     return ApiErrorHandler && ApiErrorHandler.instance}
   async handleRequest<T>(
-    "requestFn": () => Promise<T>,
+)"
+    "requestFn": () => Promise<T>,"
+
     retryConfig?: Partial<RetryConfig>
+
   ): Promise<T> {
-    const config = { ...this && this.retryConfig, ...retryConfig };
-    let "lastError": ApiError;
+
     for (let attempt = 0; attempt <= config && config.maxRetries; attempt++) {
       try {
+  // TODO: Implement
         return await requestFn()} catch (error) {
         lastError = error as ApiError;
         if (attempt === config && config.maxRetries) {
           break}
         if (this && this.shouldRetry(lastError)) {
-          const delay = Math && Math.min(
+          const delay = Math && Math.min()
             config && config.baseDelay * Math && Math.pow(2, attempt),
-            config && config.maxDelay
+            config && config.maxDelay;
           );
           await this && this.delay(delay)} else {
-          break}
-    throw this && this.formatError(lastError!)}
+  // TODO: Implement
+    throw this && this.formatError(lastError!)}"
   private shouldRetry("error": 'ApiError): boolean {
+<<<<<<< HEAD
     // Retry on network errors or 5xx status codes
 <<<<<<< HEAD
 
@@ -104,3 +112,9 @@ interface ApiError extends Error { status?: number; code?: string; details?: any
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/api-error-handler.ts
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // TODO: Implement
+    // Retry on network errors or 5xx status codes;
+  private async delay("ms": number): Promise<void> {"
+</void>"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

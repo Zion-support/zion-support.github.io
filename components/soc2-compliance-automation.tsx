@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 pr-12243
 =======
@@ -11,6 +12,8 @@ pr-12243
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 '
 import SEO from '../components/SEO';'
@@ -19,6 +22,7 @@ import Link from 'next/link';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -30,31 +34,38 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             Automate SOC 2 readiness with continuous controls, evidence;
             pipelines, and prebuilt auditor workflows. Integrates with cloud;
             providers and ticketing systems.;
           </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
 =======
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react',
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
+pr-12243
 
-import React from 'react',
-import SEO from '../components/SEO';
-import Link from 'next/link';
 export default function SOC2ComplianceAutomationPage() {
 	return (
 		<>
 			<SEO title;
-							{ title: 'Audit Room', desc: 'Share evidence securely with auditors, immutable logs.' }
+							{ title: 'Audit Room';, desc: 'Share evidence securely with auditors;, immutable logs.' }
 						].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
@@ -63,25 +74,10 @@ export default function SOC2ComplianceAutomationPage() {
 						))}
 					</div>
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-    <>
-      <SEO
-        title='SOC 2 Compliance Automation'
-        description='Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance.'
-      />
-      <section className='relative pt-28 pb-16 md:pt-36 md:pb-24'>
-        <div className='container mx-auto px-4'>
-          <h1 className='text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple'>
-            SOC 2 Compliance Automation
-          </h1>
-          <p className='mt-6 text-lg text-gray-300 max-w-3xl'>
-            Automate SOC 2 readiness with continuous controls, evidence
-            pipelines, and prebuilt auditor workflows. Integrates with cloud
-            providers and ticketing systems.
-          </p>
+
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
+<<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
 =======
@@ -118,47 +114,78 @@ pr-12243
               {'
                 title: 'Workflow & Tasks''
                 desc: 'Assign remediation tasks, SLAs, and approvals.'
+=======
+pr-12243
+              {
+                title: 'Controls Library'
+                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.';
+              }
+              {
+                title: 'Evidence Automation'
+                desc: 'Pull evidence from cloud;, CI, ticketing, security tools.'
+              }
+              {
+                title: 'Vendor Risk'
+                desc: 'Automated questionnaires;, tracking, and remediation workflows.'
+              }
+              {
+                title: 'Asset Inventory'
+                desc: 'Infrastructure and device inventory with configuration checks.';
+              }
+              {
+                title: 'Workflow & Tasks'
+                desc: 'Assign remediation tasks;, SLAs, and approvals.'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }
 <<<<<<< HEAD
               {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {[;
               {;
-                title: 'Controls Library',;
-                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.',;
+                title: 'Controls Library';,;
+                desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.';,;
               },;
               {;
-                title: 'Evidence Automation',;
-                desc: 'Pull evidence from cloud, CI, ticketing, security tools.',;
+                title: 'Evidence Automation';,;
+                desc: 'Pull evidence from cloud;, CI, ticketing, security tools.',;
               },;
               {;
-                title: 'Vendor Risk',;
-                desc: 'Automated questionnaires, tracking, and remediation workflows.',;
+                title: 'Vendor Risk';,;
+                desc: 'Automated questionnaires;, tracking, and remediation workflows.',;
               },;
               {;
-                title: 'Asset Inventory',;
-                desc: 'Infrastructure and device inventory with configuration checks.',;
+                title: 'Asset Inventory';,;
+                desc: 'Infrastructure and device inventory with configuration checks.';,;
               },;
               {;
-                title: 'Workflow & Tasks',;
-                desc: 'Assign remediation tasks, SLAs, and approvals.',;
+                title: 'Workflow & Tasks';,;
+                desc: 'Assign remediation tasks;, SLAs, and approvals.',;
               },;
               {;
-                title: 'Audit Room',;
+                title: 'Audit Room';,;
                 desc: 'Share evidence securely with auditors; immutable logs.',;
               },;
             ].map(f => (;
 
+<<<<<<< HEAD
 pr-12243
 =======
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+title: 'Audit Room'
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 title: 'Audit Room'
                 desc: 'Share evidence securely with auditors; immutable logs.'
               }
             ].map(f => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -193,6 +220,8 @@ pr-12243
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div
                 key={f.title}
 =======
@@ -207,6 +236,10 @@ pr-12243
               </div>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
@@ -244,7 +277,7 @@ pr-12243
               </div>
             </div>
             <p className='mt-4 text-sm text-gray-400'>
-              Market references:{' '}
+              Market references: {' ';}
               <a
                 className='underline hover:text-cyan-300'
                 href='https://www.vanta.com/'
@@ -293,6 +326,7 @@ pr-12243
       </section>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );					<div className="mt-12 flex flex-wrap items-center gap-4">
 pr-12243
 =======
@@ -301,6 +335,10 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  );					<div className="mt-12 flex flex-wrap items-center gap-4">
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
 =======
@@ -315,12 +353,17 @@ pr-12243
 		</>
 	)
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 pr-12243
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
           </div>;
 
@@ -335,7 +378,7 @@ pr-12243
                 <p className='mt-4 text-3xl font-bold'>;
                   $290;
                   <span className='text-base font-normal text-gray-300'>;
-                title: 'Audit Room',
+                title: 'Audit Room';,
                 desc: 'Share evidence securely with auditors; immutable logs.',
               },
             ].map (function => (
@@ -388,7 +431,7 @@ pr-12243
               </div>;
             </div>;
             <p className='mt - 4 text - sm text - gray - 400'>;
-              Market references:{' '}
+              Market references: {' ';}
               <a;
                 className='underline hover:text - cyan - 300';
                 href='https://www.vanta.com/';
@@ -424,12 +467,16 @@ pr-12243
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+}
 
 }
 pr-12243
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
             <Link;'
               href='/contact';'
@@ -457,6 +504,12 @@ pr-12243
   </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 =======
@@ -464,17 +517,21 @@ pr-12243
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -495,3 +552,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleChange = (values: number[]) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +107,36 @@ export function PriceFilter({
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+  return (
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
+      <button
+        onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium"
+      >
+        <span>Hourly Rate</span>
+        {expanded ? (
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
+        ) : (
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
+        )}
+      </button>
+      {expanded && (
+        <div className="mt-6">
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
+            <span>${priceRange[0]}/hr</span>
+            <span>${priceRange[1]}/hr</span>
+          </div>
+import { ChevronDown, ChevronUp } from "lucide-react",;
+import { Slider } from "@/components/ui/slider",;
+import { PriceFilterProps } from "@/types/filters",;
+export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
+  const handleChange = (values: number[]) => {;
+    setPriceRange([values[0], values[1]])
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return ("
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -154,6 +185,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </button>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -162,11 +194,14 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {expanded && (;
         <div className="mt-6">;
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
             <span>${priceRange[0]}/hr</span>;
             <span>${priceRange[1]}/hr</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
@@ -226,6 +261,53 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
           <Slider
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          </div>;          <Slider
+
+import { ChevronDown, ChevronUp } from "lucide-react";""
+import { Slider } from "@/components/ui/slider";""
+import { PriceFilterProps } from "@/types/filters";"
+
+export function PriceFilter({
+  priceRange,
+  setPriceRange,
+  expanded,
+
+  toggleSection,
+  isMobileFilterOpen,)
+
+}: PriceFilterProps) {
+  const handleChange = (
+    setPriceRange([values[0], values[1]]);) => {
+  return $3;}
+}
+  };
+
+
+
+
+
+  return ("
+    <div className="mb-6 border-b border-zion-blue-light pb-6">;"
+</div>
+      <button;
+        onClick={toggleSection}"
+        className="flex w-full items-center justify-between text-white font-medium">;"
+</button>
+        <span>Hourly Rate</span>;"
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
+"
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
+
+      </button>"
+        <div className="mt-6">"
+</div>"
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">"
+            <span>${priceRange[0]}/hr</span>
+            <span>${priceRange[1]}/hr</span>
+          <Slider;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}
@@ -258,17 +340,18 @@ function PriceFilter() {}
 ;
 <<<<<<< HEAD
   return (
-    <div className="mb - 6 border - b border - zion - blue - light pb - 6">;
+    <div className="mb - 6 border - b border - zion - blue - light pb-6">;
       <button;
         on_click={toggle_section}
-        className="flex w - full items - center justify - between text - white font - medium";
+        className="flex w - full items - center justify - between text - white font-medium";
       >;
         <span > Hourly Rate</span>;
         {expanded ? (
-          <ChevronUp className="h - 4 w - 4 text - zion - slate - light" />) : (
-          <ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}
+          <ChevronUp className="h - 4 w - 4 text - zion - slate-light" />) : (
+          <ChevronDown className="h - 4 w - 4 text - zion - slate-light" />)}
       </button>;
       {expanded && (
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="mt-6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb-2">;
@@ -292,6 +375,33 @@ function PriceFilter() {}
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        <div className="mt-6">;
+          <div className="flex justify - between text - sm text - zion - slate - light mb-2">;
+            onValueChange={handleChange}"
+            className="mt-6""
+          />;
+</Slider>
+        </div>;
+    </div>"
+    <div className="mb - 6 border - b border - zion - blue - light pb - 6">;"
+</div>
+      <button;
+        on_click={toggle_section}"
+        className="flex w - full items - center justify - between text - white font - medium";"
+      >;
+</button>
+        <span > Hourly Rate</span>;)"
+          <ChevronUp className="h - 4 w - 4 text - zion - slate - light" />) : ("
+</ChevronUp>)"
+          <ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}"
+</ChevronDown>
+      </button>;"
+        <div className="mt - 6">;"
+</div>"
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;"
+</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span>${price_range[0]}/hr</span>;
             <span>${price_range[1]}/hr</span>;
           </div>;
@@ -303,6 +413,7 @@ function PriceFilter() {}
 <<<<<<< HEAD
             onValueChange={handle_change}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="mt-6";
 =======
             onValueChange={handle_change}"
@@ -311,8 +422,42 @@ function PriceFilter() {}
 =======
             className="mt - 6";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            className="mt-6";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           />;
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 '"
+=======
+}
+            onValueChange={handleChange}"
+            className="mt-6""
+          />;
+
+        </div>;
+    <div className="mb - 6 border - b border - zion - blue - light pb - 6">;"
+        on_click={toggle_section}"
+        className="flex w - full items - center justify - between text - white font - medium";"
+      >;
+        <span > Hourly Rate</span>;)"
+          <ChevronUp className="h - 4 w - 4 text - zion - slate - light" />) : ("
+)"
+          <ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}"
+
+      </button>;"
+        <div className="mt - 6">;"
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;"
+            <span>${price_range[0]}/hr</span>;
+            <span>${price_range[1]}/hr</span>;
+            value={[price_range[0], price_range[1]]}
+            onValueChange={handle_change}"
+            className="mt - 6";"
+
+        </div>)}
+    </div>);"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

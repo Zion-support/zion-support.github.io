@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -13,36 +14,43 @@
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
   console.log('🧪 Starting Comprehensive Testing Automation...')
+
     "overallStatus"
           "encoding"
           "stdio"
           "status"
           "status"
           "message"
-        execSync('npx tsc --noEmit', { "stdio"})
-        return { "status": 'success', "message"}
+        execSync('npx tsc --noEmit, { "stdio"})
+        return { "status": success, "message"}
           "status"
-        const result = execSync('npm run lint', { "encoding": 'utf8', "stdio"})
-        return { "status": 'success', "message"}
+        const result = execSync('npm run lint, { "encoding": utf8, "stdio"})
+        return { "status": success, "message"}
           "status"
-        execSync('npm run build', { "stdio"})
-        return { "status": 'success', "message"}
+        execSync('npm run build, { "stdio"})
+        return { "status": success, "message"}
           "status"
           "output"
           "stdio"
-        return { "status": 'success', "message"}
+        return { "status": success, "message"}
           "status"
           "message"
           "status"
         return { "status"}
           "status"
         return { "status"}
-        const result = execSync('npm audit --json', { "encoding": 'utf8', "stdio"})
+        const result = execSync('npm audit --json, { "encoding": utf8, "stdio"})
           "status"
         return { "status"}
           "status"
@@ -53,6 +61,7 @@ const { execSync } = require('child_process')
         return { "status"}
     console.error(' Comprehensive testing "failed")
         "status"
+<<<<<<< HEAD
           issues.push({ file, "type": 'eval_usage', "severity"})
           issues.push({ file, "type": 'innerHTML_usage', "severity"})
           issues.push({ file, "type": 'document_write', "severity"})
@@ -66,19 +75,12 @@ const { execSync } = require('child_process')
       { "component": 'PerformanceMonitor', "status"}
 <<<<<<< HEAD
 #!/usr/bin/env node
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const { execSync, spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
-class ComprehensiveTestingAutomation {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'testing-automation.log');
-    this.ensureDirectories();
-  }
 
+<<<<<<< HEAD
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
@@ -327,3 +329,5 @@ module.exports = ComprehensiveTestingAutomation;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

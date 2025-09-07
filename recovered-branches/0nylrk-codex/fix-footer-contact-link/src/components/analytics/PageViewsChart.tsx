@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react";
 import {}
@@ -39,6 +40,11 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {
   Card
@@ -58,6 +64,7 @@ import {
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 =======
 
@@ -70,17 +77,39 @@ import {;
 
 } from "@/components/ui/card";
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+interface PageViewsChartProps {
+  data: Array<{ date: string, views: number }>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void
 }
+export function PageViewsChart({
+  data
+  timeRange
+  onTimeRangeChange
+}: PageViewsChartProps) {
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+interface PageViewsChartProps {
+  data: Array<{ date: string, views: number }>,
+  timeRange: string,
+  onTimeRangeChange: (range: string) => void;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 =======
@@ -95,6 +124,7 @@ export function PageViewsChart({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
@@ -137,6 +167,15 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+} from "@/components/ui/card";
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+interface PageViewsChartProps {;
+  data: Array<{ date: string; views: number }>;
+  timeRange: string;
+  onTimeRangeChange: (range: string) => void
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function PageViewsChart(): any ({;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -221,8 +260,16 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
         <AnalyticsChart
           title=""
 
-
-
+export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>
+        <CardDescription className="text-zion-slate-light">Daily page view statistics</CardDescription>
+      </CardHeader>
+      <CardContent className="p-0 pb-4">
+        <AnalyticsChart 
+          title=""
           data={data |[]}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           dataKeys={["views"]}
@@ -257,6 +304,34 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
 interface PageViewsChartProps {;
   data: Array<{ date: string, views: number }>,;
   timeRange: string;
+
+  onTimeRangeChange,;)
+}: PageViewsChartProps) {;
+  return ("
+    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;"
+</Card>"
+      <CardHeader className="pb-2">;"
+</CardHeader>"
+        <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>;""
+        <CardDescription className="text-zion-slate-light">;"
+</CardDescription>
+        </CardDescription>;
+      </CardHeader>;"
+      <CardContent className="p-0 pb-4">;"
+</CardContent>
+        <AnalyticsChart;"
+          title="""
+          data={data |[]}"
+          dataKeys={["views"]}"
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />
+</AnalyticsChart>
+      </CardContent>
+    </Card>
+
+  data: Array<{ date: string, views: number }>,;
+  timeRange: string;,)
   onTimeRangeChange: (range: string) => void;
 }
 ;
@@ -305,15 +380,40 @@ export function PageViewsChart() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-
-
           data={data || []}
           dataKeys={["views"]}
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
+;
+interface PageViewsChartProps {;
+  data:Array<{ date:string, views:number }>,;
+  timeRange:string,;
+  onTimeRangeChange:(range:string) => void;
+}
+;
+export function PageViewsChart({ data, timeRange, onTimeRangeChange } PageViewsChartProps) {;
+  return (;
+    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
+      <CardHeader className="pb-2">;
+        <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>;
+        <CardDescription className="text-zion-slate-light">Daily page view statistics</CardDescription>;
+      </CardHeader>;
+      <CardContent className="p-0 pb-4">;
+        <AnalyticsChart ;
+          title="";
+          data={data || []}
+          dataKeys={['views']}
           data={data || []}
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          data={data || []}
+          dataKeys={["views"]}          onTimeRangeChange={onTimeRangeChange}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         />;
       </CardContent>;
     </Card>;
@@ -326,6 +426,7 @@ export function PageViewsChart() { return null; }
 =======
     </Card>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -342,6 +443,8 @@ import React from './react';
 import {}
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 import React from './react';
 import {
@@ -410,7 +513,10 @@ function PageViewsChart() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   ),;}
  interface PageViewsChartProps {
@@ -434,15 +540,74 @@ onTimeRangeChange: (range: string) => void
 }
           data={data || []}
           dataKeys={["views"]}
+<<<<<<< HEAD
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />
       </CardContent>
         />;
+=======
+"
+} from "@/components/ui/card";""
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";"
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  timeRange: string;,
+  onTimeRangeChange: (range: string) => void;
+
+
+interface PageViewsChartProps {
+  // TODO: Implement
+  data: Array<{ date: string, views: number }>,
+  timeRange: string,
+
+
+export function PageViewsChart(): any ({;
+  data,;
+  timeRange,;
+  onTimeRangeChange,;)
+}: PageViewsChartProps) {;
+  return ("
+
+  return (;"
+    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;"
+      <CardHeader className="pb-2">;"
+        <CardTitle className="text-white text-lg">Page Views Trend;""
+        <CardDescription className="text-zion-slate-light">;"
+
+        ;
+      ;"
+      <CardContent className="p-0 pb-4">;"
+
+        <AnalyticsChart;"
+          title="""
+          data={data |[]}"
+          dataKeys={["views"]}"
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />
+
+  data: Array<{ date: string, views: number }>,;
+  timeRange: string;,)
+export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {;
+  return (;"
+        <CardDescription className="text-zion-slate-light">Daily page view statistics;"
+
+          title="";"
+          data={data || []}"
+        />;
+
+        />;
+</AnalyticsChart>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -461,3 +626,32 @@ onTimeRangeChange: (range: string) => void
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </Card>;
+
+  data: Array<{ date: string; views: number }>;
+  time_range: string;,)
+export /**
+ * PageViewsChart - Function description;
+ */
+function PageViewsChart() {
+    <Card className="bg - zion - blue - dark border - zion - blue - light overflow - hidden">;"
+      <CardHeader className="pb - 2">;"
+        <CardTitle className="text - white text - lg">Page Views Trend;""
+        <CardDescription className="text - zion - slate - light">;"
+
+      <CardContent className="p - 0 pb - 4">;"
+
+          data_keys={["views"]}"
+          time_range={time_range}
+
+      ;)
+    );"
+pr-12325
+          onTimeRangeChange={onTimeRangeChange}
+        />;
+</AnalyticsChart>
+      </CardContent>;)
+    </Card>);"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

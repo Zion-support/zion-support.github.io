@@ -2,18 +2,13 @@
       "totalFiles": files.length;
       "fixedFiles": this.fixedFiles.length;
       "errors": this.errors;
-      "fixedFileList": this.fixedFiles};
-
-    fs.writeFileSync(
-      path.join(this.projectRoot, 'batch-syntax-fix-report.json');
-      JSON.stringify(report, null, 2)
-    );
+      "fixedFileList": this.fixedFiles};"
+    fs.writeFileSync()"
 
     this.log('📊 Report saved to batch-syntax-fix-report.json');
   }
-}
 
-// Run the fixer
+// Run the fixer;
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
 <<<<<<< HEAD
@@ -34,6 +29,7 @@ fixer.run().catch(console.error);
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
@@ -72,32 +68,30 @@ ursor/automate-test-improve-and-merge-code-59d5
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'')]
-      "
-      /import\s*{[^}]+}\s*from\s*['"][^'']
-    content = content.replace(/['"]\s*;\s*['')]
-    content = content.replace(/['"]\s*;\s*([^'"]*)\s*['']
-      /\[\s*['"]\s*;\s*([^'')]
-      "
-      /\[\s*['"]\s*([^'')]
-      "
-    content = content.replace(/{\s*['"]\s*;\s*([^'"]*)\s*['"]\s*:/g, "}
-    content = content.replace(/:\s*['"]\s*;\s*([^'"]*)\s*['"]\s*,/g, "
-      /:\s*['"]\s*;\s*([^'')]
-      "
-      /className\s*=\s*['"]\s*;\s*([^'')]
-      "
-      /href\s*=\s*['"]\s*;\s*([^'')]
-      "
-      /title\s*=\s*['"]\s*;\s*([^'')]
-      "
-        line.includes(")
-        !line.endsWith(")
-        return line + "
-        line.includes('')
-        !line.endsWith('')
-        return line + ''
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^)]
+      """
+      /import\s*{[^}]+}\s*from\s*['"][^]
+    content = content.replace(/['"]\s*;\s*[)]
+    content = content.replace(/['"]\s*;\s*([^'"]*)\s*[]
+      /\[\s*['"]\s*;\s*([^)]
+      /\[\s*['"]\s*([^)]
+    content = content.replace(/{\s*['"]\s*;\s*([^'"]*)\s*['"]\s*:/g, "}""
+    content = content.replace(/:\s*['"]\s*;\s*([^'"]*)\s*['"]\s*,/g, """
+      /:\s*['"]\s*;\s*([^)]
+      /className\s*=\s*['"]\s*;\s*([^)]
+      /href\s*=\s*['"]\s*;\s*([^)]
+      /title\s*=\s*['"]\s*;\s*([^)]
+        line.includes(")""
+        !line.endsWith(")""
+        return line + """
+
+        line.includes()
+        !line.endsWith()
+        return line + 

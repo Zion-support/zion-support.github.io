@@ -1,13 +1,39 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
-import { motion  } from 'framer-motion';
+
 import Link from 'next/link';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin  } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin   } from 'lucide-react';
+import { aiAutonomousServices2026   } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026   } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026  } from '../../data/2026-metaverse-digital-reality-services';
+
+export default function UltraAdvancedHero2026() {const totalServices = null;
+import { ArrowRight;
+  Star;
+  TrendingUp;
+  Zap;
+  Brain;
+  Rocket;
+  Globe;
+  Sparkles;
+  CheckCircle;
+  Phone;
+  Mail;}
+  MapPin;}
+  ArrowRight,Star,TrendingUp,Zap,Brain,Rocket,Globe,Sparkles,CheckCircle,Phone,Mail,MapPin} from 'lucide-react';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
+
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+
 export default function UltraAdvancedHero2026() {
   const totalServices = null;
+<<<<<<< HEAD
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
   ArrowRight
@@ -806,12 +832,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           className="absolute bottom-1/3 right-10 text-5xl opacity-20"
         >
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           🌐
         </motion.div>
       </div>
     </section>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Message checking functionality
@@ -15,6 +16,8 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
 
 <<<<<<< HEAD
@@ -22,6 +25,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -275,3 +279,6 @@ export const checkMessage = (messageContent:string):MessageAnalysisResult => {;
 };
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

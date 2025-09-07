@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
 
 =======
@@ -68,3 +69,35 @@ export function SearchFilter({ searchTerm, setSearchTerm } SearchFilterProps) {;
 }"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/SearchFilter.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Input } from "@/components/ui/input";""
+import { SearchIcon } from 'lucide-react';
+import { SearchFilterProps } from "@/types/filters";"
+;
+export function SearchFilter({ searchTerm, setSearchTerm } SearchFilterProps) {;
+  return (;"
+    <div className="mb-6">;"
+</div>"
+      <div className="relative">;"
+        <label htmlFor="talent-search" className="sr-only">;"
+</label>
+        </label>;"
+        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />;"
+
+        <Input;"
+          id="talent-search";""
+          type="text";""
+          placeholder="Search talents...";"
+          value={searchTerm})
+          onChange={(e) => setSearchTerm(e.target.value)}
+"
+        <p id="talent-search-help" className="sr-only">;"
+</p>
+        </p>;
+      </div>;
+    </div>;"
+  return (<div className="mb-6" > <div className="relative" > <label htmlFor="talent-search" className="sr-only" > absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"aria-hidden=" true"/> <Input id=" talent-search"type=" text"placeholder=" Search talents..."value= {;"  searchTerm ";"}/> <p id=" talent-search-help"className=" sr-only" > Type a name or skill to filter results </p> </div> </div>) ;"}"""
+  return (<div className="mb-6" > <div className="relative" > <label htmlFor="talent-search" className="sr-only" > absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"aria-hidden=" true"/> <Input id=" talent-search"type=" text"placeholder=" Search talents..."value= {;"
+</div>)"
+}/> <p id=" talent-search-help"className=" sr-only" > Type a name or skill to filter results </p> </div> </div>) ;""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

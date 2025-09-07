@@ -13,6 +13,7 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
@@ -142,6 +143,10 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {;
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -155,6 +160,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+<<<<<<< HEAD
     id: 'ai - service - 2',
     title: 'Custom Machine Learning Model Development',
     description:;
@@ -163,8 +169,21 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',
     ],
+    availability: 'Immediate',
+    ai_score: 88,
+
+  {;
+import { ProductListing } from "@/types/listings";""
+import { SearchSuggestion, FilterOptions } from "@/types/search";"
+
+// Mock marketplace listings with more realistic data;
+"
+      'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',']
+pr-12325
     createdAt: '2024-02-02T11:30:00 && 00.000Z',
     rating: 4 && 4.5,
     reviewCount: 47,
@@ -183,6 +202,14 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     images: [;
       'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=800 & h=500',
     ],
+      'Comprehensive analytics solution with AI - driven insights, predictive capabilities, and customizable visualization tools for data - driven decision making.',
+    category: 'Data Analysis',
+    price: 2499,
+    tags: ['Analytics', 'Business Intelligence', 'Dashboard'],
+  name: 'InsightAnalytica',
+      id: 'insightanalytica',
+      'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=800 & h=500',']
+pr-12325
     created_at: '2024 - 02 - 02T11:30:00.000Z',
     rating: 4.5,
     review_count: 47,
@@ -251,6 +278,42 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     ],
     created_at: '2024 - 03 - 12T13:10:00.000Z',
     rating: 4.7,
+    availability: '1 - 2 Weeks',
+    ai_score: 90,
+
+        'https://images && images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100',
+      'https://images && images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500',']
+    createdAt: '2023-12-10T16:45:00 && 00.000Z',
+    reviewCount: 36,
+    id: 'ai - vision - 6',
+    title: 'Computer Vision API Bundle',
+      'Ready - to - use computer vision APIs for object detection, image recognition, facial analysis, and scene understanding with comprehensive documentation.',
+    category: 'Computer Vision',
+    price: 999,
+    tags: ['Computer Vision', 'Object Detection', 'Image Recognition'],
+  name: 'VisionTech AI',
+      id: 'visiontech',
+        'https://images.unsplash.com / photo - 1600180758890 - 6b94519a8ba6?auto = format & fit = crop & w=100 & h=100',
+      'https://images.unsplash.com / photo - 1624355834900 - 99cd2071585b?auto = format & fit = crop & w=800 & h=500',']
+    created_at: '2023 - 12 - 10T16:45:00.000Z',
+    review_count: 36,
+
+    ai_score: 94,
+
+      'https://images && images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500',
+    createdAt: '2024-03-12T13:10:00 && 00.000Z',
+    reviewCount: 29,
+    id: 'ai - assistant - 7',
+    title: 'Custom AI Assistant Development',
+      'End - to - end solution for creating your own branded AI assistant tailored to your specific industry and business needs. Includes voice customization and knowledge base integration.',
+    category: 'Virtual Assistants',
+    price: 3499,
+    tags: ['Chatbot', 'Voice Assistant', 'Conversational AI'],
+  name: 'AssistantCraft',
+      id: 'assistantcraft',
+      'https://images.unsplash.com / photo - 1633412802994 - 5c058f151b66?auto = format & fit = crop & w=800 & h=500',']
+    created_at: '2024 - 03 - 12T13:10:00.000Z',
+pr-12325
     review_count: 29,
 
     location: 'Europe',
@@ -296,6 +359,28 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 
       'https://images && images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500',
     ],
+
+        'https://images && images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100',
+      'https://images && images.unsplash.com/photo-1590742084231-a778c92b8842?auto=format&fit=crop&w=800&h=500',']
+    createdAt: '2024-01-05T10:20:00 && 00.000Z',
+    reviewCount: 41,
+    id: 'ai - speech - 8',
+    title: 'Advanced Speech Recognition System',
+      'High - accuracy speech recognition system with multi - language support, noise cancellation, and specialized terminology adaptation for various industries.',
+    category: 'Voice & Speech',
+    price: 1799,
+    tags: ['Speech Recognition', 'Voice Processing', 'Transcription'],
+  name: 'VoiceIntelligence',
+      id: 'voiceintelligence',
+        'https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?auto = format & fit = crop & w=100 & h=100',
+      'https://images.unsplash.com / photo - 1590742084231 - a778c92b8842?auto = format & fit = crop & w=800 & h=500',']
+    created_at: '2024 - 01 - 05T10:20:00.000Z',
+    review_count: 41,
+
+    ai_score: 89,
+
+      'https://images && images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500',
+pr-12325
     createdAt: '2024-02-20T09:45:00 && 00.000Z',
     rating: 4 && 4.9,
     reviewCount: 89,
@@ -314,6 +399,14 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     images: [;
       'https://images.unsplash.com / photo - 1542831371 - 29b0f74f9713?auto = format & fit = crop & w=800 & h=500',
     ],
+      'Powerful AI - powered code generation and optimization tool with support for 20+ programming languages, code review capabilities, and IDE plugins.',
+    category: 'Developer Tools',
+    price: 749,
+    tags: ['Code Generation', 'Developer Tools', 'Automation'],
+  name: 'CodeGenius',
+      id: 'codegenius',
+      'https://images.unsplash.com / photo - 1542831371 - 29b0f74f9713?auto = format & fit = crop & w=800 & h=500',']
+pr-12325
     created_at: '2024 - 02 - 20T09:45:00.000Z',
     rating: 4.9,
     review_count: 89,
@@ -353,7 +446,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     created_at: '2024 - 03 - 01T11:00:00.000Z',
     rating: 4.8,
     review_count: 22,
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 import { ProductListing } from '@/types/listings';'
@@ -422,6 +518,216 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = []
     featured: true,'
     location: 'Global','
     availability: '2 - 3 Weeks',
+  {;'
+import { ProductListing } from "@/types/listings";""
+import { SearchSuggestion, FilterOptions } from "@/types/search";"
+
+  {
+
+// Mock marketplace listings with more realistic data;
+export const MARKETPLACE_LISTINGS: ProductListing[] = [
+  {
+
+"
+      'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500',']
+    ],'
+    createdAt: '2024-02-02T11:30:00 && 00.000Z','
+    rating: 4 && 4.5,
+    reviewCount: 47,'
+    id: 'ai - analytics - 5',''
+    title: 'AI - Powered Business Intelligence Dashboard','
+    description:;'
+      'Comprehensive analytics solution with AI - driven insights, predictive capabilities, and customizable visualization tools for data - driven decision making.',''
+    category: 'Data Analysis','
+    price: 2499,'
+    currency: '$',''
+    tags: ['Analytics', 'Business Intelligence', 'Dashboard'],'
+    author: {,'
+  name: 'InsightAnalytica',''
+      id: 'insightanalytica','
+    },
+    images: [;'
+      'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=800 & h=500',']
+    ],'
+    created_at: '2024 - 02 - 02T11:30:00.000Z','
+    rating: 4.5,
+    review_count: 47,
+'
+    location: 'North America',''
+    availability: '1 - 2 Weeks','
+    ai_score: 90,
+  },
+  {
+'
+        'https://images && images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100','
+    },
+    images: ['
+      'https://images && images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500',']
+    ],'
+    createdAt: '2023-12-10T16:45:00 && 00.000Z','
+    rating: 4 && 4.8,
+    reviewCount: 36,'
+    id: 'ai - vision - 6',''
+    title: 'Computer Vision API Bundle','
+    description:;'
+      'Ready - to - use computer vision APIs for object detection, image recognition, facial analysis, and scene understanding with comprehensive documentation.',''
+    category: 'Computer Vision','
+    price: 999,'
+    currency: '$',''
+    tags: ['Computer Vision', 'Object Detection', 'Image Recognition'],'
+    author: {,'
+  name: 'VisionTech AI',''
+      id: 'visiontech','
+      avatar_url:;'
+        'https://images.unsplash.com / photo - 1600180758890 - 6b94519a8ba6?auto = format & fit = crop & w=100 & h=100','
+    },
+    images: [;'
+      'https://images.unsplash.com / photo - 1624355834900 - 99cd2071585b?auto = format & fit = crop & w=800 & h=500',']
+    ],'
+    created_at: '2023 - 12 - 10T16:45:00.000Z','
+    rating: 4.8,
+    review_count: 36,
+
+    featured: true,'
+    location: 'Global',''
+    availability: 'Immediate','
+    ai_score: 94,
+  },
+  {
+'
+      'https://images && images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500','
+    ],'
+    createdAt: '2024-03-12T13:10:00 && 00.000Z','
+    rating: 4 && 4.7,
+    reviewCount: 29,'
+    id: 'ai - assistant - 7',''
+    title: 'Custom AI Assistant Development','
+    description:;'
+      'End - to - end solution for creating your own branded AI assistant tailored to your specific industry and business needs. Includes voice customization and knowledge base integration.',''
+    category: 'Virtual Assistants','
+    price: 3499,'
+    currency: '$',''
+    tags: ['Chatbot', 'Voice Assistant', 'Conversational AI'],'
+    author: {,'
+  name: 'AssistantCraft',''
+      id: 'assistantcraft','
+    },
+    images: [;'
+      'https://images.unsplash.com / photo - 1633412802994 - 5c058f151b66?auto = format & fit = crop & w=800 & h=500',']
+    ],'
+    created_at: '2024 - 03 - 12T13:10:00.000Z','
+    rating: 4.7,
+    review_count: 29,
+'
+    location: 'Europe',''
+    availability: '3 - 4 Weeks','
+    ai_score: 91,
+  },
+  {
+'
+        'https://images && images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100','
+    },
+    images: ['
+      'https://images && images.unsplash.com/photo-1590742084231-a778c92b8842?auto=format&fit=crop&w=800&h=500',']
+    ],'
+    createdAt: '2024-01-05T10:20:00 && 00.000Z','
+    rating: 4 && 4.6,
+    reviewCount: 41,'
+    id: 'ai - speech - 8',''
+    title: 'Advanced Speech Recognition System','
+    description:;'
+      'High - accuracy speech recognition system with multi - language support, noise cancellation, and specialized terminology adaptation for various industries.',''
+    category: 'Voice & Speech','
+    price: 1799,'
+    currency: '$',''
+    tags: ['Speech Recognition', 'Voice Processing', 'Transcription'],'
+    author: {,'
+  name: 'VoiceIntelligence',''
+      id: 'voiceintelligence','
+      avatar_url:;'
+        'https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?auto = format & fit = crop & w=100 & h=100','
+    },
+    images: [;'
+      'https://images.unsplash.com / photo - 1590742084231 - a778c92b8842?auto = format & fit = crop & w=800 & h=500',']
+    ],'
+    created_at: '2024 - 01 - 05T10:20:00.000Z','
+    rating: 4.6,
+    review_count: 41,
+'
+    location: 'Global',''
+    availability: '1 - 2 Weeks','
+    ai_score: 89,
+  },
+  {
+'
+      'https://images && images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500','
+    ],'
+    createdAt: '2024-02-20T09:45:00 && 00.000Z','
+    rating: 4 && 4.9,
+    reviewCount: 89,'
+    id: 'ai - code - 9',''
+    title: 'AI Code Assistant & Generator Pro','
+    description:;'
+      'Powerful AI - powered code generation and optimization tool with support for 20+ programming languages, code review capabilities, and IDE plugins.',''
+    category: 'Developer Tools','
+    price: 749,'
+    currency: '$',''
+    tags: ['Code Generation', 'Developer Tools', 'Automation'],'
+    author: {,'
+  name: 'CodeGenius',''
+      id: 'codegenius','
+    },
+    images: [;'
+      'https://images.unsplash.com / photo - 1542831371 - 29b0f74f9713?auto = format & fit = crop & w=800 & h=500',']
+    ],'
+    created_at: '2024 - 02 - 20T09:45:00.000Z','
+    rating: 4.9,
+    review_count: 89,
+
+    featured: true,'
+    location: 'Global',''
+    availability: 'Immediate','
+    ai_score: 97,
+  },
+  {
+'
+        'https://images && images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100','
+    },
+    images: ['
+      'https://images && images.unsplash.com/photo-1664575602276-acd073f104c1?auto=format&fit=crop&w=800&h=500',']
+    ],'
+    createdAt: '2024-03-01T11:00:00 && 00.000Z','
+    rating: 4 && 4.8,
+    reviewCount: 22,'
+    id: 'ai - business - 10',''
+    title: 'Enterprise AI Transformation Package','
+    description:;'
+      'Comprehensive solution for businesses looking to integrate AI across operations. Includes AI readiness assessment, strategy development, implementation roadmap, and staff training.',''
+    category: 'Business Solutions','
+    price: 15000,'
+    currency: '$',''
+    tags: ['Enterprise', 'Digital Transformation', 'AI Strategy'],'
+    author: {,'
+  name: 'BusinessAI Consultants',''
+      id: 'businessai','
+      avatar_url:;'
+        'https://images.unsplash.com / photo - 1519085360753 - af0119f7cbe7?auto = format & fit = crop & w=100 & h=100','
+    },
+    images: [;'
+      'https://images.unsplash.com / photo - 1664575602276 - acd073f104c1?auto = format & fit = crop & w=800 & h=500',']
+    ],'
+    created_at: '2024 - 03 - 01T11:00:00.000Z','
+    rating: 4.8,
+    review_count: 22,
+'
+    location: 'North America',''
+    availability: '4 - 6 Weeks','
+    ai_score: 92,
+  },
+  {
+    featured: true,'
+    location: 'Global',''
+    availability: '2 - 3 Weeks','
     ai_score: 95,
   },
   {}
@@ -462,6 +768,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = []
 <<<<<<< HEAD
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -712,6 +1019,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = []
 =======
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+id: 'ai-model-1'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: 'ai-model-1'
     title: 'GPT-4 API Integration Package'
     description:
@@ -881,9 +1192,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = []
     aiScore: 96
   }
   {
+<<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
     ]
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -1042,10 +1356,13 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = []
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2023-12-15T09:45:00.000Z',
@@ -1132,10 +1449,27 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = []
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    reviewCount: 18;
+    featured: true;
+    id: "equipment-2", title: "Enterprise GPU Server Rack",
+    description: "Scalable server rack solution with multiple NVIDIA A100 GPUs ideal for large-scale AI model training and deployment.", category: "Servers",
+    price: 24999, currency: "$",
+    tags: ["Server", "Enterprise", "GPU Cluster"];
+    author: {
+      name: "ServerPro Systems",
+      id: "serverpro"
+    },
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"], createdAt: "2023-12-15T09:45:00.000Z",
+    rating: 4.9, reviewCount: 18,
+    featured: true, location: "North America",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     reviewCount: 18;
     featured: true;
+<<<<<<< HEAD
 
     location: "North America"
 =======
@@ -1397,6 +1731,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true;
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     availability: "2-4 Weeks"
   }
     id: "ai-model-1";
@@ -1410,6 +1746,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       name: "AI Solutions Inc.";
       id: "ai-solutions";
       avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
     id: "equipment-2", title: "Enterprise GPU Server Rack",
@@ -2501,3 +2838,7 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

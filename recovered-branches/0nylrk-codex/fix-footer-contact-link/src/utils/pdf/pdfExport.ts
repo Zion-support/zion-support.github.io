@@ -6,6 +6,7 @@
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -18,6 +19,9 @@
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -112,9 +116,12 @@ export interface ExportOptions {  theme: 'light' | 'dark';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
   theme: 'light' | 'dark';
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export interface ExportOptions {  theme: 'light' | 'dark';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   includePortfolio?: boolean;
 
   maxProjects?: number;
@@ -177,6 +184,7 @@ export async function exportResumeToPDF(;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+<<<<<<< HEAD
 
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
@@ -373,6 +381,8 @@ export async function exportResumeToPDF (
   // Check condition;
 if ( {) {}
   $2;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
     current_y = addPortfolioSection (doc, resume.portfolio_projects, colors, current_y, max_projects);
 <<<<<<< HEAD
@@ -380,6 +390,7 @@ if ( {) {}
   }
   return doc.output ('blob');
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }'
@@ -391,6 +402,15 @@ if ( {) {}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+  // Add portfolio projects if needed;
+  // Check condition;
+
+if ( {) {
+  $2;
+    current_y = addPortfolioSection (doc, resume.portfolio_projects, colors, current_y, max_projects);
+  return doc.output ('blob');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { Resume } from '@/types/resume',;
 import { jsPDF } from 'jspdf',;
@@ -403,59 +423,26 @@ import { addWorkExperienceSection } from './sections/workExperienceSection',;
 import { addEducationSection } from './sections/educationSection',;
 import { addCertificationsSection } from './sections/certificationsSection',;
 import { addPortfolioSection } from './sections/portfolioSection',;
-;
-export interface ExportOptions {;
   theme:'light' | 'dark',;
   includePortfolio?:boolean,;
   maxProjects?:number,;
   fontFamily?:FontFamily;
-}
-;
-const defaultOptions:ExportOptions = {;
+const defaultOptions: ExportOptions = {;,
   theme:'light',;
   includePortfolio:true,;
   maxProjects:2,;
   fontFamily:'default';
 },;
-;
 export async function exportResumeToPDF(;
   resume:Resume, ;
   options:Partial<ExportOptions> = {}
 ):Promise<Blob> {;
-  const mergedOptions:ExportOptions = { ...defaultOptions, ...options },;
-  const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions,;
-  ;
-  // Create new PDF document (A4);
-  const doc = new jsPDF({;
-    orientation:'portrait',;
-    unit:'mm',;
-    format:'a4';
-  }),;
-  ;
-  // Load custom fonts if specified;
-  await loadCustomFonts(doc, fontFamily),;
-  ;
-  // Set up colors based on theme;
-  const colors = getPdfThemeColors(theme),;
-  ;
-  // Set background color;
-  doc.setFillColor(colors.background),;
-  doc.rect(0, 0, 210, 297, 'F'), // Fill entire page;
-  ;
-  // Set text color based on theme;
-  doc.setTextColor(colors.text),;
-  ;
-}
-;
-const defaultOptions: ExportOptions = {;
-  theme: 'light',;
-  includePortfolio: true,;
-  maxProjects: 2,;
-  fontFamily: 'default';
-},;
-export async function exportResumeToPDF(;
-  resume: Resume,;
+
+
+pr-12325
+</Blob>
   options: Partial<ExportOptions> = {}
+</ExportOptions>
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options },;
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions,;
@@ -486,4 +473,9 @@ export async function exportResumeToPDF(;
   }
   return doc.output('blob')
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</Blob>'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -40,7 +40,7 @@ function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 exports.config = {
-  schedule: '*/30 * * * *'
+  schedule: '*/30 * * * *
 }
 
 exports.handler = async () => {
@@ -50,14 +50,14 @@ exports.handler = async () => {
     const res = fn();
     if (res.stdout) logs.push(res.stdout);
     if (res.stderr) logs.push(res.stderr);
-
+`;
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
-  }
   step('components:catalog', () =>
     runNode('automation/components-catalog.cjs')
   );
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+<<<<<<< HEAD
   return { statusCode: 200, body: logs.join('\n') }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,3 +65,6 @@ exports.handler = async () => {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  return { statusCode: 200, body: logs.join('\n') }`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

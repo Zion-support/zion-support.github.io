@@ -20,29 +20,27 @@
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node;
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Zion Tech Group - Enhanced Automation Suite')
-console.log('====')
-  log(message, type = 'info')
-    const prefix = type === 'error' ? '' : type === 'success' ? '' : 'ℹ'
-        "encoding"
-        "stdio"
-      this.log(`${description} "failed"`)
-    const lintCommands = [{ "cmd": 'npx eslint . --ext .ts,.tsx,.js,.jsx', "desc"}]
-      { "cmd": 'npx tsc --noEmit', "desc"}
-      await this.runCommand(cmd, desc, { "stdio"})
-    const buildCommands = [{ "cmd": 'npm run build', "desc"}]
-      { "cmd": 'npx next build', "desc"}
+
       const result = await this.runCommand(cmd, desc, { "stdio"})
       "recommendations"
     this.log(`Report saved "to"`)
 <<<<<<< HEAD
 =======
       this.log(` Enhanced automation suite "failed"`)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
@@ -55,3 +53,7 @@ console.log('====')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -8,8 +8,9 @@ class SecurityAuditor {}
     this.interval = 300000; // 5 minutes;
   };
   async start() {}
-    console.log('Starting Security Auditor...');
+
     this.isRunning = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // Initial security check;
@@ -22,9 +23,10 @@ class SecurityAuditor {}
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Initial security check;
     await this.runSecurityCheck();
-    
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
@@ -35,6 +37,7 @@ class SecurityAuditor {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log('Security Auditor started successfully')};
   async runSecurityCheck() {}
@@ -75,10 +78,17 @@ class SecurityAuditor {}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
+=======
+        errorOutput += data.toString()}
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.log('Security audit passed ✓')) {}
      {}
           console.log('Security audit passed ✓')}} else {}
           console.log('Security audit found issues ✗');
+<<<<<<< HEAD
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
 <<<<<<< HEAD
@@ -137,11 +147,13 @@ class SecurityAuditor {}
       clearInterval(this.intervalId)};
     console.log('Security Auditor stopped')}};
 };
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Start the auditor if run directly;
-if ( {})
   const auditor = new SecurityAuditor) {}
-     {}
   const auditor = new SecurityAuditor}(;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -177,3 +189,9 @@ module.exports = SecurityAuditor;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // Handle graceful shutdown;
+
+  auditor.start().catch(console.error)};
+module.exports = SecurityAuditor;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

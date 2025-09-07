@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
@@ -44,7 +45,22 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+
+
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+
+
+
+
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node
+
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+#!/usr/bin/env node;
 const sharp = // // require('sharp')
 const fs = // // require('fs')
 const path = // // require('path')
@@ -58,6 +74,7 @@ async function optimizeImages() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,10 +93,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.log('No images directory found');
   }
     return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -112,10 +133,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
+=======
+
+
+console.log('No images directory found');
+  }
+    return;
+  }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const sharp = // // require('sharp')'
 const fs = // // require('fs')'
@@ -145,6 +175,98 @@ async function optimizeImages() { return null; }
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+
+    console.log('No images directory found')}
+    return}
+  const files = fs.readdirSync(imagesDir;);
+  const imageFiles = files.filter(file => )
+    /.(jpg|jpeg|png|webp)$/i.test(file)
+  ;);
+
+      console.log(`"Optimized": ${file}`)} catch (error) {
+      console.error(`Error optimizing ${file}:`, error.message)}
+  }
+}
+optimizeImages();
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { console.log('No images directory found')) { ) { console.log('No images directory found')} return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); for (const file of imageFiles) { const inputPath = path.join(imagesDir,file;); const outputPath = path.join(imagesDir,file.replace(/\.(jpg|jpeg|png)$/i,'.webp');); try { await sharp(inputPath) .webp({ quality: '80' }) .toFile(outputPath); console.log(`Optimized: ${file}`)} catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+
+
+
+
+
+
+      console.log(`Optimized: ${file}`);} catch (error) {
+      console.log(`"Optimized": ${file}`)} catch (error) {
+      console.error(`Error optimizing ${file}:`, error.message)}
+  }
+
+  for (const file of imageFiles) {
+    const inputPath = path.join(imagesDir, file;);
+    const outputPath = path.join(imagesDir, file.replace(/\.(jpg|jpeg|png)$/i, '.webp'););
+    try {
+  // TODO: Implement
+      await sharp(inputPath)
+        .webp({ "quality": '80' })
+        .toFile(outputPath);
+`;
+      console.log(`"Optimized": ${file}`)} catch (error) {"`;
+      console.error(`Error optimizing ${file}:`, error.message)}
+optimizeImages();"`;
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { console.log('No images directory found')) { ) { console.log('No images directory found')} return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); for (const file of imageFiles) { const inputPath = path.join(imagesDir,file;); const outputPath = path.join(imagesDir,file.replace(/\.(jpg|jpeg|png)$/i,'.webp');); try { await sharp(inputPath) .webp({ quality: '80' }) .toFile(outputPath); console.log(`Optimized: ${file}`)} catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();`;
+      console.log(`Optimized: ${file}`);} catch (error) {`;
+
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { console.log('No images directory found')) { ) { console.log('No images directory found')} return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); console.log(`Optimized: ${file}`)} catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();`;
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { console.log('No images directory found')) { ) { console.log('No images directory found')} return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); console.log(`Optimized: ${file}`)} catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+const sharp = require('sharp');
+const fs = require('fs');
+const path = require('path');
+async function optimizeImages() {}
+  const publicDir = path.join(process.cwd(), 'public;';);
+  const images = [];
+  function findImages(dir) {}
+    const files = fs.readdirSync(dir;);
+    files.forEach(file => {})
+      const filePath = path.join(dir, file;);
+      const stat = fs.statSync(filePath;);
+      if () {}
+        findImages(filePath)} else if (/.(jpg|jpeg|png|webp)$/i.test(file)) {}
+        images.push(filePath)};
+    })};
+  findImages(publicDir)) {}
+    ) {}
+  findImages(publicDir)};
+  for (const imagePath of images) {}
+    try {}
+      const outputPath = imagePath.replace(/\.(jpg|jpeg|png)$/i, '.webp;';);
+      await sharp(imagePath);
+        .webp({ "quality": 80 }")
+});
+        .toFile(outputPath);"`;
+      console.log(`"Optimized": ${imagePath} -> ${outputPath}`)} catch (error) {`}"`;
+      console.error(`Failed to optimize ${imagePath}:`, error.message)};
+  };
+#!/usr/bin/env node;"
+async function ensureDeps() {
+  try { require('imagemin'); } catch { console.error('Missing imagemin deps'); process.exit(1); }
+
+async function run() {
+  await ensureDeps();
+  const imagemin = require('imagemin');
+  const mozjpeg = require('imagemin-mozjpeg');
+  const pngquant = require('imagemin-pngquant');
+  const svgo = require('imagemin-svgo');
+  const fg = require('fast-glob');
+
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+console.log('🖼️  Image optimization script - placeholder');
+console.log('✅ Image optimization completed');
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   for (const file of imageFiles) {
     const inputPath = path.join(imagesDir, file;);
     const outputPath = path.join(imagesDir, file.replace(/\.(jpg|jpeg|png)$/i, '.webp'););
@@ -164,6 +286,7 @@ async function optimizeImages() { return null; }
 }
 optimizeImages();
 #!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { console.log('No images directory found')) { ) { console.log('No images directory found')} return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); for (const file of imageFiles) { const inputPath = path.join(imagesDir,file;); const outputPath = path.join(imagesDir,file.replace(/\.(jpg|jpeg|png)$/i,'.webp');); try { await sharp(inputPath) .webp({ quality: '80' }) .toFile(outputPath); console.log(`Optimized: ${file}`)} catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -379,43 +502,19 @@ optimizeImages();'`
   }
 =======
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const sharp = require('sharp');
-const fs = require('fs');
-const path = require('path');
 
-async function optimizeImages() {
-  const publicDir = path.join(__dirname, 'public');
-  const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
-  
-  function scanDirectory(dir) {
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        scanDirectory(filePath);
-      } else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
-        optimizeImage(filePath);
-      }
-    }
-  }
-  
-  async function optimizeImage(imagePath) {
-    try {
-      const outputPath = imagePath.replace(/\.(jpg|jpeg|png|gif)$/i, '.webp');
-      await sharp(imagePath)
-        .webp({ quality: 80 })
-        .toFile(outputPath);
-      console.log(`Optimized: ${imagePath} -> ${outputPath}`);
-    } catch (error) {
-      console.error(`Failed to optimize ${imagePath}:`, error.message);
-    }
-  }
-  
-  scanDirectory(publicDir);
-}
 
+<<<<<<< HEAD
 optimizeImages().catch(console.error);
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+console.log('🖼️  Image optimization script - placeholder');
+console.log('✅ Image optimization completed');
+  // TODO: Implement
+        .toFile(outputPath);`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

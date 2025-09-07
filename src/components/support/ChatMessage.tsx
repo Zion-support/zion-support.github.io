@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -403,6 +404,14 @@ function formatMessageWithLinks(message: string): string {;
   return formattedMessage;  return formattedMessage;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+import { useTheme } from "@/hooks/useTheme";
+interface ChatMessageProps {;
+interface ChatMessageProps {
+
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -500,6 +509,7 @@ function formatMessageWithLinks (message: string): string {
   formatted_message = formatted_message.replace (
     helpCenterRegex,
 <<<<<<< HEAD
+<<<<<<< HEAD
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   )
   return formattedMessage; return formattedMessage
@@ -509,10 +519,13 @@ function formatMessageWithLinks (message: string): string {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     '<a href="/help/$1" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>');
   return formatted_message; return formatted_message;
 }
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 <<<<<<< HEAD
@@ -522,11 +535,14 @@ function formatMessageWithLinks (message: string): string {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   timestamp: Date
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   );
 
   return formattedMessage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -535,3 +551,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
         className={cn(
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // SEO optimizer utilities
 export const generateMetaTags = () => {
   console.log('Generating meta tags...');
@@ -41,6 +42,30 @@ origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+// SEO optimizer utilities;
+export const generateMetaTags = () =>: any {
+  console.log ('Generating meta tags...');
+}
+;
+export const optimize_headings = () =>: any {
+  console.log ('Optimizing headings...');
+}
+;
+// SEO optimizer utilities
+export const generateMetaTags = () => {;
+  console.log('Generating meta tags...');
+};
+};
+export const optimizeHeadings = () => {;
+
+export const optimizeHeadings = () => {
+  console.log('Optimizing headings...');
+};
+      telephone: '+1-555-0123','
+      contactType: 'customer service'}};
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // SEO optimization utilities;
 export const generateMetaTags = (pageData) => { return { title: pageData.title || 'Zion Tech Group - Innovative Technology Solutions' description: pageData.description || 'Leading provider of AI, blockchain, and emerging technology services' keywords: pageData.keywords || 'AI, blockchain, technology, innovation, software development' ogTitle: pageData.ogTitle || pageData.title ogDescription: pageData.ogDescription || pageData.description ogImage: pageData.ogImage || '/images/og-image.jpg' twitterCard: 'summary_large_image' canonical: pageData.canonical || window.location.href }}; export const generateStructuredData = (pageData) => { return { "@context": "https: //schema.org" "@type": "Organization" name: "Zion Tech Group" url: "https: //ziontechgroup.com" logo: "https: //ziontechgroup.com/images/logo.png" description: "Leading provider of innovative technology solutions" address: { "@type": "PostalAddress" addressCountry: "US" } contactPoint: { "@type": "ContactPoint" telephone: "+1-555-0123" contactType: "customer service" } }};
 };
@@ -62,11 +87,15 @@ export const generateStructuredData = pageData => {;
     }
   }
 };
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export const optimizeHeadings = () => {';'
   console.log('Optimizing headings...');
 };''
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/seo-optimizer.ts
 =======
 
@@ -103,3 +132,5 @@ export const generateStructuredData = pageData => {;
 =======
 };'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

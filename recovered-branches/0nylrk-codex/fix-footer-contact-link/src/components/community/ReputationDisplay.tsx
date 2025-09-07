@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -13,12 +14,15 @@
 
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 import { Trophy } from "lucide-react",
@@ -35,6 +39,10 @@ import { Progress } from "@/components/ui/progress",
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Trophy } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { Trophy } from "lucide-react",
@@ -72,9 +80,12 @@ import { Progress } from "@/components/ui/progress",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 
@@ -86,6 +97,7 @@ import { Progress } from "@/components/ui/progress",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -95,21 +107,43 @@ import { Progress } from "@/components/ui/progress",
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ReputationDisplayProps {
 
   reputation: number
   size?: 'sm' | 'md' | 'lg'
 }
+export const ReputationDisplay = ({
+  reputation;
+  size = 'md'
+}: ReputationDisplayProps) => {
+  // Calculate next milestone
+  const currentLevel = Math.floor(reputation / 100);
+  const nextMilestone = (currentLevel + 1) * 100;
+  const progress = ((reputation % 100) / 100) * 100;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   size = 'md'
+=======
+export const ReputationDisplay = ({ ;
+  reputation;
+export const ReputationDisplay = ({ 
+  reputation,
+  size = 'md' 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }: ReputationDisplayProps) => {
   // Calculate next milestone
   const currentLevel = Math.floor(reputation / 100),
   const nextMilestone = (currentLevel + 1) * 100,
   const progress = ((reputation % 100) / 100) * 100,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -160,6 +194,8 @@ interface ReputationDisplayProps {};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Styling based on size
   const sizeClasses = {
     sm: {
@@ -202,7 +238,12 @@ interface ReputationDisplayProps {};
 =======
       progress: "h-1"
 
-
+}
+    md: {
+      container: "text-sm"
+      icon: "w-4 h-4"
+      progress: "h-2"
+    }
     },
     md: {
       container: "text-sm",
@@ -212,6 +253,7 @@ interface ReputationDisplayProps {};
     },
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -617,3 +659,6 @@ export default ReputationDisplay;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

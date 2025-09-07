@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 type ModernLayoutProps = {}
   children: ReactNode;
 type ModernLayoutProps = {;
@@ -49,4 +50,18 @@ const ModernLayout = ({;
 </>),
 }
 ;
+=======
+type ModernLayoutProps = {children: ReactNode;
+
+type ModernLayoutProps = {children: ReactNode,title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+
+
+        {children}
+      </div>;
+</>)}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default ModernLayout;"

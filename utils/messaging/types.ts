@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type UserRole = 'client' | 'talent' | 'admin';
 export interface UserSummary {;
   id: string;
@@ -124,16 +125,25 @@ export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin'
 =======
 export type UserRole = "admin" | "user" | "guest";
 export type UserRole = "admin" | "user" | "guest";
+=======
+export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin' | 'user' | 'guest';
+
+export type UserRole = "admin" | "user" | "guest";""
+export type UserRole = 'admin' | 'user' | 'guest';
+pr-12325
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 export type UserRole = 'admin' | 'user' | 'guest';
 
-export type UserRole = 'admin' | 'user' | 'guest';
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin' | 'user' | 'guest';
@@ -142,3 +152,73 @@ export type UserRole = "admin" | "user" | "guest";export type UserRole = 'admin'
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+
+export type UserRole = "admin" | "user" | "guest";
+
+export type UserRole = 'client' | 'talent' | 'admin';
+export interface UserSummary {;
+  id: string;
+  name: string;
+  role: UserRole;
+  avatarUrl?: string;
+}
+;
+export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite';
+export interface ConversationContext {;
+  type: ConversationContextType;
+  jobId?: string;
+  jobTitle?: string;
+  talentId?: string;
+  talentName?: string;
+  proposalLink?: string;
+}
+;
+export interface Conversation {;
+  id: string;
+  participants: string[], // [clientId, talentId] or any two users;
+  context?: ConversationContext;
+  lastMessageAt: string, // ISO;
+  unreadBy: string[], // userIds who have unread messages;
+}
+;
+export type MessageStatus = 'sent' | 'delivered' | 'read';
+export interface Message {;
+  id: string;
+  conversationId: string;
+  senderId: string;
+  recipientId: string;
+  body: string;
+  attachmentUrl?: string, // saved under /public/uploads;
+  linkUrl?: string;
+  createdAt: string, // ISO;
+  status: MessageStatus;
+}
+;
+export interface InboxItem {;
+  conversation: Conversation;
+  otherParticipant: UserSummary;
+  lastMessage?: Message;
+  unreadCount: number;
+}
+;
+export interface NewMessageInput {;
+  conversationId?: string;
+  senderId: string;
+  recipientId: string;
+  body: string;
+  linkUrl?: string;
+  attachmentBase64?: string, // data URL or raw base64;
+  attachmentName?: string, // optional filename;
+  context?: ConversationContext;
+}
+export type UserRole = "admin" | "user" | "guest";""
+export type UserRole = "admin" | "user" | "guest";""
+export type UserRole = 'admin' | 'user' | 'guest';''
+export type UserRole = 'admin' | 'user' | 'guest';''
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

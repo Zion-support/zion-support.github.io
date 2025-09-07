@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';'
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';'
@@ -77,6 +78,15 @@ export default function HolographicAICommunicationPage() { return null; }
 <<<<<<< HEAD
         <meta
   const contactInfo = null;
+=======
+
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+export default function HolographicAICommunicationPage() {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -128,10 +138,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='text-slate-400'>;
                 30-day free trial • Setup: 1 week;
               </div>;
+<<<<<<< HEAD
               <Button'
                 href='/contact''
                 variant='quantum''
                 size='lg''
+=======
+              <Button
+                href='/contact'
+                variant='quantum'
+                size='lg'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='w-full mt-4'>;
                 Start Free Trial;'
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -239,6 +256,9 @@ function HolographicAICommunicationPage() {}
 ;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 }
 

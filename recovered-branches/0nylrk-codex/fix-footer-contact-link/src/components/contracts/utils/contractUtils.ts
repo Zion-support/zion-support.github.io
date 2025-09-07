@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -12,10 +13,13 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "../components/ContractForm";
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -26,14 +30,20 @@ import {ContractFormValues} from "../components/ContractForm";
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+
+
+
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
 import { ContractFormValues } from "../components/ContractForm";
 interface Milestone {
-  title: string;
+  title: string,
   description: string;
 
+<<<<<<< HEAD
 
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "../components/ContractForm",
@@ -246,6 +256,9 @@ export async function generateContract(
   }
   
 
+=======
+  }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (data.success && data.contract) {
 <<<<<<< HEAD
     return data.contract  } else {
@@ -258,6 +271,7 @@ export async function generateContract(
 
 =======
     return data.contract
+<<<<<<< HEAD
   
   if (data && data.success && data && data.contract) {
     return data && data.contract
@@ -350,6 +364,8 @@ export async function generateContract(;
 }
 =======
   
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (data && data.success && data && data.contract) {
     return data && data.contract
   } else {
@@ -492,6 +508,7 @@ if ( {) {
   } else {;
     throw new Error("Failed to generate contract");
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -514,13 +531,19 @@ if ( {) {
 }  } else {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
-
-  }
+}
 }
   } else {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    throw new Error("Failed to generate contract")  }
+}  } else {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     throw new Error ("Failed to generate contract");
   }
 }
@@ -532,6 +555,7 @@ if ( {) {
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -555,3 +579,54 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+  generatedMilestones: GeneratedMilestone[];)
+): Promise<string> {;
+</string>
+  generated_milestones: GeneratedMilestone[]): Promise < string> {
+  const additional_clauses = values.additional_clauses || [];
+
+  // Prepare milestone data if we have AI - generated milestones;
+  const milestone_data = generated_milestones.length > 0;
+    ? generated_milestones.map (m => ({
+        title: m.title;,
+  description: m.description;
+        due_date: m.due_date,
+        estimated_hours: m.estimated_hours;)
+      }));
+;"
+  const { data, error } = await supabase.functions.invoke ("generate - contract", {"
+  talent_name: talent.full_name;
+      client_name: client_name;,
+  project_name: values.project_name;
+      scope_summary: values.scope_summary;,)
+  start_date: values.start_date.toISOString ();
+      end_date: values.end_date?.toISOString ();,
+  payment_terms: values.payment_terms;
+      payment_amount: values.payment_amount;,
+  additional_clauses: additional_clauses,
+      milestones: milestone_data}
+  // Check condition;
+if ( {) {
+  $2;
+  // Check condition;
+
+  } else {;"
+    throw new Error("Failed to generate contract");"
+
+  // TODO: Implement
+    throw new Error ("Failed to generate contract");"
+  if (data.success && data.contract) {;
+pr-12325
+  }
+}
+;
+  if (data.success && data.contract) {;
+    return data.contract;
+  } else {;"
+    throw new Error("Failed to generate contract");"
+  }
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

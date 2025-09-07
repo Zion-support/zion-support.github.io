@@ -91,12 +91,12 @@ const nextConfig = { reactStrictMode: true,compress: true,poweredByHeader: false
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
-  compress: true
-  poweredByHeader: false
+  reactStrictMode: true;,
+  compress: true;
+  poweredByHeader: false;,
   eslint: { ignoreDuringBuilds: true }
   typescript: { ignoreBuildErrors: true }
-  trailingSlash: true
+  trailingSlash: true;,
   generateBuildId: async () => {
 <<<<<<< HEAD
 
@@ -113,21 +113,20 @@ const nextConfig = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
   }
-  experimental: {
-    optimizeCss: true
-    scrollRestoration: true
-  }
+  experimental: {,
+  optimizeCss: true;
+    scrollRestoration: true;
   async headers() {
     return [{
-        source: '/(.*)'
-        headers: [
+        source: '/(.*),
+  headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' }
           { key: 'X-Frame-Options', value: 'DENY' }
           { key: 'X-XSS-Protection', value: '1; mode=block' }
-          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' }
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' }']
         ]
-      }
     ];
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 
@@ -222,3 +221,9 @@ const nextConfig = { reactStrictMode: true,compress: true,poweredByHeader: false
 >>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:deployment/next.config.js
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export default nextConfig;
+const nextConfig = { reactStrictMode: 'true',compress: 'true',poweredByHeader: 'false',eslint: { ignoreDuringBuilds: true },typescript: { ignoreBuildErrors: true },trailingSlash: 'true',generateBuildId: async () => { return 'build-' + Date.now()},pageExtensions: ['tsx','ts','jsx','js','route.tsx','route.ts'],images: { domains: ["localhost","ziontechgroup.com","images.unsplash.com","via.placeholder.com"],formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384] },experimental: { optimizeCss: true,scrollRestoration: 'true' },async headers() { return [{ source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff' },{ key: 'X-Frame-Options',value: 'DENY' },{ key: 'X-XSS-Protection',value: '1; mode=block' },{ key: 'Referrer-Policy',value: 'origin-when-cross-origin' } ] } ]} }; export default nextConfig;
+const nextConfig = { reactStrictMode: true,compress: true,poweredByHeader: false,eslint: { ignoreDuringBuilds: true },typescript: { ignoreBuildErrors: true },trailingSlash: true,generateBuildId: async () => { return 'build-' + Date.now()},pageExtensions: ['tsx','ts','jsx','js','route.tsx','route.ts'],images: { domains: ["localhost","ziontechgroup.com","images.unsplash.com","via.placeholder.com"],formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384] },experimental: { optimizeCss: true,scrollRestoration: true },async headers() { return [{ source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff' },{ key: 'X-Frame-Options',value: 'DENY' },{ key: 'X-XSS-Protection',value: '1; mode=block' },{ key: 'Referrer-Policy',value: 'origin-when-cross-origin' } ] } ]} }; export default nextConfig;const nextConfig = { reactStrictMode: true,compress: true,poweredByHeader: false,eslint: { ignoreDuringBuilds: true },typescript: { ignoreBuildErrors: true },trailingSlash: true,generateBuildId: async () => { return 'build-' + Date.now()},pageExtensions: ['tsx','ts','jsx','js','route.tsx','route.ts'],images: { domains: ["localhost","ziontechgroup.com","images.unsplash.com","via.placeholder.com"],formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384] },experimental: { optimizeCss: true,scrollRestoration: true },async headers() { return [{ source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff' },{ key: 'X-Frame-Options',value: 'DENY' },{ key: 'X-XSS-Protection',value: '1; mode=block' },{ key: 'Referrer-Policy',value: 'origin-when-cross-origin' } ] } ]} }; export default nextConfig;
+const nextConfig = { reactStrictMode: true,compress: true,poweredByHeader: false,eslint: { ignoreDuringBuilds: true },typescript: { ignoreBuildErrors: true },trailingSlash: true,generateBuildId: async () => { return 'build-' + Date.now()},pageExtensions: ['tsx','ts','jsx','js','route.tsx','route.ts'],images: { domains: ["localhost","ziontechgroup.com","images.unsplash.com","via.placeholder.com"],formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384] },experimental: { optimizeCss: true,scrollRestoration: true },async headers() { return [{ source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff' },{ key: 'X-Frame-Options',value: 'DENY' },{ key: 'X-XSS-Protection',value: '1; mode=block' },{ key: 'Referrer-Policy',value: 'origin-when-cross-origin' } ] } ]} }; export default nextConfig;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

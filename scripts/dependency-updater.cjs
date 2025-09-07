@@ -19,11 +19,11 @@ const fs = require('fs')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
-const fs = require('fs')
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require('child_process')
+<<<<<<< HEAD
 // console.log('� Starting dependency update check...')
     console.log(' Checking for outdated packages...')
     const output = execSync('npm outdated --json', { "encoding"})
@@ -56,7 +56,8 @@ const { execSync } = require('child_process')
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-    console.log('\n "Recommendations")
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -91,6 +92,11 @@ export const formatDateForDB = (date: Date | string | undefined) => {}
 },
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import { format  } from 'date-fns';
+import { toast } from '@/hooks/use-toast';
+// Utility function to format dates for DB operations
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,6 +138,7 @@ export const handleResumeError = (e: any, errorMessage: string) => {;`
     description: `${errorMessage}: ${e.message}`,;"
 =======
 
+<<<<<<< HEAD
 export const formatDateForDB = (date: Date | string | undefined) => {
   if (!date) return undefined
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
@@ -422,3 +429,6 @@ export default UseResumeUtils;
 
 export default UseResumeUtils;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

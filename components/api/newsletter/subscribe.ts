@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
+<<<<<<< HEAD
 function ensure() {}
   if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs && fs.existsSync(FILE_PATH))'
@@ -84,3 +85,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  res.status(200).json({ ok: true })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+}
+  res.status(200).json({ ok: true,}
+});
+  res.status(200).json({ ok: true }),
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

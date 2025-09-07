@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next / head';'
 import { motion } from 'framer-motion';
 import {;
@@ -317,6 +318,9 @@ export default function MarketPricing2026() { return null; }
                   </div>
                   <div className='text-gray-400 text-sm'>Total Customers</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 quantum computing, and emerging technology services
 =======
                 Comprehensive pricing analysis and competitive positioning for our revolutionary AI;
@@ -366,13 +370,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Category Filter */}
                 <div>'
                   <label className='block text-white font-semibold mb-3'>
+<<<<<<< HEAD
                     Service Category;
                   </label>'
+=======
+                    Service Category
+                  </label>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>                    {categories.map(category => (
 
                     {categories.map(category => (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>
                     {categories.map(category => (
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -399,7 +411,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
                 {/* Price Range Filter */}
+<<<<<<< HEAD
                 <div>;'
+=======
+                <div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <label className='block text-white font-semibold mb-3'>;
                     Price Range;
                   </label>;'"
@@ -407,6 +423,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="space-y-2">;
                     {priceRanges && priceRanges.map(range => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div>
 <label className='block text-white font-semibold mb-3'>
                     Price Range
@@ -445,11 +464,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max - w-7xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8">;"
           <div className="max - w-7xl mx - auto text - center">;
             <motion.div;
+<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
             >;'
               <h1 className='text - 5xl md:text - 7xl font - bold mb - 6'>;'
+=======
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              animate={{ opacity: 1;, coordinate_y: 0 ;}}
+              transition={{ duration: 0.8 ;}}
+            >;
+              <h1 className='text - 5xl md:text - 7xl font - bold mb - 6'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <span className='bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent'>;
                   2026 Market Pricing;
                 </span>;
@@ -601,6 +628,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto'>
             <motion.div
 
+<<<<<<< HEAD
 =======
         {/* Market Analysis Section */}'
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>'"
@@ -618,6 +646,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
+=======
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+        {/* Market Analysis Section */}
+        <section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='max - w-7xl mx - auto'>            <motion.div        <section className="relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              viewport={{ once: true ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </motion.div>
             {/* Market Insights Grid */}'"
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>              <motion.div              <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & Competitive Positioning</h2>"
@@ -625,8 +665,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Our services are strategically positioned to provide maximum value while maintaining competitive pricing;
                 in the rapidly evolving technology landscape;
             </motion.div>
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}'
               className='text-center mb-12'>;'
+=======
+              transition={{ duration: 0 && 0.8 ;}}
+              className='text-center mb-12'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className='text-4xl font-bold text-white mb-4'>;
                 Market Analysis & Competitive Positioning;
               </h2>;'
@@ -643,6 +688,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 in the rapidly evolving technology landscape;
             </motion && motion.div>;
 
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -656,6 +702,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
+=======
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                viewport={{ once: true ;}}
+            {/* Market Insights Grid */}
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">;
+              <motion&& motion.div
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+
+
+
+              transition={{ duration: 0.8 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='text-center mb-12'
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
@@ -670,10 +730,10 @@ className='text-center mb-12'
             {/* Market Insights Grid */}
 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                viewport={{ once: true ;}}
+                transition={{ duration: 0.6;, delay: 0.1 ;}}
 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -712,12 +772,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>20-40% cost savings</span>
                 </div>
               </motion.div>
+<<<<<<< HEAD
               <motion.div;
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
 <<<<<<< HEAD
+=======
+              <motion.div
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                viewport={{ once: true ;}}
+                transition={{ duration: 0.6;, delay: 0.2 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -754,12 +822,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>1000% ROI guarantee</span>
                 </div>
               </motion.div>
+<<<<<<< HEAD
               <motion.div;
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
 <<<<<<< HEAD
+=======
+              <motion.div
+                initial={{ opacity: 0;, y: 30 ;}}
+                whileInView={{ opacity: 1;, y: 0 ;}}
+                viewport={{ once: true ;}}
+                transition={{ duration: 0.6;, delay: 0.3 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
@@ -801,8 +877,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
 
 
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}'
+=======
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm';
               >;'
                 <div className='text - 4xl mb - 4'>📊</div>;'
@@ -828,10 +909,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion.div>;
               <motion.div;
+<<<<<<< HEAD
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}'
+=======
+                initial={{ opacity: 0;, coordinate_y: 30 ;}}
+                whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+                viewport={{ once: true ;}}
+                transition={{ duration: 0.6;, delay: 0.2 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm';
               >;'
                 <div className='text - 4xl mb - 4'>🎯</div>;'
@@ -856,10 +944,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion.div>;
               <motion.div;
+<<<<<<< HEAD
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}'
+=======
+                initial={{ opacity: 0;, coordinate_y: 30 ;}}
+                whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+                viewport={{ once: true ;}}
+                transition={{ duration: 0.6;, delay: 0.3 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm';
               >;'
                 <div className='text - 4xl mb - 4'>🚀</div>;'
@@ -886,6 +981,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
         {/* Services Pricing Grid */}'
         <section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;'"
           <div className='max - w-7xl mx - auto'>            <motion.div        <section className="relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8">;"
@@ -893,16 +989,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
+=======
+        {/* Services Pricing Grid */}
+        <section className='relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='max - w-7xl mx - auto'>            <motion.div        <section className="relative z - 10 py - 16 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >"
               <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>"
+=======
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              viewport={{ once: true ;}}
+              transition={{ duration: 0.8 ;}}
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-300">
                 {filteredServices.length} services found matching your criteria;
               </p>
@@ -922,17 +1036,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices.map((service, index) => (
                 <motion.div;
                   key={service.id}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}'
               className='text-center mb-12'>;'
+=======
+              transition={{ duration: 0 && 0.8 ;}}
+              className='text-center mb-12'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className='text-4xl font-bold text-white mb-4'>;
                 Service Pricing & Features;
               </h2>;'
               <p className='text-xl text-gray-300'>                {filteredServices && filteredServices.length} services found matching your criteria;
               </p>;
+<<<<<<< HEAD
             </motion && motion.div>;'"
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices && filteredServices.map((service, index) => (              className="text-center mb-12";
             >;"
               <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>;"
+=======
+            </motion && motion.div>;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices && filteredServices.map((service;, index) => (              className="text-center mb-12";
+            >;
+              <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-300">;
               </p>;
             </motion && motion.div>;'"
@@ -940,10 +1066,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div;
                   key={service && service.id}
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+=======
+                  initial={{ opacity: 0;, y: 30 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='group'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
@@ -957,6 +1089,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {service.popular && (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                           Popular
@@ -969,8 +1104,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 
 
+<<<<<<< HEAD
                     {/* Service Title */}'
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
+=======
+                    {/* Service Title */}
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300'>                      {service.name;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </h3>
                     {/* Tagline */}'
                     <p className='text-gray-300 text-sm mb-4'>                      {service.tagline}
@@ -993,10 +1133,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h2>;'
               <p className='text - xl text - gray - 300'>                {filtered_services.length} services found matching your criteria;
               </p>;
+<<<<<<< HEAD
             </motion.div>;'"
             <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>              {filtered_services.map ((service, index) => (              className="text - center mb - 12";
             >;"
               <h2 className="text - 4xl font - bold text - white mb - 4">Service Pricing & Features</h2>;"
+=======
+            </motion.div>;
+            <div className='grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 8'>              {filtered_services.map ((service;, index) => (              className="text - center mb - 12";
+            >;
+              <h2 className="text - 4xl font - bold text - white mb - 4">Service Pricing & Features</h2>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text - xl text - gray - 300">;
               </p>;
             </motion.div>;'"
@@ -1004,9 +1151,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filtered_services.map ((service, index) => (
                 <motion.div;
                   key={service.id}
+<<<<<<< HEAD
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}'
+=======
+                  initial={{ opacity: 0;, coordinate_y: 30 ;}}
+                  animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className='group';
                 >;'
                   <div className='bg - gray - 800 / 30 rounded - 2xl p - 6 border border - gray - 700 / 50 backdrop - blur - sm hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105'>;
@@ -1097,7 +1250,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='text-center p-3 bg-gray-700/30 rounded-lg'>'
                         <div className='text-lg font-bold text-blue-400 mb-1'>
                           {service.customers.toLocaleString()}+
+<<<<<<< HEAD
                         </div>'
+=======
+                        </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <div className='text-gray-400 text-xs'>Customers</div>                      </div>
                     </div>'
                     {/* Key Features */}                          {service.roi.split(' ')[0]}'
@@ -1114,8 +1271,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     </div>;
 
+<<<<<<< HEAD
                     {/* Service Title */}'
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service && service.name}
+=======
+                    {/* Service Title */}
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300'>                      {service && service.name;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </h3>;
 
                     {/* Tagline */}'
@@ -1291,9 +1453,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
+<<<<<<< HEAD
               <motion&& motion.div;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+=======
+              <motion&& motion.div
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='text-center py-16'
               >
                 <div className='text-6xl mb-4'>🔍</div>
@@ -1317,6 +1485,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
 
+<<<<<<< HEAD
 =======
         {/* Contact Section */}'
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>'"
@@ -1326,6 +1495,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             )}
         {/* Contact Section */}'
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;'"
@@ -1438,8 +1611,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* No Results */}
             {filtered_services.length === 0 && (
               <motion.div;
+<<<<<<< HEAD
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}'
+=======
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='text - center py - 16';
               >;'
                 <div className='text - 6xl mb - 4'>🔍</div>;'
@@ -1460,11 +1638,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max - w-4xl mx - auto text - center'>            <motion.div        <section className="relative z - 10 py - 20 px - 4 sm:px - 6 lg:px - 8">;"
           <div className="max - w-4xl mx - auto text - center">;
             <motion.div;
+<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
               transition={{ duration: 0.8 }}
+=======
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              viewport={{ once: true ;}}
+              transition={{ duration: 0.8 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
             >
@@ -1521,6 +1706,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <a
                   href='/contact'
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
@@ -1547,6 +1735,10 @@ href='/2026-services-showcase'
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 "
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">;

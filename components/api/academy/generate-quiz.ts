@@ -2,18 +2,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { moduleTitle, moduleContent } = req.body || {},
   const apiKey = null;
       return res.status(200).json(json)
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
 
+<<<<<<< HEAD
   const { moduleTitle, moduleContent } = req.body || {};
   const apiKey = process.env.OPENAI_API_KEY;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -158,13 +156,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const json = JSON.parse(text);
 return res.status(200).json(json);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch {
 =======
     } catch {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return fallback ();
     }
+<<<<<<< HEAD
   } catch (err) {}
+=======
+  } catch (err) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return fallback ();
   }    } catch {}
       return fallback()
@@ -176,16 +180,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
       return res.status(200).json(json);
+<<<<<<< HEAD
 '
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {}
       const json = JSON.parse(text);
       return fallback ();
+=======
+    } catch {
+      return fallback();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   } catch (err) {}
     return fallback ();
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     return fallback();
   }
@@ -193,3 +203,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    return fallback();
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+    return fallback();
+  }
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

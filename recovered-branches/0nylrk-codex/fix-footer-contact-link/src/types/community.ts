@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -225,7 +226,12 @@ export interface ForumReply {
   isLocked?: boolean;
   isFeatured?: boolean;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
+export interface UserBadge {;
 
 
 export interface ForumReply {;
@@ -261,6 +267,7 @@ export interface ForumReply {};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 export interface ForumReply {
+<<<<<<< HEAD
 
 export interface ForumReply {;
 }
@@ -335,19 +342,29 @@ export interface Badge {
   isAnswer?: boolean;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+=======
+  // TODO: Implement
+  // TODO: Implement
+  post_id: string;
+  parentReplyId?: string;
+  isAnswer?: boolean;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 export interface Badge {;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   description: string;
   icon: string;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   color: string;
-}
 
   icon: string,
+<<<<<<< HEAD
   color: string;
 }
 <<<<<<< HEAD
@@ -363,11 +380,19 @@ export interface UserBadge {};
 
 }
 <<<<<<< HEAD
+=======
+export interface UserBadge {
+  // TODO: Implement
+  user_id: string;,
+  badge_id: string,
+  awarded_at: string;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface CommunityUser {
-
-
+  // TODO: Implement
 export interface UserBadge {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -446,17 +471,19 @@ export interface UserBadge {
 
 export interface UserBadge {;
   userId: string;
+=======
+  // TODO: Implement
+  userId: string;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   badgeId: string;
   awardedAt: string;
-}
 
 
 export interface CommunityUser {;
 
-export interface CommunityUser {
-
-export interface CommunityUser {;
+  // TODO: Implement
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface Badge {
 =======
@@ -464,10 +491,22 @@ export interface Badge {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   name: string;
+=======
+export interface CommunityUser {;
+
+}
+export interface UserBadge {}
+export interface UserBadge {;}
+export interface Badge {
+
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: string;
+
 }
 <<<<<<< HEAD
 export interface CommunityUser {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -481,9 +520,13 @@ export interface CommunityUser {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   name: string;
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   avatar?: string;
-  role: string;
+  role: string;,
   reputation: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -620,3 +663,15 @@ export interface CommunityUser {;
   isModerator: boolean;
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+  post_count: number;,
+  reply_count: number;
+  badges: Badge[];,
+  isVerified: boolean;
+  isModerator: boolean;
+}
+"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

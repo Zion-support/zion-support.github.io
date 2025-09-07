@@ -7,7 +7,11 @@
   return (
     </div>;
     </div>
+<<<<<<< HEAD
   );export default function NotFoundPage() {}
+=======
+  );export default function NotFoundPage() {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="container mx-auto px-4 py-20 text-center">"
       <h1 className="text-3xl font-semibold">404 - Page Not Found</h1>"
@@ -58,6 +62,7 @@ function NotFoundPage() {
 }
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 function NotFoundPage() {}
   return ("
@@ -68,3 +73,5 @@ function NotFoundPage() {}
 }
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

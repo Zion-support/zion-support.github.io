@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -30,6 +31,17 @@ import _React from';react' "export": default function ExpensiveComponent() { con
 import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
 const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
+const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
+import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';
+
+
+import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
+const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
+import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
+const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 :src.disabled/components/ExpensiveComponent.js.jsx
 import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
 const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
@@ -91,4 +103,8 @@ import _React from';react' "export": default function ExpensiveComponent() { con
 import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
 const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
 import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

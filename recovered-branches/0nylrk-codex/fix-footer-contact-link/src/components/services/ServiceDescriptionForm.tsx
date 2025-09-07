@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState } from "react";
@@ -358,6 +359,16 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
 
 =======
                       className="bg-zion-blue border border-zion-blue-light text-white"
+=======
+
+              control={form.control}
+              name=\"title\";
+              render={({ field }) = /> (;
+                <FormItem />;
+                  <FormLabel className=\"text-zion-slate-light\" />Service Title</FormLabel>;
+                  <FormControl />;
+                      className=\"bg-zion-blue border border-zion-blue-light text-white\"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       disabled={isLoading}
                     />;
                   </FormControl>;
@@ -365,19 +376,24 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                 </FormItem>;
               )}
             />;
-
-            <FormField
-              control={form && form.control}
-
+            <FormField;
+control={form && form.control}
               control={form.control}
+<<<<<<< HEAD
             <FormField
               control={form && form.control}
               name="keyFeatures"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     <Textarea
+=======
+            <FormField;
+control={form && form.control}
+              name=\"keyFeatures\"
+                    <Textarea;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {...field}
-                      placeholder="Enter key features, separated by commas"
-                      className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
+                      placeholder=\"Enter key features, separated by commas\"
+                      className=\"bg-zion-blue border border-zion-blue-light text-white min-h-20\"
                       disabled={isLoading}
                     />;
                   </FormControl>;
@@ -400,11 +416,18 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
 =======
               render={({ field }) => (;
+<<<<<<< HEAD
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>;
                   <FormControl>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       className="bg-zion-blue border border-zion-blue-light text-white"
+=======
+                <FormItem />;
+                  <FormLabel className=\"text-zion-slate-light\" />Target Audience</FormLabel>;
+                  <FormControl />;
+                      className=\"bg-zion-blue border border-zion-blue-light text-white\"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       disabled={isLoading}
                     />;
                   </FormControl>;
@@ -412,22 +435,26 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                 </FormItem>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
             />
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               type="submit"
+=======
+              type=\"submit\"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+              className=\"w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white\">;
               {isLoading ? (;
                 <>;
-                  <Loader className="mr-2 h-4 w-4 animate-spin" />;
+                  <Loader className=\"mr-2 h-4 w-4 animate-spin\" />;
                   Generating Description...;
                 </>;
               ) : (;
                 <>;
-                  <Sparkles className="h-4 w-4 mr-2" />;
+                  <Sparkles className=\"h-4 w-4 mr-2\" />;
                   Generate Description;
 <<<<<<< HEAD
                 </>;
@@ -438,6 +465,7 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </Button>;
           </form>;
+<<<<<<< HEAD
         </Form>;
       </CardContent>;
 <<<<<<< HEAD
@@ -455,3 +483,7 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        </Form>;}
+      </CardContent>;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

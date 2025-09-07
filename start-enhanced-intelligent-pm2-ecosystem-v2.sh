@@ -412,6 +412,7 @@ EOF
 display_ecosystem_status() {
     banner "🧠 Enhanced Intelligent PM2 Ecosystem V2 Status"
 <<<<<<< HEAD
+<<<<<<< HEAD
     echo "============================================================="
 
     echo "============================================================="
@@ -428,8 +429,15 @@ display_ecosystem_status() {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     echo "====="
-main
+    echo "====="
+
+    echo "====="
+
+    echo "====="
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -547,6 +555,7 @@ run_comprehensive_health_check() {
 main() {
     banner "🚀 Enhanced Intelligent PM2 Ecosystem V2 Startup"
 <<<<<<< HEAD
+<<<<<<< HEAD
     banner "=================================================="
 
     banner "=================================================="
@@ -563,8 +572,15 @@ main() {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     banner "="
-main
+    banner "="
+
+    banner "="
+
+    banner "="
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

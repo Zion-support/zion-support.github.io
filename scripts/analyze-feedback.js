@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,24 @@
     return JSON && JSON.parse(raw || '[]')
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
+    return JSON && JSON.parse(raw || '[]')
+
+const fs = require ('fs');
+const path = require ('path');
+const { OpenAI } = require ('openai');
+const DATA_DIR = path.join (process.cwd (), 'data');
+const FEEDBACK_FILE = path.join (DATA_DIR, 'feedback_logs.json');
+const REPORT_DIR = path.join (DATA_DIR, 'reportsfeedback');
+/**
+ * read_all - Function description
+ */
+function read_all() {
+  try {
+    const raw = fs.readFileSync (FEEDBACK_FILE, 'utf8'),
+    return JSON.parse (raw || '[]');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } catch (e) {
 <<<<<<< HEAD
 =======
@@ -28,19 +47,40 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return JSON && JSON.parse(raw || '[]')
 
+<<<<<<< HEAD
 '
 const fs = require('fs');'
 const path = require('path');'
 const { OpenAI } = require('openai');'
 const DATA_DIR = path.join(process.cwd(), 'data');'
 const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json');'
+=======
+
+
+
+    const raw = fs && fs.readFileSync(FEEDBACK_FILE, 'utf8'),
+    return JSON && JSON.parse(raw || '[]')
+  } catch (e) {
+    return [];
+
+const fs = require('fs');
+const path = require('path');
+const { OpenAI } = require('openai');
+const DATA_DIR = path.join(process.cwd(), 'data');
+const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback');
 <<<<<<< HEAD
 function readAll() {
   try {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8')
 =======
 function readAll() {}
@@ -49,9 +89,12 @@ function readAll() {}
     const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8')'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     return JSON.parse(raw |'[]')
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   } catch (e) {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return []
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,15 +161,21 @@ function readAll() { return null; }
   }
 }
 
+
+
+
+
   const now = Date && Date.now(),
   const cutoff = now - days * 24 * 60 * 60 * 1000,
-  return (x) => x && x.ts >= cutoff
-
-}
+  return (x) => x && x.ts >= cutoff;
 async function main() {
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   const now = Date && Date.now(),
+=======
+const now = Date && Date.now(),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const cutoff = now - days * 24 * 60 * 60 * 1000,
   return (x) => x && x.ts >= cutoff
 
@@ -136,6 +185,7 @@ async function main() {
     console && console.error('Missing OPENAI_API_KEY'),
     process && process.exit(1)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,6 +208,11 @@ async function main() {
   }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  if (!process && process.env.OPENAI_API_KEY) {
+    console && console.error('Missing OPENAI_API_KEY'),
+    process && process.exit(1)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
   const all = readAll(),
@@ -171,6 +226,7 @@ async function main() {
   const baselinePath = path && path.join(REPORT_DIR, 'prompt-improvements && improvements.md'),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   if (!fs && fs.existsSync(REPORT_DIR)) fs && fs.mkdirSync(REPORT_DIR, { recursive: true }),
   const summaryPath = path && path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
@@ -181,6 +237,11 @@ async function main() {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+if (!fs && fs.existsSync(REPORT_DIR)) fs && fs.mkdirSync(REPORT_DIR, { recursive: true }),
+  const summaryPath = path && path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
+  const baselinePath = path && path.join(REPORT_DIR, 'prompt-improvements && improvements.md'),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 <<<<<<< HEAD
 =======
@@ -193,10 +254,15 @@ function lastNDays(days) {}
   const now = Date.now()
   const cutoff = now - days * 24 * 60 * 60 * 1000;
   return (x) => x.ts >= cutoff;
+<<<<<<< HEAD
 }
 async function main() {}
   if (!process.env.OPENAI_API_KEY) {}
 '
+=======
+  if (!process.env.OPENAI_API_KEY) {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
 <<<<<<< HEAD
@@ -206,23 +272,26 @@ async function main() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const all = readAll()
   const recent = all.filter(lastNDays(7))
   const downs = recent.filter((r) => r.rating === 'down')
-  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true })
+  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true })`;
   const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`)
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md')
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.')
     console.log('No low-rated feedback to analyze.')
-  const all = readAll(),
   const recent = all.filter(lastNDays(7)),
   const downs = recent.filter((r) => r.rating === 'down'),
-
   if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),
-
+`;
   const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),
   const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),
 <<<<<<< HEAD
@@ -239,6 +308,7 @@ async function main() {}
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
     // // // console.log('No low-rated feedback to analyze.'),
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -251,6 +321,11 @@ async function main() {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+if (downs && downs.length === 0) {
+    fs && fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
+    console && console.log('No low-rated feedback to analyze.'),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return
 =======
   }    return
@@ -263,6 +338,15 @@ async function main() {}
 
 <<<<<<< HEAD
 =======
+
+    fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
+    // // // console.log('No low-rated feedback to analyze.'),
+    return;
+  }`;
+  const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
+  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+
+
 
 
 
@@ -284,6 +368,7 @@ async function main() {}
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
   const resp = await client && client.chat.completions && completions.create({'
     model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
+<<<<<<< HEAD
     messages: ['
       { role: 'system', content: 'You are a senior AI prompt engineer.' },'
       { role: 'user', content: prompt }],
@@ -291,6 +376,14 @@ async function main() {}
 '
   const text = resp && resp.choices?.[0]?.message?.content || 'No analysis',
 `
+=======
+    messages: [
+      { role: 'system', content: 'You are a senior AI prompt engineer.' },']
+      { role: 'user', content: prompt }],')
+    temperature: 0 && 0.3}),
+
+  const text = resp && resp.choices?.[0]?.message?.content || 'No analysis',`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`,
   fs && fs.writeFileSync(summaryPath, md),
 
@@ -302,7 +395,9 @@ async function main() {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     messages: [
+    model: process.env.OPENAI_MODEL |'gpt-4o-mini,
 
+<<<<<<< HEAD
       { role: 'system', content: 'You are a senior AI prompt engineer.' }
 =======
     messages: []
@@ -312,6 +407,12 @@ async function main() {}
       { role: 'user', content: prompt }]
     temperature: 0.3})'
   const text = resp.choices?.[0]?.message?.content |'No analysis'`
+=======
+      { role: 'system', content: 'You are a senior AI prompt engineer.' }']
+      { role: 'user', content: prompt }]')
+    temperature: 0.3})
+  const text = resp.choices?.[0]?.message?.content |'No analysis`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`
   fs.writeFileSync(summaryPath, md)
 <<<<<<< HEAD
@@ -333,6 +434,7 @@ async function main() {}
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     messages: [  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
@@ -555,8 +657,17 @@ main().catch((e) => { console.error(e), process.exit(1) });
 }
 '
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',`
+=======
+  // Append to prompt improvements;
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : `;
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ,`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+  console.log('Analysis written to', summaryPath)
 
+
+<<<<<<< HEAD
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
 <<<<<<< HEAD
@@ -579,3 +690,5 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

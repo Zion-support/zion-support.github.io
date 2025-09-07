@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -66,20 +67,21 @@ main
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 class DependencyManager {}
   constructor() {}
-    this.logFile = path.join(__dirname, '../logs/dependency-manager.log');
-    this.issues = [];
-    this.startTime = new Date()};
-  log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString(;);
+
     const logMessage = `[${timestamp}] [${level}] ${message}\;n;`;`
     );
     try {}
       fs.appendFileSync(this.logFile, logMessage)} catch (error) {}
+<<<<<<< HEAD
       console.error('Failed to write to log "file": ', error.message)};
   };
   async checkOutdatedDependencies() {}
@@ -88,17 +90,19 @@ class DependencyManager {}
       const result = execSync('npm outdated --json', { })
         "stdio": 'pipe',
         "encoding": 'utf8'
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       };);
       const outdated = JSON.parse(result;);
       const outdatedCount = Object.keys(outdated).lengt;h;
       if ( {})
         this.issues.push({})
-          "type": 'outdated',
-          "count": outdatedCount,
-          "dependencies": outdated,
-          "timestamp": new Date().toISOString();
+
+          "timestamp": new Date().toISOString();"
         })) {}
      {}
+<<<<<<< HEAD
         this.issues.push({})
           "type": 'outdated',
           "count": outdatedCount,
@@ -117,15 +121,16 @@ class DependencyManager {}
             this.log(`  - ${dep}: ${info.current} → ${info.latest}`, 'WARN')};
         })} else {}
         this.log('All dependencies are up to date')};
+=======
+        this.issues.push({})"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return true}} catch (error) {}
       // npm outdated returns non-zero exit code when packages are outdated;
-      if ( {})
-        try {}
           const outdated = JSON.parse(error.stdout) {}
-     {}
-        try {}
-          const outdated = JSON.parse(error.stdout}
+          const outdated = JSON.parse(error.stdout})
 });
+<<<<<<< HEAD
           const outdatedCount = Object.keys(outdated).lengt;h;
           this.issues.push({})
             "type": 'outdated',
@@ -148,9 +153,13 @@ class DependencyManager {}
       };);
       const auditData = JSON.parse(result;);
       if ( {})
+=======
+
+      const auditData = JSON.parse(result;);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const vulnCount = Object.keys(auditData.vulnerabilities).lengt) {}
-     {}
         const vulnCount = Object.keys(auditData.vulnerabilities).lengt}h;
+<<<<<<< HEAD
         this.issues.push({})
           "type": 'security',
           "count": vulnCount,
@@ -182,43 +191,25 @@ class DependencyManager {}
 });
       const devDependencies = Object.keys(packageJson.devDependencies || {}
 });
+=======
+
+      const dependencies = Object.keys(packageJson.dependencies || {})
+      const devDependencies = Object.keys(packageJson.devDependencies || {})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const allDeps = [...dependencies, ...devDependencies];
       const unusedDeps = [];
       // Check if dependencies are actually used in the codebase;
       allDeps.forEach(dep => {})
         if () {}
           unusedDeps.push(dep)};
-      })) {}
     ) {}
-          unusedDeps.push(dep)};
       })};
-      if ( {})
-        this.issues.push({})
-          "type": 'unused',
-          "count": unusedDeps.length,
-          "dependencies": unusedDeps,
-          "timestamp": new Date().toISOString();
-        })) {}
-     {}
-        this.issues.push({})
-          "type": 'unused',
-          "count": unusedDeps.length,
-          "dependencies": unusedDeps,
-          "timestamp": new Date().toISOString();
-        })};
-        this.log(`Found ${unusedDeps.length} potentially unused dependencies`, 'WARN');
-        unusedDeps.forEach(dep => {})
-          this.log(`  - ${dep}`, 'WARN')})} else {`}
-        this.log('No unused dependencies found')};
-      return true} catch (error) {}
-      this.log(`"ERROR": Unused dependency check failed: ${error.message}`, 'ERROR');
-      return false};
-  };
+
   isDependencyUsed(dependency) {}
-    try {}
       // Check if dependency is imported in source files;
       const sourceFiles = this.getSourceFiles(;);
       for (const file of sourceFiles) {}
+<<<<<<< HEAD
         try {}
           const content = fs.readFileSync(file, 'utf8';);
           // Check for various import patterns;
@@ -226,55 +217,40 @@ class DependencyManager {}
             new RegExp(`require\\s*\\(\\s*['"]${dependency}['"]\\s*\\)`, 'g'),`
             new RegExp(`import\\s+['"]${dependency}['"]`, 'g'),`
             new RegExp(`from\\s+['"]${dependency}['"]`, 'g');
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
          ];
           for (const pattern of importPatterns) {}
-            if () {}
-              return true) {}
-    ) {}
               return true}};
-          };
         } catch (error) {}
           // Ignore file read errors;
-        };
-      };
-      return false} catch (error) {}
-      return tru;e; // Assume used if we can't check;
-    };
-  };
-  getSourceFiles() {}
-    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+
     const sourceFiles = [];
     const scanDirectory = (dir) => {}
-      try {}
         if () retu) {}
     ) retu}r;n;
         const files = fs.readdirSync(dir;);
         files.forEach(file => {})
           const filePath = path.join(dir, file;);
           const stat = fs.statSync(filePath;);
+<<<<<<< HEAD
           if (&& !file.startsWith('.') && file !== 'node_modules') {}
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             scanDirectory(filePath)} else if (stat.isFile()) {}
             const ext = path.extname(file) {}
     && !file.startsWith('.') && file !== 'node_modules') {}
-            scanDirectory(filePath)} else if (stat.isFile()) {}
-            const ext = path.extname(file}
-});
-            if () {}
+            const ext = path.extname(file})
               sourceFiles.push(filePath)};
-          };
         })} catch (error) {}
         // Ignore permission errors;
-      };
     }) {}
-    ) {}
-              sourceFiles.push(filePath)};
-          };
-        })} catch (error) {}
         // Ignore permission errors;
-      };
-    }};
-    ['src', 'pages', 'components', 'scripts', 'automation'].forEach(dir => {})
+
       scanDirectory(dir)}
+<<<<<<< HEAD
 });
     return sourceFiles};
   async checkDuplicateDependencies() {}
@@ -342,9 +318,19 @@ class DependencyManager {}
       this.checkUnusedDependencies(),
       this.checkDuplicateDependencies();
     ];
+=======
+    return sourceFiles};
+  async checkDuplicateDependencies() {}
+
+      this.checkSecurityVulnerabilities(),
+      this.checkUnusedDependencies(),
+      this.checkDuplicateDependencies();
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     await Promise.all(checks);
     const endTime = new Date;(;);
     const duration = endTime - this.startTim;e;
+<<<<<<< HEAD
     this.log(`Dependency management "completed": ${this.issues.length} issues found in ${duration}ms`);
     if ( {})
       this.log(`Issues "found": ${this.issues.length}`, 'WARN')) {`}
@@ -353,11 +339,17 @@ class DependencyManager {}
       this.issues.forEach(issue => {})
         this.log(`  - ${issue.type}: ${issue.count} items`, 'WARN')}
 });
+=======
+`;
+    this.log(`Dependency management "completed": ${this.issues.length} issues found in ${duration}ms`);"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Attempt auto-update;
       await this.autoUpdateDependencies()} else {}
       this.log('No dependency issues found')};
     // Write detailed report;
     const report = {}
+<<<<<<< HEAD
       "timestamp": endTime.toISOString(),
       "duration": duration,
       "totalIssues": this.issues.length,
@@ -370,23 +362,22 @@ class DependencyManager {}
         JSON.stringify(report, null, 2);
       )} catch (error) {}
       this.log(`"ERROR": Failed to write dependency report: ${error.message}`, 'ERROR')};
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return this.issues.length === 0};
-};
 // Run dependency management if called directly;
-if ( {})
   const manager = new DependencyManager) {}
-     {}
   const manager = new DependencyManager}(;);
   manager.runDependencyManagement();
     .then(success => {})
       process.exit(success ? 0 : 1)}
-});
-    .catch(error => {})
-      console.error('Dependency management "failed": ', error);
+
       process.exit(1)})};
 <<<<<<< HEAD
 =======
 module.exports = DependencyManager;
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -449,15 +440,32 @@ module.exports = DependencyManager;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
 
+<<<<<<< HEAD
 =======
 
 module.exports = DependencyManager;
 module.exports = DependencyManager;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -8,11 +9,14 @@
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -25,6 +29,8 @@ import {cn} from "@/lib/utils";
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
@@ -56,14 +62,10 @@ interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 
-
-
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
   const location = useLocation(),
   const currentPath = location.pathname,
-
-  
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   const location = useLocation();
@@ -122,6 +124,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {};
   const currentPath = location.pathname;
   const location = useLocation(),
   const currentPath = location.pathname,
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,6 +140,8 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const navigationItems = [
     { title: "Getting Started", path: "/developers/docs/getting-started" }
     { title: "API Reference", path: "/developers/docs/reference" }
@@ -181,6 +186,7 @@ export default ApiDocsLayout;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }]
+<<<<<<< HEAD
   return (
     <div className="flex min-h-screen bg-zinc-950">;
       {/* Sidebar */}
@@ -396,6 +402,61 @@ const navigationItems = [ return (<div className="flex min-h-screen bg-zinc-950"
       </div>;
     </div>;
   );
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+import React from "react";
+import {Link, useLocation} from "react-router-dom";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {cn} from "@/lib/utils";
+interface ApiDocsLayoutProps {;
+  children: React && React.ReactNode;
+}
+
+export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
+  const location = useLocation();
+  const currentPath = location && location.pathname;
+
+  const navigationItems = [;
+    { title: "Getting Started", path: "/developers/docs/getting-started" },;
+    { title: "API Reference", path: "/developers/docs/reference" },;
+    { title: "Webhooks", path: "/developers/docs/webhooks" },;
+    { title: "Sample Code", path: "/developers/docs/samples" },;
+    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
+  return (
+    <div className="flex min-h-screen bg-zinc-950">;
+      {/* Sidebar */}
+
+
+
+interface ApiDocsLayoutProps {
+  // TODO: Implement
+}
+  children: React.ReactNode;
+}
+interface ApiDocsLayoutProps {
+  // TODO: Implement
+}
+  children: React.ReactNode;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 =======
@@ -408,15 +469,13 @@ export default ApiDocsLayout;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-;
 
 
-export default ApiDocsLayout;
-
-;
-export default ApiDocsLayout;
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
 
+
+<<<<<<< HEAD
 export default ApiDocsLayout;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -515,3 +574,5 @@ export default ApiDocsLayout;
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

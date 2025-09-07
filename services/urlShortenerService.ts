@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -19,6 +20,13 @@
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface ShortUrl {
 =======
 
@@ -28,8 +36,20 @@ export interface ShortUrl {;
   id: string;
   originalUrl: string;
   shortCode: string;
+export interface ShortUrl  {export interface ShortUrl  {id: string;
+
+export interface ShortUrl {
+  // TODO: Implement
+}
+export interface ShortUrl {;
+  id: string;,
+  originalUrl: string;
+  shortCode: string;,
+pr-12325
   shortUrl: string;
   createdAt: Date;
+  expiresAt?: Date;original_url: string;
+export interface ShortUrl  {id: string;
   expiresAt?: Date;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,6 +62,7 @@ export interface ShortUrl {;
 export interface ShortUrl {
   id: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -54,10 +75,19 @@ export interface ShortUrl {
 
   original_url: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   short_code: string;
+  // TODO: Implement
+  original_url: string;
+  short_code: string;,
+pr-12325
   short_url: string;
   created_at: Date;
-  expires_at?: Date;
+  expires_at?: Date;}
+  is_active: boolean,user_id?: string;export interface ShortUrl  {id: string;}
+
+}
   is_active: boolean,
   user_id?: string;
 <<<<<<< HEAD
@@ -65,6 +95,7 @@ export interface ShortUrl {
 =======
 
 
+<<<<<<< HEAD
 }
 export interface UrlAnalytics {
   total_clicks: number;
@@ -82,10 +113,13 @@ export interface ShortUrl {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
+<<<<<<< HEAD
 }
 export interface UrlAnalytics {};
   total_clicks: number;
@@ -132,14 +166,70 @@ export interface ShortUrl {};
 export interface UrlAnalytics {
   total_clicks: number;
   unique_visitors: number;
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export interface ShortUrl {
   id: string;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+}
+export interface UrlAnalytics {
+
+
+
+  isActive: boolean
+
+  userId?: string
+}
+export interface UrlAnalytics {
+
+export interface UrlAnalytics {;
+  totalClicks: number;
+  uniqueVisitors: number;
+
+
+
+
+export interface ShortUrl {
+  id: string;
+}
+
+
+
+
+
+  referrers: string[];
+  countries: string[];
+  devices: string[];
+  browsers: string[];
+
+
+
+
+
+
+  last_clicked: Date,
+  click_history: ClickEvent[];
+
+last_clicked: Date,
+  click_history: ClickEvent[];
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   last_clicked: Date,
   click_history: ClickEvent[];
 
@@ -158,6 +248,7 @@ export interface ClickEvent {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   timestamp: Date;
+<<<<<<< HEAD
   ip_address: string;
   user_agent: string;
 <<<<<<< HEAD
@@ -1360,3 +1451,7 @@ export const urlShortenerService = new UrlShortenerService();
 
 export const urlShortenerService = new UrlShortenerService();
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

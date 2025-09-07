@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {}
@@ -74,6 +75,9 @@ interface PortfolioBuilderProps {}
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+<
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
 =======
 >export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
@@ -159,6 +163,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =======
 }
+<<<<<<< HEAD
 
 
 
@@ -223,6 +228,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ========
+=======
+<
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 >>>>>>>> main:src.disabled/src/pages.disabled/PortfolioBuilder.jsx
 >>>>>>> main

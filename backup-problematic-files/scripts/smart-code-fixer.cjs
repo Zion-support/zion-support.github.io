@@ -19,6 +19,7 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node
@@ -40,33 +41,39 @@ console.log('=====');
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 console.log('🔧 Smart Code Fixer');
-console.log('=====');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Function to fix unescaped entities only in JSX content
+=======
+// Function to fix unescaped entities only in JSX content;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function fixUnescapedEntities(content) {
-  // Only replace single quotes that are not in import statements or string literals
-  // This regex looks for single quotes that are not preceded by import, from, or within quotes
-  return content.replace(/(?<!import\s+.*?from\s+['"])(?<!['"])(?<![a-zA-Z_$])'([^'"]*?)'(?!['"])(?![a-zA-Z_$])/g, (match, content) => {
+  // Only replace single quotes that are not in import statements or string literals;
+  // This regex looks for single quotes that are not preceded by import, from, or within quotes;
+
     // Only replace if it's likely JSX content (contains spaces or common JSX patterns)
     if (content.includes('&') || content.includes('<') || content.includes('>')) {
       return `&apos;${content}&apos;`;
     }
     return match;
   });
-}
-
-// Function to fix specific linting issues
+// Function to fix specific linting issues;
 function fixSpecificIssues(content, filePath) {
   let modified = false;
-
-  // Fix unused imports
+  // Fix unused imports;
   if (content.includes("import Image from 'next/image'") && !content.includes('<Image')) {
+<<<<<<< HEAD
     content = content.replace(/import Image from 'next\/image'/, '// import Image from \'next/image\';');
     modified = true;
   }
@@ -121,60 +128,44 @@ function fixSpecificIssues(content, filePath) {
   if (content !== content.replace(/([^,}])\n\s*}/g, '$1,\n}')) {
     modified = true;
   }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return { content, modified };
-}
-
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  // TODO: Implement
+
     let modifiedContent = content;
     let hasChanges = false;
-
-    // Apply fixes
+    // Apply fixes;
     const result = fixSpecificIssues(modifiedContent, filePath);
     modifiedContent = result.content;
     hasChanges = result.modified;
-
-    // Fix unescaped entities
+    // Fix unescaped entities;
     const originalContent = modifiedContent;
     modifiedContent = fixUnescapedEntities(modifiedContent);
     if (modifiedContent !== originalContent) {
       hasChanges = true;
-    }
-
-    // Write back if modified
+    // Write back if modified;
     if (hasChanges) {
-      fs.writeFileSync(filePath, modifiedContent, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
-    } else {
-      console.log(`ℹ️  No changes needed: ${filePath}`);
-      return false;
-    }
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
 
-// Function to find all relevant files
-function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+      return false;
+  } catch (error) {`;
+    console.error(`❌ Error processing ${filePath}:`, error.message);
+
   const files = [];
-  
   function traverse(currentDir) {
-    try {
+  // TODO: Implement
       const items = fs.readdirSync(currentDir);
-      
       for (const item of items) {
         const fullPath = path.join(currentDir, item);
-        try {
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+  // TODO: Implement
+
             traverse(fullPath);
           } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+<<<<<<< HEAD
             files.push(fullPath);
           }
         } catch (error) {
@@ -254,3 +245,6 @@ module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/automation/intelligent-git-workflow.cjs
 <<<<<<< HEAD:backup-problematic-files/scripts/automation/intelligent-git-workflow.cjs
 =======
@@ -1915,33 +1916,55 @@ class IntelligentGitWorkflow {
     } catch (e) {
       // Start fresh if file is corrupted
     }
+=======
+
+
+
+
+#!/usr/bin/env node;
+;#!/usr/bin/env node;
+/**
+ * Intelligent Git Workflow Automation;
+ * Advanced Git automation with intelligent conflict resolution, auto-merge, and code review;
+ * Features: Smart branching, conflict resolution, PR automation, code quality checks;
+ */
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+    this.logFile = path.join(this.projectRoot, 'logs', 'git-workflow.log')
+    this.configFile = path.join(this.projectRoot, 'logs', 'git-workflow-config.json')
+    this.workflowHistoryFile = path.join(this.projectRoot, 'logs', 'git-workflow-history.json')
+      autoMerge: process.env.AUTO_MERGE === 'true'
+      conflictResolution: process.env.CONFLICT_RESOLUTION === 'intelligent'
+      branchCleanup: process.env.BRANCH_CLEANUP === 'true'
+      prAutomation: process.env.PR_AUTOMATION === 'true'
+      codeReviewAI: process.env.CODE_REVIEW_AI === 'true'
+      branchStrategy: process.env.BRANCH_STRATEGY || 'gitflow'
+      protectedBranches: ['main', 'master', 'develop']
+      autoCommit: process.env.AUTO_COMMIT === 'true'
+      commitMessageTemplate: process.env.COMMIT_MESSAGE_TEMPLATE || 'feat: {type} - {description}'
+      mergeStrategy: process.env.MERGE_STRATEGY || 'recursive'
+
+
+
+      await fs.mkdir(path.join(this.projectRoot, 'logs')
+
+
+      // Start fresh if file is corrupted;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     errors.push(errorLog);
     fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
-  }
-}
-// Run the git workflow
+// Run the git workflow;
 if (require.main === module) {
   const gitWorkflow = new IntelligentGitWorkflow();
   gitWorkflow.run();
-}
-module.exports = IntelligentGitWorkflow;
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
-      console.log('Logs directory already exists')
-  log(message, level = 'INFO')
-    fs.appendFile(this.logFile, logMessage + '\n')
-      const config = await fs.readFile(this.configFile, 'utf8')
-      this.log(' Git workflow configuration loaded')
-      this.log('� Using default Git workflow configuration')
-      this.log(` Failed to save configuration: ${error.message}`, 'ERROR'`)
-      const history = await fs.readFile(this.workflowHistoryFile, 'utf8')
-      this.log('� No workflow history found, starting fresh')
-      this.log(` Failed to save workflow history: ${error.message}`, 'ERROR'`)
-    this.log(' Initializing Intelligent Git Workflow...')
+
       // Check if we'
       await this.runGitCommand('git rev-parse --git-dir')
       this.log(' Git repository detected')
       this.log(' Intelligent Git Workflow is ready')
+<<<<<<< HEAD
       this.log(` Git workflow initialization failed: ${error.message}`, 'ERROR'`)
       const userName = await this.runGitCommand('git config user.name').catch(() => ''
       const userEmail = await this.runGitCommand('git config user.email').catch(() => ''
@@ -1952,36 +1975,38 @@ const workflow = new IntelligentGitWorkflow();
 workflow.runWorkflow().catch(console.error);
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+
+
+
+        await this.runGitCommand('git config user.email "ai-workflow@example.com")"
+// Run the workflow;
+const workflow = new IntelligentGitWorkflow();
+workflow.runWorkflow().catch(console.error);"
   updateWorkflowData() {
     this.workflowData.lastUpdated = new Date().toISOString();
 
-    // Update performance metrics
+    // Update performance metrics;
     const now = new Date().toISOString();
     this.workflowData.performance[now] = {
       commits: this.workflowData.mergeHistory.filter(m => m.success).length,
       conflicts: this.workflowData.conflictHistory.length,
       merges: this.workflowData.mergeHistory.length,
-    };
-  }
 
-  handleWorkflowError(error) {
-    console.error('🚨 Git workflow error:', error.message);
+  handleWorkflowError(error) {"
 
-    // Log error for analysis
+    // Log error for analysis;
     const errorLog = {
-      timestamp: new Date().toISOString(),
       error: error.message,
       stack: error.stack,
-    };
 
     const errorFile = path.join(
-      this.projectRoot,
-      'logs',
-      'git-workflow-errors.json'
-    );
+
     let errors = [];
 
+<<<<<<< HEAD
     try {
       if (fs.existsSync(errorFile)) {
         errors = JSON.parse(fs.readFileSync(errorFile, 'utf8'));
@@ -2358,8 +2383,19 @@ workflow.runWorkflow().catch(console.error);
 const workflow = new IntelligentGitWorkflow();
 workflow.runWorkflow().catch(console.error);
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
+=======
+  // TODO: Implement
 
-// Run the workflow
-const workflow = new IntelligentGitWorkflow();
+      // Start fresh if file is corrupted;
+// Run the workflow;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 workflow.runWorkflow().catch(console.error);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Run the workflow;
+// Run the workflow;
+"`;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

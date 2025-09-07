@@ -20,19 +20,25 @@ import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio"
 const AspectRatio = AspectRatioPrimitive.Root
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio"
 ;
 const AspectRatio = AspectRatioPrimitive.Root;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+import * as AspectRatioPrimitive from \"@radix-ui/react-aspect-ratio\"
+
+
+import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio""
+const AspectRatio = AspectRatioPrimitive.Root;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import * as AspectRatioPrimitive from &quot;@radix-ui/react-aspect-ratio&quot;
-const AspectRatio = AspectRatioPrimitive.Root
-export { AspectRatio }
-import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio"
-
-const AspectRatio = AspectRatioPrimitive.Root
-
+const AspectRatio = AspectRatioPrimitive.Root;
+export { AspectRatio }"
+import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio""
+const AspectRatio = AspectRatioPrimitive.Root;
 export { AspectRatio }
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -49,6 +55,7 @@ export { AspectRatio };
 =======
 
 export { AspectRatio }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -63,3 +70,14 @@ export { AspectRatio }
 
 export { AspectRatio }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio""
+import * as AspectRatioPrimitive from &quot;@radix-ui/react-aspect-ratio&quot;
+export { AspectRatio }"
+export { AspectRatio };
+
+
+"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -20,6 +20,7 @@ import fs from 'fs';
 import path from 'path';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   return await res.json()
 
@@ -357,3 +358,6 @@ main().catch((e) => { console.error(e), process.exit(1) });
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -19,6 +20,10 @@ import { Button } from "@/components/ui/button";
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Button} from "@/components/ui/button";
 import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
@@ -58,6 +63,8 @@ import { Button } from "@/components/ui/button",
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",
@@ -69,6 +76,7 @@ import { Button } from "@/components/ui/button",
 =======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -81,6 +89,10 @@ import { Button } from "@/components/ui/button",
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -89,10 +101,17 @@ import {};
   getTalentRateSuggestion;
   PricingSuggestion;
   TalentRateParams;
+<<<<<<< HEAD
   trackPricingSuggestion"
 } from "@/services/pricingSuggestionService","
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 <<<<<<< HEAD
+=======
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService",
+
+import { PricingSuggestionBox } from "./PricingSuggestionBox",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 import {Button} from "@/components/ui/button";
@@ -100,14 +119,36 @@ import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPrici
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
+
+import {Button} from "@/components/ui/button";""
+import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";""
+import {PricingSuggestionBox} from "./PricingSuggestionBox";""
+import {useAuth} from "@/hooks/useAuth";""
+import {Sparkles} from "lucide-react";""
+import React, { useState } from "react",""
+import { Button } from "@/components/ui/button",""
+import { Button } from "@/components/ui/button","
+import {
+  // TODO: Implement
+}
+  getTalentRateSuggestion;
+  PricingSuggestion;
+  TalentRateParams;
+  trackPricingSuggestion;"
+} from "@/services/pricingSuggestionService",""
+import { PricingSuggestionBox } from "./PricingSuggestionBox",""
+import {Sparkles} from "lucide-react";"
+pr-12325
 interface TalentRateRecommenderProps {;
   skills: string[],;
   yearsExperience: number,;
   location?: string;
   onSuggestionApplied: (value: number) => void,;
   rateType: "hourly" | "fixed";
+
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,12 +178,16 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;in
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 interface TalentRateRecommenderProps {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;interface TalentRateRecommenderProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface TalentRateRecommenderProps {};
   skills;
   years_experience;
   location;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const generateSuggestion = async () => {;
     if (skills && skills.length === 0 || yearsExperience <= 0) {;
@@ -973,3 +1018,5 @@ return (<div className="space-y-4" > <div> {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

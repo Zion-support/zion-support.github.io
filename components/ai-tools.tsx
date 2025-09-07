@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Brain,
   MessageSquare,
   Image,
@@ -22,10 +23,14 @@
   Code,
   FileText,
   Zap,
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+
 import { Brain;
   MessageSquare;
   Image;
@@ -33,16 +38,24 @@ import { Brain;
   Code;
   FileText;
   Zap;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
+<<<<<<< HEAD
         'Advanced reasoning & analysis''
         'Web browsing & real-time info''
         'Plugin ecosystem access''
         'Code generation & debugging''
         'Professional writing assistance''
+=======
+        'Advanced reasoning & analysis'
+        'Web browsing & real-time info'
+        'Plugin ecosystem access'
+        'Code generation & debugging'
+        'Professional writing assistance'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
 
 
@@ -50,6 +63,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 
   Shield
+<<<<<<< HEAD
  } from 'lucide-react';
 export default function AiToolsPage() {
   const aiTools = null;
@@ -419,6 +433,9 @@ avgPrice: '$44/month',
 avgPrice: '$82/month',
     },
   ];
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -507,8 +524,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+<<<<<<< HEAD
               Curated AI Tools & Services;
             </h2>"
+=======
+              Curated AI Tools & Services
+            </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world value.
             </p>
@@ -546,10 +568,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className={`card-hover group border-gradient-blue relative ${'
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''`
                 }`}
+<<<<<<< HEAD
                       <Button;
                         href={tool && tool.website}'
                         variant='primary''
                         size='sm''
+=======
+                      <Button
+                        href={tool && tool.website}
+                        variant='primary'
+                        size='sm'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
                         Try Tool;'
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -637,9 +666,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {feature}
                         </li>
                       ))}
+<<<<<<< HEAD
                     </ul>"
                         variant="primary""
                         size="sm""
+=======
+                    </ul>
+                        variant="primary"
+                        size="sm"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
                       >
                         Try Tool"
@@ -814,8 +849,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+<<<<<<< HEAD
               Getting Started with AI Tools;
             </h2>"
+=======
+              Getting Started with AI Tools
+            </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Practical advice for implementing AI tools in your workflow and maximizing their value.
             </p>
@@ -856,8 +896,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <li>• Focus on one tool at a time</li>
                 </ul>
               </div>
+<<<<<<< HEAD
             </Card>"
                 <h3 className="text-xl font-semibold text-white mb-3">Best Practices</h3>"
+=======
+            </Card>
+                <h3 className="text-xl font-semibold text-white mb-3">Best Practices</h3>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <p className="text-gray-400 mb-4">
                   Follow proven strategies to get the most out of your AI tools and ensure quality output.
                 </p>"
@@ -904,6 +949,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* CTA Section */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>

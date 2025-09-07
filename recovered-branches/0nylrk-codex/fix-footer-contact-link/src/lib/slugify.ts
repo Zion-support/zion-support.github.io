@@ -5,11 +5,6 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-
-
-export function slugify(title: string, separator = "-"): string {
-  const sep = separator;
-  const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -59,12 +54,22 @@ export function slugify(title: string, separator = "-"): string {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+export function slugify(title: string, separator = "-"): string {
+  const sep = separator,
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return title
     .trim()
     .replace(/_/g, " ") // treat underscores like spaces
@@ -109,6 +114,7 @@ export function unslugify(slug: string, separator = "-"): string {};
 =======
 }
 
+<<<<<<< HEAD
 
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -138,6 +144,8 @@ export function unslugify(slug: string, separator = "-"): string {};
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function slugify (title: string, separator = "-"): string {
   const sep = separator;
 =======
@@ -150,7 +158,6 @@ export function slugify (title: string, separator = "-"): string {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
 ;
-
 
 ;
 
@@ -198,11 +205,50 @@ export function unslugify (slug: string, separator = "-"): string {};
   return slug;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+.split (separator);
+    .filter (Boolean);
+    .map (w => w.char_at (0).toUpperCase () + w.slice (1));
+    .join (" ");
+}
+export function slugify(title:string, separator = "-"):string {;
+  const sep = separator,;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),;
+;
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ")
+}
+
+;
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator,;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return title;
+    .trim();
+    .replace(/_/g, " ") // treat underscores like spaces;
+    .normalize("NFD");
+    .replace(/[\u0300-\u036F]/g, "");
+    .toLowerCase();
+    .replace(/[^a-z0-9\s-]/g, "");
+    .replace(/[\s-]+/g, sep);
+    .replace(new RegExp(`${escaped}{2}`, "g"), sep);
+    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
+}
+;
+/**;
+ * Convert a slug back into a human readable title.;
+ * This simply splits the slug on the separator and;
+ * capitalizes each word.;
+ */;
+export function unslugify(slug: string, separator = "-"): string {;
+  return slug;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     .split(separator);
     .filter(Boolean);
     .map(w => w.charAt(0).toUpperCase() + w.slice(1));"
@@ -244,7 +290,77 @@ export function unslugify (slug: string, separator = "-"): string {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-
-
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+
+
+
+export function slugify(title: string, separator = "-"): string {"
+  // TODO: Implement
+}
+  const sep = separator;"
+  const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");""
+export function slugify(title: string, separator = "-"): string {;"
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");""
+  // TODO: Implement
+  const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");"
+  return title;
+    .trim()"
+    .replace(/_/g, " ") // treat underscores like spaces;""
+    .normalize("NFD")""
+    .replace(/[\u0300-\u036F]/g, "")"
+    .toLowerCase()"
+    .replace(/[^a-z0-9\s-]/g, "")"
+    .replace(/[\s-]+/g, sep)"
+    .replace(new RegExp(`${escaped}{2}`, "g"), sep)""`;
+    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");"
+/**
+ * Convert a slug back into a human readable title.
+ * This simply splits the slug on the separator and;
+ * capitalizes each word.
+ */"
+export function unslugify(slug: string, separator = "-"): string {"
+  // TODO: Implement
+  return slug;
+    .split(separator)
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))"
+    .join(" ");"
+
+"
+export function slugify (title: string, separator = "-"): string {"
+  // TODO: Implement
+  const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");"
+;
+
+
+  const sep = separator,;"
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");"
+    .trim ();"
+    .replace (/_ / g, " ") // treat underscores like spaces;""
+    .normalize ("NFD");""
+    .replace (/[\u0300-\u036F]/g, "");"
+    .toLowerCase ();"
+    .replace (/[^a - z0 - 9\s-]/g, "");"
+    .replace (/[\s-]+/g, sep);"`;
+    .replace (new RegExp (`${escaped}{2}`, "g"), sep);""`;
+    .replace (new RegExp (`^${escaped}+|${escaped}+$`, "g"), "");"
+/**;
+* Convert a slug back into a human readable title.;
+* capitalizes each word.;
+*/;"
+export function unslugify (slug: string, separator = "-"): string {"
+  // TODO: Implement
+
+    .split(separator);
+    .filter(Boolean);
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1));"
+
+
+
+"`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

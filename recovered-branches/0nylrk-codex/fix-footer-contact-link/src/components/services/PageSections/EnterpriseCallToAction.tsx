@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -60,6 +61,9 @@ export function EnterpriseCallToAction() {}
 =======
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function EnterpriseCallToAction() {
   return (
     <div className="mt-12 text-center">
@@ -73,6 +77,7 @@ export function EnterpriseCallToAction() {
         Need volume pricing or custom SLAs? Contact our enterprise sales team.
       </p>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -154,7 +159,27 @@ import { Button } from "@/components/ui/button",  return (
   );
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+import { Link } from "react-router-dom",;
+import { Button } from "@/components/ui/button",;
+import {Link} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import { Link } from "react-router-dom",;
+import { Button } from "@/components/ui/button",  return (
+    <div className="mt - 12 text-center">;
+      <Link to="/request - quote">;
+        <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white text - lg py - 6 px-8">;
+          Get Custom Enterprise Quote;
+        </Button>;
+      </Link>;
+      <p className="mt - 4 text - zion - slate-light">;
+        Need volume pricing or custom SLAs? Contact our enterprise sales team.;
+      </p>;
+    </div>);
+
+}
 
   )
   )
@@ -164,6 +189,7 @@ import { Button } from "@/components/ui/button",  return (
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -190,6 +216,8 @@ import { Button } from "@/components/ui/button",  return (
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 } <div className="mt-12 text-center"> <Link to="/request-quote"> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8"> mt-4 text-zion-slate-light" > Need volume pricing or custom SLAs? Contact our enterprise sales team. </p> </div> 
   );
 }
@@ -200,6 +228,7 @@ import { Button } from "@/components/ui/button",  return (
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -207,3 +236,21 @@ import { Button } from "@/components/ui/button",  return (
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import { Link } from "react-router-dom";""
+import { Button } from "@/components/ui/button";"
+export function EnterpriseCallToAction() {
+  return ("
+    <div className="mt-12 text-center">"
+</div>"
+      <Link to="/request-quote">"
+"
+        <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">"
+
+      <p className="mt-4 text-zion-slate-light">"
+</p>
+} <div className="mt-12 text-center"> <Link to="/request-quote"> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8"> mt-4 text-zion-slate-light" > Need volume pricing or custom SLAs? Contact our enterprise sales team. </p> </div>")"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

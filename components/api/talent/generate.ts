@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -304,12 +305,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
     return res.status(500).json({ error: e.message || 'OpenAI error' });
   }
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'OpenAI error' })
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
 =======
@@ -325,3 +331,6 @@ pr-12243
 }
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

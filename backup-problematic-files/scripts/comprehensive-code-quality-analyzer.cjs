@@ -14,6 +14,7 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
@@ -102,8 +103,14 @@ main();#!/usr/bin/env node;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+=======
+    process.exit(1)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 main();
+#!/usr/bin/env node
 
+
+<<<<<<< HEAD
 #!/usr/bin/env node;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs')
@@ -213,3 +220,5 @@ console.log('')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

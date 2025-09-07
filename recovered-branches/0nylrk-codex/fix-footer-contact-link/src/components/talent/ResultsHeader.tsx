@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Loader2 } from "lucide-react";
 import { Loader2 } from "lucide-react",
@@ -26,6 +27,9 @@ import { Loader2 } from "lucide-react",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ResultsHeaderProps {
   isLoading: boolean;
   resultCount: number
@@ -191,7 +195,38 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
         </span>
       )}
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</div>;
+  );
+}
+  resultCount: number;
+}
+
+export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderProps) {;
+  return (
+    <div className="flex items-center mb-6 text-zion-slate-light">;
+      {isLoading ? (;
+        <div className="flex items-center">;
+          <Loader2 className="h-4 w-4 animate-spin mr-2" />;
+          <span>Loading talents...</span>;
+        </div>;
+      ) : (;
+        <span>;
+          {resultCount === 0 ? (;
+            "No talents found. Try adjusting your filters.";
+          ) : (;
+            `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
+
+          {resultCount === 0 ? (
+            "No talents found. Try adjusting your filters."
+          ) : (
+            `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
+
+          )}
+        </span>;      )}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>
 
   )
@@ -213,8 +248,9 @@ export /**;
 <<<<<<< HEAD
 function ResultsHeader() {
   return (
-    <div className="flex items - center mb - 6 text - zion - slate - light">;
+    <div className="flex items - center mb - 6 text - zion - slate-light">;
       {is_loading ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="flex items-center">;
           <Loader2 className="h - 4 w - 4 animate - spin mr-2" />;
@@ -230,6 +266,10 @@ function ResultsHeader() {}
         <div className="flex items - center">;
           <Loader2 className="h - 4 w - 4 animate - spin mr - 2" />;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        <div className="flex items-center">;
+          <Loader2 className="h - 4 w - 4 animate - spin mr-2" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <span > Loading talents...</span>;
         </div>) : (
         <span>;
@@ -243,18 +283,49 @@ function ResultsHeader() {}
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 
 =======
 }
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>
+=======
+</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 }
 ;
+    </div>
+  );
+import { Loader2 } from "lucide-react";"
+interface ResultsHeaderProps {
+  // TODO: Implement
+}
+  isLoading: boolean;,
+  resultCount: number;
 
-      ) :(;
+}
+
+export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
+
+  return ("
+    <div className="flex items-center mb-6 text-zion-slate-light">"
+</div>"
+        <div className="flex items-center">"
+          <Loader2 className="h-4 w-4 animate-spin mr-2" />"
+</Loader2>
+          <span>Loading talents...</span>
+        </div>
+        <span>
+</span>
+    <div className="flex items - center mb - 6 text - zion - slate - light">;"
+        <div className="flex items - center">;"
+          <Loader2 className="h - 4 w - 4 animate - spin mr - 2" />;"
+          <span > Loading talents...</span>;)
+        </div>) : (
         <span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {resultCount === 0 ? (;"
             "No talents found. Try adjusting your filters.";
@@ -291,16 +362,23 @@ resultCount: number
 }talent$ {
   resultCount !== 1 ? 's' : '' 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</span>)
+        </span>)}
+    </div>);
+        </span>;
+    </div>;"
+  return (<div className="flex items-center mb-6 text-zion-slate-light" > isLoading ? (<div className="flex items-center" > <Loader2 className="h-4 w-4 animate-spin mr-2" /> <span>Loading talents...</span> </div>) : (<span> {")"
+  resultCount === 0 ? ("No talents found. Try adjusting your filters.") : (`Found $ {"
+  resultCount;
+}talent$ {"
+  resultCount !== 1 ? 's' : ')`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }`) 
 }</span>) 
 }</div>) 
-}
-);
-}
-}
-;
-
-          )}
+    </div>`;
+pr-12325
         </span>;
       )}
     </div>
@@ -309,6 +387,7 @@ resultCount: number
   )
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -329,3 +408,7 @@ resultCount: number
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </div>'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

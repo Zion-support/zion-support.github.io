@@ -17,6 +17,17 @@ export interface Peer {;
   scope?: SyncScope;
   paused?: boolean;
 }
+<<<<<<< HEAD
+=======
+export interface InstanceConfig {instanceId: string;
+export type SyncScope = "full" | "dao" | "marketplace";
+export interface Peer {;
+  id: string;
+  baseUrl: string, // e.g., https: //zion-latam.example.org;
+  scope?: SyncScope;
+  paused?: boolean;
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export interface InstanceConfig {;
   instanceId: string;
@@ -68,6 +79,7 @@ export interface InstanceConfig {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   secret_configured: boolean;
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -79,6 +91,8 @@ export interface InstanceConfig {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 }
 ;
@@ -118,6 +132,22 @@ export interface ProposalVoteEntry {
   voterId: string;
   weight: number;
   choice: string;
+<<<<<<< HEAD
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+  | "leaderboard_entry";
+export interface BaseEventPayload {;
+  id: string;
+}
+;
+export interface ProposalVoteEntry {;
+  voterId: string;
+  weight: number;
+  choice: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 export interface ProposalPayload extends BaseEventPayload {;
@@ -134,6 +164,9 @@ export interface TokenTransferPayload extends BaseEventPayload {;
 =======
 =======
 
+  | "leaderboard_entry",;
+export interface BaseEventPayload {;
+  id: string;
 
 <<<<<<< HEAD
   | "leaderboard_entry",;
@@ -169,21 +202,28 @@ export type SyncEventType =;"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 export interface TalentMobilityPayload extends BaseEventPayload {;
   personId: string;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -193,6 +233,8 @@ export interface TalentMobilityPayload extends BaseEventPayload {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   fromNation: string;
   toNation: string;
   role: string;
@@ -202,13 +244,17 @@ export interface TalentMobilityPayload extends BaseEventPayload {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   | "leaderboard_entry",
 export interface BaseEventPayload {
   id: string;
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -216,10 +262,14 @@ export interface BaseEventPayload {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,6 +289,9 @@ export interface BaseEventPayload {
   }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 export interface DaoEndorsementPayload extends BaseEventPayload {;
@@ -260,6 +313,7 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,6 +328,11 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+  decision: "endorse" | "reject";
+  timestamp: number;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
@@ -301,6 +360,7 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -314,6 +374,11 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  rank?: number;
+  period?: string, // e.g., 2025-Q3;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 <<<<<<< HEAD
@@ -330,11 +395,19 @@ export type SyncEventPayload =;
   | DaoEndorsementPayload;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  | LeaderboardEntryPayload,;
+export interface SyncEvent {;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   | LeaderboardEntryPayload;
 export interface SyncEvent {;
   eventId: string;
   type: SyncEventType;
   payload: SyncEventPayload;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -352,13 +425,19 @@ export interface SyncEvent {;
 =======
   | DaoEndorsementPayload;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   originInstanceId: string;
   version: number;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   | LeaderboardEntryPayload,
 export interface SyncEvent {
   event_id: string,
@@ -370,10 +449,13 @@ export interface SyncEvent {
   merkle_root?: string, // required for proposal events;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export interface MultiverseState {;
   config: InstanceConfig;
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface MultiverseState {
   config: InstanceConfig,
   lastSyncedAt: number,
@@ -382,6 +464,7 @@ export interface MultiverseState {
   proposalMerkleById: Record < string string>;
 
   events: SyncEvent[];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
@@ -400,6 +483,8 @@ export interface MultiverseState {
   } catch (error) {"
     console.error("Error:", error);"
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -439,6 +524,7 @@ export interface MultiverseState {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -459,3 +545,18 @@ export interface MultiverseState {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+}
+}
+;
+export interface MultiverseState {;
+  config: InstanceConfig;
+  lastSyncedAt: number;
+  seenEventIds: Record<string true>;
+  latestVersionByEntityId: Record<string, number>;
+  proposalMerkleById: Record<string, string>;
+  events: SyncEvent[];
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { StepProps } from "./types";
@@ -33,6 +34,9 @@ import { StepProps } from "./types",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ResumeStepsProps {
   steps: StepProps[];
   activeTab: string;
@@ -69,6 +73,7 @@ interface ResumeStepsProps {}
   onChange: (value: string) => void;
 }
 
+<<<<<<< HEAD
 export const ResumeSteps = ({}
   steps,
   activeTab,
@@ -247,3 +252,7 @@ export const ResumeSteps = ({ steps, activeTab, onChange } ResumeStepsProps) => 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

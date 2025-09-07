@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Search;
   Filter;
   Star;
@@ -64,6 +65,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -78,6 +82,7 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [sortBy, setSortBy] = useState('name');
 
+<<<<<<< HEAD
   // Combine all 2026 services;
   const allServices = [;
     ...revolutionary2026Services,;
@@ -334,6 +339,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
                 Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </p>
               {/* Service Statistics */}"
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
@@ -357,10 +364,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
               {/* Service Statistics */}"
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">;"
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">;"
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices && allServices.length}</div>;"
+=======
+              {/* Service Statistics */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">;
+                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">;
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices && allServices.length}</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className="text-gray-400 text-sm">Total Services</div>;
                 </div>;"
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">;'"
@@ -425,8 +439,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </option>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     ))}
+<<<<<<< HEAD
                 {/* Sort By */}'
                 <div className='relative'>;'
+=======
+                {/* Sort By */}
+                <div className='relative'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
 <div className='relative'>
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -472,10 +491,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {filteredServices.map((service, index) => (
                 <motion.div;
                   key={service.id}
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+=======
+                  initial={{ opacity: 0;, y: 30 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='group'
                 >
 =======
@@ -510,11 +535,15 @@ className='group'
 
 <<<<<<< HEAD
                     {/* Service Title */}
+<<<<<<< HEAD
 =======
 
                     {/* Service Title */}'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
+=======
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300'>                      {service.name;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </h3>
                     {/* Tagline */}'
                     <p className='text-gray-300 text-sm mb-4'>                      {service.tagline}
@@ -522,19 +551,34 @@ className='group'
                     {/* Price */}'
                     <div className='flex items-center justify-between mb-4'>'"
                       <div className='text-2xl font-bold text-cyan-400'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+<<<<<<< HEAD
         {/* Services Grid */}'
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>;'
           <div className='max-w-7xl mx-auto'>;'"
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices && filteredServices.map((service, index) => (        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">;"
+=======
+        {/* Services Grid */}
+        <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-7xl mx-auto'>;
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices && filteredServices.map((service;, index) => (        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-7xl mx-auto">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div;
                   key={service && service.id}
+<<<<<<< HEAD
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}'
                   className='group'>;'
+=======
+                  initial={{ opacity: 0;, y: 30 ;}}
+                  animate={{ opacity: 1;, y: 0 ;}}
+                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
+                  className='group'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
                     {/* Service Header */}'
                     <div className='flex items-start justify-between mb-4'>;'
@@ -551,10 +595,16 @@ className='group'
                         </span>;
                       )}
                   key={service.id}
+<<<<<<< HEAD
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+=======
+                  initial={{ opacity: 0;, coordinate_y: 30 ;}}
+                  animate={{ opacity: 1;, coordinate_y: 0 ;}}
+                  transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {/* Service Header */}
                     <div className="flex items - start justify-between mb-4">;
                       <div className="text-4xl">{service.icon}</div>;
@@ -585,8 +635,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.rating}
                     </div>;
 
+<<<<<<< HEAD
                     {/* Service Title */}'
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service && service.name}
+=======
+                    {/* Service Title */}
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300'>                      {service && service.name;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </h3>;
 
                     {/* Tagline */}'
@@ -685,7 +740,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         ))}
 
                     {/* Category and Technology */}
+<<<<<<< HEAD
 "
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div className="flex items-center justify-between mb-4">
 "
                       <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
@@ -735,12 +794,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
+<<<<<<< HEAD
               <motion&& motion.div;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
         {/* Contact Section */}'
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;'"
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;"
+=======
+              <motion&& motion.div
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
+        {/* Contact Section */}
+        <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="max-w-4xl mx-auto text-center">;
 <<<<<<< HEAD
             <motion&& motion.div
@@ -762,6 +830,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
+<<<<<<< HEAD
 =======
             <motion&& motion.div;
         {/* Contact Section */}'
@@ -773,6 +842,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                         </span>;'
+=======
+              initial={{ opacity: 0;, y: 30 ;}}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+                        </span>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <span className='text - gray - 400 text - sm'>;
                           ({service.reviews});
                         </span>                      </div>;
@@ -869,8 +943,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* No Results */}
             {filtered_services.length === 0 && (
               <motion.div;
+<<<<<<< HEAD
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}'
+=======
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='text - center py - 16';
               >;'
                 <div className='text - 6xl mb - 4'>🔍</div>;'
@@ -906,11 +985,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="max - w-4xl mx - auto text - center">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div;
+<<<<<<< HEAD
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
                 <a'
                   href='/contact''
+=======
+              initial={{ opacity: 0;, coordinate_y: 30 ;}}
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              viewport={{ once: true ;}}
+                <a
+                  href='/contact'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>;
                   Contact Us Now;
                 </a>;
@@ -938,7 +1025,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <a"
                   href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
+=======
+              transition={{ duration: 0.8 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'
             >
               <h2 className='text-3xl font-bold text-white mb-6'>

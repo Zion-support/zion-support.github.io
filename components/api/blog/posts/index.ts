@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 '
   if (req.method === 'GET') {}
 '
@@ -245,10 +246,14 @@ return res.status(405).end();
   return res.status(405).end();
 return res.status (405).end ();
 }
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { v4 as uuidv4  } from 'uuid';
 import { BlogPost  } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
 import { requireAdmin } from '@/utils/api/auth';
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === 'GET') {
@@ -358,6 +363,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     posts.unshift(post);
     writePosts(posts);
     return res.status(201).json(post);
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   }
 return res.status(405).end();
@@ -374,6 +381,22 @@ return res.status(405).end();
     writePosts(posts);
     return res.status(201).json(post);
   }
+return res.status(405).end();
+}
+        metaTitle: body.seo?.metaTitle || body.title!;,
+        metaDescription: body.seo?.metaDescription || '';,
+        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '';
+     ,
+},
+      body: body.body || '';,
+      status: body.status || 'draft';,
+      metrics: { views: 0;, likes: 0;, shares: 0 ;}
+   ,
+};
+    posts.unshift(post);
+    writePosts(posts);
+    return res.status(201).json(post);
+  }
 
   return res.status(405).end();
 return res.status(405).end();
@@ -381,6 +404,7 @@ return res.status(405).end();
 
 }
 }
+return res.status(405).end();
   return res.status(405).end();
   }
 
@@ -389,6 +413,7 @@ return res.status(405).end();
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 pr-12243
+<<<<<<< HEAD
 =======
 return res.status (405).end ();
 }
@@ -405,3 +430,5 @@ return res.status(405).end();
   return res.status(405).end();
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

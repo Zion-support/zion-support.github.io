@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -183,6 +184,9 @@ function ProfileBadge() {
   type, class_name;
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React from "react";
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
@@ -191,18 +195,19 @@ type BadgeType = any;
       className
     )}>
       <Icon className="w-3 h-3" />
+
       <span>{text}</span>
     </div>
   )
   type, className
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }: ProfileBadgeProps) {
   const badge_config = {
-  verified: {
+  verified: {,
   const {
-<<<<<<< HEAD
-  icon: Icon,  text, colors;
+  icon: Icon,  text, colors;,
 }= badge_config[type];
+<<<<<<< HEAD
 }> <Icon className="w - 3 h-3" /> <span> {
 =======
 }: ProfileBadgeProps) {}
@@ -213,15 +218,26 @@ type BadgeType = any;
 }= badge_config[type];"
 }> <Icon className="w - 3 h - 3" /> <span> {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}> <Icon className="w - 3 h - 3" /> <span> {"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   text;
 }</span>;'"
 }'"  );
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+}}}
+    </div>;
+  );
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   icon: Icon,  text, colors
 }= badgeConfig[type]
 }> <Icon className="w-3 h-3" /> <span> {
@@ -229,8 +245,12 @@ type BadgeType = any;
 }</span>
 }'"  )
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 }'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

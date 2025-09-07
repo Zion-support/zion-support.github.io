@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const useToast = useToastHook;
@@ -383,3 +384,7 @@ export const toast = baseToast as typeof baseToast & {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -23,6 +24,9 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend  } from 'recharts';"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";"
@@ -32,6 +36,7 @@ import { useState } from "react";
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -49,16 +54,40 @@ import {useState} from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';'
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';'
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from './react';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface AnalyticsChartProps {
 
   title: string
+<<<<<<< HEAD
 =======
 interface AnalyticsChartProps {}
   title: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend  } from 'recharts';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";""
+import { useState } from "react";""
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend} from 'recharts';
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";""
+import {useState} from "react";""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { useState } from './react';
+interface AnalyticsChartProps {
+  // TODO: Implement
+}
+  title: string;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description?: string;
   data: any[]'
   type?: 'line' | 'bar';
@@ -69,6 +98,7 @@ interface AnalyticsChartProps {}
 export function AnalyticsChart({
   title;
 
+<<<<<<< HEAD
   description
   data
   type = 'line';
@@ -804,30 +834,21 @@ export function AnalyticsChart({;
                     type="monotone"
                     dataKey={key}
                     stroke={colors[index % colors && colors.length]}
+=======
+
+                    radius={[4, 4, 0, 0]}
+stroke={colors[index % colors.length]}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     activeDot={{ r: 8 }}
                     strokeWidth={2}
-                  />;
+                  />
                 ))}
-
-      <CardContent className="p - 0">;
-        <div className="h - 72 w - full p - 4">;
-          <ResponsiveContainer width="100%" height="100%">;
-            {chart_type === 'line' ? (
-              <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>;
-                <CartesianGrid stroke_dasharray="3 3" stroke="#354151" />;
-                <XAxis;
-                  data_key="date";
-                  tick={{ fill: '#b1b9c6', font_size: 12 }}
-
-                  angle={-30}
-                  text_anchor="end";
-                  height={50}
-
-              </LineChart>;
-            ) : (;
-              <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>;
-                <CartesianGrid strokeDasharray="3 3" stroke="#354151" />;
+              </LineChart>
+            ) : (
+              <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
                 <XAxis
+<<<<<<< HEAD
                   dataKey="date" 
                   tick={{ fill: '#b1b9c6', fontSize: 12 }} 
                 />;
@@ -903,6 +924,9 @@ export function AnalyticsChart({;
                     data_key={key}
                     fill={colors[index % colors.length]}
                     radius={[4, 4, 0, 0]}
+=======
+                  dataKey="date"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   tick={{ fill: '#b1b9c6', fontSize: 12 }}
                   angle={-30}
                   textAnchor="end"
@@ -960,20 +984,25 @@ export function AnalyticsChart({;
 =======
 }
 
+;
       <CardContent className="p-0">;
         <div className="h-72 w-full p-4">;
           <ResponsiveContainer width="100%" height="100%">;
             {chartType === 'line' ? (;
+                  textAnchor="end""
+                    key={key}"
+
+    ;)
+              )}
+    );"
+
               <LineChart data={data} margin={{ top:5, right:30, left:20, bottom:25 }}>;
-                <CartesianGrid strokeDasharray="3 3" stroke="#354151" />;
-                <XAxis ;
-                  dataKey="date" ;
+
+                <XAxis ;"
+                  dataKey="date" ;""
                   tick={{ fill:'#b1b9c6', fontSize:12 }}
-                  angle={-30}
-                  textAnchor="end";
-                  height={50}
-                />;
                 <YAxis tick={{ fill:'#b1b9c6', fontSize:12 }} />;
+
                 <Tooltip ;
                   contentStyle={{ ;
                     backgroundColor:'#1a2332', ;
@@ -981,6 +1010,7 @@ export function AnalyticsChart({;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     color:'#fff';
                   }} ;
+<<<<<<< HEAD
                 />;
                 <Legend />;
                 {dataKeys.map((key, index) => (;
@@ -1014,11 +1044,17 @@ export function AnalyticsChart({;
                     backgroundColor:'#1a2332', ;'
                     borderColor:'#293445',;'
 =======
+=======
+
+
+                    type="monotone";                    dataKey={key}"
+                    activeDot={{ r:8 }}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <BarChart data={data} margin={{ top:5, right:30, left:20, bottom:25 }}>;
-                <CartesianGrid strokeDasharray="3 3" stroke="#354151" />;
-                <XAxis ;
-                  dataKey="date" ;
+
                   tick={{ fill:'#b1b9c6', fontSize:12 }} ;
+<<<<<<< HEAD
                   angle={-30}
                   textAnchor="end";
                   height={50}
@@ -1034,12 +1070,16 @@ export function AnalyticsChart({;
                 />;
                 <Legend />;
                 {dataKeys.map((key, index) => (;
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Bar ;
-                    key={key}
                     dataKey={key} ;
                     fill={colors[index % colors.length]} ;
-                    radius={[4, 4, 0, 0]}
                   />;                ))}
+<<<<<<< HEAD
               </BarChart>;
             )}
           </ResponsiveContainer>;
@@ -1103,45 +1143,43 @@ dataKeys;
 timeRange = '7d';
 onTimeRangeChange 
 }: AnalyticsChartProps) {
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [chartType, setChartType] = useState<'line' | 'bar'> (type);
 const colors = [ '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57' ];
-bg-zion-blue-dark border-zion-blue-light overflow-hidden"> <CardHeader className=" pb-2"> <div className=" flex flex-col sm:flex-row justify-between sm:items-center gap-4"> <div> </SelectTrigger> <SelectContent className=" bg-zion-blue-dark border-zion-blue-light text-zion-slate-light"> <SelectItem value=" 1d">1 Day</SelectItem> <SelectItem value=" 7d">7 Days</SelectItem> <SelectItem value=" 30d">30 Days</SelectItem> <SelectItem value=" 90d">3 Months</SelectItem> <SelectItem value=" 365d">1 Year</SelectItem> </SelectContent> </Select>) 
-}</SelectTrigger> <SelectContent className=" bg-zion-blue-dark border-zion-blue-light text-zion-slate-light"> <SelectItem value=" line">Line</SelectItem> <SelectItem value=" bar" >Bar</SelectItem> </SelectContent> </Select> </div> </div> </CardHeader> /> <YAxis tick= {
-  {
-  fill: '#b1b9c6', fontSize: 12 
-}
-;
+bg-zion-blue-dark border-zion-blue-light overflow-hidden"> <CardHeader className=" pb-2"> <div className=" flex flex-col sm:flex-row justify-between sm:items-center gap-4"> <div>  <SelectContent className=" bg-zion-blue-dark border-zion-blue-light text-zion-slate-light"> <SelectItem value=" 1d">1 Day <SelectItem value=" 7d">7 Days <SelectItem value=" 30d">30 Days <SelectItem value=" 90d">3 Months <SelectItem value=" 365d">1 Year  )"
+} <SelectContent className=" bg-zion-blue-dark border-zion-blue-light text-zion-slate-light"> <SelectItem value=" line">Line <SelectItem value=" bar" >Bar   </div> </div>  /> <YAxis tick= {"
+  {"
+  fill: '#b1b9c6', fontSize: 12;
 
 }/> <Tooltip contentStyle= {
   {
-  backgroundColor: '#1a2332', borderColor: '#293445', color: '#fff' 
-}
+  backgroundColor: '#1a2332', borderColor: '#293445', color: '#fff
 }/> <Legend /> {
+
   dataKeys.map ( (key, index) => (<Line key= {
-  key 
+  key;
 }/> <YAxis tick= {
-  {
-  fill: '#b1b9c6', fontSize: 12 
-}
-}/> <Tooltip contentStyle= {
-  {
-  backgroundColor: '#1a2332', borderColor: '#293445', color: '#fff' 
-}
-}/> <Legend /> {
+
+)
   dataKeys.map ( (key, index) => (<Bar key= {
-  key 
 }dataKey= {
-  key 
 }fill= {
   colors[index % colors.length] 
 }radius= {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   [4, 4, 0, 0] 
+=======
+  [4, 4, 0, 0] )
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }/>) ) 
 }</BarChart>) 
 }</ResponsiveContainer> </div> </CardContent> </Card>) 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1162,3 +1200,9 @@ bg-zion-blue-dark border-zion-blue-light overflow-hidden"> <CardHeader className
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+}) 
+} </div>  ) 
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

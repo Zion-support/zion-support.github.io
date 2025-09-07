@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
@@ -97,3 +98,10 @@ function TalentOnboardingSteps() {}
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+return <OnboardingTracker steps={steps} />
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

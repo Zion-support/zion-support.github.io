@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -113,9 +114,15 @@ export interface ThemeColors {};
 }
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
+=======
+export interface ThemeColors {;
+
+export interface ThemeColors {;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
-;
 export interface ThemeColors {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   primary_color: string;
   background_color: string;
@@ -399,18 +406,29 @@ export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export interface ThemeColors {;
+=======
+export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
+
+export interface ThemeColors {;
+export interface ThemeColors {;
+  primaryColor: string;
+
+
+}
+  // Set background and text colors on body;
+  document.body.style.background_color = colors.background_color;
+  document.body.style.color = colors.text_color;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   primaryColor:string,;
   backgroundColor:string,;
   textColor:string,;
   accentColor:string,;
   buttonColor:string,;
   cardBackground:string;
-}
-;
 // Define theme presets;
 export function getThemeColors(preset:ThemePreset, primaryColor:string):ThemeColors {;
   switch (preset) {;
-    case 'dark':;
       return {;
         primaryColor,;
         backgroundColor:'#0f172a',;
@@ -418,52 +436,23 @@ export function getThemeColors(preset:ThemePreset, primaryColor:string):ThemeCol
         accentColor:primaryColor,;
         buttonColor:primaryColor,;
         cardBackground:'#1e293b'},;
-    case 'neon':;
-      return {;
-        primaryColor,;
         backgroundColor:'#030712',;
         textColor:'#f8fafc',;
         accentColor:'#00ffbb',;
-        buttonColor:primaryColor,;
         cardBackground:'#0f172a'},;
-    case 'corporate':;
-      return {;
-        primaryColor,;
         backgroundColor:'#f8fafc',;
         textColor:'#334155',;
-        accentColor:primaryColor,;
-        buttonColor:primaryColor,;
         cardBackground:'#ffffff'},;
-    case 'startup':;
-      return {;
-        primaryColor,;
         backgroundColor:'#16181d',;
         textColor:'#fafafa',;
         accentColor:'#ff7f50',;
-        buttonColor:primaryColor,;
         cardBackground:'#1e2127'},;
-    case 'light':;
     default:;
-      return {;
-        primaryColor,;
         backgroundColor:'#ffffff',;
         textColor:'#0f172a',;
-        accentColor:primaryColor,;
-        buttonColor:primaryColor,;
         cardBackground:'#f8fafc'},;
-  }
-}
-;
 // Apply theme colors to document CSS variables;
 export function applyThemeColors(colors:ThemeColors) {;
-  const root = document.documentElement,;
-  root.style.setProperty('--primary-color', colors.primaryColor),;
-  root.style.setProperty('--background-color', colors.backgroundColor),;
-  root.style.setProperty('--text-color', colors.textColor),;
-  root.style.setProperty('--accent-color', colors.accentColor),;
-  root.style.setProperty('--button-color', colors.buttonColor),;
-  root.style.setProperty('--card-background', colors.cardBackground),;
-  ;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor,;
   document.body.style.color = colors.textColor,;
@@ -473,6 +462,7 @@ export function applyThemeColors(colors:ThemeColors) {;
 ;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -490,3 +480,6 @@ export function applyThemeColors(colors:ThemeColors) {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

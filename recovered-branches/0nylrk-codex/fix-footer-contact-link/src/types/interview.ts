@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -211,11 +212,16 @@ export interface InterviewRequest {
   client_avatar?: string;
   talent_avatar?: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 
 export interface InterviewRequest {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   client_avatar?: string
   talent_avatar?: string
@@ -294,10 +300,17 @@ export interface InterviewResponse {
   title?: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+=======
+export interface InterviewRequest {
+  // TODO: Implement
+  // TODO: Implement
+  scheduled_date: string;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 export interface InterviewResponse {;
 
+<<<<<<< HEAD
   interview_id: string;
   status: InterviewStatus;
 <<<<<<< HEAD
@@ -431,3 +444,9 @@ export interface InterviewResponse {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  interview_id: string;,
+  alternative_date?: string;
+  message?: string;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

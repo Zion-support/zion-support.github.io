@@ -1,9 +1,8 @@
-#!/usr/bin/env node
 
 const fs = require('fs');
 const { execSync } = require('child_process');
-
 console.log('🔧 Resolving New Merge Conflicts');
+<<<<<<< HEAD
 <<<<<<< HEAD
 console.log('=================================');
 
@@ -15,10 +14,15 @@ function resolveMergeConflicts(content) {
 =======
 console.log('
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
-// Function to fix common syntax errors
+// Function to fix common syntax errors;)
 function fixSyntaxErrors(content) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Function to fix all remaining critical syntax errors
 function fixCriticalSyntax(content) {
@@ -29,6 +33,9 @@ function fixCriticalSyntax(content) {
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return content
     // Fix malformed JSX tags
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
     .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm, '<h2$1>$2</h2>')
     .replace(/<h1([^>]*)>([^<]+)><\/h1>/gm, '<h1$1>$2</h1>')
@@ -36,57 +43,13 @@ function fixCriticalSyntax(content) {
     .replace(/<span([^>]*)>([^<]+)><\/span>/gm, '<span$1>$2</span>')
     .replace(/<div([^>]*)>([^<]+)><\/div>/gm, '<div$1>$2</div>')
     .replace(/<motion\.div([^>]*)>([^<]+)><\/motion\.div>/gm, '<motion.div$1>$2</motion.div>')
-    
-    // Fix malformed meta tags
+</motion>
     .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
+</meta>
     .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
-    
-    // Fix object literal syntax
-    .replace(/\{\s*$/gm, '{')
-    .replace(/\[\s*$/gm, '[')
-    .replace(/\(\s*$/gm, '(')
-    
-    // Fix semicolons in wrong places
-    .replace(/;\s*$/gm, '')
-    .replace(/;\s*}/g, '}')
-    .replace(/;\s*]/g, ']')
-    .replace(/;\s*\)/g, ')')
-    
-    // Fix array and object syntax
-    .replace(/\[\s*\{\s*$/gm, '[{')
-    .replace(/\{\s*\[\s*$/gm, '{[')
-    .replace(/\}\s*\]\s*$/gm, '}]')
-    .replace(/\]\s*\}\s*$/gm, ']}')
-    
-    // Fix empty objects and arrays
-    .replace(/\{\s*\}/g, '{}')
-    .replace(/\[\s*\]/g, '[]')
-    
-    // Fix trailing commas
-    .replace(/,\s*}/g, '}')
-    .replace(/,\s*]/g, ']')
-    .replace(/,\s*\)/g, ')')
-    
-    // Clean up extra semicolons
-    .replace(/;;+/g, ';')
-    .replace(/;\s*;/g, ';')
-    
-    // Clean up whitespace
-    .replace(/\n\s*\n\s*\n/g, '\n\n')
-    .replace(/\s+$/gm, '');
-}
 
-// Files with merge conflicts
-const conflictFiles = [
-  'components/Footer.tsx',
-  'components/Header.tsx',
-  'components/Layout.tsx',
-  'pages/accessibility.tsx',
-  'pages/ai-services.tsx',
-  'pages/api.tsx',
-  'pages/careers.tsx'
-];
 
+<<<<<<< HEAD
 let totalFixed = 0;
 
 console.log('🔍 Resolving merge conflicts in files...');
@@ -158,3 +121,5 @@ console.log('\n🎉 Final critical fix completed!');
 =======
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

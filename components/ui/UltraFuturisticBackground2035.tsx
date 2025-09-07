@@ -1,9 +1,16 @@
   enableNeonEffects = true,;
   enableSpaceTime = true;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;
+
   intensity?: 'low' | 'medium' | 'high';
     | 'space-time';
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
@@ -12,16 +19,15 @@ interface UltraFuturisticBackground2035Props {
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
   enableNeonEffects?: boolean;
-  enableSpaceTime?: boolean
+
+  enableSpaceTime?: boolean}
+}
 }
 
-const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props> = ({
+const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props /> = ({
   intensity;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<any[]>([]);
-  const animationRef = useRef<number | undefined>(undefined);
 
+<<<<<<< HEAD
   const getColorScheme = () => {;
     switch (colorScheme) {;
       case 'quantum-fusion':;
@@ -513,3 +519,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

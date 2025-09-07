@@ -10,6 +10,7 @@
 =======
 <<<<<<< HEAD
 "use client";
+<<<<<<< HEAD
 "
 import React, { useState } from "react";
 =======
@@ -43,6 +44,21 @@ import React, { useState } from "react";
 import React, { useState } from "react";
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import React, { useState } from "react";
+"use client";
+
+import React, { useState } from "react";
+"use client";
+import { useState } from 'react';
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+"use client";""
+import React, { useState } from "react";""
+import React, { useState } from "react";"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function OSDeployPage() {
 =======
 =======
@@ -66,6 +82,9 @@ const [loading, setLoading] = useState(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
@@ -85,6 +104,29 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+    // Simulate deployment;
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }"
+  const [message, setMessage] = useState();
+  const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
+  // Mock feature keys and functions;
+  const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
+  const labelFor = (key: string) => {
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+pr-12325
   
   render() {
     if (this.state.hasError) {
@@ -95,6 +137,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 'use client';
+<<<<<<< HEAD
 =======    const labels: { [key: string]: string } = {
 =======
 =======
@@ -134,6 +177,11 @@ class ErrorBoundary extends React.Component {
 }
 'use client';
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const labels: { [key: string]: string } = {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       ai: 'AI Integration'
@@ -158,6 +206,7 @@ export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 main
@@ -168,6 +217,15 @@ main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+"use client";
+
+import React, { useState } from "react";
+
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -208,6 +266,7 @@ ai: 'Advanced AI capabilities and automation',
 };
 =======
 
+<<<<<<< HEAD
   const getFeatureDescription = (key: string) => {}
     const descriptions: { [key: string]: string } = {'
 ai: 'Advanced AI capabilities and automation','
@@ -235,10 +294,15 @@ ai: 'Advanced AI capabilities and automation','
 
 <<<<<<< HEAD
 
-        {/* Header */}
-
-main
 =======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        {/* Header */}
+main
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
 ai: 'Advanced AI capabilities and automation',
@@ -259,8 +323,20 @@ ai: 'Advanced AI capabilities and automation',
             configurations
           </p>
         </div>
+
+
         {/* Header */}
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+        {/* Header */}
+
+
+        {/* Header */}
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <div className="text-center mb-12">;
@@ -278,6 +354,7 @@ ai: 'Advanced AI capabilities and automation',
             Deploy your custom Zion OS instance with advanced features and configurations;
           </p>;
         </div>;
+<<<<<<< HEAD
 "
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}"
@@ -348,6 +425,11 @@ main
 
 =======
 
+=======
+
+main
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">
@@ -363,7 +445,26 @@ main
                 <label className="block text-sm font-medium text-white/90">
                   Instance Name *
                 </label>
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+<form onSubmit={handleSubmit} className="space-y-8">;
+        <form onSubmit={handleSubmit} className="space-y-8">;
+          {/* Basic Configuration */}
+          <div className="glass-effect rounded-2xl p-8">;
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
+              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">⚙️</span>;
+              Basic Configuration;
+            </h2>;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Instance Name *</label>;
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <input
                   id="instanceName"
                   name="instanceName"
@@ -373,6 +474,16 @@ main
                   placeholder="My Digital Economy"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+main
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Vertical
+                </label>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 />;
               </div>;
               <div className="space-y-2">;
@@ -380,17 +491,42 @@ main
 
 
 main
+<<<<<<< HEAD
 =======
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Vertical
                 </label>
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <select
                   id="vertical"
                   name="vertical"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+main
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Domain
+                </label>
+                <input
+                  name="domain"
+                  type="text"
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  placeholder="zion.example.com"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Subdomain
+                </label>
+className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
   }
 ;
@@ -442,6 +578,7 @@ ai: 'Advanced AI capabilities and automation',
                 >;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -465,6 +602,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                 </label>
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <option value="GENERAL">General</option>;
                   <option value="HEALTH">Healthcare</option>;
                   <option value="EDUCATION">Education</option>;
@@ -476,9 +615,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+placeholder="zion && zion.example.com"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                   placeholder="zion && zion.example.com"
                 />;
@@ -486,9 +629,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Subdomain</label>;
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -496,6 +641,8 @@ main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <input
                   id="subdomain"
                   name="subdomain"
@@ -542,6 +689,7 @@ main
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all""
                   placeholder="North America"
 
+<<<<<<< HEAD
                 />;
               </div>;
             </div>;
@@ -611,14 +759,25 @@ main
 =======
 
 <<<<<<< HEAD
+=======
+main
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Default Language
+                </label>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 />;
               </div>;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Default Language</label>;
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+<<<<<<< HEAD
 
 =======
               <div className="space-y-2">
@@ -626,6 +785,8 @@ main
                   Default Language
                 </label>
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <input
                   id="defaultLanguage"
                   name="defaultLanguage"
@@ -633,14 +794,26 @@ main
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+main
+
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-white/90">
+                  Region
+                </label>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 />;
               </div>;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Region</label>;
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+<<<<<<< HEAD
 
 =======
               <div className="space-y-2">
@@ -648,6 +821,8 @@ main
                   Region
                 </label>
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <input
                   id="region"
                   name="region"
@@ -655,12 +830,18 @@ main
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 />;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </div>;
@@ -695,6 +876,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             </h2>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
@@ -702,6 +884,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 =======
+=======
+
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -766,10 +952,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               Feature Selection
             </h2>
 
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Token System</label>;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Token System</label>;
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+                <select
+                  id="tokenSystem"
+                  name="tokenSystem"
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <select
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   id="tokenSystem"
@@ -834,6 +1034,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -844,6 +1045,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
@@ -851,9 +1056,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="ADMIN">Admin Control</option>;
@@ -869,6 +1078,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                   <option value="DAO LITE">DAO - lite</option>;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -876,15 +1086,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <option value="DAO FULL">Full DAO</option>;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+/>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                 />;
               </div>;
@@ -912,7 +1128,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
               Feature Selection;
             </h2>;
 
+
 main
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -922,6 +1140,8 @@ main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
               {FeatureKeys && FeatureKeys.map((k) => (;
                 <label;
@@ -931,12 +1151,19 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -944,6 +1171,8 @@ main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <input
               <div className="space-y-2">;
                 <label html_for="country" className="block text - sm font - medium text-white / 90">Country</label>;
@@ -1031,6 +1260,7 @@ main
                     value={k}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                     value={k}"
                     className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
@@ -1079,6 +1309,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 =======
+=======
+
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
                   />
                   <div>
@@ -1102,8 +1336,27 @@ main
               </span>
               Additional Features
             </h2>
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+
+            </div>;
+          </div>;
+          {/* Additional Features */}
+          <div className="glass-effect rounded-2xl p-8">;
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
+              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">🚀</span>;
+              Additional Features;
+            </h2>;
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
+              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
                 <input
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   id="treasury"
@@ -1111,6 +1364,7 @@ main
                   name="treasury"
                   aria-label="Treasury Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <div>
@@ -1139,6 +1393,10 @@ main
 
 main
 =======
+=======
+
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -1149,7 +1407,13 @@ main
                   </div>
                 </div>
               </label>
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 />;
@@ -1165,12 +1429,19 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -1178,12 +1449,15 @@ main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <input
                   id="governance"
                   type="checkbox"
                   name="governance"
                   aria-label="Governance System"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <div>
@@ -1212,6 +1486,10 @@ main
 
 main
 =======
+=======
+
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -1222,7 +1500,13 @@ main
                   </div>
                 </div>
               </label>
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 />;
@@ -1238,12 +1522,19 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -1251,12 +1542,15 @@ main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <input
                   id="moderation"
                   type="checkbox"
                   name="moderation"
                   aria-label="Content Moderation"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <div>
@@ -1285,6 +1579,10 @@ main
 
 main
 =======
+=======
+
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 />
                 <div>
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
@@ -1295,7 +1593,13 @@ main
                   </div>
                 </div>
               </label>
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 />;
@@ -1311,12 +1615,19 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -1324,12 +1635,15 @@ main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <input
                   id="partnerships"
                   type="checkbox"
                   name="partnerships"
                   aria-label="Partnership Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <div>
@@ -1348,12 +1662,24 @@ main
                   </div>"
                   <div className="text-sm text-white/60">
                     Institutional partnership management;
+=======
+
+main
+                />
+                <div>
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
+                    Partnership Management
+                  </div>
+                  <div className="text-sm text-white/60">
+                    Institutional partnership management
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>
                 </div>
               </label>
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Submit Button */}"
           <div className="text-center">
             <button;
@@ -1364,11 +1690,23 @@ main
             </button>
 
 <<<<<<< HEAD
+=======
+          {/* Submit Button */}
+          <div className="text-center">
+            <button
+              disabled={loading}
+              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift"
+            >
+              {loading ? "Deploying..." : "Deploy Digital Economy"}
+            </button>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === "success"
                     ? "bg-green-900/20 border border-green-500/20 text-green-400"
                     : "bg-red-900/20 border border-red-500/20 text-red-400"
+<<<<<<< HEAD
 =======                </div>;
               </label>;
             </div>;
@@ -1376,6 +1714,8 @@ main
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                 />;
                 <div>;
@@ -1462,6 +1802,7 @@ main
                   <div className="text - sm text - white / 60">Institutional partnership management</div>;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 
 =======
                 />
@@ -1492,16 +1833,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                     ? "bg-green-900/20 border border-green-500/20 text-green-400"
                     : "bg-red-900/20 border border-red-500/20 text-red-400"
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </div>;
               </label>;
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+</button>;
+            {message && (;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             </button>;
             {message && (;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -1509,11 +1858,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === 'success'
                     ? 'bg-green-900/20 border border-green-500/20 text-green-400'
                     : 'bg-red-900/20 border border-red-500/20 text-red-400'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 }`}
@@ -1526,13 +1878,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 main
+<<<<<<< HEAD
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 }`}
               >
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -1933,6 +2292,7 @@ export default function AdminDeployPage() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1955,6 +2315,11 @@ export default function AdminDeployPage() { return null; }
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                {message}
+              </div>;
+            )}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
 
   return (
@@ -2025,16 +2390,24 @@ export default function AdminDeployPage() { return null; }
               {loading ? "Deploying..." : "🚀 Deploy Instance"}
             </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
                 {message}
               </div>;
             )}
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </form>
       </div>
     </div>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  );
+          </div>;
+        </form>;
+      </div>;
+    </div>;
   );
 }
 <<<<<<< HEAD
@@ -2045,6 +2418,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 function labelFor(key: string) {;
   switch (key) {;
@@ -2085,6 +2461,7 @@ function getFeatureDescription(key: string) {;
     default: return "Core platform feature";
   }
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2096,6 +2473,9 @@ function getFeatureDescription(key: string) {;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}`}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 }`}>;
                 {message}
               </div>;
@@ -2131,13 +2511,17 @@ function getFeatureDescription(key: string) {;
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {message}
               </div>;
             )}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2160,6 +2544,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>;
         </form>;
       </div>;
@@ -2211,6 +2599,7 @@ function getFeatureDescription(key: string) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -2244,14 +2633,18 @@ function getFeatureDescription(key: string) {;
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 main
-
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -2261,3 +2654,264 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        <div className="text-center mb-12">"
+</div>"
+          <h1 className="text-4xl font-bold mb-4">"
+</h1>
+          </h1>"
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">"
+</p>
+        <div className="text-center mb-12">;"
+          <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>;""
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">;"
+          </p>;
+        </div>;"
+        <form onSubmit={handleSubmit} className="space-y-8">;"
+</form>"
+          <div className="glass-effect rounded-2xl p-8">"
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">"
+</h2>"
+              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">"
+</span>
+            </h2>
+"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+              <div className="space-y-2">"
+                <label className="block text-sm font-medium text-white/90">"
+</label>
+                <input;"
+                  id="instanceName"""
+                  name="instanceName"""
+                  type="text""
+                  required;"
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"""
+                  placeholder="My Digital Economy"""
+</input>"
+                <select;"
+                  id="vertical"""
+                  name="vertical"""
+</select>"
+                  name="domain"""
+                  type="text"""
+                  placeholder="zion.example.com""
+                />
+</input>
+              </div>
+                </label>"
+                  <option value="GENERAL">General</option>;""
+                  <option value="HEALTH">Healthcare</option>;""
+                  <option value="EDUCATION">Education</option>;""
+                  <option value="LAW">Legal</option>;""
+                  <option value="GOV">Government</option>;""
+                  <option value="FINANCE">Finance</option>;""
+                  <option value="TECH">Technology</option>;"
+                </select>;
+              </div>;
+                  id="subdomain"""
+                  name="subdomain"""
+                  placeholder="latam"""
+                  id="defaultLanguage"""
+                  name="defaultLanguage"""
+                  id="region"""
+                  name="region"""
+                  placeholder="North America""
+                />;
+              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">"
+                  id="tokenSystem"""
+                  name="tokenSystem"""
+                  name="governanceType"""
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all""
+                >
+                  <option value="ADMIN">Admin Control</option>""
+                  <option value="DAO LITE">DAO-lite</option>""
+                  <option value="DAO FULL">Full DAO</option>""
+                  <option value="HYBRID">Hybrid Governance</option>"
+                </select>
+                  name="country"""
+                  placeholder="United States""
+                  id="paymentGateway"""
+                  name="paymentGateway"""
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;"
+                  <option value="">None</option>;""
+                  <option value="stripe">Stripe</option>;""
+                  <option value="coinbase-commerce">Coinbase Commerce</option>;""
+                  <option value="paypal">PayPal</option>;""
+                  <option value="crypto">Crypto Payments</option>;"
+              <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">"
+
+                  name="tokenSystem""
+              <div className="space - y-2">;"
+                <label html_for="domain" className="block text - sm font - medium text - white / 90">Domain</label>;"
+                  id="domain";""
+                  name="domain";""
+                  type="text";""
+                  className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";""
+                  placeholder="zion.example.com";"
+                <label html_for="subdomain" className="block text - sm font - medium text - white / 90">Subdomain</label>;"
+                  id="subdomain";""
+                  name="subdomain";""
+                  placeholder="latam";"
+                <label html_for="default_language" className="block text - sm font - medium text - white / 90">Default Language</label>;"
+                  id="default_language";""
+                  name="default_language";""
+                  className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";"
+                <label html_for="region" className="block text - sm font - medium text - white / 90">Region</label>;"
+                  id="region";""
+                  name="region";""
+                  placeholder="North America";"
+          <div className="glass - effect rounded - 2xl p - 8">;"
+            <h2 className="text - 2xl font - semibold mb - 6 flex items - center gap - 3">;"
+              <span className="w - 8 h - 8 bg - green - 600 rounded - lg flex items - center justify - center text - white text - sm">💰</span>;"
+            </h2>;"
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;"
+                <label html_for="token_system" className="block text - sm font - medium text - white / 90">Token System</label>;"
+                  id="token_system";""
+                  name="token_system";""
+                >;
+                  <option value="SHARED">ZION$ Shared</option>;""
+                  <option value="LOCAL">Local Token</option>;""
+                  <option value="HYBRID">Hybrid System</option>;"
+                  <option value="DAO FULL">Full DAO</option>;""
+                  <option value="HYBRID">Hybrid Governance</option>;"
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;"
+                <label;
+                  key={k}"
+                  className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;"
+                <label html_for="country" className="block text - sm font - medium text - white / 90">Country</label>;"
+                  id="country";""
+                  name="country";""
+                  placeholder="United States";"
+                <label html_for="payment_gateway" className="block text - sm font - medium text - white / 90">Payment Gateway</label>;"
+                  id="payment_gateway";""
+                  name="payment_gateway";""
+                  <option value="coinbase - commerce">Coinbase Commerce</option>;""
+              <span className="w - 8 h - 8 bg - purple - 600 rounded - lg flex items - center justify - center text - white text - sm">🔧</span>;"
+            <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;"
+                  key={k}
+                  html_for={`feature-${k}`}"
+                  className="flex items - center gap - 3 p - 4 rounded - lg border border - white / 10 hover:border - white / 20 transition - colors cursor - pointer group";"
+                  <input;`;
+                    id={`feature-${k}`}"
+                    type="checkbox";""
+                    name="features";"
+                    value={k}"
+                    className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2""
+                  <div>
+                    <div className="font-medium text-white group-hover:text-blue-400 transition-colors">"
+                    <div className="text-sm text-white/60">"
+              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">"
+
+                  id="treasury"""
+                  type="checkbox"""
+                  name="treasury"""
+                  aria-label="Treasury Management"""
+                <div>;
+                  <div className="font-medium text-white group-hover:text-blue-400 transition-colors">;"
+                  <div className="text-sm text-white/60">Manage community funds with transparency</div>;"
+              </label>;"
+              <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;"
+                  id="governance"""
+                  name="governance"""
+                  aria-label="Governance System"""
+                  <div className="text-sm text-white/60">Local + global decision making</div>;"
+                  id="moderation"""
+                  name="moderation"""
+                  aria-label="Content Moderation"""
+                  <div className="text-sm text-white/60">Automated content and behavior monitoring</div>;"
+                  id="partnerships"""
+                  name="partnerships"""
+                  aria-label="Partnership Management"""
+          <div className="text-center">"
+            <button;
+              disabled={loading}"
+              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift""
+</button>
+
+              <div;`;
+                className={`mt-6 p-4 rounded-lg ${"
+                  messageType === "success"""
+                    ? "bg-green-900/20 border border-green-500/20 text-green-400"""
+                    : "bg-red-900/20 border border-red-500/20 text-red-400""
+              </label>;
+                  messageType === 'success
+                    ? 'bg-green-900/20 border border-green-500/20 text-green-400
+                    : 'bg-red-900/20 border border-red-500/20 text-red-400`;
+                }`}
+  const [message, setMessage] = useState<string | null>(null),;
+</string>
+  const [messageType, setMessageType] = useState<'success' | 'error'>('success'),;
+  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {;
+
+    const features: Record<string boolean> = {},;
+      case "HEALTH": return <Shield className="w-5 h-5 text-blue-400" />,;"
+      case "EDUCATION": return <Building2 className="w-5 h-5 text-green-400" />,;"
+</Building2>"
+      case "LAW": return <Shield className="w-5 h-5 text-purple-400" />,;"
+      case "GOV": return <Users className="w-5 h-5 text-red-400" />,;"
+      default: return <Globe className="w-5 h-5 text-gray-400" />;"
+      case "ADMIN": return <Crown className="w-5 h-5 text-yellow-400" />,;"
+      case "DAO_LITE": return <Users className="w-5 h-5 text-blue-400" />,;"
+      case "DAO_FULL": return <Zap className="w-5 h-5 text-purple-400" />,;"
+      default: return <Crown className="w-5 h-5 text-gray-400" />;"
+    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;"
+      <div className="max-w-6xl mx-auto">;"
+        <form onSubmit={onSubmit} className="space-y-8">;"
+          <div className="glass-effect rounded-2xl p-8">;"
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;"
+              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">⚙️</span>;"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;"
+              <div className="space-y-2">;"
+                <label className="block text-sm font-medium text-white/90">;"
+                  name="instanceName";"
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";""
+                  placeholder="My Digital Economy";"
+                <select name="vertical" className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;"
+                  name="defaultLanguage";""
+                  defaultValue="en";""
+                  className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all";"
+              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>;"
+                <select name="tokenSystem" className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;"
+                <select name="governanceType" className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;"
+                  <option value="ADMIN">Admin Control</option>;""
+                  <option value="DAO_LITE">DAO-lite</option>;""
+                  <option value="DAO_FULL">Full DAO</option>;""
+                <select name="paymentGateway" className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;"
+              <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>;"
+                <label key={k} className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;"
+                  <input type="checkbox" name={k} className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2" />;"
+                    <div className="text-sm text-white/60">;"
+                <label className="block text-white font-medium">;"
+                  <select name="vertical" className="select-field mt-2">;"
+                    <option value="GOV">Government</option>;"
+                    className="input-field mt-2";""
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;"
+                    className="input-field mt-2";"
+                  <select name="tokenSystem" className="select-field mt-2">;"
+                    <option value="LOCAL">Local</option>;"
+                  <select name="governanceType" className="select-field mt-2">;"
+                    <option value="ADMIN">Admin</option>;""
+                    <option value="DAO_FULL">Full DAO</option>;"
+              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">🚀</span>;"
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;"
+                <input type="checkbox" name="sovereignTreasury" className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2" />;"
+                <input type="checkbox" name="dualGovernance" className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2" />;"
+                <input type="checkbox" name="aiModeration" className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2" />;"
+                <input type="checkbox" name="affiliatePanel" className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2" />;"
+          <div className="text-center">;"
+              disabled={loading} ;"
+              className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift";"
+</button>"
+                <LoadingSpinner size="sm" text="Deploying..." />;"
+
+            </button>;`;
+              <div className={`mt-6 p-4 rounded-lg ${;"
+                messageType === 'success';
+                  ? 'bg-green-900/20 border border-green-500/20 text-green-400';
+                  : 'bg-red-900/20 border border-red-500/20 text-red-400';`;
+              }`}>;
+        </form>
+        </form>;
+    </div>);`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React from 'react';'
@@ -79,10 +80,25 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="author" content="Zion Tech Group" />
 =======
 const SEOHead: React.FC<SEOHeadProps> = ({'
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+interface SEOHeadProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  structuredData?: Record<string, any>;
+}
+const SEOHead: React.FC<SEOHeadProps> = ({,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   title = 'Zion Tech Group - Advanced Technology Solutions','
   description = 'Leading AI & Technology Solutions for a Smarter Future. We provide comprehensive AI services, cybersecurity, cloud infrastructure, and custom software development.','
   keywords = 'AI, technology, cybersecurity, cloud, software development, machine learning, automation','
   ogImage = '/og-image.jpg','
+<<<<<<< HEAD
   canonical = 'https://ziontechgroup.com'
 }) => {}
   return (
@@ -93,10 +109,24 @@ const SEOHead: React.FC<SEOHeadProps> = ({'
       <link rel="canonical" href={canonical} />
       
       {/* Open Graph */}"
+=======
+  canonical = 'https://ziontechgroup.com''
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+
+  return (
+<Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />"
+      <meta name="keywords" content={keywords} />"
+      <link rel="canonical" href={canonical} />"
+      {/* Open Graph */}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <meta property="og:title" content={title} />"
       <meta property="og:description" content={description} />"
       <meta property="og:image" content={ogImage} />"
       <meta property="og:url" content={canonical} />"
+<<<<<<< HEAD
       <meta property="og:type" content="website" />
       
       {/* Twitter */}"
@@ -144,3 +174,19 @@ export default SEOHead;
 =======
 export default SEOHead;'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      <meta property="og:type" content="website" />"
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />"
+      <meta name="twitter:title" content={title} />"
+      <meta name="twitter:description" content={description} />"
+      <meta name="twitter:image" content={ogImage} />"
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow" />"
+      <meta name="author" content="Zion Tech Group" />"
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />"
+    </Helmet>
+  );
+};
+export default SEOHead;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

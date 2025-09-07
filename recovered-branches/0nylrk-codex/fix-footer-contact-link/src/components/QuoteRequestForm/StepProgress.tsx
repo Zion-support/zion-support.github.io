@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { QuoteRequestSteps } from "../QuoteRequestForm",
@@ -17,6 +18,10 @@ interface StepProgressProps {
 interface StepProgressProps {}
   currentStep: QuoteRequestSteps;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+interface StepProgressProps {}
+  currentStep: QuoteRequestSteps}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 export function StepProgress({ currentStep }: StepProgressProps) {
@@ -37,6 +42,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 ;
 =======
 
+<<<<<<< HEAD
     { id: "summary", label: "Summary" }
 "
     { id: "summary", label: "Summary" }
@@ -89,11 +95,33 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
     { id: "timeline", label: "Timeline" },;"
     { id: "budget", label: "Budget" },;"
     { id: "summary", label: "Summary" }
+=======
+}
+                  \"text-xs mt-2 font-medium\",
+                  status === \"complete\" ? \"text-zion-cyan\" : 
+                  status === \"current\" ? \"text-white\" : 
+                  \"text-zion-slate-light\"
+import { QuoteRequestSteps } from \"../QuoteRequestForm\";
+import { CheckIcon } from \"@/components/icons\";
+import { cn } from \"@/lib/utils\",;
+interface StepProgressProps {;}
+  currentStep: QuoteRequestSteps;}
+}
+;
+export function StepProgress({ currentStep }: StepProgressProps) {;}
+export function StepProgress(): any ({ currentStep }: StepProgressProps) {;}
+  const steps: { id: QuoteRequestSteps, label: string }[] = [;
+    { id: \"service\", label: \"Service\" },;
+    { id: \"details\", label: \"Details\" },;
+    { id: \"timeline\", label: \"Timeline\" },;
+    { id: \"budget\", label: \"Budget\" },;
+    { id: \"summary\", label: \"Summary\" }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ];
-
-  const getStepStatus = (stepId: QuoteRequestSteps) => {;
+  const getStepStatus = (stepId: QuoteRequestSteps) = /> {;
     const stepOrder = steps && steps.findIndex(s => s && s.id === stepId);
     const currentStepOrder = steps && steps.findIndex(s => s && s.id === currentStep);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     if (stepOrder < currentStepOrder) return "complete";
@@ -163,6 +191,43 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
                 )}"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   "text-zion-slate-light"
+=======
+    if (stepOrder < currentStepOrder) return \"complete\";
+    if (stepOrder === currentStepOrder) return \"current\",;}
+    return \"upcoming\"}
+};
+  return (
+    <div className=\"relative\" />;
+      <div className=\"absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light\" />;
+        <div;
+className=\"absolute h-full bg-zion-purple transition-all duration-500\"
+          style={{ }
+            width: `${(steps && steps.findIndex(s = /> s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`;
+          }}
+        />;
+      </div>;
+      <div className=\"flex justify-between relative\" />;
+        {steps && steps.map((step) => {;
+          const status = getStepStatus(step && step.id);}
+          return (}
+            <div key={step && step.id} className=\"flex flex-col items-center relative\" />;
+              <div;
+className={cn(
+                  \"w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors\"
+                  status === \"complete\" ? \"bg-zion-purple text-white\" : 
+                  status === \"current\" ? \"bg-zion-cyan border-2 border-zion-purple\" : 
+                  \"w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors\",
+                  status === \"complete\" ? \"bg-zion-purple text-white\" : 
+                  status === \"current\" ? \"bg-zion-cyan border-2 border-zion-purple\" : }
+                  \"bg-zion-blue-light text-zion-slate-light\"}
+                )} />;
+                {status === \"complete\" ? (;
+                  <CheckIcon className=\"h-4 w-4\" />;}
+                ) : (;}
+                  <span className=\"text-xs\" />{steps && steps.findIndex(s => s && s.id === step && step.id) + 1}</span>;
+                )}
+                  \"text-zion-slate-light\"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 )}>;
                 {step && step.label}
               </span>;
@@ -188,6 +253,7 @@ import { QuoteRequestSteps } from '../QuoteRequestForm';'
 import { CheckIcon } from '@/components / icons';'
 import { cn } from '@/lib / utils';
 interface StepProgressProps {}
+<<<<<<< HEAD
   current_step: QuoteRequestSteps;
 }
 export /**;
@@ -207,3 +273,19 @@ function StepProgress() {}
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  current_step: QuoteRequestSteps;}
+}
+export /**
+ * StepProgress - Function description;
+ */
+function StepProgress() {}
+  const steps: { id: QuoteRequestSteps, label: string }[] = [;
+    { id: \"service\", label: \"Service\" },
+    { id: \"details\", label: \"Details\" },
+    { id: \"timeline\", label: \"Timeline\" },
+    { id: \"budget\", label: \"Budget\" },
+    { id: \"summary\", label: \"Summary\" }
+  ];
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

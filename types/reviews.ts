@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -12,6 +13,8 @@
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type ProjectStatus = 'InProgress' | 'Completed',;
 export type Project = {;
   id: string,;
@@ -23,10 +26,16 @@ export type Project = {;
 },;
 export type ReviewRole = 'client' | 'talent',;
 export type ReviewCategoryScores = {;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type ProjectStatus = 'InProgress' | 'Completed';
 <<<<<<< HEAD
 export type Project = {;
@@ -343,6 +352,9 @@ export type Project = {  id: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 export type Project = {
+
+export interface Review {
+
   id: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   userId: string;
@@ -352,25 +364,40 @@ export type Project = {
   createdAt: Date;
   updatedAt: Date;
 }
-export type ReviewRole = 'client' | 'talent';
-export type ReviewCategoryScores = {
-  communication?: number; // 1-5 optional
-  qualityOfWork?: number; // 1-5 optional
-  timeliness?: number; // 1-5 optional
-  wouldWorkWithAgain?: boolean; // optional
-}
+
+
+
+
+
+
+export type Project = {;
+  id: string;
   clientId: string, // slug for client/user;
   talentSlug: string, // slug from TALENT_PROFILES;
   title: string;
-  status: ProjectStatus,;
+  status: ProjectStatus;
   completedAt?: string, // ISO string;
 };
 export type ReviewRole = 'client' | 'talent';
-export type ReviewCategoryScores = {
+export type ReviewCategoryScores = {;
   communication?: number, // 1-5 optional;
   qualityOfWork?: number, // 1-5 optional;
   timeliness?: number, // 1-5 optional;
   wouldWorkWithAgain?: boolean, // optional;
+
+},;
+export type Review = {;
+  id: string,;
+  projectId: string,;
+  fromRole: ReviewRole,;
+};
+
+
+
+
+
+
+
 export type Review = {
   id: string;
   projectId: string;
@@ -379,20 +406,73 @@ export type Review = {
 <<<<<<< HEAD
 
 
+  fromId: string; // clientId or talentSlug depending on fromRole
+  toRole: ReviewRole; // opposite of fromRole
+  toId: string; // target id (talentSlug or clientId)
+  rating: number; // 1-5
+  text: string;
+  categories?: ReviewCategoryScores;
+  anonymous?: boolean;
+  approved: boolean; // admin moderated visibility
+  reported: boolean;
+  reports?: { reason: string; reportedAt: string }[];
+  removed?: boolean;
+  createdAt: string; // ISO
+}
+export type PublicReview = Omit<Review, 'fromId'> & { authorName: string }
 
+
+
+
+
+
+
+
+
+
+
+};
+export type Review = {;
+  id: string;
+  projectId: string;
+  fromRole: ReviewRole;
   fromId: string, // clientId or talentSlug depending on fromRole;
   toRole: ReviewRole, // opposite of fromRole;
   toId: string, // target id (talentSlug or clientId);
   rating: number, // 1-5;
+
+
   text: string;
   categories?: ReviewCategoryScores,;
   anonymous?: boolean,;
   approved: boolean, // admin moderated visibility;
   reported: boolean;
+
+
+
+
+
+
+
+
   reports?: { reason: string, reportedAt: string }[],;
   removed?: boolean,;
   createdAt: string, // ISO;
 },;
+
+export type PublicReview = Omit<Review 'fromId'> & { authorName: string },;
+export type ReviewsSummary = {;
+  averageRating: number,;
+  totalReviews: number,;
+  totalCompletedProjects: number,;
+export type PublicReview = Omit<Review 'fromId'> & { authorName: string };
+
+
+
+
+
+
+
 
 
 export type ReviewsSummary = {
@@ -416,7 +496,12 @@ export interface ReviewSummary {};
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
   totalCompletedProjects: number;
+
+
   mostRecent: PublicReview[];
+
+
+
 
 export type ProjectStatus = 'InProgress' | 'Completed',
 export type Project = {
@@ -459,6 +544,57 @@ export type ReviewsSummary = {
   most_recent: PublicReview[];
 
 }
+
+
+
+
+  mostRecent: PublicReview[];
+
+
+}
+
+};
+
+
+
+}
+};
+
+
+
+
+
+};
+
+
+
+export interface ReviewSummary {
+  averageRating: number;
+  totalReviews: number;
+  ratingDistribution: {
+    1: number;
+    2: number;
+    3: number;
+    4: number;
+    5: number;
+  };
+}
+
+  text: string;
+  categories?: ReviewCategoryScores;
+  anonymous?: boolean;
+  approved: boolean, // admin moderated visibility;
+  reported: boolean;
+  reports?: { reason: string, reportedAt: string }[];
+  removed?: boolean;
+  createdAt: string, // ISO;
+};
+export type PublicReview = Omit<Review 'fromId'> & { authorName: string };
+export type ReviewsSummary = {;
+  averageRating: number;
+  totalReviews: number;
+  totalCompletedProjects: number;
+  mostRecent: PublicReview[];
 };
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils',;
@@ -18,10 +19,13 @@ interface FavoriteButtonProps {;
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 return (
     <>;
       <TooltipProvider>;
         <Tooltip>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -36,6 +40,8 @@ return (
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
       return;
@@ -65,9 +71,13 @@ import {;
 interface FavoriteButtonProps {;
   itemId: string,;
   className?: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 <<<<<<< HEAD
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
   const { isWishlisted, toggle } = useWishlist(),;
@@ -79,10 +89,15 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
       setLoginOpen(true),;
       return;
     }
+<<<<<<< HEAD
     
     const wasWishlisted = isWishlisted(itemId),
     toggle(itemId),
     
+=======
+    const wasWishlisted = isWishlisted(itemId),
+    toggle(itemId),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Provide feedback
     toast({
       title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
@@ -125,8 +140,13 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip'
 
+<<<<<<< HEAD
 =======
 import React from 'react';
+=======
+import React from 'react';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Heart } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { useWishlist  } from '@/hooks/useWishlist';
@@ -137,6 +157,7 @@ import { Tooltip;
   TooltipContent;
   TooltipProvider;
   TooltipTrigger } from '@/components/ui/tooltip';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface FavoriteButtonProps {
   itemId: string;
@@ -158,6 +179,34 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
     })
   }
   const active = isWishlisted(itemId)
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+interface FavoriteButtonProps {
+  itemId: string;
+  className?: string
+
+  const handleClick = null;
+                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate'
+                )}
+              />
+
+            </button>
+          </TooltipTrigger>
+origin/cursor/automate-test-improve-and-merge-code-2533
+          {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
+        </Tooltip>
+      </TooltipProvider>
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+    </>
+  )
+}
+      // Add to favorites`
+      // console.log(`Added ${itemType} ${itemId} to favorites`)}  }
+  return ()
+
+                )}              />;
+import React from 'react',;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -204,6 +253,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
         <Tooltip>
           <TooltipTrigger asChild>
             <button
+<<<<<<< HEAD
               )}
               onClick={handleClick}
               aria-label={
@@ -270,6 +320,8 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
         <Tooltip>
           <TooltipTrigger asChild>
             <button
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className={cn(
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
                 className
@@ -289,6 +341,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger asChild>;
+<<<<<<< HEAD
 =======
      aria-label="Button">;
 <<<<<<< HEAD
@@ -339,6 +392,9 @@ className: {`w-4 h-4 transition-all duration-300 ${'`
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             <button;
 <<<<<<< HEAD
+=======
+            <button;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className={cn(;
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
                 className;
@@ -352,6 +408,7 @@ className: {`w-4 h-4 transition-all duration-300 ${'`
                   active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate';
                 )}
               />;
+<<<<<<< HEAD
 =======
               class_name = {cn ('
                 'absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors',
@@ -367,11 +424,14 @@ className: {`w-4 h-4 transition-all duration-300 ${'`
                     ? 'fill - red - 500 text - red - 500 scale - 110';'
                     : 'text - zion - slate')}              />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </button>;
           </TooltipTrigger>;
           {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>;
       </TooltipProvider>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
@@ -417,11 +477,127 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${'`
 '`;
 }
 
+=======
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+}
+      // Add to favorites`;`
+      // console && console.log(`Added ${itemType} ${itemId} to favorites`)}  };`
+  return ();
+    <button
+      onClick = {handleToggleFavorite}``
+      className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited''
+          ? 'bg-red-500 hover:bg-red-600 text-white'''
+          : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'``
+} ${className}`}`
+      aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}'
+     aria-label="Button">;
+      <Heart``
+        className={`w-4 h-4 transition-all duration-300 ${`
+          isFavorited ? 'fill-current' : ''``
+}`}`
+      />    </button>
+  )};``
+className: {`w-4 h-4 transition-all duration-300 ${`,
+          isFavorited ? 'fill-current' : '';``
+}`}`
+      />
+    </button>;) }
+'``
+}
+;
+    const wasWishlisted = isWishlisted(itemId),;
+    toggle(itemId),;
+    // Provide feedback;
+    toast({;
+      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",;
+      description: wasWishlisted;
+        ? "Item has been removed from your wishlist";
+        : "Item has been added to your wishlist"});
+  },;
+  const active = isWishlisted(itemId),;
+  return (;
+    <>;
+      <TooltipProvider>;
+        <Tooltip>;
+          <TooltipTrigger asChild>;
+            <button;
+              className={cn(;
+                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
+                className;
+              )}
+              onClick={handleClick}
+              aria-label={active ? 'Remove from favorites' : 'Save to favorites'}
+            >;
+              <Heart;
+                className={cn(;
+                  'h-4 w-4 transition-transform duration-200';
+                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate';
+                )}
+              />;
+            </button>;
+          </TooltipTrigger>;
+          {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
+        </Tooltip>;
+      </TooltipProvider>;
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+
+          <TooltipTrigger as_child>;
+            <button;
+              class_name = {cn (
+                'absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors',',
+                class_name)}
+              on_click={handle_click}
+              aria - label={
+                active ? 'Remove from favorites' : 'Save to favorites';
+              }            >;
+              <Heart;
+                class_name = {cn (
+                  'h - 4 w - 4 transition - transform duration - 200','
+                  active;
+                    ? 'fill - red - 500 text - red - 500 scale - 110';
+                    : 'text - zion - slate')}              />;
+            </button>;
+          </TooltipTrigger>;
+          {!is_authenticated && <TooltipContent > Login required</TooltipContent>}
+        </Tooltip>;
+      </TooltipProvider>;
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+    </>);
+}
+      // Add to favorites`;`
+      // console.log (`Added ${item_type} ${item_id} to favorites`)}  }`
+  return ();
+    <button;
+      on_click = {handleToggleFavorite}`;`
+      className={`absolute top - 2 right - 2 p - 2 rounded - full transition - all duration - 300 ${is_favorited';
+          ? 'bg - red - 500 hover:bg - red - 600 text - white'';
+          : 'bg - zion - blue - dark / 80 hover:bg - zion - cyan text - white'`;`
+} ${class_name}`}`
+      aria - label={is_favorited ? 'Remove from favorites' : 'Add to favorites'}'
+    >;
+      <Heart`;`
+        className={`w - 4 h - 4 transition - all duration - 300 ${`
+          is_favorited ? 'fill - current' : ''`;`
+}`}`
+      />    </button>)}`;`
+class_name: {`w - 4 h - 4 transition - all duration - 300 ${`,
+          is_favorited ? 'fill - current' : '';`;`
+}`}`
+      />;
+    </button>) }
+'`;`
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -443,3 +619,9 @@ class_name: {`w - 4 h - 4 transition - all duration - 300 ${'`
 =======
             <button'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <button
+;
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

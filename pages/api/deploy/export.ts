@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,12 +77,20 @@ export default function handler(req, res) {}
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { id } = req.query;
   if (!id || typeof id !== 'string') {
     return res.status(400).json({ error: 'Missing id' })
   }
   // In a real system, look up persisted deployment by id
   const fake = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json(fake)
 }
@@ -139,3 +148,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  return res.status(200).json(fake)
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -32,10 +32,16 @@ import { ApplicationStatus } from "@/types/jobs";
 import { ApplicationStatus } from "@/types/jobs";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Badge } from "@/components/ui/badge";
+
+
+
+import { ApplicationStatus } from "@/types/jobs";""
+import { Badge } from "@/components/ui/badge";"
+pr-12325
 interface StatusBadgeProps {;
   status: ApplicationStatus;
-}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
@@ -44,9 +50,17 @@ export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
 interface StatusBadgeProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
   switch (status) {;
+import { ApplicationStatus  } from '@/types / jobs';
+import { Badge  } from '@/components / ui / badge';
+
+import { ApplicationStatus } from "@/types/jobs";
+import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   status: ApplicationStatus;
@@ -103,13 +117,23 @@ import { ApplicationStatus } from "@/types/jobs",
 import { ApplicationStatus } from "@/types/jobs","
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 interface StatusBadgeProps {};
   status: ApplicationStatus;
+=======
+export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
+
+import { ApplicationStatus } from "@/types/jobs",;
+import { Badge } from "@/components/ui/badge",;
+interface StatusBadgeProps {
+  status: ApplicationStatus
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 <<<<<<< HEAD
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     case "new":;
       return <Badge variant="secondary">Submitted</Badge>;
@@ -142,6 +166,12 @@ export function StatusBadge({ status }: StatusBadgeProps) {}
     default:"
       return <Badge variant="outline">{status}</Badge>";
 import { ApplicationStatus } from "@/types/jobs",;"
+=======
+
+    default:
+      return <Badge variant="outline">{status}</Badge>
+import { ApplicationStatus } from "@/types/jobs",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Badge } from "@/components/ui/badge",;
 interface StatusBadgeProps {;
   status: ApplicationStatus;
@@ -258,12 +288,15 @@ export function StatusBadge({ status }: StatusBadgeProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ApplicationStatus } from "@/types/jobs",
 import { Badge } from "@/components/ui/badge",
 interface StatusBadgeProps {
@@ -285,10 +318,10 @@ import { ApplicationStatus } from "@/types/jobs",;"
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Badge } from "@/components/ui/badge",;
-;
-interface StatusBadgeProps {;
-  status:ApplicationStatus;
+interface StatusBadgeProps {
+  status: ApplicationStatus
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 export function StatusBadge() { return null; }
@@ -345,6 +378,10 @@ export function StatusBadge({ status } StatusBadgeProps) {;
 }export function StatusBadge ({
   status 
 }: StatusBadgeProps) {
+=======
+
+export function StatusBadge({ status }: StatusBadgeProps) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   switch (status) {
   case "viewed": return <Badge variant="outline">Viewed</Badge>;
 case "shortlisted": return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>;
@@ -356,4 +393,52 @@ default: return <Badge variant="outline"> {
 }</Badge> 
 }
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
+  switch (status) {;
+interface StatusBadgeProps {
+  // TODO: Implement
+export function StatusBadge({ status }: StatusBadgeProps) {
+  switch (status) {"
+    case "new": return <Badge variant;"
+    default:"
+    case "new":;""
+      return <Badge variant="secondary">Submitted;""
+      return <Badge variant="outline">Viewed;""
+      return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted;""
+      return <Badge className="bg - purple - 100 text - purple - 800">Interview;""
+      return <Badge className="bg - green - 100 text - green - 800">Hired;""
+      return <Badge className="bg - red - 100 text - red - 800">Not Selected;""
+      return <Badge variant="outline">{status};""
+      return <Badge variant="outline">Viewed,""
+      return <Badge className="bg-blue-100 text-blue-800">Shortlisted,""
+      return <Badge className="bg-purple-100 text-purple-800">Interview,""
+      return <Badge className="bg-green-100 text-green-800">Hired,""
+      return <Badge className="bg-red-100 text-red-800">Not Selected,""
+      return <Badge variant="outline">{status}""
+    case "new": return <Badge variant="secondary">Submitted,;""
+      return <Badge variant="outline">Viewed,;""
+      return <Badge className="bg-blue-100 text-blue-800">Shortlisted,;""
+      return <Badge className="bg-purple-100 text-purple-800">Interview,;""
+      return <Badge className="bg-green-100 text-green-800">Hired;""
+      return <Badge className="bg-red-100 text-red-800">Not Selected;""
+    case "new":return <Badge variant="secondary">Submitted,;""
+      return <Badge className="bg-green-100 text-green-800">Hired,;""
+      return <Badge className="bg-red-100 text-red-800">Not Selected,;""
+      return <Badge variant="outline">{status},;  }""
+  case "viewed": return <Badge variant="outline">Viewed;""
+case "shortlisted": return <Badge className="bg-blue-100 text-blue-800">Shortlisted;""
+case "interview": return <Badge className="bg-purple-100 text-purple-800">Interview;""
+case "hired": return <Badge className="bg-green-100 text-green-800">Hired;""
+case "rejected": return <Badge className="bg-red-100 text-red-800">Not Selected;""
+default: return <Badge variant="outline"> {"
+
+} "
+pr-12325
+</Badge>
+}</Badge> "
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

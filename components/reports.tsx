@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 origin/cursor/automate-test-improve-and-merge-code-2533
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
@@ -55,6 +56,9 @@ import React from 'react';
 };
 export default ReportsPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from 'next/head';
 =======
   report && report.icon ;"
@@ -87,6 +91,7 @@ import { FileText;
   Award'
  } from 'lucide-react';'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+<<<<<<< HEAD
 const ReportsPage: React.FC = () => {}
   const reports = [;
     {}
@@ -375,3 +380,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

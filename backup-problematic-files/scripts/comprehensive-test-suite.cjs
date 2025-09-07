@@ -1,12 +1,12 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Comprehensive Test Suite;
  * Runs all tests, checks, and validations for the application;
  */
-
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
   log(message, level = 'INFO')
   log(message, level = 'INFO')
@@ -50,6 +50,8 @@ const path = require('path')
         "description"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

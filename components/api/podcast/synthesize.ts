@@ -4,17 +4,12 @@ import path from 'path';'
 import axios from 'axios';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const EPISODES_PATH = null;
-    return res.status(500).json({ error: error?.message || 'Synthesis failed' })
-};
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-);
-const PUBLIC_DIR = path.join(process.cwd(), 'public', 'podcast');
 
+<<<<<<< HEAD
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -154,6 +149,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res && res.status(500).json({ error: error?.message || 'Synthesis failed' })
   };
 }'
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           response_type: 'arraybuffer',
           headers: {'
             'xi - api - key': eleven_key,'
@@ -212,6 +210,7 @@ if ( {) {}
     return res.status (200).json ({ episode });
   } catch (error: any) {}
     console.error (error);
+<<<<<<< HEAD
     return res;
       .status (500);'
       .json ({ error: error?.message || 'Synthesis failed' });
@@ -223,11 +222,29 @@ if ( {) {}
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');'
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 <<<<<<< HEAD
+=======
+  } catch (error: any) {
+    console.error(error);
+    return res;
+      .status(500)
+}
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       .json({ error: error?.message || 'Synthesis failed' });
   }
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      .json({ error: error?.message || 'Synthesis failed',}
+});
+  }
+}
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

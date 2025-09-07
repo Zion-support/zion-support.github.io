@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-fixer.cjs
 =======
 <<<<<<< HEAD
@@ -20,6 +21,9 @@ const fs = require('fs')
 const path = require('path')
 
 #!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -39,6 +43,7 @@ const path = require('path')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
+<<<<<<< HEAD
 console.log('')
   console.log('� Fixing common linting issues...')
   const filesToFix = ['components/ContactForm.tsx']
@@ -92,3 +97,7 @@ console.log('')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+console.log()
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

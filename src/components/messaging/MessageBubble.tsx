@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { format } from 'date-fns',;
 =======
@@ -85,17 +86,29 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {}
       >
 =======
 interface MessageBubbleProps {
+=======
+  message: Message
+  isUserMessage: boolean
+origin/cursor/automate-test-improve-and-merge-code-2533
+import React from 'react';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
         <div className='text-xs opacity-70 text-right mt-1'>
   isUserMessage: boolean
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
+<<<<<<< HEAD
     <div className;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         isUserMessage 
           ? "bg-zion-purple text-white" 
           : "bg-zion-blue-dark text-white"
       )}>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="whitespace-pre-wrap">{message.content}</div>
         
@@ -123,12 +136,30 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
 <<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+        <div className="whitespace-pre-wrap">{message.content}</div>
+        {message.attachment_url && (
+          <a 
+            href={message.attachment_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
+          >
+            <PaperclipIcon className="h-3 w-3 mr-1" aria-hidden="true" />
+            {message.attachment_name || 'Attachment'}
+          </Link>
+        )}
+        <div className="text-xs opacity-70 text-right mt-1">
+          {format(new Date(message.created_at), 'h:mm a')}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>;
       </div>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 =======
           </a>
         )}
@@ -143,6 +174,10 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+  );
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export function MessageBubble(): any ({ message, isUserMessage }: MessageBubbleProps) {;
   return (
@@ -212,7 +247,11 @@ function MessageBubble() {
         </div>;
       </div>;
     </div>);
+<<<<<<< HEAD
         <div className="text - xs opacity - 70 text - right mt-1">;
+=======
+        <div className="text - xs opacity - 70 text - right mt - 1">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface MessageBubbleProps {
   message: Message,
   isUserMessage: boolean;
@@ -230,23 +269,37 @@ function MessageBubble() {
         isUserMessage;
           ? "bg - zion - purple text - white";
           : "bg - zion - blue - dark text - white")}>;
+<<<<<<< HEAD
         <div className="whitespace - pre-wrap">{message.content}</div>;
+=======
+        <div className="whitespace - pre - wrap">{message.content}</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {message.attachment_url && (
           <a;
             href={message.attachment_url}
             target="_blank";
             rel="noopener noreferrer";
+<<<<<<< HEAD
             className="flex items - center mt - 2 p - 2 bg - black / 20 rounded text - xs hover:bg-black / 30";
           >;
             <PaperclipIcon className="h - 3 w - 3 mr-1" aria - hidden="true" />;
             {message.attachment_name || 'Attachment'}
           </a>)}
         <div className="text - xs opacity - 70 text - right mt-1">;
+=======
+            className="flex items - center mt - 2 p - 2 bg - black / 20 rounded text - xs hover:bg - black / 30";
+          >;
+            <PaperclipIcon className="h - 3 w - 3 mr - 1" aria - hidden="true" />;
+            {message.attachment_name || 'Attachment'}
+          </a>)}
+        <div className="text - xs opacity - 70 text - right mt - 1">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {format (new Date (message.created_at), 'h:mm a')}
         </div>;
       </div>;
     </div>));
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
@@ -268,3 +321,12 @@ function MessageBubble() {
 =======
 }'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        </div>
+      </div>
+    </div>
+  );
+}
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }];
 setIsSearching (true);
 
@@ -8,12 +9,17 @@ const matches_filters = selected_filters.length === 0 || selected_filters.some (
 set_results (sorted_results);
 setShowResults (true);
 setIsSearching (false);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
+
 interface SearchResult {
   id: string;
+
   name: string;
   description: string;
   category: string;
@@ -21,9 +27,8 @@ interface SearchResult {
   slug: string;
   relevance: number;
   features?: string[];
-  pricing?: {
-    starter?: string;
-    enterprise?: string
+  pricing?: {starter?: string;}
+    enterprise?: string;}
   }
 }
 
@@ -32,9 +37,11 @@ interface SearchProps {
   onResultSelect: (result: SearchResult) => void;
   placeholder?: string;
   className?: string;
-  showFilters?: boolean
+  showFilters?: boolean;}
+}
 }
 
+<<<<<<< HEAD
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch;
   onResultSelect;
@@ -610,3 +617,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

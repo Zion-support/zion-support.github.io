@@ -24,12 +24,15 @@ import { Award, Share, Star, TrendingUp } from "lucide-react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ReferralStatsProps {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
@@ -43,8 +46,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
   const statCards = [
     {
-      title: "Total Referrals"
-      value: stats.totalReferrals
       icon: <Share className="h-5 w-5 text-muted-foreground" />
 =======
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {}
@@ -172,15 +173,16 @@ function ReferralStats() {
 ;
 <<<<<<< HEAD
   return (
-    <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
-      {stat_cards.map ((card, i) => (
-        <Card key={i}>;
-          <CardHeader className="flex flex - row items - center justify - between space - y-0 pb - 2">;
-            <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
+    <div className=\"grid gap - 4 md:grid - cols - 2 lg:grid - cols-4\" />;
+      {stat_cards.map ((card, i) => (}
+        <Card key={i} />;
+          <CardHeader className=\"flex flex - row items - center justify - between space - y-0 pb-2\" />;
+            <CardTitle className=\"text - sm font-medium\" />{card.title}</CardTitle>;
             {card.icon}
           </CardHeader>;
-          <CardContent>;
+          <CardContent />;
             {is_loading ? (
+<<<<<<< HEAD
               <div className="h - 6 w - 20 bg - muted animate - pulse rounded" />) : (
               <>;
 <<<<<<< HEAD
@@ -338,10 +340,27 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+              <div className=\"h - 6 w - 20 bg - muted animate-pulse rounded\" />) : (}
+              <>;}
+                <div className=\"text - 2xl font-bold\" />{card.value}</div>;
+                <p className=\"text - xs text - muted-foreground\" />;
+                  {card.description}
+import {Card, CardContent, CardHeader, CardTitle} from \"@/components/ui/card\";
+import {ReferralStats, as, ReferralStatsType} from \"@/types/referrals\";
+import {Award, Share, Star, TrendingUp} from \"lucide-react\";
+import { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\";
+import { ReferralStats, as, ReferralStatsType } from \"@/types/referrals\";
+import { Award, Share, Star, TrendingUp } from \"lucide-react\";
 
-    </div>;
-  );
+interface ReferralStatsProps {
+  stats: ReferralStatsType;}
+  isLoading: boolean;}
 }
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 
                 </p>;
               </>)}
@@ -367,6 +386,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -379,3 +399,75 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+interface ReferralStatsProps {
+  // TODO: Implement
+}
+  stats: ReferralStatsType;,
+  isLoading: boolean;
+}
+
+export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
+
+  const statCards = [
+    {
+
+      title: "Total Referrals"",
+  value: stats.totalReferrals;"
+      icon: <Share className="h-5 w-5 text-muted-foreground" />"
+"
+      icon: <Star className="h-5 w-5 text-muted-foreground" />"
+      icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />"
+      icon: <Award className="h-5 w-5 text-muted-foreground" />"
+      icon: <Share className="h - 5 w - 5 text - muted - foreground" />,"
+      icon: <Star className="h - 5 w - 5 text - muted - foreground" />,"
+      icon: <TrendingUp className="h - 5 w - 5 text - muted - foreground" />,"
+      icon: <Award className="h - 5 w - 5 text - muted - foreground" />,"
+    <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;"
+</div>
+        <Card key={i}>;
+          <CardHeader className="flex flex - row items - center justify - between space - y-0 pb - 2">;"
+            <CardTitle className="text - sm font - medium">{card.title};"
+          ;
+          <CardContent>;
+              <div className="h - 6 w - 20 bg - muted animate - pulse rounded" />) : ("
+              <>;"
+                <div className="text - 2xl font - bold">{card.value}</div>;""
+                <p className="text - xs text - muted - foreground">;"
+</p>"
+      icon: <Share className="h-5 w-5 text-muted-foreground" />,"
+      icon: <Star className="h-5 w-5 text-muted-foreground" />,"
+      icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />,"
+      icon: <Award className="h-5 w-5 text-muted-foreground" />,"
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">"
+        <Card key={i}>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">"
+            <CardTitle className="text-sm font-medium">{card.title}"
+          <CardContent>
+              <div className="h-6 w-20 bg-muted animate-pulse rounded" />"
+              <>"
+                <div className="text-2xl font-bold">{card.value}</div>""
+                <p className="text-xs text-muted-foreground">"
+</p>
+              </>)
+            )}
+
+                </p>
+              </>)
+            )}
+
+          </CardContent>;
+        </Card>;
+    </div>;
+                </p>;
+              </>)}
+        ))}
+    </div>);
+    </div>]"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

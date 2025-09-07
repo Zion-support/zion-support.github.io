@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
 export type Job = {;
   id: string;
@@ -110,14 +111,24 @@ export type UserRole = 'admin' | 'user' | 'guest';
 export type UserRole = "admin" | "user" | "guest";
 export type UserRole = "admin" | "user" | "guest";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 export interface Application {
+
+
+
+export interface Application {;
   id: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   email: string;
   position: string;
@@ -127,6 +138,7 @@ export interface Application {
   updatedAt?: string;
 }
 
+<<<<<<< HEAD
 export type UserRole = 'admin' | 'user' | 'guest';
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -146,7 +158,27 @@ export type UserRole = 'admin' | 'user' | 'guest';
   talent_slug: string;
   status: 'applied' | 'skipped' | 'pending';
   createdAtIso: string;
+=======
+  id: string;,
+  name: string;
+  email: string;,
+  position: string;
+  experience: number;,
+  skills: string[];
+  createdAt: string;}
+  updatedAt?: string;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
+
+
+
+
+  jobId: string;
+
+  talentSlug: string;,
+  status: "applied" | "skipped" | "pending";"
+  createdAtIso: string;
+}"
 export type UserRole = 'admin' | 'user' | 'guest';
 
 <<<<<<< HEAD
@@ -200,6 +232,7 @@ export type UserRole = 'admin' | 'user' | 'guest';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   id: string;
 
   job_id: string;
@@ -246,3 +279,93 @@ export type UserRole = "admin" | "user" | "guest";
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+
+
+
+export type UserRole = "admin" | "user" | "guest";
+
+
+export type UserRole = "admin" | "user" | "guest";
+
+export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
+export type Job = {;
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  requiredSkills: string[];
+  budgetMinUsd?: number;
+  budgetMaxUsd?: number;
+  deliveryDeadlineIso?: string, // ISO string;
+  clientEmail: string;
+  status: JobStatus;
+  createdAtIso: string;
+  updatedAtIso: string;
+};
+export type ApplicationStatus = 'applied' | 'skipped' | 'withdrawn';
+export type Application = {;
+  id: string;
+  jobId: string;
+  talentSlug: string;
+  status: ApplicationStatus;
+  createdAtIso: string;
+};
+export type Participant = { type: 'email' | 'talent', id: string };
+export type Attachment = {;
+  name: string;
+  url: string;
+  sizeBytes?: number;
+};
+export type Message = {;
+  id: string;
+  conversationId: string;
+  sender: Participant;
+  text?: string;
+  attachments?: Attachment[];
+  createdAtIso: string;
+  readBy?: { participantId: string, readAtIso: string }[];
+};
+export type Conversation = {;
+  id: string;
+  jobId?: string;
+  participants: Participant[];
+  createdAtIso: string;
+  updatedAtIso: string;
+  messages: Message[];
+};
+export type UserRole = "admin" | "user" | "guest";""
+export type UserRole = "admin" | "user" | "guest";"
+
+export interface Application {
+  // TODO: Implement
+}
+  id: string;,
+  name: string;
+  email: string;,
+  position: string;
+  experience: number;,
+  skills: string[];
+  createdAt: string;}
+  updatedAt?: string;}
+}
+"
+  job_id: string;
+  talent_slug: string;,
+  status: 'applied' | 'skipped' | 'pending';
+pr-12325
+  talent_slug: string;,'
+  status: 'applied' | 'skipped' | 'pending';'
+  createdAtIso: string;
+}'
+export type UserRole = 'admin' | 'user' | 'guest';''
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

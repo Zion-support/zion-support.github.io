@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import OpenAI from 'openai';
+<<<<<<< HEAD
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:
 - Greet users warmly and concisely;
@@ -88,3 +89,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

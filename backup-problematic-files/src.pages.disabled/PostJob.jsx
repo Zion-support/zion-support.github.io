@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 interface PostJobProps {
   // Add props here as needed
@@ -27,12 +28,20 @@ import React from 'react';
 
 const PostJob = ({ className }) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from 'react';
+interface PostJobProps {
+  // Add props here as needed
+}
+export default function PostJob({ }: PostJobProps) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
-    <div className={className || ''}>
+    <div>
       <h1>PostJob</h1>
-      <p>This component is under development.</p>
+      <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/src.pages.disabled/PostJob.jsx
 ========
@@ -59,3 +68,11 @@ const PostJob = ({ className }) => {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/PostJob.jsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<
+}
+}
+<
+}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

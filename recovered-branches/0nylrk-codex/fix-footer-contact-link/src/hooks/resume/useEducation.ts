@@ -6,6 +6,7 @@
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -18,6 +19,9 @@
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Education  } from '@/types/resume';
@@ -84,8 +88,8 @@ export function useEducation() {  const { user } = useAuth();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
   const { user } = useAuth();
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [isLoading, setIsLoading] = useState(false);
 
@@ -971,13 +975,25 @@ if ( {) {}
 
 
 
+=======
+export function useEducation() {  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
+    setIsLoading (true);
+    set_error (null);
 ;
+
+
+
     try {
+  // TODO: Implement
       const { error } = await supabase;
         .from ('education');
         .insert ({
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           resume_id: resume_id;
           institution: education.institution;
@@ -1002,15 +1018,37 @@ if (throw error) {}
     } finally {}
 =======
       // Check condition
+=======
+          resume_id: resume_id;,
+  institution: education.institution;
+          degree: education.degree;,
+  field_of_study: education.field_of_study;)
+          start_date: formatDateForDB (education.start_date);,
+  end_date: education.is_current ? null: formatDateForDB (education.end_date);,
+  is_current: education.is_current;
+          description: education.description;,
+  institution_logo_url: education.institution_logo_url,
+          location: education.location;
+        });
+      // Check condition;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (throw error) {
-  $2
-}
-      return showSuccessToast ("Education added", "Your education has been added to your resume");
-    } catch (e: any) {
+      return showSuccessToast ("Education added", "Your education has been added to your resume");"
+    } catch (e: any) {"
       return handleResumeError (e, 'Could not add education');
     } finally {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setIsLoading (false);
+  const update_education = async (edu_id: string, education: Education): Promise < boolean> => {
+    // Check condition;
+      set_error ('You must be logged in to update education'),
+    setIsLoading (true);
+    set_error (null);
+
     }
   }
 ;
@@ -1022,27 +1060,39 @@ if ( {) {}
 }'
 =======
   const update_education = async (edu_id: string, education: Education): Promise < boolean> => {
-    // Check condition
+    // Check condition;
+
 if ( {) {
+<<<<<<< HEAD
   $2
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       set_error ('You must be logged in to update education'),
+=======
+  $2;
+}'
+      set_error ('You must be logged in to update education'),'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
     try {}
       const { error } = await supabase;'
         .from ('education');
         .update ({}
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
-      const { error } = await supabase;
-        .from ('education');
+  // TODO: Implement
         .update ({
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           institution: education.institution;
           degree: education.degree;
@@ -1067,18 +1117,29 @@ if (throw error) {}
     } finally {}
 =======
         });
+=======
+          institution: education.institution;,
+  degree: education.degree;
+          field_of_study: education.field_of_study;,)
+  start_date: formatDateForDB (education.start_date);
+          end_date: education.is_current ? null : formatDateForDB (education.end_date);,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         .eq ('id', edu_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Education updated", "Your education has been updated");
-    } catch (e: any) {
+      // Check condition;
+      return showSuccessToast ("Education updated", "Your education has been updated");"
       return handleResumeError (e, 'Could not update education');
+<<<<<<< HEAD
     } finally {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+  const delete_education = async (edu_id: string): Promise < boolean> => {
+    // Check condition;
+      set_error ('You must be logged in to delete education'),
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setIsLoading (false);
+
     }
   }
 ;
@@ -1090,17 +1151,26 @@ if ( {) {}
 }'
 =======
   const delete_education = async (edu_id: string): Promise < boolean> => {
-    // Check condition
+    // Check condition;
+
 if ( {) {
+<<<<<<< HEAD
   $2
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       set_error ('You must be logged in to delete education'),
+=======
+  $2;
+}'
+      set_error ('You must be logged in to delete education'),'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return false;
     }
     setIsLoading (true);
     set_error (null);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
     try {}
       const { error } = await supabase;'
@@ -1117,22 +1187,24 @@ if (throw error) {}
       return handleResumeError (e, 'Could not delete education');
     } finally {}
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
-      const { error } = await supabase;
-        .from ('education');
+  // TODO: Implement
         .delete ();
-        .eq ('id', edu_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Education deleted", "Your education has been removed from your resume");
-    } catch (e: any) {
+      // Check condition;
+      return showSuccessToast ("Education deleted", "Your education has been removed from your resume");"
       return handleResumeError (e, 'Could not delete education');
+<<<<<<< HEAD
     } finally {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setIsLoading (false);
+
     }
   }
 ;
@@ -1140,12 +1212,17 @@ if (throw error) {
   return {}
 =======
   return {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     is_loading;
     error;
     add_education;
     update_education;
     delete_education;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -1153,6 +1230,10 @@ if (throw error) {
 <<<<<<< HEAD
 }
 =======
+=======
+}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },;
 ;
   return {;
@@ -1212,6 +1293,18 @@ updateEducation;
 deleteEducation 
 }
 }
+<<<<<<< HEAD
+=======
+  }
+}
+;
+  }
+}
+;
+pr-12325
+    update_education;}
+    delete_education;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 ;
@@ -1241,6 +1334,7 @@ deleteEducation
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1255,3 +1349,6 @@ deleteEducation
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

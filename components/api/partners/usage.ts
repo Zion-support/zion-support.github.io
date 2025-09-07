@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -95,3 +96,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  return res.status(200).json({ summary })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

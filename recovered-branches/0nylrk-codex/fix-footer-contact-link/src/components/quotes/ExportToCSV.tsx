@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -25,6 +26,8 @@ import type { QuoteRequest } from "@/types/quotes";
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Button} from "@/components/ui/button";
 import {Download} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
@@ -37,6 +40,7 @@ import { Download } from "lucide-react",
 <<<<<<< HEAD
 <<<<<<< HEAD
 import type { QuoteRequest } from "@/types/quotes",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -490,10 +494,19 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       Export CSV;
     </Button>;
   );
+=======
+
+
+
+import type { QuoteRequest } from "@/types/quotes";
+import { Download } from "lucide-react",;
+import type { QuoteRequest } from "@/types/quotes",      quote.id;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
@@ -724,3 +737,5 @@ new Date (quote.created at) .toLocaleDateString () ]);
 }
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -5,6 +5,9 @@
       "dom",
       "dom.iterable",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "es6",
       "es2017",
       "es2018",
@@ -12,6 +15,7 @@
       "es2020",
       "es2021",
       "es2022"
+<<<<<<< HEAD
 =======
       "esnext"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -33,10 +37,22 @@
     "module": "ESNext",
     "moduleResolution": "node",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+<<<<<<< HEAD
     "plugins": [
       {
         "name": "next"
@@ -46,6 +62,10 @@
     "paths": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    "baseUrl": ".",
+    "paths": {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -56,6 +76,7 @@
       "@/assets/*": ["./src/assets/*"]
     },
     "allowSyntheticDefaultImports": true
+<<<<<<< HEAD
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
@@ -101,6 +122,13 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
+=======
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ],
   "exclude": [
     "node_modules",
@@ -136,7 +164,10 @@
     "hardhat"
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> pr-12243
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

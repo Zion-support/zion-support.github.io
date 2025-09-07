@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from "react",
@@ -14,10 +15,14 @@ import React from "react";
 import { MobileHeader } from "../components/common/MobileHeader";
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { ClientDashboard } from "../components/dashboard/ClientDashboard";
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { TalentDashboard } from "../components/dashboard/TalentDashboard";
 import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {
   const { user } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +71,13 @@ import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",
+=======
+
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { TalentDashboard } from "../components/dashboard/TalentDashboard";
 =======
 
@@ -86,13 +98,16 @@ export function MobileHome() {};
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-  return (
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -107,6 +122,7 @@ import { TalentDashboard } from "../components/dashboard/TalentDashboard",
 import { TalentDashboard } from "../components/dashboard/TalentDashboard","
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 export function MobileHome() {}
   const { user } = useAuth(),'
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
@@ -114,6 +130,13 @@ export function MobileHome() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+import { TalentDashboard } from "../components/dashboard/TalentDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+export function MobileHome() {
+  const { user } = useAuth(),
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div className="min-h-screen">
@@ -176,13 +199,49 @@ export function MobileHome() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
       />
+import React from "react";""
+import { MobileHeader } from "../components/common/MobileHeader";""
+import { BottomNavigation } from "../components/common/BottomNavigation";""
+import { ClientDashboard } from "../components/dashboard/ClientDashboard";""
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";""
+import { useAuth } from "@/hooks/useAuth";"
+export function MobileHome() {
+  const { user } = useAuth();"
+  const isClient = user?.userType === "employer" || user?.userType === "buyer";""
+import React from "react",""
+import { MobileHeader } from "../components/common/MobileHeader",""
+import { BottomNavigation } from "../components/common/BottomNavigation",""
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",""
+  const { user } = useAuth();
+"
+  const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
+  return (
 
+<<<<<<< HEAD
       <main className="py-4">
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import { TalentDashboard } from "../components/dashboard/TalentDashboard",""
+import { useAuth } from "@/hooks/useAuth",")
+  const { user } = useAuth(),"
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
+    <div className="min-h-screen">"
+</div>
+      <MobileHeader;"
+        title={isClient ? "Client Dashboard" : "Talent Dashboard"}"
+        showNotifications;
+        showSettings;
+      />
+
+      <main className="py-4">"
+</main>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
-      </main>
+
 
       <BottomNavigation />
+<<<<<<< HEAD
     </div>
   );
 }
@@ -209,11 +268,18 @@ function MobileHome() {
     <div className="min - h-screen">;
       <MobileHeader;
         title={is_client ? "Client Dashboard" : "Talent Dashboard"}
+=======
+
+    </div>"
+    <div className="min - h-screen">;"
+        title={is_client ? "Client Dashboard" : "Talent Dashboard"}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         show_notifications;
         show_settings;
       />;
-      <main className="py - 4">;
+      <main className="py - 4">;"
         {is_client ? <ClientDashboard /> : <TalentDashboard />}
+
       </main>;
       <BottomNavigation />;
     </div>);
@@ -239,11 +305,13 @@ export function MobileHome() {;
     <div className="min-h-screen">;
       <MobileHeader ;
         title={isClient ? "Client Dashboard" :"Talent Dashboard"} ;
+)
+    </div>);"
+    <div className="min-h-screen">;"
+      <MobileHeader ;"
+        title={isClient ? "Client Dashboard" :"Talent Dashboard"} ;"
         showNotifications ;
-        showSettings;
-      />;
-      ;
-      <main className="py-4">;
+      <main className="py-4">;"
         {isClient ? <ClientDashboard /> :<TalentDashboard />}
       </main>;
       ;
@@ -271,6 +339,7 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -297,3 +366,12 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+    </div>;"
+min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomNavigation /> </div>)"
+        title={isClient ? "Client Dashboard" : "Talent Dashboard"} ;"
+
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

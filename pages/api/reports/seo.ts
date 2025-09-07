@@ -1,13 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const report = {
         keywords: keywords || [],
         rankings: rankings || [],
         issues: issues || [],
         recommendations: recommendations || [],
+<<<<<<< HEAD
         generated_at: new Date ().toISOString ();
       }
 ;
@@ -140,3 +145,6 @@ export default function handler(req, res) {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

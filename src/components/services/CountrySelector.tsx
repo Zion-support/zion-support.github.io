@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { Globe } from 'lucide-react'
@@ -18,10 +19,15 @@ interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void,
 =======
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void;
+<<<<<<< HEAD
 import {
   Select
   SelectContent
@@ -375,6 +381,9 @@ function CountrySelector() {
       onsiteServicePricing.find (item => item.country === country_name) || null;
     onCountryChange (country);
   }
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className='mb - 6'>;
       <h3 className='text - xl font - semibold text - white mb - 4 flex items - center'>;
@@ -408,6 +417,7 @@ function CountrySelector() {
               <SelectItem key={item.country} value={item.country} className="text - white">;
               </SelectItem>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
         </SelectContent>;
@@ -418,6 +428,8 @@ function CountrySelector() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>;
           <div className='p - 2'>;
             <p className='text - sm text - zion - slate - light pb - 1'>All Countries</p>;
@@ -440,7 +452,10 @@ function CountrySelector() {
       </Select>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 ;
@@ -451,6 +466,7 @@ function CountrySelector() {
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
@@ -467,6 +483,9 @@ function CountrySelector() {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 =======
+=======
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className='p-2'>
             <p className='text-sm text-zion-slate-light pb-1'>All Countries</p>
             {onsiteServicePricing
@@ -486,6 +505,7 @@ function CountrySelector() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -496,3 +516,6 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
   // Set top/popular countries;
   useEffect(() => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

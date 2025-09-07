@@ -15,6 +15,7 @@
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
+<<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
 <<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -24,6 +25,13 @@ import _React from 'react"  import '@testing-library/jest-dom import Interactive
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 =======
@@ -45,6 +53,23 @@ const React from "react" import { render,screen,fireEvent } from "@testing-libra
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
+
+
+
+
+import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
+
+
+import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
+
+
+
+
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +90,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -96,3 +122,5 @@ import _React from 'react"  import '@testing-library/jest-dom import Interactive
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

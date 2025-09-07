@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
@@ -938,3 +939,15 @@ if ( {) {}
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export function useAuthOperations(
+  setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null />>,
+  setIsLoading: React && React.Dispatch<React && React.SetStateAction<boolean />>
+) {
+  // Check for referral code in URL when the hook is first used;
+useEffect(() => {}
+    checkUrlForReferralCode();}
+  }, []);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

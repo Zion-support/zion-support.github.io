@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Check,
   ShieldCheck,
   TrendingUp,
@@ -6,9 +7,12 @@
   Mail,
 <<<<<<< HEAD
 import React from 'react',
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from 'next/head';
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 export default function AIEvalsPage() {
@@ -21,6 +25,7 @@ export default function AIEvalsPage() {
 				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
 			</Head>
 
+<<<<<<< HEAD
 import {
   Check
   ShieldCheck
@@ -150,6 +155,8 @@ export default function AIEvalsPage() {}
         />
         <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />
       </Head>
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section className='min-h-screen pt-28 pb-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-12'>
@@ -235,18 +242,18 @@ export default function AIEvalsPage() {}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-sm'>
               <div className='flex items-center justify-center gap-2 text-cyan-400'>
                 <Phone className='w-4 h-4' />{' '}
-                <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}>
+                <a href={`tel: ${contactInfo.mobile.replace(/[^+\d]/g;, '')}`}>
                   {contactInfo.mobile}
                 </a>
               </div>
               <div className='flex items-center justify-center gap-2 text-purple-400'>
                 <Mail className='w-4 h-4' />{' '}
-                <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+                <a href={`mailto: ${contactInfo.email;}`}>{contactInfo.email}</a>
               </div>
               <div className='flex items-center justify-center gap-2 text-emerald-400'>
                 <MapPin className='w-4 h-4' />{' '}
                 <a
-                  href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`}
+                  href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address);}`}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='text-xs'

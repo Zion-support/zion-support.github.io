@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -31,6 +32,26 @@ marketAdvantage: 'First platform to combine content creation, optimization, and 
 
 <<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
+=======
+
+
+
+import { ServiceVariant } from '../types/service-variants';
+
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+marketAdvantage: 'First platform to combine content creation;, optimization, and distribution in one AI-powered solution'
+}
+
+marketAdvantage: 'First platform to combine content creation;, optimization, and distribution in one AI-powered solution' 
+};
+
+//Healthcare AI Services {
+  id: 'ai - healthcare - diagnostics - platform';
+name: 'AI Healthcare Diagnostics Platform';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface ComprehensiveMicroSaasService {
   id: string;
   name: string;
@@ -62,7 +83,7 @@ export interface ComprehensiveMicroSaasService {
     mobile: string;
     email: string;
     address: string;
-    website: string
+    website: string;
   },
   realImplementation: boolean;
   implementationDetails: string;
@@ -72,10 +93,11 @@ export interface ComprehensiveMicroSaasService {
   reviews: number;
   benefits: string[];
   capabilities: string[];
-  marketAdvantage: string
+  marketAdvantage: string;
 }
 
 const contact = null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
@@ -1034,3 +1056,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

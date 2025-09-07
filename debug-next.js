@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,12 +21,18 @@ console.log('🔍 Debugging Next.js project structure...');
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+
+
+
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
-=======
 
-=======
+
 
 console.log('🔍 Debugging Next.js project structure...'),;
 
@@ -39,7 +46,6 @@ console.log ('📁 Components directory exists:', fs.exists_sync ('components'))
 
 if (fs.existsSync('package.json')) {;
 
-
   console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
   console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
 
@@ -48,11 +54,87 @@ if (fs.existsSync('package.json')) {;
 
 if (fs.existsSync('pages')) {;
 
-
   console.log('📄 Pages found:', pages.length),;
   console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
 
 }
+// Check for any problematic files;
+
+console.log('🔍 Checking for problematic files...'),;
+
+const fs = require('fs');
+const path = require('path');
+
+
+
+
+const fs = require('fs');
+const path = require('path');
+
+
+console.log('🔍 Debugging Next.js project structure...');
+// Check if we're in a valid Next.js project;
+console.log('📁 Current directory:', process.cwd());
+console.log('📄 Package.json exists:', fs.existsSync('package.json'));
+console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js'));
+console.log('📁 Pages directory exists:', fs.existsSync('pages'));
+console.log('📁 Components directory exists:', fs.existsSync('components'));
+// Check package.json;
+if (fs.existsSync('package.json')) {
+  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found');
+  console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
+}
+
+// Check pages directory structure;
+if (fs.existsSync('pages')) {
+  const pages = fs.readdirSync('pages');
+  console.log('📄 Pages found:', pages.length);
+  console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
+
+// Check for any problematic files;
+console.log('🔍 Checking for problematic files...');
+const problematicFiles = [];
+const allFiles = getAllFiles('.', ['.tsx', '.ts', '.jsx', '.js']);
+for (const file of allFiles) {
+  try {
+  // TODO: Implement
+    const content = fs.readFileSync(file, 'utf8');
+    if (content.includes('') |content.includes('
+    if (content.includes() |content.includes()
+const fs = require('fs'),;
+const path = require('path'),;
+const fs = require('fs');
+const path = require('path');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const fs = require ('fs'),
+const path = require ('path'),
+console.log ('🔍 Debugging Next.js project structure...'),
+=======
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+console.log('🔍 Debugging Next.js project structure...'),;
+
+// Check if we're in a valid Next.js project;
+console.log ('📁 Current directory:', process.cwd ()),
+console.log ('📄 Package.json exists:', fs.exists_sync ('package.json')),
+console.log ('📄 Next.config.js exists:', fs.exists_sync ('next.config.js')),
+console.log ('📁 Pages directory exists:', fs.exists_sync ('pages')),
+console.log ('📁 Components directory exists:', fs.exists_sync ('components')),
+// Check package.json;
+
+if (fs.existsSync('package.json')) {;
+
+  console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
+// Check pages directory structure;
+
+if (fs.existsSync('pages')) {;
+
+  console.log('📄 Pages found:', pages.length),;
 // Check for any problematic files;
 
 console.log('🔍 Checking for problematic files...'),;
@@ -212,6 +294,7 @@ const problematicFiles = [];
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -221,6 +304,16 @@ const problematicFiles = [];
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;'
@@ -268,11 +361,22 @@ for (const file of allFiles) {;
 =======
 
 
-
     if (content.includes('') || content.includes('
 }
 }
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
+
+
+
+
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+
+    if (content.includes() || content.includes(
+})
+    if (content.includes() || content.includes() || content.includes('>>>>>>>')) {;
+    if (content.includes('      problematicFiles.push(file);
       problematicFiles.push(file);
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
   } catch (error) {'
@@ -280,15 +384,26 @@ for (const file of allFiles) {;
   }
 }
 '
+=======
+
+  } catch (error) {
+    // Skip files that can't be read;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 console.log('⚠️  Files with merge conflicts:', problematicFiles.length);
 if (problematicFiles.length > 0) {'
   console.log('Files:', problematicFiles.slice(0, 10));
-}
 
 // Function to get all files recursively;
+<<<<<<< HEAD
 function getAllFiles(dir, extensions) {}
   let files = [];
   try {}
+=======
+function getAllFiles(dir, extensions) {
+  let files = [];
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const items = fs.readdirSync(dir);
     for (const item of items) {}
       const fullPath = path.join(dir, item);
@@ -297,6 +412,7 @@ function getAllFiles(dir, extensions) {}
         files = files.concat(getAllFiles(fullPath, extensions));
       } else if (extensions.some(ext => item.endsWith(ext))) {}
         files.push(fullPath);
+<<<<<<< HEAD
       }
     }
   } catch (error) {'
@@ -307,6 +423,19 @@ function getAllFiles(dir, extensions) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    // Skip directories that can't be read;
+  return files;
+
+
+
+
+
+
+console.log('✅ Debug completed'),;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -324,6 +453,7 @@ function getAllFiles(dir, extensions) {}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 console.log('✅ Debug completed');
+<<<<<<< HEAD
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -347,3 +477,9 @@ console.log('✅ Debug completed');
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+;
+console.log('✅ Debug completed'),;
+console.log('✅ Debug completed');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

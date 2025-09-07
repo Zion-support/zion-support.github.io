@@ -4,14 +4,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import * as React from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -27,6 +32,11 @@ import React from 'react';import Link from 'next/link';';
 =======
 import React from 'react';import Link from 'next/link';';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from 'react';
+import * as React from 'react';
+import Link from 'next/link';';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 =======
 import * as React from 'react';'
@@ -227,6 +237,7 @@ export default function CustomDevelopmentPage() {};
         {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
+<<<<<<< HEAD
 
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",;
               {stats && stats.map((stat, index) => (,;
@@ -246,16 +257,22 @@ export default function CustomDevelopmentPage() {};
         <section className="py-16 bg-white">""
           <div className="container mx-auto px-4">";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0, y: 30 }}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  initial={{ opacity: 0, y: 30 }}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}"
                   className="text-center""
@@ -380,6 +397,7 @@ export default function CustomDevelopmentPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -404,6 +422,14 @@ export default function CustomDevelopmentPage() {};
 =======
               </h2>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>";
+              </h2>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We use the latest technologies and frameworks to build robust, scalable, and maintainable custom solutions,
               </p>;
@@ -506,6 +532,7 @@ export default function CustomDevelopmentPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-lg hover: shadow-xl transition-shadow duration-300"">;
@@ -533,6 +560,15 @@ export default function CustomDevelopmentPage() {};
 =======
                     </div>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
+                >;
+                  <div className="flex items-center mb-4">";
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">";
+                      <span className="text-white font-bold text-lg">{index + 1}</span>"
+                    </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <h3 className="text-xl font-bold text-gray-900">{step.step}</h3>"
                   </div>;"
                   <p className="text-gray-600">{step.description}</p>"
@@ -581,6 +617,7 @@ export default function CustomDevelopmentPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
                   href="/contact""
@@ -617,6 +654,21 @@ export default function CustomDevelopmentPage() {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link;
+                  href="/contact"";
+                  className="px-8 py-4 bg-white text-purple-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
+                >;
+                  Start Custom Project;
+                  <ArrowRight className="ml-2 w-5 h-5" />";
+                </Link>;
+                <Link;
+                  href="/solutions"";
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors"";
+                >;
+                  View All Solutions;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Link>;
               </div>;
             </motion.div>;

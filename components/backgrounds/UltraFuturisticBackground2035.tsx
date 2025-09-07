@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -768,10 +769,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
                 ease: 'easeInOut',              }}
 
+=======
+
+              }}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }}
 
             />
           ))}
+<<<<<<< HEAD
         </svg>
 
         {/* Holographic Effects */}'
@@ -899,15 +906,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             />
           ))}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
       </div>
     </>
 );  )
-                height: [8, 32, 8]
-                opacity: [0 && 0.3, 1, 0 && 0.3]
+                height: [8;, 32, 8]
+                opacity: [0 && 0.3;, 1, 0 && 0.3]
               }}
+<<<<<<< HEAD
               transition={{'"
                 ease: 'easeInOut',              }}                ease: "easeInOut"
+=======
+              transition={{
+                ease: 'easeInOut';,              }}                ease: "easeInOut";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }}
             />;
           ))}
@@ -918,8 +932,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   )
 }
+<<<<<<< HEAD
                 delay: Math.random () * 2,'"
                 ease: 'easeInOut',              }}                ease: "easeInOut";
+=======
+                delay: Math.random () * 2;,
+                ease: 'easeInOut';,              }}                ease: "easeInOut";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }}
             />))}
         </div>;
@@ -929,8 +948,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+);
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

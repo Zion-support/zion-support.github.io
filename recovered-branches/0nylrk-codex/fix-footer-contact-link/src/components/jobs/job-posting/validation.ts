@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -21,6 +22,10 @@
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   salary_range: z && z.string().optional(),
   description: z && z.string().min(10, {}
+=======
+salary_range: z && z.string().optional(),
+  description: z && z.string().min(10, {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     message: "Description must be at least 10 characters."});
   responsibilities: z && z.string().optional();
   qualifications: z && z.string().optional();
@@ -37,6 +42,7 @@
     message: "Please enter a valid URL."}).optional()});
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +65,9 @@ export const job_schema = z.object ({}
   salary_range: z.string ().optional (),
   description: z.string ().min (10, {"
 =======
+=======
+export type JobSchemaType = z && z.infer<typeof jobSchema>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { z } from './zod';
 export const job_schema = z.object ({
   title: z.string ().min (3, {
@@ -137,10 +146,10 @@ import { z } from "zod",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
 import {z} from "zod";
 import { z } from "zod",
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {z} from "zod";
 export const jobSchema = z.object({
@@ -364,3 +373,10 @@ export type JobSchemaType = z.infer<typeof jobSchema>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  salary_range: z && z.string().optional(),
+
+export type JobSchemaType = z && z.infer<typeof jobSchema>;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,6 +1,5 @@
-const fs = require('fs');
-const path = require('path');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?[^\n]+/g, '')
     .replace(/^<<<<<<< [^\n]+$/gm, '')
@@ -12,39 +11,42 @@ const path = require('path');
     .replace(/^
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-// Function to clean common syntax errors
+// Function to clean common syntax errors;)
 function cleanSyntaxErrors(content) {
-  return content
-    // Remove invalid characters at start of files
-    .replace(/^[^\w\s<]/gm, '')
-    // Fix common parsing issues
+  return content;
+    // Remove invalid characters at start of files;
+    .replace(/^[^\w\s<]/gm, )
+    // Fix common parsing issues;
     .replace(/export\s+default\s+export\s+default/g, 'export default')
     .replace(/import\s+import/g, 'import')
     .replace(/const\s+const/g, 'const')
     .replace(/let\s+let/g, 'let')
     .replace(/var\s+var/g, 'var')
-    // Fix unterminated strings
+    // Fix unterminated strings;
     .replace(/"[^"]*$/gm, '"')
-    .replace(/'[^']*$/gm, "'")
-    // Fix unterminated regex
+    .replace(/'[^']*$/gm, "'")"
+    // Fix unterminated regex;"
     .replace(/\/[^\/]*$/gm, '/')
-    // Remove invalid characters
-    .replace(/[^\x20-\x7E\n\r\t]/g, '')
-    // Fix common JSX issues
-    .replace(/<[^>]*$/gm, '')
-    // Fix common TypeScript issues
+    // Remove invalid characters;
+    .replace(/[^\x20-\x7E\n\r\t]/g, )
+    // Fix common JSX issues;
+    .replace(/<[^>]*$/gm, )
+    // Fix common TypeScript issues;
     .replace(/:\s*[^=,;{}()[\]]*$/gm, ': any')
-    // Remove empty lines with only special characters
-    .replace(/^[^\w\s]*$/gm, '');
-}
+    // Remove empty lines with only special characters;
+    .replace(/^[^\w\s]*$/gm, );
 
-// Function to process a file
+// Function to process a file;
 function processFile(filePath) {
   try {
+  // TODO: Implement
     const content = fs.readFileSync(filePath, 'utf8');
     let cleaned = cleanMergeConflicts(content);
     cleaned = cleanSyntaxErrors(cleaned);
+<<<<<<< HEAD
 <<<<<<< HEAD
     
     if (cleaned !== content) {
@@ -78,18 +80,23 @@ function findConflictedFiles(dir, conflictedFiles = []) {
   content = content.replace(/origin\/[^\n]+\n?/g, '');
   content = content.replace(/ursor\/[^\n]+\n?/g, '');
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
 
   content = content.replace(/
+<<<<<<< HEAD
   content = content.replace(/
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   
   // Clean up any remaining artifacts
+=======
+  // Clean up any remaining artifacts;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-  
-  // Remove any remaining conflict markers
+  // Remove any remaining conflict markers;
 

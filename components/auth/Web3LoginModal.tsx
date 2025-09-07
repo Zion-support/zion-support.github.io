@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -15,21 +16,34 @@ class ErrorBoundary extends React.Component {}
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
+=======
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     return this.props.children;
   }
 }'
 import React, { useCallback, useEffect, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 type Web3LoginModalProps = {
   isOpen: boolean
   onClose: () => void
   onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void
-import dynamic from 'next/dynamic';
-const isClient = typeof window !== 'undefined';
-  }) => void;
-};
+<<<<<<< HEAD
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import dynamic from 'next/dynamic';
+
+const isClient = typeof window !== 'undefined';
+
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
@@ -290,15 +304,23 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
 export default function Web3LoginModal() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return <ModalInner {...props} />;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return <ModalInner {...props} />
 }
-  return <ModalInner {...props} />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return <ModalInner {...props} />;
   return <ModalInner {...props} />
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

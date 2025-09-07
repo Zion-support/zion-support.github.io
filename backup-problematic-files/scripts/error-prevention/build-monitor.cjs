@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -8,8 +8,9 @@ class BuildMonitor {}
     this.interval = 60000; // 1 minute;
     this.lastBuildTime = null};
   async start() {}
-    console.log('Starting Build Monitor...');
+
     this.isRunning = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // Initial build check;
@@ -22,9 +23,10 @@ class BuildMonitor {}
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Initial build check;
     await this.runBuildCheck();
-    
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
@@ -35,6 +37,7 @@ class BuildMonitor {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
@@ -75,11 +78,18 @@ class BuildMonitor {}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
+=======
+        errorOutput += data.toString()}
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.log('Build check passed ✓')) {}
      {}
           console.log('Build check passed ✓')};
           this.lastBuildTime = new Date()} else {}
           console.log('Build check failed ✗');
+<<<<<<< HEAD
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
 <<<<<<< HEAD
@@ -140,11 +150,13 @@ class BuildMonitor {}
       clearInterval(this.intervalId)};
     console.log('Build Monitor stopped')}};
 };
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Start the monitor if run directly;
-if ( {})
   const monitor = new BuildMonitor) {}
-     {}
   const monitor = new BuildMonitor}(;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -180,3 +192,9 @@ module.exports = BuildMonitor;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // Handle graceful shutdown;
+
+  monitor.start().catch(console.error)};
+module.exports = BuildMonitor;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

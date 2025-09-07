@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ] 
  ] 
 
@@ -34,8 +35,12 @@ interface SidebarItem {}
   name: string,
   href: string,
 import React, { useState, useEffect } from 'react',
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import { X, ChevronRight, Home, Star, Users;
   Settings, HelpCircle, Mail, Phone, MapPin;
   Brain, Atom, Shield, Rocket, DollarSign;
@@ -43,13 +48,16 @@ import { X, ChevronRight, Home, Star, Users;
   TrendingUp, Award, CheckCircle, Clock;
   ArrowRight, Search, Menu, X as CloseIcon;
   Target, BookOpen, Truck, BarChart3;
-  Sparkles, Eye, Lightbulb, Palette, Code
+}
+  Sparkles, Eye, Lightbulb, Palette, Code}
  } from 'lucide-react';
+
 interface SidebarItem {
   name: string;
   href: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
   icon?: React.ReactNode;
+
   description?: string;
   children?: SidebarItem[];
   badge?: string;
@@ -79,6 +87,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
+<<<<<<< HEAD
 const contactInfo = {'
   mobile: '+1 302 464 0950','
   email: 'kleber@ziontechgroup.com','
@@ -3141,3 +3150,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

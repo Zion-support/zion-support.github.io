@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 export const JOB_POSTS: Job[] = [
   {
@@ -43,6 +44,13 @@ export const JOB_POSTS: Job[] = [
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import { Job } from "@/types/jobs";
+export const JOB_POSTS: Job[] = [
+  {
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 ];
@@ -50,6 +58,7 @@ export const JOB_POSTS: Job[] = [
 updated at: "2024-05-05"
 }];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +75,10 @@ updated at: "2024-05-05"
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 created at: "2024 - 05 - 05";
 updated at: "2024 - 05 - 05";
 }];
@@ -80,9 +93,12 @@ updated at: "2024 - 05 - 05";
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import { Job } from "@/types/jobs",
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+import { Job } from "@/types/jobs",;
 export const JOB_POSTS: Job[] = [
 import { Job } from '@/types/jobs';
-import { Job } from "@/types/jobs",
+import { Job } from "@/types/jobs",;
 export const JOB_POSTS: Job[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,15 +110,24 @@ export const JOB_POSTS: Job[] = [
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+import { Job } from "@/types/jobs",;
+export const JOB_POSTS: Job[] = [
+import { Job } from '@/types/jobs';
+import { Job } from "@/types/jobs",;
+export const JOB_POSTS: Job[] = [
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
 import { Job } from '@/types/jobs';
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -111,6 +136,8 @@ export const JOB_POSTS: Job[] = [
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {
     id: "job-1",
     client_id: "client-1",
@@ -118,14 +145,20 @@ export const JOB_POSTS: Job[] = [
     description: "Seeking a React developer for a 3 month contract building dashboards.",
     category: "development",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: "job-1";
     client_id: "client-1";
     title: "React Developer Needed";
     description: "Seeking a React developer for a 3 month contract building dashboards.";
     category: "development";
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     skills: ["React", "TypeScript"],
     budget: { min: 40, max: 50, currency: "USD" },
     deadline: "2024-07-01",
@@ -133,6 +166,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     created_at: "2024-05-10",
     updated_at: "2024-05-10"},
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -377,3 +411,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

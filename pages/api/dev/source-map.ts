@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -258,3 +259,14 @@ export default function handler(req, res) {}
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
+import { getGitStatus, requireRoles } from "../../../utils/devAccess";
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const identity = null;
+  res.status(405).end("Method Not Allowed")
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

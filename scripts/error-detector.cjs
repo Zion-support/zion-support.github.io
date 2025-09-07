@@ -19,24 +19,26 @@ const fs = require("child_process");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
-const fs = require("child_process");
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const path = require("path");
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorDetector {}
   constructor() {}
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, "automation-reports", "error-detection.log")};
+    this.projectRoot = process.cwd();"
+    this.logFile = path.join(this.projectRoot, "automation-reports", "error-detection.log")};"
   log(message) {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + "\n")};
-  async detect() {}
-    this.log("Starting error detection...");
-    // Add error detection logic here;
-    this.log("Error detection completed")};
+    console.log(logMessage);"
+    fs.appendFileSync(this.logFile, logMessage + "\n")};"
+  async detect() {}"
+    this.log("Starting error detection...");"
+    // Add error detection logic here;"
+    this.log("Error detection completed")};"
 };
 if (require.main === module) {}
   const detector = new ErrorDetector();
@@ -59,6 +61,5 @@ module.exports = ErrorDetector;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-module.exports = ErrorDetector;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

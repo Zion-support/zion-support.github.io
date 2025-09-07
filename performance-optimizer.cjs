@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/performance-optimizer.cjs
 
 
@@ -262,35 +263,21 @@ optimizePerformance();
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-  }
 
-  async optimizeImages() {
-    console.log('🖼️ Optimizing images...');
-    // Add image optimization logic here
-  }
 
-  async optimizeBundle() {
-    console.log('📦 Optimizing bundle...');
-    // Add bundle optimization logic here
-  }
-
-  async enableCaching() {
-    console.log('💾 Enabling caching...');
-    // Add caching logic here
-  }
-
-  async run() {
     await this.optimizeImages();
+    // Optimize bundle
     await this.optimizeBundle();
-    await this.enableCaching();
-    console.log('✅ Performance optimization completed');
-  }
-}
 
+<<<<<<< HEAD
 const optimizer = new PerformanceOptimizer();
 optimizer.run().catch(console.error);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

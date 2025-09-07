@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -32,6 +33,8 @@ export function useDisputes() {;
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -46,6 +49,9 @@ export function useDisputes() {;
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
+
+
+
 import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes";
 =======
 import { useState, useEffect } from "react","
@@ -57,6 +63,7 @@ import { toast } from "sonner";
 export function useDisputes() {};
   const { user } = useAuth();
   const [disputes, setDisputes] = useState<Dispute[]>([]),
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);"
 import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes","
 import { toast } from "sonner",
@@ -2457,3 +2464,7 @@ addDisputeMessage
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  const [isLoading, setIsLoading] = useState(true);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

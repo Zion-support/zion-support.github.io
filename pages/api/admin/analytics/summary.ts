@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -301,3 +302,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 };'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  const byFeature: Record<string, number> = {};
+  const byEvent: Record<string, number> = {};
+  const byDay: Record<string, number> = {};
+  for (const r of rows) {
+    const f = featureFromPath(r.page);
+    byFeature[f] = (byFeature[f] || 0) + 1;
+    byEvent[r.name] = (byEvent[r.name] || 0) + 1;
+    const day = r.at.slice(0, 10);
+    byDay[day] = (byDay[day] || 0) + 1;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

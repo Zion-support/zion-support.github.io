@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
   Phone;
@@ -643,41 +644,90 @@ export default function UltraFuturisticFooter2030() {
                 and emerging technologies. Transforming businesses through
                 innovative solutions and intelligent automation.
               </p>
+=======
+
+export default function UltraFuturisticFooter2030() {
+ ;
+  return (
+    <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden' />}
+}
+      {/* Animated Background */}
+      <div className='absolute inset-0' />;
+        <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5' /></div>;
+        <div className='absolute top-0 left-0 w-full h-full' />;
+          <div className='absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse' /></div>;
+          <div className='absolute top-40 right-20 w-1 h-1 bg-cyan-400 rounded-full animate-ping' /></div>;
+          <div className='absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-purple-300 rounded-full animate-bounce' /></div>;
+          <div className='absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse' /></div>;
+        </div>;
+      </div>;
+      <div className='relative z-10' />;
+        {/* Main Footer Content */}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16' />;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8' />;
+            {/* Company Info */}
+            <div className='space-y-6' />;
+              <div className='flex items-center space-x-3' />;
+                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center' />;
+                  <Zap className='w-6 h-6 text-white' />;
+                </div>;
+                <div />;
+                  <h3 className='text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent' />;
+                    Zion Tech Group;
+                  </h3>;
+                  <p className='text-sm text-gray-400' />;
+                    2030 Future Technology;
+                  </p>;
+                </div>;
+              </div>;
+              <p className='text-gray-300 text-sm leading-relaxed' />;
+                Pioneering the future with cutting-edge AI, quantum computing;
+                and emerging technologies. Transforming businesses through;
+                innovative solutions and intelligent automation.;
+              </p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {/* Contact Info */}
-              <div className='space-y-3'>
-                <div className='flex items-center space-x-3 text-sm text-gray-300'>
-                  <Phone className='w-4 h-4 text-purple-400' />
-                  <a
-                    href={`tel:${contactInfo.mobile}`}
-                    className='hover:text-purple-400 transition-colors'
-                  >
+              <div className='space-y-3' />;
+                <div className='flex items-center space-x-3 text-sm text-gray-300' />;
+                  <Phone className='w-4 h-4 text-purple-400' />;
+                  <a;
+                    href={`tel: ${contactInfo.mobile;}`}
+                    className='hover:text-purple-400 transition-colors' />
+
                     {contactInfo.mobile}
+
                   </a>
                 </div>
-                <div className='flex items-center space-x-3 text-sm text-gray-300'>
+                <div className='flex items-center space-x-3 text-sm text-gray-300' />
                   <Mail className='w-4 h-4 text-purple-400' />
-                  <a
-                    href={`mailto:${contactInfo.email}`}
+                  <a;
+href={`mailto: ${contactInfo.email;}`}
                     className='hover:text-purple-400 transition-colors'
-                  >
+                   />
                     {contactInfo.email}
                   </a>
                 </div>
-                <div className='flex items-center space-x-3 text-sm text-gray-300'>
+                <div className='flex items-center space-x-3 text-sm text-gray-300' />
                   <MapPin className='w-4 h-4 text-purple-400' />
-                  <span>{contactInfo.address}</span>
+                  <span />{contactInfo.address}</span>
                 </div>
-                <div className='flex items-center space-x-3 text-sm text-gray-300'>
+                <div className='flex items-center space-x-3 text-sm text-gray-300' />
                   <Globe className='w-4 h-4 text-purple-400' />
-                  <a
-                    href={contactInfo.website}
+                  <a;
+href={contactInfo.websit}
+}
                     className='hover:text-purple-400 transition-colors'
                   >
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     {contactInfo.website.replace('https://', '')}
+=======
+                   />
+                    {contactInfo.website.replace('https: //';, '')}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                   </a>
                 </div>
@@ -687,12 +737,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Service Categories */}
-<div className='space-y-6'>
-              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
+<div className='space-y-6' />
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2' />
                 <Rocket className='w-5 h-5 text-purple-400' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>Our Services</span>
+<<<<<<< HEAD
               </h4>'
               <div className='grid grid-cols-1 gap-4'>
                 {serviceCategories.slice(0, 3).map((category, index) => ('
@@ -700,6 +755,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h5 className='text-sm font-medium text-purple-300'>
                       {category.title}
                     </h5>'
+=======
+                <span />Our Services</span>
+              </h4>
+              <div className='grid grid-cols-1 gap-4' />
+                {serviceCategories.slice(0, 3).map((category, index) => (}
+                  <div key={index} className='space-y-2' />
+                    <h5 className='text-sm font-medium text-purple-300' />
+                      {category.title}
+                    </h5>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div className='space-y-1'>                      {category.services.map((service, serviceIndex) => (
                         <Link;
                           key={serviceIndex}
@@ -722,16 +787,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {category.services.map((service, serviceIndex) => (
                         <Link
                           key={serviceIndex}
+
+                    <div className='space-y-1' />
+                      {category.services.map((service, serviceIndex) => (}
+                        <Link;}
+key={serviceIndex}
                           href={service.href}
-className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'
-                        >
+className='block text-xs text-gray-400 hover: text-purple-300 transition-colors' />
+
                           {service.name}
+
                         </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
                       ))}
+
+                      )
+}
                     </div>;
                   </div>;
                 ))}
+
             {/* Quick Links */}
 
 
@@ -750,39 +825,69 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>;
 <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
+<div className='space-y-6' />
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2' />
                 <Target className='w-5 h-5 text-cyan-400' />
-                <span>Quick Links</span>
+                <span />Quick Links</span>
               </h4>
-              <div className='space-y-2'>
-                {quickLinks.map((link, index) => (
-                  <Link
-                    key={index}
+              <div className='space-y-2' />
+                {quickLinks.map((link, index) => (}
+                  <Link;}
+key={index}
                     href={link.href}
-className='block text-sm text-gray-400 hover:text-cyan-300 transition-colors flex items-center space-x-2 group'
-                  >
+className='block text-sm text-gray-400 hover: text-cyan-300 transition-colors flex items-center space-x-2 group'
+                   />
                     <ArrowRight className='w-3 h-3 group-hover:translate-x-1 transition-transform' />
-                    <span>{link.name}</span>
+                    <span />{link.name}</span>
                   </Link>
-                ))}
+                )
+}
               </div>
 
-<div className='space-y-2'>
-                <h5 className='text-sm font-medium text-cyan-300'>Company</h5>
-                {companyInfo.map((link, index) => (
-                  <Link
-                    key={index}
+<div className='space-y-2' />
+                <h5 className='text-sm font-medium text-cyan-300' />Company</h5>
+                {companyInfo.map((link, index) => (}
+                  <Link;}
+key={index}
                     href={link.href}
-className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'
-                  >
+className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors'
+                   />
                     {link.name}
                   </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
                 <span>Connect & Trust</span>
+                )
+}
+                <span />Connect & Trust</span>
               </h4>
+
+              </div>;
+<div className='space-y-2' />;
+                <h5 className='text-sm font-medium text-cyan-300' />Company</h5>;
+                {companyInfo.map((link, index) => (<Link;}
+                    key={index}
+                    href={link.href}
+className='block text-xs text-gray-400 hover: text-cyan-300 transition-colors' />
+
+                    {link.nam}
+}
+                  </Link>;
+                ))}
+                <span />Connect & Trust</span>;
+              </h4>;
+              </div>;
+            </div>;{/* Social & Certifications */}
+            <div className='space-y-6' />;
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2' />;
+                <Users className='w-5 h-5 text-green-400' />;
+                <span />Connect & Trust</span>;
+              </h4>;
               </div>;
             </div>;
+            {/* Social & Certifications */}
 
+<<<<<<< HEAD
             {/* Social & Certifications */}'
             <div className='space-y-6'>;'
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>;'
@@ -800,11 +905,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='space-y-6'>'
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<div className='space-y-6' />
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2' />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <Users className='w-5 h-5 text-green-400' />
-                <span>Connect & Trust</span>
+                <span />Connect & Trust</span>
               </h4>
+<<<<<<< HEAD
               {/* Social Links */}'
               <div className='space-y-3'>;'
+=======
+              {/* Social Links */}
+              <div className='space-y-3'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <h5 className='text-sm font-medium text-green-300'>;
                   Follow Us;
                 </h5>;'
@@ -828,19 +942,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       key={index}
                       href={social.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300'>
                   Follow Us
+
+              <div className='space-y-3' />
+                <h5 className='text-sm font-medium text-green-300' />
+                  Follow Us;
                 </h5>
-                <div className='flex flex-wrap gap-2'>
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
+                <div className='flex flex-wrap gap-2' />
+                  {socialLinks.map((social, index) => (}
+                    <a;}
+key={index}
                       href={social.href}
 target='_blank'
                       rel='noopener noreferrer'
-                      className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'
-                    >
+                      className='w-10 h-10 bg-gray-800/50 hover: bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'
+                     />
                       <social.icon className='w-5 h-5' />
                     </a>
                   ))}
@@ -850,6 +971,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Certifications */}
 <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
+<<<<<<< HEAD
 =======
               {/* Certifications */}'
               <div className='space-y-3'>'
@@ -872,6 +994,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div;
                       key={index}'
                       className='flex items-center space-x-2 text-xs text-gray-400'>;'
+=======
+              {/* Certifications *}
+}
+<div className='space-y-3' />
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2' />
+                  <Award className='w-4 h-4' />
+
+                  <span />Certifications</span>
+                </h5>
+                <div className='grid grid-cols-1 gap-2' />
+                  {certifications.map((cert, index) => (}
+}
+              {/* Certifications */}
+<div className='space-y-3' />;
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2' />;
+                  <Award className='w-4 h-4' />;
+                  <span />Certifications</span>;
+                </h5>;
+                <div className='grid grid-cols-1 gap-2'>;
+                  {certifications && certifications.map((cert, index) => (;
+                    <div
+                      key={index}
+                      className='flex items-center space-x-2 text-xs text-gray-400'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <CheckCircle className='w-3 h-3 text-green-400' />                      <span>{cert}</span>                  <span>Certifications</span>;
                 </h5>;"
                 <div className="grid grid-cols-1 gap-2">;
@@ -889,13 +1035,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {certifications.map((cert, index) => ("
                     <div key={index} className="flex items-center space-x-2 text-xs text-gray-400">"
                       <CheckCircle className="w-3 h-3 text-green-400" />
+<<<<<<< HEAD
+=======
+                <div className='grid grid-cols-1 gap-2' />;
+                  {certifications.map((cert, index) => ({/* Certifications */}
+              <div className='space-y-3' />;
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2' />;
+                  <Award className='w-4 h-4' />;
+                  <span />Certifications</span>;
+                </h5>;
+                <div className='grid grid-cols-1 gap-2' />;
+
+                  {certifications && certifications.map((cert, index) => (;}
+                    <div;}
+key={index}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className='flex items-center space-x-2 text-xs text-gray-400'
-                    >
+                     />
                       <CheckCircle className='w-3 h-3 text-green-400' />
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>{cert}</span>
+                      <span />{cert}</span>
                     </div>
+
                   ))}
+<<<<<<< HEAD
                 </div>
               </div>
             </div>
@@ -934,11 +1099,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>{cert}</span>;
                     </div>))}
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Bottom Bar */}
 <div className='border-t border-purple-500/20'>
@@ -959,24 +1127,84 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href='/terms'"
               <div className="flex items-center space-x-4 text-sm text-gray-400">"
                 <div className="flex items-center space-x-2">"
+=======
+                      target='_blank';
+                      rel='noopener noreferrer';
+                      className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40'>
+
+                      <social.icon className='w - 5 h - 5' />                    </a>                      target=\"_blank\";"
+                      rel=\"noopener noreferrer\";"
+                      className=\"w - 10 h - 10 bg - gray - 800 / 50 hover: bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40\">
+"
+                      <social.icon className=\"w - 5 h - 5\" />)
+}
+                </div>;
+              </div>;
+              {/* Certifications */}
+              <div className='space - y-3' />;
+                <h5 className='text - sm font - medium text - green - 300 flex items - center space - x-2' />;
+                  <Award className='w - 4 h - 4' />;
+                  <span  /> Certifications</span>;
+                </h5>;
+                <div className='grid grid - cols - 1 gap - 2' />;
+                  {certifications.map ((cert, index) => (<div;}
+                      key={index}
+                      className='flex items - center space - x-2 text - xs text - gray - 400' />
+
+                      <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span />{cert}</span>                  <span  /> Certifications</span>;
+                </h5>;"
+                <div className=\"grid grid - cols - 1 gap - 2\" />;"
+                  {certifications.map ((cert, index) => (<div key={index} className=\"flex items - center space - x-2 text - xs text - gray - 400\" />;"
+                      <CheckCircle className=\"w - 3 h - 3 text - green - 400\" />;
+                      <span />{cert}</span>;
+                    </div>))}</div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+        {/* Bottom Bar */}
+<div className='border-t border-purple-500/20' />;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6' />;
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0' />;
+                <span />&copy; 2024 Zion Tech Group. All rights reserved.</span>;
+                <Link;
+                  href='/privacy';
+                  className='hover:text-purple-400 transition-colors' />;
+                  Privacy Policy;
+                </Link>;
+                <Link
+                  href='/terms'
+              <div className="flex items-center space-x-4 text-sm text-gray-400">
+                <div className="flex items-center space-x-2">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Heart className="w-4 h-4 text-red-400" />
                   <span>Made with passion for innovation</span>
 <<<<<<< HEAD
                 </div>
+<<<<<<< HEAD
+=======
+
+                <Link;
+href='/terms'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className='hover:text-purple-400 transition-colors'
-                >
-                  Terms of Service
+                 />
+                  Terms of Service;
                 </Link>
               </div>
 
               <div className='flex items-center space-x-4 text-sm text-gray-400'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items-center space-x-2'>
+              <div className='flex items-center space-x-4 text-sm text-gray-400' />
+                <div className='flex items-center space-x-2' />
                   <Heart className='w-4 h-4 text-red-400' />
-                  <span>Made with passion for innovation</span>
+                  <span />Made with passion for innovation</span>
                 </div>
-                <div className='flex items-center space-x-2'>
+                <div className='flex items-center space-x-2' />
                   <Star className='w-4 h-4 text-yellow-400' />
+<<<<<<< HEAD
 =======
                 </div>'
                 <div className='flex items-center space-x-2'>'
@@ -988,6 +1216,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Star className="w-4 h-4 text-yellow-400" />
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <span>5.0/5.0 Rating</span>
+=======
+                  <span />5.0/5.0 Rating</span>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </div>
               </div>
             </div>
@@ -995,12 +1226,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </footer>
+
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+
   );
 }
 ;
@@ -1012,7 +1245,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </footer>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

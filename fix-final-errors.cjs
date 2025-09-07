@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,6 +36,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -43,8 +46,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 // Final targeted fixes for remaining errors
 const fixes = [// Fix missing semicolons in import statements
   {
@@ -209,10 +214,17 @@ const path = require('path')
     "pattern"
     "replacement"
     "replacement": 'return (\n    <div className="min-h-screen bg-white")
+=======
+// Final targeted fixes for remaining errors;
+const fixes = [// Fix missing semicolons in import statements;
+  {]
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "replacement"
     "pattern"
     "replacement"
     "replacement"
+<<<<<<< HEAD
     "pattern"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -244,67 +256,58 @@ main
 =======
 =======
 <
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     "replacement"
+
+<    "replacement"
+
     "replacement"
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Function to fix final errors
+=======
+// Function to fix final errors;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function fixFinalErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix operator.ts - fix object property syntax
-    if (filePath.includes('operator.ts')) {
-      content = content.replace(/];/g, '];');
-      modified = true;
-    }
-
-    // Fix track.ts - fix import path
-    if (filePath.includes('track.ts')) {
-      content = content.replace(/import { ensureAdmin } from '\.\.\/\.\.\/\.\.\/utils\/auth';/g, 'import { ensureAdmin } from \'../../../utils/auth\';');
-      modified = true;
-    }
-
-    // Fix applications.ts - fix import paths
-    if (filePath.includes('applications.ts')) {
-      content = content.replace(/import { rateLimit } from '\.\.\/\.\.\/utils\/rate-limit';/g, 'import { rateLimit } from \'../../utils/rate-limit\';');
-      content = content.replace(/import { readJsonFile, writeJsonFile } from '\.\.\/\.\.\/utils\/file-utils';/g, 'import { readJsonFile, writeJsonFile } from \'../../utils/file-utils\';');
-      modified = true;
-    }
-
-    // Fix nextauth.ts - remove catch block without try
-    if (filePath.includes('nextauth.ts')) {
-      content = content.replace(/} catch \(error\) \{[\s\S]*?return res\.status\(500\)\.json\(\{ error: "Internal server error" \}\);\s*}/g, '');
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed final errors in: ${filePath}`);
-      return true;
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
-  return false;
+  // TODO: Implement
 }
 
-// List of files with final errors
+    let modified = false;
+
+    // Fix operator.ts - fix object property syntax;
+    if (filePath.includes('operator.ts')) {
+
+      modified = true;
+
+    // Fix track.ts - fix import path;
+    if (filePath.includes('track.ts')) {
+
+
+    // Fix nextauth.ts - remove catch block without try;
+    if (filePath.includes('nextauth.ts')) {
+      content = content.replace(/} catch \(error\) \{[\s\S]*?return res\.status\(500\)\.json\(\{ error: "Internal server error" \}\);\s*}/g, );
+
+      return true;
+  } catch (error) {`;
+    console.error(`Error processing ${filePath}:`, error.message);
+  return false;
+
+// List of files with final errors;
 const filesToFix = [
-  'pages/api/ai/operator.ts',
-  'pages/api/analytics/events/track.ts',
-  'pages/api/applications.ts',
-  'pages/api/auth/[...nextauth].ts'
+
+  'pages/api/auth/[...nextauth].ts
 ];
 
 let fixedCount = 0;
 
-console.log('Fixing final errors...');
 
+<<<<<<< HEAD
 filesToFix.forEach(file => {
   const filePath = path.join(process.cwd(), file);
   if (fs.existsSync(filePath)) {
@@ -348,3 +351,5 @@ console.log(`Fixed final errors in ${fixedCount} files.`);
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

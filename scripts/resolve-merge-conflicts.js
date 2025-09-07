@@ -23,9 +23,13 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+
+
+
 #!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { ";
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.resolvedFiles: "= []",this.errors: "= []"} async run() { try { console.log(" Finding files with merge conflicts.");";'"'"
 #!/usr/bin/"env": node ;   _console.log("🔧 Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { _console.log("🔍 Finding files with merge conflicts...");";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
@@ -37,6 +41,18 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+#!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { ";
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.resolvedFiles: "= []",this.errors: "= []"} async run() { try { console.log(" Finding files with merge conflicts.");";'"'"
+#!/usr/bin/"env": node ;   _console.log("🔧 Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { _console.log("🔍 Finding files with merge conflicts...");";
+#!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { ";
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.resolvedFiles: "= []",this.errors: "= []"} async run() { try { console.log(" Finding files with merge conflicts.");";'"'"
+#!/usr/bin/"env": node ;   _console.log("🔧 Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { _console.log("🔍 Finding files with merge conflicts...");";
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { ";
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.resolvedFiles: "= []",this.errors: "= []"} async run() { try { console.log(" Finding files with merge conflicts.");";'"'"
 #!/usr/bin/"env": node ;   _console.log("🔧 Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { _console.log("🔍 Finding files with merge conflicts...");";
@@ -48,7 +64,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { ";
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.resolvedFiles: "= []",this.errors: "= []"} async run() { try { console.log(" Finding files with merge conflicts.");";'"'"
 #!/usr/bin/"env": node ;   _console.log("🔧 Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { _console.log("🔍 Finding files with merge conflicts...");";
+
+
+
+
+
+
+
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,3 +125,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de'"
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+#!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { ";""
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.resolvedFiles: "= []",this.errors: "= []"} async run() { try { console.log(" Finding files with merge conflicts.");";'"'"""
+#!/usr/bin/"env": node ;   _console.log("🔧 Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { _console.log("🔍 Finding files with merge conflicts...");";""
+#!/usr/bin/"env": node ;   _console.log("🔧 Merge: Conflict Resolver Started");",class MergeConflictResolver {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."resolvedFiles": '= []',this."errors": '= []'} async run() { try { _console.log("🔍 Finding files with merge conflicts...");";"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

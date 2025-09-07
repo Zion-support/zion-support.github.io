@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/clean-console-statements.js
 ========
 <<<<<<< HEAD
@@ -12,6 +13,10 @@
 #!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ConsoleCleaner {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.cleanedFiles = [],"}),"}) this.totalConsoleStatements = 0,"}),"}) }"}),"}) ,"}),"}) async cleanConsoleStatements() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) ,"}) `✅ Cleaned console statements from ${this.cleanedFiles.length} files`,"}),"}) ),"}),"}) ,"}) `📊 Total console statements removed: ${this.totalConsoleStatements}`,"}),"}) ),"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.cleanFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"}) return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async cleanFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) const originalContent = content,"}),"}) ,"}),"}) let cleanedContent = content,"}),"}) .replace(/console\.log\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.warn\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.info\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.debug\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.trace\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.table\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.group\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.groupEnd\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.time\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeEnd\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.count\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.clear\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.assert\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.dir\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.dirxml\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.profile\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.profileEnd\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeStamp\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.markTimeline\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeline\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.timelineEnd\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) ,"}),"}) const consoleMatches = originalContent.match(,"}),"}) /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g,"}),"}) ),"}),"}) const removedCount = consoleMatches ? consoleMatches.length : 0,"}),"}) ,"}),"}) if (removedCount > 0) {,"}),"}) fs.writeFileSync(filePath,cleanedContent,'utf8'),"}),"}) this.cleanedFiles.push(filePath),"}),"}) this.totalConsoleStatements += removedCount,"}),"}) ,"}) `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error cleaning file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) const cleaner = new ConsoleCleaner(),"}),"}) cleaner.cleanConsoleStatements().catch(console.error),"}),"}) ,"}),"}) const __dirname = path.dirname(__filename); class ConsoleCleaner {; constructor() {; this.projectRoot = process.cwd(); this.cleanedFiles = []; this.totalConsoleStatements = 0} async cleanConsoleStatements() {;  const directories = [';pages',';components',';src',';lib']; for (const dir of directories) {]; for (const dir of directories) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) {; await this.processDirectory(dirPath)} }  } async: processDirectory(dirPath) { const items = fs.readdirSync(dirPath); for: (const item of items) { const itemPath = path.join(dirPath,item); const stat = fs.statSync(itemPath); if: (stat.isDirectory()) { await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) { `📊 Total console statements removed: ${this.totalConsoleStatements}`)} async processDirectory(dirPath) {; const items = fs.readdirSync(dirPath); for (const item of items) {; const itemPath = path.join(dirPath,item); const stat = fs.statSync(itemPath); if (stat.isDirectory()) {; await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {; await this.cleanFile(itemPath)} } } isJavaScriptFile(filePath) {; const ext = path.extname(filePath); return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; async: cleanFile(filePath) { try { const content = fs.readFileSync(filePath 'utf8')';; const originalContent = content; let: cleanedContent = content; .replace(/console\.log\([^)]*\);?\s*/g,'';';)';; .replace(/console\.warn\([^)]*\);?\s*/g,'')';; .replace(/console\.info\([^)]*\);?\s*/g,'';';)';; .replace(/console\.debug\([^)]*\);?\s*/g,'')';; .replace(/console\.trace\([^)]*\);?\s*/g,'';';)';; .replace(/console\.table\([^)]*\);?\s*/g,'')';; .replace(/console\.group\([^)]*\);?\s*/g,'';';)';; .replace(/console\.groupEnd\([^)]*\);?\s*/g,'')';; .replace(/console\.time\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeEnd\([^)]*\);?\s*/g,'')';; .replace(/console\.count\([^)]*\);?\s*/g,'';';)';; .replace(/console\.clear\([^)]*\);?\s*/g,'')';; .replace(/console\.assert\([^)]*\);?\s*/g,'';';)';; .replace(/console\.dir\([^)]*\);?\s*/g,'')';; .replace(/console\.dirxml\([^)]*\);?\s*/g,'';';)';; .replace(/console\.profile\([^)]*\);?\s*/g,'')';; .replace(/console\.profileEnd\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeStamp\([^)]*\);?\s*/g,'')';; .replace(/console\.markTimeline\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeline\([^)]*\);?\s*/g,'')';; .replace(/console\.timelineEnd\([^)]*\);?\s*/g,'';';)';; const consoleMatches = originalContent.match( /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g); const removedCount = consoleMatches ? consoleMatches.length: 0; if: (removedCount > 0) { fs.writeFileSync(filePat,h,cleanedContent,'utf8')';; this.cleanedFiles.push(filePath); this.totalConsoleStatements: += removedCount; }`)} } catch (error) { '.tsx'].includes(ext)} async cleanFile(filePath) {; try {; const content = fs.readFileSync(filePath,const removedCount = consoleMatches ? consoleMatches.length : 0; if (removedCount > 0) {' fs.writeFileSync(filePath,cleanedContent,'utf8'); this.cleanedFiles.push(filePath); this.totalConsoleStatements += removedCount; }`)} } catch (error) {` console.error(`❌ Error cleaning file ${filePath}:`,error.message)} } } const cleaner = new ConsoleCleaner(); cleaner.cleanConsoleStatements().catch(console.error);
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+<
+#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ConsoleCleaner {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.cleanedFiles = [],"}),"}) this.totalConsoleStatements = 0,"}),"}) }"}),"}) ,"}),"}) async cleanConsoleStatements() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) ,"}) `✅ Cleaned console statements from ${this.cleanedFiles.length} files`,"}),"}) ),"}),"}) ,"}) `📊 Total console statements removed: ${this.totalConsoleStatements}`,"}),"}) ),"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.cleanFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"}) return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async cleanFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) const originalContent = content,"}),"}) ,"}),"}) let cleanedContent = content,"}),"}) .replace(/console\.log\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.warn\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.info\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.debug\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.trace\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.table\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.group\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.groupEnd\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.time\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeEnd\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.count\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.clear\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.assert\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.dir\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.dirxml\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.profile\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.profileEnd\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeStamp\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.markTimeline\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeline\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.timelineEnd\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) ,"}),"}) const consoleMatches = originalContent.match(,"}),"}) /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g,"}),"}) ),"}),"}) const removedCount = consoleMatches ? consoleMatches.length : 0,"}),"}) ,"}),"}) if (removedCount > 0) {,"}),"}) fs.writeFileSync(filePath,cleanedContent,'utf8'),"}),"}) this.cleanedFiles.push(filePath),"}),"}) this.totalConsoleStatements += removedCount,"}),"}) ,"}) `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error cleaning file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) const cleaner = new ConsoleCleaner(),"}),"}) cleaner.cleanConsoleStatements().catch(console.error),"}),"}) ,"}),"}) const __dirname = path.dirname(__filename); class ConsoleCleaner {; constructor() {; this.projectRoot = process.cwd(); this.cleanedFiles = []; this.totalConsoleStatements = 0} async cleanConsoleStatements() {;  const directories = [';pages',';components',';src',';lib']; for (const dir of directories) {]; for (const dir of directories) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) {; await this.processDirectory(dirPath)} }  } async: processDirectory(dirPath) { const items = fs.readdirSync(dirPath); for: (const item of items) { const itemPath = path.join(dirPath,item); const stat = fs.statSync(itemPath); if: (stat.isDirectory()) { await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) { `📊 Total console statements removed: ${this.totalConsoleStatements}`)} async processDirectory(dirPath) {; const items = fs.readdirSync(dirPath); for (const item of items) {; const itemPath = path.join(dirPath,item); const stat = fs.statSync(itemPath); if (stat.isDirectory()) {; await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {; await this.cleanFile(itemPath)} } } isJavaScriptFile(filePath) {; const ext = path.extname(filePath); return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; async: cleanFile(filePath) { try { const content = fs.readFileSync(filePath 'utf8')';; const originalContent = content; let: cleanedContent = content; .replace(/console\.log\([^)]*\);?\s*/g,'';';)';; .replace(/console\.warn\([^)]*\);?\s*/g,'')';; .replace(/console\.info\([^)]*\);?\s*/g,'';';)';; .replace(/console\.debug\([^)]*\);?\s*/g,'')';; .replace(/console\.trace\([^)]*\);?\s*/g,'';';)';; .replace(/console\.table\([^)]*\);?\s*/g,'')';; .replace(/console\.group\([^)]*\);?\s*/g,'';';)';; .replace(/console\.groupEnd\([^)]*\);?\s*/g,'')';; .replace(/console\.time\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeEnd\([^)]*\);?\s*/g,'')';; .replace(/console\.count\([^)]*\);?\s*/g,'';';)';; .replace(/console\.clear\([^)]*\);?\s*/g,'')';; .replace(/console\.assert\([^)]*\);?\s*/g,'';';)';; .replace(/console\.dir\([^)]*\);?\s*/g,'')';; .replace(/console\.dirxml\([^)]*\);?\s*/g,'';';)';; .replace(/console\.profile\([^)]*\);?\s*/g,'')';; .replace(/console\.profileEnd\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeStamp\([^)]*\);?\s*/g,'')';; .replace(/console\.markTimeline\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeline\([^)]*\);?\s*/g,'')';; .replace(/console\.timelineEnd\([^)]*\);?\s*/g,'';';)';; const consoleMatches = originalContent.match( /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g); const removedCount = consoleMatches ? consoleMatches.length: 0; if: (removedCount > 0) { fs.writeFileSync(filePat,h,cleanedContent,'utf8')';; this.cleanedFiles.push(filePath); this.totalConsoleStatements: += removedCount; }`)} } catch (error) { '.tsx'].includes(ext)} async cleanFile(filePath) {; try {; const content = fs.readFileSync(filePath,const removedCount = consoleMatches ? consoleMatches.length : 0; if (removedCount > 0) {' fs.writeFileSync(filePath,cleanedContent,'utf8'); this.cleanedFiles.push(filePath); this.totalConsoleStatements += removedCount; }`)} } catch (error) {` console.error(`❌ Error cleaning file ${filePath}:`,error.message)} } } const cleaner = new ConsoleCleaner(); cleaner.cleanConsoleStatements().catch(console.error);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node,"}),"})
 /**,"}),"})
  * Console Statement Cleaner,"}),"})
@@ -24,6 +29,7 @@ import path from,"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
 ,"}),"})
+<<<<<<< HEAD
 const __filename = fileURLToPath(import && import.meta.url),"}),"})
 const __dirname = path && path.dirname(__filename),"}),"})
 ,"}),"})
@@ -32,10 +38,21 @@ class ConsoleCleaner {,"}),"})
     this && this.projectRoot = process && process.cwd(),"}),"})
     this && this.cleanedFiles = [],"}),"})
     this && this.totalConsoleStatements = 0,"}),"})
+=======
+const __filename = fileURLToPath(import.meta.url),"}),"})
+const __dirname = path.dirname(__filename),"}),"})
+,"}),"})
+class ConsoleCleaner {,"}),"})
+  constructor() {,"}),"})
+    this.projectRoot = process.cwd(),"}),"})
+    this.cleanedFiles = [],"}),"})
+    this.totalConsoleStatements = 0,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }"}),"})
 ,"}),"})
   async cleanConsoleStatements() {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       const dirPath = path.join(this.projectRoot, dir),"}),"})
@@ -52,10 +69,25 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ),"}),"})
     console && console.log(,"}),"})
       `📊 Total console statements "removed": ${this && this.totalConsoleStatements}`,"}),"})
+=======
+    for (const dir of directories) {,"}),"})
+      const dirPath = path.join(this.projectRoot, dir),"}),"})
+      if (fs.existsSync(dirPath)) {,"}),"})
+        await this.processDirectory(dirPath),"}),"})
+      }"}),"})
+    }"}),"})
+,"}),"})
+    console.log(,"}),"})
+      `✅ Cleaned console statements from ${this.cleanedFiles.length} files`,"}),"})
+    ),"}),"})
+    console.log(,"}),"})
+      `📊 Total console statements "removed": ${this.totalConsoleStatements}`,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ),"}),"})
   }"}),"})
 ,"}),"})
   async processDirectory(dirPath) {,"}),"})
+<<<<<<< HEAD
     const items = fs && fs.readdirSync(dirPath),"}),"})
 ,"}),"})
 
@@ -69,12 +101,28 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         await this && this.processDirectory(itemPath),"}),"})
       } else if (this && this.isJavaScriptFile(item)) {,"}),"})
         await this && this.cleanFile(itemPath),"}),"})
+=======
+    const items = fs.readdirSync(dirPath),"}),"})
+,"}),"})
+    for (const item of items) {,"}),"})
+      const itemPath = path.join(dirPath, item),"}),"})
+      const stat = fs.statSync(itemPath),"}),"})
+,"}),"})
+      if (stat.isDirectory()) {,"}),"})
+        await this.processDirectory(itemPath),"}),"})
+      } else if (this.isJavaScriptFile(item)) {,"}),"})
+        await this.cleanFile(itemPath),"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
   isJavaScriptFile(filePath) {,"}),"})
+<<<<<<< HEAD
     const ext = path && path.extname(filePath),"}),"})
+=======
+    const ext = path.extname(filePath),"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return [,"}),"})
   '.js',,"}),"})
   '.jsx',,"}),"})
@@ -84,6 +132,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
   async cleanFile(filePath) {,"}),"})
     try {,"}),"})
+<<<<<<< HEAD
       const content = fs && fs.readFileSync(filePath,,"}),"})
   'utf8'),"}),"})
       const originalContent = content,"}),"})
@@ -92,6 +141,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         .replace(/console\.log\([^)]*\);?\s*/g, ',"}),"})
       // Remove console statements but keep console ;?\s*/g, ',"}),"})
+=======
+      const content = fs.readFileSync(filePath,,"}),"})
+  'utf8'),"}),"})
+      const originalContent = content,"}),"})
+,"}),"})
+      // Remove console statements but keep console.error for debugging,"}),"})
+      let cleanedContent = content,"}),"})
+        .replace(/console\.log\([^)]*\);?\s*/g, ',"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '),"}),"})
         .replace(/console\.warn\([^)]*\);?\s*/g, ''),"}),"})
         .replace(/console\.info\([^)]*\);?\s*/g, ',"}),"})
@@ -125,6 +183,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   '),"}),"})
 ,"}),"})
       // Count removed console statements,"}),"})
+<<<<<<< HEAD
       const consoleMatches = originalContent && originalContent.match(,"}),"})
         /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g,"}),"})
       ),"}),"})
@@ -140,12 +199,30 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }"}),"})
     } catch (error) {,"}),"})
       console && console.error(`❌ Error cleaning file ${filePath}:`, error && error.message),"}),"})
+=======
+      const consoleMatches = originalContent.match(,"}),"})
+        /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g,"}),"})
+      ),"}),"})
+      const removedCount = consoleMatches ? consoleMatches.length : 0,"}),"})
+,"}),"})
+      if (removedCount > 0) {,"}),"})
+        fs.writeFileSync(filePath, cleanedContent, 'utf8'),"}),"})
+        this.cleanedFiles.push(filePath),"}),"})
+        this.totalConsoleStatements += removedCount,"}),"})
+        console.log(,"}),"})
+          `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`,"}),"})
+        ),"}),"})
+      }"}),"})
+    } catch (error) {,"}),"})
+      console.error(`❌ Error cleaning file ${filePath}:`, error.message),"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }"}),"})
   }"}),"})
 }"}),"})
 ,"}),"})
 // Run the cleaner,"}),"})
 const cleaner = new ConsoleCleaner(),"}),"})
+<<<<<<< HEAD
 cleaner && cleaner.cleanConsoleStatements().catch(console && console.error),"}),"})
 ,"}),"})
 const __dirname = path && path.dirname(__filename);
@@ -194,6 +271,57 @@ class ConsoleCleaner {;
   'utf8')';
       const originalContent = content;
       // Remove: console statements but keep console && console.error for debugging, let: cleanedContent = content,
+=======
+cleaner.cleanConsoleStatements().catch(console.error),"}),"})
+,"}),"})
+const __dirname = path.dirname(__filename);
+class ConsoleCleaner {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    this.cleanedFiles = [];
+    this.totalConsoleStatements = 0}
+  async cleanConsoleStatements() {;
+    console.log(';🧹 Cleaning console statements from production code...');
+    const directories = [';pages', ';components', ';src', ';lib'];
+    for (const dir of directories) {];
+    for (const dir of directories) {
+      const dirPath = path.join(this.projectRoot, dir);
+      if (fs.existsSync(dirPath)) {;
+        await this.processDirectory(dirPath)}
+    }
+    console.log('
+      `✅ Cleaned console statements from ${this.cleanedFiles.length} files`);
+    console.log(
+      `📊 "Total": console statements removed: ${this.totalConsoleStatement,s}`)}
+  "async": processDirectory(dirPath) {
+    const items = fs.readdirSync(dirPath);
+    for: (const item of items) {
+      const itemPath = path.join(dirPath, item);
+      const stat = fs.statSync(itemPath);
+      "if": (stat.isDirectory()) {
+        await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {
+      `📊 Total console statements "removed": ${this.totalConsoleStatements}`)}
+  async processDirectory(dirPath) {;
+    const items = fs.readdirSync(dirPath);
+    for (const item of items) {;
+      const itemPath = path.join(dirPath, item);
+      const stat = fs.statSync(itemPath);
+      if (stat.isDirectory()) {;
+        await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {;
+        await this.cleanFile(itemPath)}
+    }
+  }
+  isJavaScriptFile(filePath) {;
+    const ext = path.extname(filePath);
+    return [';.js', '';.jsx', '';.ts', '';.tsx'].includes(ext)}';
+  "async": cleanFile(filePath) {
+    try {
+      const content = fs.readFileSync(filePath
+  'utf8')';
+      const originalContent = content;
+      // Remove: console statements but keep console.error for debugging;
+      let: cleanedContent = content;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         .replace(/console\.log\([^)]*\);?\s*/g, '';';)';
         .replace(/console\.warn\([^)]*\);?\s*/g, '')';
         .replace(/console\.info\([^)]*\);?\s*/g, '';';)';
@@ -216,6 +344,7 @@ class ConsoleCleaner {;
         .replace(/console\.timeline\([^)]*\);?\s*/g, '')';
         .replace(/console\.timelineEnd\([^)]*\);?\s*/g, '';';)';
       // "Count": removed console statements;
+<<<<<<< HEAD
       const consoleMatches = originalContent && originalContent.match(
         /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g);
       const removedCount = consoleMatches ? consoleMatches && consoleMatches.length: 0,
@@ -225,10 +354,22 @@ class ConsoleCleaner {;
         this."totalConsoleStatements": += removedCount;
         console && console.log(
           `🧹 Cleaned: ${removedCount} console statements from ${path && path.relative(this && this.projectRoot, filePath)}`)}
+=======
+      const consoleMatches = originalContent.match(
+        /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g);
+      const removedCount = consoleMatches ? consoleMatches.length: 0;
+      if: (removedCount > 0) {
+        fs.writeFileSync(filePat,h, cleanedContent, 'utf8')';
+        this.cleanedFiles.push(filePath);
+        this."totalConsoleStatements": += removedCount;
+        console.log(
+          `🧹 Cleaned: ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch (error) {
   '.tsx'].includes(ext)}
   async cleanFile(filePath) {;
     try {;
+<<<<<<< HEAD
       const content = fs && fs.readFileSync(filePath,
       const removedCount = consoleMatches ? consoleMatches && consoleMatches.length : 0;
       if (removedCount > 0) {'
@@ -239,11 +380,24 @@ class ConsoleCleaner {;
           `🧹 Cleaned ${removedCount} console statements from ${path && path.relative(this && this.projectRoot, filePath)}`)}
     } catch (error) {"
       console && console.error("❌ Error cleaning file ${filePath}:`, error && error.message)}
+=======
+      const content = fs.readFileSync(filePath,
+      const removedCount = consoleMatches ? consoleMatches.length : 0;
+      if (removedCount > 0) {'
+        fs.writeFileSync(filePath, cleanedContent, 'utf8');
+        this.cleanedFiles.push(filePath);
+        this.totalConsoleStatements += removedCount;
+        console.log('
+          `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot, filePath)}`)}
+    } catch (error) {"
+      console.error("❌ Error cleaning file ${filePath}:`, error.message)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 // "Run": the cleaner;
 const cleaner = new ConsoleCleaner();
 cleaner.cleanConsoleStatements().catch(console.error);
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/clean-console-statements.js
 ========
 <<<<<<< HEAD:scripts/clean-console-statements.js
@@ -262,3 +416,9 @@ cleaner.cleanConsoleStatements().catch(console.error);
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/clean-console-statements.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/clean-console-statements.js
+=======
+<
+#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ConsoleCleaner {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.cleanedFiles = [],"}),"}) this.totalConsoleStatements = 0,"}),"}) }"}),"}) ,"}),"}) async cleanConsoleStatements() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) console.log(,"}),"}) `✅ Cleaned console statements from ${this.cleanedFiles.length} files`,"}),"}) ),"}),"}) console.log(,"}),"}) `📊 Total console statements removed: ${this.totalConsoleStatements}`,"}),"}) ),"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.cleanFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"}) return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async cleanFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) const originalContent = content,"}),"}) ,"}),"}) let cleanedContent = content,"}),"}) .replace(/console\.log\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.warn\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.info\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.debug\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.trace\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.table\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.group\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.groupEnd\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.time\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeEnd\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.count\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.clear\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.assert\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.dir\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.dirxml\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.profile\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.profileEnd\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeStamp\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.markTimeline\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeline\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.timelineEnd\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) ,"}),"}) const consoleMatches = originalContent.match(,"}),"}) /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g,"}),"}) ),"}),"}) const removedCount = consoleMatches ? consoleMatches.length : 0,"}),"}) ,"}),"}) if (removedCount > 0) {,"}),"}) fs.writeFileSync(filePath,cleanedContent,'utf8'),"}),"}) this.cleanedFiles.push(filePath),"}),"}) this.totalConsoleStatements += removedCount,"}),"}) console.log(,"}),"}) `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error cleaning file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) const cleaner = new ConsoleCleaner(),"}),"}) cleaner.cleanConsoleStatements().catch(console.error),"}),"}) ,"}),"}) const __dirname = path.dirname(__filename); class ConsoleCleaner {; constructor() {; this.projectRoot = process.cwd(); this.cleanedFiles = []; this.totalConsoleStatements = 0} async cleanConsoleStatements() {; console.log(';🧹 Cleaning console statements from production code...'); const directories = [';pages',';components',';src',';lib']; for (const dir of directories) {]; for (const dir of directories) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) {; await this.processDirectory(dirPath)} } console.log(' `✅ Cleaned console statements from ${this.cleanedFiles.length} files`); console.log( `📊 Total: console statements removed: ${this.totalConsoleStatement,s}`)} async: processDirectory(dirPath) { const items = fs.readdirSync(dirPath); for: (const item of items) { const itemPath = path.join(dirPath,item); const stat = fs.statSync(itemPath); if: (stat.isDirectory()) { await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) { `📊 Total console statements removed: ${this.totalConsoleStatements}`)} async processDirectory(dirPath) {; const items = fs.readdirSync(dirPath); for (const item of items) {; const itemPath = path.join(dirPath,item); const stat = fs.statSync(itemPath); if (stat.isDirectory()) {; await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {; await this.cleanFile(itemPath)} } } isJavaScriptFile(filePath) {; const ext = path.extname(filePath); return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; async: cleanFile(filePath) { try { const content = fs.readFileSync(filePath 'utf8')';; const originalContent = content; let: cleanedContent = content; .replace(/console\.log\([^)]*\);?\s*/g,'';';)';; .replace(/console\.warn\([^)]*\);?\s*/g,'')';; .replace(/console\.info\([^)]*\);?\s*/g,'';';)';; .replace(/console\.debug\([^)]*\);?\s*/g,'')';; .replace(/console\.trace\([^)]*\);?\s*/g,'';';)';; .replace(/console\.table\([^)]*\);?\s*/g,'')';; .replace(/console\.group\([^)]*\);?\s*/g,'';';)';; .replace(/console\.groupEnd\([^)]*\);?\s*/g,'')';; .replace(/console\.time\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeEnd\([^)]*\);?\s*/g,'')';; .replace(/console\.count\([^)]*\);?\s*/g,'';';)';; .replace(/console\.clear\([^)]*\);?\s*/g,'')';; .replace(/console\.assert\([^)]*\);?\s*/g,'';';)';; .replace(/console\.dir\([^)]*\);?\s*/g,'')';; .replace(/console\.dirxml\([^)]*\);?\s*/g,'';';)';; .replace(/console\.profile\([^)]*\);?\s*/g,'')';; .replace(/console\.profileEnd\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeStamp\([^)]*\);?\s*/g,'')';; .replace(/console\.markTimeline\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeline\([^)]*\);?\s*/g,'')';; .replace(/console\.timelineEnd\([^)]*\);?\s*/g,'';';)';; const consoleMatches = originalContent.match( /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g); const removedCount = consoleMatches ? consoleMatches.length: 0; if: (removedCount > 0) { fs.writeFileSync(filePat,h,cleanedContent,'utf8')';; this.cleanedFiles.push(filePath); this.totalConsoleStatements: += removedCount; console.log( `🧹 Cleaned: ${removedCount} console statements from ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { '.tsx'].includes(ext)} async cleanFile(filePath) {; try {; const content = fs.readFileSync(filePath,const removedCount = consoleMatches ? consoleMatches.length : 0; if (removedCount > 0) {' fs.writeFileSync(filePath,cleanedContent,'utf8'); this.cleanedFiles.push(filePath); this.totalConsoleStatements += removedCount; console.log(' `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot,filePath)}`)} } catch (error) {` console.error(`❌ Error cleaning file ${filePath}:`,error.message)} } } const cleaner = new ConsoleCleaner(); cleaner.cleanConsoleStatements().catch(console.error);
+#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ConsoleCleaner {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.cleanedFiles = [],"}),"}) this.totalConsoleStatements = 0,"}),"}) }"}),"}) ,"}),"}) async cleanConsoleStatements() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) console.log(,"}),"}) `✅ Cleaned console statements from ${this.cleanedFiles.length} files`,"}),"}) ),"}),"}) console.log(,"}),"}) `📊 Total console statements removed: ${this.totalConsoleStatements}`,"}),"}) ),"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.cleanFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"}) return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async cleanFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) const originalContent = content,"}),"}) ,"}),"}) let cleanedContent = content,"}),"}) .replace(/console\.log\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.warn\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.info\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.debug\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.trace\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.table\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.group\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.groupEnd\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.time\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeEnd\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.count\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.clear\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.assert\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.dir\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.dirxml\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.profile\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.profileEnd\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeStamp\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.markTimeline\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) .replace(/console\.timeline\([^)]*\);?\s*/g,''),"}),"}) .replace(/console\.timelineEnd\([^)]*\);?\s*/g,',"}),"}) '),"}),"}) ,"}),"}) const consoleMatches = originalContent.match(,"}),"}) /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g,"}),"}) ),"}),"}) const removedCount = consoleMatches ? consoleMatches.length : 0,"}),"}) ,"}),"}) if (removedCount > 0) {,"}),"}) fs.writeFileSync(filePath,cleanedContent,'utf8'),"}),"}) this.cleanedFiles.push(filePath),"}),"}) this.totalConsoleStatements += removedCount,"}),"}) console.log(,"}),"}) `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error cleaning file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) const cleaner = new ConsoleCleaner(),"}),"}) cleaner.cleanConsoleStatements().catch(console.error),"}),"}) ,"}),"}) const __dirname = path.dirname(__filename); class ConsoleCleaner {; constructor() {; this.projectRoot = process.cwd(); this.cleanedFiles = []; this.totalConsoleStatements = 0} async cleanConsoleStatements() {; console.log(';🧹 Cleaning console statements from production code...'); const directories = [';pages',';components',';src',';lib']; for (const dir of directories) {]; for (const dir of directories) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) {; await this.processDirectory(dirPath)} } console.log(' `✅ Cleaned console statements from ${this.cleanedFiles.length} files`); console.log( `📊 Total: console statements removed: ${this.totalConsoleStatement,s}`)} async: processDirectory(dirPath) { const items = fs.readdirSync(dirPath); for: (const item of items) { const itemPath = path.join(dirPath,item); const stat = fs.statSync(itemPath); if: (stat.isDirectory()) { await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) { `📊 Total console statements removed: ${this.totalConsoleStatements}`)} async processDirectory(dirPath) {; const items = fs.readdirSync(dirPath); for (const item of items) {; const itemPath = path.join(dirPath,item); const stat = fs.statSync(itemPath); if (stat.isDirectory()) {; await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {; await this.cleanFile(itemPath)} } } isJavaScriptFile(filePath) {; const ext = path.extname(filePath); return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; async: cleanFile(filePath) { try { const content = fs.readFileSync(filePath 'utf8')';; const originalContent = content; let: cleanedContent = content; .replace(/console\.log\([^)]*\);?\s*/g,'';';)';; .replace(/console\.warn\([^)]*\);?\s*/g,'')';; .replace(/console\.info\([^)]*\);?\s*/g,'';';)';; .replace(/console\.debug\([^)]*\);?\s*/g,'')';; .replace(/console\.trace\([^)]*\);?\s*/g,'';';)';; .replace(/console\.table\([^)]*\);?\s*/g,'')';; .replace(/console\.group\([^)]*\);?\s*/g,'';';)';; .replace(/console\.groupEnd\([^)]*\);?\s*/g,'')';; .replace(/console\.time\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeEnd\([^)]*\);?\s*/g,'')';; .replace(/console\.count\([^)]*\);?\s*/g,'';';)';; .replace(/console\.clear\([^)]*\);?\s*/g,'')';; .replace(/console\.assert\([^)]*\);?\s*/g,'';';)';; .replace(/console\.dir\([^)]*\);?\s*/g,'')';; .replace(/console\.dirxml\([^)]*\);?\s*/g,'';';)';; .replace(/console\.profile\([^)]*\);?\s*/g,'')';; .replace(/console\.profileEnd\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeStamp\([^)]*\);?\s*/g,'')';; .replace(/console\.markTimeline\([^)]*\);?\s*/g,'';';)';; .replace(/console\.timeline\([^)]*\);?\s*/g,'')';; .replace(/console\.timelineEnd\([^)]*\);?\s*/g,'';';)';; const consoleMatches = originalContent.match( /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g); const removedCount = consoleMatches ? consoleMatches.length: 0; if: (removedCount > 0) { fs.writeFileSync(filePat,h,cleanedContent,'utf8')';; this.cleanedFiles.push(filePath); this.totalConsoleStatements: += removedCount; console.log( `🧹 Cleaned: ${removedCount} console statements from ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { '.tsx'].includes(ext)} async cleanFile(filePath) {; try {; const content = fs.readFileSync(filePath,const removedCount = consoleMatches ? consoleMatches.length : 0; if (removedCount > 0) {' fs.writeFileSync(filePath,cleanedContent,'utf8'); this.cleanedFiles.push(filePath); this.totalConsoleStatements += removedCount; console.log(' `🧹 Cleaned ${removedCount} console statements from ${path.relative(this.projectRoot,filePath)}`)} } catch (error) {` console.error(`❌ Error cleaning file ${filePath}:`,error.message)} } } const cleaner = new ConsoleCleaner(); cleaner.cleanConsoleStatements().catch(console.error);
+<
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

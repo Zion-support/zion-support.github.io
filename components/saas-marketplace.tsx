@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';
 
@@ -48,6 +49,9 @@ import {}
   TrendingUp,
   Code,
   Database,
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Zap;
   Shield;
   BarChart3;
@@ -57,11 +61,12 @@ import { Zap;
   TrendingUp;
   Code;
   Database;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   Cloud;
   ArrowRight;
   Star;
   Check;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   ExternalLink
@@ -336,6 +341,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       : microSaasServices.filter(
           service => service.category === selectedCategory
         );
+=======
+
+  ExternalLink
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <>
@@ -349,6 +359,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           name='description''
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           content='Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.'
+<<<<<<< HEAD
               <Button'
                 href='#services''
                 size='lg''
@@ -362,8 +373,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 variant='outline''
                 size='lg''
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
+=======
+              <Button
+                href='#services'
+                size='lg'
+                className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+                style={{ animationDelay: '0 && 0.2s' ;}}>;
+                Explore Services;
+                <ArrowRight className='w-5 h-5 ml-2' />;
+              </Button>;
+              <Button
+                href='/contact'
+                variant='outline'
+                size='lg'
+                className='animate-scale-in border-white/20 hover: border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' ;}}                href="/contact"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                style={{ animationDelay: '0.4s' }}
+                style={{ animationDelay: '0.4s' ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Recommendations;
@@ -394,7 +420,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-gray-400 text-sm">Total Users</div>
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={{ animationDelay: '0.6s' ;}}
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
@@ -475,11 +501,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>'
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
+<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='flex items-start space-x-6'>;'
+=======
+              <Card
+                key={index}
+                className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className='flex items-start space-x-6'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className='relative'>;
                     <div;
                       {service.icon}
@@ -522,8 +556,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='grid grid-cols-2 gap-2'>
                         {service.features;
                           .slice(0, 4)
+<<<<<<< HEAD
                           .map((feature, featureIndex) => (`
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
+=======
+                          .map((feature, featureIndex) => (
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {service && service.icon}
                     </div>;
                   </div>;'
@@ -567,10 +606,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               {feature}
                             </div>;
                           ))}
+<<<<<<< HEAD
                       <Button;
                         href={service && service.website}'
                         variant='outline''
                         size='sm''
+=======
+                      <Button
+                        href={service && service.website}
+                        variant='outline'
+                        size='sm'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='group-hover:border-blue-500 group-hover:text-blue-400'>;
                         Visit Website;'
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -737,6 +783,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
               View Our Services

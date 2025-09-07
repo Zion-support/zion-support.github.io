@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import fs from "fs";"
 import path from "path";"
@@ -92,3 +93,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {};
   if (!file) return res.status(400).json({ error: 'Missing file' });
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+import path from 'path';
+import mime from 'mime-types';
+import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -78,6 +79,9 @@ export const RESUME_STEPS = [;
   { id: 'certifications', label: 'Certifications' };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   { id: 'basic-info', label: 'Basic Info' },;
+=======
+{ id: 'basic-info', label: 'Basic Info' },;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   { id: 'work-experience', label: 'Work Experience' },;
   { id: 'education', label: 'Education' },;
   { id: 'skills', label: 'Skills' },;
@@ -96,6 +100,7 @@ export const RESUME_STEPS = [;'
   { id: 'skills', label: 'Skills' },;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { id: 'certifications', label: 'Certifications' },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -132,3 +137,13 @@ export const RESUME_STEPS = [;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+  { id: 'preview', label: 'Preview' }];
+export const RESUME_STEPS = [;
+{ id: 'basic - info', label: 'Basic Info' }
+  { id: 'work - experience', label: 'Work Experience' }
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

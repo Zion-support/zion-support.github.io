@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {}
   useEffect(() => {};
@@ -60,6 +61,9 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {};
     document.documentElement.setAttribute('lang', lng);
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }, []);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 "
       </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
@@ -91,22 +95,29 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {};
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
-    <div className='min-h-screen flex flex-col'>
-      <header>
+    <div className='min-h-screen flex flex-col' />
+      <header />
         <EnhancedNavigation />
         <LanguageSwitchPrompt />
       </header>
-<main id='main' className='flex-1 container mx-auto px-4 py-6'>
+<main id='main' className='flex-1 container mx-auto px-4 py-6' />
         {children}
       </main>
-      <footer>
+      <footer />
         <EnhancedFooter />
       </footer>
     </div>
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

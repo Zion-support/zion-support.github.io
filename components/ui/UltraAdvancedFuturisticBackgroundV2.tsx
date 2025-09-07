@@ -1,21 +1,22 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
+
 interface UltraAdvancedFuturisticBackgroundV2Props {
   children: React.ReactNode;
-  className?: string
+  className?: string;}
+}
 }
 
-const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ 
-  children;
+const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props /> = ({ children;
   className;
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let animationFrameId: number;
-let particles: Array< {
-  
 
+<<<<<<< HEAD
 const UltraAdvancedFuturisticBackgroundV2: React.FC<
   UltraAdvancedFuturisticBackgroundV2Props
 > = ({ children, className = '' }) => {
@@ -584,3 +585,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
   TrustMetricInputs;
   TrustScoreBreakdown;
   TrustMetricInputs,;
@@ -424,3 +425,13 @@ if ( {) {}
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 '`
+=======
+
+
+import { computeTrustScore  } from '../../../utils/trust/compute';
+import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
+import { supabase } from '../../../utils/supabase/client';
+
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

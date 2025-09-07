@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,12 +10,18 @@ import Link from "next/link",
 import { ArrowLeft } from 'lucide-react'
 =======
 <<<<<<< HEAD
-return (
 =======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+return (
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowLeft } from 'lucide-react''
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -56,6 +63,12 @@ import { ArrowLeft } from 'lucide-react'
 import { Button  } from '@/components / ui / button';
 import Link from './next / link';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ProfileErrorStateProps {
   error: string | null
 =======
@@ -69,7 +82,11 @@ interface ProfileErrorStateProps {}
   error: string | null;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
+        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark" />"
+          <ArrowLeft className="mr-2 h-4 w-4" />"
 
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +126,8 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         >
           <ArrowLeft className='mr-2 h-4 w-4' />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           Back to Talent Directory
 =======
 "
@@ -118,6 +137,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </Link>
       </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -136,6 +156,11 @@ import { Button } from "@/components/ui/button",;
     </div>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </div>
+
+    </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -148,6 +173,7 @@ import Link from 'next/link';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { ArrowLeft } from 'lucide-react';
 interface ProfileErrorStateProps {;
+<<<<<<< HEAD
   error: string | null;
 
 export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
@@ -161,12 +187,30 @@ export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
         <Link
           href='/talents'
           className='bg-zion-purple hover:bg-zion-purple-dark'>;
+=======
+  error: string | null;,
+export function ProfileErrorState(): any ({ error }:,  ProfileErrorStateProps) {;
+  return (
+    <div className='min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4'>;
+      <div className='text-red-400 mb-4 text-xl'>;
+        {error || 'Something went wrong'}'
+      </div>;
+      <Button asChild>;
+        <Link href='/talents''
+          className='bg-zion-purple hover:bg-zion-purple-dark' />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ArrowLeft className='mr-2 h-4 w-4' />          Back to Talent Directory;
-        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;
+        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark" />;
           <ArrowLeft className="mr-2 h-4 w-4" />;
 import React from 'react';
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  )
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from "next/link";
 =======
         <Link'
@@ -184,6 +228,13 @@ interface ProfileErrorStateProps {;
   error: string | null;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+export function ProfileErrorState({ error }:,  ProfileErrorStateProps) {;
+export function ProfileErrorState({ error }: ProfileErrorStateProps) {;
+  return (;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -199,8 +250,14 @@ export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
 export function ProfileErrorState() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
+<<<<<<< HEAD
       <Button asChild>;"
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;"
+=======
+      <Button asChild>;
+        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark" />;
+        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ArrowLeft className="mr-2 h-4 w-4" />;
           Back to Talent Directory;
         </Link>;
@@ -222,6 +279,7 @@ function ProfileErrorState() {
     <div className="min - h-screen bg - zion - blue flex flex - col justify - center items - center p-4">;
       <div className="text - red - 400 mb - 4 text-xl">{error || "Something went wrong"}</div>;
       <Button as_child>;
+<<<<<<< HEAD
         <Link href="/talents" className="bg - zion - purple hover: bg - zion - purple-dark">;
           <ArrowLeft className="mr - 2 h - 4 w-4" />;
 =======
@@ -231,6 +289,9 @@ function ProfileErrorState() {}
       <div className="text - red - 400 mb - 4 text - xl">{error || "Something went wrong"}</div>;
       <Button as_child>;"
         <Link href="/talents" className="bg - zion - purple hover: bg - zion - purple - dark">;"
+=======
+        <Link href="/talents" className="bg - zion - purple hover: bg - zion - purple - dark" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ArrowLeft className="mr - 2 h - 4 w - 4" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           Back to Talent Directory;
@@ -239,6 +300,7 @@ function ProfileErrorState() {}
     </div>);
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -250,3 +312,45 @@ function ProfileErrorState() {}
 =======
 }'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+})
+;
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+          <ArrowLeft className='mr - 2 h - 4 w - 4' />          Back to Talent Directory;
+
+        <Link href="/talents" className="bg - zion - purple hover: bg - zion - purple - dark">;"
+"
+          <ArrowLeft className="mr - 2 h - 4 w - 4" />;"
+        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">"
+          <ArrowLeft className="mr-2 h-4 w-4" />"
+
+
+
+
+    </div>"
+    <div className='min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4'>;
+      <div className='text-red-400 mb-4 text-xl'>;
+      <Button asChild>;
+
+          href='/talents
+          className='bg-zion-purple hover:bg-zion-purple-dark'>;
+
+          <ArrowLeft className='mr-2 h-4 w-4' />          Back to Talent Directory;
+
+        <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;"
+          <ArrowLeft className="mr-2 h-4 w-4" />;"
+    <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;"
+      <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;"
+
+        ;
+    </div>;"
+    <div className="min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4">;"
+      <div className="text - red - 400 mb - 4 text - xl">{error || "Something went wrong"}</div>;"
+
+      ;)
+    </div>);"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

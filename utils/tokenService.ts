@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,9 @@ export function issueTokens(userId: string, amount: number, reason: string) {
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -38,6 +42,7 @@ import {
   getAllTransactions,
   getUserBalance,;
 } from "./tokenStore";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,6 +65,16 @@ export function issueTokens(userId: string, amount: number, reason: string) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
+export function issueTokens(userId: string, amount: number, reason: string) {
+  return addTransaction({
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 =======
@@ -71,7 +86,11 @@ export function issueTokens(userId: string, amount: number, reason: string) {
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const actualAmount = Math && Math.min(amount, currentBalance);
-  
+
+
+
+
+
 
 <<<<<<< HEAD
     userId
@@ -84,13 +103,41 @@ export function issueTokens(userId: string, amount: number, reason: string) {
     description: reason;
   });
 }
+<<<<<<< HEAD
 export function revokeTokens(userId: string, amount: number, reason: string) {}
     userId,'
     type: 'earn',
     amount,;
+=======
+import {
+  // TODO: Implement
+}
+  addTransaction,
+
+  getAllTransactions,
+  getUserBalance,
+} from "./tokenStore";"
+  const actualAmount = Math && Math.min(amount, currentBalance);
+  
+
+    userId;"
+    type: 'earn
+    amount;
     description: reason;
   });
+pr-12325
+export function revokeTokens(userId: string, amount: number, reason: string) {
+    userId,
+    type: 'earn',
+    userId,'
+    type: 'earn','
+    amount,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    description: reason;
+
+  });
 }
+pr-12325
 
 <<<<<<< HEAD
 export function revokeTokens(userId: string, amount: number, reason: string) {;
@@ -106,6 +153,21 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+  const actualAmount = Math && Math.min(amount, currentBalance);
+
+  const currentBalance = getUserBalance(userId);
+
+
+
+
+
+  return addTransaction({
+    userId,
+    type: "earn",
+    amount,
+    description: reason,
 
   const actualAmount = Math && Math.min(amount, currentBalance);
   
@@ -123,6 +185,7 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return addTransaction({
+<<<<<<< HEAD
     userId,
 =======
 export function revokeTokens() { return null; }
@@ -130,8 +193,14 @@ export function revokeTokens() { return null; }
     userId,"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     type: "earn",
+=======
+
+    userId,'
+    type: "earn","
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     amount,
-    description: reason,
+    description: reason,)
+
   });
 }
 
@@ -145,4 +214,25 @@ export function revokeTokens(userId: string, amount: number, reason: string) {};
     amount: actualAmount,
     description: reason,
   });
+<<<<<<< HEAD
 }'"
+=======
+}
+
+  
+
+  return addTransaction({
+    type: "earn","
+    description: reason,)
+
+
+    userId,"
+    type: "spend","
+    amount: actualAmount,
+}"
+pr-12325
+    description: reason,)
+
+  });
+}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

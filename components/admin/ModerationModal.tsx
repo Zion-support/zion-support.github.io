@@ -1,21 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export type ModerationModalProps = {};
   flag: any | null;
 
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -25,6 +31,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 =======
 
 =======
@@ -35,8 +42,10 @@ export type ModerationModalProps = {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   onAction: (;
-    action: 'approve' | 'remove' | 'warn' | 'ban',;
+    action: 'approve' | 'remove' | 'warn' | 'ban';,;
     adminNotes?: string;
   ) => Promise<void>;
 export default function ModerationModal(): any ({;
@@ -46,6 +55,7 @@ export default function ModerationModal(): any ({;
 }: ModerationModalProps) {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -54,12 +64,15 @@ export default function ModerationModal(): any ({;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
@@ -74,6 +87,10 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   flag,
   onClose,
   onAction,
@@ -82,8 +99,9 @@ pr-12243
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
+<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {}
     return { hasError: true };
@@ -95,11 +113,21 @@ class ErrorBoundary extends React.Component {}
   
   render() {}
     if (this.state.hasError) {}
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true ;};
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: ';, error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
+<<<<<<< HEAD
 }'
 import React, { useState } from 'react';
 
@@ -117,6 +145,13 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+
+export type ModerationModalProps = {;
+  flag: any | null;
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -130,9 +165,12 @@ pr-12243
 <<<<<<< HEAD
 
 pr-12243
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             className='text-gray-500 hover:text-gray-700'>;
             ✕;
           </button>;
@@ -189,6 +227,7 @@ pr-12243
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -196,6 +235,9 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <textarea
 =======
 
@@ -239,15 +281,21 @@ pr-12243
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 pr-12243
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type ModerationModalProps = {
-  flag: any | null,
-  onClose: () => void,
-  onAction: (action: 'approve' | 'remove' | 'warn' | 'ban', adminNotes?: string) => Promise<void>
+  flag: any | null;,
+  onClose: () => void;,
+  onAction: (action: 'approve' | 'remove' | 'warn' | 'ban';, adminNotes?: string) => Promise<void>
 };
 export default function ModerationModal({ flag, onClose, onAction }: ModerationModalProps) {
   const [adminNotes, setAdminNotes] = useState('');
@@ -280,7 +328,7 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           </div>
           <div>
             <div className="text-gray-500 mb-1">Preview</div>
-            <div className="border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto">{flag.snippet}</div>
+            <div className="border rounded p-3 bg-gray-50 dark: bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto">{flag.snippet;}</div>
           </div>
           <div className="grid grid-cols-3 gap-4">
             <div className="p-3 border rounded">
@@ -306,12 +354,15 @@ pr-12243
   );
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
@@ -319,12 +370,16 @@ pr-12243
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 =======
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 );
 pr-12243
+<<<<<<< HEAD
 =======
 '
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>'"
@@ -347,6 +402,12 @@ pr-12243
   on_close: () => void;
   on_action: ('
     action: 'approve' | 'remove' | 'warn' | 'ban',
+=======
+}
+  on_close: () => void;
+  on_action: (
+    action: 'approve' | 'remove' | 'warn' | 'ban';,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     admin_notes?: string) => Promise < void>;
 ;
 export default /**;
@@ -461,11 +522,15 @@ if (return null) {}
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -486,16 +551,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React, { useState } from 'react';
+=======
+
+);
+  );
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type ModerationModalProps = {;
 
 export type ModerationModalProps = {};
   flag: any | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from 'react';
 export type ModerationModalProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+export type ModerationModalProps = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   onClose: () => void;
   onAction: ('
     action: 'approve' | 'remove' | 'warn' | 'ban'
@@ -513,6 +589,7 @@ export default function ModerationModal({};
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -521,6 +598,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
@@ -622,6 +704,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
             Ban User
 <<<<<<< HEAD
+<<<<<<< HEAD
           </button>
         </div>
 =======
@@ -631,6 +714,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           </button>        </div>
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          </button>
+        </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>
     </div>
   );"
@@ -644,6 +731,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 );
 }
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -661,6 +749,8 @@ pr-12243
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
@@ -670,6 +760,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 );
 }
+);
   );
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

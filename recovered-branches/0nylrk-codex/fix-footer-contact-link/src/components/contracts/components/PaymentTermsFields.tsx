@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +18,9 @@ import { UseFormReturn } from "react-hook-form";
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { UseFormReturn } from "react-hook-form";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -69,20 +73,45 @@ import { UseFormReturn } from "react-hook-form",
 =======
 
 import { UseFormReturn } from "react-hook-form",
+import { UseFormReturn } from "react-hook-form",
 
 import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
 import { UseFormReturn } from "react-hook-form",
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 import {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+import { 
+
+
+import {UseFormReturn} from "react-hook-form";""
+import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";""
+import {Input} from "@/components/ui/input";""
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";""
+import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSuggestions";""
+import {TalentProfile} from "@/types/talent";""
+import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";""
+import {ContractFormValues} from "./ContractForm";""
+import { UseFormReturn } from "react-hook-form",""
+import { UseFormReturn } from "react-hook-form","
+import {
+  // TODO: Implement
+}
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   FormField;
   FormItem;
   FormLabel;
   FormControl;
+
   FormDescription;
 <<<<<<< HEAD
   FormMessage
@@ -176,6 +205,7 @@ import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator","
 import { ContractFormValues } from "./ContractForm",
 =======
 
+<<<<<<< HEAD
 import { Input } from "@/components/ui/input",
 
 
@@ -229,10 +259,13 @@ import {ContractFormValues} from "./ContractForm";
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function PaymentTermsFields({
   form;
   talent;
   handleMilestonesGenerated
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   handleMilestonesGenerated
@@ -257,7 +290,16 @@ export function PaymentTermsFields({
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+export function PaymentTermsFields({ ;
+  form;
+  talent;
+export function PaymentTermsFields({ 
+  form,
+  talent,
+  handleMilestonesGenerated
 }: PaymentTermsFieldsProps) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
@@ -440,13 +482,105 @@ function PaymentTermsFields() {}
 
 =======
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+;
+export function PaymentTermsFields({;
+  form;
+  talent;
+  handleMilestonesGenerated;
+}: PaymentTermsFieldsProps) {;
+  return (;
+    <>;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;      {/* Project Milestones */}
+      {form && form.watch("paymentTerms") === "milestone" && (;
+        <div className="pt-2">;
+          <MilestoneSuggestions
+
+            projectName={form.getValues("projectName") || "Project"}
+            scopeSummary={form.getValues("scopeSummary") || ""}
+            startDate={form.getValues("startDate") || new Date()}
+            endDate={form.getValues("endDate")}
+            projectType={form.getValues("projectName").includes("AI") ? "AI/ML" : 
+
+                        form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}            projectName={form && form.getValues("projectName") || "Project"}
+            scopeSummary={form && form.getValues("scopeSummary") || ""}
+            startDate={form && form.getValues("startDate") || new Date()}
+            endDate={form && form.getValues("endDate")}
+            projectType={form && form.getValues("projectName").includes("AI") ? "AI/ML" : 
+                        form && form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
+            onMilestonesGenerated={handleMilestonesGenerated}
+          />;
+        </div>;
+      )}
+
+    </>;
+  );
+}
+  FormMessage;"
+} from "@/components/ui/form",""
+import { Input } from "@/components/ui/input","
+  // TODO: Implement
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue;"
+} from "@/components/ui/select",""
+import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",""
+import { TalentProfile } from "@/types/talent",""
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",""
+import { ContractFormValues } from "./ContractForm",""
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";""
+import { ContractFormValues } from "./ContractForm";""
+import { ContractFormValues } from "./ContractForm","
+interface PaymentTermsFieldsProps {
+  // TODO: Implement
+  form: UseFormReturn<ContractFormValues>
+
+    <>"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+</div>
         <FormField;
-          control={form.control}
-          name="payment_terms";
+          control={form.control}"
+          name="paymentTerms""
           render={({ field }) => (
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <FormItem>
+
+              <FormLabel>Payment Terms
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+
+                <FormControl>
+
+                  <SelectTrigger>
+"
+                    <SelectValue placeholder="Select payment terms" />"
+
+                <SelectContent>
+                  <SelectItem value="hourly">Hourly Rate""
+                  <SelectItem value="fixed">Fixed Price""
+                  <SelectItem value="milestone">Milestone Payments"
+              <FormMessage />
+
+</SelectContent>"
+                  <SelectItem value="hourly">Hourly Rate</SelectItem>""
+                  <SelectItem value="fixed">Fixed Price</SelectItem>""
+                  <SelectItem value="milestone">Milestone Payments</SelectItem>"
+
+                </SelectContent>
+              </Select>
+              <FormMessage />
+</FormMessage>
+            </FormItem>
+
+  form: UseFormReturn<ContractFormValues>,;
+
+        <FormField
+          control={form && form.control}
+          name="paymentAmount"
+
+<FormItem>
               <FormLabel>Payment Terms</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
@@ -473,6 +607,7 @@ function PaymentTermsFields() {}
               <FormMessage />
             </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -496,6 +631,11 @@ function PaymentTermsFields() {}
           control={form && form.control}
           name="paymentAmount"
 
+=======
+            <FormItem>;
+              <FormLabel > Payment Terms</FormLabel>;
+              <Select onValueChange={field.on_change} default_value={field.value}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <FormControl>;
                   <SelectTrigger>;
                     <SelectValue placeholder="Select payment terms" />;
@@ -520,49 +660,77 @@ function PaymentTermsFields() {}
         <FormField
           control={form && form.control}
           name="paymentAmount"
+    <>;"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;"
+          control={form && form.control}"
+          name="paymentTerms"")
+          render={({ field }) => (;
 
-import { UseFormReturn } from "react-hook-form",;
+            <FormItem>;
+
+              <FormLabel>Payment Terms;
+              <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+
+  form: UseFormReturn < ContractFormValues>,
+  talent: TalentProfile,)
+  handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void;
+
+}
+export /**
+ * PaymentTermsFields - Function description;
+ */
+function PaymentTermsFields() {
+
+  return (
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;"
+          name="payment_terms";")
+
+
+
+
+
+
+
+          name="paymentAmount""
+                <FormControl>;
+
+                  <SelectTrigger>;
+                    <SelectValue placeholder="Select payment terms" />;"
+
+                  ;
+                <SelectContent>;
+                  <SelectItem value="hourly">Hourly Rate;""
+                  <SelectItem value="fixed">Fixed Price;""
+                  <SelectItem value="milestone">Milestone Payments;"
+              <FormMessage />;
+
+          name="paymentAmount"""
+import { UseFormReturn } from "react-hook-form",;"
 import { ;
   FormField,;
   FormItem, ;
   FormLabel, ;
   FormControl, ;
   FormDescription, ;
-  FormMessage ;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { ;
+  FormMessage ;"
+} from "@/components/ui/form",;""
+import { Input } from "@/components/ui/input",;"
   Select,;
   SelectContent, ;
   SelectItem, ;
   SelectTrigger, ;
-  SelectValue ;
-} from "@/components/ui/select",;
-import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",;
-import { TalentProfile } from "@/types/talent",;
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
-import { ContractFormValues } from "./ContractForm",;
-;
+  SelectValue ;"
+} from "@/components/ui/select",;""
+import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",;""
+import { TalentProfile } from "@/types/talent",;""
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;""
+import { ContractFormValues } from "./ContractForm",;"
 interface PaymentTermsFieldsProps {;
   form:UseFormReturn<ContractFormValues>,;
-  talent:TalentProfile,;
-  handleMilestonesGenerated:(milestones:GeneratedMilestone[]) => void;
-}
-;
-export function PaymentTermsFields({ ;
-  form,;
-  talent,;
-  handleMilestonesGenerated ;
-} PaymentTermsFieldsProps) {;
-  return (;
-    <>;
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-        <FormField;
-          control={form.control}
-          name="paymentTerms";
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Payment Terms</FormLabel>;
+
+          name="paymentTerms";")
+
+
               <Select onValueChange={field.onChange} defaultValue={field.value}>;
                 <FormControl>;
                   <SelectTrigger>;
@@ -589,9 +757,20 @@ export function PaymentTermsFields({ ;
               <FormControl>;
                 <Input
                   placeholder={form && form.getValues("paymentTerms") === "hourly" ? "$X per hour" : "Total $X"} 
+
+
+
+
+          name="paymentAmount";")
+
+
+              <FormLabel>Payment Amount;
+
+                <Input;)"
+                  placeholder={form && form.getValues("paymentTerms") === "hourly" ? "$X per hour" : "Total $X"}"
                   {...field} 
                 />;
-              </FormControl>;
+
               <FormDescription>;
                 {form && form.getValues("paymentTerms") === "milestone" && ;
 
@@ -668,7 +847,8 @@ export function PaymentTermsFields({ ;
         />;
       </div>;
 
-
+/>;
+      </div>;
       {/* Project Milestones */}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {form && form.watch("paymentTerms") === "milestone" && (;
@@ -676,10 +856,45 @@ export function PaymentTermsFields({ ;
           <MilestoneSuggestions
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+)}
+        />
+        <FormField
+          control={form.control}
+          name="paymentAmount"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Payment Amount</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder={form.getValues("paymentTerms") === "hourly" ? "$X per hour" : "Total $X"}
+                  {...field}
+                />
+              </FormControl>
+              <FormDescription>
+                {form.getValues("paymentTerms") === "milestone" &&
+                  "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+      {/* Project Milestones */}
+      {form.watch("paymentTerms") === "milestone" && (
+        <div className="pt-2">
+          <MilestoneSuggestions
+            projectName={form.getValues("projectName") |"Project"}
+            scopeSummary={form.getValues("scopeSummary") |""}
+            startDate={form.getValues("startDate") |new Date()}
+            endDate={form.getValues("endDate")}
+            projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             projectName={form.getValues("projectName") || "Project"}
             scopeSummary={form.getValues("scopeSummary") || ""}
             startDate={form.getValues("startDate") || new Date()}
@@ -695,7 +910,6 @@ export function PaymentTermsFields({ ;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-
                         form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
             projectName={form && form.getValues("projectName") || "Project"}
             scopeSummary={form && form.getValues("scopeSummary") || ""}
@@ -703,6 +917,7 @@ export function PaymentTermsFields({ ;
             endDate={form && form.getValues("endDate")}
             projectType={form && form.getValues("projectName").includes("AI") ? "AI/ML" : 
                         form && form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -731,6 +946,9 @@ export function PaymentTermsFields({ ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
                 <Input ;
+=======
+<Input ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   placeholder={form.getValues("paymentTerms") === "hourly" ? "$X per hour" :"Total $X"} ;
                   {...field} ;
                 />;
@@ -754,9 +972,39 @@ export function PaymentTermsFields({ ;
             endDate={form.getValues("endDate")}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :;
                         form.getValues("projectName").includes("Web") ? "Web Development" :"Other"}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+      </div>;"
+        <div className="pt-2">;"
+          <MilestoneSuggestions;"
+            projectName={form.getValues("projectName") || "Project"}""
+            scopeSummary={form.getValues("scopeSummary") || ""}""
+            startDate={form.getValues("startDate") || new Date()}""
+            endDate={form.getValues("endDate")}""
+            projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :""
+                        form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}""
+            projectName={form && form.getValues("projectName") || "Project"}""
+            scopeSummary={form && form.getValues("scopeSummary") || ""}""
+            startDate={form && form.getValues("startDate") || new Date()}""
+            endDate={form && form.getValues("endDate")}""
+            projectType={form && form.getValues("projectName").includes("AI") ? "AI/ML" :""
+                        form && form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}"
+                <Input ;"
+                  placeholder={form.getValues("paymentTerms") === "hourly" ? "$X per hour" :"Total $X"} ;"
+                  {...field} ;
+
+
+
+            ;          )}
+            projectType={form.getValues("projectName").includes("AI") ? "AI/ML" :;""
+                        form.getValues("projectName").includes("Web") ? "Web Development" :"Other"}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             onMilestonesGenerated={handleMilestonesGenerated}
-          />;
+
         </div>;
       )}
 <<<<<<< HEAD
@@ -873,6 +1121,7 @@ handleMilestonesGenerated
 
     </>;
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -889,7 +1138,10 @@ handleMilestonesGenerated
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+</>;
             </FormItem>)}
         />;
         <FormField;
@@ -927,46 +1179,50 @@ handleMilestonesGenerated
         </div>)}
     </>);
 }
+            )}
+          name="payment_amount";"
+
+
+              <FormLabel > Payment Amount;
+
+                  placeholder={form.get_values ("payment_terms") === "hourly" ? "$X per hour" : "Total $X"}"
+
+
+
+        <div className="pt - 2">;"
+            project_name={form.get_values ("project_name") || "Project"}""
+            scope_summary={form.get_values ("scope_summary") || ""}""
+            start_date={form.get_values ("start_date") || new Date ()}""
+            end_date={form.get_values ("end_date")}""
+            project_type={form.get_values ("project_name").includes ("AI") ? "AI / ML" :;""
+                        form.get_values ("project_name").includes ("Web") ? "Web Development" : "Other"}"
+
+        </div>)}
+    </>);
   ),;}
- import {
-  FormField;
-FormItem;
-FormLabel;
-FormControl;
-FormDescription;
+  // TODO: Implement
 FormMessage import {
-  Select;
-SelectContent;
-SelectItem;
-SelectTrigger;
+  // TODO: Implement
 SelectValue interface PaymentTermsFieldsProps {
+  // TODO: Implement
   form: UseFormReturn<ContractFormValues>;
-talent: TalentProfile;
-handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void 
-}export function PaymentTermsFields ({
-  form;
-talent;
-handleMilestonesGenerated 
-}: PaymentTermsFieldsProps) {
-  return (<> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {
-  form.control 
-}name="paymentTerms" render= {
-  ({
-  field 
-}) => (field.onChange 
-}defaultValue= {
-  field.value 
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select payment terms" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="hourly" >Hourly Rate</SelectItem> <SelectItem value="fixed" >Fixed Price</SelectItem> <SelectItem value="milestone" >Milestone Payments</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Payment Amount</FormLabel> <FormControl> <Input </FormDescription> <FormMessage /> </FormItem>) 
+  return (<> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {"
+</div>)"
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select payment terms" />   <SelectContent> <SelectItem value="hourly" >Hourly Rate <SelectItem value="fixed" >Fixed Price <SelectItem value="milestone" >Milestone Payments   <FormMessage /> )"
+}/> <FormField <FormItem> <FormLabel>Payment Amount <FormControl> <Input  <FormMessage /> ) 
+
 }/> </div> /> </div>) 
 }</>) 
-}
-                        form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
-            onMilestonesGenerated={handleMilestonesGenerated}
+}"
+                        form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}"
           />
-        </div>
-      )}
     </>
   )
+pr-12325
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

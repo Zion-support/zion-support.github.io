@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -33,6 +34,9 @@
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+}},
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -48,18 +52,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-// Security checks
+// Security checks;
 const securityChecks = [{
-    "name": 'Dependency Vulnerability Scan',
-    "action": () => {
+
+    "action": () => {"
       try {
-        execSync('npm audit --audit-level=moderate', { "stdio": 'pipe' });
+  // TODO: Implement
+}"
+
       } catch (error) {
       }
     },
+<<<<<<< HEAD
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,8 +102,16 @@ main
   {
     "name": 'Environment Variables Check',
     "action": () => {
+=======
+
+  {
+    "name": 'Environment Variables Check',
+    "action": () => {"]"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const envFiles = ['.env', '.env.local', '.env.production'];
+
       let foundEnvFiles = 0;
+<<<<<<< HEAD
       envFiles.forEach(envFile => {
         if (fs.existsSync(envFile)) {
           foundEnvFiles++;
@@ -160,26 +176,46 @@ main
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
+=======
+
+      envFiles.forEach(envFile => {)
+        if (fs.existsSync(envFile)) {
+          foundEnvFiles++;
+      });
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }},
   {
-    "name": 'API Security Check',
+    "name": API Security Check,
     "action": () => {
+<<<<<<< HEAD
       const apiDir = path.join(process.cwd(), 'pages', 'api');
+=======
+      const apiDir = path.join(process.cwd(),pages,api');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (fs.existsSync(apiDir)) {
-        const apiFiles = fs
+        const apiFiles = fs;
           .readdirSync(apiDir)
           .filter(file => file.endsWith('.ts') || file.endsWith('.js'));
         let securityIssues = 0;
+<<<<<<< HEAD
         apiFiles.forEach(file => {
           const content = fs.readFileSync(path.join(apiDir, file), 'utf8');
           if (
@@ -237,6 +273,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+        apiFiles.forEach(file => {)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -250,8 +290,10 @@ main
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             !content.includes('// "Security": ')
+
           ) {
             securityIssues++;
+<<<<<<< HEAD
           }
         });
 <<<<<<< HEAD
@@ -297,18 +339,32 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         console.log(
-          `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
+          `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`)
         );
+<<<<<<< HEAD
       }
     },
   },
@@ -363,17 +419,26 @@ main
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
     }},
   {
-    "name": 'Content Security Policy Check',
+    "name": Content Security Policy Check,
     "action": () => {
+<<<<<<< HEAD
       const pagesDir = path.join(process.cwd(), 'pages');
+=======
+      const pagesDir = path.join(process.cwd(),pages');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (fs.existsSync(pagesDir)) {
-        const pages = fs
+        const pages = fs;
           .readdirSync(pagesDir)
           .filter(file => file.endsWith('.tsx'));
         let cspFound = 0;
+<<<<<<< HEAD
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           if (
@@ -465,20 +530,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
+        pages.forEach(page => {)
 
-        
-main
+            cspFound++;
 
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
 
+<<<<<<< HEAD
         
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -492,11 +568,17 @@ main
   {
     "name": 'HTTPS Enforcement Check',
     "action": () => {
+=======
+
+    "name": 'HTTPS Enforcement Check',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const nextConfigPath = path.join(process.cwd(), 'next.config.js');
       if (fs.existsSync(nextConfigPath)) {
         const content = fs.readFileSync(nextConfigPath, 'utf8');
+
         if (content.includes('https') || content.includes('secure')) {
         } else {
+<<<<<<< HEAD
         }
       } else {
       }
@@ -569,9 +651,45 @@ main
     }},
 ];
 // Run security checks
+=======
+  // TODO: Implement
+  // TODO: Implement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+];
+
+// Run security checks;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 let successCount = 0;
 let totalCount = securityChecks.length;
 for (const check of securityChecks) {
+<<<<<<< HEAD
   try {
     check.action();
     successCount++;
@@ -583,15 +701,23 @@ for (const check of securityChecks) {
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Generate security report
+=======
+  // TODO: Implement
+    check.action();
+    successCount++;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const report = {
-  "timestamp": new Date().toISOString(),
-  "checks": securityChecks.map(check => ({
+
+  "checks": securityChecks.map(check => ({"
     name: check.name,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -632,13 +758,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     status: 'completed',
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   })),
-  summary: {
-    total: totalCount,
+  summary: {,
+  total: totalCount,
     successful: successCount,
     failed: totalCount - successCount,
-  },
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -682,6 +810,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -696,6 +826,7 @@ main
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     "status": 'completed'})),
+<<<<<<< HEAD
   "summary": {
     total: totalCount,
     "successful": successCount,
@@ -847,11 +978,25 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  "summary": {"
+    total: totalCount,"
+    "successful": successCount,""
+    "failed": totalCount - successCount}};""
+const reportsDir = path.join(process.cwd(), 'automation-reports');
+
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { "recursive": true });"
+const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
+fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 main
 
@@ -859,6 +1004,10 @@ main
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -866,16 +1015,32 @@ main
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node;
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 console.log('� Security Audit Starting...\n')
+<<<<<<< HEAD
     "name"
         execSync('npm audit --audit-level=moderate', { "stdio"})
     "name"
@@ -947,6 +1112,9 @@ main
     "status"
     "status"
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

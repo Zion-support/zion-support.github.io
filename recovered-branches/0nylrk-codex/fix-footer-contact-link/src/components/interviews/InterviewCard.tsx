@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { useState } from "react",
@@ -171,6 +172,12 @@ import {InterviewResponseForm} from "./InterviewResponseForm";
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { user } = useAuth();
+=======
+
+  onRefresh: () => Promise<void>
+}
+export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {  const { user } = useAuth();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -243,6 +250,7 @@ import React, { useState } from './react';
   const [isLoading, setIsLoading] = useState(false);
 
 
+<<<<<<< HEAD
 import React, { useState } from './react';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -797,6 +805,8 @@ if ( {) {
 
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
@@ -819,197 +829,7 @@ if ( {) {
             <div>;
               <p className="font-medium">{formattedDate}</p>;
               <p className="text-sm text-muted-foreground">;
-                {formattedTime} - {formattedEndTime} ({interview && interview.duration_minutes} minutes);
-    }
-  }
-  return (
-
-  
-  const isClient = user?.id === interview.client_id;
-  const isTalent = user?.id === interview.talent_id;
-
-  // Format interview date and time
-  const interviewDate = parseISO(interview.scheduled_date);
-  const formattedDate = format(interviewDate, 'EEEE, MMMM d');
-  const formattedTime = format(interviewDate, 'h: mm a'),
-
-  // Calculate when interview ends
-  const endTime = new Date(interviewDate);
-  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
-  const formattedEndTime = format(endTime, 'h: mm a'),
-  
-  const isInterviewPending = interview.status === 'requested';
-  const isInterviewConfirmed = interview.status === 'confirmed';
-  const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
-  const isInterviewPast = isPast(interviewDate);
-  
-  const getRelativeTime = () => {
-    if (isPast(interviewDate)) {
-      return `Took place ${formatDistanceToNow(interviewDate)} ago`
-    } else {
-      return `Starts in ${formatDistanceToNow(interviewDate)}`
-    }
-  };
-import React, { useState } from "react",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Interview } from "@/types/interview",
-import { useAuth } from "@/hooks/useAuth",
-import { useInterviews } from "@/hooks/useInterviews",
-import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react",
-import { toast } from "@/components/ui/use-toast";
-import { InterviewResponseForm } from "./InterviewResponseForm";
-interface InterviewCardProps {
-
-  interview: Interview
-
-  onRefresh: () => Promise<void>
-}
-export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
-  const { user } = useAuth();
-  const { respondToInterview, cancelInterview } = useInterviews();
-  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const isClient = user?.id === interview.client_id;
-  const isTalent = user?.id === interview.talent_id;
-  // Format interview date and time
-  const interviewDate = parseISO(interview.scheduled_date);
-  const formattedDate = format(interviewDate, 'EEEE, MMMM d');
-  const formattedTime = format(interviewDate, 'h: mm a')
-  // Calculate when interview ends
-  const endTime = new Date(interviewDate);
-  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
-  const formattedEndTime = format(endTime, 'h: mm a')
-  const isInterviewPending = interview.status === 'requested';
-  const isInterviewConfirmed = interview.status === 'confirmed';
-  const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
-  const isInterviewPast = isPast(interviewDate);
-  const getRelativeTime = () => {
-    if (isPast(interviewDate)) {
-      return `Took place ${formatDistanceToNow(interviewDate)} ago`
-    } else {
-interface InterviewCardProps {;
-  interview: Interview,;
-  onRefresh: () => Promise<void>;
-}
-
-export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardProps) {;
-
-  const { user } = useAuth();
-  const { respondToInterview, cancelInterview } = useInterviews();
-  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-    } else {
-      return `Starts in ${formatDistanceToNow (interview_date)}`;
-    }
-  }
-
-  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
-    setIsLoading(true),
-    const success = await respondToInterview(interview.id, { 
-      interview_id: interview.id, 
-      status 
-    }),
-    
-    if (success) {
-      toast({
-        title: `Interview ${status}`
-        description: `You have successfully ${status} the interview request.`
-  },
-
-  const handleCancelInterview = async () => {
-    setIsLoading(true),
-    const success = await cancelInterview(interview.id),
-    
-    if (success) {
-      toast({
-        title: "Interview cancelled"
-        description: "The interview has been cancelled successfully."
-  const getStatusBadge = () => {
-    switch (interview.status) {
-      case 'requested':
-        return <Badge className="bg-amber-500">Pending</Badge>,
-      case 'confirmed':
-      case 'declined':
-        return <Badge variant="destructive">Declined</Badge>,
-      case 'rescheduled':
-        return <Badge className="bg-blue-500">Rescheduled</Badge>,
-      case 'completed':
-        return <Badge className="bg-green-700">Completed</Badge>,
-      case 'cancelled':
-        return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,
-      default:
-        return <Badge>{interview.status}</Badge>
-  }
-  };
-
-  };
-
-  },;
-
-  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {;
-    setIsLoading(true),;
-    const success = await respondToInterview(interview && interview.id, { ;
-      interview_id: interview && interview.id, ;
-      status ;
-    });
-
-    if (success) {;
-      toast({;
-        title: `Interview ${status}`,;
-        description: `You have successfully ${status} the interview request.`;
-      await onRefresh();
-    } else {;
-      toast({;
-        title: "Error",;
-        description: "Failed to respond to the interview request. Please try again.",;
-        variant: "destructive";
-      });
-    }
-    setIsLoading(false);
-    if (success) {;
-      toast({;
-        title: "Interview cancelled",;
-        description: "The interview has been cancelled successfully.";
-      await onRefresh();
-    } else {;
-      toast({;
-        title: "Error",;
-        description: "Failed to cancel the interview. Please try again.",;
-        variant: "destructive";
-      });
-    }
-    setIsLoading(false);
-      });
-      setIsResponseDialogOpen (false);
-      await on_refresh ();
-    } else {
-      });
-    }
-    setIsLoading (false);
-  }
-;
-  const handleCancelInterview = async () => {
-    setIsLoading (true);
-    const success = await cancel_interview (interview.id);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: "Interview cancelled",
-        description: "The interview has been cancelled successfully.";
-      });
-      await on_refresh ();
-    } else {
-          <Badge className="bg-green-600">Confirmed</Badge>;
+                {formattedTime} - {formattedEndTime} ({interview && interview.duration_minutes} minutes);          <Badge className="bg-green-600">Confirmed</Badge>;
       case 'declined':;
         return <Badge variant="destructive">Declined</Badge>;
       case 'rescheduled':;
@@ -1235,6 +1055,20 @@ if ( {) {}
             <div className="flex items-start gap-3">;
               <MessageSquare className="h-4 w-4 mt-0 && 0.5 text-muted-foreground" />;
               <p className="text-sm line-clamp-2">{interview && interview.notes}</p>;
+;
+          {interview.meeting_platform && (;
+            <div className="flex items-center gap-3">;
+              <Video className="h-4 w-4 text-muted-foreground" />;
+              <div>;
+                <p className="font-medium capitalize">{interview.meeting_platform}</p>;
+              </div>;
+            </div>;
+          )}
+          ;
+          {interview.notes && (;
+            <div className="flex items-start gap-3">;
+              <MessageSquare className="h-4 w-4 mt-0.5 text-muted-foreground" />;
+              <p className="text-sm line-clamp-2">{interview.notes}</p>;
             </div>;
           )}
         </div>;
@@ -1257,6 +1091,7 @@ if ( {) {}
       <CardFooter className="pt-2">;"
 =======
 
+;
       <CardFooter className="pt-2">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <div className="grid grid-cols-1 gap-2 w-full">;
@@ -1376,6 +1211,57 @@ if ( {) {
               <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                 <AlertDialogHeader>;
                   <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle>;
+toast ({
+        title: "Error",
+        description: "Failed to cancel the interview. Please try again.",
+        variant: "destructive";
+      });
+    }
+    setIsLoading (false);
+  }
+;
+  const getStatusBadge = () =>: any {
+    switch (interview.status) {
+      case 'requested':;
+        return <Badge className="bg - amber - 500">Pending</Badge>;
+      case 'confirmed':;
+        return isInterviewLive ?;
+          <Badge className="bg - green - 500 animate - pulse">Live Now</Badge> :;
+          <Badge className="bg - green - 600">Confirmed</Badge>;
+      case 'declined':;
+        return <Badge variant="destructive">Declined</Badge>;
+      case 'rescheduled':;
+        return <Badge className="bg - blue - 500">Rescheduled</Badge>;
+      case 'completed':;
+        return <Badge className="bg - green - 700">Completed</Badge>;
+      case 'cancelled':;
+        return <Badge variant="outline" className="border - destructive text - destructive">Cancelled</Badge>;
+      default:;
+        return <Badge>{interview.status}</Badge>;
+    }
+  }
+;
+  const getOtherPartyName = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      return interview.talent_name || 'Talent';
+    } else {
+      return interview.client_name || 'Client';
+    }
+        return <Badge>{interview.status}</Badge>;
+    }
+  };
+  const getOtherPartyName = () => {;
+    if (isClient) {;
+      return interview.talent_name || 'Talent';
+    } else {;
+      return interview.client_name || 'Client';
+    }
+  },
+      return interview.client_name || 'Client';
+    }
 
   }
 ;
@@ -1582,7 +1468,20 @@ if ( {) {
                     className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
                   >;
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<AlertDialogCancel>Go Back</AlertDialogCancel>;
+                  <AlertDialogAction ;
+                    onClick={handleCancelInterview} ;
+                    disabled={isLoading}
+                    className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
+                  >;
+              <p className="text-sm line-clamp-2">{interview && interview.notes}</p>;            </div>;
+          )}
+        </div>;
+      </CardContent>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     Cancel Interview;
                   </AlertDialogAction>;
                 </AlertDialogFooter>;
@@ -1594,6 +1493,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1621,14 +1521,19 @@ if ( {) {
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 
 ;
 ;
-          
+
+;
+;
 ;
             </AlertDialog>;          )}
           ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1650,6 +1555,10 @@ if ( {) {
           
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+;
+          ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;"
             <div className="grid grid-cols-2 gap-2">;
@@ -1666,7 +1575,7 @@ if ( {) {
             </AlertDialog>)}
           {/* For talents with pending requests */}
           {is_talent && isInterviewPending && (
-            <div className="grid grid - cols - 2 gap - 2">;
+            <div className="grid grid - cols - 2 gap-2">;
               <Button on_click={() => setIsResponseDialogOpen (true)} disabled={is_loading}>;
                 Respond;
               </Button>;
@@ -1679,7 +1588,6 @@ if ( {) {
           {isInterviewConfirmed && !isInterviewPast && (
             <>;
               {interview.meeting_link ? (
-
 
           {/* For confirmed interviews */}
           {isInterviewConfirmed && !isInterviewPast && (;
@@ -1767,6 +1675,30 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
                     {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+{/* For talents with pending requests */}
+          {isTalent && isInterviewPending && (
+            <div className="grid grid-cols-2 gap-2">
+              <Button onClick={() => setIsResponseDialogOpen(true)} disabled={isLoading}>
+                Respond
+              </Button>
+              <Button variant="outline" onClick={() => handleRespondToInterview('declined')} disabled={isLoading}>
+                Decline
+              </Button>
+            </div>
+          )}
+          {/* For confirmed interviews */}
+          {isInterviewConfirmed && !isInterviewPast && (
+            <>
+              {interview.meeting_link ? (
+                <Button className="w-full" asChild disabled={!isInterviewLive}>
+                  <a href={interview.meeting_link} target="_blank" rel="noopener noreferrer">
+                    <Video className="h-4 w-4 mr-2" />
+                    {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                    <ExternalLink className="h-3 w-3 ml-2" />
+                  </Link>
+                </Button>
+              ) : (
+                <Button className="w-full" disabled={!isInterviewLive}>
                     <ExternalLink className="h-3 w-3 ml-2" />;
                   </a>;
                 </Button>;
@@ -1774,13 +1706,13 @@ if ( {) {
                 <Button className="w-full" disabled={!isInterviewLive}>;
                   <Video className="h-4 w-4 mr-2" /> ;
 
-
                   <Video className="h-4 w-4 mr-2" /> 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
+<<<<<<< HEAD
               
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1793,10 +1725,14 @@ if ( {) {
 <<<<<<< HEAD
 =======
                   <Video className="h-4 w-4 mr-2" />
+=======
+<Video className="h-4 w-4 mr-2" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Video className="h-4 w-4 mr-2" /> 
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>
               )}
+<<<<<<< HEAD
               
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1814,6 +1750,10 @@ if ( {) {
 
               <AlertDialog>
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              <AlertDialog>
+                    {isInterviewLive ? 'Join Now' : 'Join Meeting'}              <AlertDialog>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <AlertDialogTrigger asChild>
                   <Button variant="outline" size="sm" className="w-full mt-2">
                     <X className="h-4 w-4 mr-2" /> Cancel Interview
@@ -1877,6 +1817,28 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
                       onClick={handleCancelInterview}
+{isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                </Button>;
+              )}
+          ;
+          {/* For confirmed interviews */}
+          {isInterviewConfirmed && !isInterviewPast && (;
+            <>;
+              {interview.meeting_link ? (;
+                <Button className="w-full" asChild disabled={!isInterviewLive}>;
+                  <a href={interview.meeting_link} target="_blank" rel="noopener noreferrer">;
+                    <Video className="h-4 w-4 mr-2" /> ;
+                    {isInterviewLive ? 'Join Now' :'Join Meeting'}
+                    <ExternalLink className="h-3 w-3 ml-2" />;
+                  </a>;
+                </Button>;
+              ) :(;
+                <Button className="w-full" disabled={!isInterviewLive}>;
+                  <Video className="h-4 w-4 mr-2" /> ;
+                  {isInterviewLive ? 'Join Now' :'Join Meeting'}
+                </Button>;
+              )}
+              ;
               <AlertDialog>;
                 <AlertDialogTrigger asChild>;
                   <Button variant="outline" size="sm" className="w-full mt-2">;
@@ -1886,6 +1848,26 @@ if ( {) {
                 <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                   <AlertDialogHeader>;
                     <AlertDialogTitle>Cancel Confirmed Interview</AlertDialogTitle>;
+<Button className="w - full" as_child disabled={!isInterviewLive}>;
+                  <a href={interview.meeting_link} target="_blank" rel="noopener noreferrer">;
+                    <Video className="h - 4 w - 4 mr - 2" />;
+                    {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                    <ExternalLink className="h - 3 w - 3 ml - 2" />;
+                  </a>;
+                </Button>) : (
+                <Button className="w - full" disabled={!isInterviewLive}>;
+                  <Video className="h - 4 w - 4 mr - 2" />;
+                  {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                </Button>)}
+              <AlertDialog>;
+                <AlertDialogTrigger as_child>;
+                  <Button variant="outline" size="sm" className="w - full mt - 2">;
+                    <X className="h - 4 w - 4 mr - 2" /> Cancel Interview;
+                  </Button>;
+                </AlertDialogTrigger>;
+                <AlertDialogContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
+                  <AlertDialogHeader>;
+                    <AlertDialogTitle > Cancel Confirmed Interview</AlertDialogTitle>;
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
@@ -1907,6 +1889,12 @@ if ( {) {
                     >;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<AlertDialogCancel>Go Back</AlertDialogCancel>;
+                    <AlertDialogAction ;
+                      onClick={handleCancelInterview} ;
+                      disabled={isLoading}
+                      className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
+                    >;
                       Cancel Interview;
                     </AlertDialogAction>;
                   </AlertDialogFooter>;
@@ -1939,6 +1927,28 @@ if ( {) {
         </div>;
       </CardFooter>;
 
+disabled={isLoading}
+                      className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                    >
+                      Cancel Interview
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
+            </>
+          )}
+        </div>
+      </CardFooter>
+      {/* Response dialog for talents */}
+      <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>
+        <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">
+          <DialogHeader>
+            <DialogTitle>Respond to Interview Request</DialogTitle>
+          </DialogHeader>
+            </>;          )}
+        </div>;
+      </CardFooter>;
+      ;
       {/* Response dialog for talents */}
       <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -2000,6 +2010,7 @@ if ( {) {
 =======
           <InterviewResponseForm
 
+<InterviewResponseForm
           <InterviewResponseForm 
 
           <InterviewResponseForm ;
@@ -2010,7 +2021,20 @@ if ( {) {
             onClose={() => setIsResponseDialogOpen(false)}
             isLoading={isLoading}
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+/>
+        </DialogContent>
+      </Dialog>
+    </Card>
+  )
+}
+                      onClick={handleCancelInterview}            interview={interview}
+            onConfirm={() => handleRespondToInterview('confirmed')}
+            onClose={() => setIsResponseDialogOpen(false)}
+            isLoading={isLoading}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           />;
         </DialogContent>;
       </Dialog>;
@@ -2034,6 +2058,7 @@ if ( {) {
 <<<<<<< HEAD
       <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <DialogContent className="sm:max - w-[500px] bg - zion - blue - dark border - zion - blue - light text-white">;
 =======
       <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>;"
@@ -2042,6 +2067,9 @@ if ( {) {
 =======
         <DialogContent className="sm:max - w-[500px] bg - zion - blue - dark border - zion - blue - light text - white">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        <DialogContent className="sm:max - w-[500px] bg - zion - blue - dark border - zion - blue - light text-white">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <DialogHeader>;
             <DialogTitle > Respond to Interview Request</DialogTitle>;
           </DialogHeader>;
@@ -2067,8 +2095,13 @@ if ( {) {
 =======
 }
 
+;
   ),; interface InterviewCardProps {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}  ),; interface InterviewCardProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   interview: Interview;
 onRefresh: () => Promise<void> 
 }export function InterviewCard ({};
@@ -2153,6 +2186,7 @@ const getStatusBadge = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -2168,3 +2202,321 @@ const getStatusBadge = () => {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      status;)
+    }),
+
+    if (success) {
+      toast({`;
+        title: `Interview ${status}``;
+        description: `You have successfully ${status} the interview request.`
+;)
+    setIsLoading (true),
+    const success = await respondToInterview (interview.id, {
+    });
+    // Check condition;
+
+if ( {) {
+      toast ({`;
+        title: `Interview ${status}`,`;
+        description: `You have successfully ${status} the interview request.`;)
+      setIsResponseDialogOpen (false);
+      await on_refresh ();
+  // TODO: Implement
+  },
+
+  const handleCancelInterview = async () => {
+    const success = await cancelInterview(interview.id),
+
+
+      toast({
+        title: "Interview cancelled"","
+  description: "The interview has been cancelled successfully.""
+      toast ({"
+        title: "Error",""
+        description: "Failed to respond to the interview request. Please try again.",""
+        variant: "destructive";")
+    setIsLoading (false);
+    setIsLoading (true);
+    const success = await cancel_interview (interview.id);
+    // Check condition;
+        title: "Interview cancelled",""
+        description: "The interview has been cancelled successfully.";")
+  // TODO: Implement
+
+
+
+  const getStatusBadge = () => {
+    switch (interview.status) {"
+      case 'requested':
+        return <Badge className="bg-amber-500">Pending;""
+          <Badge className="bg-green-500 animate-pulse">Live Now :""
+          <Badge className="bg-green-600">Confirmed,""
+        return <Badge variant="destructive">Declined,""
+        return <Badge className="bg-blue-500">Rescheduled,""
+        return <Badge className="bg-green-700">Completed,""
+        return <Badge variant="outline" className="border-destructive text-destructive">Cancelled,"
+        return <Badge>{interview.status}"
+          <Badge className="bg-green-500 animate-pulse">Live Now : ;""
+          <Badge className="bg-green-600">Confirmed;""
+        return <Badge variant="destructive">Declined;""
+        return <Badge className="bg-blue-500">Rescheduled;""
+        return <Badge className="bg-green-700">Completed;""
+        return <Badge variant="outline" className="border-destructive text-destructive">Cancelled;"
+        return <Badge>{interview && interview.status};"
+    <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;"
+"
+      <CardHeader className="pb-2 relative">;"
+        <div className="absolute right-4 top-4">;"
+</div>
+        </div>;"
+        <CardTitle className="text-lg">{interview && interview.title};""
+        <p className="text-sm text-muted-foreground">;"
+</p>
+        </p>;
+      ;"
+      <CardContent className="pt-2">;"
+        <div className="space-y-3">;"
+</div>"
+          <div className="flex items-start gap-3">;"
+            <Clock className="h-4 w-4 mt-0 && 0.5 text-muted-foreground" />;"
+
+            <div>;
+              <p className="font-medium">{formattedDate}</p>;""
+  onRefresh: () => Promise<void>
+</void>"
+        return <Badge className="bg-amber-500">Pending,""
+            <Clock className="h-4 w-4 mt-0.5 text-muted-foreground" />;"
+
+              </p>;"
+              <p className="text-xs text-muted-foreground mt-1">;"
+            </div>;
+            <div className="flex items-center gap-3">;"
+              <Video className="h-4 w-4 text-muted-foreground" />;"
+
+                <p className="font-medium capitalize">{interview && interview.meeting_platform}</p>;"
+
+              </div>;
+            </div>;"
+            <div className="flex items-start gap-3">;"
+</div>"
+              <MessageSquare className="h-4 w-4 mt-0 && 0.5 text-muted-foreground" />;"
+              <p className="text-sm line-clamp-2">{interview && interview.notes}</p>;"
+            </div>;
+
+        </div>;
+      </CardContent>;"
+      <CardFooter className="pt-2">;"
+        <div className="grid grid-cols-1 gap-2 w-full">;"
+            <AlertDialog>;
+
+              <AlertDialogTrigger asChild>;
+                <Button variant="outline" size="sm" className="w-full">;"
+                  <X className="h-4 w-4 mr-2" /> Cancel Request;"
+
+              <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;"
+
+                <AlertDialogHeader>;
+
+                  <AlertDialogTitle>Cancel Interview Request;"
+    <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">"
+      <CardHeader className="pb-2 relative">"
+        <div className="absolute right-4 top-4">"
+        <CardTitle className="text-lg">{interview.title}""
+        <p className="text-sm text-muted-foreground">"
+      <CardContent className="pt-2">"
+        <div className="space-y-3">"
+          <div className="flex items-start gap-3">"
+            <Clock className="h-4 w-4 mt-0.5 text-muted-foreground" />"
+
+            <div>
+              <p className="font-medium">{formattedDate}</p>""
+              </p>"
+              <p className="text-xs text-muted-foreground mt-1">"
+            <div className="flex items-center gap-3">"
+              <Video className="h-4 w-4 text-muted-foreground" />"
+
+                <p className="font-medium capitalize">{interview.meeting_platform}</p>"
+              <MessageSquare className="h-4 w-4 mt-0.5 text-muted-foreground" />"
+              <p className="text-sm line-clamp-2">{interview.notes}</p>"
+      <CardFooter className="pt-2">"
+        <div className="grid grid-cols-1 gap-2 w-full">"
+            <AlertDialog>
+
+              <AlertDialogTrigger asChild>
+                <Button variant="outline" size="sm" className="w-full">"
+
+              <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">"
+
+                <AlertDialogHeader>
+
+                  <AlertDialogTitle>Cancel Interview Request
+                  <AlertDialogDescription>
+
+                <AlertDialogFooter>
+
+                  <AlertDialogCancel>Go Back
+                  <AlertDialogAction;
+                    onClick={handleCancelInterview}
+                    disabled={isLoading}"
+                    className="bg-destructive text-destructive-foreground hover:bg-destructive/90""
+                  >
+
+    <Card className="bg - zion - blue - dark border border - zion - blue - light overflow - hidden">;"
+      <CardHeader className="pb - 2 relative">;"
+        <div className="absolute right - 4 top - 4">;"
+        <CardTitle className="text - lg">{interview.title};""
+        <p className="text - sm text - muted - foreground">;"
+      <CardContent className="pt - 2">;"
+        <div className="space - y-3">;"
+          <div className="flex items - start gap - 3">;"
+            <Clock className="h - 4 w - 4 mt - 0.5 text - muted - foreground" />;"
+
+              <p className="font - medium">{formatted_date}</p>;""
+              <p className="text - xs text - muted - foreground mt - 1">;"
+            <div className="flex items - center gap - 3">;"
+              <Video className="h - 4 w - 4 text - muted - foreground" />;"
+
+                <p className="font - medium capitalize">{interview.meeting_platform}</p>;"
+            </div>)}"
+              <MessageSquare className="h - 4 w - 4 mt - 0.5 text - muted - foreground" />;"
+              <p className="text - sm line - clamp - 2">{interview.notes}</p>;"
+            </div>)}
+      <CardFooter className="pt - 2">;"
+        <div className="grid grid - cols - 1 gap - 2 w - full">;"
+
+              <AlertDialogTrigger as_child>;
+                <Button variant="outline" size="sm" className="w - full">;"
+                  <X className="h - 4 w - 4 mr - 2" /> Cancel Request;"
+
+              <AlertDialogContent className="bg - zion - blue - dark border - zion - blue - light text - white">;"
+
+
+                  <AlertDialogTitle > Cancel Interview Request;
+                  <AlertDialogDescription>;
+
+                <AlertDialogFooter>;
+
+
+                  <AlertDialogCancel > Go Back;
+                    on_click={handleCancelInterview}
+                    disabled={is_loading}"
+                    className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";"
+                  >;
+
+            ;          )}"
+            <div className="grid grid-cols-2 gap-2">;"
+              <Button onClick={() => setIsResponseDialogOpen(true)} disabled={isLoading}>;
+
+              <Button variant="outline" onClick={() => handleRespondToInterview('declined')} disabled={isLoading}>;
+
+            )}
+            <div className="grid grid - cols - 2 gap - 2">;"
+              <Button on_click={() => setIsResponseDialogOpen (true)} disabled={is_loading}>;
+
+              <Button variant="outline" on_click={() => handleRespondToInterview ('declined')} disabled={is_loading}>;
+
+            <>;
+              {interview.meeting_link ? (
+
+
+          {/* For confirmed interviews */}
+          {isInterviewConfirmed && !isInterviewPast && (;
+              {interview && interview.meeting_link ? (;
+                <Button className="w-full" asChild disabled={!isInterviewLive}>;"
+                  <a href={interview && interview.meeting_link} target="_blank" rel="noopener noreferrer">;"
+</a>"
+                    <Video className="h-4 w-4 mr-2" /> ;"
+                    <ExternalLink className="h-3 w-3 ml-2" />;"
+
+                  </a>;
+                <Button className="w-full" disabled={!isInterviewLive}>;"
+                  <Video className="h-4 w-4 mr-2" />"
+
+
+                  <Button variant="outline" size="sm" className="w-full mt-2">"
+                    <X className="h-4 w-4 mr-2" /> Cancel Interview;"
+
+
+
+                    <AlertDialogTitle>Cancel Confirmed Interview
+
+
+
+                  <Button variant="outline" size="sm" className="w-full mt-2">;"
+
+
+
+                    <AlertDialogTitle>Cancel Confirmed Interview;
+
+
+
+
+      <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>;
+        <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">;"
+
+          <DialogHeader>;
+
+            <DialogTitle>Respond to Interview Request;
+          <InterviewResponseForm;
+          <InterviewResponseForm ;
+            interview={interview})"
+            onConfirm={() => handleRespondToInterview('confirmed')}
+
+            </>)}
+
+        <DialogContent className="sm:max - w-[500px] bg - zion - blue - dark border - zion - blue - light text - white">;"
+
+
+            <DialogTitle > Respond to Interview Request;
+            interview={interview}"
+            on_confirm={() => handleRespondToInterview ('confirmed')}
+
+    );
+  case 'requested': default: return <Badge> {
+
+</p>  <CardContent className="pt-2" > <div className="space-y-3" > <div className="flex items-start gap-3" > <Clock className="h-4 w-4 mt-0.5 text-muted-foreground" /> <div> </p> </div> </div> <div> <p className="font-medium capitalize" > {"
+
+}</p> </div> </div>) 
+}</div>) "
+}</div>  <AlertDialog> <AlertDialogTrigger asChild> <Button variant="outline" size="sm" className="w-full" > <X className="h-4 w-4 mr-2" /> Cancel Request   <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white" > <AlertDialogHeader> <AlertDialogTitle>Cancel Interview Request <AlertDialogDescription> Are you sure you want to cancel this interview request? This action cannot be undone.   <AlertDialogFooter> <AlertDialogCancel>Go Back <AlertDialogAction onClick= {"
+
+}> Cancel Interview    ) 
+}Decline  </div>) 
+  isInterviewConfirmed && !isInterviewPast && (<> {)
+  interview.meeting link ? () "
+}<AlertDialog> <AlertDialogTrigger asChild> <Button variant="outline" size="sm" className="w-full mt-2" > <X className="h-4 w-4 mr-2" /> Cancel Interview   <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white" > <AlertDialogHeader> <AlertDialogTitle>Cancel Confirmed Interview <AlertDialogDescription> Are you sure you want to cancel this interview? This action cannot be undone and the other party will be notified.   <AlertDialogFooter> <AlertDialogCancel>Go Back <AlertDialogAction > Cancel Interview     </>)"
+}</div>  <DialogHeader> <DialogTitle>Respond to Interview Request  <InterviewResponseForm interview= {
+  interview;
+}onConfirm= {"
+  () => handleRespondToInterview ('confirmed')
+}onClose= {
+  () => setIsResponseDialogOpen (false) 
+}isLoading= {
+  isLoading;
+}/>   ) `;
+pr-12325
+}</div> </CardContent> <AlertDialog> <AlertDialogTrigger asChild> <Button variant="outline" size="sm" className="w-full" > <X className="h-4 w-4 mr-2" /> Cancel Request </Button> </AlertDialogTrigger> <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white" > <AlertDialogHeader> <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to cancel this interview request? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Go Back</AlertDialogCancel> <AlertDialogAction onClick= {"
+</AlertDialog>
+}> Cancel Interview </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>) 
+}Decline </Button> </div>) 
+}{}
+  /* For confirmed interviews */ }
+}{
+  isInterviewConfirmed && !isInterviewPast && (<> {}
+  interview.meeting link ? (</Button>) }
+}<AlertDialog /> <AlertDialogTrigger asChild /> <Button variant=\"outline\" size=\"sm\" className=\"w-full mt-2\"  /> <X className=\"h-4 w-4 mr-2\" /> Cancel Interview </Button> </AlertDialogTrigger> <AlertDialogContent className=\"bg-zion-blue-dark border-zion-blue-light text-white\"  /> <AlertDialogHeader /> <AlertDialogTitle />Cancel Confirmed Interview</AlertDialogTitle> <AlertDialogDescription /> Are you sure you want to cancel this interview? This action cannot be undone and the other party will be notified. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter /> <AlertDialogCancel />Go Back</AlertDialogCancel> <AlertDialogAction  /> Cancel Interview </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </>) 
+}</div> </CardFooter> <DialogHeader /> <DialogTitle />Respond to Interview Request</DialogTitle> </DialogHeader> <InterviewResponseForm interview= {}
+  interview }
+}onConfirm= {}
+  () = /> handleRespondToInterview ('confirmed') }
+}onClose= {}
+  () => setIsResponseDialogOpen (false) }
+}isLoading= {}
+  isLoading }
+}/> </DialogContent> </Dialog> </Card>) 
+}
+  );
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -192,12 +193,15 @@ export function RolePicker() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <Check className="h-5 w-5 text-primary" />;
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               )}
+<<<<<<< HEAD
             </div>;
           </CardContent>;
         </Card>;
@@ -377,3 +381,10 @@ function RolePicker() {}
 =======
 ;'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            </div>
+          </CardContent>
+        </Card>
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

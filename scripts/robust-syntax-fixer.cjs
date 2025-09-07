@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
 
 
@@ -38,14 +39,18 @@
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("$1");
-const path = require("path");
+const path = require("path");"
 class RobustSyntaxFixer {;}
   constructor() {;}
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
-    this.errors = [],};
+    this.errors = []};
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
@@ -72,6 +77,8 @@ class RobustSyntaxFixer {;}
     .toISOString()}] ${message}`),}
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -81,95 +88,73 @@ class RobustSyntaxFixer {;}
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   log(message) {;}
-    console.log(`[${new Date().toISOString()}] ${message}`),};
-;
+
   fixFile(filePath) {;}
-    try {;}
-      let content = fs.readFileSync(filePath, "utf8");
+    try {;}"
+      let content = fs.readFileSync(filePath, "utf8");"
       let originalContent = content;
-      // Fix merge conflicts;
-      content = content.replace(/\n/g, "");
-      content = content.replace(/\n/g, "");
+      // Fix merge conflicts;"
+      content = content.replace(/\n/g, );
+      content = content.replace(/\n/g, );"
       content = content.replace(/      ;)
-      // Fix unterminated strings;
-      content = content.replace(/&apos;s\s*""\s*>/gm, "&apos;s>");
-      content = content.replace(/&apos;s\s*"\s*,/gm "&apos;s", ");
-      // Fix unterminated strings in general;
-      content = content.replace(/""\s*$/gm, "");
-      content = content.replace(/"\s*>/gm, "">");
-      content = content.replace(/""\s*,/gm ", ");
-      // Fix missing semicolons;
+      // Fix unterminated strings;"
+      content = content.replace(/&apos;s\s*\s*>/gm, "&apos;s>");
+      content = content.replace(/&apos;s\s*"\s*,/gm "&apos;s", ");"
+      // Fix unterminated strings in general;"
+      content = content.replace(/\s*$/gm, );
+      content = content.replace(/"\s*>/gm, >");
+      content = content.replace(/\s*,/gm ", ");"
+      // Fix missing semicolons;"
       content = content.replace(/([^}])\n\s*}/g, "$1;\n}");
       // Fix specific syntax errors we"ve seen;
-      content = content.replace(/import Head from "next\/head;/g, import Head from "next/head"");
-      content = content.replace(/";/g, "");
+      content = content.replace(/import Head from "next\/head;/g, import Head from "next/head);
+      content = content.replace(/";/g, );
       content = content.replace(/"category": "Communication AI",/g, "category": "Communication AI", ");
-      content = content.replace(/"response": "JWT token",/g, ""response": "JWT token");
+      content = content.replace(/"response": "JWT token",/g, response": "JWT token");
       content = content.replace(/Award,/g, Award,");
-      content = content.replace(/"category": "Technology",/g, ""category": "Technology");
-      // Fix JSON syntax errors;
-      content = content.replace(/: "eslint \. --ext \.ts,\.tsx,\.js,\.jsx --max-warnings 0";/g, ": eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"");
-      content = content.replace(/""typescript": 5\.9\.2";/g, """typescript": 5.9.2"");
-      content = content.replace(/"npm: >=10\.0\.0";/g, """npm": >=10.0.0"");
-      content = content.replace(/"url: git\+https: \/\/github\.com\/Zion-Holdings\/zion\.app\.git";/g, """url": git+https: //github.com/Zion-Holdings/zion.app.git"");
-      content = content.replace(/"license: MIT"/g, """license": MIT"");
-      content = content.replace(/"name: next"/g, """name": next"");
-      content = content.replace(/"@\/store\/\*: \[\.\/src\/store\/\*"\];/g, ""@/store/*: [./src/store/*"]");
-      content = content.replace(/  \];/g, "  ]");
-      if (content !== originalContent) {;}
-        fs.writeFileSync(filePath, content, "utf8");
-        this.fixedFiles.push(filePath);
-        this.log(`Fixed syntax errors "in": ${filePath}`);
-        return true,};
-      ;
-      return false,} catch (error) {;}
-      this.errors.push({ "file": filePath, "error": error.message }
-});
-      this.log(`Error fixing ${filePath}: ${error.message}`);
-      return false,};
+      content = content.replace(/"category": "Technology",/g, category": "Technology");"
+      // Fix JSON syntax errors;"
+      content = content.replace(/: "eslint \. --ext \.ts,\.tsx,\.js,\.jsx --max-warnings 0";/g, ": eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0);
+      content = content.replace(/typescript": 5\.9\.2";/g, "typescript": 5.9.2);
+      content = content.replace(/"npm: >=10\.0\.0";/g, "npm": >=10.0.0);
+      content = content.replace(/"url: git\+https: \/\/github\.com\/Zion-Holdings\/zion\.app\.git";/g, "url": git+https: //github.com/Zion-Holdings/zion.app.git);
+      content = content.replace(/"license: MIT"/g, "license": MIT);
+      content = content.replace(/"name: next"/g, "name": next);
+      content = content.replace(/"@\/store\/\*: \[\.\/src\/store\/\*"\];/g, @/store/*: [./src/store/*"]");
+      content = content.replace(/  \];/g, "  ]");"
+      if (content !== originalContent) {;}"
+        fs.writeFileSync(filePath, content, "utf8");"
+
   };
-;
-  async fixAllFiles() {;}
+  async fixAllFiles() {;}"
     this.log("Starting robust syntax error fixing...");
-    const extensions = [".js", ".jsx", ".ts", ".tsx", ".cjs", ".mjs", ".json"];
+    const extensions = [".js", ".jsx", ".ts", ".tsx", ".cjs", ".mjs", ".json"];"
     const files = this.getAllFiles(this.projectRoot, extensions);
     let fixedCount = 0;
     for (const file of files) {;}
       if (this.fixFile(file)) {;}
-        fixedCount++,};
-    };
-    ;
-    this.log(`Fixed ${fixedCount} files with syntax errors`);
+
     this.log(`Encountered ${this.errors.length} errors`);
-    return {;}
+    return {;}"
       "fixedFiles": this.fixedFiles,
-      "errors": this.errors,
-      fixedCount,};
-  };
-;
+      "errors": this.errors,"
+
   getAllFiles(dir, extensions) {;}
     let files = [];
     try {;}
       const items = fs.readdirSync(dir);
       for (const item of items) {;}
         const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {;}
-          files = files.concat(this.getAllFiles(fullPath, extensions)),} else if (stat.isFile()) {;}
+        const stat = fs.statSync(fullPath);"
+        if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {;}"
+          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (stat.isFile()) {;}
           const ext = path.extname(item);
           if (extensions.includes(ext)) {;}
-            files.push(fullPath),};
-        };
-      };
-    } catch (error) {;}
-      this.log(`Error reading directory ${dir}: ${error.message}`),};
-    ;
-    return files,};
-};
-;
+
 // Run the fixer;
 if (require.main === module) {;}
   const fixer = new RobustSyntaxFixer();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/robust-syntax-fixer.cjs
@@ -226,6 +211,11 @@ module.exports = RobustSyntaxFixer);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/robust-syntax-fixer.cjs
 =======
 
+=======
+
+    console.error("Robust syntax fixing "failed": ', error);
+    process.exit(1),}),};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

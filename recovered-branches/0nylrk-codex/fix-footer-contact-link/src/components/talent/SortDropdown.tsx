@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";"
 import { Button } from "@/components/ui/button";"
 import { SORT_OPTIONS } from "@/data/sortOptions";"
@@ -69,6 +70,8 @@ import { SortDesc, ChevronDown  } from './lucide-react';import {
 
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 import React from './react';
@@ -81,12 +84,25 @@ import {Button} from "@/components/ui/button";
 import {SORT_OPTIONS} from "@/data/sortOptions";
 import {SortDesc, ChevronDown} from "lucide-react";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { SORT_OPTIONS } from "@/data/sortOptions",
+import { SortDesc, ChevronDown } from "lucide-react",
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { SORT_OPTIONS } from "@/data/sortOptions";
+import { SortDesc, ChevronDown } from "lucide-react";
 import {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { SortDesc, ChevronDown  } from './lucide-react';import {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,10 +119,50 @@ import {
 } from '@/components / ui / dropdown - menu';
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+} from "@/components/ui/dropdown-menu";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface SortDropdownProps {
   sortOption: string;
   setSortOption: (option: string) => void;
 }
+
+import React from "react";""
+import { Button } from "@/components/ui/button";""
+import { SORT_OPTIONS } from "@/data/sortOptions";""
+import { SortDesc, ChevronDown } from "lucide-react";"
+
+import {
+  // TODO: Implement
+}
+  DropdownMenu,
+  DropdownMenuContent,
+
+  DropdownMenuItem,
+  DropdownMenuTrigger,"
+} from "@/components/ui/dropdown-menu";""
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { SORT_OPTIONS  } from '@/data / sort_options';
+import { SortDesc, ChevronDown  } from './lucide-react';
+import {Button} from "@/components/ui/button";""
+import {SORT_OPTIONS} from "@/data/sortOptions";""
+import {SortDesc, ChevronDown} from "lucide-react";""
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";"
+  // TODO: Implement
+} from '@/components / ui / dropdown - menu';
+;
+interface SortDropdownProps {
+  // TODO: Implement
+  sortOption: string;,
+  setSortOption: (option: string) => void;
+pr-12325
+
+}
+}
+}
+export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
+
 
 export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
   return (
@@ -197,8 +253,15 @@ import {}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+sortOption === option.value
+                ? "bg-zion-purple/20 text-zion-purple"
+                : ""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }`}
+      </DropdownMenuTrigger>            }`}
           >
             {option.label}
           </DropdownMenuItem>
@@ -258,9 +321,9 @@ interface SortDropdownProps {;
   setSortOption: (option: string) => void;
   );
 
-
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -286,3 +349,45 @@ interface SortDropdownProps {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+</DropdownMenu>
+      <DropdownMenuTrigger asChild>
+
+        <Button;
+          variant="outline"""
+          className="w-full justify-between border-zion-blue-light text-white""
+        >
+"
+          <div className="flex items-center gap-2">"
+</div>"
+            <SortDesc className="h-4 w-4 text-zion-purple" />"
+
+          <ChevronDown className="h-4 w-4 ml-2 opacity-50" />"
+
+</ChevronDown>
+
+        </Button>
+
+      </DropdownMenuTrigger>
+
+      <DropdownMenuContent;"
+        align="start"""
+        className="w-[200px] bg-zion-blue-dark border-zion-blue-light""
+
+          <DropdownMenuItem;
+            key={option.value})
+            onClick={() => setSortOption(option.value)}
+
+pr-12325
+</DropdownMenuItem>
+
+          </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+
+          </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

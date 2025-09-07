@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,10 +75,32 @@ interface TeamProps {
 
 <<<<<<< HEAD
 =======
+=======
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
+
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 interface TeamProps {
   // Add props here as needed
 }
+import React from 'react';
+interface TeamProps {
+  // Add props here as needed
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -86,6 +109,7 @@ import React from 'react';
 interface TeamProps {
   // Add props here as needed
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -109,12 +133,20 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function Team({ }: TeamProps) {
   return (
     <div>
       <h1>Team</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -225,11 +257,76 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   );
+=======
+  );}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}
+}
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+
+
+
+
 }
 
 
-}
+
 }
 
 
+
+
+
+
+
+
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+}
+
+
+import React from 'react';
+interface TeamProps {
+  // TODO: Implement
+}
+  // Add props here as needed;
+
+
+
+  // TODO: Implement
+  // Add props here as needed;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+export default function Team({ }: TeamProps) {
+  return (
+    <div>
+</div>
+      <h1>Team</h1>
+      <p>This component is currently under development.</p>
+    </div>)
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

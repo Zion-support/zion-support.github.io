@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }return pool 
 import { Pool, PoolClient } from 'pg';
 let pool: Pool | null;
@@ -28,6 +29,9 @@ export async function withUser<T>(;
     await client.query('ROLLBACK');
     throw err;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } finally {
 =======
   try {}
@@ -37,3 +41,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+    await client.query('ROLLBACK');}
+    throw err;}
+  } finally {}
+    client.release ();}
+  }
+

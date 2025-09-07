@@ -1,11 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 pr-12243
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 import React, { useState } from 'react',
+=======
+import React, { useState } from 'react';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Brain, Building, Target, Cpu, Shield;
@@ -19,12 +28,8 @@ import { advancedCloudDevOpsServices2025  } from '../data/2025-advanced-cloud-de
 import { industrySpecificSolutions  } from '../data/2025-industry-specific-solutions';
 import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
 const ComprehensiveServicesShowcase2025 = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-// All services combined const allServices = [ ...advancedAIMLServices;
- // All services combined const allServices = [ ...advancedAIMLServices;
-// All services combined const allServices = [ ...advancedAIMLServices;
- // All services combined const allServices = [ ...advancedAIMLServices;
 
+<<<<<<< HEAD
 
 
  // All services combined const allServices = [ ...advancedAIMLServices;
@@ -1637,3 +1642,5 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

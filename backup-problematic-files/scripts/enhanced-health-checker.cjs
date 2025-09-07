@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
@@ -39,3 +40,6 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

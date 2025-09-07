@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react',
 =======
@@ -11,6 +12,8 @@ import React from 'react',
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -45,8 +48,22 @@ export function ProfileLoadingState() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+import React from "react";
+export function ProfileLoadingState() {
+  return (
+    <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">
+      <div className="text-zion-cyan animate-pulse text-xl">
+        Loading profile...
+      </div>
+    </div>
+  );
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 import React from 'react',
@@ -110,6 +127,7 @@ export function ProfileLoadingState() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -128,3 +146,18 @@ export function ProfileLoadingState() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import React from "react";"
+export function ProfileLoadingState() {
+  return ("
+    <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">"
+</div>"
+      <div className="text-zion-cyan animate-pulse text-xl">"
+</div>
+    <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">;"
+      <div className="text-zion-cyan animate-pulse text-xl">Loading profile...</div>;"
+    </div>;)"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

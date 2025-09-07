@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* eslint-env node */
+/* eslint-disable no-undef */
+module.exports = {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 /* eslint - env node */;
 /* eslint-env node */
@@ -22,8 +28,20 @@ module.exports = {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  globals: {
+    module: 'readonly',
+    require: 'readonly',
+    exports: 'readonly',
+    __dirname: 'readonly',
+    __filename: 'readonly',
+    global: 'readonly',
+    Buffer: 'readonly',
+    console: 'readonly'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
@@ -48,7 +66,6 @@ module.exports = {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 /* eslint-env node */
 module.exports = {
-<<<<<<< HEAD
   extends: [
     'next/core-web-vitals',
     '@typescript-eslint/recommended'
@@ -85,6 +102,17 @@ ursor/add-new-services-and-deploy-updates-0462
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+    ],
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
+    '@next/next/no-html-link-for-pages': 'warn'
+  },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
@@ -150,18 +178,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
 module.exports = {
   extends: [
-    'next/core-web-vitals',
-    '@typescript-eslint/recommended'
+    'next/core-web-vitals'
   ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
   rules: {
-    'no-unused-vars': 'warn',
-    'no-undef': 'error',
-    'no-console': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
-    'no-useless-escape': 'warn'
+    'react/no-unescaped-entities': 'off'
   },
+<<<<<<< HEAD
   env: {
     browser: true,
     es2021: true,
@@ -263,12 +286,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     '@next/next/no-html-link-for-pages': 'warn'
   },
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ignorePatterns: [
     'node_modules/',
     '.next/',
     'out/',
     'build/',
     'dist/',
+<<<<<<< HEAD
     '*.config.js',
     '*.config.ts',
     'scripts/',
@@ -276,6 +302,21 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     'netlify/',
     'src/',
     'apps/'
+=======
+    '*.config.js',
+    '*.config.ts',
+    'scripts/',
+    'automation/',
+    'netlify/',
+    'src/',
+    'apps/'
+  ]
+};
+    'dist/',
+    '*.config.js',
+    '*.config.cjs',
+    '*.config.ts'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ]
 <<<<<<< HEAD
   parserOptions: {
@@ -641,8 +682,11 @@ module.exports = {;
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   root: true,
   env: {
     browser: true,
@@ -678,8 +722,12 @@ module.exports = {;
 }
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

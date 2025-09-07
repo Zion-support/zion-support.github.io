@@ -1,18 +1,23 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
+=======
+#!/usr/bin/env
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("fs")
 const path = require("path")
-console.log(""[INFO]  Starting advanced syntax error fix automation...")
+console.log([INFO]  Starting advanced syntax error fix automation...")
   let content = fs.readFileSync(filePath, "utf8")
     const scriptTagRegex = /<script type="application\/ld\+json \/\/ "TODO"
-    content = content.replace(scriptTagRegex, "<script type=""application/ld""+json dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
+    content = content.replace(scriptTagRegex, "<script type=application/ld+json dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
     const scriptTagRegex = /<script type=application\/ld\+json" \/\/ "TODO"
+<<<<<<< HEAD
     content = content.replace(scriptTagRegex, "<script type=""application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
   return match.replace(/<script[^>]*><\/script>\s*/, ")
     const duplicateCommentsRegex = /\/\/ "TODO": Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if ""needed/g""
@@ -65,7 +70,15 @@ console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+    content = content.replace(scriptTagRegex, "<script type=application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
+  return match.replace(/<script[^>]*><\/script>\s*/, ")"
+</script>"
 
-console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]"
+  console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)}`;
+});`)}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

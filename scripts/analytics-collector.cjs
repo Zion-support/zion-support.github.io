@@ -21,17 +21,16 @@ const path = require('path')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log(' Starting Analytics Collection...')
   fs.writeFileSync('analytics-report.json')
   console.log(' Analytics collected and saved to analytics-report.json')
-    const buildDir = path.join(process.cwd(), '.next;'
+    const buildDir = path.join(process.cwd(), '.next;
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')
   const securityFiles = ['package-lock.json']
+<<<<<<< HEAD
     'yarn.lock'
     '.env.local'
     '.env.example'
@@ -54,5 +53,10 @@ console.log(' Starting Analytics Collection...')
 =======
 
     'next.config.js'
+=======
+    'yarn.lock
+    '.env.local
+    '.env.example
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

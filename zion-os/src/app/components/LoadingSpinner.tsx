@@ -2,15 +2,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface LoadingSpinnerProps {;
   size?: 'sm' | 'md' | 'lg',;
   text?: string,;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   className?: string;
 }
@@ -34,6 +39,8 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   className?: string;
 }
 export default function LoadingSpinner({ size = 'md', text, className = '' }: LoadingSpinnerProps) {
@@ -54,6 +61,7 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
   return (
     <div className={`flex items-center gap-3 ${className}`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       <svg 
@@ -66,6 +74,11 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+      <svg 
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         />
       </svg>
       {text && <span className="text-sm">{text}</span>}
@@ -124,6 +137,9 @@ interface LoadingSpinnerProps {'
 =======
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';
   text?: string;
+interface LoadingSpinnerProps {;
+  size?: 'sm' | 'md' | 'lg',;
+  text?: string,;
   className?: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
@@ -207,6 +223,7 @@ function LoadingSpinner() {}
       </svg>;
       {text && <span className=&quot;text - sm & quot;>{text}</span>}
     </div>);
+    <div className={`flex items-center gap-3 ${className}`}>
       <svg
         className={`animate-spin ${sizeClasses[size]} text-current`}
         viewBox=&quot;0 0 24 24&quot;
@@ -224,9 +241,29 @@ function LoadingSpinner() {}
           className=&quot;opacity-75&quot;
           fill=&quot;currentColor&quot;
           d=&quot;M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z&quot;
+      <svg 
         className={`animate-spin ${sizeClasses[size]} text-current`} ;
         viewBox=&quot;0 0 24 24&quot;
         fill=&quot;none&quot;
+interface LoadingSpinnerProps {;
+  size?: 'sm' | 'md' | 'lg',;
+  text?: string,;
+  className?: string;
+}
+
+export default function LoadingSpinner({ size = 'md', text, className = '' }: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8'
+  },
+
+  return (
+    <div className={`flex items-center gap-3 ${className}`}>
+      <svg 
+        className={`animate-spin ${sizeClasses[size]} text-current`} 
+        viewBox="0 0 24 24"
+        fill="none"
       >
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <circle 
@@ -265,6 +302,7 @@ function LoadingSpinner() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
@@ -282,3 +320,69 @@ function LoadingSpinner() {}
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+export default function LoadingSpinner({ size = 'md', text, className =  }: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4,
+  md: 'w-6 h-6
+    lg: 'w-8 h-8
+  return (
+    <div className={`flex items-center gap-3 ${className}`}>
+</div>
+      </svg>
+      {text && <span className="text-sm">{text}</span>}"
+    </div>`;
+    <div className={`flex items - center gap - 3 ${class_name}`}>;
+      <svg;`;
+        className={`animate - spin ${size_classes[size]} text - current`}
+        view_box=&quot;0 0 24 24 & quot;
+        fill=&quot;none & quot;
+      >;
+        <circle;
+          className=&quot;opacity - 25 & quot; ;
+          cx=&quot;12 & quot; ;
+          cy=&quot;12 & quot; ;
+          r=&quot;10 & quot; ;
+          stroke=&quot;current_color & quot; ;
+          stroke_width=&quot;4 & quot;
+        />;
+</circle>
+        <path;
+          className=&quot;opacity - 75 & quot; ;
+          fill=&quot;current_color & quot; ;
+          d=&quot;M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z & quot;
+</path>
+      </svg>;
+      {text && <span className=&quot;text - sm & quot;>{text}</span>})
+    </div>);
+        className={`animate-spin ${sizeClasses[size]} text-current`}
+        viewBox=&quot;0 0 24 24&quot;
+        fill=&quot;none&quot;
+      >
+          className=&quot;opacity-25&quot;
+          cx=&quot;12&quot;
+          cy=&quot;12&quot;
+          r=&quot;10&quot;
+          stroke=&quot;currentColor&quot;
+          strokeWidth=&quot;4&quot;
+        />
+          className=&quot;opacity-75&quot;
+          fill=&quot;currentColor&quot;
+          d=&quot;M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z&quot;`;
+        className={`animate-spin ${sizeClasses[size]} text-current`} ;
+        <circle;"
+          className="opacity-25"""
+          cx="12"""
+          cy="12"""
+          r="10"""
+          stroke="currentColor"""
+          strokeWidth="4""
+        <path;"
+          className="opacity-75"""
+          fill="currentColor"""
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z""
+      </svg>"
+    </div>"`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

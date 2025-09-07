@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -192,6 +193,15 @@ const contactInfo = {
 website: 'https://ziontechgroup.com',
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import { Star, TrendingUp, Users, Award, Clock, Heart;
+  Brain, Atom, Shield, Rocket, Zap, Globe;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   CheckCircle, ArrowRight, Search, Filter;
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
@@ -202,6 +212,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Dna, Target as TargetIcon, Shield as ShieldIcon;
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function UltimateFuturisticServicesShowcase2025() {;
 
@@ -987,6 +998,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </button>;
             </div>;
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300'
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   setSelectedCategory('all')
                 }}
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
@@ -1003,6 +1016,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 
+<<<<<<< HEAD
 =======
       {/* CTA Section */}'
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>'"
@@ -1024,6 +1038,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;'
+=======
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
+          >
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;
+        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
+          <motion&& motion.div
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0 && 0.8 ;}}
+            viewport={{ once: true ;}}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Experience the Future?;
             </h2>;'
@@ -1109,15 +1139,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="text - white font - medium">{service.customers}+</span>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
                 {/* ROI and Market Info */}'
                 <div className='mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border - purple - 500 / 20'>;'
                   <div className='text - sm'>;'
                     <div className='text - gray - 300 mb - 2'>;'
                       <span className='font - semibold text - white'>ROI:</span>{' '}
+=======
+                {/* ROI and Market Info */}
+                <div className='mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border - purple - 500 / 20'>;
+                  <div className='text - sm'>;
+                    <div className='text - gray - 300 mb - 2'>;
+                      <span className='font - semibold text - white'>ROI: </span>{' ';}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {service.roi}
                     </div>;'
                     <div className='text - gray - 300'>;'
                       <span className='font - semibold text - white'>;
+<<<<<<< HEAD
                         Market Size:;'
                       </span>{' '}"
                       {service.market_size}                    </div>                <div className="mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border - purple - 500 / 20">;"
@@ -1127,6 +1166,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;"
                     <div className="text - gray - 300">;"
                       <span className="font - semibold text - white">Market Size: </span> {service.market_size}
+=======
+                        Market Size:;
+                      </span>{' '}
+                      {service.market_size}                    </div>                <div className="mb - 6 p - 4 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - lg border border - purple - 500 / 20">;
+                  <div className="text - sm">;
+                    <div className="text - gray - 300 mb - 2">;
+                      <span className="font - semibold text - white">ROI: </span> {service.roi;}
+                    </div>;
+                    <div className="text - gray - 300">;
+                      <span className="font - semibold text - white">Market Size: </span> {service.market_size;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>;
                 </div>;
                 {/* Action Buttons */}'
@@ -1157,13 +1207,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='text - center text - sm text - gray - 400'>;
                     <p > Contact us for custom pricing and implementation</p>;'
                     <div className='flex items - center justify - center space - x-4 mt - 2'>;
+<<<<<<< HEAD
                       <a;`
                         href={`tel:${contact_info.mobile}`}'
+=======
+                      <a;
+                        href={`tel: ${contact_info.mobile;}`}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='flex items - center text - purple - 400 hover:text - purple - 300';
                       >;'
                         <Phone className='w - 4 h - 4 mr - 1' />;
                         {contact_info.mobile}
                       </a>;
+<<<<<<< HEAD
                       <a;`
                         href={`mailto:${contact_info.email}`}'
                         className='flex items - center text - purple - 400 hover:text - purple - 300';
@@ -1175,6 +1231,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {contact_info.mobile}
                       </a>;"`
                       <a href={`mailto:${contact_info.email}`} className="flex items - center text - purple - 400 hover:text - purple - 300">;"
+=======
+                      <a;
+                        href={`mailto: ${contact_info.email;}`}
+                        className='flex items - center text - purple - 400 hover:text - purple - 300';
+                      >;
+                        <Mail className='w - 4 h - 4 mr - 1' />                        {contact_info.email}                    <p > Contact us for custom pricing and implementation</p>;
+                    <div className="flex items - center justify - center space - x-4 mt - 2">;
+                      <a href={`tel: ${contact_info.mobile;}`} className="flex items - center text - purple - 400 hover:text - purple - 300">;
+                        <Phone className="w - 4 h - 4 mr - 1" />;
+                        {contact_info.mobile}
+                      </a>;
+                      <a href={`mailto: ${contact_info.email;}`} className="flex items - center text - purple - 400 hover:text - purple - 300">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <Mail className="w - 4 h - 4 mr - 1" />;
                         {contact_info.email}
                       </a>;
@@ -1215,11 +1284,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 20 via - black to - pink - 900 / 20">;"
         <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">;
           <motion.div;
+<<<<<<< HEAD
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >;'
+=======
+            initial={{ opacity: 0;, coordinate_y: 30 ;}}
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
+          >;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className='text - 3xl md:text - 5xl font - bold text - white mb - 6'>;
               Ready to Experience the Future?;
             </h2>;'
@@ -1263,6 +1340,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Layout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Experience the Future?
             </h2>

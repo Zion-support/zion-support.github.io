@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import Image from "next/image";
 interface OptimizedImageProps {
@@ -15,6 +18,9 @@ interface OptimizedImageProps {}
   priority?: boolean;
   quality?: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 'use client'
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
@@ -40,6 +46,7 @@ interface OptimizedImageProps {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
+<<<<<<< HEAD
   src,
   alt,
   width = 800,
@@ -47,6 +54,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = "",
   priority = false,
   quality = 75,
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }) => {
 =======
 }
@@ -174,7 +184,6 @@ const observer = new IntersectionObserver();([entry]) => {
       {isLoading && (
         <div className="absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10" />
       )}
-      
       {/* Next.js Image component */}
       <Image
         src={src}
@@ -230,7 +239,6 @@ width={fill ? undefined : width}``        height={fill ? undefined : height}``` 
           objectFit: fill ? 'cover' : 'contain'
         }}
       />
-      
       {/* Loading spinner */}
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center z-20">
@@ -265,7 +273,10 @@ export const withImageOptimization = <P extends object>(;Component: React.Compon
 }''`
   '''export default OptimizedImage''`;''`''`'
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
 =======
 export default OptimizedImage;
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

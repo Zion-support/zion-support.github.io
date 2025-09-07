@@ -9,7 +9,11 @@ declare module "url" {
 }
 
 declare module 'url' {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}declare module 'url' {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   export function fileURLToPath (url: string | URL): string;
 }
 
@@ -31,6 +35,7 @@ declare module 'url' {
 ;
 ;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -56,3 +61,18 @@ declare module "url" {}
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+declare module "url" {"
+  export function fileURLToPath(url: string | URL): string;
+}
+
+"
+declare module 'url' {
+  export function fileURLToPath (url: string | URL): string;
+
+declare module 'url' {;
+  export function fileURLToPath(url:string | URL):string;
+
+;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

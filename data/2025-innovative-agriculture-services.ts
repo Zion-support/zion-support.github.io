@@ -1,13 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   customers: number;
   rating: number;
   reviews: number;
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -24,6 +30,7 @@ export interface InnovativeAgricultureService {
 ;
 const contact = {
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
@@ -35,6 +42,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   reviews: number;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -42,13 +51,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/expand-services-advertise-and-build-project-c28b
+  customers: number;,
+  rating: number;
+  reviews: number;,
+pr-12325
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+  website: 'https://ziontechgroup.com';,};
+
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -60,22 +84,36 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+  website: 'https://ziontechgroup.com';, }
+;
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
   website: 'https://ziontechgroup.com', }
 ;
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+  website: 'https://ziontechgroup && ziontechgroup.com',};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   mobile: '+1 302 464 0950','
   email: 'kleber@ziontechgroup.com','
@@ -113,41 +151,104 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup && ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+  website: 'https://ziontechgroup && ziontechgroup.com';,};
+
+  id: string;, name: string;,
+  tagline: string;, price: string;,
+  period: string;, description: string;,
+  features: string[];, popular: boolean;,
+  icon: string;, color: string;,
+  textColor: string;, link: string;,
+  marketPosition: string;, targetAudience: string;,
+  trialDays: number;, setupTime: string;,
+  category: string;, realService: boolean;,
+  technology: string[];, integrations: string[];,
+  useCases: string[];, roi: string;,
+  competitors: string[];, marketSize: string;,
+  growthRate: string;, variant: ServiceVariant;,
   contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
+    mobile: string;, email: string;,
+    address: string;,
+    website: string;
     },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
+    realImplementation: boolean;, implementationDetails: string;,
+  launchDate: string;, customers: number;,
+  rating: number;,
+  reviews: number;
 }
 const contact = {
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-
+  mobile: '+1 302 464 0950';, email: 'kleber@ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 
 origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;,
+  website: 'https://ziontechgroup.com';, }
+;]
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
+
+
+  {  mobile: '+1 302 464 0950';',
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709;,
+  website: 'https://ziontechgroup.com;
+}
+  email: 'kleber@ziontechgroup && ziontechgroup.com';,
+  website: 'https://ziontechgroup && ziontechgroup.com';,};']
+pr-12325
+
+  customers: number;,
+  rating: number;
+  reviews: number;,
+  mobile: '+1 302 464 0950';,''
+  email: 'kleber@ziontechgroup.com';,''
+  address: '364 E Main St STE 1008 Middletown DE 19709';,''
+  website: 'https://ziontechgroup.com';,};'
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;,'
+  mobile: '+1 302 464 0950';,''
+  email: 'kleber@ziontechgroup.com';,''
+  address: '364 E Main St STE 1008 Middletown DE 19709';,''
+  website: 'https://ziontechgroup.com';, }'
+;]
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
+  {  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: \"address\";,}
+    website: 'https://ziontechgroup.com';}
+}
+  mobile: '+1 302 464 0950';,
+  email: 'kleber@ziontechgroup && ziontechgroup.com';,
+  address: '364 E Main St STE 1008 Middletown DE 19709';,
+  website: 'https://ziontechgroup && ziontechgroup.com';};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
 
-
   {
+pr-12325
 
     id: 'quantum - agriculture - optimization',
     name: 'Quantum Agriculture Optimization',
+    id: 'quantum - agriculture - optimization';,
+    name: 'Quantum Agriculture Optimization';,
     tagline:;
       'Quantum - powered agriculture optimization for crop planning and resource allocation',
+<<<<<<< HEAD
     price: '$4, 999',
 =======
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = []
@@ -162,6 +263,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = []
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     period: '/month',
     description:;'
+=======
+    price: '$4;, 999',
+    period: '/month';,
+    description:;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Revolutionary agriculture optimization platform that uses quantum computing to optimize crop planning, resource allocation, and maximize agricultural efficiency.',
     features: [;
 <<<<<<< HEAD
@@ -171,6 +277,9 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = []
       'Resource allocation',
       'Real - time adaptation',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAgricultureService {
   id: string;
@@ -203,13 +312,13 @@ export interface InnovativeAgricultureService {
     mobile: string;
     email: string;
     address: string;
-    website: string
-  },
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
   reviews: number
 }
 
@@ -1436,3 +1545,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

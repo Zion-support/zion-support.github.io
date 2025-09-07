@@ -21,8 +21,12 @@ import {FraudSeverity} from '@/types / fraud';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Types used across fraud detection modules
+<<<<<<< HEAD
 import { FraudSeverity } from "@/types/fraud";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface AnalysisResult {
   isSuspicious: boolean;
   reasons: string[];
@@ -55,6 +59,7 @@ export interface MessageAnalysisResult extends AnalysisResult {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -81,9 +86,28 @@ export interface AnalysisResult {};
 }
 <<<<<<< HEAD
 =======
+=======
+// Types used across fraud detection modules
+import { FraudSeverity } from '@/types/fraud';
+export interface AnalysisResult {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+  isSuspicious: boolean
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  reasons: string[]
+// Types used across fraud detection modules;
+import { FraudSeverity } from '@/types/fraud',;
+export interface AnalysisResult {;
+  isSuspicious: boolean;
+  reasons: string[];
+}
+export interface MessageAnalysisResult extends AnalysisResult {
+  severity: FraudSeverity
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity
 }
@@ -100,6 +124,7 @@ export interface MessageAnalysisResult extends AnalysisResult {};
   severity: FraudSeverity;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,24 +178,54 @@ export interface FlagResult {};
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface EmailAnalysisResult extends AnalysisResult {}
 export interface FlagResult {
 }
-
 
 ;
 export interface SignupCheckResult extends AnalysisResult {}
 ;
+// Types used across fraud detection modules;
 
+;
 ;
 
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity
+import { FraudSeverity } from "@/types/fraud";"
+export interface AnalysisResult {
+  // TODO: Implement
 }
+  isSuspicious: boolean;,
+  reasons: string[];
+export interface MessageAnalysisResult extends AnalysisResult {
+  // TODO: Implement
+  severity: FraudSeverity;
+
+
+
+  // TODO: Implement
+
+
 
 export interface EmailAnalysisResult extends AnalysisResult {}
 export interface FlagResult {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+
+
+;
+export interface SignupCheckResult extends AnalysisResult {}
+
+
+  // TODO: Implement
+
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   success: boolean;
   error?: string;
 }
@@ -209,11 +264,13 @@ export interface SignupCheckResult extends AnalysisResult {}
 ;
 
 
-;
-export interface SignupCheckResult extends AnalysisResult {}
-;
 
-;
 
 export interface SignupCheckResult extends AnalysisResult {}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

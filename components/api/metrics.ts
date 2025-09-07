@@ -1,9 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 function rand(min: number, max: number) {
+
   return Math.floor(Math.random() * (max - min + 1)) + min
+
+function rand(min: number, max: number) {}
+  return Math.floor(Math.random() * (max - min + 1)) + min,}
 }
 
 function generateSeries(n: number, base: number, volatility;
+<<<<<<< HEAD
   return Math.floor(Math.random() * (max - min + 1)) + min;
 function generateSeries(n: number, base: number, volatility = 0.15) {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -197,14 +202,20 @@ marketplace: marketplace.map(m => ({
       }
     }
   }
+=======
+
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   res.status(200).json(response);
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
-
-
-  res.status(200).json(response)
+  res.status(200).json(response),
 }
+<<<<<<< HEAD
 '`
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

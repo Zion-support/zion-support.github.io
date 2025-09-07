@@ -7,8 +7,9 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface UseLocalStorageProps {
-  // Add props here as needed
+  // TODO: Implement
 }
+  // Add props here as needed;
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
 <<<<<<< HEAD
@@ -76,4 +77,8 @@ main:hooks/useLocalStorage.ts
 }
 }
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

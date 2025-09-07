@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Build and Test Automation;
  * Comprehensive build and testing automation;
@@ -21,12 +25,9 @@ class BuildTestAutomation {}
   constructor() {}
     this.startTime = new Date();
     this.report = {}
-      "timestamp": this.startTime.toISOString(),
-      "status": 'running',
-      "steps": [],
-      "errors": [],
-      "summary": {};
-    }};
+
+      "summary": {};"
+    }};"
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
 <<<<<<< HEAD
@@ -52,9 +53,6 @@ class BuildTestAutomation {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
-    console.log(logMessage);
-    
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     this.report.steps.push({})
@@ -64,6 +62,7 @@ class BuildTestAutomation {}
     })};
   async runCommand(command, description) {}
     try {}
+<<<<<<< HEAD
       this.log(`"Starting": ${description}`);
       const output = execSync(command, { })
 <<<<<<< HEAD
@@ -81,35 +80,25 @@ class BuildTestAutomation {}
         "step": description,
         "error": error.message,
         "timestamp": new Date().toISOString();
+=======
+
+        "timestamp": new Date().toISOString();"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
 });
       throw error};
   };
   async cleanBuild() {}
-    try {}
-      await this.runCommand('rm -rf .next dist build', 'Clean previous builds')} catch (error) {}
-      // Ignore if directories don't exist;
-    };
-  };
-  async installDependencies() {}
-    await this.runCommand('npm ci', 'Install dependencies')};
-  async runTests() {}
-    try {}
-      await this.runCommand('npm test', 'Run tests');
-      this.report.summary.tests = 'passed'} catch (error) {}
+    try {}"
+
       this.report.summary.tests = 'failed';
       // Continue with build even if tests fail;
-    };
-  };
   async runLinting() {}
-    try {}
-      await this.runCommand('npm run lint', 'Run linting');
-      this.report.summary.linting = 'passed'} catch (error) {}
+
       this.report.summary.linting = 'failed';
       // Continue with build even if linting fails;
-    };
-  };
   async buildApplication() {}
+<<<<<<< HEAD
     try {}
       await this.runCommand('npm run build', 'Build application');
       this.report.summary.build = 'success'} catch (error) {}
@@ -175,34 +164,33 @@ class BuildTestAutomation {}
       await this.checkBuildOutput();
 =======
       
+=======
+
+      this.log('Starting Build and Test Automation');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Clean previous builds;
       await this.cleanBuild();
-      
       // Install dependencies;
       await this.installDependencies();
-      
       // Run tests;
       await this.runTests();
-      
       // Run linting;
       await this.runLinting();
-      
       // Build application;
       await this.buildApplication();
-      
       // Check build output;
       await this.checkBuildOutput();
+<<<<<<< HEAD
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.log('Build and Test Automation completed successfully', 'success')} catch (error) {}
       this.log(`Build and Test Automation "failed": ${error.message}`, 'error')} finally {`}
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       await this.generateReport()};
-  };
-};
 // Run the automation;
-if ( {})
   const automation = new BuildTestAutomation) {}
-     {}
   const automation = new BuildTestAutomation}(;);
   automation.run().catch(console.error)};
 <<<<<<< HEAD
@@ -223,6 +211,9 @@ module.exports = BuildTestAutomation;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 module.exports = BuildTestAutomation;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

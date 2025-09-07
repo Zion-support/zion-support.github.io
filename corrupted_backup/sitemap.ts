@@ -1,8 +1,8 @@
 const Sitemap = () => {
   return null};
-export const "getServerSideProps": GetServerSideProps = async ({ res }) => {
+export const "getServerSideProps": GetServerSideProps = async ({ res }) => {""
   const baseUrl = '"https": //ziontechgroup.com';
-  const staticPages = ['',
+  const staticPages = [,
     '/about',
     '/services',
     '/services-catalog',
@@ -17,14 +17,13 @@ export const "getServerSideProps": GetServerSideProps = async ({ res }) => {
     '/contact',
     '/faq',
     '/privacy',
-    '/terms'
+    '/terms]
   ];
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
-      ${staticPages
-        .map((page) => {
-          return `
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>""
+    <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">"
+</urlset>
             <url>
+</url>
               <loc>${baseUrl}${page}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
               <changefreq>weekly</changefreq>
@@ -197,3 +196,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '' ? 1 : 0.8,
   }));
 }
+ const complianceServices = [ '/soc2-compliance-automation'] const allRoutes = [ ...routes, ...aiServices, ...quantumServices, ...networkServices, ...complianceServices] return allRoutes.map ( (route) => ({
+  url: `$ {
+  baseUrl 
+}$ {
+  route 
+}`;
+lastModified: new Date ();
+changeFrequency: 'weekly';
+priority: route === '' ? 1 : 0.8 
+}) ) 
+}
+              <changefreq>weekly</changefreq>"
+              <priority>${page ===  ? '1.0' : '0.8'}</priority>
+    </urlset>`;
+import { GetServerSideProps } from 'next'; const Sitemap = () => { return null}; export const getServerSideProps: GetServerSideProps = async ({ res }) => { const baseUrl = 'https: const staticPages = [ ,'/about','/services','/services-catalog','/micro-saas','/ai-services','/it-services','/cloud-devops','/cybersecurity','/quantum-computing','/docs','/pricing','/contact','/faq','/privacy','/terms' ]; const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${staticPages .map((page) => { return ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>${page ===  ? '1.0' : '0.8'}</priority> </url> `}) .join()} </urlset> `; res.setHeader('Content-Type','text/xml'); res.write(sitemap); res.end(); return { props: {},}}; export default Sitemap;`;

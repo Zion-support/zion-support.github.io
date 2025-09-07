@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { motion } from 'framer-motion';
 
@@ -883,12 +884,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             repeat: Infinity,
             ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           }}
 
     </section>
 <<<<<<< HEAD
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+          transition={{
+            duration: 5,
+            repeat: Infinity}
+            ease: 'easeInOut'}
+          }}
+
+    </section>
+
+);
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasV2 {
@@ -12,6 +16,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   name: string;
   tagline: string;
@@ -22,22 +28,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   popular: boolean;
   icon: string;
   color: string;
-  text_color: string;
+  textColor: string;
   link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
   category: string;
-  real_service: boolean;
+  realService: boolean;
   technology: string[];
   integrations: string[];
-  use_cases: string[];
+  useCases: string[];
   roi: string;
   competitors: string[];
-  market_size: string;
-  growth_rate: string;
+  marketSize: string;
+  growthRate: string;
   variant: ServiceVariant;
+<<<<<<< HEAD
   contact_info: {}
     mobile: string;
     email: string;
@@ -782,11 +789,19 @@ export interface InnovativeMicroSaasV2 {}
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+=======
+
+    mobile: string;
+    email: string;
+    address: string;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
-  // Innovative Business Solutions
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 ;
@@ -809,11 +824,15 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     price: '$299';
     period: '/month';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     description: 'Revolutionary inventory management platform that uses AI to predict demand, optimize stock levels, and reduce inventory costs by up to 40%. Perfect for e-commerce, retail, and manufacturing businesses.',
     features: [
       'AI-powered demand forecastingReal-time inventory optimizationAutomated reorder managementMulti-location inventory trackingSupplier performance analyticsSeasonal trend analysisCost optimization algorithmsMobile app and dashboard';
       'API for integrations24/7 inventory monitoring'
     ];
+<<<<<<< HEAD
     popular: true, icon: '📦',
     color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-powered-inventory-optimizer',
@@ -1094,3 +1113,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

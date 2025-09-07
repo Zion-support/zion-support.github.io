@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -109,29 +110,30 @@ const fs = require('fs');
 const path = require('path');
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+const fs = require('fs');
+const path = require('path');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ComprehensiveSyntaxFixer {
+  // TODO: Implement
+}
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = 0;
     this.totalErrors = 0;
-  }
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-  async fixAllSyntaxErrors() {
-    this.log('🔧 Starting comprehensive syntax error fixing...');
+
     try {
-      // Get all TypeScript and JavaScript files
-      const files = this.getAllCodeFiles();
+  // TODO: Implement
+      // Get all TypeScript and JavaScript files;
+      const files = this.getAllCodeFiles();`;
       this.log(`Found ${files.length} files to check`);
       for (const file of files) {
         await this.fixFileSyntax(file);
-      }
-      this.log(`✅ Fixed syntax errors in ${this.fixedFiles} files`);
-      this.log(`📊 Total errors fixed: ${this.totalErrors}`);
-    } catch (error) {
-      this.log(`❌ Error during syntax fixing: ${error.message}`);
+
       throw error;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -154,39 +156,45 @@ class ComprehensiveSyntaxFixer {
 
 =======
     
+=======
+
+  getAllCodeFiles() {
+    const files = [];
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const scanDirectory = (dir) => {
       const items = fs.readdirSync(dir);
-      
       for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         if (stat.isDirectory()) {
-          // Skip node_modules and other irrelevant directories
-          if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+          // Skip node_modules and other irrelevant directories;
+
             scanDirectory(fullPath);
-          }
         } else if (this.isCodeFile(item)) {
           files.push(fullPath);
-        }
-      }
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     scanDirectory(this.projectRoot);
     return files;
-  }
 
   isCodeFile(filename) {
     const ext = path.extname(filename);
-    return ['.ts', '.tsx', '.js', '.jsx', '.cjs', '.mjs'].includes(ext);
-  }
+
 
   async fixFileSyntax(filePath) {
+<<<<<<< HEAD
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       const fixedContent = this.fixSyntaxErrors(content, filePath);
@@ -204,11 +212,16 @@ class ComprehensiveSyntaxFixer {
       this.log(`⚠️  Could not fix ${path.relative(this.projectRoot, filePath)}: ${error.message}`);
     }
   }
+=======
+  // TODO: Implement
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   fixSyntaxErrors(content, filePath) {
     let fixed = content;
     let errorCount = 0;
 
+<<<<<<< HEAD
     // Fix semicolon issues in object properties
     fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*([^,;}\n]*);/g, '$1: $2, $3,');
     fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*$/gm, '$1: $2,');
@@ -289,37 +302,46 @@ class ComprehensiveSyntaxFixer {
 =======
 =======
     
+=======
+    // Fix semicolon issues in object properties;
+
+    // Count errors fixed;
+    const originalSemicolons = (content.match(/;/g) || []).length;
+    const fixedSemicolons = (fixed.match(/;/g) || []).length;
+    errorCount = originalSemicolons - fixedSemicolons;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.totalErrors += errorCount;
-    
     return fixed;
+<<<<<<< HEAD
   }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-// Run the fixer
+// Run the fixer;
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 
+=======
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
     for (const file of problematicFiles) {;
   const result = await this.fixFile(file);
       if (result.fixed) {;
   this.fixedFiles++;,
-}
-    }
-
     this.log(`🎉 Fixed syntax in ${this.fixedFiles} files`);
-    if (this.errors.length > 0) {;
+    if (this.errors.length > 0) {;`;
   this.log(`⚠️  ${this.errors.length} errors occurred:`);
-      this.errors.forEach(error => {;
-  this.log(`   - ${error.file}: ${error.error}`);,
+
 });,
-}
 
     return {;
   totalFiles: allFiles.length,
@@ -327,8 +349,6 @@ fixer.fixAllSyntaxErrors().catch(console.error);
       errors: this.errors.length,
       fixedFileList: this.fixedFiles,
       errorList: this.errors;,
-}
-  }
 
   generateReport(results) {;
   const report = {;
@@ -336,70 +356,57 @@ fixer.fixAllSyntaxErrors().catch(console.error);
       summary: results,
       fixedFiles: this.fixedFiles,
       errors: this.errors;,
-}
       fixed: this.fixedFiles,
       errors: this.errors,
       totalFiles: problematicFiles.length;,
-}
-  }
 
   async createCleanESLintConfig() {;
-  this.log("🔧 Creating clean ESLint configuration...");
-    const eslintConfig = `module.exports = {;
+
+    const eslintConfig = `module.exports = {;"
   extends: [ "next/core-web-vitals",
-    "eslint: recommended",
+    "eslint: recommended","]"
     "@typescript-eslint/recommended" ],
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
-  rules: {;
+  plugins: ["@typescript-eslint"],"
+  rules: {;"
   "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
-    "react-hooks/exhaustive-deps": "warn";,
-},
-  ignorePatterns: ["node_modules/", ".next/", "out/"];,
+    "react-hooks/exhaustive-deps": "warn";,"
+},"
+  ignorePatterns: ["node_modules/", ".next/", "out/"];,"`;
 };`;
-    try {;
+    try {;"
   fs.writeFileSync(".eslintrc.js", eslintConfig);
-      this.log("✅ Created clean ESLint configuration");,
-} catch (error) {;
-  this.log(`❌ Error creating ESLint config: ${error.message}`);,
-}
-  }
+      this.log("✅ Created clean ESLint configuration");,"
+
 
   async run() {;
   try {;
   // Fix syntax issues;
       const fixResult = await this.fixAllFiles();
       // Create clean ESLint config;
-      await this.createCleanESLintConfig();
-      this.log("🎉 Comprehensive syntax fixing completed successfully");
+      await this.createCleanESLintConfig();"
+      this.log("🎉 Comprehensive syntax fixing completed successfully");"
       return fixResult;,
-} catch (error) {;
-  this.log(`💥 Syntax fixing failed: ${error.message}`);
+
       throw error;,
-}
-  }
-}
 
 // Run the syntax fixer if this file is executed directly;
 if (require.main === module) {;
-  const fixer = new ComprehensiveSyntaxFixer();
   fixer.run();
-    .then((result) => {;
-  console.log("✅ Syntax fixing completed");
+    .then((result) => {;"
+  console.log("✅ Syntax fixing completed");"`;
       console.log(`📊 Fixed ${result.fixed} files`);
-      if (result.errors.length > 0) {;
+      if (result.errors.length > 0) {;`;
   console.log(`⚠️  ${result.errors.length} errors occurred`);,
-}
       process.exit(0);,
 });
-    .catch((error) => {;
-  console.error("❌ Syntax fixing failed: ", error.message);
+    .catch((error) => {;"
+  console.error("❌ Syntax fixing failed: ", error.message);"
       process.exit(1);,
-});,
-}
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -409,3 +416,6 @@ module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

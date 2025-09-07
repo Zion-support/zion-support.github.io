@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -181,26 +182,13 @@ export default AppMetadataManager,
 =======
   );
 };
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
-export default AppMetadataManager;
-
-import React from './react';
-import { AppLayout } from '@/layout / AppLayout';
-import { SEO } from '@/components / SEO';
-import { MetadataManager } from '@/components / mobile - app / admin / MetadataManager';
-const AppMetadataManager: React.FC = () => {
-  return (
-    <AppLayout>;
-      <SEO;
-        title="App Metadata Manager";
-        description="Manage app store metadata for the Zion mobile application";
-        noindex={true}
-      />;
-
-},
 
 
+<<<<<<< HEAD
 export default AppMetadataManager;
 ;
 
@@ -339,3 +327,5 @@ const AppMetadataManager: React.FC = () => {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

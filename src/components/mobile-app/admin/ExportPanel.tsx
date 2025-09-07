@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -39,10 +40,14 @@ export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }
   const handle_export = (format: 'json' | 'csv', ) =>: any {
     try {
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ExportPanelProps {
   platform: AppPlatform,
   metadata: AppMetadataValues;
 }
+<<<<<<< HEAD
 export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }, ) => {
   const handle_export = (format: 'json' | 'csv', ) =>: any {
     try {
@@ -454,3 +459,7 @@ return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export &
 =======
 '";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

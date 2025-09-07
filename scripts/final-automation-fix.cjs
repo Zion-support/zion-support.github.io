@@ -16,7 +16,7 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("$1")
@@ -34,26 +34,26 @@ const { execSync } = require("child_process")
       content = content.replace(/;\s*\[/g, " [")]
       content = content.replace(/;\s*\(/g, " (")
       content = content.replace(/import\s+([^]+);"import\s+/g, "import $1;\nimport "
-      content = content.replace(/""import\s+/g, ";\nimport ")
-      content = content.replace(/""interface\s+/g, ";\ninterface ")
-      content = content.replace(/""const\s+/g, ";\nconst ")
-      content = content.replace(/from\s+"next;$/gm, "from "next"")
-      content = content.replace(/from\s+"react;$/gm, "from "react"")
-      content = content.replace(/from\s+"lucide-react;$/gm, "from "lucide-react"")
+      content = content.replace(/import\s+/g, ";\nimport ")
+      content = content.replace(/interface\s+/g, ";\ninterface ")
+      content = content.replace(/const\s+/g, ";\nconst ")
+      content = content.replace(/from\s+"next;$/gm, "from "next)
+      content = content.replace(/from\s+"react;$/gm, "from "react)
+      content = content.replace(/from\s+"lucide-react;$/gm, "from "lucide-react)
       content = content.replace(/"const": \s*(\w+):\s*(\w+):\s*=\s*\(\s*\)\s*=>\s*,\s*\{/g, "const $"1": $2 = () => {"}
-      content = content.replace(/question:\s*"([^"]*):\s*([^"]*),", "";"/g, ""question": "$1: $2", "
+      content = content.replace(/question:\s*"([^"]*):\s*([^"]*),", ;"/g, question": "$1: $2", "
       content = content.replace(/const\s+(\w+)\s*=\s*\[/g, "const $1 = ["]
       content = content.replace(/{\s*;/g, "{"})
       content = content.replace(/;\s*}/g, "}")
       const lines = content.split("\n")
-        if (!seen.has(trimmed) || trimmed === "" || trimmed.startsWith("//") || trimmed.startsWith("/*")
+        if (!seen.has(trimmed) || trimmed ===  || trimmed.startsWith("//") || trimmed.startsWith("/*")
       content = uniqueLines.join("\n")
         fs.writeFileSync(filePath, content, "utf8")
       this.errors.push({ "file": filePath, "error"})
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules"
-          searchInDirectory(fullPath),} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")
+          searchInDirectory(fullPath)} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")
             const content = fs.readFileSync(fullPath, "utf8")
-            if (content.includes(""import": ")
+            if (content.includes(import": ")
                 content.includes("const:")
                 content.includes("from \"next;")
                 content.includes("from \"react;")
@@ -96,6 +96,5 @@ const { execSync } = require("child_process")
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-      this.log(` Final automation fix "failed"`)
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

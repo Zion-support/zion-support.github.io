@@ -50,13 +50,19 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-  if (!pool) {;
-  if (!pool) {;
+
+}
+}
+
+  } finally {
+client.release ();  }
+}
     pool = new Pool({ connectionString:process.env.DATABASE_URL });
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     pool = new Pool({ connectionString:process && process.env.DATABASE_URL });
   }
   return pool;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,19 +202,18 @@ client.release ();  }
 
 export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {;
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+;
+export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {;
   const client = await getPool().connect();
-  try {
+  try {;
     await client.query('BEGIN');
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);
     const result = await fn(client);
-;
-export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {;
-  const client = await getPool().connect(),;
-  try {;
-    await client.query('BEGIN'),;
-    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]),;
-    const result = await fn(client),;
+    await client.query('COMMIT');
+
     await client.query('COMMIT');
     return result;
   } catch (err) {
@@ -228,4 +233,22 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
 
 client.release ();  }
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+client.release();  }
+}
+
+  } finally {;
+    client.release();
+  }
+
+}
+
+
+
+export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {;
+
+export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+
 export default function Page(){return null}
 import React from 'react';
 import React, { useState } from 'react';
@@ -7,39 +8,16 @@ import { Phone, Mail, MapPin, Globe, Clock, Users;
   MessageSquare, Send, CheckCircle, Star;
   Rocket, Brain, Atom, Shield, Zap
  } from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 // Import service data for showcase
 import { innovativeAIServices2029  } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    service: '';
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-  const contactInfo = null;
-  return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
-      <Head>
-        <title>Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services</title>
-        <meta name="description" content="Contact Zion Tech Group to get started with our revolutionary micro SaaS services. Get a free consultation and discover how our AI and quantum computing solutions can transform your business." />
-        <meta name="keywords" content="contact Zion Tech Group, micro SaaS consultation, AI services consultation, quantum computing services, business transformation" />
-        <meta property="og:title" content="Contact Us - Zion Tech Group" />
-        <meta property="og:description" content="Get started with our revolutionary micro SaaS services. Free consultation available." />
-        <meta property="og:url" content="https://ziontechgroup.com/contact" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
-      </Head>
 
+<<<<<<< HEAD
 const [isSubmitting, setIsSubmitting] = useState (false);
 origin/cursor/automate-test-improve-and-merge-code-2533
 const [submitSuccess, setSubmitSuccess] = useState (false);
@@ -905,3 +883,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

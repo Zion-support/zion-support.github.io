@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 
   Menu;
@@ -83,10 +84,14 @@ const contactInfo = {'
 }
 <<<<<<< HEAD
 import { Menu, X, Zap, Sparkles, ChevronDown, ChevronRight;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Brain, Atom, Globe, Shield, Cpu, Database;
   Cloud, Smartphone, Palette, Search, MessageSquare;
   FileText, Calendar, CreditCard, BarChart3, Settings;
   Rocket, Star, TrendingUp, Users, Target, Award;
+<<<<<<< HEAD
   Phone, Mail, MapPin, ExternalLink, Building
  } from 'lucide-react';
 const contactInfo = null;
@@ -1820,3 +1825,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

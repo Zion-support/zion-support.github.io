@@ -25,17 +25,18 @@ const urlsToCache = ['/',
           return networkResponse})
         .catch(() => caches && caches.match('/offline && offline.html'))})
   )});
-// Activate event - clean up old caches
+// Activate event - clean up old caches;
 self && self.addEventListener('activate', (event) => {
-  event && event.waitUntil(
+  event && event.waitUntil()
     caches && caches.keys().then((cacheNames) => {
-      return Promise && Promise.all(
+      return Promise && Promise.all()
         cacheNames && cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
             return caches && caches.delete(cacheName)}
           return Promise && Promise.resolve()})
       )})
   );
+<<<<<<< HEAD
   // Ensure the service worker takes control of all clients immediately
 <<<<<<< HEAD
 
@@ -98,3 +99,7 @@ origin/main
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  // Ensure the service worker takes control of all clients immediately;]
+const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

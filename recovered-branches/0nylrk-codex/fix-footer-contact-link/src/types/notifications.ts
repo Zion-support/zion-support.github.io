@@ -23,6 +23,7 @@ export interface Notification {};
   related_id?: string;
   read: boolean;
 
+<<<<<<< HEAD
   created_at: string,
   updated_at: string;
 <<<<<<< HEAD
@@ -68,3 +69,9 @@ export interface Notification {;
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  created_at: string;
+
+  updated_at: string
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

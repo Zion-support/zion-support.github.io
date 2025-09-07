@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -15,27 +16,35 @@ class AppImportsFixer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 #!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
-
 class AppImportsFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.appPath = path.join(this.projectRoot, 'src/App.tsx')};
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message}`)};
+    console.log(`[${new Date().toISOString()}] ${message})};
   checkFileExports(filePath) {}
     try {}
       if (!fs.existsSync(filePath)) {}
-        return { "exists": false, "hasDefault": false, "hasNamed": [] }};
-      const content = fs.readFileSync(filePath, 'utf8');
+
       const hasDefault = content.includes('export default');
       const namedExports = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Check for named exports;
       const exportMatches = content.match(/export\s+(?:function|const|class)\s+(\w+)/g);
       if (exportMatches) {}
@@ -44,6 +53,7 @@ class AppImportsFixer {}
           if (nameMatch) {}
             namedExports.push(nameMatch[1])};
         })};
+<<<<<<< HEAD
       return { "exists": true, hasDefault, "hasNamed": namedExports }} catch (error) {}
       return { "exists": false, "hasDefault": false, "hasNamed": [] }};
   };
@@ -77,6 +87,9 @@ class AppImportsFixer {}
       { "name": 'AISolutions', "path": './pages/services/AISolutions' },
       { "name": 'QuantumComputing', "path": './pages/services/QuantumComputing' },
       { "name": 'Cybersecurity', "path": './pages/services/Cybersecurity' };
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
 <<<<<<< HEAD
 =======
@@ -84,8 +97,9 @@ class AppImportsFixer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Check each page and fix imports;
     pages.forEach(page => {})
-      const filePath = path.join(this.projectRoot, 'src', page.path + '.tsx');
+
       const exports = this.checkFileExports(filePath);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       
@@ -108,6 +122,12 @@ class AppImportsFixer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default' : 'named'} export`)} else {`}
         this.log(`"Warning": ${page.path}.tsx does not exist`)};
+=======
+      if (exports.exists) {}
+        let importStatement;
+
+        this.log(`"Warning": ${page.path}.tsx does not exist`)};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 });
 <<<<<<< HEAD
@@ -115,6 +135,7 @@ class AppImportsFixer {}
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Write the fixed content back;
+<<<<<<< HEAD
     fs.writeFileSync(this.appPath, content);
     this.log('App.tsx imports fixed successfully!')};
   async run() {}
@@ -127,9 +148,11 @@ class AppImportsFixer {}
       this.fixAppImports();
       this.log('App Imports Fixer completed successfully!')} catch (error) {}
       this.log(`Error in App Imports "Fixer": ${error.message}`);
+=======
+    fs.writeFileSync(this.appPath, content);"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       throw error};
-  };
-};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new AppImportsFixer();
@@ -141,12 +164,8 @@ if (require.main === module) {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   automation.run();
-    .then(() => {}
-      console.log('App Imports Fixer completed successfully!');
-      process.exit(0)}
-});
-    .catch(error => {})
-      console.error('App Imports Fixer "failed": ', error);
+    .then(() => {}"
+
       process.exit(1)})};
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,6 +185,9 @@ module.exports = AppImportsFixer;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 module.exports = AppImportsFixer;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

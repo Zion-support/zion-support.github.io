@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -687,6 +688,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -701,16 +704,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               )}
             >
-              {link.name}
-            </Link>
-          </li>
-        ))}
 
-
-
-        {/* Messages link with unread counter */}
-        {isAuthenticated && (;
           <li>;
+<<<<<<< HEAD
             <Link
               to="/messages"
 <<<<<<< HEAD
@@ -746,8 +742,17 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 
 =======
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
-                location.pathname === "/messages" || location.pathname === "/inbox"
+=======
+            <Link;"
+              to="/messages""
+              className={cn(
 
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
+                location && location.pathname === "/messages" || location && location.pathname === "/inbox"
+
+"inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
@@ -1083,11 +1088,13 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                   {unreadCount}
 
-
-
                 </span>;
               )}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</span>;              )}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </span>;
               )}
             </Link>;
@@ -1110,6 +1117,7 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 '"
@@ -1119,7 +1127,37 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
     </nav>;
   );
 }
+=======
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"""
+                location && location.pathname === "/messages" || location && location.pathname === "/inbox"""
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",""
+                location.pathname === "/messages" || location.pathname === "/inbox"""
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"")
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+          </li>;
+
+              to="/messages";"
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",;""
+                location.pathname === "/messages" || location.pathname === "/inbox";""
+                  :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";")
+            >;
+              <MessageSquare className="w-4 h-4 mr-1" />;"
+                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;"
+</span>
+                </span>;
+      </ul>;
+    </nav>;"
+    <nav className={cn ("ml - 6 hidden md:flex", class_name)}>;"
+      <ul className="flex items - center gap - 1">;"
+              className={cn ("
+                "inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors";")
+                link.matches (location.pathname);"
+                  ? "bg - zion - purple / 20 text - zion - cyan";""
+                  : "text - white hover:bg - zion - purple / 10 hover:text - zion - cyan")}"
+
+</ul>;
+    </nav>;
 import { Link, use_location } from './react-router-dom';
 import { cn } from '@/lib / utils';
 import { use_auth } from '@/hooks / use_auth';
@@ -1208,26 +1246,12 @@ if ( {) {
               {link.name}
             </Link>;
           </li>))}
-        {/* Messages link with unread counter */}
-        {is_authenticated && (
-          <li>;
-            <Link;
-              to="/messages";
-              className={cn (
-                "inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors relative";
-                location.pathname === "/messages" || location.pathname === "/inbox";
-                  ? "bg - zion - purple / 20 text - zion - cyan";
-                  : "text - white hover:bg - zion - purple / 10 hover:text - zion - cyan")}
-            >;
-              <MessageSquare className="w - 4 h - 4 mr - 1" />;
-              Messages;
-              {unread_count > 0 && (
-                <span className="absolute -top - 1 -right - 1 bg - zion - purple text - white text - xs rounded - full h - 5 w - 5 flex items - center justify - center">;
-                  {unread_count}
+                "inline - flex h - 9 items - center justify - center rounded - md px - 4 text - sm font - medium transition - colors relative";""
+                  ? "bg - zion - purple / 20 text - zion - cyan";")"
+              <MessageSquare className="w - 4 h - 4 mr - 1" />;"
+                <span className="absolute -top - 1 -right - 1 bg - zion - purple text - white text - xs rounded - full h - 5 w - 5 flex items - center justify - center">;"
                 </span>)}
-            </Link>;
           </li>)}
-      </ul>;
     </nav>);
 }
   ),;}
@@ -1275,30 +1299,24 @@ matches: (path: string) => path.startsWith ("/community") || path.startsWith ("/
 }];
 //Add authenticated-only links if (isAuthenticated) {
   links.push ({
-  
 }//Add admin-only links if (isAdmin) {
   links.push ({
-  
 }return (<nav className= {
   cn ("ml-6 hidden md:flex", className) 
 }> <ul className="flex items-center gap-1" > {
+}return (<nav className= {)"
+  cn ("ml-6 hidden md:flex", className)""
+}> <ul className="flex items-center gap-1" > {"
+</nav>
   links.map ( (link) => (<li key= {
-  link.name 
+  link.name;
 }> <Link to= {
-  link.href 
-}className= {
-  cn ("inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
-link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan" 
-}> {
-  link.name 
-}</Link> </li>) ) 
-}{
-  /* Messages link with unread counter */ 
-}{
-  isAuthenticated && (<li> <Link to="/messages" className= {
-  cn () 
-}> <MessageSquare className="w-4 h-4 mr-1" /> Messages {
-  unreadCount 
+</li>)
+} </li>) ) "
+  isAuthenticated && (<li> <Link to="/messages" className= {"
+</li>"
+}> <MessageSquare className="w-4 h-4 mr-1" /> Messages {"
+)
 }</span>) 
 }</Link> </li>) 
 }</ul> </nav>) 
@@ -1325,4 +1343,14 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
     </nav>
   )
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+} </li>) 
+}</ul> </nav>) "
+              <MessageSquare className="w-4 h-4 mr-1" />"
+                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">"
+    </nav>]"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

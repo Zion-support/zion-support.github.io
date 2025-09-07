@@ -1,29 +1,25 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
+
 interface EnhancedFuturisticBackgroundProps {
   children: React.ReactNode;
   className?: string;
   intensity?: 'low' | 'medium' | 'high';
   colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
   particleCount?: number;
-  animationSpeed?: number
+  animationSpeed?: number;}
+}
 }
 
-const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
-  children;
+const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps /> = ({children;
   className;
-const colorSchemes = {
-  quantum: {
-  resizeCanvas ();
-window.addEventListener ('resize', resizeCanvas);
-// Wrap around edges if (this.x < 0) this.x = canvas.width;
-if (this.x > canvas.width) this.x = 0;
-if (this.y < 0) this.y = canvas.height;
-if (this.y > canvas.height) this.y = 0;
-// Fade out near end of life if (this.life < 20) {
-  
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
@@ -702,3 +698,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import React, { useState, useEffect } from 'react';
@@ -28,10 +29,22 @@ import Link from "next/link";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {}
+=======
+
+
+import React, { useState, useEffect } from "react",;
+import { safeStorage } from "@/utils/safeStorage",;
+import { X, ArrowRight } from 'lucide-react'
+import Link from "next/link";
+
+import { useIsMobile } from "@/hooks/use-mobile";
+interface SmartAppBannerProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -582,3 +595,10 @@ if ( {) {
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({}
 ";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+}
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

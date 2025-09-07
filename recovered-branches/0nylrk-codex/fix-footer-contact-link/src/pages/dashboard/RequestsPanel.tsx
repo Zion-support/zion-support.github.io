@@ -11,6 +11,7 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
+<<<<<<< HEAD
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -234,6 +235,8 @@ export default function RequestsPanel() {}
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -245,6 +248,7 @@ export default function RequestsPanel() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -850,10 +854,18 @@ if ( {) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className="container mx - auto">;
             <RequestsHeader;
+=======
+
+        <Footer />
+
+
+        <div className="min - h-screen bg - zion - blue px - 4 py - 8">;"
+          <div className="container mx - auto">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               unread_count={unread_count}
               status_filter={status_filter}
-              setStatusFilter={setStatusFilter}
               archive_filter={archive_filter}
+<<<<<<< HEAD
               setArchiveFilter={setArchiveFilter}
             />;
 <<<<<<< HEAD
@@ -873,12 +885,16 @@ if ( {) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <TabsContent value="active">;
                 <QuoteRequestsList;
+=======
+            <Tabs default_value="active" className="mb - 6">;"
+              <TabsList className="bg - zion - blue - dark border border - zion - blue - light">;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   quotes={active_quotes}
                   is_loading={is_loading}
                   is_archived={false}
-                  onViewDetails={handleViewDetails}
-                  onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggle_archive}
+<<<<<<< HEAD
                 />;
 <<<<<<< HEAD
               </TabsContent>;"
@@ -887,30 +903,39 @@ if ( {) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               <TabsContent value="archived">;
                 <QuoteRequestsList;
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   quotes={archived_quotes}
-                  is_loading={is_loading}
                   is_archived={true}
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggle_archive}
+
                 />;
+</QuoteRequestsList>
               </TabsContent>;
             </Tabs>;
           </div>;
         </div>;
-        {/* Quote Details Modal */}
         <QuoteDetails;
+
           quote={selected_quote}
           is_open={show_details}
 <<<<<<< HEAD
           on_close={() => {}
 =======
           on_close={() => {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             setShowDetails (false);
             setSelectedQuote (null);
           }}
         />;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Footer />;
       </div>;
     </ProtectedRoute>);
@@ -980,6 +1005,7 @@ const [showDetails, setShowDetails] = useState (false);
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -998,3 +1024,24 @@ const [showDetails, setShowDetails] = useState (false);
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    );
+
+  return (<ProtectedRoute> <div> <Header /> <div className="min-h-screen bg-zion-blue px-4 py-8" > <div className="container mx-auto" > <RequestsHeader unreadCount= {"
+}/>  <TabsContent value="active" > <QuoteRequestsList quotes= {"
+}/>  <TabsContent value="archived" > <QuoteRequestsList quotes= {"
+
+}/>   </div> </div> {)
+}<QuoteDetails /> <Footer /> </div> ) 
+pr-12325
+</ProtectedRoute>"
+}/> </TabsList> <TabsContent value="active" > <QuoteRequestsList quotes= {"
+</TabsContent>"
+}/> </TabsContent> <TabsContent value="archived" > <QuoteRequestsList quotes= {"
+</TabsContent>
+}/> </TabsContent> </Tabs> </div> </div> {)
+}<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
+</QuoteDetails>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -24,9 +24,16 @@
       // Update and draw particles;
 <<<<<<< HEAD
       particles.for_each ((particle, index) => {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+
 const UltraFuturisticBackground2029: React.FC;
+<<<<<<< HEAD
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
@@ -768,3 +775,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -16,6 +16,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from "react";
@@ -2744,19 +2745,33 @@ if ( {) {
 }"
         variant: "destructive","
         title: "Error fetching API logs",'
+=======
+  }
+}
+        variant: \"destructive\",
+        title: \"Error fetching API logs\",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {}
       setLoading(false)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
       setLogs(result.logs || []),;
+<<<<<<< HEAD
       setTotalLogs(result.count || 0),;
       return result;
     } catch (err) {;'
       console.error('Error fetching API logs:', err),;'
+=======
+      setTotalLogs(result.count || 0),;}
+      return result;}
+    } catch (err) {;
+      console.error('Error fetching API logs:', err),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
 <<<<<<< HEAD
       toast({;
+<<<<<<< HEAD
         variant: "destructive",;
 <<<<<<< HEAD
         title: "Error fetching API logs",,
@@ -2773,6 +2788,13 @@ if ( {) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     } finally {;
       setLoading(false);
+=======
+        variant: \"destructive\",;}
+        title: \"Error fetching API logs\",,}
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {;}
+      setLoading(false);}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   },;
   return {;
@@ -2809,6 +2831,7 @@ if ( {) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -2840,6 +2863,14 @@ if ( {) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
+=======
+  }
+}
+;
+}
+    fetchApiLogs;}
+    clearNewApiKey: () => setNewApiKey(null);}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 <<<<<<< HEAD
@@ -2847,8 +2878,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 ;
-    clearNewApiKey: () => setNewApiKey (null);
   }
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { useState } from "react",;
@@ -2876,14 +2907,45 @@ export interface ApiLog {;
   created_at:string,;
   ip_address?:string,;
   response_time_ms?:number;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
-;
-export function useApiKeys() {;
+  // Fetch user's API keys;
+  const fetchApiKeys = async () => {
+    // Check condition;
+if (return) {
+  $2;
+    set_loading (true);
+    set_error (null);
+    try {
+  // TODO: Implement
+      const { data: { session } } = await supabase.auth.get_session ();
+      // Check condition;
+
+if ( {) {
+        set_error ("Authentication required");"
+        return;
+      }`;
+      const response = await fetch (`${getApiUrl ()}/keys`, {"
+        method: 'GET',
+        headers: {`;
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content - Type': 'application / json';
+      });
+      const result = await response.json ();
+      // Check condition;
+        throw new Error (result.error || 'Failed to fetch API keys');`;
+          'Content-Type': 'application/json
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to fetch API keys')
+      setKeys(result.keys |[])
+
   const { user } = useAuth(),;
   const [keys, setKeys] = useState<ApiKey[]>([]),;
+
   const [logs, setLogs] = useState<ApiLog[]>([]),;
-  const [totalLogs, setTotalLogs] = useState(0),;
-  const [loading, setLoading] = useState(false),;
+
   const [error, setError] = useState<string | null>(null),;
   const [newApiKey, setNewApiKey] = useState<string | null>(null),;
 ;
@@ -3165,7 +3227,6 @@ export function useApiKeys() {;
   //Using optional chaining ensures this function works both in the browser // (where import.meta.env is injected by Vite) and in Node environments //such as tests or server side rendering. setLoading (true);
 setError (null);
 try {
-  
 }getApiUrl () 
 }/keys`, {
   method: 'GET', headers: {
@@ -3184,7 +3245,6 @@ try {
 setError (null);
 setNewApiKey (null);
 try {
-  
 }getApiUrl () 
 }/create`, {
   method: 'POST', headers: {
@@ -3199,7 +3259,6 @@ return result;
   console.error ('Error creating API key:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
 }finally {
   setLoading (false) 
 }
@@ -3209,7 +3268,6 @@ toast ({
 setError (null);
 setNewApiKey (null);
 try {
-  
 }getApiUrl () 
 }/regenerate`, {
   method: 'POST', headers: {
@@ -3224,7 +3282,6 @@ return result;
   console.error ('Error regenerating API key:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
 }finally {
   setLoading (false) 
 }
@@ -3233,7 +3290,6 @@ toast ({
   if (!user) return;
 setError (null);
 try {
-  
 }getApiUrl () 
 }/revoke`, {
   method: 'POST', headers: {
@@ -3247,7 +3303,6 @@ return result;
   console.error ('Error revoking API key:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
 }finally {
   setLoading (false) 
 }
@@ -3256,7 +3311,6 @@ toast ({
   if (!user) return;
 setError (null);
 try {
-  
 }getApiUrl () 
 }/logs?limit=$ {
   limit 
@@ -3303,6 +3357,7 @@ clearNewApiKey: () => setNewApiKey (null)
 =======
   }
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -3320,3 +3375,19 @@ clearNewApiKey: () => setNewApiKey (null)
   }
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+</string>`;
+pr-12325
+</string>
+  const [keys, setKeys] = useState<ApiKey[]>([]),;
+</ApiKey>
+  const [logs, setLogs] = useState<ApiLog[]>([]),;
+</ApiLog>
+  const [error, setError] = useState<string | null>(null),;
+</string>
+  const [newApiKey, setNewApiKey] = useState<string | null>(null),;
+</string>'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

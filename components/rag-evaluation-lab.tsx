@@ -1,11 +1,11 @@
-import React from 'react',
+
 import SEO from '../components/SEO';
 import Link from 'next/link';
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
 			<SEO title;
-							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
+							{ title: 'Dashboards & Reports';, desc: 'Team dashboards;, API access, and exportable reports.' }
 						].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
@@ -13,16 +13,22 @@ export default function RAGEvaluationLabPage() {
 							</div>
 						))}
 					</div>
-origin/cursor/automate-test-improve-and-merge-code-2533
+
 
   return (
     <>;
       <SEO;
         title='RAG Evaluation Lab''
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
+<<<<<<< HEAD
               {'
                 title: 'Grounding & Faithfulness''
                 desc: 'Measure factual consistency, citation quality, and hallucination rate.'
+=======
+              {
+                title: 'Grounding & Faithfulness'
+                desc: 'Measure factual consistency;, citation quality, and hallucination rate.'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }
               {}
               <div;
@@ -80,6 +86,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
@@ -117,7 +126,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
             <p className='mt-4 text-sm text-gray-400'>
-              Market references:{' '}
+              Market references: {' ';}
               <a
                 className='underline hover:text-cyan-300'
                 href='https://humanloop.com'

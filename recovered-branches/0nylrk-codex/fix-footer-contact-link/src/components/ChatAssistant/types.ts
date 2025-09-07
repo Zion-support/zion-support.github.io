@@ -43,12 +43,9 @@ export interface Message {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
-
 export interface Message {;
 
-
 export interface Message {;
-
 
 export interface Message {
 export interface Message {;
@@ -56,11 +53,26 @@ export interface Message {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   id: string;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
   read?: boolean;
+=======
+
+export interface Message {;
+
+export interface Message {export interface Message {;
+
+export interface Message {
+
+  role: 'user' | 'assistant';
+  message: string;
+  timestamp: Date;
+  read?: boolean
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,6 +80,7 @@ export interface Message {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -189,17 +202,24 @@ export interface Recipient {
 }
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   avatar_url?: string;
   role?: string;
 }
 
+;
 ;
 
 ;
 ;
 export interface Recipient {
   id: string;
+name: string;
+export interface Recipient {
+  id: string;
   name: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -228,3 +248,6 @@ export interface Recipient {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

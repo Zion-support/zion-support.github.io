@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Daily Build and Test Script for PM2;
  * Replaces GitHub Actions build and test workflows;
@@ -23,15 +27,14 @@ const log = (message) => {}
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
 const log = (message) => {}
   const timestamp = new Date().toISOString();
-  
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const runCommand = (command, description) => {}
   try {}
+<<<<<<< HEAD
     log(`"Starting": ${description}`);
     const output = execSync(command, { })
 <<<<<<< HEAD
@@ -76,13 +79,19 @@ const runTests = () => {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   testCommands.forEach(cmd => {})
     const result = runCommand(cmd, `Running ${cmd}`);
+=======
+
+  ];
+  let testsPassed = 0;
+  let testsFailed = 0;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (result.success) {}
       testsPassed++;
     } else {}
       testsFailed++;
-    };
-  }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
   log(`Test "results": ${testsPassed} passed, ${testsFailed} failed`);
   return { "passed": testsPassed, "failed": testsFailed };
@@ -96,18 +105,25 @@ const buildProject = () => {}
   log(`Test "results": ${testsPassed} passed, ${testsFailed} failed`);
   return { "passed": testsPassed, "failed": testsFailed };
 };
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const buildProject = () => {}
+
+const buildProject = () => {}"
   log('Building project');
-  
   // Clean previous builds;
+<<<<<<< HEAD
   runCommand('rm -rf dist out .next build', 'Cleaning previous builds');
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Install dependencies;
-  const installResult = runCommand('npm ci', 'Installing dependencies');
+  const installResult = runCommand('npm ci,Installing dependencies');
   if (!installResult.success) {}
     log('npm ci failed, trying npm install');
+<<<<<<< HEAD
     runCommand('npm install', 'Installing dependencies (fallback)');
   };
   // Lint code;
@@ -130,44 +146,43 @@ const buildProject = () => {}
   // Build project;
   const buildResult = runCommand('npm run build', 'Building project');
   
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (buildResult.success) {}
     log('Build completed successfully');
-    
     // Verify build output;
-    const outputDirs = ['dist', 'out', '.next', 'build'];
+    const outputDirs = [dist,out,.next,build];
     let buildVerified = false;
+<<<<<<< HEAD
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const dir of outputDirs) {}
-      if (fs.existsSync(dir)) {}
-        log(`Build output "verified": ${dir} directory exists`);
-        buildVerified = true;
-        break;
-      };
-    };
-    if (!buildVerified) {}
+
+    if (!buildVerified) {}"
       log('"Warning": No build output directory found');
-    };
     return true;
-  } else {}
     log('Build failed');
     return false;
+<<<<<<< HEAD
   };
 };
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const generateTestReport = (testResults) => {}
   const report = {}
-    "timestamp": new Date().toISOString(),
-    "tests": {}
-      passed: testResults.passed,
-      "failed": testResults.failed,
-      "total": testResults.passed + testResults.failed;
-    },
-    "build": {}
+
+      "total": testResults.passed + testResults.failed;"
+    },"
+    "build": {}"
       success: true;
+<<<<<<< HEAD
     };
   };
 <<<<<<< HEAD
@@ -194,43 +209,49 @@ const main = async () => {}
     // Try to fix common issues;
     runCommand('npm run fix', 'Attempting to fix issues');
 =======
+=======
+  // Save report;"
+  const reportPath = 'logs/pm2/test-report.json';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const main = async () => {}
   log('Starting Daily Build and Test Process');
-  
   // Build the project;
   const buildSuccess = buildProject();
-  
   // Run tests;
   const testResults = runTests();
-  
   // Generate report;
   generateTestReport(testResults);
-  
   // Handle failures;
   if (!buildSuccess || testResults.failed > 0) {}
     log('Build or tests failed, attempting to fix issues');
-    
     // Try to fix common issues;
+<<<<<<< HEAD
     runCommand('npm run fix', 'Attempting to fix issues');
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Retry build if it failed;
     if (!buildSuccess) {}
       log('Retrying build after fixes');
       buildProject();
-    };
-  };
   log('Daily Build and Test Process completed');
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Handle process termination;
-process.on('SIGINT', () => {}
+process.on('SIGINT, () => {}
   log('Daily Build and Test Process interrupted');
   process.exit(0);
+<<<<<<< HEAD
 }
 });
 <<<<<<< HEAD
@@ -244,9 +265,14 @@ process.on('SIGTERM', () => {}
 });
 <<<<<<< HEAD
 =======
+=======
+
+  log('Daily Build and Test Process terminated');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Run the main function;
+<<<<<<< HEAD
 main().catch(error => {})
   log(`Daily Build and Test Process "failed": ${error.message}`);
   process.exit(1);
@@ -268,7 +294,8 @@ main().catch(error => {})
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-});
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

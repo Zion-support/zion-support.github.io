@@ -9,8 +9,8 @@
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (modified) {,;
-      fs.writeFileSync(filePath, content, "utf8"),;
-      console.log("Fixed parsing errors "in":${filePath}"),;
+      fs.writeFileSync(filePath, content, "utf8"),;""
+      console.log("Fixed parsing errors "in":${filePath}"),;"
       return true};
   } catch (error) {,;
     console.error("Error fixing ${filePath} ", error.message)};
@@ -100,4 +100,12 @@ import path from "path", function fixParsingErrors(filePath) { try { let content
 =======
   return false}
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  } catch (error) {,;"
+    console.error("Error fixing ${filePath} ", error.message)};"
+  return false};
+"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

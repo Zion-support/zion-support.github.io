@@ -33,18 +33,21 @@ exports.handler = async function() {;
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
-    const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';
+  // TODO: Implement
+}
+    const baseUrl = process.env.URL |process.env.DEPLOY_URL |;
     const pages = [
-      '/'
-      '/about'
-      '/learn'
-      '/dao'
-      '/certifications'
-      '/blog'
-      '/services'
-      '/talent'
+      '/
+      '/about
+      '/learn
+      '/dao
+      '/certifications
+      '/blog
+      '/services
+      '/talent]
     ];
     const xml =
+<<<<<<< HEAD
       `<?xml version="1.0" encoding="UTF-8"?>\n` +
       `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
       pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
@@ -96,3 +99,13 @@ exports.handler = async function () {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      `<?xml version="1.0" encoding="UTF-8"?>\n` +""`;
+      `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +"
+</urlset>"`;
+      pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join() +`;
+      `</urlset>`;`;
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +""`;
+      pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join() +`;
+      `</urlset>``;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

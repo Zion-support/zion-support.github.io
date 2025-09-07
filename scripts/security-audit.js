@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process';  try {  const auditResult = execSync('npm audit --audit-level=moderate --json',{ encoding: 'utf8' }); const auditData = JSON.parse(auditResult); if (auditData.vulnerabilities && Object.keys(auditData.vulnerabilities).length > 0) {  Object.entries(auditData.vulnerabilities).forEach(([pkg,vuln]) => { })} else { } } catch (error) { }  const sensitivePatterns = [ /password\s*=\s*["'][^"']+["']/gi,/api[_-]?key\s*=\s*["'][^"']+["']/gi,/secret\s*=\s*["'][^"']+["']/gi,/token\s*=\s*["'][^"']+["']/gi,/private[_-]?key\s*=\s*["'][^"']+["']/gi ]; const scanDirectory = (dir,results = []) => { const files = fs.readdirSync(dir); files.forEach(file => { const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') { scanDirectory(filePath,results)} else if (stat.isFile() && /\.(js|ts|tsx|jsx|json|env)$/.test(file)) { try { const content = fs.readFileSync(filePath,'utf8'); sensitivePatterns.forEach(pattern => { const matches = content.match(pattern); if (matches) { results.push({ file: filePath,matches: matches })} })} catch (error) { } } }); return results}; const sensitiveResults = scanDirectory('.'); if (sensitiveResults.length > 0) {  sensitiveResults.forEach(result => {  result.matches.forEach(match => { }...`)})})} else { }  try { const outdatedResult = execSync('npm outdated --json',{ encoding: 'utf8' }); const outdatedData = JSON.parse(outdatedResult); if (Object.keys(outdatedData).length > 0) {  Object.entries(outdatedData).forEach(([pkg,info]) => { })} else { } } catch (error) { } const securityReport = { timestamp: new Date().toISOString(),vulnerabilities: sensitiveResults.length,recommendations: [ 'Run "npm audit fix" to resolve dependency vulnerabilities','Review and remove any hardcoded secrets','Update outdated dependencies','Implement proper environment variable management','Add security headers to Next.js configuration' ] }; fs.writeFileSync('security-audit-report.json',JSON.stringify(securityReport,null,2));  
 #!/usr/bin/env node
 <<<<<<< HEAD
@@ -35,6 +36,10 @@ const sensitivePatterns = [/password\s*=\s*["'][^"']+["']/gi,
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+#!/usr/bin/env node
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -60,6 +65,7 @@ const sensitivePatterns = [/password\s*=\s*["'][^"']+["']/gi,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -68,6 +74,14 @@ import { execSync } from 'child_process';
 
 
 <<<<<<< HEAD
+=======
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+console.log('🔒 Starting Security Audit...\n');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Check for security vulnerabilities
 try {
   console.log('📦 Checking npm dependencies for vulnerabilities...');
@@ -78,7 +92,10 @@ try {
     console.log('⚠️  Security vulnerabilities found:');
     Object.entries(auditData.vulnerabilities).forEach(([pkg, vuln]) => {
       console.log(`   - ${pkg}: ${vuln.severity} - ${vuln.title}`);
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     });
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -101,8 +118,12 @@ try {
   console && console.log('❌ Failed to run npm audit:', error && error.message);
 }
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+console.log('❌ Failed to run npm audit:', error.message);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Check for sensitive data in files
 =======
 
@@ -114,6 +135,7 @@ try {
 // Check for sensitive data in files'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 console.log('\n🔍 Scanning for sensitive data...');
+<<<<<<< HEAD
 const sensitivePatterns = ['
   /password\s*=\s*["'][^"']+["']/gi,'"
   /api[_-]?key\s*=\s*["'][^"']+["']/gi,'"
@@ -122,6 +144,17 @@ const sensitivePatterns = ['
   /private[_-]?key\s*=\s*["'][^"']+["']/gi;
 ];
 <<<<<<< HEAD
+=======
+const sensitivePatterns = [
+  /password\s*=\s*["'][^"']+["']/gi,
+
+  /api[_-]?key\s*=\s*["'][^"']+["']/gi,
+  /secret\s*=\s*["'][^"']+["']/gi,
+  /token\s*=\s*["'][^"']+["']/gi,
+  /private[_-]?key\s*=\s*["'][^"']+["']/gi
+];
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const scanDirectory = (dir, results = []) => {
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -136,12 +169,18 @@ const scanDirectory = (dir, results = []) => {}
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
 <<<<<<< HEAD
 <<<<<<< HEAD
       scanDirectory(filePath, results)} else if (stat.isFile() && /\.(js|ts|tsx|jsx|json|env)$/.test(file)) {      try {
 =======
       scanDirectory(filePath, results)} else if (stat.isFile() && /\.(js|ts|tsx|jsx|json|env)$/.test(file)) {
+=======
+if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      scanDirectory(filePath, results);
+    } else if (stat.isFile() && /\.(js|ts|tsx|jsx|json|env)$/.test(file)) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       try {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -161,6 +200,7 @@ const scanDirectory = (dir, results = []) => {}
 <<<<<<< HEAD
           if (matches) {
             results.push({
+<<<<<<< HEAD
               "file": filePath,
               "matches": matches
             })}
@@ -169,6 +209,14 @@ const scanDirectory = (dir, results = []) => {}
         })} catch (error) {        // Skip files that can't be read
 =======
         })} catch (error) {
+=======
+file: filePath,
+              matches: matches
+            });
+          }
+        });
+      } catch (error) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Skip files that can't be read
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -178,8 +226,11 @@ const scanDirectory = (dir, results = []) => {}
       }
     }
   });
-  return results};
+return results;
+};
+
 const sensitiveResults = scanDirectory('.');
+<<<<<<< HEAD
 if (sensitiveResults.length > 0) {
   console.log('⚠️  Potential sensitive data "found": ');
   sensitiveResults.forEach(result => {
@@ -207,6 +258,8 @@ const securityReport = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -226,8 +279,21 @@ if (sensitiveResults && sensitiveResults.length > 0) {
   console && console.log('✅ No sensitive data patterns found');
 }
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+if (sensitiveResults.length > 0) {
+  console.log('⚠️  Potential sensitive data found:');
+  sensitiveResults.forEach(result => {
+    console.log(`   - ${result.file}`);
+    result.matches.forEach(match => {
+      console.log(`     ${match.substring(0, 50)}...`);
+    });
+  });
+} else {
+  console.log('✅ No sensitive data patterns found');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Check for outdated dependencies
 =======
           if (matches) {}
@@ -259,6 +325,7 @@ try {'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       });
   } else {
     console.log('✅ All dependencies are up to date');
@@ -280,12 +347,19 @@ try {'
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   if (Object && Object.keys(outdatedData).length > 0) {
     console && console.log('⚠️  Outdated dependencies found: '),
     Object && Object.entries(outdatedData).forEach(([pkg, info]) => {
       console && console.log(`   - ${pkg}: ${info && info.current} → ${info && info.latest}`);
 
+if (Object.keys(outdatedData).length > 0) {
+    console.log('⚠️  Outdated dependencies found:');
+    Object.entries(outdatedData).forEach(([pkg, info]) => {
+      console.log(`   - ${pkg}: ${info.current} → ${info.latest}`);
     });
   } else {
     console.log('✅ All dependencies are up to date');
@@ -296,7 +370,7 @@ try {'
   console && console.log('✅ All dependencies are up to date');
 }
 
-
+console.log('✅ All dependencies are up to date');
 // Generate security report
 const securityReport = {
 =======
@@ -314,6 +388,7 @@ const securityReport = {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   timestamp: new Date().toISOString(),
   vulnerabilities: sensitiveResults.length,
+<<<<<<< HEAD
   recommendations: ['"
     'Run "npm audit fix" to resolve dependency vulnerabilities','
     'Review and remove any hardcoded secrets','
@@ -329,6 +404,19 @@ const securityReport = {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  recommendations: [
+    'Run "npm audit fix" to resolve dependency vulnerabilities',
+
+    'Review and remove any hardcoded secrets',
+    'Update outdated dependencies',
+    'Implement proper environment variable management',
+    'Add security headers to Next.js configuration'
+  ]
+};
+console.log('🔒 Security audit completed!');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 console.log('🔒 Security audit completed!');
@@ -370,9 +458,20 @@ console.log('🔒 Security audit completed!');
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; console.log('🔒 Starting Security Audit...\n'); try { console.log('📦 Checking npm dependencies for vulnerabilities...'); const auditResult = execSync('npm audit --audit-level=moderate --json',{ encoding: 'utf8' }); const auditData = JSON.parse(auditResult); if (auditData.vulnerabilities && Object.keys(auditData.vulnerabilities).length > 0) { console.log('⚠️ Security vulnerabilities found:'); Object.entries(auditData.vulnerabilities).forEach(([pkg,vuln]) => { console.log(` - ${pkg}: ${vuln.severity} - ${vuln.title}`)})} else { console.log('✅ No security vulnerabilities found in dependencies')} } catch (error) { console.log('❌ Failed to run npm audit:',error.message)} console.log('\n🔍 Scanning for sensitive data...'); const sensitivePatterns = [ /password\s*=\s*["'][^"']+["']/gi,/api[_-]?key\s*=\s*["'][^"']+["']/gi,/secret\s*=\s*["'][^"']+["']/gi,/token\s*=\s*["'][^"']+["']/gi,/private[_-]?key\s*=\s*["'][^"']+["']/gi ]; const scanDirectory = (dir,results = []) => { const files = fs.readdirSync(dir); files.forEach(file => { const filePath = path.join(dir,file); const stat = fs.statSync(filePath); if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') { scanDirectory(filePath,results)} else if (stat.isFile() && /\.(js|ts|tsx|jsx|json|env)$/.test(file)) { try { const content = fs.readFileSync(filePath,'utf8'); sensitivePatterns.forEach(pattern => { const matches = content.match(pattern); if (matches) { results.push({ file: filePath,matches: matches })} })} catch (error) { } } }); return results}; const sensitiveResults = scanDirectory('.'); if (sensitiveResults.length > 0) { console.log('⚠️ Potential sensitive data found:'); sensitiveResults.forEach(result => { console.log(` - ${result.file}`); result.matches.forEach(match => { console.log(` ${match.substring(0,50)}...`)})})} else { console.log('✅ No sensitive data patterns found')} console.log('\n📅 Checking for outdated dependencies...'); try { const outdatedResult = execSync('npm outdated --json',{ encoding: 'utf8' }); const outdatedData = JSON.parse(outdatedResult); if (Object.keys(outdatedData).length > 0) { console.log('⚠️ Outdated dependencies found:'); Object.entries(outdatedData).forEach(([pkg,info]) => { console.log(` - ${pkg}: ${info.current} → ${info.latest}`)})} else { console.log('✅ All dependencies are up to date')} } catch (error) { console.log('✅ All dependencies are up to date')} const securityReport = { timestamp: new Date().toISOString(),vulnerabilities: sensitiveResults.length,recommendations: [ 'Run "npm audit fix" to resolve dependency vulnerabilities','Review and remove any hardcoded secrets','Update outdated dependencies','Implement proper environment variable management','Add security headers to Next.js configuration' ] }; fs.writeFileSync('security-audit-report.json',JSON.stringify(securityReport,null,2)); console.log('\n📊 Security audit report saved to security-audit-report.json'); console.log('🔒 Security audit completed!');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 '
+=======
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 console.log('🔒 Security audit completed!');
 
 
@@ -394,9 +493,17 @@ console.log('🔒 Security audit completed!');
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 =======
 '
@@ -406,8 +513,18 @@ const path = require('path');
 '
 console.log('🔒 Running security audit...');'
 console.log('✅ Security audit completed');
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+function log(msg, level = "INFO") {
+  const ts = new Date().toISOString();
 
+/**
+ * Security Audit Script for Zion Tech Group
+ * This script performs security checks and generates recommendations
+ */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const { execSync } = require("child_process");
@@ -417,6 +534,78 @@ function log(msg, level = "INFO") {
   const ts = new Date().toISOString();
   }
 function tryExec(cmd) {
+=======
+import fs from 'fs';
+import path from 'path';
+
+console.log('🔒 Security Audit for Zion Tech Group');
+console.log('=====================================');
+
+// Function to check for security vulnerabilities
+function checkSecurityVulnerabilities() {
+  console.log('\n🔍 Checking for security vulnerabilities...');
+  
+  const securityChecks = {
+    timestamp: new Date().toISOString(),
+    checks: [
+      {
+        name: 'Environment Variables',
+        status: 'checking',
+        description: 'Checking for exposed sensitive data'
+      },
+      {
+        name: 'Dependencies',
+        status: 'checking',
+        description: 'Scanning for vulnerable packages'
+      },
+      {
+        name: 'API Security',
+        status: 'checking',
+        description: 'Validating API endpoint security'
+      },
+      {
+        name: 'Authentication',
+        status: 'checking',
+        description: 'Reviewing authentication mechanisms'
+      }
+    ],
+    recommendations: [
+      'Implement Content Security Policy (CSP)',
+      'Enable HTTPS everywhere',
+      'Use secure session management',
+      'Implement rate limiting',
+      'Regular dependency updates',
+      'Input validation and sanitization',
+      'Secure headers implementation'
+    ]
+  };
+  
+  return securityChecks;
+}
+
+// Function to generate security report
+function generateSecurityReport() {
+  console.log('\n📋 Generating security report...');
+  
+  const report = checkSecurityVulnerabilities();
+  
+  const reportsDir = path.join(process.cwd(), 'reports');
+  if (!fs.existsSync(reportsDir)) {
+    fs.mkdirSync(reportsDir, { recursive: true });
+  }
+  
+  fs.writeFileSync(
+    path.join(reportsDir, 'security-audit-report.json'),
+    JSON.stringify(report, null, 2)
+  );
+  
+  console.log('✅ Security audit report created');
+  return report;
+}
+
+// Main execution
+async function main() {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   try {
     execSync(cmd, { "stdio": "inherit" });
     return { "ok": true }} catch (e) {
@@ -561,7 +750,9 @@ class SecurityAuditor {}
       SUPABASE_URL: process.env.SUPABASE_URL,'
       STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY ? '***HIDDEN***' : undefined;
     };
+    const report = generateSecurityReport();
     
+<<<<<<< HEAD
     this.results.environmentVariables = {}
       success: true,
       variables: envVars,
@@ -630,6 +821,21 @@ class SecurityAuditor {}
       console.log(`❌ Security audit failed: ${error.message}`);
       process.exit(1);
     }
+=======
+    console.log('\n🎉 Security audit completed successfully!');
+    console.log('\n📊 Security Status:');
+    report.checks.forEach(check => {
+      console.log(`- ${check.name}: ${check.status}`);
+    });
+    
+    console.log('\n🔒 Security Recommendations:');
+    report.recommendations.forEach(rec => {
+      console.log(`- ${rec}`);
+    });
+    
+  } catch (error) {
+    console.error('❌ Error during security audit:', error);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 
@@ -641,10 +847,14 @@ const auditor = new SecurityAuditor();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 auditor.run().catch(console.error);
 
+<<<<<<< HEAD
 
 
 
 <<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 =======
 '
@@ -688,6 +898,7 @@ origin/automation-improvements-final
 console.log('🔒 Security audit completed!');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -723,3 +934,17 @@ console.log('🔒 Security audit completed!');
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+
+console.log('🔒 Security audit completed!');
+
+
+console.log('🔒 Security audit completed!');
+
+// Run the script
+main().catch(console.error);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

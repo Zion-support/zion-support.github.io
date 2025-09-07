@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
@@ -40,6 +41,9 @@ export default async function handler() { return null; }
 import type { NextApiRequest, NextApiResponse } from "next";
 const existing = keys.find(k => k.id === apiKey.id);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 =======
 "
@@ -47,6 +51,7 @@ import type { NextApiRequest, NextApiResponse } from "next";"
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { v4 as uuidv4 } from "uuid";
+<<<<<<< HEAD
 export default async function handler() { return null; }
     return res.status(405).json({ error: "Method Not Allowed" })
   }
@@ -111,3 +116,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({ error: "Method Not Allowed" ;})
+  }
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

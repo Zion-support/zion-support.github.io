@@ -1,5 +1,9 @@
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?: string };
 
+import React, { useState, useEffect } from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function ProjectMilestonesContent() {;
@@ -21,6 +25,8 @@ export function ProjectMilestonesContent() { return null; }
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useParams} from 'react-router-dom';
 import {useProjects} from '@/hooks/useProjects';
 import {useMilestones} from '@/hooks/useMilestones';
@@ -31,6 +37,7 @@ import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
 export function ProjectMilestonesContent() {
   const { projectId } = useParams() as { projectId?: string }
+<<<<<<< HEAD
 
 =======
 
@@ -72,6 +79,8 @@ export function ProjectMilestonesContent() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
@@ -84,6 +93,7 @@ export function ProjectMilestonesContent() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -98,6 +108,16 @@ import React, { useState, useEffect } from 'react';
 =======
 
 
+=======
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?: string };
+  const { user } = useAuth();
+  const { getProjectById } = useProjects();
+  const { ;
+    milestones, ;
+    activities;
+    isLoading: milestonesLoading, ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect } from 'react';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     createMilestone;
@@ -125,6 +145,7 @@ import React, { useState, useEffect } from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
     refetch;
+refetch
     refetch;
   } = useMilestones(projectId);
   const [project, setProject] = useState<any>(null),
@@ -132,7 +153,11 @@ import React, { useState, useEffect } from 'react';
   const [activeTab, setActiveTab] = useState('milestones');
 
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
@@ -149,8 +174,12 @@ import React, { useState, useEffect } from 'react';
       try {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
+=======
+const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id)
@@ -166,11 +195,14 @@ import React, { useState, useEffect } from 'react';
         if (projectData) {
           setProject(projectData)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { useProjects } from '@/hooks/useProjects',;
@@ -211,15 +243,19 @@ export function ProjectMilestonesContent() {;
       if (!projectId) return;
       setIsLoading(true);
       try {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
 
+<<<<<<< HEAD
 
 
 
@@ -235,6 +271,8 @@ export function ProjectMilestonesContent() {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -242,6 +280,7 @@ export function ProjectMilestonesContent() {;
         setIsLoading(false);
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -292,14 +331,19 @@ export function ProjectMilestonesContent() {;
 =======
   useEffect(() => {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
+  const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
+  useEffect(() => {;
+        if (projectData) {;
+          setProject(projectData);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     async function loadProject() {;
       if (!projectId) return,;
       ;
       setIsLoading(true),;
       try {;
-
-
-
 
         const projectData = await getProjectById(projectId);
         if (projectData) {;
@@ -344,6 +388,7 @@ export function ProjectMilestonesContent() {;
 ;
     loadProject(),;
     refetch();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -440,20 +485,31 @@ import { ;
   ProjectHeader;
 } from './components',;
 ;
+=======
+  }, [projectId, getProjectById, refetch]),;            milestones={milestones}
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ProjectMilestonesContent() {;
-  const { projectId } = useParams() as { projectId?:string },;
-  const { user } = useAuth(),;
-  const { getProjectById } = useProjects(),;
-  const { ;
-    milestones, ;
-    activities,;
-    isLoading:milestonesLoading, ;
-    createMilestone,;
-    updateMilestoneStatus,;
-    deleteMilestone,;
-    uploadDeliverable,;
-    isSubmitting,;
+  const { projectId } = useParams() as { projectId?: string };
+
+
+  const { user } = useAuth();
+  const { getProjectById } = useProjects();
+  const {
+  // TODO: Implement
+}
+    milestones;
+    activities;
+    isLoading: milestonesLoading;
+
+    createMilestone;
+    updateMilestoneStatus;
+    deleteMilestone;
+    uploadDeliverable;
+    isSubmitting;
     refetch;
+<<<<<<< HEAD
   } = useMilestones(projectId),;
   const [project, setProject] = useState<any>(null),;
   const [isLoading, setIsLoading] = useState(true),;
@@ -572,6 +628,9 @@ export function ProjectMilestonesContent() {;
     setActiveTab('milestones'),
     await handleMilestoneCreated()
   },
+=======
+  } = useMilestones(projectId);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 <<<<<<< HEAD
@@ -608,46 +667,28 @@ export function ProjectMilestonesContent() {;
 
         <ProjectActions 
 
-
           projectId={projectId || ''}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <ProjectActions
+=======
+<ProjectActions
+    <div className="container mx-auto py-8 px-4">"
+          projectId={projectId || }
+        <ProjectActions;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ),;
-  }
-;
   const handleMilestoneSubmit = async (data:any) => {;
-    if (!projectId) return,;
-    ;
-    // Ensure all required fields are present;
-    const milestoneData = {;
-      project_id:projectId,;
-      title:data.title,;
-      description:data.description || "",;
-      amount:data.amount,;
-      status:"pending" as const,;
-      due_date:data.due_date ? data.due_date.toISOString() :undefined;
-    },;
-    ;
-    await createMilestone(milestoneData),;
-    setActiveTab('milestones'),;
-    await handleMilestoneCreated(),;
-  },;
-;
-  return (;
-    <div className="container mx-auto py-8 px-4">;
-      <ProjectHeader title={project.job?.title || "Untitled Project"} />;
-      ;
-      <div className="flex justify-between items-center my-6">;
-        <h2 className="text-2xl font-bold">Payment Milestones</h2>;
-        <ProjectActions ;
-          projectId={projectId || ''}
+
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />;"
+        <ProjectActions ;"
       title: data.title,;
-      description: data.description || "",;
-      amount: data.amount,;
-      status: "pending" as const,;
+      description: data.description || "",;"
+      amount: data.amount,;"
+      status: "pending" as const,;"
       due_date: data.due_date ? data.due_date.toISOString() : undefined;
     },;
-    await createMilestone(milestoneData),;
+    await createMilestone(milestoneData),;"
     setActiveTab('milestones');
     await handleMilestoneCreated();
   };
@@ -680,13 +721,17 @@ export function ProjectMilestonesContent() {;
           projectId={projectId || ''}
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
-          isTalent={isTalent}
+          isTalent={isTalent})
           onAddMilestone={() => setActiveTab('create')}
 
         />;
       </div>;
 
+/>;
+      </div>;
+      ;
       <Tabs value={activeTab} onValueChange={setActiveTab}>;
+<<<<<<< HEAD
         <TabsList className="mb-6">;
           <TabsTrigger value="milestones">Milestones</TabsTrigger>;
           <TabsTrigger value="activity">Activity</TabsTrigger>;
@@ -695,6 +740,8 @@ export function ProjectMilestonesContent() {;
             <TabsTrigger value="create">Create Milestone</TabsTrigger>;
           )}
         </TabsList>;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 
@@ -752,15 +799,25 @@ export function ProjectMilestonesContent() {;
           <MilestoneManager
             projectId={projectId || ''}
 
+<MilestoneManager 
+            projectId={projectId || ''}
           <MilestoneManager 
             projectId={projectId || ''}
+        <TabsList className="mb-6">;"
+          <TabsTrigger value="milestones">Milestones;""
+          <TabsTrigger value="activity">Activity;""
+            <TabsTrigger value="create">Create Milestone;"
+        ;"
+        <TabsContent value="milestones">;"
 
+          <MilestoneManager;"
+          <MilestoneManager;
             milestones={milestones}
-        ;
-        <TabsContent value="milestones">;
-          <MilestoneManager ;
-            projectId={projectId || ''}            milestones={milestones}
+
+          <MilestoneManager ;"
+            projectId={projectId || }            milestones={milestones}
         />
+
       </div>
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList className="mb-6">
@@ -776,7 +833,18 @@ export function ProjectMilestonesContent() {;
           <MilestoneManager 
             projectId={projectId || ''}
             milestones={milestones}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+        <TabsList className="mb-6">"
+          <TabsTrigger value="milestones">Milestones""
+          <TabsTrigger value="activity">Activity""
+            <TabsTrigger value="create">Create Milestone"
+        <TabsContent value="milestones">"
+
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             activities={activities}
             isLoading={milestonesLoading}
             isClient={isClient}
@@ -786,8 +854,15 @@ export function ProjectMilestonesContent() {;
             paymentTerms={project && project.payment_terms}            isSubmitting={isSubmitting}
 =======
             paymentTerms={project && project.payment_terms}
+paymentTerms={project.paymentterms}
+            paymentTerms={project && project.payment_terms}            isSubmitting={isSubmitting}
+            paymentTerms={project && project.payment_terms}
             isSubmitting={isSubmitting}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             onCreateMilestone={createMilestone}
 import {use_params} from 'react-router-dom';
 import {use_projects} from '@/hooks / use_projects';
@@ -812,8 +887,16 @@ import {useDisputeCheck} from '@/hooks / useDisputeCheck';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
 ;
+<<<<<<< HEAD
 export /**;
  * ProjectMilestonesContent - Function description;
+=======
+export /**
+ * ProjectMilestonesContent - Function description
+export /**
+ * ProjectMilestonesContent - Function description;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  */
 function ProjectMilestonesContent() {}
   const { project_id } = use_params () as { project_id?: string }
@@ -882,6 +965,7 @@ if ( {) {}
 <<<<<<< HEAD
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="container mx - auto py - 8 px-4">;
         <div className="flex justify - center items - center h-64">;
           <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border-primary"></div>;
@@ -896,6 +980,11 @@ if ( {) {}
         <div className="flex justify - center items - center h - 64">;
           <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - primary"></div>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <div className="container mx - auto py - 8 px-4">;
+        <div className="flex justify - center items - center h-64">;
+          <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border-primary"></div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>;
       </div>);
   }
@@ -921,10 +1010,10 @@ if (return, ) {}
 ;
 <<<<<<< HEAD
   return (
-    <div className="container mx - auto py - 8 px - 4">;
+    <div className="container mx - auto py - 8 px-4">;
       <ProjectHeader title={project.job?.title || "Untitled Project"} />;
-      <div className="flex justify - between items - center my - 6">;
-        <h2 className="text - 2xl font - bold">Payment Milestones</h2>;
+      <div className="flex justify - between items - center my-6">;
+        <h2 className="text - 2xl font-bold">Payment Milestones</h2>;
         <ProjectActions;
 =======
   return ("
@@ -943,7 +1032,7 @@ if (return, ) {}
       </div>;
 <<<<<<< HEAD
       <Tabs value={active_tab} onValueChange={setActiveTab}>;
-        <TabsList className="mb - 6">;
+        <TabsList className="mb-6">;
           <TabsTrigger value="milestones">Milestones</TabsTrigger>;
 =======
       <Tabs value={active_tab} onValueChange={setActiveTab}>;"
@@ -962,6 +1051,35 @@ if (return, ) {}
             is_loading={milestones_loading}
             is_client={is_client}
             is_talent={is_talent}
+  // TODO: Implement
+    milestones,
+    is_loading: milestones_loading,
+    create_milestone;
+    delete_milestone;
+    upload_deliverable;
+    is_submitting;
+  } = use_milestones (project_id);
+  const [project, set_project] = useState < any>(null);
+
+      <div className="container mx - auto py - 8 px - 4">;"
+        <div className="flex justify - center items - center h - 64">;"
+          <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - primary"></div>;"
+      </div>);"
+      <div className="flex justify - between items - center my - 6">;"
+        <h2 className="text - 2xl font - bold">Payment Milestones</h2>;"
+          project_id={project_id || }
+          dispute_id={dispute_id}
+          is_talent={is_talent}
+          onAddMilestone={() => setActiveTab ('create')}
+
+      <Tabs value={active_tab} onValueChange={setActiveTab}>;
+
+        <TabsList className="mb - 6">;"
+            <TabsTrigger value="create">Create Milestone)}"
+
+            is_loading={milestones_loading}
+            is_client={is_client}
+pr-12325
             payment_terms={project.payment_terms}
             is_submitting={is_submitting}
             onCreateMilestone={create_milestone}
@@ -990,8 +1108,12 @@ if (return, ) {}
           {(isClient || isTalent) && (;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             paymentTerms={project.payment_terms}
+=======
+paymentTerms={project.payment_terms}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
             onUpdateStatus={updateMilestoneStatus}
@@ -1005,6 +1127,7 @@ if (return, ) {}
         </TabsContent>
         <TabsContent value="create">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -1031,13 +1154,21 @@ if (return, ) {}
             refetch={refetch}              onSubmit={handleMilestoneSubmit}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+          />;
+        </TabsContent>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <MilestoneCreator
 
           {(isClient || isTalent) && (
             <MilestoneCreator 
 
               onSubmit={handleMilestoneSubmit}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            refetch={refetch}              onSubmit={handleMilestoneSubmit}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               isSubmitting={isSubmitting}
 =======
             <MilestoneCreator;
@@ -1078,6 +1209,25 @@ if (return, ) {}
 =======
 }
 
+;
+        <TabsContent value="activity">;
+          <MilestoneActivities projectId={projectId || ''} />;
+        </TabsContent>;
+        ;
+        <TabsContent value="create">;
+          {(isClient || isTalent) && (;
+            <MilestoneCreator ;
+              onSubmit={handleMilestoneSubmit}              isSubmitting={isSubmitting}
+              onCancel={_() => setActiveTab('milestones')}
+              projectScope={project.scopesummary}
+              projectStartDate={project.startdate}
+              projectEndDate={project.enddate}
+              projectType={projectType}
+            />;
+          )}
+        </TabsContent>;
+      </Tabs>;
+    </div>;
           />;
         </TabsContent>;
         <TabsContent value="activity">;
@@ -1126,10 +1276,14 @@ if (return, ) {}
 =======
 }
 
+;
   ),; setIsLoading (true);
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}  ),; setIsLoading (true);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 try {
-  
 }finally {
   setIsLoading (false) 
 }
@@ -1144,8 +1298,8 @@ if (isLoading || !project) {
   if (!projectId) return;
 //Ensure all required fields are present const milestoneData = {
   project id: projectId;
-title: data.title;
-description: data.description || "";
+title: data.title,
+  description: data.description || "";
 amount: data.amount;
 status: " pending"as const;
 due date: data.due date ? data.due date.toISOString () : undefined 
@@ -1234,6 +1388,7 @@ await handleMilestoneCreated ()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1254,3 +1409,37 @@ try {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            refetch={refetch}
+
+          />;
+
+        <TabsContent value="activity">;"
+          <MilestoneActivities projectId={projectId || } />;
+
+        <TabsContent value="create">;"
+
+            <MilestoneCreator;
+          {(isClient || isTalent) && (
+              onSubmit={handleMilestoneSubmit}
+              isSubmitting={isSubmitting})"
+              onCancel={() => setActiveTab('milestones')}
+
+          <MilestoneActivities project_id={project_id || } />;
+
+
+              on_submit={handleMilestoneSubmit}
+              is_submitting={is_submitting}"
+              on_cancel={() => setActiveTab ('milestones')}
+
+    </div>);
+  return (<div className="container mx-auto py-8 px-4" > <div className="flex justify-center items-center h-64" > <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary" ></div> </div> </div>)""
+<div className="flex justify-between items-center my-6"> <h2 className="text-2xl font-bold">Payment Milestones</h2> <ProjectActions projectId= {"
+}/> </div>) "
+} <TabsContent value=" milestones" > <MilestoneManager projectId= {"
+
+}/>  onSubmit= {
+}  </div>) 
+
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

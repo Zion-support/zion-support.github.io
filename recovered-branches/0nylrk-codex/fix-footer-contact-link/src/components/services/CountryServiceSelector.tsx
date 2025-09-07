@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -145,19 +146,11 @@ interface CountryServiceSelectorProps {
   selectedCountry?: CountryPricing | null;
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-export function CountryServiceSelector({
-  onCountryChange,
-  selectedCountry: initialCountry,
-}: CountryServiceSelectorProps) {
-  return (
-    <div className="space-y-6">
-      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
-        <CountrySelector
-          onCountryChange={onCountryChange || (() => {})}
-          selectedCountry={initialCountry || null}
-        />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {CountrySelector} from "./CountrySelector";
@@ -173,6 +166,14 @@ import { ServiceDetails } from "./ServiceDetails",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
+import { CountrySelector } from "./CountrySelector",;
+import { PaymentSection } from "./PaymentSection",;
+import { ServiceDetails } from "./ServiceDetails",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
 
@@ -228,10 +229,13 @@ export function CountryServiceSelector(): any ({ onCountryChange, selectedCountr
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
 
@@ -241,8 +245,11 @@ export function CountryServiceSelector(): any ({ onCountryChange, selectedCountr
 }
 ;
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountrySelector } from "./CountrySelector",;
 import { PaymentSection } from "./PaymentSection",;
@@ -272,9 +279,17 @@ export function CountryServiceSelector() { return null; }
   ),;}
  interface CountryServiceSelectorProps {}
   onCountryChange?: (country: CountryPricing | null) => void;
+<<<<<<< HEAD
 selectedCountry?: CountryPricing | null;
 }export function CountryServiceSelector() { return null; }
   return (<div className="space-y-6" > <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light" > onCountryChange || ( () => {}
+=======
+selectedCountry?: CountryPricing | null 
+}export function CountryServiceSelector ({
+  onCountryChange, selectedCountry: initialCountry 
+}: CountryServiceSelectorProps) {
+  return (<div className="space-y-6" > <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light" > onCountryChange || ( () => {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }) 
 }selectedCountry= {}
   initialCountry || null;
@@ -304,6 +319,7 @@ selectedCountry?: CountryPricing | null;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -323,3 +339,63 @@ selectedCountry?: CountryPricing | null;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import {
+
+  // TODO: Implement
+}
+  onsiteServicePricing,
+  CountryPricing,
+} from "@/data/onsiteServicePricing";""
+import { CountrySelector } from "./CountrySelector";""
+import { PaymentSection } from "./PaymentSection";""
+import { ServiceDetails } from "./ServiceDetails";"
+interface CountryServiceSelectorProps {
+  // TODO: Implement
+  onCountryChange?: (country: CountryPricing | null) => void;
+  selectedCountry?: CountryPricing | null;
+
+export function CountryServiceSelector({
+  onCountryChange,
+  selectedCountry: initialCountry,)
+}: CountryServiceSelectorProps) {
+  return ("
+    <div className="space-y-6">"
+</div>"
+      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">"
+</div>
+        <CountrySelector;)
+          onCountryChange={onCountryChange || (() => {})}
+</CountrySelector>
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+
+
+
+      {initialCountry && <ServiceDetails country={initialCountry.country} />}
+
+
+
+
+    <div className="space-y-6">;"
+      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;"
+        <CountrySelector ;
+          onCountryChange={onCountryChange || (() => {})} ;
+
+
+      </div>;
+
+    </div>;"
+  return (<div className="space-y-6" > <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light" > onCountryChange || ( () => {"
+  initialCountry && <PaymentSection selectedCountry= {
+  initialCountry;
+}/> 
+
+}</div> {
+  initialCountry && <ServiceDetails country= {
+  initialCountry.country;
+
+}</div>) "
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

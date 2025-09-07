@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 
 import React from "react";
@@ -50,3 +51,28 @@ export type EmptyStateProps = {};
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  return (
+    <div className="bg-white rounded-lg shadow-md p-6">
+      <h3 className="text-lg font-semibold mb-4">User Engagement</h3>
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <span>Active Users</span>
+          <span className="font-semibold">1,234</span>
+        </div>
+        <div className="flex items-center justify-between">
+          <span>Session Duration</span>
+          <span className="font-semibold">5m 32s</span>
+        </div>
+        <div className="flex items-center justify-between">
+          <span>Bounce Rate</span>
+          <span className="font-semibold">23%</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UserEngagementSystem;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

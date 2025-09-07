@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ];
 
 <<<<<<< HEAD
@@ -81,6 +82,9 @@ export default function CapabilitiesPage() {;
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 const CAPABILITIES = null;
 ];
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function CapabilitiesPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (

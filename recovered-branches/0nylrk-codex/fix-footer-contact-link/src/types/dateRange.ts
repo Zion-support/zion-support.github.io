@@ -16,7 +16,6 @@ export interface DateRange {};
 
 }
 
-
 export interface DateRange {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   from?: Date;
@@ -91,6 +90,8 @@ export interface DateRange {};
 }export interface DateRange {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   from?: Date;
+}export interface DateRange {
+  from?: Date;
 }
 <<<<<<< HEAD
 export interface DateRange {;
@@ -100,6 +101,7 @@ export interface DateRange {;
   to?: Date;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,3 +120,18 @@ export interface DateRange {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+}
+  from?: Date;
+  to?: Date;
+
+
+
+
+export interface DateRange {;
+;
+
+  // TODO: Implement
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

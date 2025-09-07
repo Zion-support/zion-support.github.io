@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout';'
+=======
+
+import Layout from '../components/layout/Layout';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion, AnimatePresence } from 'framer-motion';
 
 <<<<<<< HEAD
@@ -21,6 +26,7 @@ import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-ser
 '
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
 
+<<<<<<< HEAD
   Search,
   Filter,
   Grid3X3,
@@ -79,10 +85,12 @@ import { innovativeITServicesEnhanced2025  } from '../data/2025-innovative-it-se
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
 interface Service {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   name: string;
   tagline: string;
-  price: string,
+  price: string;,
   description: string;
   features: string[];
   category: string;
@@ -115,12 +123,21 @@ const categories = []
   {'
     name: 'Quantum & Emerging Tech''
     icon: <Atom className='w-5 h-5' />
+<<<<<<< HEAD
     count: emergingTechServicesEnhanced2025.length'
   },];  { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length }'"
   { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025.length }'"
   { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025.length }'"
   { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length }'"
   { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
+=======
+    count: emergingTechServicesEnhanced2025.length;
+  },];  { name: 'All Services';, icon: <Globe className="w-5 h-5" />;, count: allServices.length ;}
+  { name: 'Micro SAAS';, icon: <Rocket className="w-5 h-5" />;, count: innovativeRealMicroSaasServices2025.length ;}
+  { name: 'AI & Consciousness';, icon: <Brain className="w-5 h-5" />;, count: innovativeAIServicesEnhanced2025.length ;}
+  { name: 'Enterprise IT';, icon: <Shield className="w-5 h-5" />;, count: innovativeITServicesEnhanced2025.length ;}
+  { name: 'Quantum & Emerging Tech';, icon: <Atom className="w-5 h-5" />;, count: emergingTechServicesEnhanced2025.length ;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 ];
 const sortOptions = []
@@ -131,6 +148,7 @@ const sortOptions = []
   icon?: React && React.ReactNode;
 const allServices: Service[] = [;
   ...innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.map(service => ({;
+<<<<<<< HEAD
     ...service,;'
     category: 'Micro SAAS',;'
     icon: <Rocket className='w-6 h-6' />,;
@@ -150,17 +168,39 @@ const allServices: Service[] = [;
     category: 'Quantum & Emerging Tech',;'
     icon: <Atom className='w-6 h-6' />,;
 <<<<<<< HEAD
+=======
+    ...service,;
+    category: 'Micro SAAS';,;
+    icon: <Rocket className='w-6 h-6' />;,;
+  })),;
+  ...innovativeAIServicesEnhanced2025 && innovativeAIServicesEnhanced2025.map(service => ({;
+    ...service,;
+    category: 'AI & Consciousness';,;
+    icon: <Brain className='w-6 h-6' />;,;
+  })),;
+  ...innovativeITServicesEnhanced2025 && innovativeITServicesEnhanced2025.map(service => ({;
+    ...service,;
+    category: 'Enterprise IT';,;
+    icon: <Shield className='w-6 h-6' />;,;
+  })),;
+  ...emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.map(service => ({;
+    ...service,;
+    category: 'Quantum & Emerging Tech';,;
+    icon: <Atom className='w-6 h-6' />;,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   })),;
   marketSize: string;
   growthRate: string;
   launchDate: string;
   badge?: string;
+
   icon?: React.ReactNode
 }
 
 const allServices: Service[] = [
   ...innovativeRealMicroSaasServices2025.map(service;
                 setSelectedPriceRange('all')
+<<<<<<< HEAD
 ];
 const sortOptions = [
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1652,6 +1692,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 setSelectedPriceRange('all');
               }}
               className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200'
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }}
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
             >
@@ -1666,6 +1709,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>
           <motion.div
 
+<<<<<<< HEAD
 =======
       {/* CTA Section */}'
       <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20'>'"
@@ -1678,6 +1722,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >"
+=======
+            initial={{ opacity: 0;, y: 30 ;}}
+            whileInView={{ opacity: 1;, y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
+          >
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
 <<<<<<< HEAD
@@ -1709,6 +1760,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <a"
                 href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
             </h2>
@@ -1759,6 +1813,7 @@ description"content=" Explore our complete portfolio of innovative micro SAAS, A
 top: `$ {}
   Math.random () * 100;`
 }%`
+<<<<<<< HEAD
 }/>) )"
 }</div> <div className=" relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"> <motion.div initial= {}
   {}
@@ -1782,6 +1837,30 @@ top: `$ {}
 "
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   )
 <<<<<<< HEAD
+=======
+}/>) )
+}</div> <div className=" relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"> <motion.div initial= {
+  {
+  opacity: 0;, y: 30;
+}animate= {
+  {
+  opacity: 1;, y: 0;
+}transition= {
+  {
+  {
+  opacity: 0;, y: 30;
+}whileInView= {
+  {
+  opacity: 1;, y: 0;
+}transition= {
+  {
+  once: true ;
+}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion && motion.div> </div> </div> </Layout>)   );
+
+  once: true ;
+
+}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   );
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
       <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20 text - center'>          <motion.div      <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border-cyan-500 / 20">;
@@ -1793,11 +1872,19 @@ top: `$ {}
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20 text - center">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <motion.div;
+<<<<<<< HEAD
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >;'
+=======
+            initial={{ opacity: 0;, coordinate_y: 30 ;}}
+            whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+            transition={{ duration: 0.8 ;}}
+            viewport={{ once: true ;}}
+          >;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className='text - 4xl font - bold text - white mb - 6'>;
               Ready to Transform Your Business?;
             </h2>;'
@@ -1881,6 +1968,7 @@ top: `$ {
 }/>) );
 }</div> <div className=" relative z - 10 text - center px - 4 sm:px - 6 lg:px - 8 max-w-6xl mx-auto"> <motion.div initial= {
   {
+<<<<<<< HEAD
 =======
 }/>) );"
 }</div> <div className=" relative z - 10 text - center px - 4 sm:px - 6 lg:px - 8 max - w-6xl mx - auto"> <motion.div initial= {}
@@ -1891,6 +1979,12 @@ top: `$ {
   {}
   opacity: 1, coordinate_y: 0;
 <<<<<<< HEAD
+=======
+  opacity: 0;, coordinate_y: 30;
+}animate= {
+  {
+  opacity: 1;, coordinate_y: 0;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }transition= {
   {
   duration: 0.8;
@@ -1957,6 +2051,7 @@ top: `$ {
   () => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   > Clear All Filters </button> </div>);
+<<<<<<< HEAD
 }</div> <motion.div initial= {}
   {}
   opacity: 0, coordinate_y: 30;
@@ -1965,13 +2060,23 @@ top: `$ {
   opacity: 1, coordinate_y: 0;
 }transition= {}
   {}
+=======
+}</div> <motion.div initial= {
+  {
+  opacity: 0;, coordinate_y: 30;
+}whileInView= {
+  {
+  opacity: 1;, coordinate_y: 0;
+}transition= {
+  {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   duration: 0.8;
 <<<<<<< HEAD
 }viewport= {
   {
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-  once: true 
+  once: true ;
 
 =======
 }viewport= {}

@@ -1,10 +1,11 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Simple Code Quality Checker;
  * Performs basic code quality checks;
  */
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 console.log(' Running code quality checks...')
 if (fs.existsSync('package.json')
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')
@@ -22,6 +23,8 @@ if (fs.existsSync('package.json')
   results.checks.push({ "name": 'prettier-config', "status"})
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

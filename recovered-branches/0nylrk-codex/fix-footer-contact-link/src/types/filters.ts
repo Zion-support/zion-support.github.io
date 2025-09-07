@@ -34,6 +34,7 @@ export interface FilterSidebarProps {};
   selectedAvailability: string[];
   toggleAvailability: (availability: string) => void;
   selectedRegions: string[];
+<<<<<<< HEAD
   toggleRegion: (region: string) => void;
   priceRange: [number, number];
 <<<<<<< HEAD
@@ -82,6 +83,8 @@ export interface FilterSidebarProps {};
 =======
   setPriceRange: (range: [number, number]) => void;
   experience_range: [number, number];
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   setExperienceRange: (range: [number, number]) => void;
@@ -89,12 +92,26 @@ export interface FilterSidebarProps {};
     skills: boolean;
     availability: boolean;
     region: boolean;
+
     experience: boolean;
-    price: boolean;
-  };
+    price: boolean
+};
   toggleSection: (sectionName: string) => void;
   sortOption: string;
   setSortOption: (option: string) => void;
+
+
+  expanded_sections: {,
+  skills: boolean;
+    availability: boolean;,
+  region: boolean;
+    experience: boolean;,
+  price: boolean;
+  };
+  toggleSection: (sectionName: string) => void;,
+
+  sortOption: string;
+  setSortOption: (option: string) => void;,
   clearFilters: () => void;
   isMobileFilterOpen?: boolean;
 }
@@ -116,6 +133,9 @@ export interface FilterSidebarProps {};
   toggle_section: (section_name: string) => void;
   sort_option: string;
   setSortOption: (option: string) => void;
+  toggle_section: (section_name: string) => void;,
+  sort_option: string;
+  setSortOption: (option: string) => void;,
   clear_filters: () => void,
   isMobileFilterOpen?: boolean;
 }
@@ -130,8 +150,34 @@ export interface FilterComponentProps {
 export interface FilterComponentProps {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   expanded: boolean;
-  toggleSection: () => void;
-  isMobileFilterOpen?: boolean;
+
+}
+setPriceRange: (range: [number, number]) => void;
+  experienceRange: [number, number],
+  setExperienceRange: (range: [number, number]) => void;
+  expandedSections: {
+    skills: boolean;
+    availability: boolean;
+    region: boolean;
+
+    experience: boolean
+    price: boolean
+  }
+  toggleSection: (sectionName: string) => void;
+  sortOption: string;
+  setSortOption: (option: string) => void;
+  clearFilters: () => void
+
+  isMobileFilterOpen?: boolean
+}
+export interface FilterComponentProps {
+
+export interface FilterComponentProps {;
+  expanded: boolean;
+
+  toggleSection: () => void
+
+  isMobileFilterOpen?: boolean
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,8 +328,10 @@ export interface AvailabilityFilterProps extends FilterComponentProps {};
 }
 export interface RegionFilterProps extends FilterComponentProps {};
   selectedRegions: string[];
-  toggleRegion: (region: string) => void;
+
+  // TODO: Implement
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 export interface ExperienceFilterProps extends FilterComponentProps {;
@@ -329,6 +377,43 @@ export interface ExperienceFilterProps extends FilterComponentProps {};
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  expanded: boolean;,
+  toggleSection: () => void;
+  isMobileFilterOpen?: boolean;
+}
+export interface SkillsFilterProps extends FilterComponentProps {
+  // TODO: Implement
+}
+  selectedSkills: string[],
+  toggleSkill: (skill: string) => void;
+export interface SkillsFilterProps extends FilterComponentProps {
+  // TODO: Implement
+}
+  selectedSkills: string[];,
+
+  toggleSkill: (skill: string) => void;
+export interface SkillsFilterProps extends FilterComponentProps {
+  selectedSkills: string[];}
+  toggleSkill: (skill: string) => void;}
+}
+export interface AvailabilityFilterProps extends FilterComponentProps {
+
+  // TODO: Implement
+}
+  selectedAvailability: string[];,
+  toggleAvailability: (availability: string) => void;
+}
+export interface RegionFilterProps extends FilterComponentProps {
+  // TODO: Implement
+}
+  selectedRegions: string[];,
+  toggleRegion: (region: string) => void;
+
+}
+}
+export interface ExperienceFilterProps extends FilterComponentProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export interface SkillsFilterProps extends FilterComponentProps {
   selectedSkills: string[],
@@ -404,15 +489,28 @@ export interface ExperienceFilterProps extends FilterComponentProps {;
   experienceRange: [number, number],;
   experience_range: [number, number];  setExperienceRange: (range: [number, number]) => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+}
+export interface PriceFilterProps extends FilterComponentProps {
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+<<<<<<< HEAD
 export interface PriceFilterProps extends FilterComponentProps {};
+=======
+export interface PriceFilterProps extends FilterComponentProps {
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
 }
@@ -444,9 +542,15 @@ export interface SearchFilterProps {
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   searchTerm: string;
+<<<<<<< HEAD
 }
 export interface SearchFilterProps {}
   search_term: string,;
+=======
+  // TODO: Implement
+}
+  searchTerm: string;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   setSearchTerm: (term: string) => void;
 }
 <<<<<<< HEAD
@@ -469,11 +573,37 @@ export interface SortFilterProps {
   setSortOption: (option: string) => void;
 
 }
+setExperienceRange: (range: [number, number]) => void;
+}
+;
+export interface PriceFilterProps extends FilterComponentProps {;
+  priceRange: [number, number],;
+  setPriceRange: (range: [number, number]) => void;
+}
+export interface SearchFilterProps {
   searchTerm: string
+}  searchTerm: string
 
 }
 export interface SearchFilterProps {
 
+  // TODO: Implement
+}
+  sortOption: string;,
+  setSortOption: (option: string) => void;
+}
+export interface SortFilterProps {
+  // TODO: Implement
+}
+  sort_option: string,
+  setSortOption: (option: string) => void;
+
+}
+  searchTerm: string;
+}
+export interface SearchFilterProps {
+  // TODO: Implement
+}
   search_term: string,
   setSearchTerm: (term: string) => void;
 }
@@ -493,6 +623,14 @@ export interface SortFilterProps {};
 ;
 export interface SortFilterProps {;
   sortOption: string;
+  // TODO: Implement
+}
+  sortOption: string;,
+  setSortOption: (option: string) => void;
+}
+;
+export interface SortFilterProps {;
+  sortOption: string;,
   setSortOption: (option: string) => void;
 }
 ;
@@ -539,40 +677,164 @@ export interface SearchFilterProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 }
+  // TODO: Implement
+}
+  searchTerm: string;,
+  setSearchTerm: (term: string) => void;,
+  selectedSkills: string[];
+  toggleSkill: (skill: string) => void;,
+  selectedAvailability: string[];
+  toggleAvailability: (availability: string) => void;,
+  selectedRegions: string[];
+  toggleRegion: (region: string) => void;,
+  priceRange: [number, number];
+  setPriceRange: (range: [number, number]) => void;
+  experience_range: [number, number];
+
+  setExperienceRange: (range: [number, number]) => void;
+  expanded_sections: {,
+  skills: boolean;
+    availability: boolean;,
+  region: boolean;
+    experience: boolean;,
+  price: boolean;
+  };
+  toggleSection: (sectionName: string) => void;,
+  sortOption: string;
+  setSortOption: (option: string) => void;,
+  clearFilters: () => void;
+  isMobileFilterOpen?: boolean;
+
+    experience: boolean,
+  toggle_section: (section_name: string) => void;,
+  sort_option: string;
+  clear_filters: () => void,
+export interface FilterComponentProps {
+  // TODO: Implement
+  expanded: boolean;,
+  toggleSection: () => void;
+export interface SkillsFilterProps extends FilterComponentProps {
+  // TODO: Implement
+  selectedSkills: string[],
+  toggleSkill: (skill: string) => void;
+  // TODO: Implement
+  selectedSkills: string[];,
+export interface AvailabilityFilterProps extends FilterComponentProps {
+  // TODO: Implement
+  selectedAvailability: string[];,
+  toggleAvailability: (availability: string) => void;
+export interface RegionFilterProps extends FilterComponentProps {
+  // TODO: Implement
+  selectedRegions: string[];,
+  toggleRegion: (region: string) => void;
+
+export interface ExperienceFilterProps extends FilterComponentProps {
+  // TODO: Implement
+  experienceRange: [number, number];
+export interface PriceFilterProps extends FilterComponentProps {
+  // TODO: Implement
+
+
+export interface FilterSidebarProps {;
+
+export interface SearchFilterProps {
+  // TODO: Implement
+  setSearchTerm: (term: string) => void;
+
+export interface SortFilterProps {
+  // TODO: Implement
+  sortOption: string;,
+  setSortOption: (option: string) => void;
+  // TODO: Implement
+  sort_option: string,
+
+  searchTerm: string;
+  // TODO: Implement
+  search_term: string,
+  // TODO: Implement
+  // TODO: Implement
+}
+
+}
 ;
+export interface SortFilterProps {;
+  // TODO: Implement
 export interface FilterComponentProps {;
   expanded:boolean,;
   toggleSection:() => void,;
   isMobileFilterOpen?:boolean;
-}
-;
 export interface SkillsFilterProps extends FilterComponentProps {;
   selectedSkills:string[],;
   toggleSkill:(skill:string) => void;
-}
-;
 export interface AvailabilityFilterProps extends FilterComponentProps {;
   selectedAvailability:string[],;
   toggleAvailability:(availability:string) => void;
-}
-;
 export interface RegionFilterProps extends FilterComponentProps {;
   selectedRegions:string[],;
   toggleRegion:(region:string) => void;
-}
-;
 export interface ExperienceFilterProps extends FilterComponentProps {;
   experienceRange:[number, number],;
   setExperienceRange:(range:[number, number]) => void,;
-}
-;
 export interface PriceFilterProps extends FilterComponentProps {;
   priceRange:[number, number],;
   setPriceRange:(range:[number, number]) => void,;}
-;
 export interface SearchFilterProps {;
   searchTerm:string,;
   setSearchTerm:(term:string) => void;
+  sortOption:string,;
+  setSortOption:(option:string) => void;
+
+pr-12325
+  expanded: boolean,;
+  toggleSection: () => void,;}
+  isMobileFilterOpen?: boolean;}
+}
+;
+export interface SkillsFilterProps extends FilterComponentProps {;
+  selectedSkills: string[],;}
+  toggleSkill: (skill: string) => void;}
+}
+;
+export interface AvailabilityFilterProps extends FilterComponentProps {;
+  selectedAvailability: string[],;}
+  toggleAvailability: (availability: string) => void;}
+}
+;
+export interface RegionFilterProps extends FilterComponentProps {;
+  selectedRegions: string[],;}
+  toggleRegion: (region: string) => void;}
+}
+;
+export interface ExperienceFilterProps extends FilterComponentProps {;
+  experienceRange: [number, number],;}
+  experience_range: [number, number];  setExperienceRange: (range: [number, number]) => void;}
+}
+export interface PriceFilterProps extends FilterComponentProps {
+  priceRange: [number, number];}
+  setPriceRange: (range: [number, number]) => void;}
+}
+export interface FilterSidebarProps {;}
+}
+export interface SearchFilterProps {
+  searchTerm: string;}
+  setSearchTerm: (term: string) => void;}
+}
+export interface SortFilterProps {
+  sortOption: string;}
+  setSortOption: (option: string) => void;}
+}
+export interface SortFilterProps {
+  sort_option: string,}
+  setSortOption: (option: string) => void;}
+}  searchTerm: string;
+}
+export interface SearchFilterProps {
+  search_term: string,}
+  setSearchTerm: (term: string) => void;}
+}
+export interface SortFilterProps {
+  sortOption: string;}
+setSortOption: (option: string) => void}
 }
 ;
 export interface SortFilterProps {;
@@ -582,4 +844,15 @@ export interface SortFilterProps {;
 ;
 ;
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+;
+  sortOption: string;}
+  setSortOption: (option: string) => void;}
+}
+;
+}
+export interface SearchFilterProps {}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

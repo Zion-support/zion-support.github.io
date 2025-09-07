@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -16,6 +17,8 @@
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -90,6 +93,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       let content: string
       let fileName: string
 =======
@@ -100,15 +104,22 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       let content: string,
       let fileName: string,
       
+=======
+let content: string,
+      let fileName: string,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (format === 'json') {;
         content = JSON.stringify(metadata, null, 2);
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
@@ -170,15 +181,18 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata && metadata.platform;
         ];
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let content: string,
       let fileName: string,
-      
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       let content: string
@@ -860,3 +874,17 @@ return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export &
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+let content: string
+      let fileName: string
+      let content: string,
+      let fileName: string,
+      if (format === 'json') {;
+        content = JSON.stringify(metadata, null, 2);
+      if (format === 'json') {
+        content = JSON.stringify(metadata, null, 2),
+        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

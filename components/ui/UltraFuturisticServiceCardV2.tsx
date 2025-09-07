@@ -1,7 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
+
 import { motion  } from 'framer-motion';
+
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -48,19 +56,22 @@ import {;
 interface ServiceCardProps {;
   service: {;
     id: string;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     name: string;
     tagline: string;
     description: string;
+
     category: string;
+
     price: {
       monthly: number;
+
       yearly: number;
       currency: string;
       trialDays: number;
-      setupTime: string;
-      enterprise?: number
-    },
-    features: string[];
+
     benefits: string[];
     targetAudience: string[];
     marketPosition: string;
@@ -69,14 +80,17 @@ interface ServiceCardProps {;
     realImplementation: boolean;
     implementationDetails: string;
     roi: string;
+
     useCases: string[];
 origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: string[];
+
     support: string;
     compliance: string[];
     link: string;
     icon: string;
     color: string;
+<<<<<<< HEAD
     popular: boolean;'
         return <Zap className='w-5 h-5' />;'
       case 'quantum & emerging tech':;'
@@ -86,6 +100,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'space & metaverse':;'
         return <Globe className='w-5 h-5' />;'
       case 'micro saas':;'
+=======
+
+    popular: boolean;
+        return <Zap className='w-5 h-5' />;
+      case 'quantum & emerging tech':;
+        return <Rocket className='w-5 h-5' />;
+      case 'enterprise it':;
+        return <Shield className='w-5 h-5' />;
+      case 'space & metaverse':;
+        return <Globe className='w-5 h-5' />;
+      case 'micro saas':;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         return <TrendingUp className='w-5 h-5' />;
         return <Rocket className="w-5 h-5" />;'
       case 'enterprise it':;"
@@ -100,15 +126,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
         return <Zap className='w-5 h-5' />;    }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     launchDate: string;
+
     customers: number;
     rating: number;
     reviews: number;
     marketSize?: string;
-        return <Zap className='w-5 h-5' />;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
 
+<<<<<<< HEAD
 
 
 
@@ -778,3 +807,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

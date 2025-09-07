@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+
 import { Menu;
 	X;
 	ChevronDown;
@@ -49,44 +55,44 @@ import { Menu;
 	Bot;
 	ChevronRight as ChevronRightIcon;
 	Eye;
-	FlaskConical;
-	Link as LinkIcon
- } from 'lucide-react';
+	FlaskConical;}
+	Link as LinkIcon;}
+  } from 'lucide-react';
 import Button from '../ui/Button';
-export default function NeoFuturisticNavigation() {
-	const [isOpen, setIsOpen] = useState(false);
-	const [isScrolled, setIsScrolled] = useState(false);
-	const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-	const router = null;
-	return (
-		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-			isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'
-		}`}> 
+
+export default function NeoFuturisticNavigation() {const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null />(null),const router = null;}
+	return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent';}
+		}`} />
+
 			{/* Scroll Progress Bar */}
-			<div className="absolute top-0 left-0 h-1 w-full bg-transparent">
-				<div
-					className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600"
-					style={{ width: `${(typeof window !== 'undefined' && document.body.scrollHeight > 0) ? (Math.min(100, (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)) : 0}%` }}
-				/>
-			</div>
-			<div className="max-w-7xl mx-auto px-4">
-				<div className="flex items-center justify-between h-20">
+			<div className=\"absolute top-0 left-0 h-1 w-full bg-transparent\" />;
+				<div;"
+					className=\"h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600\";
+					style={{ width: `${(typeof window !== 'undefined' && document.body.scrollHeight  /> 0) ? (Math.min(100;, (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)) : 0}%` }}
+				/>;
+			</div>;"
+			<div className=\"max-w-7xl mx-auto px-4\" />;"
+				<div className=\"flex items-center justify-between h-20\" />;
 					{/* Logo */}
-					<Link href="/" className="flex items-center space-x-3 group">
-						<div className="relative">
-							<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-								<Sparkles className="w-6 h-6 text-white" />
-							</div>
-							<div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-						</div>
-						<div className="hidden sm:block">
-							<div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-								Zion Tech Group
-							</div>
-							<div className="text-xs text-gray-400">Revolutionary Technology</div>
+"
+					<Link href=\"/\" className=\"flex items-center space-x-3 group\" />"
+						<div className=\"relative\" />"
+							<div className=\"w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300\" />"
+								<Sparkles className=\"w-6 h-6 text-white\" />
+							</div>"
+							<div className=\"absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300\" /></div>
+						</div>"
+						<div className=\"hidden sm:block\" />"
+							<div className=\"text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300\" />
+								Zion Tech Group;
+							</div>"
+							<div className=\"text-xs text-gray-400\" />Revolutionary Technology</div>
 						</div>
 					</Link>
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Menu
@@ -1256,261 +1262,268 @@ export default function NeoFuturisticNavigation() {};
           </Link>
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>
+=======
+
+
+          {/* Desktop Navigation *}
+}
+          <div className='hidden lg:flex items-center space-x-8' />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Services Dropdown */}
-            <div className='relative group'>
-              <button
-                className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
-                onClick={() => toggleDropdown('services')}
-              >
-                <span>Services</span>
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-300 ${
-                    activeDropdown === 'services' ? 'rotate-180' : ''
+            <div className='relative group' />;
+              <button;
+                className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2';
+                onClick={() = /> toggleDropdown('services')}
+              >;
+                <span />Services</span>;
+                <ChevronDown;
+                  className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === 'services' ? 'rotate-180' : '';}
                   }`}
-                />
-              </button>
-              {activeDropdown === 'services' && (
-                <div className='absolute top-full left-0 mt-2 w-[800px] bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6'>
-                  <div className='grid grid-cols-2 gap-6'>
-                    {serviceCategories.map((category, index) => (
-                      <div key={index} className='group'>
-                        <div className='flex items-center space-x-3 mb-3'>
-                          <div
-                            className={`p-2 rounded-lg bg-gradient-to-r ${category.color} bg-opacity-20`}
-                          >
+                />;
+              </button>;
+              {activeDropdown === 'services' && (<div className='absolute top-full left-0 mt-2 w-[800px] bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6' />;}
+                  <div className='grid grid-cols-2 gap-6' />;}
+                    {serviceCategories.map((category, index) => (<div key={index} className='group' />;
+                        <div className='flex items-center space-x-3 mb-3' />;
+                          <div;
+                            className={`p-2 rounded-lg bg-gradient-to-r ${category.color} bg-opacity-20`} />
+
                             {category.icon}
-                          </div>
-                          <div>
-                            <h3 className='text-white font-semibold group-hover:text-cyan-400 transition-colors'>
+                          </div>;
+                          <div />;
+                            <h3 className='text-white font-semibold group-hover:text-cyan-400 transition-colors' />;
                               {category.name}
-                            </h3>
-                            <p className='text-gray-400 text-sm'>
+                            </h3>;
+                            <p className='text-gray-400 text-sm' />;
                               {category.description}
-                            </p>
-                          </div>
-                        </div>
-                        <div className='space-y-2'>
-                          {category.services.map((service, serviceIndex) => (
-                            <div
+                            </p>;
+                          </div>;
+                        </div>;
+                        <div className='space-y-2' />;
+                          {category.services.map((service, serviceIndex) => (<div;}
                               key={serviceIndex}
-                              className='flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors'
-                            >
-                              <div>
-                                <div className='text-white text-sm font-medium'>
+                              className='flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors' />
+
+                              <div />;
+                                <div className='text-white text-sm font-medium' />;
                                   {service.name}
-                                </div>
-                                <div className='text-gray-400 text-xs'>
+                                </div>;
+                                <div className='text-gray-400 text-xs' />;
                                   {service.description}
-                                </div>
-                              </div>
-                              <div className='text-cyan-400 text-sm font-semibold'>
+                                </div>;
+                              </div>;
+                              <div className='text-cyan-400 text-sm font-semibold' />;
                                 {service.price}
-                              </div>
-                            </div>
+                              </div>;
+                            </div>;
                           ))}
-                        </div>
-                      </div>
+                        </div>;
+                      </div>;
                     ))}
-                  </div>
-                  <div className='mt-6 pt-6 border-t border-gray-700/50'>
-                    <div className='flex items-center justify-between'>
-                      <div className='text-gray-400 text-sm'>
-                        <span className='text-cyan-400 font-semibold'>
-                          500+
+                  </div>;
+                  <div className='mt-6 pt-6 border-t border-gray-700/50' />;
+                    <div className='flex items-center justify-between' />;
+                      <div className='text-gray-400 text-sm' />;
+                        <span className='text-cyan-400 font-semibold' />;
+                          500+;
                         </span>{' '}
-                        Revolutionary Services Available
-                      </div>
-                      <Button href='/services' variant='quantum' size='sm'>
-                        View All Services
-                        <ArrowRight className='w-4 h-4 ml-2' />
-                      </Button>
-                    </div>
-                  </div>
-                </div>
+                        Revolutionary Services Available;
+                      </div>;
+                      <Button href='/services' variant='quantum' size='sm' />;
+                        View All Services;
+                        <ArrowRight className='w-4 h-4 ml-2' />;
+                      </Button>;
+                    </div>;
+                  </div>;
+                </div>;
               )}
-            </div>
+            </div>;
             {/* Direct Links */}
-            <Link
-              href='/it-services'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              IT Services
-            </Link>
-            <Link
-              href='/ai-services'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              AI Services
-            </Link>
-            <Link
-              href='/micro-saas'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              Micro SaaS
-            </Link>
-            <Link
-              href='/pricing'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              Pricing
-            </Link>
-            <Link
-              href='/ai-evals'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              AI Evals
-            </Link>
-            <Link
-              href='/agentic-rag'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              Agentic RAG
-            </Link>
-            <Link
-              href='/ai-guardrails'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              Guardrails
-            </Link>
-            <Link
-              href='/ai-agents'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              Agents
-            </Link>
-            <Link
-              href='/solutions'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              Solutions
-            </Link>
-            <Link
-              href='/api-observability'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              API Observability
-            </Link>
-            <Link
-              href='/incident-automation-suite'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              Incident Automation
-            </Link>
-            <Link
-              href='/data-pipeline-health'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              Data Pipeline Health
-            </Link>
-            <Link
-              href='/ai-code-review-copilot'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              AI Code Review
-            </Link>
-            <Link
-              href='/resources'
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              Resources
-            </Link>
+            <Link;
+              href='/it-services';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              IT Services;
+            </Link>;
+            <Link;
+              href='/ai-services';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              AI Services;
+            </Link>;
+            <Link;
+              href='/micro-saas';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              Micro SaaS;
+            </Link>;
+            <Link;
+              href='/pricing';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              Pricing;
+            </Link>;
+            <Link;
+              href='/ai-evals';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              AI Evals;
+            </Link>;
+            <Link;
+              href='/agentic-rag';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              Agentic RAG;
+            </Link>;
+            <Link;
+              href='/ai-guardrails';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              Guardrails;
+            </Link>;
+            <Link;
+              href='/ai-agents';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              Agents;
+            </Link>;
+            <Link;
+              href='/solutions';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              Solutions;
+            </Link>;
+            <Link;
+              href='/api-observability';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              API Observability;
+            </Link>;
+            <Link;
+              href='/incident-automation-suite';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              Incident Automation;
+            </Link>;
+            <Link;
+              href='/data-pipeline-health';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              Data Pipeline Health;
+            </Link>;
+            <Link;
+              href='/ai-code-review-copilot';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              AI Code Review;
+            </Link>;
+            <Link;
+              href='/resources';
+              className='text-gray-300 hover:text-white transition-colors duration-300 py-2' />
+
+              Resources;
+            </Link>;
             {/* Popular Dropdown */}
-            <div className='relative group'>
-              <button
-                className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
-                onClick={() => toggleDropdown('popular')}
-              >
-                <span>Popular</span>
-                <ChevronDown
+            <div className='relative group' />;
+              <button;
+                className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2';
+                onClick={() = /> toggleDropdown('popular')}
+              >;
+                <span />Popular</span>;
+                <ChevronDown;
                   className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === 'popular' ? 'rotate-180' : ''}`}
-                />
-              </button>
-              {activeDropdown === 'popular' && (
-                <div className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6'>
-                  <div className='space-y-2'>
-                    {popularServiceLinks.map(item => (
-                      <Link
+                />;
+              </button>;
+              {activeDropdown === 'popular' && (<div className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6' />;
+                  <div className='space-y-2' />;}
+                    {popularServiceLinks.map(item => (<Link;}
                         key={item.href}
                         href={item.href}
-                        className='flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors'
-                      >
-                        <span className='text-white text-sm'>{item.name}</span>
-                        <ArrowRight className='w-4 h-4 text-cyan-400' />
-                      </Link>
+                        className='flex items-center justify-between p-2 rounded-lg hover: bg-gray-800/50 transition-colors' />
+
+                        <span className='text-white text-sm' />{item.nam}
+}</span>;
+                        <ArrowRight className='w-4 h-4 text-cyan-400' />;
+                      </Link>;
                     ))}
-                  </div>
-                </div>
+                  </div>;
+                </div>;
               )}
-            </div>
+            </div>;
             {/* New Dropdown */}
-            <div className='relative group'>
-              <button
-                className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
-                onClick={() => toggleDropdown('new')}
-              >
-                <span className='flex items-center gap-2'>
+            <div className='relative group' />;
+              <button;
+                className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2';
+                onClick={() = /> toggleDropdown('new')}
+              >;
+                <span className='flex items-center gap-2' />;
                   New{' '}
-                  <span className='px-2 py-0.5 text-[10px] rounded-full bg-fuchsia-600 text-white'>
-                    Live
-                  </span>
-                </span>
-                <ChevronDown
+                  <span className='px-2 py-0.5 text-[10px] rounded-full bg-fuchsia-600 text-white' />;
+                    Live;
+                  </span>;
+                </span>;
+                <ChevronDown;
                   className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === 'new' ? 'rotate-180' : ''}`}
-                />
-              </button>
-              {activeDropdown === 'new' && (
-                <div className='absolute top-full left-0 mt-2 w-96 bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6'>
-                  <div className='space-y-2'>
-                    {newServiceLinks.map(item => (
-                      <Link
+                />;
+              </button>;
+              {activeDropdown === 'new' && (<div className='absolute top-full left-0 mt-2 w-96 bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6' />;
+                  <div className='space-y-2' />;}
+                    {newServiceLinks.map(item => (<Link;}
                         key={item.href}
                         href={item.href}
-                        className='flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors'
-                      >
-                        <span className='text-white text-sm'>{item.name}</span>
-                        <ArrowRight className='w-4 h-4 text-fuchsia-400' />
-                      </Link>
+                        className='flex items-center justify-between p-2 rounded-lg hover: bg-gray-800/50 transition-colors' />
+
+                        <span className='text-white text-sm' />{item.nam}
+}</span>;
+                        <ArrowRight className='w-4 h-4 text-fuchsia-400' />;
+                      </Link>;
                     ))}
-                  </div>
-                </div>
+                  </div>;
+                </div>;
               )}
-            </div>
-          </div>
+            </div>;
+          </div>;
           {/* Mobile Menu Button */}
-          <button
-            className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
-            onClick={() => setIsOpen(!isOpen)}
-          >
+          <button;
+            className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors';
+            onClick={() = /> setIsOpen(!isOpen)}
+          >;
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
-          </button>
-        </div>
-      </div>
+          </button>;
+        </div>;
+      </div>;
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50'>
-          <div className='max-w-7xl mx-auto px-4 py-6'>
-            <div className='space-y-6'>
+      {isOpen && (<div className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50' />;
+          <div className='max-w-7xl mx-auto px-4 py-6' />;}
+            <div className='space-y-6' />;}
               {/* Services Section */}
-              <div>
-                <button
-                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4'
-                  onClick={() => toggleDropdown('mobile-services')}
-                >
-                  <span>Services</span>
-                  <ChevronRight
+              <div />;
+                <button;
+                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4';
+                  onClick={() = /> toggleDropdown('mobile-services')}
+                >;
+                  <span />Services</span>;
+                  <ChevronRight;
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
+
                   />
                 </button>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {activeDropdown === 'mobile-services' && (
+<<<<<<< HEAD
 =======
           {/* Logo */}'
                 {activeDropdown === 'mobile-services' && ('
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className='ml-4 space-y-3'>
+=======
+                  <div className='ml-4 space-y-3' />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {serviceCategories.map((category, index) => (
+
                   />;
                 </button>;
+<<<<<<< HEAD
 '
                 {activeDropdown === 'mobile-services' && (;'
                   <div className='ml-4 space-y-3'>;
@@ -1531,6 +1544,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               <div;
                                 key={serviceIndex}'
                                 className='text-xs text-gray-500'>;
+=======
+                {activeDropdown === 'mobile-services' && (<div className='ml-4 space-y-3' />;
+                    {serviceCategories.map((category, index) => (/>;
+                </button>;{activeDropdown === 'mobile-services' && (<div className='ml-4 space-y-3' />;}
+                    {serviceCategories && serviceCategories.map((category, index) => (<div;}
+                        key={index}
+                        className='border-l-2 border-gray-700 pl-4' />;
+                        <div className='text-cyan-400 font-medium mb-2' />;
+                          {category && category.name}
+                        </div>;
+                        <div className='text-gray-400 text-sm mb-2' />;
+                          {category && category.description}
+                        </div>;
+                        <div className='space-y-1' />;
+                          {category && category.services;}
+                            .slice(0, 2).map((service, serviceIndex) => (<div;}
+                                key={serviceIndex}
+                                className='text-xs text-gray-500' />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                                 • {service && service.name} - {service && service.price}
                               </div>;
                             ))}
@@ -1584,11 +1616,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href='/services''
                     variant='quantum''
                     size='lg'
+<<<<<<< HEAD
                   <Button'
                     href='/contact''
                     variant='secondary''
                     size='lg''
                     className='w-full'>;'
+=======
+                  <Button
+                    href='/contact'
+                    variant='secondary'
+                    size='lg'
+                    className='w-full'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <ArrowRight className='w - 4 h - 4 ml - 2' />;
                       </Button>;
                     </div>;
@@ -1789,6 +1829,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       </div>))}'
                     <div className='pt - 3'>;
+<<<<<<< HEAD
                       <Button;'
                         href='/services';'
                         variant='quantum';'
@@ -1888,6 +1929,60 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href='/contact';'
                     variant='secondary';'
                     size='lg';'
+=======
+                    <div className='pt-3' />;
+                      <Button;
+                        href='/services';
+                        variant='quantum';
+                        size='sm';
+              {/* Company Section */}
+              <div />;
+                <button;
+                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4';
+                  onClick={() = /> toggleDropdown('mobile-company')}
+                >;
+                  <span />Company</span>;
+                  <ChevronRight;
+                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}
+                      <Link;
+                        key={index}
+                        href={item && item.link}
+                        className='block text-gray-300 hover:text-white transition-colors';
+                        onClick={closeMobileMenu} />;
+                        {item && item.name}
+                      </Link>;
+                    ))}
+                  </div>;
+                )}
+              {/* Resources Section */}
+              <div />;
+                <button;
+                  className='flex items-center justify-between w-full text-left text-white font-semibold mb-4';
+                  onClick={() = /> toggleDropdown('mobile-resources')}
+                >;
+                  <span />Resources</span>;
+                  <ChevronRight;
+                    className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}
+                      <Link;
+                        key={index}
+                        href={item && item.link}
+                        className='block text-gray-300 hover:text-white transition-colors';
+                        onClick={closeMobileMenu} />;
+                        {item && item.name}
+                      </Link>;
+                    ))}
+                  </div>;
+                )}
+
+                  <Button;
+href='/services'
+                    variant='quantum'
+                    size='lg'
+                  <Button;
+                    href='/contact';
+                    variant='secondary';
+                    size='lg';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className='w - full';
                   >;
                     Contact Us;
@@ -1911,9 +2006,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 			)}
 		</nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+href='/contact'
+                    variant='secondary'
+                    size='lg'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className='w-full'
-                  >
-                    Contact Us
+                   />
+                    Contact Us;
                   </Button>
                 </div>
               </div>
@@ -1923,46 +2025,51 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
     </nav>
   );
-  `w-4 h-4 transition-transform duration-300 $ {
-  activeDropdown === 'services' ? 'rotate-180' : ''
+  `w-4 h-4 transition-transform duration-300 $ {}
+  activeDropdown === 'services' ? 'rotate-180' : ''}
 }`
 }/> </button> </div>) )
-}</div> </div>) )
-}</div> <div className="mt-6 pt-6 border-t border-gray-700/50" > <div className="flex items-center justify-between" > <div className="text-gray-400 text-sm" > <span className="text-cyan-400 font-semibold" >500+</span> Revolutionary Services Available </div> <Button href="/services" variant="quantum" size="sm" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div> </div>)
-}</div> > <span>Popular</span> <ChevronDown className= {
-  `w-4 h-4 transition-transform duration-300 $ {
-  activeDropdown === 'popular'? 'rotate-180': ''
+}</div> </div>) )"
+}</div> <div className=\"mt-6 pt-6 border-t border-gray-700/50\"  /> <div className=\"flex items-center justify-between\"  /> <div className=\"text-gray-400 text-sm\"  /> <span className=\"text-cyan-400 font-semibold\"  />500+</span> Revolutionary Services Available </div> <Button href=\"/services\" variant=\"quantum\" size=\"sm\"  /> View All Services <ArrowRight className=\"w-4 h-4 ml-2\" /> </Button> </div> </div> </div>)
+}</div> > <span />Popular</span> <ChevronDown className= {
+  `w-4 h-4 transition-transform duration-300 $ {}
+  activeDropdown === 'popular'? 'rotate-180': ''}
 }`
 }/> </button>) )
 }</div> </div>)
 }</div>) )
 }</div> </div>)
-}</div> </div> </button> </div> </div> <span>Services</span> <ChevronRight className= {
-  `w-5 h-5 transition-transform duration-300 $ {
-  activeDropdown === 'mobile-services'? 'rotate-90': ''
+}</div> </div> </button> </div> </div> <span />Services</span> <ChevronRight className= {
+  `w-5 h-5 transition-transform duration-300 $ {}
+  activeDropdown === 'mobile-services'? 'rotate-90': ''}
 }`
 }/> </button>) )
-}</div> </div>) )
-}<div className="pt-3" > <Button href="/services" variant="quantum" size="sm" className="w-full" > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </Button> </div> </div>)
-}</div> {
-  /* Company Section */
-}<div> <span>Company</span> <ChevronRight className= {
-  `w-5 h-5 transition-transform duration-300 $ {
-  activeDropdown === 'mobile-company'? 'rotate-90': ''
+}</div> </div>) )"
+}<div className=\"pt-3\"  /> <Button href=\"/services\" variant=\"quantum\" size=\"sm\" className=\"w-full\"  /> View All Services <ArrowRight className=\"w-4 h-4 ml-2\" /> </Button> </div> </div>)
+}</div> {}
+  /* Company Section */}
+}<div /> <span />Company</span> <ChevronRight className= {
+  `w-5 h-5 transition-transform duration-300 $ {}
+  activeDropdown === 'mobile-company'? 'rotate-90': ''}
 }`
 }/> </button>) )
 }</div>)
-}</div> {
-  /* Resources Section */
-}<div> <span>Resources</span> <ChevronRight className= {
-  `w-5 h-5 transition-transform duration-300 $ {
-  activeDropdown === 'mobile-resources'? 'rotate-90': '' 
+}</div> {}
+  /* Resources Section */}
+}<div /> <span />Resources</span> <ChevronRight className= {
+  `w-5 h-5 transition-transform duration-300 $ {}
+  activeDropdown === 'mobile-resources'? 'rotate-90': '' }
 }` 
 }/> </button>) ) 
-}</div>) 
-}</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>) 
+}</div>) "
+}</div> </div> </div> <div className=\"mt-6 space-y-3\"  /> <Button href=\"/services\" variant=\"quantum\" size=\"lg\" className=\"w-full\"  /> Explore Services <ArrowRight className=\"w-5 h-5 ml-2\" /> </Button> <Button href=\"/contact\" variant=\"secondary\" size=\"lg\" className=\"w-full\"  /> Contact Us </Button> </div> </div> </div> </div> </div>) 
 }</nav>)
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

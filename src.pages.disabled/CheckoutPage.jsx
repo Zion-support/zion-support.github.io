@@ -35,6 +35,18 @@ import _React from 'react';
 import _React from 'react';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from \'react\';''
+import _React from 'react';''
+import _React from 'react';''
+import _React from 'react';''
+import _React from 'react';''
+import _React from 'react';'
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;'
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

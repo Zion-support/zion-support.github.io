@@ -1,23 +1,36 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {v4, as, uuidv4} from 'uuid';
 }
 function grantPath(id: string) {}
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import type { GrantApplication, VotePayload } from '../../../types/grants';
+
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-function grantPath(id: string) {
+function ensureDir() {}
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true,}
+});
+function grantPath(id: string) {}
   return path.join(GRANTS_DIR, `${id}.json`);
 
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
-return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 function writeGrant(record: GrantApplication) {
 =======
@@ -150,6 +163,8 @@ return;
   g.updatedAt = new Date().toISOString();
   writeGrant(g);
   res.status(200).json({ record: g });
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   res.status(200).json({ record: g })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

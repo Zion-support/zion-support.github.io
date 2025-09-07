@@ -10,8 +10,11 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorFixer {}
   constructor() {}
     this.logFile = 'logs/pm2/error-fixer.log';
@@ -21,10 +24,8 @@ class ErrorFixer {}
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { "recursive": true }
+      fs.mkdirSync(logDir, { "recursive": true }")
 });
-    };
-  };
   log(message) {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
@@ -37,8 +38,8 @@ class ErrorFixer {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(message);
-  };
   error(message) {}
+<<<<<<< HEAD
     const timestamp = new Date().toISOString();
     const errorMessage = `[${timestamp}] "ERROR": ${message}\n`;`
     fs.appendFileSync(this.errorFile, errorMessage);
@@ -71,6 +72,9 @@ class ErrorFixer {}
           "replacement": 'className="$1"',
           "description": 'Fix template literal className attributes'
         };
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ];
 <<<<<<< HEAD
       let totalFixed = 0;
@@ -79,21 +83,27 @@ class ErrorFixer {}
 
       let totalFixed = 0;
       const files = this.getSourceFiles();
+<<<<<<< HEAD
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       for (const file of files) {}
-        try {}
-          let content = fs.readFileSync(file, 'utf8');
+
           let fileFixed = false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           for (const fix of fixes) {}
             const before = content;
             content = content.replace(fix.pattern, fix.replacement);
             if (content !== before) {}
               fileFixed = true;
+<<<<<<< HEAD
               this.log("Applied fix "${fix.description}" to ${file}");
             };
           };
@@ -122,32 +132,34 @@ class ErrorFixer {}
       execSync('npm run "lint": fix', { })
         "stdio": 'pipe',
         "cwd": process.cwd();
+=======
+              this.log("Applied fix "${fix.description}" to ${file}");"
+
+        "cwd": process.cwd();"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
-});
+});"
       this.log('ESLint auto-fix completed');
       return true;
     } catch (err) {}
-      this.error("ESLint fix "failed": ${err.message}");
+      this.error("ESLint fix "failed": ${err.message}");"
       return false;
-    };
-  };
-  getSourceFiles() {}
-    const sourceDirs = ['src', 'pages', 'components', '__tests__', 'scripts'];
-    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
+
     const files = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const dir of sourceDirs) {}
       if (fs.existsSync(dir)) {}
         this.getFilesRecursively(dir, extensions, files);
-      };
-    };
     return files;
-  };
   getFilesRecursively(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
+<<<<<<< HEAD
 <<<<<<< HEAD
     for (const item of items) {}
       const fullPath = path.join(dir, item);
@@ -159,14 +171,17 @@ class ErrorFixer {}
       const stat = fs.statSync(fullPath);
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    for (const item of items) {}
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (stat.isDirectory()) {}
         this.getFilesRecursively(fullPath, extensions, files);
       } else if (extensions.some(ext => item.endsWith(ext))) {}
         files.push(fullPath);
-      };
-    };
-  };
   async run() {}
+<<<<<<< HEAD
     this.log('Starting error fixing automation...');
 <<<<<<< HEAD
     try {}
@@ -184,17 +199,14 @@ class ErrorFixer {}
         - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return {}
         syntaxFixed,
-        lintingFixed,
-        "success": true;
-      };
-    } catch (err) {}
-      this.error("Error in "run": ${err.message}`);
-      return { "success": false, "error": err.message };
-    };
-  };
-};
+        lintingFixed,"
+        "success": true;"
+
 // Run if called directly;
 if (require.main === module) {}
   const fixer = new ErrorFixer();
@@ -203,6 +215,7 @@ if (require.main === module) {}
       process.exit(0);
     } else {}
       process.exit(1);
+<<<<<<< HEAD
     };
   }
 });
@@ -224,7 +237,8 @@ module.exports = ErrorFixer;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-module.exports = ErrorFixer;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

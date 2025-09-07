@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -327,3 +328,7 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({}
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from 'react';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

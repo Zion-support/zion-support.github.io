@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -19,12 +20,19 @@ class ImportExtensionFixer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+=======
+
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ImportExtensionFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.fixesApplied = 0};
   log(message) {}
+<<<<<<< HEAD
     console.log(`[${new Date().toISOString()}] ${message}`)};
   async fixImportExtensions() {}
     this.log('Fixing import extensions...');
@@ -39,9 +47,13 @@ class ImportExtensionFixer {}
 });
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const file of files) {}
-      const filePath = path.join(this.projectRoot, file);
-      let content = fs.readFileSync(filePath, 'utf8');
+      const filePath = path.join(this.projectRoot, file);"
+
       let modified = false;
 <<<<<<< HEAD
       // Fix .ts extensions in import statements;
@@ -58,19 +70,8 @@ class ImportExtensionFixer {}
 
       // Fix .ts extensions in import statements;
       const originalContent = content;
-      
-      // Fix imports like 'react.ts' -> 'react'
-      content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
-      
-      // Fix imports like 'react-router-dom.ts' -> 'react-router-dom'
-      content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
-      
-      // Fix imports like 'framer-motion.ts' -> 'framer-motion'
-      content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
-      
-      // Fix imports like 'lucide-react.ts' -> 'lucide-react'
-      content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (content !== originalContent) {}
         fs.writeFileSync(filePath, content);
@@ -94,9 +95,14 @@ class ImportExtensionFixer {}
       this.log("Import Extension Fixer completed successfully!");
       this.log(`Fixed ${this.fixesApplied} files`)} catch (error) {`}
       this.log(`Error in Import Extension "Fixer": ${error.message}`);
+=======
+      if (modified) {}
+        this.fixesApplied++};
+    };
+  async run() {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       throw error};
-  };
-};
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new ImportExtensionFixer();
@@ -108,12 +114,8 @@ if (require.main === module) {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   automation.run();
-    .then(() => {}
-      console.log('Import Extension Fixer completed successfully!');
-      process.exit(0)}
-});
-    .catch(error => {})
-      console.error('Import Extension Fixer "failed": ', error);
+    .then(() => {}"
+
       process.exit(1)})};
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,6 +135,5 @@ module.exports = ImportExtensionFixer;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-module.exports = ImportExtensionFixer;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

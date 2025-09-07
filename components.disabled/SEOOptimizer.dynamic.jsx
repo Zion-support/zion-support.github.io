@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const SEOOptimizer = dynamic(() => import(\"./SEOOptimizer\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SEOOptimizer\' ,
 const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{"; loading: () => <p>Loading.</p,>,}) export: "default SEOOptimizer" ,"""
 const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOOptimizer' ,'
@@ -6,6 +7,11 @@ const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; loading: () => <
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+const SEOOptimizer = dynamic(() => import(\"./SEOOptimizer\"),{'; loading: () => <p />Loading...</p,>,}) export: 'default SEOOptimizer' ,'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 </p>'
 </p>'
 ursor/add-new-services-and-deploy-updates-0462
@@ -57,9 +63,9 @@ ursor/add-new-services-and-deploy-updates-0462
 <<<<<<< HEAD
 </p>'
 
-
 </p>'
 
+<<<<<<< HEAD
 </p>'
 </p>'
 </p>'
@@ -73,6 +79,8 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 </p>'
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

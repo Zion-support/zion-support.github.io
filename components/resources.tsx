@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 import React from 'react';'
 import SEO from '../components/SEO';'
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';'
+=======
+
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 export default function ResourcesPage() {}
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -137,3 +143,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

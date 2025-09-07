@@ -4,11 +4,20 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function NewPost() {
 =======
 
@@ -22,6 +31,25 @@ export default function NewPost() {}
       <p>Component placeholder - needs implementation</p>
 <<<<<<< HEAD
     </div>
+<<<<<<< HEAD
+=======
+)
+
+
+
+  );
+
+}
+
+
+
+
+
+
+
+  );
+  );
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,10 +61,10 @@ export default function NewPost() {}
 origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-
 main
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -54,6 +82,9 @@ main
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default /**
  * NewPost - Function description
 =======
@@ -80,6 +111,7 @@ function NewPost() {}
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -90,6 +122,10 @@ function NewPost() {}
 <<<<<<< HEAD
 =======
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
@@ -110,9 +146,16 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 export default function NewPost() {;
   return (;
@@ -167,6 +210,7 @@ export default function NewPost() { return null; }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
@@ -184,20 +228,60 @@ export default function NewPost() { return null; }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 }
 ;
 
 
+<<<<<<< HEAD
+=======
+
+
+
+;
+
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 <div> <h1>NewPost</h1> <p>Component placeholder - needs implementation</p> </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+export default function NewPost() {
+  return (
+    <div>
+</div>
+      <h1>NewPost</h1>
+      <p>Component placeholder - needs implementation</p>
+    </div>
+    <div>;
+</div>
+      <h1 > NewPost</h1>;
+      <p > Component placeholder - needs implementation</p>;)
+    </div>);
+    <div>;
+</div>
+      <h1>NewPost</h1>;
+      <p>Component placeholder - needs implementation</p>;
+    </div>;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

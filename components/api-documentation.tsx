@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout';'
 import { motion } from 'framer-motion';
 
@@ -59,6 +60,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 import {';
 } from 'lucide-react';
+=======
+
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+
+import { Code, Database, Shield, Zap, Globe, Cpu;
+  BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
+ } from 'lucide-react';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export default function APIDocumentation() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -115,6 +126,9 @@ export default function APIDocumentation() {}
   </div>),
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           href='https://ziontechgroup.com/api-documentation'
         />
       </Head>

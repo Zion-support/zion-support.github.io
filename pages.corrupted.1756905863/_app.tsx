@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -38,6 +39,40 @@ import _React from 'react'; import type { AppProps } from 'next/app'; import Hea
 =======
 import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
 import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
+=======
+
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -73,6 +108,7 @@ import React from \'react\'; import type { AppProps } from \'next/app\'; import 
 import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
 import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
 import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,7 +161,35 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5import React from \'reac
 import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
 import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
+import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title> </Head> <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div> </ErrorBoundary> )}
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title>  <div className=\"min-h-screen flex flex-col\"> {} <main className=\"flex-grow\"> <Component {...pageProps} /> </main> </div>  )}""
+import React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <ErrorBoundary> <Head> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>Zion Tech Group — AI,IT & Micro SaaS</title>  <div className="min-h-screen flex flex-col"> {} <main className="flex-grow"> <Component {...pageProps} /> </main> </div>  )}""
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

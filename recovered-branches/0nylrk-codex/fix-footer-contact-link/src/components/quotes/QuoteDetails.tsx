@@ -1,6 +1,7 @@
 import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
@@ -81,12 +82,16 @@ import type { QuoteRequest } from "@/types/quotes";"
 import { format } from "date-fns";
 interface QuoteDetailsProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void;
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -461,6 +466,8 @@ if (return "Not specified") {}
 ;
 
   )
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

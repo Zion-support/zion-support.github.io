@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { TokenConfig, TokenTransaction, Wallet } from "./types";
@@ -17,6 +18,10 @@ export interface TokenStoreData {;
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class TokenStore {
   private config: any = {};
 
@@ -26,10 +31,11 @@ class TokenStore {
 
   getConfig() {
     return this.config;
+
   }
 }
-
 export const tokenStore = new TokenStore();
+<<<<<<< HEAD
 export interface TokenConfig {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -68,6 +74,8 @@ export interface TokenConfig {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   tokenName: string;
   tokenSymbol: string;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 <<<<<<< HEAD
@@ -76,8 +84,8 @@ export interface TokenConfig {;
 
 
 
-export interface TokenConfig {
 
+<<<<<<< HEAD
 export interface TokenConfig {
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -273,10 +281,40 @@ function ensureDataDir(): void {;
     if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
   } catch {}
 }
+=======
+
+
+
+
+
+
+}
+
+
+
+import fs from "fs";
+import path from "path";
+import { TokenConfig, TokenTransaction, Wallet } from "./types";
+import { DEFAULT_TOKEN_CONFIG } from "./rules";
+const DATA_DIR = path.join(process.cwd(), "data");
+const STORE_FILE = path.join(DATA_DIR, "token_store.json");
+export interface TokenStoreData {;
+  wallets: Record<string Wallet>;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+}
+;
+function ensureDataDir(): void {;
+  try {;
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+  } catch {}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 function readFromDisk(): TokenStoreData | null {;
   try {;
     ensureDataDir();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -422,6 +460,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 <<<<<<< HEAD
+=======
+    if (!fs.existsSync(STORE_FILE)) return null;
+    const raw = fs.readFileSync(STORE_FILE, "utf8");
+    const parsed = JSON.parse(raw) as TokenStoreData;
+    return parsed;
+  } catch {;
+    return null;
+  }
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 function writeToDisk(data: TokenStoreData): void {;
   try {;
@@ -439,6 +487,7 @@ class InMemoryTokenStore {;
         wallets: {};
         transactions: [];
         config: DEFAULT_TOKEN_CONFIG}
+<<<<<<< HEAD
   }
 ;
   getData(): TokenStoreData {;
@@ -544,6 +593,37 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+=======
+  }
+;
+  getData(): TokenStoreData {;
+    return this.data;
+  }
+;
+  save(): void {;
+    writeToDisk(this.data);
+  }
+}
+;
+const store = new InMemoryTokenStore();
+export const tokenStore = {;
+  getConfig(): TokenConfig {;
+    return store.getData().config;
+  };
+  setConfig(config: TokenConfig): void {;
+    store.getData().config = config;
+    store.save();
+  };
+  getWallet(userId: string): Wallet {;
+    const wallets = store.getData().wallets;
+    if (!wallets[userId]) {;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   getData(): TokenStoreData {
     return this.data;
   }
@@ -569,12 +649,24 @@ export const tokenStore = {
       store.save();
     }
     return wallets[userId];
+  };
+  setWalletBalance(userId: string, balance: number): Wallet {;
   },
   setWalletBalance(userId: string, balance: number): Wallet {
     const wallets = store.getData().wallets;
     wallets[userId] = { userId, balance };
     store.save();
     return wallets[userId];
+  };
+  addTransaction(tx: TokenTransaction): void {;
+    store.getData().transactions.unshift(tx);
+    store.save();
+  };
+  getTransactions(userId?: string): TokenTransaction[] {;
+    const txs = store.getData().transactions;
+    if (!userId) return txs;
+    return txs.filter((t) => t.userId === userId);
+  }};
   },
   addTransaction(tx: TokenTransaction): void {
     store.getData().transactions.unshift(tx);
@@ -592,6 +684,7 @@ export const tokenStore = {
 =======
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
@@ -601,11 +694,25 @@ export const tokenStore = new TokenStore();
 
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
+    if (!fs.existsSync(STORE_FILE)) return null;'
+    const raw = fs.readFileSync(STORE_FILE, 'utf8');'
+    const parsed = JSON.parse(raw) as TokenStoreData;
+    return parsed;
 
+  } catch {
+  // TODO: Implement
+    return null;
+  setConfig(newConfig: Partial<TokenConfig>): void {
+pr-12325
+</TokenConfig>'
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -621,3 +728,5 @@ export const tokenStore = new TokenStore();
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

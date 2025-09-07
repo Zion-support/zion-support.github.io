@@ -1,9 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { createServerClient } from '../../../utils/supabase/server';
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = null;
+<<<<<<< HEAD
   try {
     const supabase = createServerClient();
     const clientId = (req.query.clientId as string) |null
@@ -120,6 +126,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
         { label: 'Hire', value: 2 }]})
   }
+=======
+
+        { label: 'Hire', value: 2 }]})
+  }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
+        { label: 'Post',}
+  value: 3,}
 }
+<<<<<<< HEAD
 '
+=======
+        { label: 'Invite',}
+  value: 2,}
+}
+
+        { label: 'Hire',}
+  value: 2 }
+      ]
+   ,
+});
+  }
+        { label: 'Hire',}
+  value: 2 }]})
+  },
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

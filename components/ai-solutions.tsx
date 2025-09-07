@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';'
 import Link from 'next/link';
 export default function AISolutionsPage() {}
@@ -172,6 +173,9 @@ export default function AISolutionsPage() {}
 <<<<<<< HEAD
   const aiSolutions = null;
   ];
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -231,9 +235,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className='text-white/70 mb-4'>{solution && solution.description}</p>;'
                     <ul className='space-y-1 mb-4'>;
                       {solution && solution.features.map((feature, featureIndex) => (;
+<<<<<<< HEAD
                         <li;
                           key={featureIndex}'
                           className='text-sm text-white/60 flex items-center'>;'
+=======
+                        <li
+                          key={featureIndex}
+                          className='text-sm text-white/60 flex items-center'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           <span className='text-cyan-400 mr-2'>•</span>                          {feature}
                         </li>;
                       ))}
@@ -378,12 +388,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </h3>;'
                     <ul className='space-y-2'>;
                       {useCase && useCase.solutions.map((solution, solutionIndex) => (;
+<<<<<<< HEAD
                         <li;
                           key={solutionIndex}'
                           className='text-sm text-white/70'>                          {solution}                {useCases && useCases.map((useCase, index) => (;"
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">;"
                     <div className="text-4xl mb-4">{useCase && useCase.icon}</div>;"
                     <h3 className="text-xl font-bold mb-4 text-white">{useCase && useCase.industry}</h3>;"
+=======
+                        <li
+                          key={solutionIndex}
+                          className='text-sm text-white/70'>                          {solution}                {useCases && useCases.map((useCase, index) => (;
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">;
+                    <div className="text-4xl mb-4">{useCase && useCase.icon}</div>;
+                    <h3 className="text-xl font-bold mb-4 text-white">{useCase && useCase.industry}</h3>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <ul className="space-y-2">;
                       {useCase && useCase.solutions.map((solution, solutionIndex) => (;"
                         <li key={solutionIndex} className="text-sm text-white/70">;
@@ -410,8 +429,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex flex-wrap justify-center gap-4'>
 
                   {technologies.map((tech, index) => (
+<<<<<<< HEAD
                     <span;
                       key={index}'
+=======
+                    <span
+                      key={index}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >
 
                       className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'
@@ -432,8 +456,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {tech}
                     </span>;
                   ))}
+<<<<<<< HEAD
             {/* Success Stories */}'
             <div className='mb-16'>;'
+=======
+            {/* Success Stories */}
+            <div className='mb-16'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>;
                 AI Success Stories;
               </h2>;'
@@ -529,7 +558,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Start Your AI Journey;
                 </Link>
+<<<<<<< HEAD
                 <Link"
+=======
+                <Link
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   href="/automation-insights"
 
                   Explore Insights;
@@ -549,6 +582,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   href='/automation-insights'
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
                 >

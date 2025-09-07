@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Q4Service {
 export interface Q4Service {
 =======
@@ -17,10 +18,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export interface Q4Service {
   id: string;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+export interface Q4Service {
+
+export interface Q4Service {
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  id: string;
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   tagline: string;
   price: string;
   period: string;
+  // TODO: Implement
+}
+  id: string;,
+  name: string;
+  tagline: string;,
+  price: string;
+  period: string;,
+pr-12325
   description: string;
   features: string[];
   popular?: boolean;
@@ -28,14 +48,21 @@ export interface Q4Service {
   color?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   roi?: string;
   competitors?: string[],
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   marketSize?: string;
   growthRate?: string;
   variant?: string;
   contactInfo?: {
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   text_color?: string;
   link: string;
   market_position?: string;
@@ -46,6 +73,7 @@ export interface Q4Service {
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -60,10 +88,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   contactInfo?: {
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     mobile: string;
     email: string;
     address: string;
 
+<<<<<<< HEAD
     website: string;
   }
 <<<<<<< HEAD
@@ -3570,3 +3601,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+  reviews?: number
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

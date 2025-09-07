@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -40,6 +41,9 @@ export interface BasicInfoFormProps {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   onSave: (data: BasicInfoFormData) => void,;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   skills?: string[];
@@ -48,9 +52,12 @@ export interface BasicInfoFormProps {;
 }
 <<<<<<< HEAD
 
-
 export function BasicInfoForm(): any ({;
 
+export function BasicInfoForm(): any ({;
+  resumeId;
+  resumeId?: string;
+  initialData?: Partial<BasicInfoFormData>;
 import React, { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -59,6 +66,14 @@ import { Form } from "@/components/ui/form",
 import { Card } from "@/components/ui/card",
 import { RateOptimizationSection } from "../RateOptimizationSection",
 import { basicInfoSchema, BasicInfoFormData } from "./schema",
+import React, { useState, useEffect } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { Button } from "@/components/ui/button",;
+import { Form } from "@/components/ui/form",;
+import { Card } from "@/components/ui/card",;
+import { RateOptimizationSection } from "../RateOptimizationSection",;
+import { basicInfoSchema, BasicInfoFormData } from "./schema",;
 import { PersonalInfoFields } from "./PersonalInfoFields";
 =======
 "
@@ -78,10 +93,17 @@ export interface BasicInfoFormProps {};
 
   initialData?: Partial<BasicInfoFormData>;
   skills?: string[];
+<<<<<<< HEAD
   yearsExperience?: number;"
 import { PersonalInfoFields } from "./PersonalInfoFields","
 import { ContactFields } from "./ContactFields",
 export interface BasicInfoFormProps {}
+=======
+  yearsExperience?: number;
+import { PersonalInfoFields } from "./PersonalInfoFields",;
+import { ContactFields } from "./ContactFields",;
+export interface BasicInfoFormProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   resumeId?: string,
   initialData?: Partial<BasicInfoFormData>,
   onSave: (data: BasicInfoFormData) => void,
@@ -92,6 +114,7 @@ export interface BasicInfoFormProps {}
 
 export function BasicInfoForm({;
   resumeId;
+<<<<<<< HEAD
   initialData = {};
   onSave;
   skills = [];
@@ -707,6 +730,12 @@ function BasicInfoForm() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+
+
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 =======

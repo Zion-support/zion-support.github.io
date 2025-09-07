@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 <<<<<<< HEAD
@@ -131,3 +132,34 @@ body {
 =======
 @tailwind utilities;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.hero {
+  min-height: 100vh;
+  background: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #93c5fd;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

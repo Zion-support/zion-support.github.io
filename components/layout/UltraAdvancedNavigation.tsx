@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Menu;
   X;
   ChevronDown;
@@ -67,23 +68,16 @@ import Link from 'next/link';import { ;
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
   Bot, Car, Building2, DollarSign, Monitor, Users;
 <<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
-  Bot, Car, Building2, DollarSign, Monitor, Users;
-  Cpu, Zap, Atom, Database, Cloud, Lock, Code
- } from 'lucide-react';
-import Link from 'next/link';
-const UltraAdvancedNavigation: React.FC;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
-    const handleScroll = () => {
-setIsScrolled(window.scrollY > 50);
-    };
 
+<<<<<<< HEAD
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -877,3 +871,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -14,8 +14,8 @@ import * as React from 'react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
 import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
+<<<<<<< HEAD
 import Layout from "../../components/Layout";";
 
 <<<<<<< HEAD
@@ -256,13 +256,22 @@ export default function StartupSolutionsPage() {
 export default Startup;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+import Layout from "../../components/Layout";";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const Startup: React.FC<StartupProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
+"
+    <div className={className || }>
+</div>
       <h1>Startup</h1>
       <p>This component is under development.</p>
     </div>
   )
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <p>This component is under development.</p>
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react',
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, TrendingUp, Zap, Brain, Rocket, Shield;
@@ -8,7 +12,7 @@ import { Star, TrendingUp, Zap, Brain, Rocket, Shield;
   Grid, List, ChevronDown, ChevronUp, Sparkles;
   Crown, Award, Target, Globe, Cpu, Database
  } from 'lucide-react';
-import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground',
+import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { nextGenerationAIServices  } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices  } from '../data/cutting-edge-it-services';
@@ -26,12 +30,8 @@ export default function EnhancedServicesShowcase() {
   const [sortBy, setSortBy] = useState<string>('name'),
 
   const contactInfo = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
- //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
- //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
 
+<<<<<<< HEAD
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
 import React from 'react';
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
@@ -140,3 +140,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

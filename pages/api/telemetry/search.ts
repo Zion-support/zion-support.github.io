@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next'
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -96,11 +97,17 @@ export default function handler() { return null; }
 =======
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const memoryStore: { q: string, ts: number }[] = [],
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
 <<<<<<< HEAD
@@ -116,3 +123,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).end()
 };'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    return res.status(200).json({ ok: true, top, total: memoryStore.length })
+  }
+  return res.status(405).end()
+};
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+const memoryStore: Array<{ q: string; ts: number }> = [];
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'POST') {
+    const { q } = req.body || {};
+    if (typeof q === 'string' && q.trim()) {
+      memoryStore.push({ q: q.trim(), ts: Date.now() });
+    }
+    return res.status(204).end();
+  }
+
+  if (req.method === 'GET') {
+    const { limit = '10' } = req.query;
+    const limited = memoryStore
+      .sort((a, b) => b.ts - a.ts)
+      .slice(0, parseInt(limit as string));
+    return res.status(200).json({ searches: limited });
+  }
+
+  res.setHeader('Allow', 'GET, POST');
+  return res.status(405).end('Method Not Allowed');
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

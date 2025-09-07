@@ -1,14 +1,13 @@
-export const emergingTechInnovations2025 = [// Quantum Computing Services
+export const emergingTechInnovations2025 = [// Quantum Computing Services;
     {
         id:,
   quantum-computing-as-a-service',
         "name": 'Quantum Computing as a Service (QCaaS),
         tagline:,
   Access quantum computing power through the cloud for complex problem solving',
-        "description": Enterprise-grade quantum computing platform that provides access to quantum processors through the cloud. Enables organizations to solve complex optimization problems, perform advanced simulations, and accelerate research in cryptography, materials science, and drug discovery.,
-  ,
-        "price": $2,999,
-  ,
+        "description": Enterprise-grade quantum computing platform that provides access to quantum processors through the cloud. Enables organizations to solve complex optimization problems, perform advanced simulations, and accelerate research in cryptography, materials science, and drug discovery.,"
+  ,"
+        "price": $2,999,"
         "period": '/month,
         features[,
   Access to 100+ qubit quantum processors',
@@ -20,51 +19,49 @@ export const emergingTechInnovations2025 = [// Quantum Computing Services
   'API access for custom quantum applications',
   'Expert quantum computing consultation',
   'Training and certification programs',
-  '24/7 quantum computing support'
+  '24/7 quantum computing support]
         ],
         "category": 'Quantum Computing & Advanced Computing,
         marketSize:,
         targetAudience['Pharmaceutical companies',
   'Financial institutions',
   'Research universities',
-  'Government agencies',
+  'Government agencies',']
   'Technology companies'],
-        "competitiveAdvantage": Largest quantum processor access, hybrid computing capabilities, comprehensive algorithm library, expert consultation,
-  ,
+        "competitiveAdvantage": Largest quantum processor access, hybrid computing capabilities, comprehensive algorithm library, expert consultation,"
         useCases['Drug discovery and molecular modeling',
   'Financial portfolio optimization',
   'Cryptography and cybersecurity',
   'Materials science research',
-  'Machine learning acceleration'
-        ],
+  'Machine learning acceleration]
         integrations['AWS Braket',
   'Azure Quantum',
   'IBM Quantum',
-  'Google Quantum AI',
+  'Google Quantum AI',']
   'D-Wave Leap'],
         compliance['ISO 27001',
   'SOC2',
   'FedRAMP',
-  'GDPR',
+  'GDPR',']
   'CCPA'],
-            "address": '364 E Main St STE 1008 Middletown DE 19709'
+            "address": '364 E Main St STE 1008 Middletown DE 19709
         },
-        "trialDays": 7,
-        setupTime:,
+        "trialDays": 7,"
+        setupTime:,"
   2-4 weeks',
         competitors['IBM Quantum',
   'Google Quantum AI',
   'D-Wave',
-  'Rigetti',
+  'Rigetti',']
   'IonQ'],
         "roi": 'Average customer accelerates research by 10x and reduces computational costs by 60%,
         "launchDate": '2024-01-10',
-        "customers": 85,
-        "reviews": 45,
-        technologyStack[,
+        "customers": 85,""
+        "reviews": 45,"
+        technologyStack[,"
   Quantum processors',
   'Quantum algorithms',
-  'Hybrid computing',
+  'Hybrid computing',']
   'Error correction'],
         "innovationLevel": 'Cutting-edge quantum technology with 5-10 year roadmap,
         futureProofing:,
@@ -72,11 +69,9 @@ export const emergingTechInnovations2025 = [// Quantum Computing Services
         researchPartnerships['MIT',
   'Stanford',
   'Caltech',
-  'NASA',
+  'NASA',']
   'DARPA']
-    },
-    // Space Technology Solutions
-    {
+    // Space Technology Solutions;
         "id": 'satellite-data-analytics-platform,
         name:,
   Satellite Data Analytics Platform',
@@ -95,73 +90,58 @@ export const emergingTechInnovations2025 = [// Quantum Computing Services
   'Mobile app for field workers',
   'API access for custom applications',
   'Advanced data visualization tools',
-  'Expert geospatial analysis support'
-        ],
+  'Expert geospatial analysis support]
         "category": 'Space Technology & Satellite Analytics,
-        marketSize:,
         targetAudience['Agricultural companies',
   'Urban planners',
   'Environmental agencies',
-  'Insurance companies',
+  'Insurance companies',']
   'Disaster response organizations'],
-        "competitiveAdvantage": Real-time processing, AI-powered analysis, comprehensive satellite coverage, expert geospatial support,
-  ,
+        "competitiveAdvantage": Real-time processing, AI-powered analysis, comprehensive satellite coverage, expert geospatial support,"
         useCases['Precision agriculture and crop monitoring',
   'Urban development and infrastructure planning',
   'Environmental impact assessment',
   'Disaster response and recovery',
-  'Insurance risk assessment'
-        ],
+  'Insurance risk assessment]
         integrations['ArcGIS',
   'QGIS',
   'Google Earth Engine',
   'Planet Labs',
-  'Maxar',
+  'Maxar',']
   'ESA Copernicus'],
         compliance['ISO 19100',
   'OGC standards',
   'GDPR',
-  'CCPA',
+  'CCPA',']
   'Environmental regulations'],
-            "address": '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        "trialDays": 14,
-        setupTime:,
+        "trialDays": 14,"
   1-2 weeks',
         competitors['Planet Labs',
   'Maxar',
   'DigitalGlobe',
-  'Airbus Defence',
+  'Airbus Defence',']
   'ESA'],
         "roi": 'Average customer improves operational efficiency by 45% and reduces costs by 35%,
         "launchDate": '2024-02-15',
-        "customers": 320,
-        "reviews": 180,
-        technologyStack[,
+        "customers": 320,""
+        "reviews": 180,"
   Satellite imagery',
   'AI/ML processing',
-  'GIS integration',
+  'GIS integration',']
   'Cloud computing'],
         "innovationLevel": 'Advanced space technology with continuous satellite constellation expansion,
-        futureProofing:,
   Next-generation satellite launches and AI algorithm improvements',
         researchPartnerships['NASA',
   'ESA',
   'NOAA',
-  'USGS',
+  'USGS',']
   'Academic institutions']
-    },
-    // Advanced IoT & Edge Computing
-    {
+    // Advanced IoT & Edge Computing;
         "id": 'iot-edge-intelligence-platform,
-        name:,
   IoT Edge Intelligence Platform',
         "tagline": 'Intelligent edge computing for real-time IoT decision making,
-        description:,
   Comprehensive IoT platform that brings AI and machine learning to the edge, enabling real-time decision making without cloud dependency. Processes data locally for faster response times and reduced bandwidth costs.',
         "price": '$399,
-        period:,
-  /month',
   'Real-time data analytics and decision making',
   'Automated device management and provisioning',
   'Advanced security and encryption at the edge',
@@ -170,71 +150,48 @@ export const emergingTechInnovations2025 = [// Quantum Computing Services
   'Custom edge application development',
   'Remote monitoring and management',
   'Predictive maintenance capabilities',
-  '24/7 edge computing support'
-        ],
+  '24/7 edge computing support
         "category": 'IoT & Edge Computing,
-        marketSize:,
         targetAudience['Manufacturing companies',
   'Smart cities',
   'Healthcare facilities',
-  'Energy companies',
+  'Energy companies',']
   'Transportation companies'],
-        "competitiveAdvantage": Edge-first architecture, real-time processing, comprehensive IoT support, advanced security,
-  ,
+        "competitiveAdvantage": Edge-first architecture, real-time processing, comprehensive IoT support, advanced security,"
   'Smart city infrastructure management',
   'Healthcare monitoring and diagnostics',
   'Energy grid optimization',
-  'Autonomous vehicle systems'
-        ],
+  'Autonomous vehicle systems
         integrations['AWS IoT',
   'Azure IoT',
   'Google Cloud IoT',
-  'IBM Watson IoT',
+  'IBM Watson IoT',']
   'Siemens MindSphere'],
-        compliance['ISO 27001',
-  'SOC2',
-  'GDPR',
-  'CCPA',
   'Industry-specific standards'],
-            "address": '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        "trialDays": 21,
-        setupTime:,
+        "trialDays": 21,"
   2-3 weeks',
         competitors['AWS IoT',
-  'Azure IoT',
-  'Google Cloud IoT',
-  'IBM Watson IoT',
   'Siemens'],
         "roi": 'Average customer reduces latency by 80% and bandwidth costs by 60%,
         "launchDate": '2024-03-01',
-        "customers": 450,
-        "reviews": 220,
-        technologyStack[,
+        "customers": 450,""
+        "reviews": 220,"
   Edge computing',
   'IoT protocols',
   'AI/ML',
-  '5G networks',
+  '5G networks',']
   'Blockchain'],
         "innovationLevel": 'Advanced edge computing with continuous AI optimization,
-        futureProofing:,
   5G integration and next-generation edge hardware',
         researchPartnerships['Intel',
   'NVIDIA',
-  'Qualcomm',
-  'Academic institutions']
-    },
-    // Advanced Blockchain Solutions
-    {
+  'Qualcomm',']
+    // Advanced Blockchain Solutions;
         "id": 'enterprise-blockchain-platform,
-        name:,
   Enterprise Blockchain Platform',
         "tagline": 'Scalable blockchain solutions for enterprise applications,
-        description:,
   Enterprise-grade blockchain platform that provides scalable, secure, and compliant blockchain solutions for supply chain management, digital identity, financial services, and more. Supports both public and private blockchain networks.',
         "price": '$899,
-        period:,
-  /month',
         features['Multi-blockchain support (Ethereum, Hyperledger, Solana)',
   'Smart contract development and deployment',
   'Advanced consensus mechanisms and scalability',
@@ -244,72 +201,51 @@ export const emergingTechInnovations2025 = [// Quantum Computing Services
   'Regulatory compliance and reporting',
   'API access for custom integrations',
   'Advanced analytics and monitoring',
-  'Expert blockchain consultation'
-        ],
+  'Expert blockchain consultation]
         "category": 'Blockchain & Web3 Technology,
-        marketSize:,
         targetAudience['Financial institutions',
   'Supply chain companies',
   'Healthcare organizations',
-  'Government agencies',
-  'Technology companies'],
-        "competitiveAdvantage": Multi-blockchain support, enterprise-grade security, regulatory compliance, expert consultation,
-  ,
+        "competitiveAdvantage": Multi-blockchain support, enterprise-grade security, regulatory compliance, expert consultation,"
         useCases['Supply chain transparency and traceability',
-  'Digital identity and authentication',
   'Financial services and payments',
   'Healthcare data management',
-  'Government services and voting'
-        ],
+  'Government services and voting]
         integrations['Ethereum',
   'Hyperledger Fabric',
   'Solana',
   'Polygon',
-  'AWS Blockchain',
+  'AWS Blockchain',']
   'Azure Blockchain'],
         compliance['GDPR',
   'CCPA',
   'SOX',
-  'PCI DSS',
+  'PCI DSS',']
   'Industry-specific regulations'],
-            "address": '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        "trialDays": 14,
-        setupTime:,
   3-4 weeks',
         competitors['IBM Blockchain',
   'Microsoft Azure Blockchain',
   'Amazon Managed Blockchain',
-  'ConsenSys',
+  'ConsenSys',']
   'R3 Corda'],
         "roi": 'Average customer improves transparency by 90% and reduces fraud by 70%,
         "launchDate": '2024-01-20',
-        "customers": 280,
-        "reviews": 150,
-        technologyStack[,
+        "customers": 280,""
+        "reviews": 150,"
   Blockchain networks',
   'Smart contracts',
-  'Cryptography',
+  'Cryptography',']
   'Distributed systems'],
         "innovationLevel": 'Advanced blockchain technology with continuous protocol improvements,
-        futureProofing:,
   Layer 2 scaling solutions and cross-chain interoperability',
         researchPartnerships['Ethereum Foundation',
-  'Hyperledger',
-  'Academic institutions']
-    },
-    // Advanced Robotics & Automation
-    {
+  'Hyperledger',']
+    // Advanced Robotics & Automation;
         "id": 'ai-robotics-automation-platform,
-        name:,
   AI Robotics & Automation Platform',
         "tagline": 'Intelligent robotics solutions for manufacturing and logistics,
-        description:,
   Advanced robotics platform that combines AI, computer vision, and robotics to automate complex manufacturing and logistics operations. Provides flexible, scalable automation solutions that can adapt to changing production needs.',
-        "price": $1,299,
-  ,
-        "period": '/month,
-        features[,
+        "price": $1,299,"
   AI-powered computer vision and object recognition',
   'Advanced robotics control and programming',
   'Collaborative robot (cobot) management',
@@ -319,54 +255,42 @@ export const emergingTechInnovations2025 = [// Quantum Computing Services
   'Real-time performance analytics',
   'Remote monitoring and control',
   'Safety compliance and monitoring',
-  'Expert robotics consultation'
-        ],
+  'Expert robotics consultation]
         "category": 'Robotics & Automation,
-        marketSize:,
-        targetAudience['Manufacturing companies',
   'Logistics providers',
   'Warehouse operators',
-  'Healthcare facilities',
+  'Healthcare facilities',']
   'Research institutions'],
-        "competitiveAdvantage": AI-first robotics, flexible automation, comprehensive integration, expert support,
-  ,
+        "competitiveAdvantage": AI-first robotics, flexible automation, comprehensive integration, expert support,"
         useCases['Manufacturing automation and assembly',
   'Warehouse and logistics automation',
   'Quality control and inspection',
   'Material handling and transportation',
-  'Research and development'
-        ],
+  'Research and development]
         integrations['Siemens',
   'Rockwell Automation',
   'ABB',
   'KUKA',
-  'FANUC',
+  'FANUC',']
   'Universal Robots'],
         compliance['ISO 13482',
-            "address": '364 E Main St STE 1008 Middletown DE 19709'
-        },
-        "trialDays": 30,
-        setupTime:,
+        "trialDays": 30,"
   4-6 weeks',
         competitors['ABB',
-  'KUKA',
   'FANUC',
-  'Universal Robots',
+  'Universal Robots',']
   'Rethink Robotics'],
         "roi": 'Average customer increases productivity by 50% and reduces labor costs by 40%,
         "launchDate": '2024-02-01',
-        "customers": 180,
-        "reviews": 95,
-        technologyStack[,
+        "customers": 180,""
+        "reviews": 95,"
   Robotics',
   'Computer vision',
-  'AI/ML',
-  'IoT sensors',
+  'IoT sensors',']
   '5G networks'],
         "innovationLevel": 'Advanced robotics with continuous AI and safety improvements,
-        futureProofing:,
   Next-generation robotics hardware and AI algorithms',
 "researchPartnerships": ['MIT Robotics Lab,
-  'Stanford Robotics',
+  'Stanford Robotics',']
   'Carnegie Mellon Robotics']];
 export default emergingTechInnovations2025}

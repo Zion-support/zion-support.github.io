@@ -3,6 +3,7 @@
                 <li>;
 import React from 'react';
 import SEO from '../components/SEO';
+
 const ext = null;
                 { name: 'Customer Support Helpdesk Pro', price: '$79/mo', href: '/services/customer-support-helpdesk-pro' }
               ].map((o) => (
@@ -12,6 +13,7 @@ const ext = null;
                   <div className="text-gray-200 mt-2">{o.name}</div>
                 </a>
               ))}
+<<<<<<< HEAD
   <a
     className='text-cyan-400 underline'
     href={`/out?u=${encodeURIComponent(url)}`}
@@ -2267,6 +2269,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Learn more
               </a>
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </section>
           <section id='multi-tenant-rate-limiter' className='space-y-2'>
@@ -5059,6 +5064,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 	),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {ext('https://www.cloudflare.com/data-localization/')},{' '}
                 {ext('https://developers.cloudflare.com/workers/')}
               </li>

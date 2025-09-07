@@ -21,18 +21,17 @@ const path = require('path')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log('� Starting File Size Optimization...')
 const largeFiles = ['pages/ai-services.tsx']
-  'pages/it-services.tsx'
-  'pages/micro-saas.tsx'
-  'pages/services.tsx'
+  'pages/it-services.tsx
+  'pages/micro-saas.tsx
+  'pages/services.tsx
   const content = fs.readFileSync(filePath, 'utf8')
   const lines = content.split('\n')
+<<<<<<< HEAD
     const backupPath = filePath + '.backup;'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,5 +52,8 @@ console.log(' File size optimization completed')
 =======
 
 console.log(' File size optimization completed')
+=======
+    const backupPath = filePath + '.backup;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,7 +1,9 @@
+// Fetch saved talents
 
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 
   // Fetch saved talents
   useEffect(() => {
@@ -37,6 +39,8 @@ export function useSavedTalents() {;
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { toast } from "@/hooks/use-toast";
 =======
 import { useState, useEffect } from "react","
@@ -49,6 +53,7 @@ export function useSavedTalents() {};
   const { isAuthenticated, userDetails } = useAuthStatus();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);"
 import { toast } from "@/hooks/use-toast","
 import { useAuthStatus } from "@/hooks/talent",
@@ -933,9 +938,13 @@ if ( {) {
     savedTalentIds;
     isLoading;
     toggleSaveTalent;
+=======
+  const [isLoading, setIsLoading] = useState(true);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
     isTalentSaved
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -973,11 +982,39 @@ if ( {) {
           title: "Error loading favorites",;
           description: "There was a problem loading your saved talents.",;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+title: "Error",
+        description: "There was a problem updating your favorites. Please try again.",
+        variant: "destructive"
+      })
+      } catch (error) {;
+        console.error('Error fetching saved talents:', error),;
+        toast({;
+          title: "Error loading favorites",,
+  description: "There was a problem loading your saved talents.",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           variant: "destructive";
+    isTalentSaved;
+      } catch (error) {;"
+        console.error('Error fetching saved talents:', error),;'
+        toast({;'
+          title: "Error loading favorites",;""
+          description: "There was a problem loading your saved talents.",;""
+          variant: "destructive";")
+
         });
+      } finally {;}
+        setIsLoading(false);}
+      }
+    isTalentSaved;
+      } catch (error) {;"
+        console.error('Error fetching saved talents:', error),;
+        toast({;
+          title: "Error loading favorites",;""
+          description: "There was a problem loading your saved talents.",;""
       } finally {;
         setIsLoading(false);
-      }
+pr-12325
     },;
     fetchSavedTalents();
   }, [isAuthenticated, userDetails.id]),;
@@ -986,6 +1023,7 @@ if ( {) {
     if (!isAuthenticated || !userDetails.id || !talent.id) {;
 <<<<<<< HEAD
       toast({;
+<<<<<<< HEAD
 <<<<<<< HEAD
         title: "Authentication required",,
   description: "Please log in to save talents to your favorites",;
@@ -1031,18 +1069,23 @@ if (throw error) {}
 =======
         title: "Authentication required",;
         description: "Please log in to save talents to your favorites",;
+=======
+        title: "Authentication required",,
+  description: "Please log in to save talents to your favorites",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant: "destructive";
       }),;
       return;
     }
   }
-    const is_saved = savedTalentIds.includes (talent.id);
+const is_saved = savedTalentIds.includes (talent.id);
 ;
     try {
       // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
         // Remove from saved_talents;
         const { error } = await supabase;
           .from ('saved_talents');
@@ -1054,9 +1097,26 @@ if ( {) {
 if (throw error) {
   $2
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    }  }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
+
+      toast({;"
+        title: "Authentication required",;""
+        description: "Please log in to save talents to your favorites",;""
+      }),;
+    const is_saved = savedTalentIds.includes (talent.id);
+  // TODO: Implement
+      // Check condition;
+        // Remove from saved_talents;
+          .delete ();
+          .eq ('talent_id', talent.id);
+        // Check condition;
+if (throw error) {
         setSavedTalents (prev => prev.filter (t => t.id !== talent.id));
         setSavedTalentIds (prev => prev.filter (id => id !== talent.id));
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
         toast ({"
@@ -1074,16 +1134,16 @@ if (throw error) {
 if (throw error) {}
   $2;
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         toast ({
-          title: "Removed from favorites",
           description: `${talent.full_name} has been removed from your favorites`});
-      } else {
+  // TODO: Implement
         // Add to saved_talents;
-        const { error } = await supabase;
-          .from ('saved_talents');
           .insert ({
-            user_id: user_details.id,
+            user_id: user_details.id,)
             talent_id: talent.id});
+<<<<<<< HEAD
 ;
         // Check condition
 if (throw error) {
@@ -1106,10 +1166,14 @@ if (throw error) {
 =======
         toast ({
           title: "Added to favorites",
+=======
+        // Check condition;
+        setSavedTalents (prev => [...prev, talent]);
+        setSavedTalentIds (prev => [...prev, talent.id]);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           description: `${talent.full_name} has been added to your favorites`});
-      }
-    } catch (error) {
       console.error ('Error toggling saved talent:', error);
+<<<<<<< HEAD
       toast ({
         title: "Error";
         description: "There was a problem updating your favorites. Please try again.",
@@ -1119,6 +1183,9 @@ if (throw error) {
     }
   }
 ;
+=======
+  description: "There was a problem updating your favorites. Please try again.",""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Check if talent is saved;
 <<<<<<< HEAD
   const isTalentSaved = (talent_id: string) =>: any {}
@@ -1128,13 +1195,17 @@ if (throw error) {
   return {}
 =======
   const isTalentSaved = (talent_id: string) =>: any {
+  // TODO: Implement
     return savedTalentIds.includes (talent_id);
+<<<<<<< HEAD
   }
 ;
   return {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     saved_talents;
-    savedTalentIds;
     is_loading;
     toggleSaveTalent;
     isTalentSaved;
@@ -1154,7 +1225,6 @@ if (throw error) {
 =======
 =======
 
-
   }
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -1163,11 +1233,12 @@ if (throw error) {
     const isSaved = savedTalentIds.includes(talent.id),;
     ;
 ;
+
+
     const isSaved = savedTalentIds.includes(talent.id),;
     try {;
       if (isSaved) {;
         // Remove from saved_talents;
-        const { error } = await supabase;
           .from('saved_talents');
           .delete();
           .eq('user_id', userDetails.id);
@@ -1175,39 +1246,26 @@ if (throw error) {
         if (error) throw error,;
         setSavedTalents(prev => prev.filter(t => t.id !== talent.id)),;
         setSavedTalentIds(prev => prev.filter(id => id !== talent.id)),;
-        toast({;
-          title: "Removed from favorites",;
-          description: `${talent.full_name} has been removed from your favorites`});
+          title: "Removed from favorites",;")`;
       } else {;
         // Add to saved_talents;
-        const { error } = await supabase;
-          .from('saved_talents');
           .insert({;
-            user_id: userDetails.id,;
+            user_id: userDetails.id,;)
             talent_id: talent.id}),;
-        if (error) throw error,;
         setSavedTalents(prev => [...prev, talent]),;
         setSavedTalentIds(prev => [...prev, talent.id]),;
-        toast({;
-          title: "Added to favorites",;
-          description: `${talent.full_name} has been added to your favorites`});
-      }
-    } catch (error) {;
+          title: "Added to favorites",;")`;
       console.error('Error toggling saved talent:', error),;
-      toast({;
-        title: "Error",;
-        description: "There was a problem updating your favorites. Please try again.",;
-        variant: "destructive";
-      });
-    }
-  },;
+        title: "Error",;""
+        description: "There was a problem updating your favorites. Please try again.",;""
   // Check if talent is saved;
   const isTalentSaved = (talentId: string) => {;
     return savedTalentIds.includes(talentId);
-  },;
   return {;
     savedTalents,;
     savedTalentIds,;
+"`;
+pr-12325
     isLoading;
     toggleSaveTalent;
     isTalentSaved;
@@ -1218,6 +1276,7 @@ if (throw error) {
 =======
   }
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
     }  }
@@ -1234,3 +1293,7 @@ if (throw error) {
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

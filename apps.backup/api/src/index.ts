@@ -108,6 +108,7 @@ import Fastify from 'fastify';
 import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { get_pool, with_user } from './pg.js';
 dotenv.config ();
@@ -490,3 +491,6 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
 });
 });
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

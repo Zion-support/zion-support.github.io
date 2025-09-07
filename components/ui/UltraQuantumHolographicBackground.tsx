@@ -1,20 +1,26 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
+
 interface UltraQuantumHolographicBackgroundProps {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high' | 'ultra';
   colorScheme?: 'quantum' | 'holographic' | 'cyberpunk' | 'neon';
   particleCount?: number;
   animationSpeed?: number;
-  className?: string
+  className?: string;}
+}
 }
 
-export default function UltraQuantumHolographicBackground({
-  children;
+export default function UltraQuantumHolographicBackground({children;
   intensity;
             ease: "easeInOut"
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 useEffect ( () => {
   const updateDimensions = () => {
@@ -627,6 +633,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
           transition={{}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           }}
         />
       </div>
@@ -636,8 +645,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+);
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -60,15 +61,31 @@ import { AppHeader } from "./AppHeader";
 import { Footer } from "@/components/Footer";
 interface AppLayoutProps {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+import React from "react";""
+import { AppHeader } from "./AppHeader";""
+import { Footer } from "@/components/Footer";"
+interface AppLayoutProps {
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   children: React.ReactNode;
   hideFooter?: boolean;
-}
 
+<<<<<<< HEAD
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {}
   return ("
+=======
+}
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
+  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div className="flex flex-col min-h-screen bg-background">
 <<<<<<< HEAD
       <AppHeader />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,9 +107,10 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {}
     </div>
   );
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <main className="flex-grow">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
-export function AppLayout(): any ({ children, hideFooter = false }: AppLayoutProps) {;
-  return (
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -209,9 +227,9 @@ export function AppLayout() { return null; }
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+;
     </div>;
 }
-
 
 ;
 
@@ -244,8 +262,9 @@ export /**;
 <<<<<<< HEAD
 function AppLayout() {
   return (
-    <div className="flex flex - col min - h-screen bg - background">;
+    <div className="flex flex - col min - h-screen bg-background">;
       <AppHeader />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <main className="flex-grow">;
 =======
@@ -258,6 +277,9 @@ function AppLayout() {}
 =======
       <main className="flex - grow">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <main className="flex-grow">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {children}
       </main>;
       {!hide_footer && <Footer />}
@@ -287,6 +309,7 @@ hideFooter?: boolean
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -303,3 +326,55 @@ hideFooter?: boolean
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React from "react";""
+import { AppHeader } from "./AppHeader";""
+import { Footer } from "@/components/Footer";"
+interface AppLayoutProps {
+  // TODO: Implement
+}
+  children: React.ReactNode;
+  hideFooter?: boolean;
+
+export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
+
+  return ("
+    <div className="flex flex-col min-h-screen bg-background">"
+</div>
+      <AppHeader />
+"
+      <main className="flex-grow">{children}</main>"
+      {!hideFooter && <Footer />}
+
+      </main>
+
+    </div>"
+    <div className="flex flex-col min-h-screen bg-background">;"
+      <AppHeader />;
+      <main className="flex-grow">;"
+      </main>;
+
+
+    </div>;
+    </div>;"
+    <div className="flex flex - col min - h-screen bg - background">;"
+      <main className="flex - grow">;"
+      {!hide_footer && <Footer />}
+)
+    </div>);"
+  return (<div className="flex flex-col min-h-screen bg-background" > flex-grow" > {"
+}</main> {
+  !hideFooter && <Footer /> 
+}</div>) 
+pr-12325
+</Footer>)
+
+}</div>) 
+      </main>
+      {!hideFooter && <Footer />}
+    </div>;
+  );
+}
+;
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

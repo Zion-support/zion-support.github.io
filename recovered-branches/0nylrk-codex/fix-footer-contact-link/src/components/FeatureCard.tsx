@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,14 +123,34 @@ interface FeatureCardProps {
   icon: React.ReactNode,
   className?: string,
   key?: string | number, // Added key prop;
+=======
+import { cn } from "@/lib/utils";
+import React from "react";
+interface FeatureCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  className?: string;
+  key?: string | number, // Added key prop
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export function FeatureCard({ title, description, icon, className }: FeatureCardProps) {}
   return (
+<<<<<<< HEAD
     <div className={cn(
       "flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300",;
       className;
     )}>"
+=======
+
+      className
+    )}>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="mr-4 text-zion-cyan p-2">
         {icon}
       </div>
@@ -153,6 +174,7 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
         <p className="text-zion-slate-light">{description}</p>
       </div>
 
+</div>
   );
 }
   )
@@ -181,6 +203,7 @@ export function FeatureCard({ title, description, icon, className }: FeatureCard
 
         "flex items-start p-6 rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300",
         className,
+      </div>        className,
       )}>;
       <div className="mr-4 text-zion-cyan p-2">{icon}</div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -272,15 +295,19 @@ interface FeatureCardProps {}
 
     </div>
 
-
     </div>;
   );
 
+      </div>;  );
 import { cn  } from '@/lib / utils';
 import React from './react';
 interface FeatureCardProps {
+<<<<<<< HEAD
   title: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  title: string,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: string;
   icon: React.ReactNode;
   class_name?: string;
@@ -298,10 +325,10 @@ function FeatureCard() {}
       )}
 <<<<<<< HEAD
     >;
-      <div className="mr - 4 text - zion - cyan p - 2">{icon}</div>;
+      <div className="mr - 4 text - zion - cyan p-2">{icon}</div>;
       <div>;
-        <h3 className="text - lg font - bold mb - 2 text - white">{title}</h3>;
-        <p className="text - zion - slate - light">{description}</p>;
+        <h3 className="text - lg font - bold mb - 2 text-white">{title}</h3>;
+        <p className="text - zion - slate-light">{description}</p>;
       </div>;
     </div>);
 
@@ -318,7 +345,7 @@ function FeatureCard() {}
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
+}
 }
 
 
@@ -328,7 +355,7 @@ import { cn } from "@/lib/utils",;"
 import React from "react",;
 ;
 interface FeatureCardProps {;
-  title:string,;
+  title:string,,
   description:string,;
   icon:React.ReactNode,;
   className?:string,;
@@ -349,6 +376,7 @@ export function FeatureCard() { return null; }
 <<<<<<< HEAD
  interface FeatureCardProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: string,
   description: string;
 =======
@@ -360,6 +388,10 @@ description: string;
   title: string;
 description: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  title: string,
+  description: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 icon: React.ReactNode;
 className?: string;
 key?: string | number, //Added key prop;
@@ -379,6 +411,7 @@ key?: string | number, //Added key prop;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -395,3 +428,48 @@ key?: string | number, //Added key prop;
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  key?: string | number, // Added key prop;
+)
+export function FeatureCard({ title, description, icon, className }: FeatureCardProps) {
+    <div className={cn(
+      "flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300","
+      className;)
+    )}>
+</div>"
+      <div className="mr-4 text-zion-cyan p-2">"
+</div>
+
+      <div>
+        <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>""
+        <p className="text-zion-slate-light">{description}</p>"
+    <div className={cn(;"
+      "flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300";"
+    )}>;
+      <div className="mr-4 text-zion-cyan p-2">;"
+      </div>;
+"
+        "flex items-start p-6 rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300","
+        className,)
+      <div className="mr-4 text-zion-cyan p-2">{icon}</div>;"
+      <div>;
+        <h3 className="text-lg font-bold mb-2 text-white">{title}</h3>;""
+        <p className="text-zion-slate-light">{description}</p>;"
+
+
+      className={cn ("
+        "flex items - start p - 6 rounded - lg border border - zion - purple / 20 hover: border - zion - purple / 50 transition - all duration - 300","
+        class_name,)
+      )}
+    >;
+      <div className="mr - 4 text - zion - cyan p - 2">{icon}</div>;"
+        <h3 className="text - lg font - bold mb - 2 text - white">{title}</h3>;""
+        <p className="text - zion - slate - light">{description}</p>;"
+    </div>);
+      "flex items-start p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300",;"
+  return (<div className= {)
+  cn (</div> </div>) 
+    </div>;"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

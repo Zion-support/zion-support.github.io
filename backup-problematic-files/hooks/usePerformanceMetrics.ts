@@ -5,6 +5,7 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+<<<<<<< HEAD
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
     if (typeof window === "undefined" |!("performance" in window)) {
@@ -73,3 +74,5 @@ export function usePerformanceMetrics() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

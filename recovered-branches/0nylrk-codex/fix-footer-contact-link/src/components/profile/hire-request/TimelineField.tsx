@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   FormField
@@ -263,6 +264,8 @@ import {FormValues} from "./useHireRequestForm";
 =======
     { value: "Ongoing", label: "Ongoing" },
   ];
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
@@ -273,7 +276,50 @@ import {FormValues} from "./useHireRequestForm";
         <FormItem>"
           <FormLabel className="text-white">Project Timeline</FormLabel>
           <FormControl>
+<<<<<<< HEAD
             <Select;
+=======
+            <Select
+
+import {
+  // TODO: Implement
+}
+  FormField,
+  FormItem,
+  FormLabel,
+
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";"
+
+import {
+  // TODO: Implement
+  Select,
+  SelectContent,
+  SelectItem,
+
+  SelectTrigger,
+  SelectValue,"
+} from "@/components/ui/select";""
+import { UseFormReturn } from "react-hook-form";""
+import { FormValues } from "./useHireRequestForm";"
+interface TimelineFieldProps {
+  // TODO: Implement
+  form: UseFormReturn<FormValues>;
+
+    <FormField;
+      control={form.control}"
+      name="timeline""
+      render={({ field }) => (
+
+        <FormItem>
+"
+          <FormLabel className="text-white">Project Timeline"
+          <FormControl>
+
+            <Select;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               onValueChange={field.onChange}
               value={field.value}
               defaultValue={field.value}
@@ -434,16 +480,44 @@ function TimelineField() {
       control={form.control}
       name="timeline";
 
+<FormField;
+      control={form.control}
+      name="timeline";
       render={({ field }) => (
+                    {option.label}
+                  </SelectItem>
+                ))}      render={({ field }) => (
         <FormItem>;
-          <FormLabel className="text - white">Project Timeline</FormLabel>;
+          <FormLabel className="text-white">Project Timeline</FormLabel>;
           <FormControl>;
+</Select>"
+              <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white">"
+</SelectTrigger>"
+                <SelectValue placeholder="Select estimated timeline" />"
+</SelectValue>
+              </SelectTrigger>
+              <SelectContent>
+</SelectContent>
+                  <SelectItem key={option.value} value={option.value}>
+</SelectItem>
+  form: UseFormReturn<FormValues>;
+</FormValues>
+    <FormField;
+      control={form.control}"
+      name="timeline";")
+      render={({ field }) => (
+</FormField>
+        <FormItem>;
+</FormItem>"
+          <FormLabel className="text - white">Project Timeline</FormLabel>;"
+          <FormControl>;
+</FormControl>
             <Select;
               onValueChange={field.on_change}
               value={field.value}
               default_value={field.value}
             >;
-              <SelectTrigger className="bg - zion - blue - light / 20 border - zion - blue - light text - white">;
+              <SelectTrigger className="bg - zion - blue - light / 20 border - zion - blue - light text-white">;
                 <SelectValue placeholder="Select estimated timeline" />;
               </SelectTrigger>;
               <SelectContent>;
@@ -460,6 +534,23 @@ function TimelineField() {
                   </SelectItem>
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 ))}
+</Select>"
+              <SelectTrigger className="bg - zion - blue - light / 20 border - zion - blue - light text - white">;"
+</SelectTrigger>"
+                <SelectValue placeholder="Select estimated timeline" />;"
+</SelectValue>
+              </SelectTrigger>;
+              <SelectContent>;
+</SelectContent>
+                  <SelectItem key={option.value} value={option.value}>;
+</SelectItem>
+        <FormItem>;
+</FormItem>"
+          <FormLabel className="text-white">Project Timeline</FormLabel>;"
+          <FormControl>;
+</FormControl>
+                  </SelectItem>
+
               </SelectContent>
             </Select>
           </FormControl>
@@ -470,17 +561,60 @@ function TimelineField() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 ))}
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+              <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white">"
+                <SelectValue placeholder="Select estimated timeline" />"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-        </FormItem>)}
+</FormItem>)}
     />);
 }
                     {option.label}
                   </SelectItem>
                 ))}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              <SelectContent>
+
+                  <SelectItem key={option.value} value={option.value}>
+
+
+      name="timeline";")
+
+        <FormItem>;
+          <FormLabel className="text - white">Project Timeline;"
+          <FormControl>;
+
+              onValueChange={field.on_change}
+              default_value={field.value}
+            >;
+              <SelectTrigger className="bg - zion - blue - light / 20 border - zion - blue - light text - white">;"
+                <SelectValue placeholder="Select estimated timeline" />;"
+
+              ;
+              <SelectContent>;
+
+                  <SelectItem key={option.value} value={option.value}>;
+
+          <FormLabel className="text-white">Project Timeline;"
+
+          <FormMessage />
+
+        )
+        )}
+pr-12325
+
+</FormMessage>
+        </FormItem>)
+        </FormItem>)}
+                  </SelectItem>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

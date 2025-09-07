@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface AdditionalRealService {
 export interface AdditionalRealService {
 =======
@@ -16,6 +17,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface AdditionalRealService {
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export interface AdditionalRealService {
+
+export interface AdditionalRealService {
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   name: string;
   tagline: string;
@@ -29,8 +38,21 @@ export interface AdditionalRealService {
     mobile: string;
     email: string;
 }
-
-
+  // TODO: Implement
+}
+  id: string;,
+  name: string;
+  tagline: string;,
+  price: string;
+  description: string;,
+  features: string[];
+  link: string;,
+  category: string;
+  real_implementation: boolean;,
+  contact_info: {
+    mobile: string;,
+  email: string;
+pr-12325
 
     address: string;
   }
@@ -38,6 +60,9 @@ export interface AdditionalRealService {
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     address: string;
   }
@@ -64,11 +89,17 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export const additionalEnhancedServices: AdditionalRealService[] = [
+  {
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -76,6 +107,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -84,6 +118,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   contactInfo: {
     mobile: string, email: string,
     address: string
+<<<<<<< HEAD
 =======
 export const additionalEnhancedServices: AdditionalRealService[] = []
   {}
@@ -100,6 +135,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   id: string;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+  id: string;
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   tagline: string;
   price: string;
@@ -111,6 +151,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   contactInfo: {}
     mobile: string;
     email: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     address: string;
   };
@@ -201,6 +242,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/fix-website-loading-errors-and-merge-6662
       address: "364 E Main St STE 1008 Middletown DE 19709"
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     address: string
   }
 }
@@ -246,17 +290,24 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     realImplementation: true;
     contactInfo: {
       mobile: "+1 302 464 0950";
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
       address: "364 E Main St STE 1008 Middletown DE 19709"
       address: "364 E Main St STE 1008 Middletown DE 19709"
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];
 
 ;
@@ -300,6 +351,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
 =======
@@ -363,6 +415,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -370,12 +424,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -392,3 +453,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+  description: string;,]
+  realImplementation: boolean;,
+  contactInfo: {
+
+
+
+  },]
+];      mobile: "+1 302 464 0950";"
+  {"
+    id: "data-warehouse-solution",""
+    name: "Data Warehouse Solution",""
+    tagline: "Enterprise-grade data management and analytics",""
+    price: "$149/month",""
+    description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.","
+    features: ["
+      "Data integration",""
+      "Real-time processing",""
+      "Advanced analytics",""
+      "Scalable architecture",""
+      "Security compliance""]
+    ],"
+    link: "/services/data-warehouse-solution",""
+    category: "Data & Analytics","
+    realImplementation: true,
+    contactInfo: {,"
+  address: "364 E Main St STE 1008 Middletown DE 19709"""
+      address: "364 E Main St STE 1008 Middletown DE 19709"","
+  email: "kleber@ziontechgroup.com";""
+      address: "364 E Main St STE 1008 Middletown DE 19709";"
+"
+      mobile: "+1 302 464 0950",""
+      email: "kleber@ziontechgroup.com",""
+      email: 'kleber@ziontechgroup.com',
+  },;
+];      mobile: "+1 302 464 0950";","
+      address: "364 E Main St STE 1008 Middletown DE 19709""
+];
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

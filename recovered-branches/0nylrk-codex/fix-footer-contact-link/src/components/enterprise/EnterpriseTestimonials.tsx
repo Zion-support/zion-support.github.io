@@ -1,6 +1,14 @@
+import React from "react";
+import { Quote } from "lucide-react";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+import React from "react",;
+import { Quote } from "lucide-react",;
+import {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 import React from "react";
@@ -13,6 +21,7 @@ import {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {;
@@ -264,22 +273,27 @@ const testimonials = [
 
 
 export function EnterpriseTestimonials() {;
-  return (
+=======
 
-export function EnterpriseTestimonials() {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
-    <section className="py-20 px-4 md:px-6">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Trusted by Leading Companies
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            See how enterprise teams are transforming their hiring process
-          </p>
-        </div>
-        <Carousel className="w-full">
+)
+export function EnterpriseTestimonials() {
+  return ("
+    <section className="py-20 px-4 md:px-6">"
+</section>"
+      <div className="container mx-auto max-w-6xl">"
+</div>"
+        <div className="text-center mb-12">"
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">"
+</h2>
+          </h2>"
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">"
+</p>
+        <Carousel className="w-full">"
+
           <CarouselContent>
+<<<<<<< HEAD
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
@@ -301,9 +315,26 @@ export function EnterpriseTestimonials() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+"
+              <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">"
+                <div className="bg-card rounded-xl p-8 border border-border h-full">"
+                  <Quote className="h-10 w-10 text-primary/20 mb-4" />"
+                  <blockquote className="text-xl mb-6 italic">"
+</blockquote>
+                  </blockquote>"
+                  <div className="flex items-center gap-4">"
+                    <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">"
+</div>
+                      <img;
+                        src={testimonial && testimonial.image}
+                        alt={testimonial && testimonial.author}"
+                        className="h-full w-full object-cover""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       />
-                    </div>
+</img>
                     <div>
+<<<<<<< HEAD
                       <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
 
@@ -354,11 +385,23 @@ export function EnterpriseTestimonials() {;
           </h2>;
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;
             See how enterprise teams are transforming their hiring process;
+=======
+                      <p className="font-bold">{testimonial.author}</p>""
+                      <p className="text-sm text-muted-foreground">"
+</p>"
+    <section className="py-20 px-4 md:px-6">;"
+      <div className="container mx-auto max-w-6xl">;"
+        <div className="text-center mb-12">;"
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">;"
+          </h2>;"
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </p>;
-        </div>;
+        </div>;"
+        <Carousel className="w-full">;"
 
-        <Carousel className="w-full">;
           <CarouselContent>;
+<<<<<<< HEAD
             {testimonials && testimonials.map((testimonial, index) => (;
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
@@ -412,62 +455,48 @@ import {}
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const testimonials = [;
-  {
-    quote:;
-      "Implementing Zion's Enterprise solution has reduced our time - to - hire by 40% and significantly improved the quality of candidates we're seeing.",
-    author: "Sarah Johnson",
-    title: "VP of Talent Acquisition",
-    company: "TechGlobal Inc.",
-    image: "/placeholder.svg",
-  },
-  {
-    quote:;
-      "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",
-    author: "Michael Chen",
-    title: "Director of HR",
-    company: "InnovateCorp",
-    image: "/placeholder.svg",
-  },
-  {
-    quote:;
-      "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
-    author: "Elena Rodriguez",
-    title: "CTO",
-    company: "FutureTech Systems",
-    image: "/placeholder.svg",
-  },
-];
+=======
+              <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;"
+                <div className="bg-card rounded-xl p-8 border border-border h-full">;"
+                  <Quote className="h-10 w-10 text-primary/20 mb-4" />;"
+                  <blockquote className="text-xl mb-6 italic">;"
+                  </blockquote>;"
+                  <div className="flex items-center gap-4">;"
+                    <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;"
+
+
+
 ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  {
+      "Implementing Zion's Enterprise solution has reduced our time - to - hire by 40% and significantly improved the quality of candidates we're seeing.",""
+    image: "/placeholder.svg","
+  },
+      "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",""
+      "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",""
+    company: "FutureTech Systems",""
+  },]
 export /**
- * EnterpriseTestimonials - Function description
- */
+ * EnterpriseTestimonials - Function description;
+ */)
 function EnterpriseTestimonials() {
-  return (
-    <section className="py - 20 px - 4 md:px - 6">;
-      <div className="container mx - auto max - w-6xl">;
-        <div className="text - center mb - 12">;
-          <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
-            Trusted by Leading Companies;
-          </h2>;
-          <p className="text - xl text - muted - foreground max - w-2xl mx - auto">;
-            See how enterprise teams are transforming their hiring process;
-          </p>;
-        </div>;
-        <Carousel className="w - full">;
-          <CarouselContent>;
-            {testimonials.map ((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis - 1/1 lg:basis - 1/1">;
-                <div className="bg - card rounded - xl p - 8 border border - border h - full">;
-                  <Quote className="h - 10 w - 10 text - primary / 20 mb - 4" />;
-                  <blockquote className="text - xl mb - 6 italic">;
-                    "{testimonial.quote}";
-                  </blockquote>;
-                  <div className="flex items - center gap - 4">;
-                    <div className="h - 12 w - 12 rounded - full overflow - hidden bg - muted">;
-                      <img;
+    <section className="py - 20 px - 4 md:px - 6">;"
+</img>"
+      <div className="container mx - auto max - w-6xl">;"
+        <div className="text - center mb - 12">;"
+          <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;"
+          <p className="text - xl text - muted - foreground max - w-2xl mx - auto">;"
+        <Carousel className="w - full">;"
+
+              <CarouselItem key={index} className="md:basis - 1/1 lg:basis - 1/1">;"
+                <div className="bg - card rounded - xl p - 8 border border - border h - full">;"
+                  <Quote className="h - 10 w - 10 text - primary / 20 mb - 4" />;"
+                  <blockquote className="text - xl mb - 6 italic">;"
+                  <div className="flex items - center gap - 4">;"
+                    <div className="h - 12 w - 12 rounded - full overflow - hidden bg - muted">;"
                         src={testimonial.image}
-                        alt={testimonial.author}
-                        className="h - full w - full object - cover";
+                        alt={testimonial.author}"
+                        className="h - full w - full object - cover";"
                       />;
                     </div>;
                     <div>;
@@ -526,8 +555,27 @@ function EnterpriseTestimonials() {
           </CarouselContent>;
           <div className="flex justify - center gap - 2 mt - 8">;
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"{testimonial.quote}";
+                  </blockquote>;
+                  <div className="flex items-center gap-4">;
+                    <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
+                      <img;
+              </CarouselItem>;
+            ))}
+          </CarouselContent>;
+          <div className="flex justify-center gap-2 mt-8">;
+                      <p className="font - bold">{testimonial.author}</p>;""
+                      <p className="text - sm text - muted - foreground">;"
+                </div>;)
+              ))}
+          ;"
+          <div className="flex justify - center gap - 2 mt - 8">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <CarouselPrevious />;
+
             <CarouselNext />;
           </div>;
         </Carousel>;
@@ -597,7 +645,41 @@ image: "/placeholder.svg"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-    </section>);
+    </section>);"
+pr-12325
 
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </section>;
+  ),;}
+ import {
+  Carousel;
+CarouselContent;
+CarouselItem;
+CarouselNext;
+const testimonials = [ {
+  quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.";
+author: "Sarah Johnson";
+title: "VP of Talent Acquisition";
+company: "TechGlobal Inc.";
+image: "/placeholder.svg" 
+};
+{
+  quote: "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.";
+author: "Michael Chen";
+title: "Director of HR";
+company: "InnovateCorp";
+image: "/placeholder.svg" 
+};
+{
+  export function EnterpriseTestimonials () {
+  return (<section className="py-20 px-4 md:px-6" > <div className="container mx-auto max-w-6xl" > <div className="text-center mb-12" > <h2 className="text-3xl md:text-4xl font-bold mb-4" > text-xl text-muted-foreground max-w-2xl mx-auto"> See how enterprise teams are transforming their hiring process </p> </div> <Carousel className=" w-full"> <CarouselContent> </blockquote> <div className=" flex items-center gap-4"> <div className=" h-12 w-12 rounded-full overflow-hidden bg-muted"> <img </p> </div> </div> </div> </CarouselItem>) ) 
+}</CarouselContent> <div className=" flex justify-center gap-2 mt-8" > <CarouselPrevious /> <CarouselNext /> </div> </Carousel> </div> </section>) 
+}
+}
+;
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

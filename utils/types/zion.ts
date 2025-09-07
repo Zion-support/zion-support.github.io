@@ -13,10 +13,24 @@ export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+export interface Branding {;
+
+export interface Branding {;
+
+  logoUrl?: string,;
+  primaryColor?: string,;
+  secondaryColor?: string,;
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
+
+
+
+
+
 export interface Branding {logoUrl?: string;
   primaryColor?: string;
-  secondaryColor?: string;
-  subdomain?: string;
+  secondaryColor?: string;}
+  subdomain?: string;}
 }
 export interface DeployModules {marketplace: boolean;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -43,14 +57,27 @@ export interface Branding {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+
 export interface Branding {;
 
 
+<<<<<<< HEAD
 =======
 
 export interface Branding {;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+export interface Branding {;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
@@ -72,13 +99,25 @@ export interface Branding {;
   }
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 export interface DeployModules {;
   marketplace: boolean;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -88,14 +127,25 @@ export interface DeployModules {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -120,6 +170,12 @@ export interface DeployModules {;
 =======
   // Bonus;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+
+
+
+
 
 
 
@@ -164,6 +220,20 @@ export interface DeployModules {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+  globalMap?: boolean;
+  franchiseOnboarding?: boolean;
+  referralAmbassadors?: boolean;
+  grantPortal?: boolean;
+  trailer?: boolean;
+  bookStore?: boolean;
+
+
+
+
+
+
 
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -213,6 +283,7 @@ export interface DeployResult {success: boolean;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   // Bonus;}
@@ -223,6 +294,9 @@ export interface DeployResult {success: boolean;
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // Bonus;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export interface DeployInput {;
   instanceName: string;
@@ -235,10 +309,14 @@ export interface DeployInput {;
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+governanceMode: GovernanceMode;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   governanceMode: GovernanceMode;
   branding: Branding;
   modules: DeployModules;
@@ -257,6 +335,7 @@ export interface GeneratedAsset {;
   path: string;
   description?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 }
@@ -273,6 +352,10 @@ export interface GeneratedAsset {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -321,6 +404,9 @@ export interface GeneratedAsset {;"
 export interface DeployResult {;
   success: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -328,6 +414,7 @@ export interface DeployResult {;
 ;
 export interface DeployResult {;
   success: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -346,6 +433,20 @@ export interface DeployResult {;
 export interface DeployResult {;
   success: boolean;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+;
+export interface DeployResult {;
+  success: boolean;
+
+export interface DeployResult {;
+  success: boolean;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
@@ -386,12 +487,24 @@ export interface Branding {}
 
 
 
+
+
+
+
+
+
+
+
+
+
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
 export interface Branding {
   logo_url?: string,
   primary_color?: string,
   secondary_color?: string,
   subdomain?: string;
+
+
 
 
   } catch (error) {
@@ -403,6 +516,9 @@ export interface Branding {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 <<<<<<< HEAD
@@ -457,14 +573,100 @@ export interface GeneratedAsset {"
   path: string,;
   description?: string;
 }
+<<<<<<< HEAD
 export interface DeployResult {}
+=======
+export interface DeployResult {
+
+
+  logoUrl?: string,;
+  primaryColor?: string,;
+
+  secondaryColor?: string,;
+  } catch (error) {
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
+
+
+;
+export interface DeployModules {;
+  marketplace: boolean;,
+  gpt: boolean;
+  academy: boolean;,
+  token: boolean;
+  dao: boolean;,
+  nationBuilder: boolean;
+  launchKit: boolean;,
+  bookBuilder: boolean;
+  roadmapWhitepaper: boolean;,
+  apiDocsWiki: boolean;
+  zionBrain: boolean;
+  // Bonus;
+
+
+
+
+  globalMap?: boolean,;
+  franchiseOnboarding?: boolean,;
+  referralAmbassadors?: boolean,;
+  grantPortal?: boolean,;
+
+  trailer?: boolean,;
+  bookStore?: boolean;
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
+
+export interface DeployInput {instanceName: string;,
+  defaultLanguage: string;
+  deploymentRegion: string;,
+  tokenActivation: boolean;
+  governanceMode: GovernanceMode;,
+  branding: Branding;
+  modules: DeployModules;
+  requestedRoutes?: string[];
+  modules: DeployModules;}
+  requestedRoutes?: string[];}
+}
+
+export interface DeployLogEntry {timestamp: string;,"
+  level: "info" | "warn" | "error";"
+  action: string;
+  details?: Record<string unknown> | string;
+</string>
+  details?: Record<string, unknown> | string;
+  details?: Record < string unknown> | string;
+export interface GeneratedAsset {
+  // TODO: Implement
+}"
+  kind: "file" | "page" | "config" | "job" | "event","
+  path: string,
+  description?: string;
+export interface DeployResult {
+  // TODO: Implement
+pr-12325
+
+}
+export interface DeployResult {
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   success: boolean,
   instance_slug: string,
   config_path: string,
   assets: GeneratedAsset[],
   logs: DeployLogEntry[],
+<<<<<<< HEAD
   summary: string,;
   version: string;
+=======
+  summary: string,}
+  version: string;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 export interface AccessControlConfig {";
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
@@ -511,14 +713,35 @@ export interface AccessControlConfig {;
 
 }
 export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+export interface AccessControlConfig {
+
+  // TODO: Implement
+  allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];",
   adminKeyConfigured: boolean;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];",
+  adminKeyConfigured: boolean;
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
   }
 
 
 }
+
+
+
+}
+}
+;
+export interface AccessControlConfig {;
+  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+  adminKeyConfigured: boolean;
+
+
+
+
 
   } catch (error) {
     console.error("Error:", error);
@@ -526,7 +749,16 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  } catch (error) {"
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+
+  }
 }
+}
+
+
+
 
 
 
@@ -536,8 +768,11 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
+"
+pr-12325
   adminKeyConfigured: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -554,3 +789,6 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

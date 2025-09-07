@@ -17,6 +17,7 @@ pr-12243
       <a href=&quot;/dao / zkvote & quot; className=&quot;inline - block px - 4 py - 2 rounded bg - black text - white & quot;>Open ZK Vote</a>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -29,3 +30,11 @@ pr-12243
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+}
+}
+}
+
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

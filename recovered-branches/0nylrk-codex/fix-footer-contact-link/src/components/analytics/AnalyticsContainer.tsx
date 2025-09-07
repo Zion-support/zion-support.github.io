@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
 <<<<<<< HEAD
 =======
@@ -31,12 +32,21 @@ import { useAuth } from "@/hooks/useAuth";
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
+
+
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
 import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
+<<<<<<< HEAD
 import { Navigate } from "react-router-dom",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +170,11 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   // If still loading auth status, show loading
   if (isLoading) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { Navigate } from "react-router-dom",;
+import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
 =======
@@ -200,7 +215,6 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 =======
   }
 
-  
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   // If not authenticated, redirect
@@ -276,7 +290,6 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
-  
 
   // If not admin, redirect
   if (!isAdmin) {
@@ -298,7 +311,16 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
           </p>
         </div>
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+{children}
+      </main>
+      <Footer />
+    </div>
+  );
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -361,10 +383,13 @@ interface AnalyticsContainerProps {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // If not authenticated, redirect;
   if (!isAuthenticated) {;"
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // If not authenticated, redirect;
   if (!isAuthenticated) {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -451,7 +476,19 @@ if ( {) {}
       <div className="flex justify - center items - center min - h-screen bg - zion - blue">;"
 =======
 import { use_auth  } from '@/hooks / use_auth';
+export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
+
+import React from "react",""
+import { Header } from "@/components/Header",""
+import { Footer } from "@/components/Footer",""
+import { SEO } from "@/components/SEO",""
+import { Navigate } from "react-router-dom";""
+import { useAuth } from "@/hooks/useAuth";""
+import { Navigate } from "react-router-dom",""
+import { useAuth } from "@/hooks/useAuth","
 interface AnalyticsContainerProps {
+  // TODO: Implement
+}
   children: React.ReactNode;
 }
 export /**
@@ -541,6 +578,7 @@ if ( {) {
       <Footer />;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -556,11 +594,15 @@ if ( {) {
 
 =======
     </div>);
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
+<<<<<<< HEAD
 
     </div>);
 <<<<<<< HEAD
@@ -605,10 +647,25 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
   // Check if user is admin (using either role or userType);
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin',;
   ;
+=======
+}
+;
+
+
+export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
+
+  const { isAuthenticated, isLoading, user } = useAuth(),
+
+  // Check if user is admin (using either role or userType)"
+  const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { isAuthenticated, isLoading, user } = useAuth();
-  // Check if user is admin (using either role or userType);
-  const isAdmin = user?.role === 'admin' || user?.userType === 'admin';
+  // Check if user is admin (using either role or userType)
+
+  const isAdmin = user?.role === "admin" |user?.userType === "admin";"
+  // Check if user is admin (using either role or userType)"
   // If still loading auth status, show loading;
+<<<<<<< HEAD
   if (isLoading) {;
     return (;
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
@@ -654,18 +711,70 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
       <SEO;
         title="Analytics Dashboard";
         description="Track user behavior, page views, and conversion rates to improve your platform performance";
+=======
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">"
+</div>"
+        <div className="animate-pulse text-zion-purple text-lg">Loading...</div>"
+    return <Navigate to="/login" state={{ from: '/analytics' }} replace />
+
+    return <Navigate to="/unauthorized" replace />"
+"
+    <div className="min-h-screen flex flex-col bg-zion-blue">"
+</div>
+      <SEO;"
+        title="Analytics Dashboard"""
+        description="Track user behavior, page views, and conversion rates to improve your platform performance""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         noindex;
+      />
+
+      <Header />
+      <main className="flex-1 p-6 md:p-8 container mx-auto">"
+</main>"
+        <div className="mb-8">"
+          <h1 className="text-3xl font-bold text-white mb-2">Analytics Dashboard</h1>""
+          <p className="text-zion-slate-light">"
+</p>
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;"
+        <div className="animate-pulse text-zion-purple text-lg">Loading...</div>;"
+      </div>;"
+    return <Navigate to="/login" state={{ from: "/analytics" }} replace />;"
+    return <Navigate to="/unauthorized" replace />;"
+    <div className="min-h-screen flex flex-col bg-zion-blue">;"
       />;
+
       <Header />;
+<<<<<<< HEAD
       <main className="flex-1 p-6 md:p-8 container mx-auto">;
         <div className="mb-8">;
           <h1 className="text-3xl font-bold text-white mb-2">Analytics Dashboard</h1>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <p className="text-zion-slate-light">;
             Track user behavior, page views, and conversion rates;
+=======
+      <main className="flex-1 p-6 md:p-8 container mx-auto">;"
+        <div className="mb-8">;"
+          <h1 className="text-3xl font-bold text-white mb-2">;"
+</h1>
+          </h1>;"
+          <p className="text-zion-slate-light">;"
+</p>"
+      <div className="flex justify - center items - center min - h-screen bg - zion - blue">;"
+        <div className="animate - pulse text - zion - purple text - lg">Loading...</div>;")
+      </div>);"
+    <div className="min - h-screen flex flex - col bg - zion - blue">;"
+        title="Analytics Dashboard";""
+        description="Track user behavior, page views, and conversion rates to improve your platform performance";"
+
+      <main className="flex - 1 p - 6 md:p - 8 container mx - auto">;"
+        <div className="mb - 8">;"
+          <h1 className="text - 3xl font - bold text - white mb - 2">;"
+          <p className="text - zion - slate - light">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </p>;
         </div>;
-        {children}
       </main>;
       <Footer />;
     </div>;
@@ -676,6 +785,7 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
 
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -692,3 +802,13 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+    </div>);
+    return <Navigate to="/login" state={{ from: '/analytics' }} replace />;
+
+
+          <h1 className="text-3xl font-bold text-white mb-2">Analytics Dashboard</h1>;""
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

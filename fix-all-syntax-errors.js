@@ -1,7 +1,25 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+console && console.log('🔧 Fixing all syntax errors...');
+// Fix accessibility && accessibility.tsx
+const fixAccessibility = () => {
+  try {
+    let content = fs && fs.readFileSync('pages/accessibility && accessibility.tsx', 'utf8');
+    // Fix the malformed JSX structure
+    content = content && content.replace(
+      /<h2 className="text-3xl font-bold text-gray-900 mb-6">\s*<\/div>\s*<\/div>\s*<\/section>\s*<section className="py-20 bg-white">/g,
+      '<h2 className="text-3xl font-bold text-gray-900 mb-6">\n                  Accessibility Standards\n                </h2>\n                <p className="text-lg text-gray-600 max-w-3xl mx-auto">\n                  We follow international accessibility standards to ensure our platform is usable by everyone.\n                </p>\n              </div>\n            </div>\n          </div>\n        </section>\n        <section className="py-20 bg-white">'
+    );
+    fs && fs.writeFileSync('pages/accessibility && accessibility.tsx', content);
+    console && console.log('✅ Fixed accessibility && accessibility.tsx');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return true;
   } catch (error) {}
     console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
@@ -13,13 +31,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 };
 // Fix api && api.tsx
 const fixApi = () => {
   try {
     let content = fs && fs.readFileSync('pages/api && api.tsx', 'utf8');
+<<<<<<< HEAD
     
 
     // Ensure proper closing structure
@@ -32,6 +54,12 @@ const fixApi = () => {
 =======
     if (!content && content.includes('export default')) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    // Ensure proper closing structure
+    if (!content && content.includes('export default')) {
+    if (!content.includes('export default')) {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -40,8 +68,12 @@ const fixApi = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 
+<<<<<<< HEAD
     '
     fs && fs.writeFileSync('pages/api && api.tsx', content);'
+=======
+    fs && fs.writeFileSync('pages/api && api.tsx', content);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console && console.log('✅ Fixed api && api.tsx');
 
 <<<<<<< HEAD
@@ -54,27 +86,78 @@ const fixApi = () => {
     return false;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+};
+// Fix careers && careers.tsx
+const fixCareers = () => {
+  try {
+    let content = fs && fs.readFileSync('pages/careers && careers.tsx', 'utf8');
+    // Fix malformed JSX structure
+    content = content && content.replace(
+      /<\/motion\.div>\s*\)\)\}\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g,
+      '</motion && motion.div>\n                ))}\n              </div>\n            </div>\n          </div>\n        </div>\n      </section>'
+    );
+    fs && fs.writeFileSync('pages/careers && careers.tsx', content);
+    console && console.log('✅ Fixed careers && careers.tsx');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return true;
   } catch (error) {'
     console && console.error('❌ Error fixing careers && careers.tsx:', error && error.message);
     return false;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+};
+// Fix support && support.tsx
+const fixSupport = () => {
+  try {
+    let content = fs && fs.readFileSync('pages/support && support.tsx', 'utf8');
+    // Fix malformed JSX structure
+    content = content && content.replace(
+      /<\/motion\.div>\s*<\/div>\s*<\/div>\s*<\/section>\s*<\/div>\s*\);\s*}/g,
+      '</motion && motion.div>\n          </div>\n        </div>\n      </section>\n    </div>\n  );\n}'
+    );
+    fs && fs.writeFileSync('pages/support && support.tsx', content);
+    console && console.log('✅ Fixed support && support.tsx');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return true;
   } catch (error) {'
     console && console.error('❌ Error fixing support && support.tsx:', error && error.message);
     return false;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+};
+// Fix webinars && webinars.tsx
+const fixWebinars = () => {
+  try {
+    let content = fs && fs.readFileSync('pages/webinars && webinars.tsx', 'utf8');
+    // Fix malformed JSX structure
+    content = content && content.replace(
+      /<\/Link>\s*<\/div>\s*\);\s*}/g,
+      '</Link>\n                </div>\n              </div>\n            </div>\n          </div>\n        </section>\n      </div>\n    );\n  }\n}'
+    );
+    fs && fs.writeFileSync('pages/webinars && webinars.tsx', content);
+    console && console.log('✅ Fixed webinars && webinars.tsx');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return true;
   } catch (error) {'
     console && console.error('❌ Error fixing webinars && webinars.tsx:', error && error.message);
@@ -83,6 +166,11 @@ const fixApi = () => {
 }
 <<<<<<< HEAD
 // Main execution
+
+const main = () => {
+  console && console.log('Starting comprehensive syntax fixes...');
+
+  const fixes = [
     fixAccessibility
     fixApi
     fixCareers
@@ -108,24 +196,39 @@ const fix_accessibility = () =>: any {}
 ;
     // Fix the malformed JSX structure;
     content = content.replace (
+<<<<<<< HEAD
       /<h2 className="text - 3xl font - bold text - gray - 900 mb - 6">\s*<\/div>\s*<\/div>\s*<\/section>\s*<section className="py - 20 bg - white">/g,'"
+=======
+      /<h2 className="text - 3xl font - bold text - gray - 900 mb - 6">\s*<\/div>\s*<\/div>\s*<\/section>\s*<section className="py - 20 bg - white">/g,
+
+    if (!content && content.includes('export default')) {
+      content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
+      /<h2 className="text - 3xl font - bold text - gray - 900 mb - 6">\s*<\/div>\s*<\/div>\s*<\/section>\s*<section className="py - 20 bg - white">/g,"
+</h2>"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       '<h2 className="text - 3xl font - bold text - gray - 900 mb - 6">\n                  Accessibility Standards\n                </h2>\n                <p className="text - lg text - gray - 600 max - w-3xl mx - auto">\n                  We follow international accessibility standards to ensure our platform is usable by everyone.\n                </p>\n              </div>\n            </div>\n          </div>\n        </section>\n        <section className="py - 20 bg - white">');
 ;'
     fs.writeFileSync ('pages / accessibility.tsx', content);'
     console.log ('✅ Fixed accessibility.tsx');
+<<<<<<< HEAD
     return true;
   } catch (error) {'
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.error ('❌ Error fixing accessibility.tsx:', error.message);
-    return false;
-  }
-}
-;
 // Fix api.tsx;
+<<<<<<< HEAD
 const fix_api = () =>: any {}
   try {'
+=======
+const fix_api = () =>: any {
+  // TODO: Implement
+  try {
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     let content = fs.readFileSync ('pages / api.tsx', 'utf8');
-;
     // Ensure proper closing structure;
+<<<<<<< HEAD
     if () {) {}
   $2;
 }'
@@ -256,3 +359,18 @@ if ( {) {}
 }
 ;
 '"`
+=======
+    if () {) {
+  $2;
+      content += '\n\nexport default /**
+ * API - Function description;
+ */
+function API() {\n  return (\n    <div>\n      <h1 > API Documentation</h1>\n    </div>\n  );\n}';
+      /<\/motion\.div>\s*\)\)\}\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g,
+      '</motion.div>\n                ))}\n              </div>\n            </div>\n          </div>\n        </div>\n      </section>');
+      /<\/motion\.div>\s*<\/div>\s*<\/div>\s*<\/section>\s*<\/div>\s*\);\s*}/g,
+      '</motion.div>\n          </div>\n        </div>\n      </section>\n    </div>\n  );\n}');
+      /<\/Link>\s*<\/div>\s*\);\s*}/g,
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

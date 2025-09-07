@@ -8,19 +8,25 @@ import { useState, useEffect  } from './react';
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface User {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   email: string;
   name: string;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const useAuth = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 export const useAuth = () => {;
   const [user, setUser] = useState<User | null>(null);
+<<<<<<< HEAD
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     // Simulate auth check
@@ -60,3 +66,5 @@ export const useAuth = () => {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

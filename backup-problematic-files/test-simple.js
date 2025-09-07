@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/test-simple.js
 ========
 <<<<<<< HEAD
@@ -8,6 +9,9 @@
 =======
 <<<<<<< HEAD
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/test-simple.js
+=======
+<
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node    ); setInterval(() => { .toISOString())},30000);
 #!/usr/bin/env node
 console.log('Simple test script running...');
@@ -18,6 +22,7 @@ console.log('Current "directory": ', process.cwd());
 setInterval(() => {
   console.log('Test script still running at', new Date().toISOString());
 }, 30000);
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/test-simple.js
 ========
 <<<<<<< HEAD:test-simple.js
@@ -36,3 +41,9 @@ setInterval(() => {
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/test-simple.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/test-simple.js
+=======
+<
+#!/usr/bin/env node console.log('Simple test script running...'); console.log('Node version:',process.version); console.log('Platform:',process.platform); console.log('Current directory:',process.cwd()); setInterval(() => { console.log('Test script still running at',new Date().toISOString())},30000);
+#!/usr/bin/env node console.log('Simple test script running...'); console.log('Node version:',process.version); console.log('Platform:',process.platform); console.log('Current directory:',process.cwd()); setInterval(() => { console.log('Test script still running at',new Date().toISOString())},30000);
+<
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

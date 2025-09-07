@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -99,6 +100,8 @@ export default function PublishProduct() {
 
   // Show loading while checking authentication
   if (isLoading) {
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   // Show loading while checking authentication
   if (isLoading) {
@@ -135,10 +138,34 @@ export default function PublishProduct() {;
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
+
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+export default function PublishProduct() {;
+  const { isAuthenticated, isLoading } = useAuth();
+  // Show loading while checking authentication;
+  if (isLoading) {;
+    return (;
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+        <div className="animate-pulse text-zion-purple text-lg">;
+          Loading...;
+        </div>;
+      </div>;
+    );
+  }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   // Redirect to login if not authenticated;
   if (!isAuthenticated) {;
     return <Navigate to="/login" state={{ from: '/publish' }} replace />;
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
   return (
@@ -203,11 +230,17 @@ import { useAuth } from "@/hooks/useAuth",
 =======
       <SEO
 =======
+=======
+  }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   return (;
 
     <div className="min-h-screen flex flex-col bg-zion-blue">;      <SEO
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         title="Publish Your Product"
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
         keywords="publish product, sell online, digital marketplace, AI tools, tech services"
@@ -225,6 +258,59 @@ import { useAuth } from "@/hooks/useAuth",
 
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">
             <ProductSubmissionForm />
+
+import React from "react";""
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm";""
+import { useAuth } from "@/hooks/useAuth";""
+import { Navigate } from "react-router-dom";""
+import { SEO } from "@/components/SEO";"
+export default function PublishProduct() {
+  const { isAuthenticated, isLoading } = useAuth();
+
+  // Show loading while checking authentication;
+  if (isLoading) {
+
+  // Show loading while checking authentication;
+  if (isLoading) {
+    return ("
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">"
+</div>"
+        <div className="animate-pulse text-zion-purple text-lg">Loading...</div>"
+      </div>"
+    return <Navigate to="/login" state={{ from: "/publish" }} replace />;"
+</Navigate>"
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />;'
+</Navigate>'
+    <div className="min-h-screen flex flex-col bg-zion-blue">"
+</div>
+      <SEO;"
+        title="Publish Your Product"""
+        description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."""
+        keywords="publish product, sell online, digital marketplace, AI tools, tech services""
+
+      />
+</SEO>
+      <Header />
+
+</Header>"
+      <main className="flex-1 p-6 md:p-10">"
+</main>"
+        <div className="max-w-4xl mx-auto">"
+</div>"
+          <h1 className="text-3xl font-bold text-white mb-2">"
+</h1>
+          </h1>"
+          <p className="text-zion-slate mb-8">"
+</p>
+          </p>
+"
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">"
+</div>
+
+            <ProductSubmissionForm />
+</ProductSubmissionForm>
           </div>
         </div>
       </main>
@@ -393,8 +479,8 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
     return (
-      <div className="flex justify - center items - center min - h-screen bg - zion - blue">;
-        <div className="animate - pulse text - zion - purple text - lg">;
+      <div className="flex justify - center items - center min - h-screen bg - zion-blue">;
+        <div className="animate - pulse text - zion - purple text-lg">;
           Loading...;
         </div>;
       </div>);
@@ -407,17 +493,17 @@ if ( {) {
     return <Navigate to="/login" state={{ from: '/publish' }} replace />;
   }
   return (
-    <div className="min - h-screen flex flex - col bg - zion - blue">;
+    <div className="min - h-screen flex flex - col bg - zion-blue">;
       <SEO;
         title="Publish Your Product";
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals.";
         keywords="publish product, sell online, digital marketplace, AI tools, tech services";
       />;
       <Header />;
-      <main className="flex - 1 p - 6 md:p - 10">;
-        <div className="max - w-4xl mx - auto">;
-          <h1 className="text - 3xl font - bold text - white mb - 2">Publish on Zion</h1>;
-          <p className="text - zion - slate mb - 8">;
+      <main className="flex - 1 p - 6 md:p-10">;
+        <div className="max - w-4xl mx-auto">;
+          <h1 className="text - 3xl font - bold text - white mb-2">Publish on Zion</h1>;
+          <p className="text - zion - slate mb-8">;
             Share your products, services, or digital assets with the Zion community.;
           </p>;
 <<<<<<< HEAD
@@ -446,11 +532,55 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p - 8">;
-          ;
+;
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md:p-8">;
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p-8">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <ProductSubmissionForm />;
+
+</Footer>
+    </div>"
+      <div className="flex justify - center items - center min - h-screen bg - zion - blue">;"
+</div>"
+        <div className="animate - pulse text - zion - purple text - lg">;"
+</div>
+        </div>;)
+      </div>);"
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />;'
+</Navigate>'
+    <div className="min - h-screen flex flex - col bg - zion - blue">;"
+</div>
+      <SEO;"
+        title="Publish Your Product";""
+        description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals.";""
+        keywords="publish product, sell online, digital marketplace, AI tools, tech services";"
+
+      />;
+</SEO>
+      <Header />;
+
+</Header>"
+      <main className="flex - 1 p - 6 md:p - 10">;"
+</main>"
+        <div className="max - w-4xl mx - auto">;"
+</div>"
+          <h1 className="text - 3xl font - bold text - white mb - 2">Publish on Zion</h1>;""
+          <p className="text - zion - slate mb - 8">;"
+</p>
+          </p>;"
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p - 8">;"
+</div>"
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md:p-8">;"
+</div>"
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">;"
+</div>
+
+            <ProductSubmissionForm />;
+</ProductSubmissionForm>
           </div>;
         </div>;
       </main>;
@@ -468,11 +598,13 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-
-
-
 }
+</div>);
+}
+}
+;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }}
 =======
@@ -488,6 +620,9 @@ if ( {) {
 }
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>);
 }
     </div>);
@@ -500,8 +635,12 @@ if ( {) {
 }= useAuth ();
 //Show loading while checking authentication if (isLoading) {"
   return (<div className="flex justify-center items-center min-h-screen bg-zion-blue" > <div className="animate-pulse text-zion-purple text-lg" > Loading... </div> </div>) 
+<<<<<<< HEAD
 }//Redirect to login if not authenticated if (!isAuthenticated) {}
   "
+=======
+}//Redirect to login if not authenticated if (!isAuthenticated) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }return (<div className="min-h-screen flex flex-col bg-zion-blue" > <SEO title="Publish Your Product" description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals." keywords="publish product, sell online, digital marketplace, AI tools, tech services" /> <Header /> <main className="flex-1 p-6 md:p-10" > <div className="max-w-4xl mx-auto" > <h1 className="text-3xl font-bold text-white mb-2" >Publish on Zion</h1> <p className="text-zion-slate mb-8" > Share your products, services, or digital assets with the Zion community. </p> <ProductSubmissionForm /> </div> </div> </main> <Footer /> </div>) 
 }
     </div>;
@@ -526,6 +665,7 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -538,3 +678,89 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React from "react";""
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm";""
+import { useAuth } from "@/hooks/useAuth";""
+import { Navigate } from "react-router-dom";""
+import { SEO } from "@/components/SEO";"
+export default function PublishProduct() {
+  const { isAuthenticated, isLoading } = useAuth();
+
+  // Show loading while checking authentication;
+  if (isLoading) {
+
+  // Show loading while checking authentication;
+    return ("
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">"
+</div>"
+        <div className="animate-pulse text-zion-purple text-lg">Loading...</div>"
+    return <Navigate to="/login" state={{ from: "/publish" }} replace />;"
+"
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />;
+
+    <div className="min-h-screen flex flex-col bg-zion-blue">"
+</div>
+      <SEO;"
+        title="Publish Your Product"""
+        description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."""
+        keywords="publish product, sell online, digital marketplace, AI tools, tech services""
+      />
+
+      <Header />
+      <main className="flex-1 p-6 md:p-10">"
+</main>"
+        <div className="max-w-4xl mx-auto">"
+          <h1 className="text-3xl font-bold text-white mb-2">"
+</h1>
+          </h1>"
+          <p className="text-zion-slate mb-8">"
+</p>
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">"
+            <ProductSubmissionForm />
+
+      </main>
+      <Footer />
+
+      <div className="flex justify - center items - center min - h-screen bg - zion - blue">;"
+        <div className="animate - pulse text - zion - purple text - lg">;"
+        </div>;)
+      </div>);"
+
+    <div className="min - h-screen flex flex - col bg - zion - blue">;"
+        title="Publish Your Product";""
+        description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals.";""
+        keywords="publish product, sell online, digital marketplace, AI tools, tech services";"
+      />;
+
+      <Header />;
+      <main className="flex - 1 p - 6 md:p - 10">;"
+        <div className="max - w-4xl mx - auto">;"
+          <h1 className="text - 3xl font - bold text - white mb - 2">Publish on Zion</h1>;""
+          <p className="text - zion - slate mb - 8">;"
+          </p>;"
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p - 8">;"
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md:p-8">;"
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">;"
+            <ProductSubmissionForm />;
+
+          </div>;
+      </main>;
+      <Footer />;
+
+</Footer>
+    </div>);
+
+    </div>);
+    </div>);
+    </div>;"
+  return (<div className="flex justify-center items-center min-h-screen bg-zion-blue" > <div className="animate-pulse text-zion-purple text-lg" > Loading... </div> </div>)""
+}return (<div className="min-h-screen flex flex-col bg-zion-blue" > <SEO title="Publish Your Product" description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals." keywords="publish product, sell online, digital marketplace, AI tools, tech services" /> <Header /> <main className="flex-1 p-6 md:p-10" > <div className="max-w-4xl mx-auto" > <h1 className="text-3xl font-bold text-white mb-2" >Publish on Zion</h1> <p className="text-zion-slate mb-8" > Share your products, services, or digital assets with the Zion community. </p> <ProductSubmissionForm /> </div> </div> </main> <Footer /> </div>)"
+pr-12325
+    </div>;
+
+    </div>);"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

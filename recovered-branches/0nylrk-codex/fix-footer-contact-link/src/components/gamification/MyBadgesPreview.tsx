@@ -2,14 +2,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { BadgeEarned } from "./BadgeEarned";
 import { badgeList, BadgeKey } from "./badgeConfig";
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Dummy data for demo: what badges this user earned (with fake dates)
 const earnedBadges: { badge: BadgeKey; date: string }[] = [
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -304,7 +308,10 @@ export const MyBadgesPreview: React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+  { badge: "first_listing", date: "2024-12-16" },
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

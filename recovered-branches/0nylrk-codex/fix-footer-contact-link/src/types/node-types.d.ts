@@ -30,14 +30,58 @@ interface Process {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Add basic type definitions for Node.js globals used in the project;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+interface Process {env: {;
+    [key: string]: string | undefined;
+    NODE_ENV: 'development' | 'production' | 'test';
+    PORT?: string;
+    SLACK_SIGNING_SECRET?: string;
+    SLACK_BOT_TOKEN?: string;
+    OPENAI_API_KEY?: string;
+  }
+}
+
+
+interface Process {
+  // TODO: Implement
+}
+  env: {
+    [key: string]: string | undefined,
+    NODE_ENV: 'development' | 'production' | 'test',
+    PORT?: string,
+    SLACK_SIGNING_SECRET?: string,
+    SLACK_BOT_TOKEN?: string,
+
+    OPENAI_API_KEY?: string;
+
+// Add basic type definitions for Node.js globals used in the project;
+interface Process {env: {;
+    [key: string]: string | undefined;,
+  NODE_ENV: 'development' | 'production' | 'test';
+    PORT?: string;
+    SLACK_SIGNING_SECRET?: string;
+    SLACK_BOT_TOKEN?: string;
+
+interface Process {;
+  env: {;
+    [key: string]: string | undefined,;
+    NODE_ENV: 'development' | 'production' | 'test',;
+    PORT?: string,;
+    SLACK_SIGNING_SECRET?: string,;
+    SLACK_BOT_TOKEN?: string,;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 declare let process: Process,
+pr-12325
 declare let console: Console,
 declare let __dirname: string,
 ;
 declare let process: Process,;
 declare let console: Console,;
 declare let __dirname: string,;
+<<<<<<< HEAD
 =======
 interface Process {env: {;
     [key: string]: string | undefined;'
@@ -132,3 +176,6 @@ declare let __dirname: string,;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

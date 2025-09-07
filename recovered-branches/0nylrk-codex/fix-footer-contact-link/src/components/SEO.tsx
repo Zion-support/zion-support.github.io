@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -112,20 +113,11 @@ import { Helmet } from "react-helmet-async",
 interface SEOProps {
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Helmet } from './react - helmet - async';
 
-interface SEOProps {
-
-  title: string
-  description: string
-
-  keywords?: string;
-  og_image?: string;
-  og_url?: string;
-  canonical?: string;
-  noindex?: boolean;
-}
-
+import { Helmet } from './react - helmet - async';
 
 export function SEO(): any ({;
   title;
@@ -137,6 +129,7 @@ export function SEO(): any ({;
   canonical,;
   noindex}: SEOProps) {;
 
+<<<<<<< HEAD
   const siteTitle = "Zion - The Future of Tech & AI Marketplace";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 
@@ -218,16 +211,15 @@ export function SEO() { return null; }`
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+import { Helmet } from "react-helmet-async";
+interface SEOProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-export function SEO({;
-  title;
-  description;
-  keywords;
-export function SEO({
-  title,
-  description,
-  keywords,
+  title: string
+  description: string
 
+<<<<<<< HEAD
 
   // Default to the Google Drive image URL
 
@@ -490,6 +482,34 @@ export function SEO() { return null; }`
     <Helmet>;
       <title>{fullTitle}</title>;"
       <meta name="description" content={description} />;"
+=======
+import {Helmet} from "react-helmet-async";
+interface SEOProps {;
+  title: string,;
+  description: string,;
+
+
+  ogImage?: string;
+  ogUrl?: string;
+  canonical?: string;interface SEOProps {
+import { Helmet } from './react - helmet - async';
+interface SEOProps {
+  // TODO: Implement
+}
+  title: string;,
+  description: string;
+  keywords?: string;
+  og_image?: string;
+  og_url?: string;
+  canonical?: string;
+  noindex?: boolean;
+
+export function SEO(): any ({;
+  title;
+  description;
+  keywords;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {keywords && <meta name="keywords" content={keywords} />}
 ;
       {/* Open Graph / Facebook */}"
@@ -504,8 +524,13 @@ export function SEO() { return null; }`
 =======
 ;
 
+;
       {/* Twitter */}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+;      {/* Twitter */}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <meta name="twitter:card" content="summary_large_image" />;
       <meta name="twitter:site" content="@lovable_dev" />;
       <meta name="twitter:title" content={fullTitle} />;
@@ -527,6 +552,7 @@ export function SEO() { return null; }`
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
 
+;
       {/* No index directive for search engines if needed */}
 =======
 ;
@@ -548,6 +574,7 @@ export function SEO() { return null; }`
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -559,8 +586,10 @@ export function SEO() { return null; }`
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
-    </Helmet>);
+</Helmet>);
 }
     </Helmet>);
     </Helmet>;
@@ -631,13 +660,89 @@ ogUrl;
 canonical;
 noindex 
 }: SEOProps) {
+;
+    </Helmet>);
+}
+;
+
+export function SEO({;
+export function SEO({
+  title,
+  description,
+  keywords,
+
+
+  // Default to the Google Drive image URL;
+  // Default to the Google Drive image URL;"
+  ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";"
+  canonical;)
+  noindex}: SEOProps) {"
+  const siteTitle = "Zion - The Future of Tech & AI Marketplace";"`;
+  ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc","
+  ogUrl,
+  canonical,
+  const siteTitle = "Zion - The Future of Tech & AI Marketplace","`;
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
+
+  return ("
+  return (
+import { Helmet } from "react-helmet-async",;"
+;
+interface SEOProps {;
+  title:string,;
+  description:string,;
+  keywords?:string,;
+  ogImage?:string,;
+  ogUrl?:string,;
+  canonical?:string,;
+  noindex?:boolean;
+  title,;
+  description,;
+  keywords,;
+  // Default to the Google Drive image URL;"
+  ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",;"
+  ogUrl,;
+  noindex} SEOProps) {;"
+  const siteTitle = "Zion - The Future of Tech & AI Marketplace",;"`;
+  const fullTitle = title ? `${title} | ${siteTitle}` :siteTitle,;
+  return (;
+    <Helmet>;
+
+      <title>{fullTitle}</title>;"
+      <meta name="description" content={description} />;"
+</meta>"
+      {keywords && <meta name="keywords" content={keywords} />}"
+      <meta property="og:type" content="website" />;"
+      <meta property="og:title" content={fullTitle} />;"
+      <meta property="og:description" content={description} />;"
+      <meta property="og:image" content={ogImage} />;"
+      {ogUrl && <meta property="og:url" content={ogUrl} />}"
+</meta>
+    <Helmet>
+
+      <title>{fullTitle}</title>"
+      <meta name="description" content={description} />"
+      <meta property="og:type" content="website" />"
+      <meta property="og:title" content={fullTitle} />"
+      <meta property="og:description" content={description} />"
+      <meta property="og:image" content={ogImage} />"
+      <meta name="twitter:card" content="summary_large_image" />;"
+      <meta name="twitter:site" content="@lovable_dev" />;"
+      <meta name="twitter:title" content={full_title} />;"
+      <meta name="twitter:description" content={description} />;"
+      <meta name="twitter:image" content={og_image} />;"
+      {canonical && <link rel="canonical" href={canonical} />}"
+</link>"
+      {noindex && <meta name="robots" content="noindex" />}"
+
+      <meta name="twitter:title" content={fullTitle} />;"
+      <meta name="twitter:image" content={ogImage} />;"
+    ;)
+    );
   return (<Helmet> <title> {
-  fullTitle 
-}</title> <meta name="description" content= {
-  description 
+}</title> <meta name="description" content= {"
 }/> {
-  keywords && <meta name="keywords" content= {
-  keywords 
+  keywords && <meta name="keywords" content= {"
 }/> 
 }{
   /* Open Graph /Facebook */ 
@@ -688,6 +793,7 @@ noindex
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -704,3 +810,19 @@ noindex
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}<meta property="og:type" content="website" /> <meta property="og:title" content= {"
+}/> <meta property="og:description" content= {"
+  description;"
+}/> <meta property="og:image" content= {"
+  ogUrl && <meta property="og:url" content= {"
+}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@lovable dev" /> <meta name="twitter:title" content= {"
+}/> <meta name="twitter:description" content= {"
+}/> <meta name="twitter:image" content= {"
+  canonical && <link rel="canonical" href= {"
+  canonical;
+  noindex && <meta name="robots" content="noindex" />"
+</meta>)
+    );"`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,8 +30,306 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+;
+;
+
+export interface Innovative2025Service {
+  \"id\": string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+  "id": string;"
+  name: string;,
+  tagline: string;
+  price: string;,
+  description: string;
+  features: string[];,
+  link: string;
+  category: string;,
+  realImplementation: boolean;
+  contactInfo: {,
+  mobile: string;
+    email: string;,"
+  address: string};export const "innovative2025Services": Innovative2025Service[] = [{""
+    id: "ai-innovation-hub",""
+    "name": "AI Innovation Hub",""
+    "tagline": "Center for AI innovation and development",""
+    "price": "$159/month",""
+    "description": "Comprehensive AI innovation platform that provides tools and resources for AI development.","
+    features["
+      "AI development tools",""
+      "Innovation resources",""
+      "Collaboration platform",""
+      "Research database",""
+      "Expert support""]
+    ],"
+    "link": "/services/ai-innovation-hub",""
+    "category": "Innovative 2025 Services",""
+    "realImplementation": true,""
+    "contactInfo": {""
+      mobile: "+1 302 464 0950",""
+      "email": "kleber@ziontechgroup.com",""
+      "address": "364 E Main St STE 1008 Middletown DE 19709""
+]}}}"
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}""
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}"
+  // TODO: Implement
+}"
+
+export const \"innovative2025Services\": Innovative2025Service[] = [{id: \"ai-innovation-hub\",\"name\": \"AI Innovation Hub\",\"tagline\": \"Center for AI innovation and development\",\"price\": \"$159/month\",\"description\": \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[;
+      \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\";}
+    ],\"link\": \"/services/ai-innovation-hub\",\"category\": \"Innovative 2025 Services\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}}
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}ursor/integrate-build-improve-and-re-verify-8f7d;
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+};
+
+export interface Innovative2025Service  {\"id\": string;
+}
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+
+export interface Innovative2025Service {
+  \"id\": string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+
+export const \"innovative2025Services\": Innovative2025Service[] = [{id: \"ai-innovation-hub\",\"name\": \"AI Innovation Hub\",\"tagline\": \"Center for AI innovation and development\",\"price\": \"$159/month\",\"description\": \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[;
+      \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\";}
+    ],\"link\": \"/services/ai-innovation-hub\",\"category\": \"Innovative 2025 Services\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}}
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface Innovative2025Service {
   "id": string;
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}ursor/fix-syntax-push-and-merge-to-main-40de;
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {
+  \"id\": string;
   name: string;
   tagline: string;
   price: string;
@@ -63,6 +362,7 @@ address: string};export const "innovative2025Services": Innovative2025Service[] 
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
@@ -249,21 +549,72 @@ address: string};export const "innovative2025Services": Innovative2025Service[] 
     "tagline": "Center for AI innovation and development",
     "price": "$159/month",
     "description": "Comprehensive AI innovation platform that provides tools and resources for AI development.",
+=======
+
+
+
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+
+export const \"innovative2025Services\": Innovative2025Service[] = [{id: \"ai-innovation-hub\",\"name\": \"AI Innovation Hub\",\"tagline\": \"Center for AI innovation and development\",\"price\": \"$159/month\",\"description\": \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[;
+      \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\";}
+    ],\"link\": \"/services/ai-innovation-hub\",\"category\": \"Innovative 2025 Services\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}};
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]}}}
+address: strin,
+};
+
+export const \"innovative2025Services\": Innovative2025Service[] = [{
+    id: \"ai-innovation-hub\",
+    \"name\": \"AI Innovation Hub\",
+    \"tagline\": \"Center for AI innovation and development\",
+    \"price\": \"$159/month\",
+    \"description\": \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     features[
-      "AI development tools",
-      "Innovation resources",
-      "Collaboration platform",
-      "Research database",
-      "Expert support"
+      \"AI development tools\",
+      \"Innovation resources\",
+      \"Collaboration platform\",
+      \"Research database\",
+      \"Expert support\"
     ],
-    "link": "/services/ai-innovation-hub",
-    "category": "Innovative 2025 Services",
-    "realImplementation": true,
-    "contactInfo": {
-      mobile: "+1 302 464 0950",
-      "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    \"link\": \"/services/ai-innovation-hub\",
+    \"category\": \"Innovative 2025 Services\",
+    \"realImplementation\": true,
+    \"contactInfo\": {
+      mobile: \"+1 302 464 0950\",
+      \"email\": \"kleber@ziontechgroup.com\",}
+      \"address\": \"364 E Main St STE 1008 Middletown DE 19709\"}
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,3 +640,35 @@ export interface Innovative2025Service { id: string; name: string; tagline: stri
 export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2025Services: Innovative2025Service[] = [ { id: "ai-innovation-hub",name: "AI Innovation Hub",tagline: "Center for AI innovation and development",price: "$159/month",description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",features[ "AI development tools","Innovation resources","Collaboration platform","Research database","Expert support" ],link: "/services/ai-innovation-hub",category: "Innovative 2025 Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface Innovative2025Service { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const innovative2025Services: Innovative2025Service[] = [ { id: \"ai-innovation-hub\",name: \"AI Innovation Hub\",tagline: \"Center for AI innovation and development\",price: \"$159/month\",description: \"Comprehensive AI innovation platform that provides tools and resources for AI development.\",features[ \"AI development tools\",\"Innovation resources\",\"Collaboration platform\",\"Research database\",\"Expert support\" ],link: \"/services/ai-innovation-hub\",category: \"Innovative 2025 Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

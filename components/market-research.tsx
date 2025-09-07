@@ -30,6 +30,7 @@ import {
   Zap,;
 } from 'lucide-react';
 export default function MarketResearchPage() {
+<<<<<<< HEAD
 'Generative AI adoption accelerating',
         'AI-powered automation increasing',
         'Natural language processing growth',
@@ -646,6 +647,9 @@ description:
 description: 'Average time for SaaS companies to reach profitability',
     },
   ];
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -700,7 +704,7 @@ description: 'Average time for SaaS companies to reach profitability',
               <Card
                 key={index}
                 className='card-hover text-center border-gradient-blue'
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 <div className='p-6'>
                   <div className='text-3xl font-bold text-white mb-2'>
@@ -739,7 +743,7 @@ description: 'Average time for SaaS companies to reach profitability',
               <Card
                 key={index}
                 className='card-hover border-gradient-blue overflow-hidden'
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 <div className='p-8'>
                   <div className='flex flex-col lg:flex-row gap-8'>
@@ -747,21 +751,25 @@ description: 'Average time for SaaS companies to reach profitability',
                     <div className='lg:w-1/3'>
                       <div className='text-center lg:text-left'>
                         <div
-                          className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment.color} shadow-xl mx-auto lg:mx-0 mb-6`}
+                          className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment.color} shadow-xl mx-auto lg: mx-0 mb-6`;}
                         >
 origin/cursor/automate-test-improve-and-merge-code-2533
                           {segment.icon}
                         </div>;'
                         <h3 className='text - 2xl font - bold mb - 3 text - white'>;
                           {segment.name}
+<<<<<<< HEAD
             </h2>"
+=======
+            </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Detailed analysis of key micro SaaS market segments with market size, growth rates, trends, and opportunities.
             </p>
           </div>"
           <div className="space-y-8">
             {marketSegments.map((segment, index) => (
-                          className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment && segment.color} shadow-xl mx-auto lg:mx-0 mb-6`}>;
+                          className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${segment && segment.color} shadow-xl mx-auto lg: mx-0 mb-6`;}>;
                           {segment && segment.icon}
                         </div>;'
                         <h3 className='text-2xl font-bold mb-3 text-white'>;
@@ -785,11 +793,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Detailed analysis of key micro SaaS market segments with market size, growth rates, trends, and opportunities.;
             </p>;
           </div>;
+<<<<<<< HEAD
               <Card;
                 key={index}"
                 className="card-hover border-gradient-blue overflow-hidden"`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;"
                 <div className="p-8">;"
+=======
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue overflow-hidden"
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className="p-8">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className="flex flex-col lg:flex-row gap-8">;
                     {/* Segment Header */}
                         {/* Top Players */}
@@ -887,7 +903,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />
                                 {opportunity}
                               </div>
+<<<<<<< HEAD
                             )"
+=======
+                            )
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           )}                        </div>                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {segment.opportunities.map((opportunity, oppIndex) => ("
                             <div key={oppIndex} className="flex items-start text-gray-300 text-sm">"
@@ -941,12 +961,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>'
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {competitiveAnalysis.map((analysis, index) => (
+<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='card - hover border - gradient - blue';`
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;'
                 <div className='p - 6'>;'
+=======
+              <Card
+                key={index}
+                className='card - hover border - gradient - blue';
+                style={{ animation_delay: `${index * 0.1;}s` }}
+              >;
+                <div className='p - 6'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className='text - xl font - bold text - white mb - 4'>;
                     {analysis.company}
                   {/* Market Share & Pricing */}'
@@ -961,19 +990,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='text - gray - 400'>Pricing:</span>;'
                       <div className='text - white font - semibold'>;
                         {analysis.pricing}
+<<<<<<< HEAD
             </h2>"
+=======
+            </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Understanding the competitive landscape and positioning strategies for different types of SaaS companies.
             </p>
           </div>"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {competitiveAnalysis.map((analysis, index) => (
+<<<<<<< HEAD
               <Card;
                 key={index}"
                 className="card-hover border-gradient-blue"`
                 style={{ animationDelay: `${index * 0.1}s` }}
               >"
                 <div className="p-6">"
+=======
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1;}s` }}
+              >
+                <div className="p-6">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className="text-xl font-bold text-white mb-4">{analysis.company}</h3>
                   {/* Examples */}"
                   <div className="mb-6">"
@@ -1005,11 +1047,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;'
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
             {competitiveAnalysis && competitiveAnalysis.map((analysis, index) => (;
+<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='card-hover border-gradient-blue'`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='p-6'>;'
+=======
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue'
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className='p-6'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className='text-xl font-bold text-white mb-4'>;
                     {analysis && analysis.company}
                   </h3>;
@@ -1044,11 +1094,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {competitiveAnalysis && competitiveAnalysis.map((analysis, index) => (;
+<<<<<<< HEAD
               <Card;
                 key={index}"
                 className="card-hover border-gradient-blue"`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;"
                 <div className="p-6">;"
+=======
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className="p-6">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className="text-xl font-bold text-white mb-4">{analysis && analysis.company}</h3>;
                   {/* Examples */}"
                   <div className="mb-6">;"
@@ -1160,6 +1218,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>              Emerging Market Trends;
             </h2>;
+<<<<<<< HEAD
               <Card;
                 key={index}"
                 className="card-hover border-gradient-blue"`
@@ -1176,6 +1235,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="text-gray-300 mb-4">{trend.description}</p>"
                   <div className="mb-4">"
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>"
+=======
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1;}s` }}
+              >
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="text-xl font-bold text-white">{trend.trend}</h3>
+                    <div className="flex items-center space-x-2">
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${
+                        trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :
+                        trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                        'bg-green-500/20 text-green-400'
+                  <p className="text-gray-300 mb-4">{trend.description}</p>
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <ul className="space-y-1 text-xs text-gray-300">
                       {trend.examples.map((example, exampleIndex) => ("
                         <li key={exampleIndex} className="flex items-start">"
@@ -1183,7 +1260,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className='card-hover border-gradient-blue'
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 <div className='p-6'>
                   <div className='flex items-start justify-between mb-4'>
@@ -1223,7 +1300,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
                   <div>"
+=======
+                  <div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <p className="text-xs text-gray-300">{trend.opportunities}</p>
 <h4 className='text-sm font-semibold text-green-400 mb-2'>
                       Opportunities:
@@ -1268,6 +1349,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
             {market_trends.map ((trend, index) => (
               <Card;
+<<<<<<< HEAD
                 key={index}"
                 className="card - hover border - gradient - blue";`
                 style={{ animation_delay: `${index * 0.1}s` }}
@@ -1280,6 +1362,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         trend.impact === 'High' ? 'bg - red - 500 / 20 text - red - 400' :;'
                         trend.impact === 'Medium' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;'
                         'bg - green - 500 / 20 text - green - 400';`
+=======
+                key={index}
+                className="card - hover border - gradient - blue";
+                style={{ animation_delay: `${index * 0.1;}s` }}
+              >;
+                <div className="p - 6">;
+                  <div className="flex items - start justify - between mb - 4">;
+                    <h3 className="text - xl font - bold text - white">{trend.trend}</h3>;
+                    <div className="flex items - center space - x-2">;
+                      <span className={`px - 2 py - 1 rounded text - xs font - medium ${
+                        trend.impact === 'High' ? 'bg - red - 500 / 20 text - red - 400' :;
+                        trend.impact === 'Medium' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;
+                        'bg - green - 500 / 20 text - green - 400';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       }`}>;
                         {trend.impact} Impact;
                       </span>;"
@@ -1357,6 +1453,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>'
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {pricingStrategies.map((strategy, index) => (
+<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='card - hover border - gradient - blue';`
@@ -1366,12 +1463,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className='text - xl font - bold text - white mb - 3'>;
                     {strategy.strategy}
             </h2>"
+=======
+              <Card
+                key={index}
+                className='card - hover border - gradient - blue';
+                style={{ animation_delay: `${index * 0.1;}s` }}
+              >;
+                <div className='p - 6'>;
+                  <h3 className='text - xl font - bold text - white mb - 3'>;
+                    {strategy.strategy}
+            </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.
             </p>
           </div>"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingStrategies.map((strategy, index) => (
+<<<<<<< HEAD
               <Card;
                 key={index}"
                 className="card-hover border-gradient-blue"`
@@ -1380,6 +1489,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="p-6">"
                   <h3 className="text-xl font-bold text-white mb-3">{strategy.strategy}</h3>"
                   <p className="text-gray-300 mb-6">{strategy.description}</p>`
+=======
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1;}s` }}
+              >
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3">{strategy.strategy}</h3>
+                  <p className="text-gray-300 mb-6">{strategy.description}</p>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       }`}>;
                         {trend && trend.impact} Impact;
                       </span>;"
@@ -1473,8 +1592,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
                   {/* Best For */}
+<<<<<<< HEAD
                   <div>"
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>"
+=======
+                  <div>
+                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <p className="text-xs text-gray-300">{strategy.bestFor}</p>
 <h4 className='text-sm font-semibold text-blue-400 mb-2'>
                       Best For:
@@ -1501,11 +1625,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
             {pricingStrategies && pricingStrategies.map((strategy, index) => (;
+<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='card-hover border-gradient-blue'`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='p-6'>;'
+=======
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue'
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className='p-6'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className='text-xl font-bold text-white mb-3'>;
                     {strategy && strategy.strategy}
                   </h3>;'
@@ -1528,12 +1660,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {pricingStrategies && pricingStrategies.map((strategy, index) => (;
+<<<<<<< HEAD
               <Card;
                 key={index}"
                 className="card-hover border-gradient-blue"`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;"
                 <div className="p-6">;"
                   <h3 className="text-xl font-bold text-white mb-3">{strategy && strategy.strategy}</h3>;"
+=======
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className="p-6">;
+                  <h3 className="text-xl font-bold text-white mb-3">{strategy && strategy.strategy}</h3>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <p className="text-gray-300 mb-6">{strategy && strategy.description}</p>;
 
                   {/* Pros */}"
@@ -1592,9 +1733,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             business strategy, pricing decisions, and market positioning.
           </p>'
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+<<<<<<< HEAD
             <Button'
               href='/contact''
               size='lg''
+=======
+            <Button
+              href='/contact'
+              size='lg'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow'            >
               Get Strategic Consultation;
             </Button>
@@ -1616,8 +1763,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Get Strategic Consultation;
             </Button>
 
+<<<<<<< HEAD
             <Button;
               View Our Services;
+=======
+            <Button
+              View Our Services
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </Button>;
           </div>;
         </div>;

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -21,14 +22,21 @@ const { execSync } = require('child_process');
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorPreventionSystem {}
   constructor() {}
-    this.logFile = path.join(__dirname, '../logs/error-prevention.log');
+
     this.errors = [];
     this.startTime = new Date()};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString(;);
     const logMessage = `[${timestamp}] [${level}] ${message}\;n;`;`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     );
@@ -58,10 +66,17 @@ class ErrorPreventionSystem {}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {}
       execSync('npm run build', { "stdio": 'pipe' }
+=======
+    );
+    try {}
+      fs.appendFileSync(this.logFile, logMessage)} catch (error) {}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 });
       this.log('Build check passed');
       return true} catch (error) {}
       this.errors.push({})
+<<<<<<< HEAD
         "type": 'build',
         "severity": 'high',
         "message": 'Build failed',
@@ -276,16 +291,15 @@ class ErrorPreventionSystem {}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       // Check for corrupted files;
       const sourceDirs = ['src', 'pages', 'components'];
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       sourceDirs.forEach(dir => {})
-        if () {}
-          try {}
             const files = fs.readdirSync(dir) {}
-    ) {}
-          try {}
-            const files = fs.readdirSync(dir}
-});
+            const files = fs.readdirSync(dir})
             files.forEach(file => {})
               const filePath = path.join(dir, file;);
+<<<<<<< HEAD
               try {}
                 fs.readFileSync(filePath, 'utf8')} catch (error) {}
                 this.errors.push({})
@@ -354,6 +368,9 @@ class ErrorPreventionSystem {}
           "timestamp": new Date().toISOString();
         })};
         this.log(`"WARNING": Node.js version ${nodeVersion} is below recommended version 18`, 'WARN')};
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Check available memory;
       const memUsage = process.memoryUsage(;);
       const freeMemory = require('os').freemem(;);
@@ -363,6 +380,7 @@ class ErrorPreventionSystem {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
@@ -456,11 +474,18 @@ class ErrorPreventionSystem {}
     
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const checks = [this.checkBuildErrors(),]
+=======
+
+    let fixedCount = ;0;
+      // Fix linting errors;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.checkLintingErrors(),
       this.checkTypeScriptErrors(),
       this.checkDependencyErrors(),
       this.checkFileSystemErrors(),
       this.checkEnvironmentErrors();
+<<<<<<< HEAD
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -471,12 +496,17 @@ class ErrorPreventionSystem {}
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     await Promise.all(checks);
 
     const endTime = new Date;(;);
     const duration = endTime - this.startTim;e;
+`;
+    this.log(`Error prevention check "completed": ${this.errors.length} errors found in ${duration}ms`);"
 
+<<<<<<< HEAD
     this.log(`Error prevention check "completed": ${this.errors.length} errors found in ${duration}ms`);
     
 <<<<<<< HEAD
@@ -517,11 +547,14 @@ class ErrorPreventionSystem {}
 =======
       
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Attempt auto-fix;
       await this.autoFixErrors()} else {}
       this.log('No errors found - system is healthy')};
     // Write detailed report;
     const report = {}
+<<<<<<< HEAD
       "timestamp": endTime.toISOString(),
       "duration": duration,
       "totalErrors": this.errors.length,
@@ -544,17 +577,16 @@ class ErrorPreventionSystem {}
       this.log(`"ERROR": Failed to write error prevention report: ${error.message}`, 'ERROR')};
     return this.errors.filter(e => e.severity === 'critical' || e.severity === 'high').length === 0};
 };
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Run error prevention if called directly;
-if ( {})
   const errorPrevention = new ErrorPreventionSystem) {}
-     {}
   const errorPrevention = new ErrorPreventionSystem}(;);
   errorPrevention.runErrorPrevention();
     .then(success => {})
       process.exit(success ? 0 : 1)}
-});
-    .catch(error => {})
-      console.error('Error prevention system "failed": ', error);
+
       process.exit(1)})};
 module.exports = ErrorPreventionSystem;
 <<<<<<< HEAD
@@ -570,6 +602,7 @@ module.exports = ErrorPreventionSystem;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 module.exports = ErrorPreventionSystem;
 module.exports = ErrorPreventionSystem;
@@ -592,5 +625,7 @@ module.exports = ErrorPreventionSystem;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,10 +8,13 @@
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState  } from 'react';
 import { TALENT_PROFILES  } from '@/data/talentData';
 import { TalentProfile } from '@/types/talent';
 export function useTalentData() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -44,16 +48,24 @@ export function useTalentData() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState} from 'react';
 import {TALENT_PROFILES} from '@/data/talentData';
 import {TalentProfile} from '@/types/talent';
 export function useTalentData() {;
+
+  const [isLoading, setIsLoading] = useState(false);
+
+
+
 
 
   const [isLoading, setIsLoading] = useState(false);
 
   const [talents] = useState<TalentProfile[]>(TALENT_PROFILES);
 
+<<<<<<< HEAD
   // In a real app, we would fetch data from an API here
   // For now, we'll just return our mock data
 <<<<<<< HEAD
@@ -105,10 +117,14 @@ export /**;
  */
 function useTalentData() {}
   const [is_loading, setIsLoading] = useState (false);
+=======
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [talents] = useState < TalentProfile[]>(TALENT_PROFILES);
 ;
   // In a real app, we would fetch data from an API here;'
   // For now, we'll just return our mock data;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,7 +135,13 @@ function useTalentData() {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  }
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return {
+  // TODO: Implement
+}
     talents;
 
     isLoading;
@@ -154,9 +176,7 @@ function useTalentData() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-
-
-  // In a real app, we would fetch data from an API here;
+// In a real app, we would fetch data from an API here;
   // For now, we'll just return our mock data;
   return {;
     talents;
@@ -166,4 +186,16 @@ function useTalentData() {}
     is_loading;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
+<<<<<<< HEAD
 }'
+=======
+}
+
+
+  // In a real app, we would fetch data from an API here;
+  // For now, we'll just return our mock data;
+  return {;
+  // TODO: Implement
+    is_loading;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,11 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+interface SearchResult {
+  title: string;, description: string
+  url: string;, type: 'service' | 'page' | 'category'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -16,14 +22,20 @@ interface SearchResult {
   type: 'service' | 'page' | 'category';
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const SearchBar: React.FC = () => {
 interface SearchResult {;
-  title: string, description: string,;
-  url: string, type: 'service' | 'page' | 'category',;
+  title: string;, description: string;,;
+  url: string;, type: 'service' | 'page' | 'category';,;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -36,18 +48,19 @@ const SearchBar: React.FC = () => {
   // Mock search data - in a real app, this would come from an API
   const searchData: SearchResult[] = [
     {
-      title: 'Micro SaaS Products',
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
-      url: '/micro-saas',
-      type: 'category',
+      title: 'Micro SaaS Products';,
+      description: 'Innovative software solutions including Cloud Cost Guard;, API Rate Limiter, and more',
+      url: '/micro-saas';,
+      type: 'category';,
     },
     {
-      title: 'AI Services',
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai-services',
-      type: 'category',
+      title: 'AI Services';,
+      description: 'Advanced AI solutions including Computer Vision;, Fraud Detection, and more',
+      url: '/ai-services';,
+      type: 'category';,
     },
     {
+<<<<<<< HEAD
       title: 'IT Services',
       description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
       url: '/it-services',
@@ -65,18 +78,30 @@ const SearchBar: React.FC = () => {
       description: 'FinOps Assistant for anomaly detection and cost optimization',
       url: '/services',
       type: 'service',
+=======
+      title: 'IT Services';,
+      description: 'Comprehensive IT solutions including Cloud Migration;, Cybersecurity, and more',
+      url: '/it-services';,
+      type: 'category';,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     },
     {
-      title: 'Contact Us',
-      description: 'Get in touch with our experts for consultation and quotes',
-      url: '/contact',
-      type: 'page',
+      title: 'Cloud Cost Guard';,
+      description: 'FinOps Assistant for anomaly detection and cost optimization';,
+      url: '/services';,
+      type: 'service';,
     },
     {
-      title: 'Pricing',
-      description: 'View our transparent pricing for all services',
-      url: '/pricing',
-      type: 'page',
+      title: 'Contact Us';,
+      description: 'Get in touch with our experts for consultation and quotes';,
+      url: '/contact';,
+      type: 'page';,
+    },
+    {
+      title: 'Pricing';,
+      description: 'View our transparent pricing for all services';,
+      url: '/pricing';,
+      type: 'page';,
     },
   ];
 
@@ -209,14 +234,21 @@ const SearchBar: React.FC = () => {
 
 export default SearchBar;
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
+=======
+interface SearchResult {
+  title: string, description: string
+  url: string, type: 'service' | 'page' | 'category'
+  title: string;, description: string
+  url: string;, type: 'service' | 'page' | 'category'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 pr-12243
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import Link from 'next/link';
 origin/cursor/analyze-improve-and-deploy-application-0a01
 
 interface SearchBarProps {
@@ -224,11 +256,14 @@ interface SearchBarProps {
   placeholder?: string;
   className?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -239,10 +274,13 @@ const SearchBar: React.FC<SearchBarProps> = ({
   const [query, setQuery] = useState('');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSearch && query.trim()) {
@@ -252,13 +290,13 @@ const SearchBar: React.FC<SearchBarProps> = ({
       title: 'Contact Us'
       description: 'Get in touch with our experts for consultation and quotes'
       url: '/contact'
-      type: 'page'
+      type: 'page';
     }
     {
       title: 'Pricing'
       description: 'View our transparent pricing for all services'
       url: '/pricing'
-      type: 'page'
+      type: 'page';
     }
   ];
     );
@@ -266,10 +304,14 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setIsOpen(true);
     setIsLoading(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
 
   const handleClear = () => {
@@ -295,6 +337,9 @@ pr-12243
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -401,14 +446,17 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
               className={`block px-4 py-3 transition-colors border-b border-white/10 last:border-b-0 ${
                 index === selectedIndex 
                   ? 'bg-blue-600/30 ring-2 ring-blue-500' 
-                  : 'hover:bg-slate-700/50'
+                  : 'hover: bg-slate-700/50';
               }`}
               role="option"
               aria-selected={index === selectedIndex}
               tabIndex={-1}
 origin/cursor/analyze-improve-and-deploy-application-0a01
+<<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
               <X className="w-4 h-4" />
             </button>
@@ -421,6 +469,7 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
 
 export default SearchBar;
 <<<<<<< HEAD
+<<<<<<< HEAD
 main
 pr-12243
 =======
@@ -431,3 +480,8 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export default SearchBar;
+main
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "vulnerabilities": [],
   "recommendations": [
     "Use HTTPS for all external requests",
@@ -18,6 +19,8 @@
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "timestamp": "2025-09-06T00:07:28.790Z",
   "vulnerabilities": [
     {
@@ -183,7 +186,11 @@
     "totalRecommendations": 2,
     "securityScore": 90,
     "status": "good"
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/fix-syntax-push-and-merge-to-main-8452
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
   ],
@@ -315,14 +322,63 @@
   "recommendations": [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
+      "priority": "high",
+      "category": "dependencies",
+      "message": "Update dependencies with known vulnerabilities",
+      "action": "Run npm audit fix to automatically fix vulnerabilities"
+    },
+    {
+      "priority": "high",
+      "category": "code_security",
+      "message": "Address code security issues",
+      "action": "Review and fix dangerous code patterns identified in the audit"
+    },
+    {
+      "priority": "medium",
+      "category": "environment",
+      "message": "Secure environment variables",
+      "action": "Ensure sensitive environment variables are properly secured and not committed to version control"
+    },
+    {
+      "priority": "low",
+      "category": "permissions",
+      "message": "Review file permissions",
+      "action": "Consider restricting file permissions for sensitive files"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  "summary": {
+    "totalVulnerabilities": 0,
+    "totalSecurityIssues": 17,
+    "criticalIssues": 0,
+    "warnings": 13,
+    "info": 4,
+    "totalRecommendations": 4
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -353,6 +409,10 @@
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "auditReportVersion": 2,
   "vulnerabilities": {},
   "metadata": {
@@ -381,6 +441,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -446,3 +507,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

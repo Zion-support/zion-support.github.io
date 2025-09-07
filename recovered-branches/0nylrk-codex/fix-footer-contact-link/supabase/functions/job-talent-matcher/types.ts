@@ -23,12 +23,13 @@ export interface JobData {
 export interface JobData {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
-  title: string;
+  title: string,
   description: string;
   skills: string[];
   category: string;
 <<<<<<< HEAD
   budget: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,6 +77,10 @@ export interface TalentProfile {;
     max: number;
   };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    min: number,    max: number
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   deadline: string;
 }
 
@@ -96,6 +101,7 @@ export interface TalentProfile {
   deadline: string
 }
 export interface TalentProfile {
+<<<<<<< HEAD
 
 export interface TalentProfile {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -109,12 +115,21 @@ export interface TalentProfile {;
 =======
 export interface TalentProfile {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+  deadline: string
+}
+export interface TalentProfile {
+
+export interface TalentProfile {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   full_name: string;
   professional_title: string;
   bio?: string;
   skills: string[];
   years_experience: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,18 +178,24 @@ export interface TalentMatch {;
   hourly_rate?: number;
   availability_type?: string;
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-  hourly_rate?: number,
-  availability_type?: string;
+  talent_id: string;
+  job_id: string;
+  match_score: number;}
 
-}
 export interface TalentMatch {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+export interface TalentMatch {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   talent_id: string;
   job_id: string;
   match_score: number;
-  matched_skills: string[];
-  created_at: string;
+
 }
 
 export interface MatchResult {};
@@ -184,6 +205,43 @@ export interface MatchResult {};
 <<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  score: number;
+
+}
+  id: string;,
+  title: string;
+  description: string;,
+  skills: string[];
+  category: string;,
+  budget: {
+    min: number;,
+  max: number;
+  };
+  deadline: string;
+
+export interface TalentProfile {
+  // TODO: Implement
+  full_name: string;
+  professional_title: string;
+  bio?: string;
+  skills: string[];,
+  years_experience: number;
+  hourly_rate?: number;
+  availability_type?: string;
+
+  hourly_rate?: number,
+
+export interface TalentMatch {
+  // TODO: Implement
+  talent_id: string;,
+  job_id: string;
+  match_score: number;,
+  matched_skills: string[];
+  created_at: string;
+
+export interface MatchResult {
+  // TODO: Implement
+  talentId: string;,
   score: number;
   matchedSkills: string[];
   reason?: string;
@@ -233,50 +291,48 @@ export interface MatchResult {
 
 export interface MatchResult {;
   talentId: string;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  matched_skills: string[],
+  // TODO: Implement
+export interface MatchResult {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   talent_id: string;
-  job_id: string;
+  job_id: string;,
   match_score: number;
 }
 <<<<<<< HEAD
 
   score: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   score: number;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  score: number;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string,;
   title: string,;
   description: string,;
   skills: string[],;
   category: string,;
-  budget: {;
-    min: number,;
-    max: number;
+  budget: {;,
+  min: number,;
   },;
-  deadline: string;
-}
 ;
 export interface TalentProfile {;
-  id: string,;
   full_name: string,;
   professional_title: string,;
   bio?: string,;
-  skills: string[],;
   years_experience: number,;
   hourly_rate?: number,;
-  availability_type?: string;
-}
-;
 export interface TalentMatch {;
   talent_id: string,;
   job_id: string,;
   match_score: number,;
   matched_skills: string[],;
-  created_at: string;
-}
-;
-export interface MatchResult {;
   talentId: string,;
   score: number,;
   matchedSkills: string[];
@@ -301,14 +357,19 @@ export interface MatchResult {
 
   matched_skills: string[],
   reason?: string;
+  // TODO: Implement
 
+<<<<<<< HEAD
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 export interface JobData {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -335,3 +396,10 @@ export interface JobData {;
 ;
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+reason?: string;
+}
+;
+}
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

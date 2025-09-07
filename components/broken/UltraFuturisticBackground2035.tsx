@@ -1,12 +1,16 @@
 
 
+<<<<<<< HEAD
 }
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';'
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {;
   children: React && React.ReactNode;
 }
 
+<<<<<<< HEAD
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
 <<<<<<< HEAD
@@ -632,11 +636,16 @@ ease: 'easeInOut',
               repeat: Infinity,
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }}
           />
         </div>
       </div>
+
 {/* Render children */}
+      {children}</>){/* Render children */}
       {children}
     </>); ;
       {/* Render children */}
@@ -644,9 +653,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+    </>
+  );
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
@@ -136,6 +137,23 @@ import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues>;
+  form: UseFormReturn<FormValues>
+import React from "react",;
+import { UseFormReturn } from "react-hook-form",;
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;
+import { FormValues } from "./useHireRequestForm",;
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues>
+import React from "react",;
+import { UseFormReturn } from "react-hook-form",;
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;  form: UseFormReturn<FormValues>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
@@ -154,6 +172,39 @@ export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) 
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
 
 
+<<<<<<< HEAD
+=======
+export /**
+ * ProjectDetailsField - Function description
+
+import React from "react";""
+import { UseFormReturn } from "react-hook-form";"
+import {
+  // TODO: Implement
+}
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+
+  FormMessage,"
+} from "@/components/ui/form";""
+import { Textarea } from "@/components/ui/textarea";""
+import { FormValues } from "./useHireRequestForm";"
+interface ProjectDetailsFieldProps {
+  // TODO: Implement
+}
+  form: UseFormReturn<FormValues>;
+</FormValues>
+    <FormField;
+      control={form && form.control}"
+      name="projectOverview""
+export /**
+ * ProjectDetailsField - Function description;
+ */
+function ProjectDetailsField() {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <FormField;
 <<<<<<< HEAD
@@ -264,6 +315,7 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -271,3 +323,88 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React from "react";""
+import { UseFormReturn } from "react-hook-form";"
+import {
+  // TODO: Implement
+}
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,"
+} from "@/components/ui/form";""
+import { Textarea } from "@/components/ui/textarea";""
+import { FormValues } from "./useHireRequestForm";"
+interface ProjectDetailsFieldProps {
+  // TODO: Implement
+      control={form.control}"
+      name="project_overview";")
+      render={({ field }) => (
+</FormField>
+        <FormItem>
+</FormItem>"
+          <FormLabel className="text-white">Project Overview</FormLabel>"
+          <FormControl>
+</FormControl>
+            <Textarea;"
+              placeholder="Describe your project, goals, and requirements"""
+              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]""
+              {...field}
+            />
+</Textarea>
+          </FormControl>"
+          <FormMessage className="text-red-400" />"
+</FormMessage>
+        </FormItem>
+  form: UseFormReturn<FormValues>;
+
+    <FormField;
+      control={form && form.control}"
+      name="projectOverview""
+export /**
+ * ProjectDetailsField - Function description;
+ */
+function ProjectDetailsField() {
+  return (
+      control={form.control}"
+      name="project_overview";")
+      render={({ field }) => (
+
+        <FormItem>
+"
+          <FormLabel className="text-white">Project Overview"
+          <FormControl>
+
+            <Textarea;"
+              placeholder="Describe your project, goals, and requirements"""
+              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]""
+              {...field}
+            />
+
+          <FormMessage className="text-red-400" />"
+
+
+
+;
+)
+  ),;}
+  // TODO: Implement
+  form: UseFormReturn<FormValues> 
+
+  return (<FormField control= {
+  form.control;)"
+}<FormItem> <FormLabel className="text-white" >Project Overview <FormControl> <Textarea />  <FormMessage className="text-red-400" /> )"
+
+
+
+
+
+
+        )"
+pr-12325
+</FormMessage>
+        </FormItem>)"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

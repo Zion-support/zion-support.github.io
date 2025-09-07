@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from "react";
@@ -128,6 +129,18 @@ import React from "react";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils";
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+=======
+
+  className?: string;
+  children?: React && React.ReactNode;
+
+import React from "react",;
+import { cn } from "@/lib/utils",;
+
+import {cn} from "@/lib/utils";
+import React from "react",;
+import { cn } from "@/lib/utils",interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   className?: string;
   children?: React.ReactNode;
 <<<<<<< HEAD
@@ -149,8 +162,13 @@ export function SidebarMenuItem({
     <li className={cn("", className)} {...props}>
       {children}
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  className?: string;
+  children?: React && React.ReactNode;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function SidebarMenuItem(): any ({ className, children, ...props }: SidebarMenuItemProps) {;
   return (
     <li"
@@ -165,6 +183,7 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
     </li>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -172,6 +191,10 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
     </li>);
 }
 
+=======
+</li>);
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </li>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -210,6 +233,7 @@ export function SidebarMenuItem({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -220,3 +244,19 @@ export function SidebarMenuItem({
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from "react";""
+import { cn } from "@/lib/utils";"
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+"
+    <li className={cn("", className)} {...props}>"
+</li>
+    <li;"
+      className={cn("", className)}"
+      {...props}>;
+    </li>;
+    </li>);
+    </li>"
+    </li>);"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

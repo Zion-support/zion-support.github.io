@@ -1,15 +1,14 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-type Question = any;
-  question: string;
-  options: string[];
-  answerIndex: number;
-}
-type Props = {
-  questions: Question[];
-  onComplete: (score: number) => void;
-};
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import React, { useState } from 'react';
+
+type Question = any;
+
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function Quiz({ questions, onComplete }: Props) {
 
@@ -51,9 +50,13 @@ export default function Quiz() { return null; }
 
                   type='radio'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     onComplete(score)
   }
+ ;
   return (
+<<<<<<< HEAD
     <div className="space-y-4">;
       {questions && questions.map((q, idx) => (;"
         <div key={q && q.id} className="border rounded p-3">;"
@@ -85,22 +88,65 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
                 <span>{opt}</span>
               </label>
+=======
+    <div className=\"space-y-4\" />;
+      {questions && questions.map((q, idx) => (;}"
+        <div key={q && q.id} className=\"border rounded p-3\" />;
+"
+          <div className=\"font-medium\" />{idx + 1}. {q && q.question}</div>;"
+          <div className=\"mt-2 grid gap-2\" />;"
+            {q && q.options.map((opt, i) => (<label key={i} className=\"flex items-center gap-2\" />;
+                <input;"
+                  type=\"radio\";
+            <div className='mt - 2 text - sm' />;"
+              {answers[q.id] === q.answer_index ? (<span className='text - green - 600' />Correct</span>) : (<span className='text - red - 600' />Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (<span className=\"text - green - 600\" />Correct</span>) : (<span className=\"text - red - 600\" />Incorrect</span>)}
+            </div>)}
+        </div>))}
+      <button;
+        on_click={submit}
+        className='px - 4 py - 2 bg - blue - 600 text - white rounded' />
+
+        Submit Quiz;
+      </button>;
+      {submitted && (Score: {score} / {questions.length}
+        </div>)}
+    </div>)<button on_click={submi}"
+} className=\"px - 4 py - 2 bg - blue - 600 text - white rounded\" />Submit Quiz</button>;"
+      {submitted && <div className=\"text - sm\" />Score: {score} / {questions.length}</div>}
+    </div>)<span />{op}
+}</span>;
+              </label>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             ))}
+
           </div>
           {submitted && (
 <div className='mt-2 text-sm'>
+
+<div className='mt-2 text-sm' />
               {answers[q.id] === q.answerIndex ? (
-                <span className='text-green-600'>Correct</span>
+                <span className='text-green-600' />Correct</span>
               ) : (
                 <span className='text-red-600'>Incorrect</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
+                <span className='text-red-600' />Incorrect</span>}
+}
               )}
-            </div>
+            </div>;
           )}
+
         </div>
       ))}
   )
 
+<button;
+onClick={submit}
+        className='px-4 py-2 bg-blue-600 text-white rounded' />
+
+        Submit Quiz;
+      </button>;
+      {submitted && (<div className='text-sm' />;}
+          Score: {score} / {questions.lengt}
 }
   );
 }
@@ -108,6 +154,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <button
         onClick={submit}
         className='px-4 py-2 bg-blue-600 text-white rounded'
@@ -118,10 +167,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='text-sm'>
           Score: {score} / {questions.length}
         </div>
+        </div>;
       )}
+
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

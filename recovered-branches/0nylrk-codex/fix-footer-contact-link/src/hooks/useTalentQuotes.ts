@@ -76,12 +76,9 @@ import { useAuth  } from '@/hooks/useAuth';  const { toast } = useToast();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 import { useAuth  } from '@/hooks/useAuth';
-import {useState} from 'react';
-import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
-import {quoteRequestService} from '@/services/quoteRequestService';
-import {useAuth} from '@/hooks/useAuth';
 
 
+<<<<<<< HEAD
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
@@ -1249,3 +1246,5 @@ export const useTalentQuotes = () => {;
 }
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

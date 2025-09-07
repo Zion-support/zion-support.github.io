@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/ErrorBanner.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/ErrorBanner.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/ErrorBanner.jsx
@@ -11,10 +12,13 @@
 =======
 "export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/talent/ErrorBanner.jsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 "export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
 :backup-merge-conflicts/ErrorBanner.js.jsx.backup"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
 
 "export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/ErrorBanner.jsx
 =======
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/ErrorBanner.jsx
@@ -48,3 +52,14 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/talent/ErrorBanner.jsx
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/talent/ErrorBanner.jsx
+=======
+"export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
+"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
+"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
+"export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
+"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
+"export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
+"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
+"export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
+"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

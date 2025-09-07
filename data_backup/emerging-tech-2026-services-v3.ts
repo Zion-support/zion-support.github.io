@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,8 +30,306 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+;
+;
+
+export interface EmergingTech2026ServiceV3 {
+  \"id\": string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+  "id": string;"
+  name: string;,
+  tagline: string;
+  price: string;,
+  description: string;
+  features: string[];,
+  link: string;
+  category: string;,
+  realImplementation: boolean;
+  contactInfo: {,
+  mobile: string;
+    email: string;,"
+  address: string};export const "emergingTech2026ServicesV3": EmergingTech2026ServiceV3[] = [{""
+    id: "2026-emerging-tech-v3",""
+    "name": "2026 Emerging Tech Platform V3",""
+    "tagline": "Third generation emerging tech",""
+    "price": "$399/month",""
+    "description": "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.","
+    features["
+      "Third generation tech",""
+      "Enhanced capabilities",""
+      "Advanced features",""
+      "Improved platform",""
+      "Better performance""]
+    ],"
+    "link": "/services/2026-emerging-tech-v3",""
+    "category": "Emerging Tech 2026 V3",""
+    "realImplementation": true,""
+    "contactInfo": {""
+      mobile: "+1 302 464 0950",""
+      "email": "kleber@ziontechgroup.com",""
+      "address": "364 E Main St STE 1008 Middletown DE 19709""
+]}}}"
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}""
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}"
+  // TODO: Implement
+}"
+
+export const \"emergingTech2026ServicesV3\": EmergingTech2026ServiceV3[] = [{id: \"2026-emerging-tech-v3\",\"name\": \"2026 Emerging Tech Platform V3\",\"tagline\": \"Third generation emerging tech\",\"price\": \"$399/month\",\"description\": \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[;
+      \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\";}
+    ],\"link\": \"/services/2026-emerging-tech-v3\",\"category\": \"Emerging Tech 2026 V3\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}}
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}ursor/integrate-build-improve-and-re-verify-8f7d;
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+};
+
+export interface EmergingTech2026ServiceV3  {\"id\": string;
+}
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+
+export interface EmergingTech2026ServiceV3 {
+  \"id\": string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+
+export const \"emergingTech2026ServicesV3\": EmergingTech2026ServiceV3[] = [{id: \"2026-emerging-tech-v3\",\"name\": \"2026 Emerging Tech Platform V3\",\"tagline\": \"Third generation emerging tech\",\"price\": \"$399/month\",\"description\": \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[;
+      \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\";}
+    ],\"link\": \"/services/2026-emerging-tech-v3\",\"category\": \"Emerging Tech 2026 V3\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}}
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface EmergingTech2026ServiceV3 {
   "id": string;
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}ursor/fix-syntax-push-and-merge-to-main-40de;
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {
+  \"id\": string;
   name: string;
   tagline: string;
   price: string;
@@ -63,6 +362,7 @@ address: string};export const "emergingTech2026ServicesV3": EmergingTech2026Serv
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
@@ -249,21 +549,72 @@ address: string};export const "emergingTech2026ServicesV3": EmergingTech2026Serv
     "tagline": "Third generation emerging tech",
     "price": "$399/month",
     "description": "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",
+=======
+
+
+
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+
+export const \"emergingTech2026ServicesV3\": EmergingTech2026ServiceV3[] = [{id: \"2026-emerging-tech-v3\",\"name\": \"2026 Emerging Tech Platform V3\",\"tagline\": \"Third generation emerging tech\",\"price\": \"$399/month\",\"description\": \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[;
+      \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\";}
+    ],\"link\": \"/services/2026-emerging-tech-v3\",\"category\": \"Emerging Tech 2026 V3\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}};
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]}}}
+address: strin,
+};
+
+export const \"emergingTech2026ServicesV3\": EmergingTech2026ServiceV3[] = [{
+    id: \"2026-emerging-tech-v3\",
+    \"name\": \"2026 Emerging Tech Platform V3\",
+    \"tagline\": \"Third generation emerging tech\",
+    \"price\": \"$399/month\",
+    \"description\": \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     features[
-      "Third generation tech",
-      "Enhanced capabilities",
-      "Advanced features",
-      "Improved platform",
-      "Better performance"
+      \"Third generation tech\",
+      \"Enhanced capabilities\",
+      \"Advanced features\",
+      \"Improved platform\",
+      \"Better performance\"
     ],
-    "link": "/services/2026-emerging-tech-v3",
-    "category": "Emerging Tech 2026 V3",
-    "realImplementation": true,
-    "contactInfo": {
-      mobile: "+1 302 464 0950",
-      "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    \"link\": \"/services/2026-emerging-tech-v3\",
+    \"category\": \"Emerging Tech 2026 V3\",
+    \"realImplementation\": true,
+    \"contactInfo\": {
+      mobile: \"+1 302 464 0950\",
+      \"email\": \"kleber@ziontechgroup.com\",}
+      \"address\": \"364 E Main St STE 1008 Middletown DE 19709\"}
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,3 +640,35 @@ export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: 
 export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: "2026-emerging-tech-v3",name: "2026 Emerging Tech Platform V3",tagline: "Third generation emerging tech",price: "$399/month",description: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",features[ "Third generation tech","Enhanced capabilities","Advanced features","Improved platform","Better performance" ],link: "/services/2026-emerging-tech-v3",category: "Emerging Tech 2026 V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EmergingTech2026ServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [ { id: \"2026-emerging-tech-v3\",name: \"2026 Emerging Tech Platform V3\",tagline: \"Third generation emerging tech\",price: \"$399/month\",description: \"Third generation of the 2026 emerging tech platform with enhanced capabilities and features.\",features[ \"Third generation tech\",\"Enhanced capabilities\",\"Advanced features\",\"Improved platform\",\"Better performance\" ],link: \"/services/2026-emerging-tech-v3\",category: \"Emerging Tech 2026 V3\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

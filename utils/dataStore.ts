@@ -9,6 +9,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 // Data store utilities
@@ -24,7 +25,16 @@ export const dataStore = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+// Data store utilities
+export const dataStore = {
+  // Add data store functionality here
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   getData: () => []
+
+getData: () => []
+
   setData: (data: any) => null
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
@@ -85,11 +95,12 @@ export const dataStore = {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
-  getData: () => [],
-  setData: (data: any) => null,
-  updateData: (id: string, data: any) => null,
-  deleteData: (id: string) => null;
-};
+
+
+
+
+
+
 
 
 <<<<<<< HEAD
@@ -113,14 +124,41 @@ interface Project {}
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
+
+
+
+
+
+
+  getData: () => [],
+  setData: (data: any) => null,
+  updateData: (id: string, data: any) => null,
+  deleteData: (id: string) => null;
+};
+
+
+
+
+
+
+
+
 interface Project {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   title: string;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: string;
+=======
+  description: string;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   status: string;
-  createdAt: Date;
+
+  createdAt: Date;,
   updatedAt: Date;
+
 }
 
 <<<<<<< HEAD
@@ -137,8 +175,26 @@ interface Review {
   anonymous: boolean;
   approved: boolean;
   removed: boolean;
+  // TODO: Implement
+}
+  id: string;,
+  projectId: string;
+
+  fromRole: "client" | "talent";",
+  fromId: string;"
+  toRole: "client" | "talent";",
+
+  toId: string;
+  rating: number;,
+  text: string;
+  categories?: any;
+  anonymous: boolean;,
+  approved: boolean;
+
+  removed: boolean;,
   createdAt: Date;
   updatedAt: Date;
+
 }
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -147,7 +203,11 @@ interface Review {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   createProject(data: Partial<Project>): Project {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const project: Project = {
@@ -161,6 +221,7 @@ interface Review {
     this.projects.push(project);
     return project;
   }
+
 
   // Review methods
   hasExistingReview(
@@ -176,6 +237,7 @@ interface Review {
     );
   }
 
+
   upsertReview(data: Partial<Review>): Review {
     const existingIndex = this.reviews.findIndex(
       (review) =>
@@ -186,38 +248,12 @@ interface Review {
 
     if (existingIndex !== -1) {
       // Update existing review
-      this.reviews[existingIndex] = {
-        ...this.reviews[existingIndex],
-        ...data,
-        updatedAt: new Date(),
-      };
-      return this.reviews[existingIndex];
-    } else {
-      // Create new review
-      const review: Review = {
-        id: Math.random().toString(36).substr(2, 9),
-        projectId: data.projectId || "",
-        fromRole: data.fromRole || "client",
-        fromId: data.fromId || "",
-        toRole: data.toRole || "talent",
-        toId: data.toId || "",
-        rating: data.rating || 0,
-        text: data.text || "",
-        categories: data.categories,
-        anonymous: data.anonymous || false,
-        approved: data.approved || false,
-        removed: data.removed || false,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      };
-      this.reviews.push(review);
+
       return review;
     }
   }
 
   getReviewsByProject(projectId: string): Review[] {
-    return this.reviews.filter((review) => review.projectId === projectId);
-  }
 
   getAllReviews(): Review[] {
     return [...this.reviews];
@@ -228,6 +264,11 @@ interface Review {
   }
 
 
+
+
+
+
+
 // Data store utilities;
 export const data_store = {
   // Add data store functionality here;
@@ -235,6 +276,10 @@ export const data_store = {
   set_data: (data: any) => null,
   update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null;
+
+}
+
+
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -260,6 +305,7 @@ export const data_store = {
     this.projects.push(project);
     return project;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -268,6 +314,13 @@ export const data_store = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 
   // Review methods
@@ -341,10 +394,14 @@ const store = new DataStore();
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const findProjectById = (id: string) => store && store.findProjectById(id);
 export const createProject = (data: Partial<Project>) => store && store.createProject(data);
 export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store && store.hasExistingReview(projectId, fromRole, fromId);
@@ -380,6 +437,14 @@ export const data_store = {
   update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null;
 }
+
+
+
+
+
+
+
+
 export const findProjectById = (id: string) => store.findProjectById(id);
 export const createProject = (data: Partial<Project>) =>
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -471,11 +536,25 @@ export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
 export const getReviewsByProject = (projectId: string) =>
   store.getReviewsByProject(projectId);
 export const getAllReviews = () => store.getAllReviews();
+
 export const counterpartRole = (role: "client" | "talent") =>
+export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
+
+
+
+
+
+
+
+
+
+
   store.counterpartRole(role);
-export const counterpartRole = (role: "client" | "talent") =>
-  store.counterpartRole(role);
 
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

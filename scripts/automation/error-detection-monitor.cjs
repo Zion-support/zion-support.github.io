@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -13,27 +14,36 @@ const { execSync } = require('child_process');
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorDetectionMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'error-reports');
-    this.logsDir = path.join(this.projectRoot, 'automation/logs');
+
     this.errorThreshold = parseInt(process.env.ERROR_THRESHOLD) || 10;
     this.checkInterval = parseInt(process.env.ERROR_DETECTION_INTERVAL) || 300000; // 5 minutes;
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};
+        fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.errorHistory = [];
-    this.lastCheck = null};
+    this.lastCheck = null};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -42,18 +52,16 @@ class ErrorDetectionMonitor {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${level}] ${message}`)};
+=======
+    console.log(`[${timestamp}] [${level}] ${message})};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runTypeScriptCheck() {}
     try {}
-      this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { "stdio": 'pipe' }
-});
-      return { "success": true, "errors": [], "count": 0 }} catch (error) {}
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseTypeScriptErrors(output);
-      this.log(`TypeScript check failed with ${errors.length} errors`, 'ERROR');
-      return { "success": false, errors, "count": errors.length }};
+
+      return { "success": false, errors, "count": errors.length }};"
   };
   async runLintCheck() {}
+<<<<<<< HEAD
     try {}
       this.log('Running ESLint check...');
       execSync('npm run lint', { "stdio": 'pipe' }
@@ -148,6 +156,10 @@ class ErrorDetectionMonitor {}
       { "name": 'ESLint', "check": this.runLintCheck.bind(this) },
       { "name": 'Build', "check": this.runBuildCheck.bind(this) },
       { "name": 'Dependencies', "check": this.runDependencyCheck.bind(this) };
+=======
+    try {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
 <<<<<<< HEAD
     const results = {};
@@ -159,18 +171,16 @@ class ErrorDetectionMonitor {}
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     for (const check of checks) {}
-      try {}
         const result = await check.check();
         results[check.name] = result;
-        totalErrors += result.count} catch (error) {}
-        this.log(`Error running ${check.name} "check": ${error.message}`, 'ERROR');
-        results[check.name] = { "success": false, "errors": [], "count": 0 }};
-    };
-    const errorReport = {}
-      "timestamp": new Date().toISOString(),
-      totalErrors,
+
+        results[check.name] = { "success": false, "errors": [], "count": 0 }};"
+    const errorReport = {}"
+      "timestamp": new Date().toISOString(),"
+      totalErrors,"
       "checks": results,
       "threshold": this.errorThreshold,
+<<<<<<< HEAD
       "exceeded": totalErrors > this.errorThreshold;
     };
 <<<<<<< HEAD
@@ -178,8 +188,11 @@ class ErrorDetectionMonitor {}
     const reportPath = path.join(this.reportsDir, `error-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
 =======
+=======
+      "exceeded": totalErrors > this.errorThreshold;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-    // Save error report;
+    // Save error report;`;
     const reportPath = path.join(this.reportsDir, `error-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
 
@@ -188,8 +201,8 @@ class ErrorDetectionMonitor {}
     this.errorHistory.push(errorReport);
     if (this.errorHistory.length > 100) {}
       this.errorHistory = this.errorHistory.slice(-100)};
-    // Save error history;
-    const historyPath = path.join(this.reportsDir, 'error-history.json');
+    // Save error history;"
+
     fs.writeFileSync(historyPath, JSON.stringify(this.errorHistory, null, 2));
 <<<<<<< HEAD
     this.lastCheck = new Date();
@@ -197,6 +210,7 @@ class ErrorDetectionMonitor {}
 
     this.lastCheck = new Date();
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (totalErrors > this.errorThreshold) {}
       this.log(`ERROR THRESHOLD "EXCEEDED": ${totalErrors} errors found ("threshold": ${this.errorThreshold})`, 'CRITICAL');
@@ -215,10 +229,15 @@ class ErrorDetectionMonitor {}
       "timestamp": new Date().toISOString(),
       "message": 'Error threshold exceeded',
       "report": errorReport;
+=======
+
+      "report": errorReport;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }, null, 2));
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Log critical error;
     const criticalLogPath = path.join(this.logsDir, 'critical-errors.log');
@@ -245,19 +264,27 @@ class ErrorDetectionMonitor {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    // Log critical error;"
+
+    // Run initial check;
+    await this.checkForErrors();
+    // Set up periodic checking;
+    setInterval(async () => {}
+
+    }, this.checkInterval);
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Error detection monitor started. Checking every ${this.checkInterval / 1000} seconds.`)};
   getStatus() {}
     return {}
-      "running": true,
-      "lastCheck": this.lastCheck,
-      "errorHistory": this.errorHistory.length,
-      "threshold": this.errorThreshold,
-      "checkInterval": this.checkInterval;
+
+      "checkInterval": this.checkInterval;"
     }};
-};
 // Main execution;
 if (require.main === module) {}
   const monitor = new ErrorDetectionMonitor();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -282,6 +309,10 @@ if (require.main === module) {}
   // Start monitoring;
   monitor.startMonitoring().catch(error => {})
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');
+=======
+  // Handle graceful shutdown;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     process.exit(1)})};
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -301,6 +332,9 @@ module.exports = ErrorDetectionMonitor;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 module.exports = ErrorDetectionMonitor;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

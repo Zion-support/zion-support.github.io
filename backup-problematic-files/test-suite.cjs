@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Comprehensive Test Suite;
  * Tests all aspects of the application;
@@ -7,6 +7,7 @@
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
+<<<<<<< HEAD:backup-problematic-files/test-suite.cjs
       'INFO': 'ℹ'
       'SUCCESS': ''
       'ERROR': ''
@@ -25,3 +26,6 @@ const path = require('path')
     console.error('Test suite "failed")
     console.error('Test suite "failed")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:test-suite.cjs
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:test-suite.cjs

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -9,12 +10,16 @@ pr-12243
 =======
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import formidable from 'formidable';
 import fs from 'fs';
@@ -22,10 +27,21 @@ import path from 'path';
 
 =======
 =======
+=======
 
 
-import type { NextApiRequest, NextApiResponse } from 'next';
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+    );
+    fs && fs.copyFileSync(file && file.filepath, targetPath);
+    appendAuditLog({
+
+    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 import formidable from 'formidable';
@@ -33,14 +49,17 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
-export const config = { api: { bodyParser: false } }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export const config = { api: { bodyParser: false ;} }
+export default function handler(req: NextApiRequest;, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
@@ -273,3 +292,11 @@ pr-12243
 }
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  const form = formidable({ multiples: false });
+    return res.status(405).json({ error: 'Method not allowed' ;});  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' ;});
+import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
+export const config = null;
+
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

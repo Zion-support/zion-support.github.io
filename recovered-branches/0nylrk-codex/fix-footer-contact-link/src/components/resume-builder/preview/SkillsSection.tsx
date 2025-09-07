@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Skill } from '@/types/resume';
 import {Skill} from '@/types/resume';
@@ -38,11 +39,19 @@ interface SkillsSectionProps {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+interface SkillsSectionProps {
+  skills: Skill[];
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface SkillsSectionProps {
   skills: Skill[];
 }
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,6 +196,9 @@ export function SkillsSection({ skills }: SkillsSectionProps) {};
 
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
       <div className="space-y-2">
@@ -293,8 +305,40 @@ export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
             <h3 className="text-sm font-medium">{category}</h3>;
             <p className="text-sm">;
               {skills && skills.map(skill => skill && skill.name).join(', ')}
+import { Skill } from '@/types/resume',;
+;
+interface SkillsSectionProps {;
+  skills:Skill[];
+}
+;
+export function SkillsSection({ skills } SkillsSectionProps) {;
+  // Group skills by category;
+  const skillsByCategory = skills.reduce((acc, skill) => {;
+    const category = skill.category || 'Other',;
+    if (!acc[category]) {;
+      acc[category] = [],;
+    }
+    acc[category].push(skill),;
+    return acc,;
+  }, {} as Record<string Skill[]>),;
+;
+  if (skills.length === 0) return null,;
+  ;
+  return (;
+    <div className="mb-6">;
+      <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>;
+      <div className="space-y-2">;
+        {Object.entries(skillsByCategory).map(([category, skills]) => (;
+          <div key={category}>;
+            <h3 className="text-sm font-medium">{category}</h3>;
+            <p className="text-sm">;
+              {skills.map(skill => skill.name).join(', ')}
             </p>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            <p className="text-sm">            </p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>;
         ))}
       </div>;
@@ -343,10 +387,18 @@ export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
     <div className="mb - 6">;
       <h2 className="text - lg font - semibold border - b mb - 3">Skills</h2>;
       <div className="space - y-2">;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}  return (
+    <div className="mb-6">;
+      <h2 className="text - lg font - semibold border - b mb-3">Skills</h2>;
+      <div className="space-y-2">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {Object.entries (skillsByCategory).map (([category, skills]) => (
 <<<<<<< HEAD
           <div key={category}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="text - sm font-medium">{category}</h3>;
             <p className="text-sm">;
@@ -359,6 +411,10 @@ export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
             <h3 className="text - sm font - medium">{category}</h3>;
             <p className="text - sm">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            <h3 className="text - sm font-medium">{category}</h3>;
+            <p className="text-sm">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {skills.map ((skill) => skill.name).join (", ")}
             </p>;
           </div>))}
@@ -366,7 +422,69 @@ export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+
+import { Skill } from "@/types/resume";"
+interface SkillsSectionProps {
+  // TODO: Implement
+}
+  skills: Skill[];
+
+
+  // TODO: Implement
+export function SkillsSection({ skills }: SkillsSectionProps) {
+  // Group skills by category;
+  const skillsByCategory = skills.reduce()
+    (acc, skill) => {"
+      const category = skill.category || "Other";"
+      if (!acc[category]) {
+        acc[category] = [];
+
+      }
+      acc[category].push(skill);
+      return acc;
+    },
+
+    {} as Record<string, Skill[]>,
+</string>"
+    <div className="mb-6">"
+</div>"
+      <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>""
+      <div className="space-y-2">"
+</div>
+          <div key={category}>
+            <h3 className="text-sm font-medium">{category}</h3>""
+            <p className="text-sm">"
+</p>
+
+            </p>
+          </div>
+      </div>
+    </div>
+
+  }, {} as Record<string, Skill[]>);
+    <div className="mb-6">;"
+      <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>;""
+      <div className="space-y-2">;"
+          <div key={category}>;
+            <h3 className="text-sm font-medium">{category}</h3>;""
+            <p className="text-sm">;"
+            </p>;
+          </div>;
+    </div>;"
+    <div className="mb - 6">;"
+      <h2 className="text - lg font - semibold border - b mb - 3">Skills</h2>;""
+      <div className="space - y-2">;"
+            <h3 className="text - sm font - medium">{category}</h3>;""
+            <p className="text - sm">;"
+          </div>))}
+    </div>);"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

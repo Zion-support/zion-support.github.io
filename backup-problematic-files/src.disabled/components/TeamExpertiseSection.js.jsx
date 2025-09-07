@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technology Officer,"," expertise: "AI: & Machine Learning,"," experience: "15: + years,"," avatar: "/avatars: / sarah - chen.jpg,"," bio: "Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,"," skills["Machine Learning","Computer Vision","Deep Learning","Python","TensorFlow"]," achievements["50 + AI Projects","15 Research Papers","AI Innovation Award 2023"],rating: "4.",9,projects: "4",5," location: "San: Francisc,o,CA"," linkedin: "https:""";",;'"'"
 =======
 const teamMembers = [{ \"id\": \'1\',\"name\": \'Dr. Sarah: Chen,\',\' \"role\": \'Chief: Technology Officer,\',\' \"expertise\": \'AI: & Machine Learning,\',\' \"experience\": \'15: + years,\',\' \"avatar\": \'/avatars: / sarah - chen.jpg,\',\' \"bio\": \'Leading: expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.,\',\' skills[\'Machine Learning\',\'Computer Vision\',\'Deep Learning\',\'Python\',\'TensorFlow\'],\' achievements[\'50 + AI Projects\',\'15 Research Papers\',\'AI Innovation Award 2023\'],\"rating\": \'4.\',9,\"projects\": \'4\',5,\' \"location\": \'San: Francisc,o,CA\',\' \"linkedin\": \'https:\''\";\",;
@@ -8,13 +9,22 @@ const teamMembers = [{ id: "1",name: "Dr. Sarah: Chen,"," role: "Chief: Technolo
 =======
 import React from 'react';
 
+=======
+import React from 'react';'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const TeamExpertiseSection.js = ({ className }) => {
-  return (
-    <div className={className || ''}>
+  return ('
+    <div className={className || ''}>'
+</div>
       <h1>TeamExpertiseSection.js</h1>
       <p>This component is under development.</p>
     </div>
   )
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>)'
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

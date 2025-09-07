@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import { FaRocket;
 =======
   FaRocket;
@@ -32,6 +33,7 @@ import { SiNextdotjs;
   SiGooglecloud;
   SiMicrosoftazure
  } from 'react-icons/si';
+<<<<<<< HEAD
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
   FaRocket
@@ -102,6 +104,9 @@ import {}
 
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface Service {
 =======
 interface Service {}
@@ -111,6 +116,7 @@ interface Service {}
   description: string;
     starter: number;
     professional: number;
+<<<<<<< HEAD
 
     enterprise: number;
   }
@@ -129,12 +135,17 @@ interface Service {}
   technologies: string[];
   benefits: string[]
 }
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface ServiceCategory {
   id: string;
   name: string;
   description: string;
   icon: React.ReactNode;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   color: string
 =======
@@ -150,10 +161,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   name: string,
   description: string,
   icon: React.ReactNode,
+=======
+
+}
+
+  color: string;  id: string;,
+  name: string;,
+  description: string;,
+  icon: React.ReactNode;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   color: string;
 }
 
 
+<<<<<<< HEAD
 const serviceCategories: ServiceCategory[] = []
   {}
 '
@@ -240,11 +261,18 @@ const serviceCategories: ServiceCategory[] = []
     color: 'from-yellow-500 to-orange-500'"
   },    icon: <FaRobot className="w-8 h-8" />
 <<<<<<< HEAD
+=======
+const serviceCategories: ServiceCategory[] = [
+  {
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: 'ai-ml';
     name: 'AI & Machine Learning';
     description: 'Cutting-edge artificial intelligence and machine learning solutions';
     icon: <FaBrain className;
 export default EnhancedServicesShowcase2025;
+<<<<<<< HEAD
 ];
 const services: Service[] = [
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1681,3 +1709,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

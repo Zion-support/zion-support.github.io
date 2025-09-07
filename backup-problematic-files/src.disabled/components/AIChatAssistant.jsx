@@ -1,4 +1,6 @@
 class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -8,9 +10,12 @@ class ErrorBoundary extends React.Component {
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary: ', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);'
+pr-12325
   }
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
@@ -27,6 +32,11 @@ const AIChatAssistant = ({ className }) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <div className={className || ''}>
+=======
+      return <div>Something went wrong.</div>;'
+    <div className={className || ''}>'
+</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <h1>AIChatAssistant</h1>
       <p>This component is under development.</p>
     </div>
@@ -38,3 +48,5 @@ const AIChatAssistant = ({ className }) => {
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+    </div>'
+pr-12325

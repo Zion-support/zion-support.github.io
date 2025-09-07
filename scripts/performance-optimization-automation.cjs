@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -23,6 +24,10 @@ const path = require('path')
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -33,25 +38,27 @@ const path = require('path')
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log('⚡ Starting Performance Optimization Automation...')
-    '.next': '43.33 MB'
-    'node_modules': '782.66 MB'
-    '.tsx'
-    '.ts'
-    '.jsx'
-    '.js'
-    '.css'
+    '.next': '43.33 MB
+    'node_modules': '782.66 MB
+    '.tsx
+    '.ts
+    '.jsx
+    '.js
+    '.css
   console.log('�  Starting Image Optimization...')
-  const imagesDir = path.join(process.cwd(), 'public/images;'
+  const imagesDir = path.join(process.cwd(), 'public/images;
 // console.log('� Creating images directory...')
     console.log('� Creating images directory...')
+
   const optimizedImageComponent = "
-    execSync('npx @next/bundle-analyzer', { "stdio"})
+    execSync('npx @next/bundle-analyzer, { "stdio"})
         "recommendations"
     console.error(' Bundle analysis "failed")
       "performanceMonitoring"
       "bundleAnalysis"
       "recommendations"
     "nextSteps"
+<<<<<<< HEAD
   console.log('� Performance improvements "created")
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,30 +83,20 @@ console.log('⚡ Starting Performance Optimization Automation...')
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-  console.error(' Performance optimization automation "failed")
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const { execSync, spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
-class PerformanceOptimizationAutomation {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'performance-optimization.log');
-    this.ensureDirectories();
-  }
 
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
 
+<<<<<<< HEAD
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
@@ -367,3 +364,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

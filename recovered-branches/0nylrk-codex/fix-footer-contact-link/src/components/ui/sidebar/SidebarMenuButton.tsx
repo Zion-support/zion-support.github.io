@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -122,6 +123,10 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButton
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string,
   children?: React.ReactNode,
@@ -131,6 +136,7 @@ interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     return (
       <Comp
@@ -307,6 +313,11 @@ SidebarMenuButton && SidebarMenuButton.displayName = "SidebarMenuButton";
 
 SidebarMenuButton.displayName = "SidebarMenuButton",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
+          "text-muted-foreground hover:text-foreground hover:bg-accent",
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 );
 SidebarMenuButton.displayName = "SidebarMenuButton";
 );
@@ -321,7 +332,57 @@ import React, { forward_ref } from './react';'
 import { Slot } from '@radix - ui / react - slot';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from '@/lib / utils';
+<<<<<<< HEAD
 interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes < HTMLButtonElement> {}
+=======
+import React, { forwardRef } from "react";""
+import {Slot} from "@radix-ui/react-slot";""
+import {cn} from "@/lib/utils";"
+interface SidebarMenuButtonProps extends React && React.ButtonHTMLAttributes<HTMLButtonElement> {;
+
+export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(;
+
+      <Comp;
+        className={cn(
+"
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors"""
+          "text-muted-foreground hover: text-foreground hover:bg-accent"""
+import {cn} from "@/lib/utils";""
+import React, { forwardRef } from "react",""
+import { Slot } from "@radix-ui/react-slot";""
+import { cn } from "@/lib/utils";""
+import { Slot } from "@radix-ui/react-slot",""
+import { cn } from "@/lib/utils",""
+
+
+interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+
+export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps>(
+
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",""
+          "text-muted-foreground hover:text-foreground hover:bg-accent",""
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring","
+          className;"
+import React, { forwardRef } from "react",;""
+import { Slot } from "@radix-ui/react-slot",;""
+import { cn } from "@/lib/utils",;"
+interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {;
+
+export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps>(;
+
+        className={cn(;"
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",;""
+          "text-muted-foreground hover:text-foreground hover:bg-accent",;""
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",;"
+          className;)
+        )}
+        ref={ref as any}
+        {...props}>;
+
+      ;
+pr-12325
+interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes < HTMLButtonElement> {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   class_name?: string;
   children?: React.ReactNode;
   as_child?: boolean;
@@ -348,10 +409,14 @@ SidebarMenuButton.display_name = "SidebarMenuButton";
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
         )}
+=======
+)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         ref={ref as any}
         {...props}
       >
@@ -404,36 +469,43 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
           className;
         )}
         ref={ref as any}
+export const SidebarMenuButton = forward_ref < HTMLButtonElement, SidebarMenuButtonProps>()
+  ({ class_name, children, as_child = false, ...props }, ref) => {"
+    const Comp = as_child ? Slot : "button";"
+    return (
+        className={cn ("
+          "flex items - center w - full px - 3 py - 2 text - sm rounded - md font - medium transition - colors";""
+          "text - muted - foreground hover: text - foreground hover:bg - accent";""
+          "focus - visible:outline - none focus - visible:ring - 1 focus - visible:ring - ring",")
+          class_name)}
         {...props}
       >;
-        {children}
-      </Comp>;
-    ),;
-  }
-),;
-;
-SidebarMenuButton.displayName = "SidebarMenuButton",; interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string;
-children?: React.ReactNode;
-asChild?: boolean 
+
+      );
+
+
+
+      ;"
+SidebarMenuButton.displayName = "SidebarMenuButton",; interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {"
+
 }export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps> ( ({
-  className, children, asChild = false, ...props 
-}, ref) => {
-  return (<Comp className= {
-  cn ("flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors";
-"text-muted-foreground hover:text-foreground hover:bg-accent";
-"focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring";
-className 
+
+  return (<Comp className= {"
+  cn ("flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors";""
+"text-muted-foreground hover:text-foreground hover:bg-accent";""
+"focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring";"
+className;
 }ref= {
-  ref as any 
+  ref as any;
 }{
-  ...props 
+  ...props;
 }> {
   children 
 }</Comp>) 
 });
 SidebarMenuButton.displayName = "SidebarMenuButton";
 SidebarMenuButton.displayName = "SidebarMenuButton";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -451,3 +523,9 @@ SidebarMenuButton.displayName = "SidebarMenuButton";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+)
+}) "
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

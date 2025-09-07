@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -179,6 +180,9 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
 import { MessageSquare, Info, X } from "lucide-react",
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { cn } from "@/lib/utils";
 =======
         <Button;
@@ -196,8 +200,9 @@ import { useTheme } from "@/hooks/useTheme";
 export function SupportWidget() {};
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
+
   return (
-    <>
+    <>  return (
     <>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
@@ -207,24 +212,10 @@ export function SupportWidget() {};
 <<<<<<< HEAD
         <Button
 
-import { cn } from "@/lib/utils",
-import { useTheme } from "@/hooks/useTheme",
-export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState(false),
-  const { theme } = useTheme(),
-  
-  return (
-    <>
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { ChatBotPanel } from "./ChatBotPanel",;
-import { MessageSquare, Info, X } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { useTheme } from "@/hooks/useTheme",;
-      ;
-      {/* Support panel */}
-      {isOpen && (;
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col"
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
+
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
 
@@ -263,11 +254,27 @@ import { useTheme } from "@/hooks/useTheme",;
               <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;"
               <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<div ;
+          className={cn(;
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",;
+            theme === "dark" ;
+              ? "bg-zion-blue-dark border border-zion-blue-light" ;
+              :"bg-white border border-gray-200";
+          )}
+          style={{ height:"600px", maxHeight:"80vh" }}
+        >;
+          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;
+            <div className="flex items-center">;
+              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;
+              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" :"text-gray-800")}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Zion Support;
               </h3>;
             </div>;"
@@ -277,7 +284,10 @@ import { useTheme } from "@/hooks/useTheme",;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false),;
   const { theme } = useTheme();
@@ -301,9 +311,16 @@ export function SupportWidget() {;
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
             theme === "dark"
               ? "bg-zion-blue-dark border border-zion-blue-light"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
+            theme === "dark" 
+              ? "bg-zion-blue-dark border border-zion-blue-light" 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}
@@ -316,6 +333,7 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -323,15 +341,27 @@ export function SupportWidget() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
                 onClick={() => window && window.location.href = "/help"}
+<Button;
+                variant="ghost";
+                size="icon";
+                className="h-8 w-8 rounded-full";
+                onClick={() => window.location.href = "/help"}
                 aria-label="Help center";
               >;
                 <Info className="h-5 w-5" />;
               </Button>;
+onClick={() => window.location.href = "/help"}
+                aria-label="Help center"
+              >
+                <Info className="h-5 w-5" />
+              </Button>
               <Button
                 variant="ghost"
                 size="icon"
@@ -344,14 +374,60 @@ export function SupportWidget() {;
                 className="h-8 w-8 rounded-full";
                 onClick={() => setIsOpen(false)}
                 aria-label="Close support";
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 rounded-full"                aria-label="Close support";
               >;
                 <X className="h-5 w-5" />;
+</Button>"
+          <MessageSquare className="h-6 w-6" />;"
+</MessageSquare>
+        </Button>;"
+          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;"
+</div>"
+            <div className="flex items-center">;"
+</div>"
+              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;"
+</MessageSquare>)"
+              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>;"
+</h3>
+              </h3>;
+            </div>;"
+            <div className="flex items-center gap-2">;"
+</div>
+              <Button;"
+                variant="ghost"""
+                size="icon"""
+                className="h-8 w-8 rounded-full"""
+                onClick={() => window && window.location.href = "/help"}"
+</Button>"
+                <Info className="h-5 w-5" />;"
+</Info>
+              </Button>;
+              <Button;"
+                variant="ghost"""
+                size="icon"""
+                className="h-8 w-8 rounded-full""
+                onClick={() => setIsOpen(false)}
+</Button>
+
+              <Button;"
+                variant="ghost";""
+                size="icon";""
+                className="h-8 w-8 rounded-full";"
+                onClick={() => setIsOpen(false)}
+</Button>"
+                <X className="h-5 w-5" />;"
+</X>
+
               </Button>;
             </div>;
           </div>;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
               <Button"
@@ -383,6 +459,9 @@ export function SupportWidget() {;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ChatBotPanel />;
         </div>;
       )}
@@ -407,6 +486,41 @@ export /**;
 function SupportWidget() {}
 =======
 
+        ;"
+          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;"
+</div>"
+            <div className="flex items-center">;"
+              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;"
+)"
+              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>;"
+</h3>
+              </h3>;
+            </div>;"
+            <div className="flex items-center gap-2">;"
+                variant="ghost"""
+                size="icon"""
+                className="h-8 w-8 rounded-full"""
+                onClick={() => window && window.location.href = "/help"}"
+                <Info className="h-5 w-5" />;"
+
+                className="h-8 w-8 rounded-full""
+                onClick={() => setIsOpen(false)}
+
+
+                variant="ghost";""
+                size="icon";""
+                className="h-8 w-8 rounded-full";"
+                <X className="h-5 w-5" />;"
+
+            </div>;
+          <ChatBotPanel />;
+
+</ChatBotPanel>
+        </div>;
+    </>;
+  );
+
+}
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { ChatBotPanel } from './ChatBotPanel';
@@ -414,17 +528,14 @@ import { MessageSquare, Info, X } from './lucide-react';
 import { cn } from '@/lib / utils';
 import { use_theme } from '@/hooks / use_theme';
 export /**
- * SupportWidget - Function description
+ * SupportWidget - Function description;
  */
 function SupportWidget() {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const [is_open, setIsOpen] = useState (false);
   const { theme } = use_theme ();
-;
-  return (
-    <>;
-      {/* Fixed button in the bottom right */}
       {!is_open && (
+<<<<<<< HEAD
         <Button;
 <<<<<<< HEAD
           on_click={() => setIsOpen (true)}"
@@ -433,11 +544,21 @@ function SupportWidget() {
           aria - label="Open support";
         >;"
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           on_click={() => setIsOpen (true)}
-          size="icon";
-          className="fixed bottom - 6 right - 6 h - 14 w - 14 rounded - full shadow - lg bg - zion - purple hover:bg - zion - purple - light text - white z - 50";
-          aria - label="Open support";
+
+          <MessageSquare className="h - 6 w - 6" />;"
+
+        )}
+          className={cn ("
+            "fixed bottom - 6 right - 6 w-[380px] rounded - 2xl shadow - xl z - 50 flex flex - col";""
+            theme === "dark";""
+              ? "bg - zion - blue - dark border border - zion - blue - light";")"
+              : "bg - white border border - gray - 200")}""
+          style={{ height: "600px", max_height: "80vh" }}"
         >;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <MessageSquare className="h - 6 w - 6" />;
         </Button>)}
@@ -514,6 +635,22 @@ function SupportWidget() {
             </div>;
           </div>;
           <ChatBotPanel />;
+=======
+          <div className="flex items - center justify - between p - 4 border - b border - zion - purple / 20">;"
+            <div className="flex items - center">;"
+              <MessageSquare className="h - 5 w - 5 text - zion - cyan mr - 2" />;"
+              <h3 className={cn ("font - semibold", theme === "dark" ? "text - white" : "text - gray - 800")}>;"
+            <div className="flex items - center gap - 2">;"
+                className="h - 8 w - 8 rounded - full";""
+                on_click={() => window.location.href = "/help"}"
+                <Info className="h - 5 w - 5" />;"
+
+                className="h - 8 w - 8 rounded - full";"
+                on_click={() => setIsOpen (false)}
+                <X className="h - 5 w - 5" />;"
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>)}
     </>);
 }
@@ -528,31 +665,32 @@ function SupportWidget() {
  export function SupportWidget () {
   const [isOpen, setIsOpen] = useState (false);
 const {
-  theme 
+  // TODO: Implement
+  theme;
 }= useTheme ();
 /* Fixed button in the bottom right */ 
 }{
-  !isOpen && (<Button onClick= {
+  !isOpen && (<Button onClick= {)
   () => setIsOpen (true) 
-}size="icon" className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50" aria-label="Open support" > <MessageSquare className="h-6 w-6" /> </Button>) 
-}{
-  /* Support panel */ 
-}{
-  isOpen && (<div className= {
-  cn (Zion Support </h3> </div> <div className="flex items-center gap-2" > <Button > <Info className="h-5 w-5" /> </Button> <Button > <X className="h-5 w-5" /> </Button> </div> </div> <ChatBotPanel /> </div>) 
+}size="icon" className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50" aria-label="Open support" > <MessageSquare className="h-6 w-6" /> )"
+
+  isOpen && (<div className= {)"
+  cn (Zion Support </h3> </div> <div className="flex items-center gap-2" > <Button > <Info className="h-5 w-5" />  <Button > <X className="h-5 w-5" />  </div> </div> <ChatBotPanel /> </div>)"
 }</>) 
-}
-                onClick={() => setIsOpen(false)}
-                aria-label="Close support"
-              >
-                <X className="h-5 w-5" />
-              </Button>
-            </div>
-          </div>
+                onClick={() => setIsOpen(false)}"
+                aria-label="Close support""
+              >"
+                <X className="h-5 w-5" />"
+
           <ChatBotPanel />
-        </div>
-      )}
+
     </>
   )
+pr-12325
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

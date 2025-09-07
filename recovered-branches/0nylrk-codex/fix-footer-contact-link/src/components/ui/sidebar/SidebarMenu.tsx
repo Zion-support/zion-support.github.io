@@ -23,11 +23,16 @@ import { cn } from "@/lib/utils",
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react";
+<<<<<<< HEAD
 =======
 import React from "react";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { cn } from "@/lib/utils";
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {}
+=======
+
+interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   className?: string;
   children?: React.ReactNode;
 }
@@ -48,8 +53,11 @@ export function SidebarMenu({}
 =======
     </ul>);
 }
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",;
 import { cn } from "@/lib/utils",;
 ;
@@ -91,6 +99,7 @@ interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -109,9 +118,12 @@ import { cn } from "@/lib/utils",
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { cn } from "@/lib/utils",
-
+import React from "react",;
+import { cn } from "@/lib/utils",;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {cn} from "@/lib/utils";
@@ -158,6 +170,7 @@ export function SidebarMenu(): any ({ className, children, ...props }: SidebarMe
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -180,3 +193,28 @@ export function SidebarMenu(): any ({ className, children, ...props }: SidebarMe
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import React from "react";""
+import { cn } from "@/lib/utils";"
+interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
+"
+    <ul className={cn("space-y-1", className)} {...props}>"
+</ul>
+    </ul>);
+interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
+
+    <ul ;"
+    <ul;"
+      className={cn("space-y-1", className)}"
+      {...props}
+    >
+
+interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElement> {;
+    <ul className={cn ("space - y-1", class_name)} {...props}>;"
+    </ul>);"
+pr-12325
+}
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

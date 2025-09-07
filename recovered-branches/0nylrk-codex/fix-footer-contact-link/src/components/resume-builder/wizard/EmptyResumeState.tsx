@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -200,6 +201,8 @@ export default EmptyResumeState;
 
 
 export default EmptyResumeState;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

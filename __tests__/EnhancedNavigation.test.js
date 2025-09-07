@@ -16,6 +16,7 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -28,6 +29,10 @@
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedNavigation from "./components/EnhancedNavigation" describe("EnhancedNavigation",() => {" test("renders without crashing",() => {" render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedNavigation / / />) }) test("handles user interactions",() => {" render(<EnhancedNavigation / / />) }) test("applies correct styling",() => {" render(<EnhancedNavigation / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedNavigation from '../components/EnhancedNavigation" describe('EnhancedNavigation',() => {' test('renders without crashing',() => {' render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedNavigation / / />) }) test('handles user interactions',() => {' render(<EnhancedNavigation / / />) }) test('applies correct styling',() => {' render(<EnhancedNavigation / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedNavigation from '../components/EnhancedNavigation" describe('EnhancedNavigation',() => {' test('renders without crashing',() => {' render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedNavigation / / />) }) test('handles user interactions',() => {' render(<EnhancedNavigation / / />) }) test('applies correct styling',() => {' render(<EnhancedNavigation / / />) }) })
@@ -35,6 +40,7 @@ const React from "react" import { render,screen,fireEvent } from "@testing-libra
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedNavigation from '../components/EnhancedNavigation" describe('EnhancedNavigation',() => {' test('renders without crashing',() => {' render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedNavigation / / />) }) test('handles user interactions',() => {' render(<EnhancedNavigation / / />) }) test('applies correct styling',() => {' render(<EnhancedNavigation / / />) }) })
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,6 +63,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -80,6 +95,11 @@ import _React from 'react"  import '@testing-library/jest-dom import EnhancedNav
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
+
+
+
+
   test('displays correct content', () => {
     render(<EnhancedNavigation />);
   });
@@ -92,11 +112,20 @@ import _React from 'react"  import '@testing-library/jest-dom import EnhancedNav
     render(<EnhancedNavigation />);
   });
 });
+
+
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedNavigation from '../components/EnhancedNavigation" describe('EnhancedNavigation',() => {' test('renders without crashing',() => {' render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedNavigation / / />) }) test('handles user interactions',() => {' render(<EnhancedNavigation / / />) }) test('applies correct styling',() => {' render(<EnhancedNavigation / / />) }) })
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedNavigation from "./components/EnhancedNavigation" describe("EnhancedNavigation",() => {" test("renders without crashing",() => {" render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedNavigation / / />) }) test("handles user interactions",() => {" render(<EnhancedNavigation / / />) }) test("applies correct styling",() => {" render(<EnhancedNavigation / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedNavigation from '../components/EnhancedNavigation" describe('EnhancedNavigation',() => {' test('renders without crashing',() => {' render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedNavigation / / />) }) test('handles user interactions',() => {' render(<EnhancedNavigation / / />) }) test('applies correct styling',() => {' render(<EnhancedNavigation / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedNavigation from '../components/EnhancedNavigation" describe('EnhancedNavigation',() => {' test('renders without crashing',() => {' render(<EnhancedNavigation / / />) expect(screen.getByTestId("enhancednavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedNavigation / / />) }) test('handles user interactions',() => {' render(<EnhancedNavigation / / />) }) test('applies correct styling',() => {' render(<EnhancedNavigation / / />) }) })
@@ -105,6 +134,7 @@ import _React from 'react"  import '@testing-library/jest-dom import EnhancedNav
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -119,3 +149,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+
+
+
+
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

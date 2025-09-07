@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Brain;
   Star;
   Users;
@@ -1872,6 +1873,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {['"
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile },'"
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email },'"
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
                 },              ].map((contact, index) => (
 '"
@@ -1937,6 +1941,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   viewport={{ once: true }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
@@ -1948,7 +1955,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>'
                   <div className='text-sm text-purple-300 mb-1'>
                     {contact.label}
+<<<<<<< HEAD
                   </div>'
+=======
+                  </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className='text-white font-medium'>{contact.value}</div>                </motion.div>
 
                   <div className='text-white font-medium'>{contact.value}</div>
@@ -2095,6 +2106,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======

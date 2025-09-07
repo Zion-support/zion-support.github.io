@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import React from 'react';
 
 interface Homepage2040Props {}
@@ -72,14 +73,21 @@ export default Homepage2040;'
 import React, { Suspense, lazy, useState, useEffect } from 'react';'
 import Layout from './layout/Layout';'
 import Link from 'next/link';'
+=======
+import Link from 'next/link';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 import { 
   ArrowRight, Star, 
+<<<<<<< HEAD
 import React, { Suspense, lazy, useState, useEffect } from 'react',
 import Layout from './layout/Layout',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+import Layout from './layout/Layout';;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ArrowRight, Star;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -90,10 +98,16 @@ import {}
   Rocket, Target, Users, Cpu, Eye, Network;
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette;
   FileText, BarChart3, Heart, Truck, ShieldCheck;
+<<<<<<< HEAD
   Sparkles, Infinity as InfinityIcon, Zap as Lightning'
 } from 'lucide-react';
 
 <<<<<<< HEAD
+=======
+  Sparkles, Infinity as InfinityIcon, Zap as Lightning
+} from 'lucide-react';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 // Import new service data
@@ -103,6 +117,7 @@ import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micr
 import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micro-saas-expansion-v2';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
+<<<<<<< HEAD
 // Lazy load heavy components for better performance'
 const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
 const Homepage2040: React.FC = () => {}
@@ -646,3 +661,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+// Lazy load heavy components for better performance
+
+const LazyServiceCard = null;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

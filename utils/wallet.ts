@@ -78,22 +78,36 @@ export async function getAccounts(): Promise<string[] | null> {;
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
 
+
+
+
   if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+
 
 
   if (typeof window === 'undefined' || !window.ethereum) {;
 
+
     throw new Error('MetaMask is not installed');
   }
   try {
+<<<<<<< HEAD
       method: 'eth_requestAccounts',
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export async function connectMetaMask(): Promise<string[]> {
   if (typeof window === "undefined" || !window.ethereum) {
     throw new Error("MetaMask is not installed");
   }
   try {
     const accounts = await window.ethereum.request({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -123,6 +137,15 @@ export async function connectMetaMask(): Promise<string[]> {}
 
     const accounts = await window && window.ethereum.request({
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+method: 'eth_requestAccounts'
+
+
+
+
+    const accounts = await window && window.ethereum.request({
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export async function connectMetaMask (): Promise < string[]> {
   // Check condition
 if ( {) {
@@ -134,6 +157,7 @@ if ( {) {
     const accounts = await window.ethereum.request ({
 
       method: 'eth_requestAccounts',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -147,6 +171,15 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+      method: "eth_requestAccounts",
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     });
     return accounts;
   } catch (error) {"
@@ -156,23 +189,35 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+
+
+if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export async function getAccounts(): Promise<string[]> {
-  if (typeof window === "undefined" || !window.ethereum) {
-export async function getAccounts(): Promise<string[]> {
-  if (typeof window === "undefined" || !window.ethereum) {
+
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
 
+
+
+
   if (typeof window === 'undefined' || !window.ethereum) {;
+
 
     return [];
   }
   try {
 
     const accounts = await window && window.ethereum.request({
+
 export async function get_accounts (): Promise < string[]> {
   // Check condition
 if ( {) {
@@ -182,12 +227,18 @@ if ( {) {
   }
   try {
       method: 'eth_accounts',
-  if (typeof window === 'undefined' |!window.ethereum) {
+if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
+
+
+export async function getAccounts(): Promise<string[]> {
+  if (typeof window === "undefined" || !window.ethereum) {
+
     return [];
   }
   try {
     const accounts = await window.ethereum.request({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,13 +248,63 @@ if ( {) {
 export async function getAccounts(): Promise<string[]> {"
   if (typeof window === "undefined" || !window.ethereum) {};
 =======
+=======
+method: 'eth_accounts'
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       method: "eth_accounts",
-      method: "eth_accounts",
+
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+  }
+  try {
+    const accounts = await window.ethereum.request({
+      method: "eth_accounts",    });
+
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {''
+  if (typeof window === 'undefined' || !window && window.ethereum) {''
+  if (typeof window === 'undefined' || !window.ethereum) {;''
+    throw new Error('MetaMask is not installed');'
+  }
+  try {
+  // TODO: Implement
+}'
+      method: 'eth_requestAccounts','
+export async function connectMetaMask(): Promise<string[]> {
+</string>
+export async function connectMetaMask (): Promise < string[]> {
+  // Check condition;
+if ( {) {
+  $2;
+}'
+    throw new Error ('MetaMask is not installed');'
+
+  }
+  try {
+  // TODO: Implement
+}
+    const accounts = await window.ethereum.request ({
+
+'
+      method: 'eth_requestAccounts',')
     });
     return accounts;
+<<<<<<< HEAD
   } catch (error) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     return [];
+=======
+  } catch (error) {'
+    throw new Error("Failed to connect to MetaMask");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
   try {}
     const accounts = await window.ethereum.request({"
@@ -250,8 +351,49 @@ export async function getAccounts(): Promise<string[]> {"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+
+
+
+
 export async function getBalance(address: string): Promise<string> {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export async function getAccounts(): Promise<string[]> {
+</string>
+export async function getAccounts(): Promise<string[]> {
+</string>
+export async function get_accounts (): Promise < string[]> {
+  // Check condition;
+if ( {) {
+  $2;
+
+}
+    return [];
+  }
+  try {
+
+  // TODO: Implement
+}"
+      method: 'eth_accounts',''
+  if (typeof window === 'undefined' |!window.ethereum) {''
+  if (typeof window === 'undefined' || !window.ethereum) {;'
+    return [];
+  }
+  try {
+  // TODO: Implement
+}
+    const accounts = await window.ethereum.request({'
+      method: "eth_accounts",""
+      method: "eth_accounts",")
+
+    });
+    return accounts;
+  } catch (error) {}
+    return [];}
+  }
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (typeof window === "undefined" || !window.ethereum) {
 =======
 
@@ -265,17 +407,24 @@ export async function getBalance(address: string): Promise<string> {"
     const balance = await window.ethereum.request({"
       method: "eth_getBalance","
       params: [address, "latest"],
+if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+export async function getBalance(address: string): Promise<string> {
+
 
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
 
+
+
+
   if (typeof window === 'undefined' || !window.ethereum) {;
+
 
     throw new Error('MetaMask is not installed');
   }
   try {
-      method: 'eth_getBalance',
-      params: [address, 'latest'],
 export async function getBalance(address: string): Promise<string> {
   if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
@@ -286,7 +435,11 @@ export async function getBalance(address: string): Promise<string> {
       method: 'eth_getBalance'
       params: [address, 'latest']
 
+
+
+
     const balance = await window && window.ethereum.request({
+
 export async function get_balance (address: string): Promise < string> {
   // Check condition
 if ( {) {
@@ -299,6 +452,13 @@ if ( {) {
 
       method: 'eth_getBalance',
       params: [address, 'latest'],
+
+
+
+
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
     });
     return balance;
   } catch (error) {"
@@ -308,6 +468,10 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+
+
+
 
 
 export async function signMessage(
@@ -325,6 +489,7 @@ export async function signMessage(
   try {}
     const signature = await window.ethereum.request({"
       method: "personal_sign",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -354,16 +519,27 @@ if ( {) {}
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+export async function signMessage(message: string, address: string): Promise<string> {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
 
+
+
+
   if (typeof window === 'undefined' || !window.ethereum) {;
+
 
     throw new Error('MetaMask is not installed');
   }
   try {
-      method: 'personal_sign',
+
       params: [message, address],
   if (typeof window === 'undefined' |!window.ethereum) {
   if (typeof window === 'undefined' || !window.ethereum) {;
@@ -387,7 +563,15 @@ if ( {) {
 
       method: 'personal_sign',
       params: [message, address],
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     });
     return signature;
   } catch (error) {"
@@ -395,6 +579,119 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+
+
+// Extend Window interface for TypeScript;
+
+// Extend Window interface for TypeScript
+
+// Extend Window interface for TypeScript;
+
+// Extend Window interface for TypeScript;
+
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
+    throw new Error('MetaMask is not installed');
+  }
+  try {
+  // TODO: Implement
+      method: 'eth_requestAccounts',
+export async function connectMetaMask(): Promise<string[]> {
+</string>
+export async function connectMetaMask (): Promise < string[]> {
+  // Check condition;
+if ( {) {
+  $2;
+    throw new Error ('MetaMask is not installed');
+  // TODO: Implement
+    const accounts = await window.ethereum.request ({
+
+      method: 'eth_requestAccounts',')
+
+
+export async function getBalance(address: string): Promise<string> {
+</string>
+export async function getBalance(address: string): Promise<string> {
+</string>
+export async function get_balance (address: string): Promise < string> {
+  // Check condition;
+if ( {) {
+  $2;
+}"
+    throw new Error ('MetaMask is not installed');'
+
+  }
+  try {
+  // TODO: Implement
+}
+    const balance = await window.ethereum.request ({
+
+'
+      method: 'eth_getBalance',''
+      params: [address, 'latest'],')
+    });
+    return accounts;
+  } catch (error) {
+    throw new Error("Failed to connect to MetaMask");"
+
+export async function getAccounts(): Promise<string[]> {
+export async function get_accounts (): Promise < string[]> {
+  // Check condition;
+    return [];
+  // TODO: Implement
+}"
+      method: 'eth_accounts',
+  if (typeof window === 'undefined' |!window.ethereum) {
+  // TODO: Implement
+    const accounts = await window.ethereum.request({
+      method: "eth_accounts",""
+      method: "eth_accounts",")
+
+export async function getBalance(address: string): Promise<string> {
+export async function get_balance (address: string): Promise < string> {
+  // Check condition;
+  // TODO: Implement
+    const balance = await window.ethereum.request ({
+
+      method: 'eth_getBalance',
+      params: [address, 'latest'],')
+    return balance;
+    throw new Error("Failed to get balance");"
+
+  }
+}
+
+export async function signMessage(
+  message: string,
+
+  address: string,)
+): Promise<string> {
+export async function sign_message (message: string, address: string): Promise < string> {
+  // Check condition;
+if ( {) {
+  $2;
+}"
+    throw new Error ('MetaMask is not installed');'
+
+  }
+  try {
+  // TODO: Implement
+    const signature = await window.ethereum.request ({
+
+      method: 'personal_sign',
+'
+      method: 'personal_sign','
+      params: [message, address],)
+    return signature;
+    throw new Error("Failed to sign message");"
+
+// Extend Window interface for TypeScript;
+
+pr-12325
+
+  }
+}
 
 // Extend Window interface for TypeScript;
 
@@ -419,19 +716,59 @@ declare global {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       request: (args: { method: string; params?: any[] }) => Promise < any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
+
       removeListener: (
         event: string,
         callback: (accounts: string[]) => void,
       ) => void;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+      removeListener: (event: string, callback: (accounts: string[]) => void) => void;
+
+
+
+      remove_listener: (event: string, callback: (accounts: string[]) => void) => void;
+
+    }
+    }      removeListener: (
+        event: string,
+        callback: (accounts: string[]) => void,
+      ) => void;
+      remove_listener: (event: string, callback: (accounts: string[]) => void) => void;
+
+    }
+      removeListener: (event: string, callback: (accounts: string[]) => void) => void
+};
+
+    }
+
+    };
+
+  }
+}
+  }
+}
+
+  // TODO: Implement
+  interface Window {
+  // TODO: Implement
+    ethereum?: {
+
+      request: (args: { method: string; params?: any[] }) => Promise < any>;
+      on: (event: string, callback: (accounts: string[]) => void) => void;,
+  removeListener: (
+        event: string,)
+        callback: (accounts: string[]) => void,
+      ) => void;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       remove_listener: (event: string, callback: (accounts: string[]) => void) => void;
 
-    }
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
 
 
@@ -455,13 +792,70 @@ declare global {}
 <<<<<<< HEAD
 =======
 
+
+
+
     };
 
+
+
+    };
+
+
+    }
+
+    };
+
+  }
+}
+    }
+
+
+
+
+
+export type WalletProvider = any;
+export function getEthereumProvider(): WalletProvider | null {;
+  if (typeof window === 'undefined') return null;
+  // @ts-ignore;
+  const { ethereum } = window;
+  return ethereum ?? null;
+}
+;
+export async function connectMetaMask(): Promise<string[] | null> {;
+  const provider = getEthereumProvider();
+  if (!provider) return null;
+  try {;
+    const accounts: string[] = await provider.request({ method: 'eth_requestAccounts' });
+    return accounts;
+  } catch (e) {;
+    return null;
+  }
+}
+;
+export async function getAccounts(): Promise<string[] | null> {;
+  const provider = getEthereumProvider();
+  if (!provider) return null;
+  try {;
+    const accounts: string[] = await provider.request({ method: 'eth_accounts' });
+    return accounts;
+  } catch (e) {;
+    return null;
+  }
+}
+    };
+
+"
+pr-12325
     }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

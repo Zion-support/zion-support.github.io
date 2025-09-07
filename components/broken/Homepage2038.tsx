@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
+=======
+
+import Link from 'next/link';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 
 import {};
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
-  CheckCircle, Sparkles, Infinity, Zap as Lightning;
 
+<<<<<<< HEAD
               {/* Company Badge */}
               <motion&& motion.div;
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -1519,3 +1525,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

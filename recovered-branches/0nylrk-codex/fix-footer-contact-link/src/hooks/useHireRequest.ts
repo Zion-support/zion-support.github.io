@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 import { useState  } from 'react';
@@ -15,6 +18,7 @@ export interface HireRequestData {}
   talent: {};
     id: string;
     full_name: string;
+<<<<<<< HEAD
   project: {}
     overview: string;
 <<<<<<< HEAD
@@ -111,6 +115,17 @@ export function useHireRequest() { return null; }
   }
 }
 export /**;
+=======
+
+  }
+}
+export function useHireRequest() {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  }
+}
+export /**
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  * useHireRequest - Function description;
  */
 function useHireRequest() {}
@@ -121,13 +136,20 @@ function useHireRequest() {}
     setIsSubmitting (true);
     set_error (null),
     try {}
+<<<<<<< HEAD
       // Call the edge function to process the hire request;'
       const { data: response, error } = await supabase.functions.invoke ('process - hire - request', {}
         body: request_data;
+=======
+      // Call the edge function to process the hire request;}
+      const { data: response, error } = await supabase.functions.invoke ('process - hire - request', {}
+        body: request_data;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       });
 ;
       // Check condition;
 if (throw error) {}
+<<<<<<< HEAD
   $2;
 }
       // Show success message;
@@ -142,11 +164,28 @@ if (throw error) {}
       const error_message = error instanceof Error;
         ? error.message;"
         : "There was a problem submitting your request. Please try again.";
+=======
+  $2}
+}
+      // Show success message;
+      toast ({}
+        title: \"Request Submitted\",}
+        description: `Your request to hire ${request_data.talent.full_name} has been sent successfully.`});
+;
+      return { success: true, request_id: response?.request_id }
+    } catch (error) {
+      console.error (\"Error submitting hire request:\", error);
+;
+      const error_message = error instanceof Error;
+        ? error.message;
+        : \"There was a problem submitting your request. Please try again.\";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
       set_error (error_message);
 ;
 <<<<<<< HEAD
       toast ({
+<<<<<<< HEAD
         title: "Error",
   description: error_message,
 =======
@@ -159,9 +198,19 @@ if (throw error) {}
       return { success: false, error: error_message }
     } finally {}
       setIsSubmitting (false);
+=======
+        title: \"Error\",}
+  description: error_message,}
+        variant: \"destructive\"});
+;
+      return { success: false, error: error_message }
+    } finally {}
+      setIsSubmitting (false);}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   }"
@@ -177,9 +226,18 @@ if (throw error) {}
       return { success: false, error: errorMessage }
     } finally {}
       setIsSubmitting(false)
+=======
+        title: \"Error\",
+        description: errorMessage,
+        variant: \"destructive\"}),
+      return { success: false, error: errorMessage }
+    } finally {}
+      setIsSubmitting(false)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
   return {}
     submitHireRequest;
     isSubmitting;
@@ -206,26 +264,41 @@ import { supabase } from "@/integrations/supabase/client",;"
 import { toast } from "@/hooks/use-toast",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { TalentProfile } from "@/types/talent",;
+=======
+  return {
+    submitHireRequest;}
+    isSubmitting;}
+  }
+}
+        title: \"Error\",
+        description: errorMessage,
+        variant: \"destructive\"}),
+import { useState } from 'react';
+import { supabase } from \"@/integrations/supabase/client\";
+import { toast } from \"@/hooks/use-toast\",;
+import { TalentProfile } from \"@/types/talent\",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface HireRequestData {;
   talent: {;
     id: string,;
     full_name: string,;
-    professional_title: string,;
-    email?: string;
+    professional_title: string,;}
+    email?: string;}
   },;
   requester: {;
     name: string,;
-    email: string,;
-    id?: string;
+    email: string,;}
+    id?: string;}
   },;
   project: {;
     overview: string,;
     timeline: string,;
-    budgetMin: number,;
-    budgetMax: number;
+    budgetMin: number,;}
+    budgetMax: number;}
   }
 }
 ;
+<<<<<<< HEAD
 export function useHireRequest() { return null; }
       const { data: response, error } = await supabase.functions.invoke('process-hire-request', {;
         body: requestData;
@@ -235,6 +308,23 @@ export function useHireRequest() { return null; }
 <<<<<<< HEAD
       toast({;
         title: "Request Submitted",,
+=======
+export function useHireRequest() {;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [error, setError] = useState<string | null />(null),;
+  const submitHireRequest = async (requestData: HireRequestData) => {;
+    setIsSubmitting(true),;
+    setError(null),;
+    try {;}
+      // Call the edge function to process the hire request;}
+      const { data: response, error } = await supabase.functions.invoke('process-hire-request', {;}
+        body: requestData;}
+      }),;
+      if (error) throw error,;
+      // Show success message;
+      toast({;}
+        title: \"Request Submitted\",,}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),;
 =======
       toast({;"
@@ -242,14 +332,23 @@ export function useHireRequest() { return null; }
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       return { success: true, requestId: response?.request_id }
+<<<<<<< HEAD
     } catch (error) {;"
       console.error("Error submitting hire request:", error),;
       const errorMessage = error instanceof Error;
         ? error.message;"
         : "There was a problem submitting your request. Please try again.",;
+=======
+    } catch (error) {;
+      console.error(\"Error submitting hire request:\", error),;
+      const errorMessage = error instanceof Error;
+        ? error.message;
+        : \"There was a problem submitting your request. Please try again.\",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setError(errorMessage),;
 <<<<<<< HEAD
       toast({;
+<<<<<<< HEAD
         title: "Error",,
   description: errorMessage,;
 =======
@@ -258,21 +357,26 @@ export function useHireRequest() { return null; }
         description: errorMessage,;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         variant: "destructive"}),;
+=======
+        title: \"Error\",,}
+  description: errorMessage,;}
+        variant: \"destructive\"}),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return { success: false, error: errorMessage }
-    } finally {;
-      setIsSubmitting(false);
+    } finally {;}
+      setIsSubmitting(false);}
     }
   },;
   return {;
     submitHireRequest;
-    isSubmitting;
-    error;
-
+    isSubmitting;}
+    error;}
   }
 }
 ;
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -287,3 +391,6 @@ export function useHireRequest() { return null; }
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

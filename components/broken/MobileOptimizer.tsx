@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Smartphone, Tablet, Monitor, RotateCcw;
@@ -6,28 +7,32 @@ import { Smartphone, Tablet, Monitor, RotateCcw;
  } from 'lucide-react';
 // TouchEvent types are already defined in DOM
 
-interface MobileOptimizerProps {
-  children: React.ReactNode;
+
+import { motion, AnimatePresence  } from 'framer-motion';
+  Wifi, WifiOff, Signal, SignalHigh;}
+  Mouse, Hand;}
+  } from 'lucide-react';
+// TouchEvent types are already defined in DOM;
+
+interface MobileOptimizerProps  {children: React.ReactNode;
   showDebugInfo?: boolean;
   enableTouchGestures?: boolean;
-  enableMobileLayout?: boolean;
-  enablePerformanceMode?: boolean
+  enableMobileLayout?: boolean;}
+  enablePerformanceMode?: boolean;}
 }
 
 interface TouchGesture {
   type: 'swipe' | 'pinch' | 'rotate' | 'longPress';
   direction?: 'up' | 'down' | 'left' | 'right';
   distance?: number;
-  duration?: number
+  duration?: number;}
+}
 }
 
-const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
-  children;
+const MobileOptimizer: React.FC<MobileOptimizerProps /> = ({children;
   showDebugInfo;
-setIsMobile (isMobileDevice);
-origin/cursor/automate-test-improve-and-merge-code-2533
-setIsTablet (isTabletDevice);
 
+<<<<<<< HEAD
 //Apply mobile - specific optimizations // Check condition;
 if ( {) {}
   $2;
@@ -867,3 +872,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

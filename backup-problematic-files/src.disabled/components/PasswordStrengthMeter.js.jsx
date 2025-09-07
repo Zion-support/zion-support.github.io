@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/PasswordStrengthMeter.js.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/PasswordStrengthMeter.js.jsx
@@ -24,5 +25,10 @@ import { ; calculatePasswordStrength,getStrengthLabel } from '@/utils/passwordSt
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/PasswordStrengthMeter.jsx
+=======
+const { ; calculatePasswordStrength,getStrengthLabel } from "@/utils/passwordStrength";"export function PasswordStrengthMeter({ password }) {" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className="mt-2" aria-live="polite">" <Progress value={value} className="h-2" />" <p className="text-xs text-zion-slate-light mt-1">{label}</p>" </div>" )} ";"'"'"
+import { ; calculatePasswordStrength,getStrengthLabel } from \'@/utils/passwordStrength\';\"export function PasswordStrengthMeter({ password }) {\" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className=\"mt-2\" aria-live=\"polite\">\" <Progress value={value} className=\"h-2\" />\" <p className=\"text-xs text-zion-slate-light mt-1\">{label}</p>\" </div>\" )} \";\"
+const { ; calculatePasswordStrength,getStrengthLabel } from "@/utils/passwordStrength";"export function PasswordStrengthMeter({ password }) {" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className="mt-2" aria-live="polite">" <Progress value={value} className="h-2" />" <p className="text-xs text-zion-slate-light mt-1">{label}</p>" </div>" )} ";"'"'"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ; calculatePasswordStrength,getStrengthLabel } from \'@/utils/
 const { ; calculatePasswordStrength,getStrengthLabel } from "@/utils/passwordStrength";"export function PasswordStrengthMeter({ password }) {" const score = calculatePasswordStrength(password); const value = (score / 4) * 100; const label = getStrengthLabel(score); return (); <div className="mt-2" aria-live="polite">" <Progress value={value} className="h-2" />" <p className="text-xs text-zion-slate-light mt-1">{label}</p>" 

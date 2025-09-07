@@ -1,31 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Mail, Phone, MapPin, Globe;
   Twitter, Linkedin, Github;
   ArrowUp, Crown, Zap, Brain, Rocket;
-  Shield, Users, BookOpen, Briefcase, Atom
+}
+  Shield, Users, BookOpen, Briefcase, Atom}
  } from 'lucide-react';
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  Mail
-  Phone
-  MapPin
-  Globe
-  Twitter
-  Linkedin
-  Github
-  ArrowUp
-  Crown
-  Zap
-  Brain
-  Rocket
-  Shield
-  Users
-  BookOpen
-  Briefcase
-  Atom;
 
+<<<<<<< HEAD
 } from 'lucide-react';
 
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -97,65 +85,64 @@ interface FooterSection {;
     title: 'Solutions'
 
 <<<<<<< HEAD
+=======
+  {
+
+    title: 'Solutions'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   links: FooterLink[];
 
   external?: boolean
+
+  links: FooterLink[];}
 }
-interface FooterSection {
-  title: string;
-  links: FooterLink[]
 }
-const footerSections: FooterSection[] = [
-  {
-    title: 'Services';
-    links: [
-      {
-        label: 'AI & Machine Learning'
-        href: '/ai-services'
-        description: 'Advanced AI solutions'
+
+const footerSections: FooterSection[] = [;
+  {title: 'Services';
+    links: [;
+      {label: 'AI & Machine Learning';
+        href: '/ai-services';}
+        description: 'Advanced AI solutions';}
       }
-      {
-        label: 'Quantum Computing'
-        href: '/quantum-computing'
-        description: 'Next-gen quantum tech'
+      {label: 'Quantum Computing';
+        href: '/quantum-computing';}
+        description: 'Next-gen quantum tech';}
       }
-      {
-        label: 'Space Technology'
-        href: '/space-tech'
-        description: 'Innovative space solutions'
+      {label: 'Space Technology';
+        href: '/space-tech';}
+        description: 'Innovative space solutions';}
       }
-      {
-        label: 'Q4 2025 Innovation'
-        href: '/innovative-2025-q4-showcase'
-        description: 'Latest revolutionary services'
+      {label: 'Q4 2025 Innovation';
+        href: '/innovative-2025-q4-showcase';}
+        description: 'Latest revolutionary services';}
       }
-      {
-        label: 'Pricing Guide'
-        href: '/comprehensive-pricing-2025-q4'
-        description: 'Comprehensive pricing'
+      {label: 'Pricing Guide';
+        href: '/comprehensive-pricing-2025-q4';}
+        description: 'Comprehensive pricing';}
       }
-      {
-        label: 'Cybersecurity'
-        href: '/cybersecurity'
-        description: 'Enterprise security'
+      {label: 'Cybersecurity';
+        href: '/cybersecurity';}
+        description: 'Enterprise security';}
       }
-      {
-        label: 'Cloud Solutions'
-        href: '/cloud-platform'
-        description: 'Scalable cloud infrastructure'
+      {label: 'Cloud Solutions';
+        href: '/cloud-platform';}
+        description: 'Scalable cloud infrastructure';}
       }
-      {
-        label: 'View All Services'
-        href: '/services'
-        description: 'Complete service portfolio'
+      {label: 'View All Services';
+        href: '/services';}
+        description: 'Complete service portfolio';}
       }
-    ]
+    ];
   }
+
   {
     title: 'Solutions';
 origin/cursor/automate-test-improve-and-merge-code-2533
     links: [
       {
+<<<<<<< HEAD
         label: 'Healthcare & Biotech'
         href: '/healthcare-solutions'
 =======
@@ -164,8 +151,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         label: 'Healthcare & Biotech''
         href: '/healthcare-solutions''
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        label: 'Healthcare & Biotech',
+  href: '/healthcare-solutions'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         description: 'Medical technology'
+}
+     }
+}
+      {label: 'Financial Services';
+        href: '/solutions?industry=financial';}
+        description: 'Fintech solutions';}
       }
+<<<<<<< HEAD
       {'
         label: 'Financial Services''
         href: '/solutions?industry=financial''
@@ -192,10 +190,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         description: 'EdTech solutions'
       }
   {'
+=======
+      {label: 'Manufacturing';
+        href: '/solutions?industry=manufacturing';}
+        description: 'Industry 4.0';}
+      }
+      {label: 'Retail & E-commerce';
+        href: '/solutions?industry=retail';}
+        description: 'Digital commerce';}
+      }
+      {label: 'Government';
+        href: '/solutions?industry=government';}
+        description: 'Public sector';}
+      }
+      {label: 'Education';
+        href: '/solutions?industry=education';}
+        description: 'EdTech solutions';}
+      }
+
+  {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     title: 'Solutions'
 <<<<<<< HEAD
     links: [
       { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
+<<<<<<< HEAD
       { label: 'Financial Services', href: '/solutions?industry;
     links: [
       {
@@ -1609,3 +1628,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

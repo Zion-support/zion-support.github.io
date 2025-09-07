@@ -113,9 +113,12 @@ import {CertificationFormFields} from './CertificationFormFields';'
 import {CertificationFormValues, certificationSchema} from './types';
 =======
 
-
 interface CertificationsFormProps {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { CertificationFormValues, certificationSchema } from './types';interface CertificationsFormProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -173,6 +176,7 @@ import {CertificationsList} from './CertificationsList';'
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {CertificationFormFields} from './CertificationFormFields';
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -197,10 +201,17 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 export function CertificationsForm() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
 
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
 
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -209,8 +220,12 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   // Helper function to format dates as strings for form inputs
+=======
+// Helper function to format dates as strings for form inputs
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue
@@ -241,8 +256,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       } else {
         success = await addCertification(resumeId, certData)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { Button } from '@/components/ui/button',;
@@ -261,6 +279,7 @@ interface CertificationsFormProps {;
   certifications: Certification[],;
   onComplete: () => void,;
   onBack: () => void;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -269,6 +288,8 @@ interface CertificationsFormProps {;
 import {CertificationFormValues, certification_schema} from './types';
 interface CertificationsFormProps {}
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import {CertificationFormValues, certification_schema} from './types';
 interface CertificationsFormProps {
@@ -383,10 +404,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
       }
 
-
   };
 
-
+}
+  };
+  };
 
 <<<<<<< HEAD
 
@@ -436,9 +458,46 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
-
-
+const formatDateValue = (date_value: string | Date | undefined): string => {
+    // Check condition
+if (return '') {
+  $2
+}
+    // Check condition
+if (return date_value, ) {
+  $2
+}
+    return format (date_value, 'yyyy - MM - dd');
+  }
+;
+  const form = use_form < CertificationFormValues>({
+    resolver: zod_resolver (certification_schema),
+    default_values: {
+      name: '',
+      issuing_organization: '',
+      issue_date: '',
+      expiration_date: '',
+      credential_id: '',
+      credential_url: ''}}),
+  const handleAddOrUpdate = async (data: CertificationFormValues) => {
+    try {
+      set_error (null);
+      let success,
+      const cert_data: Certification = {
+        name: data.name,
+        issuing_organization: data.issuing_organization,
+        issue_date: data.issue_date || undefined,
+        expiration_date: data.expiration_date || undefined,
+        credential_id: data.credential_id,
+        credential_url: data.credential_url},
+      // Check condition
+if ( {) {
+  $2
+}
+        success = await update_certification (editing_id, cert_data);
+      } else {
+        success = await add_certification (resume_id, cert_data);
+      }
   // Helper function to format dates as strings for form inputs;
 <<<<<<< HEAD
   const formatDateValue = (dateValue: string | Date | undefined): string => {;'
@@ -452,6 +511,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     return format(dateValue, 'yyyy-MM-dd');
   };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -470,6 +530,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
 
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const form = useForm<CertificationFormValues>({;
     resolver: zodResolver(certificationSchema),;
     defaultValues: {;
@@ -480,19 +542,25 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       credential_id: '',;
       credential_url: ''}}),;
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleAddOrUpdate = async (data: CertificationFormValues) => {;
     try {;
       setError(null);
       let success,;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const certData: Certification = {;
         name: data && data.name,;
         issuing_organization: data && data.issuing_organization,;
@@ -501,18 +569,22 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         credential_id: data && data.credential_id,;
         credential_url: data && data.credential_url},;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (editingId) {;
         success = await updateCertification(editingId, certData);
       } else {;
         success = await addCertification(resumeId, certData);
       }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -529,6 +601,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       }
     } catch (err: any) {;'
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (success) {;
         form && form.reset({;
           name: '',;
@@ -545,6 +619,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     }
   };
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -559,6 +634,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 
   };
@@ -616,6 +693,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     }
   },
 
+<<<<<<< HEAD
 
 
 
@@ -640,9 +718,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 
-    }
+}
   }
   };
   },;
@@ -657,9 +737,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     if (confirm('Are you sure you want to delete this certification?')) {;
       await deleteCertification(id);
     }
-
-
-
 
   return (
 
@@ -729,6 +806,9 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         success = await addCertification(resumeId, certData),;
       } else {
         success = await add_certification (resume_id, cert_data);
+      expiration_date: formatDateValue(cert && cert.expiration_date)})
+};
+  return (
       }
     }
   },;
@@ -757,6 +837,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       </div>;
 =======
 
+<<<<<<< HEAD
       }
     }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -767,15 +848,34 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         <h3 className="text-md font-medium mb-4">;
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>;
+=======
+      {certifications && certifications.length > 0 && (;
+        <CertificationsList
+import { CertificationFormValues, certificationSchema } from './types';
 
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
-            <CertificationFormFields form={form} />;
+interface CertificationsFormProps {
+  // TODO: Implement
+}
+  resumeId: string;,
+  certifications: Certification[]
+  onComplete: () => void;,
+  onBack: () => void;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+import {use_form} from 'react - hook - form';
+import {Button} from '@/components / ui / button';
+import {Form} from '@/components / ui / form';
+import {Certification} from '@/types / resume';
+import {use_resume} from '@/hooks / use_resume';
+import {Alert, AlertDescription} from '@/components / ui / alert';
+import {zod_resolver} from '@hookform / resolvers / zod';
+import {format} from 'date - fns';
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
 
-            <div className="flex justify-between pt-2">;
 
+  const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
+
+<<<<<<< HEAD
   }
   return (
               <Button
@@ -1001,6 +1101,25 @@ if ( {) {
       {certifications.length > 0 && (
         <CertificationsList;
           certifications={certifications}
+=======
+
+            {error && <Alert variant="destructive"><AlertDescription>{error}}""
+            <div className="flex justify-between pt-2">;"
+              <Button;"
+                type="button"""
+                variant="outline""
+                onClick={() => {;
+
+              ;"
+              <div className="flex gap-2">;"
+                <Button type="submit" disabled={isLoading}>;"
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
+</Loader2>
+                <Button type="button" onClick={onComplete}>;"
+    <div className="space - y-6">;"
+        <h2 className="text - xl font - semibold mb - 2">Certifications & Licenses</h2>;""
+        <p className="text - muted - foreground">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           on_edit={handle_edit}
           on_delete={handle_delete}
 <<<<<<< HEAD
@@ -1044,19 +1163,14 @@ if ( {) {}
                 </Button>;"
 =======
         />)}
-      <div className="bg - muted / 40 p - 6 rounded - lg">;
-        <h3 className="text - md font - medium mb - 4">;
-          {editing_id ? 'Update Certification' : 'Add Certification'}
-        </h3>;
-        <Form {...form}>;
-          <form on_submit={form.handle_submit (handleAddOrUpdate)} className="space - y-4">;
-            <CertificationFormFields form={form} />;
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-            <div className="flex justify - between pt - 2">;
-              <Button;
-                type="button";
-                variant="outline";
+      <div className="bg - muted / 40 p - 6 rounded - lg">;"
+        <h3 className="text - md font - medium mb - 4">;"
+          <form on_submit={form.handle_submit (handleAddOrUpdate)} className="space - y-4">;"
+            <div className="flex justify - between pt - 2">;"
+                type="button";""
+                variant="outline";"
                 on_click={() => {
+<<<<<<< HEAD
                   // Check condition
 if ( {) {
   $2
@@ -1085,10 +1199,19 @@ if ( {) {
                 <Button type="button" on_click={on_complete}>;
 ;
       {certifications.length > 0 && (;
+=======
+
+              <div className="flex gap - 2">;"
+                <Button type="submit" disabled={is_loading}>;"
+                  {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}"
+                <Button type="button" on_click={on_complete}>;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <CertificationsList ;
           certifications={certifications} ;
           onEdit={handleEdit} ;
           onDelete={handleDelete} ;
+<<<<<<< HEAD
         />;
       )}
 <<<<<<< HEAD
@@ -1200,18 +1323,26 @@ form.reset ({}
 =======
     </div>;
   ),; return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Certifications & Licenses</h2> <p className="text-muted-foreground" > Add any professional certifications, licenses, or credentials you have earned. </p> </div> {
+=======
+          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;"
+
+
+          </form>;
+    </div>;"
+  ),; return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Certifications & Licenses</h2> <p className="text-muted-foreground" > Add any professional certifications, licenses, or credentials you have earned. </p> </div> {"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   certifications.length > 0 && (<CertificationsList certifications= {
-  certifications 
+  certifications;
 }onEdit= {
-  handleEdit 
+  handleEdit;
 }onDelete= {
-  handleDelete 
+  handleDelete;)
 }/>) 
-}<div className="flex justify-between pt-2" > <Button if (editingId) {
-  setEditingId (null);
-form.reset ({
-  
-}
+}<div className="flex justify-between pt-2" > <Button if (editingId) {"
+} Next  </div> </div> </form>  </div> </div>) "
+pr-12325
+</div>
+}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) "
 
 }> {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

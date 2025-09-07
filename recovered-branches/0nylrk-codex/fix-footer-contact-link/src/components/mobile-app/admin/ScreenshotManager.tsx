@@ -1,4 +1,12 @@
+import React, { useState, useRef } from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Upload, Trash2, Plus } from "lucide-react",
+import { AppPlatform } from "./MetadataManager";
+import { toast } from "sonner";
 
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,10 +114,13 @@ import { toast } from './sonner';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
 
+<<<<<<< HEAD
 type Screenshot = {
   id: string
   url: string
@@ -1101,3 +1112,7 @@ return filtered;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

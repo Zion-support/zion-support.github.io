@@ -1,3 +1,10 @@
+import * as React from "react"
+
+import * as React from "react"
+import {Slot} from "@radix-ui/react-slot"
+import {cva, type, VariantProps} from "class-variance-authority"
+
+import {cn} from "@/lib/utils"
 
 
 <<<<<<< HEAD
@@ -9,6 +16,7 @@ import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {cva, type, VariantProps} from "class-variance-authority"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -137,6 +145,9 @@ const buttonVariants = cva(;"
 }
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
@@ -148,6 +159,7 @@ const Button = React.forwardRef<HTMLButtonElement ButtonProps>(
       <Comp
 
 import * as React from "react";
+const Button = React.forwardRef<HTMLButtonElement ButtonProps>(import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
@@ -291,9 +303,15 @@ const buttonVariants = cva(;"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
+        outline:;
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         secondary:;
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",;
         ghost: "hover:bg-accent hover:text-accent-foreground",;
@@ -375,9 +393,64 @@ const button_variants = cva ("
       size: "default"}}
 );
 export interface ButtonProps;
+
+
+</HTMLButtonElement>
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>;
+</HTMLButtonElement>
+
+
+
+    VariantProps<typeof buttonVariants> {
+</typeof>
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+
+const Button = React.forwardRef<HTMLButtonElement ButtonProps>(
+
+      <Comp;"
+import * as React from "react";""
+import { Slot } from "@radix-ui/react-slot";""
+import { cva, type VariantProps } from "class-variance-authority";""
+import { cn } from "@/lib/utils";"
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",;"
+        destructive:;"
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90",;"
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",;"
+        secondary:;"
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80",;""
+        ghost: "hover:bg-accent hover:text-accent-foreground",;""
+        link: "text-primary underline-offset-4 hover:underline"},;"
+      size: {;,"
+  default: "h-10 px-4 py-2",;""
+        sm: "h-9 rounded-md px-3",;""
+        lg: "h-11 rounded-md px-8",;""
+        icon: "h-10 w-10"}},;"
+    defaultVariants: {;,"
+  variant: "default",;""
+);
+
+      size: "default"}}")
+
+);
+export interface ButtonProps;
+
+  extends React && React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+    VariantProps<typeof buttonVariants> {;
+const Button = React && React.forwardRef<HTMLButtonElement, ButtonProps>(;
+
+pr-12325
+</HTMLButtonElement>
+
   extends React.ButtonHTMLAttributes < HTMLButtonElement>;
     VariantProps < typeof button_variants> {}
+<<<<<<< HEAD
   as_child?: boolean;
+=======
+  as_child?: boolean;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
   ({ class_name, variant, size, as_child = false, ...props }, ref) => {"
@@ -393,20 +466,28 @@ const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+const Button = React.forward_ref < HTMLButtonElement, ButtonProps>()
+  ({ class_name, variant, size, as_child = false, ...props }, ref) => {"
+    const Comp = as_child ? Slot : "button";"
     return (
-      <Comp;
+      <Comp;)
         className={cn (button_variants ({ variant, size, class_name }))}
     return (;
       <Comp;
-
+pr-12325
+)
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
+=======
+extends React.ButtonHTMLAttributes<HTMLButtonElement>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     VariantProps<typeof buttonVariants> {;
   asChild?: boolean;
 }
@@ -416,6 +497,7 @@ const Button = React.forwardRef<HTMLButtonElement ButtonProps>(;
     const Comp = asChild ? Slot : "button";
     return (;
       <Comp;
+<<<<<<< HEAD
 =======
     return (
       <Comp;
@@ -431,6 +513,12 @@ const Button = React.forwardRef<HTMLButtonElement ButtonProps>(;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    return (
+      <Comp;
+        className={cn (button_variants ({ variant, size, class_name }))}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
@@ -494,6 +582,7 @@ export { Button, button_variants }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
@@ -531,6 +620,8 @@ const buttonVariants = cva(;"
       variant:"default",;"
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -563,12 +654,13 @@ const buttonVariants = cva(;
 );
 ;
 export interface ButtonProps;
+
+
+</Comp>
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,;
-    VariantProps<typeof buttonVariants> {;
-  asChild?:boolean;
-}
-;
+
 const Button = React.forwardRef<HTMLButtonElement ButtonProps>(;
+<<<<<<< HEAD
 <<<<<<< HEAD
   ({ className, variant, size, asChild = false, ...props }, ref) => {;"
 =======
@@ -668,21 +760,23 @@ defaultVariants: {
   variant: "default";
 size: "default" 
 }
+=======
+
+      />;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }VariantProps<typeof buttonVariants> {
-  asChild?: boolean 
 }return (<Comp className= {
   cn (buttonVariants ({
-  variant, size, className 
+  variant, size, className;)
 }) ) 
 }ref= {
-  ref 
+  ref;
 }{
-  ...props 
+  ...props;
 }/>) 
-}) Button.displayName = "Button" export {
-  Button, buttonVariants 
-}
-export { Button, buttonVariants }
+pr-12325
+</Comp>"
 
 export { Button, buttonVariants };
 ;

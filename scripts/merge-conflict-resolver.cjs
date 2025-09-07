@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process")"console.log(" Merge Conflict Resolver")"console.log("=====")class MergeConflictResolver { constructor() { this.resolvedFiles = [] this.errors = [] } async resolveConflicts() { try { / Get list of files with conflicts" const conflictFiles = execSync("git diff --name-only --diff-filter=U", {" encoding: "utf8"" }).trim().split("\n").filter(f => f) console.log(`Found ${conflictFiles.length} files with conflicts`) for (const file of conflictFiles) { if (file) { await this.resolveFileConflicts(file) } }` console.log(`\n Resolved conflicts in ${this.resolvedFiles.length} files`)` console.log(` Errors in ${this.errors.length} files`) if (this.errors.length > 0) {"" console.log("\nErrors: ")` this.errors.forEach(error => console.log(` - ${error}`)) } } catch (error) {"" console.error("Error resolving conflicts: ", error.message) } } async resolveFileConflicts(filePath) { try {" const content = fs.readFileSync(filePath, "utf8") let resolvedContent = content" / Strategy: Keep our changes (HEAD) for most conflicts / Remove conflict markers and keep the HEAD version resolvedContent = resolvedContent.replace('"`'"`
 #!/usr/bin/env node
@@ -93,7 +94,10 @@ console.log('🎉 Merge conflict resolver completed!');
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node;
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -160,6 +164,7 @@ resolver.resolveConflicts().then(() => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // console.log(' Merge Conflict Resolver')
+<<<<<<< HEAD
 console.log('=====')
       const conflictFiles = execSync('git diff --name-only --diff-filter=U')
         "encoding"
@@ -169,6 +174,10 @@ console.log('=====')
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+
+  console.log('Run "git add ." and "git commit")"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,6 +214,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -224,3 +234,6 @@ main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

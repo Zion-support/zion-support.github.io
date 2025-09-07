@@ -6,6 +6,7 @@
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button";"
@@ -61,6 +62,9 @@ import { useState, useEffect } from "react","
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { X } from "lucide-react",
 export function FloatingCTA() {}
+=======
+export function FloatingCTA() {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
@@ -68,6 +72,7 @@ export function FloatingCTA() {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   useEffect(() => {
 
@@ -356,6 +361,16 @@ export function FloatingCTA() {;
   if (!isVisible) return null,;
 ;
   return (;
+=======
+import { Button } from "@/components/ui/button";""
+import { Link } from "react-router-dom";""
+import { useState, useEffect } from "react";""
+import { X } from "lucide-react";"
+export function FloatingCTA() {
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [isClosed, setIsClosed] = useState(false);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
@@ -378,6 +393,21 @@ export function FloatingCTA() {;
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close">;
+<p className="text-zion-slate-light text-sm">Register today to access all features!</p>;
+        </div>;
+        <div className="flex items-center gap-2">;
+          <Button ;
+            variant="default" ;
+            size="sm" ;
+          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>;
+        </div>;
+        <div className="flex items-center gap-2">;
+          <Button;
+            variant="default";
+            size="sm";
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap";
+            asChild;
+          >;
             <Link to="/signup">Register Now</Link>;
           </Button>;
           <button;
@@ -393,6 +423,33 @@ export function FloatingCTA() {;
   );
 
 import { Button  } from '@/components / ui / button';
+
+    },
+    },
+
+)"
+    window.addEventListener("scroll", handleScroll),"
+    return () => {"
+      window.removeEventListener("scroll", handleScroll)"
+pr-12325
+
+    }
+  }, [isClosed]),
+  const handleClose = (
+    setIsClosed(true),
+    setIsVisible(false)) => {
+  return $3;}
+}
+  },
+  if (!isVisible) return null,
+  )
+import { Button } from "@/components/ui/button",;
+import { Link } from "react-router-dom",;
+import { useState, useEffect } from "react",;
+import { X } from "lucide-react",;          </button>;
+        </div>;
+      </div>;
+    </div>;import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
 import { useState, useEffect  } from './react';
 =======
@@ -488,18 +545,19 @@ if (return null) {}
 }
 <<<<<<< HEAD
   return (
-    <div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in">;
-      <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between">;
-        <div className="mr - 4">;
-          <p className="text - white font - medium">Ready to explore Zion?</p>;
-          <p className="text - zion - slate - light text - sm">;
+    <div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade-in">;
+      <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify-between">;
+        <div className="mr-4">;
+          <p className="text - white font-medium">Ready to explore Zion?</p>;
+          <p className="text - zion - slate - light text-sm">;
             Register today to access all features!;
           </p>;
         </div>;
-        <div className="flex items - center gap - 2">;
+        <div className="flex items - center gap-2">;
           <Button;
             variant="default";
             size="sm";
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace-nowrap";
 =======
@@ -521,6 +579,9 @@ if (return null) {}
 =======
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace-nowrap";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             as_child;
           >;"
             <Link to="/signup">Register Now</Link>;
@@ -528,9 +589,10 @@ if (return null) {}
           <button;
 <<<<<<< HEAD
             on_click={handle_close}
-            className="text - zion - slate hover: text - white p - 1";
+            className="text - zion - slate hover: text - white p-1";
             aria - label="Close";
           >;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <X className="w - 5 h-5" />;
 =======
@@ -543,6 +605,9 @@ if (return null) {}
 =======
             <X className="w - 5 h - 5" />;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            <X className="w - 5 h-5" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </button>;
         </div>;
       </div>;
@@ -584,6 +649,8 @@ const threshold = 600, //Show CTA after scrolling 600px if (scrollPosition > thr
 =======
 }
 ;
+}
+;
 
   ); export function FloatingCTA () {
   const [isVisible, setIsVisible] = useState (false);
@@ -609,6 +676,7 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -622,3 +690,75 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+  if (!isVisible) return null,
+
+
+
+  return ("
+    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">"
+</div>"
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">"
+        <div className="mr-4">"
+          <p className="text-white font-medium">Ready to explore Zion?</p>""
+          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>"
+        <div className="flex items-center gap-2">"
+</div>
+          <Button;"
+            variant="default"""
+            size="sm"""
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap""
+            asChild;
+          >
+            <Link to="/signup">Register Now"
+          <button;
+            onClick={handleClose}"
+            className="text-zion-slate hover: text-white p-1"""
+            aria-label="Close""
+</button>"
+            <X className="w-5 h-5" />"
+
+          </button>
+    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;"
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;"
+        <div className="mr-4">;"
+          <p className="text-white font-medium">Ready to explore Zion?</p>;""
+          <p className="text-zion-slate-light text-sm">;"
+</p>
+          </p>;
+        </div>;"
+        <div className="flex items-center gap-2">;"
+            asChild>;
+            <Link to="/signup">Register Now;"
+          ;
+            aria-label="Close">;"
+            className="text-zion-slate hover: text-white p-1";""
+            aria-label="Close";"
+          >;
+            <X className="w-5 h-5" />;"
+
+          </button>;
+        </div>;
+    <div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in">;"
+      <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between">;"
+        <div className="mr - 4">;"
+          <p className="text - white font - medium">Ready to explore Zion?</p>;""
+          <p className="text - zion - slate - light text - sm">;"
+        <div className="flex items - center gap - 2">;"
+            variant="default";""
+            size="sm";""
+            className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap";"
+            as_child;
+            on_click={handle_close}"
+            className="text - zion - slate hover: text - white p - 1";""
+            aria - label="Close";"
+            <X className="w - 5 h - 5" />;"
+
+      </div>;)
+    </div>);"
+return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link to="/signup" >Register Now  <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)""
+pr-12325
+return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link to="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)""
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

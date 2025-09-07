@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -11,6 +12,8 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
@@ -24,6 +27,7 @@ import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -90,6 +94,9 @@ export default function CloudServicesPage() {
 ursor/fix-syntax-push-and-merge-to-main-40de
 export default function CloudServicesPage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+export default function CloudServicesPage() {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const cloudServices = [;
     {}
       title: "Cloud Migration","
@@ -123,6 +130,7 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
+<<<<<<< HEAD
 
   return (
     <Layout
@@ -189,6 +197,61 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     >      <div className="min-h-screen bg-gray-50">
+=======
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+
+const cloudServices = [
+  {
+    title: "Cloud Migration",
+    description: "Seamless migration of your infrastructure to the cloud",
+    icon: Cloud,
+    features: ["Zero-downtime migration", "Cost optimization", "Performance improvement", "Scalability"],
+    pricing: "$5,000 - $25,000/project"
+  },
+  {
+    title: "Cloud Infrastructure",
+    description: "Design and implement scalable cloud infrastructure",
+    icon: Server,
+    features: ["Auto-scaling", "Load balancing", "High availability", "Disaster recovery"],
+    pricing: "$2,000 - $10,000/month"
+  },
+  {
+    title: "Database Services",
+    description: "Managed database services with high availability",
+    icon: Database,
+    features: ["Managed databases", "Backup & recovery", "Performance tuning", "Security"],
+    pricing: "$1,000 - $5,000/month"
+  },
+  {
+    title: "Cloud Security",
+    description: "Comprehensive security solutions for cloud environments",
+    icon: Shield,
+    features: ["Security audits", "Compliance", "Access control", "Monitoring"],
+    pricing: "$1,500 - $8,000/month"
+  },
+  {
+    title: "DevOps Automation",
+    description: "Automated deployment and infrastructure management",
+    icon: Zap,
+    features: ["CI/CD pipelines", "Infrastructure as code", "Monitoring", "Alerting"],
+    pricing: "$2,500 - $12,000/month"
+  }
+];
+
+export default function CloudServicesPage() {
+  return (
+    <>
+      <Head>
+        <title>Cloud Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive cloud services including migration, infrastructure, database management, and security solutions." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
@@ -196,7 +259,22 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              className="text-center""
+            >;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
+                Cloud Solutions;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
+                Transform your business with our comprehensive cloud solutions. 
+                From migration to optimization, we help you leverage the power of the cloud.,
+              </p>;
+            </motion.div>;
+          </div>;
+        </section>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -230,6 +308,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -266,6 +347,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 );
               })}
             </div>,
+<<<<<<< HEAD
           </div>;
         </section>;
 =======
@@ -765,37 +847,54 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 View Case Studies
 origin/cursor/automate-test-improve-and-merge-code-2533
               </button>
+=======
+          </div>;
+        </section>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
-          </motion.div>
-        </div>
-      </section>
-      <EnhancedFooter />
-    </div>
-);
+          </div>
+        </section>
 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
-origin/cursor/automate-test-improve-and-merge-code-2533
-}</div> </div> </section> <motion.div initial= {
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
-              Ready to Transform Your Infrastructure?;
-            </h2>;
-            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
-              Let's discuss how our cloud infrastructure solutions can modernize;
-              your business and drive digital transformation.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <button className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
-                Infrastructure Assessment;
-              </button>;
-              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                View Case Studies;
-              </button>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {cloudServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="space-y-2 mb-4">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-lg font-semibold text-blue-600 mb-4">{service.pricing}</div>
+                  <Link
+                    href="/contact"
+                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Get Quote
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
+<<<<<<< HEAD
       <EnhancedFooter />;
     </div>;
   ),;
@@ -821,3 +920,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Move to the Cloud?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our cloud services can transform your business infrastructure.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/it-services"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View IT Services
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

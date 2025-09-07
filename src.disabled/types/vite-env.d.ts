@@ -1,4 +1,5 @@
 import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'';,}
+<<<<<<< HEAD
 import React from'
   react' interface ImportMetaEnv { readonly "VITE_APP_TITLE": string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
 <<<<<<< HEAD
@@ -62,3 +63,25 @@ import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: stri
 
 import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React from
+
+
+
+import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
+import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
+import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
+import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
+
+
+  react' interface ImportMetaEnv { readonly "VITE_APP_TITLE": string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
+
+
+import React from react' interface ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string'',
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

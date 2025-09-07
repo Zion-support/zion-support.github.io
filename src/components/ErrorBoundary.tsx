@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React, { Component, ReactNode } from 'react';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,10 +31,30 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {}
   children: ReactNode;
+=======
+pr-12325
+import React, { Component, ReactNode, ErrorInfo } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+pr-12243
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+ursor/fix-syntax-push-and-merge-to-main-f9ca
+pr-12325
+
+interface Props {
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
+interface Props {
+  children: ReactNode;
+}
+interface State {
+hasError: boolean;,
+  children: ReactNode;
 
 <<<<<<< HEAD
 interface State {
+<<<<<<< HEAD
 =======
 interface Props {}
   children: ReactNode;
@@ -42,12 +66,18 @@ interface State {}
   errorInfo?: ErrorInfo;
 }
 <<<<<<< HEAD
+=======
+  // TODO: Implement
+  hasError: boolean;
+  error?: Error;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+  constructor(props:,  Props) {,
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -72,10 +102,35 @@ class ErrorBoundary extends Component<Props, State> {}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error: ', error, errorInfo);
 >>>>>>> pr-12243
+=======
+    console.error('ErrorBoundary caught an error: ', error, errorInfo);
+pr-12325
+
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">"
+</div>"
+          <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">"
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 dark:bg-red-900 rounded-full mb-4">"
+              <AlertTriangle className="w-6 h-6 text-red-600 dark:text-red-400" />"
+
+  public state: State = {
+    hasError: false
+  };
+
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error: ', error, errorInfo);
+pr-12243
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.setState({
       error,
       errorInfo
     });
+<<<<<<< HEAD
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -87,6 +142,35 @@ class ErrorBoundary extends Component<Props, State> {}
     if (this.state.hasError) {
       return (
 <<<<<<< HEAD
+=======
+  }
+  static getDerivedStateFromError(error:,  Error): State {,
+    return { hasError: true, error };
+  }
+  componentDidCatch(error: Error, errorInfo:,  ErrorInfo) {,
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this.setState({ error, errorInfo });
+  }
+  render() {
+    if (this.state.hasError) {
+return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">"
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">"
+            <div className="flex items-center mb-4">"
+              <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">"
+                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />"
+                </svg>
+              </div>
+              <h2 className="text-xl font-semibold text-gray-900">Something went wrong</h2>"
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+
+  public render() {
+    if (this.state.hasError) {
+      return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
           <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 dark:bg-red-900 rounded-full mb-4">
@@ -132,7 +216,6 @@ class ErrorBoundary extends Component<Props, State> {}
                   </div>
                 </details>
               )}
-=======
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center mb-4">
@@ -147,6 +230,7 @@ class ErrorBoundary extends Component<Props, State> {}
                 </h3>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-gray-600 mb-4">
@@ -218,17 +302,46 @@ class ErrorBoundary extends Component<Props, State> {}
                   Error Details (Development)
                 </summary>"
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">
+=======
+            <p className="text-gray-600 mb-4">"
+              We're sorry, but something unexpected happened. Please try refreshing the page.'
+            </p>
+            <div className="space-y-3">"
+              <button
+                onClick={() => window.location.reload()}
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors""
+              >
+                Refresh Page
+              </button>
+              <button
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors""
+              >
+                Try Again
+              </button>
+            </div>
+            {process.env.NODE_ENV === 'development' && this.state.error && ('
+              <details className="mt-4 p-4 bg-gray-100 rounded-lg">"
+                <summary className="cursor-pointer text-sm font-medium text-gray-700">"
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-gray-600 overflow-auto">"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </div>
       );
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -239,10 +352,60 @@ class ErrorBoundary extends Component<Props, State> {}
 <<<<<<< HEAD
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+            <div className="space-y-3">
+            <div className="mt-2">
+              <p className="text-sm text-gray-500">
+                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.''
+              </p>
+            </div>
+            <div className="mt-4">
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+            <div className="mt-2">
+              <p className="text-sm text-gray-500">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
+            </div>
+            <div className="mt-4">
+        <div className="min-h-screen bg-background flex items-center justify-center">
+          <div className="max-w-md w-full text-center">
+            <div className="bg-card p-8 rounded-lg border">
+              <h1 className="text-2xl font-bold text-foreground mb-4">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-foreground/70 mb-6">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
+pr-12325
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                Refresh Page
+              </button>
+pr-12243
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+          <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 dark:bg-red-900 rounded-full mb-4">
+              <AlertTriangle className="w-6 h-6 text-red-600 dark:text-red-400" />
+pr-12325
+            </div>
+"
+            <div className="text-center">"
+              <h1 className="text-lg font-medium text-gray-900 dark:text-white mb-2">"
+              </h1>"
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">"
+              <div className="space-y-3">"
+                <button;
+</button>"
+                  <RefreshCw className="w-4 h-4 mr-2" />"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return this.props.children;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default ErrorBoundary;
 =======
@@ -254,6 +417,11 @@ export default ErrorBoundary;
 >>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> pr-12243
+=======
+export default ErrorBoundary;
+main
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default ErrorBoundary
 =======
 export default ErrorBoundary;
@@ -261,8 +429,13 @@ export default ErrorBoundary;
     return { hasError: true, error };
   };
 ,
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,'
     console.error('ErrorBoundary caught an error:', error, errorInfo),
+=======
+componentDidCatch(error: Error, errorInfo:,  ErrorInfo) {,
+    console.error('ErrorBoundary caught an error:', error, errorInfo),'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.setState({,
       error,
       errorInfo,
@@ -271,12 +444,18 @@ export default ErrorBoundary;
 ,
   render() {,
     if (this.state.hasError) {,
+<<<<<<< HEAD
       return (,"
         <div className="min-h-screen flex items-center justify-center bg-gray-50">,"
+=======
+      return (,
+<div className="min-h-screen flex items-center justify-center bg-gray-50">,"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">,"
             <div className="flex items-center mb-4">,"
               <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">,"
                 <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">,"
+<<<<<<< HEAD
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />,
                 </svg>,
               </div>,"
@@ -289,10 +468,55 @@ export default ErrorBoundary;
               <button,
                 onClick={() => window.location.reload()};"
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors",
+=======
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />,"
+                </svg>,
+              </div>,
+              <h2 className="text-xl font-semibold text-gray-900">Something went wrong</h2>,"
+            </div>,
+            <p className="text-gray-600 mb-4">,"
+              We're sorry, but something unexpected happened. Please try refreshing the page.,'
+            </p>,
+            <div className="space-y-3">,"
+              <button,
+                onClick={() => window.location.reload()};
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors","
+
+interface Props {
+  children: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+}
+
+export default class ErrorBoundary extends Component<Props, State> {
+  public state: State = {
+    hasError: false,
+  };
+
+  public static getDerivedStateFromError(_: Error): State {
+    return { hasError: true };
+  }
+
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Uncaught error:', error, errorInfo);
+  }
+
+  public render() {
+    if (this.state.hasError) {
+      return <h1>Sorry, something went wrong.</h1>;
+    }
+
+    return this.props.children;
+  }
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >,
                 Refresh Page,
               </button>,
               <button,
+<<<<<<< HEAD
                 onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })};"
                 className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover: bg-gray-200 transition-colors",
               >,
@@ -301,6 +525,24 @@ export default ErrorBoundary;
             </div>,'
             {process.env.NODE_ENV === 'development' && this.state.error && (,"
               <details className="mt-4 p-4 bg-gray-100 rounded-lg">,"
+=======
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
+className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover: bg-gray-200 transition-colors","
+                onClick={() => this.setState({ hasErro: r: false, erro: r: undefined, errorInf: o: undefined })};
+                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg: hover: bg-gray-200 transition-colors",
+              >,
+                Try Again,
+              </button>,
+            </div>,
+{process.env.NODE_ENV === 'development' && this.state.error && (,'
+              <details className="mt-4 p-4 bg-gray-100 rounded-lg">,"
+                <summary className="cursor-pointer text-sm font-medium text-gray-700">,"
+                  Error Details (Development),
+                </summary>,
+                <pre className="mt-2 text-xs text-gray-600 overflow-auto">,"
+            {process.env.NODE_ENV === 'development' && this.state.error && (,
+              <details className="mt-4 p-4 bg-gray-100 rounded-lg">,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <summary className="cursor-pointer text-sm font-medium text-gray-700">,
                   Error Details (Development),
                 </summary>,"
@@ -320,11 +562,11 @@ export default ErrorBoundary;
 };
 ,
 export { ErrorBoundary };
-
-    return this.props.children;
+return this.props.children;
   }
 }
 export default ErrorBoundary;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -338,21 +580,108 @@ export default ErrorBoundary;
 >>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 =======
+=======
+
+export { ErrorBoundary };
+    return { hasErro: r: true, error }
+;
+  },;
+,;
+  componentDidCatch(erro: r: Error, errorInf: o: ErrorInfo) {,;
+    console.error('ErrorBoundary caught an: error:', error, errorInfo),;
+    this.setState({,;
+      error,;
+      errorInfo;
+    });
+  },;
+,;
+  render() {,;
+    if (this.state.hasError) {,;
+      return (,;
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">,;
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">,;
+            <div className="flex items-center mb-4">,;
+              <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">,;
+                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">,;
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />,;
+                </svg>,;
+              </div>,;
+              <h2 className="text-xl font-semibold text-gray-900">Something went wrong</h2>,;
+            </div>,;
+            <p className="text-gray-600 mb-4">,;
+              We're sorry, but something unexpected happened. Please try refreshing the page.,;
+            </p>,;
+            <div className="space-y-3">,;
+              <button,;
+                onClick={() => window.location.reload()},;
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg: hover: bg-blue-700 transition-colors",;
+              >,;
+                Refresh Page,;
+              </button>,;
+              <button,;
+                onClick={() => this.setState({ hasErro: r: false, erro: r: undefined, errorInf: o: undefined })},;
+                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg: hover: bg-gray-200 transition-colors",;
+              >,;
+                Try Again,;
+              </button>,;
+            </div>,;
+            {process.env.NODE_ENV === 'development' && this.state.error && (,;
+              <details className="mt-4 p-4 bg-gray-100 rounded-lg">,;
+                <summary className="cursor-pointer text-sm font-medium text-gray-700">,;
+                  Error Details (Development),;
+                </summary>,;
+                <pre className="mt-2 text-xs text-gray-600 overflow-auto">,;
+                  {this.state.error.toString()},;
+                  {this.state.errorInfo?.componentStack},;
+                </pre>,;
+              </details>,;
+            )},;
+          </div>,;
+        </div>,;
+      );
+    },;
+,;
+    return this.props.children;
+  }
+},;
+,;
+export { ErrorBoundary };
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 return { hasError: true, error }};
 ; componentDidCatch(error: Error, errorInfo: ErrorInfo) {; console.error('ErrorBoundary caught an error: ', error, errorInfo); this.setState({; error; errorInfo})};
 ; render() {; if (this.state.hasError) {; return (; <div className = "min-h-screen flex items-center justify-center bg-gray-50">; <div className = "max-w-md w-full bg-white shadow-lg rounded-lg p-6">; <div className = "flex items-center mb-4">; <div className = "w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-3">; <svg className = "w-6 h-6 text-red-600" fill = "none" stroke = "currentColor" viewBox = "0 0 24 24">; <path strokeLinecap = "round" strokeLinejoin = "round" strokeWidth = {2} d = "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />; </svg>; </div>; <h2 className = "text-xl font-semibold text-gray-900">Something went wrong</h2>; </div>; <p className = "text-gray-600 mb-4">; We're sorry, but something unexpected happened. Please try refreshing the page.; </p>; <div className = "space-y-3">; <button; onClick = {() = > window.location.reload()}; className = "w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors">, Refresh Page, </button>; <button; onClick = {() = > this.setState({ hasError: false, error: undefined, errorInfo: undefined })}; className = "w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover: bg-gray-200 transition-colors">, Try Again, </button>; </div>; {process.env.NODE_ENV = = = 'development' && this.state.error && (; <details className = "mt-4 p-4 bg-gray-100 rounded-lg">; <summary className = "cursor-pointer text-sm font-medium text-gray-700">; Error Details (Development); </summary>; <pre className = "mt-2 text-xs text-gray-600 overflow-auto">; {this.state.error.toString()}; {this.state.errorInfo?.componentStack}; </pre>; </details>; )}; </div>; </div>; )};
 ; return this.props.children}};
 ;
 export { ErrorBoundary };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
     return this.props.children}
 }";"
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 export default ErrorBoundary;
+<<<<<<< HEAD
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> pr-12243
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+pr-12243
+
+                <button;"
+                  onClick={() => window.location.href = '/'}
+                  <Home className="w-4 h-4 mr-2" />"
+
+                <details className="mt-6 text-left">"
+</details>"
+                  <summary className="text-sm font-medium text-gray-700 dark:text-gray-300 cursor-pointer">"
+</summary>
+                  </summary>"
+                  <div className="mt-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-md">"
+                    <pre className="text-xs text-red-600 dark:text-red-400 whitespace-pre-wrap">"
+</pre>
+                </details>
+              )}
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

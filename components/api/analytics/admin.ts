@@ -1,8 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { createServerClient } from '../../../utils/supabase/server';
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = null;
+<<<<<<< HEAD
   try {
     const supabase = createServerClient();
     // Replace with your actual tables/queries
@@ -135,6 +138,9 @@ usersData.forEach(u => {
         (geoCounts[u.country || 'Unknown'] || 0) + 1;
     });
     res.status(200).json({
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       totals: {
         totalUsers,
         totalTalents,
@@ -142,8 +148,8 @@ usersData.forEach(u => {
         jobsPosted,
         jobsFilled,
         quotesSent,
-        quotesAccepted,
-        activeProjects,
+        quotesAccepted,}
+        activeProjects,}
       },
       topCategories: Object.entries(categoryCounts)
         .sort((a, b) => b[1] - a[1])
@@ -151,8 +157,8 @@ usersData.forEach(u => {
         .map(([label, value]) => ({ label, value })),
       referralConversions,
       geo: Object.entries(geoCounts).map(([country, value]) => ({
-        label: country,
-        value,
+        label: country,}
+        value,}
       })),
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -160,11 +166,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
+      geo: [{ label: 'US',}
+  value: 2,}
+}, { label: 'IN',}
+  value: 1,}
+}, { label: 'GB',}
+  value: 1 }]})
   }
+<<<<<<< HEAD
     });
   } catch (e: any) {}
     res.status (200).json ({}
       totals: {}
+=======
+   ,
+});
+  } catch (e: any) {
+    res.status (200).json ({
+      totals: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         total_users: 4,
         total_talents: 2,
         total_clients: 2,
@@ -181,18 +201,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       referral_conversions: 2,
 <<<<<<< HEAD
       geo: [;
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         totalUsers: 4,
         totalTalents: 2,
         totalClients: 2,
         jobsPosted: 1,
         jobsFilled: 2,
         quotesSent: 2,
-        quotesAccepted: 1,
-        activeProjects: 2,
+        quotesAccepted: 1,}
+        activeProjects: 2,}
       },
       topCategories: [
-        { label: 'AI/ML', value: 2 },
-        { label: 'Design', value: 1 },
+        { label: 'AI/ML',}
+  value: 2,}
+},
+        { label: 'Design',}
+  value: 1,}
+},
       ],
       referralConversions: 2,
       geo: [
@@ -212,8 +240,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+        { label: 'US',}
+  value: 2,}
+},
+        { label: 'IN',}
+  value: 1,}
+},
+        { label: 'GB',}
+  value: 1,}
+},
+      ],
+    });
+
+  }
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

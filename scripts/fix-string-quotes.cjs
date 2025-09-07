@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -29,3 +30,11 @@ const filesToFix = ['pages/api/docs.ts']
     "replacement"
     "replacement": '"$1${$2}$3"
     "replacement": '"$1\\\\\n  $2"
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

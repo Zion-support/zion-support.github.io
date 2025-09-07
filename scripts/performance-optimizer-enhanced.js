@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -22,6 +23,14 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node const fs = const path = class PerformanceOptimizer { constructor() { this.projectRoot = path.resolve(__dirname,"..")} async optimize() { await this.optimizeImages() await this.optimizeCode() await this.optimizeDependencies() } async optimizeImages() { async optimizeCode() { async optimizeDependencies() { } const optimizer = new PerformanceOptimizer() optimizer.optimize().catch(console.error)
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -46,6 +55,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
@@ -65,9 +75,23 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+#!/usr/bin/env node const fs = const path = class PerformanceOptimizer { constructor() { this.projectRoot = path.resolve(__dirname,"..")} async optimize() { await this.optimizeImages() await this.optimizeCode() await this.optimizeDependencies() } async optimizeImages() { async optimizeCode() { async optimizeDependencies() { } const optimizer = new PerformanceOptimizer() optimizer.optimize().catch(console.error)""
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node const fs = const path = class PerformanceOptimizer { constructor() { this.projectRoot = path.resolve(__dirname,".")} async optimize() { console.log(" Starting performance optimization.") await this.optimizeImages() await this.optimizeCode() await this.optimizeDependencies() console.log(" Performance optimization completed!")} async optimizeImages() { console.log(" Optimizing images.") async optimizeCode() { console.log(" Optimizing code.") async optimizeDependencies() { console.log(" Optimizing dependencies.") } const optimizer = new PerformanceOptimizer() optimizer.optimize().catch(console.error)""""
+#!/usr/bin/env node const fs = const path = class PerformanceOptimizer { constructor() { this.projectRoot = path.resolve(__dirname,"..")} async optimize() { _console.log("⚡ Starting performance optimization...") await this.optimizeImages() await this.optimizeCode() await this.optimizeDependencies() _console.log("✅ Performance optimization completed!")} async optimizeImages() { _console.log("🖼️ Optimizing images...") async optimizeCode() { _console.log("💻 Optimizing code...") async optimizeDependencies() { _console.log("📦 Optimizing dependencies...") } const optimizer = new PerformanceOptimizer() optimizer.optimize().catch(_console.error)""
+#!/usr/bin/env node const fs = const path = class PerformanceOptimizer { constructor() { this.projectRoot = path.resolve(__dirname,"..")} async optimize() { _console.log("⚡ Starting performance optimization...") await this.optimizeImages() await this.optimizeCode() await this.optimizeDependencies() _console.log("✅ Performance optimization completed!")} async optimizeImages() { _console.log("🖼️ Optimizing images...") async optimizeCode() { _console.log("💻 Optimizing code...") async optimizeDependencies() { _console.log("📦 Optimizing dependencies...") } const optimizer = new PerformanceOptimizer() optimizer.optimize().catch(_console.error)"
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

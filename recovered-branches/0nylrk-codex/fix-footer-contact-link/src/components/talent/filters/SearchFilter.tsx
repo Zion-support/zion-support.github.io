@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -43,12 +44,25 @@ import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Input } from "@/components/ui/input",
-import { SearchIcon } from "lucide-react",
-import { SearchFilterProps } from "@/types/filters",
+import { SearchIcon } from "lucide-react";
+import { SearchFilterProps } from "@/types/filters";
+
+
+import {Input} from "@/components/ui/input";
+import {SearchIcon} from "lucide-react";
+import {SearchFilterProps} from "@/types/filters";
+export function SearchFilter(): any ({ searchTerm, setSearchTerm }: SearchFilterProps) {;
+import { Input } from "@/components/ui/input",;
+import { SearchIcon } from "lucide-react",;
+import { SearchFilterProps } from "@/types/filters",;
 import { Input } from "@/components/ui/input";
 import { SearchIcon } from "lucide-react";
 import { SearchFilterProps } from "@/types/filters";
+
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,6 +71,9 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
+    <div className="mb-6">
+      <div className="relative">
+        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
     <div className="mb-6">;
       <div className="relative">;
 =======
@@ -125,6 +142,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -154,6 +172,8 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Input } from "@/components/ui/input",;
 import { SearchIcon } from "lucide-react",;
 import { SearchFilterProps } from "@/types/filters";
@@ -166,6 +186,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           type="text";
           placeholder="Search talents...";
           value={searchTerm}
+<<<<<<< HEAD
           onChange={(e) => setSearchTerm(e.target.value)}
 <<<<<<< HEAD
 =======
@@ -228,6 +249,8 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           onChange={(e) => setSearchTerm(e.target.value)}
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
         />
@@ -242,7 +265,15 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 }
 
 import { Input  } from '@/components / ui / input';
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
+        />;
+      </div>;
+    </div>;  );
+}import { Input  } from '@/components / ui / input';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { SearchIcon  } from './lucide-react';
 =======
 
@@ -256,14 +287,15 @@ export /**;
 <<<<<<< HEAD
 function SearchFilter() {
   return (
-    <div className="mb - 6">;
+    <div className="mb-6">;
       <div className="relative">;
-        <SearchIcon className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light" />;
+        <SearchIcon className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate-light" />;
         <Input;
           type="text";
           placeholder="Search talents...";
           value={search_term}
           on_change={(e) => setSearchTerm (e.target.value)}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className="pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate-light";
 =======
@@ -282,6 +314,9 @@ function SearchFilter() {}
 =======
           className="pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate - light";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          className="pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate-light";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         />;
       </div>;
     </div>);
@@ -295,10 +330,14 @@ function SearchFilter() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+<<<<<<< HEAD
   )
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   )
 
   ),;}
@@ -321,7 +360,42 @@ function SearchFilter() {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
-  )
+)
+import { Input } from "@/components/ui/input";""
+import { SearchIcon } from "lucide-react";""
+import { SearchFilterProps } from "@/types/filters";"
+export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {"
+import { Input } from "@/components/ui/input",""
+import { SearchIcon } from "lucide-react",""
+import { SearchFilterProps } from "@/types/filters",""
+export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+  return ("
+    <div className="mb-6">;"
+</div>"
+      <div className="relative">;"
+        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;"
+
+        <Input;"
+          type="text"""
+          placeholder="Search talents...""
+          value={searchTerm})
+          onChange={(e) => setSearchTerm(e.target.value)}
+
+      </div>
+    <div className="mb - 6">;"
+        <SearchIcon className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light" />;"
+
+          type="text";""
+          placeholder="Search talents...";"
+          value={search_term}
+          on_change={(e) => setSearchTerm (e.target.value)}
+
+      </div>;
+    </div>);"
+  return (<div className="mb-6" > <div className="relative" > <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" /> text"placeholder=" Search talents..." value= {"
+</div>)
+}/> </div> </div>) "
+pr-12325
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

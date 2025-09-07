@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> pr-12243
@@ -22,8 +23,22 @@ export const optimizeImages = () => {;
     if (!img.decoding) {"
       img.decoding = "async";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+// Performance optimization utilities
+export const optimizeImages = () => {;
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (!img.loading) {
+      img.loading = 'lazy';
     }
+    if (!img.decoding) {
+      img.decoding = 'async';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    }
+  });
+};
 
+<<<<<<< HEAD
 export const preloadCriticalResources = () => {';
   const criticalResources = ['/fonts/main && main.woff2/css/critical && critical.css'];
 '
@@ -34,12 +49,29 @@ export const preloadCriticalResources = () => {';
     document && document.head.appendChild(link);
 
 <<<<<<< HEAD
+=======
+
+export const preloadCriticalResources = null;
+    '/css/critical.css'
+  ];
+  
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    document.head.appendChild(link);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   });
 };
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
+const loadComponent = componentName => {    return import(`./components/${componentName}`);
+  };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   criticalResources.forEach((resource) => {"
@@ -129,3 +161,9 @@ link.rel = "preload";
   (link.as = resource.endsWith(".css") ? "style" : "font"));
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  return { loadComponent };
+};
+    link.rel = 'preload';
+    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

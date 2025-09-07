@@ -14,6 +14,7 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
@@ -99,10 +100,18 @@ main();
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    process.exit(1)}
+
+// Run the enhanced orchestrator;
+main();
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
 const os = require('os')
+<<<<<<< HEAD
 // console.log(' Enhanced Master Automation Orchestrator v2.0')
 console.log('======')
   "logLevel"
@@ -169,3 +178,6 @@ console.log('======')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

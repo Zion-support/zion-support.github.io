@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +92,8 @@ import { Check, Handshake, Search, Send } from "lucide-react",
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { GradientHeading } from './GradientHeading';
 =======
 ;
@@ -105,8 +108,17 @@ import { Check, Handshake, Search, Send } from "lucide-react",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const steps = [
+  {
+    title: "Post",
+    description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
+    icon: Send},
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from "lucide-react",
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -124,6 +136,7 @@ const steps = [
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
     icon: Send},
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -338,6 +351,11 @@ export function HowItWorksSection() { return null; }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             {steps.map((step, index) => (;
               <div;
+=======
+import {GradientHeading} from "./GradientHeading";
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${;"
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
@@ -349,6 +367,7 @@ export function HowItWorksSection() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -369,6 +388,8 @@ export function HowItWorksSection() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 } relative`}
               >"
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -383,7 +404,7 @@ export function HowItWorksSection() { return null; }
                     </div>
                   ) : null}
 
-            {steps && steps.map((step, index) => (;
+{steps && steps.map((step, index) => (;
               <div
                 key={step && step.title}
                 className={`flex flex-col md:flex-row items-center ${
@@ -399,7 +420,11 @@ export function HowItWorksSection() { return null; }
                   ) : null}
 
                 </div>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                    </div>                </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
 =======
@@ -434,11 +459,15 @@ export function HowItWorksSection() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
                   ) : null}
+=======
+) : null}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
         <div className="relative">;
           {/* Timeline line */}
@@ -490,12 +519,16 @@ export function HowItWorksSection() { return null; }
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </div>
       </div>
     </section>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -506,6 +539,8 @@ export function HowItWorksSection() { return null; }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -588,39 +623,107 @@ function HowItWorksSection() {}
     description: "Connect directly with matched providers and complete your transaction securely.",
     icon: Handshake},
   {
-    title: "Done",
-    description: "Enjoy hassle - free delivery and support for your technology solutions.",
-    icon: Check}],
-export /**
- * HowItWorksSection - Function description
- */
-function HowItWorksSection() {
+
+import { GradientHeading } from './GradientHeading';''
+import { Check, Handshake, Search, Send } from './lucide-react';'
+const steps = [;
+  {'
+    title: "Post",""
+    description: "Publish your service, job, or equipment in minutes with our AI - powered form.";"
+    icon: Send},
+"
+import { GradientHeading } from "./GradientHeading",""
+import { Check, Handshake, Search, Send } from "lucide-react","
+const steps = [
+  {"
+import {GradientHeading} from "./GradientHeading";""
+import {Check, Handshake, Search, Send} from "lucide-react";"
+    title: "Post"","
+  description: "Publish your service, job, or equipment in minutes with our AI-powered form.";"
+    icon: Send}"
+import {Check, Handshake, Search, Send} from "lucide-react";""
+import { Check, Handshake, Search, Send } from "lucide-react",""
+
+    title: "Match"","
+  description: "Our AI automatically matches your needs with the perfect providers or opportunities.""
+    icon: Search}
+
+
+  {;"
+    title: "Post",;""
+    description: "Publish your service, job, or equipment in minutes with our AI-powered form.",;"
+    icon: Send},;
+    title: "Match",;""
+    description: "Our AI automatically matches your needs with the perfect providers or opportunities.",;"
+    icon: Search},;
+    title: "Hire/Buy",;""
+    description: "Connect directly with matched providers and complete your transaction securely.",;"
+    icon: Handshake},;
+    title: "Done",;""
+    description: "Enjoy hassle-free delivery and support for your technology solutions.",;"]
+    icon: Check}],;
+
+
+export function HowItWorksSection() {;
   return (
-    <section className="py - 20 bg - zion - blue">;
-      <div className="container mx - auto px - 4">;
-        <div className="text - center mb - 16">;
-          <GradientHeading > How It Works</GradientHeading>;
-          <p className="text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto">;
-            A simple four - step process to connect technology providers with clients;
+import { GradientHeading } from "./GradientHeading",;""
+import { Check, Handshake, Search, Send } from "lucide-react",;"
+    icon: Check}];)
+  return (;
+    <section className="py-20 bg-zion-blue">;"
+</section>"
+      <div className="container mx-auto px-4">;"
+</div>"
+        <div className="text-center mb-16">;"
+</div>
+          <GradientHeading>How It Works;"
+          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;"
+</p>
           </p>;
-        </div>;
-        <div className="relative">;
-          {/* Timeline line */}
-          <div className="absolute left - 4 md:left - 1/2 top - 0 h - full w - 0.5 bg - gradient - to - b from - zion - purple via - zion - cyan to - zion - purple - light transform -translate - x-1 / 2 md:block hidden"></div>;
-          <div className="space - y-12 md:space - y-0">;
-            {steps.map ((step, index) => (
+        </div>;"
+        <div className="relative">;"
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0 && 0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;""
+          <div className="space-y-12 md:space-y-0">;"
               <div;
                 key={step.title}
-                className={`flex flex - col md:flex - row items - center ${
-                  index % 2 === 0 ? "md:flex - row - reverse" : "";
+                className={`flex flex-col md:flex-row items-center ${;"
+                  index % 2 === 0 ? "md:flex-row-reverse" : "";"`;
                 } relative`}
-              >;
-                <div className="md:w - 1/2 mb - 6 md:mb - 0 md:px - 12 text - center md:text - right">;
-                  {index % 2 === 0 ? (
+              >
+                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">"
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>""
+                      <p className="text-zion-slate-light">{step.description}</p>"
+                key={step && step.title}`;
+                className={`flex flex-col md:flex-row items-center ${"
+                  index % 2 === 0 ? "md:flex-row-reverse" : """`;
+                } relative`}>;
+                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">;"
                     <div>;
-                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
-                      <p className="text - zion - slate - light">{step.description}</p>;
+                      <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;""
+                      <p className="text-zion-slate-light">{step && step.description}</p>;"
+                    </div>;
+                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;"
+                  <step && step.icon className="w-6 h-6 text-zion-cyan" />;"
+</step>
+                <div className="md:w-1/2 md:px-12 text-center md:text-left">;"
+    </section>;"
+    <section className="py - 20 bg - zion - blue">;"
+      <div className="container mx - auto px - 4">;"
+        <div className="text - center mb - 16">;"
+          <GradientHeading > How It Works;"
+          <p className="text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto">;"
+          <div className="absolute left - 4 md:left - 1/2 top - 0 h - full w - 0.5 bg - gradient - to - b from - zion - purple via - zion - cyan to - zion - purple - light transform -translate - x-1 / 2 md:block hidden"></div>;""
+          <div className="space - y-12 md:space - y-0">;"
+                key={step.title}`;
+                className={`flex flex - col md:flex - row items - center ${"
+                  index % 2 === 0 ? "md:flex - row - reverse" : "";"`;
+              >;
+                <div className="md:w - 1/2 mb - 6 md:mb - 0 md:px - 12 text - center md:text - right">;"
+                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;""
+                      <p className="text - zion - slate - light">{step.description}</p>;")
                     </div>) : null}
+<<<<<<< HEAD
                 </div>;
                 <div className="relative z - 10 flex items - center justify - center w - 12 h - 12 rounded - full bg - zion - blue - light border - 2 border - zion - purple mx - 4 md:mx - 0">;
                   <step.icon className="w - 6 h - 6 text - zion - cyan" />;
@@ -633,6 +736,12 @@ function HowItWorksSection() {
                       <p className="text - zion - slate - light">{step.description}</p>;
                     </div>) : null}
                 </div>;
+=======
+                <div className="relative z - 10 flex items - center justify - center w - 12 h - 12 rounded - full bg - zion - blue - light border - 2 border - zion - purple mx - 4 md:mx - 0">;"
+                  <step.icon className="w - 6 h - 6 text - zion - cyan" />;"
+                <div className="md:w - 1/2 md:px - 12 text - center md:text - left">;"
+                      <p className="text - zion - slate - light">{step.description}</p>;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>))}
           </div>;
         </div>;
@@ -647,11 +756,14 @@ function HowItWorksSection() {
 };
 ;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 ;
 
@@ -695,6 +807,7 @@ icon: Handshake
 };
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -711,3 +824,20 @@ icon: Handshake
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </section>);"
+  return (<section className="py-20 bg-zion-blue" > <div className="container mx-auto px-4" > <div className="text-center mb-16" > text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto"> A simple four-step process to connect technology providers with clients </p> </div> <div className=" relative"> {"
+}<div className=" absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div> > <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right"> {""
+  index % 2 === 0 ? (<div> <h3 className="text-2xl font-bold text-white mb-3"> {"
+}</h3> <p className="text-zion-slate-light"> {"
+</p>)
+}</p> </div>) : null;"
+}</div> <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0"> <step.icon className="w-6 h-6 text-zion-cyan"/> </div> <div className="md:w-1/2 md:px-12 text-center md:text-left"> {""
+  index % 2 !== 0 ? (<div> <h3 className="text-2xl font-bold text-white mb-3"> {"
+}</p> </div>) : null;
+}</div> </div>) ) 
+}</div> </div> </div> </section>) "`;
+pr-12325
+}</div> </div> </div> </section>) "
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,10 @@
 
 =======
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 #!/usr/bin/env node,;
 const fs = require('fs'),;
@@ -76,6 +81,7 @@ class SEOAccessibility {,;
     };
 ;#!/usr/bin/env node;
 #!/usr/bin/env node;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -89,10 +95,20 @@ const path = require('path');
 const fs = require('fs');'
 const path = require('path');'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+
+const fs = require('fs');
+const path = require('path');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process');
 ;
 class SEOAccessibility {;
   constructor() {;
+<<<<<<< HEAD
     this.projectRoot = process.cwd();'
     this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log');'
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json');
@@ -132,10 +148,22 @@ class SEOAccessibility {; constructor() {; this.projectRoot = process.cwd(); thi
 #!/usr/bin/env node,;'
 const fs = require('fs'),;'
 const path = require('path'),;'
+=======
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log');
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json');
+    this.startTime = Date.now();
+};
+#!/usr/bin/env node;
+#!/usr/bin/env node,;
+const fs = require('fs'),;
+const path = require('path'),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process'),;
 ,;
 class SEOAccessibility {,;
   constructor() {,;
+<<<<<<< HEAD
     this.projectRoot = process.cwd(),;'
     this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'),;'
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'),;
@@ -164,10 +192,32 @@ class SEOAccessibility {,;
         const pageFiles = this.getPageFiles(pagesDir),;
 ,;
         pageFiles.forEach(file => {,;'
+=======
+    this.projectRoot = process.cwd(),;
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'),;
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'),;
+  },;
+  log(message) {,;
+    const timestamp = new Date().toISOString(),;
+    const logMessage = `[${timestamp}] ${message}\n`,;
+    try {,;
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {,;
+      console.error('Error writing to log: file:', error.message);
+    }
+  async checkSEO() {,;
+      this.log('🔍 Checking SEO...'),;
+      const seoIssues = [],;
+      const pagesDir = path.join(this.projectRoot, 'pages'),;
+      if (fs.existsSync(pagesDir)) {,;
+        const pageFiles = this.getPageFiles(pagesDir),;
+        pageFiles.forEach(file => {,;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           const content = fs.readFileSync(file, 'utf8'),;
           const seoChecks = this.analyzeSEO(file, content),;
           seoIssues.push(...seoChecks);
         });
+<<<<<<< HEAD
       }
     }
   },;
@@ -186,10 +236,24 @@ class SEOAccessibility {,;
         } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {,;
           files.push(fullPath);
         }
+=======
+  getPageFiles(dir) {,;
+    const files = [],;
+    const scanDirectory = (currentDir) => {,;
+      const items = fs.readdirSync(currentDir),;
+      items.forEach(item => {,;)
+        const fullPath = path.join(currentDir, item),;
+        const stat = fs.statSync(fullPath),;
+        if (stat.isDirectory()) {,;
+          scanDirectory(fullPath);
+        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {,;
+          files.push(fullPath);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       })
     },
 
 ursor/fix-lint-push-and-merge-to-main-28da;
+<<<<<<< HEAD
       });
     },;
 ursor/automate-test-improve-and-merge-code-4094;
@@ -205,10 +269,21 @@ ursor/add-new-services-and-deploy-updates-0462;
 const fs = require('fs'),'
 const path = require('path'),'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+ursor/automate-test-improve-and-merge-code-4094;
+module.exports = SEOAccessibilityScanner;
+ursor/add-new-services-and-deploy-updates-0462
+
+ursor/add-new-services-and-deploy-updates-0462;
+#!/usr/bin/env node,
+const fs = require('fs'),
+const path = require('path'),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process'),
 ,
 class SEOAccessibility {,
   constructor() {,
+<<<<<<< HEAD
     this.projectRoot = process.cwd(),'
     this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'),'
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'),
@@ -256,11 +331,44 @@ class SEOAccessibility {,
 ,
         if (stat.isDirectory()) {,
           scanDirectory(fullPath)'
+=======
+    this.projectRoot = process.cwd(),
+    this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'),
+    this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'),
+    this.startTime = Date.now()
+  log(message) {,
+    const timestamp = new Date().toISOString(),`;
+    const logMessage = `[${timestamp}] ${message}\n`,
+    try {,
+      fs.appendFileSync(this.logFile, logMessage)
+    } catch (error) {,
+      console.error('Error writing to log file:', error.message)
+  async checkSEO() {,
+      this.log('🔍 Checking SEO...'),
+      const seoIssues = [],
+      const pagesDir = path.join(this.projectRoot, 'pages'),
+      if (fs.existsSync(pagesDir)) {,
+        const pageFiles = this.getPageFiles(pagesDir),
+        pageFiles.forEach(file => {,)
+          const content = fs.readFileSync(file, 'utf8'),
+          const seoChecks = this.analyzeSEO(file, content),
+          seoIssues.push(...seoChecks)
+  getPageFiles(dir) {,
+    const files = [],
+    const scanDirectory = (currentDir) => {,
+      const items = fs.readdirSync(currentDir),
+      items.forEach(item => {,)
+        const fullPath = path.join(currentDir, item),
+        const stat = fs.statSync(fullPath),
+        if (stat.isDirectory()) {,
+          scanDirectory(fullPath)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {,
           files.push(fullPath)
         };
       })
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -304,10 +412,25 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkSEO() {try {; this.log('🔍 Checking SEO...'); const seoIssues = []; const pagesDir = path.join(this.projectRoot, 'pages'); if (fs.existsSync(pagesDir)) {; const pageFiles = this.getPageFiles(pagesDir); pageFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const seoChecks = this.analyzeSEO(file, content); seoIssues.push(...seoChecks)})}}}; getPageFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}
+
+class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkSEO() {try {; this.log('🔍 Checking SEO...'); const seoIssues = []; const pagesDir = path.join(this.projectRoot, 'pages'); if (fs.existsSync(pagesDir)) {; const pageFiles = this.getPageFiles(pagesDir); pageFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const seoChecks = this.analyzeSEO(file, content); seoIssues.push(...seoChecks)})}}}; getPageFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}
+
+      });
+    },;
+
+      });
+    },;
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 =======
 
 #!/usr/bin/env node;'
@@ -330,10 +453,15 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkSEO() {try {; this.log('🔍 Checking SEO...'); const seoIssues = []; const pagesDir = path.join(this.projectRoot, 'pages'); if (fs.existsSync(pagesDir)) {; const pageFiles = this.getPageFiles(pagesDir); pageFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const seoChecks = this.analyzeSEO(file, content); seoIssues.push(...seoChecks)})}}}; getPageFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 }
       });
     },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -372,22 +500,70 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
   async checkSEO() {}'
     this.log('Checking SEO metrics...');',
     try {}
+=======
+class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkSEO() {try {; this.log('🔍 Checking SEO...'); const seoIssues = []; const pagesDir = path.join(this.projectRoot, 'pages'); if (fs.existsSync(pagesDir)) {; const pageFiles = this.getPageFiles(pagesDir); pageFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const seoChecks = this.analyzeSEO(file, content); seoIssues.push(...seoChecks)})}}}; getPageFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}
+      });
+    },;
+
+}
+}
+      });
+`;
+class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkSEO() {try {; this.log('🔍 Checking SEO...'); const seoIssues = []; const pagesDir = path.join(this.projectRoot, 'pages'); if (fs.existsSync(pagesDir)) {; const pageFiles = this.getPageFiles(pagesDir); pageFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const seoChecks = this.analyzeSEO(file, content); seoIssues.push(...seoChecks)})}}}; getPageFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}`;
+class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkSEO() {try {; this.log('🔍 Checking SEO...'); const seoIssues = []; const pagesDir = path.join(this.projectRoot, 'pages'); if (fs.existsSync(pagesDir)) {; const pageFiles = this.getPageFiles(pagesDir); pageFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const seoChecks = this.analyzeSEO(file, content); seoIssues.push(...seoChecks)})}}}; getPageFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}
+
+
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+const { execSync } = require('child_process');`;
+    },;`;
+
+
+
+
+
+    
+    try {}
+      fs.appendFileSync(this.logFile, logMessage);,
+    } catch (error) {}
+      _console.error('Failed to write to log file:', error.message);',
+  error(message) {}
+    this.log(message, 'ERROR');',
+    try {}`;
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);,
+    } catch (err) {}
+      _console.error('Failed to write to error file:', err.message);',
+  async checkSEO() {}
+    this.log('Checking SEO metrics...');',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const seoIssues = [];,
       const seoScore = { total: 0, passed: 0, failed: 0 };,
       // Check for meta tags in HTML files;
       const htmlFiles = this.findHtmlFiles();
+<<<<<<< HEAD
       for (const file of, htmlFiles) {}'
         const content = fs.readFileSync(file, 'utf8');',
         const fileIssues = this.analyzeSEOContent(content, file);,
         seoIssues.push(...fileIssues);,
       }
       // Check for sitemap;'
+=======
+      for (const file of, htmlFiles) {}
+        const content = fs.readFileSync(file, 'utf8');',
+        const fileIssues = this.analyzeSEOContent(content, file);,
+        seoIssues.push(...fileIssues);,
+      // Check for sitemap;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const sitemapFiles = ['sitemap.xml', 'sitemap.txt', 'public/sitemap.xml'];',
       let sitemapExists = false;,
       for (const sitemap of, sitemapFiles) {}
         if (fs.existsSync(sitemap)) {}
           sitemapExists = true;,
           break;,
+<<<<<<< HEAD
         }
       }
       if (!sitemapExists) {}
@@ -407,17 +583,36 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
           file: 'global'';,
         });,
       }
+=======
+      if (!sitemapExists) {}
+        seoIssues.push({}),
+          type: 'missing_sitemap,',
+          severity: 'medium,',
+          message: 'No sitemap found,',
+          file: 'global;,
+        });,
+      // Check for robots.txt;
+      if (!fs.existsSync('robots.txt') && !fs.existsSync('public/robots.txt')) {'}
+          type: 'missing_robots,',
+          severity: 'low,',
+          message: 'No robots.txt found,',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Calculate SEO score;
       const totalChecks = 10; // Adjust based on actual checks;
       const passedChecks = totalChecks - seoIssues.length;
       seoScore.total = totalChecks;
       seoScore.passed = passedChecks;
+<<<<<<< HEAD
       seoScore.failed = seoIssues.length;`
+=======
+      seoScore.failed = seoIssues.length;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`SEO check completed: ${passedChecks}/${totalChecks} checks passed`);,
       return {}
         success: true,
         issues: seoIssues,
         score: seoScore,
+<<<<<<< HEAD
         sitemapExists,'
         robotsExists: fs.existsSync('robots.txt') || fs.existsSync('public/robots.txt'),
       };,
@@ -598,6 +793,45 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
         issues.push({}),'
           type: 'color_contrast,','
           severity: 'medium,','
+=======
+        sitemapExists,
+        robotsExists: fs.existsSync('robots.txt') || fs.existsSync('public/robots.txt'),
+      };,
+    } catch (error) {}`;
+      this.error(`SEO check failed: ${error.message}`);,
+      return { success: false, error: error.message };,
+  analyzeSEOContent(content, filePath) {}
+    const issues = [];,
+    // Check for title tag;
+    if (!content.includes('<title>') && !content.includes('<title ')) {'}
+</title>
+    const imgTags = content.match(/<img[^>]*>/g) || [];,
+</img>
+    const h1Count = (content.match(/<h1[^>]*>/g) || []).length;,
+</h1>
+    if (!content.includes('lang=') && !content.includes('<html lang=')) {'}
+      issues.push({}),
+        type: 'missing_lang,',
+        severity: 'high,',
+        message: 'Missing lang attribute on html tag,',
+        file: filePath;,
+    // Check for proper heading hierarchy;
+    const headings = content.match(/<h[1-6][^>]*>/g) || [];,
+</html>
+      const level = parseInt(heading.match(/<h([1-6])/)[1]);,
+      if (level > previousLevel + 1) {}
+</h>
+    const inputTags = content.match(/<input[^>]*>/g) || [];,
+</input>`;
+          if (!inputId || !content.includes(`<label for="${inputId[1]}">`)) {"}"
+</label>
+    const styleTags = content.match(/<style[^>]*>[\s\S]*?<\/style>/g) || [];,
+    for (const styleTag of, styleTags) {}
+      if (styleTag.includes('color:') && !styleTag.includes('background-color:')) {'}
+        issues.push({}),
+          type: 'color_contrast,',
+          severity: 'medium,',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           message: 'Potential color contrast issue,',
           file: filePath;,
         });,
@@ -605,19 +839,31 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
     }
     return issues;
   }
+<<<<<<< HEAD
   async checkPerformance() {}'
+=======
+  async checkPerformance() {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log('Checking performance metrics...');',
     try {}
       const perfIssues = [];,
       const perfScore = { total: 0, passed: 0, failed: 0 };,
       // Check for performance optimizations;
       const jsFiles = this.findJsFiles();
+<<<<<<< HEAD
       for (const file of, jsFiles) {}'
+=======
+      for (const file of, jsFiles) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const content = fs.readFileSync(file, 'utf8');',
         const fileIssues = this.analyzePerformanceContent(content, file);,
         perfIssues.push(...fileIssues);,
       }
+<<<<<<< HEAD
       // Check for build optimization;'
+=======
+      // Check for build optimization;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const buildDirs = ['dist', 'build', 'out', '.next'];',
       let buildExists = false;,
       let buildSize = 0;
@@ -629,10 +875,17 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
         }
       }
       if (buildExists && buildSize > 10 * 1024 * 1024) { // 10MB}
+<<<<<<< HEAD
         perfIssues.push({}),'
           type: 'large_build_size,','
           severity: 'medium,',`
           message: `Build size is ${(buildSize / 1024 / 1024).toFixed(2)}MB`,'
+=======
+        perfIssues.push({}),
+          type: 'large_build_size,',
+          severity: 'medium,',
+          message: `Build size is ${(buildSize / 1024 / 1024).toFixed(2)}MB`,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           file: 'global',
         });,
       }
@@ -641,7 +894,11 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
       const passedChecks = totalChecks - perfIssues.length;
       perfScore.total = totalChecks;
       perfScore.passed = passedChecks;
+<<<<<<< HEAD
       perfScore.failed = perfIssues.length;`
+=======
+      perfScore.failed = perfIssues.length;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`Performance check completed: ${passedChecks}/${totalChecks} checks passed`);,
       return {}
         success: true,
@@ -650,40 +907,69 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
         buildSize: buildSize,
         buildExists: buildExists,
       };,
+<<<<<<< HEAD
     } catch (error) {}`
+=======
+    } catch (error) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.error(`Performance check failed: ${error.message}`);,
       return { success: false, error: error.message };,
     }
   }
   analyzePerformanceContent(content, filePath) {}
     const issues = [];,
+<<<<<<< HEAD
     // Check for _console.log statements in production code;'
     if (content.includes('_console.log') && !filePath.includes('test')) {'}
       issues.push({}),'
         type: 'console_log,','
         severity: 'low,','
+=======
+    // Check for _console.log statements in production code;
+    if (content.includes('_console.log') && !filePath.includes('test')) {'}
+      issues.push({}),
+        type: 'console_log,',
+        severity: 'low,',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         message: 'Console.log statement found in production code,',
         file: filePath;,
       });,
     }
     // Check for large functions (simplified);
     const functions = content.match(/function\s+\w+\s*\([^)]*\)\s*{[\s\S]*?}/g) || [];,
+<<<<<<< HEAD
     for (const func of, functions) {}'
       const lines = func.split('\n').length;',
       if (lines > 50) {}
         issues.push({}),'
           type: 'large_function,','
           severity: 'low,',`
+=======
+    for (const func of, functions) {}
+      const lines = func.split('\n').length;',
+      if (lines > 50) {}
+        issues.push({}),
+          type: 'large_function,',
+          severity: 'low,',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           message: `Function has ${lines} lines`,
           file: filePath,
         });,
       }
     }
+<<<<<<< HEAD
     // Check for synchronous file operations;'
     if (content.includes('fs.readFileSync') || content.includes('fs.writeFileSync')) {'}
       issues.push({}),'
         type: 'sync_file_ops,','
         severity: 'medium,','
+=======
+    // Check for synchronous file operations;
+    if (content.includes('fs.readFileSync') || content.includes('fs.writeFileSync')) {'}
+      issues.push({}),
+        type: 'sync_file_ops,',
+        severity: 'medium,',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         message: 'Synchronous file operations found,',
         file: filePath;,
       });,
@@ -704,7 +990,11 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
             size += stat.size;,
           }
         }
+<<<<<<< HEAD
       } catch (error) {'
+=======
+      } catch (error) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Skip directories we can't read';
       }
     }
@@ -719,18 +1009,30 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
         for (const item of, items) {}
           const fullPath = path.join(dir, item);,
           const stat = fs.statSync(fullPath);,
+<<<<<<< HEAD
           if (stat.isDirectory()) {}'
+=======
+          if (stat.isDirectory()) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             if (!['node_modules', '.git', 'dist', 'build', 'coverage', 'logs'].includes(item)) {'}
               scanDirectory(fullPath);,
             }
           } else if (stat.isFile()) {}
+<<<<<<< HEAD
             const ext = path.extname(item);,'
+=======
+            const ext = path.extname(item);,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             if (ext === '.html' || ext === '.htm') {'}
               files.push(fullPath);,
             }
           }
         }
+<<<<<<< HEAD
       } catch (error) {'
+=======
+      } catch (error) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Skip directories we can't read';
       }
     }
@@ -745,25 +1047,41 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
         for (const item of, items) {}
           const fullPath = path.join(dir, item);,
           const stat = fs.statSync(fullPath);,
+<<<<<<< HEAD
           if (stat.isDirectory()) {}'
+=======
+          if (stat.isDirectory()) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             if (!['node_modules', '.git', 'dist', 'build', 'coverage', 'logs'].includes(item)) {'}
               scanDirectory(fullPath);,
             }
           } else if (stat.isFile()) {}
+<<<<<<< HEAD
             const ext = path.extname(item);,'
+=======
+            const ext = path.extname(item);,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             if (['.js', '.ts', '.jsx', '.tsx'].includes(ext)) {'}
               files.push(fullPath);,
             }
           }
         }
+<<<<<<< HEAD
       } catch (error) {'
+=======
+      } catch (error) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Skip directories we can't read';
       }
     }
     scanDirectory(process.cwd());
     return files;
   }
+<<<<<<< HEAD
   async generateSEOAccessibilityReport() {}'
+=======
+  async generateSEOAccessibilityReport() {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log('Generating SEO and accessibility report...');',
     try {}
       const report = {}
@@ -793,42 +1111,70 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
         totalScore += report.performanceResults.score.passed;,
         totalChecks += report.performanceResults.score.total;,
       }
+<<<<<<< HEAD
       report.overallScore = totalChecks > 0 ? Math.round((totalScore / totalChecks) * 100) : 0;`
+=======
+      report.overallScore = totalChecks > 0 ? Math.round((totalScore / totalChecks) * 100) : 0;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const reportFile = `seo-a11y-reports/seo-accessibility-${Date.now()}.json`;,
       const reportDir = path.dirname(reportFile);,
       if (!fs.existsSync(reportDir)) {}
         fs.mkdirSync(reportDir, { recursive: true });,
       }
+<<<<<<< HEAD
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,`
       this.log(`SEO and accessibility report saved to: ${reportFile}`);,`
       this.log(`Overall score: ${report.overallScore}/100`);,
       return report;
     } catch (error) {}`
+=======
+      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));,
+      this.log(`SEO and accessibility report saved to: ${reportFile}`);,
+      this.log(`Overall score: ${report.overallScore}/100`);,
+      return report;
+    } catch (error) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.error(`Failed to generate SEO and accessibility report: ${error.message}`);,
       return null;,
     }
   }
+<<<<<<< HEAD
   async start() {}`
+=======
+  async start() {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Starting ${this.processName}...`);,
     // Run initial SEO and accessibility check;
     await this.generateSEOAccessibilityReport();
     // Set up periodic checks;
     const interval = 4 * 60 * 60 * 1000; // 4 hours;
+<<<<<<< HEAD
     setInterval(async () => {}'
       this.log('Running scheduled SEO and accessibility check...');',
       await this.generateSEOAccessibilityReport();,
     }, interval);,`
+=======
+    setInterval(async () => {}
+      this.log('Running scheduled SEO and accessibility check...');',
+      await this.generateSEOAccessibilityReport();,
+    }, interval);,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`${this.processName} started successfully`);,
   }
 }
 // Start the automation if this script is run directly;
 if (require.main === module) {}
   const scanner = new SEOAccessibilityScanner();,
+<<<<<<< HEAD
   scanner.start().catch(error => {}),'
+=======
+  scanner.start().catch(error => {}),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     _console.error('SEO and accessibility scanner failed to start:', error);',
     process.exit(1);,
   });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -851,6 +1197,11 @@ module.exports = SEOAccessibilityScanner;
 
 =======
 =======
+=======
+
+module.exports = SEOAccessibilityScanner;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 #!/usr/bin/env node,;
 const fs = require('fs'),;
@@ -913,6 +1264,7 @@ class SEOAccessibility {,;
     };
 ;#!/usr/bin/env node;
 #!/usr/bin/env node;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -921,6 +1273,9 @@ class SEOAccessibility {,;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -1007,12 +1362,17 @@ module.exports = SEOAccessibilityScanner;
 ursor/add-new-services-and-deploy-updates-0462
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node,
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 #!/usr/bin/env node,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+#!/usr/bin/env node,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs'),
 const path = require('path'),
 const { execSync } = require('child_process'),
@@ -1073,6 +1433,7 @@ class SEOAccessibility {,
     };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1080,10 +1441,23 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
 
 class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkSEO() {try {; this.log('🔍 Checking SEO...'); const seoIssues = []; const pagesDir = path.join(this.projectRoot, 'pages'); if (fs.existsSync(pagesDir)) {; const pageFiles = this.getPageFiles(pagesDir); pageFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const seoChecks = this.analyzeSEO(file, content); seoIssues.push(...seoChecks)})}}}; getPageFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}
 
+=======
+
+
+class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkSEO() {try {; this.log('🔍 Checking SEO...'); const seoIssues = []; const pagesDir = path.join(this.projectRoot, 'pages'); if (fs.existsSync(pagesDir)) {; const pageFiles = this.getPageFiles(pagesDir); pageFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const seoChecks = this.analyzeSEO(file, content); seoIssues.push(...seoChecks)})}}}; getPageFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}
+
+
+
+
+class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkSEO() {try {; this.log('🔍 Checking SEO...'); const seoIssues = []; const pagesDir = path.join(this.projectRoot, 'pages'); if (fs.existsSync(pagesDir)) {; const pageFiles = this.getPageFiles(pagesDir); pageFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const seoChecks = this.analyzeSEO(file, content); seoIssues.push(...seoChecks)})}}}; getPageFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       });
     },;
 
 
+<<<<<<< HEAD
       });
     },;
 
@@ -1092,6 +1466,16 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+      });
+    },;
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+#!/usr/bin/env node;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -1106,6 +1490,7 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
 class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/seo-accessibility-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkSEO() {try {; this.log('🔍 Checking SEO...'); const seoIssues = []; const pagesDir = path.join(this.projectRoot, 'pages'); if (fs.existsSync(pagesDir)) {; const pageFiles = this.getPageFiles(pagesDir); pageFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const seoChecks = this.analyzeSEO(file, content); seoIssues.push(...seoChecks)})}}}; getPageFiles(dir) {const files = []; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') |item.endsWith('.jsx') |item.endsWith('.ts') |item.endsWith('.tsx')) {files.push(fullPath)}})}
       });
     },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1138,3 +1523,16 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+
+
+    },;
+
+
+
+</style>"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

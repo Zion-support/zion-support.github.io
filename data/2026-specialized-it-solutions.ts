@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   id: string;
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -9,6 +10,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   id: string;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+  id: string;
+export interface SpecializedITSolution2026 {
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   tagline: string;
   price: string;
@@ -37,6 +44,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   text_color: string;
   link: string;
@@ -1362,3 +1370,6 @@ export interface SpecializedITSolution2026 {;
 };
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

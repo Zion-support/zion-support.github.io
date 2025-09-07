@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -43,12 +44,18 @@ export default function UltraFuturisticBackground2028({
 }: UltraFuturisticBackground2028Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 interface UltraFuturisticBackground2028Props {}
+=======
+interface UltraFuturisticBackground2028Props {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   children: React.ReactNode;
 }
  canvas && canvas.width = window && window.innerWidth;
@@ -64,9 +71,14 @@ animate ();'
 // Handle resize window && window.addEventListener ('resize', handleResize);
 /> {;
   /* Floating Circles */ ;
+<<<<<<< HEAD
 }<motion&& motion.div '
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';'
 import { motion } from 'framer-motion';
+=======
+}<motion&& motion.div 
+}: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface UltraFuturisticBackground2028Props {;
   children: React && React.ReactNode;
 }
@@ -75,6 +87,7 @@ interface UltraFuturisticBackground2028Props {;
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
 export default function UltraFuturisticBackground2028({ children }: UltraFuturisticBackground2028Props) {
+<<<<<<< HEAD
   const canvasRef = null;
               ease: "easeInOut"
   useEffect(() => {
@@ -641,6 +654,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               delay: Math.random() * 3,
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }}
           />
         ))}
@@ -650,6 +666,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
       </div>
 
+<<<<<<< HEAD
       {/* Content */}'
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>"
@@ -668,10 +685,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               repeat: Infinity,
               delay: Math.random () * 3,'"
               ease: 'easeInOut',            }}              ease: "easeInOut";
+=======
+      {/* Content */}
+      <div className='relative' style={{ zIndex: 10 ;}}>        {children}
+      </div>
+      {/* Bottom Glow */}      <div className="relative" style={{ zIndex: 10 ;}}>
+              delay: Math.random() * 3;,
+              ease: "easeInOut"
+              left: `${Math.random () * 100;}%`,
+              top: `${Math.random () * 100;}%`;
+            }}
+            animate={{
+              scale: [0;, 1, 0];
+              opacity: [0;, 1, 0];
+            }}
+            transition={{
+              duration: 3 + Math.random () * 2;,
+              repeat: Infinity;,
+              delay: Math.random () * 3;,
+              ease: 'easeInOut';,            }}              ease: "easeInOut";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }}
           />))}
       </div>;
       {/* Content */}
+<<<<<<< HEAD
       {/* Content */}'
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>;"
@@ -680,10 +718,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;"
       {/* Bottom Glow */}      <div className="relative" style={{ z_index: 10 }}>;
 <div className='relative' style={{ zIndex: 10 }}>
+=======
+      {/* Content */}
+      <div className='relative' style={{ zIndex: 10 ;}}>        {children}
+      </div>;
+      {/* Bottom Glow */}      <div className="relative" style={{ zIndex: 10 ;}}>;
+      <div className='relative' style={{ z_index: 10 ;}}>        {children}
+      </div>;
+      {/* Bottom Glow */}      <div className="relative" style={{ z_index: 10 ;}}>;
+<div className='relative' style={{ zIndex: 10 ;}}>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
         {children}
       </div>;
       {/* Bottom Glow */}
+<<<<<<< HEAD
       <div;'
         className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none';
         style={{ z_index: 5 }}
@@ -692,13 +741,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 }
 <<<<<<< HEAD
+=======
+      <div;
+        className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none';
+        style={{ z_index: 5 ;}}
+      />;
+    </div>);      <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none" style={{ z_index: 5 ;}} />;
+    </div>);
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div
         className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none'
-        style={{ zIndex: 5 }}
+        style={{ zIndex: 5 ;}}
       />
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+<div className='relative' style={{ zIndex: 10 ;}} />
+        {childre}
+}
+      </div>;
+      {/* Bottom Glow */}
+
+<div;
+className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none'
+        style={{ zIndex: 5 ;}
+}
+      />
+    </div>
+  );
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

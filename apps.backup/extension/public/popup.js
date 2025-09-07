@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 const API_BASE = 'http: //localhost:4000',;
@@ -12,12 +13,15 @@ function getUserId(cb) {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 const API_BASE = 'http: //localhost:4000',;
 function getUserId(cb) {;
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -71,30 +75,50 @@ document.getElementById('askBtn').addEventListener('click', async () => {'
 '
     method: 'POST''
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
+pr-12325
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
+function setUserId(id) {}
+  chrome.storage.local.set({ user_id: id }),
 }
 
+document.querySelectorAll('.example').forEach((btn) => {
+  btn.addEventListener('click', () => {}
+    document.getElementById('prompt').value = btn.dataset.text |''}
+  })
+})
 
 
 
 
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
-    document.getElementById('prompt').value = btn.dataset.text |''
+    document.getElementById('prompt').value = btn.dataset.text |
   })
-})
+pr-12325
 document.getElementById('askBtn').addEventListener('click', async () => {
-  const prompt = document.getElementById('prompt').value.trim();
-  if (=> getUserId(r)),
+ ;
+  const prompt = document.getElementById('prompt').value.trim();}
+  if (=> getUserId(r)),}
   const res = await fetch(`${API_BASE}/ai/ask`, {
+<<<<<<< HEAD
 
     method: 'POST'
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+    method: 'POST'}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) }
 
+    method: 'POST,)
+  headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) }
+pr-12325
     body: JSON.stringify({ prompt })
+<<<<<<< HEAD
   }));
   const data = await res.json();
 <<<<<<< HEAD
@@ -121,15 +145,26 @@ document && document.getElementById('askBtn').addEventListener('click', async ()
 });
 <<<<<<< HEAD
 =======
+=======
+ ,
+}));
+
+const data = await res.json();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   document.getElementById('result').textContent = data.text |JSON.stringify(data, null, 2);
 
 document && document.querySelectorAll('.example').forEach((btn) => {
-  btn && btn.addEventListener('click', () => {
-    document && document.getElementById('prompt').value = btn && btn.dataset.text || ''
+  btn && btn.addEventListener('click', () => {}
+    document && document.getElementById('prompt').value = btn && btn.dataset.text || ''}
   })
+document && document.querySelectorAll('.example').forEach((btn) => {
+  btn && btn.addEventListener('click', () => {
+    document && document.getElementById('prompt').value = btn && btn.dataset.text || 
+pr-12325
 }),
 
+<<<<<<< HEAD
 document && document.getElementById('askBtn').addEventListener('click', async () => {
   const prompt = document && document.getElementById('prompt').value && value.trim();
   if (!prompt) return;
@@ -174,6 +209,9 @@ document.getElementById('signIn').addEventListener('click', async () => {}
 document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
 });
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 document.getElementById('signIn').addEventListener('click', async () => {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -181,6 +219,7 @@ document.getElementById('signIn').addEventListener('click', async () => {
   const id = crypto.randomUUID();
   setUserId(id);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -367,3 +406,5 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   document.getElementById('result').textContent = 'Signed in (local).';
 }),;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

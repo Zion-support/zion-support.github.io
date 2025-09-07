@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';'
 import Link from 'next/link';
 export default function TechnologyInsightsPage() {}
@@ -446,6 +447,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
                     <ul className='space-y-2 text-white/70'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </p>
 =======
                     </p>"
@@ -456,7 +460,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <li>• Ethical AI framework development</li>
                       <li>• Industry collaboration and partnerships</li>
                     </ul>
+<<<<<<< HEAD
                   </div>"
+=======
+                  </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <p className="text-white/60 text-sm">Innovation Lab</p>
 <div className='text-center'>
                     <div className='text-6xl mb-4'>🧪</div>
@@ -490,7 +498,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Get in Touch;
                 </Link>
+<<<<<<< HEAD
                 <Link"
+=======
+                <Link
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   href="/blog"
                   Read Our Blog;
                 </Link>;
@@ -509,6 +521,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   href='/blog'
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
                 >

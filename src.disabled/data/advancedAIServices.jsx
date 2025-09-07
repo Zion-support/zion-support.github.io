@@ -9,6 +9,7 @@
 export: const ADVANCED_AI_SERVICES = [""
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "export": const ADVANCED_AI_SERVICES = ["]"
+<<<<<<< HEAD
 "export": const ADVANCED_AI_SERVICES = ["]"
 ursor/add-new-services-and-deploy-updates-0462
 =======
@@ -42,3 +43,8 @@ export: const ADVANCED_AI_SERVICES = [""
 =======
 "export": const ADVANCED_AI_SERVICES = ["]"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"export\": const ADVANCED_AI_SERVICES = [
+export: const ADVANCED_AI_SERVICES = [""
+"export": const ADVANCED_AI_SERVICES = ["]"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

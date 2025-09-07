@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -12,10 +13,14 @@
 import * as React from 'react';'
 import Link from 'next/link';';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import * as React from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -31,6 +36,11 @@ import React from 'react';import Link from 'next/link';';
 =======
 import React from 'react';import Link from 'next/link';';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from 'react';
+import * as React from 'react';
+import Link from 'next/link';';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import { Cloud,
   Shield,
@@ -122,6 +132,7 @@ const phases = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     title: 'Migration Execution,',;
     description: 'Phased migration with minimal downtime and comprehensive testing.,',;
@@ -132,6 +143,8 @@ const phases = [;
       'Testing & validation',',;
 
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     title: 'Migration Execution,',
     description: 'Phased migration with minimal downtime and comprehensive testing.,',
     icon: Cloud,
@@ -139,6 +152,7 @@ const phases = [;
       'Data migration,',
       'Application migration',',
       'Testing & validation',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
     steps: [;'
@@ -187,6 +201,9 @@ const phases = [;
 
 =======
 =======
+=======
+      'Go-live support'';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
   },
   {}
@@ -219,6 +236,7 @@ const phases = [;
 <<<<<<< HEAD
 const services = [;
   {}
+<<<<<<< HEAD
 
     title: 'AWS Migration,',;
     description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
@@ -235,6 +253,8 @@ const services = [;
   {}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     title: 'AWS Migration,',
     description: 'Complete migration to Amazon Web Services with best practices and optimization.,',
     icon: Cloud,
@@ -242,6 +262,7 @@ const services = [;
       'EC2 instance migration,',
       'RDS database migration',',
       'S3 storage migration',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   {}'
@@ -272,6 +293,9 @@ const services = [;
 
 =======
 =======
+=======
+      'Lambda serverless functions'';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
   },
   {}
@@ -294,6 +318,7 @@ const services = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     title: 'Google Cloud Migration,',;
     description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
@@ -304,6 +329,8 @@ const services = [;
       'Cloud Storage migration',',;
 
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     title: 'Google Cloud Migration,',
     description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',
     icon: Brain,
@@ -311,6 +338,7 @@ const services = [;
       'Compute Engine migration,',
       'Cloud SQL migration',',
       'Cloud Storage migration',',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   {}'
@@ -352,6 +380,9 @@ const services = [;
 
 =======
 =======
+=======
+      'Cloud Functions deployment'';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
   },
   {}
@@ -411,6 +442,25 @@ const benefits = [;
 const benefits = [;
 <<<<<<< HEAD
   {}
+    title: 'Cost Reduction,',
+    description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',
+    icon: BarChart3;
+  },
+  {}
+    title: 'Enhanced Security,',
+    description: 'Enterprise-grade security with automated updates and monitoring.,',
+    icon: Shield;
+  },
+  {}
+    title: 'Improved Scalability,',
+    description: 'Scale resources up or down based on demand automatically.,',
+    icon: Zap;
+  },
+  {}
+    title: 'Better Performance,',
+    description: 'Faster load times and improved application performance.,',
+    icon: Smartphone;
+  }
 ;];
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -505,6 +555,7 @@ export default function CloudMigrationPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
                   Start Your Migration;
@@ -528,6 +579,15 @@ export default function CloudMigrationPage() {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Start Your Migration;
+                </Link>;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
+                  View Migration Success Stories;
+                </Link>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>;
             </motion.div>;
           </div>;
@@ -642,6 +702,7 @@ export default function CloudMigrationPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -666,6 +727,14 @@ export default function CloudMigrationPage() {};
 =======
               </h2>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Cloud Migration Services;
+              </h2>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Choose from leading cloud providers or implement a multi-cloud strategy;
                 for maximum flexibility and redundancy.;
@@ -767,6 +836,7 @@ export default function CloudMigrationPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
@@ -791,6 +861,14 @@ export default function CloudMigrationPage() {};
 =======
               </h2>;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Why Choose Our Cloud Migration?;
+              </h2>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our cloud migration services deliver measurable improvements in cost,
                 performance, and security.,
@@ -840,6 +918,7 @@ export default function CloudMigrationPage() {};
               animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -852,11 +931,18 @@ export default function CloudMigrationPage() {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              transition={{ duration: 0.8 }}
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Move to the Cloud?;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
                 Let our cloud migration experts help you seamlessly transition to the cloud;
                 with minimal downtime and maximum security.;
               </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
@@ -877,12 +963,21 @@ export default function CloudMigrationPage() {};
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
 =======
+=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Start Your Cloud Migration;
+                </Link>;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
+                  Learn About Our Expertise;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Link>;
               </div>;
-            </motion && motion.div>;
+            </motion.div>;
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </Layout>;            >
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -891,6 +986,10 @@ export default function CloudMigrationPage() {};
 =======
             >"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    </Layout>;
+            >
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?
               </h2>"
@@ -916,6 +1015,7 @@ export default function CloudMigrationPage() {};
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -957,3 +1057,6 @@ export default function CloudMigrationPage() {};
 =======
 }'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

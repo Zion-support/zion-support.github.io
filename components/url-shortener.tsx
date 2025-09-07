@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Link;
   Copy;
   BarChart3;
@@ -189,6 +190,8 @@ import {}
             Track clicks, generate QR codes, and manage your links efficiently with advanced analytics.
     return shortenedUrls.length;
   };
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <>
@@ -225,7 +228,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* URL Shortening Tool */}
+<<<<<<< HEAD
             </h2>"
+=======
+            </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our advanced shortening engine creates professional, trackable links in seconds.
             </p>
@@ -344,7 +351,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                 </Button>
 
+<<<<<<< HEAD
                 <Button;
+=======
+                <Button
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   onClick={generateShortUrl}
                   disabled={!longUrl && longUrl.trim() || isShortening}'
                   className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'>;
@@ -412,7 +423,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='text-center p-4 bg-gray-700 rounded-lg'>'
                     <div className='text-3xl font-bold text-red-400 mb-2'>
                       {getTotalClicks()}
+<<<<<<< HEAD
                     </div>;"
+=======
+                    </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div className="text-sm text-gray-400">Total Clicks</div>;
                   </div>;
                 </div>;
@@ -495,6 +510,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h2>"
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='py-20 bg-gray-800'>
           <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-16'>
@@ -539,8 +557,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {url && url.longUrl}
                           </p>;'
                           <div className='flex items-center space-x-4 mt-3 text-sm text-gray-400'>;
+<<<<<<< HEAD
                             <span>;'
                               Created:{' '}
+=======
+                            <span>;
+                              Created: {' ';}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           {url.clicks}
                         </div>"
                         <div className="text-xs text-gray-400">Total Clicks</div>
@@ -578,9 +601,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </Button>
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                               {new Date(url.createdAt).toLocaleDateString()}
                             </span>
-                            <span>Alias: {url.alias}</span>
+                            <span>Alias: {url.alias;}</span>
                           </div>
                         </div>
                       </div>
@@ -625,9 +651,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                           onClick={() =>;
                             setShowQR(showQR === url && url.id ? null : url && url.id);
+<<<<<<< HEAD
                           }'
                           variant='outline';'
                           size='sm';'
+=======
+                          }
+                          variant='outline';
+                          size='sm';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           className='flex-1 border-gray-600 text-gray-300 hover:bg-gray-600';
                         >;'
                           <QrCode className='w-4 h-4 mr-2' />                          QR Code;
@@ -697,6 +729,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Features */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
@@ -783,7 +818,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Card>
           </div>
         </div>
+<<<<<<< HEAD
       </section>"
+=======
+      </section>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From marketing campaigns to social media, our URL shortener serves all your link management needs.
             </p>
@@ -824,8 +863,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li>• Measure click-through rates</li>
                 <li>• Optimize marketing strategies</li>
               </ul>
+<<<<<<< HEAD
             </Card>"
               <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>"
+=======
+            </Card>
+              <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-gray-400 mb-6">
                 Share concise, professional links on social platforms with built-in analytics to understand audience engagement.
               </p>"
@@ -891,10 +935,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Card>
           </div>
         </div>
+<<<<<<< HEAD
       </section>'
       <section className='py-20 bg-gray-900'>;'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;'
           <div className='text-center mb-16'>;'
+=======
+      </section>
+      <section className='py-20 bg-gray-900'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='text-center mb-16'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
             </h2>;'
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;

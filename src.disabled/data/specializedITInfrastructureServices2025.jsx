@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 "export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = ["]"
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 "export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = ["]"
@@ -35,3 +36,8 @@ export: const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [""
 =======
 "export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = ["]"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"export\": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
+export: const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [""
+"export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = ["]"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

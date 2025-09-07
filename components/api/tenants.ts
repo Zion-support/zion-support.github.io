@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import { authenticateRequest } from '@/utils/auth';
 import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
@@ -177,15 +178,28 @@ return res.status(200).json({ tenant: result });
 
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
-if (!tenantId || !rotateKey)
-      return res.status(400).json({ error: 'tenantId and rotateKey required' });
-    const result = rotateTenantApiKey(tenantId);
-    if (!result) return res.status(404).json({ error: 'Tenant not found' });
-    return res.status(200).json({ tenant: result });
+=======
+
   }
 
-  return res.status(405).json({ error: 'Method not allowed' });
+  if (method = == 'PATCH') {}
+   ;}
+  const { tenantId, rotateKey } = req.body || {};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+if (!tenantId || !rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required';,}
+});
+
+const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found';,}
+});
+    return res.status(200).json({ tenant: result;,}
+});
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' ;});
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '
   if (method === 'PATCH') {}
@@ -199,6 +213,19 @@ return res.status(405).json({ error: 'Method not allowed' });
     const { tenantId, rotateKey } = req.body || {};
     const { tenantId, rotateKey } = req.body || {};
 <<<<<<< HEAD
+=======
+  return res.status(405).json({ error: 'Method not allowed';,}
+});
+    return res.status(200).json({ tenant: result ;})
+  }
+return res.status(405).json({ error: 'Method not allowed';,}
+});
+}
+
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body || {};
+    const { tenantId, rotateKey } = req.body || {};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '

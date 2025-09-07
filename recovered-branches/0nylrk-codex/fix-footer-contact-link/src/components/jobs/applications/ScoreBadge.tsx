@@ -9,6 +9,7 @@
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 
 
 
@@ -243,16 +244,32 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
   $2
 }
   return (
+=======
+  return (
+    <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>
+</span>
+    </span>`;
+    <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>;
+    </span>;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <span className={`rounded - full px - 2 py - 1 text - xs font - medium ${class_name}`}>;
-      {score ? `${score}%` : "Not scored"}
+</span>)
+    </span>);`;
+    </span>;"`;
+pr-12325
     </span>);
 
 }
 }
 ;
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { JobApplication } from "@/types/jobs",;
 ;
 interface ScoreBadgeProps {;
@@ -285,6 +302,7 @@ export function ScoreBadge({ application } ScoreBadgeProps) {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -300,3 +318,9 @@ export function ScoreBadge({ application } ScoreBadgeProps) {;
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>;
+</span>
+    </span>;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

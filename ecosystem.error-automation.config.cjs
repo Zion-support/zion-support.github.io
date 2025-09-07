@@ -1,43 +1,19 @@
 
+
+
+module.exports = {
+  "apps": [    // Main Error Detection and Fixing Service;"
+    {"
+
+
+
+
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
-      name: 'error-detection-service',
-      "script": 'scripts/pm2/error-detection-service.js',
-    // Main application
-    {
-      "name": 'zion-app',
-      "script": 'npm',
-      "args": 'start',
-      "cwd": './',
-      "instances": 1,
-      "autorestart": true,
-      "watch": false,
-      "max_memory_restart": '1G',
-      "env": {
-        NODE_ENV: 'development',
-        "PM2_PROCESS_NAME": 'error-detection-service',
-        "SCAN_INTERVAL": '300000', // 5 minutes
-        "AUTO_FIX": 'true',
-        "LOG_LEVEL": 'info',
-        "MAX_RETRIES": '3',
-        "BACKUP_BEFORE_FIX": 'true'
-      },
-      "cron_restart": '0 */2 * * *', // Restart every 2 hours
-      "log_file": 'logs/pm2/error-detection-service.log',
-      "error_file": 'logs/pm2/error-detection-service-error.log',
-      "out_file": 'logs/pm2/error-detection-service-out.log'},
-    // Syntax Error Fixer
-    {
-      "name": 'syntax-error-fixer',
-      "script": 'scripts/pm2/syntax-error-fixer.js',
-        "NODE_ENV": 'production',
-        "PORT": 3000
-      },
-      "env_production": {
-        NODE_ENV: 'production',
-        "PORT": 3000
+
       }
+<<<<<<< HEAD
     },
     // Error Detection and Monitoring System
     {
@@ -486,11 +462,13 @@ module.exports = {
       "repo": 'git@github.co: m:your-username/zion-tech-group.git',
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+    // Error Detection and Monitoring System;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       "path": '/var/www/zion-tech-group',
-      'pre-deploy-local': '',
+      'pre-deploy-local': ,
       'post-deploy': 'npm install --legacy-peer-deps && pm2 reload ecosystem.error-automation.config.cjs --env production',
-      'pre-setup': ''
-    }
-  }
-};
+      'pre-setup': 
+
+]

@@ -3,9 +3,8 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import type { AppProps } from \'next/app\' import \'../styles/globals.css\' export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
-const type { AppProps } from "next/app" import "./styles/globals.css" export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} /> }''"
-import React from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -31,3 +30,13 @@ const _app: React.FC<_appProps> = ({ className }) => {
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup_before_cleanup/_app.tsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+const type { AppProps } from "next/app" import "./styles/globals.css" export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} /> }""
+
+const _app: React.FC<_appProps> = ({ className }) => {
+</_appProps>"
+    <div className={className || }>
+</div>
+      <h1>_app</h1>
+      <p>This component is under development.</p>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

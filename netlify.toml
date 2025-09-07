@@ -1,6 +1,7 @@
 [build]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 command = "npm run build"
 publish = "dist"
 
@@ -45,18 +46,27 @@ publish = ".next"
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+command = "npm ci && npm run build"
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+package = "@netlify/plugin-nextjs"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 [functions]
-  directory = "netlify/functions"
+directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 from = "/api/*"
@@ -78,19 +88,23 @@ from = "/api/*"
 to = "/.netlify/functions/:splat"
 status = 200
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 # Security and caching headers for static assets
 [[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+for = "/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+for = "/*.js"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+<<<<<<< HEAD
   for = "/*.css"
   [headers.values]
     Referrer-Policy = "strict-origin-when-cross-origin"
@@ -123,6 +137,56 @@ status = 200
 
 # Static redirects for exported site
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+for = "/*.css"
+[headers.values]
+Referrer-Policy = "strict-origin-when-cross-origin"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+X-DNS-Prefetch-Control = "on"
+Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+Cross-Origin-Opener-Policy = "same-origin"
+Cross-Origin-Resource-Policy = "same-origin"
+X-Permitted-Cross-Domain-Policies = "none"
+Origin-Agent-Cluster = "?1"
+
+
+
+
+
+
+# SPA fallback for client-side routing
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+# Static redirects for specific routes
+
+# Static redirects for exported site
+ursor/automate-test-improve-and-merge-code-646c
+# Static redirects for exported site
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -159,6 +223,7 @@ to = "/services/smart-crm-intelligence-suite/"
 status = 301
 
 [[redirects]]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,3 +276,6 @@ from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

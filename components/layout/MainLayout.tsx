@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -22,21 +23,13 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="description" content={description || 'Leading technology solutions provider'} />
         {keywords && <meta name="keywords" content={keywords} />}
 import Layout from './Layout';
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 ;
 interface MainLayoutProps {
-interface MainLayoutProps {;
-  children: ReactNode, title?: string,  description?: string;
-  keywords?: string;
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  type?: string;
-  image?: string;
-  url?: string;}
-const MainLayout: React.FC<MainLayoutProps> = ({
 
   children
   title = 'Zion Tech Group - Technology Solutions'
@@ -48,20 +41,21 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   type = 'website'
   image = '/og-image.jpg'
   url
+<<<<<<< HEAD
 pr-12243
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
-import Head from 'next/head';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from './Header';
+import Footer from './Footer';
 
 interface MainLayoutProps {
-  title: string;
-  description: string;
   children: React.ReactNode;
-  keywords?: string;
-  canonical?: string;
 }
 
 export default function MainLayout({ 
@@ -72,23 +66,45 @@ export default function MainLayout({
   canonical 
 }: MainLayoutProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 pr-12243
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+  children: ReactNode;
+import React from 'react';
+import Head from 'next/head';
+
+interface MainLayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+}
+
+
+const MainLayout: React.FC<MainLayoutProps> = ({
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+
+        <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        {canonical && <link rel="canonical" href={canonical} />}
-        {noindex && <meta name="robots" content="noindex" />}
-        {nofollow && <meta name="robots" content="nofollow" />}
-        <meta property="og:type" content={type} />
+        {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
   children,
@@ -105,10 +121,13 @@ pr-12243
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {image && <meta property="og:image" content={image} />}
         {url && <meta property="og:url" content={url} />}
         {/* Twitter */}
@@ -193,12 +212,18 @@ import React from 'react'; import Head from 'next/head'; import Header from './H
     </>);
 }
 export default MainLayout;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
 import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
@@ -215,24 +240,51 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
     <>
       <SEOHead title={title} description={description} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 pr-12243
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+        <meta property="og:image" content={image} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
+      </Head>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
           {children}
         </main>
+const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen">
+        {children}
         <Footer />
       </div>
+      <main className="min-h-screen bg-gray-50">
+        {children}
+      </main>
     </>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 
 export default MainLayout;
 
+<<<<<<< HEAD
 pr-12243
 =======
 "
@@ -240,3 +292,12 @@ pr-12243
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+export default MainLayout;
+
+export default MainLayout;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

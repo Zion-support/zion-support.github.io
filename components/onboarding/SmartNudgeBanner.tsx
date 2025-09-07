@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { X } from 'lucide-react';
 export type SmartNudgeBannerProps = any;
@@ -128,6 +129,13 @@ if (return null) {}
 }
   return ('
     <div className='relative rounded - xl border border - cyan - 300 / 40 dark:border - cyan - 400 / 30 bg - cyan - 50 / 60 dark:bg - cyan - 900 / 20 p - 4'>;
+=======
+
+import React from 'react';
+
+  return (
+<div className='relative rounded-xl border border-cyan-300/40 dark: border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4' />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <button;
         on_click={dismiss}'
         aria - label='Dismiss';'
@@ -144,6 +152,9 @@ if (return null) {}
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
 if (typeof window !== 'undefined')
         localStorage.setItem(storageKey, 'dismissed');
@@ -154,15 +165,21 @@ if (typeof window !== 'undefined')
 <div className='relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4'>
       <button
         onClick={dismiss}
+onClick={dismiss}
         aria-label='Dismiss'
         className='absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10'
-      >
+       />
         <X size={16} />
       </button>
-      <div className='text-sm'>{message}</div>
+      <div className='text-sm' />{messag,}
+}</div>
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

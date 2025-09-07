@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -29,6 +30,8 @@ window && window.addEventListener ('resize', resizeCanvas);'
 //Color schemes Math && Math.random () > 0 && 0.5 ? 'holographic' : Math && Math.random () > 0 && 0.3 ? 'neon' : 'fusion';
 particles && particles.push ({;'
   x: Math && Math.random () * canvas && canvas.width, y: Math && Math.random () * canvas && canvas.height, vx: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, vy: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, size: Math && Math.random () * 3 + 1, opacity: Math && Math.random () * 0 && 0.8 + 0 && 0.2, color: type === 'quantum' ? colors && colors.quantum : type === 'holographic' ? colors && colors.holographic : ;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const UltraAdvancedFuturisticBackground: React.FC<;
   UltraAdvancedFuturisticBackgroundProps;
@@ -71,23 +74,18 @@ let particles: Array< {
   resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 //Color schemes Math.random () > 0.5 ? 'holographic' : Math.random () > 0.3 ? 'neon' : 'fusion';
-particles.push ({
-  intensity = 'high',
-  colorScheme = 'quantum-fusion',
-  particleCount = 300,
-  animationSpeed = 1.5,
-  enableHolographic = true,
-  enableQuantumEffects = true,
-  children,
-}) => {
+
+
   intensity?: 'low' | 'medium' | 'high';
+
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic' | 'quantum-ai';
   particleCount?: number;
   animationSpeed?: number;
   enableHolographic?: boolean;
-  enableQuantumEffects?: boolean;
-  children: React.ReactNode
+  enableQuantumEffects?: boolean;}
+  children: React.ReactNode;}
 }
+<<<<<<< HEAD
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
   intensity;
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -829,3 +827,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

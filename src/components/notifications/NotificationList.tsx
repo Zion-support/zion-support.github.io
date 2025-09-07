@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -263,10 +264,15 @@ interface NotificationListProps {}
   on_retry: () => void;
 }
 export const NotificationList: React.FC < NotificationListProps> = ({};
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   loading;
   error;
   notifications;
   onMarkAsRead;
+<<<<<<< HEAD
   on_dismiss,
   on_retry;
 }, ) => {}
@@ -521,3 +527,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

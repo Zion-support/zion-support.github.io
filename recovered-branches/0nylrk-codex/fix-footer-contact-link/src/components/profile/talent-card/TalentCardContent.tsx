@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {MapPin} from "lucide-react";
@@ -77,6 +78,9 @@ import React, { useState } from "react";
 import { MapPin } from "lucide-react";
 import { TalentCardSkills } from "./TalentCardSkills";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
@@ -88,18 +92,41 @@ interface TalentCardContentProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+import React, { useState } from "react";""
+import { MapPin } from "lucide-react";""
+import { TalentCardSkills } from "./TalentCardSkills";"
+
+interface TalentCardContentProps {
+  // TODO: Implement
+}
+  summary: string | undefined;,
+  bio: string;
+
+  timezone: string | undefined;,
+  skills: string[] | undefined;
+pr-12325
+
+}
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function TalentCardContent({
 =======
 export function TalentCardContent({}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   summary,
   bio,
+
   timezone,
   skills,
 }: TalentCardContentProps) {};
   const [isHovering, setIsHovering] = useState(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 skills: string[] | undefined
@@ -115,6 +142,8 @@ skills: string[] | undefined
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 skills: string[] | undefined
   skills: string[] | undefined
 }
@@ -129,6 +158,7 @@ export function TalentCardContent({
 export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -147,7 +177,10 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [isHovering, setIsHovering] = useState(false);
+
   return (
     <div>
 import React, { useState } from "react",;
@@ -205,12 +238,15 @@ import { TalentCardSkills } from "./TalentCardSkills",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   return (
-
 import React, { useState } from "react",;
 import { MapPin } from "lucide-react",;
 import { TalentCardSkills } from "./TalentCardSkills",;
 ;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  return (;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface TalentCardContentProps {;
   summary:string | undefined,;
   bio:string,;
@@ -223,11 +259,15 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
   const [isHovering, setIsHovering] = useState(false),;
 ;
   return (;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [isHovering, setIsHovering] = useState(false);
+=======
+const [isHovering, setIsHovering] = useState(false);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -239,6 +279,7 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <div>;
 
+<<<<<<< HEAD
 
 
 
@@ -262,6 +303,13 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
 
       {/* Location */}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+
+      {/* Location */}
+
+}      {/* Location */}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {timezone && (;
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
 =======
@@ -323,12 +371,18 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
         <p className="text-zion-slate mb-4">{summary || bio}</p>
       </div>
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<p className="text-zion-slate mb-4">{summary || bio}</p>
+      </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -342,9 +396,17 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
         onMouseLeave={() => setIsHovering(false)}
       >;"
 =======
+=======
+{/* Short bio or summary - longer on hover for desktop */}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+      ;
+      {/* Short bio or summary - longer on hover for desktop */}
+      <div ;
+        className="overflow-hidden transition-all duration-300" ;
+        style={{ maxHeight:isHovering ? '8rem' :'3rem' }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >;
@@ -354,6 +416,7 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
         </p>;
       </div>;
 
+;
       {/* Skills */}
       <TalentCardSkills skills={skills} />;
     </div>;
@@ -416,7 +479,11 @@ skills: string[] | undefined
 }/> </div>) 
 }
 export /**
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      )}export /**
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  * TalentCardContent - Function description
 =======
 
@@ -435,17 +502,18 @@ function TalentCardContent() {}
       {/* Location */}
 <<<<<<< HEAD
       {timezone && (
-        <div className="flex items - center gap - 2 text - sm text - zion - slate - light mb - 3">;
-          <MapPin className="h - 3 w - 3" />;
+        <div className="flex items - center gap - 2 text - sm text - zion - slate - light mb-3">;
+          <MapPin className="h - 3 w-3" />;
           <span>{timezone}</span>;
         </div>)}
       {/* Short bio or summary - longer on hover for desktop */}
       <div;
-        className="overflow - hidden transition - all duration - 300";
+        className="overflow - hidden transition - all duration-300";
         style={{ max_height: is_hovering ? "8rem" : "3rem" }}
         onMouseEnter={() => setIsHovering (true)}
         onMouseLeave={() => setIsHovering (false)}
       >;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <p className="text - zion - slate mb-4">{summary || bio}</p>;
 =======
@@ -466,9 +534,86 @@ function TalentCardContent() {}
 =======
         <p className="text - zion - slate mb - 4">{summary || bio}</p>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        <p className="text - zion - slate mb-4">{summary || bio}</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>;
       {/* Skills */}
       <TalentCardSkills skills={skills} />;
     </div>);
 }
+<<<<<<< HEAD
 "
+=======
+}
+  skills,)
+
+}: TalentCardContentProps) {
+  const [isHovering, setIsHovering] = useState(false);
+
+
+
+skills: string[] | undefined;,
+
+  summary;
+  bio;
+  timezone;
+  skills;)
+export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
+
+
+  return (
+    <div>
+</div>
+    <div>;
+</div>"
+        <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;"
+          <MapPin className="h-3 w-3" />;"
+
+          <span>{timezone}</span>;
+        </div>;
+      <div;"
+        className="overflow-hidden transition-all duration-300"""
+        style={{ maxHeight: isHovering ? "8rem" : "3rem" }}")
+        onMouseEnter={() => setIsHovering(true)}
+        <p className="text-zion-slate mb-4">{summary || bio}</p>"
+      <TalentCardSkills skills={skills} />
+
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+
+      </div>
+      <TalentCardSkills skills={skills} />
+</TalentCardSkills>
+    </div>
+
+      <div;"
+        className="overflow-hidden transition-all duration-300"""
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}'
+        onMouseEnter={() => setIsHovering(true)}
+</div>'
+        <p className="text-zion-slate mb-4">;"
+</p>
+        </p>;
+      <TalentCardSkills skills={skills} />;
+
+}<span> {
+</span>
+}</span> </div>) 
+}<div </p> </div> {
+}<TalentCardSkills skills= {
+  skills;
+}/> </div>) 
+
+        <div className="flex items - center gap - 2 text - sm text - zion - slate - light mb - 3">;"
+          <MapPin className="h - 3 w - 3" />;"
+
+        </div>)}
+        className="overflow - hidden transition - all duration - 300";""
+        style={{ max_height: is_hovering ? "8rem" : "3rem" }}"
+        onMouseEnter={() => setIsHovering (true)}
+        <p className="text - zion - slate mb - 4">{summary || bio}</p>;"
+
+    </div>);"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
   {
@@ -25,11 +26,15 @@ export const PROJECTS: Project[] = [
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
   {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -45,6 +50,10 @@ export const PROJECTS: Project[] = [
 
     job: {}
       title: 'AI Dashboard Development''
+=======
+    job: {
+      title: 'AI Dashboard Development'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       description: 'Develop dashboards using React and integrate ML models'
     }
     talent_profile: {'
@@ -54,6 +63,9 @@ export const PROJECTS: Project[] = [
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: "project-1";
     client_id: "client-1";
     talent_id: "t-001";
@@ -70,6 +82,7 @@ export const PROJECTS: Project[] = [
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
     talent_profile: {
+<<<<<<< HEAD
       full_name: "Alexandra Chen";
 <<<<<<< HEAD
       professional_title: "Senior AI Engineer";
@@ -206,6 +219,11 @@ export const PROJECTS: Project[] = []
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+      full_name: "Alexandra Chen";
+      professional_title: "Senior AI Engineer"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
 =======
@@ -238,6 +256,7 @@ export const PROJECTS: Project[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -252,12 +271,25 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    }
+  }
+];
+
+;
+
+;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 =======
 ];    }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -279,6 +311,8 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 ];
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   }
 ];
@@ -307,6 +341,7 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -329,3 +364,95 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+job: {
+      title: \"title\",
+    description: 'Develop dashboards using React and integrate ML models'}
+
+
+    job: {,
+  title: 'AI Dashboard Development
+      description: 'Develop dashboards using React and integrate ML models
+    }
+    talent_profile: {,
+  full_name: 'Alexandra Chen
+      professional_title: 'Senior AI Engineer
+];
+  full_name: "Alexandra Chen";""
+      professional_title: "Senior AI Engineer";","
+  professional_title: "Senior AI Engineer""
+];"
+import { Project } from "@/types/projects","
+export const PROJECTS: Project[] = ["
+import { Project } from '@/types/projects';
+import { Project } from "@/types/projects","]
+export const PROJECTS: Project[] = [
+  {"
+    id: "project-1",""
+    client_id: "client-1",""
+    talent_id: "t-001",""
+    job_id: "job-1",""
+    start_date: "2024-05-15",""
+    scope_summary: "Build an AI powered dashboard for sales metrics",""
+    payment_terms: "fixed",""
+    status: "in_progress",""
+    created_at: "2024-05-15",""
+    updated_at: "2024-05-20","
+    job: {,"
+  title: "AI Dashboard Development",""
+      description: "Develop dashboards using React and integrate ML models""
+    },
+    talent_profile: {,"
+  full_name: 'Alexandra Chen',
+      professional_title: 'Senior AI Engineer',
+  },]
+}];      title: "AI Dashboard Development";","
+    };
+      professional_title: "Senior AI Engineer"","
+  full_name: "Alexandra Chen",""
+      professional_title: "Senior AI Engineer"""
+import { Project } from "@/types/projects",;"
+export const PROJECTS: Project[] = [;
+  {;"
+    id: "project-1",;""
+    client_id: "client-1",;""
+    talent_id: "t-001",;""
+    job_id: "job-1",;""
+    start_date: "2024-05-15",;""
+    scope_summary: "Build an AI powered dashboard for sales metrics",;""
+    payment_terms: "fixed",;""
+    status: "in_progress",;""
+    created_at: "2024-05-15",;""
+    updated_at: "2024-05-20",;"
+    job: {;,"
+  title: "AI Dashboard Development",;""
+      description: "Develop dashboards using React and integrate ML models";"
+    },;
+    talent_profile: {;,"
+      professional_title: "Senior AI Engineer";"
+
+    }
+  }]
+
+
+;
+"
+pr-12325
+;
+    }
+  }
+];
+
+    }
+  }
+];"
+      professional_title: "Senior AI Engineer";"
+    }
+  }
+];
+;
+"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

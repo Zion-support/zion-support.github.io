@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -31,6 +32,38 @@ export default function LocationsPage() { return null; }
           </a>{" "}"
           or email{" "}'
 import React from './react';'
+=======
+
+  return (
+    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+      <Head>;
+        <title>Locations | Zion Tech Group</title>;
+        <meta
+          name="description"
+          content="Our office locations and contact information."
+        />;
+        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/locations" />;
+      </Head>;
+      <div className="max-w-4xl mx-auto space-y-6">;
+        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+          Locations;
+        </h1>;
+        <div className="p-6 rounded-2xl bg-black/40 border border-cyan-500/20">;
+          <h2 className="text-white text-xl font-semibold mb-2">;
+            Middletown, DE (HQ);
+          </h2>;
+          <p className="text-slate-300">;
+            364 E Main St STE 1008 Middletown DE 19709;
+          </p>;
+        </div>;
+        <p className="text-slate-300">;
+          Call{" "}
+          <a className="text-cyan-400" href="tel:+13024640950">;
+            +1 302 464 0950;
+          </a>{" "}
+          or email{" "}
+import React from './react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from './next / head';
 export default /**;
  * LocationsPage - Function description;
@@ -106,6 +139,9 @@ function LocationsPage() {}
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">
             kleber@ziontechgroup.com
           </a>

@@ -26,6 +26,7 @@ interface TemplateManagerProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function TemplateManager({
   isOpen,
   onClose,
@@ -41,11 +42,14 @@ export function TemplateManager({
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   currentValues
 }: TemplateManagerProps) {
   const [mode, setMode] = useState<"list" | "save">("list"),
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -816,6 +820,16 @@ return (<Dialog open= {
             onCancel={() => {;
               setMode("list");
               setSelectedTemplate(null);
+=======
+
+}
+
+export function TemplateManager(): any ({;
+  isOpen;
+  onClose;
+  onSelectTemplate;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }}
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}
@@ -834,6 +848,7 @@ return (<Dialog open= {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -849,3 +864,111 @@ return (<Dialog open= {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+}
+  isOpen: boolean;,
+  onClose: () => void;
+  onSelectTemplate: (template: ContractFormValues) => void;
+  currentValues?: ContractFormValues;
+
+
+
+
+
+  currentValues;
+}: TemplateManagerProps) {
+  const [mode, setMode] = useState<"list" | "save">("list"),"
+  const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null),
+"
+  const [mode, setMode] = useState<"list" | "save">("list");"
+  const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null);
+
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">;"
+
+        <DialogHeader>;
+
+          <DialogTitle>;
+
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">"
+
+        <DialogHeader>
+
+          <DialogTitle>
+
+          <div className="space-y-4">"
+</div>"
+            <div className="flex justify-end">"
+</div>
+
+
+
+          ;
+        ;"
+          <div className="space-y-4">;"
+            <div className="flex justify-end">;"
+              <Button;"
+                variant="outline";"
+                variant="outline"""
+                onClick={() => setMode("save")}"
+
+
+
+            </div>;
+            <TemplateList;
+              templates={templates}
+              isLoading={isLoading}
+              onSelect={handleSelectTemplate}
+              onEdit={(template) => {;
+
+          <TemplateSaveForm;
+            onCancel={() => {;
+
+            <TemplateList ;
+
+          <TemplateSaveForm ;
+
+              is_loading={is_loading}
+              on_select={handleSelectTemplate}
+              on_edit={(template) => {
+
+</TemplateList>
+          </div>) : (
+          <TemplateSaveForm;)
+            on_cancel={() => {
+
+    );
+return (<Dialog open= {
+  isOpen;
+}onOpenChange= {
+  onClose;"
+}> <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto" > <DialogHeader> <DialogTitle> {"
+
+}  {"
+  mode === "list" ? (<div className="space-y-4" > <div className="flex justify-end" > <Button variant="outline" onClick= {"
+</div>)
+}/> </div>) : (<TemplateSaveForm onCancel= {)
+  () => {
+
+} ) 
+
+pr-12325
+</TemplateSaveForm>
+
+}</DialogContent> </Dialog>) 
+          </div>;
+          <TemplateSaveForm;
+
+            onCancel={() => {;
+</TemplateSaveForm>
+
+      </DialogContent>
+    </Dialog>
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

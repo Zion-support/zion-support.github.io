@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {}
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
@@ -82,12 +83,20 @@ import {}
 
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Rocket, Shield, Cpu, Target, Microscope, Users;
+
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
   Home, Briefcase, BookOpen, MessageCircle, DollarSign;
   TrendingUp, Target as TargetIcon, Users as UsersIcon;
+
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;
+<<<<<<< HEAD
   {'
     name: 'Home''
     href: '/'
@@ -983,42 +992,13 @@ export default function UltraFuturisticFooter2032() {}
                 computing, space technology, and autonomous systems. Empowering
                 businesses with cutting-edge solutions for tomorrow's
                 challenges.
-              </p>
-              {/* Contact Information */}
-              <div className='space-y-3'>
-                <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors'>
-                  <Phone className='w-4 h-4 text-cyan-400' />
-                  <a
-                    href={`tel:${contactInfo.mobile}`}
-                    className='hover:text-cyan-300 transition-colors'
-                  >
-                    {contactInfo.mobile}
-                  </a>
-                </div>
-                <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors'>
-                  <Mail className='w-4 h-4 text-cyan-400' />
-                  <a
-                    href={`mailto:${contactInfo.email}`}
-                    className='hover:text-cyan-300 transition-colors'
-                  >
-                    {contactInfo.email}
-                  </a>
-                </div>
-                <div className='flex items-center space-x-3 text-slate-300'>
-                  <MapPin className='w-4 h-4 text-cyan-400' />
-                  <span>{contactInfo.address}</span>
-                </div>
-                <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors'>
-                  <Globe className='w-4 h-4 text-cyan-400' />
-                  <a
-                    href={contactInfo.website}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='hover:text-cyan-300 transition-colors'
-                  >
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    {contactInfo.website}
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              </p>
+              <div className=\"flex flex-col sm:flex-row gap-4 max-w-md mx-auto\" />
+
+<<<<<<< HEAD
 
                     {contactInfo.website}
 
@@ -1356,6 +1336,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>                  Subscribe                Stay Ahead with Future Technology;
               </h3>;"
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">;
+=======
+                />;
+                <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105' />                  Subscribe                Stay Ahead with Future Technology;
+              </h3>;"
+              <p className=\"text-slate-300 mb-8 max-w-2xl mx-auto\" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.;
               </p>;"
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
@@ -1367,20 +1353,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 />
                 <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105">
                   Subscribe
+              </p>;"
+              <div className=\"flex flex-col sm:flex-row gap-4 max-w-md mx-auto\" />;
+
+                <input;"
+type=\"email\"
+                  placeholder=\"Enter your email address\"
+                  className=\"flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300\"
+
+                />"
+                <button className=\"px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105\" />
+                  Subscribe;
                 </button>
               </div>
             </div>
           </motion.div>
-          {/* Bottom Bar */}
-<motion.div
+
+          {/* Bottom Bar *}
+}
+<motion.div;
             variants={itemVariants}
+
             className='border-t border-cyan-500/30 pt-8'
-          >
-            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
-              <div className='flex items-center space-x-2 text-slate-400 text-sm'>
-                <span>© 2024 Zion Tech Group. All rights reserved.</span>
-                <span className='text-cyan-400'>|</span>
-                <span>Leading the Future of Technology</span>
+           />
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0' />
+              <div className='flex items-center space-x-2 text-slate-400 text-sm' />
+                <span />© 2024 Zion Tech Group. All rights reserved.</span>
+                <span className='text-cyan-400' />|</span>
+                <span />Leading the Future of Technology</span>
               </div>
               <div className='flex items-center space-x-6 text-sm'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1391,8 +1391,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href='/privacy''
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   className='text-slate-400 hover:text-cyan-300 transition-colors'>;
+              <div className='flex items-center space-x-6 text-sm' />
+                <Link;
+href='/privacy'
+
+                  className='text-slate-400 hover:text-cyan-300 transition-colors' />;
                   Privacy Policy;
                 </Link>;
+<<<<<<< HEAD
                 <Link'
                   href='/terms''
                   className='text-slate-400 hover:text-cyan-300 transition-colors'>;
@@ -1402,13 +1408,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href='/cookies''
           onClick={() => window && window.scrollTo({ top: 0, behavior: 'smooth' })}
         >;"
+=======
+                <Link;
+                  href='/terms';
+                  className='text-slate-400 hover:text-cyan-300 transition-colors' />;
+                  Terms of Service;
+                </Link>;
+                <Link
+                  href='/cookies'
+          onClick={() => window && window.scrollTo({ top: 0;, behavior: 'smooth' ;})}
+        >;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ArrowRight className="w-6 h-6 transform rotate-[-90deg]" />;
         </motion && motion.button>;
       </div>;
     </footer>;
   );
 
-  );
+                <Link;
+href='/cookies'
 
 
 }
@@ -1420,20 +1438,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Floating Action Button */}'
       <div className='fixed bottom - 8 right - 8 z - 50'>;
         <motion.button;
+<<<<<<< HEAD
           while_hover={{ scale: 1.1 }}
           while_tap={{ scale: 0.9 }}'
           className='w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify - center text - white';'
           on_click={() => window.scroll_to ({ top: 0, behavior: 'smooth' })}
         >;'
+=======
+          while_hover={{ scale: 1.1 ;}}
+          while_tap={{ scale: 0.9 ;}}
+          className='w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify - center text - white';
+          on_click={() => window.scroll_to ({ top: 0;, behavior: 'smooth' ;})}
+        >;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ArrowRight className='w - 6 h - 6 transform rotate-[-90deg]' />        </motion.button>;
       </div>;
     </footer>);
 }        <motion.button;
+<<<<<<< HEAD
           while_hover={{ scale: 1.1 }}
           while_tap={{ scale: 0.9 }}"
           className="w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify - center text - white";'
           on_click={() => window.scroll_to ({ top: 0, behavior: 'smooth' })}
         >;"
+=======
+          while_hover={{ scale: 1.1 ;}}
+          while_tap={{ scale: 0.9 ;}}
+          className="w - 14 h - 14 bg - gradient - to - r from - cyan - 500 to - purple - 500 rounded - full shadow - 2xl shadow - cyan - 500 / 30 hover:shadow - cyan - 500 / 50 transition - all duration - 300 flex items - center justify - center text - white";
+          on_click={() => window.scroll_to ({ top: 0;, behavior: 'smooth' ;})}
+        >;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <ArrowRight className="w - 6 h - 6 transform rotate-[-90deg]" />;
         </motion.button>;
       </div>;
@@ -1441,19 +1475,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   className='text-slate-400 hover:text-cyan-300 transition-colors'
                 >
                   Cookie Policy
+                  className='text-slate-400 hover: text-cyan-300 transition-colors'
+                 />
+                  Cookie Policy;
                 </Link>
               </div>
             </div>
           </motion.div>
         </motion.div>
       </div>
-      {/* Floating Action Button */}
-<div className='fixed bottom-8 right-8 z-50'>
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className='w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white'
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+
+      {/* Floating Action Button *}
+}
+<div className='fixed bottom-8 right-8 z-50' />;
+        <motion.button;
+          whileHover={{ scale: 1.1 ;}}
+          whileTap={{ scale: 0.9 ;}
+}
+          className='w-14 h-14 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300 flex items-center justify-center text-white';
+          onClick={() = /> window.scrollTo({ top: 0;, behavior: 'smooth' ;}
+}
+
         >
           <ArrowRight className='w-6 h-6 transform rotate-[-90deg]' />
         </motion.button>
@@ -1462,4 +1504,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
+<<<<<<< HEAD
 '"
+=======
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

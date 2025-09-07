@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/TalentGrid.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/talent/TalentGrid.jsx
 <<<<<<< HEAD
@@ -40,3 +41,13 @@
 ' \"export\": function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { \''\'";\";
 " export: function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { """";";'"'"
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/talent/TalentGrid.jsx
+=======
+' \"export\": function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { \''\'";\";
+" export: function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { """";";'"'"
+' \"export\": function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { \''\'";\";
+" export: function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { """";";'"'"
+' \"export\": function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { \''\'";\";
+" export: function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { """";";'"'"
+' \"export\": function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { \''\'";\";
+" export: function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { """";";'"'"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

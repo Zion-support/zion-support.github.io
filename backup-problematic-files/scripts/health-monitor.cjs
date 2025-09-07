@@ -1,13 +1,14 @@
-#!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const fs = require('fs')
 class HealthMonitor {
+  // TODO: Implement
+}
   constructor() {
-    this.checks = [{ "name": 'Memory Usage', "command": 'free -h' },
-      { "name": 'Disk Space', "command": 'df -h' },
-      { "name": 'Process Status', "command": 'ps aux | grep node' }
+
     ]}
   async runChecks() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -33,3 +34,11 @@ new HealthMonitor().runChecks();
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    for (const check of this.checks) {
+      try {
+  // TODO: Implement
+
+new HealthMonitor().runChecks();
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

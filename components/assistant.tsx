@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
@@ -11,23 +12,17 @@ export default function Assistant() { return null; }
   const tenantId = params.get('tenantId') |'';'
   const brand = params.get('brand') |'Zion AI';
 <<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useEffect, useMemo, useState } from 'react';
 interface Message { role: 'user' | 'assistant', content: string }
 
 export default function Assistant() {
   const params = null;
       return
-interface Message {
-  role: 'user' | 'assistant';
-  content: string;
-export default function Assistant() {
-  const params =
-    typeof window !== 'undefined'
-      ? new URLSearchParams(window.location.search)
-      : new URLSearchParams();
-  const tenantId = params.get('tenantId') || '';
-  const brand = params.get('brand') || 'Zion AI';
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [messages, setMessages] = useState<Message[]>([
 {
@@ -84,6 +79,8 @@ setMessages(prev => [
       ]);
       return;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     ]);
   }
@@ -110,6 +107,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Basic fallback;'
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }
           >
             {m.content}
@@ -157,9 +157,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useEffect, useMemo, useState} from 'react';
 ;
 interface Message {'
@@ -331,6 +334,9 @@ if ( {) {}
 <<<<<<< HEAD
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ReactNode } from 'react';
 import {ReactNode} from 'react';
@@ -40,6 +41,9 @@ declare module '@/components / FeatureCard' {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import { ReactNode } from "react";
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Extend FeatureCardProps to include key for mapping
 declare module "@/components/FeatureCard" {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -49,8 +53,13 @@ import { ReactNode } from "react";
 declare module "@/components/FeatureCard" {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   export interface FeatureCardProps {
-    title: string;
-    description: string;
+    title: string,
+  description: string;
+    icon: ReactNode;
+
+}
+    title: string;,
+  description: string;
     icon: ReactNode;
 <<<<<<< HEAD
     title: string,
@@ -67,6 +76,7 @@ declare module "@/components/FeatureCard" {}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     className?: string;
     key?: number | string;
+<<<<<<< HEAD
   }
 }
 // Extend ListingScoreCardProps to include key for mapping;
@@ -76,14 +86,44 @@ declare module '@/components / ListingScoreCard' {}
     description: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+// Extend ListingScoreCardProps to include key for mapping;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 declare module '@/components / ListingScoreCard' {
 
 // Extend ListingScoreCardProps to include key for mapping
 declare module "@/components/ListingScoreCard" {
   export interface ListingScoreCardProps {
+export interface ListingScoreCardProps {
+
+import { ReactNode } from 'react';
+import {ReactNode} from 'react';
+// Extend FeatureCardProps to include key for mapping
+declare module '@/components/FeatureCard' {
+  export interface FeatureCardProps {;
     title: string;
     description: string;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    icon: ReactNode;
+
+    className?: string
+
+    key?: number | string
+  }
+}
+// Extend ListingScoreCardProps to include key for mapping
+declare module '@/components/ListingScoreCard' {
+  export interface ListingScoreCardProps {;
+    title: string;
+    description: string;
+// Extend ListingScoreCardProps to include key for mapping;
+declare module "@/components/ListingScoreCard" {"
+  export interface ListingScoreCardProps {
+  // TODO: Implement
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     category: string;
     image?: string;
     tags?: string[];
@@ -291,38 +331,30 @@ declare module '@/components/ProductListingCard' {;
     author_image?: string;
     ai_score?: number;
     rating?: number;
-    reviewCount?: number;
-    key?: string | number;
-    variant?: string;
   }
-}
-
-// Extend ChatMessageProps to include key for mapping
-declare module "@/components/ChatAssistant/ChatMessage" {
-  export interface ChatMessageProps {
-    role: "user" | "assistant";
-    message: string;
-    timestamp?: Date;
-    key?: string | number;
-  }
-}
-
-// Extend ProductListingCardProps to include key for mapping
-declare module "@/components/ProductListingCard" {
-  export interface ProductListingCardProps {
-    listing: any;
-    view: any;
-    onRequestQuote: (listingId: string) => void;
-    key?: string | number;
-  }
-}
-    author_image?: string;
+}    author_image?: string;
     ai_score?: number;
     rating?: number;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    reviewCount?: number;
+
+
+// Extend ChatMessageProps to include key for mapping;"
+declare module "@/components/ChatAssistant/ChatMessage" {"
+  export interface ChatMessageProps {
+
+
+
+// Extend ProductListingCardProps to include key for mapping;"
+declare module "@/components/ProductListingCard" {"
+  export interface ProductListingCardProps {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

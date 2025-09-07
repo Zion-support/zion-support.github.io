@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { defineConfig, devices } from '@playwright/test';
 =======
 <<<<<<< HEAD
+=======
+import { defineConfig, devices } from '@playwright/test';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { defineConfig, devices } from '@playwright/test';
 ;
 export default defineConfig({;
@@ -44,6 +48,7 @@ export default defineConfig({;
     ['list'];
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 });import { defineConfig, devices } from "@playwright/test";
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { defineConfig, devices } from '@playwright/test';
@@ -55,11 +60,16 @@ import { defineConfig, devices } from "@playwright/test";
 
     trace: 'on-first-retry'
 =======
+=======
+import { defineConfig, devices } from '@playwright/test';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
   testDir: "tests/e2e",
   use: {
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
+    trace: 'on-first-retry'
     baseURL: process.env.PLAYWRIGHT_BASE_URL || "http://localhost:3000",
     trace: "on-first-retry",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -69,12 +79,18 @@ export default defineConfig({
       name: "Desktop Chrome",
       use: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     {
       name: "Mobile Safari",
       use: {
 
 =======
+=======
+        browserName: 'chromium',
+        channel: 'chrome'
+      }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         browserName: "chromium",
         channel: "chrome",
       },
@@ -82,18 +98,25 @@ export default defineConfig({
     {
       name: "Desktop Firefox",
       use: {
+        browserName: 'firefox'
+      }
         browserName: "firefox",
       },
     },
     {
       name: "Desktop Safari",
       use: {
+        browserName: 'webkit'
+      }
         browserName: "webkit",
       },
     },
     {
       name: "Mobile Chrome",
       use: {
+        browserName: 'chromium',
+        ...devices['Pixel 5']
+      }
         browserName: "chromium",
         ...devices["Pixel 5"],
       },
@@ -101,6 +124,15 @@ export default defineConfig({
     {
       name: "Mobile Safari",
       use: {
+        browserName: 'webkit',
+        ...devices['iPhone 12']
+      }
+    }
+  ],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
+  ]
         browserName: "webkit",
         ...devices["iPhone 12"],
       },
@@ -111,4 +143,36 @@ export default defineConfig({
     ["html", { outputFolder: "playwright-logs/html-report", open: "never" }],
   ],
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { defineConfig, devices } from "@playwright/test";"
+export default defineConfig({"
+  testDir: "tests/e2e","
+  use: {,"
+  baseURL: process.env.PLAYWRIGHT_BASE_URL || "http://localhost:3000",""
+    trace: "on-first-retry","
+  },
+  projects: [
+    {"
+      name: "Desktop Chrome","
+  browserName: "chromium",""
+        channel: "chrome","
+      name: "Desktop Firefox","
+  browserName: "firefox","
+      name: "Desktop Safari","
+  browserName: "webkit","
+      name: "Mobile Chrome","
+  browserName: "chromium","]"
+        ...devices["Pixel 5"],"
+      name: "Mobile Safari","
+  browserName: "webkit",""
+        ...devices["iPhone 12"],"
+  ],
+  reporter: []"
+    ["list"],""
+    ["html", { outputFolder: "playwright-logs/html-report", open: "never" }],"
+  ],)
+});
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

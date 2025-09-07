@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,9 @@
 
 import {format} from 'date-fns';
 
+=======
+import {format} from 'date-fns';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 <<<<<<< HEAD
@@ -78,10 +82,9 @@ import {format} from 'date-fns'; * Formats a date for PDF display;
 =======
 import {format} from 'date-fns';
 
-
+import { format } from 'date-fns';
 import {format} from 'date-fns';
-
-
+import {format} from 'date-fns';
 /**
  * Formats a date for PDF display
  * @param date Date or string to format
@@ -95,10 +98,19 @@ export function formatDate(date: Date | string | undefined): string {
     return format(new Date(date), 'MMM yyyy')
   }
   return format(date, 'MMM yyyy')
+import {format} from 'date - fns';
+/**;
+
+import {format} from 'date - fns';
+/**;
+
+import { format } from 'date-fns',;
+/**;
 import { format } from 'date-fns',;
 /**;
 
  * Formats a date for PDF display;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
  * @param date Date or string to format;
  * @returns Formatted date string;
@@ -106,6 +118,13 @@ import { format } from 'date-fns',;
 export function formatDate(date: Date | string | undefined): string {;'
   if (!date) return '';'
   if (typeof date === 'string') {;'
+=======
+
+
+
+  if (!date) return '';
+  if (typeof date === 'string') {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return format(new Date(date), 'MMM yyyy');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +179,65 @@ export function formatDate(date: Date | string | undefined): string {;'
     return format (new Date (date), 'MMM yyyy');
   }
   return format (date, 'MMM yyyy');
+}}
+}
+import {format} from 'date-fns';
+import {format} from 'date-fns';''
+import {format} from 'date-fns';'
+/**
+ * Formats a date for PDF display;
+ * @param date Date or string to format;
+ * @returns Formatted date string;
+ */
+export function formatDate(date: Date | string | undefined): string {
+
+  // TODO: Implement
+}
+  if (!date) return 
+  if (typeof date === 'string') {
+    return format(new Date(date), 'MMM yyyy')
+  return format(date, 'MMM yyyy')
+import { format } from 'date-fns',;
+}'
+  if (!date) return ''''
+  if (typeof date === 'string') {''
+    return format(new Date(date), 'MMM yyyy')'
+  }'
+  return format(date, 'MMM yyyy')''
+import { format } from 'date-fns',;'
+
+/**;
+
+ */;
+export function formatDate(date: Date | string | undefined): string {;
+  if (!date) return ;
+  if (typeof date === 'string') {;
+    return format(new Date(date), 'MMM yyyy');
+;
+
+    return format (new Date (date), 'MMM yyyy');
+  return format (date, 'MMM yyyy');
+pr-12325
+
+export function formatDate(date: Date | string | undefined): string {;'
+  if (!date) return '';''
+  if (typeof date === 'string') {;''
+    return format(new Date(date), 'MMM yyyy');'
+  }'
+  return format(date, 'MMM yyyy')'
+
+}
+  }'
+  return format(date, 'MMM yyyy')'
+}
+;
+
+  }'
+  return format(date, 'MMM yyyy')'
+}'
+    return format (new Date (date), 'MMM yyyy');'
+  }'
+  return format (date, 'MMM yyyy');'
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,4 +265,8 @@ export function formatDate(date: Date | string | undefined): string {;'
 }
 }
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

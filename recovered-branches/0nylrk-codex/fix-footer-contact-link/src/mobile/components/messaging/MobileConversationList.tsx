@@ -29,6 +29,7 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import {Card} from "@/components/ui/card";
@@ -423,9 +424,17 @@ export function MobileConversationList({;
           >
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="flex items-center gap-3 py-3 cursor-pointer">
+=======
+            )}
+            onClick={() => onSelectConversation(conversation.id)}
+            <div className="flex items-center gap-3 py-3 cursor-pointer">"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Avatar>
+
                 <AvatarImage src={conversation.avatar} />
+
                 <AvatarFallback>
+<<<<<<< HEAD
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
 <<<<<<< HEAD
@@ -501,8 +510,19 @@ export function MobileConversationList({;
 
                     {conversation.isTyping 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+              <div className="flex-1 min-w-0">"
+                <div className="flex justify-between items-baseline">"
+                  <h3 className="font-medium truncate">{conversation.name}</h3>""
+                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">"
+</span>
+                <div className="flex justify-between items-center">"
+                  <p className="text-sm text-muted-foreground truncate">"
+</p>
                       ? <em>Typing...</em>
+<<<<<<< HEAD
                       : conversation.lastMessage}
                   </p>
                   {conversation.unreadCount > 0 && (
@@ -522,9 +542,18 @@ export function MobileConversationList({;
             onClick={() => onSelectConversation(conversation && conversation.id)}
           >;"
             <div className="flex items-center gap-3 py-3 cursor-pointer">;
+=======
+                  </p>"
+                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">"
+
+            <div className="flex items-center gap-3 py-3 cursor-pointer">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Avatar>;
+
                 <AvatarImage src={conversation && conversation.avatar} />;
+
                 <AvatarFallback>;
+<<<<<<< HEAD
                   {conversation && conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>;
               </Avatar>;"
@@ -538,10 +567,24 @@ export function MobileConversationList({;
                 <div className="flex justify-between items-center">;"
                   <p className="text-sm text-muted-foreground truncate">;
                     {conversation && conversation.isTyping ;
-                      ? <em>Typing...</em> ;
-                      : conversation && conversation.lastMessage}
-                  </p>;
+=======
 
+              ;"
+              <div className="flex-1 min-w-0">;"
+                <div className="flex justify-between items-baseline">;"
+                  <h3 className="font-medium truncate">{conversation && conversation.name}</h3>;""
+                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">;"
+                  </span>;
+                <div className="flex justify-between items-center">;"
+                  <p className="text-sm text-muted-foreground truncate">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                      ? <em>Typing...</em> ;
+                  </p>;"
+                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;"
+
+</Badge>
+
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {conversation && conversation.unreadCount > 0 && (;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
@@ -719,6 +762,48 @@ function MobileConversationList() {
             </div>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="border - t border - border ml - 12"></div>;
+=======
+                    </Badge>;
+                </div>;
+              </div>;
+
+            </div>;"
+            <div className="border-t border-border ml-12"></div>;"
+    <div className="space - y-4">;"
+      <div className="px - 4 mb - 2">;"
+          <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - muted - foreground" />;"
+
+            placeholder="Search messages...";""
+            className="pl - 9";"
+
+      <div className="px - 4 pb - 4 space - y-2">;"
+        <div className="flex space - x-2">;"
+          <Badge variant="secondary" className="rounded - full px - 3">All;""
+          <Badge variant="outline" className="rounded - full px - 3">Unread;""
+          <Badge variant="outline" className="rounded - full px - 3">Interviews;""
+          <Badge variant="outline" className="rounded - full px - 3">Projects;"
+      <div className="space - y-2 pb - 24">;"
+            key={conversation.id}
+            className={cn ("
+              "px - 4";")"
+              active_conversation === conversation.id && "bg - primary / 5")}"
+            on_click={() => onSelectConversation (conversation.id)}
+            <div className="flex items - center gap - 3 py - 3 cursor - pointer">;"
+
+                <AvatarImage src={conversation.avatar} />;
+
+
+              <div className="flex - 1 min - w-0">;"
+                <div className="flex justify - between items - baseline">;"
+                  <h3 className="font - medium truncate">{conversation.name}</h3>;""
+                  <span className="text - xs text - muted - foreground whitespace - nowrap ml - 2">;"
+                <div className="flex justify - between items - center">;"
+                  <p className="text - sm text - muted - foreground truncate">;"
+                      ? <em > Typing...</em>;
+                    <Badge className="ml - 2 h - 5 w - 5 p - 0 flex items - center justify - center rounded - full">;"
+
+            <div className="border - t border - border ml - 12"></div>;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>))}
       </div>;
     </div>);
@@ -749,31 +834,31 @@ activeConversation;
 onSelectConversation 
 }: MobileConversationListProps) {
   return (<div className="space-y-4" > <div className="px-4 mb-2" > <div className="relative" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" /> Search messages..."className=" pl-9"/> </div> </div> <div className=" px-4 pb-4 space-y-2"> <div className=" flex space-x-2"> <Badge variant=" secondary"className=" rounded-full px-3">All</Badge> <Badge variant=" outline"className=" rounded-full px-3">Unread</Badge> <Badge variant=" outline"className=" rounded-full px-3">Interviews</Badge> <Badge variant=" outline"className=" rounded-full px-3">Projects</Badge> </div> </div> <div className=" space-y-2 pb-24"> {
+    </div>);"
+  return (<div className="space-y-4" > <div className="px-4 mb-2" > <div className="relative" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" /> Search messages..."className=" pl-9"/> </div> </div> <div className=" px-4 pb-4 space-y-2"> <div className=" flex space-x-2"> <Badge variant=" secondary"className=" rounded-full px-3">All <Badge variant=" outline"className=" rounded-full px-3">Unread <Badge variant=" outline"className=" rounded-full px-3">Interviews <Badge variant=" outline"className=" rounded-full px-3">Projects </div> </div> <div className=" space-y-2 pb-24"> {")
   conversations.map ( (conversation) => (<div key= {
-  conversation.id 
+  conversation.id;)
 }) 
 }onClick= {
   () => onSelectConversation (conversation.id) 
-}> <div className=" flex items-center gap-3 py-3 cursor-pointer"> <Avatar> <AvatarImage src= {
-  conversation.avatar 
+}> <div className=" flex items-center gap-3 py-3 cursor-pointer"> <Avatar> <AvatarImage src= {"
 }/> <AvatarFallback> {
-  conversation.name.charAt (0) .toUpperCase () 
-}</AvatarFallback> </Avatar> ? <em>Typing...</em> : conversation.lastMessage 
+
+}  ? <em>Typing...</em> : conversation.lastMessage;
 }</p> {
-  conversation.unreadCount 
-}</Badge>) 
-}</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) 
+}) "
+}</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) )"
 }</div> </div>) 
-}
-                  )}
-                </div>
-              </div>
-            </div>
-            <div className="border-t border-border ml-12"></div>
+            <div className="border-t border-border ml-12"></div>"
+pr-12325
           </div>
-        ))}
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </div>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

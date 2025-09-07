@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Health Check Automation Script;
  * Monitors system health and reports status;
@@ -19,18 +23,20 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class HealthChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'health-check.log');
-        this.reportFile = path.join(this.projectRoot, 'health-check-report.json');
+
         this.ensureLogsDir()};
     ensureLogsDir() {}
         const logsDir = path.dirname(this.logFile);
         if (!fs.existsSync(logsDir)) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString();
@@ -44,6 +50,7 @@ class HealthChecker {}
         const logMessage = `[${timestamp}] ${message}\n`;`
         console.log(logMessage.trim());
         fs.appendFileSync(this.logFile, logMessage)};
+<<<<<<< HEAD
     async checkSystemHealth() {}
         this.log('Starting health check...');
 <<<<<<< HEAD
@@ -57,11 +64,17 @@ class HealthChecker {}
         };
 <<<<<<< HEAD
 =======
+=======
+    async checkSystemHealth() {}"
+
+            "checks": {};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         try {}
             // Check Node.js version;
             const nodeVersion = process.version;
+<<<<<<< HEAD
             healthReport.checks.nodeVersion = {}
                 "status": 'pass',
                 "value": nodeVersion;
@@ -84,13 +97,17 @@ class HealthChecker {}
             this.log(`Memory "usage": ${healthReport.checks.memory.value.rss}`);
 <<<<<<< HEAD
 =======
+=======
+            healthReport.checks.nodeVersion = {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             // Check disk space;
-            try {}
-                const diskUsage = execSync('df -h .', { "encoding": 'utf8' }
+            try {}"
+                const diskUsage = execSync('df -h ., { "encoding": utf8})
 });
                 healthReport.checks.diskSpace = {}
+<<<<<<< HEAD
                     "status": 'pass',
                     "value": diskUsage.split('\n')[1] || 'Unknown'
                 };
@@ -153,18 +170,20 @@ class HealthChecker {}
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         this.log(`Health check completed. "Status": ${healthReport.status}`);
+=======
+
+                    "value": `${onlineProcesses} processes online;"
+                this.log(`PM2 "processes": ${onlineProcesses} online`)} catch (error) {`}"
+                healthReport.checks.pm2Processes = {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         return healthReport};
     async run() {}
-        try {}
             await this.checkSystemHealth();
             // Exit after successful completion;
-            setTimeout(() => {}
-                this.log('Health check completed successfully, exiting...');
-                process.exit(0)}, 1000)} catch (error) {}
-            this.log(`Fatal "error": ${error.message}`);
+            setTimeout(() => {}"
+
             process.exit(1)};
-    };
-};
 // Run if called directly;
 if (require.main === module) {}
     const healthChecker = new HealthChecker();
@@ -187,6 +206,5 @@ module.exports = HealthChecker;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-module.exports = HealthChecker;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

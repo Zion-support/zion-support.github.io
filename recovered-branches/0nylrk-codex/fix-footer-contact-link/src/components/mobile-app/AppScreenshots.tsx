@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -37,13 +38,21 @@ import {Button} from "@/components/ui/button";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+=======
+// These would be replaced with actual screenshots
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useRef } from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {Button} from "@/components/ui/button";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useRef } from "react",
+
+
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { ChevronLeft, ChevronRight } from "lucide-react",
 import { Button } from "@/components/ui/button",
 // These would be replaced with actual screenshots
@@ -366,6 +375,8 @@ export const AppScreenshots: React.FC = () => {;
 },
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useRef } from "react",;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 =======
 },"
@@ -373,6 +384,7 @@ import React, { useRef } from "react",;"
 import { ChevronLeft, ChevronRight } from "lucide-react",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Button } from "@/components/ui/button",;
+<<<<<<< HEAD
 // These would be replaced with actual screenshots;
 const mockScreenshots = [;"
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },;"
@@ -742,3 +754,7 @@ Take a visual tour through the Zion app's intuitive interface. </p> </div> <div 
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+// These would be replaced with actual screenshots
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

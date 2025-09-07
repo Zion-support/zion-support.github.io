@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';
 
@@ -34,6 +35,9 @@ import {}
   Mail,
   Share2,
   Check,
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Brain;
   Monitor;
   Search;
@@ -41,7 +45,7 @@ import { Brain;
   Mail;
   Share2;
   Check;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   Star;
   Zap;
   TrendingUp;
@@ -52,10 +56,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Calendar;
 <<<<<<< HEAD
   Target
+
  } from 'lucide-react';
 export default function MicroSaasServicesPage() {
   const microSaasServices = null;
             we deliver professional solutions with competitive pricing and exceptional value.
+<<<<<<< HEAD
       features: [
         'AI-powered content generation'
         'Multiple content types (blog, social, email)'
@@ -1090,6 +1096,9 @@ description:
             enterprise-grade performance monitoring, we deliver professional
             solutions with competitive pricing and exceptional value.
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </p>
         </div>
       </section>
@@ -1115,9 +1124,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='card - hover border - gradient - blue text - center';
+<<<<<<< HEAD
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;'
                 <div className='p - 6'>;'
+=======
+                style={{ animation_delay: `${index * 0.1;}s` }}
+              >;
+                <div className='p - 6'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className='text - xl font - bold text - white mb - 4'>;
                     {insight.title}
                   </h3>;'
@@ -1127,7 +1142,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;'
                     <div className='text - green - 400 font - semibold'>;
                       {insight.growth}
+<<<<<<< HEAD
             </h2>"
+=======
+            </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Our services are positioned competitively in growing markets with strong demand and proven business models.
             </p>
@@ -1185,11 +1204,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             {marketInsights && marketInsights.map((insight, index) => (;
+<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='card-hover border-gradient-blue text-center'`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='p-6'>;'
+=======
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue text-center'
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className='p-6'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className='text-xl font-bold text-white mb-4'>;
                     {insight && insight.title}
                   </h3>;'
@@ -1280,12 +1307,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>'
           <div className='space-y-16'>
+<<<<<<< HEAD
             {microSaasServices.map((service, index) => (`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;"
                 <div className="p-6">;"
                   <h3 className="text-xl font-bold text-white mb-4">{insight && insight.title}</h3>;"
                   <div className="flex items-center justify-center space-x-4 mb-4">;"
                     <div className="text-2xl font-bold text-cursor-blue">{insight && insight.marketSize}</div>;"
+=======
+            {microSaasServices.map((service, index) => (
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className="p-6">;
+                  <h3 className="text-xl font-bold text-white mb-4">{insight && insight.title}</h3>;
+                  <div className="flex items-center justify-center space-x-4 mb-4">;
+                    <div className="text-2xl font-bold text-cursor-blue">{insight && insight.marketSize}</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div className="text-green-400 font-semibold">{insight && insight.growth}</div>;
                   </div>;"
                   <p className="text-gray-400 text-sm">{insight && insight.description}</p>;
@@ -1305,7 +1341,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div>;'
                         <h3 className='text - 2xl font - bold text - white'>;
                           {service.name}
+<<<<<<< HEAD
             </h2>"
+=======
+            </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each service is designed to solve specific business challenges with professional-grade features and competitive pricing.
             </p>
@@ -1353,6 +1393,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
                     <div className="flex flex-wrap gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         </h3>
                         <p className='text-gray-400'>{service.description}</p>
                       </div>
@@ -1398,16 +1441,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <Button
                         size='sm'
+<<<<<<< HEAD
 =======
                       <Button'
                         size='sm''"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='bg-cursor-blue hover:bg-blue-600'>                    <div className="flex flex-wrap gap-4">;
                       <Button;
                         href={service && service.website}"
                         size="sm""
                         className="bg-cursor-blue hover:bg-blue-600"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='bg-cursor-blue hover:bg-blue-600'
                       >
                         Visit Website

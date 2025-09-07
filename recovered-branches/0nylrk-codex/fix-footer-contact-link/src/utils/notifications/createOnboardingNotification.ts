@@ -35,12 +35,15 @@ import {OnboardingNotificationParams} from './types';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+<<<<<<< HEAD
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -69,6 +72,7 @@ import {OnboardingNotificationParams} from './types';
 export async function createOnboardingNotification({;
   userId;
   missingMilestone;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   userRole
 }: OnboardingNotificationParams) {
@@ -437,8 +441,16 @@ export async function createOnboardingNotification() { return null; }
     }
   }
   ;
+=======
+export async function createOnboardingNotification({  missingMilestone;
+  userRole
+}: OnboardingNotificationParams) {
+
+
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return createNotification({;
-    userId,;
     title,;
     message,;
     type: 'onboarding',;
@@ -447,40 +459,66 @@ export async function createOnboardingNotification() { return null; }
     actionText;
   });
 
+}
+;
+}
+;
+    actionText;)
 
+
+<<<<<<< HEAD
 }
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 ;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     type:'onboarding',;
     sendEmail:false,;
     actionUrl,;
     actionText;
   }),;
 } if (userRole === 'talent') {
-  switch (missingMilestone) {
   case 'profile completed': title = 'Complete your profile';
-message = 'Complete your profile to get discovered by clients';
 actionUrl = '/profile';
 actionText = 'Complete Profile';
-break;
 case 'skills added': title = 'Add your skills';
-message = 'Add your skills to get better job matches';
 actionUrl = '/profile/skills';
 actionText = 'Add Skills';
-break;
 case 'availability set': case 'job posted': title = 'Post your first job';
-message = 'Post your first job to start finding talent';
 actionUrl = '/post-job';
 actionText = 'Post Job';
-break;
 case 'match viewed': title = 'View your AI matches';
 message = 'Check out your AI-matched talent suggestions';
 actionUrl = '/client-dashboard';
 actionText = 'View Matches';
-break;
-case 'talent invited': 
+case 'talent invited':
+pr-12325
+  }),;'
+} if (userRole === 'talent') {'
+  switch (missingMilestone) {'
+  case 'profile completed': title = 'Complete your profile';''
+message = 'Complete your profile to get discovered by clients';''
+actionUrl = '/profile';''
+actionText = 'Complete Profile';'
+break;'
+case 'skills added': title = 'Add your skills';''
+message = 'Add your skills to get better job matches';''
+actionUrl = '/profile/skills';''
+actionText = 'Add Skills';'
+break;'
+case 'availability set': case 'job posted': title = 'Post your first job';''
+message = 'Post your first job to start finding talent';''
+actionUrl = '/post-job';''
+actionText = 'Post Job';'
+break;'
+case 'match viewed': title = 'View your AI matches';''
+message = 'Check out your AI-matched talent suggestions';''
+actionUrl = '/client-dashboard';''
+actionText = 'View Matches';'
+break;'
+case 'talent invited':'
 }
 }
 ;
@@ -490,6 +528,7 @@ case 'talent invited':
 }
 ;
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -528,3 +567,7 @@ case 'talent invited':
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,34 +1,15 @@
+
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+
 interface UltraFuturisticBackground2026Props {
-  children: React.ReactNode;
-  className?: string
+  children: React.ReactNode;}
+  className?: string}
 }
 
-const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props> = ({ 
-  children;
-  className;
-  const animationRef = useRef<number | undefined>(undefined);
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    let particles: Array<{
-x: number;
-      y: number;
-origin/cursor/automate-test-improve-and-merge-code-2533
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      alpha: number;
-      life: number;
-      maxLife: number;
-    }> = [];
 
+<<<<<<< HEAD
     const colors = [
       '#00ffff', // Cyan
       '#ff00ff', // Magenta
@@ -534,3 +515,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

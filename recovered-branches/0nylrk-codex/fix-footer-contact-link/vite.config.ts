@@ -23,8 +23,6 @@ export default defineConfig({
 
 export default defineConfig({
 
-
-
 import {define_config} from 'vite';
 import { defineConfig } from 'vite';
 
@@ -61,10 +59,14 @@ export default defineConfig({}
 <<<<<<< HEAD
 =======
 import path from 'node: path';
+import {defineConfig} from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'node: path';
+;
+// https://vitejs.dev/config/
 export default defineConfig({
 
   plugins: [react()]
-
 
 import {define_config} from 'vite';
 import { defineConfig } from 'vite';
@@ -78,6 +80,7 @@ export default defineConfig({;
     alias: {;
       '@': path.resolve(__dirname, './src');
 ;
+import path from 'node: path';;
 // https://vitejs.dev / config/;
 export default define_config ({
   plugins: [react ()],
@@ -173,7 +176,41 @@ export default define_config ({}
   },;
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+});
+// https://vitejs && vitejs.dev/config/
+
+
+
+
+import {define_config} from 'vite';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'node: path';
+)
+  plugins: [react()]
+
+
+// https://vitejs.dev/config/;
+export default defineConfig({;)
+  plugins: [react()];,
+  resolve: {;
+    alias: {;
+      '@': path.resolve(__dirname, './src');
+;
+// https://vitejs.dev / config/;
+export default define_config ({)
+  plugins: [react ()],
+  resolve: {,
+  alias: {
+      "@": path.resolve(__dirname, "./src"),"
+    },
+});
+"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

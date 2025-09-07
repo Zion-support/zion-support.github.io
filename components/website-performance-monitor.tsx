@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 } from 'lucide-react';
 
 <<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Button from '../components/ui/Button';
 import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 export default function WebsitePerformanceMonitorPage() {
@@ -11,6 +15,7 @@ export default function WebsitePerformanceMonitorPage() {
   const [analysisResults, setAnalysisResults] = useState(null);
   const features = null;
             and AI-powered optimization recommendations. Never let performance issues impact your users again.
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Activity
@@ -554,6 +559,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={handleAnalyzeWebsite}
               size='lg'
               className='bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow'
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -608,17 +616,17 @@ href='#pricing'
               <Card
                 key={index}
                 className='card-hover group border-gradient-blue'
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 <div className='flex items-start space-x-6'>
                   <div className='relative'>
                     <div
-                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}
                     >
                       {feature.icon}
                     </div>
                     <div
-                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
+                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover: opacity-20 transition-opacity duration-300 blur-sm`;}
                     />
                   </div>
                   <div className='flex-1'>
@@ -662,9 +670,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>;
                       {feature.icon}
                     </div>;
+<<<<<<< HEAD
                     <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`} />;
                   </div>;"
                   <div className="flex - 1">;"
+=======
+                    <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover: opacity - 20 transition - opacity duration - 300 blur - sm`;} />;
+                  </div>;
+                  <div className="flex - 1">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <h3 className="text - 2xl font - bold mb - 4 text - white">;
                       {feature.title}
                     </h3>;"
@@ -676,8 +690,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h3>;'
                 <p className='text - gray - 400 text - sm leading - relaxed'>;
                   {metric.description}
+<<<<<<< HEAD
             </h2>"
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">'
+=======
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Track all the metrics that matter for your website's performance and user experience.
             </p>
           </div>"
@@ -697,11 +716,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {metrics && metrics.map((metric, index) => (;
+<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='card-hover border-gradient-blue text-center'`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='text-4xl mb-4'>{metric && metric.icon}</div>;`
+=======
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue text-center'
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className='text-4xl mb-4'>{metric && metric.icon}</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <h3 className={`text-xl font-bold mb-3 ${metric && metric.color}`}>;
                   {metric && metric.name}
                 </h3>;'
@@ -815,9 +842,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;'
                   <div className='flex justify-between items-center'>;'
                     <span className='text-gray-400'>Page Load Time</span>;
+<<<<<<< HEAD
                     <span;
               </h2>"
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">'
+=======
+                    <span
+              </h2>
+              <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Here's a sample analysis of a website. Get real-time insights for your own website.
               </p>
             </div>"
@@ -850,6 +883,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className="text-gray-300">{rec}</span>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className={`font-bold ${parseFloat(analysisResults.loadTime) < 2 ? 'text-green-400' : 'text-orange-400'}`}
                     >
                       {analysisResults.loadTime}
@@ -869,9 +905,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Optimization Recommendations;
               </h3>'
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+<<<<<<< HEAD
                 {analysisResults.recommendations.map((rec, index) => ('
                   <div key={index} className='flex items-start space-x-3'>'
                     <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />'
+=======
+                {analysisResults.recommendations.map((rec, index) => (
+                  <div key={index} className='flex items-start space-x-3'>
+                    <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
                   </div>
@@ -911,6 +953,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Pricing Section */}
 <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -949,12 +994,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
             {metrics.map ((metric, index) => (
               <Card;
+<<<<<<< HEAD
                 key={index}"
                 className="card - hover border - gradient - blue text - center";`
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;"
                 <div className="text - 4xl mb - 4">{metric.icon}</div>;`
                 <h3 className={`text - xl font - bold mb - 3 ${metric.color}`}>{metric.name}</h3>;"
+=======
+                key={index}
+                className="card - hover border - gradient - blue text - center";
+                style={{ animation_delay: `${index * 0.1;}s` }}
+              >;
+                <div className="text - 4xl mb - 4">{metric.icon}</div>;
+                <h3 className={`text - xl font - bold mb - 3 ${metric.color}`}>{metric.name}</h3>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <p className="text - gray - 400 text - sm leading - relaxed">{metric.description}</p>;
               </Card>))}
           </div>;
@@ -1130,7 +1184,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </div>;
                 className={`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 {plan.popular && (
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
@@ -1176,7 +1230,11 @@ href='/contact'
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+=======
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
@@ -1195,12 +1253,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 
 
+<<<<<<< HEAD
               </Card>'`
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;'"
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";"
                   size="lg";'`
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+=======
+              </Card>
+                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}>;
+                  Get Started;
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
+                  size="lg";
+                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover: from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
                   Get Started;"
                   <ArrowRight className="w-5 h-5 ml-2" />;
@@ -1253,6 +1320,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
               Schedule Demo

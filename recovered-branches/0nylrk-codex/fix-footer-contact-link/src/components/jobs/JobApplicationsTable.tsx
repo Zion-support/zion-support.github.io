@@ -17,16 +17,26 @@
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} from "./applications";
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+
+import {useState} from "react";""
+import {JobApplication, ApplicationStatus} from "@/types/jobs";""
+import {useJobApplications} from "@/hooks/useJobApplications";""
+import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} from "./applications";"
+pr-12325
 interface JobApplicationsTableProps {;
   jobId: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;  const { ;
 =======
@@ -43,6 +53,33 @@ import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} fr
 export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
   const { ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
+
+import { useState } from "react",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import {;
+  ApplicationsTable,;
+  EmptyState,;
+  ErrorState,;
+  LoadingState,;
+  ScoreDialog;
+} from "./applications",;
+;
+interface JobApplicationsTableProps {;
+  jobId:string;
+}
+;
+export function JobApplicationsTable({ jobId } JobApplicationsTableProps) {;
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;  const { ;
+
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
+  const { ;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     applications, ;
     isLoading, ;
     error, ;
@@ -90,12 +127,26 @@ interface JobApplicationsTableProps {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
+
+interface JobApplicationsTableProps {
+  jobId: string
+}
+
+  const {
+    applications
+    isLoading
+    error
+    updateApplicationStatus
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
+
   const {
     applications
     isLoading
     error
     updateApplicationStatus
   const { 
+<<<<<<< HEAD
 =======
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {}
@@ -610,6 +661,14 @@ if ( {) {
     <>;
       <ApplicationsTable;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    applications;
+    isLoading;
+    error;
+    updateApplicationStatus;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         applications={applications}
         processing_id={processing_id}
         onViewApplication={handleViewApplication}
@@ -622,8 +681,8 @@ if ( {) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       />;
 
-
       <ScoreDialog
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -653,6 +712,17 @@ if ( {) {
       <ScoreDialog;
       <ScoreDialog
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+/>;
+      />;
+;
+      <ScoreDialog;
+      <ScoreDialog
+
+
+      <ScoreDialog;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
         application={selected_application}
@@ -668,17 +738,24 @@ if ( {) {
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-      />;
-    </>;
-      />;
+/>;
     </>);
 }
+      />;
+    </>;
+  );
+
+    </>);
   ),;}
 <<<<<<< HEAD
  import {};
 =======
  import {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ApplicationsTable;
 EmptyState;
 ErrorState;
@@ -692,10 +769,11 @@ ScoreDialog interface JobApplicationsTableProps {}
   const {}
 =======
 ScoreDialog interface JobApplicationsTableProps {
-  jobId: string 
+  // TODO: Implement
 }export function JobApplicationsTable ({
-  jobId 
+  jobId;)
 }: JobApplicationsTableProps) {
+<<<<<<< HEAD
   const {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   applications;
@@ -728,20 +806,23 @@ return (<> <ApplicationsTable applications= {}
   handleScoreUpdated;
 =======
 refetch 
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }= useJobApplications (jobId);
 const [selectedApplication, setSelectedApplication] = useState<JobApplication | null> (null);
-const [showScoreDialog, setShowScoreDialog] = useState (false);
+
 return (<> <ApplicationsTable applications= {
-  applications 
 }processingId= {
-  processingId 
+  processingId;
 }onViewApplication= {
-  handleViewApplication 
+  handleViewApplication;
 }onStatusChange= {
-  handleStatusChange 
+  handleStatusChange;
 }onViewScore= {
-  handleViewScore 
+  handleViewScore;
 }/> <ScoreDialog open= {
+<<<<<<< HEAD
   showScoreDialog 
 }onOpenChange= {
   setShowScoreDialog 
@@ -750,22 +831,25 @@ return (<> <ApplicationsTable applications= {
 }onScoreUpdated= {
   handleScoreUpdated 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }/> </>) 
-}
 
   return (
     <>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <ApplicationsTable;
 =======
       <ApplicationsTable
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         applications={applications}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         processingId={processingId}
-        onViewApplication={handleViewApplication}
-        onStatusChange={handleStatusChange}
-        onViewScore={handleViewScore}
       />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <ScoreDialog;
 =======
@@ -773,12 +857,16 @@ return (<> <ApplicationsTable applications= {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         application={selectedApplication}
         onScoreUpdated={handleScoreUpdated}
       />
     </>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -787,3 +875,8 @@ return (<> <ApplicationsTable applications= {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    </>)
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

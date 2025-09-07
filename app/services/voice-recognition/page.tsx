@@ -1,55 +1,97 @@
 <<<<<<< HEAD
 export const metadata = {
-  title: 'Voice Recognition | Zion Tech Group',
-  description: 'Professional voice recognition services for your business needs.',
-  keywords: 'voice-recognition, services, business, technology'
+  title: "Voice Recognition Solutions | Zion Tech Group",
+  description:
+    "Transform speech into actionable data with advanced voice recognition, speech-to-text, and voice command processing.",
 };
 
-export default function ServicePage() {
+export default function VoiceRecognitionPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Voice Recognition
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional voice recognition services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
+    <section className="max-w-6xl mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">
+        Voice Recognition Solutions
+      </h1>
+      <p className="text-xl text-gray-600 mb-12">
+        Transform speech into actionable data with advanced voice recognition,
+        speech-to-text, and voice command processing.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <FeatureCard
+          title="Speech-to-Text"
+          features={[
+            "Real-time transcription",
+            "Multi-language support",
+            "Noise cancellation",
+            "Speaker identification",
+          ]}
+        />
+        <FeatureCard
+          title="Voice Commands"
+          features={[
+            "Voice control systems",
+            "Command processing",
+            "Intent recognition",
+            "Custom wake words",
+          ]}
+        />
+        <FeatureCard
+          title="Voice Analytics"
+          features={[
+            "Emotion detection",
+            "Speaker verification",
+            "Call analytics",
+            "Quality assessment",
+          ]}
+        />
+      </div>
+
+      <div className="bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 rounded-xl p-8 mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Why Choose Our Voice Recognition Solutions?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex items-start">
+            <span className="text-emerald-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">99%+ Accuracy</h3>
+              <p className="text-gray-600">
+                Industry-leading accuracy even in noisy environments
+              </p>
+            </div>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
+          <div className="flex items-start">
+            <span className="text-emerald-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">
+                Real-Time Processing
+              </h3>
+              <p className="text-gray-600">
+                Low-latency voice processing for live applications
+              </p>
+            </div>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
+          <div className="flex items-start">
+            <span className="text-emerald-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">Custom Training</h3>
+              <p className="text-gray-600">
+                Train models on your specific vocabulary and accent patterns
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <span className="text-emerald-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">Secure & Private</h3>
+              <p className="text-gray-600">
+                End-to-end encryption with on-premise deployment options
+              </p>
+            </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 =======
 export const metadata = {}
   title: "Voice Recognition Solutions | Zion Tech Group",
@@ -166,6 +208,31 @@ export default function VoiceRecognitionPage() {}
             className="border-2 border-emerald-600 text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-600 hover:text-white transition-colors"
           >
             Email Us;
+=======
+
+      <Pricing />
+
+      <div className="mt-16 text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Ready to Hear the Future?
+        </h2>
+        <p className="text-gray-600 mb-6">
+          Start with a free voice analysis demo and see the power of voice
+          recognition.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-emerald-600 text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-600 hover:text-white transition-colors"
+          >
+            Email Us
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </a>
         </div>
       </div>
@@ -173,6 +240,7 @@ export default function VoiceRecognitionPage() {}
   );
 }
 
+<<<<<<< HEAD
 function FeatureCard({}
   title,
   features,
@@ -186,6 +254,21 @@ function FeatureCard({}
       <ul className="space-y-2 text-gray-600">
         {features.map((f) => ("
           <li key={f} className="flex items-center">"
+=======
+function FeatureCard({
+  title,
+  features,
+}: {
+  title: string;
+  features: string[];
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-600">
+        {features.map((f) => (
+          <li key={f} className="flex items-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-emerald-500 mr-2">•</span> {f}
           </li>
         ))}
@@ -194,6 +277,7 @@ function FeatureCard({}
   );
 }
 
+<<<<<<< HEAD
 function Pricing() {}
   return ("
     <div className="mt-16">"
@@ -219,10 +303,38 @@ function Pricing() {}
             "Up to 1,000 hours/month","
             "Custom model training","
             "Priority support","
+=======
+function Pricing() {
+  return (
+    <div className="mt-16">
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Pricing Plans
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan
+          name="Starter"
+          price="$2,499/mo"
+          features={[
+            "Basic speech-to-text",
+            "Up to 100 hours/month",
+            "Standard support",
+            "Cloud deployment",
+          ]}
+        />
+        <Plan
+          name="Professional"
+          price="$6,999/mo"
+          features={[
+            "Advanced voice recognition",
+            "Up to 1,000 hours/month",
+            "Custom model training",
+            "Priority support",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "API access",
           ]}
           popular={true}
         />
+<<<<<<< HEAD
         <Plan"
           name="Enterprise""
           price="$17,999/mo"
@@ -231,6 +343,16 @@ function Pricing() {}
             "Custom voice models","
             "On-premise deployment","
             "Dedicated support","
+=======
+        <Plan
+          name="Enterprise"
+          price="$17,999/mo"
+          features={[
+            "Unlimited processing",
+            "Custom voice models",
+            "On-premise deployment",
+            "Dedicated support",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "White-label solution",
           ]}
         />
@@ -239,16 +361,25 @@ function Pricing() {}
   );
 }
 
+<<<<<<< HEAD
 function Plan({}
+=======
+function Plan({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name,
   price,
   features,
   popular = false,
+<<<<<<< HEAD
 }: {}
+=======
+}: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   price: string;
   features: string[];
   popular?: boolean;
+<<<<<<< HEAD
 }) {}
   return (
     <div"
@@ -264,10 +395,28 @@ function Plan({}
       <ul className="space-y-2 text-gray-600 mb-6">
         {features.map((f) => ("
           <li key={f} className="flex items-center">"
+=======
+}) {
+  return (
+    <div
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-emerald-500 ring-2 ring-emerald-200" : "border-gray-200"}`}
+    >
+      {popular && (
+        <div className="bg-emerald-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular
+        </div>
+      )}
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-emerald-600 mb-4">{price}</div>
+      <ul className="space-y-2 text-gray-600 mb-6">
+        {features.map((f) => (
+          <li key={f} className="flex items-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-green-500 mr-2">✓</span> {f}
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -283,3 +432,18 @@ function Plan({}
   );
 }
 "`
+=======
+      <a
+        href="tel:+13024640950"
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
+          popular
+            ? "bg-emerald-600 text-white hover:bg-emerald-700"
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+        }`}
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

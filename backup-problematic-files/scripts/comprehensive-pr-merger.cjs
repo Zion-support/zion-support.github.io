@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-pr-merger.cjs
 =======
 <<<<<<< HEAD
@@ -20,6 +21,9 @@ const fs = require('fs')
 const path = require('path')
 
 #!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -39,12 +43,13 @@ const path = require('path')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process')
 // console.log('� Comprehensive PR Merger & Conflict Resolver')
-console.log('====')
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || ''
-  throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.'
-const REPO_OWNER = 'Zion-Holding;s;'
-const REPO_NAME = 'zion.app;'
+
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || 
+  throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.
+const REPO_OWNER = 'Zion-Holding;s;
+const REPO_NAME = 'zion.app;
 async function githubApiCall(endpoint, method = 'GET')
+<<<<<<< HEAD
       'Authorization'
       'Accept': 'application/vnd.github.v3+json'
       'Content-Type': 'application/json'
@@ -77,3 +82,9 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    console.error(' Comprehensive PR merger "failed")"
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -44,5 +44,9 @@ export async function loadCustomFonts(doc:jsPDF, fontFamily:FontFamily = 'defaul
 break;
 case 'open-sans': doc.setFont ('helvetica');
 break;
+<<<<<<< HEAD
 case 'roboto':
+=======
+case 'roboto': 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

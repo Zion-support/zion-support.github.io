@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -11,15 +12,19 @@ const path = require('path');
 const filesToFix = ['src/components/SEO.tsx',
     'src/components/talent/TalentCard.jsx',
     'src/data/enhancedServices.ts'
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
         return;
     }
-    let content = fs.readFileSync(filePath, 'utf8');
+
     let fixes = 0;
-    // Fix SEO.tsx
+    // Fix SEO.tsx;
     if (filePath.includes('SEO.tsx')) {
+<<<<<<< HEAD
         // Remove malformed JSX after return statement
         content = content.replace(/;\s*\{\/\* Open Graph \/ Facebook \*\/\}\s*<meta property=""og": typ e" content=\{type\}\s*\/>\s*<meta property=""og": ur l" content=\{url\}\s*\/>\s*<meta property=""og": titl e" content=\{title\}\s*\/>\s*<meta property=""og": descriptio n" content=\{description\}\s*\/>/g, '');
         // Fix malformed return statement
@@ -122,3 +127,7 @@ const filesToFix = ['src/components/SEO.tsx']
 =======
     content = content.replace(/^\s*")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        // Remove malformed JSX after return statement;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

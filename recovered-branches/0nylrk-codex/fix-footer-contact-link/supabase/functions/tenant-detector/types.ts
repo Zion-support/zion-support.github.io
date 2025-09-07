@@ -36,6 +36,7 @@ export interface TenantInfo {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     subtitle: string
 
@@ -185,26 +186,56 @@ export interface TenantResponse {
 =======
 }
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
-export interface TenantInfo {;
-
-    cta: string;
-  },;
-  is_active: boolean;
-}
-;
-export interface TenantResponse {;
-  tenant: TenantInfo | null;
-  error?: string;
-}
-;
 }
 
 export interface TenantResponse {
   tenant: TenantInfo | null,
-  error?: string
+  error?: string;
+export interface TenantResponse {;
+  tenant: TenantInfo | null;
+    subtitle: string,    cta: string
+};
+  is_active: boolean;
 }
+export interface TenantResponse {
+  tenant: TenantInfo | null;
+  error?: string;
+  // TODO: Implement
+}
+  id: string;,
+  brand_name: string;
+  subdomain: string;,
+  custom_domain: string | null;
+  primary_color: string;,
+  logo_url: string | null;
+  theme_preset: string;,
+  landing_page_copy: {
+    headline: string;,
+  subtitle: string;
+    cta: string;
+  };
+  is_active: boolean;
+export interface TenantResponse {
+  // TODO: Implement
+  tenant: TenantInfo | null;
+  error?: string;
+
+
+export interface TenantInfo {;
+
+  },;
 ;
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export interface TenantResponse {;
+
+  // TODO: Implement
+  tenant: TenantInfo | null,
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

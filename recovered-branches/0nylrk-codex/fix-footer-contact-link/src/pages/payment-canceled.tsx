@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -132,6 +133,14 @@ export default function PaymentCanceled() {
 
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { XCircle } from 'lucide-react';
+export default function PaymentCanceled() {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
         <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">
@@ -206,7 +215,47 @@ export default function PaymentCanceled() {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
           >
+<<<<<<< HEAD
             Return to Dashboard;
+=======
+            Return to Dashboard
+
+import React from "react";""
+import { Button } from "@/components/ui/button";""
+import { useNavigate } from "react-router-dom";""
+import { XCircle } from "lucide-react";"
+export default function PaymentCanceled() {
+  const navigate = useNavigate();
+
+  return ("
+    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">"
+</div>"
+      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">"
+</div>"
+        <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">"
+</div>"
+          <XCircle className="h-6 w-6 text-red-600" />"
+</XCircle>
+        </div>
+"
+        <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>""
+        <p className="text-zion-slate-light mb-6">"
+</p>
+        </p>
+"
+        <div className="flex flex-col space-y-3">"
+</div>
+          <Button;)"
+            onClick={() => navigate("/payments")}"
+</Button>
+          </Button>
+
+          <Button;"
+            variant="outline"""
+            onClick={() => navigate("/dashboard")}"
+</Button>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </Button>
         </div>
       </div>
@@ -219,6 +268,7 @@ export default function PaymentCanceled() {};
 =======
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -424,7 +474,16 @@ function PaymentCanceled() {
   );
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+=======
+  )
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>);
+
+}
+;
+    </div>);
+}    </div>);
 }
 }
     </div>);
@@ -453,6 +512,7 @@ function PaymentCanceled() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -463,3 +523,47 @@ function PaymentCanceled() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from "react";""
+import { Button } from "@/components/ui/button";""
+import { useNavigate } from "react-router-dom";""
+import { XCircle } from "lucide-react";"
+export default function PaymentCanceled() {
+  const navigate = useNavigate();
+
+  return ("
+    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">"
+</div>"
+      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">"
+        <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">"
+          <XCircle className="h-6 w-6 text-red-600" />"
+
+        </div>
+"
+        <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>""
+        <p className="text-zion-slate-light mb-6">"
+</p>
+        <div className="flex flex-col space-y-3">"
+          <Button;)"
+            onClick={() => navigate("/payments")}"
+
+
+          <Button;"
+            variant="outline"""
+            onClick={() => navigate("/dashboard")}"
+
+    </div>);
+    </div>);
+    </div>;"
+ </div> <h1 className="text-2xl font-bold text-white mb-2" >Payment Canceled</h1> <p className="text-zion-slate-light mb-6" > Your payment process was canceled. No charges have been made to your account. </p> <div className="flex flex-col space-y-3" > <Button onClick= {""
+  () => navigate ('/payments')
+}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Try Again  <Button;"
+}
+    </div>;
+
+    </div>);"
+pr-12325
+</Button>
+    </div>);"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

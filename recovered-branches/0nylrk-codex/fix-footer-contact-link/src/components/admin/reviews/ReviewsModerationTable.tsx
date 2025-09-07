@@ -19,6 +19,7 @@ import {Review, ReviewStatus} from "@/types/reviews";
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,12 +27,15 @@ import {Review, ReviewStatus} from "@/types/reviews";
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -41,6 +45,8 @@ import {Button} from "@/components/ui/button";
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -69,11 +75,26 @@ import { Review, ReviewStatus } from "@/types/reviews",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
+import {
 
-
+import {useState} from "react";""
+import {useMutation} from "@tanstack/react-query";""
+import {Check, X, User, Star, MoreHorizontal} from "lucide-react";""
+import {format} from "date-fns";""
+import {toast} from "@/hooks/use-toast";""
+import {supabase} from "@/integrations/supabase/client";""
+import {Review, ReviewStatus} from "@/types/reviews";""
+import { useState } from "react",""
+import { useMutation } from "@tanstack/react-query",""
+import { Check, X, User, Star, MoreHorizontal } from "lucide-react",""
+import { format } from "date-fns",""
+import { toast } from "@/hooks/use-toast",""
+import { supabase } from "@/integrations/supabase/client",""
+import { Review, ReviewStatus } from "@/types/reviews","
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
+<<<<<<< HEAD
 =======
 import {useState} from "react";"
 import {useMutation} from "@tanstack/react-query";"
@@ -98,17 +119,43 @@ import { Review, ReviewStatus } from "@/types/reviews",
 
 import {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  // TODO: Implement
+}
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Table,
   TableBody,
   TableCell,
+
   TableHead,
+<<<<<<< HEAD
   TableHeader,"
   TableRow} from "@/components/ui/table","
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import {}
+=======
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import {
+  TableHeader,"
+  TableRow} from "@/components/ui/table",""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
+  // TODO: Implement
+pr-12325
+  TableHeader,"
+  TableRow} from "@/components/ui/table",""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
+
+import {
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Dialog,
   DialogContent,
   DialogDescription,
+
   DialogFooter,
   DialogHeader,"
   DialogTitle} from "@/components/ui/dialog",
@@ -145,7 +192,12 @@ import { Button } from "@/components/ui/button",interface ReviewsModerationTable
 =======
 import { Button } from "@/components/ui/button",
 interface ReviewsModerationTableProps {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   reviews: Review[]
   isLoading: boolean
 =======
@@ -156,11 +208,15 @@ import { Button } from "@/components/ui/button",
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 
 interface ReviewsModerationTableProps {}
   reviews: Review[];
   isLoading: boolean;
   onRefresh: () => void;
+=======
+  onRefresh: () => void
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 =======
@@ -178,16 +234,10 @@ interface ReviewsModerationTableProps {}
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-
-
-
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
 
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
-
-
-
 
 export function ReviewsModerationTable({;
   reviews;
@@ -196,6 +246,7 @@ export function ReviewsModerationTable({}
   reviews,
   isLoading,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -287,37 +338,16 @@ export function ReviewsModerationTable({}
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+  onRefresh}: ReviewsModerationTableProps) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-  const { mutate: updateReviewStatus, isPending } = useMutation({
-    mutationFn: async ({
-
-      reviewId
-      status}: {
-      reviewId: string
-
-      status: ReviewStatus
-    }) => {
-      const { error } = await supabase
-        .from("reviews")
-        .update({ status })
-
-        .eq("id", reviewId),
-
-      if (error) throw error,
-      return { reviewId, status }
-    },
-    onSuccess: (data) => {
-      toast({
-        title: "Review updated",
-        description: `Review has been ${data.status}.`}),
-      onRefresh(),
-      setViewDetailsOpen(false)
-    },
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     onError: (error: Error) => {
       toast({
 
+<<<<<<< HEAD
         title: "Error"
         description: `Failed to update review: ${error.message}`
 <<<<<<< HEAD
@@ -1048,58 +1078,62 @@ if ( {) {}
           <TableRow>;                          : <User className="h-4 w-4" />}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>;
+</Star>
       <Table>;
+</Table>
         <TableHeader>;
+</TableHeader>
           <TableRow>;
-
-                    {review.reviewer_profile?.avatar_url ? (;
+</TableRow>
                       <AvatarImage;
 
 
 
 
-                        src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name |""}
+                        src={review.reviewer_profile.avatar_url}"
+                        alt={review.reviewer_profile.display_name |""}"
                       />
-                    ) : (
+</AvatarImage>
                       <AvatarFallback>
-                        {review.reviewer_profile?.display_name
-                          ? getInitials(review.reviewer_profile.display_name)
-                          : <User className="h-4 w-4" />}
+</AvatarFallback>"
+                          : <User className="h-4 w-4" />}"
+</User>
                       </AvatarFallback>;
-                    )}
-
                   </Avatar>;
                   <div>;
-                    {review && review.is_anonymous ? (;
-                      <span className="text-sm font-medium">Anonymous</span>;
-                    ) : (;
-                      <span className="text-sm font-medium">;
-                        {review && review.reviewer_profile?.display_name || "User"}
+</div>"
+                      <span className="text-sm font-medium">Anonymous</span>;""
+                      <span className="text-sm font-medium">;"
+</span>
                       </span>;
-
-                        src={review && review.reviewer_profile.avatar_url}
-                        alt={review && review.reviewer_profile.display_name || ""}
             <TableHead>Reviewer</TableHead>;
             <TableHead>Rating</TableHead>;
             <TableHead>Date</TableHead>;
             <TableHead>Status</TableHead>;
-            <TableHead>Reports</TableHead>;
-            <TableHead className="text-right">Actions</TableHead>;
+            <TableHead>Reports</TableHead>;"
+            <TableHead className="text-right">Actions</TableHead>;"
           </TableRow>;
         </TableHeader>;
         <TableBody>;
-          {reviews.map((review) => (;
+</TableBody>
             <TableRow key={review.id}>;
+</TableRow>
               <TableCell>;
-                <div className="flex items-center gap-2">;
-                  <Avatar className="h-8 w-8">;
-                    {review.reviewer_profile?.avatar_url ? (;
+</TableCell>"
+                <div className="flex items-center gap-2">;"
+</div>"
+                  <Avatar className="h-8 w-8">;"
+</Avatar>
                       <AvatarImage;
                   </Avatar>;
+</AvatarImage>
                   <div>;
+<<<<<<< HEAD
                     {review.is_anonymous ? (;
                       <span className="text-sm font-medium">Anonymous</span>;
                     ) :(;
@@ -1172,19 +1206,41 @@ if ( {) {}
                 <Badge"
                   variant="outline"`
 =======
+=======
+</div>"
+                      <span className="text-sm font-medium">Anonymous</span>;""
+                      <span className="text-sm font-medium">;"
+</span>
+                      </span>;"
+                          : <User className="h-4 w-4" />}"
+</User>
+
+                      </AvatarFallback>;
+                  </div>;
+                </div>;
+
+              </TableCell>;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <TableCell>{renderStars(review && review.rating)}</TableCell>;
               <TableCell>;
-                {format(new Date(review && review.created_at), "MMM d, yyyy")}
+</TableCell>
               </TableCell>;
               <TableCell>;
+<<<<<<< HEAD
                 <Badge
                   variant="outline"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</TableCell>
+                <Badge;"
+                  variant="outline""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className={`${getStatusColor(review && review.status as ReviewStatus)}`}>;
-                  {review && review.status.charAt(0).toUpperCase() + review && review.status.slice(1)}
+</Badge>
                 </Badge>;
               </TableCell>;
               <TableCell>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {review && review.report_count > 0 ? (;"
                   <Badge variant="destructive">{review && review.report_count}</Badge>;
@@ -1217,16 +1273,33 @@ if ( {) {}
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
+=======
+</TableCell>"
+                  <Badge variant="destructive">{review && review.report_count}</Badge>;"
+              </TableCell>;"
+              <TableCell className="text-right">;"
+</TableCell>"
+                <div className="flex justify-end gap-2">;"
+</div>
+                    <>;"
+                  {review && review.status === "pending" && (;"
+                    <>;
+                      <Button;"
+                        size="sm"""
+                        variant="outline"""
+                        className="h-8 w-8 p-0"")
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         onClick={() => handleApprove(review && review.id)}
-                        disabled={isPending}
-                      >;
-                        <Check className="h-4 w-4 text-green-500" />;
+</Button>"
+                        <Check className="h-4 w-4 text-green-500" />;"
+</Check>
                       </Button>;
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="h-8 w-8 p-0"
+                      <Button;"
+                        size="sm"""
+                        variant="outline"""
+                        className="h-8 w-8 p-0""
                         onClick={() => handleReject(review && review.id)}
+<<<<<<< HEAD
                         disabled={isPending}
                       >;
 =======
@@ -1256,6 +1329,11 @@ if ( {) {}
                       >;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         <X className="h-4 w-4 text-red-500" />;
+=======
+</Button>"
+                        <X className="h-4 w-4 text-red-500" />;"
+</X>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </Button>;
                     </>;
                   )}
@@ -1275,8 +1353,17 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
                         className="h-8 w-8 p-0">;
+<Button;
+                        variant="ghost";
+                        size="sm";
+                        className="h-8 w-8 p-0";
+                      >;
                         <MoreHorizontal className="h-4 w-4" />;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                        className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 w-4" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </Button>;
                     </DropdownMenuTrigger>;"
                     <DropdownMenuContent align="end">;
@@ -1297,18 +1384,45 @@ if ( {) {}
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</DropdownMenu>
+                    <DropdownMenuTrigger asChild>;
+</DropdownMenuTrigger>
+                      <Button;"
+                        variant="ghost"""
+                        size="sm"""
+                        className="h-8 w-8 p-0">;"
+</Button>"
+                        <MoreHorizontal className="h-4 w-4" />;"
+</MoreHorizontal>
+                      </Button>;
+                    </DropdownMenuTrigger>;"
+                    <DropdownMenuContent align="end">;"
+</DropdownMenuContent>
+                      <DropdownMenuItem onClick={() => handleViewDetails(review)}>;
+</DropdownMenuItem>
+                      </DropdownMenuItem>;"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "rejected" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>;"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "approved" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <TableHead > Reviewer</TableHead>;
             <TableHead > Rating</TableHead>;
             <TableHead > Date</TableHead>;
             <TableHead > Status</TableHead>;
 <<<<<<< HEAD
             <TableHead > Reports</TableHead>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <TableHead className="text-right">Actions</TableHead>;
 =======
@@ -1318,6 +1432,9 @@ if ( {) {}
 =======
             <TableHead className="text - right">Actions</TableHead>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            <TableHead className="text-right">Actions</TableHead>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </TableRow>;
         </TableHeader>;
         <TableBody>;
@@ -1325,6 +1442,7 @@ if ( {) {}
             <TableRow key={review.id}>;
 <<<<<<< HEAD
               <TableCell>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="flex items - center gap-2">;
                   <Avatar className="h - 8 w-8">;
@@ -1337,6 +1455,10 @@ if ( {) {}
                 <div className="flex items - center gap - 2">;
                   <Avatar className="h - 8 w - 8">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                <div className="flex items - center gap-2">;
+                  <Avatar className="h - 8 w-8">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage;
                         src={review.reviewer_profile.avatar_url}"
@@ -1346,11 +1468,12 @@ if ( {) {}
                         {review.reviewer_profile?.display_name;
 <<<<<<< HEAD
                           ? get_initials (review.reviewer_profile.display_name);
-                          : <User className="h - 4 w - 4" />}
+                          : <User className="h - 4 w-4" />}
                       </AvatarFallback>)}
                   </Avatar>;
                   <div>;
                     {review.is_anonymous ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <span className="text - sm font-medium">Anonymous</span>) : (
                       <span className="text - sm font-medium">;
@@ -1368,11 +1491,47 @@ if ( {) {}
                       <span className="text - sm font - medium">Anonymous</span>) : (
                       <span className="text - sm font - medium">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                      <span className="text - sm font-medium">Anonymous</span>) : (
+                      <span className="text - sm font-medium">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         {review.reviewer_profile?.display_name || "User"}
+            <TableHead > Reports</TableHead>;"
+            <TableHead className="text - right">Actions</TableHead>;"
+          </TableRow>;
+        </TableHeader>;
+        <TableBody>;
+</TableBody>
+            <TableRow key={review.id}>;
+</TableRow>
+              <TableCell>;
+</TableCell>"
+                <div className="flex items - center gap - 2">;"
+</div>"
+                  <Avatar className="h - 8 w - 8">;"
+</Avatar>
+                      <AvatarImage;
+                        src={review.reviewer_profile.avatar_url}"
+                        alt={review.reviewer_profile.display_name || ""}"
+                      />) : (
+</AvatarImage>
+                      <AvatarFallback>;
+</AvatarFallback>"
+                          : <User className="h - 4 w - 4" />}"
+</User>)
+                      </AvatarFallback>)}
+                  </Avatar>;
+                  <div>;
+</div>"
+                      <span className="text - sm font - medium">Anonymous</span>) : (""
+                      <span className="text - sm font - medium">;"
+</span>)
+
                       </span>)}
                   </div>;
                 </div>;
               </TableCell>;
+
               <TableCell>{render_stars (review.rating)}</TableCell>;
               <TableCell>;"
                 {format (new Date (review.created_at), "MMM d, yyyy")}
@@ -1391,26 +1550,27 @@ if ( {) {}
                   "None")}
 <<<<<<< HEAD
               </TableCell>;
-              <TableCell className="text - right">;
-                <div className="flex justify - end gap - 2">;
+              <TableCell className="text-right">;
+                <div className="flex justify - end gap-2">;
                   {review.status === "pending" && (
                     <>;
                       <Button;
                         size="sm";
                         variant="outline";
-                        className="h - 8 w - 8 p - 0";
+                        className="h - 8 w - 8 p-0";
                         on_click={() => handle_approve (review.id)}
                         disabled={is_pending}
                       >;
-                        <Check className="h - 4 w - 4 text - green - 500" />;
+                        <Check className="h - 4 w - 4 text - green-500" />;
                       </Button>;
                       <Button;
                         size="sm";
                         variant="outline";
-                        className="h - 8 w - 8 p - 0";
+                        className="h - 8 w - 8 p-0";
                         on_click={() => handle_reject (review.id)}
                         disabled={is_pending}
                       >;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <X className="h - 4 w - 4 text - red-500" />;
 =======
@@ -1440,6 +1600,9 @@ if ( {) {}
 =======
                         <X className="h - 4 w - 4 text - red - 500" />;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                        <X className="h - 4 w - 4 text - red-500" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </Button>;
                     </>)}
                   <DropdownMenu>;
@@ -1448,8 +1611,9 @@ if ( {) {}
                       <Button;
                         variant="ghost";
                         size="sm";
-                        className="h - 8 w - 8 p - 0";
+                        className="h - 8 w - 8 p-0";
                       >;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <MoreHorizontal className="h - 4 w-4" />;
 =======
@@ -1463,6 +1627,9 @@ if ( {) {}
 =======
                         <MoreHorizontal className="h - 4 w - 4" />;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                        <MoreHorizontal className="h - 4 w-4" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </Button>;
                     </DropdownMenuTrigger>;"
                     <DropdownMenuContent align="end">;
@@ -1610,12 +1777,16 @@ if ( {) {}
 
             </TableRow>;
 
-
           ))}
 
         </TableBody>;
       </Table>;
 
+</TableRow>;
+          ))}
+        </TableBody>;
+      </Table>;
+;
       {selectedReview && (;
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
           <DialogContent className="max-w-lg">;
@@ -1627,12 +1798,25 @@ if ( {) {}
               </DialogDescription>;
             </DialogHeader>;
 
+{format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
+              </DialogDescription>;
+            </DialogHeader>;
+;
             <div className="space-y-4">;
               <div className="flex items-center justify-between">;
                 <div className="flex items-center gap-2">;
                   <Avatar>;
                     {selectedReview && selectedReview.reviewer_profile?.avatar_url ? (;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                      {review.status === "rejected" && (                    </DropdownMenuContent>;
+                  </DropdownMenu>;
+                </div>;
+              </TableCell>;
+        </TableBody>;
+      </Table>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <AvatarImage
                         src={selectedReview && selectedReview.reviewer_profile.avatar_url}
 =======
@@ -1675,6 +1859,172 @@ if ( {) {}
                       </AvatarFallback>;
                     )}
 
+<<<<<<< HEAD
+=======
+                  </Avatar>;
+                  <div>;
+                    <div className="font-medium">;
+                      {selectedReview && selectedReview.is_anonymous;
+                        ? "Anonymous";
+                        : selectedReview && selectedReview.reviewer_profile?.display_name || "User"}
+                    </div>;
+                    <Badge variant="outline" className={getStatusColor(selectedReview && selectedReview.status as ReviewStatus)}>;
+                      {selectedReview && selectedReview.status}
+</TableCell>
+              </TableCell>;
+              <TableCell>;
+</TableCell>
+                <Badge;"
+                  variant="outline";"
+                  className={`${getStatusColor (review.status as ReviewStatus)}`}
+                >;
+</Badge>
+                </Badge>;
+              </TableCell>;
+              <TableCell>;
+</TableCell>"
+                  <Badge variant="destructive">{review.report_count}</Badge>) : ("
+              </TableCell>;"
+              <TableCell className="text - right">;"
+</TableCell>"
+                <div className="flex justify - end gap - 2">;"
+</div>
+                    <>;
+                      <Button;"
+                        size="sm";""
+                        variant="outline";""
+                        className="h - 8 w - 8 p - 0";")
+                        on_click={() => handle_approve (review.id)}
+</Button>"
+                        <Check className="h - 4 w - 4 text - green - 500" />;"
+</Check>
+                      </Button>;
+                      <Button;"
+                        size="sm";""
+                        variant="outline";""
+                        className="h - 8 w - 8 p - 0";"
+                        on_click={() => handle_reject (review.id)}
+</Button>"
+                        <X className="h - 4 w - 4 text - red - 500" />;"
+</X>
+                      </Button>;
+                    </>)}
+                  <DropdownMenu>;
+</DropdownMenu>
+                    <DropdownMenuTrigger as_child>;
+</DropdownMenuTrigger>
+                      <Button;"
+                        variant="ghost";""
+                        size="sm";""
+                        className="h - 8 w - 8 p - 0";"
+                      >;
+</Button>"
+                        <MoreHorizontal className="h - 4 w - 4" />;"
+</MoreHorizontal>
+                      </Button>;
+                    </DropdownMenuTrigger>;"
+                    <DropdownMenuContent align="end">;"
+</DropdownMenuContent>
+                      <DropdownMenuItem on_click={() => handleViewDetails (review)}>;
+</DropdownMenuItem>
+                      </DropdownMenuItem>;"
+                        <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "rejected" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>)}"
+                        <X className="h-4 w-4 text-red-500" />"
+</X>
+                      </Button>
+                    </>
+                  )}
+                  <DropdownMenu>
+</DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+</DropdownMenuTrigger>
+                      <Button;"
+                        variant="ghost"""
+                        size="sm"""
+                        className="h-8 w-8 p-0""
+                      >
+</Button>"
+                        <MoreHorizontal className="h-4 w-4" />"
+</MoreHorizontal>
+                      </Button>
+                    </DropdownMenuTrigger>"
+                    <DropdownMenuContent align="end">"
+</DropdownMenuContent>
+                      <DropdownMenuItem onClick={() => handleViewDetails(review)}>
+</DropdownMenuItem>
+                      </DropdownMenuItem>"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>"
+</DropdownMenuItem>
+                        </DropdownMenuItem>"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>"
+</DropdownMenuItem>
+                        </DropdownMenuItem>"
+                        <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "approved" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>)}"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"rejected" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>;"
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"approved" })}>;"
+</DropdownMenuItem>
+                        </DropdownMenuItem>;                      )}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+              </TableCell>
+            </TableRow>
+                    </DropdownMenuContent>;
+                  </DropdownMenu>;
+                </div>;
+              </TableCell>;
+            </TableRow>;
+        </TableBody>;
+      </Table>;
+        <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
+</Dialog>"
+          <DialogContent className="max-w-lg">;"
+</DialogContent>
+            <DialogHeader>;
+</DialogHeader>
+              <DialogTitle>Review Details</DialogTitle>;
+              <DialogDescription>;
+</DialogDescription>
+              </DialogDescription>;
+            </DialogHeader>;"
+            <div className="space-y-4">;"
+</div>"
+              <div className="flex items-center justify-between">;"
+</div>"
+                <div className="flex items-center gap-2">;"
+</div>
+                  <Avatar>;
+</Avatar>
+                      <AvatarImage;
+                        src={selectedReview && selectedReview.reviewer_profile.avatar_url}"
+                        alt={selectedReview && selectedReview.reviewer_profile.display_name || ""}"
+                      />;
+</AvatarImage>
+                      <AvatarFallback>;
+</AvatarFallback>"
+                          : <User className="h-4 w-4" />}"
+</User>
+                      </AvatarFallback>;
+                  </Avatar>;
+                  <div>;
+</div>"
+                    <div className="font-medium">;"
+</div>
+                    </div>;"
+                    <Badge variant="outline" className={getStatusColor(selectedReview && selectedReview.status as ReviewStatus)}>;"
+</Badge>
+                    </Badge>;
+                  </div>;
+                </div>;
+                <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
+              </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 <<<<<<< HEAD
@@ -1684,6 +2034,7 @@ if ( {) {}
                   {selectedReview && selectedReview.communication_rating && (;
                     <Badge variant="outline">;
                       Communication: {selectedReview && selectedReview.communication_rating}/5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1715,7 +2066,55 @@ if ( {) {}
                   {selectedReview && selectedReview.quality_rating && (;"
 =======
                     </Badge>;
+=======
+                    </Badge>;}
+;)
+  const get_initials = (name: string) =>: any {
+  // TODO: Implement
+    return name;"
+      .split (" ");"
+      .map ((n) => n[0]);"
+      .join ("");"
+      .toUpperCase ();
+  // Check condition;
+if ( {) {
+  $2;
+    return ("
+      <div className="space - y-4">;"
+        <div className="h - 12 w - full bg - muted rounded animate - pulse" />;"
+        <div className="h - 16 w - full bg - muted rounded animate - pulse" />;"
+</div>)
+      </div>);"
+      <div className="py - 10 text - center">;"
+        <h3 className="text - lg font - medium mb - 2">No reviews to moderate</h3>;""
+        <p className="text - muted - foreground">;"
+        </p>;"
+            key={star}
+  return (
+    <>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+      <Table>;
+
+        <TableHeader>;
+
+          <TableRow>;
+
+: <User className="h-4 w-4" />}
+                    {selectedReview.reviewer_profile?.avatar_url ? (;
+                      <AvatarImage;
+
+
+
+
+                        src={review.reviewer_profile.avatar_url}"
+                        alt={review.reviewer_profile.display_name |""}"
+
+                      <AvatarFallback>
+                          : <User className="h-4 w-4" />}"
+
+                  <div>;
+                    <div className="font-medium">;
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -1746,21 +2145,86 @@ if ( {) {}
                       {selectedReview && selectedReview.would_work_again ? "Would work again" : "Would not work again"}
                     </Badge>;
                   )}
+                      <span className="text-sm font-medium">Anonymous</span>;""
+                      <span className="text-sm font-medium">;"
+</span>
+                      </span>;
+            <TableHead>Reviewer;
+            <TableHead>Rating;
+            <TableHead>Date;
+            <TableHead>Status;
+            <TableHead>Reports;"
+            <TableHead className="text-right">Actions;"
+        <TableBody>;
 
-                </div>;
-              </div>;
+            <TableRow key={review.id}>;
 
               {selectedReview && selectedReview.report_count > 0 && (;
                 <div className="bg-red-50 border border-red-200 rounded-md p-3">;
                   <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview && selectedReview.report_count}</h4>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+{selectedReview.is_anonymous;
+                        ? "Anonymous";
+                        :selectedReview.reviewer_profile?.display_name || "User"}
+                    </div>;
+                    <Badge variant="outline" className={getStatusColor(selectedReview.status as ReviewStatus)}>;
+                      {selectedReview.status}
+                    </Badge>;
+                  </div>;
+                </div>;
+                <div>{renderStars(selectedReview.rating)}</div>;
+              </div>;
+;
+              <div className="border rounded-md p-3 bg-muted/20">;
+                <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>;
+              </div>;
+;
+              <div className="space-y-2">;
+                <h4 className="text-sm font-medium">Additional Ratings</h4>;
+                <div className="flex flex-wrap gap-2">;
+                  {selectedReview.communication_rating && (;
+                    <Badge variant="outline">;
+                      Communication:{selectedReview.communication_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview.quality_rating && (;
+                    <Badge variant="outline">;
+                      Quality:{selectedReview.quality_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview.timeliness_rating && (;
+                    <Badge variant="outline">;
+                      Timeliness:{selectedReview.timeliness_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview.would_work_again !== undefined && (;
+                    <Badge;
+                      variant={selectedReview.would_work_again ? "default" :"secondary"}
+                      className={selectedReview.would_work_again ? "bg-green-100 text-green-800" :"bg-gray-100 text-gray-800"}
+                    >;
+                      {selectedReview.would_work_again ? "Would work again" :"Would not work again"}
+                    </Badge>;
+                  )}
+                </div>;
+              </div>;
+;
+              {selectedReview.report_count > 0 && (;
+                <div className="bg-red-50 border border-red-200 rounded-md p-3">;
+                  <h4 className="text-sm font-medium text-red-800">Reports:{selectedReview.report_count}</h4>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <p className="text-sm text-red-700">;
                     This review has been reported by users and may need investigation.;
                   </p>;
                 </div>;
               )}
             </div>;
+              <TableCell>;
+                <div className="flex items-center gap-2">;"
+                  <Avatar className="h-8 w-8">;"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     </Badge>;
@@ -1773,10 +2237,22 @@ if ( {) {}
             <DialogFooter>;
               {selectedReview && selectedReview.status === "pending" && (;
                 <>;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                   <Button
                     variant="destructive"
                     onClick={() => handleReject(selectedReview && selectedReview.id)}
+<Button
+                    variant="destructive"
+                    onClick={() => handleReject(selectedReview && selectedReview.id)}
+;
+            <DialogFooter>;
+              {selectedReview.status === "pending" && (;
+                <>;
+                  <Button;
+                    variant="destructive";
+                    onClick={() => handleReject(selectedReview.id)}
                     </Badge>;
                   )}
                   <Button
@@ -1798,6 +2274,8 @@ if ( {) {}
                   <Button
                     onClick={() => handleApprove(selectedReview && selectedReview.id)}
                     disabled={isPending}
+<Button;
+                    onClick={() => handleApprove(selectedReview.id)}                    disabled={isPending}
                   <Button
                     onClick={() => handleApprove(selectedReview && selectedReview.id)}
                     disabled={isPending}
@@ -1821,7 +2299,14 @@ if ( {) {}
                 <Button
                   variant="destructive"
                   onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "rejected" })}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+{selectedReview.status === "approved" && (;
+                <Button;
+                  variant="destructive";
+                  onClick={() => updateReviewStatus({ reviewId:selectedReview.id, status:"rejected" })}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   disabled={isPending}
                 >;
                   Mark as Rejected;
@@ -1842,11 +2327,21 @@ if ( {) {}
                 </Button>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+{selectedReview.status === "rejected" && (;
+                <Button;
+                  onClick={() => updateReviewStatus({ reviewId:selectedReview.id, status:"approved" })}
+                  disabled={isPending}
+                >;
+                  Mark as Approved;
+                </Button>;              )}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
@@ -1906,8 +2401,66 @@ if ( {) {}
                         src={selected_review.reviewer_profile.avatar_url}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                         alt={selected_review.reviewer_profile.display_name || ""}
+                      </span>;"
+
+              <TableCell>{renderStars(review && review.rating)};
+
+
+                <Badge;"
+                  variant="outline""`;
+                  className={`${getStatusColor(review && review.status as ReviewStatus)}`}>;
+
+                  <Badge variant="destructive">{review && review.report_count};"
+              ;"
+              <TableCell className="text-right">;"
+                <div className="flex justify-end gap-2">;"
+                    <>;"
+                  {review && review.status === "pending" && (;"
+                      <Button;"
+                        size="sm"""
+                        variant="outline"""
+                        className="h-8 w-8 p-0"")
+                        onClick={() => handleApprove(review && review.id)}
+                        <Check className="h-4 w-4 text-green-500" />;"
+
+                        className="h-8 w-8 p-0""
+                        onClick={() => handleReject(review && review.id)}
+                        <X className="h-4 w-4 text-red-500" />;"
+
+                    </>;
+                  )}
+                  <DropdownMenu>;
+
+                    <DropdownMenuTrigger asChild>;
+
+                        variant="ghost"""
+                        className="h-8 w-8 p-0">;"
+                        <MoreHorizontal className="h-4 w-4" />;"
+
+                    <DropdownMenuContent align="end">;"
+
+                      <DropdownMenuItem onClick={() => handleViewDetails(review)}>;
+
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "rejected" })}>;"
+
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "approved" })}>;"
+
+            <TableHead > Reviewer;
+            <TableHead > Rating;
+            <TableHead > Date;
+            <TableHead > Status;
+            <TableHead > Reports;"
+            <TableHead className="text - right">Actions;"
+
+
+                <div className="flex items - center gap - 2">;"
+                  <Avatar className="h - 8 w - 8">;"
+
+                        alt={review.reviewer_profile.display_name || ""}"
                       />) : (
+
                       <AvatarFallback>;
+<<<<<<< HEAD
                         {selected_review.reviewer_profile?.display_name;
 <<<<<<< HEAD
                           ? get_initials (selected_review.reviewer_profile.display_name);"
@@ -2012,19 +2565,166 @@ if ( {) {}
                 <>;
                   <Button;"
 =======
+=======
+                          : <User className="h - 4 w - 4" />}"
+)
+                      <span className="text - sm font - medium">Anonymous</span>) : (""
+                      <span className="text - sm font - medium">;"
+</span>)
+                      </span>)}
+              <TableCell>{render_stars (review.rating)};
+
+
+                  variant="outline";"`;
+                  className={`${getStatusColor (review.status as ReviewStatus)}`}
+                >;
+
+                  <Badge variant="destructive">{review.report_count}) : ("
+              <TableCell className="text - right">;"
+                <div className="flex justify - end gap - 2">;"
+                        size="sm";""
+                        variant="outline";""
+                        className="h - 8 w - 8 p - 0";")
+                        on_click={() => handle_approve (review.id)}
+                        <Check className="h - 4 w - 4 text - green - 500" />;"
+
+                        className="h - 8 w - 8 p - 0";"
+                        on_click={() => handle_reject (review.id)}
+                        <X className="h - 4 w - 4 text - red - 500" />;"
+
+                    </>)}
+
+                    <DropdownMenuTrigger as_child>;
+
+                        variant="ghost";""
+                        <MoreHorizontal className="h - 4 w - 4" />;"
+
+
+                      <DropdownMenuItem on_click={() => handleViewDetails (review)}>;
+
+                        <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "rejected" })}>;"
+
+                        )}"
+                        <X className="h-4 w-4 text-red-500" />"
+
+                    </>
+                  <DropdownMenu>
+
+                    <DropdownMenuTrigger asChild>
+
+                      >
+                        <MoreHorizontal className="h-4 w-4" />"
+
+                    <DropdownMenuContent align="end">"
+
+                      <DropdownMenuItem onClick={() => handleViewDetails(review)}>
+
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>"
+
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>"
+
+                        <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "approved" })}>;"
+
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"rejected" })}>;"
+
+                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId:review.id, status:"approved" })}>;"
+
+                        ;                      )}
+        <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
+          <DialogContent className="max-w-lg">;"
+
+            <DialogHeader>;
+
+              <DialogTitle>Review Details;
+              <DialogDescription>;
+
+              <div className="flex items-center justify-between">;"
+                  <Avatar>;
+
+                        src={selectedReview && selectedReview.reviewer_profile.avatar_url}"
+                        alt={selectedReview && selectedReview.reviewer_profile.display_name || ""}"
+
+
+                    <div className="font-medium">;"
+                    <Badge variant="outline" className={getStatusColor(selectedReview && selectedReview.status as ReviewStatus)}>;"
+
+                <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
+              </div>;"
+              <div className="border rounded-md p-3 bg-muted/20">;"
+                <p className="whitespace-pre-wrap">{selectedReview && selectedReview.review_text}</p>;"
+              <div className="space-y-2">;"
+                <h4 className="text-sm font-medium">Additional Ratings</h4>;""
+                <div className="flex flex-wrap gap-2">;"
+                    <Badge variant="outline">;"
+
+
+
+                      variant={selectedReview && selectedReview.would_work_again ? "default" : "secondary"}""
+                      className={selectedReview && selectedReview.would_work_again ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"}>;"
+
+                <div className="bg-red-50 border border-red-200 rounded-md p-3">;"
+                  <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview && selectedReview.report_count}</h4>;""
+                  <p className="text-sm text-red-700">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <DialogFooter>;
-              {selected_review.status === "pending" && (
-                <>;
+
+
+                    variant="destructive""
+                    onClick={() => handleReject(selectedReview && selectedReview.id)}
+
+
                   <Button;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     variant="destructive";
+=======
+                    onClick={() => handleApprove(selectedReview && selectedReview.id)}
+
+
+              {selectedReview && selectedReview.status === "approved" && (;"
+                  variant="destructive"")"
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "rejected" })}"
+
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "approved" })}"
+
+  );
+            ))}
+          <DialogContent className="max - w-lg">;"
+
+
+              <DialogTitle > Review Details;
+
+              <div className="flex items - center justify - between">;"
+
+                        src={selected_review.reviewer_profile.avatar_url}"
+                        alt={selected_review.reviewer_profile.display_name || ""}"
+
+                    <div className="font - medium">;"
+                    <Badge variant="outline" className={getStatusColor (selected_review.status as ReviewStatus)}>;"
+
+                <div>{render_stars (selected_review.rating)}</div>;
+              <div className="border rounded - md p - 3 bg - muted / 20">;"
+                <p className="whitespace - pre - wrap">{selected_review.review_text}</p>;"
+              <div className="space - y-2">;"
+                <h4 className="text - sm font - medium">Additional Ratings</h4>;""
+                <div className="flex flex - wrap gap - 2">;"
+
+
+
+                      variant={selected_review.would_work_again ? "default" : "secondary"}""
+                      className={selected_review.would_work_again ? "bg - green - 100 text - green - 800" : "bg - gray - 100 text - gray - 800"}"
+
+                <div className="bg - red - 50 border border - red - 200 rounded - md p - 3">;"
+                  <h4 className="text - sm font - medium text - red - 800">Reports: {selected_review.report_count}</h4>;""
+                  <p className="text - sm text - red - 700">;"
+                </div>)}
+
+                    variant="destructive";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     on_click={() => handle_reject (selected_review.id)}
-                    disabled={is_pending}
-                  >;
-                    Reject;
-                  </Button>;
-                  <Button;
+
                     on_click={() => handle_approve (selected_review.id)}
+<<<<<<< HEAD
                     disabled={is_pending}
                   >;
                     Approve;
@@ -2069,256 +2769,162 @@ if ( {) {}
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+                </>)}"
+              {selected_review.status === "approved" && ("
+                  variant="destructive";")"
+                  on_click={() => updateReviewStatus ({ review_id: selected_review.id, status: "rejected" })}"
+
+                  on_click={() => updateReviewStatus ({ review_id: selected_review.id, status: "approved" })}"
+
+    </>);
+),; import {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ),; import {
+  // TODO: Implement
   Table;
 TableBody;
 TableCell;
 TableHead;
 TableHeader;
-import {
+  // TODO: Implement
   Dialog;
 DialogContent;
 DialogDescription;
 DialogFooter;
 DialogHeader;
-import {
+  // TODO: Implement
   DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
-interface ReviewsModerationTableProps {
-  reviews: Review[];
-isLoading: boolean;
-onRefresh: () => void 
+  // TODO: Implement
+  reviews: Review[];,
 }export function ReviewsModerationTable ({
   reviews;
 isLoading;
-onRefresh 
+onRefresh;)
 }: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null> (null);
-const [viewDetailsOpen, setViewDetailsOpen] = useState (false);
-const {
-  mutate: updateReviewStatus, isPending 
-}= useMutation ({
-  mutationFn: async ({
-  reviewId;
-status 
-}: {
-  reviewId: string;
-status: ReviewStatus 
-}) => {
-  const {
-  error 
-}= await supabase .from ("reviews") .update ({
-  status 
-}) if (error) throw error;
-return {
-  reviewId, status 
-}
-};
-onSuccess: (data) => {
-  toast ({
-  onRefresh ();
-setViewDetailsOpen (false);
-};
-}
-};
-const getInitials = (name: string) => {
-  return name .split (" ") .map ( (n) => n[0]) .join ("") .toUpperCase () 
-};
-return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse"/> <div className="h-16 w-full bg-muted rounded animate-pulse"/> <div className="h-16 w-full bg-muted rounded animate-pulse"/> <div className="h-16 w-full bg-muted rounded animate-pulse"/> </div> if (reviews.length === 0) {
-  return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground"> All reviews have been processed. Check back later for new submissions. </p> </div> 
-};
-  return (<div className="flex"> {
+return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse"/> <div className="h-16 w-full bg-muted rounded animate-pulse"/> <div className="h-16 w-full bg-muted rounded animate-pulse"/> <div className="h-16 w-full bg-muted rounded animate-pulse"/> </div> if (reviews.length === 0) {""
+  return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground"> All reviews have been processed. Check back later for new submissions. </p> </div>""
+  return (<div className="flex"> {"
   [1, 2, 3, 4, 5].map ( (star) => (<Star key= {
-  star 
+  star;)
 }/>) ) 
-}</div>) 
-};
-return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+
+}</div>) "
+return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer <TableHead>Rating <TableHead>Date <TableHead>Status <TableHead>Reports <TableHead className="text-right">Actions   <TableBody> {"
   reviews.map ( (review) => (<TableRow key= {
-  review.id 
-}> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {
+  review.id;"
+}> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {"
+
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
-  review.reviewer profile.avatar url 
-}alt= {
-  review.reviewer profile.display name || "" 
+  review.reviewer profile.avatar url;
+}alt= {"
+  review.reviewer profile.display name || """)
 }/>) : (<AvatarFallback> {
-  review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : <User className=" h-4 w-4"/> 
-}</AvatarFallback>) 
-}</Avatar> <div>) : (<span className=" text-sm font-medium"> {
-  review.reviewer profile?.display name || " User" 
+)"
+  review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : <User className=" h-4 w-4"/>"
+
+}) "
+} <div>) : (<span className=" text-sm font-medium"> {"
 }</span>) 
-}</div> </div> </TableCell> <TableCell> {
-  renderStars (review.rating) 
-}</TableCell> <TableCell> > {
-  review.status.charAt (0) .toUpperCase () + review.status.slice (1) 
-}</Badge> </TableCell> <TableCell>) : (" None") 
-}</TableCell> <Button size=" sm"variant=" outline"className=" h-8 w-8 p-0"onClick= {
+}</div> </div>  <TableCell> {
+
+} <TableCell> > {
+}  <TableCell>) : (" None")"
+} <Button size=" sm"variant=" outline"className=" h-8 w-8 p-0"onClick= {"
   () => handleApprove (review.id) 
-}disabled= {
-  isPending 
-}> <Check className=" h-4 w-4 text-green-500"/> </Button> <Button > <X className=" h-4 w-4 text-red-500"/> </Button> </>) 
-}<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=" ghost"size=" sm"className=" h-8 w-8 p-0"> <MoreHorizontal className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> Mark as approved </DropdownMenuItem>) 
-}</DropdownMenuContent> </DropdownMenu> </div> </TableCell> </TableRow>) ) 
-}</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div className=" flex items-center gap-2"> <Avatar> {
+}> <Check className=" h-4 w-4 text-green-500"/>  <Button > <X className=" h-4 w-4 text-red-500"/>  </>)"
+}<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=" ghost"size=" sm"className=" h-8 w-8 p-0"> <MoreHorizontal className=" h-4 w-4"/>   Mark as approved )"
+
+}  </div>  ) ) "
+}    <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div className=" flex items-center gap-2"> <Avatar> {"
   selectedReview.reviewer profile?.avatar url ? (<AvatarImage src= {
-  selectedReview.reviewer profile.avatar url 
-}alt= {
-  selectedReview.reviewer profile.display name || "" 
-}/>) : (<AvatarFallback> {
-  selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/> 
-}</AvatarFallback>) 
-}</Avatar> <div> </Badge> </div> </div> <div> {
-  renderStars (selectedReview.rating) 
-}</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
-  selectedReview.review text 
-}</p> </div> <div className="space-y-2"> <h4 className="text-sm font-medium">Additional Ratings</h4> Timeliness: {
-  selectedReview.timeliness rating 
-}/5 </Badge>) 
-}{
-  selectedReview.would work again !== undefined && (<Badge </Badge>) 
-}</div> </div> {
-  selectedReview.report count > 0 && (<div className="bg-red-50 border border-red-200 rounded-md p-3"> <h4 className="text-sm font-medium text-red-800">Reports: {
-  selectedReview.report count 
-}</h4> <p className="text-sm text-red-700"> This review has been reported by users and may need investigation. </p> </div>) 
-}</div> <DialogFooter> <Button variant=" destructive" onClick= {
-  () => handleReject (selectedReview.id) 
-}disabled= {
-  isPending 
-}> Reject </Button> <Button onClick= {
+  selectedReview.reviewer profile.avatar url;
+  selectedReview.reviewer profile.display name || """)
+  selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>"
+
+}) 
+} <div>  </div> </div> <div> {
+  renderStars (selectedReview.rating) "
+}</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {"
+}</p> </div> <div className="space-y-2"> <h4 className="text-sm font-medium">Additional Ratings</h4> Timeliness: {"
+}/5 ) 
+  selectedReview.would work again !== undefined && (<Badge ) 
+}</div> </div> {"
+  selectedReview.report count > 0 && (<div className="bg-red-50 border border-red-200 rounded-md p-3"> <h4 className="text-sm font-medium text-red-800">Reports: {"
+</div>)"
+}</h4> <p className="text-sm text-red-700"> This review has been reported by users and may need investigation. </p> </div>)""
+}</div> <DialogFooter> <Button variant=" destructive" onClick= {"
+
+}> Reject  <Button onClick= {
   () => handleApprove (selectedReview.id) 
-}disabled= {
-  isPending 
-}> Approve </Button> </>) 
-}> Mark as Rejected </Button>) 
-}> Mark as Approved </Button>) 
-}</DialogFooter> </DialogContent> </Dialog>) 
+
+}> Approve  </>) 
+}> Mark as Rejected ) 
+}> Mark as Approved ) 
+}  ) 
 }</>) 
-            </TableRow>;
-          ))}
-        </TableBody>
-      </Table>
-      {selectedReview && (
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>
-          <DialogContent className="max-w-lg">
+          <DialogContent className="max-w-lg">"
+
             <DialogHeader>
-              <DialogTitle>Review Details</DialogTitle>
+
+              <DialogTitle>Review Details
               <DialogDescription>
-                Review submitted on{" "}
-                {format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
-              </DialogDescription>
-            </DialogHeader>
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
+
+              <div className="flex items-center justify-between">"
+                <div className="flex items-center gap-2">"
                   <Avatar>
-                    {selectedReview.reviewer_profile?.avatar_url ? (
-                      <AvatarImage
-                        src={selectedReview.reviewer_profile.avatar_url}
-                        alt={selectedReview.reviewer_profile.display_name |""}
-                      />
-                    ) : (
-                      <AvatarFallback>
-                        {selectedReview.reviewer_profile?.display_name
-                          ? getInitials(selectedReview.reviewer_profile.display_name)
-                          : <User className="h-4 w-4" />}
-                      </AvatarFallback>
-                    )}
-                  </Avatar>
+
+                        src={selectedReview.reviewer_profile.avatar_url}"
+                        alt={selectedReview.reviewer_profile.display_name |""}"
+
+
                   <div>
-                    <div className="font-medium">
-                      {selectedReview.is_anonymous
-                        ? "Anonymous"
-                        : selectedReview.reviewer_profile?.display_name |"User"}
-                    </div>
-                    <Badge variant="outline" className={getStatusColor(selectedReview.status as ReviewStatus)}>
-                      {selectedReview.status}
-                    </Badge>
-                  </div>
-                </div>
+                    <div className="font-medium">"
+                    <Badge variant="outline" className={getStatusColor(selectedReview.status as ReviewStatus)}>"
+
                 <div>{renderStars(selectedReview.rating)}</div>
-              </div>
-              <div className="border rounded-md p-3 bg-muted/20">
-                <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
-              </div>
-              <div className="space-y-2">
-                <h4 className="text-sm font-medium">Additional Ratings</h4>
-                <div className="flex flex-wrap gap-2">
-                  {selectedReview.communication_rating && (
-                    <Badge variant="outline">
-                      Communication: {selectedReview.communication_rating}/5
-                    </Badge>
-                  )}
-                  {selectedReview.quality_rating && (
-                    <Badge variant="outline">
-                      Quality: {selectedReview.quality_rating}/5
-                    </Badge>
-                  )}
-                  {selectedReview.timeliness_rating && (
-                    <Badge variant="outline">
-                      Timeliness: {selectedReview.timeliness_rating}/5
-                    </Badge>
-                  )}
-                  {selectedReview.would_work_again !== undefined && (
-                    <Badge
-                      variant={selectedReview.would_work_again ? "default" : "secondary"}
-                      className={selectedReview.would_work_again ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"}
-                    >
-                      {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
-                    </Badge>
-                  )}
-                </div>
-              </div>
-              {selectedReview.report_count > 0 && (
-                <div className="bg-red-50 border border-red-200 rounded-md p-3">
-                  <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report_count}</h4>
-                  <p className="text-sm text-red-700">
-                    This review has been reported by users and may need investigation.
-                  </p>
-                </div>
-              )}
-            </div>
+              <div className="border rounded-md p-3 bg-muted/20">"
+                <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>"
+              <div className="space-y-2">"
+                <h4 className="text-sm font-medium">Additional Ratings</h4>""
+                <div className="flex flex-wrap gap-2">"
+                    <Badge variant="outline">"
+
+
+
+                      variant={selectedReview.would_work_again ? "default" : "secondary"}""
+                      className={selectedReview.would_work_again ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"}"
+
+                <div className="bg-red-50 border border-red-200 rounded-md p-3">"
+                  <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview.report_count}</h4>""
+                  <p className="text-sm text-red-700">"
             <DialogFooter>
-              {selectedReview.status === "pending" && (
+
                 <>
-                  <Button
-                    variant="destructive"
                     onClick={() => handleReject(selectedReview.id)}
-                    disabled={isPending}
-                  >
-                    Reject
-                  </Button>
-                  <Button
+
                     onClick={() => handleApprove(selectedReview.id)}
-                    disabled={isPending}
-                  >
-                    Approve
-                  </Button>
-                </>
-              )}
-              {selectedReview.status === "approved" && (
-                <Button
-                  variant="destructive"
-                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "rejected" })}
-                  disabled={isPending}
-                >
-                  Mark as Rejected
+
+              {selectedReview.status === "approved" && ("
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "rejected" })}"
+
+                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "approved" })}"
+
+}"`;
+pr-12325
+</Button>
                 </Button>
-              )}
-              {selectedReview.status === "rejected" && (
-                <Button
-                  onClick={() => updateReviewStatus({ reviewId: selectedReview.id, status: "approved" })}
-                  disabled={isPending}
-                >
-                  Mark as Approved
-                </Button>
-              )}
             </DialogFooter>
           </DialogContent>
         </Dialog>
-      )}
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -2340,3 +2946,8 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -20,6 +24,7 @@ const UltraFuturisticBackground2034: React.FC<;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+<<<<<<< HEAD
   intensity = 1;
 }) => {}
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -1058,3 +1063,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

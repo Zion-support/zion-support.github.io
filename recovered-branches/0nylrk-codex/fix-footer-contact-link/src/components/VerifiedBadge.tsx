@@ -168,15 +168,15 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
 
 export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {
   if (!verified) return null;
+  verified: boolean,
+  size?: 'sm' | 'md' | 'lg'}
 
-  const sizeClasses = {
-    sm: "h-3.5 w-3.5",
-    md: "h-4 w-4",
-    lg: "h-5 w-5",
-  };
 
+<<<<<<< HEAD
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
@@ -185,10 +185,49 @@ export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {
           </span>
         </TooltipTrigger>
         <TooltipContent>
+
+
+import React from 'react';''
+import {CheckCircle} from 'lucide-react';''
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';'
+interface VerifiedBadgeProps {
+  // TODO: Implement
+}
+  verified: boolean;'
+  size?: "sm" | "md" | "lg";"
+}
+"
+export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {"
+  if (!verified) return null;
+
+  const sizeClasses = {"
+    sm: "h-3.5 w-3.5",""
+    md: "h-4 w-4",""
+    lg: "h-5 w-5","
+  };
+
+  return (
+    <TooltipProvider>
+</TooltipProvider>
+      <Tooltip>
+</Tooltip>
+        <TooltipTrigger asChild>
+</TooltipTrigger>"
+          <span className="inline-flex text-blue-500">"
+</span>
+
+            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
+</CheckCircle>
+          </span>
+        </TooltipTrigger>
+
+        <TooltipContent>
+</TooltipContent>
           <p>Verified talent</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -212,6 +251,9 @@ export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {
 =======
   );
 }
+=======
+  )
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export function VerifiedBadge(): any ({ verified, size = 'sm' }: VerifiedBadgeProps) {;
   if (!verified) return null;
@@ -238,8 +280,11 @@ export function VerifiedBadge(): any ({ verified, size = 'sm' }: VerifiedBadgePr
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 import React from 'react';
 import {CheckCircle} from 'lucide-react';
@@ -304,6 +349,70 @@ if (return null) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+import React from 'react';
+import {CheckCircle} from 'lucide-react';
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
+interface VerifiedBadgeProps {
+  // TODO: Implement
+}
+  verified: boolean;
+  size?: "sm" | "md" | "lg";"
+"
+export function VerifiedBadge({ verified, size = "sm" }: VerifiedBadgeProps) {"
+  if (!verified) return null;
+
+  const sizeClasses = {"
+    sm: "h-3.5 w-3.5",""
+    md: "h-4 w-4",""
+    lg: "h-5 w-5","
+  };
+
+  return (
+    <TooltipProvider>
+
+      <Tooltip>
+
+        <TooltipTrigger asChild>
+          <span className="inline-flex text-blue-500">"
+    <TooltipProvider>;
+</TooltipProvider>
+      <Tooltip>;
+</Tooltip>
+        <TooltipTrigger asChild>;
+</TooltipTrigger>"
+          <span className="inline-flex text-blue-500">;"
+</span>
+            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
+
+        <TooltipContent>
+
+          <p>Verified talent</p>
+    <TooltipProvider>;
+
+      <Tooltip>;
+
+        <TooltipTrigger asChild>;
+          <span className="inline-flex text-blue-500">;"
+</span>`;
+            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />;
+
+          </span>;
+        ;
+        <TooltipContent>;
+
+          <p>Verified talent</p>;
+    ;)"`;
+pr-12325
+        </TooltipContent>;
+      </Tooltip>;
+    </TooltipProvider>;
+  ),;}
+ return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> </span> </TooltipTrigger> <TooltipContent> <p>Verified talent</p> </TooltipContent> </Tooltip> </TooltipProvider>) 
+}
+}
+}
+;
+    </TooltipProvider>;)"
 
 <<<<<<< HEAD
 =======

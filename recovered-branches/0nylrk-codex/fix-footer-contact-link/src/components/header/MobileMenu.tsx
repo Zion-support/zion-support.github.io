@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -19,14 +20,25 @@ import {cn} from "@/lib/utils";"
 import {useAuth} from "@/hooks/useAuth";"
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   unreadCount?: number;
+export interface MobileMenuProps {;
+  unreadCount?: number;}
+  onClose: () => void;}
+}
+export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;}
+  const location = useLocation();}
+  const { user } = useAuth();
+  const isAuthenticated = !!user;  unreadCount?: number,
   onClose: () => void;
 }
+
 
 export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
@@ -158,8 +170,21 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  con
 =======
   const isAuthenticated = !!user;
 
+unreadCount?: number;
+  onClose: () => void;
+}
+export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  unreadCount?: number;
+  onClose: () => void
+}
 
-
+export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
 import { Link } from "react-router-dom",
 import { useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
@@ -168,8 +193,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
-
-
 
 export interface MobileMenuProps {
   unreadCount?: number,
@@ -182,19 +205,16 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   const { user } = useAuth(),
   const isAuthenticated = !!user,
 
-  
 
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
-  
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
-  
   const navItems = [
     {
       name: "Home"
@@ -202,8 +222,9 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       icon: Home
       matches: (path: string) => path === "/"
 
-
+}
     {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       name: "Browse"
 =======
@@ -234,11 +255,17 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
+=======
+  const isAuthenticated = !!user;  unreadCount?: number,
+  onClose: () => void
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -534,6 +561,8 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             )}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -541,6 +570,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             onClick={onClose}
           >
+<<<<<<< HEAD
             <div className="relative mr-4">
               <item.icon className="h-5 w-5" />
               {item.badge && item.badge > 0 && (
@@ -769,28 +799,46 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
 
 
 =======
-                </span>;
-        {visibleItems.map(item => (;
-          <Link;
-            key={item.name}
-            to={item.href}
-            className={cn(;
-              "flex items-center px-6 py-3 text-base font-medium";
-              item.matches(location.pathname);
-                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan";
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-            )}
-            onClick={onClose}
-          >;
-            <div className="relative mr-4">;
-              <item.icon className="h-5 w-5" />;
-              {item.badge && item.badge > 0 && (;
-                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>;
+=======
+            <div className="relative mr-4">"
+</div>"
+              <item.icon className="h-5 w-5" />"
+</item>"
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">"
+</span>"
+    <div className="py-6">;"
+      <div className="flex justify-between items-center px-6 mb-6">;"
+        <h2 className="text-xl font-bold">Menu</h2>;""
+        <Button variant="ghost" size="icon" onClick={onClose}>;"
+          <X className="h-5 w-5" />;"
 
-              )}
+        ;
+      </div>;"
+      <nav className="space-y-1">;"
+</nav>
+            key={item && item.name}
+            to={item && item.href}
+            className={cn("
+              "flex items-center px-6 py-3 text-base font-medium"")
+              item && item.matches(location && location.pathname)"
+            onClick={onClose}>;
+            <div className="relative mr-4">;"
+              <item && item.icon className="h-5 w-5" />;"
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;"
+</span>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                </span>;
+            className={cn(;"
+              "flex items-center px-6 py-3 text-base font-medium";")
+              item.matches(location.pathname);"
+                ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan";""
+                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";"
+          >;
+              <item.icon className="h-5 w-5" />;"
+              "flex items-center px-6 py-3 text-base font-medium",;")
+                :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";"
             </div>;
+<<<<<<< HEAD
             {item && item.name}
       ;
       <nav className="space-y-1">;
@@ -860,17 +908,22 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
               )}
             </div>;
             {item.name}
+=======
+      </nav>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </Link>;
-        ))}
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               )}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
-            {item && item.name}
           </Link>;
+<<<<<<< HEAD
         ))}
 <<<<<<< HEAD
       </nav>
@@ -896,11 +949,20 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
 
 
 
-
+=======
       </nav>;
     </div>;
-  );
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+      </nav>;
+    </div>;"
+    <div className="py - 6">;"
+      <div className="flex justify - between items - center px - 6 mb - 6">;"
+        <h2 className="text - xl font - bold">Menu</h2>;""
+        <Button variant="ghost" size="icon" on_click={on_close}>;"
+          <X className="h - 5 w - 5" />;"
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1005,19 +1067,24 @@ function MobileMenu() {}
               item.matches (location.pathname);
                 ? "bg - zion - purple / 20 text - zion - cyan border - l-4 border - zion - cyan";
                 : "text - white hover:bg - zion - purple / 10 hover:text - zion - cyan")}
+=======
+      <nav className="space - y-1">;"
+            className={cn ("
+              "flex items - center px - 6 py - 3 text - base font - medium";")
+              item.matches (location.pathname);"
+                ? "bg - zion - purple / 20 text - zion - cyan border - l-4 border - zion - cyan";""
+                : "text - white hover:bg - zion - purple / 10 hover:text - zion - cyan")}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             on_click={on_close}
-          >;
-            <div className="relative mr - 4">;
-              <item.icon className="h - 5 w - 5" />;
-              {item.badge && item.badge > 0 && (
-                <span className="absolute -top - 2 -right - 2 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center">;
-                  {item.badge > 9 ? '9+' : item.badge}
+            <div className="relative mr - 4">;"
+              <item.icon className="h - 5 w - 5" />;"
+                <span className="absolute -top - 2 -right - 2 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center">;"
+</span>
+
                 </span>)}
-            </div>;
-            {item.name}
-          </Link>))}
-      </nav>;
+          ))}
     </div>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1084,22 +1151,20 @@ return ()
   onClose 
 }> {
   item.badge > 9 ? '9+' : item.badge 
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }</span>) 
 }</div> {
-  item.name 
-}</Link>) ) 
+}) ) 
 }</nav> </div>) 
-}
-              )}
             </div>
-            {item.name}
+pr-12325
           </Link>
-        ))}
       </nav>
     </div>
-  )
-}
       </nav>;
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -1121,3 +1186,7 @@ return ()
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </div>;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

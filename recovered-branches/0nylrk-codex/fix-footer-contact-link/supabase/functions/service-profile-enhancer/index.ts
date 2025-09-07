@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -43,6 +44,15 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ServiceProfileData {
 =======
 
@@ -67,6 +77,7 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",";
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";"
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 <<<<<<< HEAD
@@ -76,7 +87,12 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -149,9 +165,40 @@ serve(async (req) => {}
 =======
   services?: string[],
   location: string
+  services?: string[],          error: "Missing required service provider data"}),
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';import {serve} from \"https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;""
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";""
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';'
+
+interface ServiceProfileData {
+  // TODO: Implement
 }
+  name: string;,
+  title: string;
+
+  bio: string;
+
+
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",""
+import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";""
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts","
+
+interface ServiceProfileData {
+  // TODO: Implement
+  name: string,
+
+  title: string,
+  bio: string,
+  services?: string[],
+  location: string;
 serve(async (req) => {
   try {
+<<<<<<< HEAD
     // CORS headers
 
     const headers = {
@@ -1580,6 +1627,8 @@ raw: responseData.choices[0]?.message?.content
     )
   }
 });
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD

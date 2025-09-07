@@ -1,9 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import PDFDocument from 'pdfkit';
 
-  getWhitepaperSections,;
-  OPERATOR_PROMPT,;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 '
@@ -44,23 +43,27 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
     width: 480,
 align: 'left',
   });
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse;
 ) {
   const editionParam = (req.query.edition as string) || 'full';
-  const edition =
+
+const edition =
     editionParam === 'investor' || editionParam === 'developer'
-      ? editionParam
+      ? editionParam;
       : 'full';
 
   res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader(
-    'Content-Disposition',
-    `attachment; filename="zion-protocol-${edition}.pdf"`
+  res.setHeader(}
+    'Content-Disposition'}
+    `attachment; filename=\"zion-protocol-${edition}.pdf\"`
   );
 
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -226,3 +229,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  doc.end()
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+  doc.end();
+  doc.end()
+}
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

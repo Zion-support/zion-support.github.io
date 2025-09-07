@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -10,10 +11,14 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
     this.reportFile = path.join(this.projectRoot, 'security-fix-report.json')
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log('� Starting Security Fixes')
       this.log(' Security fixes completed')
     this.log(' Fixing dependency vulnerabilities')
       execSync('npm audit fix --force')
+<<<<<<< HEAD
         "type"
         "action"
         "status"
@@ -56,7 +61,8 @@ const { execSync } = require('child_process')
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-        "failed"
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import Layout from './layout/Layout';'
+=======
+
+import Layout from './layout/Layout';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion, AnimatePresence } from 'framer-motion';
 
 <<<<<<< HEAD
@@ -11,6 +17,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
+<<<<<<< HEAD
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette'
  } from 'lucide-react';'
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
@@ -32,10 +39,35 @@ class ErrorBoundary extends React.Component {}
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+=======
+  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
+  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;}
+  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette}
+ } from 'lucide-react';
+import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';;
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);}
+    this.state = { hasError: false;}
+};
   }
+  static getDerivedStateFromError(error) {}
+    return { hasError: true;}
+};
+  }
+  componentDidCatch(error, errorInfo) {}
+    console.error('Error caught by boundary: ';, error, errorInfo);}
+  }
+  render() {
+    if (this.state.hasError) {}
+      return <div />Something went wrong.</div>;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    }
+    return this.props.children;
+
+  }
+<<<<<<< HEAD
 }'
 import React, { useState, useEffect } from 'react';'
 import Layout from './layout / Layout';'
@@ -1383,3 +1415,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+import React, { useState, useEffect } from 'react';
+import Layout from './layout / Layout';
+import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
+import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
+
+import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
+import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
+import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

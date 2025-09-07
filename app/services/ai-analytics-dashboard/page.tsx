@@ -1,4 +1,8 @@
+
+
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   title: 'Ai Analytics Dashboard | Zion Tech Group',
@@ -14,10 +18,15 @@ export const metadata = {
   description:
     "Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and automated reporting.",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  title: 'Ai Analytics Dashboard - Zion Tech Group',
+  description: 'Advanced ai analytics dashboard solutions for modern businesses.',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 
-export default function AIAnalyticsDashboardPage() {
+export default function ServicePage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -121,57 +130,26 @@ export default function AIAnalyticsDashboardPage() {
                 Make informed business decisions with real-time data and AI insights
               </p>
             </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Ai Analytics Dashboard
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your business with our advanced ai analytics dashboard solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
+              Get Started
+              <ArrowRightIcon className="h-5 w-5 ml-2" />
+            </Link>
+            <Link href="/services" className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors">
+              View All Services
+            </Link>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
-          <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">Cost Reduction</h3>
-              <p className="text-gray-600">
-                Identify inefficiencies and optimize operations to reduce costs by up to 30%
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">Scalable Solution</h3>
-              <p className="text-gray-600">
-                Grows with your business from startup to enterprise scale
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-green-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">Easy Integration</h3>
-              <p className="text-gray-600">
-                Connect with 100+ data sources and existing business tools
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Ready to Transform Your Data?
-        </h2>
-        <p className="text-gray-600 mb-6">
-          Get started with a free consultation and see how AI analytics can boost your business performance.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
         </div>
       </div>
 =======
@@ -309,6 +287,7 @@ function FeatureCard({}
     </div>
   );
 }
+<<<<<<< HEAD
 
 function Pricing() {}
   return ("
@@ -399,3 +378,5 @@ function Plan({}
   );
 }
 "`
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function RequestQuote() { return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-card\"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. We’ll scope your project within 2 business days.</p> </div> </div> </div> ) }
 module.exports = default function RequestQuote() { return ( <div className="ztg-page"> <div className="ztg-container"> <div className="ztg-card"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. Well scope your project within 2 business days.</p> </div> </div> </div> ) }""
 =======
@@ -25,6 +26,18 @@ module.exports = default function RequestQuote() { return ( <div className="ztg-
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+export default function RequestQuote() { return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-card\"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. We’ll scope your project within 2 business days.</p> </div> </div> </div> ) }
+module.exports = default function RequestQuote() { return ( <div className="ztg-page"> <div className="ztg-container"> <div className="ztg-card"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. Well scope your project within 2 business days.</p> </div> </div> </div> ) }""
+
+export default function RequestQuote() { return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-card\"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. We’ll scope your project within 2 business days.</p> </div> </div> </div> ) }
+module.exports = default function RequestQuote() { return ( <div className="ztg-page"> <div className="ztg-container"> <div className="ztg-card"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. Well scope your project within 2 business days.</p> </div> </div> </div> ) }""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function RequestQuote() { return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-card\"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. We’ll scope your project within 2 business days.</p> </div> </div> </div> ) }
 module.exports = default function RequestQuote() { return ( <div className="ztg-page"> <div className="ztg-container"> <div className="ztg-card"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. Well scope your project within 2 business days.</p> </div> </div> </div> ) }""
 import React from 'react';
@@ -65,8 +78,43 @@ import React from 'react';
 =======
 
 
+
+
+export default function RequestQuote() { return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-card\"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. We’ll scope your project within 2 business days.</p> </div> </div> </div> ) }
+module.exports = default function RequestQuote() { return ( <div className="ztg-page"> <div className="ztg-container"> <div className="ztg-card"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. Well scope your project within 2 business days.</p> </div> </div> </div> ) }""
+
+
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+import React from 'react';
+import * as React from 'react';
+
+
+
+interface IndexProps {
+  // Add props here as needed
+}
+}
+
+
+}
+
+
+
+}
+
+
+
+
+export default function Index({ }: IndexProps) {
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import * as React from 'react';
 
@@ -94,6 +142,7 @@ export default function Index({ }: IndexProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,6 +180,9 @@ export default function Index({ }: IndexProps) {
 }
 export default function Index({ }: IndexProps) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -240,7 +292,41 @@ export default function Index(): any ({ }: IndexProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   );
+
+
+
+
+
+}
+
+
+}
+
+
+
+}
+
+
+
 }
 }
+<<<<<<< HEAD
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export default function RequestQuote() { return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-card\"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. We’ll scope your project within 2 business days.</p> </div> </div> </div> ) }""
+module.exports = default function RequestQuote() { return ( <div className="ztg-page"> <div className="ztg-container"> <div className="ztg-card"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup.com or call +1 302 464 0950. Well scope your project within 2 business days.</p> </div> </div> </div> ) }"""
+    <div>
+</div>
+      <h1>Index</h1>
+      <p>This component is currently under development.</p>
+      return <div>Something went wrong.</div>;"
+export default function RequestQuote() { return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-card\"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup && ziontechgroup.com or call +1 302 464 0950. We’ll scope your project within 2 business days.</p> </div> </div> </div> ) }""
+module && module.exports = default function RequestQuote() { return ( <div className="ztg-page"> <div className="ztg-container"> <div className="ztg-card"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup && ziontechgroup.com or call +1 302 464 0950. Well scope your project within 2 business days.</p> </div> </div> </div> ) }"";""
+module && module.exports = default function RequestQuote() { return ( <div className="ztg-page"> <div className="ztg-container"> <div className="ztg-card"> <h1>Request a Quote</h1> <p>Email us at kleber@ziontechgroup && ziontechgroup.com or call +1 302 464 0950. Well scope your project within 2 business days.</p> </div> </div> </div> ) }"";"
+    <div>;
+      <h1>Index</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

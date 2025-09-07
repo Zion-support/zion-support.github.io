@@ -14,6 +14,7 @@ export interface Wallet {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   user_id: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   balance: number
   updated_at: string
@@ -155,12 +156,44 @@ export interface TokenTransaction {;
 =======
   reason: string | null;
   created_at: string;
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
+export type TransactionType = 'earn' | 'burn',;
+export interface TokenTransaction {;
+  id: string,;
+  user_id: string,;
+  amount: number,;
+  transaction_type: TransactionType,;  created_at: string;
+}
+;
+}
 
+  // TODO: Implement
+}
+  user_id: string;,
+  balance: number;
+  updated_at: string;
+
+export type TransactionType = "earn" | "burn";"
+
+export interface TokenTransaction {
+  // TODO: Implement
+  id: string;,
+  user_id: string;
+  amount: number;,
+  transaction_type: TransactionType;
+
+  reason: string | null;,
+  created_at: string;
+;
 
 export interface Wallet {;
 
+<<<<<<< HEAD
   created_at: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
@@ -188,3 +221,26 @@ export interface Wallet {;
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+created_at: string;
+}
+;
+}
+"
+pr-12325
+
+}
+;
+export type TransactionType = 'earn' | 'burn',;
+export interface TokenTransaction {;
+  id: string,;
+  user_id: string,;
+  amount: number,;}
+  transaction_type: TransactionType,;  created_at: string;}
+}
+;
+
+}
+"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

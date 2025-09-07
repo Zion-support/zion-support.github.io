@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   if (req && req.method !== 'POST') {';
@@ -88,3 +89,13 @@ function ensure_dir() {}
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 '
+=======
+
+  } catch (e) {
+    res.status (500).json ({ error: 'Failed to save content' ;});
+  }
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

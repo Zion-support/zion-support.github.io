@@ -2,10 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 }})};
@@ -28,6 +31,7 @@
 } catch (error) {; this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")}}};
 ;
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -37,8 +41,10 @@
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Main execution;
-if (import.meta.url = = = `file: //${process.argv[1]}`) {const fixer = new SyntaxFixer(); fixer.run().catch(console.error)}
+if (import.meta.url = = = `file: //${process.argv[1];}`) {const fixer = new SyntaxFixer(); fixer.run().catch(console.error)}
 export default SyntaxFixer;
     });
 }
@@ -51,12 +57,15 @@ export default SyntaxFixer;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }})}
 ; async fixImportIssues () { const files = this.getSourceFiles (); files.for_each (file = > { try { let content = fs.readFileSync (file, "utf8"); let modified = false;
 ; // Fix import statements; content = content.replace (/import\s+([^]+), \s*$/gm, 'import $1, '); content = content.replace (/import\s+([^]+), \s*$/gm, 'import $1, ');
@@ -64,12 +73,15 @@ export default SyntaxFixer;
   $2
 } modified = true}
 ; // Check condition
+<<<<<<< HEAD
 =======
 }})}; async fixImportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix import statements; content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true}; if (modified) {fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed import issues in ${file}`)}} catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})}; async fixExportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix export statements; content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'); if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true}; if (modified) {fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed export issues in ${file}`)}} catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})}; getSourceFiles() {const files = []; const srcDir = path.join(process.cwd(), "src"); if (fs.existsSync(srcDir)) {; const walkDir = (dir) = > {; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith(".") && item ! = = "node_modules") {; walkDir(fullPath)} else if (item.endsWith(".ts") |item.endsWith(".tsx") |item.endsWith(".js") |item.endsWith(".jsx")) {files.push(fullPath)}})}; walkDir(srcDir)}; return files}; async run() {this.log("🚀 Starting Syntax Fixer"); try {; await this.fixSyntaxErrors(); this.log(" = " * 50); this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
 } catch (error) {this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")}}}
 // Main execution;
 // Check condition
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if ( {) {
   $2
 } fs.writeFileSync (file, content); this.fixes_applied++; this.log (`Fixed import issues in ${file}`)}} catch (error) { this.log (`Failed to fix ${file}: ${error.message}`, "WARN")}})}
@@ -97,6 +109,7 @@ if ( {) {
 ; try { await this.fixSyntaxErrors ();
 ; this.log (" = " * 50); this.log (`🎯 Syntax Fixer completed. Fixes applied: ${this.fixes_applied}`);
 } catch (error) { this.log (`❌ Syntax Fixer failed: ${error.message}`, "ERROR")}}}
+<<<<<<< HEAD
 ;
 =======
 <<<<<<< HEAD
@@ -140,21 +153,127 @@ if ( {) {
 if ( {) {}
   $2;
 } const fixer = new SyntaxFixer (); fixer.run ().catch (console.error)}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
-export default SyntaxFixer;
-    });
-}
+}})}; async fixImportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix import statements; content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true}; if (modified) {fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed import issues in ${file}`)}} catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})}; async fixExportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix export statements; content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'); if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true}; if (modified) {fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed export issues in ${file}`)}} catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})}; getSourceFiles() {const files = []; const srcDir = path.join(process.cwd(), "src"); if (fs.existsSync(srcDir)) {; const walkDir = (dir) = > {; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith(".") && item ! = = "node_modules") {; walkDir(fullPath)} else if (item.endsWith(".ts") |item.endsWith(".tsx") |item.endsWith(".js") |item.endsWith(".jsx")) {files.push(fullPath)}})}; walkDir(srcDir)}; return files}; async run() {this.log("🚀 Starting Syntax Fixer"); try {; await this.fixSyntaxErrors(); this.log(" = " * 50); this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
+} catch (error) {this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")}}}
+}})};
+; async fixImportIssues() {; const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false;
+; // Fix import statements; content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,');
+; if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true};
+; if (modified) {; fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed import issues in ${file}`)}} catch (error) {; this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})};
+; async fixExportIssues() {; const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false;
+; // Fix export statements; content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,');
+; if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true};
+; if (modified) {; fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed export issues in ${file}`)}} catch (error) {; this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})};
+; getSourceFiles() {; const files = []; const srcDir = path.join(process.cwd(), "src");
+; if (fs.existsSync(srcDir)) {; const walkDir = (dir) = > {; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath);
+; if (stat.isDirectory() && !item.startsWith(".") && item ! = = "node_modules") {; walkDir(fullPath)} else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {; files.push(fullPath)}})};
+; walkDir(srcDir)};
+; return files};
+; async run() {; this.log("🚀 Starting Syntax Fixer");
+; try {; await this.fixSyntaxErrors();
+; this.log(" = " * 50); this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
+} catch (error) {; this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")}}};
+;
+      try {;)
+        let content = fs.readFileSync(file, "utf8");""`;
+}})}; async fixImportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix import statements; content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true}; if (modified) {fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed import issues in ${file}`)}} catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})}; async fixExportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix export statements; content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'); if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true}; if (modified) {fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed export issues in ${file}`)}} catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})}; getSourceFiles() {const files = []; const srcDir = path.join(process.cwd(), "src"); if (fs.existsSync(srcDir)) {; const walkDir = (dir) = > {; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith(".") && item ! = = "node_modules") {; walkDir(fullPath)} else if (item.endsWith(".ts") |item.endsWith(".tsx") |item.endsWith(".js") |item.endsWith(".jsx")) {files.push(fullPath)}})}; walkDir(srcDir)}; return files}; async run() {this.log("🚀 Starting Syntax Fixer"); try {; await this.fixSyntaxErrors(); this.log(" = " * 50); this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied;}`);""`;
+} catch (error) {this.log(`❌ Syntax Fixer failed: ${error.message;}`, "ERROR")}}}"
+// Main execution;
+// Check condition;
+if ( {) {
+  $2;
+} const fixer = new SyntaxFixer (); fixer.run ().catch (console.error)}
 ;
   async fixImportIssues () {}
     const files = this.getSourceFiles ();
+<<<<<<< HEAD
     files.for_each (file => {}
       try {"
         let content = fs.readFileSync (file, "utf8");
+=======
+    files.for_each (file => {
+      try {
+  // TODO: Implement;
+})"
+        let content = fs.readFileSync (file, "utf8");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         let modified = false;
         // Fix import statements;
+"
+        content = content.replace (/import\s+([^, ]+), \s*$/gm, 'import $1, ');
+        if () {) {
+          modified = true;
+        // Check condition;
+  async fixExportIssues() {const files = this.getSourceFiles();
+        let content = fs.readFileSync(file, "utf8");"
+        // Fix export statements;"
+        content = content.replace(/export\s+([^,]+),\s*$/gm, 'export $1,');
+        if (content !== fs.readFileSync(file, "utf8")) {;"
+        if (modified) {fs.writeFileSync(file, content);
+          this.fixesApplied++;`;
+          this.log(`Fixed import issues in ${file}`);
+        }"`;
+      } catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN");"
 
+<<<<<<< HEAD
         content = content.replace (/import\s+([^, ]+), \s*$/gm, 'import $1, ');'
         content = content.replace (/import\s+([^, ]+), \s*$/gm, 'import $1, ');
+=======
+  },
+,
+  async fixExportIssues() {,
+    const files = this.getSourceFiles(),
+    files.forEach(file => {,
+      try {,)"
+        let content = fs.readFileSync(file, "utf8"),"
+        let modified = false,
+        // Fix export statements,"
+        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
+        if (modified) {,
+          fs.writeFileSync(file, content),
+          this.fixesApplied++,`;
+          this.log(`Fixed export issues in ${file}`)
+    })
+  getSourceFiles() {
+    const files = []
+    const srcDir = path.join(process.cwd(), &quot;src&quot;)
+    if (fs.existsSync(srcDir)) {
+      const walkDir = (dir) => {
+        const items = fs.readdirSync(dir)
+        items.forEach(item => {)
+          const fullPath = path.join(dir, item)
+          const stat = fs.statSync(fullPath)
+          if (stat.isDirectory() && !item.startsWith(&quot;.&quot;) && item !== &quot;node_modules&quot;) {
+            walkDir(fullPath)
+  getSourceFiles() {,
+
+    if (fs.existsSync(srcDir)) {,
+      const walkDir = (dir) => {,
+        const items = fs.readdirSync(dir),
+        items.forEach(item => {,)
+          const fullPath = path.join(dir, item),
+          const stat = fs.statSync(fullPath),
+,
+          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
+            walkDir(fullPath)
+          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
+
+          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,"
+            walkDir(fullPath)"
+          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,"
+            files.push(fullPath)
+      walkDir(srcDir)
+    return files;`;
+      this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied;}`)
+    } catch (error) {
+    }
+  }
+
+        content = content.replace (/export\s+([^, ]+), \s*$/gm, 'export $1, ');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
         if () {) {}
   $2;
@@ -166,6 +285,7 @@ export default SyntaxFixer;
 if ( {) {}
   $2;
 }
+<<<<<<< HEAD
   async fixExportIssues() {const files = this.getSourceFiles();
     files.forEach(file => {;
       try {;"
@@ -349,14 +469,29 @@ if ( {) {}
           } else if (|| item.ends_with (".tsx") || item.ends_with (".js") || item.ends_with (".jsx")) {) {}
   $2;
 }
+=======
+        // Check condition;
+          fs.writeFileSync (file, content);
+          this.fixes_applied++;`;
+          this.log (`Fixed export issues in ${file}`);
+      } catch (error) {"`;
+        this.log (`Failed to fix ${file}: ${error.message}`, "WARN");"
+  getSourceFiles () {
+    const files = [];"
+    const src_dir = path.join (process.cwd (), "src");"
+      const walk_dir = (dir) =>: any {
+  // TODO: Implement
+        const items = fs.readdir_sync (dir);
+        items.for_each (item => {)
+          const full_path = path.join (dir, item);
+          const stat = fs.stat_sync (full_path);
+;"
+          if (&& !item.starts_with (".") && item !== "node_modules") {) {"
+            walk_dir (full_path);"
+          } else if (|| item.ends_with (".tsx") || item.ends_with (".js") || item.ends_with (".jsx")) {) {"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             files.push (full_path);
-          }
-        });
-      }
-;
       walk_dir (src_dir);
-}
-;
     return files;
 }
 <<<<<<< HEAD
@@ -420,43 +555,60 @@ export default SyntaxFixer;
         if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {
 =======
 ;
+  async run() {this.log("🚀 Starting Syntax Fixer");
+  async run() {this.log("🚀 Starting Syntax Fixer");"
+    try {;
+      await this.fixSyntaxErrors();"
+      this.log("=" * 50);"`;
+      this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied;}`);"`;
+    } catch (error) {this.log(`❌ Syntax Fixer failed: ${error.message;}`, "ERROR");"
+// Main execution;`;
+if (import.meta.url === `file: //${process.argv[1];}`) {const fixer = new SyntaxFixer();
+  fixer.run().catch(console.error);
+}
+export default SyntaxFixer;
+    })
   }
+
+  async run () {"
+    this.log ("🚀 Starting Syntax Fixer");"
+  // TODO: Implement
+      await this.fixSyntaxErrors ();
+      this.log ("=" * 50);"`;
+      this.log (`🎯 Syntax Fixer completed. Fixes applied: ${this.fixes_applied;}`);
   async fixExportIssues() {
     const files = this.getSourceFiles()
     files.forEach(file => {
-      try {
+  // TODO: Implement
         let content = fs.readFileSync(file, &quot;utf8&quot;)
-        let modified = false
-        // Fix export statements
+        // Fix export statements;"
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,')
         if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {
-          modified = true
-        }
         if (modified) {
           fs.writeFileSync(file, content)
-          this.fixesApplied++
-          this.log(`Fixed export issues in ${file}`)
-        }
-      } catch (error) {
-this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
-      }
-    })
-  }
-  getSourceFiles() {
-    const files = []
-    const srcDir = path.join(process.cwd(), &quot;src&quot;)
-    if (fs.existsSync(srcDir)) {
-      const walkDir = (dir) => {
-        const items = fs.readdirSync(dir)
-        items.forEach(item => {
-          const fullPath = path.join(dir, item)
-          const stat = fs.statSync(fullPath)
-          if (stat.isDirectory() && !item.startsWith(&quot;.&quot;) && item !== &quot;node_modules&quot;) {
-            walkDir(fullPath)
+          this.fixesApplied++`;
+      } catch (error) {`;
+this.log(`Failed to fix ${file}: ${error.message}`, "WARN")"
           } else if (item.endsWith(&quot;.ts&quot;) |item.endsWith(&quot;.tsx&quot;) |item.endsWith(&quot;.js&quot;) |item.endsWith(&quot;.jsx&quot;)) {
+  },
+,
+  async fixExportIssues() {,
+    const files = this.getSourceFiles(),
+    files.forEach(file => {,
+      try {,
+        let content = fs.readFileSync(file, "utf8"),
+        let modified = false,
+,
+        // Fix export statements,
+        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
 ,;
         if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+,
+        if (content !== fs.readFileSync(file, "utf8")) {,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           modified = true
 <<<<<<< HEAD
         }
@@ -557,7 +709,11 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 =======
         this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
     })
   },
@@ -574,6 +730,7 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 <<<<<<< HEAD
     const files = [],;
     const srcDir = path.join(process.cwd(), &quot;src&quot;),
+<<<<<<< HEAD
 =======
     const files = [],
     const srcDir = path.join(process.cwd(), "src"),
@@ -590,6 +747,10 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
     const files = [],;
     const srcDir = path.join(process.cwd(), &quot;src&quot;),
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    const files = [],
+    const srcDir = path.join(process.cwd(), "src"),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ,
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
@@ -673,9 +834,18 @@ this.log("=" * 50),
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 this.log("=" * 50)
+  },
+,
+  async run() {,
+    this.log("🚀 Starting Syntax Fixer"),
+,
+    try {,
+      await this.fixSyntaxErrors(),
+,
       this.log("=" * 50),
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 this.log("=" * 50),
+      this.log("=" * 50),
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     } catch (error) {
@@ -691,6 +861,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -698,6 +869,8 @@ ursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 },
 ,
 // Main execution,
@@ -711,12 +884,15 @@ if ( {, ) {
 ,
 export default SyntaxFixer,
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 =======
     };
@@ -731,11 +907,34 @@ export default SyntaxFixer,
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     });
-  },;
 ,;
+        if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
+
+      } catch (error) {,
+
+"`;
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")""`;
+
+
+    const files = [],;
+    const srcDir = path.join(process.cwd(), &quot;src&quot;),
+
+,"
+  async run() {
+    this.log(&quot;🚀 Starting Syntax Fixer&quot;)
+  // TODO: Implement
+      await this.fixSyntaxErrors()"
+this.log("=" * 50)""
+      this.log("=" * 50),""
+this.log("=" * 50),"`;
+      this.log(`❌ Syntax Fixer: failed: ${error.message;}`, "ERROR")"
+ursor/fix-lint-push-and-merge-to-main-28da;
+
+  },;
   async fixImportIssues() {,;
     const files = this.getSourceFiles(),;
     files.forEach(file => {,;
+<<<<<<< HEAD
       try {,;"
         let content = fs.readFileSync(file, "utf8"),;
         let modified = false,;
@@ -788,22 +987,46 @@ export default SyntaxFixer,
     const files = [],;"
     const srcDir = path.join(process.cwd(), "src"),;
 ,;
+=======
+      try {,;)"
+        let content = fs.readFileSync(file, "utf8"),;"
+        let modified = false,;
+        // Fix import statements;"
+        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,');
+        if (content !== fs.readFileSync(file, "utf8")) {,;"
+        if (modified) {,;
+          fs.writeFileSync(file, content),;
+          this.fixesApplied++,;`;
+          this.log(`Fixed import issues in ${file}`);
+      } catch (error) {,;"`;
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN");"
+  async fixExportIssues() {,;
+        // Fix export statements,;"
+        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),;
+          this.log(`Fixed export issues in ${file}`);
+  getSourceFiles() {,;
+    const files = [],;"
+    const srcDir = path.join(process.cwd(), "src"),;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (fs.existsSync(srcDir)) {,;
       const walkDir = (dir) => {,;
         const items = fs.readdirSync(dir),;
-        items.forEach(item => {,;
+        items.forEach(item => {,;)
           const fullPath = path.join(dir, item),;
           const stat = fs.statSync(fullPath),;
 ,;"
+<<<<<<< HEAD
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,;
             walkDir(fullPath);"
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,;
+=======
+          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,;"
+            walkDir(fullPath);"
+          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             files.push(fullPath);
-          }
-        });
-      },;
-,;
       walkDir(srcDir);
+<<<<<<< HEAD
     },;
 ,;
     return files;
@@ -812,6 +1035,10 @@ export default SyntaxFixer,
   async run() {,;"
     this.log("🚀 Starting Syntax Fixer"),;
 ,;
+=======
+  async run() {,;"
+    this.log("🚀 Starting Syntax Fixer"),;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {,;
       await this.fixSyntaxErrors(),;
 ,;"
@@ -830,6 +1057,7 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ;
 export default SyntaxFixer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -856,3 +1084,12 @@ this.log("=" * 50)this.log("=" * 50),      this.log(`🎯 Syntax Fixer completed
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+      this.log("=" * 50),;"`;
+      this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied;}`);
+      this.log(`❌ Syntax Fixer: failed: ${error.message;}`, "ERROR");"
+// Main execution,;`;
+if (import.meta.url === `fil: e: //${process.argv[1];}`) {,;
+  const fixer = new SyntaxFixer(),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

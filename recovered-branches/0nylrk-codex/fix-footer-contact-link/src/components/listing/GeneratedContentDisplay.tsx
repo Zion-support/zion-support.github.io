@@ -20,6 +20,7 @@ import { ArrowRight } from "lucide-react";
 "
 =======
 
+<<<<<<< HEAD
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -138,10 +139,20 @@ interface GeneratedContent {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   key_points: string[];
 
+=======
+interface GeneratedContent {
+  description: string;
+  tags: string[];
+  suggested_price: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     min: number;
+  key_points: string[];
+    min: number;
+
 
 }
 interface GeneratedContentDisplayProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -157,10 +168,15 @@ interface GeneratedContentDisplayProps {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 interface GeneratedContentDisplayProps {;
   CardTitle,;
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   CardTitle,;
 "
 } from "@/components/ui/card";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -228,6 +244,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -271,6 +289,14 @@ import { Badge } from "@/components/ui/badge",;"
 import { ArrowRight } from "lucide-react",;"
 =======
 
+min: number;
+
+    max: number;
+  }
+  keyPoints: string[];
+
+}
+interface GeneratedContentDisplayProps {
     min: number,
     max: number
   },
@@ -308,10 +334,7 @@ interface GeneratedContentDisplayProps {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   content: GeneratedContent;
 
-
-
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
-
 
   content: GeneratedContent;
   onApply: () => void
@@ -375,6 +398,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 
+<<<<<<< HEAD
         
 
 
@@ -385,6 +409,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
@@ -421,13 +447,18 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+content: GeneratedContent;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function GeneratedContentDisplay(): any ({;
   content,;
   onApply,;
 }: GeneratedContentDisplayProps) {;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 "
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
@@ -441,6 +472,32 @@ export function GeneratedContentDisplay(): any ({;
 =======
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ArrowRight } from "lucide-react",;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+;
+interface GeneratedContent {;
+  description:string,;
+  tags:string[],;
+  suggestedPrice:{;
+    min:number,;
+    max:number;
+  },;
+  keyPoints:string[];}
+;
+interface GeneratedContentDisplayProps {;
+  content:GeneratedContent,;
+  onApply:() => void;
+}
+;
+export function GeneratedContentDisplay({ content, onApply } GeneratedContentDisplayProps) {;
+  return (;
+    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+        <div>    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <CardHeader>;
 =======
       <CardHeader>;"
@@ -486,6 +543,7 @@ export function GeneratedContentDisplay(): any ({;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
+<Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
               </Badge>;
             ))}
@@ -493,13 +551,17 @@ export function GeneratedContentDisplay(): any ({;
                 key={index}
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {tag}
               </Badge>;
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -520,6 +582,11 @@ export function GeneratedContentDisplay(): any ({;
 =======
         
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;                {tag}
+              </Badge>;
+            ))}        
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div>
 =======
 
@@ -556,6 +623,7 @@ export function GeneratedContentDisplay(): any ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ))}
 =======
 <<<<<<< HEAD
@@ -568,6 +636,21 @@ export function GeneratedContentDisplay(): any ({;
 
 
 <<<<<<< HEAD
+=======
+</div>;
+        </div>;
+
+        <div>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
+            Suggested Price Range;
+          </h3>;
+          <p className="text-white">;
+            ${content && content.suggestedPrice.min && min.toFixed(2)} - $;
+            {content && content.suggestedPrice.max && max.toFixed(2)}
+          </p>;
+        </div>;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div>;
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
             Key Selling Points;
@@ -575,6 +658,7 @@ export function GeneratedContentDisplay(): any ({;
           <ul className="list-disc pl-5 text-white space-y-1">;
             {content && content.keyPoints.map((point, index) => (;
               <li key={index}>{point}</li>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -583,6 +667,8 @@ export function GeneratedContentDisplay(): any ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   content: GeneratedContent;
               <Badge;
                 key={index}"
@@ -603,35 +689,47 @@ export /**;
 <<<<<<< HEAD
 function GeneratedContentDisplay() {
   return (
-    <Card className="border border - zion - blue - light bg - zion - blue - dark">;
+    <Card className="border border - zion - blue - light bg - zion - blue-dark">;
       <CardHeader>;
-        <CardTitle className="text - white">Generated Content</CardTitle>;
+        <CardTitle className="text-white">Generated Content</CardTitle>;
       </CardHeader>;
-      <CardContent className="space - y-4">;
+      <CardContent className="space-y-4">;
         <div>;
-          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+          <h3 className="text - sm font - medium text - zion - slate - light mb-2">;
             Description;
           </h3>;
-          <p className="text - white">{content.description}</p>;
+          <p className="text-white">{content.description}</p>;
         </div>;
         <div>;
-          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+          <h3 className="text - sm font - medium text - zion - slate - light mb-2">;
             Tags;
           </h3>;
-          <div className="flex flex - wrap gap - 2">;
+          <div className="flex flex - wrap gap-2">;
             {content.tags.map ((tag, index) => (
               <Badge;
                 key={index}
-                className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30";
+                className="bg - zion - purple / 20 text - zion - purple hover:bg - zion-purple / 30";
               >;
+<h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>;
+          <p className="text-white">{content.description}</p>;
+        </div>;
+        ;
+        <div>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
+          <div className="flex flex-wrap gap-2">;
+            {content.tags.map((tag, index) => (;
+              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
                 {tag}
               </Badge>))}
           </div>;
         </div>;
         <div>;
           <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+          <h3 className="text - sm font - medium text - zion - slate - light mb-2">;
             Suggested Price Range;
           </h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <p className="text-white">;
 =======
@@ -675,18 +773,22 @@ function GeneratedContentDisplay() {}
 =======
           <p className="text - white">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          <p className="text-white">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             ${content.suggested_price.min.to_fixed (2)} - $;
             {content.suggested_price.max.to_fixed (2)}
           </p>;
         </div>;
 <<<<<<< HEAD
         <div>;
-          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
+          <h3 className="text - sm font - medium text - zion - slate - light mb-2">;
             Key Selling Points;
           </h3>;
-          <ul className="list - disc pl - 5 text - white space - y-1">;
+          <ul className="list - disc pl - 5 text - white space-y-1">;
             {content.key_points.map ((point, index) => (
               <li key={index}>{point}</li>))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -696,6 +798,9 @@ function GeneratedContentDisplay() {}
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         ;
+=======
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div>;
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
           <p className="text-white">;
@@ -739,6 +844,7 @@ function GeneratedContentDisplay() {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -747,6 +853,43 @@ function GeneratedContentDisplay() {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
+          <p className="text-white">{content.description}</p>
+        </div>
+        <div>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
+          <div className="flex flex-wrap gap-2">
+            {content.tags.map((tag, index) => (
+              <Badge
+                key={index}
+                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30"
+              >
+              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
+          <p className="text-white">
+            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
+          </p>
+        </div>
+        <div>
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
+          <ul className="list-disc pl-5 text-white space-y-1">
+            {content.keyPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+        </div>
+      </CardContent>
+      <CardFooter>
+        <Button
+          onClick={onApply}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing"
@@ -790,6 +933,9 @@ function GeneratedContentDisplay() {}
 =======
       </CardFooter>
 
+</Card>
+  );
+}
   )
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
@@ -839,11 +985,28 @@ function GeneratedContentDisplay() {}
 =======
     </Card>
 
+    </Card>;
+  );
+<Button;
+          on_click={on_apply}
+          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml - 2 h - 4 w - 4" />;
+        </Button>;
+      </CardFooter>;
+    </Card>);
+}
+      </CardFooter>    </Card>
 
     </Card>;
   );
+<<<<<<< HEAD
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Button;
 }
           onClick={onApply}"
@@ -877,6 +1040,7 @@ onApply: () => void;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -890,3 +1054,133 @@ onApply: () => void;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  key_points: string[];,
+  min: number;
+
+interface GeneratedContentDisplayProps {
+  // TODO: Implement
+interface GeneratedContentDisplayProps {;
+  CardTitle,;"
+} from "@/components/ui/card";""
+import { ArrowRight } from "lucide-react",""
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card","
+interface GeneratedContent {
+  // TODO: Implement
+  description: string,
+  tags: string[],
+  suggestedPrice: {,
+  min: number,
+    max: number;
+  },
+  keyPoints: string[]"
+import React from "react",;""
+import { Button } from "@/components/ui/button",;""
+import { Badge } from "@/components/ui/badge",;""
+import { ArrowRight } from "lucide-react",;""
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;,
+  min: number,;
+  },;
+  keyPoints: string[];
+;
+
+  content: GeneratedContent;
+
+
+
+export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+
+
+  content: GeneratedContent;,
+  onApply: () => void;
+export function GeneratedContentDisplay({
+  content;
+  onApply;)
+}: GeneratedContentDisplayProps) {
+
+  return ("
+    <Card className="border border-zion-blue-light bg-zion-blue-dark">"
+
+      <CardHeader>
+        <CardTitle className="text-white">Generated Content"
+      <CardContent className="space-y-4">"
+
+        <div>
+</div>"
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">"
+</h3>
+          </h3>"
+          <p className="text-white">{content.description}</p>"
+        </div>
+
+
+
+
+          <div className="flex flex-wrap gap-2">"
+    <Card className="border border-zion-blue-light bg-zion-blue-dark">;"
+
+      <CardHeader>;
+        <CardTitle className="text-white">Generated Content;"
+      ;"
+      <CardContent className="space-y-4">;"
+
+        <div>;
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;"
+          </h3>;"
+          <p className="text-white">{content && content.description}</p>;"
+        </div>;
+          <div className="flex flex-wrap gap-2">;"
+              <Badge;
+                key={index}"
+                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;"
+
+
+          <p className="text-white">"
+</p>
+          <ul className="list-disc pl-5 text-white space-y-1">"
+</ul>
+              <li key={index}>{point}</li>
+
+    <Card className="border border - zion - blue - light bg - zion - blue - dark">;"
+
+        <CardTitle className="text - white">Generated Content;"
+      <CardContent className="space - y-4">;"
+
+          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;"
+          <p className="text - white">{content.description}</p>;"
+          <div className="flex flex - wrap gap - 2">;"
+                className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30";"
+              >;
+)
+              ))}
+          <p className="text - white">;"
+          </p>;
+          <ul className="list - disc pl - 5 text - white space - y-1">;"
+              <li key={index}>{point}</li>))}
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;""
+          <p className="text-white">;"
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>;""
+          <ul className="list-disc pl-5 text-white space-y-1">;"
+              <li key={index}>{point}</li>;
+          </ul>;
+      <CardFooter>;
+          <ArrowRight className="ml-2 h-4 w-4" />"
+
+          <ArrowRight className="ml-2 h-4 w-4" />;"
+
+
+
+        <Button;
+          onClick={onApply}"
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white";"
+
+  return (<Card className="border border-zion-blue-light bg-zion-blue-dark" > text-white">Generated Content  <CardContent className=" space-y-4"> <div> <h3 className=" text-sm font-medium text-zion-slate-light mb-2">Description</h3> <p className=" text-white"> {"
+}</p> </div> <div> ) ) 
+}</div> </div> <div> </p> </div> <div>) ) "
+}</ul> </div>  <CardFooter> <Button ml-2 h-4 w-4" />   )""
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

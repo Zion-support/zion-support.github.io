@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
+<<<<<<< HEAD
 function ensureStorage() {}
   const dir = path && path.dirname(EPISODES_PATH);
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
@@ -98,3 +99,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  return res.status(200).json({ episode })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  ensureStorage();}
+}
+const { id } = req.query as { id?: string };
+
+const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+
+const episode = episodes.find(e => e.id === id);
+  if (!episode) return res.status(404).json({ error: 'Not found',}
+});
+
+  return res.status(200).json({ episode });
+  return res.status(200).json({ episode })
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

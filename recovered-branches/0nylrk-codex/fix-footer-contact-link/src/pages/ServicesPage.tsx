@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -648,6 +649,8 @@ import { Globe } from "lucide-react",;
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import {AppLayout} from "@/layout/AppLayout";
@@ -655,6 +658,7 @@ import {TrustedBySection} from "@/components/TrustedBySection";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
 import {Globe} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Sample service listings;
@@ -797,32 +801,65 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     price: 8500,;
     currency: "$",;
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
+=======
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
+import { AppLayout } from "@/layout/AppLayout",
+import { TrustedBySection } from "@/components/TrustedBySection",
+import { Button } from "@/components/ui/button",
+
+
+
+import { Link } from "react-router-dom";
+import { Globe } from "lucide-react";
+// Sample service listings
+const SERVICE_LISTINGS: ProductListing[] = [
+  {
+
+        listings={SERVICE_LISTINGS}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 3000, max: 10000 }}
+      />
+      <TrustedBySection />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     <AppLayout>;
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">;
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">;
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>;
-          <div className="flex flex-wrap gap-2">;
-            <Link to="/it-onsite-services">;
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;
-                <Globe className="h-4 w-4 mr-2" />;
-                Global IT Onsite Services;
+
+      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">;"
+</div>"
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">;"
+          <h2 className="text-white text-lg font-medium">Featured Services</h2>;""
+          <div className="flex flex-wrap gap-2">;"
+            <Link to="/it-onsite-services">;"
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;"
+                <Globe className="h-4 w-4 mr-2" />;"
+
+              ;
+            ;"
+            <Link to="/request-quote">;"
+              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;"
+
+          </div>;
+      <TrustedBySection />;
+
+</Globe>
               </Button>;
-            </Link>;
-            <Link to="/request-quote">;
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
-export default function ServicesPage() {;
-  return (
-                Request a Quote;
+            </Link>;"
+            <Link to="/request-quote">;"
+</Link>"
+              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;"
+</Button>
+
               </Button>;
             </Link>;
           </div>;
         </div>;
       </div>;
 
-      />;
       <TrustedBySection />;
+</TrustedBySection>
     </AppLayout>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -881,6 +918,12 @@ export default function ServicesPage() { return null; }
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         listings={SERVICE_LISTINGS}
+=======
+      <DynamicListingPage;"
+        title="IT & AI Services";""
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";""
+        category_slug="services";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         category_filters={SERVICE_FILTERS}
         initial_price={{ min: 3000, max: 10000 }}
       />;
@@ -945,24 +988,46 @@ reviewCount: 85
       <DynamicListingPage 
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
-        categorySlug="services"
+categorySlug="services"
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+    );
+      <DynamicListingPage ;"
+        categorySlug="services";"
+        initialPrice={{ min:3000, max:10000 }}
+
+
+  return (<AppLayout> <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light" > <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4" > <h2 className="text-white text-lg font-medium" >Featured Services</h2> <div className="flex flex-wrap gap-2" > <Link to="/it-onsite-services" > <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10" > <Globe className="h-4 w-4 mr-2" /> Global IT Onsite Services   <Link to="/request-quote" > <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > Request a Quote   </div> </div> </div> <DynamicListingPage listings= {"
+
+        title="IT & AI Services"""
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."""
+        categorySlug="services"")
+}/> <TrustedBySection /> ) 
+
+
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }/> <TrustedBySection /> </AppLayout>) 
-}
-      <DynamicListingPage;
-        title="IT & AI Services";
-        description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
-        categorySlug="services";
+</DynamicListingPage>
+      <DynamicListingPage;"
+        title="IT & AI Services";""
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";""
+        categorySlug="services";"
         listings={SERVICE_LISTINGS}
         categoryFilters={SERVICE_FILTERS}
         initialPrice={{ min: 3000, max: 10000 }}
       />;
+</DynamicListingPage>
       <TrustedBySection />;
     </AppLayout>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -982,3 +1047,8 @@ reviewCount: 85
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</TrustedBySection>
+    </AppLayout>;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

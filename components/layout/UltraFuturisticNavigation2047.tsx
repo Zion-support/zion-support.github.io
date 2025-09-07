@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Menu,
   ChevronDown,
@@ -406,36 +407,46 @@ interface NavigationItem {}
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Brain, Rocket, Target, Atom, Shield;
+
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
   Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2;
   Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon;
+
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
+
  } from 'lucide-react';
+
 interface NavigationItem {
   name: string;
-  href: string;
-  icon?: React.ReactNode;
-} from 'lucide-react';
-interface NavigationItem {
-  name: string
-  href: string
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   description?: string;
+  name: string;
+href: string;
+description?: string;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
   featured?: boolean;
+
   category?: string;
+<<<<<<< HEAD
   color?: string;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   color?: string;
   color?: string;  color?: string;
 }
   color?: string;
 
+<<<<<<< HEAD
 const navigationItems: NavigationItem[] = []
   {}
 '
@@ -1038,3 +1049,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const navigationItems: NavigationItem[] = [
+  {
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

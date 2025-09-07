@@ -10,6 +10,7 @@ export class jobServiceService {;
       console && console.error("Error fetching "data": ", error)}
       throw error}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/services/jobService.ts
 <<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/src.disabled/src/services/jobService.ts
@@ -26,6 +27,11 @@ export class jobServiceService {; constructor() {; this.baseUrl = process.env.NE
 export default new jobServiceService()}
 export class jobServiceService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this.baseUrl}/jobservice"),} return await response.json(),} } catch (error) {; console.error("Error fetching data:",error),} throw error,} } export default new jobServiceService(),}      throw error,
 =======
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       throw error,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
@@ -33,6 +39,9 @@ export class jobServiceService {; constructor() {; this.baseUrl = process.env.NE
 export default new jobServiceService(),
 }
 export class jobServiceService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/jobservice");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new jobServiceService();,}
+
+
+export class jobServiceService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this.baseUrl}/jobservice");,} return await response.json();,} } catch (error) {; console.error("Error fetching data:",error);,} throw error;,} } export default new jobServiceService();,}
 export default new jobServiceService()}
 <<<<<<< HEAD
 
@@ -75,6 +84,7 @@ export class jobServiceService {; constructor() {; this.baseUrl = process.env.NE
 >>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/services/jobService.ts
 =======
 export class jobServiceService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this.baseUrl}/jobservice"),} return await response.json(),} } catch (error) {; console.error("Error fetching data:",error),} throw error,} } export default new jobServiceService(),}
+<<<<<<< HEAD
 export class jobServiceService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this && this.baseUrl}/jobservice"),} return await response && response.json(),} } catch (error) {; console && console.error("Error fetching data:",error),} throw error,} } export default new jobServiceService(),}
 export class jobServiceService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this && this.baseUrl}/jobservice"),} return await response && response.json(),} } catch (error) {; console && console.error("Error fetching data:",error),} throw error,} } export default new jobServiceService(),}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -82,3 +92,30 @@ export class jobServiceService {; constructor() {; this && this.baseUrl = proces
 
 ";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src.disabled/src/services/jobService.ts
+=======
+
+
+export default new jobServiceService()}
+
+
+export class jobServiceService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this.baseUrl}/jobservice");,} return await response.json();,} } catch (error) {; console.error("Error fetching data:",error);,} throw error;,} } export default new jobServiceService();,}
+export default new jobServiceService()}
+export class jobServiceService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this.baseUrl}/jobservice"),} return await response.json(),} } catch (error) {; console.error("Error fetching data:",error),} throw error,} } export default new jobServiceService(),}
+
+    this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api"}"
+  async get() {;
+    try {;"
+      const response = await fetch("${this && this.baseUrl}/jobservice")}"
+      return await response && response.json()}
+    } catch (error) {;"
+      console && console.error("Error fetching "data": ", error)}"
+      throw error}
+}
+      throw error,
+export default new jobServiceService(),
+}"
+export class jobServiceService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/jobservice");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new jobServiceService();,}"
+export default new jobServiceService()}"
+export class jobServiceService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this.baseUrl}/jobservice"),} return await response.json(),} } catch (error) {; console.error("Error fetching data:",error),} throw error,} } export default new jobServiceService(),}""
+export class jobServiceService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this && this.baseUrl}/jobservice"),} return await response && response.json(),} } catch (error) {; console && console.error("Error fetching data:",error),} throw error,} } export default new jobServiceService(),}""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

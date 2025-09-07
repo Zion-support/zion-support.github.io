@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowUp } from 'lucide-react'
 import { useEffect, useState } from "react",
 
@@ -131,8 +132,12 @@ export function BackToTopButton() {;
 import React, { useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+import { ArrowUp } from 'lucide-react';
+import { useEffect, useState } from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const BackToTopButton: React.FC = () => {
+export function BackToTopButton() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -150,13 +155,13 @@ const BackToTopButton: React.FC = () => {
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       setVisible(window.scrollY > 400);
     };
-
     updateVisibility();
     window.addEventListener('scroll', updateVisibility);
     return () => window.removeEventListener('scroll', updateVisibility);
   }, []);
 
   const scrollToTop = () => {
+<<<<<<< HEAD
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -176,11 +181,16 @@ export function BackToTopButton() { return null; }
   }, []);
   
   const scrollToTop = () => {'
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const opts: ScrollToOptions = { top: 0, behavior: 'smooth' };
     window.scrollTo(opts);
     document.documentElement.scrollTo(opts);
     document.body.scrollTo(opts);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
 
   return (
@@ -188,7 +198,11 @@ export function BackToTopButton() { return null; }
       aria-label="Back to top"
       onClick={scrollToTop}
 <<<<<<< HEAD
+<<<<<<< HEAD
       className={`fixed bottom-6 right-6 z-50 rounded-full bg-blue-600 text-white p-3 shadow-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-xl ${
+=======
+      className={`fixed bottom-6 right-6 z-[60] rounded-full bg-blue-600 text-white p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
 =======
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${"
@@ -229,9 +243,10 @@ export function BackToTopButton() { return null; }
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     >
-      <ArrowUp className="w-5 h-5" />
+      <ArrowUp className="h-5 w-5" />
     </button>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -262,3 +277,6 @@ export default BackToTopButton;
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

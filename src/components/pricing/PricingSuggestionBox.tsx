@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -120,6 +121,17 @@ interface PricingSuggestionBoxProps {}
 }
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({};
+=======
+
+
+  suggestion: PricingSuggestion | null;
+  isLoading: boolean;
+  onApplySuggestion: () => void;
+
+
+}
+export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   suggestion;
   isLoading;
   onApplySuggestion;
@@ -127,6 +139,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({};
   rateType}) => {
   if (isLoading) {
 
+<<<<<<< HEAD
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -877,3 +890,5 @@ if ( {) {}
 =======
 }'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

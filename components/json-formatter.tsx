@@ -34,6 +34,7 @@ import { Star } from 'lucide-react';'
   const [indentSize, setIndentSize] = useState(2);
   const [compactMode, setCompactMode] = useState(false);
   const [showLineNumbers, setShowLineNumbers] = useState(true);
+<<<<<<< HEAD
 
       setIsValid(true);'
       setErrorMessage('');
@@ -267,6 +268,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const lines = text.split('\n');
 return lines.map((_, index) => index + 1).join('\n');
   };
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <>
@@ -302,9 +305,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
       </section>
+<<<<<<< HEAD
       {/* JSON Formatter Tool */}"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center mb-16">"
+=======
+      {/* JSON Formatter Tool */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Format Your JSON Data;
             </h2>"
@@ -366,6 +375,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </select>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className='flex items-center space-x-2'>
                   <input
                     type='checkbox'
@@ -405,6 +417,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant="outline""
                   size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className='text-sm text-gray-300'
                   >
                     Line numbers
@@ -509,8 +524,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       showLineNumbers ? 'pl-16' : '';`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     }`}
+<<<<<<< HEAD
 '"
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">'
+=======
+
+                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div className='flex space-x-3'>
 
                     <strong>Error:</strong> {errorMessage}
@@ -758,7 +778,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Card>
           </div>
         </div>
+<<<<<<< HEAD
       </section>"
+=======
+      </section>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
             </p>
@@ -797,8 +821,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <li>• Configuration file management</li>
                 <li>• Debug and troubleshooting</li>
               </ul>
+<<<<<<< HEAD
             </Card>"
               <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>"
+=======
+            </Card>
+              <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-gray-400 mb-6">
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.
               </p>"

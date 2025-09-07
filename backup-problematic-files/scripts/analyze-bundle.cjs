@@ -6,16 +6,21 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 async function analyzeBundle() {}
   try {}
     // Install bundle analyzer if not present;
+<<<<<<< HEAD
     try {}
       execSync('npm list @next/bundle-analyzer', { "stdio": 'pipe' })} catch {}
       execSync('npm install @next/bundle-analyzer --save-dev', { "stdio": 'pipe' })};
@@ -46,3 +51,8 @@ analyzeBundle();
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+};
+analyzeBundle();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -22,8 +26,9 @@ class TypeChecker {}
     this.interval = 120000; // 2 minutes;
   };
   async start() {}
-    console.log('Starting Type Checker...');
+
     this.isRunning = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Initial type check;
     await this.runTypeCheck();
@@ -33,6 +38,10 @@ class TypeChecker {}
     await this.runTypeCheck();
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    // Initial type check;
+    await this.runTypeCheck();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
@@ -54,13 +63,13 @@ class TypeChecker {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-    
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
       console.log('Running TypeScript type check...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,10 +79,13 @@ class TypeChecker {}
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const child = spawn('npm', ['run', 'type-check'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
+        "cwd": process.cwd();"
       };);
+<<<<<<< HEAD
 <<<<<<< HEAD
       let output = ;';';
       let errorOutput = ;';';
@@ -86,16 +98,18 @@ class TypeChecker {}
 
 =======
 
+=======
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
-});
+
 
 
 <<<<<<< HEAD
@@ -106,10 +120,12 @@ class TypeChecker {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       child.on('close', (code) => {}
         if ( {})
+
           console.log('Type check passed ✓')) {}
      {}
           console.log('Type check passed ✓')}} else {}
           console.log('Type check failed ✗');
+<<<<<<< HEAD
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
 <<<<<<< HEAD
@@ -126,6 +142,9 @@ class TypeChecker {}
       })} catch (error) {}
       console.error('Error running type "check": ', error.message)};
   };
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   logTypeErrors(errorOutput) {}
     const lines = errorOutput.split('\n';);
     const typeErrors = lines.filter(line => )
@@ -149,35 +168,35 @@ class TypeChecker {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-    
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if ( {})
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       console.log('TypeScript errors "found": ')) {}
-     {}
       console.log('TypeScript errors found:')};
       typeErrors.forEach(error => {})
         console.log(`  ${error}`)})};
-  };
   stop() {}
     console.log('Stopping Type Checker...');
+<<<<<<< HEAD
     this.isRunning = false;
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if ( {})
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       clearInterval(this.intervalId)};
     console.log('Type Checker stopped')) {}
-     {}
-      clearInterval(this.intervalId)};
     console.log('Type Checker stopped')}};
-};
+
 // Start the checker if run directly;
-if ( {})
   const checker = new TypeChecker) {}
-     {}
   const checker = new TypeChecker}(;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -215,5 +234,11 @@ module.exports = TypeChecker;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+  // Handle graceful shutdown;
+
+  checker.start().catch(console.error)};
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

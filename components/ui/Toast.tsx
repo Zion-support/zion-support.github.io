@@ -1,21 +1,17 @@
+<<<<<<< HEAD
   message?: string;
   duration?: number;
 }
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
-export type ToastType = any;
-}, [toast.id, toast.duration, onRemove]);
-const getIcon = () => {
-  switch (toast.type) {
-  case 'success':
-origin/cursor/automate-test-improve-and-merge-code-2533
-interface ToastProps {
-  toast: Toast
-  onRemove: (id: string) => void
-}
 
+<<<<<<< HEAD
 import React from 'react';
  export type ToastType = 'success' | 'error' | 'info' | 'warning';
 import React, { useState, useEffect } from 'react';
@@ -403,3 +399,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

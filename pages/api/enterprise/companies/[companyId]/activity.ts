@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -123,12 +124,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { companyId } = req.query;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (!companyId || typeof companyId !== 'string') {
     return res.status(400).json({ error: 'companyId required' })
   }
   const company = null;
   return res.status(200).json(company.activity)
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -142,3 +150,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

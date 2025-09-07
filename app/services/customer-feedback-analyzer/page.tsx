@@ -1,55 +1,105 @@
 <<<<<<< HEAD
 export const metadata = {
-  title: 'Customer Feedback Analyzer | Zion Tech Group',
-  description: 'Professional customer feedback analyzer services for your business needs.',
-  keywords: 'customer-feedback-analyzer, services, business, technology'
+  title: "Customer Feedback Analyzer | Zion Tech Group",
+  description:
+    "Transform customer feedback into actionable insights with AI-powered sentiment analysis, trend detection, and automated reporting.",
 };
 
-export default function ServicePage() {
+export default function CustomerFeedbackAnalyzerPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Customer Feedback Analyzer
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional customer feedback analyzer services for your business needs.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
-            <p className="text-gray-300 mb-6">Description of the first key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
+    <section className="max-w-6xl mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">
+        Customer Feedback Analyzer
+      </h1>
+      <p className="text-xl text-gray-600 mb-12">
+        Transform customer feedback into actionable insights with AI-powered
+        sentiment analysis, trend detection, and automated reporting.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <FeatureCard
+          title="AI Sentiment Analysis"
+          features={[
+            "Real-time sentiment scoring",
+            "Emotion detection",
+            "Language processing",
+            "Multi-language support",
+          ]}
+        />
+        <FeatureCard
+          title="Trend Detection"
+          features={[
+            "Pattern recognition",
+            "Issue prioritization",
+            "Performance tracking",
+            "Predictive insights",
+          ]}
+        />
+        <FeatureCard
+          title="Automated Reporting"
+          features={[
+            "Custom dashboards",
+            "Scheduled reports",
+            "Alert notifications",
+            "Executive summaries",
+          ]}
+        />
+      </div>
+
+      <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-xl p-8 mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Why Analyze Customer Feedback?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex items-start">
+            <span className="text-orange-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">
+                Improve Customer Satisfaction
+              </h3>
+              <p className="text-gray-600">
+                Identify pain points and opportunities to enhance customer
+                experience
+              </p>
+            </div>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
-            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
+          <div className="flex items-start">
+            <span className="text-orange-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">
+                Reduce Churn by 25%
+              </h3>
+              <p className="text-gray-600">
+                Early detection of customer issues prevents cancellations
+              </p>
+            </div>
           </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
-            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
-            <ul className="space-y-2 text-gray-300">
-              <li>• Benefit 1</li>
-              <li>• Benefit 2</li>
-              <li>• Benefit 3</li>
-            </ul>
+          <div className="flex items-start">
+            <span className="text-orange-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">
+                Data-Driven Decisions
+              </h3>
+              <p className="text-gray-600">
+                Make informed product and service improvements based on real
+                feedback
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start">
+            <span className="text-orange-500 mr-3 text-xl">✓</span>
+            <div>
+              <h3 className="font-semibold text-gray-900">
+                Competitive Advantage
+              </h3>
+              <p className="text-gray-600">
+                Stay ahead by understanding customer needs and market trends
+              </p>
+            </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 =======
 export const metadata = {}
   title: "Customer Feedback Analyzer | Zion Tech Group",
@@ -174,6 +224,31 @@ export default function CustomerFeedbackAnalyzerPage() {}
             className="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-colors"
           >
             Email Us;
+=======
+
+      <Pricing />
+
+      <div className="mt-16 text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Ready to Understand Your Customers Better?
+        </h2>
+        <p className="text-gray-600 mb-6">
+          Start with a free analysis of your existing feedback data and see what
+          insights you're missing.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-colors"
+          >
+            Email Us
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </a>
         </div>
       </div>
@@ -181,6 +256,7 @@ export default function CustomerFeedbackAnalyzerPage() {}
   );
 }
 
+<<<<<<< HEAD
 function FeatureCard({}
   title,
   features,
@@ -194,6 +270,21 @@ function FeatureCard({}
       <ul className="space-y-2 text-gray-600">
         {features.map((f) => ("
           <li key={f} className="flex items-center">"
+=======
+function FeatureCard({
+  title,
+  features,
+}: {
+  title: string;
+  features: string[];
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-600">
+        {features.map((f) => (
+          <li key={f} className="flex items-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-orange-500 mr-2">•</span> {f}
           </li>
         ))}
@@ -202,6 +293,7 @@ function FeatureCard({}
   );
 }
 
+<<<<<<< HEAD
 function Pricing() {}
   return ("
     <div className="mt-16">"
@@ -227,10 +319,38 @@ function Pricing() {}
             "Advanced AI analysis","
             "Real-time dashboards","
             "Priority support","
+=======
+function Pricing() {
+  return (
+    <div className="mt-16">
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Pricing Plans
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan
+          name="Starter"
+          price="$149/mo"
+          features={[
+            "Up to 1,000 feedback items",
+            "Basic sentiment analysis",
+            "Monthly reports",
+            "Email support",
+          ]}
+        />
+        <Plan
+          name="Professional"
+          price="$399/mo"
+          features={[
+            "Up to 10,000 feedback items",
+            "Advanced AI analysis",
+            "Real-time dashboards",
+            "Priority support",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "Custom integrations",
           ]}
           popular={true}
         />
+<<<<<<< HEAD
         <Plan"
           name="Enterprise""
           price="$899/mo"
@@ -239,6 +359,16 @@ function Pricing() {}
             "Custom AI models","
             "White-label solution","
             "Dedicated support","
+=======
+        <Plan
+          name="Enterprise"
+          price="$899/mo"
+          features={[
+            "Unlimited feedback items",
+            "Custom AI models",
+            "White-label solution",
+            "Dedicated support",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "API access",
           ]}
         />
@@ -247,16 +377,25 @@ function Pricing() {}
   );
 }
 
+<<<<<<< HEAD
 function Plan({}
+=======
+function Plan({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name,
   price,
   features,
   popular = false,
+<<<<<<< HEAD
 }: {}
+=======
+}: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   price: string;
   features: string[];
   popular?: boolean;
+<<<<<<< HEAD
 }) {}
   return (
     <div"
@@ -272,10 +411,28 @@ function Plan({}
       <ul className="space-y-2 text-gray-600 mb-6">
         {features.map((f) => ("
           <li key={f} className="flex items-center">"
+=======
+}) {
+  return (
+    <div
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-orange-500 ring-2 ring-orange-200" : "border-gray-200"}`}
+    >
+      {popular && (
+        <div className="bg-orange-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular
+        </div>
+      )}
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-orange-600 mb-4">{price}</div>
+      <ul className="space-y-2 text-gray-600 mb-6">
+        {features.map((f) => (
+          <li key={f} className="flex items-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-green-500 mr-2">✓</span> {f}
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
       <a"
         href="tel:+13024640950"`
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
@@ -291,3 +448,18 @@ function Plan({}
   );
 }
 '"`
+=======
+      <a
+        href="tel:+13024640950"
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
+          popular
+            ? "bg-orange-600 text-white hover:bg-orange-700"
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+        }`}
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

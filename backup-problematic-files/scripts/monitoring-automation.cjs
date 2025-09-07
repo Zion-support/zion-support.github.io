@@ -1,12 +1,12 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Monitoring Automation;
  * Sets up comprehensive monitoring for the application;
  */
-
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
+<<<<<<< HEAD
       'INFO': 'ℹ'
       'SUCCESS': ''
       'ERROR': ''
@@ -34,6 +34,8 @@ const path = require('path')
                 console.error('Failed to load "metrics")
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

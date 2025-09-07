@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { motion } from 'framer-motion';
 
@@ -52,6 +53,12 @@ import Layout from './layout / Layout';'
 import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard2026';'
 import Link from 'next / link';'
 import { motion } from 'framer-motion';
+=======
+
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   CheckCircle,;'
   Sparkles,;} from 'lucide-react';import { ;
@@ -66,13 +73,17 @@ import {}
   Lock, Palette, Target, CheckCircle, Sparkles;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ArrowRight, Star, Users, Award, Clock;
   Brain, Atom, Shield, Rocket, Zap;
-  TrendingUp, Globe, Cpu, Database, Cloud;
-  Lock, Palette, Target, CheckCircle, Sparkles
+  TrendingUp, Globe, Cpu, Database, Cloud;}
+  Lock, Palette, Target, CheckCircle, Sparkles}
  } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 // Import new service data
+// Import new service data;
 import { realMicroSaasServices2025  } from '../data/real-micro-saas-services-2025';
 import { realITServices2025  } from '../data/real-it-services-2025';
 =======
@@ -82,6 +93,7 @@ import { realITServices2025  } from '../data/real-it-services-2025';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { realAIServices2025 } from '../data/real-ai-services-2025';
 
+<<<<<<< HEAD
         <section className="min-h-screen flex items-center justify-center px-4 relative">
           {/* Animated background elements */}"
           <div className="absolute inset-0 overflow-hidden">"
@@ -1970,3 +1982,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

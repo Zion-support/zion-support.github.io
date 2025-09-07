@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-testing-automation.cjs
 =======
 <<<<<<< HEAD
@@ -91,3 +92,6 @@ const { execSync } = require('child_process')
       { "component": 'PerformanceMonitor', "status"}
       { "component": 'PerformanceMonitor', "status"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

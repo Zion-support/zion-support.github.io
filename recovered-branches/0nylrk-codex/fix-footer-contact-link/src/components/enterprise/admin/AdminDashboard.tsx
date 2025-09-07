@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -9,10 +10,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
 import { UsageStats } from "./UsageStats",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
@@ -51,8 +55,11 @@ import { UsageStats } from "./UsageStats";
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
 
-import React from "react";
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 import { AdminHeader } from "./AdminHeader";
 import { TeamManagement } from "./TeamManagement";
 import { UsageStats } from "./UsageStats";
@@ -66,9 +73,16 @@ import { TeamActivity } from "./TeamActivity";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+<<<<<<< HEAD
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export function AdminDashboard() {
+  return (
+    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">
+      <AdminHeader />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
@@ -107,6 +121,7 @@ import {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -131,6 +146,8 @@ import {}
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
@@ -190,7 +207,6 @@ import {}
 =======
         </TabsList>
 
-
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>
@@ -200,22 +216,26 @@ import {}
         <TabsContent value="usage" className="space-y-8">
           <UsageStats />
         </TabsContent>
+<<<<<<< HEAD
         
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>
-        
         <TabsContent value="roles" className="space-y-8">
           <RoleManagement />
         </TabsContent>
-        
         <TabsContent value="usage" className="space-y-8">
           <UsageStats />
         </TabsContent>
+<<<<<<< HEAD
         
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -335,6 +355,27 @@ export function AdminDashboard() {;
 
       <Tabs defaultValue="team" className="mt-8">;
         <TabsList className="grid w-full grid-cols-4 mb-8">;
+import React from './react';
+import { AdminHeader  } from './AdminHeader';
+import { TeamManagement  } from './TeamManagement';
+import { UsageStats  } from './UsageStats';
+import { RoleManagement  } from './RoleManagement';
+import { TeamActivity  } from './TeamActivity';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
+;
+export /**
+ * AdminDashboard - Function description
+ */
+function AdminDashboard() {
+  return (
+    <div className="container mx - auto max - w-7xl py - 8 px - 4 md: px - 6">;
+      <AdminHeader />;
+      <Tabs default_value="team" className="mt - 8">;
+        <TabsList className="grid w - full grid - cols - 4 mb - 8">;
+
+    </div>
+  );
+}
     </div>;
   );
 }
@@ -346,13 +387,11 @@ import { TeamManagement } from "./TeamManagement",;
 import { UsageStats } from "./UsageStats",;
 import { RoleManagement } from "./RoleManagement",;
 import { TeamActivity } from "./TeamActivity",;
-import {;
-  Tabs,;
-  TabsContent,;
-  TabsList,;
-  TabsTrigger} from "@/components/ui/tabs";
-export function AdminDashboard() {;
-  return (;
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger} from "@/components/ui/tabs",
 
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
       <AdminHeader />;
@@ -382,6 +421,31 @@ export function AdminDashboard() {;
 
 }
 
+      <Tabs defaultValue="team" className="mt-8">
+        <TabsList className="grid w-full grid-cols-4 mb-8">
+          <TabsTrigger value="team">Team Management</TabsTrigger>
+          <TabsTrigger value="roles">Role Assignment</TabsTrigger>
+          <TabsTrigger value="usage">Usage Limits</TabsTrigger>
+          <TabsTrigger value="activity">Team Activity</TabsTrigger>
+        </TabsList>        
+        <TabsContent value="team" className="space-y-8">
+          <TeamManagement />
+        </TabsContent>
+        <TabsContent value="roles" className="space-y-8">
+          <RoleManagement />
+        </TabsContent>
+        <TabsContent value="usage" className="space-y-8">
+          <UsageStats />
+        </TabsContent>
+
+        <TabsContent value="activity" className="space-y-8">
+          <TeamActivity />
+        </TabsContent>
+      </Tabs>          <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
+          <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
+          <TabsTrigger value="activity">Team Activity</TabsTrigger>;
+        </TabsList>;
+}
 }
         ;
 =======
@@ -422,6 +486,7 @@ export function AdminDashboard() { return null; }
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -435,3 +500,108 @@ export function AdminDashboard() { return null; }
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import React from "react";""
+import { AdminHeader } from "./AdminHeader";""
+import { TeamManagement } from "./TeamManagement";""
+import { UsageStats } from "./UsageStats";""
+import { RoleManagement } from "./RoleManagement";""
+import { TeamActivity } from "./TeamActivity";""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
+import React from "react",""
+import { AdminHeader } from "./AdminHeader",""
+import { TeamManagement } from "./TeamManagement",""
+import { UsageStats } from "./UsageStats",""
+import { RoleManagement } from "./RoleManagement",""
+import { TeamActivity } from "./TeamActivity","
+import {
+  // TODO: Implement
+}
+  Tabs,
+  TabsContent,
+  TabsList,"
+  TabsTrigger} from "@/components/ui/tabs",""
+      <Tabs defaultValue="team" className="mt-8">"
+"
+        <TabsList className="grid w-full grid-cols-4 mb-8">"
+          <TabsTrigger value="team">Team Management""
+          <TabsTrigger value="roles">Role Assignment""
+          <TabsTrigger value="usage">Usage Limits""
+          <TabsTrigger value="activity">Team Activity"
+
+        <TabsContent value="team" className="space-y-8">"
+
+          <TeamManagement />
+
+        <TabsContent value="roles" className="space-y-8">"
+
+          <RoleManagement />
+
+        <TabsContent value="usage" className="space-y-8">"
+
+          <UsageStats />
+
+
+
+
+
+
+
+
+        <TabsContent value="activity" className="space-y-8">"
+
+          <TeamActivity />
+
+    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;"
+</div>
+      <AdminHeader />;
+
+      <Tabs defaultValue="team" className="mt-8">;"
+        <TabsList className="grid w-full grid-cols-4 mb-8">;"
+
+    </div>;
+    </div>"
+          <TabsTrigger value="team">Team Management;""
+          <TabsTrigger value="roles">Role Assignment;""
+          <TabsTrigger value="usage">Usage Limits;""
+          <TabsTrigger value="activity">Team Activity;"
+        ;"
+        <TabsContent value="team" className="space - y-8">;"
+
+          <TeamManagement />;
+
+        <TabsContent value="roles" className="space - y-8">;"
+
+          <RoleManagement />;
+
+        <TabsContent value="usage" className="space - y-8">;"
+
+          <UsageStats />;
+
+        <TabsContent value="activity" className="space - y-8">;"
+
+          <TeamActivity />;
+
+        ;
+    </div>);"
+        <TabsContent value="team" className="space-y-8">;"
+
+
+        <TabsContent value="roles" className="space-y-8">;"
+
+
+        <TabsContent value="usage" className="space-y-8">;"
+
+
+
+
+
+
+
+
+        <TabsContent value="activity" className="space-y-8">;"
+
+
+    </div>;"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

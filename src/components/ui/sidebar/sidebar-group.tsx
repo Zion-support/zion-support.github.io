@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
@@ -326,3 +327,17 @@ export { SidebarGroup };
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+import React, { forwardRef } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { SafeRef } from '@/types/ref-types';
+interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+  title?: string;
+  icon?: React.ReactNode;
+  defaultExpanded?: boolean;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

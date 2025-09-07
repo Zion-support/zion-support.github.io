@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
   if (!requireSuperadminApi(req, res)) return;'
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req && req.body || {};'
@@ -35,6 +36,9 @@ function handler() {}
 
 <<<<<<< HEAD
   res.status(200).json(update);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   res.status(200).json(update)
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

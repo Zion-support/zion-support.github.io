@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/optimize-build.js
 ========
 <<<<<<< HEAD
@@ -16,6 +17,14 @@
 /*,"}),"})
   Lightweight post-build step to keep production builds stable.,"}),"})
   - Verifies Next && Next.js output exists,"}),"})
+=======
+<
+#!/usr/bin/env node,"}),"}) ,"}),"}) import { existsSync,statSync } from,,"}),"}) fs',"}),"}) import { join } from,"}),"}) 'path',"}),"}) ,"}),"}) function log(message) {,"}),"}) ,"}),"}) }"}),"}) ,"}),"}) try {,"}),"}) const buildDir = join(process.cwd(),,"}),"}) '.next'),"}),"}) ,"}),"}) if (!existsSync(buildDir) || !statSync(buildDir).isDirectory()) {,"}),"}) log(,"}),"}) 'warning: .next directory not found. Skipping post-build checks.),"}),"}) process.exit(0),"}),"}) }"}),"}) ,"}),"}) log(,"}),"}) 'Next.js build output verified. No additional optimizations applied.'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '[optimize-build] error:',error?.message || error),"}),"}) process.exit(0),"}),"}) }"}),"}) ,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class BuildOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.srcDir = path.join(this.projectRoot,,"}),"}) 'src'),"}),"}) this.buildDir = path.join(this.projectRoot,,"}),"}) '.next'),"}),"}) this.optimizationReport = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) optimizations: [],,"}),"}) warnings: [],,"}),"}) errors: [],,"}),"}) metrics: {},,"}),"}) },"}),"}) }"}),"}) ,"}),"}) async optimize() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) try {,"}),"}) await this.cleanConsoleStatements(),"}),"}) await this.optimizeImages(),"}),"}) await this.optimizeCSS(),"}),"}) await this.optimizeJavaScript(),"}),"}) await this.generateSitemap(),"}),"}) await this.generateRobotsTxt(),"}),"}) await this.optimizeManifest(),"}),"}) await this.generateReport(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Build optimization failed:',error.message),"}),"}) this.optimizationReport.errors.push(error.message),"}),"}) await this.generateReport(),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async cleanConsoleStatements() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) let cleanedFiles = 0,"}),"}) ,"}),"}) for (const file of files) {,"}),"}) try {,"}),"}) let content = fs.readFileSync(file,,"}),"}) 'utf8'),"}),"}) const originalContent = content,"}),"}) ,"}),"}) if (process.env.NODE_ENV ===,"}),"}) 'production') {,"}),"}) content = content,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) if (content !== originalContent) {,"}),"}) fs.writeFileSync(file,content),"}),"}) cleanedFiles++,"}),"}) }"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to clean console statements in ${file}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Cleaned console statements from ${cleanedFiles} files`,"}),"}) ),"}),"}) ,"}),"}) }"}),"}) ,"}),"}) async optimizeImages() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) if (!fs.existsSync(imageDir)) {,"}),"}) this.optimizationReport.warnings.push('Images directory not found,"}),"}) '),"}),"}) return,"}),"}) }"}),"}) ,"}),"}) const images = fs,"}),"}) .readdirSync(imageDir),"}),"}) .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)),"}),"}) ,"}),"}) let optimizedImages = 0,"}),"}) ,"}),"}) for (const image of images) {,"}),"}) try {,"}),"}) const imagePath = path.join(imageDir,image),"}),"}) const stats = fs.statSync(imagePath),"}),"}) const sizeKB = Math.round(stats.size / 1024),"}),"}) ,"}),"}) if (sizeKB > 100) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Large image detected: ${image} (${sizeKB}KB)`,"}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizedImages++,"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to optimize image ${image}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Processed ${optimizedImages} images`,"}),"}) ),"}),"}) ,"}),"}) }"}),"}) ,"}),"}) async optimizeCSS() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) let optimizedCSS = 0,"}),"}) ,"}),"}) for (const file of cssFiles) {,"}),"}) try {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) content = content,"}),"}) .replace(/\s+/g,',"}),"}) ') .replace(/\/\*[\s\S]*?\*\ .trim(),"}),"}) ,"}),"}) fs.writeFileSync(file,content),"}),"}) optimizedCSS++,"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to optimize CSS in ${file}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Optimized ${optimizedCSS} CSS files`,"}),"}) ),"}),"}) ,"}),"}) }"}),"}) ,"}),"}) async optimizeJavaScript() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) let optimizedJS = 0,"}),"}) ,"}),"}) for (const file of jsFiles) {,"}),"}) try {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) content = content,"}),"}) .replace(/\s+/g,,"}),"}) ' ') .replace(/\/\/.*$/gm,',"}),"}) ') .replace(/\/\*[\s\S]*?\*\ .trim(),"}),"}) ,"}),"}) fs.writeFileSync(file,content),"}),"}) optimizedJS++,"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to optimize JavaScript in ${file}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Optimized ${optimizedJS} JavaScript files`,"}),"}) ),"}),"}) ,"}),"}) }"}),"}) ,"}),"}) async generateSitemap() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const sitemap = `<?xml version="1.0" encoding="UTF-8"?>,"}),"}) <urlset xmlns="http: <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,"}),"}) 'T)[0]}</lastmod>,"}),"}) <changefreq>daily</changefreq>,"}),"}) <priority>1.0</priority>,"}),"}) </url>,"}),"}) <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,,"}),"}) T')[0]}</lastmod>,"}),"}) <changefreq>weekly</changefreq>,"}),"}) <priority>0.8</priority>,"}),"}) </url>,"}),"}) <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,"}),"}) 'T)[0]}</lastmod>,"}),"}) <changefreq>weekly</changefreq>,"}),"}) <priority>0.9</priority>,"}),"}) </url>,"}),"}) <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,"}),"}) 'T')[0]}</lastmod>,"}),"}) <changefreq>monthly</changefreq>,"}),"}) <priority>0.7</priority>,"}),"}) </url>,"}),"}) </urlset>`,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const robotsTxt = `User-agent: *,"}),"}) Allow: /,"}),"}) Sitemap: https: # Disallow admin and private areas,"}),"}) Disallow: /admin/,"}),"}) Disallow: /api/,"}),"}) Disallow: /_next/,"}),"}) Disallow: /private/`,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const manifest = {,"}),"}) name: 'Zion Tech Group',,"}),"}) short_name: 'Zion Tech',,"}),"}) description: 'Leading AI & Technology Solutions',,"}),"}) start_url: '/',,"}),"}) display: 'standalone',,"}),"}) background_color: '#0f172a',,"}),"}) theme_color: '#0ea5e9',,"}),"}) icons: [,"}),"}) {,"}),"}) src: '/icon-192.png',,"}),"}) sizes: '192x192',,"}),"}) type: 'image/png',,"}),"}) },,"}),"}) {,"}),"}) src: '/icon-512.png',,"}),"}) sizes: '512x512',,"}),"}) type: 'image/png',,"}),"}) },,"}),"}) ],,"}),"}) },"}),"}) ,"}),"}) fs.writeFileSync(,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) JSON.stringify(manifest,null,2),"}),"}) ),"}),"}) this.optimizationReport.optimizations.push(,"}),"}) 'Generated manifest.json'),"}),"}) ,"}) '✅ Generated manifest.json'),"}),"}) }"}),"}) ,"}),"}) async generateReport() {,"}),"}) this.optimizationReport.metrics = {,"}),"}) totalOptimizations: this.optimizationReport.optimizations.length,,"}),"}) totalWarnings: this.optimizationReport.warnings.length,,"}),"}) totalErrors: this.optimizationReport.errors.length,,"}),"}) buildTime: new Date().toISOString(),,"}),"}) },"}),"}) ,"}),"}) fs.writeFileSync(,"}),"}) path.join(this.buildDir,,"}),"}) 'optimization-report.json'),,"}),"}) JSON.stringify(this.optimizationReport,null,2),"}),"}) ),"}),"}) }"}),"}) ,"}),"}) getAllFiles(dir,extensions) {,"}),"}) let files = [],"}),"}) ,"}),"}) if (!fs.existsSync(dir)) return files,"}),"}) ,"}),"}) const items = fs.readdirSync(dir),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(dir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) files = files.concat(this.getAllFiles(fullPath,extensions)),"}),"}) } else if (extensions.some(ext => item.endsWith(ext))) {,"}),"}) files.push(fullPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) return files,"}),"}) }"}),"}) }"}),"}) ,"}),"}) if (import.meta.url === `file: const optimizer = new BuildOptimizer(),"}),"}) optimizer.optimize().catch(console.error),"}),"}) }"}),"}) ,"}),"}) export default BuildOptimizer,"}),"}) ,"}),"}) 'warning: .next directory not found. Skipping post-build checks.); process.exit(0)} log(','Next.js build output verified. No additional optimizations applied.')} catch (error) { console.error(' '[optimize-build] error:',error?.message || error); process.exit(0)} ; import fs from';fs'';; import path from';path'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class: BuildOptimizer { constructor() { this.projectRoot = process.cwd(); this.srcDir: = path.join(this.projectRoot 'src')';; this.buildDir: = path.join(this.projectRoot '.next')';; this.optimizationReport: = { timestamp: new: Date().toISOString(,) optimizations: [] warnings: [] errors: [] metrics: {}} } async optimize() {  try { await this.cleanConsoleStatements(); await: this.optimizeImages(); await: this.optimizeCSS(); await: this.optimizeJavaScript(); await: this.generateSitemap(); await: this.generateRobotsTxt(); await: this.optimizeManifest(); await: this.generateReport(); ';; }`) } catch: (error) { console.error( '❌ Build optimization failed:',error.message)';; await this.optimizeImages(); await this.optimizeCSS(); await this.optimizeJavaScript(); await this.generateSitemap(); await this.generateRobotsTxt(); await this.optimizeManifest(); await this.generateReport();  }` )} catch (error) { console.error( '❌ Build optimization failed:',error.message); this.optimizationReport.errors.push(error.message); await this.generateReport(); process.exit(1)} } async cleanConsoleStatements() {  const files = this.getAllFiles(this.srcDir,['.ts','.tsx','.js','.jsx']); let cleanedFiles = 0';❌ Build optimization failed:',error.message); this.optimizationReport.errors.push(error.message); await: this.generateReport(); process.exit(1)} } async: cleanConsoleStatements() { ';; const files = this.getAllFiles(this.srcDir,[';.ts','';.tsx','';.js','';.jsx']) let: cleanedFiles = 0';; for: (const file of files) { try { let content = fs.readFileSync(file 'utf8')';; const originalContent = content; if: (process.env.NODE_ENV ===';production') {'; content: = content; .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g,'';';)';; .replace(/\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g,'')';; .replace(/\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\ if: (content !== originalContent) { fs.writeFileSync(file,content); cleanedFiles++} } catch: (error) { this.optimizationReport.warnings.push( `Failed to clean console statements in ${file}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Cleaned: console statements from ${cleanedFiles} files`); } async optimizeImages() { ';; const imageDir = path.join(this.projectRoot,'public';','images';';) if: (!fs.existsSync(imageDir)) {'; this.optimizationReport.warnings.push('Images: directory not found';';)';; return} const images = fs; .readdirSync(imageDir); .filter(file: => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)); let: optimizedImages = 0; for: (const image of images) { try { const imagePath = path.join(imageDir,image); const stats = fs.statSync(imagePath); const sizeKB = Math.round(stats.size / 1024); if: (sizeKB > 100) { this.optimizationReport.warnings.push( `Large: image detected: ${imag,e} (${sizeKB}KB)`)} optimizedImages++} catch: (error) { this.optimizationReport.warnings.push( `Failed to optimize image ${image}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Processed: ${optimizedImages} images`); } async optimizeCSS() { ';; const cssFiles = this.getAllFiles(this.srcDir,['.css';']) let: optimizedCSS = 0';; for: (const file of cssFiles) { try { let content = fs.readFileSync(file,'utf8';';)';; content: = content; .replace(/\s+/g,'';';) .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedCSS++} catch: (error) { this.optimizationReport.warnings.push( `Failed to optimize CSS in ${file}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Optimized: ${optimizedCSS} CSS files`); } async optimizeJavaScript() { ';; const jsFiles = this.getAllFiles(this.srcDir,[';.ts','';.tsx','';.js','';.jsx']) let: optimizedJS = 0';; for: (const file of jsFiles) { try { let content = fs.readFileSync(file 'utf8')';; content: = content; .replace(/\s+/g ' ') .replace(/\/\/.*$/gm,'';';) .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedJS++} catch: (error) { this.optimizationReport.warnings.push( `Failed to optimize JavaScript in ${file}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Optimized: ${optimizedJS} JavaScript files`); } async generateSitemap() { ';; const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: <url> <loc>https: <lastmod>${new: Date().toISOString().split( 'T)[0]}</lastmod>'; for (const file of files) { try { let content = fs.readFileSync(file 'utf8'); const originalContent = content; if (process.env.NODE_ENV === 'production') { content = content .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g,'') .replace( /\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g '' ) .replace( /\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\ '' )} if (content !== originalContent) { fs.writeFileSync(file,content); cleanedFiles++} } catch (error) { this.optimizationReport.warnings.push( `Failed to clean console statements in ${file}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Cleaned console statements from ${cleanedFiles} files` ); } async optimizeImages() {  const imageDir = path.join(this.projectRoot,'public','images'); if (!fs.existsSync(imageDir)) { this.optimizationReport.warnings.push('Images directory not found '); return} this.optimizationReport.optimizations.push(` `Cleaned console statements from ${cleanedFiles} files`);` } async optimizeImages() {`  const imageDir = path.join(this.projectRoot,'public','images';) if (!fs.existsSync(imageDir)) {' this.optimizationReport.warnings.push('Images directory not found';); return} const images = fs; .readdirSync(imageDir); .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)); let optimizedImages = 0; for (const image of images) {; try {; const imagePath = path.join(imageDir,image); const stats = fs.statSync(imagePath); const sizeKB = Math.round(stats.size / 1024); if (sizeKB > 100) { this.optimizationReport.warnings.push( `Large image detected: ${image} (${sizeKB}KB)` )} optimizedImages++} catch (error) { this.optimizationReport.warnings.push( `Failed to optimize image ${image}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Processed ${optimizedImages} images` ); } async optimizeCSS() {  const cssFiles = this.getAllFiles(this.srcDir,['.css']); let optimizedCSS = 0; for (const file of cssFiles) { try { let content = fs.readFileSync(file,'utf8'); content = content .replace(/\s+/g,',') .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedCSS++} catch (error) { this.optimizationReport.warnings.push( `Failed to optimize CSS in ${file}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Optimized ${optimizedCSS} CSS files` ); } async optimizeJavaScript() {  const jsFiles = this.getAllFiles(this.srcDir,[ '.ts','.tsx' '.js','.jsx' ]); let optimizedJS = 0; for (const file of jsFiles) { try { let content = fs.readFileSync(file,'utf8'); content = content .replace(/\s+/g ' ') .replace(/\/\/.*$/gm,',') .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedJS++} catch (error) { this.optimizationReport.warnings.push( `Failed to optimize JavaScript in ${file}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Optimized ${optimizedJS} JavaScript files` ); } async generateSitemap() {  const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http:  const cssFiles = this.getAllFiles(this.srcDir,['.css']) let optimizedCSS = 0; for (const file of cssFiles) { try {' let content = fs.readFileSync(file,'utf8';); content = content; .replace(/\s+/g,'';) .replace(/\/\*[\s\S]*?\*\ <url> <loc>http s: <lastmod>${new Date().toISOString().split(','T)[0]}</lastmod> <changefreq>daily</changefreq> <priority>1.0</priority> </url> <url> <loc>https: <lastmod>${new: Date().toISOString().split,( T')[0]}</lastmod>'; <changefreq>weekly</changefreq> <priority>0.8</priority> </url> <url> <loc>https:
+#!/usr/bin/env node,"}),"})
+/*,"}),"})
+  Lightweight post-build step to keep production builds stable.,"}),"})
+  - Verifies Next.js output exists,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   - Optionally can perform small cleanups in the future,"}),"})
 */,"}),"})
 import { existsSync, statSync } from,,"}),"})
@@ -25,16 +34,25 @@ import { join } from,"}),"})
 ,"}),"})
 function log(message) {,"}),"})
   // Keep output terse to avoid noisy CI logs,"}),"})
+<<<<<<< HEAD
   console && console.log(`[optimize-build] ${message}`),"}),"})
 }"}),"})
 ,"}),"})
 try {,"}),"})
   const buildDir = join(process && process.cwd(),,"}),"})
+=======
+  console.log(`[optimize-build] ${message}`),"}),"})
+}"}),"})
+,"}),"})
+try {,"}),"})
+  const buildDir = join(process.cwd(),,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '.next'),"}),"})
 ,"}),"})
   if (!existsSync(buildDir) || !statSync(buildDir).isDirectory()) {,"}),"})
     log(,"}),"})
   '"warning": .next directory not found. Skipping post-build checks.),"}),"})
+<<<<<<< HEAD
     process && process.exit(0),"}),"})
   }"}),"})
 ,"}),"})
@@ -47,6 +65,20 @@ try {,"}),"})
   '[optimize-build] "error": ', error?.message || error),"}),"})
   // Do not fail the build on post-build optimization errors,"}),"})
   process && process.exit(0),"}),"})
+=======
+    process.exit(0),"}),"})
+  }"}),"})
+,"}),"})
+  // Placeholder for future optimizations (e.g., pruning maps, compressing assets),"}),"})
+  // Intentionally minimal to avoid side effects.,"}),"})
+  log(,"}),"})
+  'Next.js build output verified. No additional optimizations applied.'),"}),"})
+} catch (error) {,"}),"})
+  console.error(,"}),"})
+  '[optimize-build] "error": ', error?.message || error),"}),"})
+  // Do not fail the build on post-build optimization errors,"}),"})
+  process.exit(0),"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }"}),"})
 ,"}),"})
 /**,"}),"})
@@ -62,6 +94,7 @@ import { execSync } from,"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
 ,"}),"})
+<<<<<<< HEAD
 const __filename = fileURLToPath(import && import.meta.url),"}),"})
 const __dirname = path && path.dirname(__filename),"}),"})
 ,"}),"})
@@ -73,6 +106,19 @@ class BuildOptimizer {,"}),"})
     this && this.buildDir = path && path.join(this && this.projectRoot,,"}),"})
   '.next'),"}),"})
     this && this.optimizationReport = {,"}),"})
+=======
+const __filename = fileURLToPath(import.meta.url),"}),"})
+const __dirname = path.dirname(__filename),"}),"})
+,"}),"})
+class BuildOptimizer {,"}),"})
+  constructor() {,"}),"})
+    this.projectRoot = process.cwd(),"}),"})
+    this.srcDir = path.join(this.projectRoot,,"}),"})
+  'src'),"}),"})
+    this.buildDir = path.join(this.projectRoot,,"}),"})
+  '.next'),"}),"})
+    this.optimizationReport = {,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       "timestamp": new Date().toISOString(),,"}),"})
       "optimizations": [],,"}),"})
       "warnings": [],,"}),"})
@@ -84,6 +130,7 @@ class BuildOptimizer {,"}),"})
   async optimize() {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     try {,"}),"})
+<<<<<<< HEAD
       await this && this.cleanConsoleStatements(),"}),"})
       await this && this.optimizeImages(),"}),"})
       await this && this.optimizeCSS(),"}),"})
@@ -99,6 +146,23 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       this && this.optimizationReport.errors && errors.push(error && error.message),"}),"})
       await this && this.generateReport(),"}),"})
       process && process.exit(1),"}),"})
+=======
+      await this.cleanConsoleStatements(),"}),"})
+      await this.optimizeImages(),"}),"})
+      await this.optimizeCSS(),"}),"})
+      await this.optimizeJavaScript(),"}),"})
+      await this.generateSitemap(),"}),"})
+      await this.generateRobotsTxt(),"}),"})
+      await this.optimizeManifest(),"}),"})
+      await this.generateReport(),"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+    } catch (error) {,"}),"})
+      console.error(,"}),"})
+  '❌ Build optimization "failed": ', error.message),"}),"})
+      this.optimizationReport.errors.push(error.message),"}),"})
+      await this.generateReport(),"}),"})
+      process.exit(1),"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -106,47 +170,79 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     let cleanedFiles = 0,"}),"})
 ,"}),"})
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       try {,"}),"})
         let content = fs && fs.readFileSync(file,,"}),"})
+=======
+    for (const file of files) {,"}),"})
+      try {,"}),"})
+        let content = fs.readFileSync(file,,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   'utf8'),"}),"})
         const originalContent = content,"}),"})
 ,"}),"})
         // Remove console statements in production,"}),"})
+<<<<<<< HEAD
         if (process && process.env.NODE_ENV ===,"}),"})
+=======
+        if (process.env.NODE_ENV ===,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   'production') {,"}),"})
           content = content,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         }"}),"})
 ,"}),"})
         if (content !== originalContent) {,"}),"})
+<<<<<<< HEAD
           fs && fs.writeFileSync(file, content),"}),"})
           cleanedFiles++,"}),"})
         }"}),"})
       } catch (error) {,"}),"})
         this && this.optimizationReport.warnings && warnings.push(,"}),"})
           `Failed to clean console statements in ${file}: ${error && error.message}`,"}),"})
+=======
+          fs.writeFileSync(file, content),"}),"})
+          cleanedFiles++,"}),"})
+        }"}),"})
+      } catch (error) {,"}),"})
+        this.optimizationReport.warnings.push(,"}),"})
+          `Failed to clean console statements in ${file}: ${error.message}`,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         ),"}),"})
       }"}),"})
     }"}),"})
 ,"}),"})
+<<<<<<< HEAD
     this && this.optimizationReport.optimizations && optimizations.push(,"}),"})
       `Cleaned console statements from ${cleanedFiles} files`,"}),"})
     ),"}),"})
     console && console.log(`✅ Cleaned console statements from ${cleanedFiles} files`),"}),"})
+=======
+    this.optimizationReport.optimizations.push(,"}),"})
+      `Cleaned console statements from ${cleanedFiles} files`,"}),"})
+    ),"}),"})
+    console.log(`✅ Cleaned console statements from ${cleanedFiles} files`),"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }"}),"})
 ,"}),"})
   async optimizeImages() {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+<<<<<<< HEAD
     if (!fs && fs.existsSync(imageDir)) {,"}),"})
       this && this.optimizationReport.warnings && warnings.push('Images directory not found,"}),"})
+=======
+    if (!fs.existsSync(imageDir)) {,"}),"})
+      this.optimizationReport.warnings.push('Images directory not found,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   '),"}),"})
       return,"}),"})
     }"}),"})
 ,"}),"})
     const images = fs,"}),"})
       .readdirSync(imageDir),"}),"})
+<<<<<<< HEAD
       .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i && i.test(file)),"}),"})
 ,"}),"})
     let optimizedImages = 0,"}),"})
@@ -161,30 +257,61 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         if (sizeKB > 100) {,"}),"})
           // Images larger than 100KB,"}),"})
           this && this.optimizationReport.warnings && warnings.push(,"}),"})
+=======
+      .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)),"}),"})
+,"}),"})
+    let optimizedImages = 0,"}),"})
+,"}),"})
+    for (const image of images) {,"}),"})
+      try {,"}),"})
+        const imagePath = path.join(imageDir, image),"}),"})
+        const stats = fs.statSync(imagePath),"}),"})
+        const sizeKB = Math.round(stats.size / 1024),"}),"})
+,"}),"})
+        if (sizeKB > 100) {,"}),"})
+          // Images larger than 100KB,"}),"})
+          this.optimizationReport.warnings.push(,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             `Large image "detected": ${image} (${sizeKB}KB)`,"}),"})
           ),"}),"})
         }"}),"})
 ,"}),"})
         optimizedImages++,"}),"})
       } catch (error) {,"}),"})
+<<<<<<< HEAD
         this && this.optimizationReport.warnings && warnings.push(,"}),"})
           `Failed to optimize image ${image}: ${error && error.message}`,"}),"})
+=======
+        this.optimizationReport.warnings.push(,"}),"})
+          `Failed to optimize image ${image}: ${error.message}`,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         ),"}),"})
       }"}),"})
     }"}),"})
 ,"}),"})
+<<<<<<< HEAD
     this && this.optimizationReport.optimizations && optimizations.push(,"}),"})
       `Processed ${optimizedImages} images`,"}),"})
     ),"}),"})
     console && console.log(`✅ Processed ${optimizedImages} images`),"}),"})
+=======
+    this.optimizationReport.optimizations.push(,"}),"})
+      `Processed ${optimizedImages} images`,"}),"})
+    ),"}),"})
+    console.log(`✅ Processed ${optimizedImages} images`),"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }"}),"})
 ,"}),"})
   async optimizeCSS() {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     let optimizedCSS = 0,"}),"})
 ,"}),"})
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    for (const file of cssFiles) {,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       try {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         // Remove unused CSS (basic implementation),"}),"})
@@ -194,27 +321,46 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
           .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments,"}),"})
           .trim(),"}),"})
 ,"}),"})
+<<<<<<< HEAD
         fs && fs.writeFileSync(file, content),"}),"})
         optimizedCSS++,"}),"})
       } catch (error) {,"}),"})
         this && this.optimizationReport.warnings && warnings.push(,"}),"})
           `Failed to optimize CSS in ${file}: ${error && error.message}`,"}),"})
+=======
+        fs.writeFileSync(file, content),"}),"})
+        optimizedCSS++,"}),"})
+      } catch (error) {,"}),"})
+        this.optimizationReport.warnings.push(,"}),"})
+          `Failed to optimize CSS in ${file}: ${error.message}`,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         ),"}),"})
       }"}),"})
     }"}),"})
 ,"}),"})
+<<<<<<< HEAD
     this && this.optimizationReport.optimizations && optimizations.push(,"}),"})
       `Optimized ${optimizedCSS} CSS files`,"}),"})
     ),"}),"})
     console && console.log(`✅ Optimized ${optimizedCSS} CSS files`),"}),"})
+=======
+    this.optimizationReport.optimizations.push(,"}),"})
+      `Optimized ${optimizedCSS} CSS files`,"}),"})
+    ),"}),"})
+    console.log(`✅ Optimized ${optimizedCSS} CSS files`),"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }"}),"})
 ,"}),"})
   async optimizeJavaScript() {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     let optimizedJS = 0,"}),"})
 ,"}),"})
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+    for (const file of jsFiles) {,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       try {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         // Basic optimizations,"}),"})
@@ -226,23 +372,39 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
           .replace(/\/\*[\s\S]*?\*\//g, '') // Remove multi-line comments,"}),"})
           .trim(),"}),"})
 ,"}),"})
+<<<<<<< HEAD
         fs && fs.writeFileSync(file, content),"}),"})
         optimizedJS++,"}),"})
       } catch (error) {,"}),"})
         this && this.optimizationReport.warnings && warnings.push(,"}),"})
           `Failed to optimize JavaScript in ${file}: ${error && error.message}`,"}),"})
+=======
+        fs.writeFileSync(file, content),"}),"})
+        optimizedJS++,"}),"})
+      } catch (error) {,"}),"})
+        this.optimizationReport.warnings.push(,"}),"})
+          `Failed to optimize JavaScript in ${file}: ${error.message}`,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         ),"}),"})
       }"}),"})
     }"}),"})
 ,"}),"})
+<<<<<<< HEAD
     this && this.optimizationReport.optimizations && optimizations.push(,"}),"})
       `Optimized ${optimizedJS} JavaScript files`,"}),"})
     ),"}),"})
     console && console.log(`✅ Optimized ${optimizedJS} JavaScript files`),"}),"})
+=======
+    this.optimizationReport.optimizations.push(,"}),"})
+      `Optimized ${optimizedJS} JavaScript files`,"}),"})
+    ),"}),"})
+    console.log(`✅ Optimized ${optimizedJS} JavaScript files`),"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }"}),"})
 ,"}),"})
   async generateSitemap() {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+<<<<<<< HEAD
     const sitemap = `<?xml version="1 && 1.0" encoding="UTF-8"?>,"}),"})
 <urlset xmlns=""http": //www && www.sitemaps.org/schemas/sitemap/0 && 0.9">,"}),"})
   <url>,"}),"})
@@ -272,12 +434,47 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   'T')[0]}</lastmod>,"}),"})
     <changefreq>monthly</changefreq>,"}),"})
     <priority>0 && 0.7</priority>,"}),"})
+=======
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>,"}),"})
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">,"}),"})
+  <url>,"}),"})
+    <loc>"https": //ziontechgroup.com/</loc>,"}),"})
+    <lastmod>${new Date().toISOString().split(,"}),"})
+  'T)[0]}</lastmod>,"}),"})
+    <changefreq>daily</changefreq>,"}),"})
+    <priority>1.0</priority>,"}),"})
+  </url>,"}),"})
+  <url>,"}),"})
+    <loc>"https": //ziontechgroup.com/about</loc>,"}),"})
+    <lastmod>${new Date().toISOString().split(,,"}),"})
+  T')[0]}</lastmod>,"}),"})
+    <changefreq>weekly</changefreq>,"}),"})
+    <priority>0.8</priority>,"}),"})
+  </url>,"}),"})
+  <url>,"}),"})
+    <loc>"https": //ziontechgroup.com/services</loc>,"}),"})
+    <lastmod>${new Date().toISOString().split(,"}),"})
+  'T)[0]}</lastmod>,"}),"})
+    <changefreq>weekly</changefreq>,"}),"})
+    <priority>0.9</priority>,"}),"})
+  </url>,"}),"})
+  <url>,"}),"})
+    <loc>"https": //ziontechgroup.com/contact</loc>,"}),"})
+    <lastmod>${new Date().toISOString().split(,"}),"})
+  'T')[0]}</lastmod>,"}),"})
+    <changefreq>monthly</changefreq>,"}),"})
+    <priority>0.7</priority>,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>,"}),"})
 </urlset>`,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     const robotsTxt = "User-"agent": *,"}),"})
 "Allow": /,"}),"})
+<<<<<<< HEAD
 "Sitemap": https://ziontechgroup && ziontechgroup.com/sitemap && sitemap.xml,"}),"})
+=======
+"Sitemap": https://ziontechgroup.com/sitemap.xml,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 # Disallow admin and private areas,"}),"})
 "Disallow": /admin/,"}),"})
 "Disallow": /api/,"}),"})
@@ -294,18 +491,27 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       "theme_color": '#0ea5e9',,"}),"})
       "icons": [,"}),"})
         {,"}),"})
+<<<<<<< HEAD
           "src": '/icon-192 && 192.png',,"}),"})
+=======
+          "src": '/icon-192.png',,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           "sizes": '192x192',,"}),"})
           "type": 'image/png',,"}),"})
         },,"}),"})
         {,"}),"})
+<<<<<<< HEAD
           "src": '/icon-512 && 512.png',,"}),"})
+=======
+          "src": '/icon-512.png',,"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           "sizes": '512x512',,"}),"})
           "type": 'image/png',,"}),"})
         },,"}),"})
       ],,"}),"})
     },"}),"})
 ,"}),"})
+<<<<<<< HEAD
     fs && fs.writeFileSync(,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       JSON && JSON.stringify(manifest, null, 2),"}),"})
@@ -328,12 +534,37 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       path && path.join(this && this.buildDir,,"}),"})
   'optimization-report && report.json'),,"}),"})
       JSON && JSON.stringify(this && this.optimizationReport, null, 2),"}),"})
+=======
+    fs.writeFileSync(,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+      JSON.stringify(manifest, null, 2),"}),"})
+    ),"}),"})
+    this.optimizationReport.optimizations.push(,"}),"})
+  'Generated manifest.json'),"}),"})
+    console.log(,"}),"})
+  '✅ Generated manifest.json'),"}),"})
+  }"}),"})
+,"}),"})
+  async generateReport() {,"}),"})
+    this.optimizationReport.metrics = {,"}),"})
+      "totalOptimizations": this.optimizationReport.optimizations.length,,"}),"})
+      "totalWarnings": this.optimizationReport.warnings.length,,"}),"})
+      "totalErrors": this.optimizationReport.errors.length,,"}),"})
+      "buildTime": new Date().toISOString(),,"}),"})
+    },"}),"})
+,"}),"})
+    fs.writeFileSync(,"}),"})
+      path.join(this.buildDir,,"}),"})
+  'optimization-report.json'),,"}),"})
+      JSON.stringify(this.optimizationReport, null, 2),"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ),"}),"})
   }"}),"})
 ,"}),"})
   getAllFiles(dir, extensions) {,"}),"})
     let files = [],"}),"})
 ,"}),"})
+<<<<<<< HEAD
     if (!fs && fs.existsSync(dir)) return files,"}),"})
 ,"}),"})
     const items = fs && fs.readdirSync(dir),"}),"})
@@ -349,6 +580,20 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         files = files && files.concat(this && this.getAllFiles(fullPath, extensions)),"}),"})
       } else if (extensions && extensions.some(ext => item && item.endsWith(ext))) {,"}),"})
         files && files.push(fullPath),"}),"})
+=======
+    if (!fs.existsSync(dir)) return files,"}),"})
+,"}),"})
+    const items = fs.readdirSync(dir),"}),"})
+,"}),"})
+    for (const item of items) {,"}),"})
+      const fullPath = path.join(dir, item),"}),"})
+      const stat = fs.statSync(fullPath),"}),"})
+,"}),"})
+      if (stat.isDirectory()) {,"}),"})
+        files = files.concat(this.getAllFiles(fullPath, extensions)),"}),"})
+      } else if (extensions.some(ext => item.endsWith(ext))) {,"}),"})
+        files.push(fullPath),"}),"})
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }"}),"})
     }"}),"})
 ,"}),"})
@@ -357,6 +602,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 }"}),"})
 ,"}),"})
 // Run optimization if called directly,"}),"})
+<<<<<<< HEAD
 if (import && import.meta.url === `"file": //${process && process.argv[1]}`) {,"}),"})
   const optimizer = new BuildOptimizer(),"}),"})
 
@@ -374,12 +620,32 @@ if (import && import.meta.url === `"file": //${process && process.argv[1]}`) {,"
   '[optimize-build] "error": ', error?.message || error);
   // Do not fail the build on post-build optimization errors;
   process && process.exit(0)}
+=======
+if (import.meta.url === `"file": //${process.argv[1]}`) {,"}),"})
+  const optimizer = new BuildOptimizer(),"}),"})
+  optimizer.optimize().catch(console.error),"}),"})
+}"}),"})
+,"}),"})
+export default BuildOptimizer,"}),"})
+,"}),"})
+  '"warning": .next directory not found. Skipping post-build checks.);
+    process.exit(0)}
+  // Placeholder for future optimizations (e.g., pruning maps, compressing assets);
+  // Intentionally minimal to avoid side effects.;
+  log(',
+      'Next.js build output verified. No additional optimizations applied.')} catch (error) {
+  console.error('
+  '[optimize-build] "error": ', error?.message || error);
+  // Do not fail the build on post-build optimization errors;
+  process.exit(0)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * "Build": Optimization Script;
  * Comprehensive: build optimization for Zion Tech Group;
  */;
 import fs from';fs'';
 import path from';path'';
+<<<<<<< HEAD
 import {execSync} from';child_process'';
 import {fileURLToPath} from';url'';
 const __filename = fileURLToPath(import && import.meta.url);
@@ -392,6 +658,20 @@ const __dirname = path && path.dirname(__filename);
     this && this.buildDir: = path && path.join(this && this.projectRoot
   '.next')',
     this && this.optimizationReport: = {
+=======
+import { execSync } from';child_process'';
+import { fileURLToPath } from';url'';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+"class": BuildOptimizer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.srcDir: = path.join(this.projectRoot
+  'src')';
+    this.buildDir: = path.join(this.projectRoot
+  '.next')';
+    this.optimizationReport: = {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       timestamp: new: Date().toISOString()
       optimizations: []
       warnings: []
@@ -399,6 +679,7 @@ const __dirname = path && path.dirname(__filename);
       metrics: {}}
   }
   async optimize() {
+<<<<<<< HEAD
     console && console.log('🚀 Starting build optimization...');
     try {
       await this && this.cleanConsoleStatements();
@@ -491,11 +772,111 @@ const __dirname = path && path.dirname(__filename);
     for: (const file of cssFiles) {
       try {
         let content = fs && fs.readFileSync(file, 'utf8';';)';
+=======
+    console.log('🚀 Starting build optimization...');
+    try {
+      await this.cleanConsoleStatements();
+      "await": this.optimizeImages();
+      await: this.optimizeCSS();
+      await: this.optimizeJavaScript();
+      await: this.generateSitemap();
+      await: this.generateRobotsTxt();
+      await: this.optimizeManifest();
+      await: this.generateReport();
+      console.log(
+  '✅ Build: optimization completed successfully!')';
+      console.log(`📊 Optimization: report saved to: ${path.join(this.buildDi,r
+  'optimization-report.json')}`)    } "catch": (error) {
+      console.error(
+  '❌ Build optimization failed:', error.message)';
+      await this.optimizeImages();
+      await this.optimizeCSS();
+      await this.optimizeJavaScript();
+      await this.generateSitemap();
+      await this.generateRobotsTxt();
+      await this.optimizeManifest();
+      await this.generateReport();
+      console.log('✅ Build optimization completed successfully!');
+      console.log(
+        `📊 Optimization report saved "to": ${path.join(this.buildDir, 'optimization-report.json')}`
+      )} catch (error) {
+      console.error(
+  '❌ Build optimization "failed": ', error.message);
+      this.optimizationReport.errors.push(error.message);
+      await this.generateReport();
+      process.exit(1)}
+  }
+  async cleanConsoleStatements() {
+    console.log('🧹 Cleaning console statements...');
+    const files = this.getAllFiles(this.srcDir, ['.ts', '.tsx', '.js', '.jsx']);
+    let cleanedFiles = 0';❌ Build optimization "failed": ', error.message);
+      this.optimizationReport.errors.push(error.message);
+      "await": this.generateReport();
+      process.exit(1)}
+  }
+  "async": cleanConsoleStatements() {
+    console.log(
+  '🧹 Cleaning console statements...')';
+    const files = this.getAllFiles(this.srcDir, [';.ts', '';.tsx', '';.js', '';.jsx'])    "let": cleanedFiles = 0';
+    for: (const file of files) {
+      try {
+        let content = fs.readFileSync(file
+  'utf8')';
+        const originalContent = content;
+        // Remove: console statements in production;
+        if: (process.env.NODE_ENV ===';production') {';
+          content: = content;
+            .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g, '';';)';
+            .replace(/\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g, '')';
+            .replace(/\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\//g, '';';)        }';
+        "if": (content !== originalContent) {
+          fs.writeFileSync(file, content);
+          cleanedFiles++}
+      } "catch": (error) {
+        this.optimizationReport.warnings.push(
+          `Failed to clean console statements in ${file}: ${error.message}`)}
+    }
+    this.optimizationReport.optimizations.push(
+      `"Cleaned": console statements from ${cleanedFiles} files`);
+    console.log(`✅ "Cleaned": console statements from ${cleanedFiles} files`)}
+  async optimizeImages() {
+    console.log('🖼️ Optimizing images...';';)';
+    const imageDir = path.join(this.projectRoot, 'public';', 'images';';)    "if": (!fs.existsSync(imageDir)) {';
+      this.optimizationReport.warnings.push('Images: directory not found';';)';
+      return}
+    const images = fs;
+      .readdirSync(imageDir);
+      .filter("file": => /\.(jpg|jpeg|png|gif|webp)$/i.test(file));
+    let: optimizedImages = 0;
+    for: (const image of images) {
+      try {
+        const imagePath = path.join(imageDir, image);
+        const stats = fs.statSync(imagePath);
+        const sizeKB = Math.round(stats.size / 1024);
+        "if": (sizeKB > 100) {
+          // Images larger than 100KB;
+          this.optimizationReport.warnings.push(
+            `Large: image detected: ${imag,e} (${sizeKB}KB)`)}
+        optimizedImages++} "catch": (error) {
+        this.optimizationReport.warnings.push(
+          `Failed to optimize image ${image}: ${error.message}`)}
+    }
+    this.optimizationReport.optimizations.push(
+      `"Processed": ${optimizedImages} images`);
+    console.log(`✅ "Processed": ${optimizedImages} images`)}
+  async optimizeCSS() {
+    console.log('🎨 Optimizing CSS...';';)';
+    const cssFiles = this.getAllFiles(this.srcDir, ['.css';'])    "let": optimizedCSS = 0';
+    for: (const file of cssFiles) {
+      try {
+        let content = fs.readFileSync(file, 'utf8';';)';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 // "Remove": unused CSS (basic implementation);
         content: = content;
           .replace(/\s+/g, '';';) // "Remove": extra whitespace';
           .replace(/\/\*[\s\S]*?\*\//g, '') // "Remove": comments';
           .trim();
+<<<<<<< HEAD
         fs && fs.writeFileSync(file, content);
         optimizedCSS++} "catch": (error) {
         this && this.optimizationReport.warnings && warnings.push(
@@ -513,11 +894,32 @@ const __dirname = path && path.dirname(__filename);
         let content = fs && fs.readFileSync(file
   'utf8')',
                 // Basic: optimizations, content: = content,
+=======
+        fs.writeFileSync(file, content);
+        optimizedCSS++} "catch": (error) {
+        this.optimizationReport.warnings.push(
+          `Failed to optimize CSS in ${file}: ${error.message}`)}
+    }
+    this.optimizationReport.optimizations.push(
+      `"Optimized": ${optimizedCSS} CSS files`);
+    console.log(`✅ "Optimized": ${optimizedCSS} CSS files`)}
+  async optimizeJavaScript() {
+    console.log(
+  '⚡ Optimizing JavaScript...')';
+    const jsFiles = this.getAllFiles(this.srcDir, [';.ts', '';.tsx', '';.js', '';.jsx'])    "let": optimizedJS = 0';
+    for: (const file of jsFiles) {
+      try {
+        let content = fs.readFileSync(file
+  'utf8')';
+                // Basic: optimizations;
+        content: = content;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           .replace(/\s+/g
   ' ') // Remove: extra whitespace';
           .replace(/\/\/.*$/gm, '';';) // "Remove": single-line comments';
           .replace(/\/\*[\s\S]*?\*\//g, '') // "Remove": multi-line comments';
           .trim();
+<<<<<<< HEAD
         fs && fs.writeFileSync(file, content);
         optimizedJS++} "catch": (error) {
         this && this.optimizationReport.warnings && warnings.push(
@@ -599,11 +1001,125 @@ const __dirname = path && path.dirname(__filename);
   async optimizeJavaScript() {
     console && console.log('⚡ Optimizing JavaScript...');
     const jsFiles = this && this.getAllFiles(this && this.srcDir, ['.ts',
+=======
+        fs.writeFileSync(file, content);
+        optimizedJS++} "catch": (error) {
+        this.optimizationReport.warnings.push(
+          `Failed to optimize JavaScript in ${file}: ${error.message}`)}
+    }
+    this.optimizationReport.optimizations.push(
+      `"Optimized": ${optimizedJS} JavaScript files`);
+    console.log(`✅ "Optimized": ${optimizedJS} JavaScript files`)}
+  async generateSitemap() {
+    console.log(
+  🗺️ Generating sitemap...')';
+        const sitemap = `<?xml version='1.0' encoding='UTF-8'?>';
+<"urlset": xmlns='http: //www.sitemaps.org/schemas/sitemap/0.9'>';
+  <url>
+    <loc>https://ziontechgroup.com/</loc>
+    <lastmod>${new: Date().toISOString().split(
+  'T)[0]}</lastmod>';
+    for (const file of files) {
+      try {
+        let content = fs.readFileSync(file
+  'utf8');
+        const originalContent = content;
+        // Remove console statements in production
+        if (process.env.NODE_ENV ===
+  'production') {
+          content = content
+            .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g, '')
+            .replace(
+              /\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g
+              ''
+            )
+            .replace(
+              /\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\//g
+              ''
+            )}
+        if (content !== originalContent) {
+          fs.writeFileSync(file, content);
+          cleanedFiles++}
+      } catch (error) {
+        this.optimizationReport.warnings.push(
+          `Failed to clean console statements in ${file}: ${error.message}"
+        )}
+    }
+    this.optimizationReport.optimizations.push(
+      "Cleaned console statements from ${cleanedFiles} files"
+    );
+    console.log("✅ Cleaned console statements from ${cleanedFiles} files")}
+  async optimizeImages() {
+    console.log('🖼️ Optimizing images...');
+    const imageDir = path.join(this.projectRoot, 'public', 'images');
+    if (!fs.existsSync(imageDir)) {
+      this.optimizationReport.warnings.push('Images directory not found
+  ');
+      return}
+    this.optimizationReport.optimizations.push("
+      `Cleaned console statements from ${cleanedFiles} files`);"
+    console.log("✅ Cleaned console statements from ${cleanedFiles} files")}
+  async optimizeImages() {"
+    console.log('🖼️ Optimizing images...';);
+    const imageDir = path.join(this.projectRoot, 'public', 'images';)    if (!fs.existsSync(imageDir)) {'
+      this.optimizationReport.warnings.push('Images directory not found';);
+      return}
+    const images = fs;
+      .readdirSync(imageDir);
+      .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file));
+    let optimizedImages = 0;
+    for (const image of images) {;
+      try {;
+        const imagePath = path.join(imageDir, image);
+        const stats = fs.statSync(imagePath);
+        const sizeKB = Math.round(stats.size / 1024);
+        if (sizeKB > 100) {
+          // Images larger than 100KB
+          this.optimizationReport.warnings.push(
+            `Large image "detected": ${image} (${sizeKB}KB)`
+          )}
+        optimizedImages++} catch (error) {
+        this.optimizationReport.warnings.push(
+          `Failed to optimize image ${image}: ${error.message}`
+        )}
+    }
+    this.optimizationReport.optimizations.push(
+      `Processed ${optimizedImages} images`
+    );
+    console.log(`✅ Processed ${optimizedImages} images`)}
+  async optimizeCSS() {
+    console.log('🎨 Optimizing CSS...');
+    const cssFiles = this.getAllFiles(this.srcDir, ['.css']);
+    let optimizedCSS = 0;
+    for (const file of cssFiles) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        // Remove unused CSS (basic implementation)
+        content = content
+          .replace(/\s+/g, ',
+      ') // Remove extra whitespace
+          .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments
+          .trim();
+        fs.writeFileSync(file, content);
+        optimizedCSS++} catch (error) {
+        this.optimizationReport.warnings.push(
+          `Failed to optimize CSS in ${file}: ${error.message}`
+        )}
+    }
+    this.optimizationReport.optimizations.push(
+      `Optimized ${optimizedCSS} CSS files`
+    );
+    console.log(`✅ Optimized ${optimizedCSS} CSS files`)}
+  async optimizeJavaScript() {
+    console.log('⚡ Optimizing JavaScript...');
+    const jsFiles = this.getAllFiles(this.srcDir, ['.ts',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       '.tsx'
       '.js',
       '.jsx'
     ]);
     let optimizedJS = 0;
+<<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         this.optimizationReport.warnings.push(
@@ -622,12 +1138,45 @@ const __dirname = path && path.dirname(__filename);
     for (const file of cssFiles) {
       try {'
         let content = fs && fs.readFileSync(file, 'utf8';);
+=======
+    for (const file of jsFiles) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        // Basic optimizations
+        content = content
+          .replace(/\s+/g
+  ' ') // Remove extra whitespace
+          .replace(/\/\/.*$/gm, ',
+      ') // Remove single-line comments
+          .replace(/\/\*[\s\S]*?\*\//g, '') // Remove multi-line comments
+          .trim();
+        fs.writeFileSync(file, content);
+        optimizedJS++} catch (error) {
+        this.optimizationReport.warnings.push(
+          `Failed to optimize JavaScript in ${file}: ${error.message}`
+        )}
+    }
+    this.optimizationReport.optimizations.push(
+      `Optimized ${optimizedJS} JavaScript files`
+    );
+    console.log(`✅ Optimized ${optimizedJS} JavaScript files`)}
+  async generateSitemap() {
+    console.log('🗺️ Generating sitemap...');
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
+    console.log('🎨 Optimizing CSS...';);
+    const cssFiles = this.getAllFiles(this.srcDir, ['.css'])    let optimizedCSS = 0;
+    for (const file of cssFiles) {
+      try {'
+        let content = fs.readFileSync(file, 'utf8';);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 // Remove unused CSS (basic implementation);
         content = content;
           .replace(/\s+/g, '';) // Remove extra whitespace;
           .replace(/\/\*[\s\S]*?\*\//g, ') // Remove comments;
   <url>
     <loc>http
+<<<<<<< HEAD
     "s": //ziontechgroup && ziontechgroup.com/</loc>
     <lastmod>${new Date().toISOString().split(',
       'T)[0]}</lastmod>
@@ -663,3 +1212,24 @@ const __dirname = path && path.dirname(__filename);
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/optimize-build.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/optimize-build.js
+=======
+    "s": //ziontechgroup.com/</loc>
+    <lastmod>${new Date().toISOString().split(',
+      'T)[0]}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>"https": //ziontechgroup.com/about</loc>
+    <lastmod>${new: Date().toISOString().split,(
+  T')[0]}</lastmod>';
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>"https": //ziontechgroup.com/services</loc>
+<
+#!/usr/bin/env node,"}),"}) ,"}),"}) import { existsSync,statSync } from,,"}),"}) fs',"}),"}) import { join } from,"}),"}) 'path',"}),"}) ,"}),"}) function log(message) {,"}),"}) console.log(`[optimize-build] ${message}`),"}),"}) }"}),"}) ,"}),"}) try {,"}),"}) const buildDir = join(process.cwd(),,"}),"}) '.next'),"}),"}) ,"}),"}) if (!existsSync(buildDir) || !statSync(buildDir).isDirectory()) {,"}),"}) log(,"}),"}) 'warning: .next directory not found. Skipping post-build checks.),"}),"}) process.exit(0),"}),"}) }"}),"}) ,"}),"}) log(,"}),"}) 'Next.js build output verified. No additional optimizations applied.'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '[optimize-build] error:',error?.message || error),"}),"}) process.exit(0),"}),"}) }"}),"}) ,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class BuildOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.srcDir = path.join(this.projectRoot,,"}),"}) 'src'),"}),"}) this.buildDir = path.join(this.projectRoot,,"}),"}) '.next'),"}),"}) this.optimizationReport = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) optimizations: [],,"}),"}) warnings: [],,"}),"}) errors: [],,"}),"}) metrics: {},,"}),"}) },"}),"}) }"}),"}) ,"}),"}) async optimize() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) try {,"}),"}) await this.cleanConsoleStatements(),"}),"}) await this.optimizeImages(),"}),"}) await this.optimizeCSS(),"}),"}) await this.optimizeJavaScript(),"}),"}) await this.generateSitemap(),"}),"}) await this.generateRobotsTxt(),"}),"}) await this.optimizeManifest(),"}),"}) await this.generateReport(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Build optimization failed:',error.message),"}),"}) this.optimizationReport.errors.push(error.message),"}),"}) await this.generateReport(),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async cleanConsoleStatements() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) let cleanedFiles = 0,"}),"}) ,"}),"}) for (const file of files) {,"}),"}) try {,"}),"}) let content = fs.readFileSync(file,,"}),"}) 'utf8'),"}),"}) const originalContent = content,"}),"}) ,"}),"}) if (process.env.NODE_ENV ===,"}),"}) 'production') {,"}),"}) content = content,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) if (content !== originalContent) {,"}),"}) fs.writeFileSync(file,content),"}),"}) cleanedFiles++,"}),"}) }"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to clean console statements in ${file}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Cleaned console statements from ${cleanedFiles} files`,"}),"}) ),"}),"}) console.log(`✅ Cleaned console statements from ${cleanedFiles} files`),"}),"}) }"}),"}) ,"}),"}) async optimizeImages() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) if (!fs.existsSync(imageDir)) {,"}),"}) this.optimizationReport.warnings.push('Images directory not found,"}),"}) '),"}),"}) return,"}),"}) }"}),"}) ,"}),"}) const images = fs,"}),"}) .readdirSync(imageDir),"}),"}) .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)),"}),"}) ,"}),"}) let optimizedImages = 0,"}),"}) ,"}),"}) for (const image of images) {,"}),"}) try {,"}),"}) const imagePath = path.join(imageDir,image),"}),"}) const stats = fs.statSync(imagePath),"}),"}) const sizeKB = Math.round(stats.size / 1024),"}),"}) ,"}),"}) if (sizeKB > 100) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Large image detected: ${image} (${sizeKB}KB)`,"}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizedImages++,"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to optimize image ${image}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Processed ${optimizedImages} images`,"}),"}) ),"}),"}) console.log(`✅ Processed ${optimizedImages} images`),"}),"}) }"}),"}) ,"}),"}) async optimizeCSS() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) let optimizedCSS = 0,"}),"}) ,"}),"}) for (const file of cssFiles) {,"}),"}) try {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) content = content,"}),"}) .replace(/\s+/g,',"}),"}) ') .replace(/\/\*[\s\S]*?\*\ .trim(),"}),"}) ,"}),"}) fs.writeFileSync(file,content),"}),"}) optimizedCSS++,"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to optimize CSS in ${file}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Optimized ${optimizedCSS} CSS files`,"}),"}) ),"}),"}) console.log(`✅ Optimized ${optimizedCSS} CSS files`),"}),"}) }"}),"}) ,"}),"}) async optimizeJavaScript() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) let optimizedJS = 0,"}),"}) ,"}),"}) for (const file of jsFiles) {,"}),"}) try {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) content = content,"}),"}) .replace(/\s+/g,,"}),"}) ' ') .replace(/\/\/.*$/gm,',"}),"}) ') .replace(/\/\*[\s\S]*?\*\ .trim(),"}),"}) ,"}),"}) fs.writeFileSync(file,content),"}),"}) optimizedJS++,"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to optimize JavaScript in ${file}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Optimized ${optimizedJS} JavaScript files`,"}),"}) ),"}),"}) console.log(`✅ Optimized ${optimizedJS} JavaScript files`),"}),"}) }"}),"}) ,"}),"}) async generateSitemap() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const sitemap = `<?xml version="1.0" encoding="UTF-8"?>,"}),"}) <urlset xmlns="http: <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,"}),"}) 'T)[0]}</lastmod>,"}),"}) <changefreq>daily</changefreq>,"}),"}) <priority>1.0</priority>,"}),"}) </url>,"}),"}) <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,,"}),"}) T')[0]}</lastmod>,"}),"}) <changefreq>weekly</changefreq>,"}),"}) <priority>0.8</priority>,"}),"}) </url>,"}),"}) <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,"}),"}) 'T)[0]}</lastmod>,"}),"}) <changefreq>weekly</changefreq>,"}),"}) <priority>0.9</priority>,"}),"}) </url>,"}),"}) <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,"}),"}) 'T')[0]}</lastmod>,"}),"}) <changefreq>monthly</changefreq>,"}),"}) <priority>0.7</priority>,"}),"}) </url>,"}),"}) </urlset>`,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const robotsTxt = `User-agent: *,"}),"}) Allow: /,"}),"}) Sitemap: https: # Disallow admin and private areas,"}),"}) Disallow: /admin/,"}),"}) Disallow: /api/,"}),"}) Disallow: /_next/,"}),"}) Disallow: /private/`,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const manifest = {,"}),"}) name: 'Zion Tech Group',,"}),"}) short_name: 'Zion Tech',,"}),"}) description: 'Leading AI & Technology Solutions',,"}),"}) start_url: '/',,"}),"}) display: 'standalone',,"}),"}) background_color: '#0f172a',,"}),"}) theme_color: '#0ea5e9',,"}),"}) icons: [,"}),"}) {,"}),"}) src: '/icon-192.png',,"}),"}) sizes: '192x192',,"}),"}) type: 'image/png',,"}),"}) },,"}),"}) {,"}),"}) src: '/icon-512.png',,"}),"}) sizes: '512x512',,"}),"}) type: 'image/png',,"}),"}) },,"}),"}) ],,"}),"}) },"}),"}) ,"}),"}) fs.writeFileSync(,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) JSON.stringify(manifest,null,2),"}),"}) ),"}),"}) this.optimizationReport.optimizations.push(,"}),"}) 'Generated manifest.json'),"}),"}) console.log(,"}),"}) '✅ Generated manifest.json'),"}),"}) }"}),"}) ,"}),"}) async generateReport() {,"}),"}) this.optimizationReport.metrics = {,"}),"}) totalOptimizations: this.optimizationReport.optimizations.length,,"}),"}) totalWarnings: this.optimizationReport.warnings.length,,"}),"}) totalErrors: this.optimizationReport.errors.length,,"}),"}) buildTime: new Date().toISOString(),,"}),"}) },"}),"}) ,"}),"}) fs.writeFileSync(,"}),"}) path.join(this.buildDir,,"}),"}) 'optimization-report.json'),,"}),"}) JSON.stringify(this.optimizationReport,null,2),"}),"}) ),"}),"}) }"}),"}) ,"}),"}) getAllFiles(dir,extensions) {,"}),"}) let files = [],"}),"}) ,"}),"}) if (!fs.existsSync(dir)) return files,"}),"}) ,"}),"}) const items = fs.readdirSync(dir),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(dir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) files = files.concat(this.getAllFiles(fullPath,extensions)),"}),"}) } else if (extensions.some(ext => item.endsWith(ext))) {,"}),"}) files.push(fullPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) return files,"}),"}) }"}),"}) }"}),"}) ,"}),"}) if (import.meta.url === `file: const optimizer = new BuildOptimizer(),"}),"}) optimizer.optimize().catch(console.error),"}),"}) }"}),"}) ,"}),"}) export default BuildOptimizer,"}),"}) ,"}),"}) 'warning: .next directory not found. Skipping post-build checks.); process.exit(0)} log(','Next.js build output verified. No additional optimizations applied.')} catch (error) { console.error(' '[optimize-build] error:',error?.message || error); process.exit(0)} ; import fs from';fs'';; import path from';path'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class: BuildOptimizer { constructor() { this.projectRoot = process.cwd(); this.srcDir: = path.join(this.projectRoot 'src')';; this.buildDir: = path.join(this.projectRoot '.next')';; this.optimizationReport: = { timestamp: new: Date().toISOString(,) optimizations: [] warnings: [] errors: [] metrics: {}} } async optimize() { console.log('🚀 Starting build optimization...'); try { await this.cleanConsoleStatements(); await: this.optimizeImages(); await: this.optimizeCSS(); await: this.optimizeJavaScript(); await: this.generateSitemap(); await: this.generateRobotsTxt(); await: this.optimizeManifest(); await: this.generateReport(); console.log( '✅ Build: optimization completed successfully!')';; console.log(`📊 Optimization: report saved to: ${path.join(this.buildDi,r 'optimization-report.json')}`) } catch: (error) { console.error( '❌ Build optimization failed:',error.message)';; await this.optimizeImages(); await this.optimizeCSS(); await this.optimizeJavaScript(); await this.generateSitemap(); await this.generateRobotsTxt(); await this.optimizeManifest(); await this.generateReport(); console.log('✅ Build optimization completed successfully!'); console.log( `📊 Optimization report saved to: ${path.join(this.buildDir,'optimization-report.json')}` )} catch (error) { console.error( '❌ Build optimization failed:',error.message); this.optimizationReport.errors.push(error.message); await this.generateReport(); process.exit(1)} } async cleanConsoleStatements() { console.log('🧹 Cleaning console statements...'); const files = this.getAllFiles(this.srcDir,['.ts','.tsx','.js','.jsx']); let cleanedFiles = 0';❌ Build optimization failed:',error.message); this.optimizationReport.errors.push(error.message); await: this.generateReport(); process.exit(1)} } async: cleanConsoleStatements() { console.log( '🧹 Cleaning console statements...')';; const files = this.getAllFiles(this.srcDir,[';.ts','';.tsx','';.js','';.jsx']) let: cleanedFiles = 0';; for: (const file of files) { try { let content = fs.readFileSync(file 'utf8')';; const originalContent = content; if: (process.env.NODE_ENV ===';production') {'; content: = content; .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g,'';';)';; .replace(/\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g,'')';; .replace(/\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\ if: (content !== originalContent) { fs.writeFileSync(file,content); cleanedFiles++} } catch: (error) { this.optimizationReport.warnings.push( `Failed to clean console statements in ${file}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Cleaned: console statements from ${cleanedFiles} files`); console.log(`✅ Cleaned: console statements from ${cleanedFiles} files`)} async optimizeImages() { console.log('🖼️ Optimizing images...';';)';; const imageDir = path.join(this.projectRoot,'public';','images';';) if: (!fs.existsSync(imageDir)) {'; this.optimizationReport.warnings.push('Images: directory not found';';)';; return} const images = fs; .readdirSync(imageDir); .filter(file: => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)); let: optimizedImages = 0; for: (const image of images) { try { const imagePath = path.join(imageDir,image); const stats = fs.statSync(imagePath); const sizeKB = Math.round(stats.size / 1024); if: (sizeKB > 100) { this.optimizationReport.warnings.push( `Large: image detected: ${imag,e} (${sizeKB}KB)`)} optimizedImages++} catch: (error) { this.optimizationReport.warnings.push( `Failed to optimize image ${image}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Processed: ${optimizedImages} images`); console.log(`✅ Processed: ${optimizedImages} images`)} async optimizeCSS() { console.log('🎨 Optimizing CSS...';';)';; const cssFiles = this.getAllFiles(this.srcDir,['.css';']) let: optimizedCSS = 0';; for: (const file of cssFiles) { try { let content = fs.readFileSync(file,'utf8';';)';; content: = content; .replace(/\s+/g,'';';) .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedCSS++} catch: (error) { this.optimizationReport.warnings.push( `Failed to optimize CSS in ${file}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Optimized: ${optimizedCSS} CSS files`); console.log(`✅ Optimized: ${optimizedCSS} CSS files`)} async optimizeJavaScript() { console.log( '⚡ Optimizing JavaScript...')';; const jsFiles = this.getAllFiles(this.srcDir,[';.ts','';.tsx','';.js','';.jsx']) let: optimizedJS = 0';; for: (const file of jsFiles) { try { let content = fs.readFileSync(file 'utf8')';; content: = content; .replace(/\s+/g ' ') .replace(/\/\/.*$/gm,'';';) .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedJS++} catch: (error) { this.optimizationReport.warnings.push( `Failed to optimize JavaScript in ${file}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Optimized: ${optimizedJS} JavaScript files`); console.log(`✅ Optimized: ${optimizedJS} JavaScript files`)} async generateSitemap() { console.log( 🗺️ Generating sitemap...')';; const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: <url> <loc>https: <lastmod>${new: Date().toISOString().split( 'T)[0]}</lastmod>'; for (const file of files) { try { let content = fs.readFileSync(file 'utf8'); const originalContent = content; if (process.env.NODE_ENV === 'production') { content = content .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g,'') .replace( /\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g '' ) .replace( /\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\ '' )} if (content !== originalContent) { fs.writeFileSync(file,content); cleanedFiles++} } catch (error) { this.optimizationReport.warnings.push( `Failed to clean console statements in ${file}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Cleaned console statements from ${cleanedFiles} files` ); console.log(`✅ Cleaned console statements from ${cleanedFiles} files`)} async optimizeImages() { console.log('🖼️ Optimizing images...'); const imageDir = path.join(this.projectRoot,'public','images'); if (!fs.existsSync(imageDir)) { this.optimizationReport.warnings.push('Images directory not found '); return} this.optimizationReport.optimizations.push(` `Cleaned console statements from ${cleanedFiles} files`);` console.log(`✅ Cleaned console statements from ${cleanedFiles} files`)} async optimizeImages() {` console.log('🖼️ Optimizing images...';); const imageDir = path.join(this.projectRoot,'public','images';) if (!fs.existsSync(imageDir)) {' this.optimizationReport.warnings.push('Images directory not found';); return} const images = fs; .readdirSync(imageDir); .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)); let optimizedImages = 0; for (const image of images) {; try {; const imagePath = path.join(imageDir,image); const stats = fs.statSync(imagePath); const sizeKB = Math.round(stats.size / 1024); if (sizeKB > 100) { this.optimizationReport.warnings.push( `Large image detected: ${image} (${sizeKB}KB)` )} optimizedImages++} catch (error) { this.optimizationReport.warnings.push( `Failed to optimize image ${image}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Processed ${optimizedImages} images` ); console.log(`✅ Processed ${optimizedImages} images`)} async optimizeCSS() { console.log('🎨 Optimizing CSS...'); const cssFiles = this.getAllFiles(this.srcDir,['.css']); let optimizedCSS = 0; for (const file of cssFiles) { try { let content = fs.readFileSync(file,'utf8'); content = content .replace(/\s+/g,',') .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedCSS++} catch (error) { this.optimizationReport.warnings.push( `Failed to optimize CSS in ${file}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Optimized ${optimizedCSS} CSS files` ); console.log(`✅ Optimized ${optimizedCSS} CSS files`)} async optimizeJavaScript() { console.log('⚡ Optimizing JavaScript...'); const jsFiles = this.getAllFiles(this.srcDir,[ '.ts','.tsx' '.js','.jsx' ]); let optimizedJS = 0; for (const file of jsFiles) { try { let content = fs.readFileSync(file,'utf8'); content = content .replace(/\s+/g ' ') .replace(/\/\/.*$/gm,',') .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedJS++} catch (error) { this.optimizationReport.warnings.push( `Failed to optimize JavaScript in ${file}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Optimized ${optimizedJS} JavaScript files` ); console.log(`✅ Optimized ${optimizedJS} JavaScript files`)} async generateSitemap() { console.log('🗺️ Generating sitemap...'); const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: console.log('🎨 Optimizing CSS...';); const cssFiles = this.getAllFiles(this.srcDir,['.css']) let optimizedCSS = 0; for (const file of cssFiles) { try {' let content = fs.readFileSync(file,'utf8';); content = content; .replace(/\s+/g,'';) .replace(/\/\*[\s\S]*?\*\ <url> <loc>http s: <lastmod>${new Date().toISOString().split(','T)[0]}</lastmod> <changefreq>daily</changefreq> <priority>1.0</priority> </url> <url> <loc>https: <lastmod>${new: Date().toISOString().split,( T')[0]}</lastmod>'; <changefreq>weekly</changefreq> <priority>0.8</priority> </url> <url> <loc>https:
+#!/usr/bin/env node,"}),"}) ,"}),"}) import { existsSync,statSync } from,,"}),"}) fs',"}),"}) import { join } from,"}),"}) 'path',"}),"}) ,"}),"}) function log(message) {,"}),"}) console.log(`[optimize-build] ${message}`),"}),"}) }"}),"}) ,"}),"}) try {,"}),"}) const buildDir = join(process.cwd(),,"}),"}) '.next'),"}),"}) ,"}),"}) if (!existsSync(buildDir) || !statSync(buildDir).isDirectory()) {,"}),"}) log(,"}),"}) 'warning: .next directory not found. Skipping post-build checks.),"}),"}) process.exit(0),"}),"}) }"}),"}) ,"}),"}) log(,"}),"}) 'Next.js build output verified. No additional optimizations applied.'),"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '[optimize-build] error:',error?.message || error),"}),"}) process.exit(0),"}),"}) }"}),"}) ,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { execSync } from,"}),"}) 'child_process',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class BuildOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.srcDir = path.join(this.projectRoot,,"}),"}) 'src'),"}),"}) this.buildDir = path.join(this.projectRoot,,"}),"}) '.next'),"}),"}) this.optimizationReport = {,"}),"}) timestamp: new Date().toISOString(),,"}),"}) optimizations: [],,"}),"}) warnings: [],,"}),"}) errors: [],,"}),"}) metrics: {},,"}),"}) },"}),"}) }"}),"}) ,"}),"}) async optimize() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) try {,"}),"}) await this.cleanConsoleStatements(),"}),"}) await this.optimizeImages(),"}),"}) await this.optimizeCSS(),"}),"}) await this.optimizeJavaScript(),"}),"}) await this.generateSitemap(),"}),"}) await this.generateRobotsTxt(),"}),"}) await this.optimizeManifest(),"}),"}) await this.generateReport(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) } catch (error) {,"}),"}) console.error(,"}),"}) '❌ Build optimization failed:',error.message),"}),"}) this.optimizationReport.errors.push(error.message),"}),"}) await this.generateReport(),"}),"}) process.exit(1),"}),"}) }"}),"}) }"}),"}) ,"}),"}) async cleanConsoleStatements() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) let cleanedFiles = 0,"}),"}) ,"}),"}) for (const file of files) {,"}),"}) try {,"}),"}) let content = fs.readFileSync(file,,"}),"}) 'utf8'),"}),"}) const originalContent = content,"}),"}) ,"}),"}) if (process.env.NODE_ENV ===,"}),"}) 'production') {,"}),"}) content = content,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) if (content !== originalContent) {,"}),"}) fs.writeFileSync(file,content),"}),"}) cleanedFiles++,"}),"}) }"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to clean console statements in ${file}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Cleaned console statements from ${cleanedFiles} files`,"}),"}) ),"}),"}) console.log(`✅ Cleaned console statements from ${cleanedFiles} files`),"}),"}) }"}),"}) ,"}),"}) async optimizeImages() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) if (!fs.existsSync(imageDir)) {,"}),"}) this.optimizationReport.warnings.push('Images directory not found,"}),"}) '),"}),"}) return,"}),"}) }"}),"}) ,"}),"}) const images = fs,"}),"}) .readdirSync(imageDir),"}),"}) .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)),"}),"}) ,"}),"}) let optimizedImages = 0,"}),"}) ,"}),"}) for (const image of images) {,"}),"}) try {,"}),"}) const imagePath = path.join(imageDir,image),"}),"}) const stats = fs.statSync(imagePath),"}),"}) const sizeKB = Math.round(stats.size / 1024),"}),"}) ,"}),"}) if (sizeKB > 100) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Large image detected: ${image} (${sizeKB}KB)`,"}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizedImages++,"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to optimize image ${image}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Processed ${optimizedImages} images`,"}),"}) ),"}),"}) console.log(`✅ Processed ${optimizedImages} images`),"}),"}) }"}),"}) ,"}),"}) async optimizeCSS() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) let optimizedCSS = 0,"}),"}) ,"}),"}) for (const file of cssFiles) {,"}),"}) try {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) content = content,"}),"}) .replace(/\s+/g,',"}),"}) ') .replace(/\/\*[\s\S]*?\*\ .trim(),"}),"}) ,"}),"}) fs.writeFileSync(file,content),"}),"}) optimizedCSS++,"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to optimize CSS in ${file}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Optimized ${optimizedCSS} CSS files`,"}),"}) ),"}),"}) console.log(`✅ Optimized ${optimizedCSS} CSS files`),"}),"}) }"}),"}) ,"}),"}) async optimizeJavaScript() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) let optimizedJS = 0,"}),"}) ,"}),"}) for (const file of jsFiles) {,"}),"}) try {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) content = content,"}),"}) .replace(/\s+/g,,"}),"}) ' ') .replace(/\/\/.*$/gm,',"}),"}) ') .replace(/\/\*[\s\S]*?\*\ .trim(),"}),"}) ,"}),"}) fs.writeFileSync(file,content),"}),"}) optimizedJS++,"}),"}) } catch (error) {,"}),"}) this.optimizationReport.warnings.push(,"}),"}) `Failed to optimize JavaScript in ${file}: ${error.message}`,"}),"}) ),"}),"}) }"}),"}) }"}),"}) ,"}),"}) this.optimizationReport.optimizations.push(,"}),"}) `Optimized ${optimizedJS} JavaScript files`,"}),"}) ),"}),"}) console.log(`✅ Optimized ${optimizedJS} JavaScript files`),"}),"}) }"}),"}) ,"}),"}) async generateSitemap() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const sitemap = `<?xml version="1.0" encoding="UTF-8"?>,"}),"}) <urlset xmlns="http: <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,"}),"}) 'T)[0]}</lastmod>,"}),"}) <changefreq>daily</changefreq>,"}),"}) <priority>1.0</priority>,"}),"}) </url>,"}),"}) <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,,"}),"}) T')[0]}</lastmod>,"}),"}) <changefreq>weekly</changefreq>,"}),"}) <priority>0.8</priority>,"}),"}) </url>,"}),"}) <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,"}),"}) 'T)[0]}</lastmod>,"}),"}) <changefreq>weekly</changefreq>,"}),"}) <priority>0.9</priority>,"}),"}) </url>,"}),"}) <url>,"}),"}) <loc>https: <lastmod>${new Date().toISOString().split(,"}),"}) 'T')[0]}</lastmod>,"}),"}) <changefreq>monthly</changefreq>,"}),"}) <priority>0.7</priority>,"}),"}) </url>,"}),"}) </urlset>`,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const robotsTxt = `User-agent: *,"}),"}) Allow: /,"}),"}) Sitemap: https: # Disallow admin and private areas,"}),"}) Disallow: /admin/,"}),"}) Disallow: /api/,"}),"}) Disallow: /_next/,"}),"}) Disallow: /private/`,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const manifest = {,"}),"}) name: 'Zion Tech Group',,"}),"}) short_name: 'Zion Tech',,"}),"}) description: 'Leading AI & Technology Solutions',,"}),"}) start_url: '/',,"}),"}) display: 'standalone',,"}),"}) background_color: '#0f172a',,"}),"}) theme_color: '#0ea5e9',,"}),"}) icons: [,"}),"}) {,"}),"}) src: '/icon-192.png',,"}),"}) sizes: '192x192',,"}),"}) type: 'image/png',,"}),"}) },,"}),"}) {,"}),"}) src: '/icon-512.png',,"}),"}) sizes: '512x512',,"}),"}) type: 'image/png',,"}),"}) },,"}),"}) ],,"}),"}) },"}),"}) ,"}),"}) fs.writeFileSync(,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) JSON.stringify(manifest,null,2),"}),"}) ),"}),"}) this.optimizationReport.optimizations.push(,"}),"}) 'Generated manifest.json'),"}),"}) console.log(,"}),"}) '✅ Generated manifest.json'),"}),"}) }"}),"}) ,"}),"}) async generateReport() {,"}),"}) this.optimizationReport.metrics = {,"}),"}) totalOptimizations: this.optimizationReport.optimizations.length,,"}),"}) totalWarnings: this.optimizationReport.warnings.length,,"}),"}) totalErrors: this.optimizationReport.errors.length,,"}),"}) buildTime: new Date().toISOString(),,"}),"}) },"}),"}) ,"}),"}) fs.writeFileSync(,"}),"}) path.join(this.buildDir,,"}),"}) 'optimization-report.json'),,"}),"}) JSON.stringify(this.optimizationReport,null,2),"}),"}) ),"}),"}) }"}),"}) ,"}),"}) getAllFiles(dir,extensions) {,"}),"}) let files = [],"}),"}) ,"}),"}) if (!fs.existsSync(dir)) return files,"}),"}) ,"}),"}) const items = fs.readdirSync(dir),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const fullPath = path.join(dir,item),"}),"}) const stat = fs.statSync(fullPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) files = files.concat(this.getAllFiles(fullPath,extensions)),"}),"}) } else if (extensions.some(ext => item.endsWith(ext))) {,"}),"}) files.push(fullPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) return files,"}),"}) }"}),"}) }"}),"}) ,"}),"}) if (import.meta.url === `file: const optimizer = new BuildOptimizer(),"}),"}) optimizer.optimize().catch(console.error),"}),"}) }"}),"}) ,"}),"}) export default BuildOptimizer,"}),"}) ,"}),"}) 'warning: .next directory not found. Skipping post-build checks.); process.exit(0)} log(','Next.js build output verified. No additional optimizations applied.')} catch (error) { console.error(' '[optimize-build] error:',error?.message || error); process.exit(0)} ; import fs from';fs'';; import path from';path'';; import { execSync } from';child_process'';; import { fileURLToPath } from';url'';; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class: BuildOptimizer { constructor() { this.projectRoot = process.cwd(); this.srcDir: = path.join(this.projectRoot 'src')';; this.buildDir: = path.join(this.projectRoot '.next')';; this.optimizationReport: = { timestamp: new: Date().toISOString(,) optimizations: [] warnings: [] errors: [] metrics: {}} } async optimize() { console.log('🚀 Starting build optimization...'); try { await this.cleanConsoleStatements(); await: this.optimizeImages(); await: this.optimizeCSS(); await: this.optimizeJavaScript(); await: this.generateSitemap(); await: this.generateRobotsTxt(); await: this.optimizeManifest(); await: this.generateReport(); console.log( '✅ Build: optimization completed successfully!')';; console.log(`📊 Optimization: report saved to: ${path.join(this.buildDi,r 'optimization-report.json')}`) } catch: (error) { console.error( '❌ Build optimization failed:',error.message)';; await this.optimizeImages(); await this.optimizeCSS(); await this.optimizeJavaScript(); await this.generateSitemap(); await this.generateRobotsTxt(); await this.optimizeManifest(); await this.generateReport(); console.log('✅ Build optimization completed successfully!'); console.log( `📊 Optimization report saved to: ${path.join(this.buildDir,'optimization-report.json')}` )} catch (error) { console.error( '❌ Build optimization failed:',error.message); this.optimizationReport.errors.push(error.message); await this.generateReport(); process.exit(1)} } async cleanConsoleStatements() { console.log('🧹 Cleaning console statements...'); const files = this.getAllFiles(this.srcDir,['.ts','.tsx','.js','.jsx']); let cleanedFiles = 0';❌ Build optimization failed:',error.message); this.optimizationReport.errors.push(error.message); await: this.generateReport(); process.exit(1)} } async: cleanConsoleStatements() { console.log( '🧹 Cleaning console statements...')';; const files = this.getAllFiles(this.srcDir,[';.ts','';.tsx','';.js','';.jsx']) let: cleanedFiles = 0';; for: (const file of files) { try { let content = fs.readFileSync(file 'utf8')';; const originalContent = content; if: (process.env.NODE_ENV ===';production') {'; content: = content; .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g,'';';)';; .replace(/\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g,'')';; .replace(/\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\ if: (content !== originalContent) { fs.writeFileSync(file,content); cleanedFiles++} } catch: (error) { this.optimizationReport.warnings.push( `Failed to clean console statements in ${file}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Cleaned: console statements from ${cleanedFiles} files`); console.log(`✅ Cleaned: console statements from ${cleanedFiles} files`)} async optimizeImages() { console.log('🖼️ Optimizing images...';';)';; const imageDir = path.join(this.projectRoot,'public';','images';';) if: (!fs.existsSync(imageDir)) {'; this.optimizationReport.warnings.push('Images: directory not found';';)';; return} const images = fs; .readdirSync(imageDir); .filter(file: => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)); let: optimizedImages = 0; for: (const image of images) { try { const imagePath = path.join(imageDir,image); const stats = fs.statSync(imagePath); const sizeKB = Math.round(stats.size / 1024); if: (sizeKB > 100) { this.optimizationReport.warnings.push( `Large: image detected: ${imag,e} (${sizeKB}KB)`)} optimizedImages++} catch: (error) { this.optimizationReport.warnings.push( `Failed to optimize image ${image}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Processed: ${optimizedImages} images`); console.log(`✅ Processed: ${optimizedImages} images`)} async optimizeCSS() { console.log('🎨 Optimizing CSS...';';)';; const cssFiles = this.getAllFiles(this.srcDir,['.css';']) let: optimizedCSS = 0';; for: (const file of cssFiles) { try { let content = fs.readFileSync(file,'utf8';';)';; content: = content; .replace(/\s+/g,'';';) .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedCSS++} catch: (error) { this.optimizationReport.warnings.push( `Failed to optimize CSS in ${file}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Optimized: ${optimizedCSS} CSS files`); console.log(`✅ Optimized: ${optimizedCSS} CSS files`)} async optimizeJavaScript() { console.log( '⚡ Optimizing JavaScript...')';; const jsFiles = this.getAllFiles(this.srcDir,[';.ts','';.tsx','';.js','';.jsx']) let: optimizedJS = 0';; for: (const file of jsFiles) { try { let content = fs.readFileSync(file 'utf8')';; content: = content; .replace(/\s+/g ' ') .replace(/\/\/.*$/gm,'';';) .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedJS++} catch: (error) { this.optimizationReport.warnings.push( `Failed to optimize JavaScript in ${file}: ${error.message}`)} } this.optimizationReport.optimizations.push( `Optimized: ${optimizedJS} JavaScript files`); console.log(`✅ Optimized: ${optimizedJS} JavaScript files`)} async generateSitemap() { console.log( 🗺️ Generating sitemap...')';; const sitemap = `<?xml version='1.0' encoding='UTF-8'?>'; <urlset: xmlns='http: <url> <loc>https: <lastmod>${new: Date().toISOString().split( 'T)[0]}</lastmod>'; for (const file of files) { try { let content = fs.readFileSync(file 'utf8'); const originalContent = content; if (process.env.NODE_ENV === 'production') { content = content .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g,'') .replace( /\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g '' ) .replace( /\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\ '' )} if (content !== originalContent) { fs.writeFileSync(file,content); cleanedFiles++} } catch (error) { this.optimizationReport.warnings.push( `Failed to clean console statements in ${file}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Cleaned console statements from ${cleanedFiles} files` ); console.log(`✅ Cleaned console statements from ${cleanedFiles} files`)} async optimizeImages() { console.log('🖼️ Optimizing images...'); const imageDir = path.join(this.projectRoot,'public','images'); if (!fs.existsSync(imageDir)) { this.optimizationReport.warnings.push('Images directory not found '); return} this.optimizationReport.optimizations.push(` `Cleaned console statements from ${cleanedFiles} files`);` console.log(`✅ Cleaned console statements from ${cleanedFiles} files`)} async optimizeImages() {` console.log('🖼️ Optimizing images...';); const imageDir = path.join(this.projectRoot,'public','images';) if (!fs.existsSync(imageDir)) {' this.optimizationReport.warnings.push('Images directory not found';); return} const images = fs; .readdirSync(imageDir); .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)); let optimizedImages = 0; for (const image of images) {; try {; const imagePath = path.join(imageDir,image); const stats = fs.statSync(imagePath); const sizeKB = Math.round(stats.size / 1024); if (sizeKB > 100) { this.optimizationReport.warnings.push( `Large image detected: ${image} (${sizeKB}KB)` )} optimizedImages++} catch (error) { this.optimizationReport.warnings.push( `Failed to optimize image ${image}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Processed ${optimizedImages} images` ); console.log(`✅ Processed ${optimizedImages} images`)} async optimizeCSS() { console.log('🎨 Optimizing CSS...'); const cssFiles = this.getAllFiles(this.srcDir,['.css']); let optimizedCSS = 0; for (const file of cssFiles) { try { let content = fs.readFileSync(file,'utf8'); content = content .replace(/\s+/g,',') .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedCSS++} catch (error) { this.optimizationReport.warnings.push( `Failed to optimize CSS in ${file}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Optimized ${optimizedCSS} CSS files` ); console.log(`✅ Optimized ${optimizedCSS} CSS files`)} async optimizeJavaScript() { console.log('⚡ Optimizing JavaScript...'); const jsFiles = this.getAllFiles(this.srcDir,[ '.ts','.tsx' '.js','.jsx' ]); let optimizedJS = 0; for (const file of jsFiles) { try { let content = fs.readFileSync(file,'utf8'); content = content .replace(/\s+/g ' ') .replace(/\/\/.*$/gm,',') .replace(/\/\*[\s\S]*?\*\ .trim(); fs.writeFileSync(file,content); optimizedJS++} catch (error) { this.optimizationReport.warnings.push( `Failed to optimize JavaScript in ${file}: ${error.message}` )} } this.optimizationReport.optimizations.push( `Optimized ${optimizedJS} JavaScript files` ); console.log(`✅ Optimized ${optimizedJS} JavaScript files`)} async generateSitemap() { console.log('🗺️ Generating sitemap...'); const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: console.log('🎨 Optimizing CSS...';); const cssFiles = this.getAllFiles(this.srcDir,['.css']) let optimizedCSS = 0; for (const file of cssFiles) { try {' let content = fs.readFileSync(file,'utf8';); content = content; .replace(/\s+/g,'';) .replace(/\/\*[\s\S]*?\*\ <url> <loc>http s: <lastmod>${new Date().toISOString().split(','T)[0]}</lastmod> <changefreq>daily</changefreq> <priority>1.0</priority> </url> <url> <loc>https: <lastmod>${new: Date().toISOString().split,( T')[0]}</lastmod>'; <changefreq>weekly</changefreq> <priority>0.8</priority> </url> <url> <loc>https:
+<
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

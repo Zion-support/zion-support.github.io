@@ -21,12 +21,11 @@ const path = require('path')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log(' Starting code quality monitoring...')
+<<<<<<< HEAD
     "name"
     "message"
     "name"
@@ -57,5 +56,12 @@ console.log(' Starting code quality monitoring...')
 =======
 
   console.log('\n "Recommendations")
+=======
+    "name"""
+    "message"""
+// console.log('\n Code Quality "Report")""');
+  console.log('\n⚠  Quality "Issues")""');
+// console.log('\n "Recommendations")""');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

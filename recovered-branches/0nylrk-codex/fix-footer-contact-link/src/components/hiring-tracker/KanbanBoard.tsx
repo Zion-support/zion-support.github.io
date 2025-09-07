@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -24,6 +27,7 @@ import {useIsMobile} from "@/hooks/use-mobile";
 interface DnDLocation {
   droppableId: string,
   index: number
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -37,6 +41,8 @@ interface DnDLocation {
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -45,6 +51,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Skeleton } from "@/components/ui/skeleton",
 import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
 import { KanbanColumn } from "./KanbanColumn";
 =======
 
@@ -96,6 +103,30 @@ interface DnDLocation {;
 =======
   index: number;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+interface DnDLocation {
+import { KanbanColumn } from "./KanbanColumn",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+interface DnDLocation {
+  droppableId: string,
+  index: number
+import { useState, useEffect } from "react",;
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { toast } from "@/hooks/use-toast",;
+import { KanbanColumn } from "./KanbanColumn",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+interface DnDLocation {;
+  droppableId: string,;
+  index: number;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 interface DropResult {;
@@ -103,6 +134,7 @@ interface DropResult {;
   source: DnDLocation,;
   destination?: DnDLocation | null;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -983,6 +1015,24 @@ if (return) {}
         description: "Please try again","
         variant: "destructive"});
     }
+=======
+
+  droppableId: string
+  index: number;  droppableId: string
+
+  index: number
+}
+interface DropResult {
+
+  draggableId: string
+  source: DnDLocation
+
+  destination?: DnDLocation | null
+}
+// Define the kanban board columns based on application statuses
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ;
   // Check condition;
@@ -995,9 +1045,10 @@ if ( {) {}
           <Card key={i} className="h-[500px]">;
 <<<<<<< HEAD
             <CardHeader>;
-              <Skeleton className="h - 8 w - 24" />;
+              <Skeleton className="h - 8 w-24" />;
             </CardHeader>;
             <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Skeleton className="h-[400px] w-full" />;
 =======
@@ -1010,6 +1061,9 @@ if ( {) {}
 =======
               <Skeleton className="h-[400px] w - full" />;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              <Skeleton className="h-[400px] w-full" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </CardContent>;
           </Card>))}
       </div>);
@@ -1020,8 +1074,9 @@ if ( {) {}
 }
 <<<<<<< HEAD
     return (
-      <Card className="text - center py - 16">;
+      <Card className="text - center py-16">;
         <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h3 className="text - lg font - semibold mb-2">No applications yet</h3>;
           <p className="text - muted - foreground mb-6">;
@@ -1036,6 +1091,10 @@ if ( {) {}
           <h3 className="text - lg font - semibold mb - 2">No applications yet</h3>;
           <p className="text - muted - foreground mb - 6">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          <h3 className="text - lg font - semibold mb-2">No applications yet</h3>;
+          <p className="text - muted - foreground mb-6">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             You haven't received any applications for this job yet.;
           </p>;
         </CardContent>;
@@ -1050,12 +1109,85 @@ if ( {) {}
 <<<<<<< HEAD
           <KanbanColumn;
 
+<<<<<<< HEAD
 
 
 =======
           <KanbanColumn;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+))}
+      </div>
+    )
+  }
+  if (!applications |applications.length === 0) {
+  if (!applications || applications.length === 0) {
+    return (
+      <Card className="text-center py-16">
+        <CardContent>
+          <h3 className="text-lg font-semibold mb-2">No applications yet</h3>
+          <p className="text-muted-foreground mb-6">
+            You haven't received any applications for this job yet.
+          </p>
+        </CardContent>
+      </Card>
+    )
+  }
+  return (
+    <DragDropContext onDragEnd={handleDragEnd}>
+      <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>
+        {COLUMNS.map(column => (
+          <KanbanColumn
+          <KanbanColumn;            applications={columns[column.id] || []}
+            count={columns[column.id]?.length || 0}
+          />))}
+      </div>;
+    </DragDropContext>);
+}
+      [source.droppable_id]: source_column;)
+      [destination.droppable_id]: dest_column});
+    // Update status in the database;
+    try {
+  // TODO: Implement
+      await updateApplicationStatus (draggable_id, new_status);
+      toast ({
+        title: "Status updated",")`;
+
+      toast ({'
+        title: "Status updated",")
+        description: `Candidate moved to ${COLUMNS.find (col => col.id === new_status)?.title}`});
+    } catch (error) {
+      // Revert the UI changes if the database update fails;
+      toast ({"
+        title: "Failed to update status",""
+        description: "Please try again",")"
+        variant: "destructive"});"
+
+    }
+  }
+;
+  // Check condition;
+
+if ( {) {
+    return ("`;
+      <div className={`grid grid - cols - 1 ${!is_mobile ? 'md:grid - cols - 3 lg:grid - cols - 5' : } gap - 4`}>;
+
+              <Skeleton className="h - 8 w - 24" />;"
+
+              <Skeleton className="h-[400px] w - full" />;"
+
+            ;)
+          ))}
+      </div>);"
+      <Card className="text - center py - 16">;"
+
+          <h3 className="text - lg font - semibold mb - 2">No applications yet</h3>;""
+          <p className="text - muted - foreground mb - 6">;"
+      );
+      <div className={`grid ${is_mobile ? 'grid - cols - 1 gap - y-6' : 'grid - cols - 1 md:grid - cols - 3 lg:grid - cols - 5 gap - 4'} overflow - x-auto`}>;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             key={column.id}
             id={column.id}
             title={column.title}
@@ -1078,16 +1210,29 @@ if ( {) {}
             applications={columns[column && column.id] || []}
             count={columns[column && column.id]?.length || 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           />;
 
+=======
+),;
+  }
+  ;
+  return (;
+    <DragDropContext onDragEnd={handleDragEnd}>;
+      <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' :'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>;
+        {COLUMNS.map(column => (;
+          <KanbanColumn;
+            key={column.id}            id={column.id}
+            title={column.title}
+            description={column.description}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
-          />
+          />;
 
-        ))}
       </div>;
     </DragDropContext>;
 <<<<<<< HEAD
@@ -1165,6 +1310,7 @@ if (applications) {}
 =======
 }
 
+;
   ),; interface DnDLocation {
   droppableId: string;
 index: number 
@@ -1202,6 +1348,7 @@ description: "Successful candidates"
   applications, isLoading, updateApplicationStatus 
 }= useJobApplications (jobId);
 const [columns, setColumns] = useState<Record<string JobApplication[]>> ({
+<<<<<<< HEAD
   
 });
 const isMobile = useIsMobile ();
@@ -1249,51 +1396,53 @@ if (isLoading) {}
 };
 if (isLoading) {
   return (<div className= {
+=======
+
+  return (<div className= {`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   `grid grid-cols-1 $ {
-  !isMobile ? 'md:grid-cols-3 lg:grid-cols-5': '' 
-}gap-4` 
-}> <CardHeader> <Skeleton className="h-8 w-24" /> </CardHeader> <CardContent> <Skeleton className="h-[400px] w-full" /> </CardContent> </Card>) ) 
-}</div>) 
-}<CardContent> <h3 className="text-lg font-semibold mb-2" >No applications yet</h3> <p className="text-muted-foreground mb-6" > You haven't received any applications for this job yet. </p> </CardContent> </Card> return (<DragDropContext onDragEnd= {
-  handleDragEnd 
-}> <div className= {
+  !isMobile ? 'md:grid-cols-3 lg:grid-cols-5': `;
+}gap-4` )
+}> <CardHeader> <Skeleton className="h-8 w-24" />  <CardContent> <Skeleton className="h-[400px] w-full" />  ) )"
+}</div>) "
+}<CardContent> <h3 className="text-lg font-semibold mb-2" >No applications yet</h3> <p className="text-muted-foreground mb-6" > You haven't received any applications for this job yet. </p>   return (<DragDropContext onDragEnd= {
+  handleDragEnd;
+}> <div className= {`;
   `grid $ {
-  isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4' 
+  isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4`;
 }overflow-x-auto` 
 }> {
   COLUMNS.map (column => (<KanbanColumn key= {
-  column.id 
+  column.id;
 }id= {
-  column.id 
 }title= {
-  column.title 
+  column.title;
 }description= {
-  column.description 
+  column.description;
 }applications= {
   columns[column.id] || [] 
 }count= {
+<<<<<<< HEAD
   columns[column.id]?.length || 0 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  columns[column.id]?.length || 0;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }/>) ) 
+
+}</div> ) 
+    ;`;
+pr-12325
+</KanbanColumn>
 }</div> </DragDropContext>) 
-}
-            applications={columns[column.id] |[]}
-            count={columns[column.id]?.length |0}
-          />
-        ))}
       </div>
     </DragDropContext>
-  )
-}
-            applications={columns[column.id] || []}
-            count={columns[column.id]?.length || 0}
-          />
-        ))}
       </div>;
     </DragDropContext>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1314,3 +1463,7 @@ if (isLoading) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </DragDropContext>;'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

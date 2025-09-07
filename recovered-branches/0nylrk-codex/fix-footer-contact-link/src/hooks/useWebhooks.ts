@@ -16,6 +16,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from "react";
@@ -494,11 +495,34 @@ if ( {) {}
         method: 'GET',
         headers: {'`
           'Authorization': `Bearer ${session.access_token}`;'
-          'Content - Type': 'application / json';
-        }
-      });
+=======
+  }
+}
 ;
+  // Fetch user's webhooks;
+  const fetch_webhooks = async () => {
+    // Check condition;
+if (return) {
+  $2;
+    set_loading (true);
+    set_error (null);
+    try {
+  // TODO: Implement
+      const { data: { session } } = await supabase.auth.get_session ();
+      // Check condition;
+if ( {) {
+        set_error ("Authentication required");"
+        return;
+      }`;
+      const response = await fetch (`${getWebhookUrl ()}/webhooks`, {"
+        method: 'GET',
+        headers: {`;
+          'Authorization': `Bearer ${session.access_token}`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          'Content - Type': 'application / json';
+      });
       const result = await response.json ();
+<<<<<<< HEAD
 ;
       // Check condition;
 if ( {) {}
@@ -510,51 +534,21 @@ if ( {) {}
           'Content-Type': 'application/json'
         }
       });
+=======
+      // Check condition;
+        throw new Error (result.error || 'Failed to fetch webhooks');`;
+          'Content-Type': 'application/json
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const result = await response.json();
       if (!response.ok) {
         throw new Error(result.error |'Failed to fetch webhooks')
-      }
       setWebhooks(result.webhooks |[])
 
-;
-export function useWebhooks() {;
   const { user } = useAuth(),;
   const [webhooks, setWebhooks] = useState<Webhook[]>([]),;
-  const [loading, setLoading] = useState(false),;
+
   const [error, setError] = useState<string | null>(null),;
   const [testResult, setTestResult] = useState<TestWebhookResult | null>(null),;
-  // Helper to get the base URL for webhook functions;
-  const getWebhookUrl = () => {;
-    // import.meta may be undefined when this hook is executed in a Node;
-    // environment (e.g. during server side rendering or tests). Using optional;
-    // chaining avoids a TypeError in those cases and falls back to process.env.;
-    const env = (import.meta as any)?.env ?? process.env,;
-    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,;
-    return `${url}/functions/v1/webhook-manager`;
-  },;
-  // Fetch user's webhooks;
-  const fetchWebhooks = async () => {;
-    if (!user) return,;
-    setLoading(true),;
-    setError(null),;
-    try {;
-      const { data: { session } } = await supabase.auth.getSession(),;
-      if (!session) {;
-        setError("Authentication required"),;
-        return;
-      }
-;
-      const response = await fetch(`${getWebhookUrl()}/webhooks`, {;
-        method: 'GET',;
-        headers: {;
-          'Authorization': `Bearer ${session.access_token}`,;
-          'Content-Type': 'application/json';
-        }
-      }),;
-      const result = await response.json(),;
-      if (!response.ok) {;
-        throw new Error(result.error || 'Failed to fetch webhooks');
-      }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -564,6 +558,7 @@ export function useWebhooks() {;
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 
 
 
@@ -2709,6 +2704,10 @@ export function useWebhooks() {;
         setError("Authentication required"),;
         return,;
       }
+=======
+`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
       const response = await fetch(`${getWebhookUrl()}/webhooks`, {;
         method:'GET',;
@@ -3172,7 +3171,6 @@ try {}
   //import.meta may be undefined when this hook is executed in a Node //environment (e.g. during server side rendering or tests) . Using optional //chaining avoids a TypeError in those cases and falls back to process.env. setLoading (true);
 setError (null);
 try {
-  
 }getWebhookUrl () 
 }/webhooks`, {
   method: 'GET', headers: {
@@ -3190,7 +3188,6 @@ try {
   if (!user) return;
 setError (null);
 try {
-  
 }getWebhookUrl () 
 }/create`, {
   method: 'POST', headers: {
@@ -3205,7 +3202,6 @@ return result.webhook
   console.error ('Error creating webhook:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
 }finally {
   setLoading (false) 
 }
@@ -3214,7 +3210,6 @@ toast ({
   if (!user) return;
 setError (null);
 try {
-  
 }getWebhookUrl () 
 }/toggle`, {
   method: 'POST', headers: {
@@ -3228,7 +3223,6 @@ return result;
   console.error ('Error toggling webhook:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
 }finally {
   setLoading (false) 
 }
@@ -3237,7 +3231,6 @@ toast ({
   if (!user) return;
 setError (null);
 try {
-  
 }getWebhookUrl () 
 }/delete`, {
   method: 'POST', headers: {
@@ -3286,7 +3279,6 @@ return {}
   console.error ('Error deleting webhook:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
 }finally {
   setLoading (false) 
 }
@@ -3296,7 +3288,6 @@ toast ({
 setError (null);
 setTestResult (null);
 try {
-  
 }getWebhookUrl () 
 }/test`, {
   method: 'POST', headers: {
@@ -3310,7 +3301,6 @@ return result;
   console.error ('Error testing webhook:', err);
 setError (err instanceof Error ? err.message : 'An unknown error occurred');
 toast ({
-  
 }finally {
   setLoading (false) 
 }

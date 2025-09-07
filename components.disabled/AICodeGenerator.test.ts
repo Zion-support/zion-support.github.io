@@ -15,6 +15,7 @@ import AICodeGenerator from './AICodeGenerator;';
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -25,12 +26,58 @@ import AICodeGenerator from './AICodeGenerator;';
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import AICodeGenerator from '
+describe(';AICodeGenerator'
+  it('renders without crashing'
+    expect(screen.getByRole('main')).toBeInTheDocument();'  });
+  it('displays correct content'
+  it('handles user interactions'
+
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', () => {; it('renders without crashing', () => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AICodeGenerator />); }); ; it('handles user interactions'
+import AICodeGenerator from './AICodeGenerator;
+
+describe(';AICodeGenerator', () => {;
+  it('renders without crashing', () => {;}
+    render(<AICodeGenerator />);}
+    expect(screen.getByRole('main')).toBeInTheDocument();'  });';
+  it('displays correct content', () => {;}
+    render(<AICodeGenerator />);}
+    // Add specific content checks based on component functionality});
+  it('handles user interactions', () => {;}
+    render(<AICodeGenerator />);}
+import AICodeGenerator from './AICodeGenerator; ; describe(';AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />); }); ; it('handles user interactions',() => {; render(<AICodeGenerator />)});,});
+// Add interaction tests based on component functionality})});
+import AICodeGenerator from './AICodeGenerator; ; describe(';AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+
+
+import AICodeGenerator from 
+describe('AICodeGenerator
+  it('renders without crashing)
+    expect(screen.getByRole('main')).toBeInTheDocument();'  });
+  it('displays correct content
+  it('handles user interactions
+import AICodeGenerator from './AICodeGenerator;')
+describe('AICodeGenerator', () => {;
+  it('renders without crashing', () => {;
+    render(<AICodeGenerator />);
+
+
+
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />); }); ; it('handles user interactions',() => {; render(<AICodeGenerator />)});,});
+// Add interaction tests based on component functionality})});
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import AICodeGenerator from '
 describe('AICodeGenerator'
   it('renders without crashing'
     expect(screen.getByRole('main')).toBeInTheDocument();'  });
   it('displays correct content'
   it('handles user interactions'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,3 +196,12 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() 
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

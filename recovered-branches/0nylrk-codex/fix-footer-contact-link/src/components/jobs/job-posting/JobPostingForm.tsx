@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
 =======
 <<<<<<< HEAD
@@ -1115,15 +1116,17 @@ if ( {) {}
           <Label htmlFor="isRemote">
             <Input
               type="checkbox"
-              id="isRemote"
-              checked={isRemote}
-              className="mr-2"
-    } catch (error: any) {;
-      console.error("Error creating/updating job:", error);
-      toast.error(error.message || "Failed to post job");
-    } finally {;
-      setIsFormLoading(false);
+=======
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
 
+
+import React, { useState, useEffect, useCallback } from 'react';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              id="isRemote"
+              checked={isRemote}              className="mr-2"
+
+<<<<<<< HEAD
     }
   }
   if (isLoading |isFormLoading) {
@@ -1220,6 +1223,8 @@ if ( {) {}
               id="isRemote";
               checked={isRemote}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="mr-2"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               onChange={(e) => setIsRemote(e.target.checked)}
@@ -1234,6 +1239,7 @@ if ( {) {}
         />"
         <Button type="submit" disabled={isSubmitting |isFormLoading}>"
           {isSubmitting |isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1264,6 +1270,9 @@ if ( {) {}
               className="mr-2"
 
 
+=======
+className="mr-2"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <DescriptionFields 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           control={form.control} 
@@ -1301,6 +1310,7 @@ if ( {) {}
         <Button type="submit" disabled={isSubmitting || isFormLoading}>"
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -1309,6 +1319,8 @@ if ( {) {}
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </Button>
       </form>
     </Form>
@@ -1584,6 +1596,15 @@ if (isLoading || isFormLoading) {
               className="mr - 2";
               on_change={(e) => setIsRemote (e.target.checked)}
 
+;
+        <div>;
+          <Label htmlFor="isRemote">;
+            <Input;
+              type="checkbox";
+              id="isRemote";
+              checked={isRemote}
+              className="mr-2";
+              onChange={(e) => setIsRemote(e.target.checked)}
             />;
             Remote;
           </Label>;
@@ -1601,9 +1622,223 @@ if (isLoading || isFormLoading) {
     </Form>);
 
 }
+
+;
+        <DescriptionFields ;
+          control={form.control} ;
+          handleEditorChange={handleEditorChange}
+          editorContent={editorContent}
+        />;
+;
+        <Button type="submit" disabled={isSubmitting || isFormLoading}>;
+          {isSubmitting || isFormLoading ? "Submitting..." :jobId ? "Update Job" :"Post Job"}
+        </Button>;
+      </form>;
+    </Form>;
+  ),; interface JobPostingFormProps {
+  jobId?: string;
+onSuccess?: () => void 
+}export function JobPostingForm ({
+  jobId, onSuccess 
+}: JobPostingFormProps) {
+  const [isFormLoading, setIsFormLoading] = useState (false);
+const [editorContent, setEditorContent] = useState ("");
+  if (job) {
+  //Set form values Object.entries (job) .forEach ( ([key, value]) => {
+  if (key === 'published date' && value) {
+}
+}) 
+}
+}) 
+}) .finally ( () => {
+  setIsFormLoading (false) 
+}) 
+}
+}, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
+}if (onSuccess) {
+  onSuccess () 
+}
+}catch (error: any) {
+}finally {
+  setIsFormLoading (false) 
+}
+};
+if (isLoading || isFormLoading) {
+}return (<Form {
+  ...form 
+}> <form onSubmit= {
+  handleSubmit (onSubmit) 
+}className=" space-y-6"> text-lg font-medium" >Post a Job</h3> <p className="text-sm text-muted-foreground" > Fill in the details below to create a job posting. </p> </div> <BasicInfoFields control= {
+  form.control 
+}/> <DateFields startDate= {
+  startDate 
+}setStartDate= {
+  setStartDate 
+}endDate= {
+  endDate 
+}setEndDate= {
+  setEndDate 
+}/> <div> <Label htmlFor="isRemote" > <Input /> Remote </Label> </div> <DescriptionFields control= {
+  form.control 
+}handleEditorChange= {
+  handleEditorChange 
+}editorContent= {
+  editorContent 
+}/> </Button> </form> </Form>) 
+}
+}
 }
 
 ;
 ;
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}            />;
+            Remote;
+          </Label>;
+        </div>;
+}}
+}
+
+
+      const jobData = await submitJob(values),;
+
+
+        await updateJob(jobId, jobData);
+        toast && toast.success("Job updated successfully!");"
+        await updateJob(jobId, jobData);"
+        await createJob(jobData);"
+        toast && toast.success("Job posted successfully!");"
+        form && form.reset();"
+        setEditorContent("");"
+      if (onSuccess) {;
+        onSuccess();
+    } catch (error: any) {;"
+      console && console.error("Error creating/updating job:", error);""
+      toast && toast.error(error && error.message || "Failed to post job");"
+    } finally {;
+      setIsFormLoading(false);
+        .catch((error) => {;"
+          console.error("Failed to load job:", error),;""
+          toast.error("Failed to load job");"
+        .finally(() => {;
+  }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),;
+  }, [setValue]),;
+        await updateJob(jobId, jobData),;
+        toast.success("Job updated successfully!");"
+        await createJob(jobData),;"
+        toast.success("Job posted successfully!"),;"
+        form.reset(),;"
+
+
+    } catch (error: any) {"
+      console.error("Error creating/updating job:", error);""
+      toast.error(error.message |"Failed to post job")"
+    } finally {
+  // TODO: Implement
+  if (isLoading |isFormLoading) {"
+      console.error("Error creating/updating job:", error),""
+      toast.error(error.message || "Failed to post job")"
+  // TODO: Implement
+  },
+"
+    return <div className="flex items-center justify-center p-8">Loading...</div>"
+    <Form {...form}>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">"
+</form>
+        <div>
+</div>"
+          <h3 className="text-lg font-medium">Post a Job</h3>""
+          <p className="text-sm text-muted-foreground">"
+</p>
+        </div>
+        <BasicInfoFields control={form.control} />
+
+
+
+        <DateFields;
+          startDate={startDate} 
+
+
+          setStartDate={setStartDate}
+          endDate={endDate}
+          setEndDate={setEndDate}
+        />
+
+          <Label htmlFor="isRemote">"
+
+            <Input;"
+              type="checkbox"""
+              id="isRemote""
+              checked={isRemote}"
+              className="mr-2""
+      toast.error(error.message || "Failed to post job");"
+
+  if (isLoading |isFormLoading) {
+
+
+  if (isLoading || isFormLoading) {;"
+    return <div className="flex items-center justify-center p-8">Loading...</div>;"
+
+
+
+
+
+  };
+
+    <Form {...form}>;
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;"
+        <div>;
+          <h3 className="text-lg font-medium">Post a Job</h3>;""
+          <p className="text-sm text-muted-foreground">;"
+          </p>;
+        </div>;
+        <BasicInfoFields control={form && form.control} />;
+
+
+        />;
+
+
+          <Label htmlFor="isRemote">;"
+
+              checked={isRemote}
+
+
+
+              type="checkbox";""
+              id="isRemote";"
+              onChange={(e) => setIsRemote(e.target.checked)}
+
+        <DescriptionFields;
+          control={form.control}
+          handleEditorChange={handleEditorChange}
+          editorContent={editorContent}
+        <Button type="submit" disabled={isSubmitting |isFormLoading}>"
+
+        <Button type="submit" disabled={isSubmitting || isFormLoading}>"
+
+    return <div className="flex items - center justify - center p - 8">Loading...</div>;"
+      <form on_submit={handle_submit (on_submit)} className="space - y-6">;"
+          <h3 className="text - lg font - medium">Post a Job</h3>;""
+          <p className="text - sm text - muted - foreground">;"
+        <BasicInfoFields control={form.control} />;
+
+          start_date={start_date}
+          end_date={end_date}
+
+          <Label html_for="is_remote">;"
+
+              id="is_remote";"
+              checked={is_remote}"
+              className="mr - 2";"
+              on_change={(e) => setIsRemote (e.target.checked)}
+
+          editor_content={editor_content}
+        <Button type="submit" disabled={is_submitting || isFormLoading}>;"
+
+      </form>;
+    );"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

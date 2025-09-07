@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { createContext } from "react";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import type { AuthContextType } from "@/types/auth";
 
 import { createContext } from "react",
@@ -23,10 +27,13 @@ import type { AuthContextType } from "@/types/auth",
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { createContext } from "react";
 import {createContext} from "react";
 =======
@@ -61,6 +68,7 @@ import type { AuthContextType } from "@/types/auth",
 import type { AuthContextType } from "@/types/auth";
 import { createContext } from "react",
 import type { AuthContextType } from "@/types/auth",
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -73,6 +81,18 @@ import type { AuthContextType } from "@/types/auth";
 import { createContext } from "react",
 import type { AuthContextType } from "@/types/auth",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { createContext } from "react",;
+import type { AuthContextType } from "@/types/auth",;
+import { createContext } from "react";
+import {createContext} from "react";
+import type { AuthContextType } from "@/types/auth";
+import { createContext } from "react",;
+import type { AuthContextType } from "@/types/auth",;
+import type { AuthContextType } from "@/types/auth";
+import { createContext } from "react",;
+import type { AuthContextType } from "@/types/auth",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Create the AuthContext and export it. We avoid providing a generic
 // parameter to `createContext` because in environments where the React
 // type definitions are unavailable, calling an untyped function with type
@@ -112,6 +132,7 @@ import type { AuthContextType } from "@/types/auth",;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 // default value so consumers still get some level of type safety.;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -137,6 +158,16 @@ import type { AuthContextType } from "@/types/auth",
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { createContext } from "react";""
+import type { AuthContextType } from "@/types/auth";""
+import { createContext } from "react",""
+import type { AuthContextType } from "@/types/auth",""
+import {createContext} from "react";""
+import type { AuthContextType } from "@/types/auth","
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Create the AuthContext and export it. We avoid providing a generic;
 // parameter to `createContext` because in environments where the React;
 // type definitions are unavailable, calling an untyped function with type;
@@ -197,6 +228,7 @@ import type { AuthContextType } from "@/types/auth",;
 // arguments causes a TypeScript error (TS2347). Instead, we cast the;
 
 
+export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 // default value so consumers still get some level of type safety.
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export const AuthContext = createContext<AuthContextType | undefined>(
@@ -208,7 +240,22 @@ export const AuthContext = createContext<AuthContextType | undefined>(
 export const AuthContext = createContext<AuthContextType | undefined>(
   undefined,
 );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 "`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+);
+
+</AuthContextType>
+
+export const AuthContext = createContext<AuthContextType | undefined>(undefined),
+
+export const AuthContext = createContext<AuthContextType | undefined>(
+)"`;
+pr-12325
+</AuthContextType>)"
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

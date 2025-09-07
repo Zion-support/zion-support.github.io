@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     text: string;
     href: string;
   }
@@ -34,15 +35,28 @@ const Hero: React.FC<HeroProps> = ({;
   }
   secondaryAction?: {}
     text: string;
+=======
+
+  secondaryAction?: {
+    text: string
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     href: string;
   }
 <<<<<<< HEAD
   stats?: Array<{
     value: string
     label: string
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+
+
+import React from 'react';;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
+
 interface HeroProps {
 title: string;
   subtitle: string;
@@ -51,6 +65,7 @@ title: string;
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>
 origin/cursor/automate-test-improve-and-merge-code-2533
     color: string
+<<<<<<< HEAD
 =======
   stats?: Array<{}
     value: string;
@@ -65,13 +80,23 @@ const Hero: React.FC<HeroProps> = ({}
   primaryAction;
   secondaryAction;'
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
+=======
+          <p className = 'text-xl sm: text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light' />;}
+    color: string;}
+  }>
+}
+;
+  const Hero: React.FC<HeroProps /> = ({ title;
+  subtitle;
+  primaryAction;
+  secondaryAction;
+          <p className='text-xl sm: text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   stats}) => {
   return (
-    <section className;
-origin/cursor/automate-test-improve-and-merge-code-2533
-            {subtitle}
 
+<<<<<<< HEAD
           </p>
           </p>;
           {/* Action Buttons */}
@@ -318,3 +343,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

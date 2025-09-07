@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
@@ -15,8 +19,9 @@ import { ArrowRight;
   MapPin;
   ArrowUpRight
  } from 'lucide-react';
-import Head from 'next/head',
+import Head from 'next/head';
 // Import our enhanced components
+<<<<<<< HEAD
 import EnhancedNavigation from './layout/EnhancedNavigation',
 import EnhancedServiceCard from './ui/EnhancedServiceCard',
 import PerformanceMonitor from './PerformanceMonitor',
@@ -550,3 +555,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

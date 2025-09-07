@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function FavoritesPage() {};
 export default function FavoritesPage() { return null; }
   const { favorites, remove } = useFavorites();
@@ -24,12 +25,19 @@ import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
   const storageKey = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div>
       <Head>
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
+<<<<<<< HEAD
 export default function FavoritesPage() { return null; }
+=======
+export default function FavoritesPage() {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(;
     () => TALENT_PROFILES && TALENT_PROFILES.filter(t => favorites && favorites.includes(t && t.slug)),;
@@ -124,6 +132,9 @@ function FavoritesPage() {}
       </div>;'
       <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>
         <nav aria-label='Breadcrumb'>
@@ -219,6 +230,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40'
             >
               <div className='flex items-center justify-between'>

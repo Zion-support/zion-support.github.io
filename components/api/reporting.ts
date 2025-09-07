@@ -1,16 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { authenticateRequest  } from '@/utils/auth';
 import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
+
 interface ReportingData {
-  byTenant: Record<string, {
-    funnel: { stage: string, count: number }[];
+  byTenant: Record<string, {}
+    funnel: { stage: string, count: number,}
+}[];
     timeToHireDays: number;
     costPerHireUsd?: number;
-    updatedAt: string
-  }>
-}
 
+<<<<<<< HEAD
 const FILE = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
@@ -26,18 +30,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     timeToHireDays: number;
     costPerHireUsd?: number;
     updatedAt: string;
+=======
+    updatedAt: string
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }>
 <<<<<<< HEAD
 }
   >;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-const FILE = 'reporting.json';
-const FALLBACK: ReportingData = { byTenant: {} }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  const method = (req.method || 'GET').toUpperCase(),;
+  >;
 
+<<<<<<< HEAD
   const method = (req.method |'GET').toUpperCase()
 =======
 }'
@@ -183,11 +188,19 @@ return res.status (405).json ({ error: 'Method not allowed' });
 <<<<<<< HEAD
 
   return res.status(405).json({ error: 'Method not allowed' });
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return res.status(200).json(updated.byTenant[tenantId])
   }
-return res.status(405).json({ error: 'Method not allowed' });
+return res.status(405).json({ error: 'Method not allowed',}
+});
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

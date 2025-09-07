@@ -13,6 +13,7 @@ function improvePerformance() {}
     // Create next.config.js optimizations;
     const nextConfigContent = "/** @type {import('next').NextConfig} */
 const nextConfig = {}
+<<<<<<< HEAD
   "reactStrictMode": true,
   "swcMinify": true,
   "compress": true,
@@ -180,3 +181,19 @@ improvePerformance();
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]},"
+  // Bundle optimization;"
+  "webpack": (config, { dev, isServer }) => {}"
+    if ( {})
+      config.optimization.splitChunks = {}"
+
+    return confi}g},
+  // Headers for performance;
+  async headers() {}
+    return [;]
+
+  };
+improvePerformance();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

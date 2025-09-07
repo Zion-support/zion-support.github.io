@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -23,10 +24,22 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 =======
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+
+
+const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
+
 /* eslint - disable no - console */;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -36,6 +49,7 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 import fs from 'fs';
 import path from 'path';
 import https from 'https';
+<<<<<<< HEAD
 =======
 /* eslint - disable no - console */;
 import fs from 'fs';'
@@ -50,12 +64,19 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 import fs from 'fs';'
 import path from 'path';'
 import https from 'https';'
+=======
+/* eslint-disable no-console */
+import fs from 'fs';
+import path from 'path';
+import https from 'https';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const HOST = process.env.SELF_HOST |'http: //localhost:3000'
 <<<<<<< HEAD
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -77,6 +98,12 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }'
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+const HOST = process.env.SELF_HOST |'http: //localhost:3000
+  { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' }
+  { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
+  { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }']
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
 
 <<<<<<< HEAD
@@ -87,10 +114,49 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
     const lib = u && u.protocol === 'https: ' ? https : require('http'),
     const req = lib && lib.request(url, opts, (res: any) => {
+      let buf = ,
+      res && res.on('data', (d: any) => (buf += d)),
+      res && res.on('end', () => {
+        try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
+
+
+      })
+    });
+    req && req.on('error', reject);
+    req && req.write(data);
+    req && req.end()
+}
+async function main() {
+      continue;
+    const file = path && path.join(outDir, `${res && res.slug}.json`);
+    fs && fs.writeFileSync(file, JSON && JSON.stringify(res && res.payload, null, 2));
+    console && console.log('Wrote', file)
+main().catch((e) => {
+
+  console && console.error(e);
+  process && process.exit(1)
+
+;
+async function post_json (url: string, body: any): Promise < any> {
+  return new Promise ((resolve, reject) => {
+    const u = new URL (url);
+    const data = JSON.stringify (body);
+    const opts: any = {,
+      headers: { 'Content - Type': 'application / json_content - Length': Buffer.byte_length (data) }}
+    const lib = u.protocol === 'https: ' ? https : require ('http'),
+    const req = lib.request (url, opts, (res: any) => {
+      res.on ('data', (d: any) => (buf += d)),
+      res.on ('end', () => {
+        try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
+method: 'POST',
+      headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
+    const lib = u && u.protocol === 'https: ' ? https : require('http'),
+    const req = lib && lib.request(url, opts, (res: any) => {
       let buf = '',
       res && res.on('data', (d: any) => (buf += d)),
       res && res.on('end', () => {
         try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -162,6 +228,8 @@ async function post_json (url: string, body: any): Promise < any> {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       })
     });
     req && req.on('error', reject);
@@ -208,9 +276,15 @@ async function post_json (url: string, body: any): Promise < any> {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+async function postJson(url: string, body: any): Promise<any> {
+  return new Promise((resolve, reject) => {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const u = new URL(url);
     const data = JSON.stringify(body);
     const opts: any = {
@@ -247,6 +321,7 @@ main().catch((e) => {
   console.error(e);
   process.exit(1)
 });
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -255,6 +330,8 @@ main().catch((e) => {
 =======
         try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -266,10 +343,16 @@ import path from 'path',;'
 import https from 'https',;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
+<<<<<<< HEAD
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;'
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' },;'
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' },;'
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' },;'
+=======
+  { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' },;
+  { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' },;
+  { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' },;']
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }],;
 async function postJson(url: string, body: any): Promise<any> {;
   return new Promise((resolve, reject) => {;
@@ -338,6 +421,7 @@ main ().catch ((e) => {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -369,6 +453,8 @@ main ().catch ((e) => {}
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 /* eslint-disable no-console */;
 import fs from 'fs',;
@@ -377,13 +463,14 @@ import https from 'https',;
 ;
 const HOST = process.env.SELF_HOST || 'http://localhost:3000',;
 ;
+</any>
 const prompts:Array<{ prompt:string, region?:string, service?:string }> = [;
   { prompt:'AI Devs in Brazil', region:'Brazil', service:'AI' },;
   { prompt:'Rent Servers in Kabul', region:'Kabul', service:'servers' },;
-  { prompt:'LLM Engineers in Toronto', region:'Toronto', service:'LLM' },;
+  { prompt:'LLM Engineers in Toronto', region:'Toronto', service:'LLM' },;']
   { prompt:'Cybersecurity Experts in Berlin', region:'Berlin', service:'security' }],;
-;
 async function postJson(url:string, body:any):Promise<any> {;
+<<<<<<< HEAD
   return new Promise((resolve, reject) => {;
     const u = new URL(url),;
     const data = JSON.stringify(body),;
@@ -461,3 +548,6 @@ main().catch((e) => {;
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

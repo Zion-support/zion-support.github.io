@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -16,6 +17,8 @@ import {check_message, monitor_content} from '@/services / fraud';
 import {toast} from '@/hooks / use - toast';
 import {supabase} from '@/integrations / supabase / client';
 // Props for the middleware component;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface FraudDetectionMiddlewareProps {
 <<<<<<< HEAD
@@ -24,6 +27,7 @@ interface FraudDetectionMiddlewareProps {
   children: React.ReactNode;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface FraudDetectionMiddlewareProps {
 <<<<<<< HEAD
@@ -38,10 +42,21 @@ interface FraudDetectionMiddlewareProps {
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React, { useCallback } from 'react';
+import { checkMessage, monitorContent  } from '@/services/fraud';
+import { toast  } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+// Props for the middleware component
+interface FraudDetectionMiddlewareProps {
+  children: React.ReactNode
+interface FraudDetectionMiddlewareProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 // Interface for the context
 interface FraudDetectionContextType {
   scanMessageContent: (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -67,6 +82,9 @@ import { toast } from '@/hooks/use-toast',;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
   children: React.ReactNode;
+=======
+children: React.ReactNode;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
@@ -109,10 +127,13 @@ interface FraudDetectionMiddlewareProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
-
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+interface FraudDetectionMiddlewareProps {
+  children: React.ReactNode}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 // Interface for the context;
 interface FraudDetectionContextType {;
@@ -121,9 +142,49 @@ interface FraudDetectionContextType {;
     messageId: string,;
     content: string,;
     userEmail?: string;
+
+import {check_message, monitor_content} from '@/services / fraud';''
+import {toast} from '@/hooks / use - toast';''
+import {supabase} from '@/integrations / supabase / client';'
+// Props for the middleware component;
+
+interface FraudDetectionMiddlewareProps {
+  // TODO: Implement
+}
+  children: React.ReactNode;
+
+
+
+
+// Interface for the context;
+interface FraudDetectionContextType {
+  // TODO: Implement
+  scanMessageContent: (,
+import React, { useCallback } from 'react',;
+import { checkMessage, monitorContent } from '@/services/fraud',;
+import { toast } from '@/hooks/use-toast',;
+import { supabase } from '@/integrations/supabase/client',;
+// Props for the middleware component;
+interface FraudDetectionMiddlewareProps {;
+
+
+
+
+}
+interface FraudDetectionMiddlewareProps {}
+  children: React.ReactNode}
+;
+// Interface for the context;
+interface FraudDetectionContextType {;
+  scanMessageContent: (;,
+  userId: string,;
+    messageId: string,;
+    content: string,;
+    userEmail?: string;)
+pr-12325
   ) => Promise<{;
-    isSafe: boolean,;
-    explanation?: string;
+    isSafe: boolean,;}
+    explanation?: string;}
   }>;
 }
 <<<<<<< HEAD
@@ -174,6 +235,7 @@ interface FraudDetectionContextType {;
 // aren't available. Passing a generic argument to an untyped function causes;
 // TS2347, so we cast the default value instead of using a type parameter.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1285,3 +1347,5 @@ explanation: data.explanation
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

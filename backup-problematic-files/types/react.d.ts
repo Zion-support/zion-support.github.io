@@ -2,6 +2,7 @@
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
 <<<<<<< HEAD
+<<<<<<< HEAD
   These definitions are **not** a replacement for `@types/react` – they only;
   exist so that isolated compilation of individual files (e.g., in CI or code;
   review bots) will not fail when full React type declarations are not;
@@ -16,10 +17,13 @@
   // Common hooks we rely on.;
 
 =======
+=======
+  These definitions are **not** a replacement for `@types/react` – they only;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   exist so that isolated compilation of individual files (e.g., in CI or code;
   review bots) will not fail when full React type declarations are not;
   present.  They purposefully model just enough surface-area used throughout;
-  the code-base.  If you have `@types/react` available in `node_modules`,;
+  the code-base.  If you have `@types/react` available in `node_modules`;
   TypeScript will prefer those and ignore this file, because paths declared in;
   `typeRoots` are merged with normal type resolution.;
 */;
@@ -65,17 +69,35 @@ TypeScript will prefer those and ignore this file, because paths declared in `ty
 }
 ;
 declare namespace React {;
-  // Keep JSX namespace for intrinsic elements  this prevents "JSX.IntrinsicElements";
+  // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
   // errors when `@types/react` is not present.;
    ;
   export interface IntrinsicElements {;
     [elemName:string]:any;
   }
-}/* Minimal React type declarations. --------------------------------------------------------------------------- These definitions are **not** a replacement for `@types/react`  they only exist so that isolated compilation of individual files (e.g., in CI or code review bots) will not fail when full React type declarations are not present. They purposefully model just enough surface-area used throughout the code-base. If you have `@types/react` available in `node modules`;
+}/* Minimal React type declarations. --------------------------------------------------------------------------- These definitions are **not** a replacement for `@types/react` – they only exist so that isolated compilation of individual files (e.g., in CI or code review bots) will not fail when full React type declarations are not present. They purposefully model just enough surface-area used throughout the code-base. If you have `@types/react` available in `node modules`;
 TypeScript will prefer those and ignore this file, because paths declared in `typeRoots` are merged with normal type resolution. */ export type Key = string | number;
 // Default export so `import React from 'react'` keeps working even without // the real react package being installed. export default React 
 }declare namespace React {
-  // Keep JSX namespace for intrinsic elements  this prevents "JSX.IntrinsicElements" // errors when `@types/react` is not present. export interface IntrinsicElements {
+  // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements" // errors when `@types/react` is not present. export interface IntrinsicElements {
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+  exist so that isolated compilation of individual files (e.g., in CI or code;)
+  review bots) will not fail when full React type declarations are not;
+  present.  They purposefully model just enough surface-area used throughout;
+  the code-base.  If you have `@types/react` available in `node_modules`,;
+  TypeScript will prefer those and ignore this file, because paths declared in;`;
+  `typeRoots` are merged with normal type resolution.;
+*/;
+;
+declare module "react" {;"
+  // Basic ReactElement stub (JSX trees ultimately compile into this).;
+  export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {;
+
+  export interface FC<P = Record<string, unknown>> {;
+
+  export function useMemo<T>(factory:() => T, deps:readonly unknown[]):T;
+
+  } & Record<string, unknown>;
+</string>"`;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -43,10 +44,26 @@ interface AIEnhancementDialogProps {
   onApply: (content: string) => void,
   defaultOptions: AIEnhancementOptions,
   initialContent?: string;
+=======
+import React from 'react';
+import { Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle } from '@/components/ui/dialog';
+import { AIEnhancementPanel  } from './AIEnhancementPanel';
+import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+interface AIEnhancementDialogProps {
+
+
+  initialContent?: string
+  initialContent?: string;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export function AIEnhancementDialog({;
 import React from 'react';
+<<<<<<< HEAD
   title;
   isOpen;
   onClose;
@@ -214,12 +231,20 @@ export function AIEnhancementDialog({};
   initialContent?: string
 }
 export function AIEnhancementDialog({
+=======
+  initialContent?: string;
+}
+export function AIEnhancementDialog({;
+import React from 'react';'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   title;
   isOpen;
   onClose;
   onApply;
+  defaultOptions;import React from 'react',;
   defaultOptions;
 
+<<<<<<< HEAD
   title,
   isOpen,
   onClose,
@@ -246,6 +271,8 @@ export function AIEnhancementDialog({
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   },
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
 <<<<<<< HEAD
@@ -260,6 +287,7 @@ export function AIEnhancementDialog({
           <DialogTitle>{title}</DialogTitle>;
         </DialogHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <AIEnhancementPanel
 =======
 
@@ -267,7 +295,70 @@ export function AIEnhancementDialog({
 
         <AIEnhancementPanel;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<AIEnhancementPanel;
+  }
+  },
+
+  return (
+    <Dialog open={isOpen} onOpenChange={() => onClose()}>
+      <DialogContent className="max-w-3xl">
+        <DialogHeader>
+          <DialogTitle>{title}</DialogTitle>
+        </DialogHeader>
+        <AIEnhancementPanel
+        <AIEnhancementPanel
+  isOpen: boolean,;)
+  onClose: () => void,;
+  onApply: (content: string) => void,;
+  defaultOptions: AIEnhancementOptions,;
+
+
+
+  title: string;,
+  isOpen: boolean;
+  onClose: () => void;,
+  onApply: (content: string) => void;,
+  defaultOptions: AIEnhancementOptions;
+export function AIEnhancementDialog({
+
+  title,
+  isOpen,
+  onClose,
+  onApply,
+  defaultOptions,
+  initialContent;)
+}: AIEnhancementDialogProps) {
+
+  const handleApply = (content: string) => {
+    onApply(content)
+    onClose()
+  initialContent;
+
+}: AIEnhancementDialogProps) {;
+  const handleApply = (;
+    onApply(content),;
+    onClose()) => {
+  return $3;}
+}
+};
+  },
+
+
+  return ()
+    <Dialog open={isOpen} onOpenChange={() => onClose()}>;
+
+      <DialogContent className="max-w-3xl">;"
+
+        <DialogHeader>;
+
+          <DialogTitle>{title};
+        ;
+        <AIEnhancementPanel;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           title={title}
+
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
@@ -292,6 +383,9 @@ interface AIEnhancementDialogProps {}
 =======
 }
 
+/>;
+      </DialogContent>;
+    </Dialog>;
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
 import {AIEnhancementPanel} from './AIEnhancementPanel';
 import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
@@ -323,6 +417,7 @@ function AIEnhancementDialog() {
 ;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Dialog open={is_open} onOpenChange={() => on_close ()}>;"
 =======
     <Dialog open={is_open} onOpenChange={() => on_close ()}>;
@@ -333,6 +428,17 @@ function AIEnhancementDialog() {
         </DialogHeader>;
         <AIEnhancementPanel;
           title={title}
+=======
+</AIEnhancementPanel>
+      </DialogContent>;
+    </Dialog>;
+
+    <Dialog open={is_open} onOpenChange={() => on_close ()}>;
+"
+      <DialogContent className="max - w-3xl">;"
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           default_options={default_options}
           on_apply={handle_apply}
           initial_content={initial_content}
@@ -349,23 +455,26 @@ function AIEnhancementDialog() {
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   ),;}
+
+    );
  <DialogHeader> <DialogTitle> {
-  title 
-}</DialogTitle> </DialogHeader> <AIEnhancementPanel title= {
-  title 
+
+}  <AIEnhancementPanel title= {
 }defaultOptions= {
-  defaultOptions 
 }onApply= {
-  handleApply 
+  handleApply;
 }initialContent= {
-  initialContent 
+}/>  ) 
+
+pr-12325
+  initialContent;
 }/> </DialogContent> </Dialog>) 
-}
-        />
+</AIEnhancementPanel>
       </DialogContent>
     </Dialog>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -385,3 +494,7 @@ function AIEnhancementDialog() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </Dialog>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

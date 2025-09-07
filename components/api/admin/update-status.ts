@@ -8,12 +8,16 @@ import path from 'path';
     return;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { isInternalAgentRequest } from '../../../utils/adminAuth';
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
-  res.status(200).json({ ok: true });
-origin/cursor/automate-test-improve-and-merge-code-2533
+
     return
 =======
     return;
@@ -24,6 +28,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return;
   }
 
+<<<<<<< HEAD
   const merged = {}
     ...existing;
     ...body;'
@@ -103,3 +108,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  res.status(200).json({ ok: true })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+const body = null;
+  res.status(200).json({ ok: true }),
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

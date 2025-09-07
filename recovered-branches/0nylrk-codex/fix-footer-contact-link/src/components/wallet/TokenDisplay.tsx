@@ -1,3 +1,4 @@
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
 <<<<<<< HEAD
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
@@ -5,6 +6,7 @@
   const { wallet, loading } = useWallet();
 =======
 
+<<<<<<< HEAD
 export function TokenDisplay() {;
 
 <<<<<<< HEAD
@@ -12,18 +14,24 @@ export function TokenDisplay() {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { wallet, loading } = useWallet();
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { BadgeDollarSign } from "lucide-react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Skeleton } from "@/components/ui/skeleton",
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 export function TokenDisplay() {
+<<<<<<< HEAD
   const { wallet, loading } = useWallet(),
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  const { wallet, loading } = useWallet();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <Card>
@@ -44,7 +52,7 @@ export function TokenDisplay() {
         ) : (
           <div className="flex flex-col gap-2">
             <div className="flex items-end">
-              <span className="text-3xl font-bold">{wallet?.balance |0}</span>
+              <span className="text-3xl font-bold">{wallet?.balance || 0}</span>
               <span className="ml-1 text-muted-foreground">ZION$</span>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -57,10 +65,14 @@ export function TokenDisplay() {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         )}
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
 import React from "react",;
 import { BadgeDollarSign } from "lucide-react",;
@@ -162,6 +174,8 @@ function TokenDisplay() {
       </CardContent>;
     </Card>);
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 =======
 }

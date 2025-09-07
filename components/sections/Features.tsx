@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Card from '../ui/Card';'
 import { Zap } from 'lucide-react';
 
@@ -23,10 +24,32 @@ class ErrorBoundary extends React.Component {}
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+=======
+
+  icon: React.ReactNode;
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);}
+    this.state = { hasError: false,}
+};
   }
+  static getDerivedStateFromError(error) {}
+    return { hasError: true,}
+};
+  }
+  componentDidCatch(error, errorInfo) {}
+    console.error('Error caught by boundary:', error, errorInfo);}
+  }
+  render() {
+    if (this.state.hasError) {}
+      return <div />Something went wrong.</div>;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    }
+    return this.props.children;
+
+  }
+<<<<<<< HEAD
 }'
 import React from 'react';'
 import Card from '../ui/Card';'
@@ -54,18 +77,25 @@ import { Zap } from 'lucide-react';
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
   delay?: number
 }
+=======
+}
+import React from 'react';
+  title: string;
+  description: string;
+  color: string;
+
+  gradient: string;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface FeaturesProps {
   title: string;
   subtitle: string;
   features: Feature[];
-          <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            {subtitle}
-          </p>;
-        </div>;
 
 
+<<<<<<< HEAD
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
           {features && features.map((feature, index) => (;
@@ -120,3 +150,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

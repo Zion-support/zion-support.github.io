@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -502,3 +503,21 @@ return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your S
   );
 };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+interface SkillsListProps {
+  skills: Skill[];
+  onDeleteSkill: (id: string, category: string) => Promise < void>;
+
+}
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
+  const [skillsByCategory, setSkillsByCategory] = useState<;
+    Record < string, Skill[]>;
+  >({});interface SkillsListProps {
+  skills: Skill[];
+  onDeleteSkill: (id: string, category: string) => Promise<void>;
+}
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

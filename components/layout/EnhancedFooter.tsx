@@ -185,11 +185,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 
+
   const company = null;
   ];
   const resources = null;
   ];
   const socialLinks = null;
+<<<<<<< HEAD
 const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYear();
 import React from 'react';'
 import { motion } from 'framer-motion';
@@ -517,25 +519,92 @@ function EnhancedFooter() {}
               </a>;
             </div>;
           </div>;
+=======
+
+  ];
+
+  return (
+
+              </div>
+              <div>
+                <div className="text-xl font-bold">Zion Tech Group</div>
+                <div className="text-sm text-gray-400">Technology Solutions</div>
+              </div>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading technology solutions provider specializing in AI, cloud services, 
+              and digital transformation. Empowering businesses to thrive in the digital age.
+            </p>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-gray-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-gray-400" />
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-gray-400 mt-1" />
+                <div className="text-gray-300">
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
+                </div>
+              </div>
+            </div>
+            <div className="flex space-x-4 mt-6">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="w-6 h-6" />
+              </a>
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {/* Services */}
-                  Web Development;
-                </Link>;
-              </li>;
-              <li>;
-                  Mobile Apps;
-                </Link>;
-              </li>;
-              <li>;
-                  AI Solutions;
-                </Link>;
-              </li>;
-              <li>;
-                  Cloud Services;
-                </Link>;
-              </li>;
-            </ul>;
-          </div>;
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-3">
+              {services.map((service, index) => (
+                <li key={index}>
+                  <Link href={service.href} className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+            <ul className="space-y-3">
+              {solutions.map((solution, index) => (
+                <li key={index}>
+                  <Link href={solution.href} className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {solution.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Company */}
+<<<<<<< HEAD
                   About Us;
                 </Link>;
               </li>;
@@ -603,3 +672,66 @@ function EnhancedFooter() {}
 export default EnhancedFooter;
 ;
 '"
+=======
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-3">
+              {company.map((item, index) => (
+                <li key={index}>
+                  <Link href={item.href} className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-3">
+              {resources.map((resource, index) => (
+                <li key={index}>
+                  <Link href={resource.href} className="text-gray-300 hover:text-white transition-colors flex items-center group">
+                    <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {resource.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Newsletter Signup */}
+
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6 text-sm">
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default EnhancedFooter;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

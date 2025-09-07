@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import { Button  } from '@/components/ui/button';
@@ -27,10 +28,14 @@ interface NotificationFooterProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   on_close: () => void;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -59,6 +64,8 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface NotificationFooterProps {
 =======
 import React from "react";"
@@ -90,6 +97,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
 
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">;
+<<<<<<< HEAD
   
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const handleViewAll = () => {
@@ -338,6 +346,10 @@ export const NotificationFooter:React.FC<NotificationFooterProps> = ({ onClose }
 
   );
 }
+=======
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   );
 

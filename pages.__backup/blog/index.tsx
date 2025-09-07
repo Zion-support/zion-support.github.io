@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,8 +33,16 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; import Lin
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+
+
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+
+
+
 
 
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
@@ -42,10 +51,14 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; import Lin
 
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 
+
+import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 
+
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
+<<<<<<< HEAD
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
@@ -54,6 +67,9 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; import Lin
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
+=======
+import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 
@@ -69,6 +85,7 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; import Lin
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
+<<<<<<< HEAD
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 <<<<<<< HEAD
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
@@ -81,11 +98,20 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; import Lin
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
@@ -158,3 +184,22 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; import Lin
 =======
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+
+
+
+
+
+import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+
+import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+
+import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' />  <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog </main> </div> )} export default Index;
+import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' />  <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog </main> </div> )} export default Index;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

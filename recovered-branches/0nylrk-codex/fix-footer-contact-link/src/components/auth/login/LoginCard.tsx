@@ -30,8 +30,10 @@ import { Link } from "react-router-dom",
 
 
 
-
+export function LoginCard() {}
+  return (import { Link } from \"react-router-dom\",;
 export function LoginCard() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (import { Link } from "react-router-dom",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -44,6 +46,9 @@ import { SocialLogin } from "./SocialLogin";
 
 import { Link } from "react-router-dom",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export function LoginCard() {};
   return (;
@@ -89,11 +94,17 @@ export function LoginCard() {;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="mx-auto w-full max-w-sm lg:w-96">;
+<<<<<<< HEAD
 =======
 
 export function LoginCard() {
   return (    <div className="mx-auto w-full max-w-sm lg:w-96">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export function LoginCard() {
+  return (    <div className="mx-auto w-full max-w-sm lg:w-96">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="text-center mb-10">;
         <h2 className="text-3xl font-bold tracking-tight text-white">;
           Welcome back;
@@ -240,6 +251,7 @@ export function LoginCard() {
             to="/signup"
 
             className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
+className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
 import { Link  } from './react-router-dom';
 import { LoginForm  } from './LoginForm';
 import { SocialLogin  } from './SocialLogin';
@@ -260,6 +272,15 @@ function LoginCard() {
             className="font - medium text - zion - cyan hover: text - zion - cyan - light";
           >;
 
+import { Link } from "react-router-dom",;
+import { LoginForm } from "./LoginForm",;
+import { SocialLogin } from "./SocialLogin",;
+;
+export function LoginCard() {;
+  return (;
+
+export function LoginCard() {
+  return (
     <div className="mx-auto w-full max-w-sm lg:w-96">;
       <div className="text-center mb-10">;
         <h2 className="text-3xl font-bold tracking-tight text-white">;
@@ -275,18 +296,20 @@ function LoginCard() {
         </p>;
       </div>;
 
-
     </div>
-
 
     </div>;
   );
       <div className="bg - zion - blue - dark rounded - lg p - 6">;
+          Don't have an account?{" "}          </Link>;
+        </p>;
+      </div>;      <div className="bg - zion - blue - dark rounded - lg p-6">;
         <LoginForm />;
         <SocialLogin />;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -296,15 +319,90 @@ function LoginCard() {
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+
+
+export function LoginCard() {
+  return (
+import { Link } from "react-router-dom";""
+import { LoginForm } from "./LoginForm";""
+import { SocialLogin } from "./SocialLogin";""
+import { Link } from "react-router-dom",")
+  return ()
+  );
+}
+  )"
+import { Link } from "react-router-dom",;""
+import { LoginForm } from "./LoginForm",;""
+import { SocialLogin } from "./SocialLogin";"
+export function LoginCard() {;
+  return (;"
+    <div className="mx-auto w-full max-w-sm lg:w-96">;"
+</div>"
+      <div className="text-center mb-10">;"
+        <h2 className="text-3xl font-bold tracking-tight text-white">;"
+</h2>
+        </h2>;"
+        <p className="mt-2 text-sm text-zion-slate-light">;"
+</p>
+          <Link;"
+            to="/signup"""
+            className="font-medium text-zion-cyan hover: text-zion-cyan-light">;"
+"
+    <div className="mx - auto w - full max - w-sm lg:w - 96">;"
+      <div className="text - center mb - 10">;"
+        <h2 className="text - 3xl font - bold tracking - tight text - white">;"
+        <p className="mt - 2 text - sm text - zion - slate - light">;"
+            to="/signup";""
+            className="font - medium text - zion - cyan hover: text - zion - cyan - light";"
+          >;
+
+</p>"
+          <Link to="/signup" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;"
+          <Link to="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">;"
+
+          ;
+        </p>;
+      </div>;
+    </div>
+
+
+    </div>;"
+      <div className="bg - zion - blue - dark rounded - lg p - 6">;"
+</div>
+
+        <LoginForm />;
+
+        <SocialLogin />;
+      </div>;
+    </div>);
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>);
 }
 ;
       <div className="bg-zion-blue-dark rounded-lg p-6">;
+
+      </div>;)
+    </div>);
+
+    </div>);"
+      <div className="bg-zion-blue-dark rounded-lg p-6">;"
+
+pr-12325
+</div>
         <LoginForm />;
+</LoginForm>
         <SocialLogin />;
+</SocialLogin>
       </div>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </div>;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

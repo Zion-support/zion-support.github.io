@@ -23,7 +23,11 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -194,7 +198,11 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
+<<<<<<< HEAD
   background-image:
+=======
+  background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
@@ -203,11 +211,19 @@ h3 {
 }
 
 @keyframes particleFloat {
+<<<<<<< HEAD
   0%, 100% {
     transform: translateY(0px) scale(1);
     opacity: 0.3;
   }
   50% {
+=======
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+    opacity: 0.3;
+  }
+  50% { 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     transform: translateY(-20px) scale(1.1);
     opacity: 0.6;
   }
@@ -215,7 +231,11 @@ h3 {
 
 /* Quantum Holographic Background */
 .quantum-holographic-bg {
+<<<<<<< HEAD
   background:
+=======
+  background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%),
@@ -233,6 +253,7 @@ body::after {
   width: 100%;
   height: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-image:
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -249,6 +270,9 @@ body::after {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   background-image: 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -256,6 +280,7 @@ body::after {
   z-index: -1;
   animation: particleFloat 20s linear infinite;
 }
+<<<<<<< HEAD
 /* Enhanced Quantum Grid Background */
 <<<<<<< HEAD
   background-image:
@@ -316,10 +341,18 @@ body::after {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   background-image: 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+/* Enhanced Quantum Grid Background */
+.quantum-grid {
+  background-image: 
+  background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
 .quantum-grid {  background-image: 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -336,12 +369,21 @@ body::after {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   animation: gridMove 30s linear infinite;
 }
 
 /* Enhanced Holographic Matrix */
 .holographic-matrix {
+<<<<<<< HEAD
   background:
+=======
+  background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(90deg, transparent 98%, rgba(139, 92, 246, 0.3) 100%),
     linear-gradient(0deg, transparent 98%, rgba(139, 92, 246, 0.3) 100%);
   background-size: 20px 20px;
@@ -350,7 +392,11 @@ body::after {
 
 /* Enhanced Neural Network */
 .neural-network {
+<<<<<<< HEAD
   background:
+=======
+  background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
@@ -366,7 +412,11 @@ body::after {
 
 /* Enhanced Futuristic Glow Effects */
 .futuristic-glow {
+<<<<<<< HEAD
   text-shadow:
+=======
+  text-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 10px currentColor,
     0 0 20px currentColor,
     0 0 30px currentColor,
@@ -374,21 +424,33 @@ body::after {
 }
 
 .quantum-glow {
+<<<<<<< HEAD
   box-shadow:
+=======
+  box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 20px rgba(0, 255, 255, 0.3),
     0 0 40px rgba(0, 255, 255, 0.2),
     0 0 60px rgba(0, 255, 255, 0.1);
 }
 
 .holographic-glow {
+<<<<<<< HEAD
   box-shadow:
+=======
+  box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 20px rgba(139, 92, 246, 0.4),
     0 0 40px rgba(139, 92, 246, 0.3),
     0 0 60px rgba(139, 92, 246, 0.2);
 }
 
 .cyberpunk-glow {
+<<<<<<< HEAD
   box-shadow:
+=======
+  box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 20px rgba(236, 73, 153, 0.5),
     0 0 40px rgba(236, 73, 153, 0.4),
     0 0 60px rgba(236, 73, 153, 0.3);
@@ -401,7 +463,11 @@ body::after {
 
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
+<<<<<<< HEAD
   box-shadow:
+=======
+  box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 20px 40px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(0, 255, 255, 0.2);
 }
@@ -414,6 +480,7 @@ body::after {
 }
 
 .futuristic-button::before {
+<<<<<<< HEAD
 <<<<<<< HEAD
   content: '';
 =======
@@ -513,10 +580,18 @@ body::after {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  content: '';
+  position: absolute;
+  position: absolute;
+  content: '';  position: absolute;
+  content: '';  position: absolute;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -564,6 +639,60 @@ body::after {
     transform: translateY(10px) rotate(-2deg);
 .holographic-float {
   animation: holographicFloat 4s ease-in-out infinite;
+=======
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.futuristic-button:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Card Animations */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+/* Enhanced Loading Animations */
+@keyframes quantumPulse {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.quantum-pulse {
+  animation: quantumPulse 2s ease-in-out infinite;
+}
+
+@keyframes holographicFloat {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% { 
+    transform: translateY(-10px) rotate(2deg);
+  }
+  66% { 
+    transform: translateY(10px) rotate(-2deg);
+  }
+}
+
+.holographic-float {
+  animation: holographicFloat 4s ease-in-out infinite;
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Enhanced Particle Effects */
 .particle {
   position: absolute;
@@ -572,10 +701,16 @@ body::after {
   background: var(--neon-cyan);
   border-radius: 50%;
   animation: particleFloat 6s linear infinite;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 @keyframes particleFloat {
   0% {
     transform: translateY(100vh) translateX(0);
     opacity: 0;
+<<<<<<< HEAD
   10% {
   90% {
   100% {
@@ -586,10 +721,40 @@ body::after {
 @keyframes gridPulse {
     opacity: 0.3;
     opacity: 0.8;
+=======
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) translateX(100px);
+    opacity: 0;
+  }
+}
+
+/* Enhanced Grid Animations */
+.grid-animate {
+  animation: gridPulse 3s ease-in-out infinite;
+}
+
+@keyframes gridPulse {
+  0%, 100% { 
+    opacity: 0.3;
+  }
+  50% { 
+    opacity: 0.8;
+  }
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Enhanced Text Animations */
 .text-reveal {
   overflow: hidden;
   animation: textReveal 1.5s ease-out forwards;
+<<<<<<< HEAD
 @keyframes textReveal {
     transform: translateY(100%);
     transform: translateY(0);
@@ -598,6 +763,29 @@ body::after {
   position: relative;
 .border-animate::before {
   content: '';
+=======
+}
+
+@keyframes textReveal {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Enhanced Border Animations */
+.border-animate {
+  position: relative;
+}
+
+.border-animate::before {
+  content: '';
+  position: absolute;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   top: 0;
   left: 0;
   right: 0;
@@ -609,6 +797,7 @@ body::after {
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   animation: borderRotate 3s linear infinite;
+<<<<<<< HEAD
 @keyframes borderRotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -759,6 +948,27 @@ body::after {
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
+}
+
+@keyframes borderRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Enhanced Focus States */
+.focus-futuristic:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 3px rgba(0, 255, 255, 0.3),
+    0 0 20px rgba(0, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+}
+  transform: scale(1.02);}
+  transform: scale(1.02);}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 .quantum-ripple::after {
   content: '';
   position: absolute;
@@ -806,6 +1016,7 @@ body::after {
 /* Responsive Quantum Effects */
 @media (max-width: 768px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -822,10 +1033,15 @@ body::after {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   .futuristic-glow {
     text-shadow:
+=======
+  .futuristic-glow {
+    text-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor;
   }
+<<<<<<< HEAD
   .quantum-glow,
   .holographic-glow,
   .cyberpunk-glow {
@@ -833,11 +1049,24 @@ body::after {
       0 0 10px rgba(0, 255, 255, 0.2),
       0 0 20px rgba(0, 255, 255, 0.1);
 }
+=======
+  
+  .quantum-glow,
+  .holographic-glow,
+  .cyberpunk-glow {
+    box-shadow: 
+      0 0 10px rgba(0, 255, 255, 0.2),
+      0 0 20px rgba(0, 255, 255, 0.1);
+  }
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* High Contrast Mode Support */
 @media (prefers-contrast: high) {
   :root {
     --neon-cyan: #00ffff;
     --neon-purple: #8b5cf6;
+<<<<<<< HEAD
 <<<<<<< HEAD
     --neon-pink: #ec4899;
   .quantum-matrix {
@@ -878,6 +1107,13 @@ body::after {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    --neon-pink: #ec4899;
+  }
+  }
+    --neon-pink: #ec4899;  }
+    --neon-pink: #ec4899;  }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 /* High Performance Mode */
@@ -889,13 +1125,18 @@ body::after {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   body::before,
   body::after {
     animation: none;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -910,6 +1151,8 @@ body::after {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Enhanced Performance Optimizations */
 .will-change-transform {
   will-change: transform;
@@ -928,6 +1171,7 @@ body::after {
     box-shadow: none;
     text-shadow: none;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -998,3 +1242,13 @@ body::after {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
 }
+=======
+  
+  .particle {
+    display: none;
+    display: none;
+  .particle {    display: none;
+  .particle {    display: none;
+  }
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

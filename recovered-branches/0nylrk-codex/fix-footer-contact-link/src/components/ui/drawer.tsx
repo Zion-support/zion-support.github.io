@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -58,13 +59,21 @@ import { Drawer as DrawerPrimitive } from "vaul"
 =======
 
 
+=======
+import * as React from 'react';
+import {Drawer, as, DrawerPrimitive} from 'vaul';
+import {cn} from '@/lib/utils';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {cn} from '@/lib/utils';
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
-
-
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+import * as React from \"react\"
+import { Drawer as DrawerPrimitive } from \"vaul\"
+import * as React from \"react\"
+import { Drawer as DrawerPrimitive } from \"vaul\"
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { cn } from "@/lib/utils"
@@ -87,9 +96,7 @@ const Drawer = ({;
 }: React && React.ComponentProps<typeof DrawerPrimitive && DrawerPrimitive.Root>) =></typeof> (;
 <<<<<<< HEAD
   <DrawerPrimitive&& DrawerPrimitive.Root
-
 import { cn } from "@/lib/utils"
-
 
 import * as React from "react";
 import { Drawer as DrawerPrimitive } from "vaul";
@@ -147,6 +154,7 @@ DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
@@ -154,6 +162,54 @@ DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import {cn} from '@/lib/utils';
+
+
+import {cn} from '@/lib/utils';''
+import * as React from "react"""
+import { Drawer as DrawerPrimitive } from "vaul"""
+import * as React from "react"""
+import { Drawer as DrawerPrimitive } from "vaul"""
+import { cn } from "@/lib/utils""
+const Drawer = ({
+  shouldScaleBackground = true;
+  ...props;)
+}: React.ComponentProps<typeof DrawerPrimitive.Root>) =></typeof> (
+  <DrawerPrimitive.Root;
+const Drawer = ({;
+  shouldScaleBackground = true,;
+}: React && React.ComponentProps<typeof DrawerPrimitive && DrawerPrimitive.Root>) =></typeof> (;
+
+  ...props;)
+}: React && React.ComponentProps<typeof DrawerPrimitive && DrawerPrimitive.Root>) =></typeof> (;
+</DrawerPrimitive>
+  <DrawerPrimitive&& DrawerPrimitive.Root;"
+import { cn } from "@/lib/utils"""
+import * as React from "react";""
+import { Drawer as DrawerPrimitive } from "vaul";"
+;"
+import { cn } from "@/lib/utils";"
+;
+} React.ComponentProps<typeof DrawerPrimitive.Root>) => (;
+
+    shouldScaleBackground={shouldScaleBackground}
+    {...props}
+  />
+
+const DrawerOverlay = React.forwardRef<
+  React.ElementRef<typeof DrawerPrimitive.Overlay>
+</typeof>
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.O</typeof>verlay>
+  React.ElementRef<typeof DrawerPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
+  <DrawerPrimitive.Overlay;
+    ref={ref})"
+    className={cn('fixed inset-0 z-50 bg-black/80', className)}
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const DrawerOverlay = React && React.forwardRef<;
   React && React.ElementRef<typeof DrawerPrimitive && DrawerPrimitive.Overlay>,;
   React && React.ComponentPropsWithoutRef<typeof DrawerPrimitive && DrawerPrimitive.O</typeof>verlay>;
@@ -168,6 +224,7 @@ const DrawerOverlay = React && React.forwardRef<;
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 
 
 
@@ -176,6 +233,8 @@ const DrawerOverlay = React && React.forwardRef<;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const DrawerContent = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof DrawerPr</typeof>imitive.Content>
@@ -316,6 +375,14 @@ const Drawer = ({
     {...props}
   />
 
+);
+Drawer.displayName = 'Drawer';
+const DrawerTrigger = DrawerPrimitive.Trigger;
+const DrawerPortal = DrawerPrimitive.Portal;
+const DrawerClose = DrawerPrimitive.Close;
+const DrawerOverlay = React.forwardRef<
+  React.ElementRef<typeof DrawerPrimitive.Overlay>
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.O</typeof>verlay>
 )
 Drawer.displayName = "Drawer"
 
@@ -344,6 +411,7 @@ const DrawerOverlay = React.forwardRef<
 ));
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 
+<<<<<<< HEAD
 
 
 
@@ -351,6 +419,8 @@ DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const DrawerContent = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof DrawerPr</typeof>imitive.Content>
@@ -376,7 +446,33 @@ const DrawerContent = React && React.forwardRef<;
 =======
     <DrawerPrimitive&& DrawerPrimitive.Content
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+Drawer.displayName = "Drawer";
+;
+const DrawerTrigger = DrawerPrimitive.Trigger;
+;
+const DrawerPortal = DrawerPrimitive.Portal;
+;
+const DrawerClose = DrawerPrimitive.Close;
+;
+const DrawerOverlay = React.forwardRef<;
+  React.ElementRef<typeof DrawerPrimitive.Overlay>,;
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>;
+>(({ className, ...props }, ref) => (;
+  <DrawerPrimitive.Overlay;
+    ref={ref}
+    className={cn("fixed inset-0 z-50 bg-black/80", className)}
+    {...props}
+  />;
+));
+DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
+;
+      ref={ref}
+      className={cn(
+        'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const DrawerContent = React.forwardRef<;
   React.ElementRef<typeof DrawerPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>;
@@ -384,7 +480,6 @@ const DrawerContent = React.forwardRef<;
   <DrawerPortal>;
     <DrawerOverlay />;
     <DrawerPrimitive.Content;
-
 
       ref={ref}
 <<<<<<< HEAD
@@ -408,6 +503,7 @@ const DrawerContent = React.forwardRef<;
   </DrawerPortal>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -427,6 +523,13 @@ const DrawerContent = React.forwardRef<;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+ref={ref}
+      className={cn(;
+        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",;
+        className;
+      )}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ref={ref}
       className={cn(
         "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
@@ -454,16 +557,20 @@ DrawerContent.displayName = "DrawerContent"
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-
-
 const DrawerHeader = ({
   className
   ...props
 }: React.HTMLAtt</HTMLDivElement>ributes<HTMLDivElement>) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   />
 '
+=======
+</DrawerPrimitive && DrawerPrimitive.Content>;
+  </DrawerPortal>;
+));
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 DrawerContent && DrawerContent.displayName = 'DrawerContent';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -520,7 +627,11 @@ const DrawerFooter = ({}
 =======
   />
 
-
+);
+DrawerHeader.displayName = 'DrawerHeader';
+const DrawerFooter = ({
+  className
+  ...props</HTMLDivElement>
 )
 DrawerHeader.displayName = "DrawerHeader"
 
@@ -528,9 +639,13 @@ const DrawerFooter = ({
   className,
   ...props
 
-
 }: React.HTMLAttributes<HTMLDivElement>) => (
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+/>;
+);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 DrawerHeader && DrawerHeader.displayName = 'DrawerHeader';
 
 const DrawerFooter = ({;
@@ -541,6 +656,7 @@ const DrawerFooter = ({;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
+<<<<<<< HEAD
 =======
   />  <div
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -551,11 +667,15 @@ const DrawerFooter = ({;
 =======
   <div
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  />  <div
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     className={cn('mt-auto flex flex-col gap-2 p-4', className)}
     {...props}
 
   />
 
+}: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn("mt-auto flex flex-col gap-2 p-4", className)}
     {...props}
@@ -600,9 +720,11 @@ const DrawerTitle = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
 <<<<<<< HEAD
 
-
 >(({ className, ...props }, ref) => (
+  <DrawerPrimitive.Title>(({ className, ...props }, ref) => (
   <DrawerPrimitive.Title
+/>;
+);
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Title
 =======
@@ -786,37 +908,166 @@ const DrawerDescription = React && React.forwardRef<;
     ref={ref}
     className={cn(
 
-      {...props}
+{...props}
+      "text-lg font-semibold leading-none tracking-tight",
+
+      className  />));
+DrawerOverlay.display_name = DrawerPrimitive.Overlay.display_name;
+;
+const Drawer = ({;
+  shouldScaleBackground = true,;
+  ...props;)
+} React.ComponentProps<typeof DrawerPrimitive.Root>) => (;
+</DrawerPrimitive>
+
+  <DrawerPrimitive.Root;
+const Drawer = ({;
+  shouldScaleBackground = true,;}
+  ...props;}
+}: React && React.ComponentProps<typeof DrawerPrimitive && DrawerPrimitive.Root />) =></typeof> (;
+  <DrawerPrimitive&& DrawerPrimitive.Root;
+shouldScaleBackground={shouldScaleBackground}
+    {...props}
+  />
+</DrawerPrimitive>
+const DrawerOverlay = React.forwardRef<
+
+  React.ElementRef<typeof DrawerPrimitive.Overlay>
+</typeof>
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.O</typeof>verlay>
+const DrawerOverlay = React.forwardRef<
+  React.ElementRef<typeof DrawerPrimitive.Overlay>,
+</typeof>
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
+</typeof>
+  <DrawerPrimitive.Overlay;
+    ref={ref})"
+    className={cn('fixed inset-0 z-50 bg-black/80', className)}'
+
+    {...props}
+  />
+</DrawerPrimitive>
+const DrawerOverlay = React && React.forwardRef<;
+
+  React && React.ElementRef<typeof DrawerPrimitive && DrawerPrimitive.Overlay>,;
+</typeof>
+  React && React.ComponentPropsWithoutRef<typeof DrawerPrimitive && DrawerPrimitive.O</typeof>verlay>;
+  <DrawerPrimitive&& DrawerPrimitive.Overlay;
+const DrawerContent = React.forwardRef<
+  React.ElementRef<typeof DrawerPrimitive.Content>
+
+  React.ComponentPropsWithoutRef<typeof DrawerPr</typeof>imitive.Content>
+  <DrawerPortal>
+
+    <DrawerOverlay />
+
+    <DrawerPrimitive.Content;
+DrawerOverlay && DrawerOverlay.displayName = DrawerPrimitive && DrawerPrimitive.Overlay.displayName;
+
+const DrawerContent = React && React.forwardRef<;
+  React && React.ElementRef<typeof DrawerPrimitive && DrawerPrimitive.Content>,;
+
+  React && React.ComponentPropsWithoutRef<typeof DrawerPr</typeof>imitive && imitive.Content>;
+  <DrawerPortal>;
+
+    <DrawerOverlay />;
+
+    <DrawerPrimitive&& DrawerPrimitive.Content;
+const DrawerContent = React.forwardRef<;
+  React.ElementRef<typeof DrawerPrimitive.Content>,;
+
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>;
+
+
+import React from 'react';
+import * as React from 'react';
+import {Drawer, as, DrawerPrimitive} from 'vaul';
+  />;
+
+}: React.ComponentProps < typeof DrawerPrimitive.Root>) =>: any</typeof> (
+    {...props})
+  />);
+
+const DrawerOverlay = React.forward_ref<;
+  React.ElementRef < typeof DrawerPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef < typeof DrawerPrimitive.O</typeof > verlay>;
+>(({ class_name, ...props }, ref) => (
+    ref={ref})
+    className={cn ('fixed inset - 0 z - 50 bg - black / 80', class_name)}
+
+}: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ref={ref}
+      className={cn(
+        'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background
+        className;)
+      )}
+      {...props}>;
+
+      <div className='mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted' />;
+</div>
+    </DrawerPrimitive.Content>
+  
+      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />"
+  <div;"
+    className={cn('grid gap-1 && 1.5 p-4 text-center sm:text-left', className)}
+}: React.HTMLAttributes<HTMLDivElement>) => (
+)
+}: React && React.HTMLAttributes<HTMLDivElement>) => (;
+
+  <div;)
+
+
+
+    className={cn('mt-auto flex flex-col gap-2 p-4', className)}
+
+
+  <div;
+    className={cn("mt-auto flex flex-col gap-2 p-4", className)}"
+
+    {...props}
+  />
+</div>
+const DrawerTitle = React.forwardRef<
+
+  React.ElementRef<typeof DrawerPrimitive.Title>
+  R</typeof>eact.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
+  React.ElementRef<typeof DrawerPrimitive.Title>,
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
+  <DrawerPrimitive.Title;
+>(({ className, ...props }, ref) => (
+
+  <DrawerPrimitive.Title;"
+DrawerFooter && DrawerFooter.displayName = 'DrawerFooter';
+const DrawerTitle = React && React.forwardRef<;
+  React && React.ElementRef<typeof DrawerPrimitive && DrawerPrimitive.Title>,;
+
+  R</typeof>eact && eact.ComponentPropsWithoutRef<typeof DrawerPrimitive && DrawerPrimitive.Title>;
+  <DrawerPrimitive&& DrawerPrimitive.Title;
+
     >;
-      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />;
-      {children}
+
+      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />;"
     </DrawerPrimitive.Content>;
-  </DrawerPortal>;
-));
-DrawerContent.displayName = "DrawerContent";
-;
-const DrawerHeader = ({;
-  className,;
-  ...props;
+  ;)
 } React.HTMLAttributes<HTMLDivElement>) => (;
-  <div;
-    className={cn("grid gap-1.5 p-4 text-center sm:text-left", className)}
-    {...props}
-  />;
-);
-DrawerHeader.displayName = "DrawerHeader";
-;
-const DrawerFooter = ({;
-  className,;
-  ...props;
-} React.HTMLAttributes<HTMLDivElement>) => (;
-  <div;
-    className={cn("mt-auto flex flex-col gap-2 p-4", className)}
-    {...props}
-  />;
-);
-DrawerFooter.displayName = "DrawerFooter";
-;
+
+  <div;)"
+    className={cn("grid gap-1.5 p-4 text-center sm:text-left", className)}"
+
 const DrawerTitle = React.forwardRef<;
   React.ElementRef<typeof DrawerPrimitive.Title>,;
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>;
@@ -826,6 +1077,7 @@ const DrawerTitle = React.forwardRef<;
 
       "text-lg font-semibold leading-none tracking-tight",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       className  />));
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -839,24 +1091,30 @@ const DrawerTitle = React.forwardRef<;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       className
+    className={cn(;
+      "text-lg font-semibold leading-none tracking-tight",;
+      className;
     )}
     {...props}
   />;
 ));
 
-
-
-
-
+>(({ className, ...props }, ref) => (
+  <DrawerPrimitive.Title
+    ref={ref}
+    className={cn(
+      'text-lg font-semibold leading-none tracking-tight'
+      "text-lg font-semibold leading-none tracking-tight",
+    ref={ref}
+    className={cn(
       className
     )}
     {...props}
   />;
 ));
-
-
-
 
 
 const DrawerDescription = React.forwardRef<
@@ -864,6 +1122,18 @@ const DrawerDescription = React.forwardRef<
 </typeof>  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
+const DrawerDescription = React.forwardRef<;
+  React.ElementRef<typeof DrawerPrimitive.Description>,;
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>;
+>(({ className, ...props }, ref) => (;
+"
+      "text-lg font-semibold leading-none tracking-tight","
+      className;
+
+const DrawerDescription = React.forwardRef<
+  React.ElementRef<typeof DrawerPrimitive.Description>
+</typeof>  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>
+  <DrawerPrimitive.Description;
 DrawerTitle && DrawerTitle.displayName = DrawerPrimitive && DrawerPrimitive.Title.displayName;
 
 const DrawerDescription = React && React.forwardRef<;
@@ -871,16 +1141,23 @@ const DrawerDescription = React && React.forwardRef<;
 </typeof>  React && React.ComponentPropsWithoutRef<typeof DrawerPrimitive && DrawerPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
 
+<DrawerPrimitive&& DrawerPrimitive.Description
     ref={ref}
     className={cn('text-sm text-muted-foreground', className)}
   />));
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 DrawerOverlay.display_name = DrawerPrimitive.Overlay.display_name;
 ;
+
+</typeof>  React && React.ComponentPropsWithoutRef<typeof DrawerPrimitive && DrawerPrimitive.Description>;
+pr-12325
+</typeof>
+
 const DrawerContent = React.forward_ref<;
-  React.ElementRef < typeof DrawerPrimitive.Content>,
-  React.ComponentPropsWithoutRef < typeof DrawerPr</typeof > imitive.Content>;
+  React.ElementRef < typeof DrawerPrimitive.Content>,}
+  React.ComponentPropsWithoutRef < typeof DrawerPr</typeof > imitive.Content>;}
 >(({ class_name, children, ...props }, ref) => (
+
   <DrawerPortal>;
     <DrawerOverlay />;
     <DrawerPrimitive.Content;
@@ -986,6 +1263,102 @@ DrawerDescription && DrawerDescription.displayName = DrawerPrimitive && DrawerPr
 <<<<<<< HEAD
 =======
 
+</DrawerPortal>
+
+    <DrawerOverlay />;
+</DrawerOverlay>
+    <DrawerPrimitive.Content;
+      ref={ref}
+
+      className={cn ("
+        'fixed inset - x-0 bottom - 0 z - 50 mt - 24 flex h - auto flex - col rounded - t-[10px] border bg - background',')
+        class_name)}
+
+      <div className='mx - auto mt - 4 h - 2 w-[100px] rounded - full bg - muted' />;
+  ));
+      {...props}
+    >;
+</DrawerPrimitive>'
+      <div className='mx - auto mt - 4 h - 2 w-[100px] rounded - full bg - muted' />;'
+</div>
+    </DrawerPrimitive.Content>;
+  </DrawerPortal>));
+
+}: React.HTMLAtt</HTMLDivElement > ributes < HTMLDivElement>) =>: any (
+    className={cn ('grid gap - 1.5 p - 4 text - center sm:text - left', class_name)}
+export {
+
+  // TODO: Implement
+}
+  Drawer;
+  DrawerPortal;
+  DrawerOverlay;
+  DrawerTrigger;
+  DrawerClose;
+  DrawerContent;
+  DrawerHeader;
+  DrawerFooter;
+  DrawerTitle;
+  DrawerDescription;
+  ...props;
+}: React.HTMLAttributes < HTMLDivElement>) =>: any (
+    className={cn ('mt - auto flex flex - col gap - 2 p - 4', class_name)}
+const DrawerTitle = React.forward_ref<;
+  React.ElementRef < typeof DrawerPrimitive.Title>,
+  R</typeof > eact.ComponentPropsWithoutRef < typeof DrawerPrimitive.Title>;
+    className={cn (
+      'text - lg font - semibold leading - none tracking - tight',')
+  />));
+
+const DrawerDescription = React.forward_ref<;
+  React.ElementRef < typeof DrawerPrimitive.Description>,
+</typeof>  React.ComponentPropsWithoutRef < typeof DrawerPrimitive.Description>;
+    className={cn ('text - sm text - muted - foreground', class_name)}
+
+DrawerDescription && DrawerDescription.displayName = DrawerPrimitive && DrawerPrimitive.Description.displayName;
+
+
+
+pr-12325
+}
+  />);
+</div>
+  ...props</HTMLDivElement>;
+
+}: React.HTMLAttributes < HTMLDivElement>) =>: any (
+  <div;)'
+    className={cn ('mt - auto flex flex - col gap - 2 p - 4', class_name)}'
+    {...props}
+  />;
+));
+DrawerDescription.displayName = DrawerPrimitive.Description.displayName;
+;
+  />);
+</div>
+const DrawerTitle = React.forward_ref<;
+  React.ElementRef < typeof DrawerPrimitive.Title>,
+  R</typeof > eact.ComponentPropsWithoutRef < typeof DrawerPrimitive.Title>;
+>(({ class_name, ...props }, ref) => (
+  <DrawerPrimitive.Title;
+    ref={ref}
+
+    className={cn ('
+      'text - lg font - semibold leading - none tracking - tight',')
+
+      class_name)}
+    {...props}
+  />));
+</DrawerPrimitive>
+const DrawerDescription = React.forward_ref<;
+  React.ElementRef < typeof DrawerPrimitive.Description>,
+</typeof>  React.ComponentPropsWithoutRef < typeof DrawerPrimitive.Description>;
+>(({ class_name, ...props }, ref) => (
+  <DrawerPrimitive.Description;
+    ref={ref})'
+    className={cn ('text - sm text - muted - foreground', class_name)}'
+    {...props}
+
+DrawerDescription && DrawerDescription.displayName = DrawerPrimitive && DrawerPrimitive.Description.displayName;
 
 
 
@@ -1013,7 +1386,28 @@ export {;
   />));
 DrawerDescription.display_name = DrawerPrimitive.Description.display_name;
 ;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+ref={ref}
+    className={cn('text-sm text-muted-foreground', className)}
+    {...props}
+  />
+));
+DrawerDescription.displayName = DrawerPrimitive.Description.displayName;
+export {
+  Drawer
+  DrawerPortal
+  DrawerOverlay
+  DrawerTrigger
+  DrawerClose
+  DrawerContent
+  DrawerHeader
+  DrawerFooter
+  DrawerTitle
+  DrawerDescription
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export {
 =======
 
@@ -1041,6 +1435,7 @@ export {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   DrawerDescription,;
 };
 <<<<<<< HEAD
@@ -1057,6 +1452,16 @@ export {}
 };
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  DrawerDescription,
+};
+
+  DrawerDescription,;
+};
+
+DrawerDescription,;
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export {;
   Drawer,;
   DrawerPortal,;
@@ -1070,6 +1475,7 @@ export {;
   DrawerDescription}
 ;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   DrawerDescription,
@@ -1093,37 +1499,39 @@ export {;
 =======
 
   DrawerDescription} const Drawer = ({
+=======
+DrawerDescription} const Drawer = ({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   shouldScaleBackground = true, ...props 
 }: React.ComponentProps<typeof DrawerPrimitive.Root>) => (<DrawerPrimitive.Root shouldScaleBackground= {
-  shouldScaleBackground 
-}{
-  ...props 
-}/>) Drawer.displayName = "Drawer" const DrawerTrigger = DrawerPrimitive.Trigger const DrawerPortal = DrawerPrimitive.Portal const DrawerClose = DrawerPrimitive.Close const DrawerOverlay = React.forwardRef< React.ElementRef<typeof DrawerPrimitive.Overlay>;
+</typeof>)
+}/>) Drawer.displayName = "Drawer" const DrawerTrigger = DrawerPrimitive.Trigger const DrawerPortal = DrawerPrimitive.Portal const DrawerClose = DrawerPrimitive.Close const DrawerOverlay = React.forwardRef< React.ElementRef<typeof DrawerPrimitive.Overlay>;"
 React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay> > ( ({
-  className, ...props 
 }, ref) => (<DrawerPrimitive.Overlay />) ) DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName const DrawerContent = React.forwardRef< React.ElementRef<typeof DrawerPrimitive.Content>;
+
 React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content> > ( ({
-  className, children, ...props 
 }, ref) => (<DrawerPortal> <DrawerOverlay /> <DrawerPrimitive.Content) 
-}{
-  ...props 
-}> </DrawerPrimitive.Content> </DrawerPortal>) ) DrawerContent.displayName = "DrawerContent" const DrawerHeader = ({
-  className, ...props 
-}: React.HTMLAttributes<HTMLDivElement>) => (<div />) DrawerHeader.displayName = "DrawerHeader" const DrawerFooter = ({
-  className, ...props 
-}: React.HTMLAttributes<HTMLDivElement>) => (<div />) DrawerFooter.displayName = "DrawerFooter" const DrawerTitle = React.forwardRef< React.ElementRef<typeof DrawerPrimitive.Title>;
+}> </DrawerPrimitive.Content> ) ) DrawerContent.displayName = "DrawerContent" const DrawerHeader = ({")"
+}: React.HTMLAttributes<HTMLDivElement>) => (<div />) DrawerHeader.displayName = "DrawerHeader" const DrawerFooter = ({"
+)"
+}: React.HTMLAttributes<HTMLDivElement>) => (<div />) DrawerFooter.displayName = "DrawerFooter" const DrawerTitle = React.forwardRef< React.ElementRef<typeof DrawerPrimitive.Title>;"
+
 React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title> > ( ({
-  className, ...props 
 }, ref) => (<DrawerPrimitive.Title) 
 }{
-  ...props 
 }/>) ) DrawerTitle.displayName = DrawerPrimitive.Title.displayName const DrawerDescription = React.forwardRef< React.ElementRef<typeof DrawerPrimitive.Description>;
+
 React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description> > ( ({
-  className, ...props 
 }, ref) => (<DrawerPrimitive.Description />) ) DrawerDescription.displayName = DrawerPrimitive.Description.displayName export {
   Drawer, DrawerPortal, DrawerOverlay, DrawerTrigger, DrawerClose, DrawerContent, DrawerHeader, DrawerFooter, DrawerTitle, DrawerDescription 
 }
   DrawerDescription,
 }
 ;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12325
+</DrawerPrimitive>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

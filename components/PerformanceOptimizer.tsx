@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -964,3 +965,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+interface PerformanceMetrics {
+  loadTime: number
+  firstContentfulPaint: number
+  largestContentfulPaint: number
+  cumulativeLayoutShift: number
+  firstInputDelay: number
+//Add responsive sizes if not present // Check condition
+if ( {) {
+  $2
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

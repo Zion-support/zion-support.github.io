@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {Calendar, RefreshCw} from "@/components/icons";
 import {Card, CardContent} from "@/components/ui/card";
@@ -87,9 +90,6 @@ import type { QuoteStatus } from "@/types/quotes",
 =======
 import type { QuoteStatus } from "@/types/quotes",
 
-
-
-
 interface QuotesFilterProps {
 
   searchQuery: string
@@ -119,15 +119,42 @@ interface QuotesFilterProps {;
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 
   searchQuery;
+import React from './react';
+import { Calendar, RefreshCw } from '@/components / icons';
+import { Card, CardContent } from '@/components / ui / card';
+import { Input } from '@/components / ui / input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components / ui / popover';
+import { Button } from '@/components / ui / button';
+import { Calendar, as, CalendarComponent } from '@/components / ui / calendar';
+import { format } from './date - fns';
+import type { DateRange } from "@/types / date_range";
+import type { QuoteStatus } from "@/types / quotes";
+interface QuotesFilterProps {
+  search_query: string,
+  setSearchQuery: (value: string) => void,
+  status_filter: QuoteStatus | 'all',
+  setStatusFilter: (value: QuoteStatus | 'all') => void,
+  archive_filter: 'active' | 'archived' | 'all',
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
+  date_range: DateRange | undefined,
+  setDateRange: (range: DateRange | undefined) => void,
+  on_reset: () => void;
+}
+export const QuotesFilter: React.FC < QuotesFilterProps> = ({
+  search_query;
   setSearchQuery;
+
+
+import type { DateRange } from "@/types/dateRange";
+import type { QuoteStatus } from "@/types/quotes";
+import { format } from "date-fns",;
+import type { DateRange } from "@/types/dateRange",;
+import type { QuoteStatus } from "@/types/quotes",  setSearchQuery;
   status_filter;
   setStatusFilter;
   archive_filter;
   setArchiveFilter;
-
-
-
-
 
   onReset
   date_range;
@@ -140,6 +167,47 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   return (
 
               onChange={(e) => setSearchQuery(e && e.target.value)}
+              onChange={(e) => setSearchQuery(e && e.target.value)}
+
+
+
+import React from "react";""
+import {Calendar, RefreshCw} from "@/components/icons";""
+import {Card, CardContent} from "@/components/ui/card";""
+import {Input} from "@/components/ui/input";""
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";""
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";""
+import {Button} from "@/components/ui/button";""
+import {Calendar, as, CalendarComponent} from "@/components/ui/calendar";""
+import {format} from "date-fns";""
+import type { DateRange } from "@/types/dateRange";""
+import type { QuoteStatus } from "@/types/quotes";""
+import React from "react",""
+import { Calendar, RefreshCw } from "@/components/icons",""
+import { Card, CardContent } from "@/components/ui/card",""
+import { Input } from "@/components/ui/input",""
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",""
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",""
+import { Button } from "@/components/ui/button",""
+import { Calendar as CalendarComponent } from "@/components/ui/calendar",""
+import { format } from "date-fns";""
+import { format } from "date-fns",""
+import type { DateRange } from "@/types/dateRange",""
+import type { QuoteStatus } from "@/types/quotes","
+interface QuotesFilterProps {
+  // TODO: Implement
+}
+  searchQuery: string;,
+  setSearchQuery: (value: string) => void;,"
+  statusFilter: QuoteStatus | 'all
+  setStatusFilter: (value: QuoteStatus | 'all') => void;',
+  archiveFilter: 'active' | 'archived' | 'all
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;',
+  dateRange: DateRange | undefined;
+  setDateRange: (range: DateRange | undefined) => void;,
+  onReset: () => void;
+
+pr-12325
 interface QuotesFilterProps {;
   searchQuery: string,;
   setSearchQuery: (value: string) => void,;
@@ -147,6 +215,11 @@ interface QuotesFilterProps {;
   setStatusFilter: (value: QuoteStatus | 'all') => void,;
   archiveFilter: 'active' | 'archived' | 'all',;
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,;
+  setSearchQuery: (value: string) => void,;'
+  statusFilter: QuoteStatus | 'all',;''
+  setStatusFilter: (value: QuoteStatus | 'all') => void,;''
+  archiveFilter: 'active' | 'archived' | 'all',;''
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,;'
   dateRange: DateRange | undefined,;
   setDateRange: (range: DateRange | undefined) => void,;
   onReset: () => void;
@@ -179,6 +252,40 @@ interface QuotesFilterProps {
   onReset: () => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+
+
+pr-12325
+
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+</QuotesFilterProps>
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+</QuotesFilterProps>
+
+export const QuotesFilter: React.FC < QuotesFilterProps> = ({
+  search_query;
+  setSearchQuery;
+  status_filter;
+  setStatusFilter;
+  archive_filter;
+  setArchiveFilter;
+  date_range;
+
+  setDateRange,
+  on_reset;
+  on_reset;)
+pr-12325
+  on_reset;)
+
+}) => {
+  setDateRange,;}
+  onReset;}
+}) => {;
+  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   searchQuery;
@@ -200,6 +307,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 interface QuotesFilterProps {;
   searchQuery: string,;
   setSearchQuery: (value: string) => void,;
@@ -1074,3 +1182,7 @@ onReset
 ;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

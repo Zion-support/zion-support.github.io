@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 import React from "react",
 import { Navigate, Route, Routes } from "react-router-dom",
 import DeveloperPortal from "../pages/DeveloperPortal",
@@ -22,25 +23,42 @@ import ApiWebhooks from "../pages/ApiWebhooks",
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorBoundary extends React.Component {
+
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
+
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
+  // TODO: Implement
+}
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+pr-12325
+    console.error('Error caught by boundary:', error, errorInfo);'
+
+  }
   render() {
+
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 <<<<<<< HEAD
@@ -62,7 +80,11 @@ import React from "react";
 =======
 }
 import React from "react";
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}import React from "react";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Navigate, Route, Routes } from "react-router-dom";
 import DeveloperPortal from "../pages/DeveloperPortal";
 import ApiDocsHub from "../pages/ApiDocsHub";
@@ -71,8 +93,8 @@ import ApiGettingStarted from "../pages/ApiGettingStarted";
 import ApiWebhooks from "../pages/ApiWebhooks";
 
 import ApiSampleCode from "../pages/ApiSampleCode";
-import ApiSampleCode from "../pages/ApiSampleCode";
 
+import ApiSampleCode from "../pages/ApiSampleCode";
 
 import ApiSampleCode from "../pages/ApiSampleCode";
 import ApiErrorCodes from "../pages/ApiErrorCodes";
@@ -111,7 +133,22 @@ import ApiErrorCodes from "../pages/ApiErrorCodes",  return (
 import ApiErrorCodes from "../pages/ApiErrorCodes",
 export default function DeveloperRoutes() {
   return (
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import ApiWebhooks from "../pages/ApiWebhooks";import React from "react",;
+import { Navigate, Route, Routes } from "react-router-dom",;
+import DeveloperPortal from "../pages/DeveloperPortal",;
+import ApiDocsHub from "../pages/ApiDocsHub",;
+import ApiReference from "../pages/ApiReference",;
+import ApiGettingStarted from "../pages/ApiGettingStarted",;
+import ApiWebhooks from "../pages/ApiWebhooks",;
+
+import ApiSampleCode from "../pages/ApiSampleCode";
+import ApiErrorCodes from "../pages/ApiErrorCodes";
+import ApiSampleCode from "../pages/ApiSampleCode",;
+import ApiErrorCodes from "../pages/ApiErrorCodes",  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <Routes>
       <Route path="/" element={<Navigate to="/developers/portal" />} />
       <Route path="/portal" element={<DeveloperPortal />} />
@@ -207,6 +244,7 @@ export default function DeveloperRoutes() {;
 <<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -223,6 +261,31 @@ export default function DeveloperRoutes() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  )
+import React from "react",;
+import { Navigate, Route, Routes } from "react-router-dom",;
+import DeveloperPortal from "../pages/DeveloperPortal",;
+import ApiDocsHub from "../pages/ApiDocsHub",;
+import ApiReference from "../pages/ApiReference",;
+import ApiGettingStarted from "../pages/ApiGettingStarted",;
+import ApiWebhooks from "../pages/ApiWebhooks",;
+import ApiSampleCode from "../pages/ApiSampleCode",;
+import ApiSampleCode from "../pages/ApiSampleCode";
+import ApiErrorCodes from "../pages/ApiErrorCodes";
+export default function DeveloperRoutes() {;
+  return (
+    <Routes>;
+      <Route path="/" element={<Navigate to="/developers/portal" />} />;
+      <Route path="/portal" element={<DeveloperPortal />} />;
+      <Route path="/docs" element={<ApiDocsHub />} />;
+      <Route path="/docs/getting-started" element={<ApiGettingStarted />} />;
+      <Route path="/docs/reference" element={<ApiReference />} />;
+      <Route path="/docs/webhooks" element={<ApiWebhooks />} />;
+      <Route path="/docs/samples" element={<ApiSampleCode />} />;
+      <Route path="/docs/errors" element={<ApiErrorCodes />} />;
+    </Routes>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from './react';
 import { Navigate, Route, Routes } from './react-router-dom';
 import DeveloperPortal from "../pages / DeveloperPortal";
@@ -246,6 +309,7 @@ function DeveloperRoutes() {
       <Route path="/docs / webhooks" element={<ApiWebhooks />} />;
       <Route path="/docs / samples" element={<ApiSampleCode />} />;
       <Route path="/docs / errors" element={<ApiErrorCodes />} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     </Routes>);
@@ -331,12 +395,20 @@ export default function DeveloperRoutes() {}
   return (
     <Routes>"
       <Route path="/" element={<Navigate to="/developers/portal" />} />"
+=======
+    </Routes>);
+    <Routes>
+
+      <Route path="/" element={<Navigate to="/developers/portal" />} />"
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Route path="/portal" element={<DeveloperPortal />} />"
       <Route path="/docs" element={<ApiDocsHub />} />"
       <Route path="/docs/getting-started" element={<ApiGettingStarted />} />"
       <Route path="/docs/reference" element={<ApiReference />} />"
       <Route path="/docs/webhooks" element={<ApiWebhooks />} />"
       <Route path="/docs/samples" element={<ApiSampleCode />} />"
+<<<<<<< HEAD
       <Route path="/docs/errors" element={<ApiErrorCodes />} />;
     </Routes>;
   );
@@ -347,3 +419,10 @@ export default function DeveloperRoutes() {}
   );
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <Route path="/docs/errors" element={<ApiErrorCodes />} />"
+pr-12325
+</Route>
+    </Routes>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

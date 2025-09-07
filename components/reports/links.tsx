@@ -1,7 +1,13 @@
 import { useEffect } from 'react';
+<<<<<<< HEAD
 export default function LinksReportRedirect() {}
   useEffect(() => {'
     if (typeof window !== 'undefined') {'
+=======
+export default function LinksReportRedirect() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       window.location.replace('/reports/links/index.html')
     };
   }, []);
@@ -42,6 +48,9 @@ if ( {) {}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       window.location.replace('/reports/links/index.html');
     }
   }, []);

@@ -2,7 +2,9 @@
 
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
+
 export type PaginationProps = any;
+<<<<<<< HEAD
 export type PaginationProps = {
   page: number;
   pageSize: number;
@@ -23,6 +25,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const goTo = (p: number) => {
 if (p >= 1 && p <= totalPages) onChange(p);
   };
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
   const goTo = (p: number) => {}
@@ -30,6 +34,7 @@ if (p >= 1 && p <= totalPages) onChange(p);
   }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
+<<<<<<< HEAD
     <div className='flex items-center justify-between gap-2 mt-4'>;
       <EnhancedButton'
         variant='secondary''
@@ -78,18 +83,35 @@ interface PaginationProps {;
         pages && pages.push(1);
         if (startPage > 2) {;'
           pages && pages.push('...');
+=======
+    <div className=\"flex items-center justify-between gap-2 mt-4\" />;
+"
+      <EnhancedButton variant=\"secondary\" size=\"md\" onClick={() = /> goTo(page - 1)} disabled={!canPrev}>;
+        Prev;
+      </EnhancedButton>;"
+      <div className=\"text-sm\" />;
+        Page {page} of {totalPages}
+import Link from 'next/link';
+import { ChevronLeft, ChevronRight  } from 'lucide-react';
+
+interface PaginationProps  {currentPage: number;
+  totalPages: number;
+  baseUrl: string;}
+  className?: string;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
+      if (startPage > 1) {pages && pages.push(1)if (startPage > 2) {pages && pages.push('...')}
       }
 }
-        pages && pages.push(totalPages);
-}
+        pages && pages.push(totalPages)}
     }
     return pages;
 }
   if (totalPages <= 1) return null;
-  return (
-    <nav className={`flex items-center justify-center space-x-2 ${className}`}>;
+  return (<nav className={`flex items-center justify-center space-x-2 ${className}`} />
+
       {/* Previous Button */}
+<<<<<<< HEAD
       {currentPage > 1 ? (;
         <Link;`
           href={`${baseUrl}?page=${currentPage - 1}`}"
@@ -100,10 +122,21 @@ interface PaginationProps {;
       ) : (;"
         <span className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed">;"
           <ChevronLeft className="w-4 h-4 mr-1" />;
+=======
+      {currentPage > 1 ? (<Link;}
+          href={`${baseUrl}?page=${currentPage - 1}`}"
+          className=\"flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors\" />;"
+          <ChevronLeft className=\"w-4 h-4 mr-1\" />;
+          Previous;
+        </Link>;"
+      ) : (<span className=\"flex items-center px-3 py-2 text-sm font-medium text-gray-300 bg-gray-100 border border-gray-200 rounded-lg cursor-not-allowed\" />;"
+          <ChevronLeft className=\"w-4 h-4 mr-1\" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           Previous;
         </span>;
       )}
       {/* Page Numbers */}"
+<<<<<<< HEAD
       <div className="flex items-center space-x-1">;"
               <span key={index} className="px-3 py-2 text-sm text-gray-500">;
                 ...;
@@ -115,11 +148,23 @@ interface PaginationProps {;
           return (
             <Link;
               key={pageNumber}`
+=======
+      <div className=\"flex items-center space-x-1\" />;"
+              <span key={index} className=\"px-3 py-2 text-sm text-gray-500\" />;
+                ...;
+              </span>;
+            )}
+
+const pageNumber = page as number;
+
+const isCurrentPage = pageNumber === currentPage;
+          return (<Link;
+              key={pageNumber}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               href={`${baseUrl}?page=${pageNumber}`}
               {pageNumber}
-            </Link>;
-          );
-})}
+            </Link />;
+          )})}
       </div>;
       {/* Next Button */}
       {currentPage < totalPages ? (;
@@ -130,7 +175,11 @@ interface PaginationProps {;
 if ( {) {}
   $2;
 }
+<<<<<<< HEAD
       for (let index = 1; i <= total_pages; i++) {}
+=======
+      for (let index = 1; i <= total_pages; i++) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         pages.push (i);
 }
     } else {}
@@ -271,9 +320,30 @@ if ( {) {}
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Pagination;
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export default Pagination;
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+      {currentPage < totalPages ? (<Link;}
+          href={`${baseUrl}?page=${currentPage + 1}`}"
+          className=\"flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors\" />;
+    // Check condition;
+if ( {) {$2;}
+}for (let index = 1; i <= total_pages; i++) {pages.push (i)}
+    } else {const start_page = Math.max (1, current_page - 2;
+  const end_page = Math.min (total_pages, start_page + maxVisiblePages - 1)// Check condition;}
+if ( {) {$2;}
+}
+
+export default Pagination;
+}
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

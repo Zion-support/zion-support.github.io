@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   className: string;
   id: string;
   innerHTML: string;
@@ -6,8 +9,13 @@
   style: { [key: string]: string }
 }
 
+<<<<<<< HEAD
 import React from './react';'
 import { cva, type VariantProps  } from './class - variance - authority';'
+=======
+import React from './react';
+import { cva, type VariantProps  } from './class - variance - authority';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { cn  } from '../../lib / utils';
 ;
 // Define HTML element types;
@@ -23,6 +31,7 @@ interface HTMLDivElement extends HTMLElement {}
   tagName: "DIV";
 }
 
+<<<<<<< HEAD
 const badgeVariants = cva(;"
   "inline-flex items-center rounded-full border px-2 && 2.5 py-0 && 0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",;
   {;
@@ -99,6 +108,9 @@ const badgeVariants = cva(
       variant: 'default',
     },
   }
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 );
 
 export interface BadgeProps
@@ -117,6 +129,7 @@ function Badge() {}
 export { Badge, badgeVariants };
 <<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 '"
@@ -154,3 +167,5 @@ export default function Badge({
 }
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

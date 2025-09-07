@@ -8,11 +8,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {const { pathname } = request.nextUrl;
   if (pathname === '/dashboard' |pathname === '/dashboard/') {const role = request.cookies.get('userRole')?.value |'talent';
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -22,6 +27,14 @@ export function middleware(request: NextRequest) {const { pathname } = request.n
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { NextResponse } from 'next/server',;
 =======
 
@@ -33,7 +46,16 @@ export function middleware() { return null; }
   if (pathname === '/dashboard' || pathname === '/dashboard/') {;'
     const role = request.cookies.get('userRole')?.value || 'talent',;'
     const target = role === 'client' ? '/dashboard/client' : '/dashboard/talent';
+
+import { NextResponse } from 'next/server',;''
+import type { NextRequest } from 'next/server',;'
+export function middleware(request: NextRequest) {;
+  const { pathname } = request.nextUrl,;'
+  if (pathname === '/dashboard' || pathname === '/dashboard/') {;''
+    const role = request.cookies.get('userRole')?.value || 'talent',;''
+    const target = role === 'client' ? '/dashboard/client' : '/dashboard/talent';'
     return NextResponse.redirect(new URL(target, request.url));
+
   }
   return NextResponse.next();
 }
@@ -45,11 +67,22 @@ import { NextResponse } from 'next / server','
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+
+
+
+
+
 import { NextResponse } from 'next / server',
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { NextRequest } from 'next / server',
+<<<<<<< HEAD
 export /**;
  * middleware - Function description;
+=======
+import type { NextRequest } from 'next / server',;
+export /**
+ * middleware - Function description
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  */
 function middleware() {}
   const { pathname } = request.next_url,
@@ -66,9 +99,17 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const config = {matcher: ['/dashboard/dashboard/']}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -218,25 +259,86 @@ export const config = {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 }
+
+  return NextResponse.next();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   }
 }
 export const config = {
   matcher: ['/dashboard / dashboard/']}
 
 
-import { NextResponse } from 'next / server',
-import type { NextRequest } from 'next / server',
+
+
+  }
+  return NextResponse.next ();
+}export const config = {
+  matcher: ['/dashboard / dashboard/']}
+
+
+import { NextResponse } from 'next / server',;
+import type { NextRequest } from 'next / server',;
+'
+import { NextResponse } from 'next / server',''
+import type { NextRequest } from 'next / server','
 export /**
- * middleware - Function description
+ * middleware - Function description;
  */
-function middleware() {
+function middleware() {}
   const { pathname } = request.next_url,
-  // Check condition
+  // Check condition;
+
 if ( {) {
-  $2
-}
+  $2;
     const role = request.cookies.get ('user_role')?.value || 'talent',
     const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';
+    return NextResponse.redirect (new URL (target, request.url));
+export const config = {matcher: ['/dashboard/dashboard/']}
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+  const { pathname } = request.nextUrl;
+    const role = request.cookies.get('userRole')?.value || 'talent';
+    } catch (error) {
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+  return NextResponse.next ();
+export const config = {"
+  matcher: ['/dashboard / dashboard/']}
+  // Check condition;
+export const config = {
+pr-12325
+;
+export const config = {;
+  matcher: ['/dashboard/dashboard/']};
+
+  }
+  return NextResponse.next ();
+}
+  }
+}
+
+export const config = {"
+  matcher: ['/dashboard / dashboard/']}''
+import { NextResponse } from 'next / server',''
+import type { NextRequest } from 'next / server','
+
+export /**
+ * middleware - Function description;
+ */
+function middleware() {}
+  const { pathname } = request.next_url,
+  // Check condition;
+
+if ( {) {
+  $2;
+}'
+    const role = request.cookies.get ('user_role')?.value || 'talent',''
+    const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';'
+
     return NextResponse.redirect (new URL (target, request.url));
   }
   return NextResponse.next ();
@@ -244,13 +346,38 @@ if ( {) {
 export const config = {
   matcher: ['/dashboard / dashboard/']}
 
+export const config = {'
+  matcher: ['/dashboard / dashboard/']}'
+;
+export const config = {;
+
+
+
+
+
+
+  matcher: ['/dashboard/dashboard/']};
+
+
+
+  }
+  return NextResponse.next();
+}
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};
+export const config = {;'
+  matcher: ['/dashboard/dashboard/']};'
 ;
-export const config = {;
-  matcher: ['/dashboard/dashboard/']};
+export const config = {;'
+  matcher: ['/dashboard/dashboard/']};'
 ;
+<<<<<<< HEAD
 export const config = {;
   matcher: ['/dashboard/dashboard/']};
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export const config = {;'
+  matcher: ['/dashboard/dashboard/']};''
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

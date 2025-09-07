@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -54,10 +55,14 @@ export * from './fraud';
 export * from "./fraud";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
+=======
+// Re-export from the refactored modules to maintain backward compatibility
+export * from "./fraud";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Re-export from the refactored modules to maintain backward compatibility;
-
 export * from './fraud';
+<<<<<<< HEAD
 // Re-export from the refactored modules to maintain backward compatibility;
 export * from './fraud';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -69,3 +74,5 @@ export * from './fraud';
 export * from "./fraud";
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

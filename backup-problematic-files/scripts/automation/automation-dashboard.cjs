@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/""usr/bin/env""
 const pm2 = require("pm2")
 const chalk = require("chalk")
@@ -96,3 +97,10 @@ const Table = require("cli-table3")
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+      chalk.gray("  restart <process>  - Restart a specific process")"
+</process>"
+// console.log(chalk.gray("  stop <process>     - Stop a specific process")"
+    console.log(chalk.gray("  start <process>    - Start a specific process")"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

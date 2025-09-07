@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -132,32 +133,37 @@ export function ProjectOfferBanner() {;
   }
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+  }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
-    <div className="mb-6 space-y-3">
-      {pendingOffers
+    <div className=\"mb-6 space-y-3\" />
+      {pendingOffers;
         .filter(offer => !dismissed.has(offer.id))
-        .map(offer => (
-          <Card
-            key={offer.id}
-            className="border-2 border-primary bg-primary/5"
-            onClick={() => handleViewOffer(offer.id)}
+        .map(offer => (}
+          <Card;}
+key={offer.id}
+            className=\"border-2 border-primary bg-primary/5\"
+            onClick={() = /> handleViewOffer(offer.id)}
           >
-            <CardContent className="p-4 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="bg-primary/10 rounded-full p-2">
-                  <Bell className="h-4 w-4 text-primary" />
+            <CardContent className=\"p-4 flex items-center justify-between\" />
+              <div className=\"flex items-center gap-2\" />
+                <div className=\"bg-primary/10 rounded-full p-2\" />
+                  <Bell className=\"h-4 w-4 text-primary\" />
                 </div>
-                <div>
-                  <h4 className="font-semibold">🎉 New Project Offer!</h4>
-                  <p className="text-sm text-muted-foreground">
-                    You've been selected for "{offer.job?.title}". Review and accept to get started.
+                <div />
+                  <h4 className=\"font-semibold\" />🎉 New Project Offer!</h4>
+                  <p className=\"text-sm text-muted-foreground\" />
+                    You've been selected for \"{offer.job?.title}\". Review and accept to get started.
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Button size="sm" className="whitespace-nowrap">
-                  View Offer
+              <div className=\"flex items-center gap-2\" />
+                <Button size=\"sm\" className=\"whitespace-nowrap\" />
+                  View Offer;
                 </Button>
+<<<<<<< HEAD
                 <Button
                   size="sm"
                   variant="ghost"
@@ -174,8 +180,14 @@ export function ProjectOfferBanner() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
                   onClick={(e) => handleDismiss(offer && offer.id, e)}
+=======
+                <Button;
+size=\"sm\"
+                  variant=\"ghost\"
+                  onClick={(e) = /> handleDismiss(offer && offer.id, e)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
-                  <X className="h-4 w-4" />;
+                  <X className=\"h-4 w-4\" />;
                 </Button>;
               </div>;
             </CardContent>;
@@ -189,12 +201,16 @@ import { Card, CardContent } from '@/components / ui / card';
 import { use_projects } from '@/hooks / use_projects';
 import { Project } from '@/types / projects';
 export /**
- * ProjectOfferBanner - Function description
+ * ProjectOfferBanner - Function description;
  */
-function ProjectOfferBanner() {
-  const navigate = use_navigate ();
+function ProjectOfferBanner() {}
+  const navigate = use_navigate ();}
   const { projects, is_loading } = use_projects ();
   const [pending_offers, setPendingOffers] = useState < Project[]>([]);
   const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function AddToCart.test({ }: AddToCart.testProps) {}
 <
@@ -26,7 +27,12 @@ export default function AddToCart.test({ }: AddToCart.testProps) {}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
+pr-12325
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -38,6 +44,8 @@ class ErrorBoundary extends React.Component {
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);'
+pr-12325
   }
   
   render() {
@@ -51,7 +59,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface FiveGSolutionsProps {
   // Add props here as needed
-
 
 }
 
@@ -85,8 +92,6 @@ export default function FiveGSolutions({ }: FiveGSolutionsProps) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-
 
 }
 <<<<<<< HEAD
@@ -133,6 +138,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD:src.pages.disabled/FiveGSolutions.jsx
 <<<<<<< HEAD
 :temp_exclude/src.pages.disabled/FiveGSolutions.jsx
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -194,3 +200,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+:temp_exclude/src.pages.disabled/FiveGSolutions.jsx
+    <div>
+</div>
+      <h1>FiveGSolutions</h1>
+      <p>This component is currently under development.</p>
+    </div>'
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

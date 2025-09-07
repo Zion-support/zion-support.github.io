@@ -3,99 +3,91 @@
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const { execSync } = require('child_process');
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-/**
- * Fix remaining syntax errors in API files
- */
-class SyntaxErrorFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-  }
+console.log('🔧 Fixing remaining syntax errors...');
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
+// List of files with known syntax errors
+const filesToFix = [
+  '/workspace/src/components/Footer.tsx',
+  '/workspace/src/components/Header.tsx',
+  '/workspace/src/components/HeroSection.tsx',
+  '/workspace/src/components/LoadingSpinner.tsx',
+  '/workspace/src/components/Navigation.tsx',
+  '/workspace/src/components/ServicesSection.tsx'
+];
 
-  fixFile(filePath) {
-    try {
-      this.log(`Fixing: ${filePath}`);
-      
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
-      
-      // Fix missing closing braces at end of files
-      if (!content.trim().endsWith('}')) {
-        // Check if it's a function that needs closing
-        const lines = content.split('\n');
-        const lastNonEmptyLine = lines.filter(line => line.trim()).pop();
-        
-        if (lastNonEmptyLine && (
-          lastNonEmptyLine.includes('return res.status') ||
-          lastNonEmptyLine.includes('res.status') ||
-          lastNonEmptyLine.includes('} catch') ||
-          lastNonEmptyLine.includes('} else')
-        )) {
-          content += '\n}';
-          modified = true;
-        }
-      }
-      
-      // Fix missing closing braces in function bodies
-      content = content.replace(/(\s+return res\.status\([^)]+\);\s*)(\n\s*)(\w)/g, '$1\n  }\n\n  $3');
-      
-      // Fix missing closing braces after catch blocks
-      content = content.replace(/(\s+} catch \([^)]+\) \{\s*\n\s*return res\.status\([^)]+\);\s*\n\s*\}\s*)(\n\s*)(\w)/g, '$1\n}\n\n$3');
-      
-      if (modified) {
-        fs.writeFileSync(filePath, content);
-        this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed: ${filePath}`, 'SUCCESS');
-        return true;
-      }
-      
-      return false;
-    } catch (error) {
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`, 'ERROR');
+function fixFile(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) {
+      console.log(`⚠️  File not found: ${filePath}`);
       return false;
     }
-  }
 
-  async fixAllFiles() {
-    this.log('🔧 Starting syntax error fixing...');
-    
-    const filesToFix = [
-      '/workspace/pages/api/admin/partners/update.ts',
-      '/workspace/pages/api/admin/pitch/add-slide.ts',
-      '/workspace/pages/api/admin/pitch/export.ts',
-      '/workspace/pages/api/admin/pitch/generate.ts',
-      '/workspace/pages/api/admin/pitch/metrics.ts'
-    ];
-    
-    let fixedCount = 0;
-    
-    for (const file of filesToFix) {
-      if (fs.existsSync(file)) {
-        if (this.fixFile(file)) {
-          fixedCount++;
-        }
-      }
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+
+    // Fix common syntax errors
+    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{const\s+(\w+)\s*=\s*([^;]+)([^;])/g, 'const $1: React.FC = () => {\n  const $2 = $3;\n');
+    content = content.replace(/}\s*const\s+/g, '}\n\nconst ');
+    content = content.replace(/;\s*const\s+/g, ';\n\nconst ');
+    content = content.replace(/}\s*export\s+/g, '}\n\nexport ');
+    content = content.replace(/;\s*export\s+/g, ';\n\nexport ');
+    content = content.replace(/return\s*\(\s*<div;\s*className/g, 'return (\n    <div\n      className');
+    content = content.replace(/className={`([^`]+)`}\s*>\s*;/g, 'className={`$1`}>\n');
+    content = content.replace(/;\s*title\s*:\s*string;/g, ';\n  title?: string;');
+    content = content.replace(/;\s*description\s*:\s*string;/g, ';\n  description?: string;');
+    content = content.replace(/;\s*className\s*:\s*string;/g, ';\n  className?: string;');
+    content = content.replace(/;\s*onClick\s*:\s*\(\)\s*=>\s*void;/g, ';\n  onClick?: () => void;');
+    content = content.replace(/;\s*children\s*:\s*React\.ReactNode;/g, ';\n  children: React.ReactNode;');
+    content = content.replace(/;\s*}\s*const\s+/g, ';\n}\n\nconst ');
+    content = content.replace(/;\s*}\s*export\s+/g, ';\n}\n\nexport ');
+    content = content.replace(/;\s*}\s*\)\s*}\s*export\s+/g, ';\n  );\n}\n\nexport ');
+    content = content.replace(/;\s*}\s*\)\s*}\s*const\s+/g, ';\n  );\n}\n\nconst ');
+    content = content.replace(/;\s*}\s*\)\s*}\s*;\s*export\s+/g, ';\n  );\n};\n\nexport ');
+    content = content.replace(/;\s*}\s*\)\s*}\s*;\s*const\s+/g, ';\n  );\n};\n\nconst ');
+
+    // Fix missing semicolons
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*const\s+/g, '$1 = $2;\n  const ');
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*}\s*const\s+/g, '$1 = $2;\n}\n\nconst ');
+    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*}\s*export\s+/g, '$1 = $2;\n}\n\nexport ');
+
+    // Fix malformed JSX
+    content = content.replace(/return\s*\(\s*<div;\s*className/g, 'return (\n    <div\n      className');
+    content = content.replace(/className={`([^`]+)`}\s*>\s*;/g, 'className={`$1`}>\n');
+    content = content.replace(/;\s*>\s*;/g, '>\n');
+
+    // Fix interface definitions
+    content = content.replace(/interface\s+(\w+)\s*{\s*([^}]+)\s*}\s*const\s+/g, 'interface $1 {\n  $2\n}\n\nconst ');
+
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed: ${filePath}`);
+      return true;
+    } else {
+      console.log(`⚠️  No changes needed: ${filePath}`);
+      return false;
     }
-    
-    this.log(`🎉 Syntax error fixing completed!`, 'SUCCESS');
-    this.log(`📊 Summary: ${fixedCount}/${filesToFix.length} files fixed`);
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Run the fixer
-if (require.main === module) {
-  const fixer = new SyntaxErrorFixer();
-  fixer.fixAllFiles().catch(console.error);
-}
+let fixedCount = 0;
+filesToFix.forEach(file => {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+});
 
+<<<<<<< HEAD
 module.exports = SyntaxErrorFixer;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+console.log(`\n📊 Fixed ${fixedCount} files`);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Security Audit Script for PM2;
  * Replaces GitHub Actions security audit workflows;
@@ -8,18 +8,21 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
 const log = (message) => {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 
 const runCommand = (command, description) => {}
   try {}
+<<<<<<< HEAD
     log(`Starting: ${description}`);
     const output = execSync(command, { })
 <<<<<<< HEAD
@@ -35,12 +38,14 @@ const runCommand = (command, description) => {}
     return { success: true, output };
   } catch (error) {}
     log(`Failed: ${description} - ${error.message}`);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return { success: false, error: error.message };
-  };
-};
 
 const runSecurityAudit = () => {}
   log('Running npm security audit');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const auditResult = runCommand('npm audit', 'Running npm audit');
@@ -50,11 +55,15 @@ const runSecurityAudit = () => {}
   const auditResult = runCommand('npm audit', 'Running npm audit');
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (auditResult.success) {}
     log('Security audit completed successfully');
     return { success: true, vulnerabilities: 0 };
   } else {}
     log('Security vulnerabilities detected');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // Try to fix automatically;
@@ -70,14 +79,16 @@ const runSecurityAudit = () => {}
       log('Vulnerabilities fixed automatically');
       return { success: true, vulnerabilities: 0, fixed: true };
     } else {}
+=======
+    // Try to fix automatically;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       log('Some vulnerabilities could not be fixed automatically');
       return { success: false, vulnerabilities: 1, fixed: false };
-    };
-  };
-};
 
 const runDependencyCheck = () => {}
   log('Checking for outdated dependencies');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const outdatedResult = runCommand('npm outdated', 'Checking outdated packages');
@@ -91,27 +102,26 @@ const runDependencyCheck = () => {}
     log('Dependency check completed');
     return { success: true, outdated: 0 };
   } else {}
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     log('Outdated dependencies found');
     return { success: false, outdated: 1 };
-  };
-};
 
 const checkForSecrets = () => {}
   log('Checking for exposed secrets');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const secretPatterns = []
-    'API_KEY',
-    'SECRET',
-    'PASSWORD',
-    'TOKEN',
-    'PRIVATE_KEY',
-    'DATABASE_URL',
-    'MONGODB_URI'
+
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   let secretsFound = 0;
@@ -135,10 +145,15 @@ const checkForSecrets = () => {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       if (result.trim()) {}
         log(`Potential secret found: ${pattern}`);
+=======
+  let secretsFound = 0;
+  secretPatterns.forEach(pattern => {})
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         secretsFound++;
-      };
     } catch (error) {}
       // No matches found, which is good;
+<<<<<<< HEAD
     };
   }
 });
@@ -148,16 +163,18 @@ const checkForSecrets = () => {}
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (secretsFound > 0) {}
+=======
+  if (secretsFound > 0) {}`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     log(`Warning: ${secretsFound} potential secrets found`);
     return { success: false, secrets: secretsFound };
-  } else {}
+
     log('No exposed secrets found');
     return { success: true, secrets: 0 };
-  };
-};
 
 const checkFilePermissions = () => {}
   log('Checking file permissions');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -175,18 +192,13 @@ const checkFilePermissions = () => {}
 =======
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (result.trim()) {}
       log('Warning: Files with overly permissive permissions found');
       return { success: false, permissiveFiles: result.trim().split('\n').length };
-    } else {}
-      log('File permissions look good');
-      return { success: true, permissiveFiles: 0 };
-    };
-  } catch (error) {}
-    log('File permission check completed');
-    return { success: true, permissiveFiles: 0 };
-  };
-};
+
 
 const generateSecurityReport = (results) => {}
   const report = {}
@@ -214,6 +226,7 @@ const generateSecurityReport = (results) => {}
                       (results.secrets.secrets || 0) + 
                       (results.filePermissions.permissiveFiles || 0),
       status: (results.npmAudit.vulnerabilities || 0) + 
+<<<<<<< HEAD
               (results.dependencies.outdated || 0) + 
               (results.secrets.secrets || 0) + 
               (results.filePermissions.permissiveFiles || 0) === 0 ? 'PASS' : 'FAIL'
@@ -230,32 +243,41 @@ const generateSecurityReport = (results) => {}
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return report;
-};
 
 const main = async () => {}
   log('Starting Security Audit Process');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Run all security checks;
   const npmAuditResults = runSecurityAudit();
   const dependencyResults = runDependencyCheck();
   const secretsResults = checkForSecrets();
   const filePermissionResults = checkFilePermissions();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Generate comprehensive report;
   const results = {}
     npmAudit: npmAuditResults,
     dependencies: dependencyResults,
     secrets: secretsResults,
     filePermissions: filePermissionResults;
+<<<<<<< HEAD
   };
 <<<<<<< HEAD
 
@@ -267,45 +289,23 @@ const main = async () => {}
 
 =======
   
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const report = generateSecurityReport(results);
-  
   // Handle security issues;
-  if (report.overall.status === 'FAIL') {}
+
     log(`Security audit failed: ${report.overall.vulnerabilities} issues found`);
+<<<<<<< HEAD
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Attempt to fix issues;
     if (npmAuditResults.vulnerabilities > 0) {}
       log('Attempting to fix npm vulnerabilities');
-      runCommand('npm audit fix --force', 'Force fixing vulnerabilities');
-    };
-    if (dependencyResults.outdated > 0) {}
-      log('Attempting to update outdated dependencies');
-      runCommand('npm update', 'Updating dependencies');
-    };
-  } else {}
-    log('Security audit passed: No issues found');
-  };
-  log('Security Audit Process completed');
-};
 
-// Handle process termination;
-process.on('SIGINT', () => {}
-  log('Security Audit Process interrupted');
-  process.exit(0);
-}
-});
-
-process.on('SIGTERM', () => {}
-  log('Security Audit Process terminated');
-  process.exit(0);
-}
-});
-
-// Run the main function;
-main().catch(error => {})
-  log(`Security Audit Process failed: ${error.message}`);
   process.exit(1);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -318,3 +318,6 @@ main().catch(error => {})
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

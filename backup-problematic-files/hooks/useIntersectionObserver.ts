@@ -5,6 +5,8 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface UseIntersectionObserverProps {
+  // TODO: Implement
+}
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
@@ -39,6 +41,7 @@ interface UseIntersectionObserverProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
+<<<<<<< HEAD
   useEffect(() => {
     if (prevNode.current) {
 <<<<<<< HEAD
@@ -67,9 +70,15 @@ export function useIntersectionObserver({;
   rootMargin = '0%',;
   freezeOnceVisible = false;
 }: UseIntersectionObserverProps = {}) {;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [entry, setEntry] = useState<IntersectionObserverEntry>(),;
+
   const [node, setNode] = useState<Element | null>(null),;
+
   const observer = useRef<IntersectionObserver | null>(null),;
+<<<<<<< HEAD
   const frozen = entry?.isIntersecting && freezeOnceVisible,;
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {;
     setEntry(entry);
@@ -107,3 +116,6 @@ export function useIntersectionObserver({;
   return [setNode, entry] as const
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

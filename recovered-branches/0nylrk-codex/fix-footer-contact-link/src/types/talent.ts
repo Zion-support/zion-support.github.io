@@ -25,6 +25,12 @@ export interface TalentProfile {};
   id: string;
   user_id: string;
   full_name: string;
+  // TODO: Implement
+}
+  id: string;,
+  user_id: string;
+  full_name: string;,
+pr-12325
   professional_title: string;
   profile_picture_url?: string;
   bio?: string;
@@ -34,8 +40,17 @@ export interface TalentProfile {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: string,
 =======
+=======
+    title: string,    description: string;
+  }[];
+}
+export interface TalentProfileFilters {
+  search?: string;
+  skills?: string[];}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   skills?: string[];
   hourly_rate?: number;
   years_experience?: number;
@@ -45,6 +60,7 @@ export interface TalentProfile {};
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
+<<<<<<< HEAD
     title: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     description: string;
@@ -150,6 +166,15 @@ export interface TalentProfileFilters {};
   priceRange?: [number, number];
   experienceRange?: [number, number];
 }
+=======
+    title: string;,
+  description: string;
+  }[];
+export interface TalentProfileFilters {
+  // TODO: Implement
+  search?: string;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 
@@ -159,11 +184,16 @@ export interface HireRequest {};
 =======
 }
 export interface HireRequest {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: string;
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   client_id: string;
-  talent_id: string;
+  talent_id: string;,
   project_title: string;
+<<<<<<< HEAD
   project_description: string;
 <<<<<<< HEAD
   budget: {}
@@ -344,3 +374,8 @@ export interface HireRequest {;
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  project_description: string;,
+  budget: {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -6,6 +6,7 @@
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
 
+<<<<<<< HEAD
 import {
 =======
 <<<<<<< HEAD
@@ -31,12 +32,22 @@ import {
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   FormField,;
   FormItem,;
   FormLabel,;
   FormControl,;
   FormMessage,;
+
+
+pr-12325
+import React, { useState } from \"react\";
+import { Control } from \"react-hook-form\";
+
 
 
   FormField,
@@ -53,7 +64,6 @@ import {;
 <<<<<<< HEAD
 =======
   FormMessage,;
-
 
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
@@ -84,6 +94,7 @@ import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecomm
 import { Card, CardContent } from "@/components/ui/card";
 
 import React, { useState } from './react';
+  FormMessage,;import React, { useState } from './react';
 import { Control  } from './react - hook - form';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {
@@ -97,6 +108,7 @@ import {
   FormLabel,
   FormControl,
   FormMessage,;
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
 
@@ -139,11 +151,50 @@ import React, { useState } from './react';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Control  } from './react - hook - form';
 import {}
+=======
+
+
+import React, { useState } from "react";""
+import { Control } from "react-hook-form";"
+import {
+  // TODO: Implement
+
+}
+  FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormMessage;
+  FormMessage,;"
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   FormField,
   FormItem,
   FormLabel,
   FormControl,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  FormMessage,;"
+import React, { useState } from "react";""
+import { Control } from "react-hook-form";"
+import {
+  // TODO: Implement
+}
+FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormMessage;"
+} from "@/components/ui/form";""
+import { Input } from "@/components/ui/input";""
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";""
+import { Card, CardContent } from "@/components/ui/card";""
+import React, { useState } from './react';
+import { Control  } from './react - hook - form';
+  // TODO: Implement
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   FormMessage,
 } from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
@@ -170,6 +221,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import React, { useState } from "react",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { Control } from "react-hook-form",
+<<<<<<< HEAD
 import {}
   FormField,
   FormItem, 
@@ -180,6 +232,13 @@ import {}
 import { Input } from "@/components/ui/input","
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender","
 import { Card, CardContent } from "@/components/ui/card",
+=======
+import { Card, CardContent  } from '@/components / ui / card';import React, { useState } from "react",;
+import { Control } from "react-hook-form",;
+import { 
+import React, { useState } from './react';''
+import { Control  } from './react - hook - form';'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -193,6 +252,7 @@ interface BasicInfoFieldsProps {};
 =======
 
 
+<<<<<<< HEAD
 interface BasicInfoFieldsProps {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   control: Control < any>;
@@ -1589,3 +1649,5 @@ return (<div className="space-y-4" > <FormField control= {
 };
 };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

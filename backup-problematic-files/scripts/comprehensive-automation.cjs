@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-automation.cjs
 =======
 <<<<<<< HEAD
@@ -17,6 +18,9 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -28,6 +32,7 @@ const path = require('path')
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // console.log(' Comprehensive Automation Suite - Zion Tech Group')
+<<<<<<< HEAD
 console.log('==')
     "name"
     "command"
@@ -56,3 +61,6 @@ console.log('==')
 console.log('\n� Detailed "Results")
 console.log('\n� Detailed "Results")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

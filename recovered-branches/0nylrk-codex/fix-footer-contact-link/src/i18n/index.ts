@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -13,28 +14,11 @@ import enTranslation from './locales/en/translation ;
 import esTranslation from './locales/es/translation ;
 import ptTranslation from './locales/pt/translation ;
 import arTranslation from './locales/ar/translation ;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-// Initialize i18next
-i18n
-  .use(LanguageDetector) // Detect user language
-  .use(initReactI18next) // Initialize react-i18next
-  .init({
-    resources: {
-      en: {
-        translation: enTranslation
-      }
-      es: {
-        translation: esTranslation
-      }
-      pt: {
-        translation: ptTranslation
-      }
-      ar: {
-        translation: arTranslation
-      }
-    }
-    fallbackLng: 'en', // Default language
 
+<<<<<<< HEAD
     debug: process && process.env.NODE_ENV === 'development',
 
     interpolation: {
@@ -292,3 +276,5 @@ export default i18n;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

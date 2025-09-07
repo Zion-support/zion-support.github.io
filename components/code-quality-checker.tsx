@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';'
 import Head from 'next/head';'
 import Card from '../components/ui/Card';
@@ -26,75 +27,15 @@ export default function CodeQualityCheckerPage() { return null; }
     { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
 <<<<<<< HEAD
 import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function CodeQualityCheckerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
-icon: <Code className='w-8 h-8 text-white' />,
-      title: 'Multi-Language Support',
-      description:
-        'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.'
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600'
-      gradient: 'from-teal-400 to-cyan-500'
-    }
-    {
-      icon: <CheckCircle className='w-8 h-8 text-white' />
-      title: 'Code Quality Metrics'
-      description:
-        'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'
-    }
-    {
-      icon: <Zap className='w-8 h-8 text-white' />
-      title: 'Real-Time Analysis'
-      description:
-        'Instant code quality feedback with detailed explanations and improvement suggestions.'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      gradient: 'from-orange-400 to-red-500'
-    }
-    {
-      icon: <Shield className='w-8 h-8 text-white' />
-      title: 'Security Scanning'
-      description:
-        'Automated detection of security vulnerabilities, dependency issues, and best practice violations.'
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'
-    }
-  ];
-  const supportedLanguages = [
-    {
-      name: 'JavaScript/TypeScript'
-      icon: '⚡'
-      features: ['ESLint rules', 'TypeScript checks', 'React best practices']
-    }
-    {
-      name: 'Python'
-      icon: '🐍'
-      features: ['PEP 8 compliance', 'Type hints', 'Security scanning']
-    }
-    {
-      name: 'Java'
-      icon: '☕'
-      features: ['PMD rules', 'Checkstyle', 'SonarQube integration']
-    }
-    {
-      name: 'C++'
-      icon: '⚙️'
-      features: ['Clang-tidy', 'Static analysis', 'Memory leak detection']
-    }
-    {
-      name: 'Go'
-      icon: '🟢'
-      features: ['Golangci-lint', 'Go vet', 'Performance analysis']
-    }
-    {
-      name: 'PHP',
-      icon: '🐘',
-      features: ['PHPStan', 'PHP CS Fixer', 'Security analysis'],
-    },
-  ];
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   const pricing = [
     {
@@ -396,6 +337,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {isAnalyzing ? (
                 <>
 <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Code Input Form */}
@@ -560,6 +503,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
@@ -622,7 +568,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {language && language.features.map((feature, featureIndex) => (;
                     <li;
                       key={featureIndex}
+<<<<<<< HEAD
             </h2>"
+=======
+            </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               We support a wide range of programming languages with language-specific analysis rules and best practices.
             </p>
@@ -759,6 +709,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='section-padding bg-gradient-cursor-accent'>
           <div className='container-cursor'>
             <div className='text-center mb-12'>
@@ -818,8 +771,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ) : (;'
                         <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;
                       )}
+<<<<<<< HEAD
               </h2>"
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">'
+=======
+              </h2>
+              <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Here's a sample code quality analysis. Get comprehensive insights for your own code.
               </p>
             </div>"
@@ -865,6 +823,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <div>
                         <span className='text-gray-300 text-sm'>
                           {issue.message}
@@ -911,12 +872,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className='text-gray-400'>Security Score</span>'
                     <span className='text-green-400 font-bold'>
                       {analysisResults.metrics.securityScore}
+<<<<<<< HEAD
                     </span>                  </div>                  </div>"
               <Card className="border-gradient-teal">"
                 <h3 className="text-2xl font-bold mb-6 text-white">Quality Metrics</h3>"
                 <div className="space-y-4">"
                   <div className="flex justify-between items-center">"
                     <span className="text-gray-400">Complexity</span>"
+=======
+                    </span>                  </div>                  </div>
+              <Card className="border-gradient-teal">
+                <h3 className="text-2xl font-bold mb-6 text-white">Quality Metrics</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Complexity</span>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className="text-orange-400 font-bold">{analysisResults.metrics.complexity}</span>
                   </div>"
                   <div className="flex justify-between items-center">"
@@ -949,9 +919,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Improvement Recommendations;
               </h3>'
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+<<<<<<< HEAD
                 {analysisResults.recommendations.map((rec, index) => ('
                   <div key={index} className='flex items-start space-x-3'>'
                     <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />'
+=======
+                {analysisResults.recommendations.map((rec, index) => (
+                  <div key={index} className='flex items-start space-x-3'>
+                    <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
                   </div>
@@ -1302,6 +1278,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'
             >
               Schedule Demo

@@ -52,5 +52,24 @@ export async function getJobById(jobId:string) {;
   } export async function createJob (jobData: any) {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  const {
+  data, error 
+}= await supabase 
+}
+}export async function updateJob (jobId: string, jobData: unknown) {
+  try {
+  const {
+  data, error 
+}= await supabase .from ('jobs') .update (jobData) .eq ('id', jobId) .select () .single ();
+}
+}export async function getJobById (jobId: string) {
+  try {
+  const {
+  data, error 
+}= await supabase .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

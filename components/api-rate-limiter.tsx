@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Shield;
   Zap;
   BarChart3;
@@ -67,10 +68,14 @@ export default function APIRateLimiterPage() {;
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
   const [timeWindow, setTimeWindow] = useState('1m');
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [testResults, setTestResults] = useState<any[]>([]),
   const [isTesting, setIsTesting] = useState(false);
   const [apiKey, setApiKey] = useState('');
 
+<<<<<<< HEAD
     { value: '10', label: '10 requests', description: 'Very strict' },
     { value: '100', label: '100 requests', description: 'Standard' },
 =======
@@ -89,37 +94,42 @@ export default function APIRateLimiterPage() { return null; }
 
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;'
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
+=======
+    { value: '10';, label: '10 requests';, description: 'Very strict' ;},
+    { value: '100';, label: '100 requests';, description: 'Standard' ;},
+    { value: '1000';, label: '1000 requests';, description: 'High volume' ;},
+
+    { value: '10000';, label: '10000 requests';, description: 'Enterprise' ;}
+  ];
+
+    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+    { value: '10000';, label: '10000 requests';, description: 'Enterprise' ;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ];
 
   const generateApiKey = () => {'
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
     setApiKey(key)
   }
+<<<<<<< HEAD
   const timeWindows = [;'
     { value: '1s', label: '1 Second', description: 'Per second rate limiting' },;'
     { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' },;'
     { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' },;'
     { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
+=======
+  const timeWindows = [;
+    { value: '1s';, label: '1 Second';, description: 'Per second rate limiting' ;},;
+    { value: '1m';, label: '1 Minute';, description: 'Per minute rate limiting' ;},;
+    { value: '1h';, label: '1 Hour';, description: 'Per hour rate limiting' ;},;
+    { value: '1d';, label: '1 Day';, description: 'Per day rate limiting' ;},  ];    { value: '1d';, label: '1 Day';, description: 'Per day rate limiting' ;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ];
 
     setIsTesting(true);
   const timeWindows = null;
-  ];
-  const rateLimits = [
-    { value: '10', label: '10 requests', description: 'Very strict' },
-    { value: '100', label: '100 requests', description: 'Standard' },
-    { value: '1000', label: '1000 requests', description: 'High volume' },
-{ value: '10000', label: '10000 requests', description: 'Enterprise' },
-  ];
-  const generateApiKey = () => {
-    const key =
-      'zt_' +
-      Math.random().toString(36).substr(2, 9) +
-      '_' +
-      Date.now().toString(36);
-    setApiKey(key);
-  };
 
+<<<<<<< HEAD
   const testRateLimiting = async () => {
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
 setIsTesting(true);
@@ -1286,6 +1296,8 @@ print('Response:', response.json())
 print('Rate Limit Info:', {
 'limit': response.headers.get('x-ratelimit-limit'),
     'remaining': response.headers.get('x-ratelimit-remaining'),
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     'reset': response.headers.get('x-ratelimit-reset')
 })`)
                 }

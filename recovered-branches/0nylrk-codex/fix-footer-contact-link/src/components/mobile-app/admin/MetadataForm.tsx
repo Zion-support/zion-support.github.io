@@ -11,6 +11,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+<<<<<<< HEAD
 import {;
   Form,;
   FormControl,;
@@ -99,6 +100,8 @@ import {};
   FormDescription,
   FormField,
   FormItem,
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   FormLabel,
   FormMessage,;
 <<<<<<< HEAD
@@ -132,7 +135,6 @@ import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
   const { control, register, watch, setValue } = form;
@@ -158,6 +160,7 @@ import { X } from "lucide-react";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -170,6 +173,8 @@ import { X } from "lucide-react";
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { AppMetadataValues } from "./MetadataManager",
@@ -246,24 +251,49 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
+import { AppMetadataValues } from "./MetadataManager";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+Form
+  FormControl
+  FormDescription
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+} from "@/components/ui/form";
 
+import { Badge } from "@/components/ui/badge";
+import { X } from "lucide-react";
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
-
-
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
   const { control, register, watch, setValue } = form,
   const keywords = watch("keywords"),
   const platform = watch("platform"),
-  
 
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
+  const { control, register, watch, setValue } = form;
+  const keywords = watch("keywords");
+  const platform = watch("platform");
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const { control, register, watch, setValue } = form;
 
+<<<<<<< HEAD
   const keywords = watch("keywords");
   const platform = watch("platform");
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -1586,3 +1616,7 @@ if (value && !keywords.includes (value) ) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

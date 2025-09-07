@@ -23,7 +23,11 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -47,7 +51,11 @@
   --quantum-ripple: 0 0 150px rgba(0, 255, 255, 0.08);
   --holographic-wave: 0 0 200px rgba(139, 92, 246, 0.12);
   --cyberpunk-pulse: 0 0 180px rgba(236, 73, 153, 0.1);
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   /* Revolutionary new effects */
   --quantum-holographic: 0 0 150px rgba(0, 255, 255, 0.2);
   --neural-quantum: 0 0 120px rgba(16, 185, 129, 0.3);
@@ -192,6 +200,7 @@ h3 {
   top: 0;
   left: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -217,10 +226,37 @@ h3 {
   border-radius: 4px;
 ::-webkit-scrollbar-thumb:hover {
   background: var(--neon-blue);
+=======
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-blue);
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Focus styles */
 :focus {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Futuristic Animations and Effects */
 @keyframes float {
   0%, 100% {
@@ -228,6 +264,7 @@ h3 {
   }
   50% {
     transform: translateY(-20px);
+<<<<<<< HEAD
 @keyframes pulse-glow {
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
     box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.4);
@@ -250,11 +287,73 @@ h3 {
 @keyframes neon-pulse {
     text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
     text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+=======
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.4);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes rotate-3d {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Futuristic Background Effects */
 .futuristic-bg {
   background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
+<<<<<<< HEAD
 .particle-bg {
   position: relative;
   overflow: hidden;
@@ -324,12 +423,30 @@ body::after {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+
+.particle-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle-bg::before {
+  content: '';
+  content: '';
+.particle-bg::before {  content: '';
+.particle-bg::before {  content: '';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background-image:
+=======
+  background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(2px 2px at 20px 30px, #3b82f6, transparent),
     radial-gradient(2px 2px at 40px 70px, #8b5cf6, transparent),
     radial-gradient(1px 1px at 90px 40px, #06b6d4, transparent),
@@ -341,6 +458,7 @@ body::after {
   opacity: 0.3;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -355,12 +473,15 @@ body::after {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Futuristic Card Effects */
 .futuristic-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   position: relative;
@@ -468,6 +589,13 @@ h3 {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  transition: all 0.3s ease;
+  position: relative;
+  position: relative;
+  transition: all 0.3s ease;  position: relative;
+  transition: all 0.3s ease;  position: relative;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   overflow: hidden;
 }
 
@@ -548,6 +676,7 @@ h3 {
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   border: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -570,6 +699,23 @@ h3 {
   animation: holographicGlow 4s ease-in-out infinite;
 .cyberpunk-flicker {
   animation: cyberpunkFlicker 2s ease-in-out infinite;
+=======
+}
+
+/* Futuristic Utility Classes */
+.futuristic-glow {
+  animation: quantumPulse 3s ease-in-out infinite;
+}
+
+.holographic-glow {
+  animation: holographicGlow 4s ease-in-out infinite;
+}
+
+.cyberpunk-flicker {
+  animation: cyberpunkFlicker 2s ease-in-out infinite;
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 .quantum-border {
   border: 2px solid transparent;
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple)) border-box;
@@ -577,16 +723,35 @@ h3 {
   -webkit-mask-composite: destination-out;
   mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
+<<<<<<< HEAD
 .neural-network-bg {
   background:
     radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
 .quantum-matrix-bg {
+=======
+}
+
+.neural-network-bg {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+}
+
+.quantum-matrix-bg {
+  background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 30px 30px;
   animation: gridMove 15s linear infinite;
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Enhanced Button Styles */
 .btn-futuristic {
   position: relative;
@@ -595,6 +760,7 @@ h3 {
   border: none;
   color: white;
   padding: 12px 24px;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -610,6 +776,8 @@ h3 {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   border-radius: 12px;
   padding: 12px 24px;
   color: white;
@@ -641,7 +809,11 @@ h3 {
 
 /* Grid Background */
 .grid-bg {
+<<<<<<< HEAD
   background-image:
+=======
+  background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -688,7 +860,11 @@ h3 {
   .futuristic-card:hover {
     transform: translateY(-5px) scale(1.01);
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .particle-bg::before {
     background-size: 100px 50px;
   }
@@ -706,7 +882,11 @@ h3 {
   .futuristic-card {
     border-width: 2px;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .futuristic-btn {
     border: 2px solid white;
   }
@@ -719,4 +899,8 @@ h3 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

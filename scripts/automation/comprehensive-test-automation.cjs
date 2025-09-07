@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -13,22 +14,16 @@ const { execSync } = require('child_process');
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ComprehensiveTestAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation', 'logs', 'comprehensive-test-automation.log');
-    this.ensureDirectories();
-    this.results = {}
-      "timestamp": new Date().toISOString(),
-      "tests": [],
-      "coverage": {},
-      "performance": {},
-      "accessibility": {},
-      "security": {},
-      "summary": {};
-    }};
-  ensureDirectories() {}
-    const dirs = ['automation/logs', 'test-results', 'coverage'];
+
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
 <<<<<<< HEAD
@@ -39,19 +34,18 @@ class ComprehensiveTestAutomation {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if () {}
-        fs.mkdirSync(dirPath, { "recursive": true })};
-    })};
+        fs.mkdirSync(dirPath, { "recursive": true })};"
+    })};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString() {}
     ) {}
-        fs.mkdirSync(dirPath, { "recursive": true })};
-    })};
-  log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString(}
+
+    const timestamp = new Date().toISOString(})
 });
     const logMessage = `[${timestamp}] [${level}] ${message};;`
     console.log(logMessage);
     try {}
+<<<<<<< HEAD
       fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
       console.error('Failed to write to log "file": ', error.message)};
   };
@@ -161,6 +155,9 @@ class ComprehensiveTestAutomation {}
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 300000;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       };);
 <<<<<<< HEAD
 =======
@@ -171,13 +168,13 @@ class ComprehensiveTestAutomation {}
       if ( {})
         performanceResults.bundleSize = parseFloat(bundleSizeMatch[1])) {}
      {}
-        performanceResults.bundleSize = parseFloat(bundleSizeMatch[1])};
-        this.log(`Bundle "size": ${performanceResults.bundleSize} kB`)};
+        performanceResults.bundleSize = parseFloat(bundleSizeMatch[1])};"`;
+        this.log(`Bundle "size": ${performanceResults.bundleSize} kB`)};"
       // Check for large pages;
       const pageSizeMatches = buildOutput.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB/;g;);
-      if ( {})
         performanceResults.pageSizes = pageSizeMatches.map(match => {})
           const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB) {}
+<<<<<<< HEAD
      {}
         performanceResults.pageSizes = pageSizeMatches.map(match => {})
           const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB}/;);
@@ -203,6 +200,12 @@ class ComprehensiveTestAutomation {}
       // Check for alt text in images;
       const pagesDir = path.join(this.projectRoot, 'pages';);
       const componentsDir = path.join(this.projectRoot, 'components';);
+=======
+          const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB}/;);"
+          return { "page": parts[1], "size": parseFloat(parts[2]) }})};"
+      this.results.performance = performanceResults;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let totalImages = ;0;
       let imagesWithAlt = ;0;
 <<<<<<< HEAD
@@ -210,14 +213,11 @@ class ComprehensiveTestAutomation {}
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       [pagesDir, componentsDir].forEach(dir => {})
-        if () {}
           const files = this.findReactFiles(dir) {}
-    ) {}
-          const files = this.findReactFiles(dir}
-});
-          files.forEach(file => {})
-            const content = fs.readFileSync(file, 'utf8';);
+          const files = this.findReactFiles(dir})
+
             const images = content.match(/<img[^>]*>/g) || [];
+<<<<<<< HEAD
             totalImages += images.length;
             const altTexts = content.match(/alt\s*=\s*["'][^"']*["']/g) || [];
             imagesWithAlt += altTexts.length})};
@@ -405,5 +405,9 @@ module.exports = ComprehensiveTestAutomation;
 =======
 
 module.exports = ComprehensiveTestAutomation;
+=======
+</img>
+            const headings = content.match(/<h[1-6][^>]*>/g) || [];
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

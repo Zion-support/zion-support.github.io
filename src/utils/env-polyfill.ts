@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Environment Polyfill for Browser
  * 
@@ -281,19 +282,17 @@ export default safe_env;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Environment Polyfill for Browser
  *
  * This polyfill ensures that process.env is always available in the browser environment.
  * It prevents the "Cannot read properties of undefined (reading 'env')" error.
  */
-// Define safe defaults for environment variables
-        NODE_ENV: 'production',
-        NEXT_PUBLIC_APP_URL: '',
-        NEXT_PUBLIC_SUPABASE_URL: '',
-        NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
-      };
 
+<<<<<<< HEAD
 console.log('✅ Environment polyfill loaded successfully');
 
 export default safeEnv;
@@ -349,3 +348,5 @@ export default safe_env;
 export default safe_env;
 export default safe_env;'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   id: string;
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -9,6 +10,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   id: string;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+  id: string;
+export interface InnovativeMicroSaas {
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   tagline: string;
   price: string;
@@ -33,6 +40,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   competitors: string[];
   marketSize: string;
   growthRate: string;
+  id: string;,
+  name: string;
+  tagline: string;,
+  price: string;
+  period: string;,
+  description: string;
+  features: string[];,
+  popular: boolean;
+  icon: string;,
+  color: string;
+  textColor: string;,
+  link: string;
+  marketPosition: string;,
+  targetAudience: string;
+  trialDays: number;,
+  setupTime: string;
+  category: string;,
+  realService: boolean;
+  technology: string[];,
+  integrations: string[];
+  useCases: string[];,
+  roi: string;
+  competitors: string[];,
+  marketSize: string;
+  growthRate: string;,
+pr-12325
   variant: string;
 
 <<<<<<< HEAD
@@ -66,13 +99,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
     address: string;
-    website: string
-  },
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
     popular: true,
     icon: '📄',
     color: 'from-blue-500 to-indigo-600',
@@ -1476,10 +1509,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 1600,
   },
 ];
+=======
+
+  reviews: number
+}
+
+export const innovativeMicroSaas: InnovativeMicroSaas[] = [
+  {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     reviews: 1600
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -1538,3 +1581,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    implementationDetails: 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.',;
+    launchDate: '2024-01-30',;
+
+pr-12325
+'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

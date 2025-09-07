@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export { MilestoneActivities } from "./MilestoneActivities";"
 export { MilestoneManager } from "./MilestoneManager";"
 export { MilestoneCreator } from "./MilestoneCreator";"
@@ -30,3 +31,10 @@ export { ProjectHeader } from './ProjectHeader';
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export { MilestoneActivities } from \"./MilestoneActivities\";
+export { MilestoneManager } from \"./MilestoneManager\";
+export { MilestoneCreator } from \"./MilestoneCreator\";
+export { ProjectActions } from \"./ProjectActions\";
+export { ProjectHeader } from \"./ProjectHeader\";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

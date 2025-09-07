@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -53,6 +54,9 @@ main
 =======
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -72,12 +76,13 @@ const { promisify } = require('util');
 const execAsync = promisify(exec);
 class ErrorMonitor {}
   constructor() {}
-    this.logFile = path.join(__dirname, 'logs', 'error-monitor.log');
+
     this.errorThreshold = 10; // Maximum errors before triggering fixes;
     this.lastCheck = null;
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,6 +139,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -149,9 +156,9 @@ main
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
-  };
   async runLintCheck() {}
     try {}
+<<<<<<< HEAD
       this.log('Running lint check...');
       const { stdout, stderr } = await execAsync('npm run "lint": check', {})
         "cwd": process.cwd(),
@@ -161,14 +168,17 @@ main
         this.log(`Lint "stderr": ${stderr}`);
         return { "hasErrors": true, "output": stderr };
       };
+=======
+
+        return { "hasErrors": true, "output": stderr };"
+      };"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log('Lint check completed successfully');
-      return { "hasErrors": false, "output": stdout };
-    } catch (error) {}
-      this.log(`Lint check "failed": ${error.message}`);
-      return { "hasErrors": true, "output": error.message };
-    };
-  };
+      return { "hasErrors": false, "output": stdout };"
+
+      return { "hasErrors": true, "output": error.message };"
   async runTypeCheck() {}
+<<<<<<< HEAD
     try {}
       this.log('Running type check...');
       const { stdout, stderr } = await execAsync('npm run type-check', {})
@@ -221,14 +231,27 @@ main
       return { "success": false, "output": error.message };
     };
   };
+=======
+    try {}"
+
+        "timeout": 60000}"
+
+
+      return { "success": false, "output": error.message };"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async countErrors(output) {}
     if (!output) return 0;
     const errorMatches = output.match(/error/g) || [];
     const warningMatches = output.match(/warning/g) || [];
     return errorMatches.length + Math.floor(warningMatches.length / 2); // Weight warnings less;
+<<<<<<< HEAD
   };
   async checkAndFix() {}
     this.log('Starting error monitoring cycle...');
+=======
+  async checkAndFix() {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const lintResult = await this.runLintCheck();
     const typeResult = await this.runTypeCheck();
     const buildResult = await this.runBuildCheck();
@@ -236,14 +259,21 @@ main
       (await this.countErrors(lintResult.output)) +
       (await this.countErrors(typeResult.output)) +
       (await this.countErrors(buildResult.output));
+<<<<<<< HEAD
     this.log(`Total errors "detected": ${totalErrors}`);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (totalErrors > this.errorThreshold) {}
-      this.log()
+      this.log()`;
         `Error threshold exceeded (${totalErrors} > ${this.errorThreshold}). Attempting fixes...``
+<<<<<<< HEAD
       );
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (lintResult.hasErrors) {}
         await this.fixLintErrors();
-      };
       // Re-run checks after fixes;
       const newLintResult = await this.runLintCheck();
       const newTypeResult = await this.runTypeCheck();
@@ -252,17 +282,17 @@ main
         (await this.countErrors(newLintResult.output)) +
         (await this.countErrors(newTypeResult.output)) +
         (await this.countErrors(newBuildResult.output));
+<<<<<<< HEAD
       this.log(`Errors after "fixes": ${newTotalErrors}`);
       if (newTotalErrors < totalErrors) {}
+=======
+
+      if (newTotalErrors < totalErrors) {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.log('Fixes applied successfully');
       } else {}
         this.log('Fixes did not reduce error count significantly');
-      };
-    } else {}
-      this.log('Error count within acceptable limits');
-    };
-    this.lastCheck = new Date();
-  };
+
   async start() {}
     this.log('Error Monitor started');
     // Run initial check;
@@ -270,19 +300,16 @@ main
     // Set up periodic checks every 30 minutes;
     setInterval()
       async () => {}
-        await this.checkAndFix();
       },
       30 * 60 * 1000;
-    );
-  };
-};
 // Start the monitor if this script is run directly;
 if (require.main === module) {}
   const monitor = new ErrorMonitor();
   monitor.start().catch(error => {})
-    console.error('Error Monitor "failed": ', error);
+
     process.exit(1);
   }
+<<<<<<< HEAD
 });
 };
 <<<<<<< HEAD
@@ -350,15 +377,33 @@ module.exports = ErrorMonitor;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+module.exports = ErrorMonitor;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-main
 
+<<<<<<< HEAD
 =======
 
 module.exports = ErrorMonitor;
 module.exports = ErrorMonitor;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

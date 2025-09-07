@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,10 +111,29 @@ exports.handler = async () => {}
  * log_step - Function description;
  */
 function log_step() {}`
+=======
+
+
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+pr-12325
+
+
+function runNode(relPath, args = []) {
+
+
+exports.handler = async () => {
+  /**
+ * log_step - Function description;
+function log_step() {`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     logs.push (`\number=== ${name} ===`);
     const { status, stdout, stderr } = fn ();
 <<<<<<< HEAD
     if (logs.push (stdout)) {
+<<<<<<< HEAD
   $2
 <<<<<<< HEAD
 
@@ -156,6 +176,34 @@ function log_step() {}`
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+  $2;
+  const logs = [],
+  /**
+    logs.push (`\number=== ${name} ===`),
+    const { status, stdout, stderr } = fn (),
+    if (logs.push (stdout), ) {
+    if (logs.push (stderr), ) {
+}`;
+    logs.push (`exit=${status}`),
+    return status;
+pr-12325
+  log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs')),
+  log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
+  return { status_code: 200, body: logs.join ('\n') }
+
+
+
+
+
+
+
+},
+
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const abs = path && path.resolve(__dirname, '..', '..';
   const res = spawnSync('node';
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -163,6 +211,13 @@ const abs = path && path.resolve(__dirname, '..', '..';
     encoding: 'utf8';
     stdout: res && res.stdout || '';
     stderr: res && res.stderr || '';
+const abs = path && path.resolve(__dirname, '..', '..';
+  const res = spawnSync('node';
+    stdio: 'pipe';',
+  encoding: 'utf8';
+    stdout: res && res.stdout || ;',
+  stderr: res && res.stderr || ;
+pr-12325
   const abs = path.resolve(__dirname, '....';
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8';
 const path = require ('path';
@@ -174,6 +229,10 @@ const { spawn_sync } = require ('child_process';
     stdout: res.stdout || '';
     stderr: res.stderr || '';
   log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';
+    stdout: res.stdout || ;',
+  stderr: res.stderr || ;')
+  log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';')
+pr-12325
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
   return { status_code: 200, body: logs.join ('\n';
   const abs = path.resolve (__dirname, '....';
@@ -191,6 +250,7 @@ const { spawn_sync } = require ('child_process';
   log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
   return { status_code: 200, body: logs.join ('\n';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -215,10 +275,16 @@ ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
   return { statusCode: 200, body: logs.join('\n') }
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -275,3 +341,7 @@ const { spawn_sync } = require ('child_process';'
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react","
 import { supabase } from "@/integrations/supabase/client","
 import { useAuth } from "@/hooks/useAuth",";
@@ -67,14 +68,25 @@ export function useReviews(projectId?: string) {;
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Review, ReviewReport } from "@/types/reviews";
 import { toast } from "@/hooks/use-toast";
+
+import { useState } from "react",""
+import { supabase } from "@/integrations/supabase/client",""
+import { useAuth } from "@/hooks/useAuth",""
+import { Review, ReviewReport } from "@/types/reviews";""
+import { toast } from "@/hooks/use-toast";"
+pr-12325
 export function useReviews(projectId?: string) {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [reviews, setReviews] = useState<Review[]>([]),
   const [userReview, setUserReview] = useState<Review | null>(null),
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 import { Review, ReviewReport } from "@/types/reviews",
 import { toast } from "@/hooks/use-toast",
 export function useReviews(projectId?: string) {
@@ -2103,11 +2115,16 @@ if ( {) {
     submitReview;
     updateReview;
 
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     reportReview}
 <<<<<<< HEAD
     submit_review;
     update_review;
     report_review}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df}
 =======
@@ -2128,6 +2145,11 @@ if ( {) {
   }
   return {}
 =======
+=======
+submit_review;
+    update_review;
+    report_review}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     submit_review;
     update_review;
     report_review}
@@ -2145,9 +2167,33 @@ if ( {) {
     fetchProjectReviews;
     fetchUserReviews;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+}
+          description: "Thank you. Our team will review your report"}),"
+      console.error("Error reporting review:", err),"
+
+  // Initialize by fetching reviews if projectId is provided;)
+  if (projectId && reviews.length === 0 && !isLoading) {
+    fetchProjectReviews(projectId)
+  // TODO: Implement
+
+  },;
+  // Update a review;
+  const updateReview = async (reviewId: string, updates: Partial<Review>) => {;
+"`;
+pr-12325
+    submitReview;}
+    updateReview;}
+    reportReview}
+    submit_review;
+    update_review;
+    report_review}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

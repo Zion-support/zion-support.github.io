@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -65,6 +66,9 @@ import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
 
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ActiveProjectsCard() {
@@ -91,6 +95,7 @@ export function ActiveProjectsCard() {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const { projects, isLoading } = useProjects();
 
+<<<<<<< HEAD
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);"
 import { useProjects } from "@/hooks/useProjects","
 import { Project } from "@/types/projects",
@@ -287,6 +292,8 @@ export function ActiveProjectsCard() { return null; }
 =======
   if (isLoading) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return (
       <Card>
         <CardHeader>
@@ -327,6 +334,10 @@ export function ActiveProjectsCard() {;
     if (projects && !isLoading) {;
       const active = projects && projects.filter(p => ;
         ['offer_acceptedin_progress'].includes(p && p.status);
+useEffect(() => {;
+    if (projects && !isLoading) {;
+      const active = projects.filter(p =>;
+        ['offer_acceptedin_progress'].includes(p.status);
       ).slice(0, 3), // Limit to 3 most recent projects;
       setActiveProjects(active);
     }
@@ -334,7 +345,7 @@ export function ActiveProjectsCard() {;
 
   if (isLoading) {;
     return (
-  if (isLoading) {;
+if (isLoading) {;
 
 import { useEffect, useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -376,10 +387,12 @@ export function ActiveProjectsCard() {;
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
 
-
-
             ))}
           </div>;
+  useEffect(() => {;
+    if (projects && !isLoading) {;
+      const active = projects && projects.filter(p => ;
+        ['offer_acceptedin_progress'].includes(p && p.status);          </div>;
         </CardContent>;
       </Card>;
     );
@@ -495,9 +508,69 @@ export function ActiveProjectsCard() {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-
-  
-
+))}
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }
+  if (activeProjects.length === 0) {
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <BriefcaseIcon className="h-5 w-5 text-primary" />
+            <span>Active Projects</span>
+          </CardTitle>
+          <CardDescription>Your ongoing work</CardDescription>
+        </CardHeader>
+        <CardContent className="text-center py-6">
+          <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
+          <Button variant="outline" asChild>
+            <Link to="/jobs">Find Opportunities</Link>
+          </Button>
+        </CardContent>
+      </Card>
+    )
+  }
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <BriefcaseIcon className="h-5 w-5 text-primary" />
+          <span>Active Projects</span>
+        </CardTitle>
+        <CardDescription>Your ongoing work</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        {activeProjects.map(project => (
+          <div key={project.id} className="border rounded-md p-3">
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="font-medium text-sm">{project.job?.title}</h3>
+              <Badge
+                variant={project.status === "in_progress" ? "default" : "outline"}
+                className={project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
+              >
+                {project.status === "offer_accepted" ? "Starting" : "In Progress"}
+              </Badge>
+            </div>
+            <div className="flex items-center text-xs text-muted-foreground gap-2">
+              <Clock className="h-3 w-3" />
+              <span>Started {new Date(project.start_date).toLocaleDateString()}</span>
+            </div>
+            <Button size="sm" variant="outline" className="w-full mt-2" asChild>
+              <Link to={`/project/${project.id}`}>View Project</Link>
+            </Button>
+          </div>
+        ))}
+      </CardContent>
+      {activeProjects.length > 2 && (
+        <CardFooter>
+          <Button variant="ghost" className="w-full" asChild>
+            <Link to="/projects">View All Projects</Link>
+          </Button>
+        </CardFooter>
+      )}
 
   if (activeProjects.length === 0) {
 
@@ -522,11 +595,38 @@ export function ActiveProjectsCard() {;
 =======
   if (activeProjects && activeProjects.length === 0) {;
     return (
+
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]),
+
+      <Card>
+
+        <CardHeader>
+"
+          <CardTitle className="flex items-center gap-2">"
+            <BriefcaseIcon className="h-5 w-5 text-primary" />"
+
+            <span>Active Projects</span>
+          <CardDescription>Your ongoing work
+        <CardContent>
+          <div className="space-y-2">"
+</div>"
+              <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>"
+
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]),;
+
+
       <Card>;
+
         <CardHeader>;
+<<<<<<< HEAD
           <CardTitle className="flex items-center gap-2">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <BriefcaseIcon className="h-5 w-5 text-primary" />;
+=======
+          <CardTitle className="flex items-center gap-2">;"
+            <BriefcaseIcon className="h-5 w-5 text-primary" />;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span>Active Projects</span>;
           </CardTitle>;
           <CardDescription>Your ongoing work</CardDescription>;
@@ -625,76 +725,65 @@ if ( {) {
           </CardTitle>;
           <CardDescription > Your ongoing work</CardDescription>;
         </CardHeader>;
+          ;
+          <CardDescription>Your ongoing work;
         <CardContent>;
-          <div className="space - y-2">;
-            {[1, 2].map (idx => (
-              <div key={idx} className="h - 16 animate - pulse bg - muted rounded"></div>))}
+          <div className="space-y-2">;"
+              <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;"
           </div>;
-        </CardContent>;
-      </Card>);
-  }
-  // Check condition
+
+
+        ;"
+        <CardContent className="text-center py-6">;"
+          <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>;
+          <Button variant="outline" asChild>;"
+            <Link to="/jobs">Find Opportunities;"
+        <CardFooter>;
+          <Button variant="ghost" className="w-full" asChild>;"
+            <Link to="/projects">View All Projects;"
+  const [active_projects, setActiveProjects] = useState < Project[]>([]);
+  // Check condition;
 if ( {) {
-  $2
+  $2;
 }
     return (
-      <Card>;
-        <CardHeader>;
-          <CardTitle className="flex items - center gap - 2">;
-            <BriefcaseIcon className="h - 5 w - 5 text - primary" />;
+
+          <CardTitle className="flex items - center gap - 2">;"
+            <BriefcaseIcon className="h - 5 w - 5 text - primary" />;"
+
             <span > Active Projects</span>;
-          </CardTitle>;
-          <CardDescription > Your ongoing work</CardDescription>;
-        </CardHeader>;
-        <CardContent className="text - center py - 6">;
+          <CardDescription > Your ongoing work;
+          <div className="space - y-2">;"
+</div>)"
+              <div key={idx} className="h - 16 animate - pulse bg - muted rounded"></div>))}"
+      );
+
+
+        <CardContent className="text - center py - 6">;"
           <p className="text - muted - foreground mb - 2">You don't have any active projects at the moment.</p>;
-          <Button variant="outline" as_child>;
-            <Link to="/jobs">Find Opportunities</Link>;
-          </Button>;
-        </CardContent>;
-      </Card>);
-  }
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          <BriefcaseIcon className="h - 5 w - 5 text - primary" />;
-          <span > Active Projects</span>;
-        </CardTitle>;
-        <CardDescription > Your ongoing work</CardDescription>;
-      </CardHeader>;
-      <CardContent className="space - y-4">;
-        {active_projects.map (project => (
-          <div key={project.id} className="border rounded - md p - 3">;
-            <div className="flex justify - between items - start mb - 2">;
-              <h3 className="font - medium text - sm">{project.job?.title}</h3>;
-              <Badge;
-                variant={project.status === "in_progress" ? "default" : "outline"}
-                className={project.status === "in_progress" ? "bg - blue - 100 text - blue - 800 hover:bg - blue - 100" : ""}
+          <Button variant="outline" as_child>;"
+
+
+      <CardContent className="space - y-4">;"
+          <div key={project.id} className="border rounded - md p - 3">;"
+            <div className="flex justify - between items - start mb - 2">;"
+              <h3 className="font - medium text - sm">{project.job?.title}</h3>;"
+              <Badge;"
+                variant={project.status === "in_progress" ? "default" : "outline"}""
+                className={project.status === "in_progress" ? "bg - blue - 100 text - blue - 800 hover:bg - blue - 100" : ""}"
               >;
-                {project.status === "offer_accepted" ? "Starting" : "In Progress"}
-              </Badge>;
-            </div>;
-            <div className="flex items - center text - xs text - muted - foreground gap - 2">;
-              <Clock className="h - 3 w - 3" />;
+
+            </div>;"
+            <div className="flex items - center text - xs text - muted - foreground gap - 2">;"
+              <Clock className="h - 3 w - 3" />;"
+
               <span > Started {new Date (project.start_date).toLocaleDateString ()}</span>;
-            </div>;
-            <Button size="sm" variant="outline" className="w - full mt - 2" as_child>;
-              <Link to={`/project/${project.id}`}>View Project</Link>;
-            </Button>;
+            <Button size="sm" variant="outline" className="w - full mt - 2" as_child>;"
+
+              <Link to={`/project/${project.id}`}>View Project;
           </div>))}
-      </CardContent>;
-      {active_projects.length > 2 && (
-        <CardFooter>;
-          <Button variant="ghost" className="w - full" as_child>;
-            <Link to="/projects">View All Projects</Link>;
-          </Button>;
-        </CardFooter>)}
-    </Card>);
-  ),; export function ActiveProjectsCard () {
-  const {
-  projects, isLoading 
-}= useProjects ();
+          <Button variant="ghost" className="w - full" as_child>;"
+        )}
 const [activeProjects, setActiveProjects] = useState<Project[]> ([]);
 useEffect ( () => {
   if (projects && !isLoading) {
@@ -716,7 +805,18 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
   );
 }
 ;
+return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span>  <CardDescription>Your ongoing work  <CardContent>) )"
 
+<<<<<<< HEAD
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}</div>  ) "
+  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span>  <CardDescription>Your ongoing work  <CardContent className="text-center py-6" > <p className="text-muted-foreground mb-2" >You don't have any active projects at the moment.</p> <Button variant="outline" asChild> <Link to="/jobs" >Find Opportunities    return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span>  <CardDescription>Your ongoing work   </div>) )"
+} {"
+  activeProjects.length > 2 && (<CardFooter> <Button variant="ghost" className="w-full" asChild> <Link to="/projects">View All Projects  )"
+}) 
+    ;"`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

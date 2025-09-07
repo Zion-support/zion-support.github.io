@@ -32,6 +32,7 @@ import {JobData, MatchResult} from "./types ;
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
 
 
+<<<<<<< HEAD
 
 "
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;"
@@ -484,6 +485,8 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     console.error("Error in processJobMatching:", error),;
     throw error;
   }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 /**;
@@ -491,6 +494,7 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
  * @param jobId The ID of the job;
  * @param matchedTalents Array of match results;
  */;
+<<<<<<< HEAD
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {;
   const matchInsertPromises = matchedTalents.map(async (match) => {;
 <<<<<<< HEAD
@@ -727,34 +731,38 @@ export async function processJobMatching(job:JobData, talents:any[]):Promise<Mat
  */;
 export async function storeMatchResults(jobId:string, matchedTalents:MatchResult[], jobTitle:string):Promise<void> {;
   const matchInsertPromises = matchedTalents.map(async (match) => {;
+=======
+export async function storeMatchResults(jobId:string, matchedTalents:MatchResult[], jobTitle:string):Promise<void /> {;}
+  const matchInsertPromises = matchedTalents.map(async (match) => {;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const { error:matchError } = await supabase;
-      .from("job_talent_matches");
+      .from(\"job_talent_matches\");
       .insert({;
         job_id:jobId,;
         talent_id:match.talentId,;
         match_score:match.score,;
-        matched_skills:match.matchedSkills,;
-        reason:match.reason;
+        matched_skills:match.matchedSkills,;}
+        reason:match.reason;}
       }),;
     ;
-    if (matchError) {;
+    if (matchError) {;}
       console.error(`Error storing match for talent ${match.talentId} `, matchError),;
     } else {;
       // Create notifications for each matched talent;
       await supabase.rpc('create_notification', {;
-        _user_id:match.talentId,;
-        _title:"New Job Match",;
-        _message:`A new job "${jobTitle}" matches your skills. Check it out!`,;
-        _type:"job_match",;
+        _user_id:match.talentId,;}
+        _title:\"New Job Match\",;}
+        _message:`A new job \"${jobTitle}\" matches your skills. Check it out!`,;
+        _type:\"job_match\",;
         _related_id:jobId;
       }),;
     }
   }),;
   ;
-  await Promise.all(matchInsertPromises),; try {
-  //Normalize job skills and generate embeddings via OpenAI 
+  await Promise.all(matchInsertPromises),; try {}
+  //Normalize job skills and generate embeddings via OpenAI }
 }
-}/** * Stores match results in the database and creates notifications * @param jobId The ID of the job * @param matchedTalents Array of match results */ related id: jobId 
+}/** * Stores match results in the database and creates notifications * @param jobId The ID of the job * @param matchedTalents Array of match results */ related id: jobId;
 }) 
 }
 });
@@ -767,10 +775,42 @@ await Promise.all (matchInsertPromises)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+    const { error: match_error } = await supabase;"
+      .from ("job_talent_matches");"
+      .insert ({
+        job_id: job_id;,
+  talent_id: match.talent_id;
+        match_score: match.score;,
+  matched_skills: match.matched_skills,
+        reason: match.reason;)
+      });
+    // Check condition;
+if ( {) {
+  $2;
+      console.error (`Error storing match for talent ${match.talent_id}:`, match_error);
+    } else {
+  // TODO: Implement
+      // Create notifications for each matched talent;"
+      await supabase.rpc ('create_notification', {
+        _user_id: match.talent_id;,
+  _title: "New Job Match",""`;
+        _message: `A new job "${job_title}" matches your skills. Check it out!`;""
+        _type: "job_match","
+        _related_id: job_id;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   await Promise.all (matchInsertPromises);
-}
+/**;
+ * @param jobId The ID of the job;
+ * @param matchedTalents Array of match results;
+export async function processJobMatching(job:JobData, talents:any[]):Promise<MatchResult[]> {;
+
+export async function storeMatchResults(jobId:string, matchedTalents:MatchResult[], jobTitle:string):Promise<void> {;
+</void>"`;
+pr-12325
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

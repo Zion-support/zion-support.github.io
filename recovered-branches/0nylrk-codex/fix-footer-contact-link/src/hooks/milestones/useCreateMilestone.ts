@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -87,6 +88,8 @@ import {use_auth} from '@/hooks / use_auth';        .select()
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 <<<<<<< HEAD
@@ -108,6 +111,20 @@ import {useRecordActivity} from './useRecordActivity';
           project_id: projectId,
           created_by: user && user.id})
 
+export const useCreateMilestone = (projectId?: string) => {
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { recordMilestoneActivity } = useRecordActivity();
+  const createMilestone = async (milestoneData: Omit<Milestone, 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
+    if (!user |!projectId) return null;
+    try {
+      setIsSubmitting(true);
+      const { data, error } = await supabase
+        .from('project_milestones')
+        .insert({
+          ...milestoneData;
+          project_id: projectId
+          created_by: user.id})
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -115,6 +132,7 @@ import {toast} from 'sonner';
 import {Milestone} from './types';
 import {useRecordActivity} from './useRecordActivity';
         .select()
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         .single();
       if (error) throw error;
@@ -446,3 +464,8 @@ export const useCreateMilestone = (projectId?: string) => {;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

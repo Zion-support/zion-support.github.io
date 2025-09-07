@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -19,9 +20,16 @@ class ErrorBoundary extends React.Component {}
     }
     
     return this.props.children;
+=======
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
+}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+    }return this.props.children;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }'
 import React, { useState } from 'react';
+<<<<<<< HEAD
 const EnhancedNavigation = () => {}
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 <<<<<<< HEAD
@@ -105,6 +113,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="container mx - auto px - 4">;"
         <div className="flex justify - between items - center py - 4">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+const EnhancedNavigation = (
+ ;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+
+  return (
+    <nav className=\"bg - white shadow - lg sticky top-0 z-50\" />;
+      <div className=\"container mx-auto px-4\" />;
+        <div className=\"flex justify - between items-center py-4\" />;) => {
+  return $3;}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {/* Logo */}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >"
@@ -113,8 +135,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">Z</span>
+
+          <Link href=\"/\" className=\"flex items-center space-x-2\" />
+            <div className=\"w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center\" />
+              <span className=\"text-white font-bold text-xl\" />Z</span>
             </div>
-            <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>
+            <span className=\"text-xl font-bold text-gray-800\" />Zion Tech Group</span>
           </Link>
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -163,7 +189,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
+<<<<<<< HEAD
               </Link>"
+=======
+              </Link>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Link href="/services" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
                 Services;
               </Link>"
@@ -181,6 +211,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>"
               <Link href="/contact" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className='lg:hidden border-t border-gray-200 py-4'>
             <div className='space-y-2'>
               <Link
@@ -234,6 +267,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </div>
     </nav>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <Link href="/" className="flex items-center space-x-2">;
@@ -432,3 +466,7 @@ export default EnhancedNavigation;}
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default EnhancedNavigation;
 '"
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

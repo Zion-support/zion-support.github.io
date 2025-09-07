@@ -33,6 +33,7 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 
 
+<<<<<<< HEAD
 
 
 interface ChangelogManagerProps {
@@ -440,10 +441,29 @@ import React, { useState } from "react",;
 
 import React, { useState } from "react",;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
+
+interface ChangelogManagerProps {
+  platform: AppPlatform
+}
+
+type ChangelogEntry = {;
+}
+
+import { Plus, Trash2 } from "lucide-react";
+import { AppPlatform } from "./MetadataManager";
+import { Plus, Trash2 } from "lucide-react";
+import { AppPlatform } from "./MetadataManager";
+import { Plus, Trash2 } from "lucide-react",
+import { AppPlatform } from "./MetadataManager",
+type ChangelogEntry = {;import { Plus, Trash2 } from "lucide-react";
+
+import { AppPlatform } from "./MetadataManager";
 import { Plus, Trash2 } from "lucide-react",;
 =======
 
@@ -456,9 +476,44 @@ import { Textarea } from "@/components/ui/textarea",;"
 import { Plus, Trash2 } from "lucide-react",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { AppPlatform } from "./MetadataManager",;
-interface ChangelogManagerProps {;
+
+interface ChangelogManagerProps {
+  platform: AppPlatform
+}
+
+type ChangelogEntry = {;
+
+import React, { useState } from "react",""
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",""
+import { Button } from "@/components/ui/button",""
+import { Input } from "@/components/ui/input",""
+import { Textarea } from "@/components/ui/textarea","
+interface ChangelogManagerProps {
+  // TODO: Implement
+}
+  platform: AppPlatform;
+
+type ChangelogEntry = {;
+"
+import { Plus, Trash2 } from "lucide-react";""
+import { AppPlatform } from "./MetadataManager";""
+import { Plus, Trash2 } from "lucide-react",""
+import { AppPlatform } from "./MetadataManager","
+  // TODO: Implement
+
+type ChangelogEntry = {;"
+pr-12325
+import React, { useState } from './react';
+import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import { Textarea  } from '@/components / ui / textarea';
+import { Plus, Trash2  } from './lucide-react';
+import { AppPlatform  } from './MetadataManager';
+interface ChangelogManagerProps {
   platform: AppPlatform;
 }
+<<<<<<< HEAD
 ;
 type ChangelogEntry = {;
   id: string,;
@@ -966,3 +1021,7 @@ date: new Date () .toISOString () .split ('T') [0];
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -22,11 +22,16 @@ export default {
 =======
 
 export default {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    autoprefixer: {}}}export default {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   plugins: {
     tailwindcss: {}
     autoprefixer: {}}}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -40,6 +45,8 @@ export default {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default {;
   plugins: {;
     tailwindcss: {};
@@ -64,6 +71,7 @@ export default {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     autoprefixer: {}}}
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -79,3 +87,20 @@ export default {;
 =======
     autoprefixer: {}}}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+export default {
+  // TODO: Implement
+}
+  plugins: {,
+  tailwindcss: {}
+    autoprefixer: {}}}
+
+
+export default {;
+  plugins: {;,
+  tailwindcss: {};
+
+export default {plugins: {;,
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

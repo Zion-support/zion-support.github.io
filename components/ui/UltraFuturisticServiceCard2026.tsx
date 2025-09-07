@@ -1,23 +1,30 @@
 import React from 'react';
+
     monthly?: number;
     yearly?: number;
     currency?: string;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
+
   name: string;
   tagline: string;
   description: string;
-  price?: string | {
-    monthly?: number;
+  price?: string | {monthly?: number;
     yearly?: number;
     currency?: string;
     trialDays?: number;
-    setupTime?: string
+
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
   period?: string;
   pricing?: any;
   features: string[],;
   popular?: boolean;
+<<<<<<< HEAD
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
@@ -474,3 +481,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

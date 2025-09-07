@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -30,6 +31,17 @@ import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
 const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
+const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
+import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
+
+
+import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
+const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
+import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
+const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 :src.disabled/src/components/ComprehensiveServicesShowcase2025.jsx
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
 =======
@@ -110,4 +122,8 @@ import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail
 import { AnimatePresence,motion } from \'framer-motion\'; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from \'lucide-react\'; import { useState } from \'react\';
 const { AnimatePresence,motion } from "framer-motion"; import { ; CheckCircle,; Clock,; ExternalLink,; Mail,; MapPin,; Phone,; Search,; Shield,; TrendingUp} from "lucide-react"; import { useState } from "react";''"
 import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { AnimatePresence, motion, ; CheckCircle, ; Clock, ; ExternalLink, ; Mail, ; MapPin, ; Phone, ; Search, ; Shield, ; TrendingUp } from 'lucide-react'; import { useState } from 'react';''
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

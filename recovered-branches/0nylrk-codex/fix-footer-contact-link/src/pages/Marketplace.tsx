@@ -11,6 +11,7 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
+<<<<<<< HEAD
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -1251,6 +1252,11 @@ if ( {) {}
 
                 selectedRating
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }}
               filterOptions={filterOptions}
               onFilterChange={handleFilterChange}
@@ -1263,6 +1269,49 @@ if ( {) {}
             {/* Active filters display */}
             <ActiveFiltersBar
               selectedProductTypes={selectedProductTypes}
+                selectedProductTypes;
+                selectedLocations;
+                selectedAvailability,
+
+                value={searchQuery}
+                onChange={setSearchQuery}"
+                placeholder="Search the marketplace...""
+                searchSuggestions={searchSuggestions}
+
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;"
+          <div className="lg: col-span-1">;"
+        {/* Main layout with sidebar and results */}"
+                selectedAvailability;
+                selectedProductTypes,
+                selectedLocations,
+
+                selectedRating;
+                selected_locations;
+                selected_availability,
+                selected_rating;
+              }}
+              filter_options={filter_options}
+              onFilterChange={handleFilterChange}
+              onRatingChange={setSelectedRating}
+              onClearFilters={clearAllFilters}
+          {/* Main content */}"
+          <div className="lg:col-span-3">;"
+
+            <ActiveFiltersBar;
+              selectedProductTypes={selectedProductTypes}
+              selected_locations={selected_locations}
+              selected_availability={selected_availability}
+              selected_rating={selected_rating}
+              search_query={search_query}
+              onRemoveFilter={handleFilterChange}
+            {/* Results count */}"
+            <div className="mb-6">;"
+          <div className="lg:col-span-3">"
+pr-12325
+</div>
+            <ActiveFiltersBar;
+              selectedProductTypes={selectedProductTypes}
+
               selectedLocations={selectedLocations}
               selectedAvailability={selectedAvailability}
               selectedRating={selectedRating}
@@ -1278,6 +1327,7 @@ if ( {) {}
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
+<<<<<<< HEAD
             
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1295,6 +1345,8 @@ if ( {) {}
                 filteredListings.map((listing) => (
                   <ProductListingCard;
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
@@ -1345,6 +1397,38 @@ if ( {) {}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               {filteredListings && filteredListings.length > 0 ? (;
                 filteredListings && filteredListings.map((listing) => (;
+<<<<<<< HEAD
+=======
+                  <ProductListingCard
+
+              onRemoveFilter={handleFilterChange})
+              onRemoveRating={() => setSelectedRating(null)}
+</ActiveFiltersBar>"
+            <div className="mb-6">"
+</div>"
+              <p className="text-zion-slate-light">"
+</p>
+              </p>
+            </div>"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+</div>
+                  <ProductListingCard;
+                    key={listing.id}
+                    listing={listing}
+                    onRequestQuote={handleRequestQuote}
+                  />
+</ProductListingCard>"
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">"
+</div>"
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>""
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">"
+</p>
+                  </p>
+              </p>;
+            </div>;"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;"
+</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <ProductListingCard;
                     key={listing && listing.id} 
                     listing={listing}
@@ -1401,17 +1485,46 @@ if ( {) {}
               <p className="text - zion - slate - light">;
                 Showing {filtered_listings.length} results;
                 {search_query && ` for "${search_query}"`}
+              onRemoveFilter={handleFilterChange})
+              onRemoveRating={() => setSelectedRating(null)}
+            <div className="mb-6">"
+              <p className="text-zion-slate-light">"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+</ProductListingCard>"
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">;"
+</div>"
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>;""
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">;"
+</p>
+                  </p>;
+                  <Button;
+                    onClick={clearAllFilters}"
+                    className="bg-zion-purple hover:bg-zion-purple-dark">;"
+</Button>
+                  </Button>;
+                </div>;"
+            <div className="mb - 6">;"
+</div>"
+              <p className="text - zion - slate - light">;"
+</p>
               </p>;
+<<<<<<< HEAD
             </div>;
             {/* Display actual marketplace listings */}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
               {filtered_listings.length > 0 ? (
                 filtered_listings.map ((listing) => (
+=======
+            </div>;"
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;"
+</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <ProductListingCard;
                     key={listing.id}
                     listing={listing}
                     onRequestQuote={handleRequestQuote}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   />))) : ("
                 <div className="col - span - 2 text - center py - 16 bg - zion - blue - dark border border - zion - blue - light rounded - lg">;"
@@ -1432,10 +1545,30 @@ if ( {) {}
                     on_click={clearAllFilters}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                     className="bg - zion - purple hover:bg - zion - purple - dark";
+=======
+                  />
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">"
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>""
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;"
+                    key={listing && listing.id} 
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">;"
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>;""
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">;"
+                  <Button;
+                    onClick={clearAllFilters}"
+                    className="bg-zion-purple hover:bg-zion-purple-dark">;"
+
+            <div className="mb - 6">;"
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;"
+                  />))) : (
+                <div className="col - span - 2 text - center py - 16 bg - zion - blue - dark border border - zion - blue - light rounded - lg">;"
+                  <h2 className="text - 2xl font - bold text - white mb - 4">No Results Found</h2>;""
+                  <p className="text - zion - slate - light max - w-md mx - auto mb - 8">;"
+                    on_click={clearAllFilters}"
+                    className="bg - zion - purple hover:bg - zion - purple - dark";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   >;
-                    Clear Filters;
-                  </Button>;
-                </div>)}
 
 <<<<<<< HEAD
 
@@ -1448,8 +1581,11 @@ if ( {) {}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <div className="lg:col-span-3">;
             {/* Active filters display */}
+                  ;)
+                </div>)}"
             <ActiveFiltersBar ;
               selectedProductTypes={selectedProductTypes}              selectedLocations={selectedLocations}
+<<<<<<< HEAD
               selectedAvailability={selectedAvailability}
               selectedRating={selectedRating}
               searchQuery={searchQuery}
@@ -1535,6 +1671,16 @@ if ( {) {}
             </div>
           </div>
         </div>
+=======
+                  <ProductListingCard ;
+                    key={listing.id} ;
+                  <Button ;
+                    className="bg-zion-purple hover:bg-zion-purple-dark";"
+
+                    className="bg-zion-purple hover:bg-zion-purple-dark""
+                  >
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </main>
     </AppLayout>
   )
@@ -1592,6 +1738,7 @@ break;
     </AppLayout>);
 }
 
+;
     </AppLayout>;
   ),; const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions ();
 const filterOptions = generateFilterOptions ();
@@ -1695,54 +1842,56 @@ Discover professional services and products for your AI and tech projects. Brows
 =======
 };
 Discover professional services and products for your AI and tech projects. Browse our curated collection of solutions from verified providers. </p> </div> /> </div> <div className="flex gap-2" > <Button variant="ghost" size="icon" className="text-zion-slate-light" > <Grid3X3 className="h-4 w-4" /> </Button> <Button variant="ghost" size="icon" className="text-zion-slate-light" > <ListFilter className="h-4 w-4" /> </Button> </div> </div> </div> <FilterSidebar filters= {
+      </main>;
+Discover professional services and products for your AI and tech projects. Browse our curated collection of solutions from verified providers. </p> </div> /> </div> <div className="flex gap-2" > <Button variant="ghost" size="icon" className="text-zion-slate-light" > <Grid3X3 className="h-4 w-4" />  <Button variant="ghost" size="icon" className="text-zion-slate-light" > <ListFilter className="h-4 w-4" />  </div> </div> </div> <FilterSidebar filters= {"
   {
-  selectedProductTypes, selectedLocations, selectedAvailability, selectedRating 
-}
+  selectedProductTypes, selectedLocations, selectedAvailability, selectedRating;
 }filterOptions= {
-  filterOptions 
+  filterOptions;
 }onFilterChange= {
-  handleFilterChange 
+  handleFilterChange;
 }onRatingChange= {
-  setSelectedRating 
+  setSelectedRating;
 }onClearFilters= {
-  clearAllFilters 
+  clearAllFilters;
 }/> </div> <ActiveFiltersBar selectedProductTypes= {
-  selectedProductTypes 
 }selectedLocations= {
-  selectedLocations 
 }selectedAvailability= {
-  selectedAvailability 
 }selectedRating= {
-  selectedRating 
 }searchQuery= {
-  searchQuery 
+  searchQuery;
 }onRemoveFilter= {
-  handleFilterChange 
 }onRemoveRating= {
   () => setSelectedRating (null) 
-}onClearSearch= {
-  () => setSearchQuery ("") 
-}/> {
-  /* Results count */ 
-}<div className="mb-6"> </p> </div> {
-  /* Display actual marketplace listings */ 
-}<div className="grid grid-cols-1 md:grid-cols-2 gap-6"> {
+}<div className="mb-6"> </p> </div> {""
+}<div className="grid grid-cols-1 md:grid-cols-2 gap-6"> {"
   filteredListings.length > 0 ? (filteredListings.map ( (listing) => (<ProductListingCard key= {
-  listing.id 
+  listing.id;
 }listing= {
-  listing 
+  listing;
 }onRequestQuote= {
-  handleRequestQuote 
+  handleRequestQuote;)"
 }/>) ) ) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg"> <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2> <p className="text-zion-slate-light max-w-md mx-auto mb-8"> We couldn't find any listings matching your filters. Try adjusting your search criteria. </p> <Button onClick= {
+<<<<<<< HEAD
   clearAllFilters 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters </Button> </div>) 
+=======
+}className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters  </div>)"
+}</div> </div> </div> </main> ) 
+    ;"`;
+pr-12325
+}/>) ) ) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg"> <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2> <p className="text-zion-slate-light max-w-md mx-auto mb-8"> We couldn't find any listings matching your filters. Try adjusting your search criteria. </p> <Button onClick= {'
+</ProductListingCard>)'
+}className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters </Button> </div>)"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }</div> </div> </div> </main> </AppLayout>) 
 }
     </AppLayout>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1763,3 +1912,7 @@ Discover professional services and products for your AI and tech projects. Brows
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </AppLayout>;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

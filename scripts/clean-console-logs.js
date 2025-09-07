@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -28,11 +29,14 @@
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 =======
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,10 +63,16 @@
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -113,11 +123,35 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-origin/main
+=======
 
+
+
+
+
+
+
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+
+
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+origin/main
 main
+<<<<<<< HEAD
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Directories to clean
 const directories = [
   'src/**/*.{js,jsx,ts,tsx}',
@@ -240,6 +274,7 @@ export { cleanConsoleLogs, processFile };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -263,3 +298,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""""
+#!/usr/bin/env node];import { glob } from "glob;""""
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

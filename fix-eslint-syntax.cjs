@@ -9,6 +9,7 @@ function fixFile(filePath) {
     const originalContent = content;
 
     // Fix common syntax errors that break ESLint
+<<<<<<< HEAD
     content = content.replace(/
     content = content.replace(/
 
@@ -21,6 +22,18 @@ function fixFile(filePath) {
     // Fix TypeScript interface syntax
     content = content.replace(/interface\s+(\w+)\s*\{\s*\}/g, 'interface $1 {}');
 
+=======
+    content = content.replace(/    content = content.replace(/    content = content.replace(/[\s\S]*?    
+    // Fix missing semicolons in imports
+    content = content.replace(/import\s+([^;]+)\s*$/gm, 'import $1;');
+    
+    // Fix missing semicolons in exports
+    content = content.replace(/export\s+([^;]+)\s*$/gm, 'export $1;');
+    
+    // Fix TypeScript interface syntax
+    content = content.replace(/interface\s+(\w+)\s*\{\s*\}/g, 'interface $1 {}');
+    
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;

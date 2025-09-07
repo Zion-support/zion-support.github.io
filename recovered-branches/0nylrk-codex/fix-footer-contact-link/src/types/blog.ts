@@ -12,10 +12,25 @@ export interface BlogAuthor {
 export interface BlogAuthor {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   name: string;
+
+
+  // TODO: Implement
+}
+  name: string;,
   title: string;
   avatarUrl: string;
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+  // TODO: Implement
+}
+  name: string;,
+  title: string;
+  avatarUrl: string;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   title: string,
   avatar_url: string;
@@ -31,6 +46,8 @@ export interface BlogAuthor {
 
 export interface BlogAuthor {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  name: string;
+}export interface BlogAuthor {
   name: string;
 }
 <<<<<<< HEAD
@@ -98,6 +115,7 @@ export interface GeneratedBlogContent {
   tags: string[];
   tweetSummary?: string;
   imagePrompt?: string;
+
 }
 
   tweet_summary?: string,
@@ -175,7 +193,11 @@ export interface GeneratedNewsletterContent {;
 }
 export interface BlogAuthor {;
   name: string,;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}  name: string,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   title: string,;
   avatarUrl: string;
 }
@@ -183,6 +205,7 @@ export interface BlogAuthor {;
 export interface BlogPost {;
   id: string,;
   title: string,;
+<<<<<<< HEAD
   slug: string,;
   excerpt: string,;
   content: string,;
@@ -291,3 +314,35 @@ export interface GeneratedNewsletterContent {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export interface BlogPost {
+  // TODO: Implement
+  // TODO: Implement
+  name: string;
+
+}
+export interface BlogPost {
+  // TODO: Implement
+export interface BlogPost {;
+
+  id: string;,
+
+  title: string;
+  slug: string;,
+  excerpt: string;
+  content: string;,
+  author: BlogAuthor;
+
+  published_date: string;,
+  read_time: string;
+  category: string;,
+  tags: string[];
+  featuredImage: string;
+  isFeatured?: boolean;
+  isPublished?: boolean;
+
+
+export interface GeneratedBlogContent {
+
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

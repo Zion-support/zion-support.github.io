@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import Head from 'next/head';'
 import Card from '../components/ui/Card';'
@@ -28,16 +29,15 @@ export default function DevOpsAutomationPage() {}
 <<<<<<< HEAD
 export default function DevOpsAutomationPage() {
   const features = [
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 export default function DevOpsAutomationPage() {
   const features = null;
               and intelligent security automation. Deploy faster, safer, and more reliably.
-origin/cursor/automate-test-improve-and-merge-code-2533
-    {
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines'
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',,
-  description: 'Automated build, test, and deployment workflows';
 
+<<<<<<< HEAD
 =======
 export default function DevOpsAutomationPage() {}
   const features = []
@@ -457,6 +457,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Streamline your development workflow with automated CI/CD
               pipelines, infrastructure as code, and intelligent security
               automation. Deploy faster, safer, and more reliably.
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -576,8 +578,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Card;
                   key={index}'
                   className='text-center group hover:scale-105 transition-transform duration-300'>;
+<<<<<<< HEAD
                   <div;
               </h2>"
+=======
+                  <div
+              </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See how Zion DevOps can transform your development workflow.
               </p>
@@ -625,6 +632,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {example.icon}
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
               </h2>;"
               <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
@@ -646,6 +654,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     {example.icon}
                   </div>'
+=======
+                    className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}
+                  >
+                    {example.icon}
+                  </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <p className='text-gray-400'>{example.description}</p>                </Card>
 
                   <h3 className='text-xl font-semibold text-white mb-4'>
@@ -667,9 +681,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Choose the plan that fits your DevOps needs. All plans include a;
                 14-day free trial.;
               </p>;
+<<<<<<< HEAD
             </div>;'
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {pricingPlans && pricingPlans.map((plan, index) => (                Simple, Transparent Pricing;
               </h2>;"
+=======
+            </div>;
+            <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>              {pricingPlans && pricingPlans.map((plan;, index) => (                Simple, Transparent Pricing;
+              </h2>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
                 Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.;
               </p>;
@@ -730,6 +750,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 Simple, Transparent Pricing
               </h2>
+<<<<<<< HEAD
 =======
 
         {/* Pricing Section */}"
@@ -751,6 +772,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Simple, Transparent Pricing;
               </h2>"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Choose the plan that fits your DevOps needs. All plans include a 14-day free trial.
               </p>
@@ -909,7 +932,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       variant={plan.popular ? 'primary' : 'outline'}
                         plan.popular'
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'
+<<<<<<< HEAD
                         plan.popular '
+=======
+                        plan.popular 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
 
                         plan.popular '
@@ -921,6 +948,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+<<<<<<< HEAD
+=======
+
+                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 `
@@ -929,8 +961,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >;
                       {plan.cta}
 
+<<<<<<< HEAD
                         plan && plan.popular '
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' `
+=======
+                        plan && plan.popular 
+                          ? 'bg-blue-600 hover: bg-blue-700 text-white' ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       }`}>;
                       {plan && plan.cta}
                     </Button>;
@@ -1037,6 +1074,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h3 className="text-xl font-bold text-white mb-2">{competitor && competitor.competitor}</h3>;"
                     <div className="flex items-center justify-center mb-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
                 See why Zion DevOps is the smart choice for automation.
@@ -1074,10 +1114,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className='mb-4'>
                     <p className='text-lg font-semibold text-white mb-1'>
-                      Pricing: {competitor.pricing}
+                      Pricing: {competitor.pricing;}
                     </p>
                     <p className='text-sm text-gray-400'>
-                      Repositories: {competitor.repositories}
+                      Repositories: {competitor.repositories;}
                     </p>
                   </div>
                   <div className='space-y-2'>
@@ -1282,7 +1322,11 @@ href='/contact'
                 variant='outline''
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 size='lg'
+<<<<<<< HEAD
                 Contact Sales;
+=======
+                Contact Sales
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </Button>;
                   </div>;
                 </Card>))}
@@ -1331,10 +1375,15 @@ href='/contact'
                   </div>;'
                   <div className='mb - 4'>;'
                     <p className='text - lg font - semibold text - white mb - 1'>;
+<<<<<<< HEAD
                       Pricing: {competitor.pricing}
                     </p>;'
+=======
+                      Pricing: {competitor.pricing;}
+                    </p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <p className='text - sm text - gray - 400'>;
-                      Repositories: {competitor.repositories}
+                      Repositories: {competitor.repositories;}
                     </p>;
                   </div>;'
                   <div className='space - y-2'>;
@@ -1348,8 +1397,8 @@ href='/contact'
                           <li key={pro_index} className='flex items - center'>;
                             <Check className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />                            {pro}                  </div>;
                   <div className="mb-4">;
-                    <p className="text - lg font - semibold text-white mb-1">Pricing: {competitor.pricing}</p>;
-                    <p className="text - sm text-gray-400">Repositories: {competitor.repositories}</p>;
+                    <p className="text - lg font - semibold text-white mb-1">Pricing: {competitor.pricing;}</p>;
+                    <p className="text - sm text-gray-400">Repositories: {competitor.repositories;}</p>;
                   </div>;
                   <div className="space-y-2">;
                     <div>;

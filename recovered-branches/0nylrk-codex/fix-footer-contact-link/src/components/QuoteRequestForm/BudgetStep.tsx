@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -28,6 +29,8 @@ import {Slider} from "@/components/ui/slider";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
@@ -62,10 +65,13 @@ import { Slider } from "@/components/ui/slider",
 =======
 import { Slider } from "@/components/ui/slider",
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface BudgetStepProps {
 
   formData: QuoteFormData
@@ -213,6 +219,23 @@ import { Slider } from "@/components/ui/slider",        }
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
+import {QuoteFormData} from "@/types/quotes";
+import {Label} from "@/components/ui/label";
+import {Slider} from "@/components/ui/slider";
+        budget: {;
+          ...formData.budget;
+          type,
+          maxAmount: formData.budget.amount + 5000
+        budget: {
+          ...formData.budget;
+          type
+          maxAmount: formData.budget.amount + 5000
+          ...formData.budget,
+          type,
+          maxAmount: formData.budget.amount + 5000
+import { QuoteFormData } from "@/types/quotes",;
+import { Label } from "@/components/ui/label",;
+import { Slider } from "@/components/ui/slider",;
 interface BudgetStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
@@ -227,6 +250,7 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
           type,;
           maxAmount: formData && formData.budget.amount + 5000;
         }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       })
     } else {
@@ -238,6 +262,8 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         budget: {
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 =======
@@ -245,6 +271,7 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
       updateFormData({}
           maxAmount: formData && formData.budget.amount + 5000;
 
+<<<<<<< HEAD
 
         budget: {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -933,6 +960,8 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
                   className="py-4"
                 />
                 <div className="flex justify-between text-sm text-zion-slate-light mt-2">
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <span>$0</span>
                   <span>$50,000</span>
                 </div>
@@ -942,13 +971,19 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   Maximum Budget: {formatCurrency(formData.budget.maxAmount |0)}
+</div>"
+                <Label className="text-zion-slate-light mb-4 block">"
+</Label>
                 </Label>
-                <Slider
+                <Slider;
                   defaultValue={[formData.budget.maxAmount |formData.budget.amount + 5000]}
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -968,9 +1003,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   Maximum Budget: {formatCurrency(formData.budget.maxAmount || 0)}
                 </Label>;
+</Slider>
                 <Slider;
                   defaultValue={[formData.budget.maxAmount || formData.budget.amount + 5000]}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -995,12 +1032,29 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   min={formData.budget.amount}
+}
+                    });
+                  }}
                   min={formData.budget.amount}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   className="py-4";
+<<<<<<< HEAD
                 />;"
                 <div className="flex justify-between text-sm text-zion-slate-light mt-2">;
+=======
+
+
+                  min={formData.budget.amount}
+                  min={formData.budget.amount}"
+                  className="py-4";"
+                />;
+</Slider>"
+                <div className="flex justify-between text-sm text-zion-slate-light mt-2">;"
+</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <span>$0</span>;
                   <span>$50,000</span>;
                 </div>;
@@ -1026,8 +1080,21 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
                   className="py-4";
                 />;"
                 <div className="flex justify-between text-sm text-zion-slate-light mt-2">;
+              <div>;
+</div>"
+                <Label className="text-zion-slate-light mb-4 block">;"
+</Label>
+                </Label>;
+                <Slider;
+                  defaultValue={[formData && formData.budget.maxAmount || formData && formData.budget.amount + 5000]}
+                  min={formData && formData.budget.amount}
+                  onValueChange={(value) => {;
+</Slider>"
+                <div className="flex justify-between text-sm text-zion-slate-light mt-2">;"
+</div>
                   <span>{formatCurrency(formData && formData.budget.amount)}</span>;
                   <span>$100,000+</span>;
+
                 </div>;
               </div>;
             </div>;
@@ -1053,11 +1120,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 ;
 <<<<<<< HEAD
   return (
-    <div className="space - y-6">;
+    <div className="space-y-6">;
       <div>;
-        <h3 className="text - xl font - semibold text - white mb - 4">What's your budget?</h3>;
-        <div className="space - y-4">;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
+        <h3 className="text - xl font - semibold text - white mb-4">What's your budget?</h3>;
+        <div className="space-y-4">;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap-4">;
             <div;
               className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${
                 form_data.budget.type === "fixed";
@@ -1066,6 +1133,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               }`}
               on_click={() => handleBudgetTypeSelect ("fixed")}
             >;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h4 className="font - medium text-white">Fixed Budget</h4>;
               <p className="text - sm text - zion - slate-light">I have a set amount</p>;
@@ -1091,6 +1159,10 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               <h4 className="font - medium text - white">Fixed Budget</h4>;
               <p className="text - sm text - zion - slate - light">I have a set amount</p>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              <h4 className="font - medium text-white">Fixed Budget</h4>;
+              <p className="text - sm text - zion - slate-light">I have a set amount</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
             <div;`
               className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${"
@@ -1101,6 +1173,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               on_click={() => handleBudgetTypeSelect ("hourly")}
 <<<<<<< HEAD
             >;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h4 className="font - medium text-white">Hourly Rate</h4>;
               <p className="text - sm text - zion - slate-light">Pay per hour of work</p>;
@@ -1113,6 +1186,10 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               <h4 className="font - medium text - white">Hourly Rate</h4>;
               <p className="text - sm text - zion - slate - light">Pay per hour of work</p>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              <h4 className="font - medium text-white">Hourly Rate</h4>;
+              <p className="text - sm text - zion - slate-light">Pay per hour of work</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
             <div;`
               className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${"
@@ -1123,11 +1200,12 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               on_click={() => handleBudgetTypeSelect ("range")}
 <<<<<<< HEAD
             >;
-              <h4 className="font - medium text - white">Budget Range</h4>;
-              <p className="text - sm text - zion - slate - light">I have a min and max</p>;
+              <h4 className="font - medium text-white">Budget Range</h4>;
+              <p className="text - sm text - zion - slate-light">I have a min and max</p>;
             </div>;
           </div>;
           {form_data.budget.type === "fixed" && (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="mt-6">;
               <Label className="text - zion - slate - light mb-4 block">;
@@ -1145,24 +1223,86 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
             <div className="mt - 6">;
               <Label className="text - zion - slate - light mb - 4 block">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            <div className="mt-6">;
+              <Label className="text - zion - slate - light mb-4 block">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Fixed Budget: {format_currency (form_data.budget.amount)}
+        </div>;
+      </div>;
+
+    </div>;"
+    <div className="space - y-6">;"
+</div>
+      <div>;
+</div>"
+        <h3 className="text - xl font - semibold text - white mb - 4">What's your budget?</h3>;''
+        <div className="space - y-4">;"
+</div>"
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;"
+</div>
+            <div;
+              className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${"
+                form_data.budget.type === "fixed";""
+                  ? "bg - zion - purple / 20 border - zion - purple";""
+                  : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";"
+              }`}"
+              on_click={() => handleBudgetTypeSelect ("fixed")}"
+</div>"
+              <h4 className="font - medium text - white">Fixed Budget</h4>;""
+              <p className="text - sm text - zion - slate - light">I have a set amount</p>;"
+            </div>;
+            <div;
+              className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${"
+                form_data.budget.type === "hourly";""
+                  ? "bg - zion - purple / 20 border - zion - purple";""
+                  : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";"
+              }`}"
+              on_click={() => handleBudgetTypeSelect ("hourly")}"
+</div>"
+              <h4 className="font - medium text - white">Hourly Rate</h4>;""
+              <p className="text - sm text - zion - slate - light">Pay per hour of work</p>;"
+            </div>;
+            <div;
+              className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${"
+                form_data.budget.type === "range";""
+                  ? "bg - zion - purple / 20 border - zion - purple";""
+                  : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";"
+              }`}"
+              on_click={() => handleBudgetTypeSelect ("range")}"
+</div>"
+              <h4 className="font - medium text - white">Budget Range</h4>;""
+              <p className="text - sm text - zion - slate - light">I have a min and max</p>;"
+            </div>;
+          </div>;"
+            <div className="mt - 6">;"
+</div>"
+              <Label className="text - zion - slate - light mb - 4 block">;"
+</Label>
+
               </Label>;
               <Slider;
                 default_value={[form_data.budget.amount]}
                 max={50000}
                 step={500}
+<<<<<<< HEAD
                 onValueChange={(value) => updateFormData ({}
+=======
+
+                onValueChange={(value) => updateFormData ({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   budget: { ...form_data.budget, amount: value[0] }
 <<<<<<< HEAD
                 })}
-                className="py - 4";
+                className="py-4";
               />;
-              <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;
+              <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
                 <span>$0</span>;
                 <span>$50, 000+</span>;
               </div>;
             </div>)}
           {form_data.budget.type === "hourly" && (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="mt-6">;
               <Label className="text - zion - slate - light mb-4 block">;
@@ -1183,26 +1323,48 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
             <div className="mt - 6">;
               <Label className="text - zion - slate - light mb - 4 block">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            <div className="mt-6">;
+              <Label className="text - zion - slate - light mb-4 block">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 Hourly Rate: {format_currency (form_data.budget.amount)}/hour;
+</Slider>"
+              <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
+</div>
+                <span>$0</span>;
+                <span>$50, 000+</span>;
+              </div>;)
+            </div>)}"
+            <div className="mt - 6">;"
+</div>"
+              <Label className="text - zion - slate - light mb - 4 block">;"
+</Label>
+
               </Label>;
               <Slider;
                 default_value={[form_data.budget.amount]}
                 max={500}
                 step={5}
+<<<<<<< HEAD
                 onValueChange={(value) => updateFormData ({}
+=======
+
+                onValueChange={(value) => updateFormData ({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   budget: { ...form_data.budget, amount: value[0] }
 <<<<<<< HEAD
                 })}
-                className="py - 4";
+                className="py-4";
               />;
-              <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;
+              <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
                 <span>$0 / hour</span>;
                 <span>$500 / hour</span>;
               </div>;
             </div>)}
           {form_data.budget.type === "range" && (
-            <div className="mt - 6 space - y-8">;
+            <div className="mt - 6 space-y-8">;
               <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Label className="text - zion - slate - light mb-4 block">;
 =======
@@ -1222,13 +1384,35 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 =======
                 <Label className="text - zion - slate - light mb - 4 block">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                <Label className="text - zion - slate - light mb-4 block">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   Minimum Budget: {format_currency (form_data.budget.amount)}
+</Slider>"
+              <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
+</div>
+                <span>$0 / hour</span>;
+                <span>$500 / hour</span>;
+              </div>;)
+            </div>)}"
+            <div className="mt - 6 space - y-8">;"
+</div>
+              <div>;
+</div>"
+                <Label className="text - zion - slate - light mb - 4 block">;"
+</Label>
+
                 </Label>;
                 <Slider;
                   default_value={[form_data.budget.amount]}
                   max={50000}
                   step={500}
+<<<<<<< HEAD
                   onValueChange={(value) => {}
+=======
+
+                  onValueChange={(value) => {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     const new_amount = value[0];
                     const max_amount = form_data.budget.max_amount || 50000;
 ;
@@ -1241,8 +1425,9 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
                     });
 <<<<<<< HEAD
                   }}
-                  className="py - 4";
+                  className="py-4";
                 />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
 =======
@@ -1254,12 +1439,19 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 =======
                 <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
+</Slider>"
+                <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
+</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <span>$0</span>;
                   <span>$50, 000</span>;
                 </div>;
               </div>;
 <<<<<<< HEAD
               <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Label className="text - zion - slate - light mb-4 block">;
 =======
@@ -1269,19 +1461,32 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 =======
                 <Label className="text - zion - slate - light mb - 4 block">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                <Label className="text - zion - slate - light mb-4 block">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   Maximum Budget: {format_currency (form_data.budget.max_amount || 0)}
+</div>"
+                <Label className="text - zion - slate - light mb - 4 block">;"
+</Label>
+
                 </Label>;
                 <Slider;
                   default_value={[form_data.budget.max_amount || form_data.budget.amount + 5000]}
                   min={form_data.budget.amount}
                   max={100000}
                   step={500}
+<<<<<<< HEAD
                   onValueChange={(value) => updateFormData ({}
+=======
+
+                  onValueChange={(value) => updateFormData ({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     budget: { ...form_data.budget, max_amount: value[0] }
 <<<<<<< HEAD
                   })}
-                  className="py - 4";
+                  className="py-4";
                 />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
 =======
@@ -1293,8 +1498,15 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 =======
                 <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
+</Slider>"
+                <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
+</div>)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <span>{format_currency (form_data.budget.amount)}</span>;
                   <span>$100, 000+</span>;
+
                 </div>;
               </div>;
             </div>)}
@@ -1312,7 +1524,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
     </div>);
-          ;
+;
           {formData.budget.type === "range" && (;
             <div className="mt-6 space-y-8">;
               <div>;
@@ -1323,142 +1535,139 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
                   defaultValue={[formData.budget.amount]}
                   max={50000}
                   step={500}
+    </div>);}
+              <div className="flex justify-between text-sm text-zion-slate-light mt-2">;"
+                <span>$0</span>;
+                <span>$50,000+</span>;
+
+                max={500}
+                step={5})
+                <span>$0/hour</span>;
+                <span>$500/hour</span>;
+
+    </div>);"
+            <div className="mt-6 space-y-8">;"
+
+
+                    const maxAmount = formData && formData.budget.maxAmount || 50000;
+
+)
                   onValueChange={(value) => {;
-                    const newAmount = value[0],;
-                    const maxAmount = formData.budget.maxAmount || 50000,;
-                    ;
-                    updateFormData({;
-                      budget:{ ;
-                        ...formData.budget, ;
-                        amount:newAmount,;
-                        maxAmount:newAmount >= maxAmount ? newAmount + 5000 :maxAmount;
-                      }
-                    }),;
-                  }}
-                  className="py-4";
-                />;
-                <div className="flex justify-between text-sm text-zion-slate-light mt-2">;
-                  <span>$0</span>;
-                  <span>$50,000</span>;
-                </div>;
-              </div>;
-              ;
-              <div>;
-                <Label className="text-zion-slate-light mb-4 block">;
-                  Maximum Budget:{formatCurrency(formData.budget.maxAmount || 0)}
-                </Label>;
-                <Slider;
+
+                defaultValue={[formData.budget.amount]}
+                onValueChange={(value) => updateFormData({
+              <div className="flex justify-between text-sm text-zion-slate-light mt-2">"
+                <span>$0</span>
+                <span>$50,000+</span>
+
+                <span>$0/hour</span>
+                <span>$500/hour</span>
+            <div className="mt-6 space-y-8">"
+
+                  step={500})
+                  onValueChange={(value) => {
+                  <span>$50,000</span>
+
+                  defaultValue={[formData.budget.maxAmount |formData.budget.amount + 5000]}
+
+
+                  Maximum Budget: {formatCurrency(formData.budget.maxAmount || 0)}
+
                   defaultValue={[formData.budget.maxAmount || formData.budget.amount + 5000]}
+
+
                   min={formData.budget.amount}
-                  max={100000}
-                  step={500}
-                  onValueChange={(value) => updateFormData({;
-                    budget:{ ...formData.budget, maxAmount:value[0] }
-                  })}
-                  className="py-4";
+                  min={formData.budget.amount}"
+                  className="py-4";"
                 />;
-                <div className="flex justify-between text-sm text-zion-slate-light mt-2">;
-                  <span>{formatCurrency(formData.budget.amount)}</span>;
+                  <span>$50,000</span>;
+
+                  defaultValue={[formData && formData.budget.maxAmount || formData && formData.budget.amount + 5000]}
+                  min={formData && formData.budget.amount}
+                  <span>{formatCurrency(formData && formData.budget.amount)}</span>;
                   <span>$100,000+</span>;
-                </div>;
-              </div>;
-            </div>;
-          )}
-        </div>;
-      </div>;
-    </div>;
-  ),; interface BudgetStepProps {
-  formData: QuoteFormData;
-updateFormData: (data: Partial<QuoteFormData>) => void 
-}export function BudgetStep ({
-  formData, updateFormData 
-}: BudgetStepProps) {
-  const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
-  if (type === "range" && !formData.budget.maxAmount) {
-  updateFormData ({
-  budget: {
-  ...formData.budget;
-type;
-maxAmount: formData.budget.amount + 5000 
-}
-}) 
-}else {
-  updateFormData ({
-  budget: {
-  ...formData.budget;
-type 
-}
-}) 
-}
-};
-<div> <h3 className="text-xl font-semibold text-white mb-4" >What's your budget?</h3> <div className="space-y-4" > <div className="grid grid-cols-1 md:grid-cols-3 gap-4" > <div > <h4 className="font-medium text-white" >Fixed Budget</h4> <p className="text-sm text-zion-slate-light" >I have a set amount</p> </div> <div > <h4 className="font-medium text-white" >Hourly Rate</h4> <p className="text-sm text-zion-slate-light" >Pay per hour of work</p> </div> <div > <h4 className="font-medium text-white" >Budget Range</h4> <p className="text-sm text-zion-slate-light" >I have a min and max</p> </div> </div> Fixed Budget: {
-  formatCurrency (formData.budget.amount) 
-}</Label> <Slider defaultValue= {
-  [formData.budget.amount] 
-}max= {
-  50000 
-}step= {
-  500 
-}onValueChange= {
-  (value) => updateFormData ({
-  budget: {
-  ...formData.budget, amount: value[0] 
-}
-}) 
-}className="py-4" /> <div className="flex justify-between text-sm text-zion-slate-light mt-2" > <span>$0</span> <span>$50, 000+</span> </div> </div>) 
-}Hourly Rate: {
-  formatCurrency (formData.budget.amount) 
-}/hour </Label> <Slider defaultValue= {
-  [formData.budget.amount] 
-}max= {
-  500 
-}step= {
-  5 
-}onValueChange= {
-  (value) => updateFormData ({
-  budget: {
-  ...formData.budget, amount: value[0] 
-}
-}) 
-}className="py-4" /> <div className="flex justify-between text-sm text-zion-slate-light mt-2" > <span>$0/hour</span> <span>$500/hour</span> </div> </div>) 
-}<div> <Label className="text-zion-slate-light mb-4 block" > Minimum Budget: {
-  formatCurrency (formData.budget.amount) 
-}</Label> <Slider 
-}
-}className="py-4" /> <div className="flex justify-between text-sm text-zion-slate-light mt-2" > <span>$0</span> <span>$50, 000</span> </div> </div> <div> </Label> <Slider defaultValue= {
-  [formData.budget.maxAmount || formData.budget.amount + 5000] 
-}min= {
-  formData.budget.amount 
-}max= {
-  100000 
-}step= {
-  500 
-}onValueChange= {
-  (value) => updateFormData ({
-  budget: {
-  ...formData.budget, maxAmount: value[0] 
-}
-}) 
-}className="py-4" /> <span>$100, 000+</span> </div> </div> </div>) 
-}</div> </div> </div>) 
-                  min={formData.budget.amount}
+    <div className="space - y-6">;"
+        <h3 className="text - xl font - semibold text - white mb - 4">What's your budget?</h3>;
+        <div className="space - y-4">;"
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;"
+              className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${"
+                form_data.budget.type === "fixed";""
+                  ? "bg - zion - purple / 20 border - zion - purple";""
+                  : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";"`;
+              on_click={() => handleBudgetTypeSelect ("fixed")}"
+              <h4 className="font - medium text - white">Fixed Budget</h4>;""
+              <p className="text - sm text - zion - slate - light">I have a set amount</p>;"
+                form_data.budget.type === "hourly";""
+              on_click={() => handleBudgetTypeSelect ("hourly")}"
+              <h4 className="font - medium text - white">Hourly Rate</h4>;""
+              <p className="text - sm text - zion - slate - light">Pay per hour of work</p>;"
+                form_data.budget.type === "range";""
+              on_click={() => handleBudgetTypeSelect ("range")}"
+              <h4 className="font - medium text - white">Budget Range</h4>;""
+              <p className="text - sm text - zion - slate - light">I have a min and max</p>;"
+            <div className="mt - 6">;"
+              <Label className="text - zion - slate - light mb - 4 block">;"
+
+                default_value={[form_data.budget.amount]}
+                onValueChange={(value) => updateFormData ({
+              <div className="flex justify - between text - sm text - zion - slate - light mt - 2">;"
+                <span>$50, 000+</span>;
+              </div>;)
+            </div>)}"
+
+                step={5}
+                <span>$0 / hour</span>;
+                <span>$500 / hour</span>;
+            <div className="mt - 6 space - y-8">;"
+
+                  <span>$50, 000</span>;
+
+                  default_value={[form_data.budget.max_amount || form_data.budget.amount + 5000]}
+                  min={form_data.budget.amount}
                   max={100000}
-                  step={500}
-                  onValueChange={(value) => updateFormData({
-                    budget: { ...formData.budget, maxAmount: value[0] }
-                  })}
-                  className="py-4"
-                />
-                <div className="flex justify-between text-sm text-zion-slate-light mt-2">
+</div>)
+                  <span>{format_currency (form_data.budget.amount)}</span>;
+                  <span>$100, 000+</span>;
+            </div>)}
+    </div>);"
+
+
+                  <span>{formatCurrency(formData.budget.amount)}</span>;
+<div> <h3 className="text-xl font-semibold text-white mb-4" >What's your budget?</h3> <div className="space-y-4" > <div className="grid grid-cols-1 md:grid-cols-3 gap-4" > <div > <h4 className="font-medium text-white" >Fixed Budget</h4> <p className="text-sm text-zion-slate-light" >I have a set amount</p> </div> <div > <h4 className="font-medium text-white" >Hourly Rate</h4> <p className="text-sm text-zion-slate-light" >Pay per hour of work</p> </div> <div > <h4 className="font-medium text-white" >Budget Range</h4> <p className="text-sm text-zion-slate-light" >I have a min and max</p> </div> </div> Fixed Budget: {"
+} <Slider defaultValue= {
+  [formData.budget.amount] 
+}max= {
+  50000;
+}step= {
+  500;
+}onValueChange= {
+  (value) => updateFormData ({
+)"
+}className="py-4" /> <div className="flex justify-between text-sm text-zion-slate-light mt-2" > <span>$0</span> <span>$50, 000+</span> </div> </div>)"
+}/hour  <Slider defaultValue= {
+  5;
+}className="py-4" /> <div className="flex justify-between text-sm text-zion-slate-light mt-2" > <span>$0/hour</span> <span>$500/hour</span> </div> </div>)""
+}<div> <Label className="text-zion-slate-light mb-4 block" > Minimum Budget: {"
+} <Slider;
+}"
+}className="py-4" /> <div className="flex justify-between text-sm text-zion-slate-light mt-2" > <span>$0</span> <span>$50, 000</span> </div> </div> <div>  <Slider defaultValue= {"
+}className="py-4" /> <span>$100, 000+</span> </div> </div> </div>)"
+}</div> </div> </div>) "
                   <span>{formatCurrency(formData.budget.amount)}</span>
                   <span>$100,000+</span>
+    </div>"`;
+pr-12325
                 </div>
               </div>
             </div>
-          )}
         </div>
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </div>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

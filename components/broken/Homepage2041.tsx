@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from './layout/Layout';'
 import { motion } from 'framer-motion';
 
@@ -39,7 +40,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   Star;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Search;
+
   Shield;
   Globe;
   TrendingUp;
@@ -55,6 +60,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Sparkles;
   Target;
   Users;
+<<<<<<< HEAD
   Award;'
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';'
 import { innovative2041MicroSaasServices  } from '../data/innovative-2041-micro-saas-services';'
@@ -887,3 +893,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  Award;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

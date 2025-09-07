@@ -1,5 +1,6 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
+<<<<<<< HEAD
 // console.log(' Build Optimizer Starting...')
     console.log('🧹 Cleaning previous builds...')
     if (fs.existsSync('.next')
@@ -13,3 +14,6 @@ const fs = require('fs')
     console.error(' Build optimization "failed")
     console.error(' Build optimization "failed")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

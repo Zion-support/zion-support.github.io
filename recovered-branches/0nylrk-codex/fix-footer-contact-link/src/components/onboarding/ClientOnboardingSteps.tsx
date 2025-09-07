@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -216,13 +217,15 @@ export function ClientOnboardingSteps() {;
 "
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 <<<<<<< HEAD
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus(),
-  
-  
+
 import React from "react";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
@@ -362,9 +365,53 @@ export function ClientOnboardingSteps() { return null; }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import React from "react";""
+import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";""
+import {PlusCircle, SendIcon, InboxIcon} from "lucide-react";""
+import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";"
+export function ClientOnboardingSteps() {;
+  const onboardingStatus = useOnboardingStatus();
+
+  const steps: OnboardingStep[] = [
+    {"
+      id: "post-job",""
+      label: "Post your first job","
+      completed: onboardingStatus.jobPosted,"
+      link: "/post-job",""
+      action: "Post Job","
+    },
+      id: "invite",""
+      label: "Send invitation to talent","
+      completed: onboardingStatus.inviteSent,"
+      link: "/talent",""
+      action: "Find Talent","
+      id: "response",""
+      label: "Receive your first application","
+      completed: onboardingStatus.responseReceived,"
+      link: "/client-dashboard",""
+      action: "Check Dashboard","
+    },]
+  ];
+"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;"
+pr-12325
+</OnboardingTracker>"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;"
+</OnboardingTracker>"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;"
+</OnboardingTracker>"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;"
+</OnboardingTracker>"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;"
+</OnboardingTracker>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -8,8 +8,9 @@ class TypeChecker {}
     this.interval = 120000; // 2 minutes;
   };
   async start() {}
-    console.log('Starting Type Checker...');
+
     this.isRunning = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // Initial type check;
@@ -22,9 +23,10 @@ class TypeChecker {}
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Initial type check;
     await this.runTypeCheck();
-    
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
@@ -35,6 +37,7 @@ class TypeChecker {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
@@ -75,10 +78,17 @@ class TypeChecker {}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
+=======
+        errorOutput += data.toString()}
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.log('Type check passed ✓')) {}
      {}
           console.log('Type check passed ✓')}} else {}
           console.log('Type check failed ✗');
+<<<<<<< HEAD
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
 <<<<<<< HEAD
@@ -93,6 +103,9 @@ class TypeChecker {}
       })} catch (error) {}
       console.error('Error running type "check": ', error.message)};
   };
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   logTypeErrors(errorOutput) {}
     const lines = errorOutput.split('\n';);
     const typeErrors = lines.filter(line => )
@@ -101,6 +114,7 @@ class TypeChecker {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     
@@ -132,11 +146,12 @@ class TypeChecker {}
       clearInterval(this.intervalId)};
     console.log('Type Checker stopped')}};
 };
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Start the checker if run directly;
-if ( {})
   const checker = new TypeChecker) {}
-     {}
   const checker = new TypeChecker}(;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -171,3 +186,10 @@ module.exports = TypeChecker;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // Handle graceful shutdown;
+
+  checker.start().catch(console.error)};
+module.exports = TypeChecker;
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

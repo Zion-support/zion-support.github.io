@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -19,6 +20,10 @@ import { Button } from "@/components/ui/button";
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
 import {DisputeForm} from "./DisputeForm";
@@ -58,6 +63,8 @@ import { Button } from "@/components/ui/button",
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React, { useState } from "react",
@@ -69,6 +76,7 @@ import { Button } from "@/components/ui/button",
 =======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -86,6 +94,24 @@ import {
 =======
 import {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+import { 
+
+import {Button} from "@/components/ui/button";""
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";""
+import {DisputeForm} from "./DisputeForm";""
+import {useNavigate} from "react-router-dom";""
+import {ShieldAlert} from "lucide-react";""
+import React, { useState } from "react",""
+import { Button } from "@/components/ui/button",""
+import { Button } from "@/components/ui/button","
+import {
+  // TODO: Implement
+}
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Dialog;
   DialogContent;
   DialogHeader;
@@ -113,6 +139,7 @@ import {ShieldAlert} from "lucide-react";
 interface RaiseDisputeButtonProps {;
   projectId: string,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import { useNavigate } from "react-router-dom";
@@ -121,10 +148,14 @@ interface RaiseDisputeButtonProps {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   milestoneId?: string;
+=======
+milestoneId?: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -132,9 +163,13 @@ interface RaiseDisputeButtonProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { DisputeForm } from "./DisputeForm",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useNavigate } from "react-router-dom";
 import { ShieldAlert } from "lucide-react";
 interface RaiseDisputeButtonProps {
+
 
   projectId: string
 
@@ -148,7 +183,6 @@ interface RaiseDisputeButtonProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   className?: string;
 }
-
 
 import { useNavigate } from "react-router-dom",
 <<<<<<< HEAD
@@ -238,6 +272,20 @@ import { ShieldAlert } from "lucide-react",  milestoneId,
 =======
 import { ShieldAlert } from "lucide-react",
 
+className?: string
+}
+export function RaiseDisputeButton({
+  projectId;
+
+  milestoneId
+  variant = "outline"
+  size;
+  className
+}: RaiseDisputeButtonProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
+import { useNavigate } from "react-router-dom",
+import { ShieldAlert } from "lucide-react",
   className?: string;
 }
 interface RaiseDisputeButtonProps {
@@ -248,11 +296,15 @@ interface RaiseDisputeButtonProps {
   className?: string
 }
 
-
 export function RaiseDisputeButton({ 
   projectId,
 
+export function RaiseDisputeButton({ ;
+  projectId;
+export function RaiseDisputeButton({ 
+  projectId,
   milestoneId, 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   variant = "outline", 
   size,
@@ -265,11 +317,21 @@ export function RaiseDisputeButton({
 
 =======
   
+=======
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  className?: string;
+}
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  className?: string;
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-  const handleDisputeCreated = (disputeId: string) => {
-    setIsDialogOpen(false)
-    navigate(`/dashboard/disputes/${disputeId}`)
 
+<<<<<<< HEAD
   },
   
 
@@ -332,10 +394,16 @@ export function RaiseDisputeButton({
     <>
       <Button
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  return (
+    <>
+      <Button;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant={variant}
         size={size}
-        className={className}
+        className={className})
         onClick={() => setIsDialogOpen(true)}
+<<<<<<< HEAD
 <<<<<<< HEAD
       >"
         <ShieldAlert className="h-4 w-4 mr-2" />
@@ -350,9 +418,18 @@ export function RaiseDisputeButton({
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         <DialogContent className="sm:max-w-[550px]">
+=======
+        <ShieldAlert className="h-4 w-4 mr-2" />"
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-[550px]">"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <DialogHeader>
-            <DialogTitle>Raise a Dispute</DialogTitle>
+
+            <DialogTitle>Raise a Dispute
             <DialogDescription>
+<<<<<<< HEAD
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
@@ -374,31 +451,13 @@ import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
-export function RaiseDisputeButton(): any ({ ;
-  projectId;
-  milestoneId, ;
-  variant = "outline", ;
-  size;
-  className ;
-}: RaiseDisputeButtonProps) {;
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const navigate = useNavigate();
-
-  const handleDisputeCreated = (disputeId: string) => {;
-    setIsDialogOpen(false),;
-    navigate(`/dashboard/disputes/${disputeId}`);
-  };
-
-  return (
     <>;
-      <Button
-        variant={variant} 
-        size={size} 
-        className={className} 
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
+        className={className} "
+import React, { useState } from "react",;""
+import { Button } from "@/components/ui/button",;"
 import { ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   Dialog,;
@@ -406,6 +465,7 @@ import { ;
   DialogHeader,;
   DialogTitle,;
   DialogDescription,;
+<<<<<<< HEAD
   DialogOverlay;
 } from "@/components/ui/dialog",;
 import { DisputeForm } from "./DisputeForm",;
@@ -442,27 +502,35 @@ export function RaiseDisputeButton(): any ({ ;
   className ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+} from "@/components/ui/dialog",;""
+import { DisputeForm } from "./DisputeForm",;""
+import { useNavigate } from "react-router-dom",;""
+import { ShieldAlert } from "lucide-react",;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
-interface RaiseDisputeButtonProps {;
   projectId:string,;
-  milestoneId?:string,;
-  variant?:"default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;
-  size?:"default" | "sm" | "lg" | "icon",;
+  milestoneId?:string,;"
+  variant?:"default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;""
+  size?:"default" | "sm" | "lg" | "icon",;"
   className?:string;
-}
-;
 export function RaiseDisputeButton({ ;
   projectId,;
-  milestoneId, ;
-  variant = "outline", ;
+  milestoneId, ;"
+  variant = "outline", ;"
   size,;
+<<<<<<< HEAD
   className ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  className ;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleDisputeCreated = (disputeId: string) => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
     setIsDialogOpen(false),;`
 =======
@@ -588,25 +656,23 @@ function RaiseDisputeButton() {
 
             <DialogDescription>;'
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant={variant} ;
         size={size} ;
         className={className} ;
-      <Button
-        variant={variant} 
-        size={size} 
         className={className} 
-        onClick={() => setIsDialogOpen(true)}
-      >;
-        <ShieldAlert className="h-4 w-4 mr-2" />;
-        Raise Dispute;
-      </Button>;
-
+        <ShieldAlert className="h-4 w-4 mr-2" />;"
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
-        <DialogContent className="sm:max-w-[550px]">;
+        <DialogContent className="sm:max-w-[550px]">;"
+
           <DialogHeader>;
-            <DialogTitle>Raise a Dispute</DialogTitle>;
+
+            <DialogTitle>Raise a Dispute;
             <DialogDescription>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
@@ -635,11 +701,14 @@ function RaiseDisputeButton() {
     </>;
   );
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 
 
           <DisputeForm;
+<<<<<<< HEAD
 =======
             <DialogTitle>Raise a Dispute</DialogTitle>;          <DisputeForm;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -670,48 +739,44 @@ function RaiseDisputeButton() {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           ;
           <DisputeForm ;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}
-          />;
-        </DialogContent>;
-      </Dialog>;
+
     </>;
+  );
+
+            project_id={project_id}
+            milestone_id={milestone_id}
+            on_cancel={() => setIsDialogOpen (false)}
+
+    </>);
+          <DisputeForm ;
+
   ),;}
- import {
-  Dialog;
-DialogContent;
-DialogHeader;
-DialogTitle;
-DialogDescription;
+  // TODO: Implement
 DialogOverlay interface RaiseDisputeButtonProps {
-  projectId: string;
+  // TODO: Implement
 milestoneId?: string;
 return (<> <Button variant= {
-  variant 
+  variant;
 }size= {
-  size 
+  size;
 }className= {
-  className 
-}onClick= {
+  className;
+}onClick= {)
   () => setIsDialogOpen (true) 
-}> <ShieldAlert className="h-4 w-4 mr-2" /> Raise Dispute </Button> <DialogHeader> <DialogTitle>Raise a Dispute</DialogTitle> <DialogDescription> Please provide details about the issue you're experiencing with this project. </DialogDescription> </DialogHeader> <DisputeForm projectId= {
-  projectId 
-}milestoneId= {
-  milestoneId 
-}onDisputeCreated= {
-  handleDisputeCreated 
-}onCancel= {
-  () => setIsDialogOpen (false) 
-}/> </DialogContent> </Dialog> </>) 
-}
+}> <ShieldAlert className="h-4 w-4 mr-2" /> Raise Dispute  <DialogHeader> <DialogTitle>Raise a Dispute <DialogDescription> Please provide details about the issue you're experiencing with this project.   <DisputeForm projectId= {
+
+}/>   </>) 
           />
-        </DialogContent>
-      </Dialog>
     </>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -729,3 +794,7 @@ return (<> <Button variant= {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

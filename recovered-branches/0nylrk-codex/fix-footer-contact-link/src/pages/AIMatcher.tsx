@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -265,6 +266,9 @@ export default function AIMatcherPage() {
 
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>
       <Header />"
       <div className="min-h-screen bg-zion-blue py-12 px-4">"
@@ -309,6 +313,21 @@ export default function AIMatcherPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<AIMatchmaker 
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { AIMatchmaker } from "@/components/AIMatchmaker",;
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { toast } from "@/hooks/use-toast",;
+import { MatchResult } from "@/lib/ai-matchmaking",;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <AIMatchmaker
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
@@ -597,34 +616,149 @@ if (|| category === "hardware") {) {}
       }
     });
   }
+
+import { useState } from "react";""
+import { useNavigate } from "react-router-dom";""
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { GradientHeading } from "@/components/GradientHeading";""
+import { AIMatchmaker } from "@/components/AIMatchmaker";"
+import {
+  // TODO: Implement
+}
+  Select,
+  SelectValue,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,"
+} from "@/components/ui/select";""
+import { toast } from "@/hooks/use-toast";""
+import { MatchResult } from "@/lib/ai-matchmaking";"
+export default function AIMatcherPage() {
+  const navigate = useNavigate();"
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");"
+</string>
+    <>
+      <Header />
+"
+      <div className="min-h-screen bg-zion-blue py-12 px-4">"
+</div>"
+        <div className="container mx-auto">"
+          <div className="text-center mb-12">"
+</div>
+            <GradientHeading>AI Matchmaker"
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">"
+</p>
+          <div className="max-w-4xl mx-auto">"
+            <div className="mb-8">"
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">"
+</label>
+              <Select;
+                value={selectedCategory}
+                onValueChange={setSelectedCategory}
+              >
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">"
+                  <SelectValue placeholder="All Categories" />"
+
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">"
+                  <SelectItem value="all" className="text-white">"
+
+                  <SelectItem value="service" className="text-white">"
+
+                  <SelectItem value="talent" className="text-white">"
+
+                  <SelectItem value="equipment" className="text-white">"
+
+</SelectValue>
+                </SelectTrigger>"
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">"
+</SelectContent>"
+                  <SelectItem value="all" className="text-white">"
+</SelectItem>
+                  </SelectItem>"
+                  <SelectItem value="service" className="text-white">"
+</SelectItem>
+                  </SelectItem>"
+                  <SelectItem value="talent" className="text-white">"
+</SelectItem>
+                  </SelectItem>"
+                  <SelectItem value="equipment" className="text-white">"
+</SelectItem>
+
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+
+            <AIMatchmaker;"
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}"
+
+              onMatchSelect={handleMatchSelect}
+            />
+
+      <Footer />
+
+</AIMatchmaker>
+          </div>
+        </div>
+      </div>
+      <Footer />
+</Footer>
+    </>
+  );
+
+}"
+        category === "data science" || category === "development") {""
+      item_type = "talent";"
+    } else // Check condition;"
+if (|| category === "hardware") {) {"
+  $2;
+      item_type = "equipment";"
+    toast ({"
+      title: "Match Selected",")"
+      description: `You've selected ${match.item.title}`}),
+    // Navigate to the quote request page with the selected item;
+    navigate ("/request - quote", {"
+      state: {,
+  service_type: item_type,
+        specific_item: match.item;
+      })
+
+    });
+pr-12325
 ;
   return (
     <>;
 <<<<<<< HEAD
       <Header />;
-      <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
-        <div className="container mx - auto">;
-          <div className="text - center mb - 12">;
+      <div className="min - h-screen bg - zion - blue py - 12 px-4">;
+        <div className="container mx-auto">;
+          <div className="text - center mb-12">;
             <GradientHeading > AI Matchmaker</GradientHeading>;
-            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;
+            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx-auto">;
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.;
             </p>;
           </div>;
-          <div className="max - w-4xl mx - auto">;
-            <div className="mb - 8">;
-              <label className="block text - sm font - medium text - zion - slate - light mb - 2">;
+          <div className="max - w-4xl mx-auto">;
+            <div className="mb-8">;
+              <label className="block text - sm font - medium text - zion - slate - light mb-2">;
                 I'm looking for:;
               </label>;
               <Select value={selected_category} onValueChange={setSelectedCategory}>;
-                <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white">;
+                <SelectTrigger className="bg - zion - blue border border - zion - blue - light text-white">;
                   <SelectValue placeholder="All Categories" />;
                 </SelectTrigger>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <SelectContent className="bg - zion - blue - dark border border - zion - blue-light">;
                   <SelectItem value="all" className="text-white">All Categories</SelectItem>;
                   <SelectItem value="service" className="text-white">Services</SelectItem>;
                   <SelectItem value="talent" className="text-white">Talent</SelectItem>;
                   <SelectItem value="equipment" className="text-white">Equipment</SelectItem>;
+<<<<<<< HEAD
 =======
       <Header />;"
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">;"
@@ -657,6 +791,8 @@ if (|| category === "hardware") {) {}
                   <SelectItem value="talent" className="text - white">Talent</SelectItem>;
                   <SelectItem value="equipment" className="text - white">Equipment</SelectItem>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </SelectContent>;
               </Select>;
             </div>;
@@ -669,18 +805,23 @@ if (|| category === "hardware") {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
               onMatchSelect={handleMatchSelect}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             ;
+=======
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <AIMatchmaker ;
               serviceType={selectedCategory === "all" ? "" :selectedCategory}
               onMatchSelect={handleMatchSelect}
             <AIMatchmaker;
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -693,10 +834,37 @@ if (|| category === "hardware") {) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+</Header>"
+      <div className="min - h-screen bg - zion - blue py - 12 px - 4">;"
+        <div className="container mx - auto">;"
+          <div className="text - center mb - 12">;"
+            <GradientHeading > AI Matchmaker;"
+            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;"
+            </p>;
+          </div>;"
+          <div className="max - w-4xl mx - auto">;"
+            <div className="mb - 8">;"
+              <label className="block text - sm font - medium text - zion - slate - light mb - 2">;"
+              </label>;
+              <Select value={selected_category} onValueChange={setSelectedCategory}>;
+                <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white">;"
+                  <SelectValue placeholder="All Categories" />;"
+
+                ;"
+                <SelectContent className="bg - zion - blue - dark border border - zion - blue - light">;"
+                  <SelectItem value="all" className="text - white">All Categories;""
+                  <SelectItem value="service" className="text - white">Services;""
+                  <SelectItem value="talent" className="text - white">Talent;""
+                  <SelectItem value="equipment" className="text - white">Equipment;"
+            </div>;
+              service_type={selected_category === "all" ? "" : selected_category}"
+            <AIMatchmaker ;"
+              serviceType={selectedCategory === "all" ? "" :selectedCategory}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />;
-          </div>;
-        </div>;
-      </div>;
+
       <Footer />;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -726,18 +894,21 @@ if (|| category === "hardware") {) {}
 specificItem: match.item;
 =======
 
+)
     </>);
-}
 
     </>;
-  ),; const handleMatchSelect = (match: MatchResult) => {
-  //Get the item type from the category //Navigate to the quote request page with the selected item navigate ("/request-quote", {
-  state: {
+  ),; const handleMatchSelect = (match: MatchResult) => {"
+  //Get the item type from the category //Navigate to the quote request page with the selected item navigate ("/request-quote", {"
   serviceType: itemType;
+<<<<<<< HEAD
 specificItem: match.item 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
+=======
+specificItem: match.item;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }) 
 <<<<<<< HEAD
@@ -746,12 +917,18 @@ specificItem: match.item
 };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI Matchmaker</GradientHeading> <p className=" mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> Describe your needs and our AI will match you with the perfect services, talents, or equipment. </p> </div> <div className=" max-w-4xl mx-auto"> <div className=" mb-8"> <label className=" block text-sm font-medium text-zion-slate-light mb-2"> I'm looking for: </label> </SelectTrigger> <SelectContent className=" bg-zion-blue-dark border border-zion-blue-light"> <SelectItem value=" all"className=" text-white">All Categories</SelectItem> <SelectItem value=" service"className=" text-white">Services</SelectItem> <SelectItem value=" talent"className=" text-white">Talent</SelectItem> <SelectItem value=" equipment"className=" text-white" >Equipment</SelectItem> </SelectContent> </Select> </div> <AIMatchmaker /> </div> </div> </div> <Footer /> </>) 
+};"
+min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI Matchmaker <p className=" mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> Describe your needs and our AI will match you with the perfect services, talents, or equipment. </p> </div> <div className=" max-w-4xl mx-auto"> <div className=" mb-8"> <label className=" block text-sm font-medium text-zion-slate-light mb-2"> I'm looking for: </label>  <SelectContent className=" bg-zion-blue-dark border border-zion-blue-light"> <SelectItem value=" all"className=" text-white">All Categories <SelectItem value=" service"className=" text-white">Services <SelectItem value=" talent"className=" text-white">Talent <SelectItem value=" equipment"className=" text-white" >Equipment   </div> <AIMatchmaker /> </div> </div> </div> <Footer /> </>)"
+"`;
+pr-12325
+min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI Matchmaker</GradientHeading> <p className=" mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> Describe your needs and our AI will match you with the perfect services, talents, or equipment. </p> </div> <div className=" max-w-4xl mx-auto"> <div className=" mb-8"> <label className=" block text-sm font-medium text-zion-slate-light mb-2"> I'm looking for: </label> </SelectTrigger> <SelectContent className=" bg-zion-blue-dark border border-zion-blue-light"> <SelectItem value=" all"className=" text-white">All Categories</SelectItem> <SelectItem value=" service"className=" text-white">Services</SelectItem> <SelectItem value=" talent"className=" text-white">Talent</SelectItem> <SelectItem value=" equipment"className=" text-white" >Equipment</SelectItem> </SelectContent> </Select> </div> <AIMatchmaker /> </div> </div> </div> <Footer /> </>)"
 }
     </>;
   );
 }
 ;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -772,3 +949,7 @@ min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,8 @@
+
+
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 import {}
   ArrowRight,
   Star,
@@ -38,16 +41,20 @@ import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';'
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';'
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {};
+=======
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;}
+import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
+import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
 
 
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom
 origin/cursor/automate-test-improve-and-merge-code-2533
   Rocket, Shield, Target, CheckCircle, ExternalLink;
+<<<<<<< HEAD
   Search, Filter, Grid, List, ChevronDown'
  } from 'lucide-react';'
 import { cuttingEdge2027Innovations  } from '../../data/2027-cutting-edge-innovations';'
@@ -1204,3 +1211,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  Search, Filter, Grid, List, ChevronDown
+  ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
+Rocket, Shield, Target, CheckCircle, ExternalLink;}
+  Search, Filter, Grid, List, ChevronDown}
+ } from 'lucide-react';
+import { cuttingEdge2027Innovations  } from '../../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027  } from '../../data/2027-practical-micro-saas';
+import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

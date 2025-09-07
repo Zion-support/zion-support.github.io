@@ -45,6 +45,7 @@ export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {}
 <<<<<<< HEAD:backup-merge-conflicts/ServiceProcessSteps.jsx.backup
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/services/PageSections/ServiceProcessSteps.jsx
 =======
 }
@@ -55,3 +56,8 @@ export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {}
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src.disabled/src/components/services/PageSections/ServiceProcessSteps.jsx
+=======
+
+}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

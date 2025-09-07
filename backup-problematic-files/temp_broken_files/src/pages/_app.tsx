@@ -3,6 +3,7 @@ import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
+<<<<<<< HEAD
 <<<<<<< HEAD:components/_app.tsx.backup.1755991382.backup.1756001148
 =======
 <<<<<<< HEAD:pages/_app.tsx.backup.1755991338
@@ -23,3 +24,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/temp_broken_files/src/pages/_app.tsx
+=======
+}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

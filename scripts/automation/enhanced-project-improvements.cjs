@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -247,7 +248,19 @@ export * from "@testing-"library/react""
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
 
-    fs.writeFileSync(path.join(this.projectRoot, ")
+</p>"
+        <div className="min-h-screen flex items-center justify-center bg-gray-50"
+            <h1 className="text-2xl font-bold text-gray-900 mb-4"
+            <p className=text-gray-600 mb-4>We
+</div>"
+  "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"]"
+</rootDir>"
+  "moduleNameMapping": {^@/(.*)$": "<rootDir>/src/$1",\\.(css|less|scss|sass)$": "identity-obj-proxy"}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+) => render(ui, { "wrapper"})"
+"`;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

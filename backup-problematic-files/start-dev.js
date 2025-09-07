@@ -4,31 +4,26 @@
 const { spawn } = require('child_process');
 ;
 console.log(' Starting development server...');
-;
 // Start the development server;
 const devProcess = spawn('npm', ['run', 'dev'], {;
   stdio:'inherit',;
-  shell:true;
+  shell:true;)
 });
-;
 devProcess.on('error', (error) => {;
   console.error('Error starting development server:', error);
-});
-;
 devProcess.on('close', (code) => {;
   console.log(`Development server exited with code ${code}`);
-});
-;
 // Handle process termination;
 process.on('SIGINT', () => {;
   console.log('Stopping development server...');
   devProcess.kill('SIGINT');
   process.exit(0);
-});
-;
 process.on('SIGTERM', () => {;
-  console.log('Stopping development server...');
   devProcess.kill('SIGTERM');
+<<<<<<< HEAD
   process.exit(0);
 });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+});`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

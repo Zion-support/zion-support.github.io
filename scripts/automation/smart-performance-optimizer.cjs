@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Smart Performance Optimizer Automation;
  * Monitors and optimizes application performance;
@@ -19,26 +23,22 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class SmartPerformanceOptimizer {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'smart-performance-optimizer.log');
-        this.reportFile = path.join(this.projectRoot, 'performance-optimization-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
@@ -65,18 +65,11 @@ class SmartPerformanceOptimizer {}
             };);
 =======
         console.log(message)};
-    analyzeBundleSize() {}
-        this.log('Analyzing bundle size...');
-        
-        try {}
-            // Build the project first;
-            execSync('npm run build', { })
-                "cwd": this.projectRoot, 
-                "stdio": 'pipe'
+    analyzeBundleSize() {}"
+
             }
-});
-            
             // Analyze bundle;
+<<<<<<< HEAD
             const bundleAnalysis = execSync('npm run analyze', { })
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
@@ -165,25 +158,39 @@ class SmartPerformanceOptimizer {}
     ) return file}s;
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+            const buildTime = Date.now() - startTi;m;e;`;
+            this.log(`Build completed in ${buildTime}ms`);
+            return {;}
+
+            const imageFiles = this.findImageFiles(publicDir;);
+            `;
+            this.log(`Found ${imageFiles.length} image files`);
+
+        const files = [];
+        if () return file) {}
+    ) return file}s;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const items = fs.readdirSync(dir;);
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
             if () {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
                 files.push(fullPath)};
-        };
         return files) {}
     ) {}
-                files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
-                files.push(fullPath)};
-        };
         return files}};
     checkLighthouseMetrics() {}
+<<<<<<< HEAD
         this.log('Checking Lighthouse metrics...');
 <<<<<<< HEAD
 =======
@@ -252,9 +259,29 @@ class SmartPerformanceOptimizer {}
             this.log('Smart Performance Optimizer completed successfully');
             return report} catch (error) {}
             this.log(`Smart Performance Optimizer "failed": ${error.message}`);
+=======
+
+            "metrics": {}"
+                performance: 85,"
+                "accessibility": 92,
+                "bestPractices": 88,
+                "seo": 90;"
+            },"
+
+            "analysis": {}"
+                bundleSize: this.analyzeBundleSize(),"
+                "buildPerformance": this.checkBuildPerformance(),
+                "images": this.optimizeImages(),
+                "lighthouse": this.checkLighthouseMetrics();"
+            "optimizations": this.generateOptimizationSuggestions();"
+
+
+        return report};
+    generateOptimizationSuggestions() {}
+        return [;]"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
-    };
-};
 // Run the optimizer if this script is executed directly;
 if ( {})
     const optimizer = new SmartPerformanceOptimizer) {}
@@ -279,6 +306,5 @@ module.exports = SmartPerformanceOptimizer;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-module.exports = SmartPerformanceOptimizer;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

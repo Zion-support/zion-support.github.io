@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';'
 import Head from 'next/head';
 '
@@ -474,6 +475,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
+=======
+
+  const [priceRange, setPriceRange] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('innovation');
+  const [showFilters, setShowFilters] = useState(false);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
                   </div>;
                 </div>;
@@ -497,6 +506,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>
       <Head>
         <title>Innovative Micro SAAS Services - Zion Tech Group</title>
@@ -656,6 +668,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </select>
                   </div>
                   {/* Sort Options */}
@@ -690,8 +705,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ))}
                     </select>
                   </div>
+<<<<<<< HEAD
                   {/* View Mode Toggle */}'
                   <div className='flex-shrink-0'>;'
+=======
+                  {/* View Mode Toggle */}
+                  <div className='flex-shrink-0'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
 
                   {/* View Mode Toggle */}"
@@ -725,7 +745,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className={`px-3 py-2 rounded-lg transition-all ${
 viewMode === 'list'
                             ? 'bg-cyan-500 text-white'
-                            : 'text-gray-400 hover:text-white'
+                            : 'text-gray-400 hover: text-white';
                         }`}
                       >
                         <List className='w-5 h-5' />
@@ -796,10 +816,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {service && service.description}
                         </p>;
 
+<<<<<<< HEAD
                         {/* Innovation Level */}'
                         <div className='mb-4'>;'
                           <div className='flex items-center space-x-2 mb-2'>;'
                             <Sparkles className='w-4 h-4 text-yellow-400' />;'
+=======
+                        {/* Innovation Level */}
+                        <div className='mb-4'>;
+                          <div className='flex items-center space-x-2 mb-2'>;
+                            <Sparkles className='w-4 h-4 text-yellow-400' />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                             <span className='text-sm font-medium text-yellow-400'>;
                               Innovation Level;
                             </span>;
@@ -851,6 +878,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <div className="text-xs text-gray-400">average ROI</div>;
                         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <div className='mb-4'>
                           <div className='flex items-center space-x-2 mb-2'>
                             <Sparkles className='w-4 h-4 text-yellow-400' />
@@ -957,16 +987,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             Learn More;"
                             <ArrowRight className="w-4 h-4 ml-2" />;
                           </Button>;
+<<<<<<< HEAD
                           <Button;`
                             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}"
+=======
+                          <Button
+                            href={`mailto: ${contactInfo && contactInfo.email;}?subject=Inquiry about ${service && service.name}`}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                             variant="secondary"
                         {/* Contact Info */}'
                         <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>;
                           <div>;
+<<<<<<< HEAD
                             Contact: {contactInfo && contactInfo.mobile} | {contactInfo && contactInfo.email}
                           </div>;'"
                           <div className='mt-1'>{contactInfo && contactInfo.website}</div>                        </div>                        <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">;
                           <div>Contact: {contactInfo && contactInfo.mobile} | {contactInfo && contactInfo.email}</div>;"
+=======
+                            Contact: {contactInfo && contactInfo.mobile;} | {contactInfo && contactInfo.email}
+                          </div>;
+                          <div className='mt-1'>{contactInfo && contactInfo.website}</div>                        </div>                        <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">;
+                          <div>Contact: {contactInfo && contactInfo.mobile;} | {contactInfo && contactInfo.email}</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           <div className="mt-1">{contactInfo && contactInfo.website}</div>;
                         </div>;
                       </div>;
@@ -985,7 +1027,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <ArrowRight className='w-4 h-4 ml-2' />
                           </Button>
                           <Button
-                            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+                            href={`mailto: ${contactInfo.email;}?subject=Inquiry about ${service.name}`}
                             variant='secondary'
                             className='px-4'
                           >
@@ -995,7 +1037,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {/* Contact Info */}
 <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>
                           <div>
-                            Contact: {contactInfo.mobile} | {contactInfo.email}
+                            Contact: {contactInfo.mobile;} | {contactInfo.email}
                           </div>
                           <div className='mt-1'>{contactInfo.website}</div>
                         </div>
@@ -1042,6 +1084,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   and cutting-edge technology.;
                 </p>;'
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+<<<<<<< HEAD
                   <Button'
                     variant='primary''
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'>;'
@@ -1049,6 +1092,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>;
                   <Button;`
                     href={`mailto:${contactInfo && contactInfo.email}`}'
+=======
+                  <Button
+                    variant='primary'
+                    className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'>;
+                    <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo && contactInfo.mobile;}
+                  </Button>;
+                  <Button
+                    href={`mailto: ${contactInfo && contactInfo.email;}`}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     variant='secondary'
                 </h2>"
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1062,23 +1114,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Transform your business with quantum AI, autonomous systems, and cutting-edge technology.;
                 </p>;"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+<<<<<<< HEAD
                   <Button;`
                     href={`tel:${contactInfo && contactInfo.mobile}`}"
                     variant="primary""
+=======
+                  <Button
+                    href={`tel: ${contactInfo && contactInfo.mobile;}`}
+                    variant="primary"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <Mail className="w-5 h-5 mr-2" />
                     Email Us;
                   </Button>
                 </div>"
                 <div className="mt-8 text-sm text-gray-400">
+<<<<<<< HEAD
                   <div>Address: {contactInfo.address}</div>"
                   <div className="mt-1">Website: {contactInfo.website}</div>
+=======
+                  <div>Address: {contactInfo.address;}</div>
+                  <div className="mt-1">Website: {contactInfo.website;}</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'
                   >
                     <Phone className='w-5 h-5 mr-2' />
-                    Call Now: {contactInfo.mobile}
+                    Call Now: {contactInfo.mobile;}
                   </Button>
                   <Button
-                    href={`mailto:${contactInfo.email}`}
+                    href={`mailto: ${contactInfo.email;}`}
 variant='secondary'
                     className='px-8 py-4 text-lg'
                   >
@@ -1087,8 +1150,8 @@ variant='secondary'
                   </Button>
                 </div>
                 <div className='mt-8 text-sm text-gray-400'>
-                  <div>Address: {contactInfo.address}</div>
-                  <div className='mt-1'>Website: {contactInfo.website}</div>
+                  <div>Address: {contactInfo.address;}</div>
+                  <div className='mt-1'>Website: {contactInfo.website;}</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </EnhancedFuturisticCard>
@@ -1097,22 +1160,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </QuantumHolographicBackground>
     </>
+<<<<<<< HEAD
 '
                     className='px-8 py-4 text-lg'>;'
+=======
+
+                    className='px-8 py-4 text-lg'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <Mail className='w-5 h-5 mr-2' />;
                     Email Us;
                   </Button>;
                 </div>;'
                 <div className='mt-8 text-sm text-gray-400'>;
+<<<<<<< HEAD
                   <div>Address: {contactInfo && contactInfo.address}</div>;'
                   <div className='mt-1'>Website: {contactInfo && contactInfo.website}</div>                </div>                  >;"
+=======
+                  <div>Address: {contactInfo && contactInfo.address;}</div>;
+                  <div className='mt-1'>Website: {contactInfo && contactInfo.website;}</div>                </div>                  >;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <Mail className="w-5 h-5 mr-2" />;
                     Email Us;
                   </Button>;
                 </div>;"
                 <div className="mt-8 text-sm text-gray-400">;
+<<<<<<< HEAD
                   <div>Address: {contactInfo && contactInfo.address}</div>;"
                   <div className="mt-1">Website: {contactInfo && contactInfo.website}</div>;'
+=======
+                  <div>Address: {contactInfo && contactInfo.address;}</div>;
+                  <div className="mt-1">Website: {contactInfo && contactInfo.website;}</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <p className='text - gray - 300 mb - 4 font - medium'>;
                           {service.tagline}
                         </p>;
@@ -1234,9 +1312,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             Learn More;'
                             <ArrowRight className='w - 4 h - 4 ml - 2' />;
                           </Button>;
+<<<<<<< HEAD
                           <Button;`
                             href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}'
                             variant='secondary';'
+=======
+                          <Button;
+                            href={`mailto: ${contact_info.email;}?subject = Inquiry about ${service.name}`}
+                            variant='secondary';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                             className='px - 4';
                           >;'
                             <Mail className='w - 4 h - 4' />                          </Button>;
@@ -1249,9 +1333,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             Learn More;"
                             <ArrowRight className="w - 4 h - 4 ml - 2" />;
                           </Button>;
+<<<<<<< HEAD
                           <Button;`
                             href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}"
                             variant="secondary";"
+=======
+                          <Button;
+                            href={`mailto: ${contact_info.email;}?subject = Inquiry about ${service.name}`}
+                            variant="secondary";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                             className="px - 4";
                           >;"
                             <Mail className="w - 4 h - 4" />;
@@ -1260,10 +1350,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {/* Contact Info */}'
                         <div className='mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center'>;
                           <div>;
+<<<<<<< HEAD
                             Contact: {contact_info.mobile} | {contact_info.email}
                           </div>;'"
                           <div className='mt - 1'>{contact_info.website}</div>                        </div>                        <div className="mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center">;
                           <div > Contact: {contact_info.mobile} | {contact_info.email}</div>;"
+=======
+                            Contact: {contact_info.mobile;} | {contact_info.email}
+                          </div>;
+                          <div className='mt - 1'>{contact_info.website}</div>                        </div>                        <div className="mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center">;
+                          <div > Contact: {contact_info.mobile;} | {contact_info.email}</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           <div className="mt - 1">{contact_info.website}</div>;
                         </div>;
                       </div>;
@@ -1284,6 +1381,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   and cutting - edge technology.;
                 </p>;'
                 <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+<<<<<<< HEAD
                   <Button;`
                     href={`tel:${contact_info.mobile}`}'
                     variant='primary';'
@@ -1294,6 +1392,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Button;`
                     href={`mailto:${contact_info.email}`}'
                     variant='secondary';'
+=======
+                  <Button;
+                    href={`tel: ${contact_info.mobile;}`}
+                    variant='primary';
+                    className='bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 px - 8 py - 4 text - lg';
+                  >;
+                    <Phone className='w - 5 h - 5 mr - 2' />                    Call Now: {contact_info.mobile;}
+                  </Button>;
+                  <Button;
+                    href={`mailto: ${contact_info.email;}`}
+                    variant='secondary';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className='px - 8 py - 4 text - lg'                  Ready to Lead the Future?;
                 </h2>;"
                 <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
@@ -1301,17 +1411,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Transform your business with quantum AI, autonomous systems, and cutting - edge technology.;
                 </p>;"
                 <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+<<<<<<< HEAD
                   <Button;`
                     href={`tel:${contact_info.mobile}`}"
                     variant="primary";"
+=======
+                  <Button;
+                    href={`tel: ${contact_info.mobile;}`}
+                    variant="primary";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 px - 8 py - 4 text - lg";
                   >;"
                     <Phone className="w - 5 h - 5 mr - 2" />;
-                    Call Now: {contact_info.mobile}
+                    Call Now: {contact_info.mobile;}
                   </Button>;
+<<<<<<< HEAD
                   <Button;`
                     href={`mailto:${contact_info.email}`}'
                     variant='secondary';'
+=======
+                  <Button;
+                    href={`mailto: ${contact_info.email;}`}
+                    variant='secondary';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className='px - 8 py - 4 text - lg';
                   >;'
                     <Mail className='w - 5 h - 5 mr - 2' />;
@@ -1319,15 +1441,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>;
                 </div>;'
                 <div className='mt - 8 text - sm text - gray - 400'>;
+<<<<<<< HEAD
                   <div > Address: {contact_info.address}</div>;'
                   <div className='mt - 1'>Website: {contact_info.website}</div>                </div>                  >;"
+=======
+                  <div > Address: {contact_info.address;}</div>;
+                  <div className='mt - 1'>Website: {contact_info.website;}</div>                </div>                  >;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <Mail className="w - 5 h - 5 mr - 2" />;
                     Email Us;
                   </Button>;
                 </div>;"
                 <div className="mt - 8 text - sm text - gray - 400">;
+<<<<<<< HEAD
                   <div > Address: {contact_info.address}</div>;"
                   <div className="mt - 1">Website: {contact_info.website}</div>;
+=======
+                  <div > Address: {contact_info.address;}</div>;
+                  <div className="mt - 1">Website: {contact_info.website;}</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                 </div>;
               </EnhancedFuturisticCard>;

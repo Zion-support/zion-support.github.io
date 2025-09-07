@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -12,6 +13,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   name: string;
   tagline: string;
@@ -23,6 +27,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   icon: string;
   color: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
   link: string;
@@ -35,6 +43,7 @@ export interface Q3Service {
   textColor: string, link: string,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -53,16 +62,34 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   category: string, realService: boolean,
 
 category: string;
+=======
+  id: string;,
+  name: string;
+  tagline: string;,
+
+  price: string;
+  period: string;,
+  description: string;
+  features: string[];
+  popular?: boolean;
+
+  icon: string;,
+
+  color: string;
+pr-12325
+  marketPosition?: string;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   realService: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
   technology?: string[];
   integrations?: string[];
 
-
   useCases?: string[];
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -71,25 +98,38 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   roi?: string;
   competitors?: string[],
+
   marketSize?: string;
   growthRate?: string;
   text_color: string;
+  text_color: string;,
+pr-12325
+  text_color: string;,
   link: string;  market_position?: string;
   target_audience?: string;
   trial_days?: number;
   setup_time?: string;
   category: string;
+  category: string;,
   real_service: boolean;  technology?: string[];  integrations?: string[];
   use_cases?: string[];
   roi?: string;
+  category: string;,
+  real_service: boolean;  technology?: string[];  integrations?: string[];
+  use_cases?: string[];
+pr-12325
   competitors?: string[];
   market_size?: string;
   growth_rate?: string;
   variant?: ServiceVariant;
   customers?: number;
   rating?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1402,3 +1442,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

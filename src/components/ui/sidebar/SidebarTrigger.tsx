@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -50,6 +51,19 @@ import React from "react",;
 import { Button } from "@/components/ui/button",;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
+  const { open, toggleSidebar } = useSidebar(),
+
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Menu, X } from 'lucide-react';
 import { useSidebar } from "./sidebar-context",;
 import { cn } from "@/lib/utils",;
@@ -69,6 +83,7 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
     >;
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
       <span className="sr-only">Toggle Sidebar</span>;
+<<<<<<< HEAD
 =======
     <Button"
       variant="ghost""
@@ -109,18 +124,35 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+    </Button>;
+  );
+}
+;
+
+
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}
     >
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
       <span className="sr-only">Toggle Sidebar</span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </Button>
   )
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 ;'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

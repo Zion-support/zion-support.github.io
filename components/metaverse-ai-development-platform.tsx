@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Phone,
   Mail,
   MapPin,
@@ -10,10 +11,14 @@ import React from 'react',
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function MetaverseAIPlatformPage() {
   const service = null;
+<<<<<<< HEAD
 import {
   Phone
   Mail
@@ -42,6 +47,9 @@ export default function MetaverseAIPlatformPage() {;
     s.link.endsWith('/metaverse-ai-development-platform')
   );
   if (!service) return null;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -90,7 +98,7 @@ export default function MetaverseAIPlatformPage() {;
                     </span>
                   </div>
                   <div className='text-slate-400'>
-                    {service.trialDays}-day free trial • Setup:{' '}
+                    {service.trialDays}-day free trial • Setup: {' ';}
                     {service.setupTime}
                   </div>
                 </div>
@@ -186,9 +194,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span className='text - slate - 400 text - base'>;
                       {service.period}
                     </span>;
+<<<<<<< HEAD
                   </div>;'
                   <div className='text - slate - 400'>;'
                     {service.trial_days}-day free trial • Setup:{' '}
+=======
+                  </div>;
+                  <div className='text - slate - 400'>;
+                    {service.trial_days}-day free trial • Setup: {' ';}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {service.setup_time}
                   </div>;
                 </div>;'
@@ -235,6 +249,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"

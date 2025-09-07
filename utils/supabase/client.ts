@@ -18,9 +18,9 @@
 
 })
 
-
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -33,6 +33,8 @@
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 })
 
 
@@ -97,6 +99,7 @@ export const supabase = { auth: { signIn: () => Promise && Promise.resolve({ dat
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -144,10 +147,13 @@ export const supabase = { auth: { signIn: () => Promise && Promise.resolve({ dat
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 })
 
 })
-
 
 };
 
@@ -164,6 +170,7 @@ export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,err
 export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
 export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,error: null }),signOut: () => Promise.resolve({ error: null }),getUser: () => Promise.resolve({ data: { user: null },error: null }) },from: (_table: string) => ({ select: () => Promise.resolve({ data: [],error: null }),insert: () => Promise.resolve({ data: null,error: null }),update: () => Promise.resolve({ data: null,error: null }),delete: () => Promise.resolve({ data: null,error: null }) }) }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,6 +195,9 @@ export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,err
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     sign_in: () => Promise.resolve ({ data: null, error: null }),
     sign_out: () => Promise.resolve ({ error: null }),
     get_user: () => Promise.resolve ({ data: { user: null }, error: null });
@@ -196,7 +206,10 @@ export const supabase = { auth: { signIn: () => Promise.resolve({ data: null,err
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     select: () => Promise.resolve ({ data: [], error: null }),
     insert: () => Promise.resolve ({ data: null, error: null }),
     update: () => Promise.resolve ({ data: null, error: null }),
@@ -212,6 +225,7 @@ export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, 
 export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, error: null }), sign_out: () => Promise.resolve ({ error: null }), get_user: () => Promise.resolve ({ data: { user: null }, error: null }) }, from: (_table: string) => ({ select: () => Promise.resolve ({ data: [], error: null }), insert: () => Promise.resolve ({ data: null, error: null }), update: () => Promise.resolve ({ data: null, error: null }), delete: () => Promise.resolve ({ data: null, error: null }) }) }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -222,3 +236,6 @@ export const supabase = { auth: { sign_in: () => Promise.resolve ({ data: null, 
 =======
   from: (_table: string) => ({}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

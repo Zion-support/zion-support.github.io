@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 pr-12243
 =======
@@ -8,6 +9,11 @@ pr-12243
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   categories?: {
 =======
   categories?: {}
@@ -18,6 +24,7 @@ pr-12243
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -25,6 +32,8 @@ pr-12243
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorBoundary extends React.Component {
   constructor(props) {
 =======
@@ -33,8 +42,9 @@ class ErrorBoundary extends React.Component {}
   constructor(props) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
+<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {}
     return { hasError: true };
@@ -46,9 +56,18 @@ class ErrorBoundary extends React.Component {}
   
   render() {}
     if (this.state.hasError) {}
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true ;};
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: ';, error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -57,6 +76,7 @@ class ErrorBoundary extends React.Component {}
 }</button> </form>) ;
 };
 
+<<<<<<< HEAD
 type Props = {;'
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';'
 import StarRating from './StarRating';
@@ -66,6 +86,17 @@ export type ReviewFormValues = {;
   fromId: string,;
   rating: number,;
   text: string,;
+=======
+type Props = {;
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+import StarRating from './StarRating';
+export type ReviewFormValues = {;
+  projectId: string;,;
+  fromRole: 'client' | 'talent';,;
+  fromId: string;,;
+  rating: number;,;
+  text: string;,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   categories?: {;
     communication?: number;
     qualityOfWork?: number;
@@ -75,18 +106,27 @@ export type ReviewFormValues = {;
   anonymous?: boolean;
 };
 
+<<<<<<< HEAD
 type Props = {;'
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
 <<<<<<< HEAD
+=======
+type Props = {;
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>;
+
+const ReviewForm: React.FC<Props> = ({ initial ;}) => {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState } from 'react';
-import StarRating from './StarRating';
 export type ReviewFormValues = any;
-const ReviewForm: React.FC<Props> = ({ initial }) => {
+const ReviewForm: React.FC<Props> = ({ initial ;}) => {
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [rating, setRating] = useState(0);
 =======
   const [rating, setRating] = useState(0);'
@@ -102,14 +142,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     wouldWorkWithAgain?: boolean;
   }
   anonymous?: boolean;
 }
 ;
 type Props = {
-  initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;
-const ReviewForm: React.FC < Props> = ({ initial }) => {
+  initial: Pick < ReviewFormValues;, 'project_id' | 'from_role' | 'from_id'>;
+const ReviewForm: React.FC < Props> = ({ initial ;}) => {
   const [rating, set_rating] = useState (0);
   const [text, set_text] = useState ('');
   const [anonymous, set_anonymous] = useState (false);
@@ -129,29 +172,33 @@ function handle_submit() {
     set_message (null),
     try {
       const res = await fetch ('/api / reviews / submit', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
+        method: 'POST';,
+        headers: { 'Content - Type': 'application / json' ;},
         body: JSON.stringify ({
-          project_id: initial.project_id,
-          from_role: initial.from_role,
-          from_id: initial.from_id,
+          project_id: initial.project_id;,
+          from_role: initial.from_role;,
+          from_id: initial.from_id;,
           rating,
           text,
           anonymous,
 
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const res = await fetch('/api/reviews/submit', {
         method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json' ;}
         body: JSON.stringify({
-          projectId: initial.projectId,
-          fromRole: initial.fromRole,
-          fromId: initial.fromId,
+          projectId: initial.projectId;,
+          fromRole: initial.fromRole;,
+          fromId: initial.fromId;,
 rating,
           text,
           anonymous,
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
 =======
@@ -195,6 +242,9 @@ function handle_submit() {
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           categories: {
             communication
             qualityOfWork
@@ -203,6 +253,7 @@ function handle_submit() {
           }
         })
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           categories: {}
@@ -222,6 +273,8 @@ function handle_submit() {
       setMessage('Review submitted! Pending admin approval.');
 
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   async function handleSubmit(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
@@ -250,7 +303,10 @@ function handle_submit() {
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
 
       setMessage('Review submitted! Pending admin approval.');
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch (err: any) {;
       setMessage(err && err.message);
     } finally {;
@@ -259,7 +315,10 @@ function handle_submit() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     <form onSubmit={handleSubmit} className='space-y-6'>;
       <div>;
@@ -269,8 +328,11 @@ function handle_submit() {
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
 
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -297,6 +359,7 @@ function handle_submit() {
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <div>;'
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {}
@@ -307,26 +370,36 @@ function handle_submit() {
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   }
   return (
 
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   }
   return (
@@ -346,10 +419,13 @@ function handle_submit() {
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch (err: any) {
       setMessage(err.message);
     } finally {
@@ -366,11 +442,15 @@ function handle_submit() {
 <label className='block text-sm font-medium mb-2'>Your Review</label>
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <textarea
 =======
 
@@ -380,6 +460,7 @@ pr-12243
           rows={5}
           value={text}
 <<<<<<< HEAD
+<<<<<<< HEAD
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
@@ -392,12 +473,20 @@ pr-12243
 
 
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <textarea
 =======
 
@@ -411,9 +500,13 @@ pr-12243
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           onChange={e => setText(e.target.value)}
           required
         />
@@ -422,21 +515,28 @@ pr-12243
 <div className='flex items-center gap-3'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 =======
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
+<<<<<<< HEAD
 =======
         <input'
           id='anonymous''
           type='checkbox'
           checked={anonymous}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -455,8 +555,11 @@ pr-12243
             <StarRating
               value={communication |0}
               onChange={v => setCommunication(v)}
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       set_submitting (false);
     }
   }
@@ -505,7 +608,10 @@ pr-12243
           <span className='pill'>Optional</span>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -519,14 +625,20 @@ pr-12243
               value={qualityOfWork || 0}
               on_change={v => setQualityOfWork (v)}
 
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />;
           </div>;'
           <span className='pill'>Optional</span>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -540,13 +652,22 @@ pr-12243
               value={timeliness || 0}
               on_change={v => set_timeliness (v)}
 
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />;
           </div>;'
           <span className='pill'>Optional</span>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+              onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
+<div className='enhanced - card'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Would Work With Again</span>;
@@ -554,6 +675,7 @@ pr-12243
               type='checkbox';
               checked={wouldWorkWithAgain}
               on_change={e => setWouldWorkWithAgain (e.target.checked)}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -561,11 +683,34 @@ pr-12243
 
               onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />;
           </div>;'
           <span className='pill'>Optional</span>        </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+      </button>;
+
+      {message && <p className='text-sm'>{message}</p>}
+    </form>;
+  );
+
+};
+
+export default ReviewForm;    </form>;
+  );
+
+        disabled={submitting}
+      >;
+        {submitting ? 'Submitting...' : 'Submit Review'}
+
+<button
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <button
         type="submit"
         className="enhanced-button enhanced-button-primary"
@@ -580,6 +725,7 @@ pr-12243
 type='submit'
         className='enhanced-button enhanced-button-primary'
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 
       </button>;
@@ -595,11 +741,14 @@ export default ReviewForm;    </form>;
   );
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         disabled={submitting}
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default ReviewForm;
       </button>;
@@ -636,6 +785,9 @@ pr-12243
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
+=======
+export default ReviewForm;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </button>;
       {message && <p className='text - sm'>{message}</p>}
     </form>);
@@ -647,5 +799,19 @@ export default ReviewForm;    </form>);
 export default ReviewForm;
 ;
 
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      </button>
+
+{message && <p className='text-sm'>{message}</p>}
+    </form>
+  );
+};
+
+export default ReviewForm;
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -21,12 +21,11 @@ const fs = require('fs')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
-const { execSync } = require('child_process')
-const fs = require('fs')
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log(' Starting Automation Orchestrator...')
+<<<<<<< HEAD
     "name"
     "script"
     "name"
@@ -68,5 +67,17 @@ console.log(' Starting Automation Orchestrator...')
 =======
 
   console.error('Orchestrator "failed")
+=======
+    "name"""
+    "script"""
+      "status"""
+      "output"""
+        "encoding"""
+        "stdio"""
+// console.log('\n Automation Orchestrator "Summary")""');
+    console.log('\n Failed "Tasks")""');
+// console.log('\n "Recommendations")""');
+    console.log('\n "Recommendations")""');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -71,18 +71,36 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import App 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from '@jest/globals';
+import App from '../App';
+
+
+it('displays correct content', () => {
+
+
+
+
   it('displays correct content', () => {
     render(<App />);
-  });
 
   it('handles user interactions', () => {
     render(<App />);
   });
-});
+
+
+
+
+
 import { render, screen, describe, it, expect } from 'lucide-react'; import App from '../App'; describe('App',() => { it('renders without crashing',() => { render(<App />); expect(screen.getByRole('main')).toBeInTheDocument()}
+
 }); it('displays correct content',() => { render(<App />)}
+
 }); it('handles user interactions',() => { render(<App />)})}
 });'
+
+
+
 import { render, screen } from '@testing-library/react'
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -94,6 +112,7 @@ describe('App'
   it('renders without crashing'
     expect(screen.getByRole('main'
   it('displays correct content'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,8 +139,21 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+it('handles user interactions'
+import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import App from \'../App\'; describe(\'App\',() => { it(\'renders without crashing\',() => { render(<App />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<App />)}); it(\'handles user interactions\',() => { render(<App />)})});
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 });
+
+
+
 </App>'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
@@ -130,6 +162,9 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import App from '../App'
@@ -137,6 +172,7 @@ describe('App'
   it('renders without crashing'
     expect(screen.getByRole('main'
   it('displays correct content'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -155,3 +191,14 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 });
 </App>'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import App from \'../App\'; describe(\'App\',() => { it(\'renders without crashing\',() => { render(<App />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<App />)}); it(\'handles user interactions\',() => { render(<App />)})});
+
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"'""
+"
+)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

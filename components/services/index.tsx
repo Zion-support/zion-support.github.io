@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 <<<<<<< HEAD
 }React.useEffect ( () => {
@@ -48,6 +49,9 @@ import Head from 'next/head',
 import React from 'react',
 import SEO from '../../components/SEO',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
 import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
@@ -65,6 +69,7 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 
 const mapLocalToServiceItem = null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {
@@ -337,3 +342,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

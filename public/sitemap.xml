@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -33,10 +34,15 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <lastmod>2025-09-06T18:01:32.328Z</lastmod>
+=======
+    <loc>https://ziontechgroup.com/</loc>
+    <lastmod>2025-09-06T19:18:23.648Z</lastmod>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/about</loc>
     <lastmod>2025-09-06T18:01:32.328Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -94,10 +100,15 @@
     <lastmod>2025-09-06T18:01:32.328Z</lastmod>
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <loc>https://ziontechgroup.com/services</loc>
+    <lastmod>2025-09-06T19:18:23.648Z</lastmod>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -356,4 +367,17 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    <loc>https://ziontechgroup.com/about</loc>
+    <lastmod>2025-09-06T19:18:23.648Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/contact</loc>
+    <lastmod>2025-09-06T19:18:23.648Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 </urlset>

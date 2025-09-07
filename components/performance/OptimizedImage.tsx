@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -90,12 +91,18 @@ import Image from "next/image";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+import React from \"react\";"
+import Image from \"next/image\";
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface OptimizedImageProps {
   src: string;
   alt: string;
   width: number;
   height: number;
   className?: string;
+<<<<<<< HEAD
 =======
 interface OptimizedImageProps {}
   width?: number;
@@ -160,11 +167,33 @@ if ( {) {}
     <Image
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       src={src}
+=======
+  priority?: boolean;
+  quality?: number;
+  sizes?: string;}
+}
+
+
+}) => {
+  return (
+    <Image
+      src={src}
+  quality = 75}"
+  sizes = \"100vw\"}
+}) => {}
+   }) => {
+
+ ;
+  return (}
+    <Image;}
+src={src}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       alt={alt}
       width={width}
       height={height}
       className={className}
       priority={priority}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -210,12 +239,24 @@ export default OptimizedImage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
+=======
+      sizes={sizes}
+      quality={quality}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     />
   );
 };
 
 export default OptimizedImage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  )
+};
+
+export default OptimizedImage;
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

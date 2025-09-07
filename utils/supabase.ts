@@ -1,22 +1,35 @@
 // Supabase utilities;
 export const supabase = {};
   // Add supabase functionality here;
+<<<<<<< HEAD
   auth: {}
+=======
+  auth: {
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
-    signOut: () => Promise<any>;
-  };
+    signOut: () => Promise<any>
+};
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
     from: (table: string) => ({
+
       select: (columns: string = "*") => ({
         eq: (column: string, value: any) => ({
 =======
@@ -74,10 +87,14 @@ export const supabase = createSupabaseClient(supabaseConfig);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
       select: (columns: string = '*') => ({
+=======
+select: (columns: string = '*') => ({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         eq: (column: string, value: any) => ({
           single: () => Promise && Promise.resolve({ data: null, error: null }),
           then: (callback: (result: any) => any) => callback({ data: [], error: null })
@@ -114,6 +131,7 @@ const supabaseConfig: SupabaseConfig = {
   anonKey: process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key'
 };
 export const supabase = createSupabaseClient(supabaseConfig);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 =======
@@ -122,6 +140,10 @@ export const supabase = createSupabaseClient(supabaseConfig);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -138,6 +160,7 @@ export const supabase = createSupabaseClient(supabaseConfig);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -148,6 +171,18 @@ export const supabase = createSupabaseClient(supabaseConfig);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+  });
+};
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         single: () => null;
       });
     });
@@ -158,7 +193,7 @@ export const supabase = createSupabaseClient(supabaseConfig);
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }
-  });
+  })
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -174,10 +209,10 @@ export const supabase = createSupabaseClient(supabaseConfig);
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
-
-  });
+  })
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -197,3 +232,14 @@ export const supabase = createSupabaseClient(supabaseConfig);
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  auth: {,
+  getUser: () => Promise<any>;
+</any>
+    signIn: (credentials: any) => Promise<any>;
+    signOut: () => Promise<any>;
+pr-12325
+</any>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

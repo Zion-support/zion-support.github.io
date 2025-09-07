@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/services/ServiceDetails.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/services/ServiceDetails.jsx
 <<<<<<< HEAD:backup-merge-conflicts/ServiceDetails.jsx.backup
+=======
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from \'@/components/ui/
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/
+const { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from "@/components/ui/
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 const { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from "@/components/ui/card"; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };'"'"
@@ -10,6 +16,7 @@ import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""
 
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,3 +53,12 @@ import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from
 const { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from "@/components/ui/
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/src/components/services/ServiceDetails.jsx
+=======
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from \'@/components/ui/card\'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} \"; \"" export { Page };
+const { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from "@/components/ui/card"; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };'"'"
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from \'@/components/ui/
+import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/
+const { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from "@/components/ui/
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

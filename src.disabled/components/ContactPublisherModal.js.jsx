@@ -18,6 +18,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
 export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (") const [message,setMessage] = useState (") const [error,setError] = useState (") const [isLoading,setIsLoading] = useState (false) "";";";"""
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -27,12 +28,17 @@ export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) {
 =======
 export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (") const [message,setMessage] = useState (") const [error,setError] = useState (") const [isLoading,setIsLoading] = useState (false) "";";";"""
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"export\": function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (\') const [message,setMessage] = useState (\') const [error,setError] = useState (\') const [isLoading,setIsLoading] = useState (false) \'';\";\";
+export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (") const [message,setMessage] = useState (") const [error,setError] = useState (") const [isLoading,setIsLoading] = useState (false) "";";";"""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+"export\": function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (\') const [message,setMessage] = useState (\') const [error,setError] = useState (\') const [isLoading,setIsLoading] = useState (false) \'';\";\";
 "export\": function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (\') const [message,setMessage] = useState (\') const [error,setError] = useState (\') const [isLoading,setIsLoading] = useState (false) \'';\";\";
 "export\": function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (\') const [message,setMessage] = useState (\') const [error,setError] = useState (\') const [isLoading,setIsLoading] = useState (false) \'';\";\";
 :src.disabled/components/ContactPublisherModal.js.jsx
@@ -52,6 +58,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (") const [message,setMessage] = useState (") const [error,setError] = useState (") const [isLoading,setIsLoading] = useState (false) "";";";"""
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (") const [message,setMessage] = useState (") const [error,setError] = useState (") const [isLoading,setIsLoading] = useState (false) "";";";"""
@@ -78,3 +85,6 @@ export: function ContactPublisherModal() { return null; }
 "export\": function ContactPublisherModal() { return null; }
 export: function ContactPublisherModal() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+export: function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (") const [message,setMessage] = useState (") const [error,setError] = useState (") const [isLoading,setIsLoading] = useState (false) "";";";"""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

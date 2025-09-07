@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -11,6 +12,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Sort options for talent directory
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -20,6 +23,7 @@
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
@@ -211,3 +215,8 @@ export const SORT_OPTIONS = [;'
   { value: 'experience', label: 'Most Experienced' },
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+// Sort options for talent directory
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

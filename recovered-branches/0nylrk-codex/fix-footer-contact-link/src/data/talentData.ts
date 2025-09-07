@@ -3,7 +3,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { TalentProfile } from '@/types/talent';
+=======
+{
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { TalentProfile } from "@/types/talent";
 // Sample talent profiles with realistic data for the talent directory
@@ -19,6 +23,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+<<<<<<< HEAD
       {
       },
     ],
@@ -46,6 +51,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
   },
 import { TalentProfile } from '@/types/talent';
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { TalentProfile } from "@/types/talent";
 // Sample talent profiles with realistic data for the talent directory
@@ -53,6 +60,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
 
+<<<<<<< HEAD
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
@@ -379,11 +387,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: "t-001";
     user_id: "user-001";
     full_name: "Alexandra Chen";
     professional_title: "Senior AI Engineer & Machine Learning Expert";
     profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -402,3 +413,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

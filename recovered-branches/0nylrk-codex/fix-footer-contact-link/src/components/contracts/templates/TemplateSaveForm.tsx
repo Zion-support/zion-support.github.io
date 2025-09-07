@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,8 @@
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -21,6 +24,7 @@ import {Button} from "@/components/ui/button";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Switch} from "@/components/ui/switch";
+<<<<<<< HEAD
 const formSchema = z.object({
   title: z.string().min(1, "Title is required");
   isDefault: z.boolean().default(false)})
@@ -168,6 +172,8 @@ export function TemplateSaveForm(): any ({;import { useState } from "react",
 export function TemplateSaveForm(): any ({;import { useState } from "react",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const formSchema = z.object({
   title: z.string().min(1, "Title is required");
   isDefault: z.boolean().default(false)})
@@ -175,6 +181,7 @@ type FormValues = z.infer<typeof formSchema>;
 interface TemplateSaveFormProps {
   onCancel: () => void
   onComplete: () => void
+<<<<<<< HEAD
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues
 }
@@ -955,6 +962,10 @@ try {}
 }</Button> </div> </form> </Form>) 
 }
   
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <Form {...form}>"
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -1011,6 +1022,7 @@ try {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1027,3 +1039,180 @@ try {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+const formSchema = z && z.object({;)
+  title: z && z.string().min(1, "Title is required");"
+  isDefault: z && z.boolean().default(false)}),;
+
+type FormValues = z && z.infer<typeof formSchema>;
+</typeof>
+type FormValues = z.infer<typeof formSchema>;
+  const form = useForm<FormValues>({
+
+type FormValues = z.infer<typeof formSchema>,
+type FormValues = z.infer<typeof formSchema>,;
+  const form = useForm<FormValues>({;
+
+    <Form {...form}>;
+)"
+      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;"
+</form>
+        <FormField;
+          control={form && form.control}"
+          name="title""
+          render={({ field }) => (;
+
+            <FormItem>;
+
+              <FormLabel>Template Name;
+              <FormControl>;
+"
+                <Input {...field} placeholder="Enter template name" />;"
+
+              ;
+              <FormMessage />;
+
+          name="isDefault"")
+            <FormItem className="flex items-center justify-between">;"
+              <FormLabel className="cursor-pointer">Set as default template;"
+
+                <Switch;
+                  checked={field && field.value}
+                  onCheckedChange={field && field.onChange}
+                />;
+
+
+            ;"
+        <div className="flex gap-2 justify-end">;"
+</div>"
+          <Button type="button" variant="outline" onClick={onCancel}>;"
+
+          <Button type="submit" disabled={saving}>;"
+
+              <>;"
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />;"
+</Loader2>
+              </>;)
+            ) : (;"
+              `${editTemplate ? "Update" : "Save"} Template`;")
+            )}
+        </div>;
+      </form>;
+type FormValues = z.infer < typeof form_schema>;
+interface TemplateSaveFormProps {
+  // TODO: Implement
+}
+  on_cancel: () => void,
+  on_complete: () => void,
+  edit_template?: ContractTemplate | null;
+  current_values?: ContractFormValues;
+export /**
+ * TemplateSaveForm - Function description;
+ */
+function TemplateSaveForm() {
+  const [saving, set_saving] = useState (false);
+  const { create_template, update_template } = useContractTemplates ();
+  const form = use_form < FormValues>({)
+    resolver: zod_resolver (form_schema),
+    default_values: {,"
+  title: edit_template?.title || "","
+      is_default: edit_template?.is_default || false}}),
+  const on_submit = async (values: FormValues) => {
+    // Check condition;
+if ( {) {
+  $2;
+      return;
+    set_saving (true);
+    try {
+  // TODO: Implement
+      // Check condition;
+        await update_template.mutate_async ({
+          template_id: edit_template.id,
+          title: values.title,
+          template_data: edit_template.template_data,)
+          is_default: values.is_default});
+      } else // Check condition;
+        await create_template.mutate_async ({
+          template_data: current_values,)
+      on_complete ();
+    } finally {
+  // TODO: Implement
+      set_saving (false);
+  return (
+      <form on_submit={form.handle_submit (on_submit)} className="space - y-4">;"
+          control={form.control}"
+          name="title";"
+          render={({ field }) => (
+
+
+              <FormLabel > Template Name;
+
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;"
+
+
+
+)
+          name="is_default";"
+            <FormItem className="flex items - center justify - between">;"
+              <FormLabel className="cursor - pointer">Set as default template;"
+
+                  checked={field.value}
+                  onCheckedChange={field.on_change}
+
+            )}"
+        <div className="flex gap - 2 justify - end">;"
+          <Button type="button" variant="outline" on_click={on_cancel}>;"
+
+
+                <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;"
+              </>) : ()"`;
+              `${edit_template ? "Update" : "Save"} Template`)}"
+    );
+            ;          )}
+          name="isDefault";"
+
+                  onCheckedChange={field.onChange}
+
+
+
+
+            ) :(;"`;
+              `${editTemplate ? "Update" :"Save"} Template`;")
+   <FormMessage /> ) 
+}/> <FormField <FormItem className="flex items-center justify-between"> <FormLabel className="cursor-pointer">Set as default template <FormControl> <Switch checked= {"
+
+}/>  <FormMessage /> ) 
+"`;
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
+</Loader2>)
+} </div> </form> ) 
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">"
+
+            <FormItem>
+
+              <FormLabel>Template Name
+              <FormControl>
+                <Input {...field} placeholder="Enter template name" />"
+
+              <FormMessage />
+
+            <FormItem className="flex items-center justify-between">"
+              <FormLabel className="cursor-pointer">Set as default template"
+
+                />
+
+
+        <div className="flex gap-2 justify-end">"
+          <Button type="button" variant="outline" onClick={onCancel}>"
+
+          <Button type="submit" disabled={saving}>"
+
+              <>"
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />"
+              </>)
+            ) : ("`;
+              `${editTemplate ? "Update" : "Save"} Template`")
+        </div>
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

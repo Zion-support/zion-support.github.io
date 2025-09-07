@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,10 @@ import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 =======
 
+=======
+import { supabase } from "@/integrations/supabase/client";
+import { CreateNotificationParams, CreateNotificationResult } from './types';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
@@ -38,6 +43,15 @@ export async function createNotification({;
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
+
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -97,7 +111,17 @@ export async function createNotification({};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import {supabase} from "@/integrations/supabase/client";""
+import {CreateNotificationParams, CreateNotificationResult} from './types';
+/**
+ * Creates a notification for a user and optionally sends an email notification;
+ */
+export async function createNotification({;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   userId;
   title;
   message;
@@ -115,6 +139,7 @@ export async function createNotification({};
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   userId,
   title,
@@ -171,12 +196,15 @@ export async function createNotification({};
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl,
   void actionText,
   try {
     // Call the create_notification database function
+<<<<<<< HEAD
     const { data, error } = await supabase.rpc('create_notification', {
       _user_id: userId;
       _title: title;
@@ -280,12 +308,22 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data;'
       await supabase.functions.invoke('send-notification-email', {;
+=======
+  relatedId = null;
+  sendEmail = false;
+  actionUrl = null;
+
+
+/**
+export async function createNotification({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -395,20 +433,54 @@ if ( {) {}
       await supabase.functions.invoke ('send - notification - email', {}
 =======
     // Check condition
+=======
+pr-12325
+  userId,
+  userId;
+  title;
+  message;
+  type;
+  relatedId = null;
+  sendEmail = false;
+  actionUrl = null;
+
+
+/**
+ * Creates a notification for a user and optionally sends an email notification;
+
+ */
+export async function createNotification({
+  userId;
+  title;
+  message;
+
+}
+    // Call the create_notification database function;
+    const { data, error } = await supabase.rpc ('create_notification', {
+      _user_id: user_id;,
+  _title: title;
+      _message: message;,
+  _type: type,
+      _related_id: related_id;)
+    });
+;
+    // Check condition;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (throw error) {
-  $2
-}
+  $2;
     // If send_email is true, call the edge function to send an email;
-    // Check condition
+    // Check condition;
 if ( {) {
-  $2
-}
       const notification_id = data;
       await supabase.functions.invoke ('send - notification - email', {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         body: { user_id: user_id, notification_id: notification_id }
       });
     }
+=======
+        body: { user_id: user_id, notification_id: notification_id })
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return { success: true, notification_id: data }
 <<<<<<< HEAD
   } catch (error) {'
@@ -418,7 +490,12 @@ if ( {) {
     console.error ('Error creating notification:', error);
     return { success: false, error }
   }
+}
+;
 
+  } catch (error) {
+  } catch (error) {;
+    console.error('Error creating notification:', error);
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -467,4 +544,12 @@ if ( {) {
 ;
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+pr-12325
+'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

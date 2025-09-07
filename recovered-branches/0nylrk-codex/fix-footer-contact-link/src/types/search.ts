@@ -117,6 +117,7 @@ export interface SearchSuggestion {
 export interface SearchSuggestion {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   text: string;
+<<<<<<< HEAD
   type: "product" | "category" | "tag" | "skill" | "person" | "recent";
   iconUrl?: string;
 }
@@ -168,6 +169,9 @@ export interface FilterOptions {
     value: string;
   }[];
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   locations: {
 =======
   locations: {}
@@ -185,6 +189,7 @@ export interface FilterOptions {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -194,6 +199,8 @@ export interface FilterOptions {
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface SearchSuggestion {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -289,6 +296,7 @@ export interface SearchSuggestion {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -302,3 +310,49 @@ export interface SearchSuggestion {};
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  // TODO: Implement
+}
+  text: string;,
+  type: "product" | "category" | "tag" | "skill" | "person" | "recent";"
+  iconUrl?: string;
+export interface SearchHighlight {
+  // TODO: Implement
+  before: string;,
+  match: string;
+  after: string;
+export interface FilterOptions {
+  // TODO: Implement
+  productTypes: {,
+  label: string;
+    value: string;
+  }[];
+  locations: {,
+  availabilityOptions: {,
+  ratingOptions: number[];
+
+
+export interface SearchSuggestion {;
+
+;
+
+  text:string,;"
+  type:'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;
+  iconUrl?:string;
+export interface SearchHighlight {;
+  before:string,;
+  match:string,;
+  after:string;
+export interface FilterOptions {;
+  productTypes: {;,
+  label:string,;
+    value:string;
+  }[],;
+  locations: {;,
+  availabilityOptions: {;,
+  ratingOptions:number[];
+  label: string,;
+  // TODO: Implement
+  text: string;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

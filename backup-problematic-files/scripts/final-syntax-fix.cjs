@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/final-syntax-fix.cjs
 =======
 
@@ -31,67 +32,26 @@ console.log('====');
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // Function to fix specific syntax errors
+=======
+
+console.log('🔧 Final Syntax Fix');
+// Function to fix specific syntax errors;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function fixSpecificErrors(content) {
-  return content
-    // Fix JSX closing tags
-    .replace(/<\$1>/g, '>')
-    .replace(/<\/\$1>/g, '>')
-    .replace(/<\$1/g, '<')
-    .replace(/<\/\$1/g, '</')
-    
-    // Fix object literal syntax
-    .replace(/\{\s*$/gm, '{')
-    .replace(/\[\s*$/gm, '[')
-    .replace(/\(\s*$/gm, '(')
-    
-    // Fix semicolons in wrong places
-    .replace(/;\s*$/gm, '')
-    .replace(/;\s*}/g, '}')
-    .replace(/;\s*]/g, ']')
-    .replace(/;\s*\)/g, ')')
-    
-    // Fix array and object syntax
-    .replace(/\[\s*\{\s*$/gm, '[{')
-    .replace(/\{\s*\[\s*$/gm, '{[')
-    .replace(/\}\s*\]\s*$/gm, '}]')
-    .replace(/\]\s*\}\s*$/gm, ']}')
-    
-    // Fix empty objects and arrays
-    .replace(/\{\s*\}/g, '{}')
-    .replace(/\[\s*\]/g, '[]')
-    
-    // Fix trailing commas
-    .replace(/,\s*}/g, '}')
-    .replace(/,\s*]/g, ']')
-    .replace(/,\s*\)/g, ')')
-    
-    // Clean up extra semicolons
-    .replace(/;;+/g, ';')
-    .replace(/;\s*;/g, ';')
-    
-    // Clean up whitespace
-    .replace(/\n\s*\n\s*\n/g, '\n\n')
-    .replace(/\s+$/gm, '');
+  return content;
+    // Fix JSX closing tags;
+
+    .replace(/\s+$/gm, );
 }
-
-// Files to fix
+// Files to fix;
 const filesToFix = [
-  'pages/about.tsx',
-  'pages/blog.tsx',
-  'pages/ai-services.tsx',
-  'pages/api.tsx',
-  'pages/accessibility.tsx',
-  'pages/careers.tsx',
-  'components/Header.tsx',
-  'components/Footer.tsx',
-  'components/Layout.tsx',
-  'components/layout/MainLayout.tsx'
-];
 
+];
 let totalFixed = 0;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
@@ -101,11 +61,17 @@ let totalFixed = 0;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 for (const file of filesToFix) {
   try {
+  // TODO: Implement
     if (!fs.existsSync(file)) {
-      console.log(`⚠️  File not found: ${file}`);
+      console.log(`⚠️  File not found: ${file});
       continue;
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -138,3 +104,6 @@ console.log('🎉 Final syntax fix completed!');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 console.log(' Fixing line breaks in className attributes...')
   '/workspace/pages/about.tsx'
   '/workspace/pages/ai-services.tsx'
@@ -11,6 +12,8 @@ console.log(' Fixing line breaks in className attributes...')
 // console.log(` Fixed: ${path.relative('/workspace'`})
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

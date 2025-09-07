@@ -32,18 +32,30 @@ export type { ExportOptions } from './pdf/pdfExport',; // This file now re-expor
 =======
 =======
 
-
 // This file now re - exports from the refactored PDF export utility;
 export { exportResumeToPDF } from './pdf / pdf_export',
 export type { ExportOptions } from './pdf / pdf_export';
 
+export { exportResumeToPDF } from './pdf/pdfExport',;
+export type { ExportOptions } from './pdf/pdfExport';
 
 // This file now re-exports from the refactored PDF export utility;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export { exportResumeToPDF } from './pdf/pdfExport',;
+export type { ExportOptions } from './pdf/pdfExport',; // This file now re-exports from the refactored PDF export utility
+
+// This file now re - exports from the refactored PDF export utility;
+export { exportResumeToPDF } from './pdf / pdf_export',
+export type { ExportOptions } from './pdf / pdf_export';
+// This file now re-exports from the refactored PDF export utility;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export { exportResumeToPDF } from './pdf/pdfExport';
 export type { ExportOptions } from './pdf/pdfExport';
 export { exportResumeToPDF } from './pdf/pdfExport',;
 export type { ExportOptions } from './pdf/pdfExport';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -62,3 +74,6 @@ export type { ExportOptions } from './pdf/pdfExport';
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

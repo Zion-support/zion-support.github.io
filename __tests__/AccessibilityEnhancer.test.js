@@ -15,6 +15,12 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 
+import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancer from '../components/AccessibilityEnhancer'; describe('AccessibilityEnhancer',() => { test('renders without crashing',() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancer />)}); test('handles user interactions',() => { render(<AccessibilityEnhancer />)}); test('applies correct styling',() => { render(<AccessibilityEnhancer />)})});
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
 
 <<<<<<< HEAD
 =======
@@ -54,14 +60,21 @@ describe('AccessibilityEnhancer', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 });
-});
+
+
+
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancer from '../components/AccessibilityEnhancer'; describe('AccessibilityEnhancer',() => { test('renders without crashing',() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancer />)}); test('handles user interactions',() => { render(<AccessibilityEnhancer />)}); test('applies correct styling',() => { render(<AccessibilityEnhancer />)})});
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
@@ -70,6 +83,12 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Accessib
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   test('displays correct content', () => {
     render(<AccessibilityEnhancer />);
     // Add specific content tests based on component
@@ -103,6 +122,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -113,6 +133,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -123,6 +153,7 @@ describe('AccessibilityEnhancer'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancer from "./components/AccessibilityEnhancer"; describe('AccessibilityEnhancer', () => { test("renders without crashing",() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancer />)}); test("handles user interactions",() => { render(<AccessibilityEnhancer />)}); test("applies correct styling"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -131,6 +162,14 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -153,8 +192,11 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 });
-});
+
+
+
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancer from '../components/AccessibilityEnhancer'; describe('AccessibilityEnhancer',() => { test('renders without crashing',() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancer />)}); test('handles user interactions',() => { render(<AccessibilityEnhancer />)}); test('applies correct styling',() => { render(<AccessibilityEnhancer />)})});
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
@@ -172,3 +214,11 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Accessib
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancer from '../components/AccessibilityEnhancer'; describe('AccessibilityEnhancer',() => { test('renders without crashing',() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancer />)}); test('handles user interactions',() => { render(<AccessibilityEnhancer />)}); test('applies correct styling',() => { render(<AccessibilityEnhancer />)})});
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancer from "./components/AccessibilityEnhancer"; describe('AccessibilityEnhancer', () => { test("renders without crashing",() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancer />)}); test("handles user interactions",() => { render(<AccessibilityEnhancer />)}); test("applies correct styling"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

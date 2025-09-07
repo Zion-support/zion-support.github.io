@@ -1,12 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     super(props);
     this.state = { hasError: false };
   }
   
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
@@ -17,11 +24,24 @@ class ErrorBoundary extends React.Component {}
   
   render() {}
     if (this.state.hasError) {}
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
+<<<<<<< HEAD
 }'
 import React from 'react';
 <<<<<<< HEAD
@@ -49,10 +69,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 interface MobileNavigationProps {
   // Add props here as needed
-
 
 }
 
@@ -92,6 +114,7 @@ export default function MobileNavigation({ }: MobileNavigationProps) {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/navigation/MobileNavigation.jsx
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,3 +157,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

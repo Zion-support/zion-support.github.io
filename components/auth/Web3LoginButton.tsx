@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -14,6 +15,13 @@ class ErrorBoundary extends React.Component {}
   render() {}
     if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
+=======
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false ;}}static getDerivedStateFromError(error) {return { hasError: true ;,}
+}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary: ';, error, errorInfo)}
+  render() {if (this.state.hasError) ;}
+  return <div />Something went wrong.</div>;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
     return this.props.children;
   }
@@ -23,12 +31,17 @@ import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 export default function Web3LoginButton() {;
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {;
+<<<<<<< HEAD
   ssr: false,;
 =======
 
 export default function Web3LoginButton() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 });const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false }),;
+=======
+  ssr: false;,;
+});const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false ;}),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 async function resolveDisplayName(): any (addr: string): Promise<string | null> {;
   try {;
     const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`);
@@ -37,18 +50,8 @@ async function resolveDisplayName(): any (addr: string): Promise<string | null> 
     return did && did.lens || did && did.ens || null;
   } catch {;
 import dynamic from 'next/dynamic';
-const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {
-  ssr: false,
-});
-async function resolveDisplayName(addr: string): Promise<string | null> {
-  try {
-    const did = data?.payload || {};
-return did.lens || did.ens || null;
-  } catch {
-origin/cursor/automate-test-improve-and-merge-code-2533
-    return null;
-  }
 
+<<<<<<< HEAD
 export default function Web3LoginButton() { return null; }
   } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
@@ -221,6 +224,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="flex items-center gap-2">"
         <span className="hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5">Web3 Verified</span>"
         <button className="rounded-md border px-2 py-1 text-xs" onClick={() => setOpen(true)}>{base}</button>"
+=======
+
+    return (
+      <div className="flex items-center gap-2">
+        <span className="hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5">Web3 Verified</span>
+        <button className="rounded-md border px-2 py-1 text-xs" onClick={() => setOpen(true)}>{base}</button>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <button className="text-xs text-red-600" onClick={disconnect}>Logout</button>
         {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
       </div>
@@ -232,12 +242,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}'
 import dynamic from 'next / dynamic';
+<<<<<<< HEAD
 ;'
 const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), {}
   ssr: false,';
 });const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), { ssr: false }),
 async function resolveDisplayName (addr: string): Promise < string | null> {}
   try {};`
+=======
+;
+const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), {
+  ssr: false;,
+});const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), { ssr: false ;});
+async function resolveDisplayName (addr: string): Promise < string | null> {
+  try {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const r = await fetch (`/api / did / get?address=${encodeURIComponent (addr)}`);
     const { data } = await r.json ();
     const did = data?.payload || {}
@@ -262,9 +281,15 @@ function Web3LoginButton() {}
 export default /**;
  * Web3LoginButton - Function description;
  */
+<<<<<<< HEAD
 function Web3LoginButton() {}
   const [open, set_open] = useState (false);'
   const [user, set_user] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
+=======
+function Web3LoginButton() {
+  const [open, set_open] = useState (false);
+  const [user, set_user] = useState<{ address: string;, chain: 'evm' | 'sol' ;} | null>(null),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [display_name, setDisplayName] = useState < string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState < boolean>(false);
 ;
@@ -297,8 +322,13 @@ function Web3LoginButton() {}
 }
       else setDisplayName (null);
     })();
+<<<<<<< HEAD
 ;'
   const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) =>: any {'
+=======
+;
+  const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' ;}) =>: any {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     window.local_storage.set_item ('zion - web3 - user', JSON.stringify (u));
     set_user (u);  }
 ;
@@ -308,8 +338,13 @@ function Web3LoginButton() {}
 ;
   const disconnect = async () => {'
     window.local_storage.remove_item ('zion - web3 - user');
+<<<<<<< HEAD
     try {'
       await fetch ('/api / auth / logout', { method: 'POST' });
+=======
+    try {
+      await fetch ('/api / auth / logout', { method: 'POST' ;});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch {}
     set_user (null);
 ;
@@ -364,6 +399,7 @@ if ( {) {}
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
         />)}"
     </>);      <button on_click={() => set_open (true)} className="rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py - 1.5 text - xs">Connect Wallet</button>;
@@ -371,3 +407,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+    </>
+  );
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

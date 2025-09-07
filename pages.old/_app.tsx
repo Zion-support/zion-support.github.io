@@ -19,8 +19,16 @@ import type { AppProps } from 'next/app'; import '../styles/globals.css'; export
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
-import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
-</Component>'
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30,7 +38,9 @@ import type { AppProps } from 'next/app'; import '../styles/globals.css'; export
 </Component>'
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
+
 import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+</Component>'import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 const type { AppProps } from "next/app"; import "./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''";
 import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
 </Component>';
@@ -39,7 +49,6 @@ import type { AppProps } from 'next/app'; import '../styles/globals ; export def
 import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 const type { AppProps } from "next/app"; import "./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''";
 import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
-</Component>'
 </Component>'
 
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
@@ -96,4 +105,86 @@ const type { AppProps } from "next/app"; import "./styles/globals.css"; export d
 import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
 </Component>'
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+</Component>'
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+
+
+
+
+import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+
+const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}""
+"
+
+
+
+
+import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
+
+const type { AppProps } from "next/app"; import "./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}";"
+import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';
+
+';
+
+
+
+
+
+
+
+
+
+pr-12325
+
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}''
+</Component>'
+</Component>'''
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}''
+</Component>'
+</Component>'''
+import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+</Component>'
+const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''""
+</Component>"
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}''
+</Component>'
+</Component>'''
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}''
+
+</Component>'
+</Component>'''
+import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+</Component>'
+
+const type { AppProps } from "next/app"; import "./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''";"
+</Component>"
+import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';'
+</Component>'
+</Component>';''
+import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';'
+
+</Component>'
+</Component>';''
+import type { AppProps } from \'next/app\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+</Component>'
+const type { AppProps } from "next/app"; import "./styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''";"
+</Component>"
+import type { AppProps } from 'next/app'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}';'
+</Component>'
+</Component>'''
+</Component>'''
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}''
+</Component>'
+</Component>'''
+import type { AppProps } from \'next/app\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}'
+</Component>'
+const type { AppProps } from "next/app"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''""
+</Component>"
+import type { AppProps } from 'next/app'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}''
+</Component>'
+</Component>'''
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

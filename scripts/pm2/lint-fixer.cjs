@@ -21,8 +21,6 @@ const fs = require(,,"}),"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node,"}),"
-,"}),"
-const fs = require(,,"}),"
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

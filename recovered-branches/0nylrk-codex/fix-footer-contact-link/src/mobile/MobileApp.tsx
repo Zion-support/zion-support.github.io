@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -44,6 +45,9 @@ import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",import { Mobil
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useAuth } from "@/hooks/useAuth";
 export function MobileApp() {
   const { isAuthenticated } = useAuth();
@@ -91,6 +95,7 @@ export function MobileApp() {};
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -98,6 +103,8 @@ export function MobileApp() {};
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <MobileThemeProvider>
       <Routes>"
@@ -332,7 +339,7 @@ export function MobileApp() {;
       </Routes>;
     </MobileThemeProvider>);
 }
-    </MobileThemeProvider>);
+</MobileThemeProvider>);
 }
         <Route path="/post-job" element={<MobileJobPost />} />;
         <Route path="/profile" element={<div>Profile page</div>} />;
@@ -343,4 +350,126 @@ export function MobileApp() {;
 }
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  )
+
+import React from "react";
+import {Routes, Route, Navigate} from "react-router-dom";
+import {MobileThemeProvider} from "./theme/MobileThemeProvider";
+import {MobileOnboarding} from "./pages/MobileOnboarding";
+import {MobileHome} from "./pages/MobileHome";
+import {MobileBrowse} from "./pages/MobileBrowse";
+import {MobileProjects} from "./pages/MobileProjects";
+import {MobileMessages} from "./pages/MobileMessages";
+import {MobileResumeBuilder} from "./pages/MobileResumeBuilder";
+import {MobileJobPost} from "./pages/MobileJobPost";
+import {useAuth} from "@/hooks/useAuth";
+
+import React from "react",;
+import { Routes, Route, Navigate } from "react-router-dom",;
+import { MobileThemeProvider } from "./theme/MobileThemeProvider",;
+import { MobileOnboarding } from "./pages/MobileOnboarding",;
+import { MobileHome } from "./pages/MobileHome",;
+import { MobileBrowse } from "./pages/MobileBrowse",;
+import { MobileProjects } from "./pages/MobileProjects",;
+import { MobileMessages } from "./pages/MobileMessages",;
+import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",;
+import { MobileJobPost } from "./pages/MobileJobPost",;
+import { useAuth } from "@/hooks/useAuth",;
+    <MobileThemeProvider>;
+      <Routes>;
+        <Route path="/onboarding" element={<MobileOnboarding />} />;
+        <Route;
+          path="/";
+        />;
+        <Route path="/browse" element={<MobileBrowse />} />;
+        <Route path="/projects" element={<MobileProjects />} />;
+        <Route path="/inbox" element={<MobileMessages />} />;
+        <Route path="/resume" element={<MobileResumeBuilder />} />;import React from "react";""
+
+import React from "react";""
+import { Routes, Route, Navigate } from "react-router-dom";""
+import { MobileThemeProvider } from "./theme/MobileThemeProvider";""
+import { MobileOnboarding } from "./pages/MobileOnboarding";""
+import { MobileHome } from "./pages/MobileHome";""
+import { MobileBrowse } from "./pages/MobileBrowse";""
+import { MobileProjects } from "./pages/MobileProjects";""
+import { MobileMessages } from "./pages/MobileMessages";""
+import { MobileResumeBuilder } from "./pages/MobileResumeBuilder";""
+import { MobileJobPost } from "./pages/MobileJobPost";""
+import { useAuth } from "@/hooks/useAuth";"
+export function MobileApp() {
+
+  const { isAuthenticated } = useAuth();
+  return (
+
+
+    <MobileThemeProvider>
+
+      <Routes>
+"
+        <Route path="/onboarding" element={<MobileOnboarding />} />"
+
+        <Route;"
+          path="/""
+          element={"
+            isAuthenticated ? <MobileHome /> : <Navigate to="/onboarding" />"
+        <Route path="/browse" element={<MobileBrowse />} />"
+        <Route path="/projects" element={<MobileProjects />} />"
+        <Route path="/inbox" element={<MobileMessages />} />"
+        <Route path="/resume" element={<MobileResumeBuilder />} />"
+        <Route path="/post-job" element={<MobileJobPost />} />"
+        <Route path="/profile" element={<div>Profile page</div>} />"
+        <Route path="*" element={<Navigate to="/" replace />} />"
+
+        <Route path="/post - job" element={<MobileJobPost />} />;"
+        <Route path="/profile" element={<div > Profile page</div>} />;"
+        <Route path="*" element={<Navigate to="/" replace />} />;"
+
+      ;)
+    );
+    );"
+        <Route path="/post-job" element={<MobileJobPost />} />;"
+        <Route path="/profile" element={<div>Profile page</div>} />;"
+
+      ;
+    ;"
+pr-12325
+</Route>
+      </Routes>
+    </MobileThemeProvider>
+  )
+import React from \"react\";
+import {Routes, Route, Navigate} from \"react-router-dom\";
+import {MobileThemeProvider} from \"./theme/MobileThemeProvider\";
+import {MobileOnboarding} from \"./pages/MobileOnboarding\";
+import {MobileHome} from \"./pages/MobileHome\";
+import {MobileBrowse} from \"./pages/MobileBrowse\";
+import {MobileProjects} from \"./pages/MobileProjects\";
+import {MobileMessages} from \"./pages/MobileMessages\";
+import {MobileResumeBuilder} from \"./pages/MobileResumeBuilder\";
+import {MobileJobPost} from \"./pages/MobileJobPost\";
+import {useAuth} from \"@/hooks/useAuth\";
+import React from \"react\";
+import { Routes, Route, Navigate } from \"react-router-dom\";
+import { MobileThemeProvider } from \"./theme/MobileThemeProvider\",;
+import { MobileOnboarding } from \"./pages/MobileOnboarding\",;
+import { MobileHome } from \"./pages/MobileHome\",;
+import { MobileBrowse } from \"./pages/MobileBrowse\",;
+import { MobileProjects } from \"./pages/MobileProjects\",;
+import { MobileMessages } from \"./pages/MobileMessages\",;
+import { MobileResumeBuilder } from \"./pages/MobileResumeBuilder\",;
+import { MobileJobPost } from \"./pages/MobileJobPost\",;
+import { useAuth } from \"@/hooks/useAuth\",;
+    <MobileThemeProvider />;
+      <Routes />;
+        <Route path=\"/onboarding\" element={<MobileOnboarding />} />;
+        <Route;
+          path=\"/\";
+        />;
+        <Route path=\"/browse\" element={<MobileBrowse />} />;
+        <Route path=\"/projects\" element={<MobileProjects />} />;
+        <Route path=\"/inbox\" element={<MobileMessages />} />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

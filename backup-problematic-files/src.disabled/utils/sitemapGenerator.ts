@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "interface": SitemapUrl {}
   url: string;
    lastmod?: string;
@@ -5,11 +6,20 @@
    priority?: numbe,r} "interface": SitemapConfig {}
   baseUrl: string;
 <<<<<<< HEAD:backup-problematic-files/src.disabled/utils/sitemapGenerator.ts
+=======
+"interface": SitemapUrl {
+  url: string;
+   lastmod?: string;
+   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';
+   priority?: numbe,r} "interface": SitemapConfig {
+  baseUrl: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
    urls: SitemapUrl[];
    outputPath?: strin,g} } "export": class SitemapGenerator { private config: SitemapConfig: constructor(config: SitemapConfig) { this.config: = config} generateXML(): "string": { const { baseUrl, urls } = this.config const xmlUrls = urls.map(url => { const lastmod = url.lastmod || new Date().toISOString().split(
   'T')[0] const changefreq = url.changefreq ||';';weekly' const priority = url.priority || 0.5 return ` <url> <loc>${baseUrl}${url.url}</loc> <lastmod>${lastmod}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>` }).join(
 interface: SitemapUrl { url: string; lastmod?: string; changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';; priority?: numbe,r} interface: SitemapConfig { baseUrl: string; urls: SitemapUrl[]; outputPath?: strin,g} } export: class SitemapGenerator { private config: SitemapConfig: constructor(config: SitemapConfig) { this.config: = config} generateXML(): string: { const { baseUrl,urls } = this.config const xmlUrls = urls.map(url => { const lastmod = url.lastmod || new Date().toISOString().split( 'T')[0] const changefreq = url.changefreq ||';';weekly' const priority = url.priority || 0.5 return ` <url> <loc>${baseUrl}${url.url}</loc> <lastmod>${lastmod}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>` }).join( '\n') return `<?xml version = '1.0' encoding='UTF-8'?> <urlset xmlns='http: '''`,;
   '\n') return "<?xml version = '1.0' encoding='UTF-8'?> <urlset xmlns='"http": '''",
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/utils/sitemapGenerator.ts
 <<<<<<< HEAD:backup-problematic-files/src.disabled/utils/sitemapGenerator.ts
 =======
@@ -27,3 +37,6 @@ interface: SitemapUrl { url: string; lastmod?: string; changefreq?: 'always' | '
 interface: SitemapUrl { url: string; lastmod?: string; changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';; priority?: numbe,r} interface: SitemapConfig { baseUrl: string; urls: SitemapUrl[]; outputPath?: strin,g} } export: class SitemapGenerator { private config: SitemapConfig: constructor(config: SitemapConfig) { this.config: = config} generateXML(): string: { const { baseUrl,urls } = this.config const xmlUrls = urls.map(url => { const lastmod = url.lastmod || new Date().toISOString().split( 'T')[0] const changefreq = url.changefreq ||';';weekly' const priority = url.priority || 0.5 return ` <url> <loc>${baseUrl}${url.url}</loc> <lastmod>${lastmod}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>` }).join( '\n') return `<?xml version = '1.0' encoding='UTF-8'?> <urlset xmlns='http: '''`,
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:src.disabled/utils/sitemapGenerator.ts
+=======
+interface: SitemapUrl { url: string; lastmod?: string; changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';; priority?: numbe,r} interface: SitemapConfig { baseUrl: string; urls: SitemapUrl[]; outputPath?: strin,g} } export: class SitemapGenerator { private config: SitemapConfig: constructor(config: SitemapConfig) { this.config: = config} generateXML(): string: { const { baseUrl,urls } = this.config const xmlUrls = urls.map(url => { const lastmod = url.lastmod || new Date().toISOString().split( 'T')[0] const changefreq = url.changefreq ||';';weekly' const priority = url.priority || 0.5 return ` <url> <loc>${baseUrl}${url.url}</loc> <lastmod>${lastmod}</lastmod> <changefreq>${changefreq}</changefreq> <priority>${priority}</priority> </url>` }).join( '\n') return `<?xml version = '1.0' encoding='UTF-8'?> <urlset xmlns='http: '''`,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

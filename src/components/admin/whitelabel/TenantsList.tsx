@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -347,6 +348,10 @@ export function TenantsList() {;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -376,6 +381,7 @@ export function TenantsList() {
 
   );
 
+<<<<<<< HEAD
 };
 const verifyDns = async (tenant: WhitelabelTenant) => {;
   try {';
@@ -412,3 +418,9 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 =======
 ;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+}
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

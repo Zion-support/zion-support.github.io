@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon({}
@@ -315,6 +316,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (err: any) {;'
       setStatus('error');'
       setError(err?.message || 'Something went wrong.')'
+=======
+      setError(err?.message || 'Something went wrong.')
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setError(err?.message || 'Something went wrong.');    }
 '
       setError(err?.message || 'Something went wrong.');
@@ -376,6 +380,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;'
           <div className='flex items-center justify-center'>;
+<<<<<<< HEAD
             {/* Phone mockup */}'
             <div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>;'
               <div className='absolute -top-1 && 1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200' />;'
@@ -384,6 +389,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='text-xs font-semibold'>Zion</div>;'
                   <div className='mt-2 flex-1 rounded-xl bg-white shadow-inner p-3'>;'
                     <div className='font-semibold'>Instant AI Matches</div>;'
+=======
+            {/* Phone mockup */}
+            <div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>;
+              <div className='absolute -top-1 && 1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200' />;
+              <div className='h-full w-full rounded-[2rem] overflow-hidden'>;
+                <div className='h-full w-full bg-gradient-to-b from-gray-50 to-gray-200 p-4 flex flex-col'>;
+                  <div className='text-xs font-semibold'>Zion</div>;
+                  <div className='mt-2 flex-1 rounded-xl bg-white shadow-inner p-3'>;
+                    <div className='font-semibold'>Instant AI Matches</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div className='mt-2 text-xs text-gray-600'>;
                       Top candidates matched to your role in seconds…;
                     </div>;'
@@ -413,6 +428,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* QR code */}'
         <div className='mt-8 flex items-center gap-4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>
               <div className='absolute -top-1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200' />
               <div className='h-full w-full rounded-[2rem] overflow-hidden'>
@@ -472,10 +490,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 
+<<<<<<< HEAD
       {/* Key features */}'
       <section className='mt-10 grid md:grid-cols-3 gap-6'>;'
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;'
           <div className='text-lg font-semibold'>Hire from anywhere</div>;'
+=======
+      {/* Key features */}
+      <section className='mt-10 grid md:grid-cols-3 gap-6'>;
+        <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
+          <div className='text-lg font-semibold'>Hire from anywhere</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <p className='mt-2 text-sm opacity-80'>;
             Global talent network with timezone-aware availability.;
           </p>;'
@@ -495,6 +520,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40' />        </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='mt-10 grid md:grid-cols-3 gap-6'>
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
           <div className='text-lg font-semibold'>Hire from anywhere</div>
@@ -534,8 +562,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='relative mt-4 overflow-hidden'>;
           <div'
             className='flex transition-transform duration-700'
+<<<<<<< HEAD
             style={{}`
               transform: `translateX(-${idx * 100}%)`,"
+=======
+            style={{
+              transform: `translateX(-${idx * 100}%)`,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             type="email"
             required;
             value={email}
@@ -564,6 +597,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               transform: `translateX(-${idx * 100}%)`
               width: `${testimonials.length * 100}%`
             }}
@@ -612,8 +648,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
+<<<<<<< HEAD
         </form>'"
         {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! You’re on the list.</div>}'"
+=======
+        </form>
+        {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! You’re on the list.</div>}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
       </section>
     </EnhancedLayout>

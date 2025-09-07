@@ -55,6 +55,14 @@ interface PricingSuggestionAnalytics {
 
 =======
 
+
+    id: string;
+    user_id: string;
+    suggested_min: number;
+    suggested_max: number;
+    actual_value?: number;
+    accepted: boolean;
+
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';
 interface PricingSuggestionAnalytics {
@@ -74,6 +82,7 @@ import { supabase } from "@/integrations/supabase/client";
 interface PricingSuggestionAnalytics {
   totalSuggestions: number;
   acceptanceRate: number;
+<<<<<<< HEAD
 
   averagePriceGap: number
   suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[];
@@ -137,8 +146,24 @@ interface PricingSuggestionAnalytics {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
     accepted: boolean;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+  averagePriceGap: number
+  suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[];
 
+  recentSuggestions: {
+    id: string;
+    userId: string;
+    suggestedMin: number;
+    suggestedMax: number;
+    actualValue?: number;
+    accepted: boolean;
+
+    createdAt: string
+    type: 'client' | 'talent'
+  }[];
+  isLoading: boolean
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import {useState, useEffect} from 'react';
@@ -146,15 +171,22 @@ import {supabase} from "@/integrations/supabase/client";
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 
-
 interface PricingSuggestionAnalytics {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    accepted: boolean;import {useState, useEffect} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import { useState, useEffect } from 'react',;
+import { supabase } from "@/integrations/supabase/client",interface PricingSuggestionAnalytics {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   totalSuggestions: number,
   acceptanceRate: number,
   averagePriceGap: number,
   suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[],
   recentSuggestions: {}
     id: string,
+<<<<<<< HEAD
     userId: string,
     suggestedMin: number,
     suggestedMax: number,
@@ -174,39 +206,29 @@ interface PricingSuggestionAnalytics {
   }[],
   isLoading: boolean,
   error: string | null
+=======
+import { supabase } from '@/integrations / supabase / client';
+
+import {useState, useEffect} from 'react';''
+import { supabase } from '@/integrations / supabase / client';'
+interface PricingSuggestionAnalytics {
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
-export function usePricingSuggestionAnalytics(days = 30) {
-
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
-
-  error: string | null
-}
-export function usePricingSuggestionAnalytics(days = 30) {
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
-    totalSuggestions: 0;
-    acceptanceRate: 0;
-    averagePriceGap: 0;
-    suggestionsByCategory: [];
-    recentSuggestions: [];
-  const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
-    totalSuggestions: 0;
-    acceptanceRate: 0;
-    averagePriceGap: 0;
-    suggestionsByCategory: [];
-    recentSuggestions: [];
-    isLoading: true
-    error: null
-  });
-    totalSuggestions: 0,
-    acceptanceRate: 0,
-    averagePriceGap: 0,
-    suggestionsByCategory: [],
-    recentSuggestions: [],
-    isLoading: true,
-    error: null
-  }),
+  total_suggestions: number;,
+  acceptance_rate: number;
+  averagePriceGap: number,
+  suggestionsByCategory: { category: string, count: number, acceptance_rate: number }[];
+  recent_suggestions: {,
+  id: string;
+    user_id: string;,
+  suggested_min: number;
+    suggested_max: number;
+    actual_value?: number;
+    accepted: boolean;
 
 
+<<<<<<< HEAD
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
 
   useEffect(() => {
@@ -961,3 +983,5 @@ export function usePricingSuggestionAnalytics(days = 30) {;
 }
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -202,8 +203,13 @@ function TalentDirectory() {}
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+                clearFilters}}
+            />;
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -790,6 +796,9 @@ export default function TalentDirectory() {;
 =======
                 experience_range;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+isAuthenticated={isAuthenticated}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               activeFiltersProps={{;
                 selectedSkills,;
                 toggleSkill,;
@@ -799,6 +808,7 @@ export default function TalentDirectory() {;
                 toggleRegion,;
                 priceRange,;
                 setPriceRange,;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 selectedSkills;
@@ -851,10 +861,13 @@ export default function TalentDirectory() {;
                 setPriceRange
                 experienceRange
                 setExperienceRange
+=======
+                experienceRange,;
+                setExperienceRange,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 clearFilters}}
             />;
-
-
+            ;
               handleRequestHire={handleRequestHire}
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
@@ -882,6 +895,9 @@ export default function TalentDirectory() {;
                     <Button
                       variant="ghost"
                       size="sm"
+<Button;
+                      variant="ghost";
+                      size="sm";
                     <Button
                       variant="ghost"
                       size="sm"
@@ -892,7 +908,52 @@ export default function TalentDirectory() {;
                       <span className="sr-only">Close</span>;
                     </Button>;
                   </div>;
+<FilterSidebar
+                experienceRange;
+                setExperienceRange;
+
+                clearFilters}}
+            />
+            {/* Mobile filter sidebar */}
+            {isMobileFilterOpen && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
+                <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="font-bold text-white">Filter & Sort</h3>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => setIsMobileFilterOpen(false)}
+                      className="text-zion-slate-light h-8 w-8 p-0"
+                    >
+                      <X className="h-4 w-4" />
+                      <span className="sr-only">Close</span>
+                    </Button>
+                  </div>
                   <FilterSidebar
+                    searchTerm={searchTerm}
+                    setSearchTerm={setSearchTerm}
+                    selectedSkills={selectedSkills}
+                    toggleSkill={toggleSkill}
+                    selectedAvailability={selectedAvailability}
+                    toggleAvailability={toggleAvailability}
+                    selectedRegions={selectedRegions}
+                    toggleRegion={toggleRegion}
+                    priceRange={priceRange}
+                    setPriceRange={setPriceRange}
+                    experienceRange={experienceRange}
+                    setExperienceRange={setExperienceRange}
+                    expandedSections={expandedSections}
+                    toggleSection={toggleSection}
+                    sortOption={sortOption}
+                    setSortOption={setSortOption}
+                    clearFilters={clearFilters}
+                    isMobileFilterOpen={isMobileFilterOpen}
+                  />
+                </div>
+              </div>
+            )}
+                  <FilterSidebar;
                     searchTerm={searchTerm}
                 clear_filters}}
             />;
@@ -918,6 +979,7 @@ export default function TalentDirectory() {;
                   <FilterSidebar
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     selectedSkills={selectedSkills}
@@ -1033,6 +1095,12 @@ export default function TalentDirectory() {;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                    setSearchTerm={setSearchTerm}
+                  <FilterSidebar
+                    searchTerm={searchTerm}
+                    setSearchTerm={setSearchTerm}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     selected_skills={selected_skills}
                     toggle_skill={toggle_skill}
                     selected_availability={selected_availability}
@@ -1063,6 +1131,7 @@ export default function TalentDirectory() {;
 ;
 
               </div>;
+              </div>)}              </div>;
             )}
           </div>
         </div>
@@ -1221,6 +1290,7 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1247,3 +1317,73 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                experience_range;
+              activeFiltersProps={{;
+
+                experienceRange;
+                setExperienceRange;
+
+                selectedSkills;
+                toggleSkill;
+                selectedAvailability;
+                toggleAvailability;
+                selectedRegions;
+                toggleRegion;
+                priceRange;
+                clearFilters}}
+              <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;"
+                <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">;"
+                  <div className="flex justify-between items-center mb-4">;"
+                    <h3 className="font-bold text-white">Filter & Sort</h3>;"
+                    <Button;"
+                      variant="ghost"""
+                      size="sm""
+                      onClick={() => setIsMobileFilterOpen(false)}
+                      <X className="h-4 w-4" />;"
+                      <span className="sr-only">Close</span>;"
+                    searchTerm={searchTerm}
+                clear_filters}}
+              <div className="fixed inset - 0 bg - black bg - opacity - 50 z - 50 lg:hidden flex">;"
+                <div className="w - 80 h - full bg - zion - blue - dark overflow - y-auto p - 4 ml - auto">;"
+                  <div className="flex justify - between items - center mb - 4">;"
+                    <h3 className="font - bold text - white">Filter & Sort</h3>;"
+                      variant="ghost";""
+                      size="sm";"
+                      on_click={() => setIsMobileFilterOpen (false)}
+                      <X className="h - 4 w - 4" />;"
+                      <span className="sr - only">Close</span>;"
+                    clear_filters={clear_filters}
+                    isMobileFilterOpen={isMobileFilterOpen}
+
+              </div>)}
+    );
+    ;"
+return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div className="flex flex-col space-y-8" > <div> <h1 className="text-3xl font-bold text-white mb-2" >AI & Tech Talent Directory</h1> <p className="text-zion-slate-light" > Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects. </p> </div> {"
+}<div className="flex flex-col lg:flex-row gap-6" > {"
+}<div className="w-full lg:w-64 shrink-0 hidden lg:block" > searchTerm;"
+}/> </div> > Filter & Sort  </div> {
+}<TalentResults filteredTalents= {
+  filteredTalents;
+}isLoading= {
+  isLoading;
+}viewProfile= {
+  viewProfile;
+}handleRequestHire= {
+  handleRequestHire;
+}savedTalents= {
+  savedTalents;
+}handleToggleSave= {
+  handleToggleSave;
+}isAuthenticated= {
+  isAuthenticated;
+}activeFiltersProps= {
+  {
+  selectedSkills, toggleSkill, selectedAvailability, toggleAvailability, selectedRegions, toggleRegion, priceRange, setPriceRange, experienceRange, setExperienceRange, clearFilters;
+}/> <Button variant="ghost" size="sm" onClick= {"
+}className="text-zion-slate-light h-8 w-8 p-0" > <X className="h-4 w-4" /> <span className="sr-only" >Close</span>  </div> <FilterSidebar searchTerm= {"
+)
+}/> </div> </div>) 
+}</div> </div> </div> ) "
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

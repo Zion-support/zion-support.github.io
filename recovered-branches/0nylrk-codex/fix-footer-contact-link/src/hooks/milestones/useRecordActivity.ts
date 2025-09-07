@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,23 +58,12 @@ export const useRecordActivity = () => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const recordMilestoneActivity = async (
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const useRecordActivity = () => {;
   const { user } = useAuth();
-
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
-import {MilestoneActivity} from './types';
-export const useRecordActivity = () => {
-  const { user } = useAuth();
-  const recordMilestoneActivity = async (
-    milestoneId: string
-    action: string
-    previousStatus: string | null
-    newStatus: string;
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
-import {MilestoneActivity} from './types';
 export const useRecordActivity = () => {;
+<<<<<<< HEAD
   const { user } = useAuth();
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
@@ -510,3 +500,8 @@ export const useRecordActivity = () => {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

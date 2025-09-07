@@ -2,36 +2,41 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Activity, Zap, Clock, TrendingUp, TrendingDown;
-  AlertTriangle, CheckCircle, X, Settings, RefreshCw;
-  BarChart3, Gauge, HardDrive, Wifi, Cpu
- } from 'lucide-react';
-interface PerformanceMetrics {
-  loadTime: number;
+  AlertTriangle, CheckCircle, X, Settings, RefreshCw;}
+  BarChart3, Gauge, HardDrive, Wifi, Cpu;}
+  } from 'lucide-react';
+
+interface PerformanceMetrics  {loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
-  memoryUsage?: number;
-  networkLatency?: number
+  memoryUsage?: number;}
+  networkLatency?: number;}
 }
 
 interface PerformanceMonitorProps {
   showUI?: boolean;
   autoRefresh?: boolean;
-  refreshInterval?: number
+  refreshInterval?: number;}
+}
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showUI;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 pr-12243
@@ -481,3 +486,6 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -14,13 +15,17 @@ class ErrorBoundary extends React.Component {}
 import React, { useState } from 'react';
 <<<<<<< HEAD
 import React, { useState } from 'react',
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond  } from 'lucide-react';
-import Button from '../components/ui/Button',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Button from '../components/ui/Button';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories  } from '../data/revolutionary-micro-saas-services';
 import { enhancedMicroSaasServices  } from '../data/enhanced-micro-saas-services';
+<<<<<<< HEAD
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
   Check
@@ -258,6 +263,9 @@ import {
   revolutionaryServiceCategories,;
 } from '../data/revolutionary-micro-saas-services';
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion, AnimatePresence } from 'framer-motion';
 export default function ComprehensivePricingPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -277,6 +285,7 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [sortBy, setSortBy] = useState('price');
 
+<<<<<<< HEAD
     filteredServices = filteredServices.filter(service => {'
       const price = parseFloat(service.price.replace('$', '').replace(, ''));
       return price >= min && (max === Infinity |price <= max)
@@ -1605,6 +1614,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Clear Filters
                 </Button>
               </motion.div>
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                      setPriceRange('All')
                    }}
                  >
@@ -1618,11 +1629,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='container mx-auto px-4 text-center'>
             <motion.div
               className='max-w-4xl mx-auto'
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0;, y: 20 ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              whileInView={{ opacity: 1;, y: 0 ;}}
+              viewport={{ once: true ;}}
+              transition={{ duration: 0.8 ;}}
             >
 <<<<<<< HEAD
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1641,8 +1652,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   variant='primary''
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   size='lg'
+<<<<<<< HEAD
                   onClick={() =>;'
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
+=======
+                  onClick={() =>;
+                    window && window.open('https: //ziontechgroup && ziontechgroup.com/contact';, '_blank');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   }
                 >;
                   Contact Sales;'
@@ -1651,26 +1667,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button'
                   variant='futuristic''
                   size='lg'
+<<<<<<< HEAD
                   onClick={() =>;'
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
                   }
               </h2>"
+=======
+                  onClick={() =>;
+                    window && window.open('https: //ziontechgroup && ziontechgroup.com/contact';, '_blank');
+                  }
+              </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-gray-300 mb-8">
                 Contact our sales team to discuss pricing, custom plans, and implementation options.
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+<<<<<<< HEAD
                 <Button"
                   variant="primary""
                   size="lg"'
                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+=======
+                <Button
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('https: //ziontechgroup.com/contact_blank');}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >
                   Contact Sales"
                   <Mail className="ml-2 w-5 h-5" />
                 </Button>
+<<<<<<< HEAD
                 <Button"
                   variant="futuristic""
                   size="lg"'
                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+=======
+                <Button
+                  variant="futuristic"
+                  size="lg"
+                  onClick={() => window.open('https: //ziontechgroup.com/contact_blank');}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >
                   Schedule Demo"
                   <Calendar className="ml-2 w-5 h-5" />
@@ -1691,9 +1728,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />"
                   <div className="text-white font-semibold">{contactInfo.address}</div>"
                   <div className="text-gray-400 text-sm">Visit our office</div>
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
+                transition={{ duration: 0.6 ;}}
               >
 
 
@@ -1731,7 +1768,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </UltraFuturisticBackground>'
+=======
+    </UltraFuturisticBackground>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           <div className='flex gap - 2'>;
                             <Button;'
                               variant='primary';'
@@ -1747,8 +1788,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               variant='futuristic';'
                               size='sm';
                               on_click={() =>;
+<<<<<<< HEAD
                                 window.open ('
                                   'https://ziontechgroup.com / contact','
+=======
+                                window.open (
+                                  'https: //ziontechgroup.com / contact';,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                                   '_blank');
                               }
                             >;
@@ -1764,10 +1810,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               Learn More;"
                               <ExternalLink className="ml - 2 w - 4 h - 4" />;
                             </Button>;
+<<<<<<< HEAD
                             <Button;"
                               variant="futuristic";"
                               size="sm";'
                               on_click={() => window.open ('https: //ziontechgroup.com / contact_blank')}
+=======
+                            <Button;
+                              variant="futuristic";
+                              size="sm";
+                              on_click={() => window.open ('https: //ziontechgroup.com / contact_blank');}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                               >;
                               Get Pricing;"
                               <DollarSign className="ml - 2 w - 4 h - 4" />;
@@ -1778,6 +1831,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>))}
             </motion.div>;
             {filtered_services.length === 0 && (
+<<<<<<< HEAD
               <motion.div;'
                 className='text - center py - 16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -1789,6 +1843,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{ duration: 0.6 }}
               >;'
                 <div className='text - 6xl mb - 4'>🔍</div>;'
+=======
+              <motion.div;
+                className='text - center py - 16'                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
+                transition={{ duration: 0.6 ;}}
+              >              <motion.div;
+                className="text - center py - 16";
+                initial={{ opacity: 0 ;}}
+                animate={{ opacity: 1 ;}}
+                transition={{ duration: 0.6 ;}}
+              >;
+                <div className='text - 6xl mb - 4'>🔍</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <h3 className='text - 2xl font - bold text - white mb - 2'>;
                   No Services Found;
                 </h3>;'
@@ -1822,15 +1889,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Contact Section */}'
         <section className='py - 20'>;'
           <div className='container mx - auto px - 4 text - center'>;
+<<<<<<< HEAD
             <motion.div;'"
               className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 20">;"
+=======
+            <motion.div;
+              className='max - w-4xl mx - auto'              initial={{ opacity: 0;, coordinate_y: 20 ;}}        <section className="py - 20">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="container mx - auto px - 4 text - center">;
             <motion.div;"
               className="max - w-4xl mx - auto";
+<<<<<<< HEAD
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >;'
+=======
+              whileInView={{ opacity: 1;, coordinate_y: 0 ;}}
+              viewport={{ once: true ;}}
+              transition={{ duration: 0.8 ;}}
+            >;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Ready to Get Started?;
               </h2>;'
@@ -1842,8 +1921,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button;'
                   variant='primary';'
                   size='lg';
+<<<<<<< HEAD
                   on_click={() =>;'
                     window.open ('https://ziontechgroup.com / contact', '_blank');
+=======
+                  on_click={() =>;
+                    window.open ('https: //ziontechgroup.com / contact';, '_blank');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   }
                 >;
                   Contact Sales;'
@@ -1852,8 +1936,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button;'
                   variant='futuristic';'
                   size='lg';
+<<<<<<< HEAD
                   on_click={() =>;'
                     window.open ('https://ziontechgroup.com / contact', '_blank');
+=======
+                  on_click={() =>;
+                    window.open ('https: //ziontechgroup.com / contact';, '_blank');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   }
                 >;
                   Schedule Demo;'
@@ -1886,18 +1975,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Contact our sales team to discuss pricing, custom plans, and implementation options.;
               </p>;"
               <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8">;
+<<<<<<< HEAD
                 <Button;"
                   variant="primary";"
                   size="lg";'
                   on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
+=======
+                <Button;
+                  variant="primary";
+                  size="lg";
+                  on_click={() => window.open ('https: //ziontechgroup.com / contact_blank');}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
                   Contact Sales;"
                   <Mail className="ml - 2 w - 5 h - 5" />;
                 </Button>;
+<<<<<<< HEAD
                 <Button;"
                   variant="futuristic";"
                   size="lg";'
                   on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
+=======
+                <Button;
+                  variant="futuristic";
+                  size="lg";
+                  on_click={() => window.open ('https: //ziontechgroup.com / contact_blank');}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
                   Schedule Demo;"
                   <Calendar className="ml - 2 w - 5 h - 5" />;
@@ -1929,6 +2032,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======

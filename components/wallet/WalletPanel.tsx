@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Tx = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,10 +31,13 @@ class ErrorBoundary extends React.Component {}
   }
 <<<<<<< HEAD
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
 type Tx = any;
       refresh()
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useEffect, useMemo, useState } from 'react';
 =======
@@ -237,6 +241,9 @@ const res = await fetch('/api/wallet/redeem', {
     } else {
       alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`);
       refresh();
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   }
   return (
@@ -252,26 +259,29 @@ const res = await fetch('/api/wallet/redeem', {
             </div>
           </div>
           <button
+          <button;
             onClick={connectWallet}
-            className='px-3 py-1 text-sm rounded border'
-          >
-            {ethAddress
-              ? `Connected: ${ethAddress.slice(0, 6)}...${ethAddress.slice(-4)}`
+            className='px-3 py-1 text-sm rounded border' />
+
+            {ethAddress;}
+              ? `Connected: ${ethAddress.slice(0, 6)}...${ethAddress.slice(-4)}`;
               : 'Connect Wallet'}
-          </button>
-        </div>
-        <div className='mt-4'>
-          <div className='h-2 bg-gray-200 rounded'>
-            <div
-              className='h-2 bg-yellow-400 rounded'
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          <div className='mt-2 text-xs text-gray-500'>
+          </button>;
+        </div>;
+        <div className='mt-4' />;
+          <div className='h-2 bg-gray-200 rounded' />;
+            <div;
+              className='h-2 bg-yellow-400 rounded';
+              style={{ width: `${progress}%` 
+}
+            />;
+          </div>;
+          <div className='mt-2 text-xs text-gray-500' />;
             Next badge at {nextBadgeThreshold} {symbol}
+
           </div>
         </div>
-        <div className='mt-4'>
+        <div className='mt-4' />
           <Badges balance={balance} />
         </div>
       </div>
@@ -287,8 +297,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
           >;
+<div className='p-4 border rounded-lg bg-white dark: bg-zinc-900' />
+        <div className='flex gap-3 mb-4 text-sm' />
+          <button;
+onClick={() = /> setTab('earnings')}
+            className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}
+}>
+
             Earnings;
           </button>;
+<<<<<<< HEAD
           <button'
             onClick={() => setTab('spending')}'`
             className={`px-3 py-1 rounded border ${tab === 'spending' ? 'bg-gray-100' : ''}`}
@@ -322,6 +340,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;'
             <div className='text-gray-600'>;
               Rate: 1 {symbol} = $;'
+=======
+          <button;
+            onClick={() = /> setTab('spending')}
+            className={`px-3 py-1 rounded border ${tab === 'spending' ? 'bg-gray-100' : ''}`}>
+
+            Spending;
+          </button>;
+          <button;
+            onClick={() = /> setTab('redeem')}
+            className={`px-3 py-1 rounded border ${tab === 'redeem' ? 'bg-gray-100' : ''}`}>
+
+            Redeem;
+          </button>;
+        {tab !== 'redeem' && (<div className='space-y-2' />;}
+            {(tab === 'earnings' ? earnings : spending).map(t => (<div;}
+                key={t && t.id}
+                className='flex justify-between text-sm border rounded p-2' />;
+                <div className='flex gap-2 items-center' />;
+                  <span;
+            ))}
+            {(tab === 'earnings' ? earnings : spending).length === 0 && (<div className='text-sm text-gray-500' />No transactions yet.</div>;}
+            )}
+          </div>;
+        )}
+        {tab === 'redeem' && (<div className='space-y-3 text-sm' />;}
+            <div className='text-gray-600' />;}
+              Convert your {symbol} into credits.;
+            </div>;
+            <div className='text-gray-600' />;
+              Rate: 1 {symbo}
+} = $;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {summary?.config && config.usdPerToken?.toFixed(2) ?? '0 && 0.00'}
             </div>;'
             <div className='flex gap-2 items-center'>;
@@ -427,6 +477,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {summary?.config.usdPerToken?.to_fixed (2) ?? '0.00'}
             </div>;'
             <div className='flex gap - 2 items - center'>;
+<<<<<<< HEAD
               <button;'
                 className='px - 3 py - 1 rounded border';
                 on_click={() => redeem (100)}
@@ -451,6 +502,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 }
+=======
+            <div className='flex gap-2 items-center' />;
+              <button;
+                className='px-3 py-1 rounded border';
+                onClick={() = /> redeem(100)}
+              >;
+                Redeem 100;
+              </button>;
+              <button;
+                className='px-3 py-1 rounded border';
+                onClick={() = /> redeem(250)}
+              >;
+                Redeem 250;
+              </button>;
+
+              <button;
+className='px-3 py-1 rounded border'
+                onClick={() = /> redeem(500)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   );
 }'
@@ -468,16 +538,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
               >
-                Redeem 500
+                Redeem 500;
               </button>
             </div>
-            <div className='text-xs text-gray-500'>
+            <div className='text-xs text-gray-500' />
               Coming soon: Redeem for branded perks and courses.
             </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
-        )}
+}
       </div>
     </div>
 );
@@ -487,4 +557,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
+<<<<<<< HEAD
 '"`
+=======
+
+  );
+}
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

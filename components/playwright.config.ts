@@ -6,11 +6,18 @@ export const Playwright.config = () => {};
   // Implementation here;
   return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 trace: on-first-retry' 
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+trace: on-first-retry' ,
 };
 reporter: [ ['list'], ['json', {
 
+<<<<<<< HEAD
 =======
 };'
 reporter: [ ['list'], ['json', {}
@@ -35,6 +42,24 @@ reporter: [ ['list'], ['json', {}
 // {'
   // name: webkit', // use: {}
     timeout: 120 * 1000, // 2 minutes timeout for server to start'
+=======
+  outputFile: playwright-logs/test-results && results.json' }
+,}
+}], ['html', {
+  outputFolder: playwright-logs/html-report', open: never'}
+,}
+}]];
+// Configure the web server to be started by Playwright webServer: {// Optional: Define projects for different browsers // projects: [ // {// name: chromium', // use: {...devices['Desktop Chrome'];}
+}, //;
+}
+// {// name: firefox', // use: {...devices['Desktop Firefox'];}
+}, //;
+}
+
+// {
+  // name: webkit', // use: {
+    timeout: 120 * 1000, // 2 minutes timeout for server to start
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
   // Optional: Define projects for different browsers;
   // projects: []
@@ -45,7 +70,11 @@ reporter: [ ['list'], ['json', {}
 <<<<<<< HEAD
   //   {
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   };
+}
+  //     name: webkit',  //     use: { ...devices['Desktop Safari'],}
+},  //   };
   // ]
+<<<<<<< HEAD
 });
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
   // ]
@@ -54,3 +83,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   //   {}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

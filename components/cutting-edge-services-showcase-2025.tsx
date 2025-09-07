@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   Brain;
   Atom;
   Shield;
@@ -934,6 +935,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setSearchTerm('');
 <<<<<<< HEAD
                   className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
+=======
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     setSelectedCategory('all')
 origin/cursor/automate-test-improve-and-merge-code-2533
                   }}
@@ -946,15 +955,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>;
               </motion && motion.div>;
             )}
+<<<<<<< HEAD
         {/* Contact CTA Section */}'
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;'"
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;"
+=======
+        {/* Contact CTA Section */}
+        <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
+          <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div;
         {/* Contact CTA Section */}"
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">"
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -990,8 +1008,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Start Your Journey;'
                   <ArrowRight className='ml-2 w-5 h-5' />;
                 </a>;
+<<<<<<< HEAD
                 <a;
               </h2>"
+=======
+                <a
+              </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className="text-xl text-white/80 mb-8 leading-relaxed">
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape.'
                 Let's discuss how we can help you achieve your goals.
@@ -1021,6 +1044,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">"
                     <Mail className="w-6 h-6 text-cyan-400" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   href={`tel:${contactInfo.mobile}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'
                 >
@@ -1106,8 +1132,13 @@ const itemVariants = {}
   hidden: {}
   y: 20, opacity: 0;
 }
+<<<<<<< HEAD
 visible: {}
   y: 0, opacity: 1, transition: {}
+=======
+visible: {
+  y: 0, opacity: 1, transition: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         </span>                      </div>;
                     </div>;
                     {/* CTA */}'
@@ -1319,6 +1350,9 @@ const item_variants = {}
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   duration: 0.5 
 
 

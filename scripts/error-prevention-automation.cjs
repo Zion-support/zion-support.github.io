@@ -16,17 +16,17 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync, spawn } = require("$1")
 const fs = require("$1")
 const path = require("path")
 // console.log("� Error Prevention & Automation System")
-console.log(""Process": ", process.env.PM2_PROCESS || "unknown")
+console.log(Process": ", process.env.PM2_PROCESS || "unknown")
 const { execSync, spawn } = require("$1")
 const fs = require("$1")
-const path = require("path")";console.log("� Error Prevention & Automation System");console.log("""Process": ", process.env.PM2_PROCESS || "unknown");"
+const path = require("path")";console.log("� Error Prevention & Automation System");console.log("Process": ", process.env.PM2_PROCESS || "unknown");"
         "encoding"
         "stdio"
 <<<<<<< HEAD
@@ -47,6 +47,5 @@ const path = require("path")";console.log("� Error Prevention & Automation Sys
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-      this.log(` ${description} "failed"`)
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

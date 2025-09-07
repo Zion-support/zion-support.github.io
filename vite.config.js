@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 <<<<<<< HEAD
 // https://vitejs.dev/config/
@@ -54,6 +55,7 @@ export default defineConfig({
     sourcemap: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -73,11 +75,16 @@ export default defineConfig({
         drop_debugger: true,
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+    minify: "terser",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
+          ui: ['framer-motion', 'lucide-react'],
           router: ['react-router-dom'],
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
     minify: "esbuild",
@@ -155,11 +162,18 @@ export default defineConfig({
     },
   },
 <<<<<<< HEAD
+=======
+        },
+      },
+    },
+  },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 >>>>>>> main
@@ -167,12 +181,10 @@ export default defineConfig({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-  optimizeDeps: {
-<<<<<<< HEAD
-    include: ["react", "react-dom", "framer-motion", "lucide-react"],
 =======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
   },
 });
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

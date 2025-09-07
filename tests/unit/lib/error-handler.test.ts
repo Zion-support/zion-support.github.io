@@ -7,6 +7,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 =======
 import { AppError, errorHandler, asyncHandler } from '../../../lib/error-handler';
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 describe('Error Handler', () => {
@@ -155,3 +156,7 @@ describe('Error Handler', () => {
   });
 });
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+describe('Error Handler', () => {
+  let mockReq: Partial<NextApiRequest>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

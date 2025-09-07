@@ -8,7 +8,10 @@ import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
 
+import { defineConfig } from 'vite
+import react from '@vitejs/plugin-react
 // https://vitejs.dev/config/
+<<<<<<< HEAD
 export default defineConfig({
   plugins: [
     react({
@@ -386,6 +389,11 @@ export default defineConfig({}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default defineConfig({)
+  plugins: [react()],
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   server: {
     port: 3000,
     host: true
@@ -397,6 +405,7 @@ export default defineConfig({}
   },
   build: {'
     outDir: 'dist',
+<<<<<<< HEAD
 <<<<<<< HEAD
     sourcemap: true
 <<<<<<< HEAD
@@ -441,7 +450,24 @@ export default defineConfig({}
     }
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+sourcemap: true
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
+  server: {,
+  port: 3000,
+    host: true;
+  },
+  build: {,
+  outDir: 'dist',
+    sourcemap: true;
+  resolve: {,
+  alias: {
+      '@': '/workspace/src
+    }
+  css: {,
+  postcss: {
+      plugins: []
 })
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c

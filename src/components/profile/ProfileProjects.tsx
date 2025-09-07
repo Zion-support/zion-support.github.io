@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
@@ -79,6 +80,9 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";'
 import { FileText } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface ProfileProjectsProps {}
   projects: ProfileProject[]
@@ -88,6 +92,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {}
   return ("
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">"
       <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
+<<<<<<< HEAD
       "
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
@@ -107,15 +112,85 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {}
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {projects.map((project) => (
+
+          <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
+            {project.imageUrl ? (
+              <AspectRatio ratio={16/9}>
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+
+              </AspectRatio>
+            ) : (
+              <div className="h-40 w-full flex items-center justify-center bg-zion-blue">
+                <FileText className="text-zion-purple h-12 w-12 opacity-50" />
+              </div>
+            )}
+
+            <CardContent className='p-4'>
+              <h4 className='text-white font-medium mb-2'>{project.title}</h4>
+              <p className='text-zion-slate text-sm mb-3 line-clamp-2'>
+                {project.description}
+              </p>
+              {project.tags && project.tags.length > 0 && (
+                <div className='flex flex-wrap gap-1 mb-2'>
+                  {project.tags.map((tag, i) => (
+                    <Badge
+                      key={i}
+                      variant='outline'
+                      className='text-xs border-zion-slate-dark text-zion-slate-light'
+                    >                      {tag}                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
+        {projects.map((project) => (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
                 <img
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <CardContent className="p-4">
+              <h4 className="text-white font-medium mb-2">{project.title}</h4>
+              <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
+              {project.tags && project.tags.length > 0 && (
+                <div className="flex flex-wrap gap-1 mb-2">
+                  {project.tags.map((tag, i) => (
+                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
+import { Card, CardContent } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { ProfileProject } from "@/types/profile",;
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { FileText } from 'lucide-react';
+interface ProfileProjectsProps {;
+  projects: ProfileProject[];,
+}
+;
+export function ProfileProjects({ projects }:,  ProfileProjectsProps) {;
+  projects: ProfileProject[];
+}
+;
+export function ProfileProjects({ projects }: ProfileProjectsProps) {;
+  return (;
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
+      <h3 className="text-xl font-bold text-white mb-4">Projects</h3>;
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
+        {projects.map((project) => (;
+          <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">;
+            {project.imageUrl ? (;
+              <AspectRatio ratio={16/9}>;
+                <img;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   src={project.imageUrl}
                   alt={project.title}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
+                  className="w-full h-full object-cover""
+                  loading="lazy""
                 />
 =======
 
@@ -138,6 +213,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {}
                 <img;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </AspectRatio>
+<<<<<<< HEAD
             ) : ("
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">"
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
@@ -256,8 +332,16 @@ export function ProfileProjects() { return null; }
             ) : ("
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">"
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
+=======
+            ) : (
+              <div className="h-40 w-full flex items-center justify-center bg-zion-blue">"
+                <FileText className="text-zion-purple h-12 w-12 opacity-50" />"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>
             )}
+            <CardContent className="p-4">"
+              <h4 className="text-white font-medium mb-2">{project.title}</h4>"
+              <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>"
 
             
 "
@@ -265,17 +349,35 @@ export function ProfileProjects() { return null; }
               <h4 className="text-white font-medium mb-2">{project.title}</h4>"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
+<<<<<<< HEAD
               {project.tags && project.tags.length > 0 && ("
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => ("
-                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
 =======
+              {project.tags && project.tags.length > 0 && (
+                <div className="flex flex-wrap gap-1 mb-2">"
+                  {project.tags.map((tag, i) => (
+                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
                     >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       {tag}
                     </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                  className="w-full h-full object-cover";
+                  loading="lazy";
+                />;
+              </AspectRatio>;
+            ) : (;
+              <div className="h-40 w-full flex items-center justify-center bg-zion-blue">;
+                <FileText className="text-zion-purple h-12 w-12 opacity-50" />;
+              </div>;
+            )}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
             <CardContent className="p-4">;
 
@@ -319,7 +421,8 @@ export function ProfileProjects() { return null; }
                   ))}
 
               )}
-<<<<<<< HEAD
+              <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              '
+              <div className="text-xs text-zion-slate-light mt-2">"
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -336,9 +439,8 @@ export function ProfileProjects() { return null; }
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              
 "
               <div className="text-xs text-zion-slate-light mt-2">
-=======
 <div className='text-xs text-zion-slate-light mt-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {project.date}
               </div>
             </CardContent>
@@ -346,9 +448,12 @@ export function ProfileProjects() { return null; }
         ))}
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     </div>;
   )
@@ -359,11 +464,21 @@ export function ProfileProjects() { return null; }
 }
 
 }
+<<<<<<< HEAD
 '
               <div className='text-xs text-zion-slate-light mt-2'>                {project && project.date}              ;"
               <div className="text-xs text-zion-slate-light mt-2">;
                 {project && project.date}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+              <div className='text-xs text-zion-slate-light mt-2'>                {project && project.date}              ;
+              <div className="text-xs text-zion-slate-light mt-2">;
+                {project && project.date}
+                </div>;
+              )}
+              <div className="text-xs text-zion-slate-light mt-2">
+                {project.date}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>;
             </CardContent>;
           </Card>;
@@ -373,6 +488,7 @@ export function ProfileProjects() { return null; }
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   );
@@ -380,6 +496,12 @@ export function ProfileProjects() { return null; }
 '
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;'
       <h3 className='text - xl font - bold text - white mb - 4'>Projects</h3>;'
+=======
+  );
+}
+    <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
+      <h3 className='text - xl font - bold text - white mb - 4'>Projects</h3>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
         {projects.map (project => (
           <Card;
@@ -458,6 +580,7 @@ export function ProfileProjects() { return null; }
                       {tag}
                     </Badge>))}
                 </div>)}
+<<<<<<< HEAD
               <div className='text - xs text - zion - slate - light mt - 2'>                {project.date}
               <div className="text - xs text - zion - slate - light mt-2">;
 =======
@@ -480,6 +603,9 @@ export function ProfileProjects() { return null; }
                     </Badge>))}
                 </div>)}'
               <div className='text - xs text - zion - slate - light mt - 2'>                {project.date}"
+=======
+              <div className='text - xs text - zion - slate - light mt - 2'>                {project.date}'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="text - xs text - zion - slate - light mt - 2">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {project.date}
@@ -495,12 +621,17 @@ export function ProfileProjects() { return null; }
 ;
 =======
 ;
-=======
+}}}}}}}}))))))))))))))))))))))
+;
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 ;'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 import type { NextApiRequest, NextApiResponse } from "next",;
@@ -230,3 +231,44 @@ export default async function handler(req, res) {
   return res.status(405).json({ error: "Method not allowed" });
 };'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState } from '../../../utils/sync/storage';
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const state = readState();
+
+  if (req.method === 'GET') {
+    return res.status(200).json({
+      route: '/multiverse/hub',
+
+      instanceId: state.config.instanceId,
+      peers: state.config.peers,
+      scope: state.config.scope,
+      optIn: state.config.optIn,
+      paused: state.config.paused,
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState } from "../../../utils/sync/storage";
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const state = null;
+
+      lastSyncedAt: state.lastSyncedAt})
+  }
+
+  return res.status(405).json({ error: "Method not allowed" })
+};
+=======
+      lastSyncedAt: state.lastSyncedAt,
+    });
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' });
+
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

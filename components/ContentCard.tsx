@@ -1,6 +1,7 @@
   static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
+<<<<<<< HEAD
   
   componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
@@ -8,9 +9,15 @@
   
   render() {}
     if (this.state.hasError) {}
+=======
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }'
@@ -39,14 +46,8 @@ const ContentCard: React.FC<ContentCardProps> = ({
   return (
     <Link
       href;
-      {/* Header */}
-      <div className='flex items-start justify-between mb-6'>
-        <div
-          className={`w-12 h-12 bg-gradient-to-br ${color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
-        >
-          <span className='text-2xl'>{icon}</span>
-        </div>
 
+<<<<<<< HEAD
         {category && (
           <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -182,3 +183,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

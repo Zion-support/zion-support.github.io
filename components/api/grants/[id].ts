@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';'
@@ -9,11 +10,26 @@ function ensureDir() {}
   }
 <<<<<<< HEAD
 function grantPath(id: string) {
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+} from '../../../types/grants';
+
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {}
+    fs.mkdirSync(GRANTS_DIR, { recursive: true,}
+});
+  }
+function grantPath(id: string) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return path.join(GRANTS_DIR, `${id}.json`);
 
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
 
+<<<<<<< HEAD
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
 =======
@@ -240,3 +256,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  res.status(405).end('Method Not Allowed')
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

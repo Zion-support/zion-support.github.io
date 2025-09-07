@@ -1,3 +1,5 @@
+import { cn } from &quot;@/lib/utils&quot;
+import { cn } from "@/lib/utils"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,22 +42,31 @@ function Skeleton({}
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
+  className;
+  ...props;)
+}: React.HTMLAttributes<HTMLDivElement>) {
+
     <div;
       className={cn (&quot;animate - pulse rounded - md bg - muted & quot;, class_name)}
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";"
 ;
 <<<<<<< HEAD
 function Skeleton() { return null; }
 =======
 function Skeleton({;
   className,;
-  ...props;
 } React.HTMLAttributes<HTMLDivElement>) {;
+<<<<<<< HEAD
   return (;
     <div;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       className={cn("animate-pulse rounded-md bg-muted", className)}
+=======
+</div>
+    <div;"
+      className={cn("animate-pulse rounded-md bg-muted", className)}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {...props}
     />);
 }
@@ -72,14 +83,8 @@ function Skeleton({;
 export { Skeleton } function Skeleton ({
   className, ...props 
 }: React.HTMLAttributes<HTMLDivElement>) {
+
   return (<div />) 
-}export {
-  Skeleton 
-}
-  return (
-    <div
-      className={cn("animate-pulse rounded-md bg-muted", className)}
-      {...props}
     />;
   );
 }
@@ -89,6 +94,7 @@ export { Skeleton };
 export { Skeleton }
 ;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -116,3 +122,7 @@ function Skeleton({
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</div>"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

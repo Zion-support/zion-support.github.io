@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -26,6 +27,8 @@ import {Link} from "react-router-dom";
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
@@ -40,6 +43,7 @@ import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -176,15 +180,11 @@ import { Link } from "react-router-dom",  icon;
 <<<<<<< HEAD
   className?: string
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
-  className}: EmptyStateProps) {
-  className?: string
-}
-
-export function EmptyState({;
-  icon;
   title;
   description;
   action;
@@ -257,6 +257,7 @@ export function EmptyState({}
 =======
   secondaryAction;
 
+<<<<<<< HEAD
 export function EmptyState({
   icon,
   title,
@@ -273,6 +274,8 @@ export function EmptyState({
 
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       className={cn(        "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -292,7 +295,7 @@ import { Button } from "@/components/ui/button",;"
 import { Link } from "react-router-dom",;
 interface EmptyStateProps {;
   icon: React.ReactNode,;
-  title: string,;
+  title: string,,
   description: string,;
   action?: {;
     text: string,;
@@ -325,9 +328,9 @@ export function EmptyState() { return null; }
 
         "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
 
-
         className
       )}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -349,6 +352,9 @@ export function EmptyState() { return null; }
         {action && (;
           action && action.href ? (;"
 =======
+=======
+)}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
         {icon}
 
@@ -379,14 +385,38 @@ export function EmptyState() { return null; }
             <Button
               size="lg" 
 
+<div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
+        {icon}
+
+  secondaryAction,;
+  className} EmptyStateProps) {;
+  return (;
+    <div;
+      className={cn(;
+        "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",;
+        className;
+      )}
+    >;
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
+        {icon}
+      </div>;
+      <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
+      <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
+            <Button
+              size="lg"
               className="bg-zion-purple hover:bg-zion-purple-light"
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">              className="bg-zion-purple hover:bg-zion-purple-light"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               onClick={action && action.onClick}>;
               {action && action.text}
             </Button>;
           );
         )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <Button 
@@ -406,6 +436,8 @@ export function EmptyState() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <Button 
               size="lg" 
               className="bg-zion-purple hover:bg-zion-purple-light"
@@ -451,10 +483,13 @@ export function EmptyState() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {secondaryAction && (
           secondaryAction.href ? ("
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
@@ -465,6 +500,7 @@ export function EmptyState() { return null; }
 <<<<<<< HEAD
           ) : (
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -472,6 +508,8 @@ export function EmptyState() { return null; }
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {secondaryAction && (;
           secondaryAction && secondaryAction.href ? (;
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">;
@@ -516,12 +554,15 @@ export function EmptyState() { return null; }
             <Button
               variant="outline" 
 
-
             <Button 
               variant="outline" 
 
               size="lg"
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+          ) : (              size="lg"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
               {secondaryAction && secondaryAction.text}
@@ -583,7 +624,26 @@ interface EmptyStateProps {}
   action?: {}
 =======
 }
+  secondaryAction;)
+  className}: EmptyStateProps) {;
+    text: string,
+    href?: string,
+  },
+  secondaryAction?: {
 
+;
+        {icon}
+      </div>;
+      <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
+      <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
+      <div className="flex flex-col sm:flex-row gap-4">;
+        {action && (;
+          action.href ? (;
+            <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-light">;
+              <Link to={action.href}>{action.text}</Link>;
+            </Button>;
+      </div>;
+    </div>;
 import React from './react';
 import { cn } from '@/lib / utils';
 import { Button } from '@/components / ui / button';
@@ -593,6 +653,7 @@ interface EmptyStateProps {
   title: string,
   description: string,
   action?: {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     text: string,
     href?: string;
@@ -603,12 +664,29 @@ interface EmptyStateProps {
 =======
   secondary_action?: {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+  className}: EmptyStateProps) {
+
+export function EmptyState({;
+  secondaryAction;)
+  className}: EmptyStateProps) {;
     text: string,
-    href?: string;
-    on_click?: () => void;
-  }
-  class_name?: string;
+    href?: string,
+    onClick?: () => void;
+  },
+  secondaryAction?: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    text: string,
+    href?: string,
+    onClick?: () => void;
+  },
+
+  className?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export /**;
  * EmptyState - Function description;
@@ -638,12 +716,102 @@ export /**
  * EmptyState - Function description
  */
 function EmptyState() {
+=======
+
+
+
+  className}: EmptyStateProps) {
+  className?: string;
+}
+
+
+export function EmptyState({;
+  icon;
+  title;
+  description;
+  action;
+
+  secondaryAction;
+
+export function EmptyState({
+  icon,
+  title,
+  description,
+  action,
+  secondaryAction,
+
+)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div;
-      className={cn (
-        "flex flex - col items - center justify - center text - center p - 6 md: p - 10 rounded - lg border border - zion - blue - light bg - zion - blue - dark / 50",
+      className={cn(
+        "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50""
+        className;"
+import React from "react",;""
+import { cn } from "@/lib/utils",;""
+import { Button } from "@/components/ui/button",;""
+import { Link } from "react-router-dom",;"
+  icon: React.ReactNode,;
+
+interface EmptyStateProps {;
+  icon: React.ReactNode,;
+  title: string,,
+  description: string,;
+  action?: {;
+    text: string,;
+
+    href?: string,;)
+</div>
+      className={cn(;"
+        "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50";"
+        className;)
+      )}
+    >
+</div>"
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">"
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;"
+      </div>;"
+      <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;""
+      <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;""
+      <div className="flex flex-col sm:flex-row gap-4">;"
+            <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-light">;"
+
+              <Link to={action && action.href}>{action && action.text};
+            ;
+            <Button;"
+              size="lg"""
+              className="bg-zion-purple hover:bg-zion-purple-light""
+
+              onClick={action && action.onClick}>;
+
+</Button>
+            </Button>;
+
+            <Button;"
+              size="lg"""
+              className="bg-zion-purple hover:bg-zion-purple-light""
+              onClick={action.onClick}
+
+            <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">"
+
+              <Link to={secondaryAction.href}>{secondaryAction.text}
+            <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">;"
+
+              <Link to={secondaryAction && secondaryAction.href}>{secondaryAction && secondaryAction.text};
+              variant="outline""
+              variant="outline"""
+              className="border-zion-blue-light hover:bg-zion-blue-light""
+
+              onClick={secondaryAction && secondaryAction.onClick}>;
+</Button>
+            </Button>;
+
+      </div>;
+      className={cn ("
+        "flex flex - col items - center justify - center text - center p - 6 md: p - 10 rounded - lg border border - zion - blue - light bg - zion - blue - dark / 50",")
         class_name)}
     >;
+<<<<<<< HEAD
       <div className="bg - zion - blue / 30 p - 6 rounded - full mb - 6">;
         {icon}
       </div>;
@@ -682,11 +850,27 @@ function EmptyState() {
               size="lg";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               className="border - zion - blue - light hover:bg - zion - blue - light";
+=======
+      <div className="bg - zion - blue / 30 p - 6 rounded - full mb - 6">;"
+      <h3 className="text - 2xl font - semibold text - white mb - 3">{title}</h3>;""
+      <p className="text - zion - slate text - lg mb - 8 max - w-md">{description}</p>;""
+      <div className="flex flex - col sm:flex - row gap - 4">;"
+            <Button as_child size="lg" className="bg - zion - purple hover:bg - zion - purple - light">;"
+
+              <Link to={action.href}>{action.text};
+            ) : (
+              size="lg";""
+              className="bg - zion - purple hover:bg - zion - purple - light";"
+              on_click={action.on_click}
+            ))}"
+            <Button as_child variant="outline" size="lg" className="border - zion - blue - light hover:bg - zion - blue - light">;"
+
+              <Link to={secondary_action.href}>{secondary_action.text};
+              variant="outline";""
+              className="border - zion - blue - light hover:bg - zion - blue - light";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               on_click={secondary_action.on_click}
-            >;
-              {secondary_action.text}
-            </Button>))}
-      </div>;
+            ))}
     </div>);
 }
 <<<<<<< HEAD
@@ -714,25 +898,13 @@ className?: string
 }: EmptyStateProps) {
   return (<div className= {
   cn (> {
-  action.text 
-}</Button>) ) 
-}{
-  secondaryAction && (secondaryAction.href ? (> {
-  secondaryAction.text 
-}</Button>) ) 
+</div>)
+}) ) 
 }</div> </div>) 
-}
-          ) : (;
-            <Button;
-              size="lg";
-              className="bg-zion-purple hover:bg-zion-purple-light";
-              onClick={action.onClick}
-            >
-              {action.text}
-            </Button>
-          )
-        )}
+              className="bg-zion-purple hover:bg-zion-purple-light";"
 
+
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         {secondaryAction && (
           secondaryAction.href ? (
@@ -746,16 +918,19 @@ className?: string
               variant="outline" 
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               onClick={secondaryAction.onClick}
+
+pr-12325
             >
-              {secondaryAction.text}
+</Button>
             </Button>
-          )
-        )}
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -774,3 +949,7 @@ className?: string
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </div>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

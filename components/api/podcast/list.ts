@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';'
 import fs from 'fs';'
 import path from 'path';
+<<<<<<< HEAD
 function ensureStorage() {}
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -57,6 +58,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
     inviteeName: e.invitee?.name || 'Guest', createdAt: e.createdAt,'
     summary: e.bestQuote || '',
     audio: e.audio || {}}));
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return res.status(200).json({ episodes: simplified })
 }'
     invitee_name: e.invitee?.name || 'Guest';
@@ -65,10 +69,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
     audio: e.audio || {}}));
   return res.status (200).json ({ episodes: simplified });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return res.status(200).json({ episodes: simplified });
   return res.status(200).json({ episodes: simplified })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  return res.status(200).json({ episodes: simplified,}
+});
+  return res.status(200).json({ episodes: simplified }),
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

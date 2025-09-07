@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -72,6 +73,9 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { GradientHeading } from "@/components/GradientHeading";
 export default function Featured() {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Header />"
@@ -93,6 +97,9 @@ export default function Featured() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { FeaturedListingsSection } from '@/components / FeaturedListingsSection';
@@ -115,8 +122,11 @@ function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.;
             </p>;
           </div>;
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -248,6 +258,7 @@ function Featured() {
       <Footer />
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -258,6 +269,42 @@ function Featured() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
+=======
+
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";""
+import { GradientHeading } from "@/components/GradientHeading";"
+
+export default function Featured() {
+  return (
+    <>
+      <Header />
+"
+
+</Header>"
+      <div className="min-h-screen bg-zion-blue">"
+</div>"
+        <div className="container mx-auto px-4 py-12">"
+          <div className="text-center mb-12">"
+</div>
+            <GradientHeading;"
+              level="h1"""
+              className="text-4xl md:text-5xl font-bold mb-4""
+            >
+
+            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">"
+</p>
+            </p>
+          </div>
+
+          <FeaturedListingsSection showTitle={false} />
+
+      <Footer />
+
+    </>)
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
@@ -289,6 +336,7 @@ function Featured() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -303,3 +351,23 @@ function Featured() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  ),;}
+
+  () {"
+  return (min-h-screen bg-zion-blue"> <div className=" container mx-auto px-4 py-12"> <div className=" text-center mb-12"> <GradientHeading level=" h1"className=" text-4xl md:text-5xl font-bold mb-4"> Featured Listings  <p className=" text-zion-slate-light text-lg max-w-3xl mx-auto" > Discover our handpicked selection of premium AI products and services. These featured listings represent the best that the Zion Marketplace has to offer. </p> </div> {"
+}<FeaturedListingsSection showTitle= {
+  false;)
+
+}/> </div> </div> <Footer /> </>) 
+
+          <FeaturedListingsSection show_title={false} />;
+
+        </div>;
+      <Footer />;
+
+    </>);
+pr-12325
+}
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

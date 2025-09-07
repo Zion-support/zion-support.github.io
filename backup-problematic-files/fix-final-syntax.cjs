@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/fix-final-syntax.cjs
 =======
 <<<<<<< HEAD
@@ -1388,59 +1389,57 @@ const path = require('path')
     return false;
   }
 }
+=======
+
+const fs = require('fs');
+const path = require('path');
+// Final targeted fixes for remaining syntax errors;
+const fixes = [
+  // Fix missing semicolons in import statements;
+  {]
+
+  },
+  // Fix malformed import statements;
+  {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 function findFiles(dir, extensions) {
   const files = [];
-  
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory()) {
-        // Skip node_modules and other directories
-        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+        // Skip node_modules and other directories;"
+
           traverse(fullPath);
-        }
       } else if (stat.isFile()) {
         const ext = path.extname(item);
         if (extensions.includes(ext)) {
           files.push(fullPath);
-        }
-      }
-    }
-  }
-  
   traverse(dir);
   return files;
-}
 
 function main() {
-  console.log('🔧 Starting final syntax fixes...');
-  
-  const extensions = ['.ts', '.tsx', '.js', '.jsx', '.cjs', '.mjs'];
+
   const files = findFiles(process.cwd(), extensions);
-  
   let fixedCount = 0;
-  
   for (const file of files) {
     if (fixFile(file)) {
       fixedCount++;
-    }
-  }
-  
-  console.log(`✅ Fixed syntax in ${fixedCount} files`);
-  console.log('🎉 Final syntax fixes completed!');
-}
+
 
 if (require.main === module) {
   main();
-}
 
 module.exports = { fixFile, findFiles };
+<<<<<<< HEAD
     "replacement"
     "replacement"
     "replacement"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

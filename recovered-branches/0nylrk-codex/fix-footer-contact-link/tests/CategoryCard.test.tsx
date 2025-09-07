@@ -9,9 +9,29 @@
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+
+import { render, screen  } from '@testing-library/react';
+import { MemoryRouter  } from 'react-router-dom';
+import { CategoryCard } from '@/components/CategoryCard';
+
+import {render, screen} from '@testing-library/react';
+import {MemoryRouter} from 'react-router-dom';
+import {CategoryCard} from '@/components/CategoryCard';import {render, screen} from '@testing-library/react',;
+import {MemoryRouter} from 'react-router-dom',;
+import {CategoryCard} from '@/components/CategoryCard',;
+
+import { render, screen } from '@testing-library/react',;
+import { MemoryRouter } from 'react-router-dom',;
+import { CategoryCard } from '@/components/CategoryCard',;
+
+import {render, screen} from '@testing-library/react';
+import {MemoryRouter} from 'react-router-dom';
+import {CategoryCard} from '@/components/CategoryCard';
+
 import {render, screen} from '@testing-library/react',;
 import {MemoryRouter} from 'react-router-dom',;
 import {CategoryCard} from '@/components/CategoryCard',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -58,6 +78,16 @@ import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components/CategoryCard';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import {render, screen} from '@testing-library/react',;
+import {MemoryRouter} from 'react-router-dom',;
+import {CategoryCard} from '@/components/CategoryCard',;
+pr-12325
+import {render, screen} from '@testing-library/react';
+import {MemoryRouter} from 'react-router-dom';
+import {CategoryCard} from '@/components/CategoryCard';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
@@ -126,7 +156,7 @@ it('renders category card with link to slug', () => {}
       <CategoryCard title="Test Category" description="desc" icon="*" />
     </MemoryRouter>
   ),
-  const link = screen && screen.getByRole('link', { name: /test category/i }),;
+const link = screen && screen.getByRole('link', { name: /test category/i }),;
   expect(link).toHaveAttribute('href/category/test-category'),;
 }),;
 it('normalizes slug with special characters', () => {;
@@ -191,7 +221,6 @@ it('renders category card with link to slug', () => {;
   ),;
 <<<<<<< HEAD
 
-
 import {render, screen} from '@testing - library / react';
 import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components / CategoryCard';
@@ -222,7 +251,10 @@ it ('treats underscores as spaces in slug', () => {
   expect (link).toHaveAttribute ('href / category / ai - tools');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 it('normalizes slug with special characters', () => {
   render(
     <MemoryRouter>
@@ -253,6 +285,7 @@ it('treats underscores as spaces in slug', () => {
   ),
 
   const link = screen.getByRole('link', { name: /ai_tools/i }),
+<<<<<<< HEAD
 <<<<<<< HEAD
   expect(link).toHaveAttribute('href/category/ai-tools')
 }),
@@ -347,6 +380,11 @@ it ('treats underscores as spaces in slug', () => {"
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+
+  expect(link).toHaveAttribute('href/category/ai-tools')
+}),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { render, screen } from '@testing-library/react',;
 import { MemoryRouter } from 'react-router-dom',;
 import { CategoryCard } from '@/components/CategoryCard',;
@@ -410,6 +448,7 @@ it ('treats underscores as spaces in slug', () => {
   const link = screen.getByRole('link', { name: /test category/i });
   expect(link).toHaveAttribute('href/category/test-category');
 });
+<<<<<<< HEAD
 it('normalizes slug with special characters', () => {
       <CategoryCard title='R&D Tools!' description='desc' icon='*' />
   const link = screen.getByRole('link', { name: /r&d tools!/i });
@@ -464,3 +503,7 @@ it('treats underscores as spaces in slug', () => {'
 =======
   expect(link).toHaveAttribute('href/category/ai-tools');
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

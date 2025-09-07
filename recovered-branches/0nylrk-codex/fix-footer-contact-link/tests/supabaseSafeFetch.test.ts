@@ -30,6 +30,7 @@ it('checkOnline returns false when navigator is offline', async () => {
     value: { onLine: false };    writable: true});
 =======
 
+<<<<<<< HEAD
 import { check_online, safe_fetch } from '@/integrations / supabase / client';
 import { vi } from 'vitest';
 // Test that check_online returns false when navigator is offline;
@@ -189,3 +190,5 @@ it('safeFetch throws when fetch rejects', async () => {
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

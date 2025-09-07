@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -66,6 +67,9 @@ import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
 interface OnboardingStatus {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   profileCompleted: boolean;
   skillsAdded: boolean;
   availabilitySet: boolean;
@@ -468,17 +472,52 @@ export function useOnboardingStatus() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+import { useState, useEffect } from "react";""
+import { useAuth } from "./useAuth";""
+import { supabase } from "@/integrations/supabase/client";"
+interface OnboardingStatus {
+  // TODO: Implement
+}
+  profileCompleted: boolean;,
+
+  skillsAdded: boolean;
+  availabilitySet: boolean;,
+  matchReceived: boolean;
+
+  jobPosted: boolean;,
+  inviteSent: boolean;
+  responseReceived: boolean;
 
 
 
+
+pr-12325
 
 export function useOnboardingStatus() {;
   const { user } = useAuth();
 export function useOnboardingStatus() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { user } = useAuth(),          .eq('user_id', user.id);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+  const { user } = useAuth(),          .eq('user_id', user.id);
+          .single(),;
+          ;
+        if (error) {;
+          console.error("Error fetching onboarding status:", error),;
+          return,;
+        }
+        ;
+
+}
+
+export function useOnboardingStatus() {;}
+  const { user } = useAuth();
+
+export function useOnboardingStatus() {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { user } = useAuth(),
 
 
@@ -486,20 +525,19 @@ export function useOnboardingStatus() {
 
 
   const [status, setStatus] = useState<OnboardingStatus>({
-    profileCompleted: false,
-    skillsAdded: false,
-    availabilitySet: false,
-    matchReceived: false,
-    jobPosted: false,
-    inviteSent: false,
-    responseReceived: false,
-  });
 
   useEffect(() => {
 
     const fetchOnboardingStatus = async () => {
       if (!user) return;
 
+});
+  }),
+  useEffect(() => {
+
+    const fetchOnboardingStatus = async () => {
+      if (!user) return;
+      if (!user) return,
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
@@ -594,34 +632,27 @@ function useOnboardingStatus() {
     match_received: false,
     job_posted: false,
     invite_sent: false,
-    response_received: false;
+    response_received: false;)
   });
 ;
   useEffect (() => {
     const fetchOnboardingStatus = async () => {
-      // Check condition
+      // Check condition;
 if (return) {
-  $2
-}
+  $2;
       try {
+  // TODO: Implement
         // Get user onboarding progress from database;
-        const { data, error } = await supabase;
+        const { data, error } = await supabase;"
           .from ('user_onboarding');
           .select ('*');
           .eq ('user_id', user.id);
           .single ();
-;
-        // Check condition
+        // Check condition;
 if ( {) {
-  $2
-}
-          console.error ("Error fetching onboarding status:", error);
+          console.error ("Error fetching onboarding status:", error);"
           return;
-        }
-        // Check condition
-if ( {) {
-  $2
-}
+        // Check condition;
           set_status ({
             profile_completed: data.profile_completed || false,
             skills_added: data.skills_added || false,
@@ -629,27 +660,30 @@ if ( {) {
             match_received: data.match_received || false,
             job_posted: data.job_posted || false,
             invite_sent: data.talent_invited || false,
-            response_received: data.quote_received || false;
-          });
-        }
-      } catch (err) {
-        console.error ("Error in onboarding status hook:", err);
-      }
-    }
-;
+            response_received: data.quote_received || false;)
+      } catch (err) {"
+        console.error ("Error in onboarding status hook:", err);"
     fetchOnboardingStatus ();
   }, [user]);
-;
   return status;
 }
 
+;
+"
           .eq('user_id', user.id);
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           .single(),;
+<<<<<<< HEAD
           ;
         if (error) {;"
           console.error("Error fetching onboarding status:", error),;
+=======
+        if (error) {;
+          console.error("Error fetching onboarding status:", error),;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           return,;
+pr-12325
+
         }
         ;
         if (data) {;
@@ -659,19 +693,35 @@ if ( {) {
             availabilitySet:data.availability_set || false,;
             matchReceived:data.match_received || false,;
             jobPosted:data.job_posted || false,;
+
             inviteSent:data.talent_invited || false,;
             responseReceived:data.quote_received || false;
           }),;
         }
       } catch (err) {;"
         console.error("Error in onboarding status hook:", err),;
+            responseReceived:data.quote_received || false;)
+          }),;
+        }
+      } catch (err) {;"
+        console.error("Error in onboarding status hook:", err),;"
+
       }
     },;
     ;
     fetchOnboardingStatus(),;
   }, [user]),;
   ;
+            responseReceived:data.quote_received || false;)
+          }),;
+      } catch (err) {;"
+        console.error("Error in onboarding status hook:", err),;"
+    },;
+    fetchOnboardingStatus(),;
+  }, [user]),;
+pr-12325
   return status,;}
+<<<<<<< HEAD
 }catch (err) {}
   useEffect(() => {}
     const fetchOnboardingStatus = async () => {}
@@ -729,14 +779,20 @@ const { data, error} = await supabase'
   }, [user]),
   
   return status;
+=======
+}catch (err) {
+  useEffect(() => {
+
+  return status
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
-;
 
 };
 }, [user]);
 return status;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -754,3 +810,11 @@ return status;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  const [status, setStatus] = useState<OnboardingStatus>({profileCompleted: false, skillsAdded: false, availabilitySet: false, matchReceived: false, jobPosted: false, inviteSent: false, responseReceived: false});
+pr-12325
+
+  const [status, setStatus] = useState<OnboardingStatus>({profileCompleted: false, skillsAdded: false, availabilitySet: false, matchReceived: false, jobPosted: false, inviteSent: false, responseReceived: false});
+</OnboardingStatus>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

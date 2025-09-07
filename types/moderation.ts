@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 export type AiScores = {;
   toxicity: number, // 0-1;
@@ -61,6 +62,30 @@ export interface ModerationResult {
   moderatedAt: Date;;
 =======
   moderatedAt: Date;
+=======
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+export interface ModerationAction {
+
+export interface ModerationAction {;
+
+
+
+
+
+
+  id: string;
+  flagId: string;
+  action: ModerationStatus;
+  adminNotes?: string;
+  adminId: string;
+  reason?: string;
+  createdAt: string;
+
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 ;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -77,9 +102,14 @@ export interface ModerationAction {
   reason?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   createdAt: string;}
 =======
   createdAt: string;
+=======
+created_at: string,
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -101,6 +131,7 @@ export interface ModerationFlag {;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,3 +305,18 @@ export interface ModerationFlag {;
 =======
 }'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+
+}
+export interface ModerationFlag {
+
+
+export interface ModerationResult {
+  id: string;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

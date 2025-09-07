@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -189,11 +190,15 @@ import { Loader2 } from "lucide-react",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
         <Button variant="outline" onClick={onBack}>
+=======
+{onNext && (;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { NavigationButtonsProps } from "./types",;
+<<<<<<< HEAD
 export const NavigationButtons = ({;
   onBack,;
   onNext,;
@@ -409,39 +414,27 @@ export const NavigationButtons = ({};
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
-    </div>;
-  ),;
-},; export const NavigationButtons = ({
-  onBack;
-onNext;
-isNextDisabled = false;
-backLabel = "Back";
-nextLabel = "Next";
-isLoading = false 
-}: NavigationButtonsProps) => {
-  return (<div className="flex justify-between" > {
-  onBack && (<Button variant="outline" onClick= {
-  onBack 
-}> {
-  backLabel 
-}</Button>) 
-}{
-  onNext && (<Button onClick= {
-  onNext 
-}disabled= {
-  isNextDisabled || isLoading 
-}> {
-  isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" /> 
-}{
-  nextLabel 
-}
-}</div>) 
-};
-    </div>
-  )
-}
+export const NavigationButtons = ({;
 
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {NavigationButtonsProps} from "./types";
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {NavigationButtonsProps} from "./types";
+
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {NavigationButtonsProps} from "./types";
+export const NavigationButtons = ({;
+
+
+
+
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     </div>;
   );
@@ -466,3 +459,5 @@ isLoading = false
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

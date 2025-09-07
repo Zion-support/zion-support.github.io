@@ -38,6 +38,7 @@ module.exports = {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -53,36 +54,30 @@ main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
+      env: {,
+  NODE_ENV: 'production
       },
       log_file: 'logs/pm2/auto-fix.log',
       error_file: 'logs/pm2/auto-fix-error.log',
       out_file: 'logs/pm2/auto-fix-out.log',
-    },
     {
       name: 'healthcheck',
       script: 'scripts/pm2/healthcheck.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
       max_memory_restart: '128M',
-      env: {
-        NODE_ENV: 'production'
-      },
       log_file: 'logs/pm2/health.log',
       error_file: 'logs/pm2/health-error.log',
       out_file: 'logs/pm2/health-out.log',
-    },
-    {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
+<<<<<<< HEAD
 <<<<<<< HEAD
       name: 'bolt-zion-app',
       name: 'ci-cd-pipeline',
@@ -121,6 +116,8 @@ main
 
       name: 'bolt-zion-app',
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       script: 'npm',
       args: 'run build',
@@ -131,10 +128,8 @@ main
       args: 'run build',
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
       max_memory_restart: '1G',
+<<<<<<< HEAD
       env: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -269,19 +264,26 @@ main
 
       },
       cron_restart: '0 0 * * *', // Daily restart
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       error_file: './logs/ci-cd-error.log',
       out_file: './logs/ci-cd-out.log',
       log_file: './logs/ci-cd-combined.log',
       time: true,    },
+<<<<<<< HEAD
     {
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
         NODE_ENV: 'production',
-      },
       log_file: 'logs/pm2/preview.log',
       error_file: 'logs/pm2/preview-error.log',
       out_file: 'logs/pm2/preview-out.log',
+<<<<<<< HEAD
     },
     {
       name: 'auto-fix',
@@ -384,6 +386,9 @@ main
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       env: {
 <<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
 
@@ -417,63 +422,24 @@ main
 
 };
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       cron_restart: '0 */6 * * *', // Every 6 hours
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       error_file: './logs/comprehensive-automation-error.log',
       out_file: './logs/comprehensive-automation-out.log',
       log_file: './logs/comprehensive-automation-combined.log',
 
-    {
       name: 'marketing-automation',
-      script: 'node',
       args: 'scripts/linkedin_automation.js',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
 
-      cron_restart: '0 */12 * * *', // Every 12 hours
-      error_file: './logs/marketing-automation-error.log',
-      out_file: './logs/marketing-automation-out.log',
-      log_file: './logs/marketing-automation-combined.log',
-
-      script: 'npm',
-      args: 'audit',
-      cwd: '/workspace',
-
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '500M',
-      env: {
-
-      cron_restart: '0 2 * * *', // Daily at 2 AM
-      error_file: './logs/security-audit-error.log',
-      out_file: './logs/security-audit-out.log',
-      log_file: './logs/security-audit-combined.log',
-
-    {
       name: 'test-runner',
-      script: 'npm',
       args: 'test',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
 
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      error_file: './logs/test-runner-error.log',
-      out_file: './logs/test-runner-out.log',
-      log_file: './logs/test-runner-combined.log',
-
-    {
       name: 'lint-checker',
-      script: 'npm',
       args: 'run lint',
+<<<<<<< HEAD
       cwd: '/workspace',
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/ecosystem.config.cjs
@@ -1265,20 +1231,32 @@ main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       watch: false,
       autorestart: true,
+=======
+
+      error_file: './logs/lint-checker-error.log',
+      out_file: './logs/lint-checker-out.log',
+      log_file: './logs/lint-checker-combined.log',
+      name: "zion-app",""
+      script: "npm",""
+      args: "start",""
+
+      interpreter: "none","
+      cwd: __dirname,
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       max_restarts: 10,
       exp_backoff_restart_delay: 500,
-      env: {
-        NODE_ENV: "production",
-        PORT: process.env.PORT || 3000
-      },
+      env: {,"
+  NODE_ENV: "production","
+        PORT: process.env.PORT || 3000;
+      },"
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/zion-app-error.log",
-      out_file: "automation/logs/zion-app-out.log",
-      time: true
-    },
-    {
+      out_file: "automation/logs/zion-app-out.log","
+    {"
       name: "zion-auto-sync",
       script: "automation/pm2-auto-sync.js",
+<<<<<<< HEAD
       interpreter: "node",
       cwd: __dirname,
       watch: false,
@@ -1688,6 +1666,18 @@ module.exports = {}
 main
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+      interpreter: "node","
+
+      out_file: "automation/logs/build-monitor-out.log","
+      time: true;"
+module.exports = {
+  apps: [
+
+        PORT: 3000
+      env_production: {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======

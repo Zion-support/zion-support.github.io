@@ -4,6 +4,7 @@ import TrustBadge from '../components/ui/TrustBadge';'
 import TrustRadar from '../components/ui/TrustRadar';'
 import RiskIndicator from '../components/ui/RiskIndicator';
 
+<<<<<<< HEAD
 
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
@@ -62,6 +63,8 @@ await fetch('/api/trust/appeal', {
     });
     alert('Appeal submitted');
     form.reset();
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     form.reset()
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
@@ -85,11 +88,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 checked={showLogic}
                 onChange={() => setShowLogic(!showLogic)}'
               />{' '}
+<<<<<<< HEAD
         <div className="flex items-center justify-between">"
           <h1 className="text-2xl font-semibold">Trust & Reputation</h1>"
           <div className="flex items-center gap-3">"
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>"
               <div className="bg-white dark:bg-gray-900 rounded border p-4">"
+=======
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-semibold">Trust & Reputation</h1>
+          <div className="flex items-center gap-3">
+            <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
+              <div className="bg-white dark:bg-gray-900 rounded border p-4">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
                 <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
               </div>
@@ -187,7 +198,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       placeholder='Explain why your score should be reconsidered''
                       className='w-full border rounded px-2 py-1 text-sm'
                       rows={4}
+<<<<<<< HEAD
                       required;
+=======
+                      required
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>;
     </EnhancedLayout>;
   );
@@ -410,6 +426,9 @@ function submit_appeal() {}
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>
     </EnhancedLayout>
   );

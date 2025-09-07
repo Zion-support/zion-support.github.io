@@ -27,7 +27,6 @@ declare module 'react-day-picker' {
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
 declare module "@radix - ui / react - hover - card";
 declare module "input - otp";
 declare module "react - markdown";
@@ -53,13 +52,58 @@ declare module '@tanstack/react-query';
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 declare module '@tanstack/react-query';
+declare module '@tanstack/react-query';
 
   export interface DateRange {
     from?: Date;
     to?: Date;
   }
 
+declare module "cmdk",;
+declare module "@radix-ui/react-context-menu",;
+declare module "vaul",;
+declare module "@radix-ui/react-hover-card",;
+declare module "input-otp",;
+declare module "react-markdown",;
+declare module "@radix-ui/react-menubar",;
+declare module "@radix-ui/react-navigation-menu",;
+declare module "react-resizable-panels",;
+declare module "@radix-ui/react-toggle-group",;
+declare module "@radix-ui/react-toggle",;
+;
+declare module '@tanstack/react-query',;
+declare module 'react-day-picker' {;
+  export interface DateRange {;
+    from?:Date,;
+    to?:Date,;
+  }
+;
+}  // Minimal placeholder for the DayPicker component used in the app;
+
+
+
+declare module "@radix - ui / react - hover - card";""
+declare module "input - otp";""
+declare module "react - markdown";""
+declare module "@radix - ui / react - menubar";""
+declare module "@radix - ui / react - navigation - menu";""
+declare module "react - resizable - panels";""
+declare module "@radix - ui / react - toggle - group";""
+declare module "@radix - ui / react - toggle";"
+;"
+declare module '@tanstack / react - query';
+declare module 'react - day - picker' {
+declare module '@tanstack/react-query';
+  export interface DateRange {
+  // TODO: Implement
+}
+    from?: Date;
+    to?: Date;
+
   // Minimal placeholder for the DayPicker component used in the app;
+pr-12325
+  }
+}  // Minimal placeholder for the DayPicker component used in the app;
   // The actual library provides full typings but we stub them here so the;
   // TypeScript compiler can understand the imports without requiring the real;
   // type definitions.;
@@ -87,7 +131,22 @@ declare module '@tanstack/react-query';
 
 }
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+declare module "cmdk";
+declare module "@radix-ui/react-context-menu";
+declare module "vaul";
+declare module "@radix-ui/react-hover-card";
+declare module "input-otp";
+declare module "react-markdown";
+declare module "@radix-ui/react-menubar";
+declare module "@radix-ui/react-navigation-menu";
+declare module "react-resizable-panels";
+declare module "@radix-ui/react-toggle-group";
+declare module "@radix-ui/react-toggle";
+declare module '@tanstack/react-query';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,10 +177,16 @@ declare module "@radix-ui/react-toggle",
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
+export interface DateRange {
+    from?: Date,
+    to?: Date
+}
 
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
+<<<<<<< HEAD
 <<<<<<< HEAD
   export interface DateRange {
     from?: Date,
@@ -131,6 +196,10 @@ declare module 'react-day-picker' {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -172,6 +241,35 @@ declare module "@radix-ui/react-navigation-menu",;
 declare module "react-resizable-panels",;
 declare module "@radix-ui/react-toggle-group",;
 declare module "@radix-ui/react-toggle",;
+
+
+
+}'
+declare module "cmdk",""
+declare module "@radix-ui/react-context-menu",""
+declare module "vaul",""
+declare module "@radix-ui/react-hover-card",""
+declare module "input-otp",""
+declare module "react-markdown",""
+declare module "@radix-ui/react-menubar",""
+declare module "@radix-ui/react-navigation-menu",""
+declare module "react-resizable-panels",""
+declare module "@radix-ui/react-toggle-group",""
+declare module "@radix-ui/react-toggle",""
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
+declare module "cmdk",;""
+declare module "@radix-ui/react-context-menu",;""
+declare module "vaul",;""
+declare module "@radix-ui/react-hover-card",;""
+declare module "input-otp",;""
+declare module "react-markdown",;""
+declare module "@radix-ui/react-menubar",;""
+declare module "@radix-ui/react-navigation-menu",;""
+declare module "react-resizable-panels",;""
+declare module "@radix-ui/react-toggle-group",;""
+declare module "@radix-ui/react-toggle",;""
+pr-12325
 declare module '@tanstack/react-query',;
 =======
 
@@ -238,6 +336,7 @@ declare module 'react-day-picker' {;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 };
+<<<<<<< HEAD
 
 declare module 'sonner';
 declare module 'lucide-react' {
@@ -291,20 +390,18 @@ declare module 'lucide-react' {
     to?: Datedeclare module 'lucide-react' {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     to?: Date
-  }
-  // Minimal placeholder for the DayPicker component used in the app
-  // The actual library provides full typings but we stub them here so the
-  // TypeScript compiler can understand the imports without requiring the real
-  // type definitions.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  export const DayPicker: any
-}
+
+pr-12325
 };
+
 declare module 'sonner';
 declare module 'lucide-react' {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 import {FC, SVGProps} from 'react';
 
   export type LucideProps = SVGProps < SVGSVGElement>;
@@ -2496,3 +2593,5 @@ declare module 'react-dom / client';
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

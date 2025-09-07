@@ -1,12 +1,41 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     headline: string
     subtitle: string
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    headline: string
+    subtitle: string
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+    cta: string
+  }
+    headline: string,
+    subtitle: string,
+    cta: string
+};
+  tenant: WhitelabelTenant | null
+}
+
+const defaultContext: WhitelabelContextType = {
+  isWhitelabel: false
+  primaryColor: '#9b87f5', // Default Zion purple
+  logoUrl: null
+  brandName: 'Zion AI Marketplace'
+  themePreset: 'light'
+  landingPageCopy: {
+    headline: 'AI Talent Marketplace'
+    subtitle: 'Find the best AI talent for your projects'
+    cta: 'Get Started'}
+  tenant: null}
+// The context may be undefined if the provider is not mounted.  By declaring
+// the generic as `WhitelabelContextType | null` we get proper type checking
+// without falling back to an empty object which triggers TS2740 errors.
+const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';
+
 export interface WhitelabelContextType {
 <<<<<<< HEAD
 
@@ -60,26 +89,14 @@ export interface WhitelabelContextType {
   landingPageCopy: {
     headline: string;
     subtitle: string;
-    cta: string;
-  };
+    cta: string
+};
   tenant: WhitelabelTenant | null;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
-const defaultContext: WhitelabelContextType = {
-  isWhitelabel: false,
-  primaryColor: "#9b87f5", // Default Zion purple
-  logoUrl: null,
-  brandName: "Zion AI Marketplace",
-  themePreset: "light",
-  landingPageCopy: {
-    headline: "AI Talent Marketplace",
-    subtitle: "Find the best AI talent for your projects",
-    cta: "Get Started",
-  },
-  tenant: null,
-};
 
+<<<<<<< HEAD
 // The context may be undefined if the provider is not mounted.  By declaring
 // the generic as `WhitelabelContextType | null` we get proper type checking
 // without falling back to an empty object which triggers TS2740 errors.
@@ -707,3 +724,5 @@ export const WhitelabelProvider = ({ children } WhitelabelProviderProps) => {;
 }
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

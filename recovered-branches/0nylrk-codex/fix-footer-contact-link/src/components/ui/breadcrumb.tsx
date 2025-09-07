@@ -53,8 +53,8 @@ const Breadcrumb = React.forwardRef<;
   HTMLElement;
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
- 
 import { cn } from "@/lib/utils"
+<<<<<<< HEAD
  
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
@@ -65,6 +65,9 @@ const Breadcrumb = React.forwardRef<
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+const Breadcrumb = React.forwardRef<
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import * as React from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {ChevronRight} from "lucide-react";
@@ -72,7 +75,10 @@ import {ChevronRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 
 const Breadcrumb = React && React.forwardRef<;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   HTMLElement;
 =======
 ;
@@ -85,6 +91,7 @@ const Breadcrumb = React && React.forwardRef<;
     separator?: React && React.ReactNode;
   }
 >(({ className, separator, ...props }, ref) => (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
  
@@ -632,3 +639,9 @@ return (<Comp ref= {
 ;
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import * as React from "react"
+import {Slot} from "@radix-ui/react-slot"
+import {ChevronRight} from "lucide-react"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

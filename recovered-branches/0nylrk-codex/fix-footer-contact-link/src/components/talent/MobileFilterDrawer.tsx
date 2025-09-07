@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -25,6 +26,8 @@ import {FilterSidebar} from "@/components/talent/FilterSidebar";
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {Drawer} from "@/components/ui/drawer";
 import {FilterSidebar} from "@/components/talent/FilterSidebar";
@@ -72,8 +75,12 @@ interface MobileFilterDrawerProps {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 
+export function MobileFilterDrawer({
+  isMobileFilterOpen;
 
+  setIsMobileFilterOpen
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -92,10 +99,13 @@ export function MobileFilterDrawer({
   setIsMobileFilterOpen
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function MobileFilterDrawer({ ;
   isMobileFilterOpen;
 export function MobileFilterDrawer({ 
   isMobileFilterOpen,
+<<<<<<< HEAD
   setIsMobileFilterOpen, 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -143,14 +153,29 @@ import { FilterSidebar } from "@/components/talent/FilterSidebar",  filterProps
 
 
 
+=======
+  setIsMobileFilterOpen,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   filterProps
 }: MobileFilterDrawerProps) {
   return (
     <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
       <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">
 
+<FilterSidebar
+        <FilterSidebar
 import React from "react",;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+}: MobileFilterDrawerProps) {
+  return (
+    <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
+      <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">import React from "react",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Drawer } from "@/components/ui/drawer",;
 =======
 "
@@ -190,8 +215,11 @@ export function MobileFilterDrawer() { return null; }
 
         <FilterSidebar 
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {...filterProps}
           isMobileFilterOpen={isMobileFilterOpen}
         />
@@ -202,7 +230,48 @@ export function MobileFilterDrawer() { return null; }
 
 =======
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React from "react";
+import {Drawer} from "@/components/ui/drawer";
+import {FilterSidebar} from "@/components/talent/FilterSidebar";
+interface MobileFilterDrawerProps {;
+  isMobileFilterOpen: boolean,;
+  setIsMobileFilterOpen: (isOpen: boolean) => void,;
+  filterProps: any, // We'll pass all filter-related props through this object;
+}
+
+export function MobileFilterDrawer(): any ({ ;
+  isMobileFilterOpen;
+  setIsMobileFilterOpen, ;
+  filterProps;
+}: MobileFilterDrawerProps) {;
+  return (
+    <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>;
+      <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">;
+        <FilterSidebar
+
+import React from "react",;
+import { Drawer } from "@/components/ui/drawer",;
+import { FilterSidebar } from "@/components/talent/FilterSidebar",;
+;
+interface MobileFilterDrawerProps {;
+  isMobileFilterOpen:boolean,;
+  setIsMobileFilterOpen:(isOpen:boolean) => void,;
+  filterProps:any, // We'll pass all filter-related props through this object;
+}
+;
+export function MobileFilterDrawer({ ;
+  isMobileFilterOpen,;
+  setIsMobileFilterOpen, ;
+  filterProps;
+} MobileFilterDrawerProps) {;
+  return (;
+    <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>;
+      <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">;
+        <FilterSidebar ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {...filterProps}
           isMobileFilterOpen={isMobileFilterOpen}
         />;
@@ -245,8 +314,50 @@ function MobileFilterDrawer() {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <div className="p - 4 bg - zion - blue - dark border - t border - zion - blue - light h-[85vh] overflow - auto">;
         <FilterSidebar;
-          {...filter_props}
+
+
+
+import React from "react";""
+import {Drawer} from "@/components/ui/drawer";""
+import {FilterSidebar} from "@/components/talent/FilterSidebar";""
+import React from "react",""
+import { Drawer } from "@/components/ui/drawer";""
+import { FilterSidebar } from "@/components/talent/FilterSidebar";""
+import { Drawer } from "@/components/ui/drawer",""
+import { FilterSidebar } from "@/components/talent/FilterSidebar","
+interface MobileFilterDrawerProps {
+  // TODO: Implement
+}
+  isMobileFilterOpen: boolean;,
+  setIsMobileFilterOpen: (isOpen: boolean) => void;,"
+  filterProps: any, // We'll pass all filter-related props through this object;
+
+
+
+
+
+
+
+  filterProps;
+}: MobileFilterDrawerProps) {
+  return (
+    <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
+
+      <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">"
+</div>
+    <Drawer open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>;
+"
+      <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto">;"
+        <FilterSidebar;
+
+          {...filterProps}
           isMobileFilterOpen={isMobileFilterOpen}
+        />
+
+      </div>;
+    ;
+      <div className="p - 4 bg - zion - blue - dark border - t border - zion - blue - light h-[85vh] overflow - auto">;"
+          {...filter_props}
         />;
       </div>;
     </Drawer>);
@@ -268,8 +379,11 @@ filterProps: any, //We'll pass all filter-related props through this object
 setIsMobileFilterOpen;
 filterProps 
 }: MobileFilterDrawerProps) {
+
+      </div>;)
+    );
   return (<Drawer open= {
-  isMobileFilterOpen 
+  isMobileFilterOpen;
 }onOpenChange= {
   setIsMobileFilterOpen 
 }> <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto" > ...filterProps 
@@ -278,6 +392,7 @@ filterProps
 }/> </div> </Drawer>) 
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -296,3 +411,13 @@ filterProps
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  setIsMobileFilterOpen;"
+}> <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto" > ...filterProps;"
+)
+}/> </div> ) "
+pr-12325
+</Drawer>)
+}/> </div> </Drawer>) "
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

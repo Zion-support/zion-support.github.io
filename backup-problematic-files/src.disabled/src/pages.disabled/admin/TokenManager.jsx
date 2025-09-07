@@ -9,6 +9,8 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -27,7 +29,7 @@ import React from 'react';
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);'
   }
   
   render() {
@@ -57,14 +59,18 @@ export default function TokenManager({ }: TokenManagerProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/pages.disabled/admin/TokenManager.jsx
 }
+<<<<<<< HEAD
 =======
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/src.disabled/src/pages.disabled/admin/TokenManager.jsx
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -77,3 +83,14 @@ class ErrorBoundary extends React.Component {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      return <div>Something went wrong.</div>;'
+import { useEffect,useState } from \'react\';\''\'; import { Card,CardContent,CardHeader,CardTitle } from \'@/components/ui/card\';\''\'; import { Button } from \'@/components/ui/button\';\''\'; import { Input } from \'@/components/ui/input\';\''\'; import { useAuth } from \'@/hooks/useAuth\';\''\'; import { supabase } from \'@/integrations/supabase/client\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\';\''\'; import { Tabs,TabsList,TabsTrigger,TabsContent } from \'@/components/ui/tabs\';\''\'; import { useToast } from \'@/hooks/use-toast\';\''\'; import { apiClient } from \'@/utils/apiClient\'; export { function }; export {}; return null} const { user } = useAuth(); const { toast } = useToast(); const [transactions,setTransactions] = useState([]);\'; const [userId,setUserId] = useState(\''); const [amount,setAmount] = useState(0);\'; const isAdmin = user?.userType === \'admin\'; useEffect(() => {} if (isAdmin) fetchTransactions();},[isAdmin]); const fetchTransactions = async () => {} \'; \''; \''\'; const { data,error } = await supabase\''\''; .from(\'token_transactions\')\''\'; .select(\'*\')\''\'; .order(\'created_at\',{ \"ascending\": \'false\' }); .limit(100); if (!error) setTransactions(data || []);}; const handleIssue = async type => {} if (!userId || amount <div>Broken JSX</div> <ProtectedRoute adminOnly> <div> <div className=\"min-h-screen bg-zion-blue px-4 py-8\"> <div className=\"container mx-auto\"> <h1 className=\"text-3xl font-bold text-white mb-6\"> Token Manager\"; </h1> <Card className=\"mb-6\"> <CardHeader> <CardTitle>Issue or Revoke Tokens</CardTitle>\"; </CardHeader> <CardContent className=\"space-y-4\">\"; <div>Broken JSX</div> onChange={e => setUserId(e && e.target.value)} />\"; <div>Broken JSX</div> onChange={e => setAmount(parseInt(e && e.target.value))}\"; /> <div className=\"flex gap-2\">\'; <Button onClick={() => handleIssue(\'earn\')}>Issue</Button>\"; <div>Broken JSX</div> onClick={() => handleIssue(\'burn\')} > Revoke; ></div> ></div> ></div> </Card>\"; <Tabs defaultValue=\"history\">\"; <TabsList> <TabsTrigger value=\"history\">Transaction History</TabsTrigger>\"; </TabsList> <TabsContent value=\"history\"> <ul className=\"space-y-2\"> {}; <span>{tx && tx.user_id}></div> <span>\'; {tx && tx.transaction_type === \'earn\' ? \'+\' : \'-\'} {tx && tx.amount} ></div> ></div> ))} ></div> ></div> ></div> ></div> ></div> ></div> </ProtectedRoute>)} ; export { TokenManager }; export { TokenManager }; export { TokenManager }; export { TokenManager }; export { TokenManager };''
+const { useEffect,useState } from "react";"""; import { Card,CardContent,CardHeader,CardTitle } from "@/components/ui/card";"""; import { Button } from "@/components/ui/button";"""; import { Input } from "@/components/ui/input";"""; import { useAuth } from "@/hooks/useAuth";"""; import { supabase } from "@/integrations/supabase/client";"""; import { ProtectedRoute } from "@/components/ProtectedRoute";"""; import { Tabs,TabsList,TabsTrigger,TabsContent } from "@/components/ui/tabs";"""; import { useToast } from "@/hooks/use-toast";"""; import { apiClient } from "@/utils/apiClient"; export { function }; export {}; return null} const { user } = useAuth(); const { toast } = useToast(); const [transactions,setTransactions] = useState([]);"; const [userId,setUserId] = useState(""); const [amount,setAmount] = useState(0);"; const isAdmin = user?.userType === "admin"; useEffect(() => {} if (isAdmin) fetchTransactions();},[isAdmin]); const fetchTransactions = async () => {} "; ""; """; const { data,error } = await supabase""""; .from("token_transactions")"""; .select("*")"""; .order("created_at",{ ascending: "false" }); .limit(100); if (!error) setTransactions(data | []);}; const handleIssue = async type => {} if (!userId | amount <div>Broken JSX</div> <ProtectedRoute adminOnly> <div> <div className="min-h-screen bg-zion-blue px-4 py-8"> <div className="container mx-auto"> <h1 className="text-3xl font-bold text-white mb-6"> Token Manager"; </h1> <Card className="mb-6"> <CardHeader> <CardTitle>Issue or Revoke Tokens</CardTitle>"; </CardHeader> <CardContent className="space-y-4">"; <div>Broken JSX</div> onChange={e => setUserId(e && e.target.value)} />"; <div>Broken JSX</div> onChange={e => setAmount(parseInt(e && e.target.value))}"; /> <div className="flex gap-2">"; <Button onClick={() => handleIssue("earn")}>Issue</Button>"; <div>Broken JSX</div> onClick={() => handleIssue("burn")} > Revoke; ></div> ></div> ></div> </Card>"; <Tabs defaultValue="history">"; <TabsList> <TabsTrigger value="history">Transaction History</TabsTrigger>"; </TabsList> <TabsContent value="history"> <ul className="space-y-2"> {}; <span>{tx && tx.user_id}></div> <span>"; {tx && tx.transaction_type === "earn" ? "+" : "-"} {tx && tx.amount} ></div> ></div> ))} ></div> ></div> ></div> ></div> ></div> ></div> </ProtectedRoute>)} ; export { TokenManager }; export { TokenManager }; export { TokenManager }; export { TokenManager }; export { TokenManager };""""
+pr-12325
+    <div>
+</div>
+      <h1>TokenManager</h1>
+      <p>This component is currently under development.</p>
+    </div>"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

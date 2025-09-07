@@ -2,8 +2,9 @@
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
+<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {}
     return { hasError: true };
@@ -15,24 +16,36 @@ class ErrorBoundary extends React.Component {}
   
   render() {}
     if (this.state.hasError) {}
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true ;};
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: ';, error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
-
 
 import React from './react';
 import SEO from "../components / SEO";
@@ -46,14 +59,11 @@ function ApiPerformanceTestingPage() {
     "SLO - aware latency reports",
 
 
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
-
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+
 export default function ApiPerformanceTestingPage() {;
   const features = [;
     "k6/Gatling-compatible test runner",;
@@ -62,7 +72,8 @@ export default function ApiPerformanceTestingPage() {;
     "CI checks and PR annotations",;
     "Synthetic traffic for staging",;
   ];
-import React from 'react',
+import React from 'react';
+
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 import React from "react";
@@ -71,6 +82,7 @@ import { Check, ExternalLink } from "lucide-react";
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -117,6 +129,24 @@ pr-12243
     "SLO-aware latency reports",
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export default function ApiPerformanceTestingPage() {
+
+  const features = [
+    "k6/Gatling-compatible test runner"
+    "SLO-aware latency reports"
+    "Regression baselines per endpoint"
+    "CI checks and PR annotations"
+    "Synthetic traffic for staging"
+  ];
+  return (
+
+export default function ApiPerformanceTestingPage() {
+  const features = [
+    "k6/Gatling-compatible test runner",
+    "SLO-aware latency reports",
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -182,6 +212,7 @@ pr-12243
             >;"
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             </a>;
@@ -211,6 +242,8 @@ pr-12243
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             </a>;
           </div>;
@@ -218,6 +251,10 @@ pr-12243
       </main>;
 
     </>);
+<<<<<<< HEAD
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>;
       <SEO;
@@ -240,8 +277,13 @@ return (
   return (
   return (
   return (
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  return (
+  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>
       <SEO"
         title="API Performance Testing""
@@ -300,9 +342,14 @@ return (
       </main>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 
+</>);
+}
 
 pr-12243
 =======
@@ -310,6 +357,7 @@ pr-12243
     </>);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -328,6 +376,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     </>);
 }
@@ -336,10 +386,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	];
 <<<<<<< HEAD
+<<<<<<< HEAD
 	const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+	const features = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 	return (
 		<>"
 			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />"
@@ -371,6 +426,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 		</>
 );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);
 }
@@ -667,3 +723,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

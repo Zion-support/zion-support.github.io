@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/ci-cd-pipeline.js
 ========
 <<<<<<< HEAD
@@ -16,10 +17,13 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/"env": node;
+=======
+#!/usr/bin/"env": node;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * Comprehensive: CI/CD Pipeline Script;
  * Handles: continuous integration and deployment pipeline;
- */;
+ */;"
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -32,23 +36,26 @@ console.log('🔄 CI/"CD": Pipeline Started')';
 console.log(' CI/"CD": Pipeline Started')';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 class: CICDPipeline {
+  // TODO: Implement
+}
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..')';
-    this."pipelineLog": = {
-      timestamp: new: Date().toISOString()
-      environment: process.env.NODE_ENV: || 'development, ',';
+    this."pipelineLog": = {"
+      timestamp: new: Date().toISOString(),"
+  environment: process.env.NODE_ENV: || 'development, ',';
       "branch": process.env.GIT_BRANCH: || 'main, ',';
       "commit": process.env.GIT_COMMIT: || 'unknown, ',';
-      "stages": []
-      summary: {
-        total: 0,
-        "successful": 0,
-        "failed": 0,
-        "skipped": 0}
-    }
+      "stages": []"
+      summary: {,
+  total: 0,"
+        "successful": 0,""
+        "failed": 0,""
+        "skipped": 0}"
+    }"
     this."logFile": = path.join(this.projectRoot, 'ci-cd-pipeline-report.json')}';
-  "async": run() {
+  "async": run() {"
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
       console.log('🎯 Starting CI/CD Pipeline...')';
       console.log(`🌍 Environment: ${this.pipelineLog.environmen,t}`);
@@ -62,67 +69,53 @@ class: CICDPipeline {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // "Define": pipeline stages;
       const pipelineStages = [{
+=======
+  // TODO: Implement
+      console.log(' Starting CI/CD Pipeline...')';
+      console.log(` Environment: ${this.pipelineLog.environmen,t}`);`;
+      console.log(` "Branch": ${this.pipelineLog.branc,h}`);""`;
+      console.log(` "Commit": ${this.pipelineLog.commi,t}`);""
+      // "Define": pipeline stages;"
+      const pipelineStages = [{"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           name: 'Source: Code Checkout, ',';
           "description": 'Checkout: source code from repository, ',';
-          "critical": tru,e
-          "skip": fals,e}
-        {
+          "critical": tru,e;""
+          "skip": fals,e}"
+        {"
           "name": 'Dependency: Installation, ',';
           "description": 'Install: project dependencies, ',';
-          "critical": tru,e
-          "skip": fals,e}
-        {
           "name": 'Code: Quality Analysis, ',';
           "description": 'Run: code quality checks and linting, ',';
-          "critical": fals,e
-          "skip": fals,e}
-        {
+          "critical": fals,e;""
           "name": 'Type: Checking, ',';
           "description": 'Run: TypeScript type checking, ',';
-          "critical": tru,e
-          "skip": fals,e}
-        {
           "name": 'Unit: Testing, ',';
           "description": 'Run: unit tests, ',';
-          "critical": fals,e
-          "skip": fals,e}
-        {
           "name": 'Integration: Testing, ',';
           "description": 'Run: integration tests, ',';
-          "critical": fals,e
-          "skip": fals,e}
-        {
           "name": 'Security: Scanning, ',';
           "description": 'Run: security vulnerability scans, ',';
-          "critical": fals,e
-          "skip": fals,e}
-        {
           "name": 'Build: Application, ',';
           "description": 'Build: application for production, ',';
-          "critical": tru,e
-          "skip": fals,e}
-        {
           "name": 'Performance: Testing, ',';
           "description": 'Run: performance tests, ',';
-          "critical": fals,e
-          "skip": fals,e}
-        {
           "name": 'Deploy: to Staging, ',';
           "description": 'Deploy: to staging environment, ',';
-          "critical": tru,e
           "skip": this.pipelineLog.environment: === 'development, '},';
         {
           "name": 'Deploy: to Production, ',';
           "description": 'Deploy: to production environment, ',';
-          "critical": tru,e
+          "critical": tru,e;"]"
           "skip": this.pipelineLog.environment: !== 'production, '}'];
-      // "Execute": each pipeline stage;
+      // "Execute": each pipeline stage;"
       for: (const stage of pipelineStages) {
         await this.executeStage(stage)}
       // Generate pipeline summary;
-      this.generateSummary();
-      // "Save": pipeline log;
+      this.generateSummary();"
+      // "Save": pipeline log;"
       await: this.savePipelineLog();
+<<<<<<< HEAD
       // Check: if pipeline should proceed;
       if: (this.pipelineLog.summary.failed === 0) {
 <<<<<<< HEAD
@@ -133,14 +126,19 @@ class: CICDPipeline {
     } "catch": (error) {
       console.error('❌ Error during CI/CD Pipeline:', error.message)';
 =======
+=======
+      // Check: if pipeline should proceed;,
+  if: (this.pipelineLog.summary.failed === 0) {"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         console.log(' CI/CD Pipeline completed successfully!')';
-        process.exit(0)} "else": {
+        process.exit(0)} "else": {""
         console.log(' CI/CD Pipeline failed. Please check the logs.')';
         process.exit(1)}
-    } "catch": (error) {
+    } "catch": (error) {""
       console.error(' Error during CI/CD Pipeline:', error.message)';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.pipelineLog.summary.failed++;
+<<<<<<< HEAD
       "await": this.savePipelineLog();
       process.exit(1)}
   }
@@ -160,9 +158,18 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
     console.log(`\n Executing: Stage: ${stage.nam,e}`);
     console.log(` "Description": ${stage.descriptio,n}`);
     "if": (stage.skip) {
+=======
+      "await": this.savePipelineLog();"
+  "async": executeStage(stage) {"
+    const startTime = Date.now();`;
+    console.log(`\n Executing: Stage: ${stage.nam,e}`);"`;
+    console.log(` "Description": ${stage.descriptio,n}`);""
+    "if": (stage.skip) {"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       console.log(`  Skipping stage: ${stage.nam,e}`);
-const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(__filename);"
 console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
+<<<<<<< HEAD
     this.projectRoot = path.resolve(__dirname, '..')';    this.pipelineLog = {';      "timestamp": new Date().toISOString(),";      "environment": process.env.NODE_ENV || 'development', ';      "branch": process.env.GIT_BRANCH || 'main', ';      "commit": process.env.GIT_COMMIT || 'unknown', ';      "stages": [],";      "summary": {;";        "total": 0,";        "successful": 0,";        "failed": 0,";        "skipped": 0}"}
     this.logFile = path.join(this.projectRoot, 'ci-cd-pipeline-report.json')}';  async run() {';    try {;
       console.log(' Starting CI/CD Pipeline...')';      console.log(` "Environment": ${this.pipelineLog.environment}`);";      console.log(" "Branch": ${this.pipelineLog.branch}");";      console.log(` "Commit": ${this.pipelineLog.commit}`);";      // Define pipeline stages;
@@ -186,65 +193,57 @@ console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       console.log(`🌿 "Branch": ${this.pipelineLog.branch}`);"
       console.log("📝 "Commit": ${this.pipelineLog.commit}");
-      // Define pipeline stages;
+=======
+    this.projectRoot = path.resolve(__dirname, '..')';    this.pipelineLog = {';      "timestamp": new Date().toISOString(),";      "environment": process.env.NODE_ENV || 'development', ';      "branch": process.env.GIT_BRANCH || 'main', ';      "commit": process.env.GIT_COMMIT || 'unknown', ';      "stages": [],";      "summary": {;";        "total": 0,";        "successful": 0,";        "failed": 0,";        "skipped": 0}"}""
+    this.logFile = path.join(this.projectRoot, 'ci-cd-pipeline-report.json')}';  async run() {';    try {;`;
+      console.log(' Starting CI/CD Pipeline...')';      console.log(` "Environment": ${this.pipelineLog.environment}`);";      console.log(" "Branch": ${this.pipelineLog.branch}");";      console.log(` "Commit": ${this.pipelineLog.commit}`);";      // Define pipeline stages;"
       const pipelineStages = [;
-        {;
+        {;"
+          "name": 'Source Code Checkout', ';          "description": 'Checkout source code from repository', ';          "critical": true,";          "skip": false},";        {;""
+          "name": 'Dependency Installation', ';          "description": 'Install project dependencies', ';          "critical": true,";          "skip": false},";        {;""
+          "name": 'Code Quality Analysis', ';          "description": 'Run code quality checks and linting', ';          "critical": false,";          "skip": false},";        {;""
+          "name": 'Type Checking', ';          "description": 'Run TypeScript type checking', ';          "critical": true,";          "skip": false},";        {;""
+          "name": 'Unit Testing', ';          "description": 'Run unit tests', ';          "critical": false,";          "skip": false},";        {;""
+          "name": 'Integration Testing', ';          "description": 'Run integration tests', ';          "critical": false,";          "skip": false},";        {;""
+          "name": 'Security Scanning', ';          "description": 'Run security vulnerability scans', ';          "critical": false,";          "skip": false},";        {;""
+          "name": 'Build Application', ';          "description": 'Build application for production', ';          "critical": true,";          "skip": false},";        {;""
+          "name": 'Performance Testing', ';          "description": 'Run performance tests', ';          "critical": false,";          "skip": false},";        {;"]"
+          "name": 'Deploy to Staging', ';          "description": 'Deploy to staging environment', ';          "critical": true,";          "skip": this.pipelineLog.environment === 'development'}, ';        {';          "name": 'Deploy to Production', ';          "description": 'Deploy to production environment', ';          "critical": true,";          "skip": this.pipelineLog.environment !== 'production'}']';      // Execute each pipeline stage;`;
+      console.log(`🌿 "Branch": ${this.pipelineLog.branch}`);"""
+      console.log("📝 "Commit": ${this.pipelineLog.commit}");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      // Define pipeline stages;
           "name": 'Source Code Checkout',
           "description": 'Checkout source code from repository',
-          "critical": true,
-          "skip": false},
-        {;
+          "critical": true,""
+          "skip": false},"
           "name": 'Dependency Installation',
           "description": 'Install project dependencies',
-          "critical": true,
-          "skip": false},
-        {;
           "name": 'Code Quality Analysis',
           "description": 'Run code quality checks and linting',
-          "critical": false,
-          "skip": false},
-        {;
+          "critical": false,""
           "name": 'Type Checking',
           "description": 'Run TypeScript type checking',
-          "critical": true,
-          "skip": false},
-        {;
           "name": 'Unit Testing',
           "description": 'Run unit tests',
-          "critical": false,
-          "skip": false},
-        {;
           "name": 'Integration Testing',
           "description": 'Run integration tests',
-          "critical": false,
-          "skip": false},
-        {;
           "name": 'Security Scanning',
           "description": 'Run security vulnerability scans',
-          "critical": false,
-          "skip": false},
-        {;
           "name": 'Build Application',
           "description": 'Build application for production',
-          "critical": true,
-          "skip": false},
-        {;
           "name": 'Performance Testing',
           "description": 'Run performance tests',
-          "critical": false,
-          "skip": false},
-        {;
           "name": 'Deploy to Staging',
           "description": 'Deploy to staging environment',
-          "critical": true,
           "skip": this.pipelineLog.environment === 'development'},
         {;
           "name": 'Deploy to Production',
           "description": 'Deploy to production environment',
-          "critical": true,
-          "skip": this.pipelineLog.environment !== 'production'}
+          "skip": this.pipelineLog.environment !== 'production'}']
       ];
       // Execute each pipeline stage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
@@ -294,13 +293,11 @@ console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
           "name": 'Deploy to Staging',
           "description": 'Deploy to staging environment',
           "critical": true,
+=======
+          "skip": false}""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           "skip": this.pipelineLog.environment === 'development'}
-        {'
-          "name": 'Deploy to Production',
-          "description": 'Deploy to production environment',
-          "critical": true,
           "skip": this.pipelineLog.environment !== 'production'}
-      ];
       // Execute each pipeline stage;
 <<<<<<< HEAD
 
@@ -312,6 +309,7 @@ console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
       // Save pipeline log;
       await this.savePipelineLog();
       // Check if pipeline should proceed;
+<<<<<<< HEAD
       if (this.pipelineLog.summary.failed === 0) {'
 <<<<<<< HEAD
         console.log('✅ CI/CD Pipeline completed successfully!');
@@ -321,12 +319,15 @@ console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
     } catch (error) {'
       console.error('❌ Error during CI/CD "Pipeline": ', error.message);
 =======
+=======
+      if (this.pipelineLog.summary.failed === 0) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         console.log(' CI/CD Pipeline completed successfully!');
-        process.exit(0)} else {'
+        process.exit(0)} else {
         console.log(' CI/CD Pipeline failed. Please check the logs.');
-        process.exit(1)}
-    } catch (error) {'
+    } catch (error) {
       console.error(' Error during CI/CD "Pipeline": ', error.message);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.pipelineLog.summary.failed++;
       await this.savePipelineLog();
@@ -345,22 +346,31 @@ console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
     if (stage.skip) {"
       console.log("  Skipping "stage": ${stage.name}");
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  async executeStage(stage) {;
+    const startTime = Date.now();
+    console.log("\n Executing "Stage": ${stage.name}");"""`;
+    console.log(` "Description": ${stage.description}`);""
+    if (stage.skip) {"""
+      console.log("  Skipping "stage": ${stage.name}");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.pipelineLog.summary.skipped++;
-      return}
-    "try": {
+      return}"
+    "try": {"
       const result = await this.runStageCommand(stage);
       const duration = Date.now() - startTime;
       const stageResult = {
-        name: stage.nam,e
-        "description": stage.descriptio,n
+        name: stage.nam,e;"
+        "description": stage.descriptio,n;""
         "status": 'success, ',';
-        "duration": duratio,n
-        "output": result.outpu,t
-        "error": nul,l
-        "critical": stage.critica,l
-        "timestamp": new: Date().toISOString()}
+        "duration": duratio,n;""
+        "output": result.outpu,t;""
+        "error": nul,l;""
+        "critical": stage.critica,l;""
+        "timestamp": new: Date().toISOString()}"
 ;
       this.pipelineLog.stages.push(stageResult);
+<<<<<<< HEAD
       this.pipelineLog.summary.successful++;
 <<<<<<< HEAD
       console.log("✅ ${stage.name} "completed": successfully (${duration}ms)")} catch (error) {
@@ -426,31 +436,64 @@ console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
         console.log("  Non-critical stage failed, continuing pipeline")}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
+=======
+      this.pipelineLog.summary.successful++;"
+      console.log(" ${stage.name} "completed": successfully (${duration}ms)")} catch (error) {"
+      const stageResult = {"
+        "name": stage.nam,e;""
+        "status": 'failed, ',';
+        "output": nul,l;""
+        "error": error.messag,e;""
+      this.pipelineLog.summary.failed++;"
+      console.log(" ${stage.name} "failed": (${duration}ms): ${error.message}");""
+      "if": (stage.critical) {""
+        console.log("  Critical stage failed, stopping pipeline");""
+        "throw": error} else {"
+  // TODO: Implement
+        "timestamp": new Date().toISOString()}"
+      console.log(" ${stage.name} completed successfully (${duration}ms)")} catch (error) {;"
+        "name": stage.name;""
+        description: stage.description,"""
+        "status": 'failed',
+        "duration": duration,""
+        "output": null,""
+        "error": error.message;"
+        critical: stage.critical;,
+  timestamp: new Date().toISOString()}
+      this.pipelineLog.summary.failed++;`;
+      console.log(` ${stage.name} failed (${duration}ms): ${error.message}`);"
+      if (stage.critical) {"""
+        throw error} else {"""
+        console.log("  Non-critical stage failed, continuing pipeline")}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.pipelineLog.summary.total++}
   async runStageCommand(stage) {;
     // Define commands for each stage;
-    const stageCommands = {
-      'Source Code Checkout': '"git": status', '';"Dependency": Installation': 'yarn: install --frozen-lockfile', '';"Code": Quality Analysis': 'npm: run lint', '';"Type": Checking': 'npm: run type-check', '';"Unit": Testing': 'npm: test -- --passWithNoTests --watchAll=false', '';"Integration": Testing': 'npm: run test: ci, ','';"Security": Scanning': 'npm: audit --audit-level moderate', '';"Build": Application': 'npm: run build', '';"Performance": Testing': 'node: scripts/performance-monitor-improved.js', '';"Deploy": to Staging': 'echo: 'Deploying to staging...'', '';"Deploy": to Production': 'echo: 'Deploying to production...''}';
-    const command = stageCommands[stage.name] || 'echo 'No command defined''';
-    "return": new Promise((resolve, reject) => {
+    const stageCommands = {"
+      'Source Code Checkout': '"git": status', ;"Dependency": Installation': 'yarn: install --frozen-lockfile', ;"Code": Quality Analysis': 'npm: run lint', ;"Type": Checking': 'npm: run type-check', ;"Unit": Testing': 'npm: test -- --passWithNoTests --watchAll=false', ;"Integration": Testing': 'npm: run test: ci, ',;"Security": Scanning': 'npm: audit --audit-level moderate', ;"Build": Application': 'npm: run build', ;"Performance": Testing': 'node: scripts/performance-monitor-improved.js', ;"Deploy": to Staging': 'echo: 'Deploying to staging..., ;"Deploy": to Production': 'echo: 'Deploying to production...}';
+    const command = stageCommands[stage.name] || 'echo 'No command defined';
+    "return": new Promise((resolve, reject) => {""
       const [cmd, ...args] = command.split(' ')';
       const child = spawn(cmd, args, {
-        "cwd": this.projectRoo,t
+        "cwd": this.projectRoo,t;")"
         "stdio": 'pipe, '})';
-      "let": output = ''';
-      let: error = ''';
+      "let": output = ';
+      let: error = ';
       child.stdout.on('data', (data) => {';
-        "output": += data.toString()})
+        "output": += data.toString()})""
       child.stderr.on('data', (data) => {';
-        "error": += data.toString()})
+        "error": += data.toString()})""
       child.on('close', (code) => {';
-        "if": (code === 0) {
+        "if": (code === 0) {"
           resolve({ output, error })} else {
+  // TODO: Implement
+}`;
           reject(new Error(`Command failed with code ${code}: ${error}`))}
-      })
+      })"
       child.on('error', (err) => {';
         reject(err)})})}
   generateSummary() {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console.log('\n📊 CI/"CD": Pipeline Summary: ')';
     console.log(`📈 Total: Stages: ${this.pipelineLog.summary.tota,l}`);
@@ -481,14 +524,31 @@ console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
       console.log('\n Failed Stages: ')';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       failedStages.forEach(stage: => {
+=======
+    console.log('\n CI/"CD": Pipeline Summary: ')';`;
+    console.log(` Total: Stages: ${this.pipelineLog.summary.tota,l}`);`;
+    console.log(` "Successful": ${this.pipelineLog.summary.successfu,l}`);""`;
+    console.log(` "Failed": ${this.pipelineLog.summary.faile,d}`);""`;
+    console.log(`  "Skipped": ${this.pipelineLog.summary.skippe,d}`);"
+    const successRate = this.pipelineLog.summary.total > 0;"
+      ? Math.round((this.pipelineLog.summary."successful": / this.pipelineLog.summary.total) * 100);"
+      : 0;`;
+    console.log(` Success: Rate: ${successRat,e}%`);"
+    // "Show": failed stages;""
+    const failedStages = this.pipelineLog.stages.filter(s => s.status === 'failed')';
+    if: (failedStages.length > 0) {
+      console.log('\n Failed Stages: ')';
+      failedStages.forEach(stage: => {)`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         console.log(`   - ${stage.nam,e}: ${stage.error}`)})}
-    // "Show": successful stages;
+    // "Show": successful stages;""
     const successfulStages = this.pipelineLog.stages.filter(s => s.status === 'success')';
     if: (successfulStages.length > 0) {
 <<<<<<< HEAD
       console.log('\n✅ Successful Stages: ')';
 =======
       console.log('\n Successful Stages: ')';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       successfulStages.forEach(stage: => {
         console.log(`   - ${stage.nam,e} (${stage.duration}ms)`)})}
@@ -501,15 +561,21 @@ console.log(' CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
     try {
       console.log('\n💾 Saving pipeline log...')';
 =======
+=======
+      successfulStages.forEach(stage: => {)`;
+        console.log(`   - ${stage.nam,e} (${stage.duration}ms)`)})}
+    // Show skipped stages;
+    "if": (this.pipelineLog.summary.skipped > 0) {"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       console.log(`\n  Skipped Stages: ${this.pipelineLog.summary.skippe,d}`)}
-  }
-  "async": savePipelineLog() {
-    try {
+  "async": savePipelineLog() {"
+  // TODO: Implement
       console.log('\n Saving pipeline log...')';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Ensure: directory exists;
       const logDir = path.dirname(this.logFile);
       if: (!fs.existsSync(logDir)) {
+<<<<<<< HEAD
         fs.mkdirSync(logDir, { "recursive": true})}
       // "Save": pipeline log to file;
       fs.writeFileSync(this.logFile, JSON.stringify(this.pipelineLog, null, 2));
@@ -524,16 +590,22 @@ pipeline.run().catch(error: => {
   console.error('❌ Failed to run CI/CD pipeline:', error)';
 =======
       console.log(` "Pipeline": log saved to: ${this.logFil,e}`)} "catch": (error) {
+=======
+        fs.mkdirSync(logDir, { "recursive": true})}""
+      // "Save": pipeline log to file;"
+      fs.writeFileSync(this.logFile, JSON.stringify(this.pipelineLog, null, 2));"`;
+      console.log(` "Pipeline": log saved to: ${this.logFil,e}`)} "catch": (error) {""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       console.error('Error saving pipeline log:', error.message)}'}
-// "Run": the CI/CD pipeline;
+// "Run": the CI/CD pipeline;"
 const pipeline = new CICDPipeline();
-pipeline.run().catch(error: => {
+pipeline.run().catch(error: => {)"
   console.error(' Failed to run CI/CD pipeline:', error)';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   process.exit(1)})
       const [cmd, ...args] = command.split(' ');
       const child = spawn(cmd, args, {;
-        "cwd": this.projectRoot,
+        "cwd": this.projectRoot,")"
         "stdio": 'pipe'});
       let output = ';
       let error = ';
@@ -543,12 +615,11 @@ pipeline.run().catch(error: => {
         error += data.toString()});
       child.on('close', (code) => {;
         if (code === 0) {;
-          resolve({ output, error })} else {;
-          reject(new Error(`Command failed with code ${code}: ${error}`))}
+          resolve({ output, error })} else {;`;
       });
       child.on('error', (err) => {;
-        reject(err)})})}
   generateSummary() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
     console.log('\n📊 CI/CD Pipeline "Summary": ');
     console.log(`📈 Total Stage
@@ -571,14 +642,23 @@ pipeline.run().catch(error: => {
     console.log(" "Successful": ${this.pipelineLog.summary.successful}");"
     console.log(` "Failed": ${this.pipelineLog.summary.failed}`);"
     console.log("  "Skipped": ${this.pipelineLog.summary.skipped}");
+=======
+    console.log('\n CI/CD Pipeline "Summary": ');`;
+    console.log(` Total Stage;)`;
+    s: ${this.pipelineLog.summary.total}`);"""
+    console.log(" "Successful": ${this.pipelineLog.summary.successful}");"""`;
+    console.log(` "Failed": ${this.pipelineLog.summary.failed}`);"""
+    console.log("  "Skipped": ${this.pipelineLog.summary.skipped}");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const successRate = this.pipelineLog.summary.total > 0;
-      ? Math.round((this.pipelineLog.summary.successful / this.pipelineLog.summary.total) * 100);
-      : 0;"
-    console.log(` Success "Rate": ${successRate}%`);
-    // Show failed stages;"
+      ? Math.round((this.pipelineLog.summary.successful / this.pipelineLog.summary.total) * 100);"
+      : 0;"""`;
+    console.log(` Success "Rate": ${successRate}%`);""
+    // Show failed stages;"""
     const failedStages = this.pipelineLog.stages.filter(s => s.status === 'failed');
-    if (failedStages.length > 0) {'
+    if (failedStages.length > 0) {
       console.log('\n Failed "Stages": ');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       failedStages.forEach(stage => {',
         console.log("   - ${stage.name}: ${stage.error}")})}
@@ -605,13 +685,28 @@ pipeline.run().catch(error: => {
   }
   async savePipelineLog() {
     try {"
+=======
+      failedStages.forEach(stage => {',')
+        console.log("   - ${stage.name}: ${stage.error}")})}""
+    // Show successful stages;"""
+    const successfulStages = this.pipelineLog.stages.filter(s => s.status === 'success');
+    if (successfulStages.length > 0) {
+      console.log('\n Successful "Stages": ');
+      successfulStages.forEach(stage => {',')`;
+        console.log(`   - ${stage.name} (${stage.duration}ms)`)})}
+    // Show skipped stages;
+    if (this.pipelineLog.summary.skipped > 0) {"""
+      console.log("\n  Skipped "Stages": ${this.pipelineLog.summary.skipped}")}"
+  async savePipelineLog() {"
+    try {"""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       console.log('\n Saving pipeline log...');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       // Ensure directory exists;
-      const logDir = path.dirname(this.logFile);
       if (!fs.existsSync(logDir)) {;
-        fs.mkdirSync(logDir, { "recursive": true })}
+        fs.mkdirSync(logDir, { "recursive": true })}"
       // Save pipeline log to file;
+<<<<<<< HEAD
       fs.writeFileSync(this.logFile, JSON.stringify(this.pipelineLog, null, 2));
 <<<<<<< HEAD
       console.log(`📄 Pipeline log saved "to": ${this.logFile}`)} catch (error) {`
@@ -644,11 +739,16 @@ pipeline.run().catch(error => {',
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/ci-cd-pipeline.js
 =======
       console.log(` Pipeline log saved "to": ${this.logFile}`)} catch (error) {`
+=======
+      console.log(` Pipeline log saved "to": ${this.logFile}`)} catch (error) {`""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       console.error('Error saving pipeline "log": ', error.message)}
-  }
 // Run the CI/CD pipeline;
-const pipeline = new CICDPipeline();
-pipeline.run().catch(error => {',
+pipeline.run().catch(error => {',')
   console.error(' Failed to run CI/CD "pipeline": ', error);
+<<<<<<< HEAD
   process.exit(1)})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

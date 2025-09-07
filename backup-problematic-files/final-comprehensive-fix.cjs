@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -11,45 +12,26 @@ const fs = require('fs');
 const fs = require('fs');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Function to fix all remaining syntax errors
+=======
+
+const fs = require('fs');
+// Function to fix all remaining syntax errors;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function fixSyntaxErrors(content) {
-  // Fix extra commas in JSX attributes
-  content = content.replace(/className="[^"]*"\s*,\s*>/g, (match) => {
-    return match.replace(/,\s*$/, '')});
-  // Fix malformed function "declarations": {, -> {
-  content = content.replace(/\{\s*,/g, '{');
-  // Fix malformed JSX "elements": >, -> >
-  content = content.replace(/>\s*,\s*$/gm, '>');
-  // Fix malformed JSX "elements": >, -> >
-  content = content.replace(/>\s*,\s*</g, '><');
-  // Fix malformed function "declarations": ) {, -> ) {
-  content = content.replace(/\)\s*\{\s*,/g, ') {');
-  // Fix malformed JSX "elements": >, -> >
-  content = content.replace(/>\s*,\s*$/gm, '>');
-  // Fix missing closing braces in for loops
-  content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
-    return match.replace(/\}\);/g, '}\n      });')});
-  // Fix missing closing braces in for loops (alternative pattern)
-  content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
-    return match.replace(/\}\);/g, '}\n      });')});
-  // Fix malformed JSON "objects": {, -> {
-  content = content.replace(/JSON\.stringify\(\{\s*,/g, 'JSON.stringify({');
-  // Fix missing closing braces in for loops (CLS pattern)
-  content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\s*console\.log\('"CLS": ', clsValue\);\s*\}\);/g, (match) => {
-    return match.replace(/\}\);/g, '}\n      });')});
+  // Fix extra commas in JSX attributes;
+
   return content}
-// Function to process a file
+// Function to process a file;
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8';);
-    const fixedContent = fixSyntaxErrors(conten;t;);
-    if ( {
-      fs.writeFileSync(filePath, fixedContent, 'utf8')) {
-     {
-      fs.writeFileSync(filePath, fixedContent, 'utf8')}
+  // TODO: Implement
+}
+
       return true}
     return false} catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
     return false}
+<<<<<<< HEAD
 }
 console.log('🔧 Applying final comprehensive fixes...');
 // Fix SEO.tsx - remove everything after the return statement
@@ -172,15 +154,18 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 console.log(`\n📊 Syntax fixing complete:`)) {
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 console.log(`\n📊 Syntax fixing complete:`)) {
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ) {
-    ) {
     if (processFile(file)) {
       totalFixed++}
+<<<<<<< HEAD
   }
 }
 }
@@ -265,3 +250,6 @@ const fs = require('fs')
 =======
   .replace(/"isLoading": fals e/g, '"isLoading")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

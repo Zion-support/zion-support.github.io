@@ -1,49 +1,55 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
+=======
+#!/usr/bin/env node;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * Dependency Manager - PM2 Automation;
  * Automatically manages and fixes dependency issues;
  */;
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**;
- * Dependency Manager - PM2 Automation;
- * Automatically manages and fixes dependency issues;
- */;
+ */;"
 const fs = require("fs");
 const path = require("path");
+<<<<<<< HEAD
 const { execSync, spawn } = require("child_process");
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+const { execSync, spawn } = require("child_process");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
-    this.logFile = path.join(;)
+    this.logFile = path.join(;)"
       this.projectRoot,logs",
-      "dependency-manager.log";
-    );
-    this.reportsDir = path.join(this.projectRoot, "logs", "dependency-reports");
+      "dependency-manager.log";"
+    );"
+    this.reportsDir = path.join(this.projectRoot, "logs", "dependency-reports");"
     this.ensureLogsDirectory()};
 ;
   ensureLogsDirectory() {}
   const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {}
-  fs.mkdirSync(logsDir, { "recursive": true })};
-;
-    if (!fs.existsSync(this.reportsDir)) {}
-  fs.mkdirSync(this.reportsDir, { "recursive": true })};
+    if (!fs.existsSync(logsDir)) {}"
+  fs.mkdirSync(logsDir, { "recursive": true })};"
+    if (!fs.existsSync(this.reportsDir)) {}"
+  fs.mkdirSync(this.reportsDir, { "recursive": true })};"
   };
-;
+;"
   log(message, level = "INFO") {}
-  log(message, level = "INFO") {}
+  log(message, level = "INFO") {}"
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -56,6 +62,11 @@ class $1 {}
 ;
   async runDependencyManagement() {}
   this.log("Starting dependency management automation...");
+=======
+
+  async runDependencyManagement() {}"
+  this.log("Starting dependency management automation...");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const actions = [];
     const errors = [];
     try {}
@@ -67,17 +78,14 @@ class $1 {}
           status.packageJsonIssues;
         );
         actions.push(...packageFixes)};
-;
       // 3. Clean corrupted dependencies;
       if (status.corruptedDeps.length > 0) {}
   const cleanupActions = await this.cleanCorruptedDependencies();
         actions.push(...cleanupActions)};
-;
       // 4. Reinstall dependencies if needed;
       if (status.needsReinstall) {}
   const reinstallActions = await this.reinstallDependencies();
         actions.push(...reinstallActions)};
-;
       // 5. Update outdated dependencies;
       const updateActions = await this.updateDependencies();
       actions.push(...updateActions);
@@ -86,37 +94,35 @@ class $1 {}
         status,
         actions,
         errors;
-      );
       // 7. Commit changes if successful;
       if (actions.length > 0 && errors.length === 0) {}
-  await this.commitDependencyChanges(actions)};
-    } catch (error) {  this.log(`Dependency management "failed": ${error.message  }`, "ERROR");
-      errors.push({})
+
+      errors.push({})"
   "type": "SYSTEM_ERROR",
         "message": error.message,
+<<<<<<< HEAD
         "timestamp": new Date().toISOString(),
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        "timestamp": new Date().toISOString(),"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // 3. Clean corrupted dependencies;
-      if (status.corruptedDeps.length > 0) {}
-  const cleanupActions = await this.cleanCorruptedDependencies();
-        actions.push(...cleanupActions)};
-;
       // 4. Reinstall dependencies if needed;
-      if (status.needsReinstall) {}
-  const reinstallActions = await this.reinstallDependencies();
-        actions.push(...reinstallActions)};
-;
       // 5. Update outdated dependencies;
+<<<<<<< HEAD
       const updateActions = await this.updateDependencies();
       actions.push(...updateActions);
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // 6. Generate dependency report;
+<<<<<<< HEAD
       const report = await this.generateDependencyReport(;)
         status,
         actions,
@@ -124,63 +130,51 @@ class $1 {}
       );
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // 7. Commit changes if successful;
-      if (actions.length > 0 && errors.length === 0) {}
-  await this.commitDependencyChanges(actions)};
-    } catch (error) {this.log(`Dependency management "failed": ${error.message}`, "ERROR");
-      errors.push({})
-  "type": "SYSTEM_ERROR",
-        "message": error.message,
-        "timestamp": new Date().toISOString()})};
-;
+
+        "timestamp": new Date().toISOString()})};"
     return { actions, errors };
-  };
-;
   async checkDependencyStatus() {}
-  const status = {}
+  const status = {}"
   "packageJsonIssues": [],
       "corruptedDeps": [],
       "needsReinstall": false,
-      "outdatedDeps": []};
-    try {}
-  // Check package.json;
-      const packagePath = path.join(this.projectRoot, "package.json");
+      "outdatedDeps": []};"
+  // Check package.json;"
+      const packagePath = path.join(this.projectRoot, "package.json");"
       if (fs.existsSync(packagePath)) {}
-  try {}
-  const packageContent = fs.readFileSync(packagePath, "utf8");
+  try {}"
+  const packageContent = fs.readFileSync(packagePath, "utf8");"
           const packageJson = JSON.parse(packageContent);
           // Check for invalid versions;
-          if (packageJson.dependencies) {}
-  for (const ["dep", "version"] of Object.entries(;)
+          if (packageJson.dependencies) {}"
+  for (const ["dep", "version"] of Object.entries(;)"
               packageJson.dependencies;
-            )) {}
-  if (typeof version !== "string" || version.trim() === "") {}
-  status.packageJsonIssues.push({})
+            )) {}"
+  if (typeof version !== "string" || version.trim() === ) {}"
+  status.packageJsonIssues.push({})"
   "type": "INVALID_VERSION",
                   "dependency": dep,
+<<<<<<< HEAD
                   "current": version,
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+                  "current": version,"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           // Check for invalid versions;
-          if (packageJson.dependencies) {}
-  for (const ["dep", "version"] of Object.entries(;)
-              packageJson.dependencies;
-            )) {}
-  if (typeof version !== "string" || version.trim() === ") {}
-  status.packageJsonIssues.push({})
-  "type": "INVALID_VERSION",
-                  "dependency": dep,
-                  "current": version})};
-            };
-          };
-;
-          if (packageJson.devDependencies) {}
-  for (const ["dep", "version"] of Object.entries(;)
+  if (typeof version !== "string" || version.trim() === ") {}"
+
+                  "current": version})};"
+          if (packageJson.devDependencies) {}"
               packageJson.devDependencies;
+<<<<<<< HEAD
             )) {}
   if (typeof version !== "string" || version.trim() === "") {}
   status.packageJsonIssues.push({})
@@ -210,7 +204,15 @@ class $1 {}
 ;
       // Check node_modules;
       const nodeModulesPath = path.join(this.projectRoot, "node_modules");
+=======
+
+            "error": error.message})};"
+      // Check node_modules;"
+      const nodeModulesPath = path.join(this.projectRoot, "node_modules");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (fs.existsSync(nodeModulesPath)) {}
+
+      // Check node_modules;"
   const corrupted = await this.findCorruptedPackages(nodeModulesPath);
         status.corruptedDeps = corrupted;
 <<<<<<< HEAD
@@ -220,24 +222,20 @@ class $1 {}
         if (corrupted.length > 0) {}
   status.needsReinstall = true};
       } else {}
-  status.needsReinstall = true};
-;
       // Check for outdated dependencies;
-      try {}
   const outdated = await this.checkOutdatedDependencies();
-        status.outdatedDeps = outdated} catch (error) {}
-  this.log(Failed to check outdated "dependencies": ${error.message  }",)
-          "WARN";
-        )};
-    } catch (error) {  this.log("Dependency status check "failed": ${error.message  }", "ERROR")};
-;
+        status.outdatedDeps = outdated} catch (error) {}"
+  this.log(Failed to check outdated "dependencies": ${error.message  }")
+          "WARN";"
+        )};"
+    } catch (error) {  this.log("Dependency status check "failed": ${error.message  }", "ERROR")};"
     return status};
-;
   async findCorruptedPackages(nodeModulesPath) {}
   const corrupted = [];
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
   const packages = fs.readdirSync(nodeModulesPath);
@@ -257,15 +255,22 @@ class $1 {}
         const pkgJsonPath = path.join(pkgPath", "package.json");
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  const packages = fs.readdirSync(nodeModulesPath);
+      for (const pkg of packages) {}"
+  if (pkg.startsWith(".")) continue;"
+
+        const pkgJsonPath = path.join(pkgPath", "package.json");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         if (fs.existsSync(pkgJsonPath)) {}
-  try {}
-  const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, "utf8"));
+  const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, "utf8"));"
             if (!pkgJson.name || !pkgJson.version) {}
-  corrupted.push({})
+  corrupted.push({})"
   "name": pkg,
                 "issue": "Missing name or version",
-                "path": pkgPath})};
+                "path": pkgPath})};"
           } catch {}
+<<<<<<< HEAD
   corrupted.push({})
   "name": pkg,
               "issue": "Invalid package.json",
@@ -290,25 +295,33 @@ class $1 {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    return corrupted};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async checkOutdatedDependencies() {}
-  try {}
-  const result = execSync("npm outdated --json", {})
-  "cwd": this.projectRoot,
-        "stdio": "pipe",
-        "encoding": "utf8"}
+
+        "encoding": "utf8"}"
 });
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       const outdated = JSON.parse(result);
       return Object.entries(outdated).map((["name", "info"]) => ({})
   name,
+=======
+      const outdated = JSON.parse(result);"
+      return Object.entries(outdated).map((["name", "info"]) => ({})"
+  name,"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         "current": info.current,
         "wanted": info.wanted,
-        "latest": info.latest}))} catch (error) {}
+        "latest": info.latest}))} catch (error) {}"
   // npm outdated returns non-zero exit code when there are outdated deps;
       if (error.stdout) {}
+<<<<<<< HEAD
   try {}
   const outdated = JSON.parse(error.stdout);
           return Object.entries(outdated).map((["name", "info"]) => ({})
@@ -321,45 +334,44 @@ class $1 {}
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 } catch (error) {}
+=======
+  const outdated = JSON.parse(error.stdout);"
+
+            "latest": info.latest}))} catch {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // npm outdated returns non-zero exit code when there are outdated deps;
-      if (error.stdout) {}
-  try {}
-  const outdated = JSON.parse(error.stdout);
-          return Object.entries(outdated).map((["name", "info"]) => ({})
-  name,
-            "current": info.current,
-            "wanted": info.wanted,
-            "latest": info.latest}))} catch {}
+
   return []} catch {}
   return []};
-      };
-      return []};
-  };
-;
   async fixPackageJsonIssues(issues) {}
   const fixes = [];
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
   const packagePath = path.join(this.projectRoot, "package.json");
       const packageContent = fs.readFileSync(packagePath, "utf8");
       const packageJson = JSON.parse(packageContent);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let modified = false;
       for (const issue of issues) {}
-  if (;)
+  if (;)"
           issue.type === "INVALID_VERSION" ||;
-          issue.type === "INVALID_DEV_VERSION";
+          issue.type === "INVALID_DEV_VERSION";"
         ) {}
-  const deps =;
-            issue.type === "INVALID_VERSION";
+  const deps =;"
+            issue.type === "INVALID_VERSION";"
               ? packageJson.dependencies;
               : packageJson.devDependencies;
           if (deps && deps[issue.dependency]) {}
-  // Set a reasonable default version;
-            deps[issue.dependency] = "^1.0.0";
+  // Set a reasonable default version;"
+            deps[issue.dependency] = "^1.0.0";"
             modified = true;
+<<<<<<< HEAD
             fixes.push({})
   "type": "PACKAGE_JSON_FIX",
               "dependency": issue.dependency,"action": `Fixed invalid version for ${issue.dependency}`,`
@@ -401,9 +413,17 @@ class $1 {}
         this.log("Fixed package.json issues")};
     } catch (error) {  this.log(`Failed to fix package."json": ${error.message  }`, "ERROR")};
 ;
+=======
+            fixes.push({})"
+
+
+  // Set a reasonable default version;"
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return fixes};
-;
   async cleanCorruptedDependencies() {}
+<<<<<<< HEAD
   const actions = [];
     try {}
   this.log("Cleaning corrupted dependencies...");
@@ -443,9 +463,19 @@ class $1 {}
           "timestamp": new Date().toISOString()})};
     } catch (error) {  this.log(`Failed to clean "dependencies": ${error.message  }`, "ERROR")};
 ;
+=======
+
+      const packageLockPath = path.join(this.projectRoot, "package-lock.json");"
+      if (fs.existsSync(nodeModulesPath)) {}"
+  fs.rmSync(nodeModulesPath, { "recursive": true, "force": true }")
+});"
+        this.log("Removed corrupted node_modules");"
+        actions.push({})"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return actions};
-;
   async reinstallDependencies() {}
+<<<<<<< HEAD
   const actions = [];
     try {}
   this.log("Reinstalling dependencies...");
@@ -471,14 +501,19 @@ class $1 {}
   "type": "REINSTALL",
         "action": "Successfully reinstalled all dependencies",
         "timestamp": new Date().toISOString()})} catch (error) {  this.log(`Failed to reinstall "dependencies": ${error.message  }`, "ERROR");
+=======
+  this.log("Reinstalling dependencies...");"
+      // Run npm install;"
+
+        "stdio": "pipe"}"
+"
+      this.log("Dependencies reinstalled successfully");"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       throw error};
-;
-    return actions};
-;
   async updateDependencies() {}
-  const actions = [];
-    try {}
   // Check for outdated dependencies;
+<<<<<<< HEAD
       const outdated = await this.checkOutdatedDependencies();
 <<<<<<< HEAD
 =======
@@ -522,33 +557,39 @@ class $1 {}
 ;
     return actions};
 ;
+=======
+`;
+      if (outdated.length > 0) {this.log(`Found ${outdated.length} outdated dependencies`);
+        // Update minor and patch versions only (safe updates);
+        for (const dep of outdated) {}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   isSafeUpdate(current, wanted) {}
-  // Only allow minor and patch updates (semver);
+  // Only allow minor and patch updates (semver);"
     const currentParts = current.split(".").map(Number);
-    const wantedParts = wanted.split(".").map(Number);
+    const wantedParts = wanted.split(".").map(Number);"
     // Major version should be the same;
     if (currentParts[0] !== wantedParts[0]) {}
   return false};
-;
     return true};
-;
   async generateDependencyReport(status, actions, errors) {}
-  const report = {}
+  const report = {}"
   "timestamp": new Date().toISOString(),
-      "summary": {}
-  totalActions: actions.length,
+      "summary": {}"
+  totalActions: actions.length,"
         "totalErrors": errors.length,
         "packageJsonIssues": status.packageJsonIssues.length,
         "corruptedDeps": status.corruptedDeps.length,
         "outdatedDeps": status.outdatedDeps.length},
       "status": status,
       "actions": actions,
-      "errors": errors};
-    const reportFile = path.join(;)
+      "errors": errors};"
+    const reportFile = path.join(;)`;
       this.reportsDir,dependency-report-${Date.now()}.json`;`
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     const reportFile = path.join(;)
       this.reportsDir,dependency-report-${Date.now()}.json";
@@ -559,46 +600,37 @@ this.log(`Dependency report "generated": ${reportFile}");
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    const reportFile = path.join(;)"
+      this.reportsDir,dependency-report-${Date.now()}.json";"
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));"`;
+this.log(`Dependency report "generated": ${reportFile}");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return report};
-;
   async commitDependencyChanges(actions) {}
-  try {}
-  this.log("Committing dependency changes...");
-      // Add package.json and package-lock.json;
-      execSync("git add package.json package-lock.json', {})
-  "cwd": this.projectRoot,
-        "stdio": "pipe"}
-});
-      // Commitconst commitMessage = `"chore": Auto-manage dependencies (${actions.length} actions)`;execSync(`git commit -m "${commitMessage}"`, {`})
-  "cwd": this.projectRoot,
-        "stdio": "pipe"}
-});
-      this.log("Dependency changes committed successfully")} catch (error) {  this.log(`Failed to commit dependency "changes": ${error.message  }`, "WARN")};
-  };
-};
-;
+  this.log("Committing dependency changes...");"
+      // Add package.json and package-lock.json;"
+
 // Main execution;
 async function $1() {}
   const manager = new DependencyManager();
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   try {}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const result = await manager.runDependencyManagement();
     if (result.errors.length === 0 && result.actions.length > 0) {}
   process.exit(0); // Success} else if (result.errors.length > 0) {}
   process.exit(1); // Errors occurred} else {}
-  if (result.errors.length === 0 && result.actions.length > 0) {}
-  process.exit(0); // Success} else if (result.errors.length > 0) {}
-  process.exit(1); // Errors occurred} else {}
-  process.exit(2); // No actions needed};
-  } catch (error) {  manager.log(`Fatal "error": ${error.message  }`, "ERROR");
+
     process.exit(1)};
-};
-;
 if (require.main === module) {}
   main()};
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -619,5 +651,7 @@ module.exports = DependencyManager;
 =======
 
 module.exports = DependencyManager;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

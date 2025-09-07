@@ -1,21 +1,9 @@
-#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
-console.log('🔧 Fixing all merge conflicts...');
-
-// List of files with known merge conflicts
-const conflictedFiles = [
-  'pages/index.tsx',
-  'pages/about.tsx', 
-  'pages/blog.tsx',
-  'pages/contact.tsx',
-  'pages/services.tsx'
 ];
 
 function resolveMergeConflicts(filePath) {
   try {
+<<<<<<< HEAD
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${filePath}`);
       return false;
@@ -45,21 +33,30 @@ function resolveMergeConflicts(filePath) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false;
   }
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
+    if (!fs.existsSync(filePath)) {
+      console.log(`⚠️  File not found: ${filePath});
+      return false;
 
-// Process all conflicted files
+    content = content.replace(/\n\n\n+/g, '\n\n');
+    // Write the cleaned content;
+    fs.writeFileSync(filePath, content);`;
+    console.log(`✅ Resolved conflicts in: ${filePath}`);
+
+    return true;
+  } catch (error) {`;
+    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+
+// Process all conflicted files;
 let resolvedCount = 0;
 for (const file of conflictedFiles) {
   if (resolveMergeConflicts(file)) {
     resolvedCount++;
-  }
-}
-
+`;
 console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
 
-// Verify no more conflicts exist
-console.log('\n🔍 Checking for remaining conflicts...');
-const remainingConflicts = [];
-for (const file of conflictedFiles) {
-  if (fs.existsSync(file)) {
-    const content = fs.readFileSync(file, 'utf8');
+// Verify no more conflicts exist;
+

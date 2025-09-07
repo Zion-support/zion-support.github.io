@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -94,7 +95,31 @@ const NotFound = () => {}
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+import {useLocation} from "react-router-dom";
+import {useEffect} from "react";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const NotFound = () => {
+  const location = useLocation();
+import { useLocation } from "react-router-dom",;
+import { useEffect } from "react",;
+
+import { useLocation } from "react-router-dom",;
+import { useEffect } from "react",;
+import {useLocation} from "react-router-dom";
+import {useEffect} from "react";
+import { useLocation } from "react-router-dom",;
+import { useEffect } from "react",;
+const NotFound = () => {
+  const location = useLocation(),
+
+  useEffect(() => {
+    console.error(
+      "404 Error: User attempted to access non-existent route:"
+      location.pathname
+    )const NotFound = () => {
   const location = useLocation(),
 
 const NotFound = () => {
@@ -109,6 +134,7 @@ const NotFound = () => {
 
 const NotFound = () => {
   const location = useLocation(),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,6 +149,8 @@ const NotFound = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   useEffect(() => {
     console.error(
 <<<<<<< HEAD
@@ -151,6 +179,7 @@ const NotFound = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }, [location.pathname]);
   }, [location.pathname]),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -158,6 +187,14 @@ const NotFound = () => {
 =======
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}, [location.pathname]);
+  }, [location.pathname]),
+  return (
+  }, [location.pathname]);
+  }, [location.pathname]),
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">404</h1>
@@ -289,17 +326,26 @@ export default NotFound;
 =======
 =======
         </a>
+</Link>
       </div>
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        </Link>      </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>
-  );
+  )
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { use_location } from './react-router-dom';
 =======
 
@@ -320,11 +366,15 @@ const NotFound = () =>: any {}
 <<<<<<< HEAD
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div className="min - h-screen flex items - center justify - center bg - gray-100">;
       <div className="text-center">;
         <h1 className="text - 4xl font - bold mb-4">404</h1>;
         <p className="text - xl text - gray - 600 mb-4">Oops! Page not found</p>;
         <a href="/" className="text - blue - 500 hover: text - blue-700 underline">;
+<<<<<<< HEAD
 =======
   return ("
     <div className="min - h-screen flex items - center justify - center bg - gray - 100">;"
@@ -340,6 +390,8 @@ const NotFound = () =>: any {}
         <p className="text - xl text - gray - 600 mb - 4">Oops! Page not found</p>;
         <a href="/" className="text - blue - 500 hover: text - blue - 700 underline">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           Return to Home;
         </a>;
       </div>;
@@ -370,6 +422,7 @@ export default NotFound;
 },;
 export default NotFound;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -386,3 +439,47 @@ export default NotFound;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { useLocation } from "react-router-dom";""
+import { useEffect } from "react";"
+const NotFound = () => {
+  const location = useLocation();
+
+"
+import { useLocation } from "react-router-dom",""
+import { useEffect } from "react",""
+import {useLocation} from "react-router-dom";""
+import {useEffect} from "react";""
+import { useEffect } from "react","
+  const location = useLocation(),
+
+
+
+
+  useEffect(() => {
+    console.error("
+      "404 Error: User attempted to access non-existent route:","
+      location.pathname,)
+    );
+  }, [location.pathname]);
+
+  return ("
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">"
+</div>"
+      <div className="text-center">"
+        <h1 className="text-4xl font-bold mb-4">404</h1>""
+        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>""
+        <a href="/" className="text-blue-500 hover: text-blue-700 underline">"
+</a>
+      </div>
+    <div className="min - h-screen flex items - center justify - center bg - gray - 100">;"
+      <div className="text - center">;"
+        <h1 className="text - 4xl font - bold mb - 4">404</h1>;""
+        <p className="text - xl text - gray - 600 mb - 4">Oops! Page not found</p>;""
+        <a href="/" className="text - blue - 500 hover: text - blue - 700 underline">;"
+        </a>;
+      </div>;)
+    </div>);"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

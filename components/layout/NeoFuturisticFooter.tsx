@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {;
   Phone,;
   Mail,;
@@ -25,32 +26,35 @@ import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'luci
 const contactInfo = null;
 export default function NeoFuturisticFooter() {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
               Productized AI, IT and micro SaaS solutions with transparent;
+
               pricing and fast onboarding. Built for outcomes, delivered with;
               reliability.;
             </p>;
           </div>;
-            <a
-              className='flex items-center gap-2 text-slate-300 hover:text-cyan-300'
-              href='/market-pricing'>;
+            <a;
+              className='flex items-center gap-2 text-slate-300 hover:text-cyan-300';
+              href='/market-pricing' />;
               <ExternalLink className='w-4 h-4' /> Market Pricing;
             </a>;
-            <a
-              className='flex items-center gap-2 text-slate-300 hover:text-cyan-300'
-              href='/services'>;
+            <a;
+              className='flex items-center gap-2 text-slate-300 hover:text-cyan-300';
+              href='/services' />;
               <ExternalLink className='w-4 h-4' /> Services;
             </a>;
-            <a
-              className='flex items-center gap-2 text-slate-300 hover:text-cyan-300'
-              href='/contact'>;
+            <a;
+              className='flex items-center gap-2 text-slate-300 hover:text-cyan-300';
+              href='/contact' />;
               <ExternalLink className='w-4 h-4' /> Contact;
             </a>;
-            <div className='flex items-center gap-3 pt-2'>;
-              <a
-                aria-label='GitHub'
-                href='https://github && github.com/Zion-Holdings'
-                className='text-slate-400 hover:text-white'>;
+            <div className='flex items-center gap-3 pt-2' />;
+              <a;
+                aria-label='GitHub';
+                href='https://github && github.com/Zion-Holdings';
+                className='text-slate-400 hover:text-white' />;
                 <Github className='w-5 h-5' />;
               </a>;
               <a
@@ -82,11 +86,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 
-          <div className='space - y-2 text - sm'>;
-            <div className='font - semibold text - slate - 100 mb - 2'>Contact</div>;
-            <div className='flex items - center gap - 2 text - cyan - 300'>;
-              <Phone className='w - 4 h - 4' />;
               <a;
+<<<<<<< HEAD
                 href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}
 =======
 export default function NeoFuturisticFooter() { return null; }
@@ -216,29 +217,34 @@ export default function NeoFuturisticFooter() { return null; }
     </footer>);
 }
 ;
+=======
+aria-label='LinkedIn'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 export default function NeoFuturisticFooter() {
   return (
                 href='https://www.linkedin.com/company/zion-tech-group/'
+                href='https: //www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'
-              >
+               />
                 <Linkedin className='w-5 h-5' />
               </a>
             </div>
           </div>
         </div>
 
-<div className='mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6'>
-          <div className='text-xs text-slate-500'>
-            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+<div className='mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6' />
+          <div className='text-xs text-slate-500' />}
+            © {new Date().getFullYear(,}
+} Zion Tech Group. All rights reserved.
           </div>
-          <div className='text-xs text-slate-500 flex gap-4'>
-            <a href='/privacy' className='hover:text-slate-300'>
-              Privacy
+          <div className='text-xs text-slate-500 flex gap-4' />
+            <a href='/privacy' className='hover:text-slate-300' />
+              Privacy;
             </a>
-            <a href='/terms' className='hover:text-slate-300'>
-              Terms
+            <a href='/terms' className='hover:text-slate-300' />
+              Terms;
             </a>
           </div>
         </div>

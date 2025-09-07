@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -31,9 +32,14 @@ const path = require('path')
 <<<<<<< HEAD
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require('child_process')
+<<<<<<< HEAD
 // console.log(' Starting Bundle Analysis...')
     console.log(' Analyzing bundle size...')
     execSync('npx @next/bundle-analyzer', { "stdio"})
@@ -314,3 +320,7 @@ module.exports = BundleAnalyzer;
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

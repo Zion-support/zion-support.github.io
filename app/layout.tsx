@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import type { Metadata } from 'next';
@@ -82,6 +83,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import Link from "next/link";
 import "./globals.css";
@@ -93,6 +96,7 @@ export const metadata = {
   keywords:
     "AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software",
   authors: [{ name: "Zion Tech Group" }],
+<<<<<<< HEAD
   openGraph: {"
     title: "Zion Tech Group — AI, Micro SaaS, and IT Services",
     description:"
@@ -100,6 +104,15 @@ export const metadata = {
     url: "https://ziontechgroup.com","
     siteName: "Zion Tech Group","
     locale: "en_US","
+=======
+  openGraph: {
+title: "Zion Tech Group — AI, Micro SaaS, and IT Services",
+    description:
+      "Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.",
+    url: "https://ziontechgroup.com",
+    siteName: "Zion Tech Group",
+    locale: "en_US",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     type: "website",
   },
   twitter: {"
@@ -111,7 +124,11 @@ export const metadata = {
   robots: {}
     index: true,
     follow: true,
+<<<<<<< HEAD
     googleBot: {}
+=======
+googleBot: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       index: true,
       follow: true,"
       "max-video-preview": -1,"
@@ -171,16 +188,27 @@ function Header() {}
   );
 }
 
+<<<<<<< HEAD
 function Footer() {}
   return ("
     <footer className="bg-gray-900 text-white py-12">"
       <div className="max-w-6xl mx-auto px-4">"
+=======
+function Footer() {
+  return (
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="max-w-6xl mx-auto px-4">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>"
             <h3 className="font-bold text-lg mb-4">Zion Tech Group</h3>"
             <p className="text-gray-400">
               Leading technology solutions provider specializing in AI,
+<<<<<<< HEAD
               cybersecurity, cloud infrastructure, and digital transformation;
+=======
+              cybersecurity, cloud infrastructure, and digital transformation
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               services.
             </p>
           </div>
@@ -188,6 +216,7 @@ function Footer() {}
             <h4 className="font-semibold mb-4">Services</h4>"
             <ul className="space-y-2 text-gray-400">
               <li>
+<<<<<<< HEAD
                 <Link"
                   href="/services/ai-services""
                   className="hover:text-white transition-colors"
@@ -217,6 +246,37 @@ function Footer() {}
                   className="hover:text-white transition-colors"
                 >
                   Blockchain;
+=======
+                <Link
+                  href="/services/ai-services"
+                  className="hover:text-white transition-colors"
+                >
+                  AI Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/cybersecurity"
+                  className="hover:text-white transition-colors"
+                >
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/cloud-infrastructure"
+                  className="hover:text-white transition-colors"
+                >
+                  Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/blockchain"
+                  className="hover:text-white transition-colors"
+                >
+                  Blockchain
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Link>
               </li>
             </ul>
@@ -225,6 +285,7 @@ function Footer() {}
             <h4 className="font-semibold mb-4">Company</h4>"
             <ul className="space-y-2 text-gray-400">
               <li>
+<<<<<<< HEAD
                 <Link"
                   href="/about""
                   className="hover:text-white transition-colors"
@@ -254,12 +315,48 @@ function Footer() {}
                   className="hover:text-white transition-colors"
                 >
                   News;
+=======
+                <Link
+                  href="/about"
+                  className="hover:text-white transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-white transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="hover:text-white transition-colors"
+                >
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/news"
+                  className="hover:text-white transition-colors"
+                >
+                  News
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Link>
               </li>
             </ul>
           </div>
+<<<<<<< HEAD
           <div>"
             <h4 className="font-semibold mb-4">Contact</h4>"
+=======
+          <div>
+            <h4 className="font-semibold mb-4">Contact</h4>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="text-gray-400">
               <p>+1-302-464-0950</p>
               <p>kleber@ziontechgroup.com</p>
@@ -276,6 +373,7 @@ function Footer() {}
   );
 }
 
+<<<<<<< HEAD
 export default function RootLayout({}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   children,
@@ -302,6 +400,31 @@ export default function RootLayout({}
 }
 "
 =======
+=======
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Leading AI and Technology Solutions',
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+  keywords: 'AI, artificial intelligence, technology solutions, cloud computing, cybersecurity, data analytics, digital transformation',
+  authors: [{ name: 'Zion Tech Group' }],
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',
+    description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',
+    description: 'Leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.',
+  },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 
 export default function RootLayout({
@@ -311,8 +434,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className={inter.className}>{children}</body>
     </html>
   );
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

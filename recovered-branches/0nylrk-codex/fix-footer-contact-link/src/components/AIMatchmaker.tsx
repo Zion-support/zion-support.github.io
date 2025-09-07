@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -44,12 +45,17 @@ import { Textarea } from "@/components/ui/textarea";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Sparkles, Search } from "lucide-react";
 interface AIMatchmakerProps {}
+=======
+
+interface AIMatchmakerProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface AIMatchmakerProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   serviceType?: string;
-  onMatchSelect?: (match: any) => void,;
-  className?: string;
+  onMatchSelect?: (match: any) => void,;}
+  className?: string;}
 }
+<<<<<<< HEAD
 "
 export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
 "
@@ -312,6 +318,23 @@ export function AIMatchmaker() { return null; }
           <div className="space-y-2">
 <<<<<<< HEAD
 =======
+=======
+
+  return (
+    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |\"\"}`} />
+      <CardHeader className=\"pb-2\" />
+        <CardTitle className=\"flex items-center text-white\" />
+          <Sparkles className=\"h-5 w-5 mr-2 text-zion-cyan\" />
+          AI Matchmaker;
+        </CardTitle>
+        <p className=\"text-sm text-zion-slate-light\" />
+          Describe what you're looking for and our AI will find the best matches;
+        </p>
+      </CardHeader>
+      <CardContent />
+        <div className=\"space-y-4\" />
+          <div className=\"space-y-2\" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 <<<<<<< HEAD
   }
@@ -322,6 +345,7 @@ export function AIMatchmaker() { return null; }
           Describe what you're looking for and our AI will find the best matches;
         </p>;
       </CardHeader>;
+<<<<<<< HEAD
       <CardContent>;
             <Button;
               onClick={handleSearch}
@@ -337,32 +361,50 @@ export function AIMatchmaker() { return null; }
               )}
             <AIMatchingResults;
               matches={matchItems}
+=======
+      <CardContent />;
+            <Button;
+onClick={handleSearch}
+              disabled={isMatchmaking}
+              className=\"w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white\" />;
+              {isMatchmaking ? (;
+                <>Analyzing your needs...</>;
+              ) : (;
+                <>;
+                  <Search className=\"h-4 w-4 mr-2\" />;
+                  Find Matches;}
+                </>;}
+              )}
+            <AIMatchingResults;
+matches={matchItems}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
               projectDescription={query}
           )}
-        </div>;
+        </div />;
       </CardContent>;
     </Card>;
 <<<<<<< HEAD
   );
-        <div className="space-y-4">;
-          <div className="space-y-2">;
+        <div className=\"space-y-4\" />;
+          <div className=\"space-y-2\" />;
             <Textarea;
-              placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')";
+              placeholder=\"Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3 - month project')\";
               value={query}
-              on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) => set_query (e.target.value)}
-              className="min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
+              on_change={(e: React.ChangeEvent < HTMLTextAreaElement />) => set_query (e.target.value)}
+              className=\"min - h-24 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white\";
             />;
             <Button;
               on_click={handle_search}
               disabled={is_matchmaking}
-              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white";
-            >;
+              className=\"w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white\";
+             />;
               {is_matchmaking ? (
                 <>Analyzing your needs...</>) : (
                 <>;
+<<<<<<< HEAD
                   <Search className="h - 4 w - 4 mr-2" />;
 =======
   );"
@@ -385,11 +427,15 @@ export function AIMatchmaker() { return null; }
                   <Search className="h - 4 w - 4 mr - 2" />;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Find Matches;
+=======
+                  <Search className=\"h - 4 w - 4 mr-2\" />;}
+                  Find Matches;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </>)}
             </Button>;
           </div>;
-          {has_searched && (
-            <AIMatchingResults;
+          {has_searched && (}
+            <AIMatchingResults;}
               matches={match_items}
               onSelectMatch={handleItemSelect}
               is_loading={is_matchmaking}

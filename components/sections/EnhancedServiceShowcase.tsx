@@ -1,11 +1,17 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { Star, Users, TrendingUp, DollarSign, Clock;
   CheckCircle, ArrowRight, Zap, Shield, Rocket;
-  Brain, Globe, Lock, Code, Database, Cloud
+}
+  Brain, Globe, Lock, Code, Database, Cloud}
  } from 'lucide-react';
+<<<<<<< HEAD
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
   Star
@@ -76,9 +82,15 @@ import {;
   Database,;
   Cloud,;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Button from '../ui/Button';
+
 interface Service {;
   id: string;
+
   name: string;
   tagline: string;
   price: string;
@@ -103,20 +115,22 @@ interface Service {;
   competitors: string[];
   market_size: string;
   growth_rate: string;
+
   variant: string;
+
   contactInfo: {
     mobile: string;
+
     email: string;
-    address: string;
-    website: string
-  },
-  realImplementation: boolean;
+
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+
   reviews: number
 }
+
 
 interface EnhancedServiceShowcaseProps {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -124,18 +138,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   subtitle: string;
   show_filters?: boolean;
   services?: Service[];
+<<<<<<< HEAD
   subtitle;
   showFilters = false;
   services = []
 <<<<<<< HEAD
   maxServices = 12
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   maxServices?: number
+
+  maxServices?: number}
+}
 }
 
-const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
+const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps /> = ({
   title;
   subtitle;
   showFilters;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
@@ -1359,3 +1381,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

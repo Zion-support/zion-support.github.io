@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -80,11 +81,14 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
         </select>
         <Link href={downloadHref} legacyBehavior>
           <a className='ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90'>
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="space-y-6">
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl font-bold">Zion Protocol Whitepaper</h1>
-        <p className="text-gray-600 dark:text-gray-300">Investor and Developer editions. Toggle, review, and download as PDF.</p>
+        <p className="text-gray-600 dark: text-gray-300">Investor and Developer editions. Toggle;, review, and download as PDF.</p>
       </div>
       <div className="flex flex-wrap gap-3 items-center">
         <label className="font-medium" htmlFor="input-Edition">Edition</label>
@@ -122,9 +126,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </section>
         ))}
       </div>
+<<<<<<< HEAD
     </div>'
       <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;'
         <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;'
+=======
+    </div>
+      <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;
+        <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <pre className='whitespace - pre - wrap text - sm text - gray - 700 dark:text - gray - 200'>;
           {OPERATOR_PROMPT}
         </pre>;
@@ -142,6 +152,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <section key={s.id} className="space-y-2">;
             <h2 className="text-2xl font-bold">{s.title}</h2>;
             {s.subtitle ? <p className="text-gray-500">{s.subtitle}</p> : null}
+<<<<<<< HEAD
             <article className="prose dark:prose - invert max - w-none whitespace-pre-wrap">{s.content_md}</article>))}
 =======
               {s.content_md}"
@@ -152,6 +163,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {s.subtitle ? <p className="text - gray - 500">{s.subtitle}</p> : null}"
             <article className="prose dark:prose - invert max - w-none whitespace - pre - wrap">{s.content_md}</article>))}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            <article className="prose dark: prose - invert max - w-none whitespace-pre-wrap">{s.content_md;}</article>))}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>;
     </div>);
   );

@@ -5,11 +5,8 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-
-
-
-
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 =======
 <<<<<<< HEAD
@@ -1261,6 +1258,10 @@ export async function createTestNotification() { return null; }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 /**;
@@ -1293,8 +1294,6 @@ export async function createTestNotification(userId: string) {;
     actionText: actions[randomType].text;
   });
 
-
-
 }
 ;
 }
@@ -1312,20 +1311,101 @@ export async function createTestNotification(userId:string) {;
   },;
   ;
   const actions = {;
+  sendEmail?:boolean;)
+/**;
+ * Demo function to create test notifications for the current user;
+ */;
+export async function createTestNotification(userId: string) {;'
+  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'],;'
+  const randomType = types[Math.floor(Math.random() * types.length)],;
+  const titles = {;'
+    'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';'
+  },;
+  const messages = {;'
+    'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';'
+  },;
+  const actions = {;'
+    'message': { url: '/messages', text: 'View Messages' },;''
+    'quote_request': { url: '/quotes', text: 'View Quote' },;''
+    'booking_confirmation': { url: '/bookings', text: 'View Booking' },;''
+    'hire_request': { url: '/dashboard', text: 'View Request' },;''
+    'onboarding': { url: '/profile', text: 'Complete Profile' },;''
+    'system': { url: '/dashboard', text: 'Learn More' }'
+  },;
+  return createNotification({;
+    type: 'system',;
+    sendEmail,;
+    actionUrl,;
+    actionText;)
+    type:'system',;
+    actionText;
+/**;
+export async function createTestNotification(userId: string) {;
+  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'],;
+  const randomType = types[Math.floor(Math.random() * types.length)],;
+  const titles = {;
+  },;
+  const messages = {;
+  const actions = {;
+    'message': { url: '/messages', text: 'View Messages' },;
+    'quote_request': { url: '/quotes', text: 'View Quote' },;
+    'booking_confirmation': { url: '/bookings', text: 'View Booking' },;
+    'hire_request': { url: '/dashboard', text: 'View Request' },;
+    'onboarding': { url: '/profile', text: 'Complete Profile' },;
+    title: titles[randomType],;
+    message: messages[randomType],;
+    type: randomType,;
+    sendEmail: true;,
+  actionUrl: actions[randomType].url;
+    actionText: actions[randomType].text;)
+
+
+
+export async function createTestNotification(userId:string) {;
+  const types:NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],;
+    'message':'New Message Receivedquote_request':'Quote Request Submittedbooking_confirmation':'Booking Confirmedhire_request':'New Hire Requestonboarding':'Complete Your Profilesystem':'System Update';
+    'message':'You have received a new message from a potential client.quote_request':'A client has submitted a quote request for your services.booking_confirmation':'Your booking has been confirmed and scheduled.hire_request':'A client wants to hire you for a project. Check your dashboard for details.onboarding':'Complete your profile to get more visibility and job matches.system':'Our platform has been updated with new features. Check them out!';
+pr-12325
     'message':{ url:'/messages', text:'View Messages' },;
     'quote_request':{ url:'/quotes', text:'View Quote' },;
     'booking_confirmation':{ url:'/bookings', text:'View Booking' },;
     'hire_request':{ url:'/dashboard', text:'View Request' },;
     'onboarding':{ url:'/profile', text:'Complete Profile' },;
     'system':{ url:'/dashboard', text:'Learn More' }
+}
+;
+}
+;
+export async function createTestNotification(userId:string) {;'
+  const types:NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],;'
+  const randomType = types[Math.floor(Math.random() * types.length)],;
+  ;
+  const titles = {;'
+    'message':'New Message Receivedquote_request':'Quote Request Submittedbooking_confirmation':'Booking Confirmedhire_request':'New Hire Requestonboarding':'Complete Your Profilesystem':'System Update';'
+  },;
+  ;
+  const messages = {;'
+    'message':'You have received a new message from a potential client.quote_request':'A client has submitted a quote request for your services.booking_confirmation':'Your booking has been confirmed and scheduled.hire_request':'A client wants to hire you for a project. Check your dashboard for details.onboarding':'Complete your profile to get more visibility and job matches.system':'Our platform has been updated with new features. Check them out!';'
+  },;
+  ;
+  const actions = {;'
+    'message':{ url:'/messages', text:'View Messages' },;''
+    'quote_request':{ url:'/quotes', text:'View Quote' },;''
+    'booking_confirmation':{ url:'/bookings', text:'View Booking' },;''
+    'hire_request':{ url:'/dashboard', text:'View Request' },;''
+    'onboarding':{ url:'/profile', text:'Complete Profile' },;''
+    'system':{ url:'/dashboard', text:'Learn More' }'
+
   },;
   ;
   return createNotification({;
     userId,;
+pr-12325
     title:titles[randomType],;
     message:messages[randomType],;
     type:randomType,;
     sendEmail:true,;
+
     actionUrl:actions[randomType].url,;
     actionText:actions[randomType].text;
   }),;
@@ -1352,6 +1432,31 @@ relatedId: hireRequestId;
 sendEmail: true;
 actionUrl: '/dashboard';
 actionText: 'View Request' 
+    actionText:actions[randomType].text;)
+  }),;'
+} type NotificationType = 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';'
+//If sendEmail is true, call the edge function to send an email;
+}
+}/** * Creates a hire request notification for admin and talent */? `$ {
+  projectType;'
+}project` : "";"
+  userId: talentId, title: `New Hire Request from $ {
+  requesterName;
+}`;
+message: `$ {
+  requesterName;
+}($ {
+  requesterEmail;)
+}) wants to hire you for a $ {
+  projectInfo;
+}$ {
+  summaryText;
+}`;"
+type: 'hire request';',
+  relatedId: hireRequestId;
+sendEmail: true;,'
+  actionUrl: '/dashboard';''
+actionText: 'View Request''
 });
 //Create notification for admin if admin ID is provided if (adminId) {
   const adminNotification = await createNotification ({
@@ -1387,12 +1492,90 @@ message = 'Post your first job to start finding talent';
 actionUrl = '/post-job';
 actionText = 'Post Job';
 break;
+    actionText:actions[randomType].text;)
+} type NotificationType = 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';
+//If sendEmail is true, call the edge function to send an email;
+}`;
+}/** * Creates a hire request notification for admin and talent */? `$ {
+  projectType;`;
+}project` : "";"`;
+  userId: talentId, title: `New Hire Request from $ {
+  requesterName;`;
+}`;`;
+message: `$ {
+  requesterName;
+}($ {
+  requesterEmail;)
+}) wants to hire you for a $ {
+  projectInfo;
+}$ {
+  summaryText;`;
+}`;"
+type: 'hire request';',
+  relatedId: hireRequestId;
+  actionUrl: '/dashboard';
+actionText: 'View Request
+//Create notification for admin if admin ID is provided if (adminId) {
+  const adminNotification = await createNotification ({`;
+  userId: adminId, title: `New Hire Request for Talent`, message: `$ {
+}) wants to hire talent for a $ {
+  actionUrl: '/admin/hire-requests';
+actionText: 'Review Request
+}/** * Creates an onboarding notification for a user */if (userRole === 'talent') {
+  case 'profile completed': title = 'Complete your profile';
+actionUrl = '/profile';
+actionText = 'Complete Profile';
+case 'skills added': title = 'Add your skills';
+actionUrl = '/profile/skills';
+actionText = 'Add Skills';
+case 'availability set': case 'job posted': title = 'Post your first job';
+actionUrl = '/post-job';
+actionText = 'Post Job';
+pr-12325
 case 'match viewed': title = 'View your AI matches';
 message = 'Check out your AI-matched talent suggestions';
 actionUrl = '/client-dashboard';
 actionText = 'View Matches';
 break;
 case 'talent invited': 
+  requesterName;
+}($ {
+  requesterEmail;)
+}) wants to hire talent for a $ {
+  projectInfo;
+}$ {
+  summaryText;
+}`;'
+type: 'hire request';',
+  relatedId: hireRequestId;
+sendEmail: true;,'
+  actionUrl: '/admin/hire-requests';''
+actionText: 'Review Request''
+});'
+}/** * Creates an onboarding notification for a user */if (userRole === 'talent') {'
+  switch (missingMilestone) {'
+  case 'profile completed': title = 'Complete your profile';''
+message = 'Complete your profile to get discovered by clients';''
+actionUrl = '/profile';''
+actionText = 'Complete Profile';'
+break;'
+case 'skills added': title = 'Add your skills';''
+message = 'Add your skills to get better job matches';''
+actionUrl = '/profile/skills';''
+actionText = 'Add Skills';'
+break;'
+case 'availability set': case 'job posted': title = 'Post your first job';''
+message = 'Post your first job to start finding talent';''
+actionUrl = '/post-job';''
+actionText = 'Post Job';'
+break;'
+case 'match viewed': title = 'View your AI matches';''
+message = 'Check out your AI-matched talent suggestions';''
+actionUrl = '/client-dashboard';''
+actionText = 'View Matches';'
+break;'
+case 'talent invited':'
+
 }/** * Creates a system notification for a user */ 
 }/** * Demo function to create test notifications for the current user */ 
 }
@@ -1402,7 +1585,9 @@ case 'talent invited':
 ;
 }
 ;
+
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1414,3 +1599,12 @@ case 'talent invited':
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+case 'talent invited':
+}/** * Creates a system notification for a user */ 
+}/** * Demo function to create test notifications for the current user */ 
+`;
+pr-12325
+'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

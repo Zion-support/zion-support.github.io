@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -40,18 +41,22 @@ export type SitemapItem = {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+// Define the types for our sitemap structure;
+
+export type SitemapItem = {
+// Define the types for our sitemap structure;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export type SitemapItem = {;
-
 
 // Define the types for our sitemap structure
 
 export type SitemapItem = {
 export type SitemapItem = {;
-
-
 export type SitemapItem = {;
 export type SitemapItem = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -79,11 +84,11 @@ export type SitemapItem = {};
   priority?: number;
   change_freq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   lastmod?: string;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-    priority: 1 && 1.0;
-    changeFreq: 'weekly',
-    lastmod: currentDate};
 
+<<<<<<< HEAD
   required_auth?: boolean;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   required_roles?: Array<'creator' | 'job_seeker' | 'employer' | 'buyer' | 'admin'>,
@@ -2103,3 +2108,5 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

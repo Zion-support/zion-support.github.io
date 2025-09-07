@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -51,10 +52,15 @@ export default function CloudMonitoringPage() {
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Button from '../components/ui/Button';
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
 export default function CloudMonitoringPage() {
   const features = null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
     {
 =======
@@ -383,6 +389,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
     },
   ];
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -494,10 +503,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
+<<<<<<< HEAD
                 style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;'
                 <div className='relative'>;
                   <div;`
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
+=======
+                style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2;}s` }}>;
+                <div className='relative'>;
+                  <div
+                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover: scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color;} shadow-xl`}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {feature && feature.icon}
                   </div>;
                 </div>;'
@@ -508,12 +524,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card;
                 key={index}"
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
+<<<<<<< HEAD
                 key={index}"
                 className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";`
                 style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
               >;"
                 <div className="relative">;`
                   <div className={`w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center transition - all duration - 300 group - hover:scale - 110 group - hover:shadow - lg bg - gradient - to - br ${feature.color} shadow - xl`}>;
+=======
+                key={index}
+                className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - green - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
+                style={{ animation_delay: `${(index * 0.1) + 0.2;}s` }}
+              >;
+                <div className="relative">;
+                  <div className={`w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center transition - all duration - 300 group - hover: scale - 110 group - hover:shadow - lg bg - gradient - to - br ${feature.color;} shadow - xl`}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     {feature.icon}
                   </div>;
                 </div>;"
@@ -521,7 +546,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {feature.title}
                 </h3>;"
                 <p className="text - gray - 400 leading - relaxed">;
+<<<<<<< HEAD
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
+=======
+                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover: scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color;} shadow-xl`}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   >
                     {feature.icon}
                   </div>
@@ -700,7 +729,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 
       {/* Pricing Section */}
+<<<<<<< HEAD
 "
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section id="pricing" className="py-24 bg-black relative overflow-hidden">
 "
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">"
@@ -718,10 +751,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>;'
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your monitoring needs;
             </p>;
+<<<<<<< HEAD
           </div>;'"
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-black relative overflow-hidden">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;"
           <div className="text-center mb-20">;"
+=======
+          </div>;
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan;, index) => (      <section id="pricing" className="py-24 bg-black relative overflow-hidden">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
+          <div className="text-center mb-20">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
               Simple, Transparent Pricing;
             </h2>;"
@@ -745,7 +785,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingPlans.map((plan, index) => (
               <Card
                 key={index}
-                className={`relative group ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} border ${plan.color} hover:border-green-500/50 transition-all duration-300`}
+                className={`relative group ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} border ${plan.color} hover: border-green-500/50 transition-all duration-300`;}
               >
                 {plan.popular && (
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
@@ -810,9 +850,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 </ul>
 
+<<<<<<< HEAD
                 <Button"
                   href="/contact"`
                   className={`w-full ${plan.buttonColor} text-white`}"
+=======
+                <Button
+                  href="/contact"
+                  className={`w-full ${plan.buttonColor} text-white`}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   size="lg"
                 >
                   Get Started"
@@ -828,7 +874,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>
             ))}
       {/* Integrations Section */}
+<<<<<<< HEAD
 "
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section className="py-24 bg-gray-900 relative overflow-hidden">
 
             ))}"
@@ -956,10 +1006,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='#demo''
               variant='outline''
               size='lg'
+<<<<<<< HEAD
             <Button"
               href="/contact""
               variant="secondary""
               size="lg""
+=======
+            <Button
+              href="/contact"
+              variant="secondary"
+              size="lg"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl">;
               Start Free Trial;"
               <ArrowRight className="w-5 h-5 ml-2" />;
@@ -982,6 +1039,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
             >
               <Play className='w-5 h-5 mr-2' />

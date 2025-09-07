@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,8 @@
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -30,6 +33,7 @@ interface AIListingFormProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -240,6 +244,9 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
     })
 
   },
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -303,6 +310,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       <Button 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
       <Button 
@@ -323,10 +331,18 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<Button 
+
+          disabled={isLoading}
+        />
+      </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Button
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
       <Button 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -349,6 +365,9 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       <Button 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<Button
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -415,8 +434,54 @@ import { Sparkles } from "lucide-react",;    category?: string;
   initialValues?: {;
     title?: string;
     category?: string;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { Sparkles } from "lucide-react",;    category?: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     keyFeatures?: string;
+
+
+
+interface AIListingFormProps {
+  // TODO: Implement
+}
+  onSubmit: (formData: {,
+  title: string;
+    category: string;,
+  keyFeatures: string;
+    targetAudience: string;
+import React, { useState } from "react";""
+import {useToast} from "@/hooks/use-toast";""
+import {Button} from "@/components/ui/button";""
+import {Input} from "@/components/ui/input";""
+import {Textarea} from "@/components/ui/textarea";""
+import {Sparkles} from "lucide-react";""
+import React, { useState } from "react",""
+import { useToast } from "@/hooks/use-toast",""
+import { Button } from "@/components/ui/button",""
+import { Input } from "@/components/ui/input",""
+import { Textarea } from "@/components/ui/textarea";""
+import { Sparkles } from "lucide-react";""
+import { Textarea } from "@/components/ui/textarea",""
+import { Sparkles } from "lucide-react","
+interface AIListingFormProps {
+  // TODO: Implement
+}
+  onSubmit: (formData: {,
+  title: string;
+    category: string;,
+  keyFeatures: string;
+    targetAudience: string;)
+  }) => void;
+  isLoading: boolean;
+  }) => void,
+  isLoading: boolean,
+
+  initialValues?: {
+    title?: string,
+    category?: string,
+    keyFeatures?: string,
     targetAudience?: string;
   }
 }
@@ -433,6 +498,22 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
   const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
   const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");
 
+}) => void,;
+  isLoading: boolean,;
+  initialValues?: {;
+    title?: string,;
+    category?: string,;
+    keyFeatures?: string,;
+    targetAudience?: string;
+  }
+}
+;
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
+  const { toast } = useToast(),;
+  const [title, setTitle] = useState(initialValues.title || ""),;
+  const [category, setCategory] = useState(initialValues.category || ""),;
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),;
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;
   const handleSubmit = () => {;
     if (!title || !category) {;
       toast({;
@@ -444,7 +525,9 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       return;
     }
 
-
+});
+      return;
+    }
     onSubmit({;
       title;
       category;
@@ -452,7 +535,6 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       targetAudience;
     });
   };
-
 
   return (
     <div className="space-y-4">;
@@ -462,6 +544,64 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
           id="title"
           value={title}
           onChange={(e) => setTitle(e && e.target.value)}
+          placeholder="Enter your product or service title";
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Sparkles } from "lucide-react",;
+;
+interface AIListingFormProps {;
+  onSubmit:(formData:{;
+    title:string,;
+    category:string,;
+    keyFeatures:string,;
+    targetAudience:string;
+  }) => void,;
+  isLoading:boolean,;
+  initialValues?:{;
+    title?:string,;
+    category?:string,;
+    keyFeatures?:string,;
+    targetAudience?:string;
+  },;
+}
+;
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIListingFormProps) {;
+  const { toast } = useToast(),;
+  const [title, setTitle] = useState(initialValues.title || ""),;
+  const [category, setCategory] = useState(initialValues.category || ""),;
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),;
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;
+;
+  const handleSubmit = () => {;
+    if (!title || !category) {;
+      toast({;
+        title:"Missing required fields",;
+        description:"Please provide at least a title and category.",;
+        variant:"destructive";
+      }),;
+      return,;
+      }),;
+      return;
+    }
+;
+    onSubmit({;
+      title,;
+      category,;
+      keyFeatures;
+      targetAudience;
+    });
+  };
+  return (;
+    <div className="space-y-4">;
+      <div className="space-y-2">;
+        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
+        <Input;
+          id="title";
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter your product or service title";
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
@@ -484,7 +624,11 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
           id="keyFeatures";
           value={keyFeatures}
           onChange={(e) => setKeyFeatures(e.target.value)}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  const { toast } = useToast();          onChange={(e) => setKeyFeatures(e && e.target.value)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           placeholder="Briefly describe the main features or benefits";
 =======
   const { toast } = useToast();
@@ -574,6 +718,16 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       </div>;
       <div className="space-y-2">;
         <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
+onChange={(e) => setTitle(e.target.value)}
+          placeholder=&quot;Enter your product or service title&quot;
+          className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
+          disabled={isLoading}        />
+      </div>
+      <div className=&quot;space-y-2&quot;>
+        <label htmlFor=&quot;category&quot; className=&quot;text-sm font-medium text-zion-slate-light&quot;>Category</label>
+        <Input
+          id="category"
+          value={category}
         <Input
           id="category"
           value={category}
@@ -585,6 +739,16 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       </div>;
       <div className="space-y-2">;
         <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
+onChange={(e) => setCategory(e.target.value)}
+          placeholder=&quot;e.g. AI Tool, Digital Product, Service&quot;
+          className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
+          disabled={isLoading}        />
+      </div>
+      <div className=&quot;space-y-2&quot;>
+        <label htmlFor=&quot;keyFeatures&quot; className=&quot;text-sm font-medium text-zion-slate-light&quot;>Key Features (Optional)</label>
+        <Textarea
+          id="keyFeatures"
+          value={keyFeatures}
         <Textarea
           id="keyFeatures"
           value={keyFeatures}
@@ -596,6 +760,13 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       </div>;
       <div className="space-y-2">;
         <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
+onChange={(e) => setKeyFeatures(e.target.value)}
+          placeholder=&quot;Briefly describe the main features or benefits&quot;
+          className=&quot;bg-zion-blue border border-zion-blue-light text-white min-h-20&quot;
+          disabled={isLoading}        />
+      </div>
+      <div className=&quot;space-y-2&quot;>
+        <label htmlFor=&quot;targetAudience&quot; className=&quot;text-sm font-medium text-zion-slate-light&quot;>Target Audience (Optional)</label>
         <Input
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           id="targetAudience"
@@ -630,9 +801,9 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       <Button;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -657,6 +828,13 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 =======
         <Input
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<Button;
+        onClick={handleSubmit}
+        disabled={isLoading || !title || !category}
+        <Input
+      <Button;        <Input
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           id="targetAudience"
           value={targetAudience}
         onClick={handleSubmit}
@@ -714,8 +892,12 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           onChange={(e) => setTargetAudience(e.target.value)}
+=======
+onChange={(e) => setTargetAudience(e.target.value)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           placeholder=&quot;e.g. Developers, Marketers, Startups&quot;
           className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
           disabled={isLoading}
@@ -729,6 +911,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
         {isLoading ? (;
           <>Generating Optimized Content...</>;
         ) :(;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -736,6 +919,8 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <>;
 =======
 
@@ -745,7 +930,6 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
             Generate Optimized Content;
           </>;
         )}
-
 
       </Button>;
     </div>;
@@ -797,8 +981,48 @@ function AIListingForm() {}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
+  const handle_submit = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+
+interface AIListingFormProps {
+  // TODO: Implement
+}
+  onSubmit: (formData: {,
+  title: string;
+    category: string;,
+  keyFeatures: string;
+    targetAudience: string;
+import React, { useState } from "react";""
+import {useToast} from "@/hooks/use-toast";""
+import {Button} from "@/components/ui/button";""
+import {Input} from "@/components/ui/input";""
+import {Textarea} from "@/components/ui/textarea";""
+import {Sparkles} from "lucide-react";""
+import React, { useState } from "react",""
+import { useToast } from "@/hooks/use-toast",""
+import { Button } from "@/components/ui/button",""
+import { Input } from "@/components/ui/input",""
+import { Textarea } from "@/components/ui/textarea";""
+import { Sparkles } from "lucide-react";""
+import { Textarea } from "@/components/ui/textarea",""
+import { Sparkles } from "lucide-react","
+  // TODO: Implement
+    targetAudience: string;)
+  }) => void;
+  isLoading: boolean;
+  }) => void,
+  isLoading: boolean,
+
+  initialValues?: {
+    title?: string,
+    category?: string,
+    keyFeatures?: string,
+    targetAudience?: string;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -879,11 +1103,130 @@ if ( {) {
             <Sparkles className="h - 4 w - 4 mr - 2" />;
             Generate Optimized Content;
           </>)}
+=======
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
+
+  const handleSubmit = () => {
+    if (!title |!category) {
+      toast({"
+        title: "Missing required fields"","
+  description: "Please provide at least a title and category."""
+        variant: "destructive"")
+      }),
+      return;
+    onSubmit({
+      title,
+      category,
+      keyFeatures,
+      targetAudience;)
+    })
+
+  },
+
+
+  return ("
+    <div className="space-y-4">"
+</div>"
+      <div className="space-y-2">"
+        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>"
+        <Input;"
+          id="title""
+          value={title})
+          onChange={(e) => setTitle(e.target.value)}
+
+        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>"
+          id="category""
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>"
+        <Textarea;"
+          id="keyFeatures""
+          value={keyFeatures}
+          onChange={(e) => setKeyFeatures(e.target.value)}
+
+        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>"
+          id="targetAudience""
+          value={targetAudience}
+          onChange={(e) => setTargetAudience(e.target.value)}
+
+      <Button;
+        onClick={handleSubmit}
+        disabled={isLoading |!title |!category}
+      <Button;"
+import React, { useState } from "react",;""
+import { useToast } from "@/hooks/use-toast",;""
+import { Button } from "@/components/ui/button",;""
+import { Input } from "@/components/ui/input",;""
+import { Textarea } from "@/components/ui/textarea",;""
+import { Sparkles } from "lucide-react",;"
+interface AIListingFormProps {;
+  onSubmit: (formData: {;,
+  title: string,;
+    category: string,;
+    keyFeatures: string,;
+"
+    <div className="space-y-4">;"
+      <div className="space-y-2">;"
+        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;"
+          value={title}
+          onChange={(e) => setTitle(e && e.target.value)}
+
+      </div>;"
+        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;"
+          id="category";"
+
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;"
+          id="keyFeatures";"
+
+        <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;"
+          id="targetAudience";"
+
+          onChange={(e) => setCategory(e && e.target.value)}
+
+          onChange={(e) => setKeyFeatures(e && e.target.value)}
+
+          onChange={(e) => setTargetAudience(e && e.target.value)}
+
+      </div>;
+
+
+        disabled={isLoading |!title |!category}"
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2""
+      >
+
+          <>Generating Optimized Content...</>
+        ) : (
+          <>"
+            <Sparkles className="h-4 w-4 mr-2" />"
+
+          </>)
+        )}
+
+        />;
+        disabled={isLoading || !title || !category}"
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">;"
+
+          <>Generating Optimized Content...</>;
+        ) : (;
+          <>;"
+            <Sparkles className="h-4 w-4 mr-2" />;"
+
+          </>;)
+
+
+      ;
+pr-12325
+        )}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </Button>;
     </div>);
   ),;}export function AIListingForm ({
   onSubmit, isLoading, initialValues = {
+<<<<<<< HEAD
   
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 }: AIListingFormProps) {
   if (!title || !category) {
@@ -902,6 +1245,7 @@ if ( {) {
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -917,3 +1261,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    </div>;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

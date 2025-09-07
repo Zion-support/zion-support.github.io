@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -21,6 +22,24 @@ import {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+}
+
+import { useState } from \"react\";
+import { useForm } from \"react-hook-form\";
+import { Button } from \"@/components/ui/button\";
+import { Textarea } from \"@/components/ui/textarea\";
+import {
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Form,
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -41,7 +60,6 @@ interface ReplyFormProps {
   parentId?: string;
 }
 
-
 import {;
   Form,;
   FormControl,;
@@ -57,6 +75,9 @@ interface ReplyFormProps {;
   parentId?: string
 }
 
+onSubmit: (content: string) => Promise<void>;
+  parentId?: string
+}
 import { useState  } from './react';
 import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
@@ -79,26 +100,74 @@ import { Textarea } from "@/components/ui/textarea";
 import {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Form,
   FormControl,
   FormField,
   FormItem,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 FormMessage,;
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 =======
+=======
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+  FormMessage,
 
+} from "@/components/ui/form";
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
+  FormMessage,
+} from '@/components / ui / form';
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+interface ReplyFormProps {
+  on_submit: (content: string) => Promise < void>;
+  parent_id?: string;
+}
+interface ReplyFormValues {
+interface ReplyFormValues {;
+  content: string;
+}
+  const form = useForm<ReplyFormValues>({;
+    defaultValues: {;
+      content: "",;
+    },;
+  });
+  const handleSubmit = async (values: ReplyFormValues) => {;
+    setIsSubmitting(true);
+    try {;
+      (await onSubmit(values && values.content), form && form.reset());
+    } finally {;
+      setIsSubmitting(false);
+    }
+
+  },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <Card>;
@@ -128,13 +197,57 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
     default_values: {"
       content: "",
     },
+
+FormMessage,;
+} from "@/components/ui/form";""
+import { Card, CardContent, CardFooter } from "@/components/ui/card";"
+interface ReplyFormProps {
+  // TODO: Implement
+}
+  onSubmit: (content: string) => Promise<void>;
+</void>
+    <Card>;
+"
+      <CardContent className="pt-6">;"
+
+        <Form {...form}>;
+
+          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
+</form>
+            <FormField;
+              control={form && form.control}"
+              name="content""
+              render={({ field }) => (;
+
+                <FormItem>;
+
+                  <FormControl>;
+
+                    <Textarea;)
+export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
+
+  const form = use_form < ReplyFormValues>({
+    default_values: {,"
+  content: "","
+    },)
+pr-12325
   });
 ;
   const handle_submit = async (values: ReplyFormValues) => {}
     setIsSubmitting (true);
     try {}
       (await on_submit (values.content), form.reset ());
+<<<<<<< HEAD
     } finally {}
+=======
+    } finally {
+  // TODO: Implement
+}
+      (await on_submit (values.content), form.reset ());
+    } finally {
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setIsSubmitting (false);
     }
   }
@@ -142,6 +255,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
   return (
 <<<<<<< HEAD
     <Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <CardContent className="pt-6">;
 =======
@@ -151,6 +265,9 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
 =======
       <CardContent className="pt - 6">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <CardContent className="pt-6">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Form {...form}>;
           <form on_submit={form.handle_submit (handle_submit)}>;
             <FormField;
@@ -166,7 +283,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
                           : "Join the discussion...";
 <<<<<<< HEAD
                       }
-                      className="min - h-[100px] resize - y";
+                      className="min - h-[100px] resize-y";
   FormMessage;
 } from "@/components/ui/form",;
 =======
@@ -228,6 +345,69 @@ export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
             <div className="mt-4 flex justify-end">;"
               <Button type="submit" disabled={isSubmitting}>;"
                 {isSubmitting ? "Submitting..." :"Post Reply"}
+</Card>"
+      <CardContent className="pt - 6">;"
+</CardContent>
+        <Form {...form}>;
+</Form>)
+          <form on_submit={form.handle_submit (handle_submit)}>;
+</form>
+            <FormField;
+              control={form.control}"
+              name="content";"
+              render={({ field }) => (
+</FormField>
+                <FormItem>;
+</FormItem>
+                  <FormControl>;
+</FormControl>
+                    <Textarea;
+                      placeholder={
+                        parent_id;"
+                          ? "Write your reply...";""
+                          : "Join the discussion...";"
+                      }"
+                      className="min - h-[100px] resize - y";"
+  FormMessage;"
+} from "@/components/ui/form",;""
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;"
+;
+interface ReplyFormProps {;)
+  onSubmit:(content:string) => Promise<void>,;
+</Textarea>
+  const form = useForm<ReplyFormValues>({;
+</ReplyFormValues>
+    <Card>;
+</Card>"
+      <CardContent className="pt-6">;"
+</CardContent>
+        <Form {...form}>;
+</Form>)
+          <form onSubmit={form.handleSubmit(handleSubmit)}>;
+</form>
+            <FormField;
+              control={form.control}"
+              name="content";"
+              render={({ field }) => (;
+</FormField>
+                <FormItem>;
+</FormItem>
+                  <FormControl>;
+</FormControl>
+                    <Textarea;"
+                      placeholder={parentId ? "Write your reply..." :"Join the discussion..."}""
+                      className="min-h-[100px] resize-y";"
+                      {...field}
+                    />;
+</Textarea>
+                  </FormControl>;
+                  <FormMessage />;
+</FormMessage>
+                </FormItem>;"
+            <div className="mt-4 flex justify-end">;"
+</div>"
+              <Button type="submit" disabled={isSubmitting}>;"
+</Button>
               </Button>;
             </div>;
           </form>;
@@ -236,6 +416,7 @@ export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
 
 <<<<<<< HEAD
 FormMessage,;
+placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
 
 } from "@/components/ui/form";
 
@@ -254,7 +435,21 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
   };
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+const form = useForm<ReplyFormValues>({;
+    defaultValues: {;
+      content: "",;
+    },;
+  });
+
+  const handleSubmit = async (values: ReplyFormValues) => {;
+} from "@/components/ui/form";
+
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     setIsSubmitting(true);
     try {;
@@ -265,6 +460,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -279,6 +475,8 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <Card>;"
       <CardContent className="pt-6">;
@@ -298,13 +496,47 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
     default_values: {"
       content: "",
     },
+    <Card>;
+</Card>"
+      <CardContent className="pt-6">;"
+</CardContent>
+        <Form {...form}>;
+</Form>)
+          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
+</form>
+            <FormField;
+              control={form && form.control}"
+              name="content""
+              render={({ field }) => (;
+</FormField>
+                <FormItem>;
+</FormItem>
+                  <FormControl>;
+</FormControl>
+                    <Textarea;)
+export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
+</Textarea>
+  const form = use_form < ReplyFormValues>({
+    default_values: {,"
+  content: "","
+    },)
   });
 ;
   const handle_submit = async (values: ReplyFormValues) => {}
     setIsSubmitting (true);
     try {}
       (await on_submit (values.content), form.reset ());
+<<<<<<< HEAD
     } finally {}
+=======
+    } finally {
+  // TODO: Implement
+}
+      (await on_submit (values.content), form.reset ());
+    } finally {
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setIsSubmitting (false);
     }
   }
@@ -312,6 +544,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
   return (
 <<<<<<< HEAD
     <Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <CardContent className="pt-6">;
 =======
@@ -321,6 +554,9 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
 =======
       <CardContent className="pt - 6">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <CardContent className="pt-6">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Form {...form}>;
           <form on_submit={form.handle_submit (handle_submit)}>;
             <FormField;
@@ -338,6 +574,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
 <<<<<<< HEAD
                       }
 <<<<<<< HEAD
+<<<<<<< HEAD
                       className="min - h-[100px] resize-y";
 =======
                       }"
@@ -346,6 +583,9 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
 =======
                       className="min - h-[100px] resize - y";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                      className="min - h-[100px] resize-y";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {...field}
                     />;
                   </FormControl>;
@@ -354,7 +594,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
                 </FormItem>)}
 <<<<<<< HEAD
             />;
-            <div className="mt - 4 flex justify - end">;
+            <div className="mt - 4 flex justify-end">;
               <Button type="submit" disabled={is_submitting}>;
 =======
             />;"
@@ -363,6 +603,42 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {is_submitting ? "Submitting..." : "Post Reply"}
 
+</Card>"
+      <CardContent className="pt - 6">;"
+</CardContent>
+        <Form {...form}>;
+</Form>)
+          <form on_submit={form.handle_submit (handle_submit)}>;
+</form>
+            <FormField;
+              control={form.control}"
+              name="content";"
+              render={({ field }) => (
+</FormField>
+                <FormItem>;
+</FormItem>
+                  <FormControl>;
+</FormControl>
+                    <Textarea;
+
+                      placeholder={
+                        parent_id;"
+                          ? "Write your reply...";""
+                          : "Join the discussion...";"
+                      }"
+                      className="min - h-[100px] resize - y";"
+                      {...field}
+                    />;
+</Textarea>
+                  </FormControl>;
+                  <FormMessage />;
+</FormMessage>
+)
+                </FormItem>)}"
+            <div className="mt - 4 flex justify - end">;"
+</div>"
+              <Button type="submit" disabled={is_submitting}>;"
+</Button>
               </Button>;
             </div>;
           </form>;
@@ -377,7 +653,6 @@ export default ReplyForm;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-
 
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
 
@@ -443,6 +718,7 @@ interface ReplyFormValues {}
   content: string;
 }
 
+<<<<<<< HEAD
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<ReplyFormValues>({}
@@ -511,6 +787,8 @@ import { Button } from "@/components/ui/button";"
 import { Textarea } from "@/components/ui/textarea";
 <<<<<<< HEAD
 import {
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 =======
@@ -518,6 +796,7 @@ import {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 interface ReplyFormValues {;
@@ -696,3 +975,5 @@ export default ReplyForm,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

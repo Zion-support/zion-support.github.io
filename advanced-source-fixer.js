@@ -48,6 +48,11 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -66,11 +71,11 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -90,6 +95,8 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -97,6 +104,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import fs from "fs";
@@ -113,6 +121,43 @@ import { fileURLToPath } from "url";
 
 
 <<<<<<< HEAD
+=======
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import && import.meta.url);
+const __dirname = path && path.dirname(__filename);
+
+class AdvancedSourceFixer {
+  constructor() {
+    this && this.fixes = [];
+    this && this.errors = [];
+    this && this.reportFile = path && path.join(__dirname, "advanced-source-fix-report && report.json");
+  }
+  log(message, level = "INFO") {
+    const timestamp = new Date().toISOString();
+    console && console.log(`[${timestamp}] [${level}] ${message}`);
+  }
+  async fixAllSourceFiles() {
+    this && this.log("🔧 Starting advanced source file fixing...");
+    await this && this.fixDirectory(path && path.join(__dirname, "src"));
+    await this && this.fixDirectory(path && path.join(__dirname, "pages"));
+    this && this.log(`✅ Fixed ${this && this.fixes.length} files`);
+    if (this && this.errors.length > 0) {
+      this && this.log(`❌ ${this && this.errors.length} errors encountered`);
+    }
+    await this && this.generateReport();
+  }
+  async fixDirectory(dir) {
+
+    if (!fs && fs.existsSync(dir)) return;
+    const items = fs && fs.readdirSync(dir);
+    for (const item of items) {
+      const fullPath = path && path.join(dir, item);
+      const stat = fs && fs.statSync(fullPath);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (
         stat && stat.isDirectory() &&
         !item && item.startsWith(".") &&
@@ -128,9 +173,12 @@ import { fileURLToPath } from "url";
 
       ) {
         await this && this.fixFile(fullPath);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
     }
   }
@@ -138,12 +186,18 @@ import { fileURLToPath } from "url";
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const content = fs && fs.readFileSync(filePath, "utf8");
       let fixedContent = content;
       let wasFixed = false;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (this && this.hasParsingErrors(content)) {
         fixedContent = this && this.fixParsingErrors(content, filePath);
         wasFixed = true;
@@ -177,12 +231,15 @@ import { fileURLToPath } from "url";
 
       });
       this && this.log(`Error fixing ${filePath}: ${error && error.message}`, "ERROR");
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 #!/usr/bin/env node;
       }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   }
   async fixFile(filePath) {}
@@ -222,7 +279,10 @@ import { fileURLToPath } from "url";
     // Fix unterminated strings
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     fixed = fixed && fixed.replace(/"[^"]*$/gm, '"');
     fixed = fixed && fixed.replace(/'[^']*$/gm, "'");
@@ -238,6 +298,7 @@ import { fileURLToPath } from "url";
     fixed = fixed && fixed.replace(/<([^>]*)\s*>/g, "<$1>");
     fixed = fixed && fixed.replace(/<\/([^>]*)\s*>/g, "</$1>");
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -245,10 +306,13 @@ import { fileURLToPath } from "url";
 =======
     // Fix unterminated strings;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return fixed;
   }
   fixImportExportIssues(content, filePath) {}
     let fixed = content;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -270,6 +334,12 @@ import { fileURLToPath } from "url";
 <<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    if (filePath && filePath.endsWith(".tsx") || filePath && filePath.endsWith(".jsx")) {
+
+      if (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         !fixed && fixed.includes("import React") &&
         !fixed ;\n" + fixed;
       }
@@ -281,13 +351,10 @@ import { fileURLToPath } from "url";
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
     fixed = fixed && fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
     fixed = fixed && fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
 
     if (!fixed && fixed.includes("export default") && !fixed && fixed.includes("export {")) {
-
-
 
     if (!fixed.includes("export default") && !fixed.includes("export {")) {;
 
@@ -321,7 +388,10 @@ import { fileURLToPath } from "url";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     fixed = fixed && fixed.replace(/\bconst\s+const\b/g, "const");
     fixed = fixed && fixed.replace(/\blet\s+let\b/g, "let");
@@ -335,6 +405,7 @@ import { fileURLToPath } from "url";
     fixed = fixed && fixed.replace(/\(\s*,\s*\)/g, "()");
     fixed = fixed && fixed.replace(/\(\s*,\s*/g, "(");
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -347,12 +418,15 @@ import { fileURLToPath } from "url";
 =======
     // Fix duplicate keywords;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return fixed;
   }
   getAppliedFixes(original, fixed) {}
     const fixes = [];
     if (original !== fixed) {}
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -368,12 +442,24 @@ import { fileURLToPath } from "url";
       if (fixed && fixed.includes("import React")) {
         fixes ;
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (fixed && fixed.includes("import React")) {
         fixes ;
       }
       if (fixed && fixed.includes("export default")) {
         fixes && fixes.push("Added default export");
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      if (fixed.includes("import React")) {;
+        fixes.push("Added React import");
+      }
+      if (fixed.includes("export default")) {;
+        fixes.push("Added default export");
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
       if (fixed && fixed.includes("export default")) {
         fixes && fixes.push("Added default export");
@@ -509,6 +595,7 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -525,6 +612,10 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { await this.fixDirectory(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: 'filePath',timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent) }); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: 'filePath',error: 'error.message',timestamp: new Date().toISOString() }); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/',/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/ ]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return content.includes('from') && !content.includes('import') && !content.includes('export')} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/ ]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if (!fixed.includes('import React') && !fixed.includes('import * as React')) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,'import React from \'react\''); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: 'this.fixes.length',totalErrors: 'this.errors.length',fixes: 'this.fixes',errors: 'this.errors' }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); } async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -655,6 +746,7 @@ class AdvancedSourceFixer {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       /', ' expected/,
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       /', ' expected/,
@@ -665,6 +757,9 @@ class AdvancedSourceFixer {}
 =======
       /', ' expected/,
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+      /',' expected/,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       /';' expected/,
       /'\)' expected/,
       /'\}' expected/,
@@ -698,8 +793,11 @@ class AdvancedSourceFixer {}
     const syntax_issues = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return errorPatterns.some(pattern => pattern.test(content));
   }
 
@@ -713,6 +811,7 @@ class AdvancedSourceFixer {}
 
   hasSyntaxIssues(content) {
     const syntaxIssues = [
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -725,6 +824,8 @@ class AdvancedSourceFixer {}
     ];
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       /import.*from.*from/,
 <<<<<<< HEAD
 =======
@@ -770,64 +871,42 @@ class AdvancedSourceFixer {}
     // Fix JSX tags;
     fixed = fixed.replace (/<([^>]*)\s*>/g, "<$1>");
     fixed = fixed.replace (/<\/([^>]*)\s*>/g, "</$1>");
+    fixed = fixed.replace (/<\/([^>]*)\s*>/g, "</$1>");"
 ;
     return fixed;
-  }
   fixImportExportIssues (content, file_path) {
     let fixed = content;
-;
-    if (|| file_path.ends_with (".jsx")) {) {
-  $2
-}
-      // Check condition
+;"
+    if (|| file_path.ends_with (".jsx")) {) {"
+  $2;
+      // Check condition;
 if (&&) {
-  $2
-}
-        !fixed.includes ("import * as React")) {
-        fixed = "import React from 'react';\n" + fixed;
-      }
-    }
-    fixed = fixed.replace (/import\s+{\s*}\s * from / g, "import React from");
-    fixed = fixed.replace (/import\s + from\s+['"]/g, "import React from 'react'");
-;
-    if (&& !fixed.includes ("export {")) {) {
-  $2
-}
-      fixed += "\n\nexport default {}";
-    }
-    return fixed;
-  }
+}"
+        !fixed.includes ("import * as React")) {""
+        fixed = "import React from 'react';\n" + fixed;"
+    fixed = fixed.replace (/import\s+{\s*}\s * from / g, "import React from");""
+    fixed = fixed.replace (/import\s + from\s+['"]/g, "import React from 'react'");"
+    if (&& !fixed.includes ("export {")) {) {"
+      fixed += "\n\nexport default {}";"
   fixSyntaxIssues (content, file_path) {
-    let fixed = content;
-;
-    // Fix duplicate keywords;
-    fixed = fixed.replace (/\bconst\s + const\b / g, "const");
-    fixed = fixed.replace (/\blet\s + let\b / g, "let");
-    fixed = fixed.replace (/\bvar\s + var\b / g, "var");
-    fixed = fixed.replace (/\bfunction\s + function\b / g, "function");
-;
-    // Fix trailing commas;
-    fixed = fixed.replace (/\{\s*, \s*\}/g, "{}");
-    fixed = fixed.replace (/\{\s*, \s*/g, "{");
-    fixed = fixed.replace (/\[\s*, \s*\]/g, "[]");
-    fixed = fixed.replace (/\[\s*, \s*/g, "[");
-    fixed = fixed.replace (/\(\s*, \s*\)/g, "()");
-    fixed = fixed.replace (/\(\s*, \s*/g, "(");
-;
-    return fixed;
-  }
-  getAppliedFixes (original, fixed) {
+    // Fix duplicate keywords;"
+    fixed = fixed.replace (/\bconst\s + const\b / g, "const");""
+    fixed = fixed.replace (/\blet\s + let\b / g, "let");""
+    fixed = fixed.replace (/\bvar\s + var\b / g, "var");""
+    fixed = fixed.replace (/\bfunction\s + function\b / g, "function");"
+    // Fix trailing commas;"
+    fixed = fixed.replace (/\{\s*, \s*\}/g, "{}");""
+    fixed = fixed.replace (/\{\s*, \s*/g, "{");""
+    fixed = fixed.replace (/\[\s*, \s*\]/g, "[]");""
+    fixed = fixed.replace (/\[\s*, \s*/g, "[");""
+    fixed = fixed.replace (/\(\s*, \s*\)/g, "()");""
+    fixed = fixed.replace (/\(\s*, \s*/g, "(");"
+  getAppliedFixes (original, fixed) {]
     const fixes = [];
-    // Check condition
+    // Check condition;
 if ( {) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        fixes.push ("Content length changed");
-      }
+      // Check condition;
+        fixes.push ("Content length changed");"
       if () {) {
   $2
 }
@@ -847,18 +926,33 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        fixes.push ("Added React import");"
+        fixes.push ("Added default export");"
+        fixes.push ("Added semicolons");""
+    fixed = fixed && fixed.replace(/import\s+{\s*}\s*from/g, "import React from");""
+    fixed = fixed && fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");""
+    if (!fixed && fixed.includes("export default") && !fixed && fixed.includes("export {")) {""
+    if (!fixed.includes("export default") && !fixed.includes("export {")) {;""
+      fixed += "\n\nexport default {};";"
+  fixSyntaxIssues(content, filePath) {
+    // Fix duplicate keywords;
+  getAppliedFixes(original, fixed) {
+    if (original !== fixed) {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return syntaxIssues.some(pattern => pattern.test(content));
-  }
 
   fixParsingErrors(content, filePath) {
-    let fixed = content;
+    let fixed = content;"
     fixed = fixed.replace(/"[^"]*$/gm, '"');
-    fixed = fixed.replace(/'[^']*$/gm, "'");
+    fixed = fixed.replace(/'[^']*$/gm, "'");""
     fixed = fixed.replace(/import\s+from\s+from/g, 'import React from');
     fixed = fixed.replace(/export\s+from\s+from/g, 'export default');
     fixed = fixed.replace(/function\s+function/g, 'function');
@@ -867,30 +961,24 @@ if ( {) {
     fixed = fixed.replace(/([^}])\n/g, '$1;\n');
     fixed = fixed.replace(/<([^>]*)\s*>/g, '<$1>');
     fixed = fixed.replace(/<\/([^>]*)\s*>/g, '</$1>');
+<<<<<<< HEAD
     return fixed;
   }
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   fixImportExportIssues(content, filePath) {
-    let fixed = content;
     if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
-      if (
+      if ()
         !fixed.includes('import React') &&
         !fixed.includes('import * as React')
       ) {
-        fixed = "import React from 'react';\n" + fixed;
-      }
-    }
     fixed = fixed.replace(/import\s+{\s*}\s*from/g, 'import React from');
-    fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
+    fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");""
     if (!fixed.includes('export default') && !fixed.includes('export {')) {
       fixed += '\n\nexport default {};';
-    }
-    return fixed;
-  }
 
-  fixSyntaxIssues(content, filePath) {
-    let fixed = content;
     fixed = fixed.replace(/\bconst\s+const\b/g, 'const');
     fixed = fixed.replace(/\blet\s+let\b/g, 'let');
     fixed = fixed.replace(/\bvar\s+var\b/g, 'var');
@@ -901,15 +989,85 @@ if ( {) {
     fixed = fixed.replace(/\[\s*,\s*/g, '[');
     fixed = fixed.replace(/\(\s*,\s*\)/g, '()');
     fixed = fixed.replace(/\(\s*,\s*/g, '(');
+
+  getAppliedFixes(original, fixed) {]
+      if (original.length !== fixed.length) {
+        fixes.push('Content length changed');
+      if (fixed.includes('import React')) {
+        fixes.push('Added React import');
+      if (fixed.includes('export default')) {
+        fixes.push('Added default export');
+      if (fixed.includes(';')) {
+        fixes.push('Added semicolons');
+#!/usr/bin/env node
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+      }
+    }
+  }
+  async fixFile(filePath) {
+    try {
+    }
+  }
+  hasParsingErrors(content) {
+    const errorPatterns = [
+      /Error: 'Parsing error:/
+      /Unterminated string literal/
+      /Identifier expected/
+      /Declaration or statement expected/
+      /Expression expected/
+      /Property or signature expected/
+      /Unexpected token/
+      /'from' expected/
+      /',' expected/
+      /';' expected/
+      /'\)' expected/
+      /'\}' expected/
+    ];
+    );
+  }
+  hasSyntaxIssues(content) {
+    const syntaxIssues = [
+      /import.*from.*from/
+      /export.*from.*from/
+      /function.*function/
+      /const.*const.*const/
+      /let.*let.*let/
+    ];
+  }
+  fixParsingErrors(content, filePath) {
+    let fixed = content;
+    // Fix unterminated strings
     return fixed;
   }
+  fixImportExportIssues(content, filePath) {
+    let fixed = content;
 
+
+    fixed = fixed && fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
+    fixed = fixed && fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
+
+    if (!fixed && fixed.includes("export default") && !fixed && fixed.includes("export {")) {
+
+
+
+    if (!fixed.includes("export default") && !fixed.includes("export {")) {;
+
+      fixed += "\n\nexport default {};";
+    }
+    return fixed;
+  }
+  fixSyntaxIssues(content, filePath) {
+    let fixed = content;
+    // Fix duplicate keywords
+    return fixed;
+  }
   getAppliedFixes(original, fixed) {
     const fixes = [];
     if (original !== fixed) {
-      if (original.length !== fixed.length) {
-        fixes.push('Content length changed');
       }
+<<<<<<< HEAD
       if (fixed.includes('import React')) {
         fixes.push('Added React import');
       }
@@ -1042,6 +1200,13 @@ import { fileURLToPath } from "url";
       if (fixed.includes(';')) {
         fixes.push('Added semicolons');
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
     }
     return fixes;
@@ -1050,11 +1215,38 @@ import { fileURLToPath } from "url";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 `
 if (import.meta.url === `file://${process.argv[1]}`) {}
 =======
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+
+
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);
+
+
+
+
+
+      timestamp: new Date().toISOString(),
+      totalFilesFixed: this && this.fixes.length,
+      totalErrors: this && this.errors.length,
+      fixes: this && this.fixes,
+      errors: this && this.errors,
+    };
+    fs && fs.writeFileSync(this && this.reportFile, JSON && JSON.stringify(report, null, 2));
+    this && this.log(`Report generated: ${this && this.reportFile}`);
+
+  }
+
+
+    return fixes;
+
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);
   async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -1063,18 +1255,18 @@ if (import.meta.url === `file://${process.argv[1]}`) {}
       fixes: this.fixes,
       errors: this.errors,
     };
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`;
     this.log(`Report generated: ${this.reportFile}`);
-  }
-}
 
 const fixer = new AdvancedSourceFixer();
-fixer.fixAllSourceFiles().catch(console.error);
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);
+fixer.fixAllSourceFiles().catch(console.error);`;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);`;
 if (import.meta.url === `file://${process.argv[1]}`) {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const fixer = new AdvancedSourceFixer();
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   fixer.fixAllSourceFiles().catch(console.error);
 
 `
@@ -1082,6 +1274,7 @@ if (import && import.meta.url === `file://${process ;
   fixer && fixer.fixAllSourceFiles().catch(console && console.error);
 }
 
+<<<<<<< HEAD
 
 
 
@@ -1186,10 +1379,13 @@ if (import && import.meta.url === `file://${process ;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 }
+<<<<<<< HEAD
 
 export default AdvancedSourceFixer;
 }
@@ -1281,9 +1477,15 @@ export default AdvancedSourceFixer;
 =======
 export default AdvancedSourceFixer;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+`;
+if (import && import.meta.url === `file://${process ;)
+  fixer && fixer.fixAllSourceFiles().catch(console && console.error);
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (require.main === module) {
-  const fixer = new AdvancedSourceFixer();
-  fixer.fixAllSourceFiles().catch(console.error);
 
 module.exports = AdvancedSourceFixer;
 export default AdvancedSourceFixer;
@@ -1302,7 +1504,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 }
+
 export default AdvancedSourceFixer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -1313,16 +1517,29 @@ export default AdvancedSourceFixer;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+if (require.main === module) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+
+module.exports = AdvancedSourceFixer;
+export default AdvancedSourceFixer;
+
+export default AdvancedSourceFixer;
+
+
+// Check condition;
+  const fixer = new AdvancedSourceFixer ();
+  fixer.fixAllSourceFiles ().catch (console.error);
+;`;
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async generate_report () {
-    const report = {
       timestamp: new Date ().toISOString (),
-      totalFilesFixed: this.fixes.length,
       total_errors: this.errors.length,
-      fixes: this.fixes,
-      errors: this.errors,
-    }
-;
-    fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2));
+    fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2));`;
     this.log (`Report generated: ${this.report_file}`);
   }
 }
@@ -1340,6 +1557,7 @@ export default AdvancedSourceFixer;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -1350,10 +1568,13 @@ export default AdvancedSourceFixer;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1363,6 +1584,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export default AdvancedSourceFixer;
 <<<<<<< HEAD
@@ -1381,8 +1606,14 @@ export default AdvancedSourceFixer;
 const fixer = new AdvancedSourceFixer();
 fixer.fixAllSourceFiles().catch(console.error);
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);
+// Check condition;
+
+
+
+const fixer = new AdvancedSourceFixer();
 fixer.fixAllSourceFiles().catch(console.error);
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1411,6 +1642,9 @@ fixer.fixAllSourceFiles().catch(console.error);
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);  const fixer = new AdvancedSourceFixer();
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
@@ -1419,6 +1653,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export default AdvancedSourceFixer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1436,12 +1671,16 @@ module.exports = AdvancedSourceFixer;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+module.exports = AdvancedSourceFixer;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default AdvancedSourceFixer;
 if (require.main === module) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 
 export default AdvancedSourceFixer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 module.exports = AdvancedSourceFixer;
@@ -1460,6 +1699,9 @@ export default AdvancedSourceFixer;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 =======
+=======
+module.exports = AdvancedSourceFixer;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default AdvancedSourceFixer;
 
 <<<<<<< HEAD
@@ -1490,6 +1732,7 @@ export default AdvancedSourceFixer;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedSourceFixer { constructor() { this.fixes = []; this.errors = []; this.reportFile = path.join(__dirname,'advanced-source-fix-report.json')} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async fixAllSourceFiles() { this.log('🔧 Starting advanced source file fixing...'); await this.fixDirectory(path.join(__dirname,'src')); await this.fixDirectory(path.join(__dirname,'pages')); this.log(`✅ Fixed ${this.fixes.length} files`); if (this.errors.length > 0) { this.log(`❌ ${this.errors.length} errors encountered`)} await this.generateReport()} async fixDirectory(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); for (const item of items) { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if ( stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' ) { await this.fixDirectory(fullPath)} else if ( item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') ) { await this.fixFile(fullPath)} } } async fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let wasFixed = false; if (this.hasParsingErrors(content)) { fixedContent = this.fixParsingErrors(content,filePath); wasFixed = true} if (this.hasImportExportIssues(content)) { fixedContent = this.fixImportExportIssues(fixedContent,filePath); wasFixed = true} if (this.hasSyntaxIssues(content)) { fixedContent = this.fixSyntaxIssues(fixedContent,filePath); wasFixed = true} if (wasFixed) { fs.writeFileSync(filePath,fixedContent); this.fixes.push({ file: filePath,timestamp: new Date().toISOString(),fixes: this.getAppliedFixes(content,fixedContent),}); this.log(`Fixed: ${filePath}`)} } catch (error) { this.errors.push({ file: filePath,error: error.message,timestamp: new Date().toISOString(),}); this.log(`Error fixing ${filePath}: ${error.message}`,'ERROR')} } hasParsingErrors(content) { const errorPatterns = [ /Error: 'Parsing error:/,/Unterminated string literal/,/Identifier expected/,/Declaration or statement expected/,/Expression expected/,/Property or signature expected/,/Unexpected token/,/'from' expected/,/',' expected/,/';' expected/,/'\)' expected/,/'\}' expected/,]; return errorPatterns.some(pattern => pattern.test(content))} hasImportExportIssues(content) { return ( content.includes('from') && !content.includes('import') && !content.includes('export') )} hasSyntaxIssues(content) { const syntaxIssues = [ /import.*from.*from/,/export.*from.*from/,/function.*function/,/const.*const.*const/,/let.*let.*let/,]; return syntaxIssues.some(pattern => pattern.test(content))} fixParsingErrors(content,filePath) { let fixed = content; fixed = fixed.replace(/"[^"]*$/gm,'"'); fixed = fixed.replace(/'[^']*$/gm,"'"); fixed = fixed.replace(/import\s+from\s+from/g,'import React from'); fixed = fixed.replace(/export\s+from\s+from/g,'export default'); fixed = fixed.replace(/function\s+function/g,'function'); fixed = fixed.replace(/const\s+const/g,'const'); fixed = fixed.replace(/let\s+let/g,'let'); fixed = fixed.replace(/([^}])\n/g,'$1;\n'); fixed = fixed.replace(/<([^>]*)\s*>/g,'<$1>'); fixed = fixed.replace(/<\/([^>]*)\s*>/g,'</$1>'); return fixed} fixImportExportIssues(content,filePath) { let fixed = content; if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) { if ( !fixed.includes('import React') && !fixed.includes('import * as React') ) { fixed = "import React from 'react';\n" + fixed} } fixed = fixed.replace(/import\s+{\s*}\s*from/g,'import React from'); fixed = fixed.replace(/import\s+from\s+['"]/g,"import React from 'react'"); if (!fixed.includes('export default') && !fixed.includes('export {')) { fixed += '\n\nexport default {};'} return fixed} fixSyntaxIssues(content,filePath) { let fixed = content; fixed = fixed.replace(/\bconst\s+const\b/g,'const'); fixed = fixed.replace(/\blet\s+let\b/g,'let'); fixed = fixed.replace(/\bvar\s+var\b/g,'var'); fixed = fixed.replace(/\bfunction\s+function\b/g,'function'); fixed = fixed.replace(/\{\s*,\s*\}/g,'{}'); fixed = fixed.replace(/\{\s*,\s*/g,'{'); fixed = fixed.replace(/\[\s*,\s*\]/g,'[]'); fixed = fixed.replace(/\[\s*,\s*/g,'['); fixed = fixed.replace(/\(\s*,\s*\)/g,'()'); fixed = fixed.replace(/\(\s*,\s*/g,'('); return fixed} getAppliedFixes(original,fixed) { const fixes = []; if (original !== fixed) { if (original.length !== fixed.length) { fixes.push('Content length changed')} if (fixed.includes('import React')) { fixes.push('Added React import')} if (fixed.includes('export default')) { fixes.push('Added default export')} if (fixed.includes(';')) { fixes.push('Added semicolons')} } return fixes} async generateReport() { const report = { timestamp: new Date().toISOString(),totalFilesFixed: this.fixes.length,totalErrors: this.errors.length,fixes: this.fixes,errors: this.errors,}; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); this.log(`Report generated: ${this.reportFile}`)} } const fixer = new AdvancedSourceFixer(); fixer.fixAllSourceFiles().catch(console.error);
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 <<<<<<< HEAD
@@ -1536,6 +1779,8 @@ export default AdvancedSourceFixer;
 if (require.main === module) {}
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -1543,6 +1788,7 @@ if (require.main === module) {}
 
 
 
+<<<<<<< HEAD
 export default AdvancedSourceFixer;
 
 
@@ -1562,3 +1808,8 @@ export default AdvancedSourceFixer;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+// Check condition;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

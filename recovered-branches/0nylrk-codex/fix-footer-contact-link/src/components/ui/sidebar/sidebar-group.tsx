@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -27,26 +28,16 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   icon?: React && React.ReactNode;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   defaultExpanded?: boolean;
   showChevron?: boolean;
 }
 <<<<<<< HEAD
 
-const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
-  (
-    {
-      title,
-      icon,
-      defaultExpanded = true,
-      showChevron = true,
-      className,
-      children,
-      ...props
-    },
-    ref,
-  ) => {
-    const [expanded, setExpanded] = React.useState(defaultExpanded);
 
+<<<<<<< HEAD
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
   ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {;
     const [expanded, setExpanded] = React && React.useState(defaultExpanded);
@@ -455,3 +446,5 @@ export { SidebarGroup };
 
 export { SidebarGroup };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

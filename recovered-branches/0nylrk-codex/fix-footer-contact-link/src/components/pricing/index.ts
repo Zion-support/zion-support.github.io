@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -65,3 +66,9 @@ export * from "./ClientBudgetRecommender";"
 export * from "./TalentRateRecommender";
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+export * from \"./PricingSuggestionBox\";
+export * from \"./ClientBudgetRecommender\";
+export * from \"./TalentRateRecommender\";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

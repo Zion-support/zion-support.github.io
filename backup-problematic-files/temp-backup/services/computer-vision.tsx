@@ -14,15 +14,17 @@ export default function Computervision({ }: ComputervisionProps) {
       <p>This component is currently under development.</p>
 =======
 import React from 'react';
-
 interface Computer-visionProps {
-  className?: string;
+  // TODO: Implement
 }
+  className?: string;
 
 const Computer-vision: React.FC<Computer-visionProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
+
+    <div className={className || }>
+</div>
       <h1>Computer-vision</h1>
+<<<<<<< HEAD
       <p>This component is under development.</p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>
@@ -30,3 +32,6 @@ const Computer-vision: React.FC<Computer-visionProps> = ({ className }) => {
 }
 }
 }
+=======
+      <p>This component is under development.</p>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

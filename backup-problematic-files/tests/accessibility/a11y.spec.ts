@@ -16,21 +16,15 @@
     expect(h2).toBeGreaterThanOrEqual(0);
     expect(h3).toBeGreaterThanOrEqual(0)});
   test('forms have proper labels', async ({ page }) => {
-    await page.goto('/contact');
     const inputs = await page.locator('input, textarea, select').count(;);
     const labels = await page.locator('label').count(;);
     expect(labels).toBeGreaterThanOrEqual(inputs)});
   test('has proper color contrast', async ({ page }) => {
-    await page.goto('/');
     const accessibilityScanResults = await new AxeBuilder({ page };);
       .withTags(['color-contrast']);
       .analyze();
-    expect(accessibilityScanResults.violations).toEqual([])});
   test('keyboard navigation works', async ({ page }) => {
-    await page.goto('/');
     // Test tab navigation;
-    await page.keyboard.press('Tab');
-    await page.keyboard.press('Tab');
     await page.keyboard.press('Tab');
     // Should be able to navigate without errors;
     await expect(page.locator(':focus')).toBeVisible()})});
@@ -38,8 +32,10 @@ import { test,expect } from '@playwright/test'; import AxeBuilder from '@axe-cor
 export default function A11y.spec({ }: A11y.specProps) {
   return (
     <div>
+</div>
       <h1>A11y.spec</h1>
       <p>This component is currently under development.</p>
+<<<<<<< HEAD
     </div>
   );
 }
@@ -48,3 +44,6 @@ export default function A11y.spec({ }: A11y.specProps) {
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

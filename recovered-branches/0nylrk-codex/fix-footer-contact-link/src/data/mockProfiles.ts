@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -661,6 +662,9 @@ export const MOCK_PROFILES: Record<string ProfileData> = {"
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <<<<<<< HEAD
+=======
+{
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -687,6 +691,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     name: "TechSolutions Inc.";
     title: "Enterprise AI Integration Services";
     avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -875,3 +880,7 @@ export const MOCK_PROFILES: Record<string ProfileData> = {;
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

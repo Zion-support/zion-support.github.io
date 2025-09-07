@@ -8,15 +8,17 @@ import React from 'react';
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 import React from 'react';
-
 interface Cloud-migrationProps {
-  className?: string;
+  // TODO: Implement
 }
+  className?: string;
 
 const Cloud-migration: React.FC<Cloud-migrationProps> = ({ className }) => {
-  return (
-    <div className={className || ''}>
+
+    <div className={className || }>
+</div>
       <h1>Cloud-migration</h1>
+<<<<<<< HEAD
       <p>This component is under development.</p>
     </div>
   );
@@ -24,3 +26,6 @@ const Cloud-migration: React.FC<Cloud-migrationProps> = ({ className }) => {
 }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      <p>This component is under development.</p>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

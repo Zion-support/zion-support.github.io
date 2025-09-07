@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -73,11 +74,20 @@ import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { LoginContent } from "@/components/auth/login";
 export default function Login() {
+import { Navigate } from \"react-router-dom\",;
+import { useAuth } from \"@/hooks/useAuth\",;
+import { Header } from \"@/components/Header\",import { Footer } from \"@/components/Footer\";
+import { LoginContent } from \"@/components/auth/login\";
+export default function Login() {}
   const { isAuthenticated, user } = useAuth();
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -168,6 +178,23 @@ export default function Login() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Footer } from \"@/components/Footer\",;
+import { LoginContent } from \"@/components/auth/login\",;
+export default function Login() {}
+  const { isAuthenticated, user } = useAuth(),
+  // Redirect if user is already logged in and has completed profile;
+if (isAuthenticated && user?.profileComplete) {}
+    return <Navigate to=\"/\" />}
+  }
+  // Redirect to onboarding if user is authenticated but hasn't completed profile;
+if (isAuthenticated && !user?.profileComplete) {}
+    return <Navigate to=\"/onboarding\" />}
+  }
+  }  // Redirect to onboarding if user is authenticated but hasn't completed profile;
+  if (isAuthenticated && !user?.profileComplete) {;}
+    return <Navigate to=\"/onboarding\" />;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 import { Navigate } from './react-router-dom';
 import { use_auth } from '@/hooks / use_auth';
@@ -197,7 +224,11 @@ import { Header } from '@/components / Header';'
 import { Footer } from '@/components / Footer';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { LoginContent } from '@/components / auth / login';
+<<<<<<< HEAD
 export default /**;
+=======
+export default /**
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  * Login - Function description;
  */
 function Login() {}
@@ -206,6 +237,7 @@ function Login() {}
   // Redirect if user is already logged in and has completed profile;
   // Check condition;
 if ( {) {}
+<<<<<<< HEAD
   $2;
 }"
     return <Navigate to="/" />;
@@ -220,11 +252,26 @@ if ( {) {}
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  $2}
+}
+    return <Navigate to=\"/\" />;
+  }
+  // Redirect to onboarding if user is authenticated but hasn't completed profile;
+  // Check condition;
+if ( {) {}
+  $2}
+}
+    return <Navigate to=\"/onboarding\" />;
+  }
+  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Navigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { LoginContent } from "@/components/auth/login",;
+<<<<<<< HEAD
 ;
 export default function Login() {;
   const { isAuthenticated, user } = useAuth(),;
@@ -237,11 +284,31 @@ export default function Login() {;
   // Redirect to onboarding if user is authenticated but hasn't completed profile;
   if (isAuthenticated && !user?.profileComplete) {;
     return <Navigate to="/onboarding" />,;
+=======
+import { Navigate } from \"react-router-dom\";
+import { useAuth } from \"@/hooks/useAuth\";
+import { Header } from \"@/components/Header\",;
+import { Footer } from \"@/components/Footer\",;
+import { LoginContent } from \"@/components/auth/login\",;
+;
+export default function Login() {;}
+  const { isAuthenticated, user } = useAuth(),;
+  ;
+  // Redirect if user is already logged in and has completed profile;
+  if (isAuthenticated && user?.profileComplete) {;}
+    return <Navigate to=\"/\" />,;}
+  }
+  ;
+  // Redirect to onboarding if user is authenticated but hasn't completed profile;
+  if (isAuthenticated && !user?.profileComplete) {;}
+    return <Navigate to=\"/onboarding\" />,;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 ;
   return (;
 ;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -254,9 +321,34 @@ export default function Login() {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </>);
+}
+
+}
+}
+
+import { Navigate } from "react-router-dom";""
+import { useAuth } from "@/hooks/useAuth";""
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { LoginContent } from "@/components/auth/login";"
+export default function Login() {
+  const { isAuthenticated, user } = useAuth();
+
+
+  // Redirect if user is already logged in and has completed profile;
+  if (isAuthenticated && user?.profileComplete) {"
+    return <Navigate to="/" />;"
+"
+    return <Navigate to="/onboarding" />;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>;
       <Header />;
+
       <LoginContent />;
+
       <Footer />;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -271,6 +363,7 @@ export default function Login() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
@@ -280,6 +373,12 @@ export default function Login() {;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    </>);
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </>);
 }
 
@@ -300,20 +399,17 @@ export default function Login() {;
     </>;
   ),; export default function Login () {
   const {
-  isAuthenticated, user 
+  // TODO: Implement
+  isAuthenticated, user;
 }= useAuth ();
 //Redirect if user is already logged in and has completed profile if (isAuthenticated && user?.profileComplete) {
-  
 }// Redirect to onboarding if user is authenticated but hasn't completed profile if (isAuthenticated && !user?.profileComplete) {
-  
-}
 
-}
-}
-    </>;
   );
+pr-12325
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -331,3 +427,7 @@ export default function Login() {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

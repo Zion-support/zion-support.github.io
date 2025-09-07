@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * CI/CD Automation Script for PM2;
  * Replaces GitHub Actions CI/CD workflows;
@@ -23,15 +27,14 @@ const log = (message) => {}
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
 const log = (message) => {}
   const timestamp = new Date().toISOString();
-  
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const runCommand = (command, description) => {}
   try {}
+<<<<<<< HEAD
     log(`"Starting": ${description}`);
     const output = execSync(command, { })
 <<<<<<< HEAD
@@ -56,15 +59,22 @@ const runCommand = (command, description) => {}
 const main = async () => {}
   log('Starting CI/CD Automation Process');
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const main = async () => {}
+
+const main = async () => {}"
   log('Starting CI/CD Automation Process');
+<<<<<<< HEAD
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Install dependencies;
-  const installResult = runCommand('npm ci', 'Installing dependencies');
+  const installResult = runCommand('npm ci,Installing dependencies');
   if (!installResult.success) {}
     log('Dependency installation failed, trying npm install');
+<<<<<<< HEAD
     runCommand('npm install', 'Installing dependencies (fallback)');
   };
   // Lint and type-check;
@@ -74,20 +84,22 @@ const main = async () => {}
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Build project;
-  const buildResult = runCommand('npm run build', 'Building project');
+  const buildResult = runCommand('npm run build,Building project');
   if (!buildResult.success) {}
     log('Build failed, attempting to fix and rebuild');
     // Try to fix common build issues;
-    runCommand('rm -rf .next && npm run build', 'Cleaning and rebuilding');
-  };
+
   // Verify build output;
   if (fs.existsSync('dist') || fs.existsSync('out') || fs.existsSync('.next')) {}
     log('Build "verification": Output directory found');
   } else {}
     log('Build "verification": No output directory found');
-  };
   // Run tests if available;
+<<<<<<< HEAD
   runCommand('npm test --if-present', 'Running tests');
 <<<<<<< HEAD
 =======
@@ -96,28 +108,29 @@ const main = async () => {}
   // Check for any pending changes;
   try {}
     const gitStatus = execSync('git status --porcelain', { "encoding": 'utf8' }
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 });
     if (gitStatus.trim()) {}
       log('Uncommitted changes detected');
       // Optionally auto-commit fixes;
-      if (process.env.AUTO_COMMIT === 'true') {}
-        runCommand('git add .', 'Staging changes');
-        runCommand('git commit -m "Auto-"fix": CI/CD automation fixes"', 'Committing fixes');
-      };
-    };
-  } catch (error) {}
-    log(`Git status check "failed": ${error.message}`);
-  };
+
+  };"
   log('CI/CD Automation Process completed');
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Handle process termination;
-process.on('SIGINT', () => {}
+process.on('SIGINT, () => {}
   log('CI/CD Automation Process interrupted');
   process.exit(0);
+<<<<<<< HEAD
 }
 });
 <<<<<<< HEAD
@@ -131,9 +144,14 @@ process.on('SIGTERM', () => {}
 });
 <<<<<<< HEAD
 =======
+=======
+
+  log('CI/CD Automation Process terminated');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Run the main function;
+<<<<<<< HEAD
 main().catch(error => {})
   log(`CI/CD Automation Process "failed": ${error.message}`);
   process.exit(1);
@@ -155,7 +173,8 @@ main().catch(error => {})
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-});
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

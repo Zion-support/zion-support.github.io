@@ -94,6 +94,7 @@ serve(async (req) => {;
 };
 //Handle CORS preflight requests if (req.method === 'OPTIONS') {
   //Create prompt for OpenAI const prompt = `You are an expert project manager who specializes in breaking down projects into clear milestones. Based on the following project details: Generate a logical, phased milestone breakdown with 3-7 milestones that would be appropriate for this project. Include realistic due dates, estimated hours of effort, and clear deliverable descriptions. Each milestone should have: 1. Title: A concise title 2. Description: A clear description of deliverables 3. Due Date: A specific date within the project timeline 4. Estimated Hours: Reasonable effort estimate Format the response as a valid JSON array of milestone objects with these fields: "title", "description", "dueDate", "estimatedHours" Ensure your response is ONLY the JSON array with no additional text. `;
+<<<<<<< HEAD
 // Call OpenAI API
 }
 });
@@ -101,3 +102,8 @@ serve(async (req) => {;
 
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+// Call OpenAI API 
+}
+});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

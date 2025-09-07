@@ -1,7 +1,18 @@
+import * as React from &quot;react & quot;
+import { cn } from &quot;@/lib / utils & quot;
+
+import * as React from &quot;react&quot;
+import { cn } from &quot;@/lib/utils&quot;
+import { badgeVariants } from &quot;@/components/ui/badge-variants&quot;
+import * as React from &quot;react&quot;
+import { cn } from &quot;@/lib/utils&quot;
+import { badgeVariants } from &quot;@/components/ui/badge-variants&quot;
+import * as React from "react"
 
 <<<<<<< HEAD
 import * as React from &quot;react & quot;
 import { cn } from &quot;@/lib / utils & quot;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,10 +75,11 @@ export interface BadgeProps
 =======
 import * as React from "react"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { cn } from "@/lib/utils"
 
 import { badgeVariants } from "@/components/ui/badge-variants"
-
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLSpanElement> {
@@ -75,7 +87,20 @@ export interface BadgeProps
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export interface BadgeProps
+  extends React.HTMLAttributes<HTMLSpanElement> {
+  variant?:;
+    | &quot;default&quot;
+    | &quot;secondary&quot;
+    | &quot;destructive&quot;
+    | &quot;outline&quot;
+    | &quot;success&quot;
+    | &quot;warning&quot;
+    | &quot;info&quot;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   variant?:
     | "default"
     | "secondary"
@@ -87,6 +112,7 @@ export interface BadgeProps
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -104,6 +130,8 @@ export interface BadgeProps
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 ;
 
@@ -113,6 +141,14 @@ export interface BadgeProps
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import * as React from "react"""
+import { cn } from "@/lib/utils"""
+import { badgeVariants } from "@/components/ui/badge-variants""
+export interface BadgeProps;
+  extends React.HTMLAttributes<HTMLSpanElement> {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -139,6 +175,7 @@ export { Badge, badgeVariants }
 ;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -155,3 +192,9 @@ export { Badge, badgeVariants }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    <span className={cn(badgeVariants({ variant }), className)} {...props} />;
+</span>
+</span>"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/integrations/IntegrationConnectionModal.js.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/integrations/IntegrationConnectionModal.js.jsx
 <<<<<<< HEAD
@@ -43,3 +44,9 @@
 =======
 ' ' ' ' "export": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ "autoCreateContacts": 'tru',e,"pushNotes": 'fals',e,"syncJobDetails": 'tru',e,"syncApplicantData": 'true'}) const handleConnectOAuth = () => { setIsConnecting(true)';"";""}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/integrations/IntegrationConnectionModal.jsx
+=======
+" " " " export: function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ autoCreateContacts: "tru",e,pushNotes: "fals",e,syncJobDetails: "tru",e,syncApplicantData: "true"}) const handleConnectOAuth = () => { setIsConnecting(true)";"";"""
+' \' \' \' \"export\": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ \"autoCreateContacts\": \'tru\',e,\"pushNotes\": \'fals\',e,\"syncJobDetails\": \'tru\',e,\"syncApplicantData\": \'true\'}) const handleConnectOAuth = () => { setIsConnecting(true)\';\"";
+" " " " export: function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ autoCreateContacts: "tru",e,pushNotes: "fals",e,syncJobDetails: "tru",e,syncApplicantData: "true"}) const handleConnectOAuth = () => { setIsConnecting(true)";"";"""
+ \' \' \' \"export\": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ \"autoCreateContacts\": \'tru\',e,\"pushNotes\": \'fals\',e,\"syncJobDetails\": \'tru\',e,\"syncApplicantData\": \'true\'}) const handleConnectOAuth = () => { setIsConnecting(true)\'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

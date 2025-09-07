@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
 export type TrackEventPayload = {;
 =======
@@ -10,6 +11,10 @@ export type TrackEventPayload = {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';
 
 export interface TrackEventPayload {
@@ -44,6 +49,7 @@ export async function trackEvent(payload: TrackEventPayload) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
@@ -53,6 +59,11 @@ export async function trackEvent(payload: TrackEventPayload) {
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 <<<<<<< HEAD
 export type TrackEventPayload = {
@@ -114,10 +125,54 @@ function track_event() {}
 =======
 
 
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',;
+export type TrackEventPayload = {;
+  name: string,;
+  page?: string,;
+  userType?: UserType,;
+  properties?: Record<string any>,;
+  at?: string;
+},;
+export async function trackEvent(payload: TrackEventPayload) {;
+  try {;
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
+export type TrackEventPayload = {
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
+export type TrackEventPayload = {;
+  name: string;
+  page?: string;
+  userType?: UserType;
+  properties?: Record<string, any>;
+  at?: string;
+}
+export async function trackEvent(payload: TrackEventPayload) {
+  try {
+    await fetch('/api/analytics/events/track', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify(payload)
+      keepalive: true as any
+    });
+  } catch (e) {
+    // swallow
+  userType?: UserType,;
+  properties?: Record<string, any>,;
+  at?: string;
+
+
+
+
+
+
+
 
 
     await fetch('/api/analytics/events/track', {;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
@@ -127,19 +182,30 @@ function track_event() {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-
   }
 }
+
 };
 export async function trackEvent(payload: TrackEventPayload) {;
   try {
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
+};
+export async function trackEvent(payload: TrackEventPayload) {;
+  try {;
+    await fetch('/api/analytics/events/track', {;
+      method: 'POST';
+      headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify(payload);
       keepalive: true as any});
   } catch (e) {;
     // swallow;
+
+
+
+
+
   } catch (error) {
     // swallow;
     } catch (error) {
@@ -173,6 +239,7 @@ export async function trackEvent(payload: TrackEventPayload) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
@@ -182,9 +249,24 @@ export async function trackEvent(payload: TrackEventPayload) {;
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+}
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
-  }
+export interface TrackEventPayload {
+  // TODO: Implement
+}
+  event: string;
+  properties?: Record<string, any>;
+</string>
+pr-12325
 }
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

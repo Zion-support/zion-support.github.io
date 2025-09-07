@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import {}
   addJSON,;
   publishManifesto,;
@@ -88,9 +89,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
     return res.status(500).json({ error: e.message });
   }
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return res.status(200).json({ ok })
-origin/cursor/automate-test-improve-and-merge-code-2533
     }
+<<<<<<< HEAD
 =======
   } catch (e: any) {}
     }'
@@ -99,6 +103,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {}
 }
 import {}
+=======
+    return res && res.status(400).json({ error: 'Unsupported action' ;})
+  } catch (e: any) {;}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   addJSON,
   publish_manifesto,
   OFFWORLD_TOPICS,';
@@ -120,9 +129,15 @@ function handler() {}
 if ( {) {}
   $2;
 }
+<<<<<<< HEAD
       const { cid, provider } = await addJSON (body);'
       if (return res.status (503).json ({ error: 'IPFS unavailable' })) {}
   $2;
+=======
+      const { cid, provider } = await addJSON (body);
+      if (return res.status (503).json ({ error: 'IPFS unavailable' ;})) {
+  $2
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
       return res.status (200).json ({ cid, provider });
     }
@@ -134,10 +149,17 @@ if ( {) {}
         OFFWORLD_TOPICS.manifesto,'
         body?.message || '');
       return res.status (200).json ({ ok });
+<<<<<<< HEAD
     }'
     return res.status (400).json ({ error: 'Unsupported action' });
   } catch (e: any) {}
     return res.status (500).json ({ error: e.message });
+=======
+    }
+    return res.status (400).json ({ error: 'Unsupported action' ;});
+  } catch (e: any) {
+    return res.status (500).json ({ error: e.message ;});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }    }
     // Check condition;
 if ( {) {}
@@ -145,11 +167,29 @@ if ( {) {}
 }'
       const ok = await publish_manifesto (OFFWORLD_TOPICS.manifesto, body?.message || '');
       return res.status (200).json ({ ok });
+<<<<<<< HEAD
     }'
     return res.status (400).json ({ error: 'Unsupported action' });
   } catch (e: any) {}
     return res.status (500).json ({ error: e.message });
+=======
+    }
+    return res.status (400).json ({ error: 'Unsupported action' ;});
+  } catch (e: any) {
+    return res.status (500).json ({ error: e.message ;});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+,
 }
+<<<<<<< HEAD
 '
+=======
+
+const ok = await publish_manifesto (OFFWORLD_TOPICS.manifesto, body?.message || '')return res.status (200).json ({ ok })}
+    return res.status (400).json ({ error: 'Unsupported action' ;},
+} catch (e: any) ;
+  return res.status (500).json ({ error: e.message ;}),
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

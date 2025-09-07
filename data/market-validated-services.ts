@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 <<<<<<< HEAD
@@ -1209,6 +1213,9 @@ export interface MarketValidatedService {;
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 	id: string;
 	name: string;
 	tagline: string;
@@ -1224,6 +1231,7 @@ export interface MarketValidatedService {;
 	trialDays?: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}
 }}
 =======
@@ -1236,13 +1244,15 @@ export interface MarketValidatedService {;
 	address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup && ziontechgroup.com";,
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 	contactInfo: {
 		mobile: string;
 		email: string;
 		address: string;
-		website?: string;
-	};
 
+<<<<<<< HEAD
 }
 export const marketValidatedServices: MarketValidatedService[] = [;
 	// AI and Assistants;
@@ -2043,3 +2053,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   website: "https://ziontechgroup && ziontechgroup.com";,
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

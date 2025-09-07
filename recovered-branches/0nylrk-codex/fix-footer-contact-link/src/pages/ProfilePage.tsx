@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -606,6 +607,16 @@ export default function ProfilePage() {;
 =======
         description={
           profileData.bio || "View the profile of this talented individual."
+=======
+
+      </div>
+    <>;
+      <SEO;
+        title={`${profileData.full_name} | Talent Profile`}
+        description={"
+          profileData.bio || "View the profile of this talented individual.""
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -614,7 +625,9 @@ export default function ProfilePage() {;
         }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       />
+
       <AppHeader />
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
 <<<<<<< HEAD
@@ -727,49 +740,41 @@ export default function ProfilePage() {;
 =======
       />;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"
+
+</AppHeader>"
+      <div className="container mx-auto px-4 py-8">"
+        <div className="grid grid-cols-12 gap-6">"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <AppHeader />;
-      <div className="container mx-auto px-4 py-8">;
-        <div className="grid grid-cols-12 gap-6">;
-  return (
-    <>;
-      <SEO
-          {/* Main Content Area */}
-          <div className="col-span-12 lg:col-span-8">;
-            {/* Profile Header */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
-              <div className="flex items-start">;
-                {/* Avatar */}
-                <div className="relative mr-4">
-                  <Avatar className="w-24 h-24">
-                    {profileData.profile_picture_url ? (
-                      <AvatarImage
+      <div className="container mx-auto px-4 py-8">;"
+        <div className="grid grid-cols-12 gap-6">;"
+          {/* Main Content Area */}"
+          <div className="col-span-12 lg:col-span-8">;"
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;"
+              <div className="flex items-start">;"
+                <div className="relative mr-4">"
+                  <Avatar className="w-24 h-24">"
+
+                      <AvatarImage;
                         src={profileData.profile_picture_url}
                         alt={profileData.full_name}
-                      />
-                    ) : (
-                      <AvatarFallback>
-                        {profileData.full_name?.charAt(0)}
-                      </AvatarFallback>
-                    )}
-                  </Avatar>;
-                  {profileData && profileData.is_verified && (;
-                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;
-                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
-                    </div>;
-                  )}
-                </div>
 
-                </div>;
-                    {profileData.profile_picture_url ? (;
+                      <AvatarFallback>
+
+                  ;"
+                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;"
+                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;"
+</CheckCircle2>
+                    </div>;
+
                       <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />;
-                    ) :(;
-                      <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>;
-                    )}
-                  </Avatar>;
-                  {profileData.is_verified && (;
-                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;
-                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
+
+                      <AvatarFallback>{profileData.full_name?.charAt(0)};
+                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;"
                     </div>;                  )}
+<<<<<<< HEAD
                 </div>;
                 ;
                 {/* Main Info */}
@@ -851,11 +856,23 @@ export default function ProfilePage() {;
                       </h1>"
                       <p className="text-zion-cyan font-medium">
                         {profileData.professional_title}
+=======
+                <div className="flex-1">"
+                  <div className="flex justify-between items-start">"
+                    <div>
+                      <h1 className="text-2xl font-bold text-white">"
+</h1>
+                      </h1>"
+                      <p className="text-zion-cyan font-medium">"
+</p>
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </p>
                     </div>
-                    {/* Add Save/Unsave Button Here */}
                   </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </div>;
                   {/* Location & Availability */}
@@ -877,8 +894,21 @@ export default function ProfilePage() {;
                     {profileData && profileData.availability && (;"
                       <div className="flex items-center text-zion-slate-light">;"
                         <Clock className="h-4 w-4 mr-1" />;
+=======
+
+                  </div>;"
+                  <div className="mt-2 flex flex-wrap gap-3 text-sm">;"
+                      <div className="flex items-center text-zion-slate-light">;"
+                        <MapPin className="h-4 w-4 mr-1" />;"
+
+                        <span>{profileData && profileData.location}</span>;
+                        <Clock className="h-4 w-4 mr-1" />;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <span>{profileData && profileData.availability}</span>;
+
                       </div>;
+<<<<<<< HEAD
                     )}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -918,10 +948,12 @@ export default function ProfilePage() {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>
                 </div>
-              </div>
 
+<<<<<<< HEAD
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && ("
                 <div className="mt-4">"
@@ -1076,11 +1108,37 @@ export default function ProfilePage() {;
                 ) : ("
                   <p className="text-zion-slate-light">
                     No portfolio links provided.
-                  </p>
-                )}
-              </div>
-            </div>
+=======
+              </div>"
+                <div className="mt-4">"
+                  <h4 className="text-lg font-bold text-white mb-2">Skills</h4>""
+                  <div className="flex flex-wrap gap-2">"
+                      <Badge key={index} variant="secondary">"
 
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">"
+              <h2 className="text-xl font-bold text-white mb-3">About Me</h2>""
+              <p className="text-zion-slate-light">"
+              <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>""
+              <div className="space-y-3">"
+                    <a;
+                      key={index}
+                      href={link}"
+                      target="_blank"""
+                      rel="noopener noreferrer"""
+                      className="flex items-center text-zion-cyan hover:text-white transition-colors">;"
+</a>"
+                      <LinkIcon className="h-4 w-4 mr-2" />;"
+
+</LinkIcon>
+                    </a>"
+                  <p className="text-zion-slate-light">"
+</p>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                  </p>
+              </div>
+
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
@@ -1153,13 +1211,23 @@ export default function ProfilePage() {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+            </div>"
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">"
+</div>"
+              <h2 className="text-xl font-bold text-white mb-3">Experience</h2>""
+              <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;""
+              <div className="flex space-x-4">;"
+                    href={profileData && profileData.github_link}"
+                    className="text-zion-cyan hover:text-white transition-colors""
+                  >
+                    <Github className="h-6 w-6" />"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-                  </Link>
+                    <Github className="h-6 w-6" />;"
 
-
-                    className="text-zion-cyan hover:text-white transition-colors">;
-                    <Github className="h-6 w-6" />;
                   </a>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 )}
                 {profileData && profileData.twitter_link && (;
@@ -1512,15 +1580,37 @@ if ( {) {
                 id: profileData?.id || "",
                 full_name: profileData?.full_name || "",
                 professional_title: profileData?.professional_title || "",
+=======
+                    href={profileData && profileData.twitter_link}"
+                    className="text-zion-cyan hover:text-white transition-colors">;"
+                    <Twitter className="h-6 w-6" />;"
+
+                    href={profileData && profileData.linkedin_link}"
+                    rel="noopener noreferrer""
+</a>
+                    <Linkedin className="h-6 w-6" />;"
+
+</Linkedin>
+
+                  </a>;
+              </div>;
+            </div>;
+
+          </div>;"
+          <div className="col-span-12 lg:col-span-4 space-y-6">;"
+            <HireNowCTA;
+              talentProfile={{"
+                id: profileData?.id || "",""
+                full_name: profileData?.full_name || "",""
+                professional_title: profileData?.professional_title || "","
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 hourly_rate: profileData?.hourly_rate || 0,
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               }}
             />;
-            {/* Placeholder for other sidebar elements */}
-          </div>
-        </div>
-      </div>
+
       <Footer />
+
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1626,17 +1716,21 @@ if ( {) {
   ),; import {};
 =======
   );
-}
 
     </>;
   ),; import {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Star;
 MapPin;
 Clock;
 Link as LinkIcon;
 Github;
 Twitter;
+<<<<<<< HEAD
 <<<<<<< HEAD
 Linkedin;"
 CheckCircle2 //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. .from ("talent profiles") .select ("*") .eq ("id", profileId) .single ();
@@ -1646,49 +1740,46 @@ CheckCircle2 //useParams may be untyped in this environment, so avoid passing a 
 =======
 Linkedin;
 CheckCircle2 //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. .from ("talent profiles") .select ("*") .eq ("id", profileId) .single ();
+=======
+Linkedin;"
+CheckCircle2 //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. .from ("talent profiles") .select ("*") .eq ("id", profileId) .single ();"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }finally {
+  // TODO: Implement
   setIsLoading (false) 
-}
 ;
 
-
 ;
+
 
 };
 if (profileId) {
   fetchProfile () 
-}
 }, [profileId]);
-if (isLoading) {
-  return (<div className="min-h-screen flex items-center justify-center" > <span className="loading loading-ring loading-lg" ></span> </div>) 
-}if (isError || !profileData) {
-  return (<div className="min-h-screen flex items-center justify-center" > <p className="text-red-500" >Failed to load profile.</p> </div>) 
-}profileData.full name?.charAt (0) 
-}</AvatarFallback>) 
-}</Avatar> </div>) 
+if (isLoading) {"
+  return (<div className="min-h-screen flex items-center justify-center" > <span className="loading loading-ring loading-lg" ></span> </div>)""
+  return (<div className="min-h-screen flex items-center justify-center" > <p className="text-red-500" >Failed to load profile.</p> </div>)"
+}) 
+} </div>) 
 }</div> </div> {
-  /* Add Save/Unsave Button Here */ 
 }</div> <span> {
-  profileData.availability 
+</span>
 }</span> </div>) 
 }</div> </div> </div>) ) 
-}</div> </div>) 
-}</div>) ) ) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) 
+}</div> </div>) "
+}</div>) ) ) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>)"
 }</div> </div> <a href= {
-  profileData.github link 
-}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Github className="h-6 w-6" /> </Link>) 
-}{
+  profileData.github link;"
+}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Github className="h-6 w-6" /> )"
   profileData.twitter link && (<a href= {
-  profileData.twitter link 
-}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Twitter className="h-6 w-6" /> </Link>) 
-}{
+  profileData.twitter link;)"
+}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Twitter className="h-6 w-6" /> )"
   profileData.linkedin link && (<a href= {
-  profileData.linkedin link 
-}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Linkedin className="h-6 w-6" /> </Link>) 
+  profileData.linkedin link;)"
+}target="blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white transition-colors" > <Linkedin className="h-6 w-6" /> )"
 }</div> </div> </div> <HireNowCTA talentProfile= {
-  {
-  id: profileData?.id || '', full name: profileData?.full name || '', professional title: profileData?.professional title || '', hourly rate: profileData?.hourly rate || 0 
-}
+  {"
+  id: profileData?.id || , full name: profileData?.full name || , professional title: profileData?.professional title || , hourly rate: profileData?.hourly rate || 0;
 }/> {
   /* Placeholder for other sidebar elements */ 
 }</div> </div> </div> <Footer /> </>) 
@@ -1700,6 +1791,7 @@ if (isLoading) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 
+<<<<<<< HEAD
 
 ;
 
@@ -1770,3 +1862,12 @@ if (isLoading) {"
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}</div> </div> </div> <Footer /> </>) 
+
+
+`;
+pr-12325
+'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

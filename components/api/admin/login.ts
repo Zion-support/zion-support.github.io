@@ -1,12 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return
 
 import { setSessionCookie } from '../../../utils/adminAuth';
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
 
+<<<<<<< HEAD
   const { username, password } = req.body || {};
   const envUser = null;
     res.status(200).json({ ok: true })
@@ -70,6 +75,8 @@ if ( {) {}
     res.status (200).json ({ ok: true });
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } else {
 =======
   } else {'
@@ -84,7 +91,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
   }  } else {}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

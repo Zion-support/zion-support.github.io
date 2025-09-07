@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -16,10 +17,13 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /* Import Inter font for modern typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 :root {
 /* CSS Variables for modern theming */:root {
@@ -47,6 +51,13 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+/* CSS Variables for modern theming */
+:root {
+:root {
+/* CSS Variables for modern theming */:root {
+/* CSS Variables for modern theming */:root {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   --background: #000000;
   --foreground: #ffffff;
   --primary: #3b82f6;
@@ -62,7 +73,11 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -109,6 +124,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 /* Enhanced Selection */
@@ -224,6 +240,20 @@ input, textarea, select {
 ::selection {
   background: rgba(0, 255, 255, 0.4);
 =======
+=======
+/* Enhanced Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.4);
+  color: white;
+/* Enhanced Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.4);  color: white;
+
+/* Enhanced Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.4);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 .text-high-contrast-accent {
   color: var(--text-accent);
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
@@ -380,14 +410,22 @@ input, textarea, select {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+  color: white;
+/* Enhanced Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.4);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   color: white;
 /* Enhanced Selection */
 ::selection {
   background: rgba(0, 255, 255, 0.4);  color: white;
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -400,6 +438,11 @@ input, textarea, select {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+/* Enhanced Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.4);  color: white;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
 
@@ -432,7 +475,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background:
+=======
+  background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.15) 0%, transparent 50%),
@@ -456,7 +503,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background:
+=======
+  background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.15) 0%, transparent 50%),
@@ -474,7 +525,11 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background-image:
+=======
+  background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(90deg, rgba(0, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(0deg, rgba(139, 92, 246, 0.02) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -491,7 +546,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background:
+=======
+  background: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.05) 0%, transparent 40%),
     radial-gradient(circle at 75% 75%, rgba(236, 73, 153, 0.05) 0%, transparent 40%),
     radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.03) 0%, transparent 60%);
@@ -546,7 +605,11 @@ body::after {
 
 /* Enhanced Text Gradients */
 .text-gradient-rainbow {
+<<<<<<< HEAD
   background: linear-gradient(45deg,
+=======
+  background: linear-gradient(45deg, 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     #ff0080, #ff8c00, #40e0d0, #ee82ee, #ff0080);
   background-size: 400% 400%;
   -webkit-background-clip: text;
@@ -556,7 +619,11 @@ body::after {
 }
 
 .text-gradient-quantum {
+<<<<<<< HEAD
   background: linear-gradient(45deg,
+=======
+  background: linear-gradient(45deg, 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     #00ffff, #0080ff, #8000ff, #ff0080, #00ffff);
   background-size: 400% 400%;
   -webkit-background-clip: text;
@@ -774,7 +841,11 @@ body::after {
   .text-gradient-quantum {
     background-size: 200% 200%;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .particle-quantum,
   .particle-holographic {
     display: none;
@@ -806,8 +877,13 @@ body::after {
     --neon-purple: #a855f7;
     --neon-pink: #ec4899;
   }
+<<<<<<< HEAD
   50% {
     box-shadow:
+=======
+  50% { 
+    box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0 0 30px rgba(59, 130, 246, 0.8),
       0 0 60px rgba(147, 51, 234, 0.5),
       0 0 90px rgba(16, 185, 129, 0.4);
@@ -840,7 +916,11 @@ body::after {
 }
 
 .neural-network {
+<<<<<<< HEAD
   background-image:
+=======
+  background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
@@ -855,7 +935,11 @@ body::after {
 }
 
 .cyberpunk-grid {
+<<<<<<< HEAD
   background-image:
+=======
+  background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linear-gradient(rgba(239, 68, 68, 0.2) 1px, transparent 1px),
     linear-gradient(90deg, rgba(239, 68, 68, 0.2) 1px, transparent 1px);
   background-size: 30px 30px;
@@ -900,22 +984,38 @@ body::after {
 }
 
 @keyframes biomedicalPulse {
+<<<<<<< HEAD
   0%, 100% {
     transform: scale(1);
     filter: brightness(1);
   }
   50% {
+=======
+  0%, 100% { 
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% { 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     transform: scale(1.05);
     filter: brightness(1.2);
   }
 }
 
 .autonomous-flow {
+<<<<<<< HEAD
   background: linear-gradient(90deg,
     transparent 0%,
     rgba(59, 130, 246, 0.1) 25%,
     rgba(147, 51, 234, 0.1) 50%,
     rgba(16, 185, 129, 0.1) 75%,
+=======
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(59, 130, 246, 0.1) 25%, 
+    rgba(147, 51, 234, 0.1) 50%, 
+    rgba(16, 185, 129, 0.1) 75%, 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     transparent 100%);
   background-size: 200% 100%;
   animation: autonomousFlow 3s ease-in-out infinite;
@@ -954,9 +1054,15 @@ body::after {
   left: -100%;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background: linear-gradient(90deg,
     transparent,
     rgba(255, 255, 0, 0.4),
+=======
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 0, 0.4), 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     transparent);
   animation: energySurge 2s ease-in-out infinite;
 }
@@ -971,11 +1077,19 @@ body::after {
 }
 
 @keyframes manufacturingPulse {
+<<<<<<< HEAD
   0%, 100% {
     transform: scale(1) rotate(0deg);
     filter: hue-rotate(0deg);
   }
   50% {
+=======
+  0%, 100% { 
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  50% { 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     transform: scale(1.02) rotate(1deg);
     filter: hue-rotate(10deg);
   }
@@ -1004,7 +1118,11 @@ body::after {
 }
 
 .quantum-matrix {
+<<<<<<< HEAD
   background-image:
+=======
+  background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
     linear-gradient(45deg, transparent 49%, rgba(147, 51, 234, 0.1) 50%, transparent 51%);
@@ -1019,7 +1137,11 @@ body::after {
 
 /* New futuristic effects */
 .quantum-glow {
+<<<<<<< HEAD
   box-shadow:
+=======
+  box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 20px rgba(59, 130, 246, 0.3),
     0 0 40px rgba(147, 51, 234, 0.2),
     0 0 60px rgba(16, 185, 129, 0.1);
@@ -1027,14 +1149,24 @@ body::after {
 }
 
 @keyframes quantumPulse {
+<<<<<<< HEAD
   0%, 100% {
     box-shadow:
+=======
+  0%, 100% { 
+    box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0 0 20px rgba(59, 130, 246, 0.3),
       0 0 40px rgba(147, 51, 234, 0.2),
       0 0 60px rgba(16, 185, 129, 0.1);
   }
+<<<<<<< HEAD
   50% {
     box-shadow:
+=======
+  50% { 
+    box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0 0 30px rgba(59, 130, 246, 0.5),
       0 0 60px rgba(147, 51, 234, 0.3),
       0 0 90px rgba(16, 185, 129, 0.2);
@@ -1068,7 +1200,11 @@ body::after {
 }
 
 .neural-network-bg {
+<<<<<<< HEAD
   background-image:
+=======
+  background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
@@ -1078,6 +1214,7 @@ body::after {
 }
 
 @keyframes neuralFlow {
+<<<<<<< HEAD
   0%, 100% {
     background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%;
   }
@@ -1088,12 +1225,28 @@ body::after {
     background-position: 100% 100%, 0% 100%, 100% 0%, 0% 0%;
   }
   75% {
+=======
+  0%, 100% { 
+    background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%;
+  }
+  25% { 
+    background-position: 100% 0%, 0% 0%, 100% 100%, 0% 100%;
+  }
+  50% { 
+    background-position: 100% 100%, 0% 100%, 100% 0%, 0% 0%;
+  }
+  75% { 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     background-position: 0% 100%, 100% 100%, 0% 0%, 100% 0%;
   }
 }
 
 .cyberpunk-glow {
+<<<<<<< HEAD
   box-shadow:
+=======
+  box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 10px rgba(239, 68, 68, 0.5),
     0 0 20px rgba(239, 68, 68, 0.3),
     0 0 30px rgba(239, 68, 68, 0.1);
@@ -1101,14 +1254,24 @@ body::after {
 }
 
 @keyframes cyberpunkFlicker {
+<<<<<<< HEAD
   0%, 100% {
     box-shadow:
+=======
+  0%, 100% { 
+    box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0 0 10px rgba(239, 68, 68, 0.5),
       0 0 20px rgba(239, 68, 68, 0.3),
       0 0 30px rgba(239, 68, 68, 0.1);
   }
+<<<<<<< HEAD
   50% {
     box-shadow:
+=======
+  50% { 
+    box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       0 0 15px rgba(239, 68, 68, 0.7),
       0 0 30px rgba(239, 68, 68, 0.5),
       0 0 45px rgba(239, 68, 68, 0.3);
@@ -1116,11 +1279,19 @@ body::after {
 }
 
 .quantum-holographic {
+<<<<<<< HEAD
   background: linear-gradient(135deg,
     rgba(59, 130, 246, 0.1) 0%,
     rgba(147, 51, 234, 0.1) 25%,
     rgba(16, 185, 129, 0.1) 50%,
     rgba(239, 68, 68, 0.1) 75%,
+=======
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.1) 0%, 
+    rgba(147, 51, 234, 0.1) 25%, 
+    rgba(16, 185, 129, 0.1) 50%, 
+    rgba(239, 68, 68, 0.1) 75%, 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     rgba(59, 130, 246, 0.1) 100%);
   border: 1px solid rgba(59, 130, 246, 0.3);
   position: relative;
@@ -1161,13 +1332,21 @@ body::after {
 
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
+<<<<<<< HEAD
   box-shadow:
+=======
+  box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 20px 40px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(59, 130, 246, 0.2);
 }
 
 .hover-glow:hover {
+<<<<<<< HEAD
   box-shadow:
+=======
+  box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 20px rgba(59, 130, 246, 0.4),
     0 0 40px rgba(147, 51, 234, 0.2);
 }
@@ -1221,7 +1400,11 @@ body::after {
 /* Enhanced focus states */
 .focus-ring:focus {
   outline: none;
+<<<<<<< HEAD
   box-shadow:
+=======
+  box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 0 3px rgba(59, 130, 246, 0.1),
     0 0 0 6px rgba(147, 51, 234, 0.1);
 }
@@ -1252,7 +1435,11 @@ body::after {
 
 /* Enhanced neon effects */
 .neon-glow {
+<<<<<<< HEAD
   text-shadow:
+=======
+  text-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     0 0 5px currentColor,
     0 0 10px currentColor,
     0 0 15px currentColor,
@@ -1260,7 +1447,11 @@ body::after {
 }
 
 .neon-border {
+<<<<<<< HEAD
   box-shadow:
+=======
+  box-shadow: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     inset 0 0 10px currentColor,
     0 0 20px currentColor;
 }
@@ -1278,7 +1469,11 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
+<<<<<<< HEAD
   background-image:
+=======
+  background-image: 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.8), transparent),
     radial-gradient(2px 2px at 40px 70px, rgba(147, 51, 234, 0.8), transparent),
     radial-gradient(1px 1px at 90px 40px, rgba(16, 185, 129, 0.8), transparent),
@@ -1295,11 +1490,19 @@ body::after {
   .futuristic-heading {
     font-size: clamp(1.5rem, 8vw, 2.5rem);
   }
+<<<<<<< HEAD
 
   .particle-bg::before {
     background-size: 100px 100px;
   }
 
+=======
+  
+  .particle-bg::before {
+    background-size: 100px 100px;
+  }
+  
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .grid-bg {
     background-size: 25px 25px;
   }
@@ -1330,10 +1533,18 @@ body::after {
   .loading-quantum {
     display: none;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   .text-gradient-rainbow,
   .text-gradient-quantum {
     color: #000 !important;
     background: none !important;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

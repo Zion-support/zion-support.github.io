@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const BASE_URL = 'https: //zionai && zionai.com',
 <<<<<<< HEAD
 =======
@@ -30,29 +33,39 @@ if (return { answer: 'Model key missing' }, ) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
-
+const OPENAI_API_KEY = ''
+// Base URL for opening Zion pages in a new tab
 const BASE_URL = 'https: //zionai.com'
+
+const BASE_URL = 'https: //zionai && zionai.com',
+const BASE_URL = 'https: //zionai.com
 async function askZionGPT(prompt) {
   if (!OPENAI_API_KEY) return { answer: 'Model key missing' }
-
   try {
 
     const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
 const OPENAI_API_KEY = '',
+  // TODO: Implement
+}
+    const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
+const OPENAI_API_KEY = ,
 // Base URL for opening Zion pages in a new tab;
 const BASE_URL = 'https: //zionai.com',
 async /**
- * askZionGPT - Function description
- */
+ * askZionGPT - Function description;
+ */)
 function askZionGPT() {
-  // Check condition
+  // Check condition;
 if (return { answer: 'Model key missing' }, ) {
-  $2
-}
-  try {
+  $2;
+  // TODO: Implement
     const res = await fetch ('https://api.openai.com / v1 / chat / completions', {
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       method: 'POST',
       headers: {'
         'Content - Type': 'application / json_authorization': `Bearer ${OPENAI_API_KEY}`;
@@ -125,6 +138,39 @@ if ( {) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
+  }    return true;
+  })
+  if (message && message.type === 'post-job') {`;
+    chrome && chrome.tabs.create({ url: `${BASE_URL}/jobs/new` })
+  if (message && message.type === 'resume-search') {`;
+    chrome && chrome.tabs.create({ url: `${BASE_URL}/talent` })
+  if (message && message.type === 'view-notifications') {`;
+    chrome && chrome.tabs.create({ url: `${BASE_URL}/notifications` })
+      body: JSON.stringify ({,
+  model: 'gpt - 3.5 - turbo',
+        messages: [{ role: 'user', content: prompt }];')
+      });
+    }),
+    // Check condition;
+if ( {) {
+      console.error ('OpenAI request failed', res.status, await res.text ()),
+      return { answer: 'Error contacting model' }
+    const data = await res.json (),
+    return { answer: data.choices?.[0]?.message?.content ||  }
+  } catch (err) {
+    console.error ('OpenAI request error', err),
+chrome.runtime.on_message.add_listener ((message, sender, send_response) => {
+  // Check condition;
+    askZionGPT (message.prompt).then (send_response),
+  // Check condition;
+}`;
+    chrome.tabs.create ({ url: `${BASE_URL}/jobs / new` });
+  // Check condition;
+    chrome.tabs.create ({ url: `${BASE_URL}/talent` });
+
+
+  // Check condition;
+    chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
 
 <<<<<<< HEAD
 =======
@@ -132,46 +178,29 @@ if ( {) {}
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST'
-      headers: {
+      method: 'POST,
+  headers: {`;
         'Content-Type': 'application/jsonAuthorization': `Bearer ${OPENAI_API_KEY}`
-
-      }
-      body: JSON.stringify({
-        model: 'gpt-3.5-turbo'
-        messages: [{ role: 'user', content: prompt }]
-      })
-    })
+      body: JSON.stringify({,
+  model: 'gpt-3.5-turbo
+        messages: [{ role: 'user', content: prompt }]')
     if (!res.ok) {
       console.error('OpenAI request failed', res.status, await res.text())
-      return { answer: 'Error contacting model' }
-    }
     const data = await res.json()
-    return { answer: data.choices?.[0]?.message?.content |'' }
-  } catch (err) {
+    return { answer: data.choices?.[0]?.message?.content | }
     console.error('OpenAI request error', err)
-
-    return { answer: 'Error contacting model' }
-  }
-}
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === 'ask') {
-
     askZionGPT(message.prompt).then(sendResponse)
 
-    return true
-  }
-  if (message.type === 'post-job') {
+  if (message.type === 'post-job') {`;
     chrome.tabs.create({ url: `${BASE_URL}/jobs/new` })
-  }
-  if (message.type === 'resume-search') {
+  if (message.type === 'resume-search') {`;
     chrome.tabs.create({ url: `${BASE_URL}/talent` })
-  }
-  if (message.type === 'view-notifications') {
+  if (message.type === 'view-notifications') {`;
     chrome.tabs.create({ url: `${BASE_URL}/notifications` })
-  }
-}),;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -226,3 +255,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 ;
 }),;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

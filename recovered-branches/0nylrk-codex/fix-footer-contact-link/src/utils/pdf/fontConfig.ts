@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,12 +144,33 @@ export interface FontConfig {;
   boldItalic?: ArrayBuffer;
     doc && doc.setFont('helvetica')
 import {jsPDF} from 'jspdf';
+=======
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+
+import { jsPDF } from 'jspdf';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface FontConfig {
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+
+
+  }
+}
+
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+
+
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
   italic?: ArrayBuffer,
   bold_italic?: ArrayBuffer;
+
+  italic?: ArrayBuffer;
+  boldItalic?: ArrayBuffer;
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export type FontFamily = 'default' | 'montserrat' | 'open - sans' | 'roboto';
 ;
@@ -185,12 +207,20 @@ if (return, ) {}
 <<<<<<< HEAD
 =======
 */;
+=======
+export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
+/**
+ * Loads and registers custom fonts for PDF documents;
+ */
+export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'default'): Promise<void> {
+</void>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export async function loadCustomFonts (doc: jsPDF, font_family: FontFamily = 'default'): Promise < void> {
-  // Check condition
+  // Check condition;
 if (return, ) {
-  $2
-}
+  $2;
   try {
+  // TODO: Implement
     // Font loading logic would go here;
     // For demonstration purposes, we'll just set up the font using standard fonts;
     switch (font_family) {
@@ -198,13 +228,8 @@ if (return, ) {
         doc.set_font ('helvetica');
         break;
       case 'open - sans':;
-        doc.set_font ('helvetica');
-        break;
       case 'roboto':;
-        doc.set_font ('helvetica');
-        break;
       default: doc.set_font ('helvetica');
-    }
   } catch (error) {
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
@@ -212,6 +237,7 @@ if (return, ) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     doc.setFont('helvetica');
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -239,3 +265,11 @@ if (return, ) {
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  }
+}
+doc.set_font ('helvetica');
+  }
+}
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

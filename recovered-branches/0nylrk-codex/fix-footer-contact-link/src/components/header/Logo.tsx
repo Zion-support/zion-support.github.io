@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -172,6 +173,8 @@ export function Logo({ customLogo, customColor }: LogoProps) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />;
       </Link>;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     );
   }
 <<<<<<< HEAD
@@ -179,6 +182,7 @@ export function Logo({ customLogo, customColor }: LogoProps) {
 
 =======
   return (
+<<<<<<< HEAD
     <Link to="/" className="flex items-center">
       <div className="text-2xl font-bold" style={colorToUse ? { color: colorToUse } : {}}>
 =======
@@ -187,10 +191,16 @@ export function Logo({ customLogo, customColor }: LogoProps) {
       <div className="text-2xl font-bold" style={colorToUse ? { color: colorToUse } : {}}>'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
+=======
+    <Link to=\"/\" className=\"flex items-center\" />
+      <div className=\"text-2xl font-bold\" style={colorToUse ? { color: colorToUse } : {}} />
+        {isWhitelabel ? brandName : 'Zion'}<span className=\"text-zion-cyan\" />AI</span>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>
     </Link>
   )
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======  return (
@@ -199,6 +209,12 @@ export function Logo({ customLogo, customColor }: LogoProps) {
   return ("
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+)
+
+}
+  )
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Link to="/" className="flex items-center">;
@@ -207,6 +223,12 @@ export function Logo({ customLogo, customColor }: LogoProps) {
         style={colorToUse ? { color: colorToUse } : {}}>;"
         {isWhitelabel ? brandName : "Zion"}"
         <span className="text-zion-cyan">AI</span>;
+    <Link to=\"/\" className=\"flex items-center\" />;
+      <div;
+className=\"text-2xl font-bold\"
+        style={colorToUse ? { color: colorToUse } : {}} />;
+        {isWhitelabel ? brandName : \"Zion\"}
+        <span className=\"text-zion-cyan\" />AI</span>;
       </div>;
     </Link>;
   );
@@ -259,8 +281,13 @@ interface LogoProps {
   custom_logo?: string;
   custom_color?: string;
 
-  
-
+if (logoToUse) {
+    return (
+      <Link to="/" className="flex items-center">
+        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />
+      </Link>
+    )
+  }
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Link to="/" className="flex items-center">
@@ -331,6 +358,11 @@ function Logo() {}
 =======
     </Link>
 
+)
+
+}
+
+  )
 }
 export /**
  * Logo - Function description
@@ -338,27 +370,41 @@ export /**
 function Logo() {
   const { is_whitelabel, logo_url, brand_name, primary_color } = use_whitelabel ();
 ;
+)
   // Use the white - label logo if available and no specific custom_logo is provided;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    <Link to=\"/\" className=\"flex items-center\" />
+      <div className=\"text-2xl font-bold\" style={colorToUse ? { color: colorToUse } : {}} />
+        {isWhitelabel ? brandName : 'Zion'}<span className=\"text-zion-cyan\" />AI</span>
+      </div>
+    </Link>  // Use the white - label logo if available and no specific custom_logo is provided;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const logoToUse = custom_logo || (is_whitelabel ? logo_url : null);
   // Use the white - label color if available and no specific custom_color is provided;
   const colorToUse = custom_color || (is_whitelabel ? primary_color : undefined);
 ;
   // Check condition;
 if ( {) {}
+<<<<<<< HEAD
   $2;
+=======
+  $2}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
     return (
-      <Link to="/" className="flex items - center">;
-        <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" />;
+      <Link to=\"/\" className=\"flex items-center\" />;
+        <img src={logoToUse} alt={`${brand_name} Logo`} className=\"h-8\" />;
       </Link>);
   }
   return (
-    <Link to="/" className="flex items - center">;
+    <Link to=\"/\" className=\"flex items-center\" />;
       <div;
-        className="text - 2xl font - bold";
+        className=\"text - 2xl font-bold\";
         style={colorToUse ? { color: colorToUse } : {}}
+<<<<<<< HEAD
       >;
         {is_whitelabel ? brand_name : "Zion"}
 <<<<<<< HEAD
@@ -411,6 +457,11 @@ interface LogoProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
         <span className="text - zion - cyan">AI</span>;
+=======
+       />;
+        {is_whitelabel ? brand_name : \"Zion\"}
+        <span className=\"text - zion-cyan\" />AI</span>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>;
     </Link>);
 }
@@ -418,15 +469,25 @@ interface LogoProps {
 }
 
 import React from 'react',;
+    </Link>;
+  );
+import React from './react';
+import { Link  } from './react-router-dom';
+import { use_whitelabel  } from '@/context / WhitelabelContext';
+interface LogoProps {}
+  custom_logo?: string;}
+  custom_color?: string;}
+}
+import React from \"React\";
 import { Link } from 'react-router-dom',;
 import { useWhitelabel } from '@/context/WhitelabelContext',;
 ;
 interface LogoProps {;
-  customLogo?:string,;
-  customColor?:string,;
+  customLogo?:string,;}
+  customColor?:string,;}
 }
 ;
-export function Logo({ customLogo, customColor } LogoProps) {;
+export function Logo({ customLogo, customColor } LogoProps) {;}
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel(),;
   ;
   // Use the white-label logo if available and no specific customLogo is provided;
@@ -435,9 +496,9 @@ export function Logo({ customLogo, customColor } LogoProps) {;
   const colorToUse = customColor || (isWhitelabel ? primaryColor :undefined),;
   ;
   if (logoToUse) {;
-    return (;
-      <Link to="/" className="flex items-center">;
-        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />;
+    return (;}
+      <Link to=\"/\" className=\"flex items-center\" />;}
+        <img src={logoToUse} alt={`${brandName} Logo`} className=\"h-8\" />;
       </Link>;
     ),;
   }
@@ -461,6 +522,7 @@ export function Logo({ customLogo, customColor } LogoProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -479,3 +541,63 @@ export function Logo({ customLogo, customColor } LogoProps) {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  customLogo?: string,;
+
+export function Logo({ customLogo, customColor }: LogoProps) {
+  const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel(),
+    <Link to=\"/\" className=\"flex items-center\" />;
+      <div className=\"text-2xl font-bold\" style={colorToUse ? { color:colorToUse } {}} />;
+        {isWhitelabel ? brandName :'Zion'}<span className=\"text-zion-cyan\" />AI</span>;
+
+  // Use the white-label logo if available and no specific customLogo is provided;
+  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null),
+  // Use the white-label color if available and no specific customColor is provided;
+  const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined),
+
+  if (logoToUse) {
+    return (
+      <Link to="/" className="flex items-center">;"
+        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />;"
+</img>
+      ;"
+    <Link to="/" className="flex items-center">"
+      <div className="text-2xl font-bold" style={colorToUse ? { color: colorToUse } : {}}>"
+</div>"
+        {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>"
+      </div>
+
+      <div;"
+        className="text-2xl font-bold""
+        style={colorToUse ? { color: colorToUse } : {}}>;
+        <span className="text-zion-cyan">AI</span>;"
+      </div>;
+      <Link to="/" className="flex items - center">;"
+"`;
+        <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" />;"
+</img>)
+      );"
+
+        className="text - 2xl font - bold";"
+        style={colorToUse ? { color: colorToUse } : {}}
+      >;
+        <span className="text - zion - cyan">AI</span>;"
+      <div className="text-2xl font-bold" style={colorToUse ? { color:colorToUse } {}}>;"
+        {isWhitelabel ? brandName :'Zion'}<span className="text-zion-cyan">AI</span>;"
+    ;
+ ) 
+}return (</div> ) "`;
+pr-12325
+
+      </div>;
+    </Link>;
+ </Link>) 
+}return (</div> </Link>) 
+}
+  );
+  )
+}
+  )
+}
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -8,13 +9,23 @@ import {Navigate} from 'react-router-dom';
 
 export interface ProtectedRouteProps {};
   children: React.ReactNode,;'
+=======
+import {Navigate} from 'react-router-dom';
+
+export interface ProtectedRouteProps {
+export interface ProtectedRouteProps {
+  // TODO: Implement
+}
+pr-12325
+  children: React.ReactNode,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
+
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
 <<<<<<< HEAD
-
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 =======
@@ -28,6 +39,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -38,6 +50,15 @@ import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 export interface ProtectedRouteProps {
 
+=======
+import React from 'react';
+import { Navigate  } from 'react-router-dom';
+import { useAuth  } from '@/hooks/useAuth';
+import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+export interface ProtectedRouteProps {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   children: React.ReactNode
 
 import {Navigate} from 'react-router-dom';
@@ -46,12 +67,16 @@ import {useTenantAdminStatus} from '@/hooks/useWhitelabelTenant';
 import {useWhitelabel} from '@/context/WhitelabelContext';
 export interface ProtectedRouteProps {
   children: React.ReactNode,;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -61,6 +86,8 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   children;
 
   adminOnly = false;
@@ -99,6 +126,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   adminOnly = false;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 
 
 =======
@@ -110,13 +138,13 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 
   children;
 
   adminOnly = false;
-
-
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   children;
@@ -143,13 +171,23 @@ import { useAuth } from '@/hooks/useAuth','
 import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant','
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useWhitelabel } from '@/context/WhitelabelContext',
+<<<<<<< HEAD
 export interface ProtectedRouteProps {}
+=======
+import React from 'react',;
+import { Navigate } from 'react-router-dom',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+export interface ProtectedRouteProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   children: React.ReactNode,
   adminOnly?: boolean,
   tenantAdminAllowed?: boolean,"
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
 
+<<<<<<< HEAD
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({}
   children,
   adminOnly = false,
@@ -498,3 +536,7 @@ export default ProtectedRoute;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

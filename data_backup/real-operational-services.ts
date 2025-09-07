@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,8 +30,306 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+;
+;
+
+export interface RealOperationalService {
+  \"id\": string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+  "id": string;"
+  name: string;,
+  tagline: string;
+  price: string;,
+  description: string;
+  features: string[];,
+  link: string;
+  category: string;,
+  realImplementation: boolean;
+  contactInfo: {,
+  mobile: string;
+    email: string;,"
+  address: string};export const "realOperationalServices": RealOperationalService[] = [{""
+    id: "operational-intelligence",""
+    "name": "Operational Intelligence Platform",""
+    "tagline": "Real-time operational insights and optimization",""
+    "price": "$99/month",""
+    "description": "Comprehensive operational intelligence platform for monitoring and optimizing business operations.","
+    features["
+      "Real-time monitoring",""
+      "Performance analytics",""
+      "Operational insights",""
+      "Optimization recommendations",""
+      "Alert system""]
+    ],"
+    "link": "/services/operational-intelligence",""
+    "category": "Operational Services",""
+    "realImplementation": true,""
+    "contactInfo": {""
+      mobile: "+1 302 464 0950",""
+      "email": "kleber@ziontechgroup.com",""
+      "address": "364 E Main St STE 1008 Middletown DE 19709""
+]}}}"
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}""
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}"
+  // TODO: Implement
+}"
+
+export const \"realOperationalServices\": RealOperationalService[] = [{id: \"operational-intelligence\",\"name\": \"Operational Intelligence Platform\",\"tagline\": \"Real-time operational insights and optimization\",\"price\": \"$99/month\",\"description\": \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[;
+      \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\";}
+    ],\"link\": \"/services/operational-intelligence\",\"category\": \"Operational Services\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}}
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}ursor/integrate-build-improve-and-re-verify-8f7d;
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+};
+
+export interface RealOperationalService  {\"id\": string;
+}
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+
+export interface RealOperationalService {
+  \"id\": string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+
+export const \"realOperationalServices\": RealOperationalService[] = [{id: \"operational-intelligence\",\"name\": \"Operational Intelligence Platform\",\"tagline\": \"Real-time operational insights and optimization\",\"price\": \"$99/month\",\"description\": \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[;
+      \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\";}
+    ],\"link\": \"/services/operational-intelligence\",\"category\": \"Operational Services\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}}
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface RealOperationalService {
   "id": string;
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}ursor/fix-syntax-push-and-merge-to-main-40de;
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {
+  \"id\": string;
   name: string;
   tagline: string;
   price: string;
@@ -63,6 +362,7 @@ address: string};export const "realOperationalServices": RealOperationalService[
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
@@ -249,21 +549,72 @@ address: string};export const "realOperationalServices": RealOperationalService[
     "tagline": "Real-time operational insights and optimization",
     "price": "$99/month",
     "description": "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
+=======
+
+
+
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+
+export const \"realOperationalServices\": RealOperationalService[] = [{id: \"operational-intelligence\",\"name\": \"Operational Intelligence Platform\",\"tagline\": \"Real-time operational insights and optimization\",\"price\": \"$99/month\",\"description\": \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[;
+      \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\";}
+    ],\"link\": \"/services/operational-intelligence\",\"category\": \"Operational Services\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}};
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]}}}
+address: strin,
+};
+
+export const \"realOperationalServices\": RealOperationalService[] = [{
+    id: \"operational-intelligence\",
+    \"name\": \"Operational Intelligence Platform\",
+    \"tagline\": \"Real-time operational insights and optimization\",
+    \"price\": \"$99/month\",
+    \"description\": \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     features[
-      "Real-time monitoring",
-      "Performance analytics",
-      "Operational insights",
-      "Optimization recommendations",
-      "Alert system"
+      \"Real-time monitoring\",
+      \"Performance analytics\",
+      \"Operational insights\",
+      \"Optimization recommendations\",
+      \"Alert system\"
     ],
-    "link": "/services/operational-intelligence",
-    "category": "Operational Services",
-    "realImplementation": true,
-    "contactInfo": {
-      mobile: "+1 302 464 0950",
-      "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    \"link\": \"/services/operational-intelligence\",
+    \"category\": \"Operational Services\",
+    \"realImplementation\": true,
+    \"contactInfo\": {
+      mobile: \"+1 302 464 0950\",
+      \"email\": \"kleber@ziontechgroup.com\",}
+      \"address\": \"364 E Main St STE 1008 Middletown DE 19709\"}
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,3 +640,35 @@ export interface RealOperationalService { id: string; name: string; tagline: str
 export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const realOperationalServices: RealOperationalService[] = [ { id: "operational-intelligence",name: "Operational Intelligence Platform",tagline: "Real-time operational insights and optimization",price: "$99/month",description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",features[ "Real-time monitoring","Performance analytics","Operational insights","Optimization recommendations","Alert system" ],link: "/services/operational-intelligence",category: "Operational Services",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface RealOperationalService { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const realOperationalServices: RealOperationalService[] = [ { id: \"operational-intelligence\",name: \"Operational Intelligence Platform\",tagline: \"Real-time operational insights and optimization\",price: \"$99/month\",description: \"Comprehensive operational intelligence platform for monitoring and optimizing business operations.\",features[ \"Real-time monitoring\",\"Performance analytics\",\"Operational insights\",\"Optimization recommendations\",\"Alert system\" ],link: \"/services/operational-intelligence\",category: \"Operational Services\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

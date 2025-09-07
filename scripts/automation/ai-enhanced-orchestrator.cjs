@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * AI-Enhanced PM2 Orchestrator;
  * Advanced intelligent system for PM2 process management with ML capabilities;
@@ -14,12 +18,17 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const pm2 = require('pm2')
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 const os = require('os')
+<<<<<<< HEAD
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-enhanced-orchestrator.log')
     this.configFile = path.join(this.projectRoot, 'logs', 'orchestrator-config.json')
     this.metricsFile = path.join(this.projectRoot, 'logs', 'enhanced-metrics.json')
@@ -70,7 +79,8 @@ const os = require('os')
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-      const result = execSync('top -bn1 | grep "Cpu(s)"
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

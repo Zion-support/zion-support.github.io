@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -26,6 +27,8 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {Link} from "react-router-dom";
 import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
@@ -235,6 +238,15 @@ export function ApiDocsHub() {
       icon: Webhook
       path: "/developers/docs/webhooks"
       color: "from-green-500 to-emerald-500"}
+import React from './react';
+import { Link } from './react-router-dom';
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from './lucide-react';
+import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
+export /**
+ * ApiDocsHub - Function description
+ */
+function ApiDocsHub() {
+  const sections = [;
     {
       title: "Sample Code"
       description: "Examples in JavaScript, Python, and Node.js";
@@ -262,10 +274,15 @@ export function ApiDocsHub() {
       color: "from - green - 500 to - emerald - 500"},
     {
 
-
       title: "Sample Code",;
       description: "Examples in JavaScript, Python, and Node.js";
 
+title: "Sample Code",
+      description: "Examples in JavaScript, Python, and Node.js",
+
+      icon: Zap,
+      path: "/developers/docs/samples",
+      color: "from-yellow-500 to-orange-500"},
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
 
@@ -281,6 +298,7 @@ export function ApiDocsHub() {
       title: "Sample Code",;
       description: "Examples in JavaScript, Python, and Node.js";
       title: "Sample Code",
+<<<<<<< HEAD
       description: "Examples in JavaScript, Python, and Node.js",
       icon: Zap,
       path: "/developers/docs/samples",
@@ -772,3 +790,8 @@ return (<ApiDocsLayout> <div className="max-w-4xl" > <h1 className="text-4xl fon
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

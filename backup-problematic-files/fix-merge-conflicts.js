@@ -38,8 +38,8 @@ console.log('Merge conflict resolution complete!'),;
 ;  };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   traverse(dir),
-  return files};
 // Find and fix files with merge conflicts,
+<<<<<<< HEAD
 const conflictedFiles = findFilesWithConflicts('.'),
 <<<<<<< HEAD
 
@@ -49,30 +49,26 @@ const conflictedFiles = findFilesWithConflicts('.'),
 };
 
 =======
+=======
+const conflictedFiles = findFilesWithConflicts('.'),`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 console.log(`Found ${conflictedFiles.length} files with merge conflicts`),
 for (const file of conflictedFiles) {,
-  fixMergeConflicts(file)};
 console.log('Merge conflict resolution complete!'),
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?};
-};
-        };
-      };
-};
-;
+;)
 ,);
-;
 console.log('\nMerge conflict fixing complete!'),;
-console.log('\nMerge conflict fixing complete!'),;
-,;
+,;`;
 console.log(`Fixed merge conflicts in ${fixedCount} files`),;
 ,),;
 ;    };
-  };
-  };
-};
 console.log('\nMerge conflict fixing complete!'),
-console.log('\nMerge conflict fixing complete!'),
-,
+,`;
 console.log(`Fixed merge conflicts in ${fixedCount} files`),
 ,),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

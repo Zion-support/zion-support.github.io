@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/home/NewServicesShowcase.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/home/NewServicesShowcase.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/home/NewServicesShowcase.jsx
@@ -18,10 +19,18 @@
 
 'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/home/NewServicesShowcase.jsx
+=======
+
+
+"import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {"""";";'"'"
+
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
 
 'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/home/NewServicesShowcase.jsx
 <<<<<<< HEAD
@@ -56,3 +65,18 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/home/NewServicesShowcase.jsx
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/home/NewServicesShowcase.jsx
+=======
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {\''\'";\";
+"import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {"""";";'"'"
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {\''\'";\";
+"import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {"""";";'"'"
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {\''\'";\";
+"import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {"""";";'"'"
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {\''\'";\";
+"import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {"""";";'"'"
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

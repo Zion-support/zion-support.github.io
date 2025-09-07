@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/jest.setup.js
 // Jest setup file
 import '@testing-library/jest-dom';
@@ -8,20 +9,27 @@ import "@testing-library/jest-dom";
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
+=======
+import "@testing-library/jest-dom";"
+// Mock Next.js router;"
+jest.mock("next/router", () => ({")
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   useRouter() {
     return {
-      route: "/",
-      pathname: "/",
-      query: {},
-      asPath: "/",
+  // TODO: Implement
+}"
+      route: "/",""
+      pathname: "/","
+      query: {},"
+      asPath: "/","
       push: jest.fn(),
       pop: jest.fn(),
       reload: jest.fn(),
       back: jest.fn(),
       prefetch: jest.fn().mockResolvedValue(undefined),
       beforePopState: jest.fn(),
-      events: {
-        on: jest.fn(),
+      events: {,
+  on: jest.fn(),
         off: jest.fn(),
 <<<<<<< HEAD
 =======
@@ -45,6 +53,7 @@ jest.mock("next/router", () => ({
 }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Mock Next.js Image component
 jest.mock("next/image", () => {
@@ -56,6 +65,10 @@ jest.mock("next/image", () => {
 =======
 // Mock Next.js Image component
 jest.mock("next/image", () => {
+=======
+// Mock Next.js Image component;"
+jest.mock("next/image", () => {"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return function MockedImage({ src, alt, ...props }) {
     return <img src={src} alt={alt} {...props} />
 };
@@ -132,6 +145,7 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 <<<<<<< HEAD:backup-problematic-files/jest.setup.js
 
@@ -187,3 +201,11 @@ import '@testing-library/jest-dom'; global.IntersectionObserver = class Intersec
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:jest.setup.js
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    return <img src={src} alt={alt} {...props} />;
+</img>
+      <a href={href} {...props}>
+</a>
+      </a>"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -4,14 +4,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import * as React from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -27,6 +32,11 @@ import React from 'react';import Link from 'next/link';';
 =======
 import React from 'react';import Link from 'next/link';';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from 'react';
+import * as React from 'react';
+import Link from 'next/link';';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 =======
 import * as React from 'react';'
@@ -270,6 +280,7 @@ export default function IndustrySolutionsPage() {};
         {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
+<<<<<<< HEAD
 
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",;
               {stats && stats.map((stat, index) => (,;
@@ -289,16 +300,22 @@ export default function IndustrySolutionsPage() {};
         <section className="py-16 bg-white">""
           <div className="container mx-auto px-4">";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0, y: 30 }}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  initial={{ opacity: 0, y: 30 }}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}"
                   className="text-center""
@@ -375,6 +392,7 @@ export default function IndustrySolutionsPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className="bg-white rounded-2xl shadow-xl p-8 hover: shadow-2xl transition-shadow duration-300"">;
@@ -399,6 +417,15 @@ export default function IndustrySolutionsPage() {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300""
+                >;
+                  <div className="flex items-center mb-6">";
+                    <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-xl flex items-center justify-center mr-4`}>,
+                      <industry.icon className="w-8 h-8 text-white" />";
+                    </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div>;
                       <h3 className="text-2xl font-bold text-gray-900">{industry.name}</h3>"
                       <p className="text-gray-600">{industry.description}</p>"
@@ -494,6 +521,7 @@ export default function IndustrySolutionsPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 hover: shadow-lg transition-shadow duration-300"">,;
@@ -517,6 +545,15 @@ export default function IndustrySolutionsPage() {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300""
+                >;
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{capability.title}</h3>"
+                  <p className="text-gray-600">{capability.description}</p>"
+                </motion.div>;
+              ))}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>,
           </div>;
         </section>;
@@ -560,6 +597,7 @@ export default function IndustrySolutionsPage() {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
                   href="/contact""
@@ -596,6 +634,21 @@ export default function IndustrySolutionsPage() {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link;
+                  href="/contact"";
+                  className="px-8 py-4 bg-white text-indigo-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
+                >;
+                  Schedule Industry Consultation;
+                  <ArrowRight className="ml-2 w-5 h-5" />";
+                </Link>;
+                <Link;
+                  href="/solutions"";
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-indigo-600 rounded-lg font-semibold transition-colors"";
+                >;
+                  View All Solutions;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Link>;
               </div>;
             </motion.div>;

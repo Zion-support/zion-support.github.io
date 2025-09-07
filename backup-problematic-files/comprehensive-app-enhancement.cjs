@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -40,3 +41,6 @@ console.log(' Starting Comprehensive App Enhancement...')
   console.error(' App enhancement "failed")
   console.error(' App enhancement "failed")
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

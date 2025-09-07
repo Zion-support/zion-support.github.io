@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 })
 }</div>)
@@ -9,9 +10,13 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>)
 })
+=======
+> <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>)"
+</polygon>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }</div>)
-}
 export const StarRating: React.FC<Props> = ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -84,8 +89,16 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <button
+=======
+)"
+}) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
+</number>
+export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
+
+          <button;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             key={star}
-            type="button"
+            type="button"""
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
 <<<<<<< HEAD
 
@@ -104,27 +117,23 @@ export default StarRating;              width={size}
 
 =======
             onMouseLeave={() => !readOnly && setHovered(null)}
-            onClick={() => !readOnly && onChange(star)}
-            aria-label={`${star} star`}
->;
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
+</button>
+            <svg;
+              xmlns='http://www.w3.org/2000/svg
               width={size}
               height={size}
-              viewBox='0 0 24 24'
+              viewBox='0 0 24 24
               fill={active ? 'gold' : 'none'}
               stroke={active ? 'gold' : 'currentColor'}
-              strokeWidth='2'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              className={`drop-shadow ${active ? 'animate-pulse-slow' : ''}`}
+              strokeWidth='2
+              strokeLinecap='round
+              strokeLinejoin='round`;
+              className={`drop-shadow ${active ? 'animate-pulse-slow' : }`}
             >
+</svg>
               <polygon points='12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2' />
-            </svg>
-          </button>
-        );
-      })}
     </div>
+<<<<<<< HEAD
   );
               viewBox="0 0 24 24"
               fill={active ? 'gold' : 'none'}
@@ -159,3 +168,7 @@ export default StarRating;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+              <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" />"
+    </div>"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
@@ -15,11 +16,14 @@ const { execSync, spawnSync } = require('"node": child_process');
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-#!/usr/bin/env node;
-'use strict';
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+#!/usr/bin/env node;
+use strict';
 const { execSync, spawnSync } = require('"node": child_process');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -31,11 +35,14 @@ const { execSync, spawnSync } = require('"node": child_process');
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
-		"shell": true,
+		"shell": true,""
 		"stdio": 'inherit',
+
 		...options}
 });
 	return result.status === 0};
@@ -48,14 +55,17 @@ function main() {}
 =======
 
 	// Ensure deps are installed;
-	ok = run('corepack enable >/dev/null 2>&1 || true') && ok;
-	ok = run('yarn install --frozen-lockfile --check-files --non-interactive || yarn install --non-interactive') && ok;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+	ok = run('yarn install --frozen-lockfile --check-files --non-interactive || yarn install --non-interactive') && ok;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 	// Lint, type-check, tests;
 	ok = run('npm run lint') && ok;
 	ok = run('npm run type-check') && ok;
 	ok = run('npm run test') && ok;
+<<<<<<< HEAD
 <<<<<<< HEAD
 	// Security;
 	ok = run('npm run "security": audit') && ok;
@@ -90,6 +100,12 @@ function main() {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 		process.exitCode = 1} else {}
 		console.log('\nAutomation runner completed successfully.')};
+=======
+	// Security;
+	ok = run('npm run "security": audit') && ok;
+	// Selected automations (best-effort);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 main();
 <<<<<<< HEAD
@@ -107,4 +123,7 @@ main();
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

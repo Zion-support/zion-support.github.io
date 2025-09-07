@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -88,10 +89,14 @@ export function getDisputeUploadDir(caseId: string): string {;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -179,13 +184,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Mock file system database utility
 export function readJson<T>(filePath: string, defaultValue: T): T {
-// Mock file system database utility
-export function readJson<T>(filePath: string, defaultValue: T): T {
-  }
-}
 
+<<<<<<< HEAD
 }
 ;
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
@@ -198,6 +202,8 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 export function read_json < T>(file_path: string, default_value: T): T {
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   try {
 =======
 // Mock file system database utility;
@@ -214,16 +220,25 @@ export function readJson<T>(filePath: string, defaultValue: T): T {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
 =======
   } catch (error) {"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+    const dir = path && path.dirname(filePath),
+    if (!fs && fs.existsSync(dir)) {
+      fs && fs.mkdirSync(dir, { recursive: true });
+main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.error("Error reading file:", error);
   }
   return defaultValue;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -231,6 +246,8 @@ export function readJson<T>(filePath: string, defaultValue: T): T {}
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -239,17 +256,26 @@ export function readJson<T>(filePath: string, defaultValue: T): T {}
   } catch (error) {
     console.error('Error reading file:', error);
 
+
+  await writeAllDisputes(all);
+  } catch (error) {
+
+
+
+
   await writeAllDisputes(all);
   } catch (error) {
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 main
+<<<<<<< HEAD
 =======
     console.error("Error reading file:", error);
   }
   return defaultValue;
 }
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -266,6 +292,7 @@ export function writeJson<T>(filePath: string, data: T): void {}
     if (!fs.existsSync(dir)) {}
       fs.mkdirSync(dir, { recursive: true });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
@@ -290,10 +317,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error writing file:", error);
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 main
@@ -314,6 +346,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("Error writing file:", error);
+
+  }
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   } catch (error) {
 =======
   } catch (error) {"
@@ -332,6 +375,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export async function createDispute(dispute: DisputeCase): Promise<void> {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function read_json < T>(file_path: string, default_value: T): T {
@@ -402,6 +446,8 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {
   try {
@@ -424,11 +470,15 @@ export function read_json < T>(file_path: string, default_value: T): T {
   }
 }
 export async function createDispute(dispute: DisputeCase): Promise<void> {
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const all = await readAllDisputes();
   all && all.push(dispute);
   await writeAllDisputes(all);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return path && path.join(UPLOADS_ROOT, caseId);
@@ -436,6 +486,11 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+
+  return path && path.join(UPLOADS_ROOT, caseId);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
@@ -465,9 +520,12 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 
   return path && path.join(UPLOADS_ROOT, caseId);
 
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
 =======
 
@@ -483,6 +541,7 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {}
   await mkdir(dir, { recursive: true });
   return dir;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -517,6 +576,9 @@ import * as path from 'path';
 =======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // File system database utilities
 import * as fs from 'fs';
 import * as path from 'path';
@@ -528,8 +590,11 @@ export interface FSDocument {
   updatedAt: Date;
   version: number;
 }
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export interface FSDocument {
   id: string;
@@ -758,6 +823,7 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -792,3 +858,87 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import fs from 'fs';
+import path from 'path';
+import { promisify } from 'util';
+import crypto from 'crypto';
+import { DisputeCase } from '../types/disputes';
+const mkdir = promisify(fs.mkdir);
+const readFile = promisify(fs.readFile);
+const writeFile = promisify(fs.writeFile);
+const ROOT = path.join(process.cwd(), 'data');
+const DISPUTES_FILE = path.join(ROOT, 'disputes.json');
+const UPLOADS_ROOT = path.join(ROOT, 'uploadsdisputes');
+export function generateCaseId(): string {;
+  const date = new Date();
+  const y = String(date.getFullYear());
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  const suffix = crypto.randomBytes(3).toString('hex').toUpperCase();
+  return `DSP-${y}${m}${d}-${suffix}`;
+}
+;
+async function ensureBaseFiles() {;
+  try {;
+    await mkdir(ROOT, { recursive: true });
+  } catch {}
+  try {;
+    await mkdir(UPLOADS_ROOT, { recursive: true });
+  } catch {}
+  try {;
+    await readFile(DISPUTES_FILE, 'utf8');
+  } catch {;
+    await writeFile(DISPUTES_FILE, JSON.stringify({ disputes: [] }, null, 2), 'utf8');
+  }
+}
+;
+export async function readAllDisputes(): Promise<DisputeCase[]> {;
+  await ensureBaseFiles();
+  const raw = await readFile(DISPUTES_FILE, 'utf8');
+  const data = JSON.parse(raw) as { disputes: DisputeCase[] };
+  return data.disputes || [];
+}
+;
+export async function writeAllDisputes(disputes: DisputeCase[]): Promise<void> {;
+  await ensureBaseFiles();
+  const data = { disputes };
+  await writeFile(DISPUTES_FILE, JSON.stringify(data, null, 2), 'utf8');
+}
+;
+export async function getDisputeById(id: string): Promise<DisputeCase | undefined> {;
+  const all = await readAllDisputes();
+  return all.find(d => d.id === id);
+}
+;
+export async function upsertDispute(updated: DisputeCase): Promise<void> {;
+  const all = await readAllDisputes();
+  const idx = all.findIndex(d => d.id === updated.id);
+  if (idx >= 0) {;
+    all[idx] = updated;
+  } else {;
+    all.push(updated);
+  }
+  await writeAllDisputes(all);
+}
+;
+export async function createDispute(dispute: DisputeCase): Promise<void> {;
+  const all = await readAllDisputes();
+  all.push(dispute);
+  await writeAllDisputes(all);
+}
+;
+export function getDisputeUploadDir(caseId: string): string {;
+  return path.join(UPLOADS_ROOT, caseId);
+}
+;
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
+  const dir = getDisputeUploadDir(caseId);
+  await mkdir(dir, { recursive: true });
+  return dir;
+}
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error("Error writing file:", error);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

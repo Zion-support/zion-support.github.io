@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
+
 interface UltraAdvancedFuturisticBackgroundProps {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high' | 'extreme';
@@ -8,22 +14,14 @@ interface UltraAdvancedFuturisticBackgroundProps {
   particleCount?: number;
   animationSpeed?: number;
   enableHolographic?: boolean;
-  enableQuantumEffects?: boolean
+  enableQuantumEffects?: boolean;}
+}
 }
 
-export default function UltraAdvancedFuturisticBackground({ 
-  children;
+export default function UltraAdvancedFuturisticBackground({children;
   intensity;
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-origin/cursor/automate-test-improve-and-merge-code-2533
-const particles: Array< {
-  //Initialize particles with enhanced properties const initParticles = () => {
-  const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math.floor (particleCount * 0.7) : Math.floor (particleCount * 0.5);
-for (let i = 0, i < count, i++) {
-  particles.push ({
-  
 
+<<<<<<< HEAD
 export default function UltraAdvancedFuturisticBackground({
 origin/cursor/automate-test-improve-and-merge-code-2533
   children,
@@ -944,12 +942,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return ('
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className='relative min - h-screen'>;
+=======
+  return (
+    <div className='relative min - h-screen' />;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <canvas;
         ref={canvas_ref}'
         className='fixed inset - 0 w - full h - full pointer - events - none';
-        style={{ z_index: -1 }}
+        style={{ z_index: -1 ,}
+}
       />;
       {/* Additional futuristic overlay effects */}
+<<<<<<< HEAD
       {enable_holographic && (
         <div;'
           className='fixed inset - 0 pointer - events - none';
@@ -957,6 +962,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         >;'
           <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to - purple - 500 / 5' />;'
           <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]' />;'
+=======
+      {enable_holographic && (<div;
+          className='fixed inset - 0 pointer - events - none';}
+          style={{ z_index: -1 ,}
+}
+         />;
+          <div className='absolute inset - 0 bg - gradient - to - br from - transparent via - cyan - 500 / 5 to - purple - 500 / 5' />;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (0, 255, 255, 0.03), transparent_50%)]' />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]' />;
         </div>)}
       {enableQuantumEffects && (
@@ -980,9 +994,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.03),transparent_50%)]" />;
         </div>;
       )}
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (139, 92, 246, 0.03), transparent_50%)]' />
+    </div>
+  );
+}
+      {enableQuantumEffects && (<div;
+          className='fixed inset - 0 pointer - events - none';}
+          style={{ z_index: -1 ,}
+}
+         />;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.02), transparent_70%)]' />
+    </div>
+  );
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     <div className="relative min-h-screen">;
       <canvas;
         ref={canvas_ref}
@@ -1023,10 +1050,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>);
   );
 <<<<<<< HEAD
+=======
+      {children}
+    </div>);
+  );
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+    </div>
+);
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -19,6 +20,15 @@
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {TalentProfile} from '@/types/talent';
+=======
+
+    closeMobileFilter}
+}
+
+
+import {useState} from 'react';''
+import {TalentProfile} from '@/types/talent';'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function useUIState() {;
 
 <<<<<<< HEAD
@@ -52,6 +62,7 @@ export function useUIState() {;
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
+<<<<<<< HEAD
   const [expandedSections, setExpandedSections] = useState({
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -250,17 +261,13 @@ export function useUIState() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
     setSelectedTalent,;
+=======
 
+  const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),;
+pr-12325
+</TalentProfile>'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
-    expandedSections;
-    toggleSection;
-
-    expandedSections;
-    toggleSection;
-
-    expanded_sections;
-    toggle_section;
     closeMobileFilter}
 }
     expandedSections;
@@ -272,7 +279,11 @@ export function useUIState() { return null; }
     closeMobileFilter}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

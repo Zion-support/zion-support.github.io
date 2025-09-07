@@ -20,6 +20,7 @@ const path = require('path');
 async function analyzeBundle() {}
   try {}
     // Install bundle analyzer if not present;
+<<<<<<< HEAD
     try {}
       execSync('npm list @next/bundle-analyzer', { "stdio": 'pipe' })} catch {}
       execSync('npm install @next/bundle-analyzer --save-dev', { "stdio": 'pipe' })};
@@ -40,10 +41,15 @@ async function analyzeBundle() {}
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.log('Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
     console.error('Bundle analysis "failed": ', error.message)};
+
 };
 analyzeBundle();
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,6 +62,8 @@ analyzeBundle();
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

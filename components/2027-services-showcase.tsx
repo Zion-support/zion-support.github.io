@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';'
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -96,6 +97,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Search, Star, Users, TrendingUp, DollarSign, Clock;
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;
@@ -103,7 +107,7 @@ import { Search, Star, Users, TrendingUp, DollarSign, Clock;
  } from 'lucide-react';
 import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
-origin/cursor/automate-test-improve-and-merge-code-2533
+
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 =======
@@ -119,6 +123,7 @@ import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticN
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [searchTerm, setSearchTerm] = useState('');
+<<<<<<< HEAD
 '
   const [selectedCategory, setSelectedCategory] = useState<string>('all');'
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');'
@@ -138,6 +143,10 @@ export default function ServicesShowcase2027() { return null; }
                         (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
 <<<<<<< HEAD
     return matchesSearch && matchesCategory && matchesPrice
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<string>('name'),
@@ -145,19 +154,8 @@ export default function ServicesShowcase2027() { return null; }
   // Sort options
   const sortOptions = null;
                   setSelectedPriceRange('all')
-      service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory =
-      selectedCategory === 'all' |service.category.includes(selectedCategory);
-    const matchesPrice =
-      selectedPriceRange === 'all' |
-      (selectedPriceRange === 'low' &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |
-      (selectedPriceRange === 'medium' &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) |
-      (selectedPriceRange === 'high' &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
 
+<<<<<<< HEAD
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
@@ -836,6 +834,8 @@ setSelectedPriceRange('all');
                 }}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 }}
 =======
                 }}"
@@ -881,8 +881,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
           )}
+<<<<<<< HEAD
               <Link'
                 href='/contact''
+=======
+              <Link
+                href='/contact'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>;
                 Get Started Today;
               </Link>;
@@ -910,6 +915,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Link"
                 href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'
               >
                 Get Started Today
@@ -932,7 +940,11 @@ href='/pricing'
         </div>
       </section>
       {/* Footer */}
+<<<<<<< HEAD
             </div>"
+=======
+            </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
               Zion Tech Group;
             </h3>"
@@ -1009,8 +1021,13 @@ href='/pricing'
                     {/* ROI */}'
                     <div className='mb - 6 text - center'>;'
                       <div className='text - green - 400 font - semibold text - lg'>;
+<<<<<<< HEAD
                         ROI: {service.roi}
                       </div>;'
+=======
+                        ROI: {service.roi;}
+                      </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <div className='text - gray - 400 text - xs'>;
                         Return on Investment;
                       </div>;
@@ -1077,8 +1094,13 @@ href='/pricing'
           {/* No Results */}
           {sorted_services.length === 0 && (
             <motion.div;
+<<<<<<< HEAD
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}'
+=======
+              initial={{ opacity: 0 ;}}
+              animate={{ opacity: 1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='text - center py - 20';
             >;'
               <div className='text - 6xl mb - 4'>🔍</div>;'
@@ -1306,6 +1328,9 @@ href='/pricing'
     </UltraFuturisticMatrixBackground2027>));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <footer className='px-4 sm:px-6 lg:px-8 py-12 border-t border-cyan-500/30'>
         <div className='max-w-7xl mx-auto text-center'>
           <div className='mb-8'>

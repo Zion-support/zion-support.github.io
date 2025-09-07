@@ -16,6 +16,7 @@ import {useState} from 'react';'
 import {supabase} from '@/integrations / supabase / client';
 =======
 export interface TalentProfileData {
+<<<<<<< HEAD
 export interface TalentProfileData {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
@@ -109,19 +110,16 @@ export interface CategorizedSkills {;
   platforms: string[];
 import { useState  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface TalentProfileData {
-  name: string;
-  title: string;
-  bio: string;
-}
-export interface CategorizedSkills {
-
-export interface CategorizedSkills {;
-  programming: string[];
-  devops: string[];
-  platforms: string[];
+export interface TalentProfileData {
+export interface TalentProfileData {export interface TalentProfileData {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -159,6 +157,8 @@ export interface EnhancedProfile {}
   summary: string,;
   categorizedSkills: CategorizedSkills;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
   const [error, setError] = useState<string | null>(null);
@@ -210,11 +210,9 @@ export interface EnhancedProfile {
 export function useTalentProfileEnhancer() {;
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
     setIsGenerating(true);
     setError(null),
-    
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -224,6 +222,7 @@ export function useTalentProfileEnhancer() {;
         body: { talentData: profileData }
       });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -254,11 +253,22 @@ export function useTalentProfileEnhancer() {;
     setError(null)      if (error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+if (error) {
+        throw new Error(error.message)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-
-
+    try {
+      // Call the Supabase Edge Function
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+        body: { talentData: profileData }
+      });
       if (error) {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    setError(null)      if (error) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         throw new Error(error.message)
 import { useState } from 'react',;
 =======
@@ -316,6 +326,14 @@ export function useTalentProfileEnhancer() { return null; }
       setError(err && err.message || 'Failed to enhance profile'),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+setError(err && err.message || 'Failed to enhance profile'),
+      }
+      return data as EnhancedProfile
+    } catch (err: any) {
+      setError(err.message |'Failed to enhance profile')
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface CategorizedSkills {
 =======
 
@@ -348,11 +366,7 @@ export interface CategorizedSkills {};
     }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
-
   };
-  
-
 
 <<<<<<< HEAD
 
@@ -369,6 +383,7 @@ export interface CategorizedSkills {};
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -376,6 +391,9 @@ export interface CategorizedSkills {};
 =======
 <<<<<<< HEAD
 =======
+=======
+error
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
   return {
     enhanceProfile;
@@ -391,6 +409,7 @@ export interface CategorizedSkills {};
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   soft_skills: string[],
+<<<<<<< HEAD
 =======
   platforms: string[];  soft_skills: string[],
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -401,6 +420,12 @@ export interface CategorizedSkills {};
   soft_skills: string[],
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   other: string[];
+=======
+export interface CategorizedSkills {
+  programming: string[];
+  devops: string[];
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 export interface EnhancedProfile {
   summary: string,
@@ -411,34 +436,56 @@ export /**
  */
 function useTalentProfileEnhancer() {
   const [is_generating, setIsGenerating] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-;
-  const enhance_profile = async (profile_data: TalentProfileData): Promise < EnhancedProfile | null> => {
-    setIsGenerating (true);
-    set_error (null),
-    try {
-      // Call the Supabase Edge Function;
-      const { data, error } = await supabase.functions.invoke ('talent - profile - enhancer', {
-        body: { talent_data: profile_data }
-      });
-;
-      // Check condition
-if ( {) {
-  $2
+
+import {useState} from 'react';''
+import {supabase} from '@/integrations / supabase / client';'
+export interface TalentProfileData {
+  // TODO: Implement
 }
-        throw new Error (error.message);
-      }
-      return data as EnhancedProfile;
-    } catch (err: any) {
-      set_error (err.message || 'Failed to enhance profile'),
-      return null;
-    } finally {
-      setIsGenerating (false);
-    }
+  // TODO: Implement
+import {supabase} from '@/integrations/supabase/client';
+export interface TalentProfileData {;
+
+  name: string;,
+  title: string;
+  bio: string;,
+  skills: string[],
+  location?: string;
+
+export interface CategorizedSkills {
+  // TODO: Implement
+  // TODO: Implement
+
+
+export interface CategorizedSkills {;
+
+  programming: string[];,
+  devops: string[];
+  platforms: string[];
+import { useState  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+  // TODO: Implement
+  bio: string;
+  // TODO: Implement
+
+
+export interface EnhancedProfile {
+  // TODO: Implement
+  summary: string,
+  categorizedSkills: CategorizedSkills;
+
+
   }
-;
-  return {
+}
+  }
+}
+
+
+
+pr-12325
+}
     enhance_profile;
+<<<<<<< HEAD
     is_generating;
     error;
 
@@ -463,6 +510,16 @@ if ( {) {
 
 
 
+=======
+    is_generating;}
+    error;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
+
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 =======
@@ -27,10 +28,17 @@ import fs from "fs";"
 =======
 import fs from "fs";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import fs from "fs";
+import fs from 'fs';
+import path from 'path';import fs from "fs";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import path from "path";
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,15 +88,29 @@ export interface TokenTransaction {;
 =======  id: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+import fs from 'fs';
+import path from 'path';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface TokenTransaction {
 
+export interface TokenTransaction {;
+export interface TokenTransaction {
 
 export interface TokenTransaction {;
+  id: string;
+  userId: string;
+  type: "earn" | "spend" | "transfer";
+  amount: number,
+  description: string;
+
+import fs from "fs";""
+import path from "path";"
 
 ;
 
 export interface TokenTransaction {
-
 
 export interface TokenTransaction {;
 
@@ -107,10 +129,26 @@ export interface TokenTransaction {;
   userId: string;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   type: "earn" | "spend" | "transfer";
+  // TODO: Implement
+}
+export interface TokenTransaction {;
+
+;
+
+export interface TokenTransaction {
+  // TODO: Implement
+}
+export interface TokenTransaction {;
+
+
+  id: string;,
+  userId: string;"
+  type: "earn" | "spend" | "transfer";",
   amount: number;
-  description: string;
+  description: string;,
   timestamp: string;
   metadata?: Record < string, any>;
+
 }
 <<<<<<< HEAD
 export interface TokenConfig {
@@ -120,10 +158,9 @@ export interface TokenConfig {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
-
-
 export interface TokenConfig {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -137,6 +174,8 @@ export interface TokenConfig {;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   symbol: string;
   total_supply: number;
@@ -149,13 +188,37 @@ export interface TokenConfig {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const DATA_DIR = path.join(process.cwd(), "data");
 const TRANSACTIONS_FILE = path.join(DATA_DIR, "token-transactions.json");
 const CONFIG_FILE = path.join(DATA_DIR, "token-config.json");
 
+
+
+export interface TokenConfig {;
+
+
+
+  name: string;,
+  symbol: string;
+  total_supply: number;,
+  circulating_supply: number;
+
+  exchange_rate: number; // USD per token;,
+  staking_enabled: boolean;
+  stakingRewardRate: number; // APY percentage;
+}
+"
+const DATA_DIR = path.join(process.cwd(), "data");""
+const TRANSACTIONS_FILE = path.join(DATA_DIR, "token-transactions.json");""
+const CONFIG_FILE = path.join(DATA_DIR, "token-config.json");"
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
+<<<<<<< HEAD
 =======
 "
 const DATA_DIR = path.join(process.cwd(), "data");"
@@ -165,6 +228,9 @@ const CONFIG_FILE = path.join(DATA_DIR, "token-config.json");
 function ensureDataDir() {}
   if (!fs && fs.existsSync(DATA_DIR)) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   }
 }
@@ -280,6 +346,8 @@ function getDefaultConfig (): TokenConfig {}
 =======
 }
 
+
+
 function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
   fs.writeFileSync (TRANSACTIONS_FILE, JSON.stringify (transactions, null, 2));
@@ -292,10 +360,13 @@ function load_config (): TokenConfig {
 }
       return getDefaultConfig ();
     }
+const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
+    return JSON.parse (raw);
+
+
     const raw = fs.readFileSync(CONFIG_FILE, "utf8");
     return JSON.parse(raw);
-    const raw = fs.readFileSync(CONFIG_FILE, "utf8");
-    return JSON.parse(raw);
+
   } catch {
     return getDefaultConfig ();
   }
@@ -303,8 +374,20 @@ function load_config (): TokenConfig {
 export function getAllTransactions(): TokenTransaction[] {
   return loadTransactions();
 }
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+
+
+function save_config (config: TokenConfig): void {
+  ensureDataDir ();
+  fs.writeFileSync (CONFIG_FILE, JSON.stringify (config, null, 2));
+}
 function getDefaultConfig (): TokenConfig {
+
+  return {
+
+
 function getDefaultConfig (): TokenConfig {
+
 
   return {
     name: "ZION Token",
@@ -419,11 +502,28 @@ export function getUserBalance(userId: string): number {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
   for (const tx of transactions) {
+<<<<<<< HEAD
     if (tx.userId === userId) {
       if (tx.type === "earn") {
     if (tx.userId === userId) {
       if (tx.type === "earn") {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+if (tx && tx.userId === userId) {
+      if (tx && tx.type === 'earn') {
+        balance += tx && tx.amount;
+      } else if (tx && tx.type === 'spend') {
+        balance -= tx && tx.amount;
+      }
+    }
+  }
+
+  
+  return Math && Math.max(0, balance);
+
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -433,12 +533,16 @@ export function getUserBalance(userId: string): number {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function getAllTransactions (): TokenTransaction[] {
   return load_transactions ();
 }
@@ -449,20 +553,35 @@ export function add_transaction (transaction: Omit < TokenTransaction, 'id' | 't
     id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
     timestamp: new Date ().toISOString ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function getAllTransactions(): TokenTransaction[] {
   return loadTransactions();
 }
 export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+export function getAllTransactions(): TokenTransaction[] {;
+  return loadTransactions();
+}
+
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
     ...transaction
@@ -470,17 +589,24 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
     timestamp: new Date().toISOString()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
+}  }
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);
   return new_transaction;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -616,15 +742,31 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
 }
 export function get_config (): TokenConfig {
   return load_config ();
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function getConfig(): TokenConfig {
   return loadConfig();
+
 }
 export function set_config (config: TokenConfig): void {
   save_config (config);
 }
-export function getUserBalance (user_id: string): number {
-  const transactions = load_transactions ();
+export function getUserBalance(userId: string): number {
+
+
+export function getConfig(): TokenConfig {;
+  return loadConfig();
+}
+
+export function setConfig(config: TokenConfig): void {;
+  saveConfig(config);
+}
+
+export function getUserBalance(userId: string): number {;
   const transactions = loadTransactions();
+
+
   let balance = 0;
 ;
   for (const tx of transactions) {
@@ -638,6 +780,7 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -645,6 +788,13 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+    if (tx.userId === userId) {
+      if (tx.type === "earn") {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         balance += tx.amount;
       } else if (tx.type === "spend") {
 =======
@@ -661,4 +811,134 @@ if ( {) {
 
   return Math.max(0, balance);
 }
+<<<<<<< HEAD
 "`
+=======
+import fs from "fs";""
+import path from "path";"
+;
+
+export interface TokenTransaction {
+  // TODO: Implement
+}
+export interface TokenTransaction {;
+
+
+  // TODO: Implement
+
+  id: string;,
+  userId: string;"
+  type: "earn" | "spend" | "transfer";",
+  amount: number;
+  description: string;,
+  timestamp: string;
+  metadata?: Record < string, any>;
+
+
+
+export interface TokenConfig {;
+
+
+  name: string;,
+  symbol: string;
+  total_supply: number;,
+  circulating_supply: number;
+  exchange_rate: number; // USD per token;,
+  staking_enabled: boolean;
+  stakingRewardRate: number; // APY percentage;
+"
+const DATA_DIR = path.join(process.cwd(), "data");""
+const TRANSACTIONS_FILE = path.join(DATA_DIR, "token-transactions.json");""
+const CONFIG_FILE = path.join(DATA_DIR, "token-config.json");"
+function ensureDataDir() {
+  if (!fs && fs.existsSync(DATA_DIR)) {
+    fs && fs.mkdirSync(DATA_DIR, { recursive: true });
+function loadTransactions(): TokenTransaction[] {
+  try {
+  // TODO: Implement
+    ensureDataDir();
+
+    if (!fs.existsSync(TRANSACTIONS_FILE)) return [];"
+    const raw = fs.readFileSync(TRANSACTIONS_FILE, "utf8");"
+    return JSON.parse(raw);
+  } catch {
+  // TODO: Implement
+    return [];
+
+  }
+}
+
+function save_transactions (transactions: TokenTransaction[]): void {
+
+  // TODO: Implement
+  ensureDataDir ();
+  fs.writeFileSync (TRANSACTIONS_FILE, JSON.stringify (transactions, null, 2));
+
+}
+function load_config (): TokenConfig {
+  // TODO: Implement
+  // TODO: Implement
+}
+    ensureDataDir ();
+
+    if () {) {
+  $2;
+      return getDefaultConfig ();
+    }"
+    const raw = fs.readFileSync(CONFIG_FILE, "utf8");"
+    return JSON.parse(raw);"
+  // TODO: Implement
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+    return getDefaultConfig ();
+
+  }
+}
+export function getAllTransactions(): TokenTransaction[] {}
+  return loadTransactions();}
+}
+function getDefaultConfig (): TokenConfig {
+  // TODO: Implement
+  // TODO: Implement
+  return {
+
+  // TODO: Implement
+    name: "ZION Token",""
+    symbol: "ZION$","
+
+    totalSupply: 1000000000,
+    circulatingSupply: 250000000,
+    exchangeRate: 0.05,
+    stakingEnabled: true,}
+    stakingRewardRate: 12.5,}
+  };
+
+export function getAllTransactions(): TokenTransaction[] {}
+  return loadTransactions();}
+}
+
+
+export function addTransaction("
+  transaction: Omit<TokenTransaction, "id" | "timestamp">,"
+)"
+export function add_transaction (transaction: Omit < TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+  // TODO: Implement
+}
+
+  const transactions = load_transactions ();
+  const new_transaction: TokenTransaction = {}
+    ...transaction,}
+    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    timestamp: new Date ().toISOString ();
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+`;
+pr-12325
+
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}'
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {'
+</TokenTransaction>'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 import React from 'react';
 'use client';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -23,7 +24,15 @@ import {cn} from '@/lib/utils';
 import React from 'react';
 'use client';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import {cn} from '@/lib/utils';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+"use client"
+"use client"
+import React from 'react';
+use client';
+pr-12325
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -44,7 +53,9 @@ import {cn} from '@/lib/utils';
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+'use client';
 
+<<<<<<< HEAD
 
 
 
@@ -81,6 +92,15 @@ import {cn} from '@/lib/utils';
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import * as React from 'react';
+import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
+import {Check} from 'lucide-react';
+import {cn} from '@/lib/utils';
+"use client"
+"use client"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {cn} from '@/lib/utils';
 
 "use client"
@@ -98,6 +118,9 @@ import {cn} from '@/lib/utils';
 "use client"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+"use client"
+"use client"
+
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
 =======
@@ -112,6 +135,7 @@ import * as CheckboxPrimitive from "@radix-ui/react-checkbox""
 import { Check } from "lucide-react"
 "
 import { cn } from "@/lib/utils"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -206,6 +230,8 @@ Checkbox && Checkbox.displayName = CheckboxPrimitive && CheckboxPrimitive.Root.d
 export { Checkbox };
 
       className
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     )}
     {...props}
   >
@@ -215,23 +241,95 @@ export { Checkbox };
       <Check className="h-3 w-3" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
-export { Checkbox };
-export { Checkbox }
-;
 
+))
+Checkbox.displayName = CheckboxPrimitive.Root.displayName
+
+"use client"""
+import {cn} from '@/lib/utils';
+import * as React from "react"""
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox"""
+import { Check } from "lucide-react"""
+import { cn } from "@/lib/utils""
+const Checkbox = React.forwardRef<
+  React.ElementRef<typeof CheckboxPrimitive.Root>
+</typeof>
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+></typeof>(({ className, ...props }, ref) => (
+  <CheckboxPrimitive.Root
+
+;
 import * as React from 'react';
 import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
 import {Check} from 'lucide-react';
+const Checkbox = React && React.forwardRef<;
+  React && React.ElementRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>;
+></typeof>(({ className, ...props }, ref) => (;
+  <CheckboxPrimitive&& CheckboxPrimitive.Root
     ref={ref}
     className={cn(
-      'peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground'
-      className
+      "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+
+  <CheckboxPrimitive.Root;
+const Checkbox = React && React.forwardRef<;
+  React && React.ElementRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>,;
+
+  React && React.ComponentPropsWithoutRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>;
+</typeof>)
+></typeof>(({ className, ...props }, ref) => (;
+  <CheckboxPrimitive&& CheckboxPrimitive.Root;
+    ref={ref}
+    className={cn("
+      "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground","
+Checkbox && Checkbox.displayName = CheckboxPrimitive && CheckboxPrimitive.Root.displayName;
+
+export { Checkbox };
+
+"use client";
+;
+import * as React from "react";
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
+import { Check } from "lucide-react";
+;
+import { cn } from "@/lib/utils";
+;
+const Checkbox = React.forwardRef<;
+  React.ElementRef<typeof CheckboxPrimitive.Root>,;
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>;
+>(({ className, ...props }, ref) => (;
+  <CheckboxPrimitive.Root;
+    ref={ref}
+    className={cn(;
+      "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",;
+      className;
     )}
+      className
+      className;)
+    )}
+    {...props}
+  >
+
+    <CheckboxPrimitive.Indicator;"
+      className={cn("flex items-center justify-center text-current")}"
+"
+      <Check className="h-3 w-3" />"
+
+    </CheckboxPrimitive.Indicator>
+  </CheckboxPrimitive.Root>
+export { Checkbox }
+    className={cn(
+      'peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground
     {...props}>;
-    <CheckboxPrimitive&& CheckboxPrimitive.Indicator
+    <CheckboxPrimitive&& CheckboxPrimitive.Indicator;
       className={cn('flex items-center justify-center text-current')}>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Check className='h-3 w-3' />;
+
     </CheckboxPrimitive && CheckboxPrimitive.Indicator>;
   </CheckboxPrimitive && CheckboxPrimitive.Root>;
 ));
@@ -242,11 +340,11 @@ import {Check} from 'lucide-react';
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {cn} from '@/lib / utils';
-;
 const Checkbox = React.forward_ref<;
   React.ElementRef < typeof CheckboxPrimitive.Root>,
   React.ComponentPropsWithoutRef < typeof CheckboxPrimitive.Root>;
 ></typeof>(({ class_name, ...props }, ref) => (
+<<<<<<< HEAD
   <CheckboxPrimitive.Root;
     ref={ref}
 <<<<<<< HEAD
@@ -255,9 +353,13 @@ const Checkbox = React.forward_ref<;
     className={cn (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'peer h - 4 w - 4 shrink - 0 rounded - sm border border - primary ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 data-[state = checked]:bg - primary data-[state = checked]:text - primary - foreground',
+=======
+    className={cn (
+      'peer h - 4 w - 4 shrink - 0 rounded - sm border border - primary ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 data-[state = checked]:bg - primary data-[state = checked]:text - primary - foreground',')
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       class_name)}
-    {...props}
   >;
+<<<<<<< HEAD
 <<<<<<< HEAD
     <CheckboxPrimitive.Indicator;'
       className={cn ('flex items - center justify - center text - current')}
@@ -267,7 +369,14 @@ const Checkbox = React.forward_ref<;
       className={cn ('flex items - center justify - center text - current')}
     >;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    <CheckboxPrimitive.Indicator;
+      className={cn ('flex items - center justify - center text - current')}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Check className='h - 3 w - 3' />;
+
     </CheckboxPrimitive.Indicator>;
   </CheckboxPrimitive.Root>));
 Checkbox.display_name = CheckboxPrimitive.Root.display_name;
@@ -283,10 +392,14 @@ export { Checkbox };
 =======
 export { Checkbox }
 ;
+<<<<<<< HEAD
 
       "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
 
@@ -329,6 +442,7 @@ Checkbox.displayName = CheckboxPrimitive.Root.displayName
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -336,6 +450,8 @@ Checkbox.displayName = CheckboxPrimitive.Root.displayName
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     {...props}
   >;
     <CheckboxPrimitive.Indicator;
@@ -345,11 +461,19 @@ Checkbox.displayName = CheckboxPrimitive.Root.displayName
     </CheckboxPrimitive.Indicator>;
   </CheckboxPrimitive.Root>;
 ));
+
+      "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",""
+
+
+
+))
 Checkbox.displayName = CheckboxPrimitive.Root.displayName;
-;
-export { Checkbox } "use client" const Checkbox = React.forwardRef< React.ElementRef<typeof CheckboxPrimitive.Root>;
+      <Check className="h-3 w-3" />;"
+
+  </CheckboxPrimitive.Root>;
+;"
+export { Checkbox } "use client" const Checkbox = React.forwardRef< React.ElementRef<typeof CheckboxPrimitive.Root>;"
 React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> > ( ({
-  className, ...props 
 }, ref) => (<CheckboxPrimitive.Root) 
 }{
   ...props 
@@ -373,6 +497,7 @@ export { Checkbox }
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -389,3 +514,8 @@ Checkbox.displayName = CheckboxPrimitive.Root.displayName;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  ...props;"
+}> <CheckboxPrimitive.Indicator > <Check className="h-3 w-3" /> </CheckboxPrimitive.Indicator> </CheckboxPrimitive.Root>) ) Checkbox.displayName = CheckboxPrimitive.Root.displayName export {"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

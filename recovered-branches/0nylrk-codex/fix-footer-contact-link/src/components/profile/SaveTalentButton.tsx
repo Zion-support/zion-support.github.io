@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import {Button} from "@/components/ui/button";
@@ -85,6 +86,9 @@ export function SaveTalentButton({
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface SaveTalentButtonProps {
   talentId: string;
   onSave: (talentId: string) => void;
@@ -99,6 +103,24 @@ interface SaveTalentButtonProps {
   onSave: (talentId: string) => void;
   isSaved: boolean;
 }
+
+}
+
+import React from "react";""
+import { Button } from "@/components/ui/button";""
+import { Star } from "lucide-react";"
+interface SaveTalentButtonProps {
+  // TODO: Implement
+}
+  talentId: string;,
+  onSave: (talentId: string) => void;,
+  isSaved: boolean;"
+  // TODO: Implement
+}
+  talentId: string;,
+  onSave: (talentId: string) => void;,
+  isSaved: boolean;
+pr-12325
 
 export function SaveTalentButton({
   talentId,
@@ -131,14 +153,26 @@ import React from 'react';"
 import {Button} from "@/components/ui/button";"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import {Star} from "lucide-react";
+  isSaved,)
+}: SaveTalentButtonProps) {"
+import React from 'react';''
+import {Button} from "@/components/ui/button";""
+import {Star} from "lucide-react";"
+
 interface SaveTalentButtonProps {;
   talentId: string,;
-  onSave: (talentId: string) => void,;
-  isSaved: boolean;
+  onSave: (talentId: string) => void,;}
+  isSaved: boolean;}
 }
 
+<<<<<<< HEAD
 export function SaveTalentButton({}
+=======
+
+export function SaveTalentButton({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   talentId,
+
   onSave,
   isSaved,
 }: SaveTalentButtonProps) {}
@@ -191,6 +225,7 @@ export function SaveTalentButton({}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -203,3 +238,33 @@ export function SaveTalentButton({}
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+  isSaved,)
+}: SaveTalentButtonProps) {"
+import React from 'react';
+import {Button} from "@/components/ui/button";""
+import {Star} from "lucide-react";"
+interface SaveTalentButtonProps {;
+  talentId: string,;
+  onSave: (talentId: string) => void,;
+
+}: SaveTalentButtonProps) {
+  return (
+    <Button;)
+      onClick={() => onSave(talentId)}
+"
+      <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : } mr-1`} />
+
+    `;
+      <Star className={`h - 4 w - 4 ${is_saved ? "fill - current" : ""} mr - 1`} />;"
+
+    );"`;
+      <Star className={`h-4 w-4 ${isSaved ? "fill-current" : ""} mr-1`} />"
+
+    "`;
+pr-12325
+</Star>
+    </Button>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

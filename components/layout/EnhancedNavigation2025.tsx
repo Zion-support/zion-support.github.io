@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 };export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() { return null; }
   }, []);
@@ -808,6 +809,8 @@ function EnhancedNavigation2025() {}
 import { useState, useEffect  } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Menu, ChevronDown;
   Brain, Rocket, Shield;
   Zap;
@@ -815,6 +818,7 @@ import { Menu, ChevronDown;
   BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
+<<<<<<< HEAD
   Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
  } from 'lucide-react';
 const navigationItems = null;
@@ -826,3 +830,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

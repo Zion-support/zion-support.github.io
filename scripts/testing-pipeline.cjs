@@ -16,7 +16,7 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require("$1")
@@ -68,6 +68,5 @@ const fs = require("fs")
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-    console.log(`� Report saved "to"`)
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,10 +17,18 @@ interface ContractHeaderProps {
   onCreateClick: () => void;
 =======
   return (
+<<<<<<< HEAD
   );
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 =======
+=======
+
+import { Button } from "@/components/ui/button";
+interface ContractHeaderProps {
+  onCreateClick: () => void;
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ContractHeader({ onCreateClick }: ContractHeaderProps) {
   return (
     <div className="flex justify-between items-center mb-8">
@@ -44,12 +55,16 @@ import { Button } from "@/components/ui/button",
 interface ContractHeaderProps {
   onCreateClick: () => void
 }
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       <Button size="lg" onClick={onCreateClick}>
         Create New Contract
       </Button>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -68,6 +83,12 @@ interface ContractHeaderProps {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
+=======
+  );
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {;
   onCreateClick: () => void;
@@ -89,7 +110,6 @@ export function ContractHeader({ onCreateClick }: ContractHeaderProps) {;
 =======
   return (;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
 
 export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
   return (
@@ -137,9 +157,13 @@ export function ContractHeader() { return null; }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
+;
       <Button size="lg" onClick={onCreateClick}>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  return (;      <Button size="lg" onClick={onCreateClick}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         Create New Contract;
       </Button>;
     </div>;
@@ -168,8 +192,9 @@ export /**;
 <<<<<<< HEAD
 function ContractHeader() {
   return (
-    <div className="flex justify - between items - center mb - 8">;
+    <div className="flex justify - between items - center mb-8">;
       <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <h1 className="text - 3xl font-bold">Smart Contract Builder</h1>;
         <p className="text - muted - foreground mt-2">;
@@ -185,6 +210,10 @@ function ContractHeader() {}
         <h1 className="text - 3xl font - bold">Smart Contract Builder</h1>;
         <p className="text - muted - foreground mt - 2">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        <h1 className="text - 3xl font-bold">Smart Contract Builder</h1>;
+        <p className="text - muted - foreground mt-2">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           Create legally binding agreements with optional blockchain deployment;
         </p>;
       </div>;"
@@ -198,11 +227,18 @@ function ContractHeader() {}
 }=======}
 =======
 }
+}
 
 }
 }
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+
+}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
   ),;}
@@ -222,6 +258,7 @@ function ContractHeader() {}
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -250,3 +287,47 @@ function ContractHeader() {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
+  return ()
+  );
+}
+  )
+import { Button } from "@/components/ui/button";"
+interface ContractHeaderProps {;
+  onCreateClick: () => void;
+;
+export function ContractHeader({ onCreateClick }: ContractHeaderProps) {;
+  return (;
+
+  return (
+"
+import { Button } from "@/components/ui/button",;"
+interface ContractHeaderProps {;)
+  onCreateClick:() => void;
+export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
+  return (;"
+    <div className="flex justify-between items-center mb-8">;"
+</div>
+      <div>;
+</div>"
+        <h1 className="text-3xl font-bold">Smart Contract Builder</h1>;""
+        <p className="text-muted-foreground mt-2">;"
+</p>
+        </p>;
+      </div>;"
+      <Button size="lg" onClick={onCreateClick}>;"
+
+    <div className="flex justify - between items - center mb - 8">;"
+        <h1 className="text - 3xl font - bold">Smart Contract Builder</h1>;""
+        <p className="text - muted - foreground mt - 2">;"
+      <Button size="lg" on_click={onCreateClick}>;"
+
+      ;)
+    </div>);"
+  return (<div className="flex justify-between items-center mb-8" > text-3xl font-bold">Smart Contract Builder</h1> <p className=" text-muted-foreground mt-2"> Create legally binding agreements with optional blockchain deployment </p> </div> <Button size=" lg" onClick= {"
+  onCreateClick;)
+}> Create New Contract  </div>) "
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

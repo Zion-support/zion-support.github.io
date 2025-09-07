@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 =======
 export interface CustomerTicket {
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -20,10 +21,19 @@ export interface CustomerTicket {
 
 export interface CustomerTicket {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+export interface CustomerTicket {
+
+export interface CustomerTicket {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface CustomerTicket {;
   id: string;
   customerId: string;
-  subject: string;
+  subject: string,
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';'
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
@@ -33,6 +43,7 @@ export interface CustomerTicket {;
   updatedAt: Date;
   resolvedAt?: Date;
   customerSatisfaction?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -171,21 +182,28 @@ export interface CustomerProfile {};
 =======
 }
 export interface CustomerMessage {
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
-  ticket_id: string;
-  sender_id: string;
-  sender_type: 'customer' | 'agent' | 'ai';
+  ticketId: string;
+  senderId: string;
+  senderType: 'customer' | 'agent' | 'ai';
+
   message: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   timestamp: Date;
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
 
-  intent: string,
-  confidence: number;
 
-}
+  tags: string[];  message: string;
+  timestamp: Date;
+  attachments?: string[];
+  sentiment: 'positive' | 'neutral' | 'negative';}
+export interface CustomerProfile {}
 export interface CustomerProfile {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -229,6 +247,8 @@ export interface CustomerProfile {
 
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface AIResponse {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -245,11 +265,20 @@ export interface AIResponse {};
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   suggested_actions: string[];
   next_steps: string[];
   requiresHumanReview: boolean,
@@ -305,6 +334,14 @@ export interface CustomerServiceMetrics {};
 =======
 
 
+
+
+
+
+
+
+
+
 }
 export interface CustomerServiceMetrics {
   total_tickets: number;
@@ -312,13 +349,32 @@ export interface CustomerServiceMetrics {
   resolved_tickets: number;
   averageResolutionTime: number;
 
+
+
+
+
+
     ticketsResolved: number
     averageResolutionTime: number,
 
     customerSatisfaction: number
   }>
+
+    ticketsResolved: number
+    averageResolutionTime: number,
+    customerSatisfaction: number
+  }>
+
+
+
+
+
   customer_satisfaction: number;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}  customer_satisfaction: number;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   firstResponseTime: number,
   ticketVolumeByCategory: Record < string, number>;
   agent_performance: Record < string, {}
@@ -327,6 +383,10 @@ export interface CustomerServiceMetrics {
     customer_satisfaction: number;
   }>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -336,54 +396,108 @@ export interface CustomerServiceMetrics {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface CustomerServiceRequest {
   customer_id: string;
+
 }
 export interface CustomerServiceRequest {
   customer_id: string;
-  totalTickets: number;
-  resolvedTickets: number;
+  // TODO: Implement
+}
+export interface CustomerTicket {;
+  id: string;,
+  customerId: string;
+  subject: string;,
+
+  description: string;
+  priority: 'low' | 'medium' | 'high' | 'urgent';','
+  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';'
+  category: string;
+  assignedTo?: string;
+  createdAt: Date;,
+  updatedAt: Date;
+
+  resolvedAt?: Date;
+  customerSatisfaction?: number;
+  tags: string[];,
+
+  attachments: string[],
+  conversation_history: CustomerMessage[];}
+}
+}
+export interface CustomerMessage {
+  // TODO: Implement
+}
+  id: string;,
+  ticket_id: string;
+  sender_id: string;,'
+  sender_type: 'customer' | 'agent' | 'ai';'
+  message: string;,
+  timestamp: Date;
+  attachments?: string[];'
+  sentiment: 'positive' | 'neutral' | 'negative';',
+  intent: string,
+  confidence: number;}
+
+}
+
+export interface CustomerProfile {
+  // TODO: Implement
+}
+
+}
+export interface CustomerProfile {}
+export interface CustomerProfile {
+  // TODO: Implement
+}
+  intent: string,
+  confidence: number;}
+}
+}
+export interface CustomerProfile {
+  // TODO: Implement
+}
+  id: string;,
+  email: string;
+  name: string;
+  phone?: string;
+  company?: string;
+  plan: string;,
+  total_tickets: number;
+  resolved_tickets: number;,
   averageResolutionTime: number;
-  customerSatisfaction: number;
-  lastContact: Date;
-  preferences: {
-    communicationChannel: 'email' | 'chat' | 'phone';
 
-    language: string
 
-    timezone: string
   }
-  tags: string[]
+  tags: string[];,
+  tags: string[];
+
+
 }
 export interface AIResponse {
 
-export interface AIResponse {;
-  id: string;
-  ticketId: string;
-  response: string;
+}
+  id: string;,
+  ticket_id: string;
+  response: string;,
   confidence: number;
-  suggestedActions: string[];
-  nextSteps: string[];
 
-  requiresHumanReview: boolean
 
-  generatedAt: Date
+  suggested_actions: string[];,
+  next_steps: string[];
+  requiresHumanReview: boolean,
+  generated_at: Date;
+}
+}
 }
 export interface CustomerServiceMetrics {
-
-export interface CustomerServiceMetrics {;
-  totalTickets: number;
-  openTickets: number;
-  resolvedTickets: number;
+  // TODO: Implement
+}
+  total_tickets: number;,
+  open_tickets: number;
+  resolved_tickets: number;,
   averageResolutionTime: number;
-  customerSatisfaction: number;
 
-  firstResponseTime: number
-  ticketVolumeByCategory: Record<string, number>;
-  agentPerformance: Record<string, {
-    ticketsResolved: number;
-    averageResolutionTime: number
-
-    customerSatisfaction: number
   }>
+<<<<<<< HEAD
 }
 export interface CustomerServiceRequest {
 <<<<<<< HEAD
@@ -446,16 +560,41 @@ export interface CustomerServiceRequest {
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   category: string;
+=======
+  customer_satisfaction: number;,
+  firstResponseTime: number,
+  ticketVolumeByCategory: Record < string, number>;
+  agent_performance: Record < string, {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-  attachments?: string[],
-  preferred_channel?: 'email' | 'chat' | 'phone';
+    tickets_resolved: number;,
+  averageResolutionTime: number,
+    customer_satisfaction: number;
+
+  }>;
+  customer_satisfaction: number;
+}  customer_satisfaction: number;
+  firstResponseTime: number,ticketVolumeByCategory: Record < string, number>;
+  agent_performance: Record < string, {tickets_resolved: number;}
+    averageResolutionTime: number,customer_satisfaction: number;}
+  }>;}
+export interface CustomerServiceRequest  {customer_id: string;}
+}
+
+export interface CustomerServiceRequest {
 
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export interface CustomerServiceRequest {
+  customerId: string;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ticketId: string;
 export interface CustomerServiceResponse {};
   ticket_id: string;'
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
+<<<<<<< HEAD
   ai_response?: AIResponse;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2180,6 +2319,8 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
 =======
 
 export interface CustomerTicket {;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = default function APIPage() { return null}
 =======
 <<<<<<< HEAD
@@ -90,8 +91,21 @@ module.exports = default function APIPage() { return null}
 import React from 'react';
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = default function APIPage() { return null}
+
+
+module.exports = default function APIPage() { return null}
+module.exports = default function APIPage() { return null}
+import React from 'react';
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import * as React from 'react';
+
+
 
 interface ApiProps {
   // Add props here as needed
@@ -119,14 +133,24 @@ import React from 'react';
 =======
 
 
+
+
+
+
 module.exports = default function APIPage() { return null}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+import React from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 module.exports = default function APIPage() { return null}
 import React from 'react';
 interface ApiProps {
   // Add props here as needed
-
-
 
 module.exports = default function APIPage() { return null}
 module.exports = default function APIPage() { return null}
@@ -144,6 +168,9 @@ interface ApiProps {
   // Add props here as needed
 }
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 
 
 
@@ -154,6 +181,25 @@ interface ApiProps {
   // Add props here as needed
 
 
+
+
+
+
+module.exports = default function APIPage() { return null}
+
+
+
+import React from 'react';
+
+
+
+import React from 'react';
+import * as React from 'react';
+
+
+
+interface ApiProps {
+  // Add props here as needed
 
 module.exports = default function APIPage() { return null}
 import React from 'react';
@@ -162,7 +208,14 @@ import * as React from 'react';
 
 interface ApiProps {
   // Add props here as needed
+
+import React from 'react';''
+import React from 'react';''
+import * as React from 'react';'
+interface ApiProps {
+  // TODO: Implement
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -171,13 +224,130 @@ interface ApiProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  // Add props here as needed;
+
+}
+
+
+module.exports = default function APIPage() { return null}
+
+module.exports = default function APIPage() { return null}'
+import React from 'react';'
+interface ApiProps {
+  // TODO: Implement
+}
+  // Add props here as needed;
+module.exports = default function APIPage() { return null}
+module.exports = default function APIPage() { return null}'
+import React from 'react';'
+interface ApiProps {
+  // TODO: Implement
+}
+  // Add props here as needed;
+
+module.exports = default function APIPage() { return null}
+module.exports = default function APIPage() { return null}
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+module.exports = default function APIPage() { return null}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;'
+import React from 'react';'
+interface ApiProps {
+  // TODO: Implement
+}
+  // Add props here as needed;
+
+}
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function Api({ }: ApiProps) {
+
+
+module.exports = default function APIPage() { return null}'
+import React from 'react';'
+interface ApiProps {
+  // TODO: Implement
+}
+  // Add props here as needed;
+module.exports = default function APIPage() { return null}'
+import React from 'react';''
+import React from 'react';''
+import * as React from 'react';'
+interface ApiProps {
+  // TODO: Implement
+}
+  // Add props here as needed;
+
+}
+export default function Api() {export default function Api() {return (<div />;
+      <h1 />Api</h1>;
+      <p />This component is currently under development.</p>;}
+    </div>;}
+  )}
+}}
+}ursor/automate-test-improve-and-merge-code-646c;
+}
+}
+}}
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/automate-test-improve-and-merge-code-646c;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+export default function Api({}: ApiProps) {
   return (
+
     <div>
       <h1>Api</h1>
       <p>This component is currently under development.</p>
     </div>
+
+
+
+}
+
+}
+
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,6 +368,8 @@ export default function Api({ }: ApiProps) {
 
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
@@ -287,8 +459,8 @@ export default function Api({ }: ApiProps) {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -325,8 +497,48 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+import * as React from 'react';
+interface ApiProps {
+  // TODO: Implement
+}
+  // Add props here as needed;
+
+
+module.exports = default function APIPage() { return null}
+  // TODO: Implement
+  // Add props here as needed;
+  // TODO: Implement
+  // Add props here as needed;
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+  // TODO: Implement
+  // Add props here as needed;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+  // TODO: Implement
+  // Add props here as needed;
+  // TODO: Implement
+  // Add props here as needed;
+export default function Api({ }: ApiProps) {
+  return (
+    <div>
+</div>
+      <h1>Api</h1>
+      <p>This component is currently under development.</p>
+    </div>)
+pr-12325
+</div>
+      <h1>Api</h1>
+      <p>This component is currently under development.</p>
+    </div>)'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

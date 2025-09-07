@@ -17,6 +17,7 @@ export default function Page() {;
       if(status) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         query = query.eq("status", status)}
       ;
 =======
@@ -111,21 +112,43 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+        query = query && query.eq("status", status)}""
+      const { data, "error": fetchError } = await query;"
+      if(fetchError) throw fetchError;
+      setJobs(data as Job[] || []); // Ensure data is not null;"
+      setError(null)} catch("err": unknown) {}} finally {}}"
+  }, [clientId, status]); // Dependencies for fetchJobs;"
+  const updateJobStatus = async("jobId": string, "newStatus": JobStatus) => {};""
+      const { "error": updateError } = await supabase;""
+        .from("jobs");""
+        .update({ "status": newStatus });""
+        .eq("id", jobId);""
+        .eq("client_id", clientId);"
+      if(updateError) throw updateError;"
+      setJobs(prevJobs => prevJobs && prevJobs.map(job => job && job.id === jobId ? {...job, "status": newStatus} : job));""
+      toast && toast.success("Job status updated successfully");""
+      return true} catch("err": unknown) {}}"
+  };"
+  const deleteJob = async("jobId": string) => {};""
+      const { "error": deleteError } = await supabase;""
+        .from("jobs");"
+        .delete();"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if(deleteError) throw deleteError;
-      setJobs(prevJobs => prevJobs && prevJobs.filter(job => job && job.id !== jobId));
-      toast && toast.success("Job deleted successfully");
-      return true} catch("err": unknown) {}}
+      setJobs(prevJobs => prevJobs && prevJobs.filter(job => job && job.id !== jobId));"
+      toast && toast.success("Job deleted successfully");""
   };
   useEffect(() => {}}, []);
     fetchJobs(),
 }, [fetchJobs]); // Changed dependencies to just fetchJobs;
 
   return {}},
-};
-import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); ; if(status) {; query = query && query.eq("status",status);,} ; const { data,error: 'fetchError' } = await query; ; if(fetchError) throw fetchError; ; setJobs(data as Job[] || []); setError(null);,} catch(err: unknown) {}} finally {}} },[clientId,status]); const updateJobStatus = async(jobId: 'string',newStatus: JobStatus) => {}; const { error: 'updateError' } = await supabase; .from("jobs"); .update({ status: 'newStatus' }); .eq("id",jobId); .eq("client_id",clientId); ; ; if(updateError) throw updateError; ; setJobs(prevJobs => prevJobs && prevJobs.map(job => job && job.id === jobId ? {...job,status: 'newStatus'} : job)); toast && toast.success("Job status updated successfully"); return true;,} catch(err: unknown) {}} }; ; const deleteJob = async(jobId: string) => {}; const { error: 'deleteError' } = await supabase; .from("jobs"); .delete(); .eq("id",jobId); .eq("client_id",clientId); ; ; if(deleteError) throw deleteError; ; setJobs(prevJobs => prevJobs && prevJobs.filter(job => job && job.id !== jobId)); toast && toast.success("Job deleted successfully"); return true;,} catch(err: unknown) {}} }; ; useEffect(() => {}},[]); fetchJobs();,},[fetchJobs]); ; return {}};,};
+import { useState, useEffect, useCallback, supabase } from 'lucide-react'; export default function Page() {; ); ; if(status) {; query = query && query.eq("status",status);,} ; const { data,error: 'fetchError' } = await query; ; if(fetchError) throw fetchError; ; setJobs(data as Job[] || []); setError(null);,} catch(err: unknown) {}} finally {}} },[clientId,status]); const updateJobStatus = async(jobId: 'string',newStatus: JobStatus) => {}; const { error: 'updateError' } = await supabase; .from("jobs"); .update({ status: 'newStatus' }); .eq("id",jobId); .eq("client_id",clientId); ; ; if(updateError) throw updateError; ; setJobs(prevJobs => prevJobs && prevJobs.map(job => job && job.id === jobId ? {...job,status: 'newStatus'} : job)); toast && toast.success("Job status updated successfully"); return true;,} catch(err: unknown) {}} }; ; const deleteJob = async(jobId: string) => {}; const { error: 'deleteError' } = await supabase; .from("jobs"); .delete(); .eq("id",jobId); .eq("client_id",clientId); ; ; if(deleteError) throw deleteError; ; setJobs(prevJobs => prevJobs && prevJobs.filter(job => job && job.id !== jobId)); toast && toast.success("Job deleted successfully"); return true;,} catch(err: unknown) {}} }; ; useEffect(() => {}},[]); fetchJobs();,},[fetchJobs]); ; return {}};,};"
     fetchJobs()}, [fetchJobs]); // Changed dependencies to just fetchJobs;
   return {}}};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -148,3 +171,7 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"
+import { useState, useEffect, useCallback, supabase } from 'lucide-react'; export default function Page() {; ); ; if(status) {; query = query && query.eq("status",status),} ; const { data,error: fetchError } = await query; ; if(fetchError) throw fetchError; ; setJobs(data as Job[] || []); setError(null),} catch(err: unknown) {}} finally {}} },[clientId,status]); const updateJobStatus = async(jobId: string,newStatus: JobStatus) => {}; const { error: updateError } = await supabase; .from("jobs"); .update({ status: newStatus }); .eq("id",jobId); .eq("client_id",clientId); ; ; if(updateError) throw updateError; ; setJobs(prevJobs => prevJobs && prevJobs.map(job => job && job.id === jobId ? {...job,status: newStatus} : job)); toast && toast.success("Job status updated successfully"); return true,} catch(err: unknown) {}} }; ; const deleteJob = async(jobId: string) => {}; const { error: deleteError } = await supabase; .from("jobs"); .delete(); .eq("id",jobId); .eq("client_id",clientId); ; ; if(deleteError) throw deleteError; ; setJobs(prevJobs => prevJobs && prevJobs.filter(job => job && job.id !== jobId)); toast && toast.success("Job deleted successfully"); return true,} catch(err: unknown) {}} }; ; useEffect(() => {}},[]); fetchJobs(),},[fetchJobs]); ; return {}},};""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

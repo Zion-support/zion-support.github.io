@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -218,10 +219,30 @@ interface ConversionAnalysisProps {
   time_range: string;
   onTimeRangeChange: (range: string) => void;
 }
+=======
+
+
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+interface ConversionAnalysisProps {
+  data: Array<Record<string, any>>;
+  timeRange: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light">
+      <CardHeader>
+        <CardTitle className="text-white text-lg">Conversion Analysis</CardTitle>
+        <CardDescription className="text-zion-slate-light">Track different conversion types</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <AnalyticsChart
+          title=""
+          data={data |[]}
+          dataKeys={dataKeys}
+          type="bar"
 
 =======
 import React from "react",
@@ -298,25 +319,61 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
     ? Object.keys(data[0]).filter(key => key !== 'date')
     : [],
 
-
-
   return (
 
+export /**
+ * ConversionAnalysisChart - Function description
+ */
+function ConversionAnalysisChart() {
+  const data_keys =;
+    data && data.length > 0;
+      ? Object.keys (data[0]).filter ((key) => key !== "date");
+      : [];
+;
+  return (
     <Card className="bg - zion - blue - dark border - zion - blue - light">;
       <CardHeader>;
-        <CardTitle className="text - white text - lg">;
+        <CardTitle className="text - white text-lg">;
           Conversion Analysis;
         </CardTitle>;
         <CardDescription className="text - zion - slate - light">;
+        <CardDescription className="text - zion - slate-light">;
 
           Track different conversion types;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
 
+Track different conversion types;
+        </CardDescription>;
 
-
-
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
+;
+interface ConversionAnalysisProps {;
+  data:Array<Record<string any>>,;
+  timeRange:string,;
+  onTimeRangeChange:(range:string) => void;
+}
+;
+export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange } ConversionAnalysisProps) {;
+  const dataKeys = data && data.length > 0;
+    ? Object.keys(data[0]).filter(key => key !== 'date');
+    :[],;
+;
+  return (;
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;
+      <CardHeader>;
+        <CardTitle className="text-white text-lg">Conversion Analysis</CardTitle>;
+        <CardDescription className="text-zion-slate-light">Track different conversion types</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />
+      </CardContent>
+    </Card>
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 =======
@@ -386,6 +443,7 @@ export function ConversionAnalysisChart() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -411,21 +469,91 @@ export function ConversionAnalysisChart() { return null; }
           data={data || []}
           data_keys={data_keys}"
 =======
+=======
+"
+} from "@/components/ui/card";""
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";"
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+interface ConversionAnalysisProps {;
+  data: Array<Record<string, any>>;
+
+
+  data: Array < Record < string, any>>;
+  time_range: string;,
+  onTimeRangeChange: (range: string) => void;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
-  );
-        <AnalyticsChart;
-          title="";
+export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
+  const dataKeys = data && data.length > 0;"
+    ? Object.keys(data[0]).filter(key => key !== 'date')
+    ? Object.keys(data[0]).filter(key => key !== 'date')'
+
+    : [],
+  return (
+
+'
+    <Card className="bg - zion - blue - dark border - zion - blue - light">;"
+
+      <CardHeader>;
+        <CardTitle className="text - white text - lg">;"
+
+        ;"
+        <CardDescription className="text - zion - slate - light">;"
+
+        ;
+      <CardContent>;
+
+  data: Array<Record<string any>>,;
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;"
+
+        <CardTitle className="text-white text-lg">Conversion Analysis;""
+        <CardDescription className="text-zion-slate-light">Track different conversion types;"
+
+        <AnalyticsChart;"
+          title="";"
           data={data || []}
+<<<<<<< HEAD
           data_keys={data_keys}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           type="bar";
+=======
+          dataKeys={dataKeys}"
+          type="bar""
+
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />;
+
+          data_keys={data_keys}"
+          type="bar";"
+          time_range={time_range}
+
+      ;)
+    );
+pr-12325
+</AnalyticsChart>
+      </CardContent>;
+
+    </Card>;
+        <AnalyticsChart;"
+          title="";"
+          data={data || []}
+          data_keys={data_keys}"
+          type="bar";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           time_range={time_range}
           onTimeRangeChange={onTimeRangeChange}
         />;
-      </CardContent>;
+</AnalyticsChart>
+      </CardContent>;)
     </Card>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 export /**;
  * ConversionAnalysisChart - Function description;
@@ -446,6 +574,8 @@ function ConversionAnalysisChart() {
 ;
   return (
           Track different conversion types;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
@@ -453,7 +583,10 @@ function ConversionAnalysisChart() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <AnalyticsChart;
           title="";
           data={data || []}
@@ -478,6 +611,7 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 }
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -494,3 +628,7 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</CardContent>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

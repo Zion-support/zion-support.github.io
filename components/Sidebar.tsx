@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 pr-12243
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -90,13 +94,18 @@ const quickLinks = [
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' },
 ];
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface SidebarProps {}
   isOpen: boolean;
   onClose: () => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
@@ -121,6 +130,8 @@ pr-12243
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
 
@@ -157,16 +168,44 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  const handleDropdownToggle = (item: string) => {
+    setActiveDropdown(activeDropdown === item ? null : item);
+  };
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
+<<<<<<< HEAD
           <motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+=======
+          <motion.div
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
@@ -177,13 +216,25 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             exit={{ x: '-100%' }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             transition={{ type: 'tween', duration: 0.3 }}
+            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+            initial={{ x: '-100%' ;}}
+            animate={{ x: 0 ;}}
+            exit={{ x: '-100%' ;}}
+            transition={{ type: 'tween';, duration: 0.3 ;}}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
 
 pr-12243
+<<<<<<< HEAD
 =======
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           >
 =======
 
@@ -202,12 +253,20 @@ pr-12243
                   onClick={onClose}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
 
 pr-12243
 =======
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >
 =======
 
@@ -228,6 +287,7 @@ pr-12243
                   <div key={title}>
                     <button;
                       onClick={() => handleDropdownToggle(title)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
@@ -257,6 +317,8 @@ pr-12243
                       </motion.div>
                     )}
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
                     >
                       <span className="font-medium">{title}</span>
@@ -287,7 +349,40 @@ pr-12243
                         </motion.div>
                       )}
                     </AnimatePresence>
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                  </div>
+                ))}
+              </nav>
+
+                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
+                    >
+                      <span>{title}</span>
+                      <ChevronDown className={`w-5 h-5 transition-transform ${
+                        activeDropdown === title ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                    {activeDropdown === title && (
+                      <motion.div
+                        initial={{ opacity: 0;, height: 0 ;}}
+                        animate={{ opacity: 1;, height: 'auto' ;}}
+                        exit={{ opacity: 0;, height: 0 ;}}
+                        className="ml-4 space-y-2 mt-2"
+                      >
+                        {links.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.href}
+                            className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
+                            onClick={onClose}
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>
                 ))}
               </nav>
@@ -316,6 +411,18 @@ pr-12243
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+              {/* Contact Info */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <p>+1 302 464 0950</p>
+                  <p>kleber@ziontechgroup.com</p>
+                  <p>24/7 Support Available</p>
+                </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
@@ -339,6 +446,7 @@ pr-12243
                 </button>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -353,6 +461,9 @@ pr-12243
                   <p>24/7 Support Available</p>
                 </div>
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>
             </div>
           </motion.div>
@@ -362,33 +473,36 @@ pr-12243
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
 
 export default Sidebar;
+}
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
-  
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true ;};
   }
-  
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ';, error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -414,11 +528,10 @@ import {
   ExternalLink;
 } from 'lucide-react';
 interface SidebarProps {
-  isOpen: boolean, onClose: () => void
+  isOpen: boolean;, onClose: () => void;
 }
         : [...prev, title];
     );
-
 
   ];
   return (
@@ -427,13 +540,13 @@ interface SidebarProps {
         <>;
           {/* Backdrop */}
           <motion&& motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            initial={{ x: -300 }}
-            animate={{ x: 0 }}
-            exit={{ x: -300 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}
+            initial={{ x: -300 ;}}
+            animate={{ x: 0 ;}}
+            exit={{ x: -300 ;}}
+            transition={{ type: 'spring';, damping: 25;, stiffness: 200 ;}}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
               {/* Header */}
               <div className="flex items-center justify-between mb-8">;
@@ -475,9 +588,9 @@ interface SidebarProps {
                 <div className="mt-4">;
                   <Link
                     href="/contact"
-                    className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                    className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors";
 }
-const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
+const Sidebar: React.FC < SidebarProps> = ({ is_open;, on_close }) => {
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);
 ;
   const handleDropdownToggle = (title: string) =>: any {
@@ -489,34 +602,34 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 ;
   const navigation = {
     'Services': [;
-      { name: 'Web Development', href: '/services / web - development', icon: Code },
-      { name: 'Mobile Development', href: '/services / mobile - development', icon: Smartphone },
-      { name: 'Cloud Solutions', href: '/services / cloud - solutions', icon: Cloud },
-      { name: 'Cybersecurity', href: '/services / cybersecurity', icon: Shield },
-      { name: 'Performance Optimization', href: '/services / performance', icon: Zap },
+      { name: 'Web Development';, href: '/services / web - development';, icon: Code ;},
+      { name: 'Mobile Development';, href: '/services / mobile - development';, icon: Smartphone ;},
+      { name: 'Cloud Solutions';, href: '/services / cloud - solutions';, icon: Cloud ;},
+      { name: 'Cybersecurity';, href: '/services / cybersecurity';, icon: Shield ;},
+      { name: 'Performance Optimization';, href: '/services / performance';, icon: Zap ;},
     ],
     'Solutions': [;
-      { name: 'Enterprise Solutions', href: '/solutions / enterprise', icon: Building2 },
-      { name: 'E - commerce Platforms', href: '/solutions / ecommerce', icon: ShoppingCart },
-      { name: 'Healthcare Technology', href: '/solutions / healthcare', icon: Heart },
-      { name: 'Educational Platforms', href: '/solutions / education', icon: GraduationCap },
+      { name: 'Enterprise Solutions';, href: '/solutions / enterprise';, icon: Building2 ;},
+      { name: 'E - commerce Platforms';, href: '/solutions / ecommerce';, icon: ShoppingCart ;},
+      { name: 'Healthcare Technology';, href: '/solutions / healthcare';, icon: Heart ;},
+      { name: 'Educational Platforms';, href: '/solutions / education';, icon: GraduationCap ;},
     ],
     'Industries': [;
-      { name: 'Manufacturing', href: '/industries / manufacturing', icon: Factory },
-      { name: 'Logistics', href: '/industries / logistics', icon: Truck },
-      { name: 'Finance', href: '/industries / finance', icon: CreditCard },
-      { name: 'Healthcare', href: '/industries / healthcare', icon: Heart },
-      { name: 'Education', href: '/industries / education', icon: GraduationCap },
+      { name: 'Manufacturing';, href: '/industries / manufacturing';, icon: Factory ;},
+      { name: 'Logistics';, href: '/industries / logistics';, icon: Truck ;},
+      { name: 'Finance';, href: '/industries / finance';, icon: CreditCard ;},
+      { name: 'Healthcare';, href: '/industries / healthcare';, icon: Heart ;},
+      { name: 'Education';, href: '/industries / education';, icon: GraduationCap ;},
     ],
   }
 ;
   const quick_links = [;
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Case Studies', href: '/case - studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'About Us';, href: '/about' ;},
+    { name: 'Our Team';, href: '/team' ;},
+    { name: 'Case Studies';, href: '/case - studies' ;},
+    { name: 'Blog';, href: '/blog' ;},
+    { name: 'Careers';, href: '/careers' ;},
+    { name: 'Contact';, href: '/contact' ;},
   ];
 ;
   return (
@@ -525,17 +638,17 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
         <>;
           {/* Backdrop */}
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 ;}}
+            animate={{ opacity: 1 ;}}
+            exit={{ opacity: 0 ;}}
             className="fixed inset - 0 bg - black bg - opacity - 50 z - 40";
             on_click={on_close}
           />;
           <motion.div;
-            initial={{ coordinate_x: -300 }}
-            animate={{ coordinate_x: 0 }}
-            exit={{ coordinate_x: -300 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            initial={{ coordinate_x: -300 ;}}
+            animate={{ coordinate_x: 0 ;}}
+            exit={{ coordinate_x: -300 ;}}
+            transition={{ type: 'spring';, damping: 25;, stiffness: 200 ;}}
             className="fixed left - 0 top - 0 h - full w - 80 bg - white shadow - xl z - 50";
             <div className="p - 6">;
               {/* Header */}
@@ -605,14 +718,17 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 export default Sidebar;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 pr-12243
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
   X, 
   ChevronDown, 
   Home, 
@@ -629,30 +745,35 @@ import {
 
 const navigation = {
   'Services': [
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Consulting', href: '/consulting' }
+    { name: 'AI Services';, href: '/ai-services' ;},
+    { name: 'IT Services';, href: '/it-services' ;},
+    { name: 'Micro SaaS';, href: '/micro-saas' ;},
+    { name: 'Consulting';, href: '/consulting' ;}
   ],
   'Solutions': [
-    { name: 'Enterprise', href: '/enterprise' },
-    { name: 'Startup', href: '/startup' },
-    { name: 'Industry', href: '/industries' }
+    { name: 'Enterprise';, href: '/enterprise' ;},
+    { name: 'Startup';, href: '/startup' ;},
+    { name: 'Industry';, href: '/industries' ;}
   ],
   'Company': [
-    { name: 'About', href: '/about' },
-    { name: 'Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'About';, href: '/about' ;},
+    { name: 'Team';, href: '/team' ;},
+    { name: 'Careers';, href: '/careers' ;},
+    { name: 'Contact';, href: '/contact' ;}
   ]
 };
+
 import React from 'react';
-import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface SidebarProps {
   isOpen: boolean;
@@ -660,11 +781,15 @@ interface SidebarProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ isOpen;, onClose }) => {
   const menuItems = [
-    { href: '/dashboard', label: 'Dashboard', icon: Home },
-    { href: '/profile', label: 'Profile', icon: User },
-    { href: '/settings', label: 'Settings', icon: Settings },
+    { href: '/dashboard';, label: 'Dashboard';, icon: Home ;},
+    { href: '/profile';, label: 'Profile';, icon: User ;},
+    { href: '/settings';, label: 'Settings';, icon: Settings ;},
   ];
 
   return (
@@ -713,7 +838,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 };
 
 export default Sidebar;
+
+
+
+
+
 pr-12243
+<<<<<<< HEAD
 =======
 
 
@@ -870,3 +1001,5 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   );
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

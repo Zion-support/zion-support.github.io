@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -43,6 +44,8 @@ export interface EmergingTechService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
   {
@@ -58,6 +61,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     category: 'Cybersecurity',
     price: {
       monthly: 1899,
+    price: {,
+  monthly: 1899,
+pr-12325
       yearly: 18990,
       currency: 'USD',
       trial_days: 30,
@@ -80,7 +86,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Future - proof against quantum attacks',
       'Reduce security risks by 99.9%',
   id: string;
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+export interface EmergingTechService {
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   tagline: string;
   description: string;
@@ -90,6 +102,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     yearly: number;
     currency: string;
     trialDays: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -1156,6 +1169,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
     setupTime: string
   },
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -1176,6 +1192,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   launchDate: string;
   customers: number;
   rating: number;
+
   reviews: number
 }
 
@@ -1267,11 +1284,13 @@ export const emergingTechServices2025: EmergingTechService[] = [
     customers: 250;
     rating: 4.8;
     reviews: 145
+
   },
   {
     id: 'synthetic-biology-platform';
     name: 'Synthetic Biology Platform';
     tagline: 'Design, build, and test synthetic biological systems with AI',
+
     description: 'Revolutionary platform that combines synthetic biology with AI to design, build, and test synthetic biological systems for healthcare, agriculture, and industrial applications.',
     category: 'Biotechnology';
     price: {
@@ -1623,6 +1642,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
 ],
 
 export const getPopularEmergingTechServices = null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(
@@ -3904,3 +3924,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

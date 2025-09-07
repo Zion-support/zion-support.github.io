@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -116,7 +117,11 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-blue-500">💬</span>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Use the centralized icon wrapper to avoid missing icons;
+import React from 'react';
+// Use the centralized icon wrapper to avoid missing icons
 
 import {Check, Trash2, ChevronRight} from '@/components/icons';
 import {Button} from '@/components/ui/button';
@@ -126,8 +131,6 @@ import {cn} from '@/lib/utils';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
-
-
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
@@ -164,6 +167,7 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-gray-500">📣</span>
 
 
+<<<<<<< HEAD
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
@@ -816,3 +820,5 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
   );
 };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

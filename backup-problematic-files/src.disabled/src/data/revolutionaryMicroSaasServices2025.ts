@@ -8,21 +8,21 @@
 =======
 
 class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  }
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
-  }
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-  }
   
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       return <div>Something went wrong.</div>;
     }
     
@@ -587,3 +587,6 @@ export interface RevolutionaryMicroSaasService { id: string; name: string; descr
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      return <div>Something went wrong.</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

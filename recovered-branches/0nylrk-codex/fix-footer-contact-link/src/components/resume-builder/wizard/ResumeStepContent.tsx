@@ -14,10 +14,17 @@ interface ResumeStepContentProps {
   onNextStep: () => void
   onPrevStep: () => void
 }
+  // TODO: Implement
+}
+  activeTab: string;,
+  resume: Resume;
+  onNextStep: () => void;,
+  onPrevStep: () => void;
 
 
 
 
+pr-12325
 
 }: ResumeStepContentProps) => {
 =======
@@ -41,8 +48,14 @@ interface ResumeStepContentProps {}
           resumeId={resume?.id!}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {TabsContent} from "@/components/ui/tabs";
 =======
+=======
+
+
+interface ResumeStepContentProps {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 "
@@ -97,6 +110,7 @@ interface ResumeStepContentProps {}
   onNextStep: () => void;
   onPrevStep: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   resume,
@@ -808,3 +822,6 @@ onPrevStep
 
 };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

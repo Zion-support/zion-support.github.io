@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -92,11 +93,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const data = store[String(address).toLowerCase()] |null
 =======
 
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {},
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { address } = req.query as { address?: string },
   if (!address) return res.status(400).json({ error: 'Missing address' });
+<<<<<<< HEAD
   const data = store[String(address).toLowerCase()] || null;
 return res.status(200).json({ data });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -191,3 +199,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {};
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  const data = null;
+  return res.status(200).json({ data })
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

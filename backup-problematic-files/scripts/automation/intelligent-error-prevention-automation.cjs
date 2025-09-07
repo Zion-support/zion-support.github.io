@@ -1,9 +1,10 @@
-#!/""usr/bin/env""
+#!/usr/bin/env
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "reports")
   "jsx": [{ pattern: /<\/motion\.article>\s*\)\)\s*\}\s*<\/div>/g, "fix": "</div>\n                </motion.article>\n                ))"]
+<<<<<<< HEAD
         { "pattern": /<>\s*<Helmet>/g, "fix": "<>\n      <Helmet>"}
         { "pattern": /<\/div>\s*<\/>/g, "fix": "</div>\n    </>"}
         { "pattern"}
@@ -54,6 +55,9 @@ const { execSync, spawn } = require("child_process")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+        { "pattern": /<>\s*<Helmet>/g, "fix": "<>\n      <Helmet>"}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

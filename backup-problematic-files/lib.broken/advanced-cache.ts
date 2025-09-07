@@ -1,5 +1,6 @@
 import React from 'react';
 interface CacheItem<T> {
+<<<<<<< HEAD
   "data": T;
   timestamp: number;
   ttl: number;'
@@ -15,10 +16,15 @@ interface CacheConfig {
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class AdvancedCache<T = any> {
+
   private cache = new Map<string, CacheItem<T>>();
-  private "config": CacheConfig;
+</string>
   constructor(config: Partial<CacheConfig> = {}) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     this.config = {
 =======
@@ -233,3 +239,13 @@ import React from 'react'; interface CacheItem<T> { data: T; timestamp: number; 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    const "item": CacheItem<T> = {"
+"
+export const useCache = <T>("key": string, "fetcher": () => Promise<T>, ttl?: number) => {"
+
+] = React && React.useState<T | null>(() => globalCache && globalCache.get(key));
+
+] = React && React.useState<Error | null>(null);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

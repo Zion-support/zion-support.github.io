@@ -36,6 +36,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 import { Card, CardContent } from "@/components/ui/card";
@@ -327,6 +328,8 @@ import { Separator } from "@/components/ui/separator",;
 
 =======
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React, { useState } from "react",;
 import { MessageCircle } from "lucide-react",;
@@ -334,16 +337,36 @@ import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Separator } from "@/components/ui/separator",;
-interface DiscussionPost {;
-  id: number,;
-  author: string,;
-  avatar?: string,;
-  time: string,;
-  title: string,;
-  body: string;
+
+
+import React, { useState } from "react",""
+import { MessageCircle } from "lucide-react",""
+import { Button } from "@/components/ui/button",""
+import { Input } from "@/components/ui/input",""
+import { Textarea } from "@/components/ui/textarea",""
+import { Avatar, AvatarFallback } from "@/components/ui/avatar",""
+import { Card, CardContent } from "@/components/ui/card";""
+import { Separator } from "@/components/ui/separator";""
+import React, { useState } from './react';
+pr-12325
+import { MessageCircle  } from './lucide-react';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import { Textarea  } from '@/components / ui / textarea';
+import { Avatar, AvatarFallback  } from '@/components / ui / avatar';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Separator  } from '@/components / ui / separator';
+
+interface DiscussionPost {
+
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+interface DiscussionPost {
+  id: number;
+interface DiscussionPost {
+  // TODO: Implement
 }
+<<<<<<< HEAD
 ;
 const initialPosts: DiscussionPost[] = [;
   {;
@@ -844,9 +867,38 @@ export const CommunityDiscussion: React.FC = () => {
         homepage.;
       </div>;
     </div>);
-}
-;
+=======
+  id: number;,
+  author: string;
+  avatar?: string;
+  time: string;,
+  title: string;
 
+
+
+import { Card, CardContent } from "@/components/ui/card",""
+import { Separator } from "@/components/ui/separator","
+  // TODO: Implement
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}
+  id: number,
+  author: string,
+  avatar?: string,
+  time: string,
+  title: string,
+  body: string
+}  body: string
+
+}
+
+body: string
+  body: string
+}
+const initial_posts: DiscussionPost[] = [;
+  {
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -883,3 +935,5 @@ export const CommunityDiscussion: React.FC = () => {
   );
 };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

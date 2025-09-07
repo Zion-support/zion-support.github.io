@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 } from 'lucide-react';
 
 import {};
@@ -51,11 +52,15 @@ import {};
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Button from '../components/ui/Button';
 import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
 export default function BusinessToolsPage() {
   const businessTools = null;
             communicate effectively, market their products, and grow their operations. Real pricing and features.
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function BusinessToolsPage() {
   const businessTools = [
@@ -951,6 +956,9 @@ description:
             use to manage projects, communicate effectively, market their
             products, and grow their operations. Real pricing and features.
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </p>
         </div>
       </section>
@@ -991,7 +999,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className='card-hover border-gradient-blue text-center'
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 <h3 className='text-xl font-bold text-white mb-3'>
                   {insight.title}
@@ -1015,12 +1023,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
       {/* Business Tools */}
+<<<<<<< HEAD
 "
       <section className="section-padding bg-gradient-cursor">
 `
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;"
                 <h3 className="text-xl font-bold text-white mb-3">{insight && insight.title}</h3>;"
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">{insight && insight.description}</p>;`
+=======
+
+      <section className="section-padding bg-gradient-cursor">
+
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <h3 className="text-xl font-bold text-white mb-3">{insight && insight.title}</h3>;
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">{insight && insight.description}</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight && insight.color} bg-gray-800/50`}>;
                   {insight && insight.trend}
                 </div>;
@@ -1075,7 +1092,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     key={toolIndex}
                     className={`card-hover border-gradient-blue group ${tool.popular ? 'ring-2 ring-cursor-blue/50' : ''}`}
 style={{
-                      animationDelay: `${categoryIndex * 0.2 + toolIndex * 0.1}s`,
+                      animationDelay: `${categoryIndex * 0.2 + toolIndex * 0.1;}s`,
                     }}
                   >
                     {tool.popular && (
@@ -1089,7 +1106,7 @@ style={{
 
 <div className='text-center mb-6'>
                       <div
-                        className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
+                        className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 ${tool.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}
                       >
 origin/cursor/automate-test-improve-and-merge-code-2533
                         {tool.icon}
@@ -1098,8 +1115,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {tool.name}
                       </h4>;'
                       <p className='text - gray - 400 text - sm leading - relaxed'>;
+<<<<<<< HEAD
                         {tool.description}"
                       <h4 className="text-xl font-bold text-white mb-2">{tool.name}</h4>"
+=======
+                        {tool.description}
+                      <h4 className="text-xl font-bold text-white mb-2">{tool.name}</h4>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <p className="text-gray-400 text-sm leading-relaxed">{tool.description}</p>
                     </div>"
                     <div className="mb-6">"
@@ -1296,7 +1318,7 @@ variant='primary'
               </Card>
 
                 className='card-hover border-gradient-blue text-center'
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 <div className='flex justify-center mb-4'>{tip.icon}</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -1328,11 +1350,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
             {productivity_tips.map ((tip, index) => (
               <Card;
+<<<<<<< HEAD
                 key={index}'
                 className='card - hover border - gradient - blue text - center';`
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;'
                 <div className='flex justify - center mb - 4'>{tip.icon}</div>;'
+=======
+                key={index}
+                className='card - hover border - gradient - blue text - center';
+                style={{ animation_delay: `${index * 0.1;}s` }}
+              >;
+                <div className='flex justify - center mb - 4'>{tip.icon}</div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <h3 className='text - xl font - bold text - white mb - 3'>;
                   {tip.title}
                 </h3>;'
@@ -1376,6 +1406,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             your tech stack strategically.
           </p>'
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+<<<<<<< HEAD
             <Button'
               href='/micro-saas''
               variant='secondary''
@@ -1384,6 +1415,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Explore Micro SaaS;
             </Button>;
 <<<<<<< HEAD
+=======
+            <Button
+              href='/micro-saas'
+              variant='secondary'
+              size='lg'
+              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl'>;
+              Explore Micro SaaS;
+            </Button>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl'
             >
               Explore Micro SaaS
@@ -1398,10 +1438,17 @@ href='/contact'
               variant='outline''
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               size='lg'
+<<<<<<< HEAD
 "
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden">"
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />"
         <div className="container-cursor text-center relative z-10">"
+=======
+
+      <section className="section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="container-cursor text-center relative z-10">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <h2 className="text-responsive-lg font-bold text-white mb-8">
             Ready to Transform Your Business Operations?
           </h2>"
@@ -1440,6 +1487,9 @@ href='/contact'
             </Button>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'
             >
               Get Business Consultation

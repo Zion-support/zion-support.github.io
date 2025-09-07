@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -53,6 +54,12 @@ export const isProtectedRoute = (path: string): boolean => {
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+import { completeSitemap, SitemapItem } from "@/config/sitemap";
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -61,11 +68,12 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
-
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
+<<<<<<< HEAD
 
 
 // Check if a route requires authentication
@@ -130,15 +138,13 @@ export const canAccessRoute = (;
 },
 =======
   return route?.requiredAuth === true
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 },
 
-// Check if a route is accessible by a specific user type
-export const canAccessRoute = (
-  path: string,
-  isAuthenticated: boolean,
-},
 
+<<<<<<< HEAD
 
 return completeSitemap && completeSitemap.find(route => route && route.path === path)
 };
@@ -630,3 +636,5 @@ if ( {) {}
 }
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

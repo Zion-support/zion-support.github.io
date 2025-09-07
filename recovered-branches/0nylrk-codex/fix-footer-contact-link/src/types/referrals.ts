@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -39,6 +40,9 @@ export interface ReferralCode {
   code: string;
   created_at: string;
   updated_at: string;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
   id: string;
@@ -107,6 +111,7 @@ export interface Referral {
 }export interface Referral {
 =======
 
+<<<<<<< HEAD
 
 export interface Referral {;
 
@@ -343,7 +348,12 @@ export interface ReferralReward {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
+=======
+expires_at: string | null;
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   expires_at: string | null;
+  totalRewards: number  expires_at: string | null;
 }
 
 <<<<<<< HEAD
@@ -383,7 +393,95 @@ export interface ReferralStats {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+}
+}}
+
+export type ReferralStatus = "pending" | "completed" | "expired";"
+export interface ReferralCode {
+  // TODO: Implement
+}
+export interface ReferralCode {;
+
+  id: string;,
+
+  user_id: string;
+  code: string;,
+  created_at: string;
+
+  updated_at: string;
+
+
+export interface Referral {;
+
+export interface Referral {
+  // TODO: Implement
+  // TODO: Implement
+}
+
+export interface Referral {;
+export interface Referral {
+  // TODO: Implement
+  referrer_id: string;
+  referred_id: string | null;,
+  referral_code: string;
+  status: ReferralStatus;,
+  ip_address: string | null;
+  email: string | null;,
+  referred_user_type: string | null;
+  referrer_user_type: string | null;,
+  created_at: string;
+
+  completed_at: string | null;,
+  reward_issued: boolean;
+  reward_issued_at: string | null;
+
+
+export interface ReferralReward {;
+
+  reward_issued: boolean;,
+export interface ReferralReward {
+  // TODO: Implement
+  // TODO: Implement
+  referral_id: string;,"
+  reward_type: "credit" | "visibility";"
+  amount: number | null;,
+  expires_at: string | null;
+
+
+
+export interface ReferralStats {;
+  created_at: string;
+  expires_at: string | null;
+
+}
+export interface ReferralStats {;
+
+
+
+  totalReferrals: number;,
+  pendingReferrals: number;
+  completedReferrals: number;,
+  totalRewards: number;
 
 
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  totalRewards: number  expires_at: string | null;
+}
+;
+  totalReferrals: number,;
+  pendingReferrals: number,;
+
+  completedReferrals: number;,
+  totalRewards: number;
+}
+;
+
+
+
+"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

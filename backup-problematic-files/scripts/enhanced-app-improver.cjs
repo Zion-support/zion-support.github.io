@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     console.log(" Enhanced App Improver Starting...");""
@@ -109,3 +110,6 @@ module.exports = DeploymentAutomation";"
     console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
     console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

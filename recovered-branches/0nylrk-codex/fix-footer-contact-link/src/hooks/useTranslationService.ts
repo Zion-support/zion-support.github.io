@@ -16,7 +16,12 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+}
+    return translations[current_language] || translations.en || fallback;
+  }
+}}
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -61,6 +66,19 @@ import {supabase} from '@/integrations / supabase / client';'
 import {use_language, SupportedLanguage} from '@/context / LanguageContext';
 ;'
 type ContentType = 'job' | 'profile' | 'service' | 'general';
+=======
+
+
+import {useState} from 'react';''
+import {supabase} from '@/integrations/supabase/client';''
+import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';''
+type ContentType = 'job' | 'profile' | 'service' | 'general';''
+import {useState} from 'react';''
+import {supabase} from '@/integrations / supabase / client';''
+import {use_language, SupportedLanguage} from '@/context / LanguageContext';'
+;'
+type ContentType = 'job' | 'profile' | 'service' | 'general';'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,6 +88,7 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface TranslationResponse {
+<<<<<<< HEAD
 =======
 
 
@@ -79,9 +98,12 @@ interface TranslationResponse {}
 =======
 interface TranslationResponse {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   translations: Record < SupportedLanguage, string>;
   error?: string;
-}
 
 
 <<<<<<< HEAD
@@ -142,11 +164,12 @@ export function useTranslationService() { return null; }
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
   const translateContent = async (
-    content: string;
-    contentType: ContentType = 'general';
-    sourceLanguage: SupportedLanguage = 'en';
-    targetLanguages: SupportedLanguage[] = ['enesptar']
+    content: string;,
+  contentType: ContentType = 'general';
+    sourceLanguage: SupportedLanguage = 'en';',
+  targetLanguages: SupportedLanguage[] = ['enesptar']')
   ): Promise<TranslationResponse> => {
+<<<<<<< HEAD
     setIsTranslating(true)
     try {
       const { data, error } = await supabase && supabase.functions.invoke('translate-content', {
@@ -326,67 +349,46 @@ export function useTranslationService() {;
     }
   }
   const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
+=======
 
-    if (!translations) return fallback,
-    return translations[currentLanguage] || translations && translations.en || fallback
-  };
-  
+        const initialTranslations: Record<SupportedLanguage, string> = {
 
-      }
-    }
-  }
-  const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
-  return {
-    translateContent;
-    isTranslating;
+  translations: Record<SupportedLanguage string>,;
 
-    } catch (err) {;
-      setIsTranslating(false),;
-      console.error('Translation service error:', err),;
-      const initialTranslations: Record<SupportedLanguage string> = {;
-        en: content,;
-        es: '',;
-        pt: '',;
-  }
-export /**
- * useTranslationService - Function description
- */
-function useTranslationService() {
-  const [is_translating, setIsTranslating] = useState (false);
-  const { current_language } = use_language ();
-;
-  const translate_content = async (
-    content: string;
-    content_type: ContentType = 'general';
-    source_language: SupportedLanguage = 'en';
+  ): Promise<TranslationResponse> => {;
+
+        const initialTranslations: Record<SupportedLanguage string> = {;
+
+
+  const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = ) => {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+
     target_languages: SupportedLanguage[] = ['enesptar']): Promise < TranslationResponse> => {
     setIsTranslating (true),
     try {
+  // TODO: Implement
       const { data, error } = await supabase.functions.invoke ('translate - content', {
         body: {
           content;
           source_language;
           target_languages,
           content_type;
-        }
+        })
       });
-;
       setIsTranslating (false);
-;
-      // Check condition
+      // Check condition;
 if ( {) {
-  $2
-}
+  $2;
         console.error ('Translation error:', error);
         const initial_translations: Record < SupportedLanguage, string> = {
-          en: content;
-          es: '';
-          pt: '',
-          ar: '';
-        }
+          en: content;,
+  es: ;
+          pt: ,
+          ar: ;
         initial_translations[source_language] = content;
         return { translations: initial_translations, error: error.message }
-      }
       return { translations: data.translations }
 <<<<<<< HEAD
 =======
@@ -410,53 +412,15 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
     } catch (err) {
-      setIsTranslating (false);
       console.error ('Translation service error:', err);
-;
-      const initial_translations: Record < SupportedLanguage, string> = {
-        en: content;
-        es: '';
-        pt: '',
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
 type ContentType = 'job' | 'profile' | 'service' | 'general',;
 interface TranslationResponse {;
-  translations: Record<SupportedLanguage string>,;
-  error?: string;
-}
-;
-export function useTranslationService() {;
-  const [isTranslating, setIsTranslating] = useState(false),;
-  const { currentLanguage } = useLanguage(),;
-  const translateContent = async (;
-    content: string,;
-    contentType: ContentType = 'general',;
-    sourceLanguage: SupportedLanguage = 'en',;
-    targetLanguages: SupportedLanguage[] = ['enesptar'];
-  ): Promise<TranslationResponse> => {;
-    setIsTranslating(true),;
-    try {;
-      const { data, error } = await supabase.functions.invoke('translate-content', {;
-        body: {;
-          content,;
-          sourceLanguage,;
-          targetLanguages,;
-          contentType;
-        }
-      }),;
-      setIsTranslating(false),;
-      if (error) {;
-        console.error('Translation error:', error),;
-        const initialTranslations: Record<SupportedLanguage string> = {;
-          en: content,;
-          es: '',;
-          pt: '',;
-          ar: '';
-        },;
-        initialTranslations[sourceLanguage] = content,;
 
 
+<<<<<<< HEAD
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
@@ -712,10 +676,20 @@ export function useTranslationService() { return null; }
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {
     // Check condition
+=======
+
+
+
+
+  const getTranslation = (translations: Record<SupportedLanguage string>, fallback: string = ) => {;
+
+  const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = ) =>: any {
+  // TODO: Implement
+    // Check condition;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (return fallback, ) {
-  $2
-}
     return translations[current_language] || translations.en || fallback;
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 }}
@@ -737,7 +711,10 @@ if (return fallback, ) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 ;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return {
+  // TODO: Implement
     translate_content;
     is_translating;
     get_translation;
@@ -767,4 +744,14 @@ setIsTranslating (false);
 }
   }
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  },;
+  const getTranslation = (translations:Record<SupportedLanguage string>, fallback:string = ) => {;
+pr-12325
+  ;'
+  const getTranslation = (translations:Record<SupportedLanguage string>, fallback:string = '') => {;'
+</SupportedLanguage>'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

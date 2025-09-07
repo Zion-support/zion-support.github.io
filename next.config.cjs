@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import(
   'next').NextConfig} */
 const nextConfig = {
@@ -23,6 +24,9 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   experimental: {
     esmExternals: false,
@@ -76,17 +80,5 @@ const nextConfig = {
     pagesBufferLength: 2}};
 
 module.exports = nextConfig;
-=======
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true
-  },
-  typescript: {
-    ignoreBuildErrors: true
-  }
-};
 
-export default nextConfig;
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+

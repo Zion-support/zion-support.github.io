@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 };
 
 export default function MilestoneForm(): any ({ onSubmit }: Props) {;
@@ -186,12 +187,65 @@ type='submit'
         className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50'
         disabled={loading}
       >
+=======
+          value={title}
+          onChange={e = /> setTitle(e.target.value)}
+          placeholder='Phase 1 – Backend Setup';
+          required;
+        />;
+      </div>;
+      <div />;
+<label className='block text-sm font-medium' />Description</label>;
+        <textarea;
+          className='mt-1 w-full rounded border px-3 py-2';
+          value={description}
+          onChange={e = /> setDescription(e.target.value)}
+          placeholder='Describe deliverables...';
+          rows={3}
+        />;
+      </div>;
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4' />;
+        <div />;
+          <label className='block text-sm font-medium' />Due Date</label>;
+          <input;
+            type='date';
+            className='mt-1 w-full rounded border px-3 py-2';
+            value={dueDate}
+            onChange={e = /> setDueDate(e.target.value)}
+            required;
+          />;
+        </div>;
+        <div />;
+<label className='block text-sm font-medium' />Amount (USD)</label>;
+          <input;
+            type='number';
+            min={0}
+            step='0.01';
+            className='mt-1 w-full rounded border px-3 py-2';
+            value={amountUsd}
+            onChange={e = /> setAmountUsd(e.target.value)}
+            placeholder='3000';
+            required;
+          />;
+        </div>;
+      </div>;
+      <button;
+type='submit';
+        className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50';
+        disabled={loading}
+       />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {loading ? 'Adding...' : 'Add Milestone'}
+
       </button>
     </form>
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

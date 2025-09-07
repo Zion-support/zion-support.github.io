@@ -26,14 +26,37 @@ export function ContactPage() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
   const [selectedService, setSelectedService] = useState(''),
+=======
+
+import React from 'react';
+import { render, screen } from '@testing - library / react';
+import { MemoryRouter } from 'react-router-dom';
+import EquipmentPage from './EquipmentPage';
+describe ('EquipmentPage', () => {
+  it ('renders equipment page correctly', () => {
+    render (
+      <MemoryRouter>;
+        <EquipmentPage />;
+      </MemoryRouter>);
+    expect (screen.getByText ('Equipment')).toBeInTheDocument ();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 =======
   });
+<<<<<<< HEAD
+=======
+  const [selectedService, setSelectedService] = useState('');
+
+
+import React, { useState } from 'react',;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [selectedService, setSelectedService] = useState('');import React, { useState } from 'react',;
 import { Link } from 'react-router-dom',;
 import { SERVICE_CATEGORIES } from '@/data/servicesData',;
+
 export function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -48,6 +71,7 @@ export function ContactPage() {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
@@ -61,6 +85,15 @@ export function ContactPage() {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({
@@ -84,12 +117,36 @@ export function ContactPage() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const { name, value } = e.target;
+<<<<<<< HEAD
     setFormData(prev => ({ ...prev, [name]: value }))
 };
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target,
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  },
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(),
+    // Here you would typically send the form data to your backend
+    const mailtoLink = `mailto:kleber@ziontechgroup.com?subject=Service Inquiry from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ACompany: ${formData.company}%0D%0APhone: ${formData.phone}%0D%0AService: ${formData.service}%0D%0ABudget: ${formData.budget}%0D%0ATimeline: ${formData.timeline}%0D%0AMessage: ${formData.message}`,
+    window.location.href = mailtoLink
+  },
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}"
@@ -109,6 +166,10 @@ export function ContactPage() {
               >
 <<<<<<< HEAD
                 📞 Call Now: +1 302 464 0950
+<<<<<<< HEAD
+=======
+              </a>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </Link>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
@@ -119,6 +180,7 @@ export function ContactPage() {
 =======
                 📞 Call Now: +1 302 464 0950;
               </a>
+<<<<<<< HEAD
               <a "
                 href="mailto:kleber@ziontechgroup.com""
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
@@ -126,6 +188,9 @@ export function ContactPage() {
                 ✉️ Email Us;
               </a>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              </Link>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </div>
@@ -156,7 +221,11 @@ export function ContactPage() {
 =======
                 ziontechgroup.com;
               </a>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              </Link>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </div>
@@ -187,7 +256,19 @@ export function ContactPage() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <<<<<<< HEAD
@@ -202,6 +283,7 @@ export function ContactPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <form onSubmit={handleSubmit} className="space-y-6">
+<<<<<<< HEAD
 =======
             </p>            <form onSubmit={handleSubmit} className="space-y-6">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -216,6 +298,9 @@ export function ContactPage() {
 "
             <form onSubmit={handleSubmit} className="space-y-6">"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            </p>            <form onSubmit={handleSubmit} className="space-y-6">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>"
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -232,8 +317,12 @@ export function ContactPage() {
                     placeholder="Your full name"
                   />
                 </div>
+<<<<<<< HEAD
                 
                 <div>"
+=======
+                <div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
                   </label>
@@ -265,7 +354,19 @@ export function ContactPage() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-              
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <<<<<<< HEAD
@@ -301,8 +402,12 @@ export function ContactPage() {
                     placeholder="Your company name"
                   />
                 </div>
+<<<<<<< HEAD
                 
                 <div>"
+=======
+                <div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number;
                   </label>
@@ -317,8 +422,12 @@ export function ContactPage() {
                   />
                 </div>
               </div>
+<<<<<<< HEAD
               
               <div>"
+=======
+              <div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Service of Interest *
                 </label>
@@ -386,9 +495,9 @@ export function ContactPage() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
-              
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -407,6 +516,27 @@ export function ContactPage() {
 =======
               </div>              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </optgroup>;
+                  ))}
+                </select>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              </div>              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div>
 =======
 
@@ -435,8 +565,12 @@ export function ContactPage() {
                     <option value="over-500k">Over $500,000</option>
                   </select>
                 </div>
+<<<<<<< HEAD
                 
                 <div>"
+=======
+                <div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
                     Project Timeline;
                   </label>
@@ -456,8 +590,12 @@ export function ContactPage() {
                   </select>
                 </div>
               </div>
+<<<<<<< HEAD
               
               <div>"
+=======
+              <div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Project Details *
                 </label>
@@ -472,9 +610,14 @@ export function ContactPage() {
                   placeholder="Tell us about your project, goals, and requirements..."
                 />
               </div>
+<<<<<<< HEAD
               
               <button"
                 type="submit""
+=======
+              <button
+                type="submit"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
               >
                 ✉️ Send Message;
@@ -484,6 +627,10 @@ export function ContactPage() {
 
 <<<<<<< HEAD
           {/* Contact Information */}
+<<<<<<< HEAD
+=======
+          <div className="space-y-8">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className="space-y-8">;
             {/* Direct Contact */}
             <div className="bg-white rounded-xl shadow-lg p-8">
@@ -512,12 +659,20 @@ export function ContactPage() {
 =======
                       +1 302 464 0950;
                     </a>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
                 "
                 <div className="flex items-center gap-4">"
                   <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center">"
+=======
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className="text-green-600 text-xl">✉️</span>
                   </div>
                   <div>"
@@ -529,12 +684,20 @@ export function ContactPage() {
 =======
                       kleber@ziontechgroup.com;
                     </a>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
                 "
                 <div className="flex items-center gap-4">"
                   <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">"
+=======
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className="text-purple-600 text-xl">📍</span>
                   </div>
                   <div>"
@@ -545,9 +708,14 @@ export function ContactPage() {
                     </p>
                   </div>
                 </div>
+<<<<<<< HEAD
                 "
                 <div className="flex items-center gap-4">"
                   <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center">"
+=======
+                <div className="flex items-center gap-4">
+                  <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className="text-orange-600 text-xl">🌐</span>
                   </div>
                   <div>"
@@ -559,7 +727,11 @@ export function ContactPage() {
 =======
                       ziontechgroup.com;
                     </a>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                    </Link>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   </div>
                 </div>
               </div>
@@ -576,6 +748,30 @@ export function ContactPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Monday - Friday</span>
+                  <span className="font-semibold">8:00 AM - 6:00 PM EST</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Saturday</span>
+                  <span className="font-semibold">9:00 AM - 2:00 PM EST</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Sunday</span>
+                  <span className="font-semibold">Closed</span>
+                </div>
+                <div className="pt-3 border-t border-gray-200">
+                  <p className="text-sm text-gray-600">
+                    <span className="font-semibold text-green-600">24/7 Emergency Support</span> available for critical issues
+                  </p>
+                </div>
+              </div>
+            </div>
 
 
 
@@ -625,12 +821,24 @@ export function ContactPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>
@@ -649,12 +857,20 @@ export function ContactPage() {
                 >
 <<<<<<< HEAD
                   📞 Call Now
+<<<<<<< HEAD
+=======
+                </a>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="block w-full bg-green-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-green-700 transition-colors"
                 >
                   ✉️ Send Email
+<<<<<<< HEAD
+=======
+                </a>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </Link>
                 <Link
                   to="/services"
@@ -684,7 +900,11 @@ export function ContactPage() {
 =======
                   🌐 Visit Website;
                 </a>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                </Link>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>
             </div>
           </div>
@@ -707,6 +927,10 @@ export function ContactPage() {
             >
 <<<<<<< HEAD
               📞 Call +1 302 464 0950
+<<<<<<< HEAD
+=======
+            </a>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </Link>
             <a 
               href="mailto:kleber@ziontechgroup.com"
@@ -717,6 +941,7 @@ export function ContactPage() {
 =======
               📞 Call +1 302 464 0950;
             </a>
+<<<<<<< HEAD
             <a "
               href="mailto:kleber@ziontechgroup.com""
               className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
@@ -724,6 +949,9 @@ export function ContactPage() {
               ✉️ Get Free Consultation;
             </a>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+            </Link>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
         </div>
       </div>
@@ -745,9 +973,13 @@ export function ContactPage() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+
+
+
   );
 };
 
+<<<<<<< HEAD
 '
 import React from 'react';'
 import { render, screen } from '@testing-library/react';'
@@ -755,14 +987,237 @@ import { MemoryRouter } from 'react-router-dom';'
 import EquipmentPage from './EquipmentPage';'
 describe('EquipmentPage', () => {'
   it('renders equipment page correctly', () => {}
+=======
+  )
+}
+  );
+};
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import EquipmentPage from './EquipmentPage';
+describe('EquipmentPage', () => {
+  it('renders equipment page correctly', () => {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     render(
+        <EquipmentPage />;
+)
+      );
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">"
+</div>"
+      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">"
+        <div className="container mx-auto px-4 py-20">"
+          <div className="text-center max-w-4xl mx-auto">"
+            <h1 className="text-5xl font-bold mb-6">"
+</h1>
+            </h1>"
+            <p className="text-xl mb-8 text-blue-100">"
+</p>
+            </p>"
+            <div className="flex flex-wrap justify-center gap-4">"
+</div>
+              <a;"
+                href="tel:+13024640950"""
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors""
+              >
+</a>
+                href="mailto:kleber@ziontechgroup.com"""
+                className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors""
+      <div className="bg-white border-b shadow-sm">"
+        <div className="container mx-auto px-4 py-4">"
+          <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">"
+            <div className="flex items-center gap-2">"
+              <span className="text-blue-600">📍</span>"
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="text-blue-600">📱</span>"
+              <span>+1 302 464 0950</span>
+              <span className="text-blue-600">✉️</span>"
+              <span>kleber@ziontechgroup.com</span>
+              <span className="text-blue-600">🌐</span>""
+              <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">"
+      <div className="container mx-auto px-4 py-16">"
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">"
+          <div className="bg-white rounded-xl shadow-lg p-8">"
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>""
+            <p className="text-gray-600 mb-8">"
+
+
+
+"
+            <form onSubmit={handleSubmit} className="space-y-6">"
+</form>"
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">"
+</label>
+                  <input;"
+                    type="text"""
+                    id="name"""
+                    name="name""
+                    required;
+                    value={formData.name}
+                    onChange={handleInputChange}"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
+                    placeholder="Your full name""
+                  />
+</input>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">"
+                    type="email"""
+                    id="email"""
+                    name="email""
+                    value={formData.email}
+                    placeholder="your.email@company.com""
+
+
+
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">"
+                    id="company"""
+                    name="company""
+                    value={formData.company}
+                    placeholder="Your company name""
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">"
+                    type="tel"""
+                    id="phone"""
+                    name="phone""
+                    value={formData.phone}
+                    placeholder="+1 (555) 123-4567""
+                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">"
+                <select;"
+                  id="service"""
+                  name="service""
+                  value={formData.service}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
+</select>"
+                  <option value="">Select a service</option>"
+                    <optgroup key={category.id} label={category.name}>
+</optgroup>
+                        <>"
+                          <option value="ai-customer-service">AI Customer Service Automation</option>""
+                          <option value="ai-content-generation">AI Content Generation Suite</option>""
+                          <option value="ai-data-analytics">AI-Powered Business Intelligence</option>"
+                        </>
+                      )}"
+                      {category.id === 'it-services' && (
+                        <>
+                          <option value="onsite-it-support">Onsite IT Support & Infrastructure</option>""
+                          <option value="cloud-migration">Cloud Migration & Optimization</option>"
+                        </>)
+                      {category.id === 'micro-saas' && (
+                          <option value="project-management-saas">Smart Project Management Platform</option>""
+                          <option value="crm-saas">AI-Powered CRM System</option>""
+                          <option value="hr-management-saas">HR Management & Talent Platform</option>"
+                      {category.id === 'cybersecurity' && (
+                          <option value="security-audit">Security Audit & Penetration Testing</option>"
+                      {category.id === 'data-analytics' && (
+                          <option value="business-intelligence">Advanced Business Intelligence Platform</option>"
+                      {category.id === 'cloud-solutions' && (
+                          <option value="devops-automation">DevOps Automation & CI/CD Pipeline</option>"
+                      )}
+                </select>
+
+
+
+                  <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">"
+                    id="budget"""
+                    name="budget""
+                    value={formData.budget}
+                    <option value="">Select budget range</option>""
+                    <option value="under-5k">Under $5,000</option>""
+                    <option value="5k-25k">$5,000 - $25,000</option>""
+                    <option value="25k-100k">$25,000 - $100,000</option>""
+                    <option value="100k-500k">$100,000 - $500,000</option>""
+                    <option value="over-500k">Over $500,000</option>"
+                  <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">"
+                    id="timeline"""
+                    name="timeline""
+                    value={formData.timeline}
+                    <option value="">Select timeline</option>""
+                    <option value="asap">ASAP</option>""
+                    <option value="1-3-months">1-3 months</option>""
+                    <option value="3-6-months">3-6 months</option>""
+                    <option value="6-12-months">6-12 months</option>""
+                    <option value="over-12-months">Over 12 months</option>"
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">"
+                <textarea;"
+                  id="message"""
+                  name="message""
+                  rows={6}
+                  value={formData.message}
+                  placeholder="Tell us about your project, goals, and requirements...""
+</textarea>
+              <button;"
+                type="submit"""
+                className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors""
+</button>
+            </form>
+          <div className="space-y-8">"
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Direct Contact</h3>""
+              <div className="space-y-4">"
+                <div className="flex items-center gap-4">"
+                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">"
+                    <span className="text-blue-600 text-xl">📱</span>"
+                    <p className="font-semibold text-gray-900">Phone</p>""
+                    <a href="tel:+13024640950" className="text-blue-600 hover:underline text-lg">"
+                  <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center">"
+                    <span className="text-green-600 text-xl">✉️</span>"
+                    <p className="font-semibold text-gray-900">Email</p>""
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline text-lg">"
+                  <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center">"
+                    <span className="text-purple-600 text-xl">📍</span>"
+                    <p className="font-semibold text-gray-900">Address</p>""
+                    <p className="text-gray-600">"
+                      364 E Main St STE 1008<br />
+</br>
+                  <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center">"
+                    <span className="text-orange-600 text-xl">🌐</span>"
+                    <p className="font-semibold text-gray-900">Website</p>""
+                    <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline text-lg">"
+            <div className="bg-white rounded-xl shadow-lg p-8">;"
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>;""
+              <div className="space-y-3">;"
+                <div className="flex justify-between">;"
+                  <span className="text-gray-600">Monday - Friday</span>;""
+                  <span className="font-semibold">8:00 AM - 6:00 PM EST</span>;"
+                </div>;"
+                  <span className="text-gray-600">Saturday</span>;""
+                  <span className="font-semibold">9:00 AM - 2:00 PM EST</span>;"
+                  <span className="text-gray-600">Sunday</span>;""
+                  <span className="font-semibold">Closed</span>;"
+                <div className="pt-3 border-t border-gray-200">;"
+                  <p className="text-sm text-gray-600">;"
+                    <span className="font-semibold text-green-600">24/7 Emergency Support</span> available for critical issues;"
+                  </p>;
+                </div>;
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h3>""
+              <div className="space-y-3">"
+                  className="block w-full bg-blue-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors""
+                  className="block w-full bg-green-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-green-700 transition-colors""
+                <Link;"
+                  to="/services"""
+                  className="block w-full bg-purple-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-purple-700 transition-colors""
+
+                  href="https://ziontechgroup.com"""
+                  className="block w-full bg-gray-600 text-white py-3 px-4 rounded-lg text-center font-medium hover:bg-gray-700 transition-colors""
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">"
+        <div className="container mx-auto px-4 text-center">"
+          <h2 className="text-4xl font-bold mb-6">"
+</h2>
+          </h2>"
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">"
+              href="tel: +13024640950"""
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors""
+              className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors""
       <MemoryRouter>
+
         <EquipmentPage />
       </MemoryRouter>
     );'
     expect(screen.getByText('Equipment')).toBeInTheDocument();
   });
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
 <<<<<<< HEAD
@@ -779,9 +1234,23 @@ describe('EquipmentPage', () => {'
     </div>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
+<<<<<<< HEAD
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  );
+};
+
+
+
+  )
+}
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

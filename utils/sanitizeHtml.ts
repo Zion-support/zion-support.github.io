@@ -27,31 +27,47 @@ export function sanitizeHtml("html": string): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function sanitizeHtml(html: string): string {
   let sanitized = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
 origin/main
 origin/automation-improvements-final
   sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');'"
   // Remove javascript: URLs
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   sanitized = sanitized.replace(/javascript:/gi, '');
   sanitized = sanitized.replace(/data:text\/html/gi, '');
+export function sanitizeHtml(html: string): string {
+  let sanitized = html
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+    .replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '')
+    .replace(/javascript:/gi, '')
+    .replace(/data:text\/html/gi, '');
+  
   return sanitized;
 }
+
 export function sanitizeUrl(url: string): string {
   return url.replace(/javascript:/gi, '');
 }
+
 export function sanitizeCss(css: string): string {
   return css.replace(/expression\s*\(/gi, '');
+<<<<<<< HEAD
 }
   return sanitized}
 export function sanitizeUrl("url": string): string {
@@ -148,3 +164,6 @@ export function sanitizeHtml(htm: l: string): string { let sanitized = html.repl
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Additional type declaration for toast variants
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -13,9 +14,13 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// Additional type declaration for toast variants
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-declare type ToastVariant = "default" | "destructive" | "success",
+declare type ToastVariant = any;
 
+<<<<<<< HEAD
 // Additional type declaration for toast variants;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,3 +41,5 @@ declare type ToastVariant = "default" | "destructive" | "success",;
 declare type ToastVariant = "default" | "destructive" | "success";
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

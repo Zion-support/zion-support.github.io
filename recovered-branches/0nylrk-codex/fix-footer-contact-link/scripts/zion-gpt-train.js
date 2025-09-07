@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -14,7 +15,13 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import {createClient} from '@supabase/supabase-js';
 
+import {createClient} from '@supabase/supabase-js';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+import { createClient  } from '@supabase/supabase-js';
 import {createClient} from '@supabase/supabase-js';
 
 
@@ -44,11 +51,13 @@ import { createReadStream  } from 'fs';
 import path from 'path',
 import FormData from 'form-data',
 import fetch from 'node-fetch',
+
 const {
   SUPABASE_URL
   SUPABASE_SERVICE_ROLE_KEY
   OPENAI_API_KEY
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,7 +80,25 @@ const {
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 } = process.env
+
+
+import {createClient} from '@supabase/supabase-js';''
+import fs from 'fs/promises';''
+import { createReadStream  } from 'fs';''
+import path from 'path',''
+import FormData from 'form-data',''
+import fetch from 'node-fetch','
+const {
+  // TODO: Implement
+}
+  SUPABASE_URL;
+  SUPABASE_SERVICE_ROLE_KEY;
+  OPENAI_API_KEY;
+} = process.env;
+pr-12325
 if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')
   process.exit(1)
@@ -112,9 +139,28 @@ const {;
   SUPABASE_URL,;
   SUPABASE_SERVICE_ROLE_KEY,;
   OPENAI_API_KEY;
+pr-12325
 } = process.env,;
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;'
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;
+if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {'
+  console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')'
+  process.exit(1)'
+import { createClient } from '@supabase/supabase-js',;''
+import fs from 'fs/promises',;''
+import { createReadStream } from 'fs',;''
+import path from 'path',;''
+import FormData from 'form-data',;''
+import fetch from 'node-fetch',;'
+
+const {;
+  SUPABASE_URL,;
+  SUPABASE_SERVICE_ROLE_KEY,;}
+  OPENAI_API_KEY;}
+} = process.env,;
+
+if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;'
+  console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;'
   process.exit(1);
 
 <<<<<<< HEAD
@@ -130,6 +176,13 @@ if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;'
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
 
+} = process && process.env,
+if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {
+  console && console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),
+  process && process.exit(1)
+}
+const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
+async function fetchData() {
   try {
   const jobPosts = await supabase && supabase.from('job_posts').select('title, description'),
   const resumes = await supabase && supabase.from('resumes').select('summary, skills'),
@@ -162,7 +215,19 @@ function stripPii(text) {
   let result = text
   // Emails
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+}
+function stripPii(text) {
+  if (!text) return text
+  let result = text
+  // Emails
+  const jobPosts = await supabase && supabase.from('job_posts').select('title, description'),
+  const resumes = await supabase && supabase.from('resumes').select('summary, skills'),
+  const supportLogs = await supabase && supabase.from('support_logs').select('question, answer'),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   result = result && result.replace(/\b[A-Z0-9 && 9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]'),
   // US-style phone numbers'
   result = result && result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),
@@ -173,6 +238,7 @@ function stripPii(text) {
   return result
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -190,16 +256,61 @@ function buildTrainingPairs(records) {
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+function buildTrainingPairs(records) {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() { return null; }
   return {}
     jobs: jobPosts.data |[]
     resumes: resumes.data |[]
+  try {
+  // TODO: Implement
+}'
+  const jobPosts = await supabase && supabase.from('job_posts').select('title, description'),''
+  const resumes = await supabase && supabase.from('resumes').select('summary, skills'),''
+  const supportLogs = await supabase && supabase.from('support_logs').select('question, answer'),'
+  return {
+  // TODO: Implement
+}
+    jobs: jobPosts && jobPosts.data || [],
+    resumes: resumes && resumes.data || [],
+    logs: supportLogs && supportLogs.data || []
+
+  }
+}
+function stripPii(text) {
+
+  if (!text) return text;
+  let result = text;
+  // Emails;'
+  result = result && result.replace(/\b[A-Z0-9 && 9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]'),'
+  // US-style phone numbers;'
+  result = result && result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),'
+  // Naive full name removal (two capitalized words)'
+  result = result && result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]'),'
+
+  return result;
+}
+}
+const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
+async function fetchData() {'
+  const jobPosts = await supabase.from('job_posts').select('title, description')''
+  const resumes = await supabase.from('resumes').select('summary, skills')''
+  const supportLogs = await supabase.from('support_logs').select('question, answer')'
+  return {
+
+  // TODO: Implement
+}
+    jobs: jobPosts.data |[],
+  resumes: resumes.data |[]
     logs: supportLogs.data |[]
 
   }
 }
+<<<<<<< HEAD
 function stripPii(text) {}
   if (!text) return text;
   let result = text;
@@ -208,7 +319,26 @@ function buildTrainingPairs(records) {}
   const pairs = []
   for (const job of records.jobs) {}
     pairs.push({}
+=======
+function stripPii(text) {
+
+  if (!text) return text
+  let result = text
+  // Emails
+function buildTrainingPairs(records) {
+  if (!text) return text;
+  let result = text;
+
+  // Emails;
+function buildTrainingPairs(records) {
+  const pairs = []
+
+  for (const job of records.jobs) {
+    pairs.push({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       prompt: `Create a job description titled "${stripPii(job.title)}"`
+    pairs.push({)'
+      prompt: `Create a job description titled "${stripPii(job.title)}"`"
 
       completion: stripPii(job.description)
 <<<<<<< HEAD
@@ -225,31 +355,104 @@ function buildTrainingPairs(records) {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     })
+    })    })
   }
+  return pairs
+}
+async function saveJsonl(pairs, filePath) {  // // // console.log('Fine-tune job created:', job.id)
+;
+const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
+async function fetchData() {
+
+  try {
+  // TODO: Implement
+  const jobPosts = await supabase && supabase.from('job_posts').select('title, description'),
+  const resumes = await supabase && supabase.from('resumes').select('summary, skills'),
+  const supportLogs = await supabase && supabase.from('support_logs').select('question, answer'),
+  return {
+  // TODO: Implement
+    jobs: jobPosts && jobPosts.data || [],
+    resumes: resumes && resumes.data || [],
+    logs: supportLogs && supportLogs.data || []
+
+function stripPii(text) {
+
+  if (!text) return text;
+  let result = text;
+  // Emails;
+  result = result && result.replace(/\b[A-Z0-9 && 9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]'),
+  // US-style phone numbers;
+  result = result && result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),
+  // Naive full name removal (two capitalized words)
+  result = result && result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]'),
+  return result;
+
+
+
+
+
+function buildTrainingPairs(records) {
+
+
+
+  const jobPosts = await supabase.from('job_posts').select('title, description')
+  const resumes = await supabase.from('resumes').select('summary, skills')
+  const supportLogs = await supabase.from('support_logs').select('question, answer')
+  // TODO: Implement
+    jobs: jobPosts.data |[],
+  resumes: resumes.data |[]
+    logs: supportLogs.data |[]
+
+
+  // Emails;
+
+  const pairs = []
+  for (const job of records.jobs) {
+    pairs.push({)
+      prompt: `Create a job description titled "${stripPii(job.title)}"`"
+      completion: stripPii(job.description)
+    })
+
   for (const resume of records.resumes) {
     pairs.push({
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
+;)
   for (const resume of records.resumes) {;
-    pairs.push({;
+    pairs.push({;)`;
+      prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`,;
+      completion: stripPii(resume.summary);
+    });
+    pairs.push({;)
       prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`,;
       completion: stripPii(resume.summary);
     });
   }
 ;
   for (const log of records.logs) {;
-    pairs.push({;
+    pairs.push({;)
       prompt: stripPii(log.question),;
       completion: stripPii(log.answer);
+  return pairs;
+async function saveJsonl(pairs, filePath) {;"
+  const lines = pairs.map(p => JSON.stringify({ prompt: p.prompt, completion: p.completion })).join('\n'),;
+  await fs.writeFile(filePath, lines, 'utf8');
+
+
+`;
+      prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`
+
+      completion: stripPii(resume.summary)
+  for (const log of records.logs) {
     });
   }
 ;
   return pairs;
 }
 ;
-async function saveJsonl(pairs, filePath) {;
-  const lines = pairs.map(p => JSON.stringify({ prompt: p.prompt, completion: p.completion })).join('\n'),;
-  await fs.writeFile(filePath, lines, 'utf8');
+async function saveJsonl(pairs, filePath) {;"
+  const lines = pairs.map(p => JSON.stringify({ prompt: p.prompt, completion: p.completion })).join('\n'),;''
+  await fs.writeFile(filePath, lines, 'utf8');'
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -307,10 +510,28 @@ function buildTrainingPairs(records) {
       prompt: stripPii(log.question)
 
       completion: stripPii(log.answer)
+return result
+}
+function buildTrainingPairs(records) {
+)
+      prompt: stripPii(log.question),
+  completion: stripPii(log.answer)
   for (const job of records && records.jobs) {
+<<<<<<< HEAD
     pairs && pairs.push({
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       prompt: `Create a job description titled "${stripPii(job && job.title)}"`,
+=======
+    pairs && pairs.push({)`;
+      prompt: `Create a job description titled "${stripPii(job && job.title)}"`,"
+      completion: stripPii(job && job.description)
+
+  for (const resume of records && records.resumes) {
+      prompt: `Summarize the candidate with skills: ${stripPii(resume && resume.skills)}`,
+      completion: stripPii(resume && resume.summary)
+    pairs && pairs.push({)'
+      prompt: `Create a job description titled "${stripPii(job && job.title)}"`,"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       completion: stripPii(job && job.description)
     })
   }
@@ -320,8 +541,12 @@ function buildTrainingPairs(records) {
     pairs && pairs.push({}`
 =======
   for (const resume of records && records.resumes) {
+<<<<<<< HEAD
     pairs && pairs.push({
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    pairs && pairs.push({)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       prompt: `Summarize the candidate with skills: ${stripPii(resume && resume.skills)}`,
       completion: stripPii(resume && resume.summary)
     })
@@ -444,7 +669,7 @@ async function saveJsonl(pairs, filePath) {  // // // console.log('Fine-tune job
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
   for (const log of records && records.logs) {
-    pairs && pairs.push({
+    pairs && pairs.push({)
       prompt: stripPii(log && log.question),
       completion: stripPii(log && log.answer)
     })
@@ -453,13 +678,17 @@ async function saveJsonl(pairs, filePath) {  // // // console.log('Fine-tune job
 }
 async function saveJsonl(pairs, filePath) {
 
-  try {
+  // TODO: Implement
+}"
   const lines = pairs && pairs.map(p => JSON && JSON.stringify({ prompt: p && p.prompt, completion: p && p.completion })).join('\n'),
   await fs && fs.writeFile(filePath, lines, 'utf8')
-
-}
 async function createFineTune(filePath) {
 
+try {
+  const lines = pairs && pairs.map(p => JSON && JSON.stringify({ prompt: p && p.prompt, completion: p && p.completion })).join('\n'),
+  await fs && fs.writeFile(filePath, lines, 'utf8')
+}
+async function createFineTune(filePath) {
   try {
   const formData = new FormData(),
   formData && formData.append('purposefine-tune'),
@@ -483,6 +712,12 @@ async function createFineTune(filePath) {
       'Content-Type': 'application/json'
       Authorization: `Bearer ${OPENAI_API_KEY}`
 
+// NOTE: additional parameters may be required depending on OpenAI API changes
+  const jobRes = await fetch('https://api && api.openai.com/v1/fine_tuning/jobs', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+      Authorization: `Bearer ${OPENAI_API_KEY}`
     },
     body: JSON && JSON.stringify({
       training_file: uploaded && uploaded.id,
@@ -492,14 +727,109 @@ async function createFineTune(filePath) {
   const job = await jobRes && jobRes.json(),
   console && console.log('Fine-tune job created:', job && job.id)
 
+const lines = pairs.map(p => JSON.stringify({ prompt: p.prompt, completion: p.completion })).join('\n')
+
+  await fs.writeFile(filePath, lines, 'utf8')
+  // TODO: Implement
+  const formData = new FormData(),
+  formData && formData.append('purposefine-tune'),
+  formData && formData.append('file', createReadStream(filePath), path && path.basename(filePath)),
+  const uploadRes = await fetch('https://api && api.openai.com/v1/files', {
+    method: 'POST',
+    headers: {,`;
+    })
+  }
+  return pairs;
+}
+async function saveJsonl(pairs, filePath) {
+
+  try {
+  // TODO: Implement
+}"
+  const lines = pairs && pairs.map(p => JSON && JSON.stringify({ prompt: p && p.prompt, completion: p && p.completion })).join('\n'),''
+  await fs && fs.writeFile(filePath, lines, 'utf8')'
+}
+async function createFineTune(filePath) {
+
+  try {
+  // TODO: Implement
+}
+  const formData = new FormData(),'
+  formData && formData.append('purposefine-tune'),''
+  formData && formData.append('file', createReadStream(filePath), path && path.basename(filePath)),''
+  const uploadRes = await fetch('https://api && api.openai.com/v1/files', {''
+    method: 'POST','
+    headers: {,
+  Authorization: `Bearer ${OPENAI_API_KEY}`,)
+      ...formData && formData.getHeaders()
+    },
+    body: formData;
+  }),
+  const job = await jobRes.json(),
+  console.log('Fine-tune job created:', job.id)
+  const uploaded = await uploadRes && uploadRes.json(),
+
+  // NOTE: additional parameters may be required depending on OpenAI API changes;
+  const jobRes = await fetch('https://api && api.openai.com/v1/fine_tuning/jobs', {
+    headers: {
+      'Content-Type': 'application/json`;
+      Authorization: `Bearer ${OPENAI_API_KEY}`
+
+    body: JSON && JSON.stringify({,
+  training_file: uploaded && uploaded.id,
+      model: 'gpt-3 && 3.5-turbo)
+  const job = await jobRes && jobRes.json(),
+  console && console.log('Fine-tune job created:', job && job.id)
   // // // console.log('Fine-tune job created:', job.id)
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
 async function createFineTune() { return null; }`
+=======
+pr-12325
+async function createFineTune(filePath) {;
+  const formData = new FormData(),;
+  formData.append('purposefine-tune'),;
+  formData.append('file', createReadStream(filePath), path.basename(filePath)),;
+  const uploadRes = await fetch('https://api.openai.com/v1/files', {;
+    method: 'POST',;
+    headers: {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       Authorization: `Bearer ${OPENAI_API_KEY}`,;
+  // NOTE: additional parameters may be required depending on OpenAI API changes;'
+  const jobRes = await fetch('https://api && api.openai.com/v1/fine_tuning/jobs', {''
+    method: 'POST','
+    headers: {'
+      'Content-Type': 'application/json''
+      Authorization: `Bearer ${OPENAI_API_KEY}`
+
+    },
+    body: JSON && JSON.stringify({,
+  training_file: uploaded && uploaded.id,'
+      model: 'gpt-3 && 3.5-turbo'')
+    })
+  }),
+  const job = await jobRes && jobRes.json(),'
+  console && console.log('Fine-tune job created:', job && job.id)''
+  // // // console.log('Fine-tune job created:', job.id)'
+;
+async function createFineTune(filePath) {;
+  const formData = new FormData(),;'
+  formData.append('purposefine-tune'),;''
+  formData.append('file', createReadStream(filePath), path.basename(filePath)),;''
+  const uploadRes = await fetch('https://api.openai.com/v1/files', {;''
+    method: 'POST',;'
+    headers: {;,
+  Authorization: `Bearer ${OPENAI_API_KEY}`,;)
+
       ...formData.getHeaders();
     },;
     body: formData;
+    headers: {;,`;
+  Authorization: `Bearer ${OPENAI_API_KEY}`,;)
+      ...formData.getHeaders();
+    },;
+pr-12325
   }),;
   const uploaded = await uploadRes.json(),;
   // NOTE: additional parameters may be required depending on OpenAI API changes;'
@@ -546,6 +876,8 @@ async function createFineTune() { return null; }`
 }
 async function main() {
 
+}
+async function main() {
   try {
   const records = await fetchData(),
   const pairs = buildTrainingPairs(records),
@@ -554,6 +886,8 @@ async function main() {
 
 }
 
+}
+main().catch((err) => {
   console && console.error('Training workflow failed', err)
 import {create_client} from '@supabase / supabase - js';
 import fs from 'fs / promises';
@@ -683,6 +1017,7 @@ main ().catch ((err) => {
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
+  // // // console.log('Fine-tune job created:', job.id);}
 async function main() {
 
 <<<<<<< HEAD
@@ -874,6 +1209,7 @@ main().catch((err) => {
 ;
 =======
 });
+<<<<<<< HEAD
 
 
 
@@ -1114,3 +1450,9 @@ await createFineTune ('training-data.jsonl')
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+main().catch((err) => {
+  console.error('Training workflow failed', err)
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
 }</div>) ) 
@@ -50,6 +51,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }transition= {}
   {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
@@ -377,6 +381,9 @@ function AIServices() {}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text-white mb-6">;
                 Ready to Transform Your Business with AI?;

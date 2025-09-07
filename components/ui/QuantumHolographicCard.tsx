@@ -1,7 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
+
 import { motion  } from 'framer-motion';
+
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -39,6 +47,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
 interface QuantumHolographicCardProps {}
   service: {}
+=======
+
+interface QuantumHolographicCardProps {
+  service: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Star,;
   Zap,;
@@ -54,6 +67,21 @@ import {;
 interface QuantumHolographicCardProps {;
   service: {;
     id: string;
+  Star;
+Zap,
+Shield;
+TrendingUp,
+ArrowRight;
+ExternalLink,
+Check;
+Users,
+Clock;}
+DollarSign;}
+  Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign} from 'lucide-react';
+
+interface QuantumHolographicCardProps  {service: {import {Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign} from 'lucide-react';
+
+interface QuantumHolographicCardProps  {service: {id: string;
     name: string;
     tagline: string;
     price: string;
@@ -67,6 +95,7 @@ interface QuantumHolographicCardProps {;
       email: string;
       address: string;
 
+<<<<<<< HEAD
       website: string;
     }
       opacity: 1,
@@ -91,11 +120,16 @@ interface QuantumHolographicCardProps {;
     animate: {
       website: string
     },
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     realImplementation: boolean;
+
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
+<<<<<<< HEAD
     reviews: number
   },
   className?: string
@@ -595,3 +629,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

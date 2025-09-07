@@ -31,6 +31,7 @@ import { HireRequestModal } from "./hire-request",
 
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Button} from "@/components/ui/button";
 import {HireRequestModal} from "./hire-request";
@@ -93,6 +94,8 @@ interface HireNowCTAProps {
   talent_profile: {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     id: string,
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     full_name?: string;
     professional_title?: string;
     hourly_rate?: number;
@@ -102,14 +105,16 @@ interface HireNowCTAProps {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
   const [modalOpen, setModalOpen] = useState(false);
 
-  const handleOpenModal = () => {;
-    setModalOpen(true);
-  };
 
+<<<<<<< HEAD
   const handleCloseModal = () => {;
     setModalOpen(false);
   };
@@ -949,3 +954,5 @@ return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

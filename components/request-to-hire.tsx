@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
@@ -140,6 +141,8 @@ return;
       setSubmitting(false);
     }
   }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (result) {
     return (
 <div className='max-w-xl mx-auto py-12'>
@@ -207,8 +210,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           />;
         </div>;'
         {error && <div className='text-sm text-red-600'>{error}</div>}
+<<<<<<< HEAD
         <button;
           disabled={submitting}'
+=======
+        <button
+          disabled={submitting}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
   }
@@ -432,6 +440,9 @@ if ( {) {}
       </form>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className='px-4 py-2 rounded bg-black text-white'
         >
           {submitting ? 'Submitting…' : 'Submit Request'}

@@ -4,6 +4,7 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/tests/Accessibility.test.tsx
 <<<<<<< HEAD:backup-problematic-files/tests/Accessibility.test.tsx
 </ModeToggle>'
@@ -42,9 +43,17 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 </ModeToggle>'
 </ModeToggle>'
 </ModeToggle>'
+
+
+</ModeToggle>'
+
+
 </ModeToggle>'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,5 +68,18 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 </ModeToggle>'
+
+
 </ModeToggle>'
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import { render, axe, toHaveNoViolations, ModeToggle, expect } from 'lucide-react'; expect.extend(toHaveNoViolations); test(','ModeToggle has no accessibility violations',async () => {  const { container } = render(<ModeToggle />) const results = await axe(container) expect(results).toHaveNoViolations()}
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

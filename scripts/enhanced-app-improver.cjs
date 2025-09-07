@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -18,6 +19,9 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -27,25 +31,27 @@
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     console.log(" Enhanced App Improver Starting...");""
+
       console.error(" Error during "improvements":", error.message);"}"
-    console.log("⚡ Optimizing performance...");""
-    const performanceHook = "import { useState, useEffect  } from "react"";"
-  const [metrics, setMetrics] = useState({);    "loadTime": 0,""renderTime": 0,""memoryUsage": 0,"}
-          "renderTime": endTime - startTime,""memoryUsage"
-  return metrics,,};";"
+    console.log("⚡ Optimizing performance...");
+    const performanceHook = "import { useState, useEffect  } from "react;"
+  const [metrics, setMetrics] = useState({);    "loadTime": 0,renderTime": 0,memoryUsage": 0,"}
+          "renderTime": endTime - startTime,memoryUsage"
+  return metrics,};";"
     this.writeFile("src/hooks/usePerformanceMonitoring.ts", performanceHook);";    this.improvements.push("Created performance monitoring hook");"}"
-    console.log("� Improving code quality...");""
-      "compilerOptions": {""target": "ES2020", ""lib": ["DOM", "DOM.Iterable", "ES6"],""allowJs": true,""skipLibCheck": true,""strict": true,""forceConsistentCasingInFileNames": true,""noEmit": true,""esModuleInterop": true,""module": "esnext", ""moduleResolution": "node", ""resolveJsonModule": true,""isolatedModules": true,""jsx": "preserve", ""incremental": true,""plugins": ["}]
+    console.log("� Improving code quality...");
+      "compilerOptions": {target": "ES2020", lib": ["DOM", "DOM.Iterable", "ES6"],allowJs": true,skipLibCheck": true,strict": true,forceConsistentCasingInFileNames": true,noEmit": true,esModuleInterop": true,module": "esnext", moduleResolution": "node", resolveJsonModule": true,isolatedModules": true,jsx": "preserve", incremental": true,plugins": ["}]
             "name": "next", "},,"
-        "baseUrl": ".", ""paths": {""@/*": ["./src/*"],""@/components/*": ["./src/components/*"],""@/pages/*": ["./src/pages/*"],""@/utils/*": ["./src/utils/*"],""@/hooks/*": ["./src/hooks/*"],""@/types/*": ["./src/types/*"],"},,"
-      "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],""exclude": ["node_modules"],"};"
+        "baseUrl": ".", paths": {@/*": ["./src/*"],@/components/*": ["./src/components/*"],@/pages/*": ["./src/pages/*"],@/utils/*": ["./src/utils/*"],@/hooks/*": ["./src/hooks/*"],@/types/*": ["./src/types/*"],"},,"
+      "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],exclude": ["node_modules"],"};"
     this.writeFile("tsconfig.json", JSON.stringify(tsConfig, null, 2));";    this.improvements.push("Enhanced TypeScript configuration");"}"
-    console.log("� Enhancing security...");""
-    const securityMiddleware = "import { NextResponse  } from "next/server"";import type { NextRequest } from "next/server"";";export function middleware("request": NextRequest) {"}
+    console.log("� Enhancing security...");
+    const securityMiddleware = "import { NextResponse  } from "next/server;import type { NextRequest } from "next/server;";export function middleware("request": NextRequest) {"}
   response.headers.set("X-Frame-Options", "DENY");";  response.headers.set("X-Content-Type-Options", "nosniff");";  response.headers.set("Referrer-Policy", "origin-when-cross-origin");";  response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");";"
-    "default-src "self", ""script-src "self" "unsafe-eval" "unsafe-inline", ""style-src "self" "unsafe-inline", ""img-src "self" "data": "https":", ""font-src "self", ""connect-src "self", ""frame-ancestors "none"""].join("");";";  response.headers.set("Content-Security-Policy", csp);";"
-  "matcher": [""/((?!api|_next/static|_next/image|favicon.ico).*)", "],,"};";"
+    "default-src "self", script-src "self" "unsafe-eval" "unsafe-inline", style-src "self" "unsafe-inline", img-src "self" "data": "https":", font-src "self", connect-src "self", frame-ancestors "none"].join();";";  response.headers.set("Content-Security-Policy", csp);";"
+  "matcher": [/((?!api|_next/static|_next/image|favicon.ico).*)", "],,"};";"
     this.writeFile("middleware.ts", securityMiddleware);";    this.improvements.push("Created security middleware with CSP headers");"}"
+<<<<<<< HEAD
     console.log(" Optimizing SEO...");""
     const seoComponent = "import Head from "next/head"";";interface SEOProps {"}
 export const "SEO": React.FC<SEOProps> = ({";  title = "Zion Tech Group - Advanced AI Solutions", ";  description = "Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.", ";  keywords = "AI, artificial intelligence, cloud computing, digital transformation, automation", ";  image = "/og-image.jpg", ";  url = ""https"://ziontechgroup.com", ";  type = "website""}) => {"}
@@ -151,26 +157,20 @@ module.exports = DeploymentAutomation";"
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-    console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
-class EnhancedAppImprover {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.improvements = [];
-    this.fixes = [];
-  }
 
-  async runImprovements() {
-    console.log('🚀 Enhanced App Improver Starting...');
 
+<<<<<<< HEAD
     try {
       await this.optimizePerformance();
       await this.improveCodeQuality();
@@ -857,3 +857,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

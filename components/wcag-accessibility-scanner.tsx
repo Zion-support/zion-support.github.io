@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 export default function WCAGScannerPage() { return null; }
+=======
+export default function WCAGScannerPage() {;
+  const service = extraServices && extraServices.find(s =>;
+    s && s.link.endsWith('/wcag-accessibility-scanner');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );  if (!service) return null;import { Star } from 'lucide-react';
 export default function WCAGScannerPage() { return null; }
         <title>{service && service.name} - Zion Tech Group</title>;'
         <meta name='description' content={service && service.description} />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import Head from 'next/head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
@@ -11,8 +20,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function WCAGScannerPage() {
-  );
-  if (!service) return null;
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -70,10 +78,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <Button'
                 href='/contact''
                 variant='quantum''
                 size='lg''
+=======
+              <Button
+                href='/contact'
+                variant='quantum'
+                size='lg'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='w-full'>;
                 Start Trial;'
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -252,6 +267,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 }
 

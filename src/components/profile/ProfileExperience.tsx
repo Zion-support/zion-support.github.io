@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from 'lucide-react'
@@ -113,6 +114,21 @@ import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from 'lucide-react';
+=======
+
+}
+
+              <p className="text-zion-slate">{exp.description}</p>
+            </div>
+          </div>
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
+import { Briefcase } from 'lucide-react';
+interface ProfileExperienceProps {;,
+  experience: ProfileExperienceType[];
+}
+;
+export function ProfileExperience({ experience }:,  ProfileExperienceProps) {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
 
@@ -139,12 +155,21 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
             </div>;
 
             <div>;
+<<<<<<< HEAD
+=======
+              <h4 className="text-white font-medium">{exp.role}</h4>;
+              <div className="text-zion-cyan mb-1">{exp.company}</div>;
+              <div className="text-sm text-zion-slate-light mb-2">;
+                {exp.startDate} - {exp.current ? 'Present' : exp.endDate}'
+                {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h4 className='text-white font-medium'>{exp && exp.role}</h4>;
               <div className='text-zion-cyan mb-1'>{exp && exp.company}</div>;
               <div className='text-sm text-zion-slate-light mb-2'>;
                 {exp && exp.startDate} - {exp && exp.current ? 'Present' : exp && exp.endDate}
               </div>;
               <p className='text-zion-slate'>{exp && exp.description}</p>            </div>              <p className="text-zion-slate">{exp && exp.description}</p>;
+<<<<<<< HEAD
 =======
           </div>"
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;'
@@ -168,6 +193,8 @@ export function ProfileExperience() { return null; }
               </div>;"
               <p className="text-zion-slate">{exp.description}</p>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
           </div>;
         ))}
@@ -175,6 +202,7 @@ export function ProfileExperience() { return null; }
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -185,10 +213,18 @@ export function ProfileExperience() { return null; }
       <h3 className='text - xl font - bold text - white mb - 4'>Experience</h3>;'
       <div className='space - y-6'>;
 <<<<<<< HEAD
+=======
+  );
+}
+    <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
+      <h3 className='text - xl font - bold text - white mb - 4'>Experience</h3>;
+      <div className='space - y-6'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {experience.map (exp => (
           <div key={exp.id} className='flex'>;
             <div className='mr - 4'>;
               <div className='h - 10 w - 10 rounded - full bg - zion - purple / 20 flex items - center justify - center'>;
+<<<<<<< HEAD
                 <Briefcase className='h - 5 w - 5 text - zion - purple' />    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb-8">;
       <h3 className="text - xl font - bold text - white mb-4">Experience</h3>;
       <div className="space-y-6">;
@@ -225,11 +261,31 @@ export function ProfileExperience() { return null; }
               </div>;'"
               <p className='text - zion - slate'>{exp.description}</p>            </div>              <p className="text - zion - slate">{exp.description}</p>;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+                <Briefcase className='h - 5 w - 5 text - zion - purple' />    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;
+      <h3 className="text - xl font - bold text - white mb - 4">Experience</h3>;
+      <div className="space - y-6">;
+        {experience.map ((exp, ) => (
+          <div key={exp.id} className="flex">;
+            <div className="mr - 4">;
+              <div className="h - 10 w - 10 rounded - full bg - zion - purple / 20 flex items - center justify - center">;
+                <Briefcase className="h - 5 w - 5 text - zion - purple" />;
+              </div>;
+            </div>;
+            <div>;
+              <h4 className='text - white font - medium'>{exp.role}</h4>;
+              <div className='text - zion - cyan mb - 1'>{exp.company}</div>;
+              <div className='text - sm text - zion - slate - light mb - 2'>;
+                {exp.start_date} - {exp.current ? 'Present' : exp.end_date}'
+              </div>;
+              <p className='text - zion - slate'>{exp.description}</p>            </div>              <p className="text - zion - slate">{exp.description}</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
           </div>))}
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -244,3 +300,10 @@ export function ProfileExperience() { return null; }
 =======
 ;'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+;
+;
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

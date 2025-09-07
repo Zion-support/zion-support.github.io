@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 pr-12243
@@ -6,10 +7,14 @@ pr-12243
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 
 interface UltraFuturisticBackgroundProps {}
   children: React.ReactNode;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   variant?: 'quantum' | 'neon' | 'cyber';
@@ -18,6 +23,9 @@ interface UltraFuturisticBackgroundProps {}
 pr-12243
 =======
   variant?: 'quantum' | 'matrix' | 'neon';
+=======
+variant?: 'quantum' | 'matrix' | 'neon';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   intensity?: 'low' | 'medium' | 'high';
   className?: string;
 }
@@ -58,7 +66,12 @@ export default function UltraFuturisticBackground({
   enableNeonEffects?: boolean;
   enableSpaceTime?: boolean;
   variant?: 'quantum' | 'neon' | 'cyber';
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+variant?: 'quantum' | 'neon' | 'cyber';
+  intensity?: 'low' | 'medium' | 'high';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   className?: string;
 }
 
@@ -88,7 +101,12 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({}
   enableNeonEffects = true,
   enableSpaceTime = true,
   variant = 'quantum',
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+variant = 'quantum',
+  intensity = 'medium',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   className = ''
 }) => {}
   const getBackgroundClasses = () => {'
@@ -102,12 +120,17 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({}
       case 'cyber':
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return `${baseClasses} bg-gradient-to-br from-green-900 via-slate-900 to-blue-900`;
 
 pr-12243
 =======
         return `${baseClasses} bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900`;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        return `${baseClasses} bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900`;
+return `${baseClasses} bg-gradient-to-br from-green-900 via-slate-900 to-blue-900`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       default:
 =======
 
@@ -119,7 +142,14 @@ pr-12243
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getIntensityClasses = () => {
+=======
+  return (
+    <div className={`${getBackgroundClasses()} ${className}`}>
+      <div className="absolute inset-0 bg-black/20" />
+const getIntensityClasses = () => {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     switch (intensity) {
       case 'low':
         return 'opacity-30';
@@ -144,6 +174,7 @@ pr-12243
       </div>
       
       {/* Content */}
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -153,6 +184,8 @@ pr-12243
     <div className={`${getBackgroundClasses()} ${className}`}>
       <div className="absolute inset-0 bg-black/20" />
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="relative z-10">
         {children}
       </div>
@@ -164,6 +197,7 @@ export default UltraFuturisticBackground;
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -172,3 +206,5 @@ pr-12243
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

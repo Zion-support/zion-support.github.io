@@ -1,20 +1,27 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
 import { NavigationButtonsProps } from "./types",;
+=======
+import { Button } from "@/components/ui/button";""
+import { Loader2 } from "lucide-react";""
+import { NavigationButtonsProps } from "./types";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 export const NavigationButtons = ({;
   onBack,;
   onNext,;
-  isNextDisabled = false,;
-  backLabel = "Back",;
-  nextLabel = "Next",;
+  isNextDisabled = false,;"
+  backLabel = "Back",;""
+  nextLabel = "Next",;")
   isLoading = false} NavigationButtonsProps) => {;
+<<<<<<< HEAD
   return (;
     <div className="flex justify-between">;
       {onBack && (;
@@ -41,23 +48,28 @@ export const NavigationButtons = ({;
 =======
   ),;
 },; export const NavigationButtons = ({
+=======
+  return (;"
+    <div className="flex justify-between">;"
+</div>"
+        <Button variant="outline" onClick={onBack}>;          {backLabel}"
+
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+"
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
+</Loader2>
+    </div>;"
+  return (<div className="flex justify-between" > {"
+  onBack && (<Button variant="outline" onClick= {"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   onBack;
-onNext;
-isNextDisabled = false;
-backLabel = "Back";
-nextLabel = "Next";
-isLoading = false 
-}: NavigationButtonsProps) => {
-  return (<div className="flex justify-between" > {
-  onBack && (<Button variant="outline" onClick= {
-  onBack 
 }> {
-  backLabel 
-}</Button>) 
-}{
+)
+}) 
   onNext && (<Button onClick= {
-  onNext 
+  onNext;
 }disabled= {
+<<<<<<< HEAD
   isNextDisabled || isLoading 
 }> {
   isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" /> 
@@ -67,3 +79,9 @@ isLoading = false
 }</div>) 
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  isNextDisabled || isLoading;
+  isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />"
+</Loader2>)
+}</div>) "
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

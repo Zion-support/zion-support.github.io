@@ -34,8 +34,14 @@ import {ResumeWizard, as, WizardComponent} from './wizard';
 export function ResumeWizard() {;
   return <WizardComponent />;
 }
+import { ResumeWizard, as, WizardComponent  } from './wizard';
+export /**
+ * ResumeWizard - Function description
+ */
+function ResumeWizard() {
 
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
@@ -48,6 +54,8 @@ export function ResumeWizard() {
 export function ResumeWizard() {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return <WizardComponent />;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 import {ResumeWizard, as, WizardComponent} from './wizard';
@@ -86,6 +94,7 @@ export function ResumeWizard() {};
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -96,6 +105,8 @@ export function ResumeWizard() {};
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { ResumeWizard as WizardComponent } from './wizard',;
 ;
 export function ResumeWizard() { return null; }
@@ -115,9 +126,13 @@ import { ResumeWizard as WizardComponent } from './wizard';
 export function ResumeWizard() {};
 =======
 import { ResumeWizard as WizardComponent } from './wizard';
+
+
+import { ResumeWizard, as, WizardComponent } from "./wizard";"
 export function ResumeWizard() {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return <WizardComponent />;
+<<<<<<< HEAD
 }
 }
 ;
@@ -129,24 +144,37 @@ export function ResumeWizard() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-import {ResumeWizard, as, WizardComponent} from './wizard';
-export function ResumeWizard() {
+
+
+
+
+  return <WizardComponent />,;
+
+
   return <WizardComponent />
-import { ResumeWizard as WizardComponent } from './wizard';
-export function ResumeWizard() {
+
+
+"
+pr-12325
+</WizardComponent>
   return <WizardComponent />;
-}
-export function ResumeWizard() {;
+</WizardComponent>
   return <WizardComponent />;
 }
 ;
+<<<<<<< HEAD
 
 
 
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</WizardComponent>"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 '

@@ -44,7 +44,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const messageChannelHandler = {
-
+  sendMessage: (message: string) => {},
+  receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
 <<<<<<< HEAD
@@ -61,6 +62,12 @@ type MessageHandler = {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
+export const messageChannelHandler: MessageHandler = {
+  sendMessage: (_message) => {
+    // No-op: placeholder for message channel integration
+  },
+  receiveMessage: (_callback) => {
+    // No-op: placeholder for message listener registration
   sendMessage: (message: string) => {
     // Implementation for sending messages
     // eslint-disable-next-line no-console
@@ -103,14 +110,45 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 export class MessageChannelHandler {;
 =======
 // Message channel handler for real-time communication
+export interface MessageChannel {
+  id: string;
+  name: string;
+  type: 'direct' | 'group' | 'channel';
+  participants: string[];
+  createdAt: string;
+  lastMessageAt?: string;
+}
+
+export interface Message {
+  id: string;
+  channelId: string;
+  senderId: string;
+  content: string;
+  timestamp: string;
+  type: 'text' | 'image' | 'file';
+  metadata?: any;
+}
+
 export class MessageChannelHandler {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   private channels: Map<string, MessageChannel> = new Map();
-  createChannel(id: string): MessageChannel {
-    const channel = new MessageChannel();
-    this.channels.set(id, channel);
+  private messages: Map<string, Message[]> = new Map();
+
+  createChannel(name: string, type: MessageChannel['type'], participants: string[]): MessageChannel {
+    const channel: MessageChannel = {
+      id: Math.random().toString(36).substr(2, 9),
+      name,
+      type,
+      participants,
+      createdAt: new Date().toISOString()
+    };
+    
+    this.channels.set(channel.id, channel);
+    this.messages.set(channel.id, []);
+    
     return channel;
   }
+<<<<<<< HEAD
   getChannel(id: string): MessageChannel | undefined {
     return this.channels.get(id);
   }
@@ -159,8 +197,35 @@ export default MessageChannelHandler;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+  sendMessage(channelId: string, senderId: string, content: string, type: Message['type'] = 'text'): Message {
+    const message: Message = {
+      id: Math.random().toString(36).substr(2, 9),
+      channelId,
+      senderId,
+      content,
+      timestamp: new Date().toISOString(),
+      type
+    };
+    
+    const channelMessages = this.messages.get(channelId) || [];
+    channelMessages.push(message);
+    this.messages.set(channelId, channelMessages);
+    
+    // Update last message timestamp
+    const channel = this.channels.get(channelId);
+    if (channel) {
+      channel.lastMessageAt = message.timestamp;
+    }
+    
+    return message;
+  }
 
+  getChannelMessages(channelId: string): Message[] {
+    return this.messages.get(channelId) || [];
+  }
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -182,6 +247,7 @@ export default MessageChannelHandler;
 
 },;
 ,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -205,3 +271,10 @@ export default MessageChannelHandler;
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+;
+  getChannel(channelId: string): MessageChannel | undefined {
+    return this.channels.get(channelId);
+  }
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

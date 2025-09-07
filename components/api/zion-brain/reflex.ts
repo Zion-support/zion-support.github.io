@@ -1,9 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {
-  const token = null;
+function isAuthorized(req: NextApiRequest): boolean {}
+  const token = null;}
       return res.status(500).json({ error: 'Reflex failure' })
+<<<<<<< HEAD
     }
 import {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -180,12 +185,43 @@ return res.status (405).json ({ error: 'Method not allowed' });'
 '
   return res.status(405).json({ error: 'Method not allowed' });
 '
+=======
+
+  }
+
+return res.status (405).json ({ error: 'Method not allowed',}
+});
+}      append_log ({ module: 'reflex',}
+  type: 'metrics', status: 'ok', latency_ms, payload: { metrics, triggers } });
+      return res.status (200).json ({ triggers });
+    } catch (e: any) {}
+      append_log ({ module: 'reflex',
+  type: 'metrics', status: 'error',}
+  payload: { error: e?.message || 'unknown' },
+});
+      return res.status (500).json ({ error: 'Reflex failure',}
+});
+  }
+  return res.status (405).json ({ error: 'Method not allowed',}
+});
+
+  return res.status(405).json({ error: 'Method not allowed',}
+});
+
+  return res.status(405).json({ error: 'Method not allowed' });
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return res.status(405).json({ error: 'Method not allowed' });
 }
 
 <<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

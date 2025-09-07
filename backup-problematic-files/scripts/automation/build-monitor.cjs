@@ -1,51 +1,47 @@
-#!/""usr/bin/env"" node;
-#!/usr/bin/env node;
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
+#!/usr/bin/env node;"
 
 const fs = require('fs');
 const path = require('path');
 const { exec, execSync } = require('child_process');
-
 class BuildMonitor {}
   constructor() {}
     this.projectRoot = '/workspace';
-    this.logDir = path.join(this.projectRoot, 'logs');
+
     this.checkInterval = 10 * 60 * 1000; // 10 minutes;
     this.isRunning = false;
     this.fixesApplied = [];
     this.errorsFound = [];
     this.startTime = Date.now();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.ensureDirectories();
     this.setupSignalHandlers()};
   ensureDirectories() {}
     if (!fs.existsSync(this.logDir)) {}
-      fs.mkdirSync(this.logDir, { "recursive": true })};
+      fs.mkdirSync(this.logDir, { "recursive": true })};"
   };
 ;
-  async checkBuildHealth() {}
+  async checkBuildHealth() {}"
   this.log("Checking build health...");
-    const result = await this.runCommand("npm run build");
-    if (result.success) {}
+    const result = await this.runCommand("npm run build");"
+    if (result.success) {}"
   this.log("Build completed successfully", "success");
-      return true} else {this.log(`Build "failed": ${result.output}`, "error");this.errorsFound.push(`Build "failed": ${result.output}`);
+      return true} else {this.log(`Build "failed": ${result.output}, "error");this.errorsFound.push(`Build "failed": ${result.output});"
       return false};
-  };
-;
-  async fixBuildIssues(buildError) {}
-  this.log("Attempting to fix build issues...");
-    // Try to install dependencies first;
-    const installResult = await this.runCommand("npm install");
-    if (installResult.success) {}
-  this.fixesApplied.push("Installed missing dependencies")};
-    ;
+  async fixBuildIssues(buildError) {}"
+  this.log("Attempting to fix build issues...");"
+    // Try to install dependencies first;"
+    const installResult = await this.runCommand("npm install");"
+    if (installResult.success) {}"
+  this.fixesApplied.push("Installed missing dependencies")};"
 
+<<<<<<< HEAD
 setupSignalHandlers() {}
     process.on('SIGTERM', () => this.shutdown());
     process.on('SIGINT', () => this.shutdown())};
@@ -108,14 +104,32 @@ setupSignalHandlers() {}
         resolve({})
           "success": error === null,
           duration,
+=======
+setupSignalHandlers() {}"
+
+      return { "success": false, "output": error.message, "code": error.status }};"
+  async runBuild() {}
+    return new Promise((resolve) => {}
+      const startTime = Date.now();
+      "
+
+        "maxBuffer": 1024 * 1024 * 10 // 10MB buffer;"
+      }, (error, stdout, stderr) => {}
+        const endTime = Date.now();
+        const duration = Math.round((endTime - startTime) / 1000);
+        resolve({})"
+          "success": error === null,"
+          duration,"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           "output": stdout,
           "error": stderr,
-          "errorMessage": error ? error.message : null;
+          "errorMessage": error ? error.message : null;"
         })})})};
   async runTypeCheck() {}
-    return new Promise((resolve) => {}
-      exec('npm run type-check', { "cwd": this.projectRoot }, (error, stdout, stderr) => {}
+    return new Promise((resolve) => {}"
+      exec('npm run type-check, { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
         const errorCount = stderr ? (stderr.match(/error TS/g) || []).length : 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -127,12 +141,17 @@ setupSignalHandlers() {}
           "output": stdout,
           "errors": stderr;
         })})})};
+=======
+          errorCount,"
+
+          "errors": stderr;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runLintCheck() {}
-    return new Promise((resolve) => {}
-      exec('npm run lint', { "cwd": this.projectRoot }, (error, stdout, stderr) => {}
+
         const output = stdout + stderr;
         const errorCount = output ? (output.match(/error/g) || []).length : 0;
         const warningCount = output ? (output.match(/warning/g) || []).length : 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -140,38 +159,23 @@ setupSignalHandlers() {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         resolve({})
           "success": error === null,
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           errorCount,
           warningCount,
           output;
-        })})})};
   async checkDiskSpace() {}
-    return new Promise((resolve) => {}
-      exec('df -h .', { "cwd": this.projectRoot }, (error, stdout) => {}
-        if (error) {}
-          resolve({ "available": 'unknown', "percentage": 0 }
-});
-          return};
+
+          return};"
         const lines = stdout.trim().split('\n');
         if (lines.length > 1) {}
           const parts = lines[1].split(/\s+/);
-          const percentage = parseInt(parts[4].replace('%', ''));
-          resolve({ "available": parts[3], percentage })} else {}
-          resolve({ "available": 'unknown', "percentage": 0 })};
-      })})};
-  async checkMemoryUsage() {}
-    return new Promise((resolve) => {}
-      exec('free -m', { "cwd": this.projectRoot }, (error, stdout) => {}
-        if (error) {}
-          resolve({ "used": 0, "total": 0, "percentage": 0 }
-});
-          return};
-        const lines = stdout.trim().split('\n');
-        if (lines.length > 1) {}
-          const parts = lines[1].split(/\s+/);
+
           const total = parseInt(parts[1]);
           const used = parseInt(parts[2]);
           const percentage = Math.round((used / total) * 100);
           resolve({ used, total, percentage })} else {}
+<<<<<<< HEAD
           resolve({ "used": 0, "total": 0, "percentage": 0 })};
       })})};
   async checkBuildHealth() {}
@@ -199,6 +203,10 @@ setupSignalHandlers() {}
 =======
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          resolve({ "used": 0, "total": 0, "percentage": 0 })};"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Try to install dependencies first;
     const installResult = await this.runCommand('npm install');
     if (installResult.success) {}
@@ -209,6 +217,7 @@ setupSignalHandlers() {}
       this.fixesApplied.push('TypeScript compilation successful')} else {}
       this.fixesApplied.push('TypeScript errors detected - manual review needed')};
     // Try to fix linting errors;
+<<<<<<< HEAD
     const lintResult = await this.runCommand('npx eslint --fix src/');
     if (lintResult.success) {}
       this.fixesApplied.push('Auto-fixed linting errors')};
@@ -301,12 +310,22 @@ setupSignalHandlers() {}
         const buildHealthy = await this.checkBuildHealth();
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      "summary": {}"
+        buildSuccessful: this.errorsFound.length === 0,"
+        "totalErrors": this.errorsFound.length,
+        "totalFixes": this.fixesApplied.length;"
+
+        const buildHealthy = await this.checkBuildHealth();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         if (!buildHealthy) {}
           await this.fixBuildIssues();
           await this.fixMissingModules();
           await this.fixSyntaxErrors();
           await this.fixTypeErrors()};
         await this.generateReport();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         this.log('info', 'Build monitoring cycle completed');
@@ -326,24 +345,26 @@ setupSignalHandlers() {}
 =======
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Wait before retrying;
         await new Promise(resolve => setTimeout(resolve, 60000)); // 1 minute;
-      };
     }  };
-  shutdown() {}
-    this.log('info', 'Shutting down Build Monitor...');
-    this.isRunning = false;
+  shutdown() {}"
+
     process.exit(0)};
-};
-;
 
 // Start the build monitor;
 const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
+<<<<<<< HEAD
   console.error('Failed to start Build "Monitor": ', error);
   process.exit(1)}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

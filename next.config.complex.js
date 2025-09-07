@@ -8,6 +8,11 @@
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+
+
+
 /** @type {import ('next').NextConfig} */;
 const next_config = {}
   reactStrictMode: true,
@@ -16,6 +21,7 @@ const next_config = {}
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },'
   page_extensions: ['tsxtsjsxjs'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -28,9 +34,18 @@ const next_config = {}
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 /** @type {import('next').NextConfig} */;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+
+
+
+
+
+/** @type {import('next').NextConfig} */;
 const nextConfig = {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,10 +54,39 @@ const nextConfig = {;
 =======
 /** @type {import('next').NextConfig} */;
 
+=======
+
+/** @type {import('next').NextConfig} */;
+const nextConfig = {reactStrictMode: true;
+  compress: true;
+  poweredByHeader: false;
+  eslint: { ignoreDuringBuilds: true }
+  typescript: { ignoreBuildErrors: true }
+  pageExtensions: ['tsxtsjsxjs'];
+  // Image optimization;
+  images: {domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"];
+    formats: ['image/webpimage/avif'];
+  }
+  // Output configuration;
+  output: 'standalone';
+  // Trailing slash;
+  trailingSlash: false;
+  // Base path;
+  basePath: '';
+  // Asset prefix;
+  assetPrefix: '';
+  // Generate ETags;
+  generateEtags: true;
+  // Dist directory;
+  distDir: '.next';
+}
+module.exports = nextConfig;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const nextConfig = {;
   reactStrictMode: true;
   reactStrictMode: true,;
   reactStrictMode: true;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -74,6 +118,21 @@ const nextConfig = {;
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
+
+
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
+
+
+
+  reactStrictMode: true,;
+  reactStrictMode: true;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
@@ -92,19 +151,36 @@ const nextConfig = {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+
+
+
+
+
   // Image optimization;
+<<<<<<< HEAD
   images: {}
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],'
+=======
+  images: {,
+  domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     formats: ['image / webpimage / avif'];
   },
   // Output configuration;'
   output: 'standalone',
   // Trailing slash;
   trailing_slash: false,
+<<<<<<< HEAD
   // Base path;'
   base_path: '',
   // Asset prefix;'
   asset_prefix: '',
+=======
+  // Base path;
+  base_path: ,
+  // Asset prefix;
+  asset_prefix: ,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // Generate ETags;
   generate_etags: true,
 <<<<<<< HEAD
@@ -118,6 +194,14 @@ module.exports = nextConfig,;
 =======
   dist_dir: '.next';
 },
+
+
+
+
+module.exports = next_config,
+
+
+
 module.exports = next_config,
 <<<<<<< HEAD
 <<<<<<< HEAD

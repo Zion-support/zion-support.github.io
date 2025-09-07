@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/security-config.js
 =======
 =======
@@ -17,6 +18,8 @@
 
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -49,6 +52,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 const securityHeaders = [{ key: "X-DNS-Prefetch-Control",value: "on" },{ key: "Strict-Transport-Security",value: "max-age=630720;0;0; includeSubDomains; preload" },{ key: "X-XSS-Protection",value: "1; mode=block" },{ key: "X-Frame-Options",value: "SAMEORIGIN" },{ key: "X-Content-Type-Options",value: "nosniff" },{ key: "Referrer-Policy",value: "origin-when-cross-origin" }]; module.exports = { securityHeaders };'"'"
 const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "key": 'Strict-Transport-Security',"value": 'max-age=630720;0;0; includeSubDomains; preload' },{ "key": 'X-XSS-Protection',"value": '1; mode=block' },{ "key": 'X-Frame-Options',"value": 'SAMEORIGIN' },{ "key": 'X-Content-Type-Options',"value": 'nosniff' },{ "key": 'Referrer-Policy',"value": 'origin-when-cross-origin' }]; module.exports = { securityHeaders };''
+<<<<<<< HEAD
 const securityHeaders = [{ key: "X-DNS-Prefetch-Control",value: "on" },{ key: "Strict-Transport-Security",value: "max-age=630720;0;0; includeSubDomains; preload" },{ key: "X-XSS-Protection",value: "1; mode=block" },{ key: "X-Frame-Options",value: "SAMEORIGIN" },{ key: "X-Content-Type-Options",value: "nosniff" },{ key: "Referrer-Policy",value: "origin-when-cross-origin" }]; module.exports = { securityHeaders };'"'"
 const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "key": 'Strict-Transport-Security',"value": 'max-age=630720;0;0; includeSubDomains; preload' },{ "key": 'X-XSS-Protection',"value": '1; mode=block' },{ "key": 'X-Frame-Options',"value": 'SAMEORIGIN' },{ "key": 'X-Content-Type-Options',"value": 'nosniff' },{ "key": 'Referrer-Policy',"value": 'origin-when-cross-origin' }]; module.exports = { securityHeaders };''
 <<<<<<< HEAD
@@ -99,6 +103,16 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
+
+
+
+<
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const securityHeaders = [
 <<<<<<< HEAD
 =======
@@ -133,9 +147,14 @@ const securityHeaders = ["
   { key: "X-Content-Type-Options", value: "nosniff" },"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   { key: "Referrer-Policy", value: "origin-when-cross-origin" }
+
+
+
+
 ];
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,12 +215,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+
+
+module.exports = { securityHeaders };
+<
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -211,3 +237,24 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 export { securityHeaders };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+const securityHeaders = [{ key: "X-DNS-Prefetch-Control",value: "on" },{ key: "Strict-Transport-Security",value: "max-age=630720;0;0; includeSubDomains; preload" },{ key: "X-XSS-Protection",value: "1; mode=block" },{ key: "X-Frame-Options",value: "SAMEORIGIN" },{ key: "X-Content-Type-Options",value: "nosniff" },{ key: "Referrer-Policy",value: "origin-when-cross-origin" }]; module.exports = { securityHeaders };'"'"""
+const securityHeaders = [{ "key": 'X-DNS-Prefetch-Control',"value": 'on' },{ "key": 'Strict-Transport-Security',"value": 'max-age=630720;0;0; includeSubDomains; preload' },{ "key": 'X-XSS-Protection',"value": '1; mode=block' },{ "key": 'X-Frame-Options',"value": 'SAMEORIGIN' },{ "key": 'X-Content-Type-Options',"value": 'nosniff' },{ "key": 'Referrer-Policy',"value": 'origin-when-cross-origin' }]; module.exports = { securityHeaders };
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+ursor/integrate-build-improve-and-re-verify-8f7d;
+pr-12325
+const securityHeaders = [
+  { key: "X-DNS-Prefetch-Control", value: "on" },""
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },""
+  { key: "X-XSS-Protection", value: "1; mode=block" },""
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },""
+  { key: "X-Content-Type-Options", value: "nosniff" },""
+  { key: "Referrer-Policy", value: "origin-when-cross-origin" }"]
+];
+
+export { securityHeaders };
+
+
+"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

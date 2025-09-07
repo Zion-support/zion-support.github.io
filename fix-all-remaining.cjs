@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -60,64 +61,16 @@ const helpCategories = [
       "API documentation",
       "Integration guides"
     ]
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
-];
+}
 
-const popularArticles = [
-  {
-    titl: "How to get started with our AI solutions",
-    categor: "Getting Started",
-    readTim: "5 min"
-  },
-  {
-    titl: "Setting up cloud migration",
-    categor: "Technical Support",
-    readTim: "10 min"
-  },
-  {
-    titl: "Understanding your billing",
-    categor: "Account & Billing",
-    readTim: "3 min"
-  }
-];
 
-export default function Help() {
-  return (
-    <Layout>
-      <Head>
-        <title>Help Center - Zion Tech Group</title>
-        <meta name="description" content="Find answers to your questions and get help with our services." />
-      </Head>
 
-      <main>
-        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center"
-              initial={{ opacit: 0, y: 30 }}
-              animate={{ opacit: 1, y: 0 }}
-              transition={{ duratio: 0.8 }}
-            >
-              <h1 className="text-4xl: md:text-6xl font-bold mb-6">
-                Help Center
-              </h1>
-              <p className="text-xl: md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Find answers to your questions and get the support you need.
-              </p>
-              <div className="max-w-2xl mx-auto">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search for help articles..."
-                    className="w-full px-6 py-4 pr-12 rounded-lg text-gray-900"
-                  />
-                  <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
+<<<<<<< HEAD
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -413,3 +366,5 @@ console.log('✅ Fixed industries/education.tsx');
 
 console.log('🎉 All remaining syntax errors fixed!');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

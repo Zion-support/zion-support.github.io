@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -17,7 +18,23 @@ import { Link } from "react-router-dom",
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
 
+
+import { Button } from "@/components/ui/button",;
+
+import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card",;
+import { Link } from "react-router-dom",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+import { Button } from "@/components/ui/button",""
+import { Card, CardContent } from "@/components/ui/card";""
+import { Link } from "react-router-dom";""
+import { Card, CardContent } from "@/components/ui/card",""
+import { Link } from "react-router-dom",""
+pr-12325
 import { Button  } from '@/components / ui / button';
 import { Card, CardContent  } from '@/components / ui / card';
 =======
@@ -66,8 +83,13 @@ export function EmptyState() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 }
+
 export function EmptyState() {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}export function EmptyState() {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <Card className="bg-muted/30">
       <CardContent className="pt-6 text-center">
@@ -140,7 +162,6 @@ export function EmptyState() {}
 =======
       </CardContent>
 
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -166,7 +187,11 @@ export function EmptyState() {
   );
 }
     </Card>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      </CardContent>    </Card>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 }
     </Card>
@@ -196,6 +221,7 @@ export function EmptyState() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
     </Card>
   )"
 import { Button } from "@/components/ui/button",;"
@@ -232,3 +258,75 @@ export function EmptyState() { return null; }
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+ * EmptyState - Function description;
+ */
+function EmptyState() {
+  return (
+import { Button  } from '@/components / ui / button';''
+import { Card, CardContent  } from '@/components / ui / card';''
+import { Link  } from './react-router-dom';'
+
+export /**
+ * EmptyState - Function description;
+ */
+function EmptyState() {
+
+  return ('
+    <Card className="bg-muted/30">;"
+"
+      <CardContent className="pt-6 text-center">;"
+        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>;""
+        <p className="text-muted-foreground mb-4">;"
+</p>
+        </p>;"
+        <Button className="mt-4" asChild>;"
+          <Link to="/jobs">Browse Jobs;"
+        ;
+      ;)
+    );"
+    <Card className="bg-muted/30">"
+      <CardContent className="pt-6 text-center">"
+        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>""
+        <p className="text-muted-foreground mb-4">"
+        </p>"
+        <Button className="mt-4" asChild>"
+          <Link to="/jobs">Browse Jobs"
+    ;"
+pr-12325
+</Button>"
+          <Link to="/jobs">Browse Jobs</Link>"
+        </Button>
+      </CardContent>"
+    <Card className="bg-muted/30">"
+</Card>"
+      <CardContent className="pt-6 text-center">"
+</CardContent>"
+        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>""
+        <p className="text-muted-foreground mb-4">"
+</p>
+        </p>"
+        <Button className="mt-4" asChild>"
+</Button>"
+          <Link to="/jobs">Browse Jobs</Link>"
+        </Button>
+      </CardContent>
+    </Card>
+    </Card>;
+    </Card>"
+    <Card className="bg-muted/30">;"
+</Card>"
+      <CardContent className="pt-6 text-center">;"
+</CardContent>"
+        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>;""
+        <p className="text-muted-foreground mb-4">;"
+</p>
+        </p>;"
+        <Button className="mt-4" asChild>;"
+</Button>"
+          <Link to="/jobs">Browse Jobs</Link>;"
+        </Button>;
+      </CardContent>;
+    </Card>;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

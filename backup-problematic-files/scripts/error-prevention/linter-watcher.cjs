@@ -1,26 +1,21 @@
-#!/usr/bin/env node;
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 class LinterWatcher {}
   constructor() {}
     this.isRunning = false;
-    this.watchPaths = ['components', 'pages', 'scripts'];
-    this.interval = 30000; // 30 seconds;
-  };
-  async start() {}
-    console.log('Starting Linter Watcher...');
+
     this.isRunning = true;
-    
     // Initial lint check;
     await this.runLint();
-    
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     
@@ -50,10 +45,12 @@ class LinterWatcher {}
 
       child.stdout.on('data', (data) => {}
         output += data.toString()}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 });
-
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 =======
@@ -69,10 +66,16 @@ class LinterWatcher {}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.log('Lint check passed ✓')) {}
      {}
           console.log('Lint check passed ✓')}} else {}
           console.log('Lint check failed ✗');
+<<<<<<< HEAD
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
           
@@ -93,10 +96,14 @@ class LinterWatcher {}
       const child = spawn('npm', ['run', '"lint": fix'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       };);
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -153,3 +160,15 @@ module.exports = LinterWatcher;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+"
+
+// Start the watcher if run directly;
+  const watcher = new LinterWatcher) {}
+  const watcher = new LinterWatcher}(;);
+  // Handle graceful shutdown;
+
+  watcher.start().catch(console.error)};
+module.exports = LinterWatcher;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

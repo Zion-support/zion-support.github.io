@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { format } from "date-fns";
@@ -18,11 +19,15 @@ import {
 =======
 import React from "react",
 import { format } from "date-fns",
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Card;
   CardContent;
   CardHeader;
+<<<<<<< HEAD
   CardTitle;
   CardDescription
 } from "@/components/ui/card",
@@ -355,3 +360,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5,8 +6,11 @@
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function useResumeEnhancer() {;
 
+export function useResumeEnhancer() {;
 
 <<<<<<< HEAD
 =======
@@ -38,6 +42,7 @@ export function useResumeEnhancer() {;
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -288,6 +293,9 @@ if ( {) {}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+export function useResumeEnhancer() {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -308,6 +316,21 @@ import { useState } from 'react',;'
 import { supabase } from '@/integrations/supabase/client',;
 ;'
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;
+}
+    enhance_content;
+    is_enhancing;}
+    error;}
+  }
+}
+
+
+  }
+}
+'
+import { useState } from 'react',;''
+import { supabase } from '@/integrations/supabase/client',;'
+;'
+type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;'
 ;
 export function useResumeEnhancer() { return null; }
       const { data, error } = await supabase.functions.invoke('resume-enhancer', {;
@@ -340,7 +363,11 @@ export function useResumeEnhancer() { return null; }
 } const enhanceContent = async (content: string, type: EnhancementType = 'general', context?: string) : Promise<string | null> => {}
   setIsEnhancing (true);
 setError (null);
+<<<<<<< HEAD
 try {}
+=======
+try {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
           context;
         }
@@ -365,7 +392,29 @@ try {}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;
+  const [isEnhancing, setIsEnhancing] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  ):Promise<string | null> => {;
+} const enhanceContent = async (content: string, type: EnhancementType = 'general', context?: string) : Promise<string | null> => {
+pr-12325
+</string>
+  ):Promise<string | null> => {;
+</string>'
+} const enhanceContent = async (content: string, type: EnhancementType = 'general', context?: string) : Promise<string | null> => {'
+</string>'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

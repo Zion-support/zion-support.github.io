@@ -10,9 +10,11 @@ import { useState, useEffect } from 'react,;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState,useEffect } from 'react', export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value), useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay), return () => { clearTimeout(handler)}},[value,delay]), return debouncedValue};
-export default useDebounce,
+
 export const useDebounce = <T>(value: T, delay: number): T => {,
+
   const [debouncedValue, setDebouncedValue] = useState<T>(value),
+<<<<<<< HEAD
   useEffect(() => {,
     const handler = setTimeout(() => {,
       setDebouncedValue(value)}, delay),
@@ -42,10 +44,15 @@ origin/automation-improvements-final
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect } from 'react
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState,useEffect } from 'react', export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value), useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay), return () => { clearTimeout(handler)}},[value,delay]), return debouncedValue}
-export default useDebounce
+
 export const useDebounce = <T>(value: T, delay: number): T => {
+
   const [debouncedValue, setDebouncedValue] = useState<T>(value)
+<<<<<<< HEAD
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedValue(value)}, delay)
@@ -66,7 +73,11 @@ export const useDebounce = <T>(value: T, delay: number): T => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { useState, useEffect } from 'react';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export const use_debounce = <T>(value: T, delay: number): T => {
+
   const [debounced_value, setDebouncedValue] = useState < T>(value);
   useEffect (() => {
     const handler = set_timeout (() => {
@@ -84,6 +95,9 @@ export const use_debounce = <T>(value: T, delay: number): T => {
 export default useDebounce;
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: 'T',delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;

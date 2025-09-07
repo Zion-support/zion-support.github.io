@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,6 +14,9 @@
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { jsPDF  } from 'jspdf';
 import { Education  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
@@ -22,6 +26,7 @@ import { Education  } from '@/types/resume';'
 import { PdfThemeColors  } from '../themeConfig';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { formatDate } from '../formatters';
+<<<<<<< HEAD
 export function addEducationSection(';
 import {jsPDF} from 'jspdf';'
 import {Education} from '@/types/resume';'
@@ -29,11 +34,15 @@ import {PdfThemeColors} from '../themeConfig';'
 import {formatDate} from '../formatters';
 export function addEducationSection(;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   doc: jsPDF;
   education: Education[];
   colors: PdfThemeColors;
 <<<<<<< HEAD
   startY: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -638,3 +647,6 @@ doc.text (dateText, 20, yPos + 10);
 }
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

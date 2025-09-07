@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 interface MilestoneSuggestionsProps {
@@ -20,6 +21,11 @@ interface MilestoneSuggestionsProps {
 
 
 =======
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -28,12 +34,17 @@ import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card'
 import { Loader2, Sparkles, Check } from 'lucide-react'
 import { Badge  } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
+<<<<<<< HEAD
 interface MilestoneSuggestionsProps {
 projectName: string;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   scopeSummary: string;
   startDate: Date;
   endDate?: Date;
   projectType: string;
+<<<<<<< HEAD
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 
 export function MilestoneSuggestions({
@@ -278,10 +289,22 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
           disabled={isGenerating || !scopeSummary || !startDate}
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+  return (
+    <div className="space-y-4">
+      {!showSuggestions && (
+        <Button
+          variant="outline"
+          onClick={handleGenerateMilestones}
+          disabled={isGenerating || !scopeSummary || !startDate}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className="w-full"
         >
           {isGenerating ? (
             <>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -293,6 +316,9 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
 =======
+=======
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           variant='outline'
           onClick={handleGenerateMilestones}
           disabled={isGenerating |!scopeSummary |!startDate}
@@ -300,11 +326,16 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
           {isGenerating ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Generating milestones...
             </>
           ) : (
             <>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -350,10 +381,40 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
         >;
           {isGenerating ? (;
             <>;"
+=======
+              <Sparkles className="mr-2 h-4 w-4" />"
+
+              <Sparkles className="mr-2 h-4 w-4" />
+
+
+
+<Sparkles className='mr-2 h-4 w-4' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+              Suggest Project Milestones with AI
+            </>
+          disabled={isGenerating || !scopeSummary || !startDate}
+          className='w-full'>;
+          {isGenerating ? (;
+            <>;
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />              Generating milestones...;
+            </>;
+          ) : (;
+            <>;
+              <Sparkles className='mr-2 h-4 w-4' />              Suggest Project Milestones with AI;
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+          variant="outline";
+          onClick={handleGenerateMilestones}
+          disabled={isGenerating || !scopeSummary || !startDate}
+          className="w-full";
+        >;
+          {isGenerating ? (;
+            <>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Generating milestones...;
             </>;
           ) : (;
+<<<<<<< HEAD
             <>;'"
               <Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />;
               Suggest Project Milestones with AI;
@@ -386,11 +447,36 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
             <CardTitle className="text-lg flex items-center">
               <Sparkles className="h-5 w-5 mr-2 text-primary" />
 =======
+=======
+            <>;
+              <Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />;
+              Suggest Project Milestones with AI;
+            </>;
+          )}
+        </Button>
+      )}
+          <CardHeader className="pb-3">"
+            <CardTitle className="text-lg flex items-center">"
+              <Sparkles className="h-5 w-5 mr-2 text-primary" />"
+              <Sparkles className="mr-2 h-4 w-4" />
+              Suggest Project Milestones with AI
+            </>
+          )}
+        </Button>;
+      )}
+
+      {showSuggestions && generatedMilestones.length > 0 && (
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg flex items-center">
+              <Sparkles className="h-5 w-5 mr-2 text-primary" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
 <CardHeader className='pb-3'>
             <CardTitle className='text-lg flex items-center'>
               <Sparkles className='h-5 w-5 mr-2 text-primary' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               AI-Suggested Milestones
 =======
@@ -479,6 +565,50 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
 <<<<<<< HEAD
             <div className="space-y-3">
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+              AI-Suggested Milestones
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">"
+
+
+            <div className="space-y-3">
+<div className='space-y-3'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+              {generatedMilestones.map((milestone, index) => (
+                <div key={index} className="p-3 border rounded-lg bg-muted/10">"
+                  <div className="flex items-center justify-between mb-1">"
+                    <div className="font-medium flex items-center">"
+                      {milestone.title}
+                      <Badge variant="secondary" className="ml-2 text-xs">"
+                        AI Suggested
+                      </Badge>
+                    </div>
+                    <div className="text-sm text-muted-foreground">"
+                    <div className='text-sm text-muted-foreground'>
+                      Due: {formatDate(milestone.dueDate)}
+                    </div>
+                  </div>
+            <div className="space-y-3">"
+              {generatedMilestones.map((milestone, index) => (
+                <div key={index} className="p-3 border rounded-lg bg-muted/10">"
+                  <div className="flex items-center justify-between mb-1">"
+                    <div className="font-medium flex items-center">"
+                      {milestone.title}
+                      <Badge variant="secondary" className="ml-2 text-xs">"
+                        AI Suggested
+                      </Badge>
+                    </div>
+                    <div className="text-sm text-muted-foreground">"
+                      Due: {formatDate(milestone.dueDate)}
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{milestone.description}</p>"
+                  <div className="flex justify-between items-center mt-2 text-sm">"
+            <div className="space-y-3">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {generatedMilestones.map((milestone, index) => (
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">
                   <div className="flex items-center justify-between mb-1">
@@ -492,6 +622,7 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
                       Due: {formatDate(milestone.dueDate)}
                     </div>
                   </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -505,15 +636,24 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="flex justify-between items-center mt-2 text-sm">
 =======
+=======
+                  <p className="text-sm text-muted-foreground">{milestone.description}</p>
+                  <div className="flex justify-between items-center mt-2 text-sm">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <p className='text-sm text-muted-foreground'>
                     {milestone.description}
                   </p>
                   <div className='flex justify-between items-center mt-2 text-sm'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span>Estimated: {milestone.estimatedHours} hours</span>
                   </div>
                 </div>
               ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -545,11 +685,23 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">"
+                <Check className="h-4 w-4 mr-1 text-green-500" />"
+
+              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
+                <Check className="h-4 w-4 mr-1 text-green-500" />
+<div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>
+                <Check className='h-4 w-4 mr-1 text-green-500' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+                These milestones will be added to your contract
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>
             </div>
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -567,19 +719,40 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
           <CardContent>;'"
             <div className='space-y-3'>          <CardHeader className="pb-3">;"
             <CardTitle className="text-lg flex items-center">;"
+=======
+      {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
+        <Card>;
+          <CardHeader className='pb-3'>;
+            <CardTitle className='text-lg flex items-center'>;
+              <Sparkles className='h-5 w-5 mr-2 text-primary' />              AI-Suggested Milestones;
+            </CardTitle>;
+          </CardHeader>;
+          <CardContent>;
+            <div className='space-y-3'>          <CardHeader className="pb-3">;
+            <CardTitle className="text-lg flex items-center">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Sparkles className="h-5 w-5 mr-2 text-primary" />;
               AI-Suggested Milestones;
             </CardTitle>;
           </CardHeader>;
+<<<<<<< HEAD
           <CardContent>;'
             <div className='space-y-3'>;
               {generatedMilestones && generatedMilestones.map((milestone, index) => (;'
                 <div key={index} className='p-3 border rounded-lg bg-muted/10'>;'
                   <div className='flex items-center justify-between mb-1'>;'
+=======
+          <CardContent>;
+            <div className='space-y-3'>;
+              {generatedMilestones && generatedMilestones.map((milestone, index) => (;
+                <div key={index} className='p-3 border rounded-lg bg-muted/10'>;
+                  <div className='flex items-center justify-between mb-1'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div className='font-medium flex items-center'>                      {milestone && milestone.title}'
                       <Badge variant='secondary' className='ml-2 text-xs'>;
                         AI Suggested;
                       </Badge>;
+<<<<<<< HEAD
                     </div>;'
                     <div className='text-sm text-muted-foreground'>;
                       Due: {formatDate(milestone && milestone.dueDate)}
@@ -605,14 +778,46 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
                     </div>;
                   </div>;"
                   <p className="text-sm text-muted-foreground">{milestone && milestone.description}</p>;"
+=======
+                    </div>;
+                    <div className='text-sm text-muted-foreground'>;
+                      Due: {formatDate(milestone && milestone.dueDate)}
+                    </div>;
+                  </div>;
+                  <p className='text-sm text-muted-foreground'>;
+                    {milestone && milestone.description}
+                  </p>;
+                  <div className='flex justify-between items-center mt-2 text-sm'>                    <span>Estimated: {milestone && milestone.estimatedHours} hours</span>;
+                  <p className="text-sm text-muted-foreground">{milestone && milestone.description}</p>;
+                  <div className="flex justify-between items-center mt-2 text-sm">;
+              {generatedMilestones && generatedMilestones.map((milestone, index) => (;
+                <div key={index} className="p-3 border rounded-lg bg-muted/10">;
+                  <div className="flex items-center justify-between mb-1">;
+                    <div className="font-medium flex items-center">;
+                      {milestone && milestone.title}
+                      <Badge variant="secondary" className="ml-2 text-xs">;
+                        AI Suggested;
+                      </Badge>;
+                    </div>;
+                    <div className="text-sm text-muted-foreground">;
+                      Due: {formatDate(milestone && milestone.dueDate)}
+                    </div>;
+                  </div>;
+                  <p className="text-sm text-muted-foreground">{milestone && milestone.description}</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className="flex justify-between items-center mt-2 text-sm">;
                     <span>Estimated: {milestone && milestone.estimatedHours} hours</span>;
                   </div>;
                 </div>;
               ))}
+<<<<<<< HEAD
 '
               <div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>;'"
                 <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;"
+=======
+              <div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>;
+                <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <Check className="h-4 w-4 mr-1 text-green-500" />;
                 These milestones will be added to your contract;
               </div>;
@@ -622,6 +827,7 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
       )}
     </div>;
   );
+<<<<<<< HEAD
 '
     <div className='space - y-4'>;
       {!show_suggestions && (
@@ -648,11 +854,39 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
               Generating milestones...;
             </>) : (
             <>;'"
+=======
+    <div className='space - y-4'>;
+      {!show_suggestions && (
+        <Button;
+          variant='outline';
+          on_click={handleGenerateMilestones}
+          disabled={is_generating || !scope_summary || !start_date}
+          className='w - full'        >;
+          {is_generating ? (
+            <>;
+              <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />              Generating milestones...;
+            </>) : (
+            <>;
+              <Sparkles className='mr - 2 h - 4 w - 4' />              Suggest Project Milestones with AI;
+              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+          variant="outline";
+          on_click={handleGenerateMilestones}
+          disabled={is_generating || !scope_summary || !start_date}
+          className="w - full";
+        >;
+          {is_generating ? (
+            <>;
+              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+              Generating milestones...;
+            </>) : (
+            <>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Sparkles className='mr - 2 h - 4 w - 4' />              <Sparkles className="mr - 2 h - 4 w - 4" />;
               Suggest Project Milestones with AI;
             </>)}
         </Button>)}
       {show_suggestions && generated_milestones.length > 0 && (
+<<<<<<< HEAD
         <Card>;'
           <CardHeader className='pb - 3'>;'
             <CardTitle className='text - lg flex items - center'>;'
@@ -662,19 +896,39 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
           <CardContent>;'"
             <div className='space - y-3'>          <CardHeader className="pb - 3">;"
             <CardTitle className="text - lg flex items - center">;"
+=======
+        <Card>;
+          <CardHeader className='pb - 3'>;
+            <CardTitle className='text - lg flex items - center'>;
+              <Sparkles className='h - 5 w - 5 mr - 2 text - primary' />              AI - Suggested Milestones;
+            </CardTitle>;
+          </CardHeader>;
+          <CardContent>;
+            <div className='space - y-3'>          <CardHeader className="pb - 3">;
+            <CardTitle className="text - lg flex items - center">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Sparkles className="h - 5 w - 5 mr - 2 text - primary" />;
               AI - Suggested Milestones;
             </CardTitle>;
           </CardHeader>;
+<<<<<<< HEAD
           <CardContent>;'
             <div className='space - y-3'>;
               {generated_milestones.map ((milestone, index) => ('
                 <div key={index} className='p - 3 border rounded - lg bg - muted / 10'>;'
                   <div className='flex items - center justify - between mb - 1'>;'
+=======
+          <CardContent>;
+            <div className='space - y-3'>;
+              {generated_milestones.map ((milestone, index) => (
+                <div key={index} className='p - 3 border rounded - lg bg - muted / 10'>;
+                  <div className='flex items - center justify - between mb - 1'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div className='font - medium flex items - center'>                      {milestone.title}'
                       <Badge variant='secondary' className='ml - 2 text - xs'>;
                         AI Suggested;
                       </Badge>;
+<<<<<<< HEAD
                     </div>;'
                     <div className='text - sm text - muted - foreground'>;
                       Due: {format_date (milestone.due_date)}
@@ -706,6 +960,39 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
                 </div>))}'
               <div className='flex items - center justify - center mt - 4 text - sm text - muted - foreground'>;'"
                 <Check className='h - 4 w - 4 mr - 1 text - green - 500' />                These milestones will be added to your contract              <div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground">;"
+=======
+                    </div>;
+                    <div className='text - sm text - muted - foreground'>;
+                      Due: {format_date (milestone.due_date)}
+                    </div>;
+                  </div>;
+                  <p className='text - sm text - muted - foreground'>;
+                    {milestone.description}
+                  </p>;
+                  <div className='flex justify - between items - center mt - 2 text - sm'>                    <span > Estimated: {milestone.estimated_hours} hours</span>;
+                  <p className="text - sm text - muted - foreground">{milestone.description}</p>;
+                  <div className="flex justify - between items - center mt - 2 text - sm">;
+              {generated_milestones.map ((milestone, index) => (
+                <div key={index} className="p - 3 border rounded - lg bg - muted / 10">;
+                  <div className="flex items - center justify - between mb - 1">;
+                    <div className="font - medium flex items - center">;
+                      {milestone.title}
+                      <Badge variant="secondary" className="ml - 2 text - xs">;
+                        AI Suggested;
+                      </Badge>;
+                    </div>;
+                    <div className="text - sm text - muted - foreground">;
+                      Due: {format_date (milestone.due_date)}
+                    </div>;
+                  </div>;
+                  <p className="text - sm text - muted - foreground">{milestone.description}</p>;
+                  <div className="flex justify - between items - center mt - 2 text - sm">;
+                    <span > Estimated: {milestone.estimated_hours} hours</span>;
+                  </div>;
+                </div>))}
+              <div className='flex items - center justify - center mt - 4 text - sm text - muted - foreground'>;
+                <Check className='h - 4 w - 4 mr - 1 text - green - 500' />                These milestones will be added to your contract              <div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <Check className="h - 4 w - 4 mr - 1 text - green - 500" />;
                 These milestones will be added to your contract;
               </div>;
@@ -713,6 +1000,7 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
           </CardContent>;
         </Card>)}
     </div>);
+<<<<<<< HEAD
 }"
 <Button variant="outline" on_click={}
   handleGenerateMilestones;"
@@ -736,6 +1024,31 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
 <<<<<<< HEAD
 ;
 =======
+=======
+}
+<Button variant="outline" on_click={"
+  handleGenerateMilestones;
+}> {";
+  is_generating ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Generating milestones... </>) : (<> <Sparkles className="mr - 2 h - 4 w - 4" /> Suggest Project Milestones with AI </>);
+}</Button>);
+}AI - Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
+}<div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground" > <Check className="h - 4 w - 4 mr - 1 text - green - 500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>);
+}</div>);
+}"}"
+}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) "
+}</div>)
+}"};
+;
+    </div>;
+  );
+}
+;)
+    </div>;
+  );
+}
+;
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>
   );
 };
@@ -748,7 +1061,11 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) ;
 }</div>) ;
 }"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 ;'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

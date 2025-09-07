@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState, useMemo} from "react";
 import {ProductListing} from "@/types/listings";
 import {SearchSuggestion, FilterOptions} from "@/types/search";
@@ -14,14 +17,19 @@ import {generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS} 
 export function useMarketplaceSearch() {
   // Search state;
   const [searchQuery, setSearchQuery] = useState("");
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
+
+
 import { SearchSuggestion, FilterOptions } from "@/types/search";
 =======
 import { useState, useMemo } from "react","
@@ -32,7 +40,12 @@ import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS 
 export function useMarketplaceSearch() {}
   // Search state";
   const [searchQuery, setSearchQuery] = useState("");
+<<<<<<< HEAD
   // Filter states;
+=======
+
+  // Filter states
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
@@ -43,6 +56,7 @@ export function useMarketplaceSearch() {}
     [];
   );
 
+<<<<<<< HEAD
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions();
     [];
@@ -555,6 +569,9 @@ function useMarketplaceSearch() {}
     handleFilterChange,
     clearAllFilters,
 <<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     filterOptions
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -596,12 +613,80 @@ import { ProductListing } from "@/types/listings",;"
 import { SearchSuggestion, FilterOptions } from "@/types/search",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;
+<<<<<<< HEAD
 export function useMarketplaceSearch() { return null; }
     });
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),;
   // Handle filter changes;
   const handleFilterChange = (filterType: string, value: string) => {;
     switch (filterType) {;'
+=======
+    clearAllFilters,
+    filterOptions;
+  }
+}"
+import { useState, useMemo } from "react",;""
+import { ProductListing } from "@/types/listings",;""
+import { SearchSuggestion, FilterOptions } from "@/types/search",;""
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;"
+export function useMarketplaceSearch() {;
+  // Search state;
+  const [searchQuery, setSearchQuery] = useState(""),;
+    filterOptions;
+}"
+import { useState, useMemo } from "react",;""
+import { ProductListing } from "@/types/listings",;""
+import { SearchSuggestion, FilterOptions } from "@/types/search",;""
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;"
+export function useMarketplaceSearch() {;
+  // Search state;"
+  const [searchQuery, setSearchQuery] = useState(""),;"
+pr-12325
+  // Search state;"
+  const [searchQuery, setSearchQuery] = useState(""),;"
+  // Filter states;
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[] />([]),;
+  const [selectedLocations, setSelectedLocations] = useState<string[] />([]),;
+  const [selectedAvailability, setSelectedAvailability] = useState<string[] />([]),;
+  const [selectedRating, setSelectedRating] = useState<number | null />(null),;
+  // Generate search suggestions and filter options;
+  const searchSuggestions: SearchSuggestion[] = useMemo(;
+    () => generateSearchSuggestions(),;
+    []),;
+  const filterOptions: FilterOptions = useMemo(;
+    () => generateFilterOptions(),;
+    []),;
+  // Filter listings based on current search query and filters;
+  const filteredListings = useMemo(() => {;
+    return MARKETPLACE_LISTINGS.filter(listing => {;
+      // Search query filter;
+      const matchesSearch = !searchQuery ||;
+        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),;
+      // Product type filter;
+      const matchesProductType = selectedProductTypes.length === 0 ||;
+        selectedProductTypes.includes(listing.category),;
+      // Location filter;
+      const matchesLocation = selectedLocations.length === 0 ||;
+        (listing.location && selectedLocations.includes(listing.location)),;
+      // Availability filter;
+      const matchesAvailability = selectedAvailability.length === 0 ||;
+        (listing.availability && selectedAvailability.includes(listing.availability)),;
+      // Rating filter;
+      const matchesRating = selectedRating === null ||;
+        (listing.rating !== undefined && listing.rating >= selectedRating),;
+      return matchesSearch &&;
+        matchesProductType &&;
+        matchesLocation &&;
+        matchesAvailability &&;}
+        matchesRating;}
+    });
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),;
+  // Handle filter changes;
+  const handleFilterChange = (;
+    switch (filterType) {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       case 'productTypes':;
         setSelectedProductTypes((prev: string[]) =>;
           prev.includes(value) ? prev.filter(t => t !== value) : [...prev, value];
@@ -617,16 +702,25 @@ export function useMarketplaceSearch() { return null; }
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value];
         ),;
         break,;
-      default: break;
+      default: break;) => {
+  return $3;}
+}
     }
   },;
   // Clear all filters;
+<<<<<<< HEAD
   const clearAllFilters = () => {;"
     setSearchQuery(""),;
+=======
+  const clearAllFilters = (;
+    setSearchQuery(\"\"),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     setSelectedProductTypes([]),;
     setSelectedLocations([]),;
     setSelectedAvailability([]),;
-    setSelectedRating(null);
+    setSelectedRating(null);) => {
+  return $3;}
+}
   },;
   return {;
     searchQuery,;
@@ -639,6 +733,7 @@ export function useMarketplaceSearch() { return null; }
     setSelectedRating,;
     filteredListings,;
     handleFilterChange;
+<<<<<<< HEAD
     clearAllFilters;
     filterOptions;
 <<<<<<< HEAD
@@ -658,12 +753,17 @@ export function useMarketplaceSearch() { return null; }
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+    clearAllFilters;}
+    filterOptions;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 ;
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -685,3 +785,8 @@ export function useMarketplaceSearch() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</number>"
+pr-12325
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

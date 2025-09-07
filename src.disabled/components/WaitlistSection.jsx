@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
+<<<<<<< HEAD
 =======
 "export\": function WaitlistSection () { const [email,setEmail] = useState (\') const handleSubmit = e => { e.preventDefault () \'';\"";
 export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = e => { e.preventDefault () "";"";"""
@@ -25,6 +26,11 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 =======
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+"export\": function WaitlistSection () { const [email,setEmail] = useState (\') const handleSubmit = e => { e.preventDefault () \'';\"";
+export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = e => { e.preventDefault () "";"";"""
+"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -107,6 +113,7 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = e => { e && e.preventDefault () "";"";"""
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
 
+"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
 <<<<<<< HEAD
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
@@ -125,4 +132,11 @@ export: function WaitlistSection () { const [email,setEmail] = useState (") cons
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 "export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"export\": function WaitlistSection () { const [email,setEmail] = useState (\') const handleSubmit = e => { e.preventDefault () \'';\"";
+export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = e => { e.preventDefault () "";"";"""
+"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e.preventDefault () '';"";""}
+"export": function WaitlistSection () { const [email,setEmail] = useState (') const handleSubmit = (e) => { e && e.preventDefault () '';"";""}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

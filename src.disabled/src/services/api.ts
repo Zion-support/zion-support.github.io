@@ -2,6 +2,10 @@
 export class apiService {;
   constructor() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api"}
   async get() {;
     try {;
@@ -10,6 +14,7 @@ export class apiService {;
     } catch (error) {;
       console && console.error("Error fetching "data": ", error)}
       throw error}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,16 +36,34 @@ export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBL
 export default new apiService()}
 export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this.baseUrl}/api"),} return await response.json(),} } catch (error) {; console.error("Error fetching data:",error),} throw error,} } export default new apiService(),}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+      throw error,
+}
+}
+
+
+
+
+}
+      throw error,
+}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
       throw error,
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default new apiService(),
 
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default new apiService(),
 }
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -53,6 +76,7 @@ export class apiService {; constructor() {; this && this.baseUrl = process && pr
 export default new apiService()}";
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api"),} return await response && response.json(),} } catch (error) {; console && console.error("Error fetching data:",error),} throw error,} } export default new apiService(),}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,6 +146,8 @@ export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBL
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this.baseUrl}/api");,} return await response.json();,} } catch (error) {; console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
 export default new apiService()}
 export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this.baseUrl}/api"),} return await response.json(),} } catch (error) {; console.error("Error fetching data:",error),} throw error,} } export default new apiService(),}
@@ -132,6 +158,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export default new apiService(),
 }
 export class apiService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/api");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
+<<<<<<< HEAD
 export default new apiService()}
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -140,6 +167,10 @@ export default new apiService()}
 ";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"}
   async get() {;
     try {;
@@ -152,4 +183,10 @@ export default new apiService()}
 export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this.baseUrl}/api");,} return await response.json();,} } catch (error) {; console.error("Error fetching data:",error);,} throw error;,} } export default new apiService();,}
 export default new apiService()}
 export class apiService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this.baseUrl}/api"),} return await response.json(),} } catch (error) {; console.error("Error fetching data:",error),} throw error,} } export default new apiService(),}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export default new apiService()}
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

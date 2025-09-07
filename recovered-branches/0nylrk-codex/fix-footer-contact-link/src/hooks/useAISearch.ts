@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {useState} from "react";"
 import {TALENT_PROFILES} from "@/data/talentData";"
 import {JOB_POSTS} from "@/data/jobsData";"
@@ -158,11 +159,18 @@ export interface SearchResult {}
 import { useState } from "react",;"
 import { TALENT_PROFILES } from "@/data/talentData",;"
 import { JOB_POSTS } from "@/data/jobsData",;"
+=======
+
+  description: string
+import { useState } from "react",;
+import { TALENT_PROFILES } from "@/data/talentData",;
+import { JOB_POSTS } from "@/data/jobsData",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { PROJECTS } from "@/data/projectsData",;
 export interface SearchResult {;
   id: string,;"
   type: "talent" | "job" | "project",;
-  title: string,;
+  title: string,,
   description: string;
 }
 ;
@@ -200,12 +208,15 @@ export function useAISearch() {}
   availability?: string | null;
 }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export /**
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -221,6 +232,7 @@ export /**;
  * useAISearch - Function description;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
  */
+<<<<<<< HEAD
 function useAISearch() {}
   const [results, set_results] = useState < SearchResult[]>([]);
   const [loading, set_loading] = useState (false);
@@ -490,11 +502,60 @@ if (return true, ) {}
 export function useAISearch() { return null; }
           headers: { "Content-Type": "application/json" },;
           body: JSON.stringify({ query })}
+=======
+function useAISearch() {
+import { useState } from './react';''
+import { TALENT_PROFILES } from '@/data / talent_data';''
+import { JOB_POSTS } from '@/data / jobs_data';''
+import { PROJECTS } from '@/data / projects_data';'
+export interface SearchResult {
+  // TODO: Implement
+}
+  id: string;,
+  type: "talent" | "job" | "project";"
+  title: string,
+  description: string;
+
+
+interface SearchFilters {
+  // TODO: Implement
+  type?: string | null;
+  skills?: string[] | null;
+  location?: string | null;
+  budget?: { min: number, max: number } | null;
+  availability?: string | null;
+
+
+}
+        // Check condition;
+if (return true, ) {
+  $2;
+
+}
+        return skills?.some ((s) =>;
+          filters.skills!.some ((f) => s.toLowerCase ().includes (f.toLowerCase ())));
+;
+export function useAISearch() {;
+
+  const [results, setResults] = useState<SearchResult[]>([]),;
+  const [loading, setLoading] = useState(false),;
+;
+  const search = async (query:string) => {;
+    setLoading(true),;
+    try {;
+      const response = await fetch(;
+        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",;
+        {;
+          method:"POST",;
+          headers:{ "Content-Type":"application/json" },;
+          body:JSON.stringify({ query })}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ),;
       const data = await response.json(),;
-      const filters: SearchFilters = data.filters || {},;
-      const items: SearchResult[] = [],;
-      const matchSkill = (skills: string[] | undefined) => {;
+      const filters:SearchFilters = data.filters || {},;
+;
+      const items:SearchResult[] = [],;
+      const matchSkill = (skills:string[] | undefined) => {;
         if (!filters.skills || filters.skills.length === 0) return true,;
         return skills?.some((s) =>;
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()));
@@ -645,6 +706,7 @@ export function useAISearch() {;
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return,;
           if (!matchSkill(t.skills)) return,;
 <<<<<<< HEAD
+<<<<<<< HEAD
           items.push({ id:t.id, type:"talent", title:t.full_name, description:t.professional_title }),;
         }),;
       }
@@ -695,57 +757,41 @@ export function useAISearch() {;
           items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
         });
 
+=======
+          items.push({ id:t.id, type:"talent", title:t.full_name, description:t.professional_title }),;
+        }),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       }
 ;
-      // Check condition
-if ( {) {
-  $2
-}
-        TALENT_PROFILES.for_each ((t) => {
-          if (.includes (filters.location.toLowerCase ())) return) {
-  $2
-}
-          if () return) {
-  $2
-}
-          items.push ({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
+      if (!filters.type || filters.type === "job" || filters.type === "all") {;
+        JOB_POSTS.forEach((j) => {;
+          if (!matchSkill(j.skills)) return,;
+          items.push({ id: j.id, type: "job", title: j.title, description: j.description });
         });
       }
-      // Check condition
-if ( {) {
-  $2
-}
-        JOB_POSTS.for_each ((j) => {
-          if () return) {
-  $2
-}
-          items.push ({ id: j.id, type: "job", title: j.title, description: j.description });
+;
+      if (!filters.type || filters.type === "project" || filters.type === "all") {;
+        PROJECTS.forEach((p) => {;
+          items.push({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary });
         });
       }
-      // Check condition
-if ( {) {
-  $2
-}
-        PROJECTS.for_each ((p) => {
-          items.push ({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary });
-        });
-      }
-      set_results (items);
-    } catch (err) {
-      console.error ("search error", err);
-      set_results ([]);
-    } finally {
-      set_loading (false);
+;
+      setResults(items);
+    } catch (err) {;
+      console.error("search error", err);
+      setResults([]);
+    } finally {;
+      setLoading(false);
     }
-
   };
-
-
-
   return { results, loading, search }
 }
-  }
 ;
+<<<<<<< HEAD
   return { results, loading, search }
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</SearchResult>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

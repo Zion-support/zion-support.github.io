@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -83,6 +84,9 @@ import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestim
 import { SEO } from "@/components/SEO";
 export default function EnterprisePlans() {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <SEO"
@@ -154,6 +158,7 @@ import {SEO} from "@/components/SEO";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -169,6 +174,9 @@ import {SEO} from "@/components/SEO";
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -189,7 +197,40 @@ export default function EnterprisePlans() {;
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
+import React from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { EnterpriseHero } from '@/components / enterprise / EnterpriseHero';
+import { EnterprisePricingTable } from '@/components / enterprise / EnterprisePricingTable';
+import { EnterpriseFeatures } from '@/components / enterprise / EnterpriseFeatures';
+import { EnterpriseCTA } from '@/components / enterprise / EnterpriseCTA';
+import { EnterpriseTrustBadges } from '@/components / enterprise / EnterpriseTrustBadges';
+import { EnterpriseTestimonials } from '@/components / enterprise / EnterpriseTestimonials';
+import { SEO } from '@/components / SEO';
+export default /**
+ * EnterprisePlans - Function description
+ */
+function EnterprisePlans() {
+  return (
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",;
+import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable",;
+import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures",;
+import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",;
+import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",;
+import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",;
+import { SEO } from "@/components/SEO",;
+;
+export default function EnterprisePlans() {;
+  return (;
     <>;
+      <SEO ;
+export default function EnterprisePlans() {;
+  return (;
+    <>;
+      <main className="min-h-screen bg-background">;    <>;
       <SEO;
         title="Enterprise Plans - Zion AI Marketplace";
 =======
@@ -218,6 +259,7 @@ import { SEO } from "@/components/SEO";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Header />;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -240,20 +282,112 @@ import { SEO } from "@/components/SEO";
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+      <Header />;    </>);
+
+import React from "react";""
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero";""
+import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable";""
+import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures";""
+import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA";""
+import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges";""
+import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";""
+import { SEO } from "@/components/SEO";"
+export default function EnterprisePlans() {
+  return (
+    <>
+      <SEO;"
+        title="Enterprise Plans - Zion AI Marketplace"""
+        description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.""
+
+      />
+
+      <Header />
+"
+
+</Header>"
+      <main className="min-h-screen bg-background">"
+</main>
+
+        <EnterpriseHero />
+
+        <EnterprisePricingTable />
+
+        <EnterpriseFeatures />
+
+        <EnterpriseTestimonials />
+
+        <EnterpriseTrustBadges />
+
+        <EnterpriseCTA />
+
+      <Footer />
+
+</Footer>
+    </>)
+  );
+}
+import {Header} from "@/components/Header";""
+import {Footer} from "@/components/Footer";""
+import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";""
+import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";""
+import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";""
+import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";""
+import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";""
+import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";""
+import {SEO} from "@/components/SEO";""
+import React from "react",;""
+import { Header } from "@/components/Header",;""
+import { Footer } from "@/components/Footer",;""
+import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",;""
+import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable",;""
+import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures",;""
+import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",;""
+import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",;""
+import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",;""
+export default function EnterprisePlans() {;
+    <>;
+      />;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Header />;
       <main className="min - h-screen bg - background">;
+<main className="min-h-screen bg-background">;
       <main className="min-h-screen bg-background">;
+<<<<<<< HEAD
       <main className="min-h-screen bg-background">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <main className="min-h-screen bg-background">;"
+        title="Enterprise Plans - Zion AI Marketplace";""
+        description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.";"
+
+      />;
+</SEO>
+      <Header />;
+
+</Header>"
+      <main className="min - h-screen bg - background">;"
+</main>"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <EnterpriseHero />;
+
         <EnterprisePricingTable />;
+
         <EnterpriseFeatures />;
+
         <EnterpriseTestimonials />;
+
         <EnterpriseTrustBadges />;
+
         <EnterpriseCTA />;
+
       </main>;
       <Footer />;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -291,11 +425,30 @@ import { SEO } from "@/components/SEO";
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </>);
+}
+pr-12325
+;
+
+    </>);
+}
+    </>;
+  ),;
+} export default function EnterprisePlans () {
+  return (<> <SEO title="Enterprise Plans - Zion AI Marketplace" description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools." min-h-screen bg-background" > <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> </main> <Footer /> </> 
+    </>;
+  );
 }
 ;
 
-
     </>);
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

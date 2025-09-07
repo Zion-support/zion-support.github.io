@@ -2,13 +2,61 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { cva } from "class-variance-authority",
+export const badgeVariants = cva(
+  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus: outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  {
+    variants: {
+      variant: {
+        default:
+          "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+        secondary:
+          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive:
+          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
+        outline: "text-foreground",
+        success: 
+          "border-transparent bg-green-100 text-green-800 hover:bg-green-200/80",
+        warning:
+          "border-transparent bg-yellow-100 text-yellow-800 hover:bg-yellow-200/80",
+        info:
+          "border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200/80"}},
+    defaultVariants: {
+      variant: "default"}}
+),
+import { cva } from "class-variance-authority",;
+export const badgeVariants = cva(;
+  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus: outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",;
+  {;
+    variants: {;
+      variant: {;
+        default:;
+          "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",;
+        secondary:;
+          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",;
+        destructive:;
+          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",;
+        outline: "text-foreground",;
+        success:;
+          "border-transparent bg-green-100 text-green-800 hover:bg-green-200/80",;
+        warning:;
+          "border-transparent bg-yellow-100 text-yellow-800 hover:bg-yellow-200/80",;
+        info:;
+          "border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200/80"}};
+    defaultVariants: {;
+      variant: "default"}}
+);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -76,3 +124,6 @@ export const badgeVariants = cva(;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

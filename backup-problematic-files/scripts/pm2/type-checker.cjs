@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const chokidar = require('chokidar');
-
 class TypeChecker {}
   constructor() {}
     this.logFile = 'logs/pm2/type-checker.log';
@@ -13,24 +12,21 @@ class TypeChecker {}
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true }
+      fs.mkdirSync(logDir, { recursive: true })
 });
-    };
-  };
   log(message) {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     fs.appendFileSync(this.logFile, logMessage);
     console.log(message);
-  };
   error(message) {}
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString();`;
     const errorMessage = `[${timestamp}] ERROR: ${message}\n`;`
     fs.appendFileSync(this.errorFile, errorMessage);
     console.error(message);
-  };
   async runTypeCheck() {}
     try {}
+<<<<<<< HEAD
       this.log('Running TypeScript type check...');
       execSync('npm run type-check', { })
         stdio: 'pipe',
@@ -54,17 +50,24 @@ class TypeChecker {}
       const errors = this.parseTypeScriptErrors(errorOutput);
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      // Parse TypeScript errors from stderr;
+      const errorOutput = err.stderr ? err.stderr.toString() : err.message;
+      const errors = this.parseTypeScriptErrors(errorOutput);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return { success: false, errors: errors.length, errorDetails: errors };
-    };
-  };
   parseTypeScriptErrors(output) {}
     const errors = [];
     const lines = output.split('\n');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const line of lines) {}
       const match = line.match(/^(.+)\((\d+),(\d+)\):\s+error\s+TS(\d+):\s*(.+)$/);
       if (match) {}
@@ -74,14 +77,10 @@ class TypeChecker {}
           column: parseInt(match[3]),
           code: match[4],
           message: match[5];
-        }
-});
-      };
-    };
     return errors;
-  };
-  async fixTypeScriptErrors(errors) {}
+  async fixTypeScriptErrors(errors) {}`;
     this.log(`Attempting to fix ${errors.length} TypeScript errors...`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     let fixedCount = 0;
@@ -93,65 +92,58 @@ class TypeChecker {}
     const filesToFix = new Set();
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    let fixedCount = 0;
+    const filesToFix = new Set();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Group errors by file;
     for (const error of errors) {}
       filesToFix.add(error.file);
-    };
     for (const filePath of filesToFix) {}
-      try {}
         if (fs.existsSync(filePath)) {}
           const fixed = await this.fixFileErrors(filePath, errors.filter(e => e.file === filePath));
           if (fixed) {}
             fixedCount++;
-          };
-        };
-      } catch (err) {}
-        this.error(`Error fixing file ${filePath}: ${err.message}`);
-      };
-    };
+
     this.log(`Fixed TypeScript errors in ${fixedCount} files`);
     return fixedCount;
-  };
   async fixFileErrors(filePath, fileErrors) {}
-    try {}
-      let content = fs.readFileSync(filePath, 'utf8');
+
       let modified = false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       for (const error of fileErrors) {}
         const fix = this.getFixForError(error, content);
         if (fix) {}
           content = fix;
-          modified = true;
-          this.log(`Fixed error in ${filePath} at line ${error.line}: ${error.message}`);
-        };
-      };
+
       if (modified) {}
         fs.writeFileSync(filePath, content);
         return true;
-      };
       return false;
-    } catch (err) {}
-      this.error(`Error fixing file ${filePath}: ${err.message}`);
-      return false;
-    };
-  };
+
   getFixForError(error, content) {}
     const lines = content.split('\n');
     const lineIndex = error.line - 1;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (lineIndex < 0 || lineIndex >= lines.length) {}
       return null;
-    };
     const line = lines[lineIndex];
     let fixedLine = line;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -553,6 +545,9 @@ if (require.main === module) {}
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    switch (error.code) {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

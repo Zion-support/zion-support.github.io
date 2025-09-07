@@ -29,6 +29,7 @@
 
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
@@ -979,6 +980,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Button>;
   );
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 }
 
@@ -990,7 +993,6 @@ if ( {) {
 <<<<<<< HEAD
     </Button>;
   );
-
 
 }
 ;
@@ -1004,12 +1006,13 @@ if ( {) {
     >;
       {is_processing ? (
         <>;
-          <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
+          <Loader2 className="h - 4 w - 4 mr - 2 animate-spin" />;
           Processing...;
         </>) : (
         button_text)}
     </Button>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1106,16 +1109,24 @@ export function PaymentButton({;
         body:{;
           amount,;
           serviceId,;
+=======
+      className={cn("
+        "relative min-w-[120px]";"
+
+      // Call the create-checkout edge function;"
+      const { data, error } = await supabase && supabase.functions.invoke("create-checkout", {;"
+        body: {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           providerId,;
-          userId:user?.id,;
-          successUrl:redirectUrl || window.location.href,;
-          cancelUrl:window.location.href}}),;
-      ;
+          userId: user?.id,;
+          successUrl: redirectUrl || window && window.location.href,;)
+          cancelUrl: window && window.location.href}}),;
+
       if (error) {;
-        throw error,;
       }
-      ;
+
       if (data?.url) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Open Stripe checkout in a new tab;'
         window.open(data.url, '_blank'),;
@@ -1142,16 +1153,27 @@ export function PaymentButton({;
         description:"There was a problem initiating your payment. Please try again.",;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         variant:"destructive"}),;
+=======
+        // Open Stripe checkout in a new tab;"
+        window && window.open(data && data.url, '_blank');
+      } else {;
+        throw new Error("No checkout URL returned");"
+
+    } catch (error) {;"
+      console && console.error("Payment error:", error);"
+        title: "Payment error",;""
+        description: "There was a problem initiating your payment. Please try again.",;")"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } finally {;
       // Reset button state after a short delay;
       setTimeout(() => {;
-        setIsProcessing(false),;
-      }, 1500),;
-    }
-  },;
-  ;
+        setIsProcessing(false);
+      }, 1500);
+  };
+
   return (;
     <Button;
+<<<<<<< HEAD
       onClick={handlePaymentClick}
       disabled={isProcessing}
 <<<<<<< HEAD
@@ -1171,11 +1193,28 @@ export function PaymentButton({;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
           Processing...;
+=======
+
+
+
+        "relative min-w-[120px]","
+      className={cn(
+        "relative min-w-[120px]""
+  return (
+        className;)
+      )}>;
+
+        <>;"
+          <Loader2 className="h-4 w-4 mr-2 animate-spin" />;"
+</Loader2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </>;
-      ) :(;
-        buttonText;
+      ) : (;
+        buttonText;)
       )}
+
     </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   ),; interface PaymentButtonProps {}
 =======
@@ -1285,15 +1324,46 @@ if (error) {
 }, 1500) 
 }
 };
+=======
+    </Button>;
+    </Button>;
+    </Button>;
+
+    </Button>;
+    </Button>;
+
+    <Button;
+      on_click={handlePaymentClick}
+      disabled={is_processing}
+      className={cn ("
+        "relative min - w-[120px]";")
+        class_name)}
+    >;
+
+          <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;"
+        </>) : ()
+        button_text)}
+    );
+      className={cn(;"
+        "relative min-w-[120px]",;"
+
+      ) :(;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 return (<Button) 
 <<<<<<< HEAD
 }> {"
 =======
 }> {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) 
+=======
+  isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText)"
+    ;"
+pr-12325
+</Loader2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }</Button>) 
-}
     </Button>;
   );
     </Button>;
@@ -1304,6 +1374,7 @@ return (<Button)
 
 
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1318,3 +1389,7 @@ return (<Button)
 =======
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </Button>;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

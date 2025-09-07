@@ -24,6 +24,7 @@ export type Toast = {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   addToast: (toast: Omit<Toast, 'id'>) => string;
+<<<<<<< HEAD
   removeToast: (id: string) => void;
   clearToasts: () => void;
 }
@@ -35,11 +36,12 @@ export type Toast = {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
+
 export function ToastProvider({ children }: { children: React.ReactNode }) {const [toasts, setToasts] = useState<Toast[]>([]);
-  const removeToast = useCallback((id: string) => {;
-    setToasts(prev => prev.filter(t => t.id !== id));
-  }, []);
 
 <<<<<<< HEAD
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
@@ -54,14 +56,10 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {cons
 =======
 const ToastContext = createContext<ToastContextValue | undefined>(undefined)
 
-export function ToastProvider({ children }: { children: React.ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([])
 
-  const removeToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(t => t.id !== id))
-  }, [])
-
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
+<<<<<<< HEAD
     const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
@@ -105,9 +103,15 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+    <ToastContext.Provider value={value}>;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div className={`mt-1 h-2 w-2 rounded-full ${
-                  t.variant === 'success' ? 'bg-emerald-400' : t.variant === 'error' ? 'bg-rose-400' : t.variant === 'info' ? 'bg-sky-400' : 'bg-gray-400'
+                  t.variant === 'success' ? 'bg-emerald-400' : t.variant === 'error' ? 'bg-rose-400' : t.variant === 'info' ? 'bg-sky-400' : 'bg-gray-400`;
                 }`} />
+<<<<<<< HEAD
                 <div className="flex-1">
                   {t.title && <div className="font-medium text-sm">{t.title}</div>}
                   {t.description && <div className="text-xs opacity-80 mt-0.5">{t.description}</div>}
@@ -131,3 +135,13 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   return ctx;
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+</div>
+                <div className="flex-1">"
+</div>"
+                  {t.title && <div className="font-medium text-sm">{t.title}</div>}""
+                  {t.description && <div className="text-xs opacity-80 mt-0.5">{t.description}</div>}""
+                    <button onClick={t.onAction} className="mt-2 text-xs underline underline-offset-2 hover:opacity-80">"
+</button>
+                    </button>;"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

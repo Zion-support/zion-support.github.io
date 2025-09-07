@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -24,20 +25,34 @@ class TypeScriptErrorAutoFixer {}
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+class TypeScriptErrorAutoFixer {}
+  constructor() {}
+    this.projectRoot = process.cwd();
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};
+        fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.fixesApplied = 0;
-    this.filesProcessed = 0};
+    this.filesProcessed = 0};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -46,21 +61,19 @@ class TypeScriptErrorAutoFixer {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${level}] ${message}`)};
+=======
+    console.log(`[${timestamp}] [${level}] ${message})};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runTypeScriptCheck() {}
     try {}
-      this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { "stdio": 'pipe' }
-});
-      return { "success": true, "errors": [], "count": 0 }} catch (error) {}
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseTypeScriptErrors(output);
-      this.log(`TypeScript check failed with ${errors.length} errors`, 'ERROR');
-      return { "success": false, errors, "count": errors.length }};
+
+      return { "success": false, errors, "count": errors.length }};"
   };
-  parseTypeScriptErrors(output) {}
+  parseTypeScriptErrors(output) {}"
     const errorLines = output.split('\n').filter(line => )
-      line.includes('error TS') || line.includes('"error": ');
+
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
     const errors = [];
     let currentError = null;
@@ -70,50 +83,47 @@ class TypeScriptErrorAutoFixer {}
     let currentError = null;
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    const errors = [];
+    let currentError = null;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const line of errorLines) {}
-      if (line.includes('error TS') || line.includes('error:')) {}
+
         const match = line.match(/([^:]+):(\d+):(\d+)/);
         if (match) {}
           if (currentError) {}
             errors.push(currentError)};
           currentError = {}
-            "file": match[1].trim(),
-            "line": parseInt(match[2]),
-            "column": parseInt(match[3]),
-            "message": line.split(' - ')[1] || line,
-            "type": 'typescript'
-          }};
-      } else if (currentError && line.trim()) {}
-        currentError.message += ' ' + line.trim()};
-    };
-    if (currentError) {}
-      errors.push(currentError)};
+
     return errors};
   async fixTypeScriptErrors(errors) {}
     let fixesApplied = 0;
 <<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-    for (const error of errors) {}
-      try {}
-        if (await this.fixSingleError(error)) {}
-          fixesApplied++};
-      } catch (error) {}
-        this.log(`Failed to fix error in ${error.file}: ${error.message}`, 'ERROR')};
-    };
-    return fixesApplied};
-  async fixSingleError(error) {}
-    if (!error.file || !fs.existsSync(error.file)) {}
-      return false};
-    const content = fs.readFileSync(error.file, 'utf8');
-    const lines = content.split('\n');
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    for (const error of errors) {}
+        if (await this.fixSingleError(error)) {}
+          fixesApplied++};
+
+    return fixesApplied};
+  async fixSingleError(error) {}
+    if (!error.file || !fs.existsSync(error.file)) {}
+      return false};
+
+    const lines = content.split('\n');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Apply common TypeScript fixes;
-    const fixes = [this.fixAnyType.bind(this),]
+    const fixes = [this.fixAnyType.bind(this)]
       this.fixMissingImports.bind(this),
       this.fixTypeAnnotations.bind(this),
       this.fixInterfaceIssues.bind(this),
@@ -130,21 +140,16 @@ class TypeScriptErrorAutoFixer {}
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     for (const fix of fixes) {}
-      try {}
         const result = fix(lines, error);
         if (result.modified) {}
-          modifiedContent = result.content;
-          this.log(`Applied fix to ${error.file}: ${result.description}`, 'INFO')};
-      } catch (fixError) {}
-        this.log(`Fix failed for ${error.file}: ${fixError.message}`, 'WARN')};
-    };
+
     if (modifiedContent !== originalContent) {}
       fs.writeFileSync(error.file, modifiedContent);
       return true};
-    return false};
   fixAnyType(lines, error) {}
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
@@ -184,32 +189,38 @@ class TypeScriptErrorAutoFixer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         // Find the last import statement;
         let lastImportIndex = -1;
+=======
+
+</any>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         for (let i = 0; i < lines.length; i++) {}
           if (lines[i].trim().startsWith('import ')) {}
             lastImportIndex = i};
-        };
         if (lastImportIndex >= 0) {}
           lines.splice(lastImportIndex + 1, 0, importStatement)} else {}
           lines.unshift(importStatement)};
         return {}
-          "modified": true,
-          "content": lines.join('\n'),
-          "description": `Added missing import for ${moduleName}
-        }};
-    };
+
+          "description": `Added missing import for ${moduleName}"
+    };"
     return { "modified": false, "content": lines.join('\n') }};
   fixTypeAnnotations(lines, error) {}
+<<<<<<< HEAD
     const lineIndex = error.line - 1;
     const line = lines[lineIndex];
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (error.message.includes('implicitly has an any type')) {}
       // Add type annotation;
       const varMatch = line.match(/(const|let|var)\s+(\w+)\s*=/);
       if (varMatch) {}
         const varName = varMatch[2];
+<<<<<<< HEAD
         const fixedLine = line.replace()
           new RegExp(`(${varMatch[1]}\\s+${varName}\\s*)=`),`
           "$"1": unknown ="
@@ -218,32 +229,29 @@ class TypeScriptErrorAutoFixer {}
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         if (fixedLine !== line) {}
           lines[lineIndex] = fixedLine;
-          return {}
-            modified: true,
-            "content": lines.join('\n'),
-            "description": `Added type annotation for ${varName}
-          }};
-      };
-    };
-    return { "modified": false, "content": lines.join('\n') }};
-  fixInterfaceIssues(lines, error) {}
-    if (error.message.includes('Property') && error.message.includes('does not exist on type')) {}
-      const propMatch = error.message.match(/Property '([^']+)' does not exist on type '([^']+)'/);
+            modified: true,"
+
       if (propMatch) {}
         const propName = propMatch[1];
         const typeName = propMatch[2];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Try to find and extend the interface;
-        for (let i = 0; i < lines.length; i++) {}
-          if (lines[i].includes(`interface ${typeName}`) || lines[i].includes(`type ${typeName}`)) {`}
+
             // Add the missing property;
-            const indent = lines[i].match(/^\s*/)[0];
+            const indent = lines[i].match(/^\s*/)[0];`;
             lines.splice(i + 1, 0, `${indent}  ${propName}?: unknown;`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             
@@ -343,11 +351,21 @@ class TypeScriptErrorAutoFixer {}
       const postCheckResult = await this.runTypeScriptCheck();
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      // Get current TypeScript errors;
+      const checkResult = await this.runTypeScriptCheck();
+      if (checkResult.success) {}
+
+      // Run check again to see if fixes worked;
+      const postCheckResult = await this.runTypeScriptCheck();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const report = {}
-        "timestamp": new Date().toISOString(),
-        "initialErrors": checkResult.errors.length,
-        fixesApplied,
+
+        "initialErrors": checkResult.errors.length,"
+        fixesApplied,"
         "remainingErrors": postCheckResult.errors.length,
+<<<<<<< HEAD
         "success": postCheckResult.success;
       };
 <<<<<<< HEAD
@@ -385,11 +403,24 @@ class TypeScriptErrorAutoFixer {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        "success": postCheckResult.success;"
+      // Save report;`;
+      const reportPath = path.join(this.reportsDir, `typescript-fix-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    // Run initial fix;
+    await this.runAutoFix();
+    // Set up periodic fixing;
+    setInterval(async () => {}
+
+    }, this.fixInterval);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`TypeScript error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
-};
 // Main execution;
 if (require.main === module) {}
   const fixer = new TypeScriptErrorAutoFixer();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -414,6 +445,10 @@ if (require.main === module) {}
   // Start auto-fixer;
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
+=======
+  // Handle graceful shutdown;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     process.exit(1)})};
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -433,6 +468,9 @@ module.exports = TypeScriptErrorAutoFixer;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 module.exports = TypeScriptErrorAutoFixer;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

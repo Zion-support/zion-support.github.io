@@ -21,6 +21,7 @@ const path = require('path')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -66,5 +67,7 @@ console.log(' Starting Master Automation Runner...')
 =======
 
   console.log(' Master Automation "Summary")
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

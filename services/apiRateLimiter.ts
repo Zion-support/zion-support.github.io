@@ -9,8 +9,12 @@
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-  burst_limit: number,
-  window_size: number;
+}
+export interface RateLimitRule {
+
+
+burst_limit: number,
+  window_size: number;}
 
 }
 <<<<<<< HEAD
@@ -21,19 +25,55 @@ export interface RateLimitRule {
 =======
 export interface RateLimitRule {
 export interface RateLimitConfig {
+  requestsPerMinute: number;
+  requestsPerHour: number;
+  requestsPerDay: number;
+  burst_limit: number,
+  window_size: number;
+}
+export interface RateLimitRule {
+
+export interface RateLimitConfig {
+export interface RateLimitRule {export interface RateLimitConfig {
 export interface RateLimitConfig {;
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
+export interface RateLimitRule {}
+}
+export interface RateLimitRule  {id: string;
+  name: string;
+  pattern: string;
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL';
+  config: RateLimitConfig;}
+  enabled: boolean;}
+}
+}}
+export interface RateLimitStats  {endpoint: string;
+export interface RateLimitRule {
+  // TODO: Implement
+}
+export interface RateLimitConfig {
+  // TODO: Implement
+}
+export interface RateLimitConfig {;
+  requestsPerMinute: number;,
+  requestsPerHour: number;
+
+  requestsPerDay: number;,
 
   burst_limit: number,
   window_size: number;
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface RateLimitConfig {
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   burst_limit: number,
   window_size: number;
@@ -89,6 +129,9 @@ export interface RateLimitRule {;
 }
 export interface RateLimitRule {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   name: string;
   pattern: string;
@@ -96,6 +139,7 @@ export interface RateLimitRule {
   config: RateLimitConfig;
   enabled: boolean;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -113,6 +157,11 @@ export interface RateLimitRule {
 
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+}}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface RateLimitStats {
 =======
 export interface RateLimitStats {};
@@ -122,6 +171,7 @@ export interface RateLimitStats {};
   total_requests: number;
   blocked_requests: number;
   averageResponseTime: number;
+<<<<<<< HEAD
   last_request: Date;
 <<<<<<< HEAD
   current_usage: {
@@ -3193,3 +3243,9 @@ topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice 
 }
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+  private apiKey: string;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -26,6 +27,8 @@ import {useNavigate} from 'react-router-dom';
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {toast} from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 import {checkNewRegistration} from "@/utils/authUtils";
@@ -110,9 +113,9 @@ export function useAuthEventHandlers(
         checkNewRegistration(mappedUser)
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-
       }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     // Check if user needs to complete onboarding;
@@ -437,6 +440,17 @@ if ( {) {}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    // Check if user needs to complete onboarding
+    if (!mappedUser.profileComplete && navigate) {
+      setOnboardingStep('profile');
+};
+    }, 0);
+      }
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -487,6 +501,7 @@ export function useAuthEventHandlers(): any (;
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
+}  }
 }
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -512,6 +527,7 @@ export function useAuthEventHandlers(;
   const handleSignedIn = (mappedUser:UserProfile) => {;
     toast({;
 <<<<<<< HEAD
+<<<<<<< HEAD
       title:"Welcome back!",,
   description:`You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;
 =======
@@ -522,6 +538,10 @@ export function useAuthEventHandlers() { return null; }`
       title:"Welcome back!",;
       description:`You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      title:"Welcome back!",,
+  description:`You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       variant:"default"}),;
     ;
     // Check for new registration and send welcome email if needed;
@@ -536,8 +556,8 @@ export function useAuthEventHandlers() { return null; }`
       setOnboardingStep('profile'),;
 <<<<<<< HEAD
       toast({;
-        title:"Complete your profile",;
-        description:"Please complete your profile information to get started",;
+        title:"Complete your profile",,
+  description:"Please complete your profile information to get started",;
         variant:"default"}),;
 =======
       toast({;"
@@ -553,6 +573,7 @@ export function useAuthEventHandlers() { return null; }`
 <<<<<<< HEAD
     toast({;
 <<<<<<< HEAD
+<<<<<<< HEAD
       title:"Signed out",,
   description:"You have been successfully logged out",;
 =======
@@ -564,6 +585,10 @@ export function useAuthEventHandlers() { return null; }`
       title:"Signed out",;
       description:"You have been successfully logged out",;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      title:"Signed out",,
+  description:"You have been successfully logged out",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       variant:"default"}),;
   },;
 ;
@@ -582,13 +607,51 @@ export function useAuthEventHandlers() { return null; }`
 toast ({'
   navigate ('/onboarding');
 }
-};
+}
 };
 }
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+import {toast} from "@/hooks/use-toast";""
+import type { UserProfile } from "@/types/auth";""
+import {checkNewRegistration} from "@/utils/authUtils";""
+import {useNavigate} from 'react-router-dom';
+import { toast } from "@/hooks/use-toast",""
+import { checkNewRegistration } from "@/utils/authUtils";""
+import { useNavigate } from 'react-router-dom';
+import type { UserProfile } from "@/types/auth",""
+import { checkNewRegistration } from "@/utils/authUtils",""
+import { useNavigate } from 'react-router-dom',;
+/**
+ * Custom hook for auth event handling;
+ */
+export function useAuthEventHandlers(
+
+  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
+
+  setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>
+
+  setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,;
+
+  setOnboardingStep: React && React.Dispatch<React && React.SetStateAction<string | null>>;
+
+
+
+  setUser:React.Dispatch<React.SetStateAction<UserProfile | null>>,;
+
+  setOnboardingStep:React.Dispatch<React.SetStateAction<string | null>>;
+)
+pr-12325
+</React>)'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

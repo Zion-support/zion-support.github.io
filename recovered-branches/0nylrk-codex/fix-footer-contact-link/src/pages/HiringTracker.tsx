@@ -51,8 +51,11 @@ function HiringTrackerContent() {}
 
   const [activeTab, setActiveTab] = useState<string>("kanban");
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {AppHeader} from "@/layout/AppHeader";
@@ -114,6 +117,7 @@ import { SEO } from "@/components/SEO","
 import { ProtectedRoute } from "@/components/ProtectedRoute","
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { Briefcase } from "lucide-react",
+<<<<<<< HEAD
 function HiringTrackerContent() {}
   const { jobId } = useParams() as { jobId?: string },"
   const [activeTab, setActiveTab] = useState<string>("kanban"),
@@ -127,6 +131,19 @@ function HiringTrackerContent() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+import { useState } from "react",;
+import { useParams } from "react-router-dom",;
+import { AppHeader } from "@/layout/AppHeader",;
+import { Footer } from "@/components/Footer",;
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { Briefcase } from "lucide-react",;
+function HiringTrackerContent() {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -153,6 +170,49 @@ function HiringTrackerContent() {}
             </h1>
             <p className="text-muted-foreground mt-1">
               Track and manage your candidates through the hiring process
+
+import { useState } from "react";""
+import { useParams } from "react-router-dom";""
+import { AppHeader } from "@/layout/AppHeader";""
+import { Footer } from "@/components/Footer";""
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";""
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
+import { SEO } from "@/components/SEO";""
+import { ProtectedRoute } from "@/components/ProtectedRoute";""
+import { Briefcase } from "lucide-react";"
+function HiringTrackerContent() {
+  const { jobId } = useParams() as { jobId?: string };
+"
+  const [activeTab, setActiveTab] = useState<string>("kanban");"
+</string>"
+  const [activeTab, setActiveTab] = useState<string>("kanban");"
+</string>"
+  const [activeTab, setActiveTab] = useState<string>("kanban"),"
+</string>
+    <>
+      <SEO;"
+        title="Hiring Tracker | Zion AI Marketplace"""
+        description="Manage your candidate pipeline in the Zion AI Marketplace.""
+
+      />
+</SEO>
+      <AppHeader />
+
+</AppHeader>"
+      <main className="container mx-auto px-4 py-8">"
+</main>"
+        <div className="flex justify-between items-center mb-8">"
+</div>
+          <div>
+</div>"
+            <h1 className="text-3xl font-bold flex items-center">"
+</h1>"
+              <Briefcase className="mr-2 h-6 w-6 text-primary" />"
+</Briefcase>
+            </h1>"
+            <p className="text-muted-foreground mt-1">"
+</p>
             </p>
           </div>
         </div>
@@ -177,6 +237,81 @@ function HiringTrackerContent() {}
         </Tabs>
       </main>
       <Footer />
+import { useState } from "react";""
+import { useParams } from "react-router-dom";""
+import { AppHeader } from "@/layout/AppHeader";""
+import { Footer } from "@/components/Footer";""
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";""
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
+import { SEO } from "@/components/SEO";""
+import { ProtectedRoute } from "@/components/ProtectedRoute";""
+import { Briefcase } from "lucide-react";"
+function HiringTrackerContent() {
+  const { jobId } = useParams() as { jobId?: string };
+"
+  const [activeTab, setActiveTab] = useState<string>("kanban");"
+</string>"
+  const [activeTab, setActiveTab] = useState<string>("kanban"),"
+</string>
+    <>
+      <SEO;"
+        title="Hiring Tracker | Zion AI Marketplace"""
+        description="Manage your candidate pipeline in the Zion AI Marketplace.""
+      />
+
+      <AppHeader />
+      <main className="container mx-auto px-4 py-8">"
+</main>"
+        <div className="flex justify-between items-center mb-8">"
+</div>
+          <div>
+</div>"
+            <h1 className="text-3xl font-bold flex items-center">"
+</h1>"
+              <Briefcase className="mr-2 h-6 w-6 text-primary" />"
+
+            <p className="text-muted-foreground mt-1">"
+</p>
+
+        <Tabs;"
+          defaultValue="kanban""
+          onValueChange={setActiveTab}"
+          className="mb-8""
+        >
+
+          <TabsList>
+            <TabsTrigger value="kanban">Kanban Board""
+            <TabsTrigger value="analytics">Analytics"
+          <TabsContent value="kanban" className="mt-6">"
+
+            <KanbanBoard jobId={jobId} />
+
+          <TabsContent value="analytics" className="mt-6">"
+
+            <HiringAnalytics jobId={jobId} />
+
+      </main>
+      <Footer />
+
+pr-12325
+</TabsContent>
+
+            <KanbanBoard jobId={jobId} />
+</KanbanBoard>
+          </TabsContent>
+
+"
+          <TabsContent value="analytics" className="mt-6">"
+</TabsContent>
+
+            <HiringAnalytics jobId={jobId} />
+</HiringAnalytics>
+          </TabsContent>
+        </Tabs>
+      </main>
+      <Footer />
+</Footer>
     </>
 <<<<<<< HEAD
   )
@@ -348,6 +483,7 @@ function HiringTrackerContent() {;
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 export default function HiringTracker() {;
   return (;
@@ -410,6 +546,8 @@ export default function HiringTracker() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
@@ -450,7 +588,23 @@ function HiringTrackerContent() {;
 =======
 ;
   return (
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { useState } from "react",;
+import { useParams } from "react-router-dom",;
+import { AppHeader } from "@/layout/AppHeader",;
+import { Footer } from "@/components/Footer",;
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { Briefcase } from "lucide-react",;
+function HiringTrackerContent() {;
+  const { jobId } = useParams() as { jobId?: string },;
+  const [activeTab, setActiveTab] = useState<string>("kanban");  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>;
       <SEO;"
         title="Hiring Tracker | Zion AI Marketplace";"
@@ -458,20 +612,26 @@ function HiringTrackerContent() {;
       />;
 <<<<<<< HEAD
       <AppHeader />;
-      <main className="container mx - auto px - 4 py - 8">;
-        <div className="flex justify - between items - center mb - 8">;
+      <main className="container mx - auto px - 4 py-8">;
+        <div className="flex justify - between items - center mb-8">;
           <div>;
-            <h1 className="text - 3xl font - bold flex items - center">;
-              <Briefcase className="mr - 2 h - 6 w - 6 text - primary" />;
+            <h1 className="text - 3xl font - bold flex items-center">;
+              <Briefcase className="mr - 2 h - 6 w - 6 text-primary" />;
               Hiring Pipeline;
             </h1>;
-            <p className="text - muted - foreground mt - 1">;
-              Track and manage your candidates through the hiring process;
-            </p>;
-          </div>;
-        </div>;
-        <Tabs default_value="kanban" onValueChange={setActiveTab} className="mb - 8">;
-          <TabsList>;
+            <p className="text - muted - foreground mt-1">;
+        title="Hiring Tracker | Zion AI Marketplace" 
+        description="Manage your candidate pipeline in the Zion AI Marketplace." 
+      />;
+      <AppHeader />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="flex justify-between items-center mb-8">;
+          <div>;
+            <h1 className="text-3xl font-bold flex items-center">;
+              <Briefcase className="mr-2 h-6 w-6 text-primary" />;
+              Hiring Pipeline;
+            </h1>;
+            <p className="text-muted-foreground mt-1">;          <TabsList>;
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>;
             <TabsTrigger value="analytics">Analytics</TabsTrigger>;
 <<<<<<< HEAD
@@ -502,16 +662,56 @@ function HiringTrackerContent() {;
           </TabsContent>;"
 =======
           </TabsList>;
-          <TabsContent value="kanban" className="mt - 6">;
+
+
+    <ProtectedRoute>
+</ProtectedRoute>
+      <HiringTrackerContent />
+
+    <>;
+        title="Hiring Tracker | Zion AI Marketplace";""
+        description="Manage your candidate pipeline in the Zion AI Marketplace.";"
+
+      />;
+
+      <AppHeader />;
+
+</AppHeader>"
+      <main className="container mx - auto px - 4 py - 8">;"
+        <div className="flex justify - between items - center mb - 8">;"
+          <div>;
+            <h1 className="text - 3xl font - bold flex items - center">;"
+              <Briefcase className="mr - 2 h - 6 w - 6 text - primary" />;"
+
+            </h1>;"
+            <p className="text - muted - foreground mt - 1">;"
+            </p>;
+          </div>;
+        </div>;"
+        <Tabs default_value="kanban" onValueChange={setActiveTab} className="mb - 8">;"
+
+          <TabsList>;
+            <TabsTrigger value="kanban">Kanban Board;""
+            <TabsTrigger value="analytics">Analytics;"
+          ;"
+          <TabsContent value="kanban" className="mt - 6">;"
+
             <KanbanBoard job_id={job_id} />;
+<<<<<<< HEAD
           </TabsContent>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           <TabsContent value="analytics" className="mt - 6">;
+=======
+
+          <TabsContent value="analytics" className="mt - 6">;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <HiringAnalytics job_id={job_id} />;
-          </TabsContent>;
-        </Tabs>;
+
+          ;
       </main>;
       <Footer />;
+)
     </>);
 
 <<<<<<< HEAD
@@ -527,13 +727,24 @@ function HiringTracker() {}
 ;
 }
 export default /**
- * HiringTracker - Function description
+ * HiringTracker - Function description;
  */
 function HiringTracker() {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <ProtectedRoute>;
+
       <HiringTrackerContent />;
+
+
+} Hiring Tracker | Zion AI Marketplace"description=" Manage your candidate pipeline in the Zion AI Marketplace."/> <AppHeader /> <main className=" container mx-auto px-4 py-8"> <div className=" flex justify-between items-center mb-8"> <div> <h1 className=" text-3xl font-bold flex items-center"> <Briefcase className=" mr-2 h-6 w-6 text-primary"/> Hiring Pipeline </h1> <p className=" text-muted-foreground mt-1"> Track and manage your candidates through the hiring process </p> </div> </div> <TabsList> <TabsTrigger value=" kanban">Kanban Board <TabsTrigger value=" analytics" >Analytics    </main> <Footer /> </>)"
+
+  return (<ProtectedRoute> <HiringTrackerContent />  )"
+pr-12325
+</HiringTrackerContent>)
     </ProtectedRoute>);
 }
 <<<<<<< HEAD
@@ -550,6 +761,7 @@ function HiringTracker() {
 export default function HiringTracker() {;
   return (;
     <ProtectedRoute>;
+</ProtectedRoute>
       <HiringTrackerContent />;
     </ProtectedRoute>;
   ),;
@@ -557,6 +769,7 @@ export default function HiringTracker() {;
 }export default function HiringTracker () {
   return (<ProtectedRoute> <HiringTrackerContent /> </ProtectedRoute> 
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -579,3 +792,11 @@ export default function HiringTracker() {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</HiringTrackerContent>
+    </ProtectedRoute>;"
+} Hiring Tracker | Zion AI Marketplace"description=" Manage your candidate pipeline in the Zion AI Marketplace."/> <AppHeader /> <main className=" container mx-auto px-4 py-8"> <div className=" flex justify-between items-center mb-8"> <div> <h1 className=" text-3xl font-bold flex items-center"> <Briefcase className=" mr-2 h-6 w-6 text-primary"/> Hiring Pipeline </h1> <p className=" text-muted-foreground mt-1"> Track and manage your candidates through the hiring process </p> </div> </div> <TabsList> <TabsTrigger value=" kanban">Kanban Board</TabsTrigger> <TabsTrigger value=" analytics" >Analytics</TabsTrigger> </TabsList> </TabsContent> </Tabs> </main> <Footer /> </>)"
+</AppHeader>
+  return (<ProtectedRoute> <HiringTrackerContent /> </ProtectedRoute> )"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

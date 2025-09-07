@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { forwardRef } from "react",
@@ -78,19 +79,12 @@ interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonE
   href?: string;
   target?: string;
   badge?: React && React.ReactNode;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
-import React, { forwardRef } from "react",
-import { ChevronDown } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { SafeRef } from "@/types/ref-types";
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
-  active?: boolean;
-  href?: string;
-  target?: string;
-  badge?: React && React.ReactNode;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   icon?: React.ReactNode,
   active?: boolean,
@@ -202,6 +196,13 @@ import React, { forward_ref } from './react';
 import { ChevronDown } from './lucide-react';
 import { cn } from '@/lib / utils';
 import { SafeRef } from '@/types / ref - types';
+=======
+
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {;
+
+const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement> {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   icon?: React.ReactNode;
@@ -210,6 +211,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement>
   target?: string;
   badge?: React.ReactNode;
 }
+<<<<<<< HEAD
 const SidebarMenuItem = forward_ref < HTMLButtonElement, SidebarMenuItemProps>(
 <<<<<<< HEAD
   ({ icon, active, children, href, target, badge, class_name, ...props }, ref) => {}
@@ -894,3 +896,6 @@ export { SidebarMenuItem, SidebarMenuGroup };
 =======
 export { SidebarMenuItem, SidebarMenuGroup };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

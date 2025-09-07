@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 // This file fixes the ref type issues in sidebar components;
 // Export a placeholder to ensure the file is recognized as a module;
 export const SIDEBAR_REF_TYPE_FIX = true;
@@ -325,3 +326,9 @@ export type SidebarContext = {;
 };
 };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+// This file fixes the ref type issues in sidebar components
+
+// Export a placeholder to ensure the file is recognized as a module
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

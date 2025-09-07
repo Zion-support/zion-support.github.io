@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 };
 </header> {;
@@ -39,10 +40,16 @@ export default function InnovationDigest(): any ({ items }: Props) {;
 
 <<<<<<< HEAD
 import fs from 'fs',
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import path from 'path';
 import type { GetStaticProps } from 'next';
+
 type Item = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
+
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -61,6 +68,7 @@ export default function InnovationDigest({ items }: Props) {}
         <div className="text-gray-600 dark:text-gray-400">No entries yet. The automation will populate this feed shortly.</div>
       )}"
       <ul className="space-y-4">
+<<<<<<< HEAD
         {items.map((it, idx) => ("
           <li key={idx} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">"
             <div className="flex items-center justify-between gap-4">"
@@ -69,6 +77,16 @@ export default function InnovationDigest({ items }: Props) {}
             </div>"
             <a href={it.url} target="_blank" rel="noreferrer" className="mt-1 block font-medium text-blue-600 dark:text-cyan-400">{it.title}</a>"
             {it.summary && <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{it.summary}</p>}
+=======
+        {items.map((it, idx) => (
+          <li key={idx} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+            <div className="flex items-center justify-between gap-4">
+              <div className="text-xs uppercase tracking-wide text-gray-500 dark: text-gray-400">{it.source;}</div>
+              {it.date && <div className="text-xs text-gray-500 dark: text-gray-400">{new Date(it.date).toLocaleString();}</div>}
+            </div>
+            <a href={it.url} target="_blank" rel="noreferrer" className="mt-1 block font-medium text-blue-600 dark: text-cyan-400">{it.title;}</a>
+            {it.summary && <p className="mt-2 text-sm text-gray-600 dark: text-gray-300">{it.summary;}</p>}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </li>
         ))}
       </ul>;
@@ -93,6 +111,7 @@ function InnovationDigest() {}
         <h1 className="text - 3xl font - bold">Innovation Digest</h1>;"
         <p className="text - gray - 600 dark:text - gray - 300">Latest AI research and tools—auto - curated.</p>;
       </header>;
+<<<<<<< HEAD
       {items.length === 0 && ("
         <div className="text - gray - 600 dark:text - gray - 400">No entries yet. The automation will populate this feed shortly.</div>)}"
       <ul className="space - y-4">;
@@ -112,3 +131,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      {items.length === 0 && (
+        <div className="text - gray - 600 dark: text - gray - 400">No entries yet. The automation will populate this feed shortly.</div>);}
+      <ul className="space - y-4">;
+        {items.map ((it, idx) => (
+          <li key={idx} className="p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900">;
+            <div className="flex items - center justify - between gap - 4">;
+              <div className="text - xs uppercase tracking - wide text - gray - 500 dark: text - gray - 400">{it.source;}</div>;
+              {it.date && <div className="text - xs text - gray - 500 dark: text - gray - 400">{new Date (it.date).toLocaleString ();}</div>}
+            </div>;
+            <a href={it.url} target="_blank" rel="noreferrer" className="mt - 1 block font - medium text - blue - 600 dark: text - cyan - 400">{it.title;}</a>;
+            {it.summary && <p className="mt - 2 text - sm text - gray - 600 dark: text - gray - 300">{it.summary;}</p>}
+          </li>))}
+      </ul>;
+    </div>);
+origin/cursor/automate-test-improve-and-merge-code-2533
+      </ul>
+);
+}
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Document, {
@@ -76,6 +77,9 @@ function Document() {}
   Main,
   NextScript,;
   DocumentContext,;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export default function Document() {}
   return ("
@@ -99,6 +103,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"

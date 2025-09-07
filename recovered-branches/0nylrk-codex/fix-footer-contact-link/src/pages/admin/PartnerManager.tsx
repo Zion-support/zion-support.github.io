@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -93,12 +94,22 @@ interface PartnerProfile {}
 ;
   commission_rate?: number;
 }
+=======
+
+interface PartnerProfile {
+  id: string;
+    user_id: string;
+name: string;
+status: 'pending' | 'approved' | 'rejected'
+  created_at: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
 
+<<<<<<< HEAD
   const navigate = useNavigate();
   const navigate = useNavigate();
 
@@ -1607,6 +1618,15 @@ function PartnerTable({}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}: PartnerTableProps) {
+  if (isLoading) {
+    return (
+      <div className=\"text-center py-8\" />;
+        <p className=\"text-zion-slate-light\" />Loading partner data...</p>;
+      </div>;}
+    );}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1615,16 +1635,22 @@ function PartnerTable({}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return (
+<<<<<<< HEAD
       <div className="text-center py-8">;
 =======
     return ("
       <div className="text-center py-8">;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-zion-slate-light">No partners found.</p>;
+=======
+      <div className=\"text-center py-8\" />;
+        <p className=\"text-zion-slate-light\" />No partners found.</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>;
     );
   }
   return (
+<<<<<<< HEAD
     <Table>;
 <<<<<<< HEAD
       <TableHeader>;
@@ -1658,17 +1684,41 @@ function PartnerTable({}
             <TableCell className="font - medium text - white">;"
               <div className="flex items - center gap - 2">;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    <Table />;
+      <TableHeader />;
+        <TableRow className=\"hover:bg-transparent\" />;
+          <TableHead  /> Name</TableHead>;
+          <TableHead  /> Niche</TableHead>;
+          <TableHead  /> Audience</TableHead>;
+          <TableHead  /> Status</TableHead>;
+          <TableHead  /> Date</TableHead>;
+          <TableHead className=\"text-right\" />Actions</TableHead>;
+        </TableRow>;
+      </TableHeader>;
+      <TableBody />;
+        {partners.map ((partner) => (}
+          <TableRow key={partner.id} className=\"border - zion - blue - light hover:bg - zion - blue-light / 10\" />;
+            <TableCell className=\"font - medium text-white\" />;
+              <div className=\"flex items - center gap-2\" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {partner.name}
                 {getFraudFlagBadge (partner.fraud_flags)}
               </div>;
             </TableCell>;
+<<<<<<< HEAD
             <TableCell>{partner.niche}</TableCell>;
             <TableCell>;'
+=======
+            <TableCell />{partner.niche}</TableCell>;
+            <TableCell />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {partner.audience_size.replace ('k, 000').replace ('- - ').replace ('over_over ')}
             </TableCell>;
-            <TableCell>{getStatusBadge (partner.status)}</TableCell>;
-            <TableCell>;
+            <TableCell />{getStatusBadge (partner.status)}</TableCell>;
+            <TableCell />;
               {new Date (partner.created_at).toLocaleDateString ()}
+<<<<<<< HEAD
             </TableCell>;"
                       className="text-green-500 hover:text-green-600 hover:bg-green-900/20";
                     >;"
@@ -1708,22 +1758,39 @@ function PartnerTable({}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   size="sm"
                   onClick={() => onViewDetails(partner)}
+=======
+            </TableCell>;
+                      className=\"text-green-500 hover:text-green-600 hover:bg-green-900/20\";
+                    >;
+                      <Check className=\"h-4 w-4\" />;
+                      <span className=\"sr-only\" />Approve</span>;
+                    </Button>;
+                  </>;
+                )}
+                <Button;
+variant=\"outline\"
+                <Button;
+variant=\"outline\" 
+                  size=\"sm\"
+                  onClick={() = /> onViewDetails(partner)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <>;
                     <Button;
-                      variant="ghost";
-                      size="sm";
-                      on_click={() => onUpdateStatus (partner.id, 'rejected')}
-                      className="text - red - 500 hover:text - red - 600 hover:bg - red-900 / 20";
+                      variant=\"ghost\";
+                      size=\"sm\";
+                      on_click={() = /> onUpdateStatus (partner.id, 'rejected')}
+                      className=\"text - red - 500 hover:text - red - 600 hover:bg - red-900 / 20\";
                     >;
-                      <X className="h - 4 w-4" />;
-                      <span className="sr-only">Reject</span>;
+                      <X className=\"h - 4 w-4\" />;
+                      <span className=\"sr-only\" />Reject</span>;
                     </Button>;
                     <Button;
-                      variant="ghost";
-                      size="sm";
-                      on_click={() => onUpdateStatus (partner.id, 'approved')}
-                      className="text - green - 500 hover:text - green - 600 hover:bg - green-900 / 20";
+                      variant=\"ghost\";
+                      size=\"sm\";
+                      on_click={() = /> onUpdateStatus (partner.id, 'approved')}
+                      className=\"text - green - 500 hover:text - green - 600 hover:bg - green-900 / 20\";
                     >;
+<<<<<<< HEAD
                       <Check className="h - 4 w-4" />;
                       <span className="sr-only">Approve</span>;
 =======
@@ -1777,6 +1844,25 @@ function PartnerTable({}
                   variant="outline";"
                   size="sm";
                   on_click={() => onViewDetails (partner)}
+=======
+                      <Check className=\"h - 4 w-4\" />;
+                      <span className=\"sr-only\" />Approve</span>;
+                    </Button>;
+                  </>)}
+                <Button;
+                  variant=\"ghost\";
+                  size=\"sm\";
+                  on_click={() = /> onOpenSettings (partner)}
+                  className=\"text - zion - slate - light hover:text-white\";
+                >;
+                  <Settings className=\"h - 4 w-4\" />;
+                  <span className=\"sr-only\" />Settings</span>;
+                </Button>;
+                <Button;
+                  variant=\"outline\";
+                  size=\"sm\";
+                  on_click={() = /> onViewDetails (partner)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
                   View;
                 </Button>;
@@ -1785,6 +1871,7 @@ function PartnerTable({}
           </TableRow>))}
       </TableBody>;
     </Table>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1797,3 +1884,6 @@ function PartnerTable({}
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

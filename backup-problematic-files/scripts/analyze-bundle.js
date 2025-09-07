@@ -1,22 +1,31 @@
 const { BundleAnalyzerPlugin } = // // require('webpack-bundle-analyzer');
+module.exports = (nextConfig = {}) => {
+  return Object.assign({;}, nextConfig, {
+    webpack(config, { isServer }) {
+      if ( {
+        config.plugins.push(
+          new BundleAnalyzerPlugin({
+            "analyzerMode": 'server',
+            "analyzerPort": 'isServer ? 8888 : 8889',
 module && module.exports = (nextConfig = {}) => {
-  return Object && Object.assign({;}, nextConfig, {
+  return Object && Object.assign({;}, nextConfig, {)
     webpack(config, { isServer }) {
       if ( {
         config && config.plugins.push(
           new BundleAnalyzerPlugin({
             "analyzerMode": 'server',
-            "analyzerPort": 'isServer ? 8888 : 8889',
+            "analyzerPort": 'isServer ? 8888 : 8889',')
             "openAnalyzer": 'true'})
         )}
       return config) {
      {
-        config && config.plugins.push(
+        config.plugins.push(
           new BundleAnalyzerPlugin({
             "analyzerMode": 'server',
             "analyzerPort": isServer ? 8888 : 8889,
             "openAnalyzer": true})
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/analyze-bundle.js
 ========
@@ -33,16 +42,28 @@ const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return 
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/analyze-bundle.js
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+<
+            "analyzerPort": isServer ? 8888 : 8889,")"
+            "openAnalyzer": true})"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return config;
   }},
   })}
       return config}}})}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
       return config}}})}
 const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
       return config}}})}
 const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
+<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/analyze-bundle.js
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

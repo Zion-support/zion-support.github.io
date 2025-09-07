@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from './layout/Layout';'
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -27,10 +28,17 @@ class ErrorBoundary extends React.Component {}
 import React, { useState, useEffect } from 'react';'
 import Layout from './layout / Layout';'
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+
+import Layout from './layout/Layout';
+import { motion, AnimatePresence } from 'framer-motion';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, ;
   Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
+<<<<<<< HEAD
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight;'
 } from 'lucide-react';
     {/* Quantum particle effects */}'
@@ -1826,3 +1834,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

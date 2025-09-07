@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const localeToFlag: Record<string, string> = {
 
   en: 'us',
@@ -96,10 +97,15 @@ setOpen(false);
             <li key={lng}>;
               <button'
                 role='option'
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 aria-selected={current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
-origin/cursor/automate-test-improve-and-merge-code-2533
+ ;
   return (
+<<<<<<< HEAD
     <div className="relative">;
       <button"
         aria-haspopup="listbox"
@@ -111,21 +117,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 aria-selected={current && current.startsWith(lng)}"
                 className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
                 onClick={() => changeLanguage(lng)}
+=======
+    <div className=\"relative\" />;
+      <button;"
+aria-haspopup=\"listbox\"
+
+        aria-expanded={open}"
+        className=\"flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800\";
+        onClick={() = /> setOpen((v) => !v)}
+              <button;"
+                role=\"option\";
+                aria-selected={current && current.startsWith(lng)}"
+                className=\"w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900\";
+                onClick={() = /> changeLanguage(lng)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >;
-                <span className={`fi fi-${localeToFlag[lng]}`}></span>;
-                <span>{t(localeLabelKey[lng])}</span>;
+                <span className={`fi fi-${localeToFlag[lng]}`} /></span>;
+                <span />{t(localeLabelKey[lng])}</span>;
               </button>;
             </li>;
           ))}
         </ul>;
       )}
+
     </div>
 );
 }
   );
+<<<<<<< HEAD
 }'
 import {use_translation} from 'react - i18next';'
 import i18n from '../../utils / i18n';'
+=======
+}
+import {use_translation} from 'react - i18next';
+import i18n from '../../utils / i18n';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {supported_locales, is_rtl} from '../../utils / i18n';
 const localeToFlag: Record < string, string> = {'
   en: 'us','
@@ -249,6 +276,14 @@ function LanguageSwitcher() {}
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  );
+}
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

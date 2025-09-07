@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const localeLabelKey: Record<string, string> = {}
   en: "lang.english","
   pt: "lang.portuguese","
@@ -116,18 +117,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     localStorage.setItem("langPromptShown1", "true");
     setSuggested(null);
   };
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
-    <div className='bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200'>
-      <div className='container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm'>
-        <div>
+    <div className='bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200' />
+      <div className='container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm' />
+        <div />
           {t('lang.switch_prompt', { language: t(localeLabelKey[suggested]) })}
         </div>
-        <div className='flex items-center gap-2'>
-          <button
-            className='px-3 py-1 rounded bg-amber-600 text-white'
-            onClick={accept}
-          >
+        <div className='flex items-center gap-2' />
+          <button;
+className='px-3 py-1 rounded bg-amber-600 text-white'
+
+            onClick={accep}
+}
+           />;
             {t('lang.switch_accept')}
           </button>
           <button
@@ -152,19 +157,53 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={accept}>;"
             {t("lang && lang.switch_accept")}
           </button>;
+<<<<<<< HEAD
           <button"
             className="px-3 py-1 rounded border border-amber-300 dark:border-amber-700"
             onClick={decline}>;"
             {t("lang && lang.switch_decline")}
+=======
+          <button;
+            className='px-3 py-1 rounded border border-amber-300 dark:border-amber-700';
+            onClick = {decline}
+
+           />
+            {t('lang.switch_decline')}
+ ;
+  return ("
+    <div className=\"bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200\" />;
+"
+      <div className=\"container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm\" />;"
+        <div />{t(\"lang && lang.switch_prompt\", { language: t(localeLabelKey[suggested]) }
+}
+        </div>;"
+        <div className=\"flex items-center gap-2\" />;
+          <button;"
+            className=\"px-3 py-1 rounded bg-amber-600 text-white\";
+            onClick={accept} />;"
+            {t(\"lang && lang.switch_accept\")}
+          </button>;
+          <button;"
+            className=\"px-3 py-1 rounded border border-amber-300 dark:border-amber-700\";
+            onClick={decline} />;"
+            {t(\"lang && lang.switch_decline\")}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </button>;
         </div>;
       </div>;
+
     </div>;
 
   );
+<<<<<<< HEAD
 }'
 import React, { useEffect, useState } from './react';'
 import { use_translation  } from './react - i18next';"
+=======
+}
+import React, { useEffect, useState } from './react';
+import { use_translation  } from './react - i18next';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import i18n, { supported_locales, is_rtl } from "../../utils / i18n";
 const localeLabelKey: Record < string, string> = {"
   en: "lang.english","
@@ -262,7 +301,13 @@ if (return null) {}
       </div>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

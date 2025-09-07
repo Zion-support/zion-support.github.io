@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,8 +30,306 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+;
+;
+
+export interface EnterpriseItService2029 {
+  \"id\": string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+  "id": string;"
+  name: string;,
+  tagline: string;
+  price: string;,
+  description: string;
+  features: string[];,
+  link: string;
+  category: string;,
+  realImplementation: boolean;
+  contactInfo: {,
+  mobile: string;
+    email: string;,"
+  address: string};export const "enterpriseITServices2029": EnterpriseItService2029[] = [{""
+    id: "2029-enterprise-it",""
+    "name": "2029 Enterprise IT Service Platform",""
+    "tagline": "Enterprise IT services for 2029",""
+    "price": "$599/month",""
+    "description": "Advanced enterprise IT service platform designed for large organizations in 2029.","
+    features["
+      "Enterprise IT services",""
+      "Scalable solutions",""
+      "Advanced security",""
+      "24/7 support",""
+      "Custom integration""]
+    ],"
+    "link": "/services/2029-enterprise-it",""
+    "category": "Enterprise IT Services 2029",""
+    "realImplementation": true,""
+    "contactInfo": {""
+      mobile: "+1 302 464 0950",""
+      "email": "kleber@ziontechgroup.com",""
+      "address": "364 E Main St STE 1008 Middletown DE 19709""
+]}}}"
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}""
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}"
+  // TODO: Implement
+}"
+
+export const \"enterpriseITServices2029\": EnterpriseItService2029[] = [{id: \"2029-enterprise-it\",\"name\": \"2029 Enterprise IT Service Platform\",\"tagline\": \"Enterprise IT services for 2029\",\"price\": \"$599/month\",\"description\": \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[;
+      \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\";}
+    ],\"link\": \"/services/2029-enterprise-it\",\"category\": \"Enterprise IT Services 2029\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}}
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}ursor/integrate-build-improve-and-re-verify-8f7d;
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+};
+
+export interface EnterpriseItService2029  {\"id\": string;
+}
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+
+export interface EnterpriseItService2029 {
+  \"id\": string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+
+export const \"enterpriseITServices2029\": EnterpriseItService2029[] = [{id: \"2029-enterprise-it\",\"name\": \"2029 Enterprise IT Service Platform\",\"tagline\": \"Enterprise IT services for 2029\",\"price\": \"$599/month\",\"description\": \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[;
+      \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\";}
+    ],\"link\": \"/services/2029-enterprise-it\",\"category\": \"Enterprise IT Services 2029\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}}
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface EnterpriseItService2029 {
   "id": string;
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}ursor/fix-syntax-push-and-merge-to-main-40de;
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {
+  \"id\": string;
   name: string;
   tagline: string;
   price: string;
@@ -63,6 +362,7 @@ address: string};export const "enterpriseITServices2029": EnterpriseItService202
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
@@ -249,21 +549,72 @@ address: string};export const "enterpriseITServices2029": EnterpriseItService202
     "tagline": "Enterprise IT services for 2029",
     "price": "$599/month",
     "description": "Advanced enterprise IT service platform designed for large organizations in 2029.",
+=======
+
+
+
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+
+export const \"enterpriseITServices2029\": EnterpriseItService2029[] = [{id: \"2029-enterprise-it\",\"name\": \"2029 Enterprise IT Service Platform\",\"tagline\": \"Enterprise IT services for 2029\",\"price\": \"$599/month\",\"description\": \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[;
+      \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\";}
+    ],\"link\": \"/services/2029-enterprise-it\",\"category\": \"Enterprise IT Services 2029\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}};
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]}}}
+address: strin,
+};
+
+export const \"enterpriseITServices2029\": EnterpriseItService2029[] = [{
+    id: \"2029-enterprise-it\",
+    \"name\": \"2029 Enterprise IT Service Platform\",
+    \"tagline\": \"Enterprise IT services for 2029\",
+    \"price\": \"$599/month\",
+    \"description\": \"Advanced enterprise IT service platform designed for large organizations in 2029.\",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     features[
-      "Enterprise IT services",
-      "Scalable solutions",
-      "Advanced security",
-      "24/7 support",
-      "Custom integration"
+      \"Enterprise IT services\",
+      \"Scalable solutions\",
+      \"Advanced security\",
+      \"24/7 support\",
+      \"Custom integration\"
     ],
-    "link": "/services/2029-enterprise-it",
-    "category": "Enterprise IT Services 2029",
-    "realImplementation": true,
-    "contactInfo": {
-      mobile: "+1 302 464 0950",
-      "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    \"link\": \"/services/2029-enterprise-it\",
+    \"category\": \"Enterprise IT Services 2029\",
+    \"realImplementation\": true,
+    \"contactInfo\": {
+      mobile: \"+1 302 464 0950\",
+      \"email\": \"kleber@ziontechgroup.com\",}
+      \"address\": \"364 E Main St STE 1008 Middletown DE 19709\"}
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,3 +640,35 @@ export interface EnterpriseItService2029 { id: string; name: string; tagline: st
 export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: "2029-enterprise-it",name: "2029 Enterprise IT Service Platform",tagline: "Enterprise IT services for 2029",price: "$599/month",description: "Advanced enterprise IT service platform designed for large organizations in 2029.",features[ "Enterprise IT services","Scalable solutions","Advanced security","24/7 support","Custom integration" ],link: "/services/2029-enterprise-it",category: "Enterprise IT Services 2029",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseItService2029 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [ { id: \"2029-enterprise-it\",name: \"2029 Enterprise IT Service Platform\",tagline: \"Enterprise IT services for 2029\",price: \"$599/month\",description: \"Advanced enterprise IT service platform designed for large organizations in 2029.\",features[ \"Enterprise IT services\",\"Scalable solutions\",\"Advanced security\",\"24/7 support\",\"Custom integration\" ],link: \"/services/2029-enterprise-it\",category: \"Enterprise IT Services 2029\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,7 +1,9 @@
 
-
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process')
   log(message, type = 'info')
+<<<<<<< HEAD
     this.log('🧪 Generating component tests...')
     const componentsDir = path.join(this.projectRoot, 'components')
       this.log('Components directory not found', 'warn')
@@ -23,6 +25,8 @@ const { execSync } = require('child_process')
       this.log(` Tests "failed"`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

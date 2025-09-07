@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Basic.spec utility
 export const Basic.spec = () => {
@@ -14,10 +15,26 @@ export const Basic.spec = () => {
   // Implementation here
   return null
 };
+=======
+import React from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface Basic.specProps {
   // Add props here as needed
 }
+// Basic.spec utility;
+export const Basic.spec = () => {
+  // Implementation here
+  return null
+  // Implementation here;
+  return null;
+pr-12325
+};
+
+interface Basic.specProps {
+  // TODO: Implement
+}
+  // Add props here as needed;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Basic.spec({ }: Basic.specProps) {
@@ -37,3 +54,10 @@ export default function Basic.spec({ }: Basic.specProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+}
+}
+}
+</div>
+      <h1>Basic.spec</h1>
+      <p>This component is currently under development.</p>
+    </div>)

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { EducationForm as EducationFormComponent  } from './education';
 import { EducationFormProps } from './education/types';
@@ -21,6 +22,8 @@ export function EducationForm(props: EducationFormProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { EducationForm, as, EducationFormComponent  } from './education';
 import { EducationFormProps  } from './education / types';
 export /**
@@ -28,6 +31,7 @@ export /**
  */
 function EducationForm() {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return <EducationFormComponent {...props} />;
@@ -161,11 +165,37 @@ export function EducationForm(props: EducationFormProps) {;
 import { EducationForm, as, EducationFormComponent } from "./education";
 import { EducationFormProps } from "./education/types";
 export function EducationForm(props: EducationFormProps) {
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return <EducationFormComponent {...props} />;
 }
 ;
+import {EducationForm, as, EducationFormComponent} from './education';
+import {EducationFormProps} from './education/types';
+export function EducationForm(): any (props: EducationFormProps) {;
+  return <EducationFormComponent {...props} />;
 }
+
+
+export function EducationForm(props: EducationFormProps) {
+  return <EducationFormComponent {...props} />
+import { EducationForm as EducationFormComponent } from './education',;
+import { EducationFormProps } from './education/types';
+export function EducationForm(props: EducationFormProps) {;
+  return <EducationFormComponent {...props} />;}
 ;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import { EducationForm, as, EducationFormComponent } from "./education";""
+import { EducationFormProps } from "./education/types";"
+export function EducationForm(props: EducationFormProps) {
+  return <EducationFormComponent {...props} />;
+"
+pr-12325
+</EducationFormComponent>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

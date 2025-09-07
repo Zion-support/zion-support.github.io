@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Project Health Monitor Automation;
  * Monitors overall project health and provides insights;
@@ -7,29 +7,22 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class ProjectHealthMonitor {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'project-health-monitor.log');
-        this.reportFile = path.join(this.projectRoot, 'project-health-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
+<<<<<<< HEAD
     checkProjectStructure() {}
         this.log('Checking project structure...');
 <<<<<<< HEAD
@@ -68,6 +61,11 @@ class ProjectHealthMonitor {}
 =======
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    checkProjectStructure() {}"
+
+            "score": 0;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Check required files;
         for (const file of requiredFiles) {}
             const exists = fs.existsSync(path.join(this.projectRoot, file;););
@@ -78,15 +76,15 @@ class ProjectHealthMonitor {}
             const exists = fs.existsSync(path.join(this.projectRoot, file) {}
     structure.score += 10};
         // Check optional files;
-        for (const file of optionalFiles) {}
-            const exists = fs.existsSync(path.join(this.projectRoot, file}
+            const exists = fs.existsSync(path.join(this.projectRoot, file})
 }););
             structure.optional[file] = exists;
-            if (structure.score += 5};)
-        this.log(`Project structure "score": ${structure.score}/100`)) {`}
-    structure.score += 5};
-        this.log(`Project structure "score": ${structure.score}/100`)};
+            if (structure.score += 5};)"`;
+        this.log(`Project structure "score": ${structure.score}/100`)) {`}"
+    structure.score += 5};"`;
+        this.log(`Project structure "score": ${structure.score}/100`)};"
         return structure};
+<<<<<<< HEAD
     checkCodeQuality() {}
         this.log('Checking code quality...');
 <<<<<<< HEAD
@@ -110,17 +108,16 @@ class ProjectHealthMonitor {}
 });
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    checkCodeQuality() {}"
+
+            }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             return {;}
-                "status": 'success',
-                "linting": 'passed',
-                "score": 20;
-            }} catch (error) {}
-            return {;}
-                "status": 'warning',
-                "linting": 'failed',
-                "score": 0,
-                "error": error.message;
+
+                "error": error.message;"
             }};
+<<<<<<< HEAD
     };
     checkTypeScript() {}
         this.log('Checking TypeScript configuration...');
@@ -219,20 +216,24 @@ class ProjectHealthMonitor {}
                     "cwd": this.projectRoot, 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     "stdio": 'pipe'
+=======
+    checkTypeScript() {}"
+
+            const totalDeps = Object.keys(packageJson.dependencies || {}).length + 
+                             Object.keys(packageJson.devDependencies || {}).lengt;h;
+            // Check for outdated packages;
+            let outdatedCount = ;0;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 })} catch (error) {}
                 if ( {})
-                    try {}
                         const outdated = JSON.parse(error.stdout) {}
      {}
-                    try {}
-                        const outdated = JSON.parse(error.stdout}
-});
+                        const outdated = JSON.parse(error.stdout})
                         outdatedCount = Object.keys(outdated).length} catch (parseError) {}
                         // No outdated packages;
-                    };
-                };
-            };
             const score = Math.max(0, 20 - (outdatedCount * 2;););
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -273,12 +274,14 @@ class ProjectHealthMonitor {}
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             };);
-            
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-            
             const score = Math.max(0, 20 - (vulnerabilities * 5;););
+<<<<<<< HEAD
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             return {;}
@@ -299,12 +302,16 @@ class ProjectHealthMonitor {}
 =======
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const structure = this.checkProjectStructure(;);
         const codeQuality = this.checkCodeQuality(;);
         const typeScript = this.checkTypeScript(;);
         const build = this.checkBuildHealth(;);
         const dependencies = this.checkDependencies(;);
         const security = this.checkSecurity(;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         const totalScore = structure.score + codeQuality.score + typeScript.score +
@@ -328,21 +335,26 @@ class ProjectHealthMonitor {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
             "health": {}
+=======
+        const totalScore = structure.score + codeQuality.score + typeScript.score + 
+                          build.score + dependencies.score + security.scor;e;
+
+            "health": {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 overall: {}
-                    score: totalScore,
+                    score: totalScore,"
                     "status": healthStatus,
-                    "maxScore": 100;
-                },
+                    "maxScore": 100;"
+                },"
                 "structure": structure,
                 "codeQuality": codeQuality,
                 "typeScript": typeScript,
                 "build": build,
                 "dependencies": dependencies,
-                "security": security;
-            },
-            "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);
-       };
+                "security": security;"
+            "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);"
 
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Project health report saved to ${this.reportFile}`);
         this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);
@@ -360,18 +372,23 @@ class ProjectHealthMonitor {}
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         if ( {})
+=======
+
+        this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);"
+        return report};
+    generateHealthRecommendations(score, status) {}
+        const recommendations = [];
+        if ( {})"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             recommendations.push('Project health needs immediate attention')};
-        if (status === 'poor' || status === 'fair') {}
-            recommendations.push('Focus on improving code quality and fixing build issues')) {}
-     {}
-            recommendations.push('Project health needs immediate attention')};
-        if (status === 'poor' || status === 'fair') {}
+
             recommendations.push('Focus on improving code quality and fixing build issues')};
             recommendations.push('Update outdated dependencies');
             recommendations.push('Address security vulnerabilities')};
         recommendations.push('Implement automated testing');
         recommendations.push('Set up continuous integration');
         recommendations.push('Regularly monitor project health');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         return recommendations};
@@ -390,15 +407,18 @@ class ProjectHealthMonitor {}
             this.log('Project Health Monitor completed successfully');
             return report} catch (error) {}
             this.log(`Project Health Monitor "failed": ${error.message}`);
+=======
+        return recommendations};
+    async run() {}
+        this.log('Project Health Monitor started');
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
-    };
-};
 // Run the monitor if this script is executed directly;
-if ( {})
     const monitor = new ProjectHealthMonitor) {}
-     {}
     const monitor = new ProjectHealthMonitor}(;);
     monitor.run().catch(console.error)};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -410,3 +430,7 @@ module.exports = ProjectHealthMonitor;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = ProjectHealthMonitor;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

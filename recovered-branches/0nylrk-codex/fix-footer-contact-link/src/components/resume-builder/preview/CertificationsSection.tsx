@@ -8,7 +8,6 @@
 
 }
 
-
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
@@ -17,10 +16,14 @@ import {Certification} from '@/types / resume';
 import {format} from 'date - fns';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { Certification  } from '@/types/resume';
 import { format } from 'date-fns';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface CertificationsSectionProps {
   certifications: Certification[];
 =======
@@ -33,7 +36,14 @@ interface CertificationsSectionProps {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
+import { Certification  } from '@/types/resume';
+import { format } from 'date-fns';
+interface CertificationsSectionProps {
+  certifications: Certification[]
+}
+export function CertificationsSection({ certifications }: CertificationsSectionProps) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import {Certification} from '@/types/resume';'
 import {format} from 'date-fns';
@@ -79,6 +89,16 @@ interface CertificationsSectionProps {}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+=======
+  const formatDate = (date: Date | string | undefined) => {
+    if (!date) return ''
+    if (typeof date === 'string') {
+      return format(new Date(date), 'MMM yyyy')
+    }
+    return format(date, 'MMM yyyy')
+  }
+  if (certifications.length === 0) return null;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
@@ -110,6 +130,7 @@ interface CertificationsSectionProps {;
   certifications: Certification[];
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -127,6 +148,8 @@ interface CertificationsSectionProps {;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -170,16 +193,20 @@ export function CertificationsSection() { return null; }
     return format(date, 'MMM yyyy')
   },
 
+<<<<<<< HEAD
 
   if (certifications.length === 0) return null,
   
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+if (certifications.length === 0) return null,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return format(date, 'MMM yyyy');
   };
     return format(date, 'MMM yyyy')
   },
-
   if (certifications.length === 0) return null,
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -198,6 +225,8 @@ export function CertificationsSection() { return null; }
               <h3 className="text-sm font-medium">{cert.name}</h3>
               {cert.issue_date && ("
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
@@ -215,10 +244,13 @@ export function CertificationsSection() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {;
@@ -249,6 +281,7 @@ export function CertificationsSection(): any ({ certifications }: Certifications
                   {formatDate(cert && cert.issue_date)}
                   {cert && cert.expiration_date && ` - ${formatDate(cert && cert.expiration_date)}`}
                 </span>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -260,6 +293,8 @@ export function CertificationsSection(): any ({ certifications }: Certifications
             {cert && cert.credential_url && (;"
               <p className="text-sm">;"
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               )}
             </div>;
             <p className="text-sm">{cert && cert.issuing_organization}</p>;
@@ -279,12 +314,15 @@ export function CertificationsSection(): any ({ certifications }: Certifications
   );
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 '
 import { Certification } from '@/types/resume',;'
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Certification } from '@/types/resume',;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { format } from 'date-fns',;
@@ -355,7 +393,11 @@ interface CertificationsSectionProps {
   certifications: Certification[];
 }
               )}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    }              )}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>;
 =======
             </div>;"
@@ -427,6 +469,88 @@ if (return null) {
   cert.expiration date && ` - $ {
   formatDate (cert.expiration date) 
 }` 
+
+
+}
+
+
+  return (
+    <div>
+</div>'
+      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>""
+      <div className="space-y-2">"
+</div>"
+          <div key={cert.id |index} className="space-y-1">"
+</div>"
+            <div className="flex justify-between">"
+</div>"
+              <h3 className="text-sm font-medium">{cert.name}</h3>""
+                <span className="text-sm">"
+</span>
+                </span>
+            </div>;"
+            <p className="text-sm">{cert && cert.issuing_organization}</p>;""
+              <p className="text-sm">;"
+</p>"
+                <a href={cert && cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;"
+</a>
+                </a>;
+              </p>;
+          </div>;
+      </div>;
+    </div>;
+    <div>;
+</div>"
+      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>;""
+      <div className="space-y-2">;"
+</div>"
+          <div key={cert.id || index} className="space-y-1">;"
+</div>"
+            <div className="flex justify-between">;"
+</div>"
+              <h3 className="text-sm font-medium">{cert.name}</h3>;""
+                <span className="text-sm">;"
+</span>
+                </span>;
+                </span>;
+            </div>;"
+            <p className="text-sm">{cert.issuing_organization}</p>;""
+              <p className="text-sm">;"
+</p>"
+                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;"
+</a>
+                </a>;)
+
+              </p>;            )}
+          </div>;
+      </div>;
+    </div>;
+
+    <div>;
+</div>"
+      <h2 className="text - lg font - semibold border - b mb - 3">Certifications</h2>;""
+      <div className="space - y-2">;"
+</div>"
+          <div key={cert.id || index} className="space - y-1">;"
+</div>"
+            <div className="flex justify - between">;"
+</div>"
+              <h3 className="text - sm font - medium">{cert.name}</h3>;""
+                <span className="text - sm">;"
+</span>
+                </span>)}
+            </div>;"
+            <p className="text - sm">{cert.issuing_organization}</p>;""
+              <p className="text - sm">;"
+</p>"
+                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text - blue - 600 hover:underline">;"
+</a>
+                </a>;
+              </p>)}
+          </div>))}
+      </div>;
+    </div>);
+
 }</span>) 
 }</div> View Credential </Link> </p>) 
 }</div>) ) 
@@ -448,6 +572,7 @@ if (return null) {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -506,3 +631,109 @@ if (return null) {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+}
+
+
+import {Certification} from '@/types/resume';
+import {format} from 'date-fns';
+interface CertificationsSectionProps {
+  // TODO: Implement
+  certifications: Certification[]
+import {Certification} from '@/types / resume';
+import {format} from 'date - fns';
+  // TODO: Implement
+  certifications: Certification[];
+
+
+
+  // TODO: Implement
+
+import { Certification } from '@/types/resume',;
+import { format } from 'date-fns',;
+interface CertificationsSectionProps {;
+
+
+
+;
+export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
+  const formatDate = (date: Date | string | undefined) => {;
+    if (!date) return ,;
+    if (typeof date === 'string') {;
+      return format(new Date(date), 'MMM yyyy');
+
+    return format(date, 'MMM yyyy')
+  },
+
+
+  if (certifications.length === 0) return null,
+    return format(date, 'MMM yyyy');
+  };
+
+  return (
+    <div>
+</div>
+      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>""
+      <div className="space-y-2">"
+</div>"
+          <div key={cert.id |index} className="space-y-1">"
+            <div className="flex justify-between">"
+              <h3 className="text-sm font-medium">{cert.name}</h3>""
+                <span className="text-sm">"
+</span>
+            </div>;"
+            <p className="text-sm">{cert && cert.issuing_organization}</p>;""
+              <p className="text-sm">;"
+</p>"
+                <a href={cert && cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;"
+</a>
+                </a>;
+              </p>;
+          </div>;
+    <div>;
+      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>;""
+      <div className="space-y-2">;"
+          <div key={cert.id || index} className="space-y-1">;"
+            <div className="flex justify-between">;"
+              <h3 className="text-sm font-medium">{cert.name}</h3>;""
+                <span className="text-sm">;"
+                </span>;
+            <p className="text-sm">{cert.issuing_organization}</p>;""
+                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;"
+                </a>;)
+              </p>;            )}
+      <h2 className="text - lg font - semibold border - b mb - 3">Certifications</h2>;""
+      <div className="space - y-2">;"
+          <div key={cert.id || index} className="space - y-1">;"
+            <div className="flex justify - between">;"
+              <h3 className="text - sm font - medium">{cert.name}</h3>;""
+                <span className="text - sm">;"
+                </span>)}
+            <p className="text - sm">{cert.issuing_organization}</p>;""
+              <p className="text - sm">;"
+                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text - blue - 600 hover:underline">;"
+              </p>)}
+          </div>))}
+    </div>);
+}</span>) 
+}</div> View Credential  </p>) 
+}</div>) ) 
+}</div> </div>) 
+
+            </div>"
+            <p className="text-sm">{cert.issuing_organization}</p>""
+              <p className="text-sm">"
+                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">"
+              </p>
+pr-12325
+</a>
+
+                </Link>
+              </p>
+          </div>
+      </div>
+    </div>
+  )
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

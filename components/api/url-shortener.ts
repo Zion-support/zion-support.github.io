@@ -1,6 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 interface ShortUrl {}
   for (let i = 0, i < length, i++) {}
+=======
+
+interface ShortUrl {
+  for (let i = 0, i < length, i++) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
   error?: string;  error?: string;
 }
@@ -11,20 +17,24 @@ const url_storage = new Map < string, ShortUrl>();
 <<<<<<< HEAD
 function generateShortCode (length: number = 6): string {
   const chars =;
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 id: string;
+
   originalUrl: string;
   shortCode: string;
   shortUrl: string;
   createdAt: string;
-  clicks: number;
-  isActive: boolean
+
 }
 
-interface UrlShortenerRequest {
-  originalUrl: string;
-  customCode?: string
+interface UrlShortenerRequest  {originalUrl: string;}
+  customCode?: string;}
 }
 
+<<<<<<< HEAD
 interface UrlShortenerResponse {
   success: boolean;
   data?: ShortUrl;
@@ -245,26 +255,40 @@ if ( {) {}
     },
   };      destination: shortUrl.originalUrl;
       permanent: false;
+=======
+
+      permanent: false
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
 };
 }
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   shortUrl.clicks++;
+  // Increment click count;
+shortUrl.clicks++;
   urlStorage.set(shortCode, shortUrl);
-  // Redirect to original URL
-  return {
+  // Redirect to original URL;
+return {
     redirect: {
-      destination: shortUrl.originalUrl,
-permanent: false,
+      destination: shortUrl.originalUrl,}
+permanent: false,}
     },
   };
-      permanent: false
+      permanent: false;
     }
+},
 }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

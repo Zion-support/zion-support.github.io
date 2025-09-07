@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -36,6 +37,15 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
@@ -44,6 +54,7 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -63,6 +74,11 @@ import { motion } from 'framer-motion'
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from 'react';
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -94,6 +110,24 @@ import Head from 'next/head';
 import Link from 'next/link';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { 
+const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })""
+const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })""
+const \"ContactPage\": React.FC = () => {""
+import React from 'react
+import dynamic from 'next/dynamic
+import Head from 'next/head
+import Link from 'next/link
+import { motion } from 'framer-motion
+import React from 'react';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import Link from 'next/link';
+
+import { 
+import {
+  // TODO: Implement
+}
+pr-12325
   Phone, 
   Mail, 
   MapPin, 
@@ -102,6 +136,7 @@ import {
   Send,
   MessageCircle,
   Globe
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -117,8 +152,15 @@ import {
 =======
 =======
 } from 'lucide-react'
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 } from 'lucide-react';
+
+
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -129,6 +171,7 @@ const "ContactPage": React.FC = () => {
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 } from 'lucide-react';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -193,6 +236,28 @@ const "ContactPage": React.FC = () => {
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -218,6 +283,7 @@ const "ContactPage": React.FC = () => {
       \"link\": null
     }
   ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -261,6 +327,18 @@ const "ContactPage": React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const services = [\"AI & Machine Learning Solutions\",
     \"IT Infrastructure & Support\",
     \"Micro SaaS Development\",
@@ -331,6 +409,7 @@ const "ContactPage": React.FC = () => {
     "Consulting & Strategy"
 
 
+<<<<<<< HEAD
   ]
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -399,6 +478,30 @@ const "ContactPage": React.FC = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ]
 import {motion} from 'framer-motion';
 import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
@@ -454,28 +557,34 @@ const "ContactPage": React.FC = () => {;
     <>;
       <SEOtitle=\"Contact Us - Zion Tech Group\"
         description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup && ziontechgroup.com\"
+    "Consulting & Strategy"  return (
+    <>
+      <SEO title=\"Contact Us - Zion Tech Group\"
+        description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com\"
         keywords=\"contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address\"
-        canonical=\""https\": //ziontechgroup && ziontechgroup.com/contact\"
-       />;
-      <PageTransition>;
-        <main className=\"min-h-screen bg-white\">;
+        canonical=\""https\": //ziontechgroup.com/contact\"
+       />
+      <PageTransition>
+        <main className=\"min-h-screen bg-white\">
           {/* Hero Section */}
-          <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">;
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-              <motion&& motion.div
+          <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">
+            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+              <motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0 && 0.6 }}
-                className=\"text-center\">;
-                <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">;
-                  Get In <span className=\"text-blue-600\">Touch</span>;
-                </h1>;
-                <p className=\"text-xl text-gray-600 mb-8 max-w-3xl mx-auto\">;
-                  Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let\'s discuss your project.;
-                </p>;
-                <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;
-                  <motion&& motion.a
+                transition={{ \"duration\": 0.6 }}
+                className=\"text-center\"
+              >
+                <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">
+                  Get In <span className=\"text-blue-600\">Touch</span>
+                </h1>
+                <p className=\"text-xl text-gray-600 mb-8 max-w-3xl mx-auto\">
+                  Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let\'s discuss your project.
+                </p>
+                <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">
+                  <motion.a
                     href=\"tel:+13024640950\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -485,6 +594,8 @@ const "ContactPage": React.FC = () => {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ \"scale\": 0.95 }}
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\"
@@ -505,6 +616,7 @@ const "ContactPage": React.FC = () => {;
               </motion.div>
             </div>
           </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -537,6 +649,14 @@ const "ContactPage": React.FC = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -602,8 +722,32 @@ const "Contact": NextPage = () => {  const contactInfo = [{
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 const "Contact": NextPage = () => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const contactInfo = [{
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+const "Contact": NextPage = () => {  const contactInfo = [{
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       icon: Mail,
       \"title\": \'Email Us\',
       \"details\": \'info@ziontechgroup.com\',
@@ -629,12 +773,61 @@ const "Contact": NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ \"scale\": 0 && 0.95 }}
+                    className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;
+                    <Phone className=\"w-5 h-5\"  />;
+                    Call \"Now\": +1 302 464 0950;
+                  </motion && motion.a>;
+                  <motion&& motion.a
+                    href=\"mailto: klebe r@ziontechgroup && ziontechgroup.com\"
+                    whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ \"scale\": 0 && 0.95 }}
+                    className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;
+                    <Mail className=\"w-5 h-5\"  />;
+                    Send Email;
+                  </motion && motion.a>;
+                </div>;
+              </motion && motion.div>;
+            </div>;
+          </section>;
+const \"Contact\": NextPage = () => {;
+import type { NextPage } from 'next';
+import MainLayout from '../components/layout/MainLayout';
+import {Mail,, Phone,, MapPin,, Clock,, Send} from 'lucide-react';
+const "Contact": NextPage = () => {;
+  const contactInfo = [{;
+      icon: Mail,;
+      \"title\": \'Email Us\',;
+      \"details\": \'info@ziontechgroup && ziontechgroup.com\',;
+      \"link\": \'mailto:info@ziontechgroup && ziontechgroup.com\';
+    },;
+    {;
+      \"icon\": Phone,;
+      \"title\": \'Call Us\',;
+      \"details\": \'+1 (555) 123-4567\',;
+      \"link\": \'tel:+1-555-123-4567\';
+    },;
+    {;
+      \"icon\": MapPin,;
+      \"title\": \'Visit Us\',;
+      \"details\": \'123 Tech Street, San Francisco, CA 94105\',;
+      \"link\": \'https://maps && maps.google.com\';
+    },;
+    {;
+      \"icon\": Clock,;
+      \"title\": \'Business Hours\',;
+      \"details\": \'Mon-Fri: 9AM-6PM PST\',;
+      \"link\": null;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   ];
   const offices = [{
@@ -656,6 +849,11 @@ const "Contact": NextPage = () => {
       \"email\": \'london@ziontechgroup.com\'
     }
   ];
+
+  return (
+    <MainLayout
+      title=\"Contact Us - Zion Tech Group\"
+      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
   return (
     <MainLayout
       title=\"Contact Us - Zion Tech Group\"
@@ -712,6 +910,7 @@ const "Contact": NextPage = () => {
                   <div>
                     <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       First Name *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -805,6 +1004,9 @@ const "Contact": NextPage = () => {;
                     </label>
       {/* Hero Section */}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                    </label>      {/* Hero Section */}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center\">;
@@ -858,6 +1060,7 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -865,6 +1068,9 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <input
                       type=\"text\"
                       id=\"firstName\"
@@ -874,17 +1080,28 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+/>;
+                  </div>;
+                  <div>;
+                    <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
+                      Last Name *;
+                    </label>;
+                    <input
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     />
                   </div>
                   <div>
                     <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       Last Name *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -912,11 +1129,15 @@ const "Contact": NextPage = () => {;
                     </label>
                     <input
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                    </label>                    <input
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       type=\"text\"
                       id=\"lastName\"
                       name=\"lastName\"
                       required
                       className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -926,12 +1147,23 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+/>;
+                  </div>;
+                </div>;
+                <div>;
+                  <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
+                    Email Address *;
+                  </label>;
+                  <input
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     />
                   </div>
                 </div>
                 <div>
                   <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Email Address *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -960,11 +1192,15 @@ const "Contact": NextPage = () => {;
                   </label>
                   <input
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                  </label>                  <input
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     type=\"email\"
                     id=\"email\"
                     name=\"email\"
                     required
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -974,11 +1210,21 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+/>;
+                </div>;
+                <div>;
+                  <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
+                    Company;
+                  </label>;
+                  <input
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   />
                 </div>
                 <div>
                   <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Company
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1006,10 +1252,14 @@ const "Contact": NextPage = () => {;
                   </label>
                   <input
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                  </label>                  <input
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     type=\"text\"
                     id=\"company\"
                     name=\"company\"
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1019,11 +1269,21 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+/>;
+                </div>;
+                <div>;
+                  <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
+                    Phone Number;
+                  </label>;
+                  <input
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   />
                 </div>
                 <div>
                   <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Phone Number
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1051,10 +1311,14 @@ const "Contact": NextPage = () => {;
                   </label>
                   <input
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                  </label>                  <input
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     type=\"tel\"
                     id=\"phone\"
                     name=\"phone\"
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1064,6 +1328,14 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+/>;
+                </div>;
+                <div>;
+                  <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
+                    Service of Interest;
+                  </label>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   />
                 </div>
                 <div>
@@ -1090,6 +1362,7 @@ const "Contact": NextPage = () => {;
                 <div>
                   <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Message *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1137,11 +1410,15 @@ const "Contact": NextPage = () => {;
                   </label>
                   <textarea
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                  </label>                  <textarea
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     id=\"message\"
                     name=\"message\"
                     rows={6}
                     required
                     className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": ring-2 focus:ring-blue-500 focus:border-transparent\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1151,6 +1428,12 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     placeholder=\"Tell us about your project or how we can help you...\"
                   ></textarea>
                 </div>
@@ -1273,12 +1556,15 @@ const "Contact": NextPage = () => {;
       {/* FAQ Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -1287,6 +1573,7 @@ const "Contact": NextPage = () => {;
               Get answers to common questions about our services and process
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1316,12 +1603,21 @@ const "Contact": NextPage = () => {;
 =======
       {/* FAQ Section */}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1381,6 +1677,30 @@ const "Contact": NextPage = () => {;
 =======
                 What is your typical project timeline?
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                What is your typical project timeline?
+      {/* FAQ Section */}                What is your typical project timeline?
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </h3>
               <p className=\"text-gray-600\">
                 Project timelines vary depending on complexity and scope. Simple websites 
@@ -1392,6 +1712,7 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1427,6 +1748,18 @@ const "Contact": NextPage = () => {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
@@ -1494,8 +1827,34 @@ const "Contact": NextPage = () => {;
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 Do you provide ongoing support?
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                Do you provide ongoing support?
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </h3>
               <p className=\"text-gray-600\">
                 Yes, we offer comprehensive support and maintenance packages to ensure 
@@ -1507,6 +1866,7 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1542,6 +1902,18 @@ const "Contact": NextPage = () => {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
@@ -1609,8 +1981,34 @@ const "Contact": NextPage = () => {;
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 What technologies do you specialize in?
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                What technologies do you specialize in?
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </h3>
               <p className=\"text-gray-600\">
                 We work with modern technologies including React, Node.js, Python, 
@@ -1622,6 +2020,7 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1657,6 +2056,18 @@ const "Contact": NextPage = () => {;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
@@ -1724,8 +2135,34 @@ const "Contact": NextPage = () => {;
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 How do you ensure project quality?
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                How do you ensure project quality?
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </h3>
               <p className=\"text-gray-600\">
                 We follow industry best practices including code reviews, automated 
@@ -1741,8 +2178,24 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+
+<div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 =======
   )
@@ -1770,6 +2223,12 @@ const "Contact": NextPage = () => {;
                   Multiple ways to reach us for your convenience
                 </p>
               </motion.div>
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
@@ -1817,6 +2276,25 @@ const "Contact": NextPage = () => {;
                   Fill out the form below and we\'ll get back to you within 24 hours
                 </p>
               </motion.div>
+
+<div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+
+
+
+
+
+
+
+
+
+
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
                 <motion.form
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -1829,6 +2307,7 @@ const "Contact": NextPage = () => {;
                         Full Name *
                       </label>
                       <input type=\"text\"
+
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -1892,13 +2371,15 @@ const "Contact": NextPage = () => {;
       </section>;
     </MainLayout>;
   );
+  )
 };
           {/* Contact Information */}
-          <section className=\"py-20\">;
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-              <motion&& motion.div
+          <section className=\"py-20\">
+            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+              <motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
+<<<<<<< HEAD
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
@@ -2091,6 +2572,8 @@ const "Contact": NextPage = () => {;
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
                 className=\"text-center mb-16\"
               >
@@ -2104,8 +2587,16 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
 <<<<<<< HEAD
@@ -2128,6 +2619,7 @@ const "Contact": NextPage = () => {;
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/main
@@ -2164,6 +2656,27 @@ const "Contact": NextPage = () => {;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 {contactInfo.map((info, index) => (
                   <motion.div
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -2217,6 +2730,7 @@ const "Contact": NextPage = () => {;
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
 <<<<<<< HEAD
@@ -2231,6 +2745,8 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 transition={{ \"duration\": 0.6 }}
                 className=\"text-center mb-16\"
               >
@@ -2244,8 +2760,16 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
 <<<<<<< HEAD
@@ -2268,6 +2792,7 @@ const "Contact": NextPage = () => {;
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/main
@@ -2302,6 +2827,28 @@ const "Contact": NextPage = () => {;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <motion.form
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
@@ -2332,6 +2879,7 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -2339,6 +2887,9 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         id=\"name\"
                         name=\"name\"
                         required
@@ -2347,18 +2898,64 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+/>;
+                    </div>;
+                    <div>;
+                      <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
+                        Email Address *;
+                      </label>;
+                      <inputtype=\"email\"
+                        id=\"email\"
+                        name=\"email\"
+                        required
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+<div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+
+                        placeholder=\"your.email@example.com\"
+                       />
+                    </div>
+                  </div>
+
+
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+
+
+
+
+
+
+
+
+
+
+
+<div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+
+
+
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                        />
                     </div>
                     <div>
                       <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Email Address *
                       </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2461,15 +3058,19 @@ const "Contact": NextPage = () => {;
                       <input type=\"email\"
                         id=\"email\"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                      <input type=\"email\"                        id=\"email\"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                        placeholder=\"your.email@example.com\"
                        />
                     </div>
                   </div>
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -2487,11 +3088,14 @@ const "Contact": NextPage = () => {;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
                       </label>
                       <input type=\"tel\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2505,6 +3109,9 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         placeholder=\"your && your.email@example && example.com\"
+=======
+placeholder=\"your && your.email@example && example.com\"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                        />;
                     </div>;
                   </div>;
@@ -2522,6 +3129,7 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -2531,10 +3139,13 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"+1 (555) 123-4567\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2544,12 +3155,64 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+/>;
+                    </div>;
+                    <div>;
+                      <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
+                        Company;
+                      </label>;
+                      <inputtype=\"text\"
+                        id=\"company\"
+                        name=\"company\"
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"Your company name\"
+
+                       />
+                    </div>
+                  </div>
+
+
+
+
+
+
+                  <div className=\"mb-6\">
+                    <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                  <div className="mb-6">
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      Service Interest
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                        />
                     </div>
                     <div>
                       <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Company
                       </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2686,6 +3349,12 @@ const "Contact": NextPage = () => {;
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                       Service Interest
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                      <input type=\"text\"                        id=\"company\"
+                        name=\"company\"
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"Your company name\"                      Service Interest
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </label>
                     <select
                       id=\"service\"
@@ -2700,6 +3369,7 @@ const "Contact": NextPage = () => {;
                       ))}
                     </select>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2846,14 +3516,48 @@ const "Contact": NextPage = () => {;
                     </label>                      Message *
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                       Message *
+<<<<<<< HEAD
                     </label>
                       Message *
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                  <div className=\"mb-6\">
+                    <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">                      Message *
+                    </label>                      Message *
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </label>
                     </select>;
                   </div>;
@@ -2866,6 +3570,7 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -2873,6 +3578,9 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <textarea
                       id=\"message\"
                       name=\"message\"
@@ -2901,7 +3609,6 @@ const "Contact": NextPage = () => {;
                   </div>
                   <motion.button
                     type=\"submit\"
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2920,6 +3627,7 @@ const "Contact": NextPage = () => {;
                     Send Message
                   </motion.button>
                 </motion.form>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3013,6 +3721,16 @@ const "Contact": NextPage = () => {;
 =======
         {/* Hero Section */}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+
+
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">        {/* Hero Section */}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"text-center\">
@@ -3054,6 +3772,7 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -3061,6 +3780,50 @@ const "Contact": NextPage = () => {;
 =======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      placeholder=\"Tell us about your project requirements...\"></textarea>;
+                  </div>;
+                  <motion&& motion.button
+                    type=\"submit\"
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                    whileHover={{ scale: 1 && 1.02 }}
+                    whileTap={{ \"scale\": 0 && 0.98 }}
+                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
+                    <Send className=\"w-5 h-5\"  />;
+                    Send Message;
+                  </motion && motion.button>;
+                </motion && motion.form>;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+
+
+
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -3079,6 +3842,7 @@ const "Contact": NextPage = () => {;
           <div className=\"max-w-7xl mx-auto\">;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3182,18 +3946,57 @@ const "Contact": NextPage = () => {;
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>                {isSubmitted ? (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 {isSubmitted ? (
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
+                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>                {isSubmitted ? (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3203,6 +4006,17 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">;
+                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>;
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">;
+                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>;
+                {isSubmitted ? (;
+                  <div className=\"text-center py-12\">;
+                    <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />;
+                    <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>;
+                    <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <button
                       onClick={() => setIsSubmitted(false)}
                       className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\"
@@ -3216,6 +4030,7 @@ const "Contact": NextPage = () => {;
                       <div>
                         <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Full Name *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3260,10 +4075,14 @@ const "Contact": NextPage = () => {;
                         </label>
                         <input
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                        </label>                        <input
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           type=\"text\"
                           id=\"name\"
                           name=\"name\"
                           required
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3273,6 +4092,9 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+value={formData && formData.name}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           value={formData.name}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -3282,6 +4104,7 @@ const "Contact": NextPage = () => {;
                       <div>
                         <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Email Address *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3313,10 +4136,14 @@ const "Contact": NextPage = () => {;
                         </label>
                         <input
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                        </label>                        <input
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           type=\"email\"
                           id=\"email\"
                           name=\"email\"
                           required
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3400,10 +4227,13 @@ const "Contact": NextPage = () => {;
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           placeholder=\"your@email.com\"
                         />
                       </div>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">                          value={formData && formData.email}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -3438,10 +4268,55 @@ const "Contact": NextPage = () => {;
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+
+
+
+
+
+
+
+
+
+
+
+value={formData && formData.email}
+                          onChange={handleInputChange}
+                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">                          value={formData && formData.email}
+                          onChange={handleInputChange}
+                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3455,6 +4330,9 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           placeholder=\"your@email && email.com\"
+=======
+placeholder=\"your@email && email.com\"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         />;
                       </div>;
                     </div>;
@@ -3471,6 +4349,7 @@ const "Contact": NextPage = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -3480,10 +4359,13 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <input
                           type=\"text\"
                           id=\"company\"
                           name=\"company\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3493,6 +4375,9 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+value={formData && formData.company}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           value={formData.company}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -3502,6 +4387,7 @@ const "Contact": NextPage = () => {;
                       <div>
                         <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Phone Number
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3545,6 +4431,13 @@ const "Contact": NextPage = () => {;
                           id=\"phone\"
                           name=\"phone\"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                        </label>                        <input
+                          type=\"tel\"
+                          id=\"phone\"
+                          name=\"phone\"
+value={formData && formData.phone}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           value={formData.phone}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -3572,6 +4465,7 @@ const "Contact": NextPage = () => {;
                     <div>
                       <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                         Message *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3620,10 +4514,14 @@ const "Contact": NextPage = () => {;
                       </label>
                       <textarea
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                      </label>                      <textarea
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         id=\"message\"
                         name=\"message\"
                         required
                         rows={6}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3663,6 +4561,33 @@ const "Contact": NextPage = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              <div className=\"space-y-8\">
+                <div>
+                  <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
+                  <p className=\"text-lg text-gray-300 mb-8\">
+                    We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
+                  </p>
+                </div>
+
+
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+
+
+
+
+
+
+
+
+
+
+
+
+
+value={formData && formData.message}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         value={formData.message}
                         onChange={handleInputChange}
                         className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
@@ -3709,14 +4634,27 @@ const "Contact": NextPage = () => {;
 =======
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
+<<<<<<< HEAD
               <div className=\"space-y-8\">
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+
+
+
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+                  {contactInfo.map((info, index) => (
+                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div>
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
                   <p className=\"text-lg text-gray-300 mb-8\">
                     We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
                   </p>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3819,6 +4757,9 @@ const "Contact": NextPage = () => {;
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                <div className="space-y-6">                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
                         <info.icon className=\"w-6 h-6 text-white\" />
                       </div>
@@ -3832,6 +4773,7 @@ const "Contact": NextPage = () => {;
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3874,6 +4816,31 @@ const "Contact": NextPage = () => {;
 =======
           </section>
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {/* Services Overview */}
           <section className="py-20">
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
@@ -4004,6 +4971,7 @@ export default ContactPage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ContactPage
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4019,13 +4987,35 @@ export default ContactPage
 export default ContactPage
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+
+export default ContactPage
+
+
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+
+
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         </section>
       </div>
     </>
+
+export default ContactPage
+        </section>
+      </div>
+    </>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4100,6 +5090,8 @@ export default ContactPage
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>;
 =======
 =======              </div>;
@@ -4135,6 +5127,7 @@ export default ContactPage;
     </>;
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4207,3 +5200,507 @@ export default ContactPage;
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+
+
+
+import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+
+
+
+
+
+
+
+
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  Globe;
+} from 'lucide-react
+} from 'lucide-react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })""
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })""
+const "ContactPage": React.FC = () => {"
+  const contactInfo = [{"
+      icon: <Phone className=\"w-6 h-6\"  />,"
+"
+      \"icon\": <Mail className=\"w-6 h-6\"  />,"
+      \"icon\": <MapPin className=\"w-6 h-6\"  />,"
+      \"icon\": <Clock className=\"w-6 h-6\"  />,"
+
+    <>"
+      <SEO title=\"Contact Us - Zion Tech Group\"""
+        description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com\"""
+        keywords=\"contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address\"""
+        canonical=\""https\": //ziontechgroup.com/contact\""
+       />
+
+      <PageTransition>
+        <main className=\"min-h-screen bg-white\">"
+</main>"
+          <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">"
+</section>"
+            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">"
+</div>
+              <motion.div;"
+                initial={{ opacity: 0, \"y\": 20 }}""
+                animate={{ \"opacity\": 1, \"y\": 0 }}""
+                transition={{ \"duration\": 0.6 }}""
+                className=\"text-center\""
+              >
+</motion>"
+                <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">"
+</h1>"
+                  Get In <span className=\"text-blue-600\">Touch</span>"
+                <p className=\"text-xl text-gray-600 mb-8 max-w-3xl mx-auto\">"
+</p>
+                </p>"
+                <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">"
+                  <motion.a;"
+                    href=\"tel:+13024640950\""
+                    whileHover={{ scale: 1.05 }}"
+                    whileTap={{ \"scale\": 0.95 }}""
+                    className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\""
+                    <Phone className=\"w-5 h-5\"  />"
+
+                  </motion.a>
+                    href=\"mailto: klebe r@ziontechgroup.com\""
+                    className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\""
+                    <Mail className=\"w-5 h-5\"  />"
+
+              </motion.div>
+      icon: <Phone className=\"w-6 h-6\"  />,;"
+      \"icon\": <Mail className=\"w-6 h-6\"  />,;"
+      \"icon\": <MapPin className=\"w-6 h-6\"  />,;"
+      \"icon\": <Clock className=\"w-6 h-6\"  />,;"
+
+    <>;"
+      <SEOtitle=\"Contact Us - Zion Tech Group\"""
+        description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup && ziontechgroup.com\"""
+        canonical=\""https\": //ziontechgroup && ziontechgroup.com/contact\""
+       />;
+
+      <PageTransition>;
+        <main className=\"min-h-screen bg-white\">;"
+          <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">;"
+            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;"
+              <motion&& motion.div;"
+                transition={{ \"duration\": 0 && 0.6 }}""
+                className=\"text-center\">;"
+                <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">;"
+                  Get In <span className=\"text-blue-600\">Touch</span>;"
+                </h1>;"
+                <p className=\"text-xl text-gray-600 mb-8 max-w-3xl mx-auto\">;"
+                </p>;"
+                <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;"
+                  <motion&& motion.a;"
+                    href=\"tel:+13024640950\"""
+const \"Contact\": NextPage = () => {"
+</motion>
+    <MainLayout;"
+      title=\"Contact Us - Zion Tech Group\"""
+      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\""
+      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">"
+</div>"
+          <div className=\"text-center\">"
+            <h1 className=\"text-5xl font-bold mb-6\">Get In Touch</h1>""
+            <p className=\"text-xl max-w-3xl mx-auto\">"
+      <section className=\"py-20\">"
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16\">"
+              <div key={info.title} className=\"text-center\">"
+                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">"
+                  <info.icon className=\"h-8 w-8\" />"
+</info>
+                <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">"
+</h3>
+                  <a;
+                    href={info.link}"
+                    className=\"text-blue-600 \"hover\": text-blue-700 transition-colors\""
+</a>
+                  </a>"
+                  <p className=\"text-gray-600\">{info.details}</p>"
+      <section className=\"py-20 bg-gray-50\">"
+          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12\">"
+            <div>
+              <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Send Us a Message</h2>""
+              <form className=\"space-y-6\">"
+</form>"
+                <div className=\"grid grid-cols-1 \"md\": grid-cols-2 gap-6\">"
+                    <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
+</label>
+                    </label>"
+      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;"
+          <div className=\"text-center\">;"
+            <h1 className=\"text-5xl font-bold mb-6\">Get In Touch</h1>;""
+            <p className=\"text-xl max-w-3xl mx-auto\">;"
+            </p>;
+          </div>;
+      </section>;"
+      <section className=\"py-20\">;"
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16\">;"
+              <div key={info && info.title} className=\"text-center\">;"
+                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">;"
+                  <info && info.icon className=\"h-8 w-8\" />;"
+                </div>;"
+                <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">;"
+                </h3>;
+                    href={info && info.link}"
+                    className=\"text-blue-600 \"hover\": text-blue-700 transition-colors\">;"
+                  </a>;"
+                  <p className=\"text-gray-600\">{info && info.details}</p>;"
+      <section className=\"py-20 bg-gray-50\">;"
+          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12\">;"
+            <div>;
+              <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Send Us a Message</h2>;""
+              <form className=\"space-y-6\">;"
+                <div className=\"grid grid-cols-1 \"md\": grid-cols-2 gap-6\">;"
+                    <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">;"
+                    </label>;
+                    <input;"
+                      type=\"text\"""
+                      id=\"firstName\"""
+                      name=\"firstName\""
+                      required;"
+                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\""
+</input>
+                    <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
+                      id=\"lastName\"""
+                      name=\"lastName\""
+                  <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
+                    type=\"email\"""
+                    id=\"email\"""
+                    name=\"email\""
+                  <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
+                    id=\"company\"""
+                    name=\"company\"""
+                  <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
+                    type=\"tel\"""
+                    id=\"phone\"""
+                    name=\"phone\"""
+                  <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
+                  <select;"
+                    id=\"service\"""
+                    name=\"service\"""
+</select>"
+                    <option value=\"">Select a service</option>""
+                    <option value=\"ai-development\">AI Development</option>""
+                    <option value=\"cloud-solutions\">Cloud Solutions</option>""
+                    <option value=\"web-development\">Web Development</option>""
+                    <option value=\"mobile-development\">Mobile Development</option>""
+                    <option value=\"blockchain\">Blockchain Solutions</option>""
+                    <option value=\"iot-platforms\">IoT Platforms</option>""
+                    <option value=\"data-analytics\">Data Analytics</option>""
+                    <option value=\"cybersecurity\">Cybersecurity</option>""
+                    <option value=\"consulting\">Technology Consulting</option>"
+                  </select>
+                  <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
+                  <textarea;"
+                    id=\"message\"""
+                    name=\"message\""
+                    rows={6}
+                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": ring-2 focus:ring-blue-500 focus:border-transparent\"""
+                    placeholder=\"Tell us about your project or how we can help you...\""
+                  ></textarea>
+                <button;"
+                  type=\"submit\"""
+                  className=\"w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center\""
+</button>"
+                  <Send className=\"mr-2 h-5 w-5\" />"
+
+                </button>
+              </form>
+              <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Our Offices</h2>""
+              <div className=\"space-y-6\">"
+                  <div key={office.city} className=\"bg-white rounded-lg shadow-lg p-6\">"
+                    <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">"
+                    </h3>"
+                    <div className=\"space-y-2 text-gray-600\">"
+                      <div className=\"flex items-start\">"
+                        <MapPin className=\"h-5 w-5 mr-2 mt-0.5 text-blue-600\" />"
+
+                        <span>{office.address}</span>
+                      <div className=\"flex items-center\">"
+                        <Phone className=\"h-5 w-5 mr-2 text-blue-600\" />"
+                        <a href={`\"tel\": ${office.phone}`} className=\""hover\": text-blue-600\">"
+                        <Mail className=\"h-5 w-5 mr-2 text-blue-600\" />"
+"`;
+                        <a href={`\"mailto\": ${office.email}`} className=\""hover\": text-blue-600\">"
+          <div className=\"text-center mb-16\">"
+            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>""
+            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">"
+                    placeholder=\"Tell us about your project or how we can help you...\"></textarea>;"
+                  className=\"w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center\">;"
+                  <Send className=\"mr-2 h-5 w-5\" />;"
+
+                </button>;
+              </form>;
+              <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Our Offices</h2>;""
+              <div className=\"space-y-6\">;"
+                  <div key={office && office.city} className=\"bg-white rounded-lg shadow-lg p-6\">;"
+                    <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">;"
+                    </h3>;"
+                    <div className=\"space-y-2 text-gray-600\">;"
+                      <div className=\"flex items-start\">;"
+                        <MapPin className=\"h-5 w-5 mr-2 mt-0 && 0.5 text-blue-600\" />;"
+
+                        <span>{office && office.address}</span>;
+                      <div className=\"flex items-center\">;"
+                        <Phone className=\"h-5 w-5 mr-2 text-blue-600\" />;"
+                        <a href={`\"tel\": ${office && office.phone}`} className=\""hover\": text-blue-600\">;"
+                        </a>;
+                        <Mail className=\"h-5 w-5 mr-2 text-blue-600\" />;"
+                        <a href={`\"mailto\": ${office && office.email}`} className=\""hover\": text-blue-600\">;"
+          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">"
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">"
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+            <div className="bg-white rounded-lg shadow-lg p-6">"
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">"
+              <p className=\"text-gray-600\">"
+      </section>
+                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}""
+                className=\"text-center mb-16\""
+                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">"
+</h2>
+                </h2>"
+                {contactInfo.map((info, index) => (
+                  <motion.div;
+                    key={index}"
+                    initial={{ \"opacity\": 0, \"y\": 20 }}""
+                    transition={{ \"duration\": 0.6, \"delay\": index * 0.1 }}""
+                    className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\""
+                    <div className=\"text-blue-600 mb-4 flex justify-center\">"
+                    <h3 className=\"text-xl font-bold text-gray-900 mb-3\">"
+                        className=\"text-gray-600 \"hover\": tex t-blue-600 transition-colors whitespace-pre-line\""
+                      <p className=\"text-gray-600 whitespace-pre-line\">"
+                  </motion.div>)
+                ))}
+          <section className=\"bg-gray-50 py-20\">"
+                <motion.form;"
+                  className=\"bg-white rounded-xl shadow-lg p-8\""
+                  <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">"
+                      <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-700 mb-2\">"
+                      <input type=\"text\"""
+</input>"
+          <div className=\"text-center mb-16\">;"
+            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>;""
+            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;"
+          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">;"
+            <div className=\"bg-white rounded-lg shadow-lg p-6\">;"
+              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;"
+            <div className="bg-white rounded-lg shadow-lg p-6">;"
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">;"
+              <p className=\"text-gray-600\">;"
+      </section>;
+    ;"
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">"
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">"
+                transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}""
+                className=\"text-center mb-16\">;"
+                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;"
+                </h2>;"
+              </motion && motion.div>;"
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">;"
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">;"
+                  <motion&& motion.div;
+                    transition={{ \"duration\": 0 && 0.6, \"delay\": index * 0 && 0.1 }}""
+                    className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\">;"
+                    <div className=\"text-blue-600 mb-4 flex justify-center\">;"
+                    <h3 className=\"text-xl font-bold text-gray-900 mb-3\">;"
+                        className=\"text-gray-600 \"hover\": tex t-blue-600 transition-colors whitespace-pre-line\">;"
+                      <p className=\"text-gray-600 whitespace-pre-line\">;"
+                  </motion && motion.div>;
+          <section className=\"bg-gray-50 py-20\">;"
+              <div className=\"max-w-4xl mx-auto\">"
+              <div className="max-w-4xl mx-auto">"
+              <div className=\"max-w-4xl mx-auto\">;"
+              <div className="max-w-4xl mx-auto">;"
+                <motion&& motion.form;"
+                  className=\"bg-white rounded-xl shadow-lg p-8\">;"
+                  <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">;"
+                      <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-700 mb-2\">;"
+                      </label>;"
+                      <inputtype=\"text\"""
+                        id=\"name\"""
+                        name=\"name\""
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"""
+                        placeholder=\"Your full name\""
+</inputtype>
+                      <input type=\"email\"""
+                        placeholder=\"your.email@example.com\""
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">"
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">"
+                      <input type=\"tel\"""
+                        placeholder=\"+1 (555) 123-4567\""
+                        placeholder=\"Your company name\""
+                  <div className=\"mb-6\">"
+                  <div className="mb-6">"
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">"
+                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\""
+                      <option value=\"">Select a service</option>"
+                        <option key={index} value={service}>
+</option>
+                  <div className=\"mb-6\">;"
+                    <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">;"
+                  <div className="mb-6">;"
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;"
+                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\">;"
+                      <option value=\"">Select a service</option>;"
+                        <option key={index} value={service}>;
+                        </option>;"
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">"
+                    </select>;
+                    <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">;"
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;"
+                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"""
+                      placeholder=\"Tell us about your project requirements...\""
+                  <motion.button;"
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+                    <Send className=\"w-5 h-5\"  />"
+
+                  </motion.button>
+                </motion.form>"
+                    <Send className=\"w-5 h-5\"  />;"
+
+                  </motion && motion.button>;
+                </motion && motion.form>;"
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"
+        <section className=\"relative py-20 px-4\">"
+          <div className=\"max-w-7xl mx-auto\">"
+              <h1 className=\"text-5xl \"md\": text-6xl font-bold text-white mb-6\">"
+                Get in <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\">Touch</span>"
+              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto mb-8\">"
+        <section className=\"py-16 px-4\">"
+            <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">"
+                      placeholder=\"Tell us about your project requirements...\"></textarea>;"
+                  <motion&& motion.button;"
+
+        <section className=\"relative py-20 px-4\">;"
+          <div className=\"max-w-7xl mx-auto\">;"
+              <h1 className=\"text-5xl \"md\": text-6xl font-bold text-white mb-6\">;"
+                Get in <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\">Touch</span>;"
+              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto mb-8\">;"
+        <section className=\"py-16 px-4\">;"
+            <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;"
+              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">"
+                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>""
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">"
+                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>""
+                  <div className=\"text-center py-12\">"
+                    <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />"
+                    <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>""
+                    <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
+                    <button;
+                      onClick={() => setIsSubmitted(false)}
+                  <form onSubmit={handleSubmit} className=\"space-y-6\">"
+                        <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">"
+                          required;
+                          value={formData.name}
+                          onChange={handleInputChange}"
+                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"""
+                        <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">"
+                          value={formData.email}
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">"
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+                        <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">"
+                          name=\"company\""
+                          value={formData.company}
+                        <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-300 mb-2\">"
+                          name=\"phone\""
+                          value={formData.phone}
+                      <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-300 mb-2\">"
+                        name=\"service\""
+                        value={formData.service}
+                        className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\""
+                          <option key={service} value={service}>{service}</option>
+                      <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-300 mb-2\">"
+                        value={formData.message}
+                        placeholder=\"Tell us about your project or requirements...\""
+</textarea>
+                      type=\"submit\""
+                      disabled={isSubmitting}"
+                      className=\"w-full inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300\""
+                          <div className=\"animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2\"></div>"
+                        </>
+                      ) : (
+                          <Send className=\"w-5 h-5 mr-2\" />"
+
+                        </>)
+                      )}
+                <div className="space-y-6">"
+              <div className=\"space-y-8\">"
+                  <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>""
+                  <p className=\"text-lg text-gray-300 mb-8\">"
+                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">"
+                      <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">"
+                        <info.icon className=\"w-6 h-6 text-white\" />"
+                        <h3 className=\"text-lg font-semibold text-white mb-1\">{info.title}</h3>""
+                        <p className=\"text-cyan-400 font-medium mb-1\">{info.details}</p>""
+                        <p className=\"text-gray-400 text-sm\">{info.description}</p>"
+          <section className="py-20">"
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">"
+                initial={{ opacity: 0, "y": 20 }}""
+                animate={{ "opacity": 1, "y": 0 }}""
+                transition={{ "duration": 0.6 }}""
+                className="text-center mb-16""
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">"
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+              </motion.div>"
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">"
+                    initial={{ "opacity": 0, "y": 20 }}""
+                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}""
+                    className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center""
+                    <h3 className="text-lg font-semibold text-gray-900">"
+        </main>
+      
+  )
+export default ContactPage;
+              <div className=\"space-y-8\">;"
+                  <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>;""
+                  <p className=\"text-lg text-gray-300 mb-8\">;"
+                <div className="space-y-6">;"
+                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">;"
+                      <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">;"
+                        <info && info.icon className=\"w-6 h-6 text-white\" />;"
+                        <h3 className=\"text-lg font-semibold text-white mb-1\">{info && info.title}</h3>;""
+                        <p className=\"text-cyan-400 font-medium mb-1\">{info && info.details}</p>;""
+                        <p className=\"text-gray-400 text-sm\">{info && info.description}</p>;"
+          <section className="py-20">;"
+            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;"
+                transition={{ "duration": 0 && 0.6 }}""
+                className="text-center mb-16">;"
+                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;"
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">;"
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">;"
+                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}""
+                    className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center">;"
+                    <h3 className="text-lg font-semibold text-gray-900">;"
+
+  );
+export default ContactPage;"
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet, Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+        </main>;
+      ;
+    </>;
+
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet, Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';']`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

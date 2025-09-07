@@ -14,6 +14,7 @@
     this.log(`Total errors: ${this.errors.length}`);
     this.log(`Duration: ${duration}ms`);
 
+<<<<<<< HEAD
 =======
 =======
 
@@ -34,18 +35,14 @@
 =======
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    if (this.errors.length > 0) {
-      this.log('\\n❌ Errors encountered:');
-      this.errors.forEach((error, index) => {
-        this.log(`  ${index + 1}. ${error}`);
+=======
       });
     }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    if (this.errors.length > 0) {
 
-    this.log('\\n🎉 App improvements completed!');
-  }
-}
 
-// Run the improvements
+// Run the improvements;
 const improvements = new SimpleAppImprovements();
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements-fixed.cjs
@@ -66,16 +63,20 @@ improvements.runAllImprovements().catch(console.error);
 =======
 improvements.runAllImprovements().catch(console.error);
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
 <<<<<<< HEAD
 improvements.runAllImprovements().catch(console.error);#!/usr/bin/env node;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Simple App Improvements System')
+<<<<<<< HEAD
 console.log('=====')
   log(message, type = 'info')
         encoding: 'utf8'
@@ -107,3 +108,6 @@ console.log('=====')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

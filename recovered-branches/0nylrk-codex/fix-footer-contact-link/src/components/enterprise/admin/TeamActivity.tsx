@@ -1,5 +1,9 @@
+import React from "react";
+import {
 
+import React from "react",;
 
+<<<<<<< HEAD
 import {;
   Table,;
   TableBody,;
@@ -8,6 +12,8 @@ import {;
   TableHeader,;
 <<<<<<< HEAD
   TableRow,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 import React from "react";
@@ -18,6 +24,7 @@ import {
   TableCell
   TableHead
   TableHeader
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -562,6 +569,11 @@ export function TeamActivity() {;
   }
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  TableRow} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { CalendarIcon, Search } from "lucide-react";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
 
   const getCategoryBadge = (category: string) => {"
@@ -576,22 +588,26 @@ export function TeamActivity() {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (  return (
 =======
 
   return (
   return (
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  return (  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h3 className="text-xl font-medium">Recent Team Activity</h3>;
         <div className="flex items-center gap-2">;
           <div className="relative">;
-            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
-            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
+            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
             <Input
               type="search"
               placeholder="Search activities..."
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="w-[200px] md:w-[300px] pl-9"import React from "react",;
 =======
@@ -624,11 +640,15 @@ import React from "react",;
 
 import React from "react",;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              className="w-[200px] md:w-[300px] pl-9"import React from "react",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
+<<<<<<< HEAD
   TableHeader,;"
   TableRow} from "@/components/ui/table",;"
 import { Badge } from "@/components/ui/badge",;"
@@ -704,11 +724,35 @@ export function TeamActivity() { return null; }
   };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (;
+=======
+  TableHeader,;
+  TableRow,;
+
+import React from "react";
+  TableRow} from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { CalendarIcon, Search } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+
+import React from "react";"
+import {
+  // TODO: Implement
+}
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+
+  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <div className="space-y-6">;
-      <div className="flex items-center justify-between">;
-        <h3 className="text-xl font-medium">Recent Team Activity</h3>;
-        <div className="flex items-center gap-2">;
+      <div className="flex items - center justify-between">;
+        <h3 className="text - xl font-medium">Recent Team Activity</h3>;
+        <div className="flex items - center gap-2">;
           <div className="relative">;
+<<<<<<< HEAD
 =======
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   };
@@ -745,10 +789,61 @@ export function TeamActivity() { return null; }
 <<<<<<< HEAD
 =======
 
+=======
+            <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted-foreground" />;
+            <Input;
+              type="search";
+              placeholder="Search activities...";
+              className="w-[200px] md:w-[300px] pl-9";
+            />;
+          </div>;
+          <Button variant="outline" size="icon" className="h - 10 w-10">;
+            <CalendarIcon className="h - 4 w-4" />;
+          </Button>;
+        </div>;
+      </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
             <TableRow>;
+  const getCategoryBadge = (category: string) => {;"
+    const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {;"
+</string>
+    return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;"
+    <div className="space-y-6">;"
+</div>"
+      <div className="flex items-center justify-between">;"
+</div>"
+        <h3 className="text-xl font-medium">Recent Team Activity</h3>;""
+        <div className="flex items-center gap-2">;"
+</div>"
+          <div className="relative">;"
+</div>"
+            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />;"
+</Search>
+            <Input;"
+              type="search";""
+              placeholder="Search activities...";""
+              className="w-[200px] md:w-[300px] pl-9";"
+            />;
+</Input>
+          </div>;"
+          <Button variant="outline" size="icon" className="h-10 w-10">;"
+</Button>"
+            <CalendarIcon className="h-4 w-4" />;"
+</CalendarIcon>
+          </Button>;
+        </div>;
+      </div>;"
+      <div className="rounded-md border">;"
+</div>
+        <Table>;
+</Table>
+          <TableHeader>;
+</TableHeader>
+            <TableRow>;
+</TableRow>
               <TableHead>User</TableHead>;
               <TableHead>Activity</TableHead>;
               <TableHead>Target</TableHead>;
@@ -757,79 +852,88 @@ export function TeamActivity() { return null; }
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {activities && activities.map((activity) => (;
+</TableBody>
               <TableRow key={activity && activity.id}>;
-                <TableCell className="font-medium">{activity && activity.user}</TableCell>;
+</TableRow>"
+                <TableCell className="font-medium">{activity && activity.user}</TableCell>;"
                 <TableCell>{activity && activity.action}</TableCell>;
                 <TableCell>;
-                  <span className="font-medium">{activity && activity.target}</span>;
+</TableCell>"
+                  <span className="font-medium">{activity && activity.target}</span>;"
                 </TableCell>;
-                <TableCell>{getCategoryBadge(activity && activity.category)}</TableCell>;
-                <TableCell className="text-muted-foreground">;
-                  {formatDate(activity && activity.timestamp)}
+                <TableCell>{getCategoryBadge(activity && activity.category)}</TableCell>;"
+                <TableCell className="text-muted-foreground">;"
+</TableCell>
                 </TableCell>;
               </TableRow>;
-            ))}
           </TableBody>;
         </Table>;
-      </div>;
-
-      <div className="flex items-center justify-between">;
-        <Button variant="outline" size="sm">;
-          Previous;
-        </Button>;
-        <div className="text-sm text-muted-foreground">Page 1 of 10</div>;
-                  {formatDate(activity.timestamp)}
+      </div>;"
+      <div className="flex items-center justify-between">;"
+</div>"
+        <Button variant="outline" size="sm">;"
+</Button>
+        </Button>;"
+        <div className="text-sm text-muted-foreground">Page 1 of 10</div>;"
                 </TableCell>
               </TableRow>
-            ))}
           </TableBody>
         </Table>
-      </div>
-      <div className="flex items-center justify-between">
-        <Button variant="outline" size="sm">
-          Previous
-        </Button>
-        <Button variant="outline" size="sm">
-          Next
+      </div>"
+      <div className="flex items-center justify-between">"
+</div>"
+        <Button variant="outline" size="sm">"
+</Button>
+        </Button>"
+        <Button variant="outline" size="sm">"
+</Button>
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 ;
   const getCategoryBadge = (category: string) =>: any {
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const category_styles: Record<;
-      string,
-      { variant: "default" | "outline" | "secondary" | "destructive" }
-    > = {
-      jobs: { variant: "default" },
-      candidates: { variant: "outline" },
-      team: { variant: "secondary" },
-      billing: { variant: "destructive" },
+      string,"
+      { variant: "default" | "outline" | "secondary" | "destructive" }"
+    > = {"
+      jobs: { variant: "default" },""
+      candidates: { variant: "outline" },""
+      team: { variant: "secondary" },""
+      billing: { variant: "destructive" },"
     }
 ;
-    return <Badge variant={category_styles[category].variant}>{category}</Badge>;
-  }
-;
-  return (
-    <div className="space - y-6">;
-      <div className="flex items - center justify - between">;
-        <h3 className="text - xl font - medium">Recent Team Activity</h3>;
-        <div className="flex items - center gap - 2">;
-          <div className="relative">;
-            <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted - foreground" />;
-            <Input;
-              type="search";
-              placeholder="Search activities...";
-              className="w-[200px] md:w-[300px] pl - 9";
+    return <Badge variant={category_styles[category].variant}>{category}</Badge>;"
+    <div className="space - y-6">;"
+</div>"
+      <div className="flex items - center justify - between">;"
+</div>"
+        <h3 className="text - xl font - medium">Recent Team Activity</h3>;""
+        <div className="flex items - center gap - 2">;"
+</div>"
+          <div className="relative">;"
+</div>"
+            <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted - foreground" />;"
+</Search>
+            <Input;"
+              type="search";""
+              placeholder="Search activities...";""
+              className="w-[200px] md:w-[300px] pl - 9";"
             />;
-          </div>;
-          <Button variant="outline" size="icon" className="h - 10 w - 10">;
-            <CalendarIcon className="h - 4 w - 4" />;
+</Input>
+          </div>;"
+          <Button variant="outline" size="icon" className="h - 10 w - 10">;"
+</Button>"
+            <CalendarIcon className="h - 4 w - 4" />;"
+</CalendarIcon>
           </Button>;
         </div>;
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
 =======
@@ -841,10 +945,21 @@ export function TeamActivity() { return null; }
 =======
       <div className="rounded - md border">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      </div>;"
+      <div className="rounded - md border">;"
+</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <Table>;
+</Table>
           <TableHeader>;
+</TableHeader>
             <TableRow>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+</TableRow>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <TableHead > User</TableHead>;
               <TableHead > Activity</TableHead>;
               <TableHead > Target</TableHead>;
@@ -855,10 +970,10 @@ export function TeamActivity() { return null; }
           <TableBody>;
             {activities.map ((activity) => (
               <TableRow key={activity.id}>;
-                <TableCell className="font - medium">{activity.user}</TableCell>;
+                <TableCell className="font-medium">{activity.user}</TableCell>;
                 <TableCell>{activity.action}</TableCell>;
                 <TableCell>;
-                  <span className="font - medium">{activity.target}</span>;
+                  <span className="font-medium">{activity.target}</span>;
                 </TableCell>;
 
     </div>);
@@ -867,6 +982,7 @@ export function TeamActivity() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
@@ -896,12 +1012,18 @@ export function TeamActivity() { return null; }
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+<TableCell>{getCategoryBadge(activity.category)}</TableCell>;
+                <TableCell className="text-muted-foreground">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   {formatDate(activity.timestamp)}
+}                  {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>"
       <div className="flex items-center justify-between">"
@@ -953,9 +1075,203 @@ export function TeamActivity() { return null; }
         <Button variant="outline" size="sm">
           Next;
 =======
+=======
+      </div>}
+      id: 1,;"
+      user: "Alex Johnson",;""
+      action: "Posted a job",;""
+      target: "Senior AI Engineer",;"
+      timestamp: new Date(Date && Date.now() - 1000 * 60 * 30),;"
+      category: "jobs",;"
+      id: 2,;"
+      user: "Jamie Smith",;""
+      action: "Contacted candidate",;""
+      target: "Michael Chen",;"
+      timestamp: new Date(Date && Date.now() - 1000 * 60 * 120),;"
+      category: "candidates",;"
+      id: 3,;"
+      user: "Sam Williams",;""
+      action: "Updated job",;""
+      target: "Frontend Developer",;"
+      timestamp: new Date(Date && Date.now() - 1000 * 60 * 60 * 5),;"
+      id: 4,;"
+      action: "Added team member",;""
+      target: "Chris Rodriguez",;"
+      timestamp: new Date(Date && Date.now() - 1000 * 60 * 60 * 24),;"
+      category: "team",;"
+      id: 5,;"
+      user: "Taylor Brown",;""
+      action: "Viewed candidate profile",;""
+      target: "Sarah Kim",;"
+      timestamp: new Date(Date && Date.now() - 1000 * 60 * 60 * 24 * 2),;"
+      id: 6,;"
+      action: "Updated budget",;""
+      target: "Monthly spending cap",;"
+      timestamp: new Date(Date && Date.now() - 1000 * 60 * 60 * 24 * 3),;"
+      category: "billing",;"
+    },;]
+
+  // Function to format the date in a readable way;
+  const formatDate = (date: Date) => {;
+    const diffMs = now && now.getTime() - date && date.getTime();
+    const diffMins = Math && Math.floor(diffMs / (1000 * 60));
+    const diffHrs = Math && Math.floor(diffMs / (1000 * 60 * 60));
+    const diffDays = Math && Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+    if (diffMins < 60) {;
+      return `${diffMins} minutes ago`;
+    } else if (diffHrs < 24) {;`;
+      return `${diffHrs} hours ago`;
+    } else if (diffDays < 7) {;`;
+      return `${diffDays} days ago`;
+    } else {;
+      return date && date.toLocaleDateString();
+
+  };
+
+  const getCategoryBadge = (category: string) => {;
+    const categoryStyles: Record<;
+      string,;"
+      { variant: "default" | "outline" | "secondary" | "destructive" }"
+    > = {;"
+      jobs: { variant: "default" },;""
+      candidates: { variant: "outline" },;""
+      team: { variant: "secondary" },;""
+      billing: { variant: "destructive" },;"
+
+
+    return <Badge variant={categoryStyles[category].variant}>{category};"
+    const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {"
+</string>
+    return <Badge variant={categoryStyles[category].variant}>{category}"
+    <div className="space-y-6">;"
+</div>"
+      <div className="flex items-center justify-between">;"
+        <h3 className="text-xl font-medium">Recent Team Activity</h3>;""
+        <div className="flex items-center gap-2">;"
+          <div className="relative">;"
+            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;"
+
+            <Input;"
+              type="search"""
+              placeholder="Search activities..."""
+              className="w-[200px] md:w-[300px] pl-9"""
+import React from "react",;"
+  TableHeader,;"
+  TableRow} from "@/components/ui/table",;""
+import { Badge } from "@/components/ui/badge",;""
+import { CalendarIcon, Search } from "lucide-react",;""
+import { Button } from "@/components/ui/button",;""
+import { Input } from "@/components/ui/input",;"
+  // Mock activity data;
+      timestamp: new Date(Date.now() - 1000 * 60 * 30),;"
+      category: "jobs"},;"
+      timestamp: new Date(Date.now() - 1000 * 60 * 120),;"
+      category: "candidates"},;"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5),;"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24),;"
+      category: "team"},;"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2),;"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),;]"
+      category: "billing"}],;"
+  // Function to format the date in a readable way;
+
+    if (diffMins < 60) {;`;
+      return date.toLocaleDateString();
+  const getCategoryBadge = (category: string) => {;"
+    const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {;"
+            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />;"
+
+              type="search";""
+              placeholder="Search activities...";""
+              className="w-[200px] md:w-[300px] pl-9";"
+            />;
+
+          </div>;"
+          <Button variant="outline" size="icon" className="h-10 w-10">;"
+            <CalendarIcon className="h-4 w-4" />;"
+
+          ;
+        </div>;
+      <div className="rounded-md border">;"
+</div>
+        <Table>;
+
+          <TableHeader>;
+
+            <TableRow>;
+
+              <TableHead>User;
+              <TableHead>Activity;
+              <TableHead>Target;
+              <TableHead>Category;
+              <TableHead>Time;
+          <TableBody>;
+
+              <TableRow key={activity && activity.id}>;
+                <TableCell className="font-medium">{activity && activity.user};"
+                <TableCell>{activity && activity.action};
+</TableBody>
+              <TableRow key={activity.id}>;
+</TableRow>"
+                <TableCell className="font - medium">{activity.user}</TableCell>;"
+                <TableCell>{activity.action}</TableCell>;
+                <TableCell>;
+                  <span className="font-medium">{activity && activity.target}</span>;"
+                <TableCell>{getCategoryBadge(activity && activity.category)};"
+                <TableCell className="text-muted-foreground">;"
+
+        <Button variant="outline" size="sm">;"
+
+        ;"
+        <div className="text-sm text-muted-foreground">Page 1 of 10</div>;"
+      <div className="flex items-center justify-between">"
+        <Button variant="outline" size="sm">"
+
+
+    const category_styles: Record<;
+      string,"
+    > = {"
+      jobs: { variant: "default" },""
+      candidates: { variant: "outline" },""
+      team: { variant: "secondary" },""
+      billing: { variant: "destructive" },"
+    return <Badge variant={category_styles[category].variant}>{category};"
+    <div className="space - y-6">;"
+      <div className="flex items - center justify - between">;"
+        <h3 className="text - xl font - medium">Recent Team Activity</h3>;""
+        <div className="flex items - center gap - 2">;"
+            <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted - foreground" />;"
+
+              className="w-[200px] md:w-[300px] pl - 9";"
+
+          <Button variant="outline" size="icon" className="h - 10 w - 10">;"
+            <CalendarIcon className="h - 4 w - 4" />;"
+
+      <div className="rounded - md border">;"
+
+
+
+              <TableHead > User;
+              <TableHead > Activity;
+              <TableHead > Target;
+              <TableHead > Category;
+              <TableHead > Time;
+
+              <TableRow key={activity.id}>;
+                <TableCell className="font - medium">{activity.user};"
+                <TableCell>{activity.action};
+                  <span className="font - medium">{activity.target}</span>;"
+    </div>);
+
+                </TableCell>
+              </TableRow>
+          </TableBody>
+        </Table>
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>
 
-      
 
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
@@ -971,10 +1287,11 @@ export function TeamActivity() { return null; }
       </div>
     </div>
 
-  )
-}
-;
 
+        <div className="text-sm text-muted-foreground">"
+
+                <TableCell>{getCategoryBadge (activity.category)};"
+                <TableCell className="text - muted - foreground">;"
 
 <<<<<<< HEAD
 
@@ -1160,25 +1477,29 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 }> </TableCell> </TableRow>) ) "
 =======
 if (diffMins < 60) {
+              ))}
+
+        <div className="text - sm text - muted - foreground">Page 1 of 10</div>;""
+        <div className="text-sm text-muted-foreground">;"
+
+if (diffMins < 60) {`;
   return `$ {
-  diffMins 
+  diffMins;`;
 }minutes ago` 
-}else if (diffHrs < 24) {
-  return `$ {
-  diffHrs 
+}else if (diffHrs < 24) {`;
+  diffHrs;`;
 }hours ago` 
-}else if (diffDays < 7) {
-  return `$ {
-  diffDays 
+}else if (diffDays < 7) {`;
+  diffDays;`;
 }days ago` 
 }else {
+  // TODO: Implement
   return date.toLocaleDateString () 
-}
-};
 const getCategoryBadge = (category: string) => {
   return <Badge variant= {
-  categoryStyles[category].variant 
+  categoryStyles[category].variant;
 }> {
+<<<<<<< HEAD
   category 
 }</Badge> 
 };
@@ -1191,6 +1512,8 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 }
 );
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   );
 }
@@ -1207,6 +1530,7 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1225,3 +1549,15 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+} "
+return (<div className="space-y-6" > <div className="flex items-center justify-between" > <h3 className="text-xl font-medium" >Recent Team Activity</h3> <div className="flex items-center gap-2" > <div className="relative" > <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" /> search"placeholder=" Search activities..."className=" w-[200px] md:w-[300px] pl-9"/> </div> <Button variant=" outline"size=" icon"className=" h-10 w-10"> <CalendarIcon className=" h-4 w-4"/>  </div> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>User <TableHead>Activity <TableHead>Target <TableHead>Category <TableHead>Time   <TableBody> {")
+  activities.map ( (activity) => (<TableRow key= {
+  activity.id;)
+}>  ) ) "
+}  </div> <div className=" flex items-center justify-between"> <Button variant=" outline"size=" sm"> Previous  <div className=" text-sm text-muted-foreground"> Page 1 of 10 </div> <Button variant=" outline"size=" sm" > Next  </div> </div>)""`;
+pr-12325
+}> </TableCell> </TableRow>) ) "
+}</TableBody> </Table> </div> <div className=" flex items-center justify-between"> <Button variant=" outline"size=" sm"> Previous </Button> <div className=" text-sm text-muted-foreground"> Page 1 of 10 </div> <Button variant=" outline"size=" sm" > Next </Button> </div> </div>)""
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

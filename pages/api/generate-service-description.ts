@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -550,3 +551,13 @@ description =
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+export type GenerateServiceDescriptionRequest = any;
+    return res.status(500).json({ error: 'Failed to generate description' })
+
+  }
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

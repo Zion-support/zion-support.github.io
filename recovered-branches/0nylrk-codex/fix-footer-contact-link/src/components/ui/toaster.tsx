@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -86,6 +87,16 @@ export function Toaster() {
   return (
     <SonnerToaster
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+export function Toaster() {
+  return (
+
+import {Toaster, as, SonnerToaster} from "sonner";
+export function Toaster() {;
+  return (    <SonnerToaster
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       position="top-right"
       toastOptions={{}
         className:"
@@ -96,16 +107,20 @@ export function Toaster() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           background: '#0a1429'
           color: '#fff'
           border: '1px solid #1e3a6f'}
         duration: 4000
 
         descriptionClassName: "text-zion-slate-light"}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -140,6 +155,9 @@ export function Toaster() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import * as React from "react",;
 import { Toaster as SonnerToaster } from "sonner",;
 export function Toaster() {;
@@ -157,6 +175,7 @@ export function Toaster() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     />;
   );
@@ -167,6 +186,8 @@ export function Toaster() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import * as React from './react';
 import { Toaster, as, SonnerToaster } from './sonner';
@@ -183,6 +204,7 @@ function Toaster() {
           background: '#0a1429',
           color: '#fff',
           border: '1px solid #1e3a6f'},
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -224,6 +246,8 @@ function Toaster() {
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         duration: 4000,
         descriptionClassName: "text-zion-slate-light",
       }}
@@ -234,11 +258,12 @@ function Toaster() {
 
 ;
 
-
 }
+        descriptionClassName: "text - zion - slate - light"}}
+    />);
+}}
 
 ;
-
 
     />;
   );
@@ -261,6 +286,7 @@ function Toaster() {
 =======
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -273,3 +299,28 @@ function Toaster() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a;
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+import * as React from "react";""
+import { Toaster, as, SonnerToaster } from "sonner";"
+export function Toaster() {
+  return (
+    <SonnerToaster;"
+      position="top-right""
+      toastOptions={{
+        className:"
+          "bg-zion-blue-dark text-white border border-zion-blue-light shadow-lg shadow-zion-purple/10","
+        style: {,"
+  background: "#0a1429",""
+          color: "#fff",""
+          border: "1px solid #1e3a6f","
+        },
+        duration: 4000,"
+        descriptionClassName: "text-zion-slate-light","
+      }}
+    />
+)"
+pr-12325
+</SonnerToaster>)"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

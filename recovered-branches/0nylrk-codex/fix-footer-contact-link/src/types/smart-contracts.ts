@@ -3,6 +3,7 @@ export type BlockchainNetwork = "ethereum" | "polygon" | "none";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -241,13 +242,20 @@ export interface DeploymentOptions {
 =======
 export interface DeploymentOptions {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  network: BlockchainNetwork;
-  wallet_address?: string;
-  use_escrow: boolean,
-  deployToChain: boolean;
+=======
+export interface SmartContractInfo {;
+
+
 
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  network: BlockchainNetwork;
+  wallet_address?: string;
+  use_escrow: boolean,}
+  deployToChain: boolean;}
+}
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -257,12 +265,16 @@ export interface DeploymentOptions {};
 
   arbitrator?: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}  arbitrator?: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 export interface DeploymentOptions {;
   network: BlockchainNetwork,;
   walletAddress?: string,;
-  useEscrow: boolean;
+
+  useEscrow: boolean;,
   deployToChain: boolean;
 }
 ;
@@ -272,6 +284,7 @@ export interface DeploymentOptions {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -290,3 +303,7 @@ export interface DeploymentOptions {;
 =======
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

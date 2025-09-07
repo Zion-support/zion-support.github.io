@@ -43,6 +43,7 @@ export default function ApiDocsPage() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           <div>
+<<<<<<< HEAD
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
             <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>
           </div>
@@ -65,15 +66,27 @@ export default function ApiDocsPage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+</div>
+            <div className="text-2xl font-bold">Zion OS API Documentation</div>""
+            <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>"
+          </div>"
+          <div className="flex gap-2">"
+            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/openapi" target="_blank" rel="noreferrer">OpenAPI</a>""
+            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/postman" target="_blank" rel="noreferrer">Postman</a>""
+            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <EndpointDetail endpoint={activeEndpoint} />
-        ) : (
-          <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
-        )}
-        <section className="mt-8">
-          <div className="text-lg font-semibold mb-2">Changelog</div>
+"
+          <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>""
+        <section className="mt-8">"
+</section>"
+          <div className="text-lg font-semibold mb-2">Changelog</div>"
           <ChangelogWidget />
+
         </section>
       </main>
+<<<<<<< HEAD
     </div>
   )
 }
@@ -106,3 +119,10 @@ function ChangelogWidget() {
 =======
       </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    <div className="space-y-2">"
+        <button onClick={load} className="px-3 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">Load</button>""
+        <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>""
+        {message && <span className="text-xs text-high-contrast-muted">{message}</span>}"
+      </div>;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

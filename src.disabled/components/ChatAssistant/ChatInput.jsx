@@ -15,6 +15,7 @@ import React,{ useState,useRef,useEffect } from';react' import { Button } from '
 =======
 =======
 import React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';''}
+<<<<<<< HEAD
 
 
 :src.disabled/components/ChatAssistant/ChatInput.jsx
@@ -79,6 +80,14 @@ import React,{ useState,useRef,useEffect } from';react' import { Button } from '
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+import { Send export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(\') const inputRef = useRef(null) useEffect(() => {\''\'"\";
+const { Send export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(") const inputRef = useRef(null) useEffect(() => {""""";'"'"
 import React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';''}
+<
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';''}
+import { Send export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(\') const inputRef = useRef(null) useEffect(() => {\''\'"\";
+const { Send export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(") const inputRef = useRef(null) useEffect(() => {""""";'"'"
 import React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';''}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

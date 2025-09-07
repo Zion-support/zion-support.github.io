@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -18,6 +19,9 @@
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -30,73 +34,18 @@ const fs = require("fs")";const path = require("path")""
     console.log(`[${new Date().toISOString()}] ${message}`);
     this.log("� Checking meta tags");""
       "pages": [],""issues": [],,"
+
     const pagesDir = path.join(this.projectRoot, "src", "pages");";    if (!fs.existsSync(pagesDir)) {";      results.issues.push("Pages directory not found");";      return results,"}
-    const files = this.getAllFiles(pagesDir, [".tsx", ".jsx", ".ts", ".js"]);""
+    const files = this.getAllFiles(pagesDir, [".tsx", ".jsx", ".ts", ".js"]);
         const content = fs.readFileSync(file, "utf8");";        const pageName = path.basename(file);"
+<<<<<<< HEAD
           "file": pageName,""hasTitle": content.includes("<title>") || content.includes(""title":"),""hasDescription":;";            content.includes("description") ||";            content.includes("meta name="description""),""hasKeywords":;";            content.includes("keywords") ||";            content.includes("meta name="keywords""),""hasOpenGraph":;";            content.includes(""og":") || content.includes("property=""og":"),""hasTwitterCard":;";            content.includes(""twitter":") || content.includes("name=""twitter":"),"};"
           results.issues.push("${pageName}: Missing title tag");"
 <<<<<<< HEAD
 #!/usr/bin/env node
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const fs = require('fs');
-const path = require('path');
-
-class SEOOptimizer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportFile = path.join(
-      this.projectRoot,
-      'seo-optimization-report.json'
-    );
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  async checkMetaTags() {
-    this.log('🏷️ Checking meta tags');
-
-    const results = {
-      pages: [],
-      issues: [],
-    };
-
-    const pagesDir = path.join(this.projectRoot, 'src', 'pages');
-    if (!fs.existsSync(pagesDir)) {
-      results.issues.push('Pages directory not found');
-      return results;
-    }
-
-    const files = this.getAllFiles(pagesDir, ['.tsx', '.jsx', '.ts', '.js']);
-
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        const pageName = path.basename(file);
-
-        const pageAnalysis = {
-          file: pageName,
-          hasTitle: content.includes('<title>') || content.includes('title:'),
-          hasDescription:
-            content.includes('description') ||
-            content.includes('meta name="description"'),
-          hasKeywords:
-            content.includes('keywords') ||
-            content.includes('meta name="keywords"'),
-          hasOpenGraph:
-            content.includes('og:') || content.includes('property="og:'),
-          hasTwitterCard:
-            content.includes('twitter:') || content.includes('name="twitter:'),
-        };
-
-        results.pages.push(pageAnalysis);
-
-        if (!pageAnalysis.hasTitle) {
-          results.issues.push(`${pageName}: Missing title tag`);
-        }
-        if (!pageAnalysis.hasDescription) {
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           results.issues.push(`${pageName}: Missing meta description`);
           results.issues.push("${pageName}: Missing Open Graph tags");"
         results.issues.push(`Error reading ${file}: ${error.message}`);
@@ -145,24 +94,18 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 =======
 
-  .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
 
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       }
     }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-    return results;
-  }
 
-  async checkSitemap() {
-    this.log('🗺️ Checking sitemap');
 
-    const results = {
-      exists: false,
-      valid: false,
-      issues: [],
-    };
 
+<<<<<<< HEAD
     const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml');
     results.exists = fs.existsSync(sitemapPath);
 
@@ -337,3 +280,5 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

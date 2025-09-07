@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -10,10 +11,18 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import LoadingSpinner from './LoadingSpinner';
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+import React, { useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
+
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface FormData {
   name: string;
   email: string;
   company: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   phone: string;
 =======
@@ -23,12 +32,17 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
   phone: string;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+  phone: string;
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   service: string;
   message: string;
 }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
+<<<<<<< HEAD
     name: '',
     email: '',
     company: '',
@@ -36,6 +50,14 @@ const ContactForm: React.FC = () => {
     service: '',
 <<<<<<< HEAD
     message: ''
+=======
+    name: '';,
+    email: '';,
+    company: '';,
+    phone: '';,
+    service: '';,
+    message: '';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -59,19 +81,23 @@ const ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+        name: '';,
+        email: '';,
+        company: '';,
+        phone: '';,
+        service: '';,
+        message: '';
       });
     } catch {
       setSubmitStatus('error');
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     message: '',
+=======
+    message: '';,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -94,8 +120,9 @@ const ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setIsSubmitted(true);
     } catch (error) {
-      console.error('Error submitting form: ', error);
+      console.error('Error submitting form: ';, error);
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
 =======
     message: ''
   });
@@ -131,12 +158,17 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     } catch {
       setSubmitStatus('error');
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } finally {
       setIsSubmitting(false);
     }
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="max-w-2xl mx-auto bg-white rounded-lgshadow-lgp-8">
       <h2 className="text-3xl font-bold text-gray-900mb-6text-center">Get In Touch</h2>
@@ -273,9 +305,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 export default ContactForm;
 pr-12243
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');
@@ -484,6 +519,7 @@ pr-12243
 export default ContactForm;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -626,3 +662,6 @@ pr-12243
 export default ContactForm;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -15,6 +15,7 @@ export * from './VideoCallRoom';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -59,3 +60,13 @@ export const Index = () => {
 =======
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+// Index utility;
+export const Index = (
+  // Implementation here;
+return null) => {
+  return $3;}
+}
+}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

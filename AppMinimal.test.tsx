@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { render, screen } from '@testing-library/react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -29,11 +30,29 @@ import AppMinimal from './AppMinimal';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+
+
+import React from 'react';
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import '@testing-library/jest-dom';
 import AppMinimal from './AppMinimal';
 
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
     render(<AppMinimal />);
@@ -56,6 +75,7 @@ describe('AppMinimal', () => {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -82,6 +102,36 @@ describe('AppMinimal', () => {'
   it('renders without crashing', () => {}
     render(<AppMinimal />);'
     expect(screen.getByRole('main')).toBeInTheDocument();
+=======
+
+
+
+
+});
+
+import React from 'react';
+import { describe, it, expect } from 'vitest';
+describe('AppMinimal', () => {
+  it('renders without crashing', () => {
+    render(<AppMinimal />);
+
+
+
+import { render, screen, describe, it, expect } from 'lucide-react'; import AppMinimal from './AppMinimal'; describe('AppMinimal',() => { it('renders without crashing',() => { render(<AppMinimal />); expect(screen.getByRole('main')).toBeInTheDocument()}
+
+}); it('displays correct content',() => { render(<AppMinimal />)}
+
+}); it('handles user interactions',() => { render(<AppMinimal />)})}
+
+import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import AppMinimal from \'./AppMinimal\'; describe(\'AppMinimal\',() => { it(\'renders without crashing\',() => { render(<AppMinimal />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<AppMinimal />)}); it(\'handles user interactions\',() => { render(<AppMinimal />)})});
+
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions""
+"
+)
+  it('displays correct content', () => {
+    render(<AppMinimal />);
+    // Add content tests here
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   });
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -95,6 +145,7 @@ describe('AppMinimal', () => {'
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,6 +171,15 @@ describe('AppMinimal', () => {'
 =======
 });
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { render, screen, describe, it, expect } from 'lucide-react'; import AppMinimal from './AppMinimal'; describe('AppMinimal',() => { it('renders without crashing',() => { render(<AppMinimal />); expect(screen.getByRole('main')).toBeInTheDocument()}
 }); it('displays correct content',() => { render(<AppMinimal />)}
 }); it('handles user interactions',() => { render(<AppMinimal />)})}
@@ -137,6 +197,7 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import AppM
 =======
 
 
+<<<<<<< HEAD
 =======
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -212,6 +273,20 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 =======
 </AppMinimal>'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+});
+import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import AppMinimal from \'./AppMinimal\'; describe(\'AppMinimal\',() => { it(\'renders without crashing\',() => { render(<AppMinimal />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<AppMinimal />)}); it(\'handles user interactions\',() => { render(<AppMinimal />)})});
+
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions"
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions"
+
+});
+});
+</AppMinimal>'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import AppMinimal from './AppMinimal'
@@ -221,6 +296,7 @@ describe('AppMinimal'
   it('displays correct content'
   it('handles user interactions'
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -258,3 +334,10 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 });
 </AppMinimal>'
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

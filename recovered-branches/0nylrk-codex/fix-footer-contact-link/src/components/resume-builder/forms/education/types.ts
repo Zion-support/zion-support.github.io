@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Education } from '@/types/resume';
 export interface EducationFormProps {
@@ -27,6 +28,9 @@ export interface EducationFormProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 import { Education } from "@/types/resume";
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface EducationFormProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -35,6 +39,7 @@ export interface EducationFormProps {};
   resumeId: string;
   educationEntries: Education[];
   onComplete: () => void;
+<<<<<<< HEAD
   onBack: () => void;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,14 +92,32 @@ export interface EducationItemProps {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+=======
 
+}
+export interface EducationItemProps {
 
+export interface EducationItemProps {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+  education: Education;
+
+}
+  resumeId: string;,
+  educationEntries: Education[];
+  onComplete: () => void;,
+  onBack: () => void;
+}"
+  // TODO: Implement
+export interface EducationItemProps {
+  // TODO: Implement
 export interface EducationItemProps {;
 
 
-  education: Education;
-  onEdit: (education: Education) => void;
+  education: Education;,
+  onEdit: (education: Education) => void;,
   onDelete: (id: string) => void;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +129,8 @@ export interface EducationItemProps {;
 export interface EducationFormFieldsProps {
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -115,6 +140,7 @@ export interface EducationFormFieldsProps {;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -219,6 +245,13 @@ export interface EducationFormFieldsProps {
   on_cancel: () => void;
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  isEditing: boolean;,
+  onSubmit: (data: any) => Promise<void>;
+</void>
+  on_submit: (data: any) => Promise < void>;,
+  on_cancel: () => void;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 ;
 
@@ -235,9 +268,6 @@ export interface EducationFormFieldsProps {
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-}
-;
-export interface EducationItemProps {;
   education: Education,;
   onEdit: (education: Education) => void,;
   onDelete: (id: string) => void;
@@ -249,6 +279,7 @@ export interface EducationFormFieldsProps {;
   onCancel: () => void;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -268,3 +299,8 @@ export interface EducationFormFieldsProps {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</void>"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

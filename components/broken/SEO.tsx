@@ -1,28 +1,33 @@
 
+<<<<<<< HEAD
 {}
   /* Robots Meta */
 <<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect } from 'react';
 import Head from 'next/head';
+
 interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string | string[],
-  image?: string;
+  keywords?: string | string[],image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'product',
-  publishedTime?: string;
+  type?: 'website' | 'article' | 'product',publishedTime?: string;
   modifiedTime?: string;
   author?: string;
   section?: string;
-  tags?: string[],
-  structuredData?: any;
+  tags?: string[],structuredData?: any;
   noindex?: boolean;
-  nofollow?: boolean
+
+  nofollow?: boolean}
+}
 }
 
 const SEO: React.FC<SEOProps> = ({
   title;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 }{
 =======
@@ -564,3 +569,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

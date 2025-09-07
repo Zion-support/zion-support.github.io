@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -24,20 +25,34 @@ class ESLintErrorAutoFixer {}
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+class ESLintErrorAutoFixer {}
+  constructor() {}
+    this.projectRoot = process.cwd();
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};
+        fs.mkdirSync(dir, { "recursive": true })};"
     }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.fixesApplied = 0;
-    this.filesProcessed = 0};
+    this.filesProcessed = 0};"
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -46,30 +61,23 @@ class ESLintErrorAutoFixer {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(`[${timestamp}] [${level}] ${message}`)};
+=======
+    console.log(`[${timestamp}] [${level}] ${message})};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runESLintCheck() {}
     try {}
-      this.log('Running ESLint check...');
-      execSync('npm run lint', { "stdio": 'pipe' }
-});
-      return { "success": true, "errors": [], "count": 0 }} catch (error) {}
-      const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      const errors = this.parseESLintErrors(output);
-      this.log(`ESLint check failed with ${errors.length} errors`, 'ERROR');
-      return { "success": false, errors, "count": errors.length }};
+
+      return { "success": false, errors, "count": errors.length }};"
   };
   async runESLintFix() {}
-    try {}
-      this.log('Running ESLint auto-fix...');
-      execSync('npx eslint --fix src/**/*.{js,jsx,ts,tsx}', { "stdio": 'pipe' }
-});
-      return { "success": true, "fixed": true }} catch (error) {}
-      this.log(`ESLint auto-fix "failed": ${error.message}`, 'ERROR');
-      return { "success": false, "fixed": false }};
-  };
-  parseESLintErrors(output) {}
+    try {}"
+
+      return { "success": false, "fixed": false }};"
+  parseESLintErrors(output) {}"
     const errorLines = output.split('\n').filter(line => )
-      line.includes('error') || line.includes('"Error": ');
+
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
     const errors = [];
     let currentError = null;
@@ -79,50 +87,47 @@ class ESLintErrorAutoFixer {}
     let currentError = null;
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    const errors = [];
+    let currentError = null;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     for (const line of errorLines) {}
-      if (line.includes('error') || line.includes('Error:')) {}
+
         const match = line.match(/([^:]+):(\d+):(\d+)/);
         if (match) {}
           if (currentError) {}
             errors.push(currentError)};
           currentError = {}
-            "file": match[1].trim(),
-            "line": parseInt(match[2]),
-            "column": parseInt(match[3]),
-            "message": line.split(' - ')[1] || line,
-            "type": 'eslint'
-          }};
-      } else if (currentError && line.trim()) {}
-        currentError.message += ' ' + line.trim()};
-    };
-    if (currentError) {}
-      errors.push(currentError)};
+
     return errors};
   async fixESLintErrors(errors) {}
     let fixesApplied = 0;
 <<<<<<< HEAD
-=======
-    
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-    for (const error of errors) {}
-      try {}
-        if (await this.fixSingleESLintError(error)) {}
-          fixesApplied++};
-      } catch (error) {}
-        this.log(`Failed to fix ESLint error in ${error.file}: ${error.message}`, 'ERROR')};
-    };
-    return fixesApplied};
-  async fixSingleESLintError(error) {}
-    if (!error.file || !fs.existsSync(error.file)) {}
-      return false};
-    const content = fs.readFileSync(error.file, 'utf8');
-    const lines = content.split('\n');
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    for (const error of errors) {}
+        if (await this.fixSingleESLintError(error)) {}
+          fixesApplied++};
+
+    return fixesApplied};
+  async fixSingleESLintError(error) {}
+    if (!error.file || !fs.existsSync(error.file)) {}
+      return false};
+
+    const lines = content.split('\n');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Apply common ESLint fixes;
-    const fixes = [this.fixUnusedVariables.bind(this),]
+    const fixes = [this.fixUnusedVariables.bind(this)]
       this.fixMissingSemicolons.bind(this),
       this.fixUnusedImports.bind(this),
       this.fixConsoleStatements.bind(this),
@@ -140,46 +145,38 @@ class ESLintErrorAutoFixer {}
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     for (const fix of fixes) {}
-      try {}
         const result = fix(lines, error);
         if (result.modified) {}
-          modifiedContent = result.content;
-          this.log(`Applied ESLint fix to ${error.file}: ${result.description}`, 'INFO')};
-      } catch (fixError) {}
-        this.log(`ESLint fix failed for ${error.file}: ${fixError.message}`, 'WARN')};
-    };
-    if (modifiedContent !== originalContent) {}
-      fs.writeFileSync(error.file, modifiedContent);
-      return true};
-    return false};
-  fixUnusedVariables(lines, error) {}
-    if (error.message.includes('is assigned a value but never used')) {}
-      const varMatch = error.message.match(/'([^']+)' is assigned a value but never used/);
+
       if (varMatch) {}
         const varName = varMatch[1];
         const lineIndex = error.line - 1;
         const line = lines[lineIndex];
+<<<<<<< HEAD
 <<<<<<< HEAD
         // Comment out unused variable;
         if (line.includes(varName)) {}
           lines[lineIndex] = `// ${line} // eslint-disable-line no-unused-vars`;`
 =======
         
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Comment out unused variable;
-        if (line.includes(varName)) {}
+        if (line.includes(varName)) {}`;
           lines[lineIndex] = `// ${line} // eslint-disable-line no-unused-vars`;`
+<<<<<<< HEAD
           
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           return {}
-            "modified": true,
-            "content": lines.join('\n'),
-            "description": `Commented out unused variable ${varName}
-          }};
-      };
-    };
+
+            "description": `Commented out unused variable ${varName}"
+    };"
     return { "modified": false, "content": lines.join('\n') }};
   fixMissingSemicolons(lines, error) {}
     if (error.message.includes('Missing semicolon')) {}
+<<<<<<< HEAD
       const lineIndex = error.line - 1;
       const line = lines[lineIndex];
 <<<<<<< HEAD
@@ -320,10 +317,20 @@ class ESLintErrorAutoFixer {}
       const autoFixResult = await this.runESLintFix();
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      if (importMatch) {}
+        const importName = importMatch[1];
+        // Find and remove unused import;
+
+      // First try ESLint's built-in auto-fix;
+      const autoFixResult = await this.runESLintFix();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (autoFixResult.success) {}
-        this.log('ESLint built-in auto-fix completed', 'INFO')};
+
       // Get current ESLint errors;
       const checkResult = await this.runESLintCheck();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       
@@ -392,11 +399,30 @@ class ESLintErrorAutoFixer {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      if (checkResult.success) {}
+
+      // Run check again to see if fixes worked;
+      const postCheckResult = await this.runESLintCheck();
+      const report = {}
+
+        "success": postCheckResult.success;"
+      // Save report;`;
+      const reportPath = path.join(this.reportsDir, `eslint-fix-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    // Run initial fix;
+    await this.runAutoFix();
+    // Set up periodic fixing;
+    setInterval(async () => {}
+
+    }, this.fixInterval);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`ESLint error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)};
-};
 // Main execution;
 if (require.main === module) {}
   const fixer = new ESLintErrorAutoFixer();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -421,6 +447,10 @@ if (require.main === module) {}
   // Start auto-fixer;
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
+=======
+  // Handle graceful shutdown;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     process.exit(1)})};
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -440,6 +470,9 @@ module.exports = ESLintErrorAutoFixer;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 module.exports = ESLintErrorAutoFixer;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

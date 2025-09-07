@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/automation-manager.js
 ========
 <<<<<<< HEAD
@@ -622,3 +623,37 @@ class AutomationManager {;
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/automation-manager.js
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+#!/usr/bin/env node,"}),"})""
+import { execSync } from,"}),"})""
+  'child_process',"}),"})""
+import fs from,"}),"})""
+  'fs',"}),"})""
+import path from,"}),"})""
+  'path',"}),"})""
+import { fileURLToPath } from,"}),"})""
+  'url',"}),"})""
+class AutomationManager {,"}),"})""
+  constructor() {,"}),"})""
+    this && this.automationProcesses = [,"}),"})""
+  'console-error-fixer',,"}),"})""
+  'link-checker',,"}),"})""
+  'continuous-improvement',,"}),"})""
+  'daily-build-test',,"}),"})""
+  'security-audit',,"}),"})""
+  'dependency-updates',,"}),"})""
+  'performance-monitor',,"}),"})""
+  'quality-checks',,"}),"})""
+  'link-integrity',,"}),"})""
+  'front-maximizer',,"}),"})""
+  'sitemap-runner',"}),"})"]"
+    ]}"}),"})""
+  async showHelp() {,"}),"})""
+  status                    - Show all automation processes status,"}),"})""
+  logs <process>           - Show logs for specific process,"}),"})"
+</process>"
+  restart <process>        - Restart specific process,"}),"})"
+</process>
+  logs <process>           - Show logs for specific process;
+  restart <process>        - Restart specific process;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

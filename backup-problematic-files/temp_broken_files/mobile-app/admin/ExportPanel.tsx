@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ExportPanel.tsx
 =======
 import React from "react",;
@@ -23,11 +24,21 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/ExportPanel.tsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import React from "react";""
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";""
+import { Button } from "@/components/ui/button";""
+import { Download } from 'lucide-react';
+import { AppPlatform, AppMetadataValues } from "./MetadataManager";""
+import { toast } from "sonner";""
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ExportPanelProps {;
-  platform:AppPlatform,;
+  platform: AppPlatform;,;
   metadata:AppMetadataValues;
 }
 ;
+<<<<<<< HEAD
 export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) => {;
   const handleExport = (format:'json' | 'csv') => {;
     try {;
@@ -104,12 +115,20 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <Card className="bg-zion-blue border-zion-purple/30">;
+=======
+export const ExportPanel: React.FC<ExportPanelProps> = ({ platform;, metadata }) => {;
+
+    <Card className="bg-zion-blue border-zion-purple/30">;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <CardHeader>;
-        <CardTitle className="text-lg">Export & Analytics</CardTitle>;
-      </CardHeader>;
+"
+        <CardTitle className="text-lg">Export & Analytics;"
       <CardContent>;
-        <div className="space-y-4">;
+        <div className="space-y-4">;"
+</div>
           <div>;
+<<<<<<< HEAD
             <h4 className="font-medium mb-2">Export Metadata</h4>;
             <p className="text-sm text-gray-400 mb-3">;
               Export your app metadata for submission to app stores;
@@ -173,3 +192,24 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/Expor
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/admin/ExportPanel.tsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+</div>"
+            <h4 className="font-medium mb-2">Export Metadata</h4>;""
+            <p className="text-sm text-gray-400 mb-3">;"
+</p>
+            </p>;"
+            <div className="flex flex-col sm:flex-row gap-2">;"
+              <Button variant="outline" onClick={() => handleExport('json')} className="flex-1">;"
+                <Download className="mr-2 h-4 w-4" />;"
+
+              ;"
+              <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">;"
+
+            </div>;
+          </div>;"
+          <div className="border-t border-zion-purple/20 pt-4">;"
+            <h4 className="font-medium mb-2">Installation Analytics</h4>;""
+            <Button onClick={trackAnalytics} className="w-full">;"
+
+return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export & Analytics  <CardContent> <div className=" space-y-4"> <div> <h4 className=" font-medium mb-2">Export Metadata</h4> <p className=" text-sm text-gray-400 mb-3"> Export your app metadata for submission to app stores </p> CSV  </div> </div> <div className=" border-t border-zion-purple/20 pt-4"> <h4 className=" font-medium mb-2">Installation Analytics</h4> <p className=" text-sm text-gray-400 mb-3"> Track how many users click " Install" from web </p> Enable Analytics  </div> </div>  ) ;""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

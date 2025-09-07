@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
@@ -33,6 +34,9 @@ import { ReviewCard } from "./ReviewCard",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
@@ -74,6 +78,7 @@ export function ReviewsList({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="space - y-4">;
 =======
       <div className="space-y-4">;
@@ -81,10 +86,14 @@ export function ReviewsList({
 =======
       <div className="space-y-4">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      <div className="space-y-4">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {Array (3);
           .fill (0);
           .map ((_, i) => (
             <div;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               key={i}
@@ -101,6 +110,9 @@ export function ReviewsList({
               key={i}
               className="border rounded-lg p-4 bg-card animate-pulse"
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              key={i}              className="border rounded-lg p-4 bg-card animate-pulse"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -278,6 +290,7 @@ if ( {) {}
         <h3 className="text - lg font - medium mb - 1">No Reviews Yet</h3>;"
 =======
 
+))}
       </div>
     );
   }
@@ -299,6 +312,7 @@ if ( {) {}
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     return (
       <div className="text - center py - 8 border rounded - lg bg - muted / 20">;
         <h3 className="text - lg font - medium mb - 1">No Reviews Yet</h3>;
@@ -324,11 +338,56 @@ if ( {) {
 <<<<<<< HEAD
 =======
     <div className="space-y-4">
+=======
+;
+
+
+import { Review } from "@/types/reviews";""
+import { ReviewCard } from "./ReviewCard";"
+interface ReviewsListProps {
+  // TODO: Implement
+}
+  reviews: Review[];,
+  isLoading: boolean;
+  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
+</boolean>"
+      <div className="space-y-4">"
+</div>
+            <div;
+              key={i}"
+              className="border rounded-lg p-4 bg-card animate-pulse""
+            >
+</div>"
+              <div className="flex items-center gap-3 mb-3">"
+                <div className="h-10 w-10 rounded-full bg-muted"></div>"
+                <div>
+                  <div className="h-4 w-24 bg-muted rounded mb-2"></div>""
+                  <div className="h-3 w-16 bg-muted rounded"></div>"
+              <div className="h-20 bg-muted rounded mb-3"></div>""
+              <div className="flex gap-2">"
+                <div className="h-6 w-16 bg-muted rounded"></div>""
+                <div className="h-6 w-16 bg-muted rounded"></div>"
+      <div className="text-center py-8 border rounded-lg bg-muted/20">"
+        <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>""
+        <p className="text-muted-foreground">"
+</p>
+      <div className="text - center py - 8 border rounded - lg bg - muted / 20">;"
+        <h3 className="text - lg font - medium mb - 1">No Reviews Yet</h3>;""
+        <p className="text - muted - foreground">;"
+        </p>;
+      </div>);"
+    <div className="space - y-4">;"
+        <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
+    </div>);
+}
+<div className="space-y-4">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {reviews.map((review) => (
         <ReviewCard key={review.id} review={review} onReport={onReportReview} />
       ))}
     </div>
   );
+<<<<<<< HEAD
 }
 ;
 <<<<<<< HEAD
@@ -363,3 +422,14 @@ if ( {) {
 
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+;
+
+}
+;
+pr-12325
+</ReviewCard>
+    </div>);"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

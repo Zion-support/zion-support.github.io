@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';
 
@@ -43,6 +44,9 @@ import {}
   FileText,
   BarChart3,
   Users,
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Brain;
   MessageSquare;
   Image;
@@ -50,13 +54,14 @@ import { Brain;
   FileText;
   BarChart3;
   Users;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   Zap;
   ArrowRight;
   Star;
   Check;
   ExternalLink;
   TrendingUp;
+<<<<<<< HEAD
   Shield;'
       bestFor: 'Content creators, developers, researchers'
     }
@@ -599,6 +604,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
         <meta
       : aiTools.filter(tool => tool.category === selectedCategory);
+=======
+  Shield;
+      bestFor: 'Content creators;, developers, researchers'
+    }
+  Globe
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <>
@@ -629,7 +641,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 variant='outline''
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                style={{ animationDelay: '0.4s' }}
+                style={{ animationDelay: '0.4s' ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get AI Consultation;
@@ -660,7 +672,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-gray-400 text-sm">Total Users</div>
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={{ animationDelay: '0.6s' ;}}
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
@@ -737,11 +749,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>'
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
+<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;'
                 <div className='flex items-start space-x-6'>;'
+=======
+              <Card
+                key={index}
+                className='group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className='flex items-start space-x-6'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <div className='relative'>;
                     <div;
                       {tool.icon}
@@ -784,8 +804,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='grid grid-cols-2 gap-2'>
                         {tool.features;
                           .slice(0, 4)
+<<<<<<< HEAD
                           .map((feature, featureIndex) => (`
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool && tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
+=======
+                          .map((feature, featureIndex) => (
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool && tool.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       {tool && tool.icon}
                     </div>;
                   </div>;'
@@ -835,6 +860,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         size='sm'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='group-hover:border-green-500 group-hover:text-green-400'
                       >
                         Visit Website
@@ -870,7 +898,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Why Choose AI Tools?
+<<<<<<< HEAD
             </h2>"
+=======
+            </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               AI-powered tools are revolutionizing how businesses operate, create content, and serve customers.
             </p>
@@ -948,7 +980,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Card>
           </div>
         </div>
+<<<<<<< HEAD
       </section>'
+=======
+      </section>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         className='group-hover:border-green-500 group-hover:text-green-400'>;
                         Visit Website;'
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -1101,6 +1137,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />

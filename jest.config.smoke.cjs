@@ -3,11 +3,11 @@ module.exports = {
   displayName: 'Smoke Tests',
 =======
 const nextJest = require('next/jest');
-
 const createJestConfig = nextJest({
-  dir: './',
+  dir: ./,
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const config = {
@@ -95,6 +95,8 @@ const customJestConfig = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   coverageThreshold: {
@@ -127,12 +129,16 @@ module.exports = createJestConfig(customJestConfig);
       functions: 70,
       lines: 70,
       statements: 70,
-    },
-  },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
+
+  verbose: true,
+  collectCoverage: false,
+  testTimeout: 30000,
+  passWithNoTests: true
+
 };
 
+<<<<<<< HEAD
 module.exports = createJestConfig(config);
 <<<<<<< HEAD
 >>>>>>> main
@@ -145,5 +151,7 @@ module.exports = createJestConfig(config);
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

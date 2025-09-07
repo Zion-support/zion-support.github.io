@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -58,10 +59,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,11 +155,14 @@ interface PersonalInfoFieldsProps {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface PersonalInfoFieldsProps {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,6 +214,8 @@ import { Control } from "react-hook-form",;
 import { BasicInfoFormData } from "./schema";
 interface PersonalInfoFieldsProps {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   control: Control<BasicInfoFormData>;
 }
 
@@ -220,7 +231,7 @@ export /**
  */
 function PersonalInfoFields() {
   return (
-    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
       <FormField;
         control={control}
         name="full_name";
@@ -312,6 +323,7 @@ function PersonalInfoFields() {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -322,10 +334,13 @@ function PersonalInfoFields() {}
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         )}
 
       />;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -361,13 +376,26 @@ function PersonalInfoFields() {}
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <FormField
         control={control}
         name="title"
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Professional Title</FormLabel>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+</FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="title";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Professional Title</FormLabel>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </FormItem>;
         )}
       />;
@@ -399,22 +427,33 @@ function PersonalInfoFields() {}
 <<<<<<< HEAD
       />;
 
-
       <FormField
         control={control}
         name="email"
+</FormItem>;
+        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="email";
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Email</FormLabel>;
             <FormControl>;
               <Input type="email" placeholder="john@example && example.com" {...field} />;
+<Input type="email" placeholder="john@example.com" {...field} />;
             </FormControl>;
+        name="email"        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Email</FormLabel>;
+            <FormControl>;
+              <Input type="email" placeholder="john@example && example.com" {...field} />;            </FormControl>;
             <FormMessage />;
           </FormItem>;
         )}
 
       />;
-
 
       <FormField
         control={control}
@@ -468,8 +507,31 @@ function PersonalInfoFields() {}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
             <FormLabel>Phone</FormLabel>;
+</FormItem>)}
       />;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <FormField;
+        control={control}
+        name="email";
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Phone</FormLabel>
+            <FormControl>
+              <Input placeholder="+1 234 567 8900" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </div>
+  );
+}
+;
+      />;
+            <FormLabel>Phone</FormLabel>;      />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         )}
       />
       <FormField
@@ -566,9 +628,161 @@ function PersonalInfoFields() {}
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+} from "@/components/ui/form";""
+import { Input } from "@/components/ui/input";""
+import { Control } from "react-hook-form";""
+import { BasicInfoFormData } from "./schema";"
+interface PersonalInfoFieldsProps {
+  // TODO: Implement
+  control: Control<BasicInfoFormData>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 "
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;"
+</div>
+      <FormField;
+        control={control}"
+        name="fullName""
+export /**
+ * PersonalInfoFields - Function description;
+ */
+function PersonalInfoFields() {
+  return ("
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;"
+
+        name="full_name";")
+        render={({ field }) => (
+
+          <FormItem>;
+
+            <FormLabel > Full Name;
+ */)
+
+
+
+  control:Control<BasicInfoFormData>;
+        name="fullName";")
+        render={({ field }) => (;
+
+
+            <FormLabel>Full Name;
+            <FormControl>;
+              <Input placeholder="John Doe" {...field} />;"
+
+            ;
+            <FormMessage />;
+
+          <FormItem>
+
+            <FormLabel>Full Name
+            <FormControl>
+              <Input placeholder="John Doe" {...field} />"
+
+            <FormMessage />
+
+        name="title"")
+
+
+            <FormLabel>Professional Title;
+        name="title";")
+
+
+              <Input placeholder="Senior Software Engineer" {...field} />;"
+
+
+        name="email"")
+
+
+            <FormLabel>Email;
+              <Input type="email" placeholder="john@example && example.com" {...field} />;"
+
+
+        name="phone"")
+
+
+            <FormLabel>Phone;
+
+
+            <FormLabel>Professional Title
+              <Input placeholder="Senior Software Engineer" {...field} />"
+
+
+
+
+            <FormLabel>Email
+              <Input type="email" placeholder="john@example.com" {...field} />"
+
+
+
+
+            <FormLabel>Phone
+              <Input placeholder="+1 234 567 8900" {...field} />"
+
+
+</Input>
+
+            </FormControl>
+            <FormMessage />
+</FormMessage>
+          </FormItem>
+
+      <FormField;
+        control={control}"
+        name="email"")
+        render={({ field }) => (
+</FormField>
+          <FormItem>
+</FormItem>
+            <FormLabel>Email</FormLabel>
+            <FormControl>
+</FormControl>"
+              <Input type="email" placeholder="john@example.com" {...field} />"
+</Input>
+
+            </FormControl>
+            <FormMessage />
+</FormMessage>
+          </FormItem>
+
+      <FormField;
+        control={control}"
+        name="phone"")
+        render={({ field }) => (
+</FormField>
+          <FormItem>
+</FormItem>
+            <FormLabel>Phone</FormLabel>
+            <FormControl>
+</FormControl>"
+              <Input placeholder="+1 234 567 8900" {...field} />"
+</Input>
+
+            </FormControl>
+            <FormMessage />
+</FormMessage>
+          </FormItem>
+    </div>
+
+          </FormItem>;
+    </div>;
+  control: Control<BasicInfoFormData> 
+  return (<div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {"
+</div>)"
+}) => (<FormItem> <FormLabel>Full Name <FormControl> <Input placeholder="John Doe" {"
+)
+}/> <FormField  <FormMessage /> ) 
+
+
+
+}/> </div>) "
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

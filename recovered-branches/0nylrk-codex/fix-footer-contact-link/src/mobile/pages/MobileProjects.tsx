@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -26,6 +27,8 @@ import {MobileProjectView} from "../components/projects/MobileProjectView";
 =======
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -148,6 +151,7 @@ const milestonesData = [;
   }
 ];
 
+<<<<<<< HEAD
 export function MobileProjects() {;
   return (
     <div className="min-h-screen">;
@@ -286,17 +290,14 @@ const milestonesData = [;
     paymentStatus: "pending" as const,;
     amount: "$5,000";
   }
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];
 export function MobileProjects() {;
-  return (;
-    <div className="min-h-screen">;
-      <MobileHeader;
-        title="Project Details";
-        showBack;
-      />;
-      <main className="py-4">;
-        <MobileProjectView;
-          project={projectData} ;
+
+
+
         <MobileProjectView 
           project={projectData} 
 <<<<<<< HEAD
@@ -327,6 +328,7 @@ const milestonesData = [;
     title: "Initial Design Concepts",;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
@@ -341,6 +343,8 @@ const milestonesData = [;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           milestones={milestonesData}
         />
       </main>
@@ -364,7 +368,6 @@ const milestonesData = [;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
-
 
       />;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -396,7 +399,6 @@ const milestonesData = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-
 
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
@@ -469,10 +471,10 @@ function MobileProjects() {
 };
 ;
 
-
 };
 ;
-
+};
+;
 
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
@@ -575,6 +577,7 @@ const projectData = {;"
   totalAmount:"$12,000",;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   progress:60,,
 =======
   progress:60,;"
@@ -582,6 +585,9 @@ const projectData = {;"
 =======
   progress:60,;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  progress:60,,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description:"Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.";
 },;
 ;
@@ -634,6 +640,7 @@ export function MobileProjects() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -652,3 +659,181 @@ export function MobileProjects() { return null; }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+import React from "react";""
+import {MobileHeader} from "../components/common/MobileHeader";""
+import {BottomNavigation} from "../components/common/BottomNavigation";""
+import {MobileProjectView} from "../components/projects/MobileProjectView";""
+import React from "react",""
+import { MobileHeader } from "../components/common/MobileHeader",""
+import { BottomNavigation } from "../components/common/BottomNavigation";""
+import { MobileProjectView } from "../components/projects/MobileProjectView";""
+import { BottomNavigation } from "../components/common/BottomNavigation",""
+import { MobileProjectView } from "../components/projects/MobileProjectView","
+// Mock data;
+const projectData = {"
+  id: "project-123"","
+  title: "Website Redesign""
+  client: {,"
+  name: "TechCorp Inc."""
+    avatar: """"
+import {MobileProjectView} from "../components/projects/MobileProjectView";"
+// Mock data;
+const projectData = {;"
+  id: "project-123",;""
+  title: "Website Redesign",;"
+  client: {;,"
+  name: "TechCorp Inc.",;""
+    avatar: "";"
+  };"
+  startDate: "Oct 15, 2023";""
+  endDate: "Jan 15, 2024";""
+  status: "in_progress",;""
+  totalAmount: "$12,000";"
+  progress: 60,;"
+  description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.";"
+};
+
+const milestonesData = [;
+  {;"
+    id: "milestone-1",;""
+    title: "Initial Design Concepts",;""
+    dueDate: "Oct 30, 2023";""
+    status: "completed" as const,;""
+    paymentStatus: "paid" as const,;""
+    amount: "$3,000";"
+    id: "milestone-2",;""
+    title: "Homepage Development",;""
+    dueDate: "Nov 30, 2023";""
+    status: "in_progress" as const,;""
+    paymentStatus: "pending" as const,;""
+    amount: "$4,000";"
+    id: "milestone-3",;""
+    title: "Product Pages",;""
+    dueDate: "Dec 30, 2023";""
+    status: "pending" as const,;""
+    amount: "$5,000";"
+  }]
+];
+
+export function MobileProjects() {;
+  return ("
+    <div className="min-h-screen">;"
+</div>
+      <MobileHeader;"
+        title="Project Details""
+        showBack;
+  },"
+  startDate: "Oct 15, 2023",""
+  endDate: "Jan 15, 2024",""
+  status: "in_progress",""
+  totalAmount: "$12,000","
+  progress: 60,"
+  description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.""
+
+},
+const milestonesData = [
+
+  {"
+    id: "milestone-1",""
+    title: "Initial Design Concepts",""
+    dueDate: "Oct 30, 2023",""
+    status: "completed" as const,""
+    paymentStatus: "paid" as const,""
+    amount: "$3,000""
+    id: "milestone-2",""
+    title: "Homepage Development",""
+    dueDate: "Nov 30, 2023",""
+    status: "in_progress" as const,""
+    paymentStatus: "pending" as const,""
+    amount: "$4,000""
+    id: "milestone-3",""
+    title: "Product Pages",""
+    dueDate: "Dec 30, 2023",""
+    status: "pending" as const,""
+    amount: "$5,000""
+],
+)
+export function MobileProjects() {
+    <div className="min-h-screen">"
+
+      />
+"
+      <main className="py-4">"
+</main>"
+        title="Project Details";"
+      />;
+      <main className="py-4">;"
+</main>
+        <MobileProjectView;
+          project={projectData} ;
+          project={projectData} 
+
+
+
+          milestones={milestonesData}
+
+      <BottomNavigation />
+
+    </div>"
+
+      </main>;
+      <BottomNavigation />;
+
+</BottomNavigation>
+    </div>"
+      <main className="py-4">;"
+</main>
+        <MobileProjectView;
+          project={projectData} 
+
+          milestones={milestonesData}
+        />;
+</MobileProjectView>
+      </main>;
+      <BottomNavigation />;
+
+</BottomNavigation>
+    </div>;"
+    <div className="min - h-screen">;"
+        show_back;
+      <main className="py - 4">;"
+          project={project_data}
+          milestones={milestones_data}
+
+    </div>);"
+        <MobileProjectView ;
+
+
+    <div className="min-h-screen">;"
+</div>
+      <MobileHeader;"
+        title="Project Details";"
+        showBack;
+      />;
+</MobileHeader>"
+      <main className="py-4">;"
+</main>
+        <MobileProjectView ;
+
+          project={projectData} ;
+          milestones={milestonesData}
+        />;
+</MobileProjectView>
+      </main>;
+      <BottomNavigation />;
+
+</BottomNavigation>
+    </div>;"
+ <MobileHeader title="Project Details" showBack /> <main className="py-4"> <MobileProjectView project= {"
+
+}/> </main> <BottomNavigation /> </div>) 
+pr-12325
+}
+}
+};
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

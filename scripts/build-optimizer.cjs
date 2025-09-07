@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -135,14 +136,22 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process')
 const fs = require('fs')
-// console.log(' Build Optimizer Starting...')
-    console.log('🧹 Cleaning previous builds...')
+// console.log(' Build Optimizer Starting...)
+    console.log('🧹 Cleaning previous builds...)
     if (fs.existsSync('.next')
-        execSync('rm -rf .next', { "stdio"})
-        execSync('rm -rf out', { "stdio"})
-    execSync('npm run build', { "stdio"})
 
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,8 +1,9 @@
-#!/usr/bin/env node;
+
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
 const glob = require('glob')
+<<<<<<< HEAD
     this.reportFile = path.join(this.projectRoot, 'comprehensive-error-fixer-report.json')
   log(message, level = 'info')
     this.log('Starting Comprehensive Error Fixer...', 'info')
@@ -27,6 +28,8 @@ const glob = require('glob')
           "description"
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

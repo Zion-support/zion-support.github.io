@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';'
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',';
@@ -13,6 +14,9 @@ export default function BackupDROrchestratorPage() {}
 <<<<<<< HEAD
   );
   if (!service) return null;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -66,14 +70,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {service && service.trialDays;
                       ? `${service && service.trialDays}-day free trial • `;'
                       : ''}
-                    Setup: {service && service.setupTime}
+                    Setup: {service && service.setupTime;}
                   </div>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <Button'
                 href='/contact''
                 variant='quantum''
                 size='lg''
+=======
+              <Button
+                href='/contact'
+                variant='quantum'
+                size='lg'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='w-full'>;
                 Start Trial;'
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -163,7 +174,7 @@ if (return null) {}
                     {service.trial_days;`
                       ? `${service.trial_days}-day free trial • `;'
                       : ''}
-                    Setup: {service.setup_time}
+                    Setup: {service.setup_time;}
                   </div>;
                 </div>;
               </div>;
@@ -252,6 +263,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 }
 

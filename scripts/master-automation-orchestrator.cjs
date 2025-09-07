@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -65,12 +66,23 @@ main
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node;
+
+<>#!/usr/bin/env node;
+
+
+<:scripts/master-automation-orchestrator.cjs
+>#!/usr/bin/env node;
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Starting Master Automation Orchestrator...')
 console.log('=====')
+<<<<<<< HEAD
     "status"
       "encoding"
       "stdio"
@@ -87,9 +99,12 @@ const metricsResult = runCommand('Metrics Generation', 'echo "Generating final m
 =======
 #!/usr/bin/env node
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+=======
 
-<
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 class MasterAutomationOrchestrator {
@@ -143,15 +158,16 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
         stdio: 'pipe',
         encoding: 'utf8',
-        timeout: 300000, // 5 minutes timeout
-        maxBuffer: 1024 * 1024 * 10, // 10MB buffer
         ...options,
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
@@ -426,6 +442,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return { success: false, error: error.message };
     }
   }
@@ -460,7 +479,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   async runTests() {
     this.log('\n🧪 RUNNING TESTS');
-    
     try {
       // Run type check
       const typeResult = await this.runCommand('npm run type-check', 'TypeScript type check');
@@ -495,14 +513,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   async buildProject() {
     this.log('\n🏗️ BUILDING PROJECT');
-    
     try {
       // Clean build
       await this.runCommand('npm run clean', 'Clean build');
 
       // Build project
       const buildResult = await this.runCommand('npm run build', 'Production build');
-      
       if (buildResult.success) {
         this.results.builds.success = true;
         this.log('✅ Build successful', 'SUCCESS');
@@ -518,7 +534,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   async commitAndPush() {
     this.log('\n📝 COMMITTING AND PUSHING CHANGES');
-    
     try {
       // Add all changes
       await this.runCommand('git add .', 'Git add');
@@ -539,7 +554,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   async mergeToMain() {
     this.log('\n🔄 MERGING TO MAIN BRANCH');
-    
     try {
       // Check current branch
       const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
@@ -548,13 +562,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       if (currentBranch !== 'main') {
         // Switch to main branch
         await this.runCommand('git checkout main', 'Switch to main branch');
-        
         // Merge the current branch
         await this.runCommand(`git merge ${currentBranch}`, `Merge ${currentBranch} into main`);
-        
         // Push to main
         await this.runCommand('git push origin main', 'Push to main branch');
-        
         this.log('✅ Successfully merged to main branch', 'SUCCESS');
       } else {
         this.log('ℹ️ Already on main branch', 'INFO');
@@ -567,7 +578,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   generateFinalReport() {
     const duration = Date.now() - this.startTime;
-    
     this.log('\n📊 MASTER AUTOMATION ORCHESTRATOR REPORT');
     this.log('='.repeat(60));
     this.log(`Total Duration: ${duration}ms`);
@@ -630,6 +640,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Run the automation
 if (require.main === module) {
   const automation = new MasterAutomationOrchestrator();
@@ -685,3 +696,15 @@ module.exports = MasterAutomationOrchestrator;
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+}
+
+module.exports = MasterAutomationOrchestrator;
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

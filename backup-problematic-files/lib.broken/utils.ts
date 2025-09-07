@@ -3,12 +3,11 @@
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait)}
-export function throttle<T extends (..."args": any[]) => any>(
-  func: T,
-  "limit": number
+
+export function throttle<T extends (..."args": any[]) => any>("
+)
 ): (...args: Parameters<T>) => void {
+<<<<<<< HEAD
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -33,3 +32,12 @@ export function cn(...classes: Array<string | undefined | null | false>) {; retu
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
 export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+"
+export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' ');,}
+</string>
+export function cn(..."classes": Array<string | undefined | null | false>) {;"
+</string>"
+export function cn(...classes: Array<string | undefined | null | false>) {; return classes.filter(Boolean).join(' '),}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

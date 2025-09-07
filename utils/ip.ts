@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 =======
 <<<<<<< HEAD
@@ -16,15 +17,26 @@ import type { NextApiRequest } from 'next';
 import type { NextApiRequest } from 'next';
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+
+
+import type { NextApiRequest } from 'next';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+
+
+
+import type { NextApiRequest } from 'next';
 export function extractClientIp(req: NextApiRequest): string | null {
   const xff = (req.headers['x-forwarded-for'] as string) |'';
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export function extractClientIp(req: NextApiRequest): string | null {;
   const xff = (req.headers['x-forwarded-for'] as string) || '';
+<<<<<<< HEAD
   const ip = xff.split()[0]?.trim() || (req.headers['x-real-ip'] as string) || (req.socket?.remoteAddress ?? null);
   if (!ip) return null;
   if (ip.startsWith('::ffff: ')) return ip.substring(7);
@@ -37,12 +49,26 @@ export function extractClientIp(req: NextApiRequest): string | null {;'
   const xff = (req.headers['x-forwarded-for'] as string) || '';
   const ip ='
     xff.split(',')[0]?.trim() |'
+=======
+
+
+export function extractClientIp(req: NextApiRequest): string | null {
+  // TODO: Implement
+}
+  const xff = (req.headers['x-forwarded-for'] as string) |;
+export function extractClientIp(req: NextApiRequest): string | null {;
+  const xff = (req.headers['x-forwarded-for'] as string) || ;
+pr-12325
+  const ip =
+    xff.split(',')[0]?.trim() |
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     (req.headers['x-real-ip'] as string) |
     (req.socket?.remoteAddress ?? null);
   if (!ip) return null;'
   if (ip.startsWith('::ffff:')) return ip.substring(7);
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return ip;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,12 +85,17 @@ export function getClientIp(req: any): string {;
 =======
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 export function getClientIp(req: any): string {
 
 export function getClientIp(req: any): string {;
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 import type { NextApiRequest } from 'next';
@@ -77,6 +108,7 @@ import type { NextApiRequest } from 'next';
 export function getClientIp(req: any): string {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -94,6 +126,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {'
@@ -101,6 +138,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,17 +160,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
   return remoteAddress |'unknown';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -148,6 +200,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
   // Check IP reputation;
@@ -166,7 +220,44 @@ ursor/fix-website-loading-errors-and-merge-6662
       // Mock reputation check - in production, integrate with real reputation services;
       const reputation = await this.checkMockReputation(ip);
       
+<<<<<<< HEAD
       // Cache the result;`
+=======
+      // Cache the result
+export function getClientIp(req: any): string {
+  // TODO: Implement
+export function getClientIp(req: any): string {;
+
+
+import type { NextApiRequest } from 'next';
+  if (forwarded) {
+    return Array && Array.isArray(forwarded) ? forwarded[0] : forwarded && forwarded.split(',')[0].trim();
+  
+  return remoteAddress || 'unknown';
+  // TODO: Implement
+  const forwarded = req.headers['x-forwarded-for'];
+  const remoteAddress = req.socket?.remoteAddress;
+    return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
+
+
+
+
+
+
+  // Check IP reputation;
+  async getIpReputation(ip: string): Promise<IpReputation | null> {
+
+    if (cached && Date.now() - cached.timestamp < this.cacheTimeout) {
+      return cached.data;
+
+    try {
+  // TODO: Implement
+      // Mock reputation check - in production, integrate with real reputation services;
+      const reputation = await this.checkMockReputation(ip);
+      
+      // Cache the result;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.cache.set(`reputation_${ip}`, { data: reputation, timestamp: Date.now() });
       
       return reputation;
@@ -174,6 +265,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       console.error('Error checking IP reputation:', error);
       return null;
     }
+
+
   }
 
 <<<<<<< HEAD
@@ -213,6 +306,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   // Validate IP address
@@ -318,6 +412,14 @@ if (return null) {
   if () return ip.substring (7)) {
   $2
 }
+=======
+import type { NextApiRequest } from 'next';
+export function extractClientIp(req: NextApiRequest): string | null {;
+  const xff = (req.headers['x-forwarded-for'] as string) || '';
+  const ip = xff.split()[0]?.trim() || (req.headers['x-real-ip'] as string) || (req.socket?.remoteAddress ?? null);
+  if (!ip) return null;
+  if (ip.startsWith('::ffff: ')) return ip.substring(7);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return ip;
 }
 export function getClientIp (req: any): string {
@@ -332,6 +434,7 @@ if ( {) {
   }
   return remote_address || 'unknown';
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -351,9 +454,11 @@ if ( {) {
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -363,3 +468,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+  private async checkMockReputation(ip: string): Promise<IpReputation> {
+
+  async isProxyOrVpn(ip: string): Promise<boolean> {
+</boolean>
+  async getGeolocation(ip: string): Promise<GeolocationResult | null> {
+`;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

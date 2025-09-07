@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,13 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface InvestmentPortfolio {
 =======
 
@@ -42,9 +50,6 @@ export interface InvestmentPortfolio {;
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-  risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
-  investment_horizon: number, // in years;
-  target_return: number;
 
 <<<<<<< HEAD
 =======
@@ -69,13 +74,13 @@ export interface InvestmentPortfolio {;
   last_rebalanced: Date;
   performance: PortfolioPerformance;
 
-  created_at: Date,
-  updated_at: Date;
-
 }
+<<<<<<< HEAD
 export interface PortfolioAsset {
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   riskTolerance: 'conservative' | 'moderate' | 'aggressive'
 
   assets: PortfolioAsset[];
@@ -86,6 +91,7 @@ export interface PortfolioAsset {
 export interface PortfolioAsset {
 
 export interface PortfolioAsset {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -111,6 +117,19 @@ export interface PortfolioAsset {};
 }
 export interface PortfolioAsset {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+}
+export interface PortfolioAsset {
+
+
+
+
+}
+export interface PortfolioAsset {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   symbol: string;
   name: string;'
@@ -121,10 +140,17 @@ export interface PortfolioAsset {
   quantity: number;
 
 
+<<<<<<< HEAD
 =======
   quantity: number;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   current_price: number;
   market_value: number,
   allocation: number, // percentage of portfolio;
@@ -176,11 +202,26 @@ export interface PortfolioPerformance {
   id: string;
   user_id: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
 export interface PortfolioPerformance {};
 =======
+=======
+
+  current_price: number;
+  market_value: number,
+  allocation: number, // percentage of portfolio;
+  purchase_price: number;
+  purchase_date: Date;
+  performance: {
+    daily_return: number;
+    weekly_return: number;
+    monthly_return: number;
+    yearly_return: number,
+    total_return: number;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 export interface PortfolioPerformance {
@@ -210,16 +251,26 @@ export interface InvestmentRecommendation {
   tracking_error: number;
   information_ratio: number,
   sortino_ratio: number;
+
+  tracking_error: number;
+  information_ratio: number,
+  sortino_ratio: number;
+
 }
 export interface InvestmentRecommendation {
   id: string;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   user_id: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
   quantity: number;  id: string;
   user_id: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  quantity: number;  id: string;
+  user_id: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   currentPrice: number;
 =======
 export interface InvestmentRecommendation {};
@@ -227,6 +278,10 @@ export interface InvestmentRecommendation {};
   user_id: string;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
   allocation: number, // percentage of portfolio
@@ -237,7 +292,7 @@ export interface InvestmentRecommendation {};
     weeklyReturn: number;
     monthlyReturn: number;
 
-    yearlyReturn: number
+
 
     totalReturn: number
   }
@@ -254,7 +309,7 @@ export interface PortfolioPerformance {;
   alpha: number;
   trackingError: number;
 
-  informationRatio: number
+
 
   sortinoRatio: number
 }
@@ -264,6 +319,13 @@ export interface InvestmentRecommendation {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   userId: string;
+
+
+
+
+
+
+
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
   asset: {
 =======
@@ -277,6 +339,7 @@ export interface InvestmentRecommendation {;
 <<<<<<< HEAD
     name: string;
 
+<<<<<<< HEAD
 }
 export interface FinancialGoal {};
   id: string;
@@ -297,6 +360,11 @@ export interface MarketAnalysis {};
     name: string;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     type: string,
     current_price: number;
   }
@@ -394,15 +462,6 @@ export interface FinancialGoal {
   target_date: Date;
   priority: 'low' | 'medium' | 'high';
   category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
-
-  monthly_contribution: number;
-  expected_return: number;
-  risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
-  progress: number, // percentage;
-  created_at: Date,
-  updated_at: Date;
-
-}
 export interface MarketAnalysis {
   id: string;
   market: string;
@@ -411,12 +470,18 @@ export interface MarketAnalysis {
   key_metrics: Record < string, number>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+
+
+
+
+
   trends: string[];
   risks: string[];
   opportunities: string[];
   recommendations: string[];
   confidence: number;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -432,6 +497,63 @@ export interface FinancialPlan {
 export interface FinancialPlan {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
+=======
+
+
+
+  last_updated: Date,
+  next_update: Date;
+
+last_updated: Date,
+  next_update: Date;
+}
+export interface FinancialPlan {
+  id: string;
+  user_id: string;
+  name: string;
+  summary: string;
+
+  goals: FinancialGoal[],
+  investment_strategy: {
+    asset_allocation: Record < string, number>;
+    rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually',
+    risk_management: string[];
+  }
+  cash_flow: {
+    monthly_income: number;
+    monthly_expenses: number;
+    savings_rate: number,
+    emergency_fund: number;
+
+
+  lastUpdated: Date
+
+  nextUpdate: Date
+}
+export interface FinancialPlan {
+
+export interface FinancialPlan {;
+  id: string;
+  userId: string;
+  name: string;
+  summary: string;
+
+  goals: FinancialGoal[]
+  investmentStrategy: {
+    assetAllocation: Record<string, number>;
+    rebalancingFrequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually'
+
+    riskManagement: string[]
+  }
+  cashFlow: {
+    monthlyIncome: number;
+    monthlyExpenses: number;
+
+    savingsRate: number
+
+    emergencyFund: number
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   last_updated: Date,
   next_update: Date;
 
@@ -465,6 +587,7 @@ export interface FinancialPlan {
     emergency_fund: number;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -518,6 +641,9 @@ export interface FinancialPlan {
     monthly_expenses: number;
     savings_rate: number,
     emergency_fund: number;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 
@@ -531,6 +657,7 @@ export interface FinancialPlan {
     health: boolean;
     disability: boolean;
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -2525,3 +2652,11 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+  asset: {
+    symbol: string;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

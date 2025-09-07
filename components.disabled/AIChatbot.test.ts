@@ -15,6 +15,7 @@ import AIChatbot from './AIChatbot;';
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -25,12 +26,58 @@ import AIChatbot from './AIChatbot;';
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import AIChatbot from '
+describe(';AIChatbot'
+  it('renders without crashing'
+    expect(screen.getByRole('main')).toBeInTheDocument();'  });
+  it('displays correct content'
+  it('handles user interactions'
+
+import AIChatbot from './AIChatbot; ; describe('AIChatbot', () => {; it('renders without crashing', () => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AIChatbot />); }); ; it('handles user interactions'
+import AIChatbot from './AIChatbot;
+
+describe(';AIChatbot', () => {;
+  it('renders without crashing', () => {;}
+    render(<AIChatbot />);}
+    expect(screen.getByRole('main')).toBeInTheDocument();'  });';
+  it('displays correct content', () => {;}
+    render(<AIChatbot />);}
+    // Add specific content checks based on component functionality});
+  it('handles user interactions', () => {;}
+    render(<AIChatbot />);}
+import AIChatbot from './AIChatbot; ; describe(';AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />); }); ; it('handles user interactions',() => {; render(<AIChatbot />)});,});
+// Add interaction tests based on component functionality})});
+import AIChatbot from './AIChatbot; ; describe(';AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
+
+
+import AIChatbot from 
+describe('AIChatbot
+  it('renders without crashing)
+    expect(screen.getByRole('main')).toBeInTheDocument();'  });
+  it('displays correct content
+  it('handles user interactions
+import AIChatbot from './AIChatbot;')
+describe('AIChatbot', () => {;
+  it('renders without crashing', () => {;
+    render(<AIChatbot />);
+
+
+
+import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />); }); ; it('handles user interactions',() => {; render(<AIChatbot />)});,});
+// Add interaction tests based on component functionality})});
+import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
+import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
+import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import AIChatbot from '
 describe('AIChatbot'
   it('renders without crashing'
     expect(screen.getByRole('main')).toBeInTheDocument();'  });
   it('displays correct content'
   it('handles user interactions'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,3 +196,12 @@ import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders 
 
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+
+import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

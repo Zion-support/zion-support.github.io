@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/AdvancedAnalytics.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/AdvancedAnalytics.jsx
@@ -48,3 +49,16 @@ export: function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] =
 export: function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;""
 "export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/AdvancedAnalytics.jsx
+=======
+export\"
+export: function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;""
+"export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
+"export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
+"export\": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;
+export: function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;""
+"export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
+export\"
+export: function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;""
+"export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
+"export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

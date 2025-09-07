@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 } from 'lucide-react';
 
 import {};
@@ -24,11 +25,15 @@ import Button from '../components/ui/Button',
 import EmailValidatorDemo from '../components/demos/EmailValidatorDemo',
 import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo',
 import UrlShortenerDemo from '../components/demos/UrlShortenerDemo',
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play  } from 'lucide-react';
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
@@ -80,6 +85,9 @@ export default function DemosPage() {;
         <title>;
           Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services;
         </title>;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -151,7 +159,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               functionality;
             </p>;
           </div>;
+<<<<<<< HEAD
                 style={{ animationDelay: '0.4s' }}
+=======
+                style={{ animationDelay: '0.4s' ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               >
                 <Code className='w-5 h-5 mr-2' />
                 View All Services
@@ -161,7 +173,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Stats */}
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={{ animationDelay: '0.6s' ;}}
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
@@ -278,8 +290,13 @@ export default function DemosPage() { return null; }
                     : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';`
                 }`}
               >;
+<<<<<<< HEAD
                 <div;`
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo && demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>;
+=======
+                <div
+                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo && demo.color} flex items-center justify-center mb-3 group-hover: scale-110 transition-transform duration-300`;}>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   {demo && demo.icon}
                 </div>;'
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>;
@@ -312,7 +329,7 @@ export default function DemosPage() { return null; }
                 }`}
               >
 <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover: scale-110 transition-transform duration-300`;}
                 >
 origin/cursor/automate-test-improve-and-merge-code-2533
                   {demo.icon}
@@ -363,7 +380,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>'
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
               {activeDemoData?.title}
+<<<<<<< HEAD
             </h2>;'
+=======
+            </h2>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
 
             </p>;
@@ -442,9 +463,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Code className='w-8 h-8 text-purple-400' />
               </div>'
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300'>
+<<<<<<< HEAD
                 API Examples;
               </h3>'
               <p className='text-gray-400 leading-relaxed'>                See exact request/response formats for easy integration;
+=======
+                API Examples
+              </h3>
+              <p className='text-gray-400 leading-relaxed'>                See exact request/response formats for easy integration
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </p>
             </Card>'
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>'
@@ -453,6 +480,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className='text-gray-400 leading-relaxed'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 See exact request/response formats for easy integration
@@ -461,8 +491,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+<<<<<<< HEAD
 =======
                 See exact request/response formats for easy integration;
+=======
+                <BarChart3 className='w-8 h-8 text-orange-400' />
+              </div>
+              <h3 className='text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300'>
+                Detailed Results
+              </h3>
+              <p className='text-gray-400 leading-relaxed'>                Get comprehensive analysis and insights from each service
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </p>
             </Card>'
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>'
@@ -551,6 +590,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h3>"
               <p className="text-gray-400 leading-relaxed">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <p className='text-gray-400 leading-relaxed'>
                 Get comprehensive analysis and insights from each service
               </p>
@@ -586,7 +628,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
+<<<<<<< HEAD
           </div>;'"
+=======
+          </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
             {activeDemoData?.component}
           </div>;

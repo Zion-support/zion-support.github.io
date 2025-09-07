@@ -1,13 +1,13 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Advanced Testing Automation;
  * Comprehensive testing suite with multiple test types and reporting;
  */
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
+<<<<<<< HEAD
       'INFO': 'ℹ'
       'SUCCESS': ''
       'ERROR': ''
@@ -88,3 +88,7 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+</script>"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

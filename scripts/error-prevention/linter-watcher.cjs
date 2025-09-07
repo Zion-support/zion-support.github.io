@@ -1,17 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 class LinterWatcher {}
   constructor() {}
     this.isRunning = false;
+<<<<<<< HEAD
     this.watchPaths = ['components', 'pages', 'scripts'];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +39,12 @@ class LinterWatcher {}
     await this.runLint();
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    this.isRunning = true;
+    // Initial lint check;
+    await this.runLint();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
@@ -55,13 +66,13 @@ class LinterWatcher {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-    
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
       console.log('Running lint check...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -71,10 +82,13 @@ class LinterWatcher {}
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const child = spawn('npm', ['run', 'lint'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
+        "cwd": process.cwd();"
       };);
+<<<<<<< HEAD
 <<<<<<< HEAD
       let output = ;';';
       let errorOutput = ;';';
@@ -87,16 +101,18 @@ class LinterWatcher {}
 
 =======
 
+=======
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
-});
+
 
 
 <<<<<<< HEAD
@@ -107,10 +123,12 @@ class LinterWatcher {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       child.on('close', (code) => {}
         if ( {})
+
           console.log('Lint check passed ✓')) {}
      {}
           console.log('Lint check passed ✓')}} else {}
           console.log('Lint check failed ✗');
+<<<<<<< HEAD
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
 <<<<<<< HEAD
@@ -156,20 +174,26 @@ class LinterWatcher {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       child.on('close', (code) => {}
         if ( {})
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.log('Auto-fix completed ✓')) {}
      {}
           console.log('Auto-fix completed ✓')}} else {}
           console.log('Auto-fix failed ✗')};
       })} catch (error) {}
-      console.error('Error running auto-"fix": ', error.message)};
+      console.error('Error running auto-"fix": , error.message)};
   };
   stop() {}
-    console.log('Stopping Linter Watcher...');
+    console.log('Stopping Linter Watcher...);
     this.isRunning = false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if ( {})
       clearInterval(this.intervalId)};
     console.log('Linter Watcher stopped')) {}
@@ -177,11 +201,11 @@ class LinterWatcher {}
       clearInterval(this.intervalId)};
     console.log('Linter Watcher stopped')}};
 };
+
 // Start the watcher if run directly;
-if ( {})
   const watcher = new LinterWatcher) {}
-     {}
   const watcher = new LinterWatcher}(;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -219,5 +243,11 @@ module.exports = LinterWatcher;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+  // Handle graceful shutdown;
+
+  watcher.start().catch(console.error)};
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -11,10 +12,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
 
+<<<<<<< HEAD
 
 
 
@@ -73,9 +78,14 @@ pr-12243
 
   res.status(200).send(csv)
 <<<<<<< HEAD
+=======
+
+  res.status(200).send(csv)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 =======
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {};
@@ -91,6 +101,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {};
 =======
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ['Metric', 'Value', 'Trend%'],
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],
     ['GMV', '$4,800,000', '5 && 5.1'],
@@ -117,6 +129,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {};
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
   res.status(200).send(csv)
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
@@ -127,6 +140,10 @@ pr-12243
 =======
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { requireSuperadminApi } from '../../../utils / api / auth';
 export default /**;
  * handler - Function description;
@@ -137,15 +154,25 @@ function handler() {}
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-20a4
 pr-12243
 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 <<<<<<< HEAD
@@ -167,10 +194,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   res.status(200).send(csv);
   res.status(200).send(csv)
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
 =======
@@ -183,3 +216,6 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

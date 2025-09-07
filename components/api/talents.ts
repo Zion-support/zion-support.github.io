@@ -1,15 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
   const started = null;
-  return res.status(201).json({ id: record.id })
+  return res.status(201).json({ id: record.id ;})
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 =======
@@ -106,15 +111,23 @@ if ( {) {}
     skills: skills || [],
     programTrack: programTrack || null,'
     certificationStatus: certificationStatus || 'pending',
+=======
 
-    partnerId: auth.partner.id,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-  };
-  records && records.push(record);
-  await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
-  await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
-  return res && res.status(201).json({ id: record && record.id });  return res && res.status(201).json({ id: record && record.id })
+import type { NextApiRequest, NextApiResponse } from \"next\";"
+import fs from \"fs-extra\";"
+import path from \"path\";"
+import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../utils/api/partnerAuth\";"
+import { v4 as uuidv4 } from \"uuid\";
+"
+const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\");
+
+export default async function handler(req: NextApiRequest;, res: NextApiResponse) {;}
+  const started = null;}
+  return res.status(201).json({ id: record.id ;})
 }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";"
 import fs from "fs-extra";"
 import path from "path";"
@@ -175,3 +188,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

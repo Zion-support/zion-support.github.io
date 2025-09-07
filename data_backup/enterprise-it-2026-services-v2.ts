@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,8 +30,306 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+
+;
+;
+
+export interface EnterpriseIt2026ServiceV2 {
+  \"id\": string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+  "id": string;"
+  name: string;,
+  tagline: string;
+  price: string;,
+  description: string;
+  features: string[];,
+  link: string;
+  category: string;,
+  realImplementation: boolean;
+  contactInfo: {,
+  mobile: string;
+    email: string;,"
+  address: string};export const "enterpriseIT2026ServicesV2": EnterpriseIt2026ServiceV2[] = [{""
+    id: "2026-enterprise-it-v2",""
+    "name": "2026 Enterprise IT Solutions V2",""
+    "tagline": "Enhanced enterprise IT solutions",""
+    "price": "$449/month",""
+    "description": "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.","
+    features["
+      "Enhanced enterprise IT",""
+      "Advanced solutions",""
+      "Improved infrastructure",""
+      "Better security",""
+      "Enhanced support""]
+    ],"
+    "link": "/services/2026-enterprise-it-v2",""
+    "category": "Enterprise IT 2026 V2",""
+    "realImplementation": true,""
+    "contactInfo": {""
+      mobile: "+1 302 464 0950",""
+      "email": "kleber@ziontechgroup.com",""
+      "address": "364 E Main St STE 1008 Middletown DE 19709""
+]}}}"
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}""
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}"
+  // TODO: Implement
+}"
+
+export const \"enterpriseIT2026ServicesV2\": EnterpriseIt2026ServiceV2[] = [{id: \"2026-enterprise-it-v2\",\"name\": \"2026 Enterprise IT Solutions V2\",\"tagline\": \"Enhanced enterprise IT solutions\",\"price\": \"$449/month\",\"description\": \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[;
+      \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\";}
+    ],\"link\": \"/services/2026-enterprise-it-v2\",\"category\": \"Enterprise IT 2026 V2\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}}
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}ursor/integrate-build-improve-and-re-verify-8f7d;
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+};
+
+export interface EnterpriseIt2026ServiceV2  {\"id\": string;
+}
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+
+export interface EnterpriseIt2026ServiceV2 {
+  \"id\": string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+
+export const \"enterpriseIT2026ServicesV2\": EnterpriseIt2026ServiceV2[] = [{id: \"2026-enterprise-it-v2\",\"name\": \"2026 Enterprise IT Solutions V2\",\"tagline\": \"Enhanced enterprise IT solutions\",\"price\": \"$449/month\",\"description\": \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[;
+      \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\";}
+    ],\"link\": \"/services/2026-enterprise-it-v2\",\"category\": \"Enterprise IT 2026 V2\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}}
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+
+
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface EnterpriseIt2026ServiceV2 {
   "id": string;
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}ursor/fix-syntax-push-and-merge-to-main-40de;
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {
+  \"id\": string;
   name: string;
   tagline: string;
   price: string;
@@ -63,6 +362,7 @@ address: string};export const "enterpriseIT2026ServicesV2": EnterpriseIt2026Serv
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
@@ -249,21 +549,72 @@ address: string};export const "enterpriseIT2026ServicesV2": EnterpriseIt2026Serv
     "tagline": "Enhanced enterprise IT solutions",
     "price": "$449/month",
     "description": "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",
+=======
+
+
+
+  contactInfo: {mobile: string;
+    email: string;}
+address: string,}
+}
+
+export const \"enterpriseIT2026ServicesV2\": EnterpriseIt2026ServiceV2[] = [{id: \"2026-enterprise-it-v2\",\"name\": \"2026 Enterprise IT Solutions V2\",\"tagline\": \"Enhanced enterprise IT solutions\",\"price\": \"$449/month\",\"description\": \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[;
+      \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\";}
+    ],\"link\": \"/services/2026-enterprise-it-v2\",\"category\": \"Enterprise IT 2026 V2\",\"realImplementation\": true,\"contactInfo\": {mobile: \"+1 302 464 0950\",\"email\": \"kleber@ziontechgroup.com\",\"address\": \"364 E Main St STE 1008 Middletown DE 19709\";}
+]}}};
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 {}
+  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]}}}
+address: strin,
+};
+
+export const \"enterpriseIT2026ServicesV2\": EnterpriseIt2026ServiceV2[] = [{
+    id: \"2026-enterprise-it-v2\",
+    \"name\": \"2026 Enterprise IT Solutions V2\",
+    \"tagline\": \"Enhanced enterprise IT solutions\",
+    \"price\": \"$449/month\",
+    \"description\": \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     features[
-      "Enhanced enterprise IT",
-      "Advanced solutions",
-      "Improved infrastructure",
-      "Better security",
-      "Enhanced support"
+      \"Enhanced enterprise IT\",
+      \"Advanced solutions\",
+      \"Improved infrastructure\",
+      \"Better security\",
+      \"Enhanced support\"
     ],
-    "link": "/services/2026-enterprise-it-v2",
-    "category": "Enterprise IT 2026 V2",
-    "realImplementation": true,
-    "contactInfo": {
-      mobile: "+1 302 464 0950",
-      "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 1008 Middletown DE 19709"
+    \"link\": \"/services/2026-enterprise-it-v2\",
+    \"category\": \"Enterprise IT 2026 V2\",
+    \"realImplementation\": true,
+    \"contactInfo\": {
+      mobile: \"+1 302 464 0950\",
+      \"email\": \"kleber@ziontechgroup.com\",}
+      \"address\": \"364 E Main St STE 1008 Middletown DE 19709\"}
 ]}}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,3 +640,35 @@ export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: 
 export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: "2026-enterprise-it-v2",name: "2026 Enterprise IT Solutions V2",tagline: "Enhanced enterprise IT solutions",price: "$449/month",description: "Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.",features[ "Enhanced enterprise IT","Advanced solutions","Improved infrastructure","Better security","Enhanced support" ],link: "/services/2026-enterprise-it-v2",category: "Enterprise IT 2026 V2",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+
+export interface EnterpriseIt2026ServiceV2 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: strin,}
+};
+
+export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [ { id: \"2026-enterprise-it-v2\",name: \"2026 Enterprise IT Solutions V2\",tagline: \"Enhanced enterprise IT solutions\",price: \"$449/month\",description: \"Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.\",features[ \"Enhanced enterprise IT\",\"Advanced solutions\",\"Improved infrastructure\",\"Better security\",\"Enhanced support\" ],link: \"/services/2026-enterprise-it-v2\",category: \"Enterprise IT 2026 V2\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

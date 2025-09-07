@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   ArrowRight;
   Play;
   TrendingUp;
@@ -115,15 +116,23 @@ import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
 <<<<<<< HEAD
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
+
  } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 // Import our new innovative services
+}
+  ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon}
+ } from 'lucide-react';
+// Import our new innovative services;
 import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
 import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';
 =======
@@ -132,6 +141,7 @@ import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-
 import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { innovative2025ITInfrastructureV2  } from '../data/2025-innovative-it-infrastructure-v2';
+<<<<<<< HEAD
 // Import enhanced components'
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047',';
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';'
@@ -1553,3 +1563,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+// Import enhanced components;
+import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';;
+import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
+import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
+
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('scroll', handleScroll)
+    }
+const Homepage2047: React.FC;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

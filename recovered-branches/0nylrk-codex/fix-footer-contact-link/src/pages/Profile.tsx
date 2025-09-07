@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -339,6 +340,9 @@ export default function Profile() {
                     navigate("/");
                   }}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   variant="outline"
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 >
@@ -398,6 +402,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -411,6 +416,11 @@ import React, { useEffect } from 'react',;
 =======
 import React, { useEffect } from 'react',;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+import React, { useEffect } from 'react',;
+  )import React, { useEffect } from 'react',;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -432,13 +442,129 @@ import { Button } from "@/components/ui/button",;"
 import { useNavigate } from "react-router-dom",;"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { toast } from "sonner",;
+<<<<<<< HEAD
 export default function Profile() { return null; }
+=======
+
+import React, { useEffect } from "react";""
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { useAuth } from "@/hooks/useAuth";""
+import { Button } from "@/components/ui/button";""
+import { useNavigate } from "react-router-dom";""
+import { toast } from "sonner";"
+export default function Profile() {
+  const { user, isLoading, logout } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isLoading && !user) {"
+      toast.error("Please log in to view your profile");""
+      navigate("/login?redirect=/profile");"
+    }
+  }, [user, isLoading, navigate]);
+
+  if (isLoading) {;
+    return (
+      <>
+        <Header />
+"
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">"
+</div>"
+          <div className="animate-pulse text-white">Loading profile...</div>"
+
+        </div>
+        <Footer />
+
+      </>)
+    );
+
+
+  if (!user) {;
+  }
+  if (!user) {;
+    return (
+      <>
+        <Header />
+
+</Header>"
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">"
+</div>"
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">"
+            <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>""
+            <p className="text-zion-slate mb-4">"
+</p>
+            <Button;)"
+              onClick={() => navigate("/login?redirect=/profile")}"
+
+
+      </>
+</Button>
+
+            </Button>
+          </div>
+        </div>
+        <Footer />
+</Footer>
+      </>
+    );
+  }
+  return (
+
+    <>
+      <Header />
+</Header>"
+      <div className="min-h-screen bg-zion-blue">"
+        <div className="container mx-auto px-4 py-8">"
+          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>""
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">"
+            <div className="flex flex-col md:flex-row gap-6">"
+              <div className="md:w-1/3">"
+                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">"
+              <div className="md:w-2/3">"
+                <h2 className="text-xl font-bold text-white">"
+</h2>
+                </h2>"
+                <p className="text-zion-slate-light mb-4">{user.email}</p>"
+                <Button;)
+                  onClick={() => {
+
+
+</Button>
+
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+</Footer>
+    </>
+
+  );
+}"
+      toast.error ("Please log in to view your profile");""
+      navigate ("/login?redirect=/profile");""
+import React, { useEffect } from 'react',;
+import { Header } from "@/components/Header",;""
+import { Footer } from "@/components/Footer",;""
+import { useAuth } from "@/hooks/useAuth",;""
+import { Button } from "@/components/ui/button",;""
+import { useNavigate } from "react-router-dom",;""
+import { toast } from "sonner",;"
+pr-12325
+export default function Profile() {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { user, isLoading, logout } = useAuth(),;
   const navigate = useNavigate(),;
   useEffect(() => {;
     if (!isLoading && !user) {;"
       toast.error("Please log in to view your profile"),;"
       navigate("/login?redirect=/profile");
+    if (!isLoading && !user) {;"
+      toast.error("Please log in to view your profile"),;""
+      navigate("/login?redirect=/profile");"
 
 <<<<<<< HEAD
     }
@@ -447,12 +573,17 @@ export default function Profile() { return null; }
   // Check condition
 if ( {) {
   $2
+  // Check condition;
+
+if ( {) {
+  $2;
+
 }
     return (
       <>;
         <Header />;
-        <div className="min - h-screen bg - zion - blue flex items - center justify - center">;
-          <div className="animate - pulse text - white">Loading profile...</div>;
+        <div className="min - h-screen bg - zion - blue flex items - center justify-center">;
+          <div className="animate - pulse text-white">Loading profile...</div>;
         </div>;
         <Footer />;
       </>);
@@ -460,14 +591,30 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
+
+</Header>"
+        <div className="min - h-screen bg - zion - blue flex items - center justify - center">;"
+</div>"
+          <div className="animate - pulse text - white">Loading profile...</div>;"
+
+        </div>;
+        <Footer />;
+</Footer>)
+      </>);
+  }
+  // Check condition;
+
+if ( {) {
+  $2;
+
 }
     return (
       <>;
         <Header />;
-        <div className="min - h-screen bg - zion - blue flex items - center justify - center">;
-          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 max - w-md">;
-            <h1 className="text - xl font - bold text - white mb - 4">Please log in</h1>;
-            <p className="text - zion - slate mb - 4">You need to be logged in to view your profile.</p>;
+        <div className="min - h-screen bg - zion - blue flex items - center justify-center">;
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 max-w-md">;
+            <h1 className="text - xl font - bold text - white mb-4">Please log in</h1>;
+            <p className="text - zion - slate mb-4">You need to be logged in to view your profile.</p>;
             <Button;
               on_click={() => navigate ("/login?redirect=/profile")}
 <<<<<<< HEAD
@@ -477,32 +624,77 @@ if ( {) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
               className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";
+}
+  }, [user, isLoading, navigate]);
+  if (isLoading) {;
+    return (;
+      <>;
+        <Header />;
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
+          <div className="animate-pulse text-white">Loading profile...</div>;
+        </div>;
+        <Footer />;
+      </>;
+    );
+  }
+;
+  if (!user) {;
+    return (;
+      <>;
+        <Header />;
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">;
+            <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>;
+            <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>;
+            <Button;
+              onClick={() => navigate("/login?redirect=/profile")}
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white";
             >;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text-white";            >;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               Go to Login;
+
+</Header>"
+        <div className="min - h-screen bg - zion - blue flex items - center justify - center">;"
+</div>"
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 max - w-md">;"
+</div>"
+            <h1 className="text - xl font - bold text - white mb - 4">Please log in</h1>;""
+            <p className="text - zion - slate mb - 4">You need to be logged in to view your profile.</p>;"
+            <Button;)"
+              on_click={() => navigate ("/login?redirect=/profile")}"
+</Button>
+
             </Button>;
           </div>;
         </div>;
         <Footer />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+</Footer>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </>);
   }
   return (
     <>;
       <Header />;
-      <div className="min - h-screen bg - zion - blue">;
-        <div className="container mx - auto px - 4 py - 8">;
-          <h1 className="text - 2xl font - bold text - white mb - 8">My Profile</h1>;
-          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6">;
-            <div className="flex flex - col md:flex - row gap - 6">;
-              <div className="md:w - 1/3">;
-                <div className="w - 32 h - 32 rounded - full bg - zion - purple flex items - center justify - center text - 3xl font - bold text - white mb - 4 mx - auto md:mx - 0">;
+      <div className="min - h-screen bg - zion-blue">;
+        <div className="container mx - auto px - 4 py-8">;
+          <h1 className="text - 2xl font - bold text - white mb-8">My Profile</h1>;
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p-6">;
+            <div className="flex flex - col md:flex - row gap-6">;
+              <div className="md:w-1/3">;
+                <div className="w - 32 h - 32 rounded - full bg - zion - purple flex items - center justify - center text - 3xl font - bold text - white mb - 4 mx - auto md:mx-0">;
                   {user.display_name ? user.display_name.split (' ').map (name => name[0]).join ('') : user.email?.char_at (0)}
                 </div>;
               </div>;
-              <div className="md:w - 2/3">;
-                <h2 className="text - xl font - bold text - white">{user.display_name || "User"}</h2>;
-                <p className="text - zion - slate - light mb - 4">{user.email}</p>;
+              <div className="md:w-2/3">;
+                <h2 className="text - xl font - bold text-white">{user.display_name || "User"}</h2>;
+                <p className="text - zion - slate - light mb-4">{user.email}</p>;
                 <Button;
                   on_click={() => {
                     logout ();
@@ -513,12 +705,43 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                   {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') :user.email?.charAt(0)}
+=======
+{user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') :user.email?.charAt(0)}
+                  className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text-white";
+                >;
+                  Logout;
+
+</Header>"
+      <div className="min - h-screen bg - zion - blue">;"
+</div>"
+        <div className="container mx - auto px - 4 py - 8">;"
+</div>"
+          <h1 className="text - 2xl font - bold text - white mb - 8">My Profile</h1>;""
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6">;"
+</div>"
+            <div className="flex flex - col md:flex - row gap - 6">;"
+</div>"
+              <div className="md:w - 1/3">;"
+</div>"
+                <div className="w - 32 h - 32 rounded - full bg - zion - purple flex items - center justify - center text - 3xl font - bold text - white mb - 4 mx - auto md:mx - 0">;"
+</div>
+                </div>;
+              </div>;"
+              <div className="md:w - 2/3">;"
+</div>"
+                <h2 className="text - xl font - bold text - white">{user.display_name || "User"}</h2>;""
+                <p className="text - zion - slate - light mb - 4">{user.email}</p>;"
+                <Button;)
+                  on_click={() => {
+</Button>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </>;
     );
   }
@@ -526,20 +749,27 @@ if ( {) {
   return (;
     <>;
       <Header />;
-      <div className="min-h-screen bg-zion-blue">;
-        <div className="container mx-auto px-4 py-8">;
-          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>;
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
-            <div className="flex flex-col md:flex-row gap-6">;
-              <div className="md:w-1/3">;
-                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">;
-                  {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') : user.email?.charAt(0)}
+</Header>"
+      <div className="min-h-screen bg-zion-blue">;"
+</div>"
+        <div className="container mx-auto px-4 py-8">;"
+</div>"
+          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>;""
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;"
+</div>"
+            <div className="flex flex-col md:flex-row gap-6">;"
+</div>"
+              <div className="md:w-1/3">;"
+</div>"
+                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">;"
+</div>
                 </div>;
-              </div>;
-              <div className="md:w-2/3">;
-                <h2 className="text-xl font-bold text-white">{user.displayName || "User"}</h2>;
-                <p className="text-zion-slate-light mb-4">{user.email}</p>;
-                <Button;
+              </div>;"
+              <div className="md:w-2/3">;"
+</div>"
+                <h2 className="text-xl font-bold text-white">{user.displayName || "User"}</h2>;""
+                <p className="text-zion-slate-light mb-4">{user.email}</p>;"
+                <Button;)
                   onClick={() => {;
                     logout();
                     navigate("/");
@@ -566,6 +796,8 @@ if ( {) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 >;
                   Logout;
+</Button>
+
                 </Button>;
               </div>;
             </div>;
@@ -615,23 +847,88 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
   return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md" > <h1 className="text-xl font-bold text-white mb-4" >Please log in</h1> <p className="text-zion-slate mb-4" >You need to be logged in to view your profile.</p> <Button > Go to Login </Button> </div> </div> <Footer /> </>) "
 =======
 
+;
     </>;
+ursor/fix-website-loading-errors-and-merge-6662
+    if (!isLoading && !user) {;"
+      toast.error("Please log in to view your profile"),;""
+  }, [user, is_loading, navigate]);
+;
+  // Check condition;
+if ( {) {
+  $2;
+      <>;
+        <Header />;
+        <div className="min - h-screen bg - zion - blue flex items - center justify - center">;"
+          <div className="animate - pulse text - white">Loading profile...</div>;"
+        </div>;
+        <Footer />;
+)
+      </>);
+  // Check condition;
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 max - w-md">;"
+            <h1 className="text - xl font - bold text - white mb - 4">Please log in</h1>;""
+            <p className="text - zion - slate mb - 4">You need to be logged in to view your profile.</p>;"
+              on_click={() => navigate ("/login?redirect=/profile")}"
+
+
+      <div className="min - h-screen bg - zion - blue">;"
+        <div className="container mx - auto px - 4 py - 8">;"
+          <h1 className="text - 2xl font - bold text - white mb - 8">My Profile</h1>;""
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6">;"
+            <div className="flex flex - col md:flex - row gap - 6">;"
+              <div className="md:w - 1/3">;"
+                <div className="w - 32 h - 32 rounded - full bg - zion - purple flex items - center justify - center text - 3xl font - bold text - white mb - 4 mx - auto md:mx - 0">;"
+              </div>;"
+              <div className="md:w - 2/3">;"
+                <h2 className="text - xl font - bold text - white">{user.display_name || "User"}</h2>;""
+                <p className="text - zion - slate - light mb - 4">{user.email}</p>;"
+                  on_click={() => {
+
+      </>;
+  return (;
+      <div className="min-h-screen bg-zion-blue">;"
+        <div className="container mx-auto px-4 py-8">;"
+          <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>;""
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;"
+            <div className="flex flex-col md:flex-row gap-6">;"
+              <div className="md:w-1/3">;"
+                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">;"
+              <div className="md:w-2/3">;"
+                <h2 className="text-xl font-bold text-white">{user.displayName || "User"}</h2>;""
+                <p className="text-zion-slate-light mb-4">{user.email}</p>;"
+                  onClick={() => {;
+
+
+
+
   ); export default function Profile () {
   const {
-  user, isLoading, logout 
+  // TODO: Implement
+  user, isLoading, logout;
 }= useAuth ();
 const navigate = useNavigate ();
 useEffect ( () => {
   if (!isLoading && !user) {
-  
-}
-;
 
+<<<<<<< HEAD
 }, [user, isLoading, navigate]);
 return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="animate-pulse text-white" >Loading profile...</div> </div> <Footer /> </> if (!user) {
   return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md" > <h1 className="text-xl font-bold text-white mb-4" >Please log in</h1> <p className="text-zion-slate mb-4" >You need to be logged in to view your profile.</p> <Button > Go to Login </Button> </div> </div> <Footer /> </>) 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }return (<> <Header /> variant="outline" className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white" 
+=======
+}, [user, isLoading, navigate]);"
+return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="animate-pulse text-white" >Loading profile...</div> </div> <Footer /> </> if (!user) {"
+  return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md" > <h1 className="text-xl font-bold text-white mb-4" >Please log in</h1> <p className="text-zion-slate mb-4" >You need to be logged in to view your profile.</p> <Button > Go to Login  </div> </div> <Footer /> </>)"
+}return (<> <Header /> variant="outline" className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white""
+
+    </>;)
+pr-12325
+</Footer>
+
+    </>);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
     </>;
   );

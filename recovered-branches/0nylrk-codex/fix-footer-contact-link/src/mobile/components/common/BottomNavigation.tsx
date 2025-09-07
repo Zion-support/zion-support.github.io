@@ -1,10 +1,38 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 
+=======
+import React from "react";
+import {Link, useLocation} from "react-router-dom";
+import {Home, Search, Briefcase, MessageSquare, User} from "lucide-react";
+import {cn} from "@/lib/utils";
+export function BottomNavigation() {;
+  const location = useLocation();
+
+  const navItems = [;
+    { path: "/mobile", icon: <Home />, label: "Home" },;
+    { path: "/mobile/browse", icon: <Search />, label: "Browse" },;
+    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;
+    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;
+    { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
+
+import React from "react",
+import { Link, useLocation } from "react-router-dom",
+    { path: "/mobile/profile", icon: <User />, label: "Profile" }],;import React from "react",;
+import { Link, useLocation } from "react-router-dom",;
+import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
+import { cn } from "@/lib/utils";
+export function BottomNavigation() {
+import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+export function BottomNavigation() {
+  const location = useLocation(),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" },
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },
@@ -105,12 +133,13 @@ export function BottomNavigation() {}
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
-  const navItems = [;
+const navItems = [;
     { path: "/mobile", icon: <Home />, label: "Home" },;
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },;
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
+<<<<<<< HEAD
 
 
 
@@ -174,6 +203,8 @@ export function BottomNavigation() {}
               {React.cloneElement(item.icon as React.ReactElement, {"
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const location = useLocation();
   const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" }
@@ -188,10 +219,21 @@ export function BottomNavigation() {}
         return (
           <Link
 
-
               "flex flex-col items-center justify-center flex-1 py-1 px-2",
 
+"flex flex-col items-center justify-center flex-1 py-1 px-2",
 
+    <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">
+      {navItems.map((item) => {
+        const isActive = location.pathname === item.path,
+        return (
+          <Link
+            key={item.path}
+            to={item.path}
+            className={cn(
+              "flex flex-col items-center justify-center flex-1 py-1 px-2";
+
+              "flex flex-col items-center justify-center flex-1 py-1 px-2",
               isActive ? "text-primary" : "text-muted-foreground"
             )}
           >
@@ -268,9 +310,46 @@ export function BottomNavigation() {;
       {navItems.map((item) => {;
         const isActive = location.pathname === item.path;
         return (;
+import React from "react";""
+import {Link, useLocation} from "react-router-dom";""
+import {Home, Search, Briefcase, MessageSquare, User} from "lucide-react";""
+import {cn} from "@/lib/utils";"
+export function BottomNavigation() {;
+  const location = useLocation();
+
+  const navItems = [;"
+    { path: "/mobile", icon: <Home />, label: "Home" },;"
+"
+    { path: "/mobile/browse", icon: <Search />, label: "Browse" },;"
+    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;"
+    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;"
+]"
+    { path: "/mobile/profile", icon: <User />, label: "Profile" }],;"
+    { path: "/mobile", icon: <Home />, label: "Home" },"
+    { path: "/mobile/browse", icon: <Search />, label: "Browse" },"
+    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },"
+    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },"
+    { path: "/mobile/profile", icon: <User />, label: "Profile" }],"
+    { path: "/mobile", icon: <Home />, label: "Home" }"
+    { path: "/mobile/browse", icon: <Search />, label: "Browse" }"
+    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" }"
+    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" }"
+    { path: "/mobile/profile", icon: <User />, label: "Profile" }]"
+    <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">;"
+</div>
+          <Link;"
+              "flex flex-col items-center justify-center flex-1 py-1 px-2",""
+              isActive ? "text-primary" : "text-muted-foreground""
+
+            )}
+          >
+            <div className="h-5 w-5">"
+            </div>"
+            <span className="text-xs mt-1">{item.label}</span>"
           <Link;
             key={item.path} ;
             to={item.path}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className={cn(;"
               "flex flex-col items-center justify-center flex-1 py-1 px-2";"
@@ -280,6 +359,11 @@ export function BottomNavigation() {;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               isActive ? "text-primary" : "text-muted-foreground";
             )}
+=======
+            className={cn(;"
+              "flex flex-col items-center justify-center flex-1 py-1 px-2";""
+              isActive ? "text-primary" : "text-muted-foreground";")
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           >;
 
 <<<<<<< HEAD
@@ -352,6 +436,9 @@ function BottomNavigation() {}
   );
 }
 
+</div>;
+  );
+}
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, Briefcase, MessageSquare, User } from './lucide-react';
@@ -452,6 +539,7 @@ export function BottomNavigation() {;
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -469,3 +557,32 @@ export function BottomNavigation() {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            <div className="h-5 w-5">;"
+            </div>;"
+            <span className="text-xs mt-1">{item && item.label}</span>;"
+          ;
+    { path: "/mobile / browse", icon: <Search />, label: "Browse" },"
+    { path: "/mobile / projects", icon: <Briefcase />, label: "Projects" },"
+    { path: "/mobile / inbox", icon: <MessageSquare />, label: "Messages" },"
+    { path: "/mobile / profile", icon: <User />, label: "Profile" }],"
+    <div className="fixed bottom - 0 left - 0 right - 0 bg - background border - t border - border flex justify - between px - 1 py - 2 z - 50">;"
+            key={item.path}
+            className={cn ("
+              "flex flex - col items - center justify - center flex - 1 py - 1 px - 2";")"
+              is_active ? "text - primary" : "text - muted - foreground")}"
+            <div className="h - 5 w - 5">;"
+            <span className="text - xs mt - 1">{item.label}</span>;"
+          );
+    </div>);"
+    { path:"/mobile", icon:<Home />, label:"Home" },;"
+    { path:"/mobile/browse", icon:<Search />, label:"Browse" },;"
+    { path:"/mobile/projects", icon:<Briefcase />, label:"Projects" },;"
+    { path:"/mobile/inbox", icon:<MessageSquare />, label:"Messages" },;"
+    { path:"/mobile/profile", icon:<User />, label:"Profile" }],;"
+          <Link ;
+              "flex flex-col items-center justify-center flex-1 py-1 px-2",;""
+              isActive ? "text-primary" :"text-muted-foreground";")
+            <span className="text-xs mt-1">{item.label}</span>;"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; ,} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`
 <<<<<<< HEAD:backup-merge-conflicts/use-toast.js.backup
 =======
@@ -22,12 +23,19 @@ import React, { useState, useCallback } from "react";
 // comment;
 export const toast = ({ title, description, variant = "default" }) => {};
   console && console.log(""Toast [${variant}]: ${title} -, ${description}"")}
+=======
+import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; ,} return Date && Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`""
+import React, { useState, useCallback } from "react";"
+// comment;"
+export const toast = ({ title, description, variant = "default" }) => {};""
+  console && console.log(""Toast [${variant}]: ${title} -, ${description}"")}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   // comment;
 return Date && Date.now()}
 
 export const useToast = () => {}};
   const [toasts, setToasts] = useState([])}
-
+"
   const toast = useCallback(({ title, description, variant = "default' }) => {}}
     const newToast = {}
 
@@ -39,6 +47,7 @@ setTimeout(() => {}}
     return id}, [])}
   const dismiss = useCallback((id) => {}}
   }, [])}
+<<<<<<< HEAD
   return {};
     toast, dismiss,    toasts}};"`
 <<<<<<< HEAD
@@ -76,3 +85,9 @@ import React,{ useState,useCallback } from "react"; export const toast = ({ titl
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return {};`;
+    toast, dismiss,    toasts}};"`""`;
+import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console && console.log(Toast [${variant}]: ${title} -,${description}"");,} return Date && Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]);,} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]);,} setTimeout(() => {}} },5000);,} return id},[]);,} const dismiss = useCallback((id) => {}} },[]);,} return {}; toast,dismiss,toasts}};"`""`;
+import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console && console.log(""Toast [${variant}]: ${title} -,${description}""),} return Date && Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]),} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]),} setTimeout(() => {}} },5000),} return id},[]),} const dismiss = useCallback((id) => {}} },[]),} return {}; toast,dismiss,toasts}};"`""`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

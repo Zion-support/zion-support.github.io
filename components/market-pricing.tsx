@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';'
+=======
+
+import React, { useState } from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
   ArrowRight, Check, Star, BarChart3;
@@ -9,6 +14,7 @@ import React, { useState } from 'react';'
 import {motion} from 'framer-motion';'
 import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';'
 import Link from 'next/link';
+<<<<<<< HEAD
 export default function MarketPricing() { return null; }
     { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },'"
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },'"
@@ -1500,3 +1506,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

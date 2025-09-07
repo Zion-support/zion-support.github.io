@@ -22,6 +22,7 @@ interface PasswordStrengthResult {}
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
   score: number;
   feedback: string[];
+<<<<<<< HEAD
   details: {}
     entropy: number;
   }
@@ -37,6 +38,12 @@ export default async function handler(;
     score += entropy > 50 ? 15 : 0; // High entropy bonus;
     score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns;
     // Generate suggestions;
+=======
+  details: {
+
+
+    // Generate suggestions
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const suggestions: string[] = []
     if (score < 50) {}
       password;
@@ -108,7 +115,9 @@ if ( {) {}
         hasCommonPatterns;
 password.toLowerCase () .includes (pattern) );
 origin/cursor/automate-test-improve-and-merge-code-2533
+password.toLowerCase () .includes (pattern) );
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
+
 if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';
 else if (score < 70) strength = 'medium';
@@ -122,6 +131,7 @@ else if (score < 70) strength = 'medium';'
 else if (score < 90) strength = 'strong';'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 else strength = 'very-strong';
+<<<<<<< HEAD
 // Generate feedback const feedback: string[] = [];'
 if (length < 8) feedback.push ('Password is too short (minimum 8 characters) ');'
 if (!hasUppercase) feedback.push ('Add uppercase letters');'
@@ -130,6 +140,17 @@ if (!hasNumbers) feedback.push ('Add numbers');'
 if (!hasSymbols) feedback.push ('Add special characters');'
 if (hasCommonPatterns) feedback.push ('Avoid common patterns and words');'
 if (entropy < 30) feedback.push ('Password is too predictable');'
+=======
+// Generate feedback const feedback: string[] = [];
+
+if (length < 8) feedback.push ('Password is too short (minimum 8 characters) ');
+if (!hasUppercase) feedback.push ('Add uppercase letters');
+if (!hasLowercase) feedback.push ('Add lowercase letters');
+if (!hasNumbers) feedback.push ('Add numbers');
+if (!hasSymbols) feedback.push ('Add special characters');
+if (hasCommonPatterns) feedback.push ('Avoid common patterns and words');
+if (entropy < 30) feedback.push ('Password is too predictable');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next';
 interface PasswordStrengthResult {}
   password: string;'
@@ -144,10 +165,14 @@ interface PasswordStrengthResult {}
     hasSymbols: boolean;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     hasCommonPatterns: boolean
 
     hasCommonPatterns: boolean;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     entropy: number
 =======
     hasCommonPatterns: boolean;
@@ -155,12 +180,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   }
   suggestions: string[]
+
+    hasCommonPatterns: boolean;
+    entropy: number;
 }
+<<<<<<< HEAD
 export default async function handler() { return null; }
+=======
+  suggestions: string[];
+}
+
+export default async function handler(
+
+  req: NextApiRequest
+
+  res: NextApiResponse<PasswordStrengthResult | { error: string }>
+) {
+  if (req.method !== 'POST') {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
   try {}
     const { password } = req.body;
+<<<<<<< HEAD
 '
     if (!password |typeof password !== 'string') {}
 '
@@ -339,10 +381,24 @@ suggestions.push(
   }
 <<<<<<< HEAD
   }
+=======
+
+
+      return res.status(400).json({ error: 'Password is required' });
+    }
+    // Password analysis
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     res.status(500).json({ error: 'Internal server error' })
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL |'zion://open';export default function OpenApp() {
 const IOS_APP_URL = null;
@@ -87,6 +88,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
   );
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div className="min-h-[50vh] flex items-center justify-center">
       <div className="text-center">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Menu,
   ChevronDown,
@@ -226,17 +227,26 @@ interface NavigationItem {
   href: string;
   icon?: React.ReactNode;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description?: string;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
+<<<<<<< HEAD
   featured?: boolean;
+=======
+
+  featured?: boolean
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
   featured?: boolean;
 <<<<<<< HEAD
   featured?: boolean;  featured?: boolean
 
 const contactInfo = null;
+<<<<<<< HEAD
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -2387,3 +2397,7 @@ export default UltraFuturisticNavigation2035;  )
 export default UltraFuturisticNavigation2035;
 export default UltraFuturisticNavigation2035;
 '"`
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

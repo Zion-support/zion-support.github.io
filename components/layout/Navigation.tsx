@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Menu;
   X;
   Home;
@@ -8,6 +9,18 @@
   Mail;
   MapPin;
   Globe;
+=======
+  Menu
+  X
+  Home
+  Brain
+  Cpu
+  Rocket
+  Phone
+  Mail
+  MapPin
+  Globe
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ChevronDown;
 
   Globe,;
@@ -23,11 +36,16 @@ import Link from 'next/link';
 import {}
   Menu, X, Home, Brain, Cpu, Rocket, 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import { Menu, X, Home, Brain, Cpu, Rocket;
 origin/cursor/automate-test-improve-and-merge-code-2533
   Phone, Mail, MapPin, Globe, ChevronDown
+<<<<<<< HEAD
 =======
   Phone, Mail, MapPin, Globe, ChevronDown';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -863,3 +881,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+  Phone, Mail, MapPin, Globe, ChevronDown}
+}
+ } from 'lucide-react';
+
+const Navigation: React.FC = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+const Navigation: React.FC;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

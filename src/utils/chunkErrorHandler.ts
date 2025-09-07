@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -10,10 +11,17 @@ private readonly RETRY_DELAY = 1000; // 1 second
 
     this && this.initializeGlobalHandlers();
 
+=======
+private readonly RETRY_DELAY = 1000; // 1 second
+  private readonly CACHE_CLEAR_THRESHOLD = 2
+  constructor() {
+    this && this.initializeGlobalHandlers();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
   private initializeGlobalHandlers(): void {
     if (typeof window === 'undefined') return
     // Handle webpack chunk loading errors
+<<<<<<< HEAD
 
     window && window.addEventListener('error', event => {
 =======
@@ -66,6 +74,210 @@ private readonly RETRY_DELAY = 1000; // 1 second;
 <<<<<<< HEAD
     const chunkErrorPatterns = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+    window && window.addEventListener('error', event => {'
+      this && this.handleScriptError(event);
+    });
+    // Handle unhandled promise rejections (async chunk,  loading)
+    window && window.addEventListener('unhandledrejection', event => {'
+      this && this.handlePromiseRejection(event);
+    });  }
+      this.handlePromiseRejection(event)
+    }) }
+  private handleScriptError(event:,  ErrorEvent): void {,
+    const { error, filename } = event;
+    if (this && this.isChunkError(error, filename)) {
+      event && event.preventDefault(); // Prevent the error from bubbling up
+      this && this.handleChunkError(error, { filename, source: 'script' });
+    }
+  }
+  private handlePromiseRejection(event:,  PromiseRejectionEvent): void {,
+    const error = event && event.reason;
+    if (this && this.isChunkError(error)) {
+      event && event.preventDefault(); // Prevent unhandled rejection
+      this && this.handleChunkError(error, { source: 'promise' });
+    }
+  }
+  private isChunkError(error: any, filename?:,  string): boolean {
+    if (!error) return false;
+    const errorMessage = error && error.message || String(error);
+    const errorName = error && error.name || '';
+    const chunkErrorPatterns = [,
+/**;
+* Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
+* Handles automatic retry, cache clearing, and graceful degradation;
+*/;
+import { logErrorToProduction } from './production_logger';
+interface ChunkErrorStats {
+  error_count: number;,
+  lastErrorTime: number;,
+  user_agent: string;,
+  url: string;,
+class ChunkErrorHandler {
+  private error_stats: Map < string, ChunkErrorStats> = new Map ();
+  private readonly MAX_RETRIES = 3;
+  private readonly RETRY_DELAY = 1000; // 1 second;
+  private readonly CACHE_CLEAR_THRESHOLD = 2;
+  constructor () {
+    this.initializeGlobalHandlers ();
+  }
+  private initializeGlobalHandlers (): void {
+    // Check condition
+if (return) {
+  $2
+}
+    // Handle webpack chunk loading errors;
+    window.addEventListener ('error', event => {'
+      this.handleScriptError (event);
+    });
+    // Handle unhandled promise rejections (async chunk,  loading);
+    window.addEventListener ('unhandledrejection', event => {'
+      this.handlePromiseRejection (event);
+    }) }
+  private handleScriptError (event:,  ErrorEvent): void {,
+    const { error, filename } = event;
+    if () {) {
+  $2
+}
+      event.prevent_default (); // Prevent the error from bubbling up;
+      this.handleChunkError (error, { filename, source: 'script' });
+    }
+  }
+  private handlePromiseRejection (event:,  PromiseRejectionEvent): void {,
+    const error = event.reason;
+    if () {) {
+  $2
+}
+      event.prevent_default (); // Prevent unhandled rejection;
+      this.handleChunkError (error, { source: 'promise' });
+    }
+  }
+  private isChunkError (error: any, filename?:,  string): boolean {
+    // Check condition
+if (return,  false) {
+  $2
+}
+    const error_message = error.message || String (error);
+    const error_name = error.name || '';,
+    const chunkErrorPatterns = [;
+      'ChunkLoadError','
+      'Loading chunk','
+      'Failed to fetch dynamically imported module','
+      'Failed to import','
+      'chunk-','
+      'vendors-','
+
+      'ChunkLoadError',
+      'Loading chunk',
+      'Failed to fetch dynamically imported module',;
+      'Failed to import',;
+      'chunk-',
+      'vendors-',
+    ];
+    const sessionKey = this && this.getSessionKey();
+    const stats = this && this.getOrCreateErrorStats(sessionKey);
+    stats && stats.errorCount++;
+    stats && stats.lastErrorTime = Date && Date.now();
+    logErrorToProduction('ChunkLoadError detected', error, {'
+      context: 'chunkErrorHandler','
+      errorCount: stats && stats.errorCount,
+      retryAttempt: stats && stats.errorCount,
+      source: context && context.source,
+      filename: context && context.filename,
+      userAgent: navigator && navigator.userAgent,
+      url: window && window.location.href,
+    });
+    // Attempt recovery based on error count
+    if (stats && stats.errorCount <= this && this.MAX_RETRIES) {
+      await this && this.attemptRecovery(stats && stats.errorCount, context);
+    } else {
+      this && this.showFatalErrorMessage();
+    }
+  }
+  private async attemptRecovery(
+    attemptNumber: number,
+    context: { filename?: string; source: string }
+  ): Promise<void> {
+    logErrorToProduction(
+      `Attempting ChunkLoadError recovery #${attemptNumber}``
+      undefined
+    return chunkErrorPatterns.some (
+      pattern =>;
+        error_message.includes (pattern) ||;
+        error_name.includes (pattern) ||;
+        (filename && filename.includes (pattern)));
+  }
+  private async handleChunkError (
+    error: Error,
+    context: { filename?: string; source: string }
+  ): Promise < void> {
+    const session_key = this.getSessionKey ();
+    const stats = this.getOrCreateErrorStats (session_key);
+    stats.error_count++;
+    stats.lastErrorTime = Date.now ();
+    logErrorToProduction ('ChunkLoadError detected', error, {'
+      context: 'chunkErrorHandler','
+      error_count: stats.error_count,
+      retry_attempt: stats.error_count,
+      source: context.source,
+      filename: context.filename,
+      user_agent: navigator.user_agent,
+      url: window.location.href,
+    });
+    // Attempt recovery based on error count;
+    // Check condition
+if ( {) {
+  $2
+}
+      await this.attempt_recovery (stats.error_count, context);
+    } else {
+      this.showFatalErrorMessage ();
+    }
+  }
+  private async attempt_recovery (
+    attempt_number: number,
+    context: { filename?: string; source: string }
+  ): Promise < void> {
+    logErrorToProduction (
+      `Attempting ChunkLoadError recovery #${attempt_number}`,`
+      undefined,
+      {
+        context: 'chunkErrorRecovery','
+        } catch (e) {
+          // Ignore localStorage errors
+        }
+    window && window.location.replace(window && window.location.href);
+  }
+  private hardRefresh(): void {
+    // Force a hard refresh bypassing all caches
+    window && window.location.href = window && window.location.href + '?_t=' + Date && Date.now();
+  }
+  private showFatalErrorMessage(): void {
+    // Create a user-friendly error message
+          background: #0070f3,
+          color: white,
+          border: none,
+          padding: 0.75rem 1.5rem,
+          border-radius: 0.5rem,
+          font-size: 1rem,
+          cursor: pointer,
+          margin-right: 1rem;        ">",
+          Try Again
+        </button>
+        <button onclick="window.location.href='/'" style=""
+          background: #666,
+          color: white,
+          border: none,
+          padding: 0.75rem 1.5rem,
+          border-radius: 0.5rem,
+    const errorDiv = document && document.createElement('div');
+    errorDiv && errorDiv.style.cssText = ``
+    window.location.href = window.location.href + '?_t=' + Date.now()'
+      });
+    } catch (error) {;
+      logErrorToProduction('Failed to clear caches', error as Error, {;
+        context: 'chunkErrorRecovery',;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
  * Handles automatic retry, cache clearing, and graceful degradation;
@@ -73,6 +285,7 @@ private readonly RETRY_DELAY = 1000; // 1 second;
 import { logErrorToProduction } from './productionLogger';
 interface ChunkErrorStats {;
   errorCount: number;
+<<<<<<< HEAD
 =======
     const chunkErrorPatterns = []
 /**;
@@ -87,6 +300,11 @@ interface ChunkErrorStats {}
   userAgent: string;
   url: string;
 <<<<<<< HEAD
+=======
+  lastErrorTime: number;
+  userAgent: string;
+  url: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 ;
 class ChunkErrorHandler {;
@@ -213,6 +431,7 @@ class ChunkErrorHandler {;
         try {;
           localStorage.removeItem(key);
         } catch (e) {;
+<<<<<<< HEAD
 =======
 class ChunkErrorHandler {}
   private error_stats: Map < string, ChunkErrorStats> = new Map ();
@@ -350,10 +569,15 @@ if ( {) {}
           // Ignore localStorage errors;
         }
 <<<<<<< HEAD
+=======
+          // Ignore localStorage errors;
+        }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       });
       logErrorToProduction('Caches cleared successfully', undefined, {;
         context: 'chunkErrorRecovery';
         action: 'cache-clear';
+<<<<<<< HEAD
 =======
 
     window && window.location.replace(window && window.location.href);
@@ -406,6 +630,12 @@ if ( {) {}
       logErrorToProduction('Failed to clear caches', error as Error, {;'
         context: 'chunkErrorRecovery',;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      });
+    } catch (error) {;
+      logErrorToProduction('Failed to clear caches', error as Error, {;
+        context: 'chunkErrorRecovery';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         action: 'cache-clear-failed';
       });
     }
@@ -418,6 +648,7 @@ if ( {) {}
 ;
   private hardRefresh(): void {;
     // Force a hard refresh bypassing all caches;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 '
@@ -522,6 +753,34 @@ if ( {) {}
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 =======
+=======
+    window.location.href = window.location.href + '?_t=' + Date.now();
+  }
+  private showFatalErrorMessage (): void {
+    // Create a user - friendly error message;
+    const error_div = document.create_element ('div');
+    error_div.style.css_text = `;`
+      position: fixed;,
+      top: 0;,
+      left: 0;,
+      width: 100%;,
+      height: 100%;,
+  private showFatalErrorMessage(): void {
+    // Create a user-friendly error message
+    errorDiv.innerHTML = ``
+      <div style="text-align: center, padding: 2rem, max-width: 500px,">"
+        <h2 style="margin-bottom: 1rem,">Connection Issue</h2>"
+        <p style="margin-bottom: 1.5rem, line-height: 1.5,">"
+          We're having trouble loading some parts of the application. '
+          This might be due to a poor network connection or a temporary server issue.
+        </p>
+        <button onclick="window.location.reload()" style=""
+        ">"
+        <button onclick="window.location.reload()" style="
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
  * Handles automatic retry, cache clearing, and graceful degradation
@@ -532,6 +791,7 @@ interface ChunkErrorStats {
   errorCount: number;
   lastErrorTime: number;
   userAgent: string;
+<<<<<<< HEAD
   url: string
 class ChunkErrorHandler {
           background: #0070f3;
@@ -932,3 +1192,9 @@ export default chunkErrorHandler;
 =======
 export default chunkErrorHandler;'"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+  url: string
+class ChunkErrorHandler {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

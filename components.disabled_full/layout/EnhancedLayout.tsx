@@ -30,8 +30,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
 
+
+
+
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { ReactNode } from "react";
 import { ReactNode } from "react";
 import EnhancedNavigation from "./EnhancedNavigation";
@@ -122,23 +132,94 @@ interface EnhancedLayoutProps {
 =======
 
 
-interface EnhancedLayoutProps {
-  \"children\": ReactNode;
-}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
+
+
+
+
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
+
+
+
+
 interface EnhancedLayoutProps {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   \"children\": ReactNode;
 
+<<<<<<< HEAD
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {}
   return ("
     <div className=\"min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col\">
       <EnhancedNavigation />"
       <main className=\"container mx-auto px-4 py-8 flex-1\">
+=======
+
+interface EnhancedLayoutProps {
+  \"children\": ReactNode;
+}interface EnhancedLayoutProps {
+  \"children\": ReactNode;
+;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+import React, { ReactNode } from 'react';
+import { ReactNode  } from 'react';
+import EnhancedNavigation from './EnhancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+interface EnhancedLayoutProps  {\"children\": ReactNode;}
+}ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+;
+interface EnhancedLayoutProps  {interface EnhancedLayoutProps  {\"children\": ReactNode;}
+}interface EnhancedLayoutProps  {\"children\": ReactNode;export default function EnhancedLayout() {return (<div className=\"min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col\" />;
+      <EnhancedNavigation />;}
+      <main className=\"container mx-auto px-4 py-8 flex-1\" />;}
+        {children}
+      </main>;
+      <EnhancedFooter />;
+    </div>;
+  )}
+;
+ import React,{ ReactNode } from \"react\";  import { ReactNode } from \"react\"; import EnhancedNavigation from \"./EnhancedNavigation\"; import EnhancedFooter from './EnhancedFooter';
+
+ursor/fix-syntax-push-and-merge-to-main-40de;
+import React, { ReactNode } from \"react\";
+import { ReactNode } from \"react\";
+import EnhancedNavigation from \"./EnhancedNavigation\";
+import EnhancedFooter from \"./EnhancedFooter\";
+
+interface EnhancedLayoutProps {}
+  \"children\": ReactNode;}
+}
+interface EnhancedLayoutProps {
+  \"children\": ReactNode;}
+}
+export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
+  return (
+    <div className=\"min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col\" />
+      <EnhancedNavigation />}
+      <main className=\"container mx-auto px-4 py-8 flex-1\" />}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {children}
       </main>
       <EnhancedFooter />
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -243,6 +324,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 
+=======
+
+
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+}
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -256,5 +348,61 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
+<<<<<<< HEAD
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+}
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+
+}
+ import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+ import React,{ ReactNode } from \"react\";  import { ReactNode } from \"react\"; import EnhancedNavigation from \"./EnhancedNavigation\"; import EnhancedFooter from \"./EnhancedFooter\";
+}
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+}
+  // TODO: Implement
+export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
+  return ("
+    <div className=\"min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col\">"
+</div>
+      <EnhancedNavigation />
+"
+      <main className=\"container mx-auto px-4 py-8 flex-1\">"
+</main>
+      <EnhancedFooter />
+
+    </div>)"
+pr-12325
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+;
+}}
+} import React,{ ReactNode } from \"react\";  import { ReactNode } from \"react\"; import EnhancedNavigation from \"./EnhancedNavigation\"; import EnhancedFooter from './EnhancedFooter';
+}
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

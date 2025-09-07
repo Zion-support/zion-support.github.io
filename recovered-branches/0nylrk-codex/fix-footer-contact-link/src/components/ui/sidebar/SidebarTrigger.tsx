@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -202,9 +203,16 @@ export function SidebarTrigger() { return null; }
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}>;
+className={cn("", className)}
+      onClick={toggleSidebar}
+      {...props}
+    >;
       {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
 =======
 "
@@ -233,6 +241,7 @@ export function SidebarTrigger() { return null; }
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -257,3 +266,34 @@ export function SidebarTrigger() { return null; }
 =======
 ;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+import React from "react";""
+import { Button } from "@/components/ui/button";""
+import { Menu, X } from "lucide-react";""
+import { useSidebar } from "./sidebar-context";""
+import { cn } from "@/lib/utils";"
+interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
+
+    <Button;"
+      variant="ghost"""
+      size="icon"""
+import React from "react",;""
+import { Button } from "@/components/ui/button",;""
+import { Menu, X } from "lucide-react",;""
+import { useSidebar } from "./sidebar-context",;""
+import { cn } from "@/lib/utils",;"
+interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {;
+
+      variant="ghost";""
+      size="icon";""
+      className={cn("", className)}"
+      onClick={toggleSidebar}
+      {...props}>;
+"
+      {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}"
+      <span className="sr-only">Toggle Sidebar</span>"
+pr-12325
+    </Button>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

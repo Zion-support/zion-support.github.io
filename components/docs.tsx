@@ -19,38 +19,15 @@ export default function DocsPage() {}
       color: 'text-green-400'
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-  const contact = null;
-  const sections = [
-    {
-      title: 'Getting Started'
-      links: [
-        { name: 'Overview', href: '/enhanced-services-showcase' },
-        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
-{ name: 'Contact Sales', href: '/contact' },
-      ],
-    },
-    {
-      title: 'AI Services Docs'
-      links: [
-        { name: 'AI Guardrails', href: '/ai-guardrails' },
-        { name: 'AI Evals', href: '/ai-evals' },
-{ name: 'Agentic RAG', href: '/agentic-rag' },
-      ],
-    },
-    {
-      title: 'IT & Platform Docs'
-      links: [
-        { name: 'API Observability', href: '/api-observability' },
-        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
-{ name: 'Status Pages & SLO', href: '/status-pages-slo' },
-      ],
-    },
-  ];
 
+<<<<<<< HEAD
   const external = [
     { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' },
     { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' },
@@ -263,6 +240,8 @@ day: 'numeric',
 origin/cursor/automate-test-improve-and-merge-code-2533
     });
   };
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
 <<<<<<< HEAD
@@ -333,12 +312,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     href={e && e.url}
                     target='_blank'
                     rel='noopener noreferrer'
+<<<<<<< HEAD
 =======
                   <a;
                     href={e && e.url}'
                     target='_blank''
                     rel='noopener noreferrer''
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className='text-cyan-400 hover:underline'>;
                     {e && e.name}
                   </a>;
@@ -349,6 +331,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {external.map((e) => ("
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className='text-cyan-400 hover:underline'
                   >
                     {e.name}
@@ -466,6 +451,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {contact.mobile}
               </a>;'`
               <a className='text - purple - 400' href={`mailto:${contact.email}`}>;
+<<<<<<< HEAD
                 {contact.email}"
               </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;"
             <h2 className="text - xl font - semibold mb - 4 text - white">Need help?</h2>;"
@@ -473,6 +459,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Button href="/contact" className="bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white">Contact Support</Button>;"
               <Button href={contact.website} variant="outline" className="border - gray - 600 text - gray - 200">Visit Website</Button>;'"`
               <a className="text - cyan - 400" href={`tel:${contact.mobile.replace (/[^+\\d]/g, '')}`}>{contact.mobile}</a>;"`
+=======
+                {contact.email}
+              </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+            <h2 className="text - xl font - semibold mb - 4 text - white">Need help?</h2>;
+            <div className="flex flex - col sm:flex - row gap - 3">;
+              <Button href="/contact" className="bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white">Contact Support</Button>;
+              <Button href={contact.website} variant="outline" className="border - gray - 600 text - gray - 200">Visit Website</Button>;
+              <a className="text - cyan - 400" href={`tel:${contact.mobile.replace (/[^+\\d]/g, '')}`}>{contact.mobile}</a>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <a className="text - purple - 400" href={`mailto:${contact.email}`}>{contact.email}</a>;
           </Card>;
         </div>;
@@ -488,6 +483,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ul>
           </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </a>
             </div>
           </Card>

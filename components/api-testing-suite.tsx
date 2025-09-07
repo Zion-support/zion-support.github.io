@@ -12,17 +12,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ArrowRight,
   Play,
   AlertTriangle,
+<<<<<<< HEAD
 } from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';'
+=======
+} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Zap, Star } from 'lucide-react';
 export default function APITestingSuitePage() { return null; }
 } from 'lucide-react';
 
+<<<<<<< HEAD
 '
 import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';'
 import { Zap, Star } from 'lucide-react';
 <<<<<<< HEAD
+=======
+
+import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Clock,
   Database,;
 } from 'lucide-react';
@@ -35,6 +45,7 @@ export default function APITestingSuitePage() {};
   const [testResults, setTestResults] = useState(null);'
   const [apiEndpoint, setApiEndpoint] = useState('');'
   const [apiKey, setApiKey] = useState('');
+<<<<<<< HEAD
 
 icon: <Code className='w-8 h-8 text-white' />,
       title: 'Comprehensive API Testing',
@@ -506,6 +517,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             secure.
 
 
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
           {/* API Testing Form */}'
@@ -521,7 +537,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 type='text''
                 placeholder='API Key (optional)'
                 value={apiKey}
+<<<<<<< HEAD
                 onChange={e => setApiKey(e && e.target.value)}'
+=======
+                onChange={e => setApiKey(e && e.target.value)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'              />;
             </div>;
             <Button;
@@ -533,6 +553,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow'              size="lg""
               className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 onChange={e => setApiKey(e.target.value)}
                 className='px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'
               />
@@ -609,7 +632,7 @@ href='/contact'
           </div>"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
+                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover: opacity-20 transition-opacity duration-300 blur-sm`;}
                     />;
                   </div>;'
                   <div className='flex-1'>;'
@@ -652,17 +675,17 @@ href='/contact'
               <Card
                 key={index}
                 className='card-hover group border-gradient-indigo'
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 <div className='flex items-start space-x-6'>
                   <div className='relative'>
                     <div
-                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}
                     >
                       {feature.icon}
                     </div>
                     <div
-                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
+                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover: opacity-20 transition-opacity duration-300 blur-sm`;}
                     />
                   </div>
                   <div className='flex-1'>
@@ -716,6 +739,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='text-center mb-20'>;'
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
               Comprehensive Testing Coverage;
+<<<<<<< HEAD
             </h2>;'
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;"
@@ -727,6 +751,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />;
                   </div>;"
                   <div className="flex-1">;"
+=======
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className="flex items-start space-x-6">;
+                  <div className="relative">;
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature && feature.color} shadow-xl group-hover: scale-110 transition-transform duration-300`;}>;
+                      {feature && feature.icon}
+                    </div>;
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover: opacity-20 transition-opacity duration-300 blur-sm`;} />;
+                  </div>;
+                  <div className="flex-1">;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <h3 className="text-2xl font-bold mb-4 text-white">;
                       {feature && feature.title}
                     </h3>;"
@@ -756,12 +793,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {testTypes && testTypes.map((type, index) => (;
+<<<<<<< HEAD
               <Card;
                 key={index}"
                 className="card-hover border-gradient-indigo"`
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;"
                 <h3 className="text-xl font-bold mb-4 text-white">{type && type.name}</h3>;"
                 <p className="text-gray-400 mb-6">{type && type.description}</p>;"
+=======
+              <Card
+                key={index}
+                className="card-hover border-gradient-indigo"
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <h3 className="text-xl font-bold mb-4 text-white">{type && type.name}</h3>;
+                <p className="text-gray-400 mb-6">{type && type.description}</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <ul className="space-y-2">;
                   {type && type.tests.map((test, testIndex) => (;"
                     <li key={testIndex} className="flex items-center text-gray-300">;"
@@ -769,7 +815,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className='card-hover border-gradient-indigo'
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 <h3 className='text-xl font-bold mb-4 text-white'>
                   {type.name}
@@ -795,10 +841,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       {/* Demo Test Results */}
       {testResults && (
+<<<<<<< HEAD
 "
         <section className="section-padding bg-gradient-cursor-accent">"
           <div className="container-cursor">"
             <div className="text-center mb-12">"
+=======
+
+        <section className="section-padding bg-gradient-cursor-accent">
+          <div className="container-cursor">
+            <div className="text-center mb-12">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
                 API Test Results;
               </h2>"
@@ -902,6 +955,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         }`}>
                           {test.status}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='section-padding bg-gradient-cursor-accent'>
           <div className='container-cursor'>
             <div className='text-center mb-12'>
@@ -1010,9 +1066,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='flex justify-between items-center'>'
                     <span className='text-gray-400'>Reliability</span>'
                     <span className='text-green-400 font-bold'>99.9%</span>
+<<<<<<< HEAD
                   </div>'
                   <div className='flex justify-between items-center'>'
                     <span className='text-gray-400'>Uptime</span>'
+=======
+                  </div>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-400'>Uptime</span>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className='text-green-400 font-bold'>24/7</span>                  </div>                  </div>
                   ))}"
                   <div className="flex justify-between items-center">"
@@ -1045,9 +1107,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Optimization Recommendations;
               </h3>'
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+<<<<<<< HEAD
                 {testResults.recommendations.map((rec, index) => ('
                   <div key={index} className='flex items-start space-x-3'>'
                     <CheckCircle className='w-5 h-5 text-indigo-400 mt-1 flex-shrink-0' />'
+=======
+                {testResults.recommendations.map((rec, index) => (
+                  <div key={index} className='flex items-start space-x-3'>
+                    <CheckCircle className='w-5 h-5 text-indigo-400 mt-1 flex-shrink-0' />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
                   </div>
@@ -1087,6 +1155,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Pricing Section */}
 <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -1119,10 +1190,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             {test_types.map ((type, index) => (
               <Card;
+<<<<<<< HEAD
                 key={index}'
                 className='card - hover border - gradient - indigo';`
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;'
+=======
+                key={index}
+                className='card - hover border - gradient - indigo';
+                style={{ animation_delay: `${index * 0.1;}s` }}
+              >;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <h3 className='text - xl font - bold mb - 4 text - white'>;
                   {type.name}
                 </h3>;'
@@ -1142,12 +1220,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
             {test_types.map ((type, index) => (
               <Card;
+<<<<<<< HEAD
                 key={index}"
                 className="card - hover border - gradient - indigo";`
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;"
                 <h3 className="text - xl font - bold mb - 4 text - white">{type.name}</h3>;"
                 <p className="text - gray - 400 mb - 6">{type.description}</p>;"
+=======
+                key={index}
+                className="card - hover border - gradient - indigo";
+                style={{ animation_delay: `${index * 0.1;}s` }}
+              >;
+                <h3 className="text - xl font - bold mb - 4 text - white">{type.name}</h3>;
+                <p className="text - gray - 400 mb - 6">{type.description}</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <ul className="space - y-2">;
                   {type.tests.map ((test, test_index) => ("
                     <li key={test_index} className="flex items - center text - gray - 300">;"
@@ -1327,7 +1414,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </div>;
                 className={`card-hover border-gradient-indigo ${plan.popular ? 'ring-2 ring-indigo-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                style={{ animationDelay: `${index * 0.1;}s` }}
               >
                 {plan.popular && (
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
@@ -1373,7 +1460,11 @@ href='/contact'
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+=======
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
@@ -1392,12 +1483,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>
 
 
+<<<<<<< HEAD
               </Card>'`
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
                   Get Started;'"
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";"
                   size="lg";'`
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+=======
+              </Card>
+                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}>;
+                  Get Started;
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
+                  size="lg";
+                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600';} text-white`}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 >;
                   Get Started;"
                   <ArrowRight className="w-5 h-5 ml-2" />;
@@ -1439,7 +1539,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='/contact''
               variant='outline''
               size='lg'
+<<<<<<< HEAD
               Schedule Demo;
+=======
+              Schedule Demo
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </Button>
           </div>
         </div>
@@ -1466,6 +1570,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               size="lg""
               className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'
             >
 origin/cursor/automate-test-improve-and-merge-code-2533

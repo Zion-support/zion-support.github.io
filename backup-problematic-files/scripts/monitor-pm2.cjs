@@ -1,8 +1,9 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**;
  * PM2 Monitoring Dashboard for Zion Application;
  * Provides real-time monitoring of all PM2 processes;
  */;
+<<<<<<< HEAD
 const { exec } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -80,6 +81,8 @@ const path = require("path")"
   process.on("SIGINT")
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

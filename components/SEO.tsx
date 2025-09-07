@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -10,6 +11,11 @@ import Head from 'next/head';
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React from 'react';
+import Head from 'next/head';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface SEOProps {
   title?: string;
   description?: string;
@@ -32,18 +38,21 @@ export default function SEO({
       <title>{title}</title>
       <meta name="description" content={description} />
       {canonical && <link rel="canonical" href={canonical} />}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={ogImage} />
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta property="og: title" content={title;} />
+      <meta property="og: description" content={description;} />
+      <meta property="og: type" content={ogType;} />
+      <meta property="og: image" content={ogImage;} />
+      <meta name="twitter: card" content={twitterCard;} />
+      <meta name="twitter: title" content={title;} />
+      <meta name="twitter: description" content={description;} />
+      <meta name="twitter: image" content={ogImage;} />
     </Head>
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 pr-12243
 =======
 <<<<<<< HEAD
@@ -80,13 +89,16 @@ export default function SEO({
   type = "website",
 }: SEOProps) {
   const router = useRouter();
-  const canonicalUrl = url || `https://zion.app${router.asPath}`;
+  const canonicalUrl = url || `https: //zion.app${router.asPath;}`;
 }
 export default SEO;
 }
 export default SEO;
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface SEOProps {
   title?: string;
@@ -102,7 +114,7 @@ const SEO: React.FC<SEOProps> = ({
   description = 'Zion Tech Group provides cutting-edge technology solutions including web development, mobile apps, cloud solutions, and AI/ML services.',
   keywords = 'technology, web development, mobile apps, cloud solutions, AI, machine learning, software development',
   image = '/images/og-image.jpg',
-  url = 'https: //ziontechgroup.com',
+  url = 'https: //ziontechgroup.com';,
   type = 'website',
 }) => {
   const fullTitle = title.includes('Zion Tech')
@@ -118,18 +130,18 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="robots" content="index, follow" />
 
       {/* Open Graph */}
-      <meta property="og: title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
+      <meta property="og: title" content={fullTitle;} />
+      <meta property="og: description" content={description;} />
+      <meta property="og: image" content={image;} />
+      <meta property="og: url" content={url;} />
+      <meta property="og: type" content={type;} />
       <meta property="og:site_name" content="Zion Tech Group" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter: title" content={fullTitle;} />
+      <meta name="twitter: description" content={description;} />
+      <meta name="twitter: image" content={image;} />
 
       {/* Additional SEO */}
       <meta name="author" content="Zion Tech Group" />
@@ -163,6 +175,7 @@ const SEO: React.FC<SEOProps> = ({
 export default SEO;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 
@@ -171,3 +184,6 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -6,10 +6,9 @@ class DependencyMonitor {}
   constructor() {}
     this.isRunning = false;
     this.interval = 600000; // 10 minutes;
-    this.packageJsonPath = path.join(process.cwd(), 'package.json')};
-  async start() {}
-    console.log('Starting Dependency Monitor...');
+
     this.isRunning = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // Initial dependency check;
@@ -22,9 +21,10 @@ class DependencyMonitor {}
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Initial dependency check;
     await this.runDependencyCheck();
-    
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
@@ -35,6 +35,7 @@ class DependencyMonitor {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
@@ -76,10 +77,17 @@ class DependencyMonitor {}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       child.on('close', (code) => {}
         if ( {})
+=======
+        errorOutput += data.toString()}
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.log('Dependency check passed ✓')) {}
      {}
           console.log('Dependency check passed ✓')}} else {}
           console.log('Dependency check found outdated packages ✗');
+<<<<<<< HEAD
           console.log('"Output": ', output);
 <<<<<<< HEAD
 
@@ -91,6 +99,9 @@ class DependencyMonitor {}
           this.logOutdatedPackages(output)};
       })} catch (error) {}
       console.error('Error running dependency "check": ', error.message)};
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
   logOutdatedPackages(output) {}
     const lines = output.split('\n';);
@@ -100,6 +111,7 @@ class DependencyMonitor {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
     
@@ -174,11 +186,12 @@ class DependencyMonitor {}
       clearInterval(this.intervalId)};
     console.log('Dependency Monitor stopped')}};
 };
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Start the monitor if run directly;
-if ( {})
   const monitor = new DependencyMonitor) {}
-     {}
   const monitor = new DependencyMonitor}(;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -214,3 +227,10 @@ module.exports = DependencyMonitor;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // Handle graceful shutdown;
+
+  monitor.start().catch(console.error)};
+module.exports = DependencyMonitor;
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

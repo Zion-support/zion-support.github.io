@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Card from '../components/ui/Card';'
 import Button from '../components/ui/Button';
 
@@ -30,12 +31,15 @@ import {}
   TrendingUp,
   DollarSign,
   Users,
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Search;
   Filter;
   TrendingUp;
   DollarSign;
   Users;
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   Star;
   Check;
   X;
@@ -46,15 +50,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Globe;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function ToolComparisonPage() {;
 
   Rocket
  } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
+<<<<<<< HEAD
 
   const allTools = [
     // AI Tools
@@ -771,6 +779,8 @@ return (
     if (pricing.includes('$')) return 'text-blue-400';
 return 'text-gray-400';
   };
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <>
@@ -826,7 +836,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 variant='outline''
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                style={{ animationDelay: '0.4s' }}
+                style={{ animationDelay: '0.4s' ;}}
 origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get Expert Advice;
@@ -857,7 +867,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="text-gray-400 text-sm">Total Users</div>
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
+            style={{ animationDelay: '0.6s' ;}}
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
@@ -887,8 +897,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
+<<<<<<< HEAD
               <input"
                 type="text""
+=======
+              <input
+                type="text"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 placeholder="Search tools, categories, or use cases..."
                 value={searchTerm}
             {/* Category Filter */}'
@@ -923,6 +938,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Category Filter */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -959,7 +977,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <select;
                 value={sortBy}
+<<<<<<< HEAD
                 onChange={e => setSortBy(e && e.target.value)}'
+=======
+                onChange={e => setSortBy(e && e.target.value)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className='bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500';
               >;'
                 <option value='rating'>Sort by Rating</option>;'
@@ -1082,12 +1104,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           Visit;'
                           <ExternalLink className='w-3 h-3 ml-1' />;
                         </Button>;
+<<<<<<< HEAD
                         <Button'`
                           href={`/tool-details/${tool && tool.name.toLowerCase().replace(/\s+/g, '-')}`}'
                           variant='ghost''
                           size='sm''"
                           className='text-xs'>                          variant="ghost";"
                           size="sm";"
+=======
+                        <Button
+                          href={`/tool-details/${tool && tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+                          variant='ghost'
+                          size='sm'
+                          className='text-xs'>                          variant="ghost";
+                          size="sm";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           className="text-xs";
                         >;
                           Details;
@@ -1173,12 +1204,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 No tools found;
               </h3>'
               <p className='text-gray-500'>
+<<<<<<< HEAD
                 Try adjusting your search criteria or category filter."
               </p>            </div>            <div className="text-center py-20">"
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />"
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>"
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
 <<<<<<< HEAD
+=======
+                Try adjusting your search criteria or category filter.
+              </p>            </div>            <div className="text-center py-20">
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
+              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </p>
             </div>
           )}
@@ -1208,6 +1247,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* Detailed Comparison Cards */}
+<<<<<<< HEAD
               <Card;
                 key={index}'
                 className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'`
@@ -1215,6 +1255,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items-start space-x-4 mb-4'>;
                   <div;
                   <span;`
+=======
+              <Card
+                key={index}
+                className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
+                style={{ animationDelay: `${index * 0 && 0.1;}s` }}>;
+                <div className='flex items-start space-x-4 mb-4'>;
+                  <div
+                  <span
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>                    {tool && tool.pricing}
                   </span>;
                   <Button"
@@ -1380,6 +1429,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               size="lg""
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'
             >
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
+<<<<<<< HEAD
 =======
 import React from\';react\' \"export\": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>\'';
 const React from";react" export: default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>"";'"'"
@@ -25,6 +26,11 @@ import _React from';react' "export": default function SitemapPage() { const publ
 =======
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from\';react\' \"export\": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>\'';
+const React from";react" export: default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>"";'"'"
+import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
@@ -98,6 +104,7 @@ import React from\';react\' \"export\": default function SitemapPage() { const p
 const React from";react" export: default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>"";'"'"
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>'';
 
+import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>'';
 <<<<<<< HEAD
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>'';
@@ -113,4 +120,11 @@ import _React from';react' "export": default function SitemapPage() { return nul
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import React from\';react\' \"export\": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>\'';
+const React from";react" export: default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>"";'"'"
+import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth) const talentRoutes = completeSitemap.filter() route =>'';
+import _React from';react' "export": default function SitemapPage() { const publicRoutes = completeSitemap && completeSitemap.filter(route => !route && route.requiredAuth) const talentRoutes = completeSitemap && completeSitemap.filter() route =>'';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

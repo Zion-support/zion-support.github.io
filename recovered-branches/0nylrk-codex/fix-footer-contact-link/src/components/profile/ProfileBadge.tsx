@@ -17,6 +17,7 @@
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
@@ -134,6 +135,8 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {}
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       className
     )}>
 =======
@@ -290,12 +293,11 @@ function ProfileBadge() {}
 =======
   )
 
-
+}
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',;
-
 
 interface ProfileBadgeProps {;
   type: BadgeType,;
@@ -303,6 +305,8 @@ interface ProfileBadgeProps {;
 }
 
 export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
+;
+export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
 
 export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
   const badgeConfig = {;
@@ -330,8 +334,90 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium"
       colors
       className
+import React from "react",;
+import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+;
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',;
+;
+interface ProfileBadgeProps {;
+  type:BadgeType,;
+  className?:string;
+}
+;
+export function ProfileBadge({ type, className } ProfileBadgeProps) {;
+  const badgeConfig = {;
+    verified:{;
+      icon:BadgeCheck,;
+      text:"Verified",;
+      colors:"bg-blue-500/20 text-blue-400"},;
+    featured:{;
+      icon:Star,;
+      text:"Featured",;
+      colors:"bg-yellow-500/20 text-yellow-400"},;
+    new:{;
+      icon:Clock,;
+      text:"New",;
+      colors:"bg-green-500/20 text-green-400"},;
+    "top-rated":{;
+      icon:Award,;
+      text:"Top Rated",;
+      colors:"bg-purple-500/20 text-purple-400"}},;
+;
+  const { icon:Icon, text, colors } = badgeConfig[type],;
+;
+  return (;
+    <div className={cn(;
+      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",;
+      colors,;
+
+
+import React from "react";""
+import {BadgeCheck, Star, Clock, Award} from "lucide-react";""
+import {cn} from "@/lib/utils";""
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
+import React from "react",""
+import { BadgeCheck, Star, Clock, Award } from "lucide-react",""
+import { cn } from "@/lib/utils",""
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
+interface ProfileBadgeProps {
+  // TODO: Implement
+}
+  type: BadgeType;
+  className?: string;
+export function ProfileBadge({ type, className }: ProfileBadgeProps) {
+  const badgeConfig = {
+    verified: {,
+  icon: BadgeCheck;
+      text: "Verified"","
+  colors: "bg-blue-500/20 text-blue-400"}"
+    featured: {,
+  icon: Star;"
+      text: "Featured"","
+  colors: "bg-yellow-500/20 text-yellow-400"}"
+    new: {,
+  icon: Clock;"
+      text: "New"","
+  colors: "bg-green-500/20 text-green-400"}""
+    "top-rated": {"
+      icon: Award,"
+      text: "Top Rated",""
+      colors: "bg-purple-500/20 text-purple-400"}},"
+      className;
+    )}>"
+      <Icon className="w-3 h-3" />"
+
+      <span>{text}</span>
+    </div>
+    <divclassName={cn("
+      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium""
+      colors;
+      className;
+      className;)
     )}>;
-      <Icon className="w-3 h-3" />;
+</divclassName>"
+      <Icon className="w-3 h-3" />;"
+
       <span>{text}</span>;
     </div>;
   );
@@ -382,10 +468,19 @@ function ProfileBadge() {
     <div className={cn (
       "flex items - center gap - 1 px - 2 py - 1 rounded - full text - xs font - medium";
       colors;
+    <div className={cn ("
+      "flex items - center gap - 1 px - 2 py - 1 rounded - full text - xs font - medium";"
+      colors;)
       class_name)}>;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       <Icon className="w - 3 h - 3" />;
       <span>{text}</span>;
+=======
+</div>"
+      <Icon className="w - 3 h - 3" />;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </div>);
 }
 <<<<<<< HEAD
@@ -416,6 +511,7 @@ className)
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -434,3 +530,12 @@ className)
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+return (<div className= {"
+  cn ("flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";"
+className) "
+}> <Icon className="w-3 h-3" /> <span> {"
+}</span> "
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

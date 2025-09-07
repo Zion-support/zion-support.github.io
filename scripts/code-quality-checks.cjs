@@ -21,9 +21,7 @@ const fs = require("fs")
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
-const { execSync } = require("child_process")
-const fs = require("fs")
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "timestamp"
@@ -84,6 +82,5 @@ const fs = require("fs")
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-    console.log(`� Report saved "to"`)
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

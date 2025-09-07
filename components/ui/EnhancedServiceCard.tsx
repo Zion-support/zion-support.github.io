@@ -1,5 +1,6 @@
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react';
@@ -35,6 +36,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+import React from 'react';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface EnhancedServiceCardProps {
   service: {
 =======
@@ -48,12 +55,19 @@ import {;
   TrendingUp,;
   Users,;
   Clock,;
+<<<<<<< HEAD
   Shield,;
   Zap,;'
+=======
+  Shield,;}
+  Zap,;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 } from 'lucide-react';
+
 interface EnhancedServiceCardProps {;
   service: {;
     id: string;
+
     name: string;
     tagline: string;
     price: string;
@@ -79,7 +93,14 @@ interface EnhancedServiceCardProps {;
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+    color: string;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     textColor: string;
+
     link: string;
     marketPosition: string;
     targetAudience: string;
@@ -95,21 +116,19 @@ interface EnhancedServiceCardProps {;
     marketSize: string;
     growthRate: string;
     variant: string;
-    contactInfo: {
-      mobile: string;
+    contactInfo: {mobile: string;
       email: string;
-      address: string;
-      website: string
-    },
-    realImplementation: boolean;
+
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
-    reviews: number
+
   }
+
 }
 
+<<<<<<< HEAD
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
   const cardVariants = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -869,3 +888,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

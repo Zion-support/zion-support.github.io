@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
@@ -30,6 +31,13 @@ import {
   ExclamationTriangleIcon
 } from '@heroicons/react/24/outline';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export const metadata = {
+  title: "Contact | Zion Tech Group",
+  description:
+    "Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.",
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -142,6 +150,7 @@ export default function ContactPage() {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 <<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
@@ -151,10 +160,22 @@ export default function ContactPage() {
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to transform your business? Let's discuss your project and discover how our solutions can accelerate your growth.
+=======
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Contact Us
+          </h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Ready to transform your business with cutting-edge technology? Let's
+            discuss how we can help you achieve your goals.
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<<<<<<< HEAD
           {/* Contact Form */}
           <div className="bg-slate-800 p-8 rounded-lg">
             <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
@@ -266,6 +287,66 @@ export default function ContactPage() {
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
+=======
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
+
+            <div className="space-y-8">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                <div className="flex items-start space-x-4">
+                  <div className="text-2xl">📞</div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      Phone
+                    </h3>
+                    <p className="text-gray-300 text-lg">+1-302-464-0950</p>
+                    <p className="text-gray-400 text-sm">
+                      Available 9 AM - 6 PM EST
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                <div className="flex items-start space-x-4">
+                  <div className="text-2xl">✉️</div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      Email
+                    </h3>
+                    <p className="text-gray-300 text-lg">
+                      <a
+                        href="mailto:kleber@ziontechgroup.com"
+                        className="hover:text-cyan-400 transition-colors"
+                      >
+                        kleber@ziontechgroup.com
+                      </a>
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      We respond within 24 hours
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                <div className="flex items-start space-x-4">
+                  <div className="text-2xl">📍</div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      Office
+                    </h3>
+                    <p className="text-gray-300 text-lg">
+                      364 E Main St STE 1008
+                      <br />
+                      Middletown, DE 19709
+                    </p>
+                    <p className="text-gray-400 text-sm">By appointment only</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
 
           {/* Contact Information */}
@@ -769,4 +850,7 @@ export default function ContactPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 '"
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

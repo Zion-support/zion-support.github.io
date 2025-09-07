@@ -1,5 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 interface TextAnalysisResult {}
+=======
+
+interface TextAnalysisResult {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 export default async function handler(
@@ -16,62 +21,43 @@ export default async function handler(
     const charactersNoSpaces = text.replace(/\s/g, '').length;
 <<<<<<< HEAD
     const words = text
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 text: string;
-  statistics: {
-    characters: number;
+  statistics: {characters: number;
     charactersNoSpaces: number;
     words: number;
     sentences: number;
     paragraphs: number;
     syllables: number;
-    readingTime: number;
-    speakingTime: number
-  },
-  readability: {
-    fleschReadingEase: number;
+
     fleschKincaidGrade: number;
     gunningFog: number;
     smog: number;
     colemanLiau: number;
-    automatedReadability: number;
-    averageGrade: number
-  },
-  sentiment: {
-    score: number;
-    label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive';
-    positiveWords: string[];
-    negativeWords: string[]
-  },
-  language: {
-    detectedLanguage: string;
-    confidence: number;
-    isEnglish: boolean
-  },
-  keywords: {
-    topWords: Array<{ word: string; count: number; frequency: number }>;
-    bigrams: Array<{ phrase: string; count: number }>;
-    trigrams: Array<{ phrase: string; count: number }>;
-  };
 
 export default async function handler(
   req: NextApiRequest;
-  res: NextApiResponse<TextAnalysisResult | { error: string }>
+  res: NextApiResponse<TextAnalysisResult | { error: string } />
 ) {
-  if (req.method !== 'POST') {
-return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') {}
+return res.status(405).json({ error: 'Method not allowed'}
+});
   }
-  try {
+  try {}
     const { text } = req.body;
-    if (!text || typeof text !== 'string') {
-      return res.status(400).json({ error: 'Text is required' });
+
     }
     if (text.length > 10000) {
-      return res
-        .status(400)
+      return res}
+        .status(400)}
         .json({ error: 'Text too long (max 10,000 characters)' });
     }
 
     // Basic statistics
+<<<<<<< HEAD
 const words = text
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -341,10 +327,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error('Text analysis error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     res.status(500).json({ error: 'Internal server error' })
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

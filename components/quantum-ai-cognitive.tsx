@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
  return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
 
@@ -35,6 +36,9 @@ export default function QuantumAICognitivePage() {}
 
   const service = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -65,6 +69,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>"
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">"
               <div className="flex items-end justify-between mb-3">
+<<<<<<< HEAD
                 <div>"
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>"
                   <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
@@ -72,6 +77,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
               </div>"
               <div className="text-slate-300 text-sm mb-4">Market: {service.marketSize}, Growth: {service.growthRate}</div>"
+=======
+                <div>
+                  <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime;}</div>
+                </div>
+                <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
+              </div>
+              <div className="text-slate-300 text-sm mb-4">Market: {service.marketSize;}, Growth: {service.growthRate;}</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Link href="/contact" variant="quantum" size="lg" className="w-full">
                 Start Free Trial"
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -105,7 +119,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) );
 }</ul> </div> <div className="bg - black / 30 rounded - 2xl border border - purple - 500 / 30 p-6 h-fit" > <div className="flex items - end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w - 5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 import Head from 'next / head';
-import {Phone, Mail, MapPin, Check, ArrowRight, Star} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 =======
@@ -160,11 +173,11 @@ if ( {) {}
               <div className="flex items - end justify-between mb-3">;
                 <div>;
                   <div className="text - 3xl font-bold text-white">{service.price}<span className="text - slate-400 text-base">{service.period}</span></div>;
-                  <div className="text-slate-400">{service.trial_days}-day free trial • Setup: {service.setup_time}</div>;
+                  <div className="text-slate-400">{service.trial_days}-day free trial • Setup: {service.setup_time;}</div>;
                 </div>;
                 <div className="flex items - center text-yellow-400"><Star className="w - 4 h-4 mr-1" />{service.rating.to_fixed (1)}</div>;
               </div>;
-              <div className="text - slate - 300 text-sm mb-4">Market: {service.market_size}, Growth: {service.growth_rate}</div>;
+              <div className="text - slate - 300 text-sm mb-4">Market: {service.market_size;}, Growth: {service.growth_rate;}</div>;
               <Link href="/contact" variant="quantum" size="lg" className="w-full">;
                 Start Free Trial;
                 <ArrowRight className="w - 5 h-5 ml-2" />;
@@ -251,6 +264,9 @@ if ( {) {}
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

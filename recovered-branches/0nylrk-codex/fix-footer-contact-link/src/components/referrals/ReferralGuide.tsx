@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -54,6 +55,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ReferralGuide() {
 
   const steps = [
@@ -65,23 +72,19 @@ function ReferralGuide() {
   const steps = [;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
-
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
-
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
 
+<<<<<<< HEAD
 export function ReferralGuide() {
 
   const steps = [
@@ -282,12 +285,85 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
     <Card>
       <CardHeader>
+
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
+export function ReferralGuide() {
+
+  const steps = ["
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';'
+export /**
+ * ReferralGuide - Function description;
+ */
+function ReferralGuide() {
+  const steps = [;'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
+export function ReferralGuide() {
+
+  const steps = ["
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';'
+export /**
+ * ReferralGuide - Function description;
+ */
+function ReferralGuide() {
+  const steps = [;
+    {'
+      title: "Share your referral link"","
+  description: "Copy your unique referral link and share it with potential clients or talent"}"
+    {
+
+"
+      title: "They sign up",;""
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};""
+      title: "They sign up",""
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"},"
+    {"
+      title: "They complete onboarding",""
+      description: "Once they complete their profile setup, your referral is confirmed"},"
+    {"
+      title: "You earn rewards"",]"
+  description: "Rewards are issued based on the type of user who completes onboarding"}]""
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";"
+    {"
+      title: "You earn rewards"","
+  description: "Rewards are issued based on the type of user who completes onboarding"}]""
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
+      title: "They sign up"","
+  description: "When someone clicks your link and creates an account, they're tagged as your referral"}"
+    {"
+      title: "They complete onboarding"","
+  description: "Once they complete their profile setup, your referral is confirmed"}""
+      title: "They sign up",;""
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};""
+      title: "They sign up",""
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"},"
+    {"
+      title: "They complete onboarding",""
+      description: "Once they complete their profile setup, your referral is confirmed"},"
+    {"
+      title: "You earn rewards"","
+  description: "Rewards are issued based on the type of user who completes onboarding"}]""
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";"
+  return (
+    <Card>
+</Card>
+      <CardHeader>
+</CardHeader>
         <CardTitle>How Referrals Work</CardTitle>
         <CardDescription>Follow these steps to earn rewards through referrals</CardDescription>
       </CardHeader>
@@ -306,6 +382,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -343,11 +420,25 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function ReferralGuide() {;
   const steps = [;
     {;
-      title: "Share your referral link",;
-      description: "Copy your unique referral link and share it with potential clients or talent"},;
+      title: "Share your referral link",,
+  description: "Copy your unique referral link and share it with potential clients or talent"},;
     {;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -384,7 +475,6 @@ export function ReferralGuide() { return null; }
 =======
 
   return (
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 ;
 export function ReferralGuide() {;
@@ -442,6 +532,7 @@ export function ReferralGuide() {;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 
 
 
@@ -468,12 +559,16 @@ export function ReferralGuide() {;
       title: "They sign up",;}}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
-
-
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      title: "They sign up",;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
                 {index + 1}
               </div>;"
@@ -515,17 +610,63 @@ export function ReferralGuide() {;
   return (
     <Card>;
       <CardHeader>;
+</CardContent>"
+        <div className="space-y-4">"
+</div>"
+            <div key={index} className="flex gap-4">"
+</div>"
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">"
+</div>
+              </div>"
+              <div className="space-y-1">"
+</div>"
+                <h4 className="font-medium">{step.title}</h4>""
+                <p className="text-sm text-muted-foreground">{step.description}</p>"
+              </div>
+            </div>
+    <Card>;
+</Card>
+      <CardHeader>;
+</CardHeader>
+        <CardTitle>How Referrals Work</CardTitle>;
+        <CardDescription>Follow these steps to earn rewards through referrals</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+</CardContent>"
+        <div className="space-y-4">;"
+</div>"
+            <div key={index} className="flex gap-4">;"
+</div>"
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;"
+</div>
+              </div>;"
+              <div className="space-y-1">;"
+</div>"
+                <h4 className="font-medium">{step && step.title}</h4>;""
+                <p className="text-sm text-muted-foreground">{step && step.description}</p>;"
+
+              </div>;
+            </div>;
+        </div>;
+      </CardContent>;
+    </Card>;
+
+    <Card>;
+</Card>
+      <CardHeader>;
+</CardHeader>
         <CardTitle > How Referrals Work</CardTitle>;
         <CardDescription > Follow these steps to earn rewards through referrals</CardDescription>;
       </CardHeader>;
 <<<<<<< HEAD
       <CardContent>;
-        <div className="space - y-4">;
+        <div className="space-y-4">;
           {steps.map ((step, index) => (
-            <div key={index} className="flex gap - 4">;
-              <div className="flex h - 8 w - 8 items - center justify - center rounded - full bg - primary text - primary - foreground">;
+            <div key={index} className="flex gap-4">;
+              <div className="flex h - 8 w - 8 items - center justify - center rounded - full bg - primary text - primary-foreground">;
                 {index + 1}
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="space-y-1">;
                 <h4 className="font-medium">{step.title}</h4>;
@@ -547,6 +688,11 @@ export function ReferralGuide() {;
                 <h4 className="font - medium">{step.title}</h4>;
                 <p className="text - sm text - muted - foreground">{step.description}</p>;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+              <div className="space-y-1">;
+                <h4 className="font-medium">{step.title}</h4>;
+                <p className="text - sm text - muted-foreground">{step.description}</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>;
             </div>))}
         </div>;
@@ -572,19 +718,99 @@ export function ReferralGuide() {;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
                 {index + 1}
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
+export function ReferralGuide() {
+
+  const steps = ["
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+export /**
+ * ReferralGuide - Function description;
+ */
+function ReferralGuide() {
+  const steps = [;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";""
+
+    {
+      title: "Share your referral link"","
+  description: "Copy your unique referral link and share it with potential clients or talent"}"
+
+"
+      title: "They sign up",;""
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};""
+      title: "They sign up",""
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"},"
+    {"
+      title: "They complete onboarding",""
+      description: "Once they complete their profile setup, your referral is confirmed"},"
+      title: "You earn rewards"",]"
+  description: "Rewards are issued based on the type of user who completes onboarding"}]""
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";"
+      title: "You earn rewards"","
+      title: "They sign up"","
+  description: "When someone clicks your link and creates an account, they're tagged as your referral"}"
+      title: "They complete onboarding"","
+  description: "Once they complete their profile setup, your referral is confirmed"}""
+  return (
+    <Card>
+
+      <CardHeader>
+
+        <CardTitle>How Referrals Work
+        <CardDescription>Follow these steps to earn rewards through referrals
+      <CardContent>
+        <div className="space-y-4">"
+</CardContent>"
+        <div className="space - y-4">;"
+</div>"
+            <div key={index} className="flex gap-4">"
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">"
+</div>
+              <div className="space-y-1">"
+                <h4 className="font-medium">{step.title}</h4>""
+                <p className="text-sm text-muted-foreground">{step.description}</p>"
+    <Card>;
+
+      <CardHeader>;
+
+        <CardTitle>How Referrals Work;
+        <CardDescription>Follow these steps to earn rewards through referrals;
+      ;
+      <CardContent>;
+        <div className="space-y-4">;"
+            <div key={index} className="flex gap-4">;"
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;"
+              </div>;"
+              <div className="space-y-1">;"
+                <h4 className="font-medium">{step && step.title}</h4>;""
+                <p className="text-sm text-muted-foreground">{step && step.description}</p>;"
               </div>;
-              <div className="space-y-1">;
-                <h4 className="font-medium">{step.title}</h4>;
-                <p className="text-sm text-muted-foreground">{step.description}</p>;
+
+
+        <CardTitle > How Referrals Work;
+        <CardDescription > Follow these steps to earn rewards through referrals;
+        <div className="space - y-4">;"
+            <div key={index} className="flex gap - 4">;"
+              <div className="flex h - 8 w - 8 items - center justify - center rounded - full bg - primary text - primary - foreground">;"
+              <div className="space - y-1">;"
+                <h4 className="font - medium">{step.title}</h4>;""
+                <p className="text - sm text - muted - foreground">{step.description}</p>;"
+              </div>;)
+            </div>))}
+    );"
+                <h4 className="font-medium">{step.title}</h4>;""
+                <p className="text-sm text-muted-foreground">{step.description}</p>;"
+}</div>  ) "
+pr-12325
               </div>;
             </div>;
-          ))}
         </div>;
       </CardContent>;
     </Card>;
   ),;}
  const steps = [ {
-  
 }</div> </CardContent> </Card>) 
 }
           {steps.map((step, index) => (;
@@ -592,6 +818,7 @@ export function ReferralGuide() {;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -611,3 +838,11 @@ export function ReferralGuide() {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}</div> </CardContent> </Card>) "
+            <div key={index} className="flex gap-4">;"
+</div>"
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;"
+</div>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -71,9 +71,9 @@ module.exports = {
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:ecosystem.error-automation.config.cjs
 =======
 module.exports = {
-module.exports = {
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
@@ -961,3 +961,11 @@ module.exports = {
 };
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  "apps": [    // Main Error Detection and Fixing Service;"
+    {"
+
+      }
+    // Error Detection and Monitoring System;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

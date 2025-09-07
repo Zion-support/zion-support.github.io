@@ -25,24 +25,26 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
+
+
+const React from "react";"""; import { Button } from "@/components/ui/button"; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };""
+
+import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
+
+import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
+
+import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
+import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
 import React from \'react\';\''\'; import { Button } from \'@/components/ui/button\'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
 const React from "react";"""; import { Button } from "@/components/ui/button"; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };""
 import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

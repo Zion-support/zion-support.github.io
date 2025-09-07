@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/interviews/UpcomingInterviewsCard.js.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/interviews/UpcomingInterviewsCard.js.jsx
 <<<<<<< HEAD
@@ -43,3 +44,9 @@
 =======
 ' ' ' ' ' "export": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()'';"";""}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/components/interviews/UpcomingInterviewsCard.jsx
+=======
+" " " " " export: function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()"";"";"""
+' \' \' \' \' \"export\": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()\'';\"";
+" " " " " export: function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()"";"";"""
+ \' \' \' \' \"export\": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()\''
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

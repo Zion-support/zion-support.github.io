@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -118,23 +119,50 @@ export default function Home() {}
         description="Discover top AI and tech talent, services, and equipment in one place.""
         keywords="AI, technology, marketplace, services, talent""
         canonical="https: //app.ziontechgroup.com/"
+=======
+
+export default function Home() {
+  return ("
+    <div className="min-h-screen bg-background">"
+</div>
+      <SEO;"
+        title="Zion - The Tech & AI Marketplace"""
+        description="Discover top AI and tech talent, services, and equipment in one place."""
+        keywords="AI, technology, marketplace, services, talent"""
+        canonical="https: //app.ziontechgroup.com/""
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       />
+
       <Header />
+
+</Header>
 
       <HeroSection />
 
+
       <QuickAccess />
+
 
       <FeatureCTAs />
 
+
       <FeatureHighlights />
 
+
+
       <CategoriesSection />
+
       <BenefitsSection />
+
       <HowItWorksSection />
+
       <FeaturedListingsSection />
+
       <NewsletterSection />
+
       <Footer />
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
 <<<<<<< HEAD
@@ -393,8 +421,13 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 ;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+</Footer>
+    </div>)
     </div>);
+<<<<<<< HEAD
 }
     </div>;
   );
@@ -440,3 +473,11 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </div>;"
+  return (<div className="min-h-screen bg-background" >"
+    </div>;)
+    </div>);"
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

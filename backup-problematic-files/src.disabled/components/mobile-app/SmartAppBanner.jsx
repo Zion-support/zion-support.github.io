@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/mobile-app/SmartAppBanner.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/components/mobile-app/SmartAppBanner.jsx
@@ -35,3 +36,11 @@ export: const SmartAppBanner = ({ appName = "Zion Marketplace",appIconSrc,appSto
 "export\": const SmartAppBanner = ({ appName = \'Zion Marketplace\',appIconSrc,appStoreUrl = \'/download\',googlePlayUrl = \'/download\',delay = 1500}) => { const [isVisible,setIsVisible] = useState(false) const isMobile = useIsMobile() useEffect(() => {\''\"";
 export: const SmartAppBanner = ({ appName = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/download",delay = 1500}) => { const [isVisible,setIsVisible] = useState(false) const isMobile = useIsMobile() useEffect(() => {"""";'"'"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2:src.disabled/components/mobile-app/SmartAppBanner.jsx
+=======
+export\": const SmartAppBanner = ({ appName = \'Zion Marketplace\',appIconSrc,appStoreUrl = \'/download\',googlePlayUrl = \'/;
+export: const SmartAppBanner = ({ appName = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/
+"export\": const SmartAppBanner = ({ appName = \'Zion Marketplace\',appIconSrc,appStoreUrl = \'/download\',googlePlayUrl = \'/download\',delay = 1500}) => { const [isVisible,setIsVisible] = useState(false) const isMobile = useIsMobile() useEffect(() => {\''\"";
+export: const SmartAppBanner = ({ appName = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/download",delay = 1500}) => { const [isVisible,setIsVisible] = useState(false) const isMobile = useIsMobile() useEffect(() => {"""";'"'"
+export\": const SmartAppBanner = ({ appName = \'Zion Marketplace\',appIconSrc,appStoreUrl = \'/download\',googlePlayUrl = \'/;
+export: const SmartAppBanner = ({ appName = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

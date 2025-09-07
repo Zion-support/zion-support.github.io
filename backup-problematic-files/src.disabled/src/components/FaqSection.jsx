@@ -9,6 +9,7 @@ export default function FaqSection({ }: FaqSectionProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/FaqSection.jsx
 }
 =======
@@ -25,3 +26,6 @@ export default function FaqSection({ }: FaqSectionProps) {
 
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31:tests/unit/lib/cache.test.ts
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

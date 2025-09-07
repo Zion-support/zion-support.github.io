@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';'
 import Link from 'next/link';
 export default function AutomationInsightsPage() {}
@@ -308,6 +309,9 @@ description: 'Successfully deployed and running',
       description: 'Content created autonomously',
     },
   ];
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
@@ -399,10 +403,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {trend && trend.title}
                     </h3>;'
                     <p className='text-white/70 mb-4'>{trend && trend.description}</p>;
+<<<<<<< HEAD
                     <Link;
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">"
                     <div className="flex items-center justify-between mb-4">"
                       <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>"
+=======
+                    <Link
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <span className="text-white/60 text-sm">{trend.readTime}</span>
                     </div>"
                     <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>"
@@ -413,6 +424,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >"
                       Read More <span className="ml-1">→</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
@@ -569,8 +583,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>;
                 <Link'
                   href='/case-studies'
+<<<<<<< HEAD
                 <Link"
                   href="/contact""
+=======
+                <Link
+                  href="/contact"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started;
@@ -594,6 +613,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
                 >
                   View Case Studies

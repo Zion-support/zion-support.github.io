@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -263,6 +264,14 @@ exports.handler = async () => {}
  */
 function run_node() { return null; }
   const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),'
+=======
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+
+
+function runNode(relPath, args = []) {
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }'
 exports.config = { schedule: '15 */12 * * *' },
@@ -284,6 +293,9 @@ exports.handler = async () => {}
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),'
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
@@ -293,6 +305,7 @@ exports.handler = async () => {}
   step('security:audit', () => runNode('automation/security-audit.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
+<<<<<<< HEAD
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -302,3 +315,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

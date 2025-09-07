@@ -6,16 +6,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 =======
+=======
+
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const nextConfig = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  
-  // Minimal webpack config
+  // Minimal webpack config;
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -30,14 +38,16 @@ const nextConfig = {
           '**/src_backup*/**',
           '**/components.disabled*/**',
           '**/pages.disabled*/**',
-          '**/src.disabled*/**'
+          '**/src.disabled*/**]
         ]
       };
     }
     return config;
 
+
 /** @type {import ('next').NextConfig} */;
 const next_config = {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
@@ -103,14 +113,27 @@ const next_config = {}
   images: {
     domains: ["localhost", "ziontechgroup.com"],
   },
+=======
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+
+
+
+  page_extensions: ['tsx', 'ts', 'jsx', 'js'],
+  images: {,
+  domains: ["localhost", "ziontechgroup.com"],"
+  },"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   output: 'standalone',
   trailing_slash: false,
   dist_dir: '.next',
-}
 ;
 module.exports = next_config;
-;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -121,9 +144,16 @@ module.exports = next_config;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+domains: ["localhost", "ziontechgroup.com"],
+  },
+  output: 'standalone',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   trailingSlash: false,
   distDir: '.next',
-};
+
+
+
 
 <<<<<<< HEAD
 module.exports = nextConfig;
@@ -323,26 +353,33 @@ module.exports = nextConfig;
   trailingSlash: false,
   distDir: '.next',
 };
+module.exports = nextConfig;
+
+
+
+  pageExtensions: ["tsx", "ts", "jsx", "js"],"
+  images: {,"
+  output: "standalone","
+  trailingSlash: false,"
 /** @type {import('next').NextConfig} */;
 const nextConfig = {;
   reactStrictMode:true,;
   eslint:{ ignoreDuringBuilds:true },;
   typescript:{ ignoreBuildErrors:true },;
   pageExtensions:['tsx', 'ts', 'jsx', 'js'],;
-  images:{;
-    domains:["localhost", "ziontechgroup.com"],;
-  },;
+  images: {;,
+  domains:["localhost", "ziontechgroup.com"],;"
+  },;"
   output:'standalone',;
   trailingSlash:false,;
   distDir:'.next',;
-};
-;
 module.exports = nextConfig;};
-};
-;
 export default nextConfig;
 const nextConfig = {,
   reactStrictMode: true,
+
+
+module.exports = nextConfig;
 const nextConfig = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
@@ -369,135 +406,18 @@ const nextConfig = {
       };
     }
     return config;
+
+
+
+
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-module.exports = nextConfig;
-module.exports = nextConfig;
-
-  distDir: ".next",
-};
-
 =======
 
-"
-  distDir: ".next",
-};
-
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
-  
-  // Image optimization;
-  images: {"
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],'
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
-  },
-  
-  // Webpack configuration to exclude problematic directories;
-  webpack: (config, { dev, isServer }) => {}
-    if (dev) {}
-      // Exclude problematic directories from file watching;
-      config.watchOptions = {}
-        ignored: ['
-          '**/node_modules/**','
-          '**/.git/**','
-          '**/pages_backup*/**','
-          '**/pages.*/**','
-          '**/pages-*/**','
-          '**/pages_disabled*/**','
-          '**/pages.disabled*/**','
-          '**/pages.broken*/**','
-          '**/pages.corrupted*/**','
-          '**/pages.old*/**','
-          '**/pages._*/**','
-          '**/pages.__*/**','
-          '**/backup-pages/**','
-          '**/src.pages.disabled/**','
-          '**/lib_backup*/**','
-          '**/src_backup*/**','
-          '**/corrupted-files-backup*/**','
-          '**/performance-reports*/**','
-          '**/log-analysis-reports*/**','
-          '**/link-reports*/**','
-          '**/lint-target*/**','
-          '**/monitoring*/**','
-          '**/pm2-automation*/**','
-          '**/automation/logs*/**','
-          '**/automation/backup*/**','
-          '**/performance-*.json','
-          '**/performance-*.js','
-          '**/performance-*.cjs','
-          '**/performance-*.sh','
-          '**/performance-*.html','
-          '**/performance-*.md','
-          '**/performance-*.txt'
-        ],
-        poll: 1000,
-        aggregateTimeout: 300,
-      };
-    }
-    return config;
-  },
-  
-  // Headers for security and performance;
-  async headers() {}
-    return []
-      {'
-        source: '/(.*)',
-        headers: []
-          {'
-            key: 'X-Frame-Options','
-            value: 'DENY',
-          },
-          {'
-            key: 'X-Content-Type-Options','
-            value: 'nosniff',
-          },
-          {'
-            key: 'Referrer-Policy','
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
-  
-  // Redirects for SEO;
-  async redirects() {}
-    return []
-      {'
-        source: '/home','
-        destination: '/',
-        permanent: true,
-      },
-    ];
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  }
-};
-
-export default nextConfig;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
   pageExtensions: ['tsxtsjsxjs'],
   trailingSlash: true,
   // Image optimization,
@@ -579,6 +499,279 @@ module.exports = nextConfig;
 
 module.exports = nextConfig;
 module.exports = nextConfig;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+  distDir: ".next",
+};
+
+<<<<<<< HEAD
+=======
+
+"
+  distDir: ".next",
+};
+
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+
+
+  // Minimal webpack config;
+
+  compress: true,
+  poweredByHeader: false,
+
+  distDir: ".next","
+"
+  trailingSlash: true,
+  
+  // Image optimization;
+<<<<<<< HEAD
+  images: {"
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],'
+=======
+  domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
+  },
+  
+  // Webpack configuration to exclude problematic directories;
+<<<<<<< HEAD
+  webpack: (config, { dev, isServer }) => {}
+    if (dev) {}
+      // Exclude problematic directories from file watching;
+      config.watchOptions = {}
+        ignored: ['
+          '**/node_modules/**','
+          '**/.git/**','
+          '**/pages_backup*/**','
+          '**/pages.*/**','
+          '**/pages-*/**','
+          '**/pages_disabled*/**','
+          '**/pages.disabled*/**','
+          '**/pages.broken*/**','
+          '**/pages.corrupted*/**','
+          '**/pages.old*/**','
+          '**/pages._*/**','
+          '**/pages.__*/**','
+          '**/backup-pages/**','
+          '**/src.pages.disabled/**','
+          '**/lib_backup*/**','
+          '**/src_backup*/**','
+          '**/corrupted-files-backup*/**','
+          '**/performance-reports*/**','
+          '**/log-analysis-reports*/**','
+          '**/link-reports*/**','
+          '**/lint-target*/**','
+          '**/monitoring*/**','
+          '**/pm2-automation*/**','
+          '**/automation/logs*/**','
+          '**/automation/backup*/**','
+          '**/performance-*.json','
+          '**/performance-*.js','
+          '**/performance-*.cjs','
+          '**/performance-*.sh','
+          '**/performance-*.html','
+          '**/performance-*.md','
+          '**/performance-*.txt'
+=======
+      // Exclude problematic directories from file watching;
+          '**/.git/**',
+          '**/pages.*/**',
+          '**/pages-*/**',
+          '**/pages_disabled*/**',
+          '**/pages.broken*/**',
+          '**/pages.corrupted*/**',
+          '**/pages.old*/**',
+          '**/pages._*/**',
+          '**/pages.__*/**',
+          '**/backup-pages/**',
+          '**/src.pages.disabled/**',
+          '**/lib_backup*/**',
+          '**/corrupted-files-backup*/**',
+          '**/performance-reports*/**',
+          '**/log-analysis-reports*/**',
+          '**/link-reports*/**',
+          '**/lint-target*/**',
+          '**/monitoring*/**',
+          '**/pm2-automation*/**',
+          '**/automation/logs*/**',
+          '**/automation/backup*/**',
+          '**/performance-*.json',
+          '**/performance-*.js',
+          '**/performance-*.cjs',
+          '**/performance-*.sh',
+          '**/performance-*.html',
+          '**/performance-*.md',
+          '**/performance-*.txt]
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        ],
+        poll: 1000,
+        aggregateTimeout: 300,
+  
+  // Headers for security and performance;
+<<<<<<< HEAD
+  async headers() {}
+    return []
+      {'
+        source: '/(.*)',
+        headers: []
+          {'
+            key: 'X-Frame-Options','
+            value: 'DENY',
+          },
+          {'
+            key: 'X-Content-Type-Options','
+            value: 'nosniff',
+          },
+          {'
+            key: 'Referrer-Policy','
+=======
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+            key: 'X-Frame-Options',
+            value: 'DENY',
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+            key: 'Referrer-Policy',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            value: 'origin-when-cross-origin',
+          },]
+    ];
+  
+  // Redirects for SEO;
+<<<<<<< HEAD
+  async redirects() {}
+    return []
+      {'
+        source: '/home','
+=======
+  async redirects() {
+        source: '/home',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        destination: '/',
+        permanent: true,
+      },
+    ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  }
+};
+
+export default nextConfig;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+  pageExtensions: ['tsxtsjsxjs'],
+=======
+pageExtensions: ['tsxtsjsxjs'],
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  trailingSlash: true,
+  // Image optimization,
+  images: {,
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webpimage/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000
+  },
+  // Webpack configuration to exclude problematic directories,
+  webpack: (config, { dev, isServer }) => {,
+    if (dev) {,
+      // Exclude problematic directories from file watching,
+      config.watchOptions = {,
+        ignored: [,
+          '**/node_modules/****/.git/****/pages_backup*/****/pages.*/****/pages-*/****/pages_disabled*/****/pages.disabled*/****/pages.broken*/****/pages.corrupted*/****/pages.old*/****/pages._*/****/pages.__*/****/backup-pages/****/src.pages.disabled/****/lib_backup*/****/src_backup*/**',
+          '**/corrupted-files-backup*/****/performance-reports*/****/log-analysis-reports*/****/link-reports*/****/lint-target*/****/monitoring*/****/pm2-automation*/****/automation/logs*/****/automation/backup*/****/performance-*.json**/performance-*.js**/performance-*.cjs**/performance-*.sh**/performance-*.html**/performance-*.md**/performance-*.txt'
+        ],
+        poll: 1000,
+        aggregateTimeout: 300
+      };
+    };
+    return config
+  },
+  // Headers for security and performance,
+  async headers() {,
+    return [,
+      {,
+        source: '/(.*)',
+        headers: [,
+          {,
+            key: 'X-Frame-Options',
+            value: 'DENY'
+          },
+          {,
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {,
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin'
+          }
+        ]
+      }
+    ]
+  },
+  // Redirects for SEO,
+  async redirects() {,
+    return [,
+      {,
+        source: '/home',
+        destination: '/',
+        permanent: true
+      }
+    ]
+  };
+};
+,
+export default nextConfig,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+reactStrictMode: true
+  eslint: { ignoreDuringBuilds: true }
+  typescript: { ignoreBuildErrors: true }
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js']
+  images: {
+domains: ["localhost", "ziontechgroup.com"]
+  }
+  output: 'standalone'
+  trailingSlash: false
+  distDir: '.next'
+}
+module.exports = nextConfig;
+
+module.exports = nextConfig;
+
+module.exports = nextConfig;
+
+<<<<<<< HEAD
+module.exports = nextConfig;
+module.exports = nextConfig;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 module.exports = nextConfig;
@@ -604,3 +797,24 @@ module.exports = nextConfig;
 
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+
+
+
+
+
+
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

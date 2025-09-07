@@ -6,14 +6,19 @@ export type TokenSymbol = "ZION$";
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+
+
 export type TokenSymbol = "ZION$",
 
 
 
 
 export type TokenSymbol = "ZION$";
+
+export type TokenSymbol = "ZION$";
 export type TokenSymbol = "ZION$",;
 export type TokenSymbol = "ZION$";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,6 +55,8 @@ export type TokenSymbol = "ZION$",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type TokenTransactionType =;
   | "earn";
   | "burn";
@@ -64,6 +71,7 @@ export type TokenTransactionType =;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   | "redeem";
@@ -93,14 +101,45 @@ export type TokenTransactionType =;"
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+  | "redeem";
+export interface TokenTransaction {id: string;
+  userId: string;
+  type: TokenTransactionType;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   | "redeem",;
+export type TokenSymbol = "ZION$",""
+export type TokenSymbol = "ZION$";""
+export type TokenSymbol = "ZION$",;""
+export type TokenSymbol = "ZION$","
+export type TokenTransactionType =;"
+  | "earn";""
+  | "burn";""
+  | "issue";""
+  | "revoke";""
+  | "redeem",;"
+pr-12325
+
 export interface TokenTransaction {;
   id: string,;
   userId: string,;
   type: TokenTransactionType,;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  | "redeem";
+export interface TokenTransaction {;
+  id: string;
+  userId: string;
+  type: TokenTransactionType;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   amount: number, // positive integer tokens;
   reason: string;
+
   metadata?: Record<string, any>;
   createdAt: string, // ISO timestamp;
 }
@@ -121,7 +160,18 @@ export interface Wallet {userId: string;
 export interface TokenConfig {symbol: TokenSymbol;
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+}
+export interface TokenConfig {symbol: TokenSymbol;
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   | "redeem",
 export interface TokenTransaction {}
   id: string,
@@ -133,6 +183,7 @@ export interface TokenTransaction {}
   created_at: string, // ISO timestamp;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 }
@@ -141,10 +192,18 @@ export interface Wallet {}
   balance: number, // current token balance;
 
 =======
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 export interface Wallet {
   user_id: string,
   balance: number, // current token balance;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
 
@@ -155,6 +214,21 @@ export interface Wallet {
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+
+
+  | "redeem",;
+export interface TokenTransaction {;
+
+}
+export interface TokenConfig {
+  symbol: TokenSymbol,
+
+
+
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export interface WalletSummary {}
@@ -166,9 +240,13 @@ export interface WalletSummary {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 
@@ -183,35 +261,105 @@ export interface Wallet {}
 "
 =======
 }
+
+}
+</string>
+  metadata?: Record < string any>,
+  created_at: string, // ISO timestamp;
+</string>
+  metadata?: Record < string any>,
+  created_at: string, // ISO timestamp;
+
+}
 export interface Wallet {
+  // TODO: Implement
+}
+  user_id: string,
+  balance: number, // current token balance;
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+
+
+}
+}
+}
+
+export interface WalletSummary {
+  // TODO: Implement
+}
+export interface Wallet {
+  // TODO: Implement
+  user_id: string,
+  balance: number, // current token balance;
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+
+
+
+
+
+export interface WalletSummary {
+  // TODO: Implement
+  wallet: Wallet,
+
+  transactions: TokenTransaction[];,
+  config: TokenConfig;
+
+
+
+}
+}
+}
+
+  // TODO: Implement
+"
+
+
+}
   user_id: string,
   balance: number, // current token balance;
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   | "redeem",;
+=======
+"
+  | "redeem",;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface TokenTransaction {;
 
-
+}
+}
 }
 <<<<<<< HEAD
 export interface TokenConfig {}
   symbol: TokenSymbol,;
 =======
 export interface TokenConfig {
+  // TODO: Implement
   symbol: TokenSymbol,
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   earn_rules: Record < string number>, // action -> tokens;
   burn_rules: Record < string number>, // feature -> tokens;
+  id: string;,
+  userId: string;
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+  earn_rules: Record < string number>, // action -> tokens;}
+  burn_rules: Record < string number>, // feature -> tokens;}
 }
-  transactions: TokenTransaction[];
+  transactions: TokenTransaction[];,
   config: TokenConfig;
-  id: string;
+  id: string;,
   userId: string;
   type: TokenTransactionType,;
   amount: number, // positive integer tokens;
   reason: string;
+
   metadata?: Record<string, any>,;
+<<<<<<< HEAD
   createdAt: string, // ISO timestamp;
 <<<<<<< HEAD
   } catch (error) {"
@@ -279,6 +427,8 @@ export interface WalletSummary {;
 export interface TokenConfig {;
   symbol: TokenSymbol,;
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   earnRules: Record<string number>, // action -> tokens;
   burnRules: Record<string number>, // feature -> tokens;
   earnRules: Record<string, number>, // action -> tokens;
@@ -302,6 +452,7 @@ export interface WalletSummary {;
 }
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -313,9 +464,24 @@ export interface WalletSummary {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
-
+;
+export interface TokenConfig {;
+  symbol: TokenSymbol;
+  usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+  earnRules: Record<string, number>, // action -> tokens;
+  burnRules: Record<string, number>, // feature -> tokens;
 }
+;
+export interface WalletSummary {;
+  wallet: Wallet;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+}
+</string>"
+pr-12325
 
 <<<<<<< HEAD
 <<<<<<< HEAD

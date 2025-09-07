@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = any;
@@ -134,8 +135,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
     const analysis =;
       completion.choices?.[0]?.message?.content?.trim () ||;'
+=======
+
+
+}
+
+const analysis =;
+      completion.choices?.[0]?.message?.content?.trim () ||;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'No analysis generated.';
+    return res.status (200).json ({ analysis })} catch (error: any) {console.error ('Analyze API error';, error?.message || error)return res.status (500).json ({ error: 'Failed to generate analysis' ;},
+}
+
+const analysis = completion.choices?.[0]?.message?.content?.trim () || 'No analysis generated.';
+
     return res.status (200).json ({ analysis });
+<<<<<<< HEAD
   } catch (error: any) {'
     console.error ('Analyze API error', error?.message || error);'
     return res.status (500).json ({ error: 'Failed to generate analysis' });
@@ -145,10 +160,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (error: any) {'
     console.error ('Analyze API error', error?.message || error);'
     return res.status (500).json ({ error: 'Failed to generate analysis' });
+=======
+  } catch (error: any) {
+    console.error ('Analyze API error', error?.message || error);}
+    return res.status (500).json ({ error: 'Failed to generate analysis';,}
+});
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

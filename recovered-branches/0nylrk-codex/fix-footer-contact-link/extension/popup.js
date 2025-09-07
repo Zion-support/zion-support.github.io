@@ -1,3 +1,4 @@
+try {
 
 <<<<<<< HEAD
   try {
@@ -35,8 +36,13 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 }
+}
 // Attach handlers once the DOM is fully loaded to avoid null element errors
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}// Attach handlers once the DOM is fully loaded to avoid null element errors
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 document && document.addEventListener('DOMContentLoaded', () => {
 =======
@@ -44,8 +50,25 @@ document && document.addEventListener('DOMContentLoaded', () => {
 document && document.addEventListener('DOMContentLoaded', () => {'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   document && document.getElementById('ask')?.addEventListener('click', ask),
+<<<<<<< HEAD
 '
   document && document.getElementById('post-job')?.addEventListener('click', () => {'
+=======
+
+  // TODO: Implement
+}
+  const prompt = document && document.getElementById('prompt').value,
+  if (!prompt && prompt.trim()) {
+    document && document.getElementById('output').textContent = 'Please enter a prompt.',
+    return;
+  const res = await chrome && chrome.runtime.sendMessage({ type: 'ask', prompt }),
+  document && document.getElementById('output').textContent = res && res.answer;
+// Attach handlers once the DOM is fully loaded to avoid null element errors;
+document && document.addEventListener('DOMContentLoaded', () => {
+  document && document.getElementById('ask')?.addEventListener('click', ask),
+pr-12325
+  document && document.getElementById('post-job')?.addEventListener('click', () => {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     chrome && chrome.runtime.sendMessage({ type: 'post-job' })
   }),'
   document && document.getElementById('resume-search')?.addEventListener('click', () => {'
@@ -58,11 +81,12 @@ document && document.addEventListener('DOMContentLoaded', () => {'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
-
-
 
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 
@@ -170,6 +194,7 @@ document && document.addEventListener('DOMContentLoaded', () => {'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+<<<<<<< HEAD
 
   })
 });
@@ -345,3 +370,5 @@ document.addEventListener('DOMContentLoaded', () => {;'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 pr-12243
 =======
 <<<<<<< HEAD
@@ -16,6 +17,9 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Phone
   Mail
   MapPin
@@ -35,6 +39,7 @@ pr-12243
 
 import React from 'react;';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { motion } from 'framer-motion';
@@ -82,6 +87,8 @@ export default function Footer() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function Footer() {
 export default function Footer() {
 export default function Footer() {;
@@ -313,11 +320,14 @@ const Footer: React.FC = () => {
                 <a href="tel:+13024640950" className=hover:text-blue-400 transition-colors">
                   +1 302 464 0950
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </a>
               </div>
               <div className="flex items-center>
@@ -339,6 +349,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
           {/* Services */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -371,11 +382,69 @@ const socialLinks = [
   { name: 'Instagram', href: '#', icon: Instagram },
   { name: 'GitHub', href: '#', icon: Github }
 ];
+=======
+
+
+
+import React from 'react';
+import Link from 'next/link';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  ArrowRight
+} from "lucide-react";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  
+  const footerLinks = {
+    services: [
+      { name: "AI Solutions", href: "/services/ai-services" },
+      { name: "Blockchain", href: "/services/blockchain" },
+      { name: "Cloud Infrastructure", href: "/services/cloud-platform" },
+      { name: "Cybersecurity", href: "/services/cybersecurity" },
+      { name: "Data Analytics", href: "/services/ai-analytics-platform" },
+      { name: "DevOps", href: "/services/ai-powered-devops-platform" }
+    ],
+    company: [
+      { name: "About Us", href: "/about" },
+      { name: "Careers", href: "/careers" },
+      { name: "Press", href: "/press" },
+      { name: "Partners", href: "/partners" },
+      { name: "Contact", href: "/contact" }
+    ],
+    resources: [
+      { name: "Documentation", href: "/docs" },
+      { name: "Blog", href: "/blog" },
+      { name: "Case Studies", href: "/case-studies" },
+      { name: "White Papers", href: "/whitepaper" },
+      { name: "Support", href: "/support" }
+    ],
+    legal: [
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Service", href: "/terms" },
+      { name: "Cookie Policy", href: "/cookies" },
+      { name: "Legal", href: "/legal" }
+    ]
+  };
+
+  const socialLinks = [
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
+  ];
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -401,10 +470,41 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   <link.icon className="h-5 w-5" />
                 </a>
               ))}
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-xl font-bold">Zion Tech Group</span>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading the future of technology with innovative AI, blockchain, and cloud solutions 
+              that transform businesses and drive digital transformation.
+            </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">contact@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-blue-400" />
+                <span className="text-gray-300">San Francisco, CA</span>
+              </div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
 <<<<<<< HEAD
           
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -412,6 +512,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
+=======
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                     className="text-gray-300 hover:text-white transition-colors"
@@ -420,8 +527,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   </Link>
                 </li>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h3 className="text-lg font-semibold mb-6>Services</h3>
             <div className="space-y-4">
               {Object.entries(services).map(([category, links]) => (
@@ -475,7 +585,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             </ul>;
           </div>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {/* Solutions */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
@@ -483,7 +596,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               {footerLinks && footerLinks.solutions.map((link) => (;
                 <li key={link && link.name}>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
@@ -507,6 +623,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
@@ -544,6 +661,9 @@ pr-12243
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
                     href={link && link.href}
+=======
+href={link && link.href}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     className="text-gray-300 hover:text-white transition-colors">;
                     {link && link.name}
                   </Link>;
@@ -551,7 +671,6 @@ pr-12243
               ))}
             </ul>;
           </div>;
-
 
           {/* Company & Resources */}
           <div>;
@@ -565,17 +684,8 @@ pr-12243
             <h3 className=text-lg font-semibold mb-6">Resources</h3>
             <ul className="space-y-3>
               {resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
 
+<<<<<<< HEAD
 
 
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
@@ -586,16 +696,31 @@ pr-12243
               <li><a href="/contact" className="text-gray-300 hover:text-white">Contact Us</a></li>
               <li><a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white">Email</a></li>
 =======
+=======
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
               <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link href="/micro-saas" className="text-gray-300 hover:text-white">Micro SaaS</Link></li>
               <li><Link href="/consulting" className="text-gray-300 hover:text-white">Consulting</Link></li>
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2 text-gray-300">
               <div className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2" />
@@ -608,10 +733,14 @@ pr-12243
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
                 <span>kleber@ziontechgroup.com</span>
+              <div className="flex items-start">
+                <MapPin className="h-5 w-5 text-blue-400 mr-3 mt-1" />
+                <span className="text-gray-300">123 Tech Street<br />Innovation City, IC 12345</span>
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
@@ -629,81 +758,78 @@ pr-12243
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
               {footerLinks.resources.map((link) => (
+=======
+
+              {footerLinks.services.map((link) => (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <li key={link.name}>
-                    href={link && link.href}
-                    className="text-gray-300 hover:text-white transition-colors">;
-                    {link && link.name}
-                  </Link>;
-                </li>;
-              ))}
-            </ul>;
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>;
-            <ul className="space-y-2">;
-              {footerLinks && footerLinks.resources.map((link) => (;
-                <li key={link && link.name}>;
-                  <Link
+                  <Link 
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
-            </ul>;
-          </div>;
-        </div>;
-      </div>;
-            {/* Social Links */}
-            <div className="flex space-x-4 mb-4 md:mb-0">
-              <a
-                href="https://linkedin.com/company/zion-tech-group"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://twitter.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="https://facebook.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://instagram.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-              <Link
-                href="/privacy"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-            {/* Social Links */}
-            <div className=mt-6">
-              <h4 className="text-sm font-medium text-blue-400 mb-3>Follow Us</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social) => (
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              {footerLinks.company.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Social Links */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex space-x-6 mb-4 md:mb-0">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
                   <a
                     key={social.name}
                     href={social.href}
-                    target=_blank"
-                    rel="noopener noreferrer
-                    className="text-gray-400 hover:text-white transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
                     aria-label={social.name}
                   >
-                    <social.icon className=h-5 w-5" />
+                    <Icon className="w-6 h-6" />
                   </a>
                 ))}
+
+
+
               <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
               <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link href="/micro-saas" className="text-gray-300 hover:text-white">Micro SaaS</Link></li>
@@ -725,6 +851,7 @@ pr-12243
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
                 <span>kleber@ziontechgroup.com</span>
+<<<<<<< HEAD
 =======
 
           <div>
@@ -732,10 +859,14 @@ pr-12243
             <ul className="space-y-2">
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -744,6 +875,11 @@ pr-12243
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 mt-8 pt-8>
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -755,8 +891,17 @@ pr-12243
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white transition-colors"
+                );
+              })}
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <Link 
+                href="/newsletter"
+                className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2"
               >
-                Privacy Policy
+                <span>Subscribe to Newsletter</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
                 className="text-gray-400 hover:text-white transition-colors">;
                 <Instagram className="w-5 h-5" />;
@@ -775,6 +920,7 @@ pr-12243
                 Terms of Service;
               </Link>;
               <Link
+<<<<<<< HEAD
 pr-12243
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
@@ -814,108 +960,46 @@ pr-12243
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
               </a>
+=======
+
+
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/services"
-                  className="text-gray-300 hover:text-white"
-                >
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-gray-300 hover:text-white"
-                >
-                  Mobile Apps
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-gray-300 hover:text-white"
-                >
-                  Cloud Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-gray-300 hover:text-white"
-                >
-                  AI & ML
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-white">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-300 hover:text-white"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/careers"
-                  className="text-gray-300 hover:text-white"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white">
-                  Blog
-                </Link>
-              </li>
-            </ul>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-700">
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              © {new Date().getFullYear()} Zion Tech Group. All rights
-              reserved.
+            <p className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md: mt-0">
-              <Link
-                href="/privacy"
-                className="text-gray-300 hover:text-white text-sm"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-gray-300 hover:text-white text-sm"
-              >
-                Terms of Service
-              </Link>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              {footerLinks.legal.map((link) => (
+                <Link 
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
           </div>
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 main
@@ -938,3 +1022,7 @@ pr-12243
 }
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

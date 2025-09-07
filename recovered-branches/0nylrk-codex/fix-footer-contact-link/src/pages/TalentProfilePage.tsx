@@ -26,6 +26,7 @@ import { UserProfile } from "@/types/auth",
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
+<<<<<<< HEAD
   constructor(props) {
     super(props);
     this.state = { hasError: false };
@@ -846,6 +847,10 @@ export default function TalentProfilePage() { return null; }
       <TalentProfile
         profile={profile} 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />;
@@ -906,14 +911,19 @@ export default function TalentProfilePage() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             onClick={handleMessageTalent}
+=======
+onClick={handleMessageTalent}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           >
             <MessageSquare className="mr-2 h-4 w-4" />
             Message
           </Button>
         </div>
       </StickyAction>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -962,6 +972,8 @@ export default /**;
  */
 function TalentProfilePage() {}
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             onClick={handleMessageTalent}>;
             <MessageSquare className="mr-2 h-4 w-4" />;
@@ -1218,19 +1230,41 @@ if ( {) {
           >;
             <MessageSquare className="mr - 2 h - 4 w - 4" />;
 
+;
+      {/* Sticky action buttons that appear when scrolling */}
+      <StickyAction>;
+        <div className="p-2 flex gap-2">;
+          <Button ;
+            size="sm";
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark";
+            onClick={handleRequestHire}
+          >;
+            <Handshake className="mr-2 h-4 w-4" />;
+            Hire Now;
+          </Button>;
+          <Button ;
+            size="sm";
+            variant="outline";
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+            onClick={handleMessageTalent}
+          >;
+            <MessageSquare className="mr-2 h-4 w-4" />;
             Message;
           </Button>;
         </div>;
       </StickyAction>;
 
 
-      
-
-
-      
-      
       {/* Request to Hire Modal */}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+            onClick={handleMessageTalent}>;
+            <MessageSquare className="mr-2 h-4 w-4" />;            Message;
+          </Button>;
+        </div>;
+      </StickyAction>;      {/* Request to Hire Modal */}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <HireRequestModal
 =======
       {/* Request to Hire Modal */}
@@ -1270,16 +1304,97 @@ if ( {) {
 
 =======
         userDetails={userProfile}
+    return <ProfileLoadingState />;
 
+    return <ProfileErrorState error={error} />
+
+    <div className="min-h-screen bg-zion-blue pb-12">"
+</div>
+      <TalentProfile;
+        profile={profile} 
+;
+  const handleRequestHire = () => {;
+"
+    <div className="min-h-screen bg-zion-blue pb-12">;"
+        profile={profile} ;
+
+  },
+
+  return ("
+
+
+
+        onRequestHire={handleRequestHire}
+        onMessageTalent={handleMessageTalent}
+      />
+
+      <BackToDirectoryButton />
+
+      <StickyAction>
+        <div className="p-2 flex gap-2">"
+          <Button;"
+            size="sm"""
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark""
+            onClick={handleRequestHire}
+          >
+            <Handshake className="mr-2 h-4 w-4" />"
+
+
+    return <ProfileErrorState error={error} />;
+</ProfileErrorState>"
+    <div className="min-h-screen bg-zion-blue pb-12">;"
+</div>
+      <TalentProfile;
+        profile={profile} 
+
+        onRequestHire={handleRequestHire}
+        onMessageTalent={handleMessageTalent}
       />;
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {/* Request to Hire Modal */}
+      <BackToDirectoryButton />;
+
+</BackToDirectoryButton>
+      <StickyAction>;
+        <div className="p-2 flex gap-2">;"
+            onClick={handleRequestHire}>;
+            <Handshake className="mr-2 h-4 w-4" />;"
+
+            variant="outline"""
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10""
+            onClick={handleMessageTalent}>;
+            <MessageSquare className="mr-2 h-4 w-4" />;"
+
+
+    <div className="min - h-screen bg - zion - blue pb - 12">;"
+
+
+        <div className="p - 2 flex gap - 2">;"
+            size="sm";""
+            className="bg - zion - purple text - white hover:bg - zion - purple - dark";"
+            on_click={handleRequestHire}
+          >;
+            <Handshake className="mr - 2 h - 4 w - 4" />;"
+
+            variant="outline";""
+            className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";"
+            on_click={handleMessageTalent}
+            <MessageSquare className="mr - 2 h - 4 w - 4" />;"
+
+        </div>;
       <HireRequestModal;
         talent={profile}
+        isOpen={isHireModalOpen})
+        onClose={() => setIsHireModalOpen(false)}
+
         is_open={isHireModalOpen}
         on_close={() => setIsHireModalOpen (false)}
+<<<<<<< HEAD
         user_details={user_profile}
       />;
 <<<<<<< HEAD
@@ -1287,14 +1402,17 @@ if ( {) {
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       {/* Message Talent Modal */}
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <MessageTalentModal;
-        talent={profile}
         is_open={isMessageModalOpen}
         on_close={() => setIsMessageModalOpen (false)}
-      />;
+
     </div>);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1314,6 +1432,9 @@ if ( {) {
       {/* Message Talent Modal */}
       <MessageTalentModal;
 =======
+=======
+;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       />
       {/* Message Talent Modal */}
       <MessageTalentModal
@@ -1323,7 +1444,6 @@ if ( {) {
         onClose={() => setIsMessageModalOpen(false)}
 
       />;
-
 
       />
     </div>
@@ -1335,9 +1455,13 @@ if ( {) {
 }
       ;
       {/* Request to Hire Modal */}
+        isOpen={isMessageModalOpen}
+        onClose={() => setIsMessageModalOpen(false)}
+
       <HireRequestModal ;
         talent={profile}        isOpen={isHireModalOpen}
         onClose={_() => setIsHireModalOpen(false)}
+<<<<<<< HEAD
         userDetails={userProfile}
       />;
       ;
@@ -1464,36 +1588,39 @@ const handleMessageTalent = () => {
   return;
 }setIsMessageModalOpen (true) 
 };
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <TalentProfile profile= {
-  profile 
+  profile;
 }onRequestHire= {
-  handleRequestHire 
+  handleRequestHire;
 }onMessageTalent= {
-  handleMessageTalent 
+  handleMessageTalent;
 }/> <BackToDirectoryButton /> {
-  /* Sticky action buttons that appear when scrolling */ 
-}<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {
-  /* Request to Hire Modal */ 
+}<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now  <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message  </div>  {"
 }<HireRequestModal talent= {
-  profile 
 }isOpen= {
-  isHireModalOpen 
+  isHireModalOpen;
 }onClose= {
   () => setIsHireModalOpen (false) 
-}userDetails= {
-  userProfile 
-}/> {
-  /* Message Talent Modal */ 
+
 }<MessageTalentModal talent= {
+<<<<<<< HEAD
   profile 
 }isOpen= {
   isMessageModalOpen 
 }onClose= {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  isMessageModalOpen;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   () => setIsMessageModalOpen (false) 
 }/> </div>) 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1514,3 +1641,9 @@ const handleMessageTalent = () => {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+}/> </div>) "
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

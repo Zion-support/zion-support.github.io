@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -83,16 +84,31 @@ export interface FraudFlag {
   user_id: string;
   user_email?: string;"
   content_type: "signup" | "job" | "message" | "quote" | "review";
+=======
+
+}
+  id: string;,
+  user_id: string;
+  user_email?: string;
+  content_type: "signup" | "job" | "message" | "quote" | "review";",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   content_id: string;
-  content_excerpt: string;
+  content_excerpt: string;,
   severity: FraudSeverity;
-  reason: string;
+  reason: string;,
   timestamp: string;
   ip_address?: string;"
+<<<<<<< HEAD
   status: "pending" | "reviewed" | "ignored" | "actioned";
   reviewed_by?: string;
   reviewed_at?: string;"
   action_taken?: "none" | "warning" | "suspension" | "ban";
+=======
+  status: "pending" | "reviewed" | "ignored" | "actioned";"
+  reviewed_by?: string;
+  reviewed_at?: string;"
+  action_taken?: "none" | "warning" | "suspension" | "ban";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   gpt_classification?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,12 +131,16 @@ export interface FraudStats {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   gpt_explanation?: string;
   is_false_positive?: boolean;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 export interface FraudStats {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   gpt_explanation?: string
   is_false_positive?: boolean
@@ -161,9 +181,16 @@ export interface FraudStats {;
 export interface FraudStats {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   total_flags: number;
+=======
+export interface FraudStats {
+  // TODO: Implement
+  // TODO: Implement
+  total_flags: number;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   pending_flags: number;
-  suspicious_count: number;
+  suspicious_count: number;,
   dangerous_count: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -245,3 +272,9 @@ export interface FraudStats {;
   actioned_count: number;
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  false_positives: number;,
+  actioned_count: number;
+"
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

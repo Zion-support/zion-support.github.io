@@ -45,12 +45,9 @@ export interface Job {};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
-
 export interface Job {;
 
-
 export interface Job {;
-
 
 export interface Job {
 export interface Job {;
@@ -60,11 +57,26 @@ export interface Job {;
 =======
   id: string;
   title: string;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   description: string;
   company_name?: string;
   budget?: string;
   client_id: string;
+=======
+
+export interface Job {;
+
+export interface Job {export interface Job {;
+
+export interface Job {
+export interface Job {;
+  title: string,
+  description: string;
+  company_name?: string;
+  budget?: string;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,6 +84,7 @@ export interface Job {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -218,15 +231,43 @@ export interface ApplyToJobModalProps {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   is_open: boolean;
   on_close: () => void;
   onApplySuccess?: (job_id: string) => Promise < void>;
 }
 
 ;
+;
 
 ;
 ;
 export interface ApplyToJobModalProps {
+job: Job;
+export interface ApplyToJobModalProps {
   job: Job;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+export interface Job {
+  // TODO: Implement
+}
+  id: string;,
+  title: string;
+  description: string;
+  company_name?: string;
+  budget?: string;
+  client_id: string;
+
+
+
+export interface ApplyToJobModalProps {;
+  job: Job;,
+  isOpen: boolean;
+  onClose: () => void;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

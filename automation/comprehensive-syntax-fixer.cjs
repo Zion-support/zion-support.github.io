@@ -452,18 +452,13 @@ fixer.run().catch(console.error);    }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-fixer.run().catch(console.error);
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     }
-  }
-}
 
-// Main execution
+
 if (require.main === module) {
   const fixer = new ComprehensiveSyntaxFixer();
-  fixer.run().catch(console.error);
-}
 
 module.exports = ComprehensiveSyntaxFixer;
 <<<<<<< HEAD
@@ -492,4 +487,8 @@ fixer.run().catch(console.error);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

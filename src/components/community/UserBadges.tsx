@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -64,10 +65,14 @@ const iconMap = {}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   Trophy,
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 interface UserBadgesProps {
   badges: Badge[]
+<<<<<<< HEAD
 }  Trophy,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Award,
@@ -323,3 +328,8 @@ export default UserBadges;
 =======
 export default UserBadges;'"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+}
+;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -16,6 +17,8 @@
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -42,6 +45,8 @@ export function useProjects() {;
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
+
+
 import { Project, ProjectStatus } from "@/types/projects";
 =======
 
@@ -54,6 +59,7 @@ import { toast } from "sonner";
 export function useProjects() {};
   const { user } = useAuth();
   const [projects, setProjects] = useState<Project[]>([]),
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);"
 import { Project, ProjectStatus } from "@/types/projects","
 import { toast } from "sonner",
@@ -1225,3 +1231,7 @@ updateProjectStatus
   }
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  const [isLoading, setIsLoading] = useState(true);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

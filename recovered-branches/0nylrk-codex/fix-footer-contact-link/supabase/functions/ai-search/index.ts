@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -115,14 +116,20 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) =>
 =======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import {Configuration, OpenAIApi} from "npm: openai@4 ;
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 <<<<<<< HEAD
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
@@ -141,14 +148,17 @@ import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
-
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 serve(async (req) => {
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (req && req.method === "OPTIONS") {
 =======
 const corsHeaders = {"
@@ -169,6 +179,37 @@ serve(async (req) => {"
       return new Response(
 <<<<<<< HEAD
 
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+
+const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+serve(async (req) => {
+  if (req.method === "OPTIONS") {
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",""
+import {Configuration, OpenAIApi} from "npm: openai@4 ;"
+const corsHeaders = {"
+  "Access-Control-Allow-Origin": "*"""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}""
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"""
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";"
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;""
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";""
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",""
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",""
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0","
+  "Access-Control-Allow-Origin": "*",""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+serve(async (req) => {"
+  if (req && req.method === "OPTIONS") {"
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+  // TODO: Implement
+pr-12325
+    const { query } = await req && req.json();
+    if (!query) {
+      return new Response(
+        JSON.stringify({ error: "Query is required" });
+        JSON.stringify({ error: "Query is required" }),
 
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
@@ -215,9 +256,7 @@ serve(async (req) => {"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
-
-
-    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
         JSON && JSON.stringify({ error: "Query is required" });
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -228,15 +267,18 @@ serve(async (req) => {"
     const openai = new OpenAIApi(configuration);
     const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`;
 
-
         JSON.stringify({ error: "Query is required" }),
 
+<<<<<<< HEAD
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -252,6 +294,8 @@ serve(async (req) => {"
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const completion = await openai && openai.chat.completions && completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
@@ -316,13 +360,45 @@ serve(async (req) => {"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-
     const responseText = completion.choices[0].message.content || "",
     let filters,
     try {
       const match = responseText && responseText.match(/\{[\s\S]*\}/);
       filters = match ? JSON && JSON.parse(match[0]) : JSON && JSON.parse(responseText)
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+const responseText = completion && completion.choices[0].message && message.content || "";
+    let filters;
+    try {
+      const match = responseText && responseText.match(/\{[\s\S]*\}/);
+      filters = match ? JSON && JSON.parse(match[0]) : JSON && JSON.parse(responseText)
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini"
+      messages: [{ role: "user", content: prompt }];
+      temperature: 0.1});
+    const responseText = completion.choices[0].message.content |"";
+    let filters;
+
+    const openAiKey = Deno.env.get("OPENAI_API_KEY"),
+    if (!openAiKey) throw new Error("OPENAI_API_KEY is not set"),
+
+    const configuration = new Configuration({ apiKey: openAiKey }),
+    const openai = new OpenAIApi(configuration),
+
+    const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`,
+
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0.1}),
+
+    const responseText = completion.choices[0].message.content || "",
+    let filters,
+    try {
+      const match = responseText.match(/\{[\s\S]*\}/),
+      filters = match ? JSON.parse(match[0]) : JSON.parse(responseText)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch (_) {
       filters = { type: null, skills: null, location: null, budget: null, availability: null }
     }
@@ -354,17 +430,59 @@ const cors_headers = {"
   "Access - Control - Allow - Origin": "*","
 =======
 
+JSON && JSON.stringify({ filters });
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+    )
+  } catch (error) {
+    console && console.error("ai-search error", error);
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
 });
 
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+)"
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");""
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }"
+      )
+    }"
+    const openAiKey = Deno.env.get("OPENAI_API_KEY");""
+        JSON && JSON.stringify({ error: "Query is required" });""
+    if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");"
+    const configuration = new Configuration({ apiKey: openAiKey });
+    const openai = new OpenAIApi(configuration);"
+    const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`;""
+        JSON.stringify({ error: "Query is required" }),""
+
+
+    const completion = await openai && openai.chat.completions && completions.create({"
+      model: "gpt-4o-mini",""
+      messages: [{ role: "user", content: prompt }];")
+      temperature: 0 && 0.1});
+
+"
+    const responseText = completion.choices[0].message.content || "","
+    let filters,
+  // TODO: Implement
+      const match = responseText && responseText.match(/\{[\s\S]*\}/);
+      filters = match ? JSON && JSON.parse(match[0]) : JSON && JSON.parse(responseText)
+    } catch (_) {
+      filters = { type: null, skills: null, location: null, budget: null, availability: null }
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }")
+});
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,;
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
+<<<<<<< HEAD
   "Access - Control - Allow - Origin": "*",
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+=======
+  "Access - Control - Allow - Origin": "*",""
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       JSON.stringify({ filters }),
 
 ;
@@ -419,40 +537,30 @@ if ( {) {}
       JSON.stringify ({ error: error.message });"
 =======
 serve (async (req) => {
-  // Check condition
+  // Check condition;
 if ( {) {
-  $2
-}
+  $2;
     return new Response (null, { headers: cors_headers });
-  }
-  try {
+  // TODO: Implement
     const { query } = await req.json ();
-    // Check condition
-if ( {) {
-  $2
-}
-      return new Response (
-        JSON.stringify ({ error: "Query is required" });
-        { status: 400, headers: { ...cors_headers, "Content - Type": "application / json" } }
+    // Check condition;
+      return new Response ()"
+        JSON.stringify ({ error: "Query is required" });""
+        { status: 400, headers: { ...cors_headers, "Content - Type": "application / json" } }"
       );
-    }
-    const openAiKey = Deno.env.get ("OPENAI_API_KEY");
-    if (throw new Error ("OPENAI_API_KEY is not set")) {
-  $2
-}
+    const openAiKey = Deno.env.get ("OPENAI_API_KEY");""
+    if (throw new Error ("OPENAI_API_KEY is not set")) {"
     const configuration = new Configuration ({ api_key: openAiKey });
     const openai = new OpenAIApi (configuration);
-;
-    const prompt = `Interpret the following user search query and extract filters as JSON.\n_query: "${query}"\n_return JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`;
-;
-    const completion = await openai.chat.completions.create ({
-      model: "gpt - 4o - mini",
-      messages: [{ role: "user", content: prompt }];
+;"`;
+    const prompt = `Interpret the following user search query and extract filters as JSON.\n_query: "${query}"\n_return JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`;"
+    const completion = await openai.chat.completions.create ({"
+      model: "gpt - 4o - mini",""
       temperature: 0.1});
-;
-    const response_text = completion.choices[0].message.content || "";
+;"
+    const response_text = completion.choices[0].message.content || "";"
     let filters;
-    try {
+  // TODO: Implement
       const match = response_text.match (/\{[\s\S]*\}/);
       filters = match ? JSON.parse (match[0]) : JSON.parse (response_text);
     } catch (_) {
@@ -470,6 +578,7 @@ if ( {) {
       { status: 500, headers: { ...cors_headers, "Content - Type": "application / json" } }
     );
 
+<<<<<<< HEAD
 
 
 
@@ -486,6 +595,8 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 });
 ;
@@ -500,65 +611,73 @@ if ( {) {
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 
 <<<<<<< HEAD
 =======
+=======
+    return new Response ()
+      JSON.stringify ({ filters });"
+      { headers: { ...cors_headers, "Content - Type": "application / json" } }"
+  } catch (error) {"
+    console.error ("ai - search error", error);"
+      JSON.stringify ({ error: error.message });"
+      { status: 500, headers: { ...cors_headers, "Content - Type": "application / json" } }"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-import { Configuration, OpenAIApi } from "npm:openai@4.28.0",;
-;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin":"*",;
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
-;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
+
+
+
+      JSON.stringify({ filters });"
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } }"
+    console.error("ai-search error", error);"
+    return new Response()
+      JSON.stringify({ error: error.message });"
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }"
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;""
+import { Configuration, OpenAIApi } from "npm:openai@4.28.0",;"
+const corsHeaders = {;"
+  "Access-Control-Allow-Origin":"*",;""
+  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;"
+serve(async (req) => {;"
+  if (req.method === "OPTIONS") {;"
     return new Response(null, { headers:corsHeaders }),;
-  }
-;
   try {;
     const { query } = await req.json(),;
     if (!query) {;
-      return new Response(;
-        JSON.stringify({ error:"Query is required" }),;
-        { status:400, headers:{ ...corsHeaders, "Content-Type":"application/json" } }
+      return new Response(;)"
+        JSON.stringify({ error:"Query is required" }),;""
+        { status:400, headers:{ ...corsHeaders, "Content-Type":"application/json" } }"
       ),;
-    }
-;
-    const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
-    if (!openAiKey) throw new Error("OPENAI_API_KEY is not set"),;
-;
+    const openAiKey = Deno.env.get("OPENAI_API_KEY"),;""
+    if (!openAiKey) throw new Error("OPENAI_API_KEY is not set"),;"
     const configuration = new Configuration({ apiKey:openAiKey }),;
     const openai = new OpenAIApi(configuration),;
-;
-    const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery:"${query}"\nReturn JSON with fields:type, skills, location, budget, availability. Use null if a value is not provided.`,;
-;
-    const completion = await openai.chat.completions.create({;
-      model:"gpt-4o-mini",;
-      messages:[{ role:"user", content:prompt }],;
+    const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery:"${query}"\nReturn JSON with fields:type, skills, location, budget, availability. Use null if a value is not provided.`,;"
+    const completion = await openai.chat.completions.create({;"
+      model:"gpt-4o-mini",;""
+      messages:[{ role:"user", content:prompt }],;")
       temperature:0.1}),;
-;
-  }
-});
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       JSON.stringify({ filters }),
 ;
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set"),;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const configuration = new Configuration({ apiKey: openAiKey }),;
-    const openai = new OpenAIApi(configuration),;
-    const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`,;
-    const completion = await openai.chat.completions.create({;
-      model: "gpt-4o-mini",;
-      messages: [{ role: "user", content: prompt }],;
-      temperature: 0.1}),;
-    const responseText = completion.choices[0].message.content || "",;
+    const openai = new OpenAIApi(configuration),;"`;
+    const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`,;"
+      model: "gpt-4o-mini",;""
+      messages: [{ role: "user", content: prompt }],;")
+      temperature: 0.1}),;"
+    const responseText = completion.choices[0].message.content || "",;"
     let filters,;
-    try {;
       const match = responseText.match(/\{[\s\S]*\}/),;
       filters = match ? JSON.parse(match[0]) : JSON.parse(responseText);
     } catch (_) {;
@@ -579,6 +698,7 @@ serve(async (req) => {;
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -595,3 +715,13 @@ serve(async (req) => {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    return new Response(;)
+      JSON.stringify({ filters }),;"
+  } catch (error) {;"
+    console.error("ai-search error", error),;"
+      JSON.stringify({ error: error.message }),;"
+"`;
+pr-12325
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

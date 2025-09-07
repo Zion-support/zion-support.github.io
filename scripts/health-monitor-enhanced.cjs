@@ -1,13 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-class HealthMonitor {
-  constructor() {
-    this.projectRoot = process.cwd();
-  }
 
+<<<<<<< HEAD
   async run() {
     console.log('🏥 Running health monitoring...');
     console.log('✅ Health monitoring completed');
@@ -305,10 +305,13 @@ module.exports = HealthMonitor;
 
 main
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
         console.log(' Checking system health...')
             "status"
             "status"
@@ -320,4 +323,7 @@ const path = require('path')
             "status"
             "message"
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 

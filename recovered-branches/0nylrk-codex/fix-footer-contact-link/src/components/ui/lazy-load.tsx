@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -54,8 +55,17 @@ import { Skeleton } from "@/components/ui/skeleton",
   height = "200px";"
 =======
 
+=======
+
+}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export function LazyLoad(): any ({;
 
+loadingComponent?: ReactNode;
+  className?: string;
+}
+export function LazyLoad(): any ({;
   height = "200px";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   width = "100%";
@@ -90,6 +100,21 @@ export function LazyLoad(): any ({;interface LazyLoadProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+import {useEffect, useState, useRef, ReactNode} from "react";
+import {cn} from "@/lib/utils";
+import {Skeleton} from "@/components/ui/skeleton";
+import { useEffect, useState, useRef, ReactNode } from "react",
+import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
+interface LazyLoadProps {
+  height?: string | number;
+  width?: string | number;
+
+  children: ReactNode
+
+  loadingComponent?: ReactNode;
+import { cn } from "@/lib/utils",
+import { Skeleton } from "@/components/ui/skeleton",
 interface LazyLoadProps {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   height?: string | number,
@@ -100,9 +125,12 @@ interface LazyLoadProps {
   className?: string
 }
 
-
-
   className?: string
+export function LazyLoad(): any ({;interface LazyLoadProps {
+  height?: string | number,
+  width?: string | number,
+  children: ReactNode,
+  loadingComponent?: ReactNode,  className?: string
 }
 
 <<<<<<< HEAD
@@ -115,6 +143,7 @@ export function LazyLoad({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function LazyLoad({
 
+<<<<<<< HEAD
   className}: LazyLoadProps) {
 =======
 interface LazyLoadProps {}
@@ -687,6 +716,9 @@ if ( {) {
       )}>;
       {isVisible ? (;
         <>;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           {!isLoaded && (loadingComponent || defaultLoadingComponent)}
           {isLoaded && children}
         </>;
@@ -761,14 +793,11 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
-
     </div>;
   );
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
-
-
 
       }, 500),;
       return () => clearTimeout(timer);
@@ -832,6 +861,7 @@ if ( {) {}
 <<<<<<< HEAD
       style={{ height, width }}
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="rounded - md bg - zion - blue-light / 20";
 =======
       style={{ height, width }}"
@@ -840,6 +870,9 @@ if ( {) {}
 =======
       className="rounded - md bg - zion - blue - light / 20";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      className="rounded - md bg - zion - blue-light / 20";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     />);
 ;
   return (
@@ -872,6 +905,7 @@ return (<div)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -888,3 +922,57 @@ return (<div)
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        loadingComponent || defaultLoadingComponent;)
+      )}
+    </div>;
+
+    <Skeleton;
+      style={{ height, width }}"
+      className="rounded-md bg-zion-blue-light/20""
+    />
+</Skeleton>
+    <div;
+      ref={containerRef}"
+      className={cn("transition-opacity duration-500",""
+        isLoaded ? "opacity-100" : "opacity-0","
+    >
+        <>
+          {!isLoaded && (loadingComponent |defaultLoadingComponent)}
+        </>
+      ) : (
+        loadingComponent |defaultLoadingComponent;)
+      className="rounded - md bg - zion - blue - light / 20";"
+
+    />);
+</Skeleton>
+    <div;
+
+      ref={container_ref}"
+      className={cn ("transition - opacity duration - 500",""
+        is_loaded ? "opacity - 100" : "opacity - 0";")
+        class_name)}
+    >;
+</div>
+        <>;
+
+          {!is_loaded && (loading_component || defaultLoadingComponent)}
+          {is_loaded && children}
+        </>) : ()
+        loading_component || defaultLoadingComponent)}
+    </div>);
+const defaultLoadingComponent = (<Skeleton />);
+
+return (<div) 
+
+}> {
+  isVisible ? (<> {)
+  !isLoaded && (loadingComponent || defaultLoadingComponent) 
+}{
+  isLoaded && children;
+}</>) : (loadingComponent || defaultLoadingComponent) 
+}</div>) "
+pr-12325
+}</div>) 
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

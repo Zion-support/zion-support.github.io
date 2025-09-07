@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/context/WhitelabelContext.jsx
 <<<<<<< HEAD:backup-problematic-files/src.disabled/src/context/WhitelabelContext.jsx
 <<<<<<< HEAD
@@ -52,3 +53,16 @@ import _React,{ createContext,useContext } from "react" const defaultConfig = {}
 =======
 import _React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c:src.disabled/src/context/WhitelabelContext.jsx
+=======
+import React,{ createContext,useContext } from \"react\"
+const React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}""
+import _React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}
+import _React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}
+import React,{ createContext,useContext } from \"react\" const defaultConfig = {};const defaultConfig = {}
+const React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}""
+import _React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}
+import React,{ createContext,useContext } from \"react\"
+const React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}""
+import _React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}
+import _React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,9 @@
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { Link  } from 'react-router-dom';
+import { ShieldAlert } from "lucide-react";
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+interface ProjectActionsProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,16 +38,33 @@ interface ProjectActionsProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
-  projectId: string
-  isUnderDispute: boolean
+}
+    </div>;
+  ),;}
+ interface ProjectActionsProps {
+  projectId: string;
+isUnderDispute: boolean;
+disputeId?: string;
+isTalent: boolean;
+onAddMilestone: () => void 
+}export function ProjectActions ({
+
+
+  projectId: string;,
+  isUnderDispute: boolean;
   disputeId?: string;
+<<<<<<< HEAD
   isTalent: boolean
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  isTalent: boolean;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
-import {ShieldAlert} from "lucide-react";
+import {ShieldAlert} from "lucide-react";""
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -180,13 +203,21 @@ export function ProjectActions({}
 
 
 
+=======
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Link } from 'react-router-dom',;
+import { ShieldAlert } from "lucide-react",""
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ProjectActionsProps {
+  // TODO: Implement
+}
   projectId: string,
   isUnderDispute: boolean,
   disputeId?: string,
   isTalent: boolean,
-  onAddMilestone: () => void
-}
+  onAddMilestone: () => void;
 
 export function ProjectActions({;
   projectId;
@@ -200,14 +231,14 @@ export function ProjectActions({
   isTalent,
 
 
-  onAddMilestone
+  onAddMilestone;)
 }: ProjectActionsProps) {
   return (
 <<<<<<< HEAD
 =======
 
-  return (
 
+<<<<<<< HEAD
   onAddMilestone
 }: ProjectActionsProps) {
   return (
@@ -413,29 +444,35 @@ import {Button} from '@/components / ui / button';
     <div className="flex gap-2">;
       {isUnderDispute && disputeId ? (;
         <Button variant="outline" asChild>;
+=======
+    <div className="flex gap-2">"
+</div>"
+        <Button variant="outline" asChild>"
+
+          <Link to={`/dashboard/disputes/${disputeId}`}>
+"
+            <ShieldAlert className="h-4 w-4 mr-2" />"
+
+        <RaiseDisputeButton;
+          projectId={projectId}"
+          variant="outline""
+        />
+    <div className="flex gap-2">;"
+        <Button variant="outline" asChild>;"
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Link to={`/dashboard/disputes/${disputeId}`}>;
-            <ShieldAlert className="h-4 w-4 mr-2" />;
-            View Active Dispute;
-          </Link>;
-        </Button>;
-      ) : (;
-        <RaiseDisputeButton
-          projectId={projectId}
-          variant="outline"
+            <ShieldAlert className="h-4 w-4 mr-2" />;"
+
+          ;
+          variant="outline"")
       ) :(;
         <RaiseDisputeButton ;
-          projectId={projectId}
-          variant="outline";
+          variant="outline";"
         />;
 
-
-
-      )}
-      {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
-          Add Milestone
-        </Button>
-      )}
+
     </div>
   )
 <<<<<<< HEAD
@@ -452,6 +489,7 @@ import {Button} from '@/components / ui / button';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 }
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -543,10 +581,30 @@ onAddMilestone
 }` 
 }> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) 
 }{
+=======
+    </div>;"
+    <div className="flex gap - 2">;"
+        <Button variant="outline" as_child>;"
+          <Link to={`/dashboard / disputes/${dispute_id}`}>;
+            <ShieldAlert className="h - 4 w - 4 mr - 2" />;"
+
+          ;)
+        ) : (
+          project_id={project_id}"
+
+        <Button onClick={onAddMilestone}>;
+)
+        )}
+    </div>);
+  return (<div className="flex gap-2" > isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link to= {"
+</div>)"
+}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute  ) : (<RaiseDisputeButton />)"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   isTalent && !isUnderDispute && (<Button onClick= {
-  onAddMilestone 
-}> Add Milestone </Button>) 
+}> Add Milestone ) 
 }</div>) 
+<<<<<<< HEAD
 }
     </div>
   )
@@ -568,3 +626,9 @@ onAddMilestone
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </div>"`;
+pr-12325
+    </div>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

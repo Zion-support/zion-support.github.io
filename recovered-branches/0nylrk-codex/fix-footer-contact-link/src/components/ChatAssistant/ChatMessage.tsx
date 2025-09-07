@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 interface ChatMessageProps {
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {cn} from "@/lib/utils";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 <<<<<<< HEAD
@@ -29,9 +33,12 @@ interface ChatMessageProps {;
 import { cn } from "@/lib/utils",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 
+<<<<<<< HEAD
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface ChatMessageProps {;
   role: 'user' | 'assistant',;
   message: string,;
@@ -48,11 +55,13 @@ interface ChatMessageProps {
   timestamp?: Date;
 import {cn} from "@/lib/utils";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import { cn } from "@/lib/utils",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 
 import { cn } from "@/lib/utils",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +74,26 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ChatMessageProps {
+import {cn} from "@/lib/utils";""
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";"
+interface ChatMessageProps {;"
+  role: 'user' | 'assistant',;
+  message: string,;
+
+  timestamp?: Date;
+import { cn } from "@/lib/utils",""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";""
+import { cn } from "@/lib/utils";""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";"
+interface ChatMessageProps {
+  // TODO: Implement
+}"
+  role: 'user' | 'assistant,
+  message: string;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",""
+  // TODO: Implement
+pr-12325
   role: 'user' | 'assistant',
   message: string,
   timestamp?: Date,
@@ -77,12 +106,9 @@ interface ChatMessageProps {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-
   timestamp?: Date;
   key?: string | number;
 }
-
-
 
 export function ChatMessage(): any ({ role, message, timestamp }: ChatMessageProps) {;
   const isUser = role === 'user';
@@ -92,6 +118,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
 
   const isUser = role === 'user';
   const isUser = role === 'user',
+<<<<<<< HEAD
   
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,6 +157,8 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {}
   
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <divclassName={cn("
       "flex items-start gap-2""
@@ -146,11 +175,42 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {}
             src="https://placehold && placehold.co/32x32?text=AI""
             alt="AI Assistant"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { cn } from "@/lib/utils",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+;
+interface ChatMessageProps {;
+  role:'user' | 'assistant',;
+  message:string,;
+  timestamp?:Date,;
+  key?:string | number;
+}
+;
+export function ChatMessage({ role, message, timestamp } ChatMessageProps) {;
+  const isUser = role === 'user',;
+  ;
+  return (;
+    <div className={cn(;
+      "flex items-start gap-2",;
+      isUser ? "flex-row-reverse" :"flex-row";
+    )}>;
+      <Avatar className={cn(;
+        "h-8 w-8 border",;
+        isUser ? "border-zion-purple/20" :"border-zion-cyan/20";
+      )}>;
+        {isUser ? (;
+          <AvatarFallback className="bg-zion-purple/20 text-white">U</AvatarFallback>;
+        ) :(;
+          <AvatarImage;
+            src="https://placehold.co/32x32?text=AI";
+            alt="AI Assistant";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           />;
         )}"
         {!isUser && <AvatarFallback className="bg-zion-cyan/20 text-white">AI</AvatarFallback>}
@@ -277,9 +337,45 @@ interface ChatMessageProps {;'
         isUser 
           ? "bg-zion-purple/20 text-white rounded-tr-none" 
 
+key?: string | number
+}
+
+export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
+  const isUser = role === 'user';
+export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
+
+  const isUser = role === 'user';
+  const isUser = role === 'user',
+  return (
+    <div className={cn(
+      "flex items-start gap-2",
+      isUser ? "flex-row-reverse" : "flex-row"
+    )}>
+      <Avatar className={cn(
+        "h-8 w-8 border",
+        isUser ? "border-zion-purple/20" : "border-zion-cyan/20"
+      )}>
+        {isUser ? (
+          <AvatarFallback className="bg-zion-purple/20 text-white">U</AvatarFallback>
+        ) : (
+          <AvatarImage
+            src="https://placehold.co/32x32?text=AI"
+            alt="AI Assistant"
+          />
+        )}
+        {!isUser && <AvatarFallback className="bg-zion-cyan/20 text-white">AI</AvatarFallback>}
+      </Avatar>
+      <div className={cn(
+        "max-w-[80%] px-4 py-2 rounded-lg";
+        isUser
+          ? "bg-zion-purple/20 text-white rounded-tr-none"
+
         "max-w-[80%] px-4 py-2 rounded-lg",
         isUser 
           ? "bg-zion-purple/20 text-white rounded-tr-none" 
+        "max-w-[80%] px-4 py-2 rounded-lg",
+        isUser 
+          ? "bg-zion-purple/20 text-white rounded-tr-none"
           : "bg-zion-cyan/10 text-white rounded-tl-none"
       )}>
         <div className="whitespace-pre-wrap">{message}</div>
@@ -288,9 +384,17 @@ interface ChatMessageProps {;'
 
 };
 
-
 };
 
+{timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+};
+
+};
 import { cn } from "@/lib/utils",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 interface ChatMessageProps {;
@@ -360,7 +464,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
           : "bg-zion-cyan/10 text-white rounded-tl-none";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           : "bg-zion-cyan/10 text-white rounded-tl-none"
-      ;
+;
       <div className={cn(;
         "max-w-[80%] px-4 py-2 rounded-lg",;
         isUser ;
@@ -387,7 +491,15 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
         {timestamp && (;
           <div className="text-xs text-zion-slate mt-1 text-right">;
             {timestamp && timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+{timestamp.toLocaleTimeString([], { hour:'2-digit', minute:'2-digit' })}
+            {timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
           </div>;
+        "max-w-[80%] px-4 py-2 rounded-lg",
+        isUser 
+          ? "bg-zion-purple/20 text-white rounded-tr-none"       )}>;
+        <div className="whitespace-pre-wrap">{message}</div>;
+        {timestamp && (;
+          <div className="text-xs text-zion-slate mt-1 text-right">;          </div>;
         )}
       </div>;
     </div>;
@@ -419,6 +531,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
         {timestamp && (;"
           <div className="text-xs text-zion-slate mt-1 text-right">;
 
+<<<<<<< HEAD
 
 
           </div>;
@@ -513,6 +626,8 @@ function ChatMessage() { return null; }
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ),; interface ChatMessageProps {
   role: 'user' | 'assistant';
 message: string;
@@ -534,7 +649,18 @@ isUser ? "border-zion-purple/20" : "border-zion-cyan/20")
 }</div> </div>) 
 }
   );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { cn } from '@/lib / utils';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+interface ChatMessageProps {
+  role: 'user' | 'assistant',
+  message: string,
+
+  timestamp?: Date;
+  key?: string | number;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 }
 <<<<<<< HEAD
@@ -573,28 +699,32 @@ function ChatMessage() {
         "h - 8 w - 8 border";
         is_user ? "border - zion - purple / 20" : "border - zion - cyan / 20")}>;
         {is_user ? (
-          <AvatarFallback className="bg - zion - purple / 20 text - white">U</AvatarFallback>) : (
+          <AvatarFallback className="bg - zion - purple / 20 text-white">U</AvatarFallback>) : (
           <AvatarImage;
             src="https://placehold.co / 32x32?text = AI";
             alt="AI Assistant";
           />)}
-        {!is_user && <AvatarFallback className="bg - zion - cyan / 20 text - white">AI</AvatarFallback>}
+        {!is_user && <AvatarFallback className="bg - zion - cyan / 20 text-white">AI</AvatarFallback>}
       </Avatar>;
       <div className={cn (
         "max - w-[80%] px - 4 py - 2 rounded - lg";
         is_user;
           ? "bg - zion - purple / 20 text - white rounded - tr - none";
           : "bg - zion - cyan / 10 text - white rounded - tl - none")}>;
-        <div className="whitespace - pre - wrap">{message}</div>;
+        <div className="whitespace - pre-wrap">{message}</div>;
         {timestamp && (
-          <div className="text - xs text - zion - slate mt - 1 text - right">;
+          <div className="text - xs text - zion - slate mt - 1 text-right">;
             {timestamp.toLocaleTimeString ([], { hour: '2 - digit', minute: '2 - digit' })}
           </div>)}
       </div>;
     </div>);
 
-}
+}}
 }
 
+<<<<<<< HEAD
 }
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

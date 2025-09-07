@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Phone,
   Mail,
@@ -631,74 +632,79 @@ if (e.key === 'Escape') closeMenu();
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <>
+
       {/* Top Contact Bar */}
-<div className='bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20'>
-  return (
-    <>
+<div className='bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20' />;
+  return (<>;
       {/* Top Contact Bar */}
-      <div className='bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex items-center justify-between h-10 text-xs text-purple-300'>
-            <div className='flex items-center space-x-4'>
-              <div className='flex items-center space-x-2'>
-                <Phone className='w-3 h-3 text-purple-400' />
-                <span>{contactInfo.mobile}</span>
-              </div>                <span>{contactInfo.mobile}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-3 h-3 text-purple-400" />
-                <span>{contactInfo.email}</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-3 h-3 text-purple-400" />
-                <span>{contactInfo.address}</span>
-              </div>
-              <div className='flex items-center space-x-2'>
-                <Mail className='w-3 h-3 text-purple-400' />
-                <span>{contactInfo.email}</span>
-              </div>
-            </div>
-            <div className='flex items-center space-x-4'>
-              <div className='flex items-center space-x-2'>
-                <MapPin className='w-3 h-3 text-purple-400' />
-                <span>{contactInfo.address}</span>
-              </div>
-              <div className='flex items-center space-x-2'>
-                <Globe className='w-3 h-3 text-purple-400' />
-                <span>{contactInfo.website}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className='bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />;
+          <div className='flex items-center justify-between h-10 text-xs text-purple-300' />;
+            <div className='flex items-center space-x-4' />;
+              <div className='flex items-center space-x-2' />;
+                <Phone className='w-3 h-3 text-purple-400' />;
+                <span />{contactInfo.mobile}</span>;
+              </div>                <span />{contactInfo.mobile}</span>;
+              </div>;"
+              <div className=\"flex items-center space-x-2\" />;"
+                <Mail className=\"w-3 h-3 text-purple-400\" />;
+                <span />{contactInfo.email}</span>;
+              </div>;
+            </div>;"
+            <div className=\"flex items-center space-x-4\" />;"
+              <div className=\"flex items-center space-x-2\" />;"
+                <MapPin className=\"w-3 h-3 text-purple-400\" />;
+                <span />{contactInfo.address}</span>;
+              </div>;
+              <div className='flex items-center space-x-2' />;
+                <Mail className='w-3 h-3 text-purple-400' />;
+                <span />{contactInfo.email}</span>;
+              </div>;
+            </div>;
+            <div className='flex items-center space-x-4' />;
+              <div className='flex items-center space-x-2' />;
+                <MapPin className='w-3 h-3 text-purple-400' />;
+                <span />{contactInfo.address}</span>;
+              </div>;
+              <div className='flex items-center space-x-2' />;
+                <Globe className='w-3 h-3 text-purple-400' />;
+                <span />{contactInfo.website}</span>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
       {/* Main Navigation */}
-<nav className='bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex items-center justify-between h-20'>
+<nav className='bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' />;
+          <div className='flex items-center justify-between h-20' />;
             {/* Logo */}
-            <motion.div
-              className='flex items-center space-x-3'
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-            >
-              <Link href='/' className='flex items-center space-x-3'>
-                <div className='relative'>
-                  <div className='w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl'>
+            <motion.div;
+              className='flex items-center space-x-3';
+              whileHover={{ scale: 1.05 ;}
+}
+              transition={{ type: 'spring';}
+  stiffness: 400;, damping: 10 ;}}
+
+             />
+              <Link href='/' className='flex items-center space-x-3' />
+                <div className='relative' />
+                  <div className='w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl' />
                     <Rocket className='w-7 h-7 text-white' />
                   </div>
-                  <div className='absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse'></div>
+                  <div className='absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse' /></div>
                 </div>
-                <div className='flex flex-col'>
-                  <span className='text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-                    Zion Tech Group
+                <div className='flex flex-col' />
+                  <span className='text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent' />
+                    Zion Tech Group;
                   </span>
-                  <span className='text-xs text-purple-300 font-medium'>
-                    Future Technology Solutions
+                  <span className='text-xs text-purple-300 font-medium' />
+                    Future Technology Solutions;
                   </span>
                 </div>
               </Link>
@@ -718,13 +724,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onMouseLeave={() => setActiveCategory(null)}'
                   className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
                 >
+<<<<<<< HEAD
                   <span>Services</span>'
+=======
+                  <span>Services</span>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>
 
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+            {/* Desktop Navigation *}
+}
+<div className='hidden lg:flex items-center space-x-8' />;
+              {/* Services Mega Menu */}
+              <div className='relative group' />;
+                <button;
+                  onMouseEnter={() = /> setActiveCategory('services')}
+                  onMouseLeave={() => setActiveCategory(null)}
+
+                  className='flex items-center space-x-2 text-gray-300 hover: text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+                >
+                  <span />Services</span>
+
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />
                 </button>
 
+<<<<<<< HEAD
                 {/* Mega Menu */}
                 <AnimatePresence>;'
                   {activeCategory === 'services' && (;
@@ -737,9 +763,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       onMouseLeave={() => setActiveCategory(null)}
 
 <<<<<<< HEAD
+=======
+                {/* Mega Menu *}
+}
+                <AnimatePresence />;
+                  {activeCategory === 'services' && (<motion&& motion.div;}
+                      initial={{ opacity: 0;, y: 10;, scale: 0 && 0.95 ;}
+}
+                      animate={{ opacity: 1;, y: 0;, scale: 1 ;}
+}
+                      exit={{ opacity: 0;, y: 10;, scale: 0 && 0.95 ;}}
+                      transition={{ duration: 0 && 0.2 ;}}
+                      onMouseEnter={() => setActiveCategory('services')}
+                      onMouseLeave={() => setActiveCategory(null)}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
+                      onMouseEnter={() = /> setActiveCategory('services')}
+
+                      onMouseLeave={() => setActiveCategory(null)}
+
+className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4'
                     >
+<<<<<<< HEAD
 =======
                     >'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -753,11 +800,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 <category.icon className='w-5 h-5 text-white' />
                               </div>'
                               <h3 className='text-lg font-semibold text-white'>
+=======
+                      <div className='grid grid-cols-2 lg:grid-cols-4 gap-8' />
+                        {serviceCategories.map(category => (}
+                          <div key={category.title} className='space-y-4' />
+                            <div className='flex items-center space-x-3' />
+                              <div;
+className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center
+} />
+
+                                <category.icon className='w-5 h-5 text-white' />;
+                              </div>;
+                              <h3 className='text-lg font-semibold text-white' />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                                 {category.title}
+
                               </h3>
                             </div>'
                             <div className='space-y-3'>
                               {category.services.map(service => (
+<<<<<<< HEAD
                                 <Link;
 "
                       className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
@@ -851,6 +913,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <div className="space - y-3">;
                               {category.services.map ((service) => (
                                 <Link;
+=======
+                                <Link
+                            <div className='space-y-3' />
+                              {category.services.map(service => (}
+                                <Link;}
+key={service.name}
+
+                                  href={service.href}
+                                  className='block group' />
+
+                                  <div className='p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200' />;
+                                    <div className='flex items-center justify-between mb-2' />;
+                                      <h4 className='font-medium text-white group-hover:text-cyan-400 transition-colors' />;
+                                        {service.name}
+                                      </h4>;
+                                      <span className='text-sm text-purple-400 font-medium' />;
+                                        {service.price}
+                                      </span>;
+                                    </div>;
+                                    <p className='text-sm text-gray-400' />;
+                                      {service.description}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                                   key={service.name}
                                   href={service.href}"
@@ -881,13 +965,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                     </p>
                                   </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
+                                    </p>
+                                  </div>
                                 </Link>
+
                               ))}
                             </div>;
                           </div>;
                         ))}
                       </div>;
                     </motion && motion.div>;
+
                   )}
                   key={link && link.name}
                   href={link && link.href}"
@@ -897,11 +985,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 >
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 </AnimatePresence>
               </div>
+
               {/* Quick Links */}
-{quickLinks.map(link => (
-                <Link
+{quickLinks.map(link => (<Link;}
                   key={link.name}
                   href={link.href}
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
@@ -911,15 +1003,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
               ))}
 
+<<<<<<< HEAD
               {/* Contact Button */}
               <motion&& motion.div;
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Link'
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
+=======
+                  className='text-gray-300 hover: text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+                 />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-                >
+                  {link.nam}
+}
+                </Link>;
+              ))}{/* Contact Button */}
+              <motion&& motion.div;
+                whileHover={{ scale: 1 && 1.05 ;}}
+                whileTap={{ scale: 0 && 0.95 ;}
+} />;
+                <Link;
+                  className='text-gray-300 hover: text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                 />>
 
+<<<<<<< HEAD
                   {link.name}
                 </Link>
               ))}
@@ -930,6 +1037,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 whileTap={{ scale: 0.95 }}
               >
                 <Link'
+=======
+                  {link.nam}
+}
+                </Link>;
+              ))}{/* Contact Button */}
+              <motion.div;
+                whileHover={{ scale: 1.05 ;}}
+                whileTap={{ scale: 0.95 ;}}
+              >
+                <Link
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   href='/contact'
 "
                   href="/contact"
@@ -939,17 +1057,33 @@ href='/contact'
                   className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg'
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
+<<<<<<< HEAD
+=======
+                  Get Started
+
+               />
+                <Link;
+href='/contact'
+                  className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg'
+                 />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   Get Started;
                 </Link>
               </motion.div>
             </div>
+<<<<<<< HEAD
             {/* Mobile Menu Button */}"
             <div className="lg:hidden">
 <<<<<<< HEAD
+=======
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <div className='lg:hidden'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               <button
                 onClick={toggleMenu}
+<<<<<<< HEAD
 =======
               <button;
                 onClick={toggleMenu}'
@@ -957,11 +1091,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className='text-gray-300 hover:text-white transition-colors duration-200 p-2'
               >
                 {isOpen ? ('
+=======
+
+<div className='lg:hidden' />
+              <button;
+onClick={toggleMenu}
+                className='text-gray-300 hover:text-white transition-colors duration-200 p-2'
+               />
+                {isOpen ? (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <X className='w-6 h-6' />
                 ) : ('
                   <Menu className='w-6 h-6' />
+<<<<<<< HEAD
                 )}              </button>              <button;
                 onClick={toggleMenu}"
+=======
+                )}              </button>              <button
+                onClick={toggleMenu}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 className="text-gray-300 hover:text-white transition-colors duration-200 p-2"
               >"
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -970,6 +1118,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 
+<<<<<<< HEAD
+=======
+                  <Menu className='w-6 h-6' />}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 )}
               </button>
             </div>
@@ -979,6 +1132,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
+<<<<<<< HEAD
             <motion&& motion.div;
               initial={{ opacity: 0, height: 0 }}'
               animate={{ opacity: 1, height: 'auto' }}
@@ -1009,16 +1163,55 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                            className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors";
                           >;
                             {service && service.name}
+=======
+            <motion&& motion.div
+              initial={{ opacity: 0;, height: 0 ;}}
+              animate={{ opacity: 1;, height: 'auto' ;}}
+
+        {/* Mobile Menu *}
+}
+        <AnimatePresence />;
+          {isOpen && (<motion&& motion.div;}
+              initial={{ opacity: 0;, height: 0 ;}
+}
+              animate={{ opacity: 1;, height: 'auto' ;}
+}
+              exit={{ opacity: 0;, height: 0 ;}}
+                {/* Mobile Services *}
+}
+                <div className='space-y-4' />;
+                  <h3 className='text-lg font-semibold text-white' />Services</h3>;
+                  {serviceCategories && serviceCategories.map(category => (<div key={category && category.title} className='ml-4 space-y-2' />;
+                      <h4 className='font-medium text-purple-300' />;
+                        {category && category.title}
+                      </h4>;
+                      <div className='ml-4 space-y-1' />;
+                        {category && category.services.map(service => (                          <Link;}
+                            key={service && service.name}
+                            href={service && service.href}
+                            onClick={closeMenu}"
+                            className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors' />                <div className=\"space-y-4\" />;"
+                  <h3 className=\"text-lg font-semibold text-white\" />Services</h3>;"
+                  {serviceCategories && serviceCategories.map((category) => (<div key={category && category.title} className=\"ml-4 space-y-2\" />;"
+                      <h4 className=\"font-medium text-purple-300\" />{category && category.title}</h4>;"
+                      <div className=\"ml-4 space-y-1\" />;
+                        {category && category.services.map((service) => (key={service && service.name}
+                            href={service && service.href}
+                            onClick={closeMenu}"
+                            className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors'                            className=\"block text-sm text-gray-400 hover:text-cyan-400 transition-colors\">
+
+                            {service && service.nam}
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           </Link>;
                         ))}
                       </div>;
                     </div>;
-                  ))}
-
-                {/* Mobile Quick Links */}
-
-
+                  ))}{/* Mobile Quick Links */}))}
+                {/* Mobile Contact Button */}
+                <div className='pt-4' />;
                     ))}
+<<<<<<< HEAD
                 {/* Mobile Contact Button */}'
                 <div className='pt-4'>
 
@@ -1044,6 +1237,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - purple - 500 / 20';'
               <div className='px - 4 py - 6 space - y-6'>;
 <<<<<<< HEAD
+=======
+                {/* Mobile Contact Button */}
+                <div className='pt-4' />;
+                  <Link;
+                    href='/contact';
+                    onClick={closeMenu}
+                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200' />                  <Link;"
+                    href=\"/contact\";
+                    onClick={closeMenu}"
+                    className=\"block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200\" />;
+        {/* Mobile Menu */}
+        <AnimatePresence />;
+          {is_open && (<motion.div;}
+              initial={{ opacity: 0;, height: 0 ;}
+}
+              animate={{ opacity: 1;, height: 'auto' ;}
+}
+              exit={{ opacity: 0;, height: 0 ;}}
+
+              transition={{ duration: 0.3 ;}}
+              className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - purple - 500 / 20';
+              <div className='px - 4 py - 6 space - y-6'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
             >
               <div className='px-4 py-6 space-y-6'>
@@ -1059,7 +1275,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div key={category.title} className='ml - 4 space - y-2'>;'
                       <h4 className='font - medium text - purple - 300'>;
                         {category.title}
+<<<<<<< HEAD
                       </h4>;'
+=======
+                      </h4>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       <div className='ml - 4 space - y-1'>;
                         {category.services.map (service => (                          <Link;
                             key={service.name}
@@ -1077,23 +1297,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             on_click={close_menu}'"
                             className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
                           >;
+<<<<<<< HEAD
+=======
+
+className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
+             />
+              <div className='px-4 py-6 space-y-6' />
+
+                {/* Mobile Services *}
+}
+                <div className='space - y-4' />;
+                  <h3 className='text - lg font - semibold text - white' />Services</h3>;
+                  {service_categories.map (category => (<div key={category.title} className='ml - 4 space - y-2' />;
+                      <h4 className='font - medium text - purple - 300' />;
+
+                        {category.title}
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       </h4>
-                      <div className='ml-4 space-y-1'>
-                        {category.services.map(service => (
-                          <Link
-                            key={service.name}
+                      <div className='ml-4 space-y-1' />
+                        {category.services.map(service => (}
+                          <Link;}
+key={service.name}
                             href={service.href}
                             onClick={closeMenu}
 className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'
                           >
 origin/cursor/automate-test-improve-and-merge-code-2533
+className='block text-sm text-gray-400 hover: text-cyan-400 transition-colors'
+                           />
+
                             {service.name}
-                          </Link>))}
+                          </Link>)
+}
                       </div>;
                     </div>))}
                 </div>;
+<<<<<<< HEAD
                 {/* Mobile Quick Links */}'
                 <div className='space - y-4'>;'
+=======
+
+                {/* Mobile Quick Links */}
+                <div className='space - y-4'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <h3 className='text - lg font - semibold text - white'>;
                     Quick Links;
                   </h3>;'
@@ -1114,20 +1361,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white'>
                     Quick Links
+
+<div className='space-y-4' />
+                  <h3 className='text-lg font-semibold text-white' />
+                    Quick Links;
                   </h3>
-                  <div className='grid grid-cols-2 gap-2'>
-                    {quickLinks.map(link => (
-                      <Link
-                        key={link.name}
+                  <div className='grid grid-cols-2 gap-2' />
+                    {quickLinks.map(link => (}
+                      <Link;}
+key={link.name}
                         href={link.href}
                         onClick={closeMenu}
 className='text-sm text-gray-400 hover:text-cyan-400 transition-colors'
                       >
 origin/cursor/automate-test-improve-and-merge-code-2533
+className='text-sm text-gray-400 hover: text-cyan-400 transition-colors'
+                       />
+
                         {link.name}
-                      </Link>))}
+                      </Link>)
+}
                   </div>;
                 </div>;
+<<<<<<< HEAD
                 {/* Mobile Contact Button */}'
                 <div className='pt - 4'>;
                   <Link;'
@@ -1138,6 +1394,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     on_click={close_menu}"
                     className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white font - medium rounded - lg text - center hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
                   >;
+=======
+
+                {/* Mobile Contact Button */}
+                <div className='pt - 4'>;
+
+<div className='pt-4' />
+                  <Link;
+href='/contact'
+
+                    onClick={closeMenu}
+                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200' />
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     Get Started;
                   </Link>;
                 </div>;
@@ -1161,14 +1430,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </motion.div>
+            </motion.div>;
           )}
+
         </AnimatePresence>
       </nav>
     </>
   );
 }whileTap= {
   {
-  scale: 0.95
+  scale: 0.95;
 }> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
@@ -1186,6 +1457,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD
 }</AnimatePresence> </nav> </>)
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  {}
+  scale: 0.95;}"
+}> <Link href=\"/contact\" className=\"px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg\"  /> Get Started </a> </motion.div> </div> </button> </div> </div> </div> {;}
+  /* Mobile Menu */ }
+}<AnimatePresence />) ) 
+}</div> </div>) ) 
+}</div>) ) 
+}</div> </div> > Get Started </a> </div> </div> </motion.div>) 
+
+}</AnimatePresence> </nav> </>)
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

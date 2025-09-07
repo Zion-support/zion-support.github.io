@@ -1,28 +1,26 @@
-#!/usr/bin/env node;
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 class ErrorPreventionOrchestrator {}
   constructor() {}
     this.processes = new Map();
-    this.logFile = path.join(__dirname, '..', '..', 'logs', 'error-prevention.log');
+
     this.ensureLogDirectory()};
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile;);
     if () {}
-      fs.mkdirSync(logDir, { "recursive": true })};
+      fs.mkdirSync(logDir, { "recursive": true })};"
   };
   log(message) {}
     const timestamp = new Date().toISOString() {}
-    ) {}
-      fs.mkdirSync(logDir, { "recursive": true })};
-  };
-  log(message) {}
-    const timestamp = new Date().toISOString(}
+    ) {}"
+    const timestamp = new Date().toISOString(})
 });
     const logMessage = `[${timestamp}] ${message}\;n;`;`
     console.log(logMessage.trim(););
     fs.appendFileSync(this.logFile, logMessage)};
+<<<<<<< HEAD
   async start() {}
     this.log('Starting Error Prevention System...');
 <<<<<<< HEAD
@@ -35,6 +33,10 @@ class ErrorPreventionOrchestrator {}
       'security-auditor.cjs',
       'dependency-monitor.cjs',
       'type-checker.cjs'
+=======
+  async start() {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     ];
 
     for (const script of scripts) {}
@@ -42,6 +44,7 @@ class ErrorPreventionOrchestrator {}
     this.log('Error Prevention System started successfully')};
   async startScript(scriptName) {}
     const scriptPath = path.join(__dirname, scriptName;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -51,26 +54,18 @@ class ErrorPreventionOrchestrator {}
       this.log(`"Warning": Script ${scriptName} not found, skipping...`)) {`}
     ) {}
       this.log(`"Warning": Script ${scriptName} not found, skipping...`)};
+=======
+
+      this.log(`"Warning": Script ${scriptName} not found, skipping...`)) {`}"
+    ) {}"`;
+      this.log(`"Warning": Script ${scriptName} not found, skipping...`)};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return};
-    try {}
-      const child = spawn('node', [scriptPath], {})
-        "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
-      };);
+    try {}"
 
-      child.stdout.on('data', (data) => {}
-        this.log(`[${scriptName}] ${data.toString().trim()}`)}
-});
-
-      child.stderr.on('data', (data) => {}
-        this.log(`[${scriptName}] "ERROR": ${data.toString().trim()}`)}
-});
-
-      child.on('close', (code) => {}
-        this.log(`[${scriptName}] Process exited with code ${code}`);
         this.processes.delete(scriptName)}
-});
 
+<<<<<<< HEAD
       this.processes.set(scriptName, child);
       this.log(`Started ${scriptName} ("PID": ${child.pid})`)} catch (error) {`}
       this.log(`Failed to start ${scriptName}: ${error.message}`)};
@@ -88,6 +83,9 @@ class ErrorPreventionOrchestrator {}
         this.log(`Stopped ${name}`)} catch (error) {`}
         this.log(`Error stopping ${name}: ${error.message}`)};
     };
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.processes.clear();
     this.log('Error Prevention System stopped')};
   async restart() {}
@@ -95,6 +93,7 @@ class ErrorPreventionOrchestrator {}
     await new Promise(resolve => setTimeout(resolve, 1000));
     await this.start()};
   status() {}
+<<<<<<< HEAD
     this.log('Error Prevention System "Status": ');
     this.log(`Active processes: ${this.processes.size}`);
 <<<<<<< HEAD
@@ -172,11 +171,19 @@ class ErrorPreventionOrchestrator {}
       console.log('No logs found')};
   };
 };
+=======
+
+      process.exit(1)};
+  runCommand(command, args) {}
+    return new Promise((resolve, reject) => {;}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // CLI Interface;
 const orchestrator = new ErrorPreventionOrchestrator;(;);
 const command = process.argv[2];
 
 switch (command) {}
+<<<<<<< HEAD
   case 'start':
     orchestrator.start().catch(console.error);
     break;
@@ -198,6 +205,8 @@ switch (command) {}
 <<<<<<< HEAD
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
 <<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======

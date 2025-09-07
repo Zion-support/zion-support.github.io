@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';'
 import Head from 'next/head';'
 import Card from '../components/ui/Card';
@@ -46,10 +47,14 @@ export default function SEOAnalyzerToolPage() { return null; }
         'Local link building'
       ]
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
+<<<<<<< HEAD
 icon: <Search className='w-8 h-8 text-white' />,
       title: 'Comprehensive SEO Analysis',
       description:
@@ -563,6 +568,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {isAnalyzing ? (
                   <>
 <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </p>
           {/* URL Input */}
           <div className="max-w-2xl mx-auto mb-8">
@@ -1001,6 +1009,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 <section className='section-padding bg-gradient-cursor-accent'>
           <div className='container-cursor'>
             <div className='text-center mb-12'>
@@ -1148,6 +1159,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;"
                       <span className="text-gray-300">{rec}</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             {/* Recommendations and Keywords */}
 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               <Card className='border-gradient-green'>
@@ -1191,6 +1205,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className='text-sm text-gray-400'>;
                           Difficulty: {keyword && keyword.difficulty}
                         </span>;
+<<<<<<< HEAD
                         <span;`
                           className={`px-2 py-1 rounded text-xs ${'
                             keyword && keyword.difficulty === 'low''
@@ -1204,6 +1219,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           keyword && keyword.difficulty === 'low' ? 'bg-green-500/20 text-green-400' :'
                           keyword && keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :'
                           'bg-red-500/20 text-red-400'`
+=======
+                        <span
+                          className={`px-2 py-1 rounded text-xs ${
+                            keyword && keyword.difficulty === 'low'
+                              ? 'bg-green-500/20 text-green-400'
+                              : keyword && keyword.difficulty === 'medium'
+                                ? 'bg-yellow-500/20 text-yellow-400'
+                                : 'bg-red-500/20 text-red-400'
+                          }`}>                          {keyword && keyword.difficulty}                      <div className="flex justify-between items-center">;
+                        <span className="text-sm text-gray-400">Difficulty: {keyword && keyword.difficulty}</span>;
+                        <spanclassName={`px-2 py-1 rounded text-xs ${
+                          keyword && keyword.difficulty === 'low' ? 'bg-green-500/20 text-green-400' :
+                          keyword && keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                          'bg-red-500/20 text-red-400'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         }`}>;
                         </span>;
                       </div>;
@@ -1233,7 +1263,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </span>
                       </div>
                     </div>
+<<<<<<< HEAD
                   ))}'
+=======
+                  ))}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
               {/* Overall Score */}'
               <Card className='border - gradient - green text - center'>;'
@@ -1605,6 +1639,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
             >
               Schedule Demo

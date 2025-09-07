@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,10 +15,13 @@
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 function runNode(relPath, args = []) {
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -192,12 +196,16 @@ function step() {}`
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const abs = path.resolve(__dirname, '....', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
 }
 
 exports.config = {
   schedule: '*/30 * * * *'};
+
 exports.handler = async () => {
   const logs = [];
   function step(name, fn) {
@@ -205,6 +213,7 @@ exports.handler = async () => {
     const res = fn();
     if (res.stdout) logs.push(res.stdout);
     if (res.stderr) logs.push(res.stderr);
+<<<<<<< HEAD
   return { statusCode: 200, body: logs.join('\n') };
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -215,3 +224,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

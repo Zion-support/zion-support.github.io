@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -23,6 +24,12 @@
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+useEffect(() => {
+
+    const fetchSuggestedJobs = async () => {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -30,6 +37,7 @@ import {JobMatch} from "@/types/jobs";
 export function useJobSuggestions(talentId?: string) {;
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -53,9 +61,18 @@ import { useState, useEffect } from "react","
 import { supabase } from "@/integrations/supabase/client","
 import { toast } from "@/hooks/use-toast",";
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { JobMatch } from "@/types/jobs";
 export function useJobSuggestions(talentId?: string) {};
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);"
 import { JobMatch } from "@/types/jobs",
 export function useJobSuggestions(talentId?: string) {}
@@ -906,3 +923,31 @@ job:job id (*) `)
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+  const [isLoading, setIsLoading] = useState(true);
+
+    }
+  }
+}
+    }
+  }
+}
+
+import { useState, useEffect } from "react",""
+import { supabase } from "@/integrations/supabase/client",""
+import { toast } from "@/hooks/use-toast",""
+import { JobMatch } from "@/types/jobs";"
+export function useJobSuggestions(talentId?: string) {
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
+
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
+
+
+  const [jobMatches, setJobMatches] = useState<JobMatch[]> ([]);
+"
+pr-12325
+</JobMatch>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

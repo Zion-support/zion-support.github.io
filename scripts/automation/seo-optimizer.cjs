@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
+=======
+#!/usr/bin/env node
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * SEO Optimizer Automation;
  * Optimizes the application for search engines;
@@ -19,26 +23,22 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class SEOOptimizer {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'seo-optimizer.log');
-        this.reportFile = path.join(this.projectRoot, 'seo-optimization-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
@@ -54,6 +54,7 @@ class SEOOptimizer {}
         const pages = this.findPages(;);
 =======
         console.log(message)};
+<<<<<<< HEAD
     generateSitemap() {}
         this.log('Generating sitemap...');
         
@@ -63,10 +64,16 @@ class SEOOptimizer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
+=======
+    generateSitemap() {}"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ${pages.map(page => `  <url>`})
-    <loc>https://ziontechgroup.com${page}</loc>
+</url>
+    <loc>https://ziontechgroup.com${page}</loc>"
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
+<<<<<<< HEAD
     <priority>0.8</priority>
   </url>").join('\n')};
 </urlset;>;";
@@ -74,9 +81,14 @@ ${pages.map(page => `  <url>`})
         fs.writeFileSync(sitemapPath, sitemap);
         this.log(`Sitemap generated with ${pages.length} pages`);
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-        fs.writeFileSync(sitemapPath, sitemap);
+  </url>").join('\n')};
+</urlset;>;";"
+        fs.writeFileSync(sitemapPath, sitemap);`;
         this.log(`Sitemap generated with ${pages.length} pages`);
+<<<<<<< HEAD
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         return { "status": 'success', "pages": pages.length }};
@@ -91,19 +103,23 @@ ${pages.map(page => `  <url>`})
         // Find pages from pages directory;
         if () {}
             this.findPagesInDirectory(pagesDir, '', pages)};
+=======
+        "
+        return { "status": success, "pages": pages.length }};"
+    findPages() {}"
+
+            this.findPagesInDirectory(pagesDir, , pages)};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Find pages from app directory (App Router);
         if (fs.existsSync(appDir)) {}
-            this.findPagesInAppDirectory(appDir, '', pages)};
+            this.findPagesInAppDirectory(appDir, , pages)};
         return [...new Set(pages)) {}]
     ) {}
-            this.findPagesInDirectory(pagesDir, '', pages)};
-        // Find pages from app directory (App Router);
-        if (fs.existsSync(appDir)) {}
-            this.findPagesInAppDirectory(appDir, '', pages)};
+
         return [...new Set(pages)}]; // Remove duplicates;
-    };
     findPagesInDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
 <<<<<<< HEAD
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
@@ -131,13 +147,17 @@ ${pages.map(page => `  <url>`})
                 if ( {})
                     pagePath = basePath || '/'};
                 if (pagePath !== '/index') {}
+=======
+        for (const item of items) {}
+            const fullPath = path.join(dir, item;);
+            const stat = fs.statSync(fullPath;);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     pages.push(pagePath)};
-            };
-        };
-    };
     findPagesInAppDirectory(dir, basePath, pages) {}
         const items = fs.readdirSync(dir) {}
      {}
+<<<<<<< HEAD
                     pagePath = basePath || '/'};
                 if (pagePath !== '/index') {}
                     pages.push(pagePath)};
@@ -178,12 +198,19 @@ Allow: /
         
         const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt';);
         const robotsContent = "User-"agent": *
+=======
+
+        const items = fs.readdirSync(dir})
+
+        const robotsContent = "User-"agent": *"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 Allow: /
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 # Sitemap;
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Disallow admin and private areas;
+<<<<<<< HEAD
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
@@ -197,12 +224,18 @@ Crawl-delay: 1;";
     createSEOMetaComponent() {}
         this.log('Creating SEO meta component...');
 =======
+=======
+Disallow: /admin/,
+  Disallow: /api/
+Disallow: /_next/,
+  Disallow: /private/
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-# Crawl delay;
-Crawl-delay: 1;";
-
-        fs.writeFileSync(robotsPath, robotsContent);
+# Crawl delay;"
+Crawl-delay: 1;";"
+        fs.writeFileSync(robotsPath, robotsContent);"
         this.log('Robots.txt generated');
+<<<<<<< HEAD
         
         return { "status": 'success' }};
     createSEOMetaComponent() {}
@@ -218,6 +251,8 @@ Crawl-delay: 1;";
         const seoMeta = "import Head from 'next/hea}d;';
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 interface SEOProps {}
@@ -233,6 +268,7 @@ interface SEOProps {}
   section?: string;
   tags?: string[]};
 export default function SEO({})
+<<<<<<< HEAD
   title = 'Zion Tech Group - Advanced Technology Solutions',
   description = 'Leading provider of cutting-edge technology solutions, AI automation, and digital transformation services.',
   keywords = 'technology, AI, automation, digital transformation, software development, consulting',
@@ -251,10 +287,14 @@ export default function SEO({})
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (;)
     <Head>
-      {/* Basic Meta Tags */};
+
       <title>{fullTitle}</title>
+<<<<<<< HEAD
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
@@ -315,29 +355,45 @@ export default function SEO({})
       <script;
         type="application/ld+json"
         dangerouslySetInnerHTML={{}
+=======
+      <meta name="description" content={fullDescription} />"
+</meta>"
+      <meta name="keywords" content={keywords} />"
+      <meta name="author" content={author} />"
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />"
+      <meta name="robots" content="index, follow" />"
+      <meta name="language" content="en" />"
+      <meta name="revisit-after" content="7 days" />"
+
+      <link rel="canonical" href={url} />"
+</link>"
+      <link rel="icon" href="/favicon.ico" />"
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />"
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />"
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />"
+      <link rel="manifest" href="/site.webmanifest" />"
+</link>
+      <script;"
+        type="application/ld+json
+        dangerouslySetInnerHTML={{}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           "__html": JSON.stringify({})
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Zion Tech Group",
-            "url": ""https": //ziontechgroup.com",
-            "logo": ""https": //ziontechgroup.com/logo.png",
+            "url": https": //ziontechgroup.com",
+            "logo": https": //ziontechgroup.com/logo.png",
             "description": "Leading provider of cutting-edge technology solutions",
             "address": {}
               "@type": "PostalAddress",
-              "addressCountry": "US"
-            },
-            "contactPoint": {}
-              "@type": "ContactPoint",
-              "contactType": "customer service",
-              "email": "info@ziontechgroup.com"
-            },
-            "sameAs": [""https": //linkedin.com/company/zion-tech-group",]
-              ""https": //twitter.com/ziontechgroup"
+              "addressCountry": "US
+            },"
+
             ];
           }
-});
         }};
       />
+<<<<<<< HEAD
     </Head>
   )};
 ";
@@ -470,5 +526,7 @@ module.exports = SEOOptimizer;
 =======
 
 module.exports = SEOOptimizer;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -14,9 +14,23 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface ListingCategory {
   id: string;
-  name: string;
+
+}
+
+}export interface ProductListing {
+  id: string;
+  title: string,
   description: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+
+  // TODO: Implement
+}
+  id: string;,
+  name: string;
+  description: string;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   icon: string;
 }
 
@@ -25,13 +39,21 @@ export interface ListingCategory {
   icon: string;
 
 export interface ProductListing {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   title: string;
   description: string;
 
   category: string,
   subcategory?: string, // Adding optional subcategory field;
 
+category: string,
+  subcategory?: string, // Adding optional subcategory field;
+  description: string;,
+
+  category: string,
+  subcategory?: string, // Adding optional subcategory field;
 export interface ListingCategory {
 =======
 export interface ListingCategory {};
@@ -57,6 +79,11 @@ export interface ListingCategory {};
 export interface ListingCategory {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
+  // TODO: Implement
+}
+export interface ListingCategory {;
+
+  id: string;,
   name: string;
 
 }
@@ -75,16 +102,21 @@ export interface ProductListing {
 export interface ProductListing {};
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
-  title: string;
+  title: string,
   description: string;
+<<<<<<< HEAD
   category: string;
   subcategory?: string; // Adding optional subcategory field;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   price: number | null;
   currency: string;
   tags: string[];
   author: {}
     name: string;
     id: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   id: string;
@@ -332,15 +364,21 @@ export interface ListingItem {};
 }
 export interface ListingItem {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   title: string;
   category: string;
+
+
   image?: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description?: string;
 }
 
 
+<<<<<<< HEAD
 export interface ListingCategory {;
 
 <<<<<<< HEAD
@@ -419,3 +457,5 @@ export type ListingView = 'grid' | 'list';
 
 export type ListingView = "grid" | "list";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

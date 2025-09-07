@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -16,6 +17,8 @@
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
@@ -109,16 +112,23 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <Card className={cn(
 
+<Card className={cn(
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <Card className={cn(
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <Card className={cn(;
       "transition-shadow hover: shadow-md";
     <Card className={cn(
@@ -126,6 +136,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
       post.isPinned && "border-zion-purple/50"
       "transition-shadow hover:shadow-md",
       post.isPinned && "border-zion-purple/50",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -826,3 +837,10 @@ export default PostCard;
 
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      post.isFeatured && "bg-zion-purple/5"
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

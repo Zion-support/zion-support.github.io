@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -15,11 +16,14 @@
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { MessagingContextType  } from '@/types/messaging';
 import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
 // Default context used when React type definitions are missing
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -102,6 +106,9 @@ const defaultContext: MessagingContextType = {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+const defaultContext: MessagingContextType = {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,6 +136,7 @@ const defaultContext: MessagingContextType = {}
   isLoading: false;
 =======
 
+<<<<<<< HEAD
 
 
 const defaultContext: MessagingContextType = {
@@ -527,15 +535,39 @@ export function MessagingProvider() { return null; }
     send_message;
     create_conversation;
     markAsRead;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {children}
     </MessagingContext.Provider>
   )
 }
 ;
 // Provider component;
+<<<<<<< HEAD
 export function MessagingProvider() { return null; }
+=======
+export function MessagingProvider({ children }: { children: ReactNode }) {;}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const { user } = useAuth(),;
   const {;
+
+
+
+),
+
+// Hook for using the messaging context;
+  // TODO: Implement
+  // Cast to avoid type errors when React type definitions are missing;
+
+  if (context === undefined) {;
+  // TODO: Implement
+// Provider component;
+      {children}
+    </MessagingContext.Provider>
+  )
+// Provider component;
+  const { user } = useAuth(),;
+pr-12325
     messages,;
     activeMessages,;
     setActiveMessages,;
@@ -549,20 +581,23 @@ export function MessagingProvider() { return null; }
     sendMessage,;
     createConversation,;
     markAsRead,;
-    fetchConversations,;
-    loadMessages;
+    fetchConversations,;}
+    loadMessages;}
   } = useMessagingOperations(user),;
   // Setup real-time subscription;
   useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
   // Calculate unread count from conversations;
   useEffect(() => {;
     if (conversations.length > 0) {;
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
-      setUnreadCount(count);
+      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;}
+      setUnreadCount(count);}
     }
   }, [conversations, setUnreadCount]),;
   // Fetch conversations when user changes;
   useEffect(() => {;
+  }, [conversations, setUnreadCount]),;
+  // Fetch conversations when user changes;
+pr-12325
     if (user) {;
       fetchConversations();
     } else {;
@@ -571,8 +606,11 @@ export function MessagingProvider() { return null; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       setConversations([]);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -583,6 +621,7 @@ export function MessagingProvider() { return null; }
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -608,18 +647,43 @@ export function MessagingProvider() { return null; }
   const contextValue: MessagingContextType = {;
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // Create context value with all the methods and states;
+  const contextValue: MessagingContextType = {;
+
+// Create context value with all the methods and states;
+  const contextValue: MessagingContextType = {;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     fetch_conversations;
     load_messages;
+    if (user) {;}
+      fetchConversations();}
+    } else {;
+      setConversations([]),;
+    fetch_conversations;}
+    load_messages;}
   } = useMessagingOperations (user);
 ;
   // Setup real - time subscription;
   useMessagingRealtime (user, active_conversation, setActiveMessages, fetch_conversations);
 ;
   // Calculate unread count from conversations;
+<<<<<<< HEAD
   useEffect (() => {}
     // Check condition;
 if ( {) {}
   $2;
+=======
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+    // Check condition;
+
+if ( {) {
+  $2;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
       const count = conversations.reduce ((acc, conversation) => acc + conversation.unread_count, 0);
       setUnreadCount (count);
@@ -633,9 +697,23 @@ if ( {) {}
   $2;
 }
       fetch_conversations ();
+<<<<<<< HEAD
     } else {}
+=======
+    } else {
+    // Check condition;
+
+if ( {) {
+  $2;
+}
+      fetch_conversations ();
+    } else {
+  // TODO: Implement
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       set_conversations ([]);
       setUnreadCount (0);
+
     }
   }, [user, fetch_conversations, set_conversations, setUnreadCount]);
 ;
@@ -696,12 +774,19 @@ if ( {) {}
   };
 
       {children}
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+      {children}      {children}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     </MessagingContext && MessagingContext.Provider>;
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -730,8 +815,23 @@ if ( {) {}
 =======
 
 
+=======
+fetchConversations,;
+    loadMessages;
+  };
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <MessagingContext && MessagingContext.Provider value={contextValue}>;
+    setActiveConversation;}
+  return (}
+    <MessagingContext && MessagingContext.Provider value={contextValue} />;
+      {children}      {children}
+    </MessagingContext && MessagingContext.Provider>;
+  );
+}
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+    <MessagingContext && MessagingContext.Provider value={contextValue} />;
       {children}
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
@@ -741,10 +841,11 @@ if ( {) {}
 ;
 <<<<<<< HEAD
   return (
-    <MessagingContext.Provider value={context_value}>;
+    <MessagingContext.Provider value={context_value} />;
       {children}
     </MessagingContext.Provider>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -752,89 +853,77 @@ if ( {) {}
 =======
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+      setConversations([]);
+      setUnreadCount(0);
+  }, [user, fetchConversations, setConversations, setUnreadCount]);
+
+
+  // Create context value with all the methods and states;
+  const contextValue: MessagingContextType = {;
+
+    fetch_conversations;
+    load_messages;
+  } = useMessagingOperations (user);
+  // Setup real - time subscription;
+  useMessagingRealtime (user, active_conversation, setActiveMessages, fetch_conversations);
+  // Calculate unread count from conversations;
+  useEffect (() => {
+    // Check condition;
+      const count = conversations.reduce ((acc, conversation) => acc + conversation.unread_count, 0);
+      setUnreadCount (count);
+  }, [conversations, setUnreadCount]);
+  // Fetch conversations when user changes;
+    // Check condition;
+      fetch_conversations ();
+    } else {
+  // TODO: Implement
+      set_conversations ([]);
+      setUnreadCount (0);
+  }, [user, fetch_conversations, set_conversations, setUnreadCount]);
+  // Create context value with all the methods and states;
+  const context_value: MessagingContextType = {
+
+
+
+    </MessagingContext && MessagingContext.Provider>;
+
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+
+    <MessagingContext.Provider value={context_value}>;
+    </MessagingContext.Provider>);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ),;
-;
 // Hook for using the messaging context;
 export function useMessaging():MessagingContextType {;
   // Cast to avoid type errors when React type definitions are missing;
   const context = useContext(MessagingContext) as MessagingContextType,;
-  if (context === undefined) {;
     throw new Error('useMessaging must be used within a MessagingProvider'),;
-  }
   return context,;
-}
-;
 // Provider component;
 export function MessagingProvider({ children } { children:ReactNode }) {;
-  const { user } = useAuth(),;
-  ;
-  const {;
-    messages,;
-    activeMessages,;
-    setActiveMessages,;
-    conversations,;
-    setConversations,;
-    unreadCount,;
-    setUnreadCount,;
-    activeConversation,;
-    setActiveConversation,;
-    isLoading,;
-    sendMessage,;
-    createConversation,;
-    markAsRead,;
-    fetchConversations,;
-    loadMessages;
-  } = useMessagingOperations(user),;
-;
   // Setup real-time subscription;
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
-;
   // Calculate unread count from conversations;
-  useEffect(() => {;
-    if (conversations.length > 0) {;
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
       setUnreadCount(count),;
-    }
-  }, [conversations, setUnreadCount]),;
-;
   // Fetch conversations when user changes;
-  useEffect(() => {;
-    if (user) {;
       fetchConversations(),;
-    } else {;
-      setConversations([]),;
       setUnreadCount(0),;
-    }
   }, [user, fetchConversations, setConversations, setUnreadCount]),;
-;
   // Create context value with all the methods and states;
   const contextValue:MessagingContextType = {;
-      setConversations([]),;
-      setUnreadCount(0);
-    }
-  }, [user, fetchConversations, setConversations, setUnreadCount]),;
   // Create context value with all the methods and states;
-  const contextValue: MessagingContextType = {;
-    messages,;
-    activeMessages,;
-    conversations,;
-    unreadCount,;
-    activeConversation,;
-    isLoading,;
-    sendMessage,;
-    createConversation,;
-    markAsRead,;
-    setActiveConversation,;
     fetchConversations;
-    loadMessages;
-  };
   return (;
     <MessagingContext.Provider value={contextValue}>;
-      {children}
-    </MessagingContext.Provider>;
+
+    </MessagingContext.Provider>;)
+pr-12325
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -852,3 +941,7 @@ export function MessagingProvider({ children } { children:ReactNode }) {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+'
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

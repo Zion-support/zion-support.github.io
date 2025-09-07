@@ -21,6 +21,7 @@ import { CodeBlock } from "@/components/developers/CodeBlock",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -2150,10 +2151,16 @@ export default ApiErrorCodes;
         </p>;
 
 ;
+=======
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+import { CodeBlock } from "@/components/developers/CodeBlock",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
-export default ApiErrorCodes;
 
+<<<<<<< HEAD
         <div className="overflow - x-auto mb - 8">;
           <table className="w - full border - collapse">;
             <thead>;
@@ -2246,3 +2253,14 @@ export default ApiErrorCodes;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12325
+
+import React from \"react\",;
+import ApiDocsLayout from \"@/components/developers/ApiDocsLayout\";
+import { CodeBlock } from \"@/components/developers/CodeBlock\";
+import ApiDocsLayout from \"@/components/developers/ApiDocsLayout\",;
+import { CodeBlock } from \"@/components/developers/CodeBlock\",;
+export function ApiErrorCodes() {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

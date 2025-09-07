@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { ProductListing } from '@/types/listings';
@@ -29,6 +30,11 @@ import { SearchSuggestion } from '@/types/search';
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { ProductListing } from '@/types/listings';
+import { SearchSuggestion } from '@/types/search';
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -37,9 +43,12 @@ import { SearchSuggestion } from "@/types/search";
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {
 
     id: 'ai-model-1'
@@ -66,8 +75,34 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = []
       name: 'AI Solutions Inc.''
       id: 'ai-solutions'
       avatarUrl:
+<<<<<<< HEAD
     featured: true,'
     location: 'Global','
+=======
+
+
+import { ProductListing } from "@/types/listings";""
+import { SearchSuggestion } from "@/types/search";"
+// Shared data source for marketplace listings;
+export const MARKETPLACE_LISTINGS: ProductListing[] = [
+  {
+"
+    id: 'ai-model-1,
+  title: 'GPT-4 API Integration Package
+    description:
+      'Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.
+    category: 'AI Models & APIs,
+  price: 1999;
+    currency: '$,]
+  tags: ['GPT-4', 'API Integration', 'NLP']
+    author: {,
+  name: 'AI Solutions Inc.
+      id: 'ai-solutions,
+  avatarUrl:
+pr-12325
+    featured: true,
+    location: 'Global',
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     availability: 'Immediate',
     ai_score: 98,
   },
@@ -102,6 +137,9 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = []
     aiScore: 94;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     id: "ai-model-1";
     title: "GPT-4 API Integration Package";
     description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
@@ -113,6 +151,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = []
       name: "AI Solutions Inc.";
       id: "ai-solutions";
       avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
@@ -1126,3 +1165,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

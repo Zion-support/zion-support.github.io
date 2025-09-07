@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Accessibility Checker Automation;
  * Checks and improves accessibility compliance;
@@ -7,29 +7,22 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class AccessibilityChecker {}
     constructor() {}
         this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'accessibility-checker.log');
-        this.reportFile = path.join(this.projectRoot, 'accessibility-report.json');
-        this.ensureLogsDirectory()};
-    ensureLogsDirectory() {}
-        const logsDir = path.join(this.projectRoot, 'logs';);
+
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     };
     log(message) {}
         const timestamp = new Date().toISOString() {}
-    ) {}
-            fs.mkdirSync(logsDir, { "recursive": true })};
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString(}
+    ) {}"
+        const timestamp = new Date().toISOString(})
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
+<<<<<<< HEAD
     checkAccessibilityIssues() {}
         this.log('Checking accessibility issues...');
 <<<<<<< HEAD
@@ -43,18 +36,17 @@ class AccessibilityChecker {}
         const issues = [];
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    checkAccessibilityIssues() {}"
+
+        const files = this.findSourceFiles(;);
+        const issues = [];
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         for (const file of files) {}
             try {}
-                const content = fs.readFileSync(file, 'utf8';);
-                const fileIssues = this.analyzeFileForAccessibility(content, file;);
-                issues.push(...fileIssues)} catch (error) {}
-                this.log(`Error reading file ${file}: ${error.message}`)};
-        };
-        this.log(`Found ${issues.length} accessibility issues`);
-        return issues};
-    findSourceFiles() {}
-        const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+
         const files = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         const scanDirectory = (dir) => {}
@@ -68,10 +60,16 @@ class AccessibilityChecker {}
     ) retu}r;n;
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             const items = fs.readdirSync(dir;);
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -86,12 +84,16 @@ class AccessibilityChecker {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
                     files.push(fullPath)};
             };
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }};
         scanDirectory(this.projectRoot);
         return files};
     analyzeFileForAccessibility(content, file) {}
-        const issues = [];
+
         const lines = content.split('\n';);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         for (let i = ;0; i < lines.length i++) {}
@@ -105,73 +107,25 @@ class AccessibilityChecker {}
             const lineNumber = i +;1;
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        for (let i = ;0; i < lines.length i++) {}
+            const line = lines[i];
+            const lineNumber = i +;1;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             // Check for missing alt attributes;
             if (&& !line.includes('alt=')) {}
                 issues.push({})
-                    "file": path.relative(this.projectRoot, file),
-                    "line": lineNumber,
-                    "type": 'missing_alt',
-                    "severity": 'error',
-                    "message": 'Image missing alt attribute',
-                    "suggestion": 'Add alt attribute to image tag'
+
                 })};
             // Check for missing aria-labels;
             if (line.includes('<button') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {}
                 if (!line.includes('>') || line.trim().endsWith('/>')) {}
-                    issues.push({})
-                        "file": path.relative(this.projectRoot, file),
-                        "line": lineNumber,
-                        "type": 'missing_aria_label',
-                        "severity": 'warning',
-                        "message": 'Button missing aria-label',
-                        "suggestion": 'Add aria-label or aria-labelledby to button'
-                    })};
-            };
-            // Check for missing form labels;
-            if (line.includes('<input') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {}
-                const hasLabel = lines.slice(Math.max(0, i - 5), i + 1).some(l => )
-                    l.includes('<label') && l.includes('for=');
-               ) {}
-    && !line.includes('alt=')) {}
-                issues.push({})
-                    "file": path.relative(this.projectRoot, file),
-                    "line": lineNumber,
-                    "type": 'missing_alt',
-                    "severity": 'error',
-                    "message": 'Image missing alt attribute',
-                    "suggestion": 'Add alt attribute to image tag'
-                })};
-            // Check for missing aria-labels;
-            if (line.includes('<button') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {}
-                if (!line.includes('>') || line.trim().endsWith('/>')) {}
-                    issues.push({})
-                        "file": path.relative(this.projectRoot, file),
-                        "line": lineNumber,
-                        "type": 'missing_aria_label',
-                        "severity": 'warning',
-                        "message": 'Button missing aria-label',
-                        "suggestion": 'Add aria-label or aria-labelledby to button'
-                    })};
-            };
-            // Check for missing form labels;
-            if (line.includes('<input') && !line.includes('aria-label') && !line.includes('aria-labelledby')) {}
-                const hasLabel = lines.slice(Math.max(0, i - 5), i + 1).some(l => )
-                    l.includes('<label') && l.includes('for=');
-               } ;);
-                if ( {})
-                    issues.push({})
-                        "file": path.relative(this.projectRoot, file),
-                        "line": lineNumber,
-                        "type": 'missing_form_label',
-                        "severity": 'error',
-                        "message": 'Input missing label',
-                        "suggestion": 'Add label element or aria-label to input'
-                    })};
-            };
+
             // Check for heading hierarchy;
             if (line.match(/<h[1-6]/)) {}
                 const headingLevel = parseInt(line.match(/<h([1-6])/)[1) {}]
      {}
+<<<<<<< HEAD
                     issues.push({})
                         "file": path.relative(this.projectRoot, file),
                         "line": lineNumber,
@@ -248,22 +202,20 @@ class AccessibilityChecker {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
         // Accessibility utilities;
         const accessibilityUtils = "/**
+=======
+
+            fs.mkdirSync(utilsDir, { "recursive": true })};"
+        // Accessibility utilities;"
+        const accessibilityUtils = "/**"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
  * Accessibility Utilities;
  * Helper functions for accessibility compliance;
- */
 
 export const accessibility = {}
-  // Generate unique IDs for form elements;
+  // Generate unique IDs for form elements;"
   "generateId": (prefix = 'element') => {}
-    return \"\${prefi) {}
-    ) {}
-            fs.mkdirSync(utilsDir, { "recursive": true })};
-        // Accessibility utilities;
-        const accessibilityUtils = "/**
- * Accessibility Utilities;
- * Helper functions for accessibility compliance;
- */
 
+<<<<<<< HEAD
 export const accessibility = {}
   // Generate unique IDs for form elements;
   "generateId": (prefix = 'element') => {}
@@ -508,30 +460,17 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
     return () {}
      {}
     return (};)
-      <div>
-        <div style={{}
-          "position": 'fixed',
-          "top": 0,
-          "right": 0,
-          "background": '#ff4444',
-          "color": 'white',
-          "padding": '10px',
-          "zIndex": 9999,
-          "fontSize": '12px'
-        }}>
-          Accessibility "Issues": {issues.length};
-          <ul style={{ "margin": '5px 0 0 0', "paddingLeft": '20px' }}>
-            {issues.map((issue, index) => (})
-              <li key={index}>{issue}</li>
-            ))};
-          </ul>
-        </div>
-        {children};
-      </div>
-    )};
-  return <>{children}</>};
-";
+=======
+export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children }) => {}"
 
+  const [issues, setIssues] = useState<string[]>([]);
+</string>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      <div>
+</div>
+        <div style={{}"
+
+<<<<<<< HEAD
         fs.writeFileSync(path.join(utilsDir, 'AccessibilityTest.tsx'), accessibilityTest);
 <<<<<<< HEAD
 
@@ -553,21 +492,13 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
         const utilities = this.createAccessibilityUtilities(;);
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        const issues = this.checkAccessibilityIssues(;);
+        const utilities = this.createAccessibilityUtilities(;);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const report = {}
-            "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
-            "accessibility": {}
-                issues: issues,
-                "utilities": utilities,
-                "summary": {}
-                    total: issues.length,
-                    "errors": issues.filter(i => i.severity === 'error').length,
-                    "warnings": issues.filter(i => i.severity === 'warning').length;
-                };
-            },
-            "recommendations": this.generateAccessibilityRecommendations(issues);
-       };
 
+<<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Accessibility report saved to ${this.reportFile}`);
 <<<<<<< HEAD
@@ -615,15 +546,24 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
             this.log('Accessibility Checker completed successfully');
             return report} catch (error) {}
             this.log(`Accessibility Checker "failed": ${error.message}`);
+=======
+            "accessibility": {}"
+                issues: issues,"
+                "utilities": utilities,
+                "summary": {}"
+                    total: issues.length,"
+
+            },
+            "recommendations": this.generateAccessibilityRecommendations(issues);"
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
-    };
-};
 // Run the checker if this script is executed directly;
-if ( {})
     const checker = new AccessibilityChecker) {}
-     {}
     const checker = new AccessibilityChecker}(;);
     checker.run().catch(console.error)};
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -635,3 +575,7 @@ module.exports = AccessibilityChecker;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+module.exports = AccessibilityChecker;
+"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

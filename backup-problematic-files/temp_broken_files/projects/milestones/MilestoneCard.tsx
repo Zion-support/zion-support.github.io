@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
 =======
 =======
@@ -23,17 +24,30 @@ import { Check, ArrowDown, X } from 'lucide-react';
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
+=======
+import React from 'react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
+import { Badge } from "@/components/ui/badge";""
+import { Button } from "@/components/ui/button";""
+import { format } from 'date-fns';
+import { Check, ArrowDown, X } from 'lucide-react';
+import { useDisputeCheck } from '@/hooks/useDisputeCheck';
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 interface MilestoneCardProps {;
-  id:string,;
-  projectId:string,;
-  title:string,;
+  id: string;,;
+  projectId: string;,;
+  title: string;,;
   description?:string,;
-  amount:number,;
-  status:string,;
+  amount: number;,;
+  status: string;,;
   dueDate?:string,;
-  onApprove?:(id:string) => Promise<void>,;
+  onApprove?:(id: string) => Promise<void>;,;
+</void>
   onReject?:(id:string) => Promise<void>;
+<<<<<<< HEAD
 }
 ;
 export function MilestoneCard({ ;
@@ -76,10 +90,16 @@ export function MilestoneCard({ ;
   ;
   return (;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <Card>;
-      <CardHeader className="pb-2">;
-        <div className="flex justify-between items-start">;
+
+      <CardHeader className="pb-2">;"
+"
+        <div className="flex justify-between items-start">;"
+</div>
           <div>;
+<<<<<<< HEAD
             <CardTitle className="text-xl">{title}</CardTitle>;
             {dueDate && (;
               <p className="text-sm text-muted-foreground">;
@@ -111,9 +131,21 @@ export function MilestoneCard({ ;
             ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {isUnderDispute && disputeStatus && (;
+=======
+</div>"
+            <CardTitle className="text-xl">{title};""
+              <p className="text-sm text-muted-foreground">;"
+</p>
+              </p>;
+          </div>;"
+          <div className="flex gap-2">;"
+            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <DisputeStatusBadge status={disputeStatus} />;
-            )}
+
           </div>;
+<<<<<<< HEAD
         </div>;
       </CardHeader>;
 <<<<<<< HEAD
@@ -143,12 +175,22 @@ export function MilestoneCard({ ;
       <CardFooter className="pt-2 flex justify-between">;
         <div>;
           {status !== 'completed' && status !== 'rejected' && (;
+=======
+      ;"
+      <CardContent className="pb-2">;"
+          <p className="text-muted-foreground">{description}</p>;""
+        <div className="mt-4">;"
+          <p className="text-xl font-bold">${amount.toFixed(2)}</p>;"
+      <CardFooter className="pt-2 flex justify-between">;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <RaiseDisputeButton ;
               projectId={projectId} ;
-              milestoneId={id} ;
-              variant="ghost";
-              size="sm";
+              milestoneId={id} ;"
+              variant="ghost";""
+              size="sm";"
             />;
+<<<<<<< HEAD
           )}
         </div>;
         ;
@@ -228,32 +270,29 @@ description?: string;
 amount: number;
 status: string;
 dueDate?: string;
+=======
+
+            <Button variant="outline" size="sm" onClick={() => onReject(id)}>;"
+              <X className="h-4 w-4 mr-1" /> Reject;"
+
+            <Button variant="default" size="sm" onClick={() => onApprove(id)}>;"
+              <Check className="h-4 w-4 mr-1" /> Approve;"
+
+            <Button variant="outline" size="sm" disabled>;"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 onApprove?: (id: string) => Promise<void>;
 onReject?: (id: string) => Promise<void> ;
-}export function MilestoneCard ({;
-  id;
-projectId;
-title;
-description;
-amount;
-status;
-dueDate;
-onApprove;
-onReject ;
-}: MilestoneCardProps) {;
-  const { ;
-  isUnderDispute, disputeStatus ;
- } = useDisputeCheck (projectId, id);
-switch (status) {';
-  case 'completed': return 'bg-green-500';';
-case 'in progress': return 'bg-blue-500';';
-case 'pending': return 'bg-yellow-500';';
-case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) ;
-}</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status= {;
-  disputeStatus ;"}/>) ";"}</div> </div> </CardHeader> </div> </CardContent> <CardFooter className="pt-2 flex justify-between" > <div> {';
+</void>"
+case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) ;"
+
+}</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status= {;)"
+  disputeStatus ;"}/>) ";"}</div> </div>  </div>  <CardFooter className="pt-2 flex justify-between" > <div> {';
+
   status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId= {;
-  projectId ;
+  projectId ;)
 }/>) ;
+<<<<<<< HEAD
 }</div> Actions frozen due to dispute </Button>) ;
 :temp_broken_files/projects/milestones/MilestoneCard.tsx
 }</div> </CardFooter> </Card>) ;"}'"
@@ -264,3 +303,9 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/Mi
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+}</div> Actions frozen due to dispute ) ;
+}</div>  ) ;"}'""
+}</div>  ) ;"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

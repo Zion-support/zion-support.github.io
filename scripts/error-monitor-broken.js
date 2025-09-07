@@ -62,12 +62,28 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 
+
+
+
+
+
+
+
+
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class ErrorMonitor { constructor() {this.logDir = path.join(__dirname,".","logs"),this.errorReportDir = path.join(__dirname,".","error-reports"),this.maxLogSize = 10 * 1024 * 1024,""
 #!/usr/bin/env node   class ErrorMonitor { constructor() {this.logDir = path.join(__dirname,"..","logs"),this.errorReportDir = path.join(__dirname,"..","error-reports"),this.maxLogSize = 10 * 1024 * 1024,
+
+
+
+
+
+
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class ErrorMonitor { constructor() {this.logDir = path.join(__dirname,".","logs"),this.errorReportDir = path.join(__dirname,".","error-reports"),this.maxLogSize = 10 * 1024 * 1024,""
 #!/usr/bin/env node   class ErrorMonitor { constructor() {this.logDir = path.join(__dirname,"..","logs"),this.errorReportDir = path.join(__dirname,"..","error-reports"),this.maxLogSize = 10 * 1024 * 1024,
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class ErrorMonitor { constructor() {this.logDir = path.join(__dirname,".","logs"),this.errorReportDir = path.join(__dirname,".","error-reports"),this.maxLogSize = 10 * 1024 * 1024,""
+
+
 #!/usr/bin/env node   class ErrorMonitor { constructor() {this.logDir = path.join(__dirname,"..","logs"),this.errorReportDir = path.join(__dirname,"..","error-reports"),this.maxLogSize = 10 * 1024 * 1024,
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class ErrorMonitor { constructor() {this.logDir = path.join(__dirname,".","logs"),this.errorReportDir = path.join(__dirname,".","error-reports"),this.maxLogSize = 10 * 1024 * 1024,""
@@ -83,3 +99,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node   class ErrorMonitor { constructor() {this.logDir = path.join(__dirname,"..","logs"),this.errorReportDir = path.join(__dirname,"..","error-reports"),this.maxLogSize = 10 * 1024 * 1024,
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class ErrorMonitor { constructor() {this.logDir = path.join(__dirname,".","logs"),this.errorReportDir = path.join(__dirname,".","error-reports"),this.maxLogSize = 10 * 1024 * 1024,""""
+#!/usr/bin/env node   class ErrorMonitor { constructor() {this.logDir = path.join(__dirname,"..","logs"),this.errorReportDir = path.join(__dirname,"..","error-reports"),this.maxLogSize = 10 * 1024 * 1024,""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

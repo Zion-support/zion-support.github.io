@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -24,12 +25,16 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
 import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -352,6 +357,16 @@ export function PreviewHeader() { return null; }
     }, 1000);
   };
 
+=======
+
+  resume: Resume;
+  onBack: () => void;
+}
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <div
       className={`flex ${isMobile ? "flex-col" : "justify-between"} items-${isMobile ? "stretch" : "center"} gap-3`}
@@ -417,13 +432,20 @@ export function PreviewHeader() { return null; }
       <div
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
       >
+      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
+<<<<<<< HEAD
 
         <Button
           variant="outline"
           onClick={handleBrowserPrint}
           disabled={isPrinting}
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        <Button 
+          variant="outline" 
+          onClick={handleBrowserPrint}           disabled={isPrinting}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           className="gap-2"
         >
           <FileText className="h-4 w-4" />
@@ -445,15 +467,17 @@ export function PreviewHeader() { return null; }
     </div>
   );
 }
-    document.head.append_child (style);
+document.head.append_child (style);
 ;
-
-
 
   );
 }
     document.head.append_child (style);
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    </div>    document.head.append_child (style);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
     // Trigger print dialog;
     window.print ();
@@ -471,6 +495,7 @@ export function PreviewHeader() { return null; }
 <<<<<<< HEAD
     >;
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Button variant="outline" on_click={on_back} className="gap - 2 no-print">;
         <ArrowLeft className="h - 4 w-4" />;
 =======
@@ -482,6 +507,10 @@ export function PreviewHeader() { return null; }
       <Button variant="outline" on_click={on_back} className="gap - 2 no - print">;
         <ArrowLeft className="h - 4 w - 4" />;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      <Button variant="outline" on_click={on_back} className="gap - 2 no-print">;
+        <ArrowLeft className="h - 4 w-4" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         Back;
       </Button>;
       <div;"`
@@ -493,11 +522,12 @@ export function PreviewHeader() { return null; }
           on_click={handleBrowserPrint}
 <<<<<<< HEAD
           disabled={is_printing}
-          className="gap - 2";
+          className="gap-2";
         >;
-          <FileText className="h - 4 w - 4" />;
+          <FileText className="h - 4 w-4" />;
           Print;
         </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Button variant="outline" className="gap-2">;
           <Link className="h - 4 w-4" />;
@@ -515,6 +545,10 @@ export function PreviewHeader() { return null; }
         <Button variant="outline" className="gap - 2">;
           <Link className="h - 4 w - 4" />;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        <Button variant="outline" className="gap-2">;
+          <Link className="h - 4 w-4" />;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           Add to Profile;
         </Button>;
       </div>;
@@ -522,7 +556,6 @@ export function PreviewHeader() { return null; }
 }
 <<<<<<< HEAD
   ),;}
- 
 }`;
 document.head.appendChild (style);
 //Trigger print dialog window.print ();
@@ -551,6 +584,7 @@ document.head.appendChild (style);
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -558,3 +592,93 @@ document.head.appendChild (style);
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+        .no - print {
+  // TODO: Implement
+          display: none !important;
+      }`;
+    `;
+    document.head.appendChild(style);
+
+
+    // Trigger print dialog;
+    window.print();
+
+    // Remove the temporary style element after printing;
+    setTimeout(() => {
+      document.head.removeChild(style);
+      setIsPrinting(false);
+    }, 1000);
+  };
+
+  return (
+    <div;"`;
+      className={`flex ${isMobile ? "flex-col" : "justify-between"} items-${isMobile ? "stretch" : "center"} gap-3`}"
+    >
+</div>"
+      <Button variant="outline" onClick={onBack} className="gap-2 no-print">"
+"
+        <ArrowLeft className="h-4 w-4" />"
+
+
+        className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}"
+</div>
+
+        <PdfExportButton resume={resume} />
+
+
+
+        <Button;"
+          variant="outline""
+          onClick={handleBrowserPrint}
+          disabled={isPrinting}"
+          className="gap-2""
+          <FileText className="h-4 w-4" />"
+
+        <Button variant="outline" className="gap-2">"
+          <Link className="h-4 w-4" />"
+
+</Link>
+
+        </Button>
+      </div>
+
+    </div>
+
+    <div;"
+      className={`flex ${is_mobile ? "flex - col" : "justify - between"} items-${is_mobile ? "stretch" : "center"} gap - 3`}"
+    >;
+      <Button variant="outline" on_click={on_back} className="gap - 2 no - print">;"
+        <ArrowLeft className="h - 4 w - 4" />;"
+
+        className={`flex ${is_mobile ? "flex - col" : "flex - row"} space-${is_mobile ? "y - 2" : "x - 2"} no - print`}"
+        <PdfExportButton resume={resume} />;
+
+          variant="outline";"
+          on_click={handleBrowserPrint}
+          disabled={is_printing}"
+          className="gap - 2";"
+          <FileText className="h - 4 w - 4" />;"
+
+        ;"
+        <Button variant="outline" className="gap - 2">;"
+          <Link className="h - 4 w - 4" />;"
+
+      </div>;)
+    </div>);
+//Remove the temporary style element after printing return (<div className= {`;
+  `flex $ {"
+  isMobile ? 'flex-col' : 'justify-between
+}items-$ {
+  isMobile ? 'stretch' : 'center`;
+}gap-3` 
+}> <Button > <ArrowLeft className="h-4 w-4" /> Back  <div className= {"
+}> <PdfExportButton resume= {
+  resume;)"
+}/> <Button > <FileText className="h-4 w-4" /> Print  <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile  </div> </div>)"
+"`;
+pr-12325
+}/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>)"
+</PdfExportButton>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

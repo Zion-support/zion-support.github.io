@@ -9,7 +9,11 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import fs from 'fs',;
 import path from 'path',;
 import { v4 as uuidv4 } from 'uuid',;
@@ -26,6 +30,7 @@ export type ProposalMeta = {;
   supportingMultiverses: string[],;
   languages: string[],;
   status: ProposalStatus,;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -39,10 +44,19 @@ export type ProposalMeta = {;
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
+
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export type ProposalMeta = {;
 =======
@@ -58,6 +72,12 @@ export type ProposalMeta = {};
 export type ProposalMeta = {id: string;
 export type ProposalMeta = {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+export type ProposalMeta = {
+export type ProposalMeta = {;
+interface ProposalMeta {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -69,13 +89,14 @@ export type ProposalMeta = {
   supportingMultiverses: string[];
   languages: string[];
   status: ProposalStatus;
-  artifacts: {;
+
     markdownPath?: string;
     jsonPath?: string;
     pdfPath?: string;
     ipfsCid?: string;
     ensRecordHash?: string;
     signature?: string;
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,14 +106,28 @@ export type ProposalMeta = {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }
 export type ProposalPayload = {title: string;
+=======
+  };
+};
+
+export type ProposalPayload = {
+  title: string;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   targetInstitution: string;
   type: string;
   regionalScope: string;
   budgetOrResolution: string;
+export type ProposalPayload = {title: string;,
+  targetInstitution: string;
+  type: string;,
+  regionalScope: string;
+  budgetOrResolution: string;,
+pr-12325
   supportingMultiverses: string[];
   contentMarkdown: string;
   language?: string;
   metadata?: Record<string, any>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }'
 const dataDir = path.join(process.cwd(), 'dataproposals');'
@@ -102,9 +137,20 @@ const dataDir = path.join(process.cwd(), 'dataproposals');
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const publicDir = path.join(process.cwd(), 'publicproposals');
 function ensureDirs() {if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+=======
+};
+
+const dataDir = path.join(process.cwd(), 'data/proposals');
+const publicDir = path.join(process.cwd(), 'public/proposals');
+
+function ensureDirs() {
+  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 }
-export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDirs();
+
+export function createProposal(payload: ProposalPayload): ProposalMeta {
+  ensureDirs();
   const id = uuidv4();
   const createdAt = new Date().toISOString();
   const updatedAt = createdAt;
@@ -119,6 +165,7 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDi
   const markdownPath = path.join(publicProposalDir, 'proposal.md');
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   const jsonPath = path.join(proposalDir, 'proposal.json');
+<<<<<<< HEAD
   const meta: ProposalMeta = {id;
     createdAt;
     updatedAt;
@@ -144,6 +191,25 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDi
     artifacts: {;
       markdownPath: `/proposals/${id}/proposal.md`;
       jsonPath: path.relative(process.cwd(), jsonPath)}}
+=======
+  const meta: ProposalMeta = {
+    id,
+    createdAt,
+    updatedAt,
+    title: payload.title,
+    targetInstitution: payload.targetInstitution,
+    type: payload.type,
+    regionalScope: payload.regionalScope,
+    budgetOrResolution: payload.budgetOrResolution,
+    supportingMultiverses: payload.supportingMultiverses || [],
+    languages: payload.language ? [payload.language] : ['en'],
+    status: 'Draft',
+    artifacts: {
+      markdownPath: `/proposals/${id}/proposal.md`,
+      jsonPath: path.relative(process.cwd(), jsonPath)
+    }
+  };
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8');
   fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8');
   const metaPath = path.join(proposalDir, 'meta.json');
@@ -151,7 +217,7 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDi
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
   return meta;
 }
-export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
+
 export function updateProposalMeta(
 <<<<<<< HEAD
   id: string,;
@@ -263,6 +329,27 @@ function ensureDirs() {;
 ;
 export function createProposal(payload: ProposalPayload): ProposalMeta {;
   ensureDirs(),;
+};
+export type ProposalPayload = {;
+  title: string;
+  targetInstitution: string;
+  type: string;
+  regionalScope: string;
+  budgetOrResolution: string;
+  supportingMultiverses: string[];
+  contentMarkdown: string;
+  language?: string;
+  metadata?: Record<string, any>;
+};
+const dataDir = path.join(process.cwd(), 'dataproposals');
+const publicDir = path.join(process.cwd(), 'publicproposals');
+function ensureDirs() {;
+  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+}
+;
+export function createProposal(payload: ProposalPayload): ProposalMeta {;
+  ensureDirs();
   const id = uuidv4();
   const createdAt = new Date().toISOString();
   const updatedAt = createdAt;
@@ -459,7 +546,39 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+
+
+
+
+    updatedAt;
+    title: payload.title;
+    targetInstitution: payload.targetInstitution;
+    type: payload.type;
+    regionalScope: payload.regionalScope;
+    budgetOrResolution: payload.budgetOrResolution;
+    supportingMultiverses: payload.supportingMultiverses || [];
+    languages: payload.language ? [payload.language] : ['en'];
+    status: 'Draft';
+    artifacts: {;
+      markdownPath: `/proposals/${id}/proposal.md`;
+      jsonPath: path.relative(process.cwd(), jsonPath)}};
+  fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8');
+  fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8');
+  const metaPath = path.join(proposalDir, 'meta.json');
+  fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
+  return meta;
+}
+;
+export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {;
+  ensureDirs();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -476,9 +595,26 @@ export function listProposals(): ProposalMeta[] {;
 =======
 
 
+export function listProposals(): ProposalMeta[] {ensureDirs();
+  const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
+  const metas: ProposalMeta[] = entries.map((id) => {;
 
 
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+;
+export function listProposals(): ProposalMeta[] {;
+  ensureDirs();
+  const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
+  const metas: ProposalMeta[] = entries.map((id) => {;
+export function listProposals(): ProposalMeta[] {
+  ensureDirs();
+  const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
+  const metas: ProposalMeta[] = entries.map((id) => {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
@@ -491,6 +627,9 @@ export function getProposal(id: string): ProposalMeta | null {;
     const metaPath = path.join(dataDir, id, 'meta.json');
     if (!fs.existsSync(metaPath)) return null;
 =======
+
+
+export function getProposal(id: string): ProposalMeta | null {try {;
 
 
 
@@ -507,7 +646,20 @@ export function getProposal(id: string): ProposalMeta | null {;
 
 
 
+
+
+
+
   artifacts: {;
+
+export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
+
+
+
+  artifacts: {;
+
+
+
 
     markdownPath?: string,;
     jsonPath?: string,;
@@ -515,6 +667,7 @@ export function getProposal(id: string): ProposalMeta | null {;
     ipfsCid?: string,;
     ensRecordHash?: string,;
     signature?: string;
+
 
   }
 },;
@@ -593,7 +746,15 @@ export function getProposal(id: string): ProposalMeta | null {;
   try {;
     const metaPath = path.join(dataDir, id, 'meta.json'),;
     if (!fs.existsSync(metaPath)) return null,;
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+;
+export function getProposal(id: string): ProposalMeta | null {;
+  try {;
+    const metaPath = path.join(dataDir, id, 'meta.json');
+    if (!fs.existsSync(metaPath)) return null;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   } catch {;
     return null;
@@ -810,12 +971,14 @@ export function getProposal(id: string): ProposalMeta | null {;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   ensureDirs(),;
 
+
+
+
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
-
 
 
   } catch (error) {
@@ -844,7 +1007,9 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {};
 =======
 
 
+
 }
+
 }
 }
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
@@ -860,6 +1025,11 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
   return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
+</string>
+  return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+pr-12325
+
+
 
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs();
@@ -895,9 +1065,9 @@ export type ProposalMeta = {}
     artifacts: { ...meta.artifacts, ...artifacts },
   }));
 }
-import fs from 'fs',
-import path from 'path',
-import { v4 as uuidv4 } from 'uuid',
+import fs from 'fs',;
+import path from 'path',;
+import { v4 as uuidv4 } from 'uuid',;
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed',
 export type ProposalMeta = {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
@@ -1138,5 +1308,22 @@ export function update_artifacts (id: string, artifacts: Partial < ProposalMeta[
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
 }
+
+
+;
+export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
+  return updateProposalMeta(id, (meta) => ({;
+    ...meta;
+    artifacts: { ...meta.artifacts, ...artifacts }}));
 }
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+    } catch (error) {
+    console.error("Error:", error);""
+    return res.status(500).json({ error: "Internal server error" });"
+},;
+export type ProposalPayload = {
+  title: string;,
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

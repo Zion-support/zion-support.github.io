@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 initParticles ();
 // Animation loop // Update and draw particles particlesRef && particlesRef.current.forEach ( (particle, index) => {;
   // Update position particle && particle.x += particle && particle.vx;
@@ -10,6 +11,9 @@ if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0
 ctx && ctx.globalAlpha = particle && particle.opacity;
 // Different effects for different particle types switch (particle && particle.type) {;
   case 'quantum': // Quantum particles with glow effect import React, { useEffect, useRef } from 'react';'
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { motion } from 'framer-motion';
 }
 <<<<<<< HEAD
@@ -17,39 +21,27 @@ export default function UltraFuturisticBackground2029() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+
 interface Particle {
   x: number;
+
   y: number;
   vx: number;
   vy: number;
   size: number;
   opacity: number;
   color: string;
-  type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk'
+  type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk';}
 }
-export default function UltraFuturisticBackground2029() {
-  const canvasRef = null;
-              delay: i * 0.3
-resizeCanvas ();
-window.addEventListener ('resize', resizeCanvas);
-// Initialize particles
-}particlesRef.current = particles
 }
-initParticles ();
-// Animation loop // Update and draw particles particlesRef.current.forEach ( (particle, index) => {
-  // Update position particle.x += particle.vx;
-particle.y += particle.vy;
-// Wrap around edges if (particle.x < 0) particle.x = canvas.width;
-if (particle.x > canvas.width) particle.x = 0;
-if (particle.y < 0) particle.y = canvas.height;
-if (particle.y > canvas.height) particle.y = 0;
-// Draw particle ctx.save ();
-ctx.globalAlpha = particle.opacity;
-// Different effects for different particle types switch (particle.type) {
-  case 'quantum': // Quantum particles with glow effect
 
+<<<<<<< HEAD
 export default function UltraFuturisticBackground2029() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -742,13 +734,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             transition={{}
               delay: i * 0.3;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }}
+            animate={{y: [0;, -20, 0],opacity: [0.3;, 0.8, 0.3],scale: [1;, 1.2, 1]}}duration: 4;,repeat: Infinity;,transition={{delay: i * 0.3;}
+              duration: 3 + i * 0.5;,repeat: Infinity;,ease: 'easeInOut';,
+  delay: i * 0.3;}}
           />;
         ))}
 }
   )
 }
-              delay: i * 0.3,            }}              delay: i * 0.3;
+              delay: i * 0.3;,            }}              delay: i * 0.3;
             }}
           />))}
       </div>;
@@ -757,10 +754,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>
     </div>
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+        ))}
+
+      </div>
+    </div>
+);
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

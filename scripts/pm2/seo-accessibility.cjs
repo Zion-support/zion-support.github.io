@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 
 
@@ -557,6 +558,10 @@ monitor.run().catch(error => {
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**
  * PM2 SEO & Accessibility Service;
  * Checks SEO and accessibility compliance;
@@ -569,6 +574,7 @@ monitor.run().catch(error => {
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 >>>>>>> origin/automation-improvements-final
@@ -576,25 +582,26 @@ const path = require('path');
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class SEOAccessibility {}
   constructor() {}
-    this.processName = process.env.PM2_PROCESS_NAME || 'seo-accessibility';
-    this.checkSEO = process.env.CHECK_SEO === 'true';
-    this.checkAccessibility = process.env.CHECK_ACCESSIBILITY === 'true';
-    this.checkPerformance = process.env.CHECK_PERFORMANCE === 'true';
-    this.lighthouseAudit = process.env.LIGHTHOUSE_AUDIT === 'true';
-    this.logFile = path.join(__dirname, '../../logs/pm2/seo-accessibility.log');
+    this.processName = process.env.PM2_PROCESS_NAME ||seo-accessibility';
+    this.checkSEO = process.env.CHECK_SEO ===true;
+    this.checkAccessibility = process.env.CHECK_ACCESSIBILITY ===true;
+    this.checkPerformance = process.env.CHECK_PERFORMANCE ===true;
+    this.lighthouseAudit = process.env.LIGHTHOUSE_AUDIT ===true;
+    this.logFile = path.join(__dirname,../../logs/pm2/seo-accessibility.log');
     this.ensureLogDir();
   };
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true }
+      fs.mkdirSync(logDir, { recursive: true })
 });
-    };
-  };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
@@ -620,6 +627,8 @@ class SEOAccessibility {}
     );
 
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -631,13 +640,12 @@ class SEOAccessibility {}
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
-  };
   async checkSEO() {}
     if (!this.checkSEO) {}
       this.log('SEO checking disabled');
       return { checked: false };
-    };
     try {}
+<<<<<<< HEAD
       this.log('Checking SEO compliance...');
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 
@@ -658,16 +666,15 @@ class SEOAccessibility {}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
+=======
+
+      const seoIssues = [];
+      const htmlFiles = this.findHTMLFiles();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       for (const file of htmlFiles) {}
-        try {}
-          const content = fs.readFileSync(file, 'utf8');
-          const issues = this.analyzeSEO(content, file);
-          seoIssues.push(...issues);
-        } catch (err) {}
-          this.log(`Error reading ${file}: ${err.message}`);
-        };
-      };
+
       this.log(`Found ${seoIssues.length} SEO issues`);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
 
@@ -681,19 +688,18 @@ class SEOAccessibility {}
 =======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return {}
         checked: true,
         issues: seoIssues,
         totalIssues: seoIssues.length,
         filesChecked: htmlFiles.length;
-      };
-    } catch (error) {}
-      this.log(`SEO check failed: ${error.message}`);
+
       return { checked: false, error: error.message };
-    };
-  };
   findHTMLFiles() {}
     const htmlFiles = [];
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 
 <<<<<<< HEAD
@@ -707,12 +713,14 @@ class SEOAccessibility {}
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const scanDir = (dir) => {}
-      try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 
 <<<<<<< HEAD
@@ -727,15 +735,15 @@ class SEOAccessibility {}
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
+=======
+          '
+          if (stat.isDirectory() && !file.startsWith('.) && file !==node_modules') {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             scanDir(filePath);
           } else if (stat.isFile() && (file.endsWith('.html') || file.endsWith('.htm'))) {}
             htmlFiles.push(filePath);
-          };
-        };
       } catch (err) {}
         // Skip directories that can't be read;
-      };
-    };
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
@@ -749,16 +757,14 @@ class SEOAccessibility {}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
     // Scan common directories;
-    const scanDirs = ['public', 'dist', 'out', 'build', 'pages'];
+    const scanDirs = [public,dist,out,build,pages];
     for (const dir of scanDirs) {}
       if (fs.existsSync(dir)) {}
         scanDir(dir);
-      };
-    };
     return htmlFiles;
-  };
   analyzeSEO(content, filePath) {}
     const issues = [];
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 
 <<<<<<< HEAD
@@ -772,38 +778,13 @@ class SEOAccessibility {}
 =======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Check for title tag;
     if (!content.includes('<title>')) {}
-      issues.push({})
-        file: filePath,
-        type: 'missing_title',
-        severity: 'high',
-        message: 'Missing <title> tag'
-      }
-});
-    };
-    // Check for meta description;
-    if (!content.includes('name="description"')) {}
-      issues.push({})
-        file: filePath,
-        type: 'missing_meta_description',
-        severity: 'high',
-        message: 'Missing meta description'
-      }
-});
-    };
-    // Check for h1 tag;
-    if (!content.includes('<h1>')) {}
-      issues.push({})
-        file: filePath,
-        type: 'missing_h1',
-        severity: 'medium',
-        message: 'Missing <h1> tag'
-      }
-});
-    };
-    // Check for alt attributes on images;
+
     const imgTags = content.match(/<img[^>]*>/g) || [];
+<<<<<<< HEAD
     for (const imgTag of imgTags) {}
       if (!imgTag.includes('alt=')) {}
         issues.push({})
@@ -916,55 +897,19 @@ class SEOAccessibility {}
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
     // Check for proper heading hierarchy;
+=======
+</img>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
-    let lastLevel = 0;
-    for (const heading of headings) {}
+</h>
       const level = parseInt(heading.match(/<h(\d)/)[1]);
       if (level > lastLevel + 1) {}
-        issues.push({})
-          file: filePath,
-          type: 'heading_hierarchy',
-          severity: 'medium',
-          message: `Heading level ${level} follows level ${lastLevel} (skipped levels)
-        }
-});
-      };
-      lastLevel = level;
-    };
-    // Check for form labels;
-    const inputTags = content.match(/<input[^>]*>/g) || [];
-    for (const inputTag of inputTags) {}
-      if (inputTag.includes('type=') && !inputTag.includes('type="hidden"')) {}
-        if (!inputTag.includes('aria-label') && !inputTag.includes('aria-labelledby')) {}
-          // Check if there's a label element nearby (simplified);
+
           const hasLabel = content.includes('</label>');
-          if (!hasLabel) {}
-            issues.push({})
-              file: filePath,
-              type: 'missing_form_label',
-              severity: 'high',
-              message: 'Form input missing label or aria-label'
-            }
-});
-          };
-        };
-      };
-    };
-    // Check for color contrast (simplified - would need actual color analysis);
-    const colorStyles = content.match(/color\s*:\s*[^;]+/g) || [];
-    if (colorStyles.length > 0) {}
-      issues.push({})
-        file: filePath,
-        type: 'color_contrast_check',
-        severity: 'low',
-        message: 'Manual color contrast check recommended'
-      }
-});
-    };
-    // Check for keyboard navigation;
     const interactiveElements = content.match(/<button|<a|<input|<select|<textarea/g) || [];
     const tabIndexElements = content.match(/tabindex/g) || [];
     if (interactiveElements.length > 0 && tabIndexElements.length === 0) {}
+<<<<<<< HEAD
       issues.push({})
         file: filePath,
         type: 'keyboard_navigation',
@@ -1346,6 +1291,8 @@ module.exports = SEOAccessibility;
 
 
 module.exports = SEOAccessibility;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

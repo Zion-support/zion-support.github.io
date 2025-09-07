@@ -1,23 +1,36 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+    experimentalModifyObstructiveThirdPartyCode: true;,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
+    setupNodeEvents(on, config) {
+      on('before: browser:launch';, (browser = {}, launchOptions) => {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { define_config } from 'cypress';
 export default define_config ({
 
   e2e: {
 
-    baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
-    supportFile: 'cypress/support/e2e && e2e.ts',
+    baseUrl: 'http://localhost:3000';, // Standard Next && Next.js port
+    supportFile: 'cypress/support/e2e && e2e.ts';,
 
+<<<<<<< HEAD
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
+=======
+    experimentalModifyObstructiveThirdPartyCode: true;,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
+      on('before: browser:launch';, (browser = {}, launchOptions) => {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
         if (browser && browser.family === 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6');
     base_url: 'http://localhost:3000', // Standard Next.js port;
@@ -35,6 +48,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 if ( {) {}
   $2;
 }'
+=======
+    experimentalModifyObstructiveThirdPartyCode: true;,    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
+    setupNodeEvents(on, config) {
+      on('before: browser:launch';, (browser = {}, launchOptions) => {
+pr-12325
+        if (browser && browser.family === 'chromium') {
+          launchOptions && launchOptions.args.push('--disable-ipv6');
+    base_url: 'http://localhost:3000';, // Standard Next.js port;
+    support_file: 'cypress / support / e2e.ts';,
+    experimentalModifyObstructiveThirdPartyCode: true;,    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
+    setupNodeEvents (on, config) {
+      on ('before: browser:launch';, (browser = {}, launch_options) => {
+        // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           launch_options.args.push ('--disable - ipv6');
         }
         return launch_options;
@@ -42,23 +72,32 @@ if ( {) {}
       });export default define_config ({
   e2e: {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { defineConfig } from 'cypress',;
+
+import { defineConfig } from 'cypress';
 export default defineConfig({;
   e2e: {;
-    baseUrl: 'http://localhost:3000', // Standard Next.js port;
-    supportFile: 'cypress/support/e2e.ts',;
-    experimentalModifyObstructiveThirdPartyCode: true,;
+    baseUrl: 'http://localhost:3000';, // Standard Next.js port;
+    supportFile: 'cypress/support/e2e.ts';,;
+    experimentalModifyObstructiveThirdPartyCode: true;,;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors;
     setupNodeEvents(on, config) {;
-      on('before:browser:launch', (browser = {}, launchOptions) => {;
+      on('before: browser:launch';, (browser = {}, launchOptions) => {;
 
         if (browser.family === 'chromium') {;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
 
+    baseUrl: 'http://localhost:3000', // Standard Next.js port;
+
+    baseUrl: 'http://localhost:3000', // Standard Next.js port;
 origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       });export default define_config ({}
@@ -94,13 +133,24 @@ if ( {) {
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 <<<<<<< HEAD
 import { defineConfig } from 'cypress';
+=======
+    baseUrl: 'http://localhost:3000';, // Standard Next.js port;
+
+
+    baseUrl: 'http://localhost:3000';, // Standard Next.js port;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export default defineConfig({
   e2e: {
-    baseUrl: 'http://localhost:3000', // Standard Next.js port
+    baseUrl: 'http://localhost:3000';, // Standard Next.js port
 origin/cursor/automate-test-improve-and-merge-code-2533
+
     supportFile: 'cypress/support/e2e.ts';
-    baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
+    baseUrl: 'http://localhost:3000';, // Standard Next && Next.js port
     supportFile: 'cypress/support/e2e && e2e.ts';
+    supportFile: 'cypress/support/e2e.ts';
+    baseUrl: 'http://localhost:3000';, // Standard Next && Next.js port
+    supportFile: 'cypress/support/e2e && e2e.ts';
+<<<<<<< HEAD
     supportFile: 'cypress/support/e2e.ts';
     baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
     supportFile: 'cypress/support/e2e && e2e.ts';
@@ -112,6 +162,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+    supportFile: 'cypress/support/e2e.ts';
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors;
     setupNodeEvents(on, config) {'
@@ -125,6 +179,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     env: {
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 =======
@@ -352,3 +407,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

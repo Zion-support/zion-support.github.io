@@ -16,27 +16,28 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-#!/usr/bin/env node;
+
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("$1")
 const path = require("path")
       let content = fs.readFileSync(filePath, "utf8")
-      content = content.replace(/&apos;s\s*""\s*$/gm, "&apos;s"")
-      content = content.replace(/&apos;s\s*""\s*>/gm, "&apos;s">")
-      content = content.replace(/&apos;s\s*""\s*,/gm, "&apos;s", ")
-      content = content.replace(/we\\"ll\s*""\s*$/gm, "we\\"ll"")
-      content = content.replace(/we\\"ll\s*""\s*,/gm, "we\\"ll", ")
-      content = content.replace(/""\s*$/gm, """)
-      content = content.replace(/""\s*>/gm, "">")
-      content = content.replace(/""\s*,/gm, ", ")
-      content = content.replace(/""\s*\)/gm, "")"
+      content = content.replace(/&apos;s\s*\s*$/gm, "&apos;s)
+      content = content.replace(/&apos;s\s*\s*>/gm, "&apos;s">")
+      content = content.replace(/&apos;s\s*\s*,/gm, "&apos;s", ")
+      content = content.replace(/we\\"ll\s*\s*$/gm, "we\\"ll)
+      content = content.replace(/we\\"ll\s*\s*,/gm, "we\\"ll", ")
+      content = content.replace(/\s*$/gm, ")
+      content = content.replace(/\s*>/gm, >")
+      content = content.replace(/\s*,/gm, ", ")
+      content = content.replace(/\s*\)/gm, )"
         fs.writeFileSync(filePath, content, "utf8")
       this.errors.push({ "file": filePath, "error"})
     this.log(" Starting syntax error fixing...")
       "pages/blog.tsx"
       "pages/help.tsx"
       "pages/pricing-guide.tsx"
+<<<<<<< HEAD
       "pages/pricing.tsx"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,5 +58,7 @@ const path = require("path")
 =======
 
       "
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508

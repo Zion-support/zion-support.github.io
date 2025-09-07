@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -25,6 +26,15 @@ export function middleware(_request: NextRequest) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+export function middleware(request: NextRequest) {
+
+  const response = NextResponse.next();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   // Security headers
     "camera=(), microphone=(), geolocation=()",
@@ -36,6 +46,7 @@ export function middleware(_request: NextRequest) {
     "default - src 'self'; script - src 'self' 'unsafe - eval' 'unsafe - inline'; style - src 'self' 'unsafe - inline'; img - src 'self' data: https:; font - src 'self' data:; connect - src 'self' https:;",
   );
 
+<<<<<<< HEAD
   return response;
     return response;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -102,6 +113,22 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  // Content Security Policy
+  const csp = [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https:",
+    "font-src 'self'",
+    "connect-src 'self'",
+    "frame-ancestors 'none'"
+  ].join('; ');
+
+  response.headers.set('Content-Security-Policy', csp);
+  return response;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export const config = {
@@ -135,7 +162,7 @@ export const config = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico).*)'
   ],
 };
 <<<<<<< HEAD

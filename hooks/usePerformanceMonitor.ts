@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 interface PerformanceMetrics {
 <<<<<<< HEAD
@@ -182,17 +183,15 @@ if ( {) {
   return { metrics, is_supported }
 =======
 import { useState, useEffect } from 'react';
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-}
 
-export function usePerformanceMonitor(): PerformanceMetrics | null {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+},
+,
+export default usePerformanceMonitor;
 
+<<<<<<< HEAD
   useEffect(() => {
     if (typeof window === 'undefined') return;
     // Check if Performance Observer is supported
@@ -316,3 +315,5 @@ if ( {) {
   return metrics;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Serviceportfoliodashboard() {}; return null} )}
 =======
 import React from \"react\"; import Link from \"next/link\"; import { ArrowRight,Phone,Mail } from \"lucide-react\"; ); export default function Serviceportfoliodashboard() {}; return null} )}
@@ -9,13 +10,22 @@ import _React from "react"; import Link from "next/link"; import { ArrowRight,Ph
 =======
 import React from 'react';
 
+=======
+import React from 'react';'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const ServicePortfolioDashboard = ({ className }) => {
-  return (
-    <div className={className || ''}>
+  return ('
+    <div className={className || ''}>'
+</div>
       <h1>ServicePortfolioDashboard</h1>
       <p>This component is under development.</p>
     </div>
   )
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </div>)'
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

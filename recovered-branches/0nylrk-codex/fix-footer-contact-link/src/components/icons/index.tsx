@@ -1,4 +1,8 @@
+const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
+    return <LucideIcon {...props} />;
+  };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -124,13 +128,112 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
     return <LucideIcon {...props} />
 };
 =======
+=======
+import React from 'react';
+import * as LucideIcons from 'lucide-react';
+// Alias for missing icons or for icons with different names
+const iconAliases: Record<string, keyof typeof LucideIcons> = {
+  // Grid views
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+  LayoutGrid: 'LayoutGrid'
+  List: 'List'
+  // UI elements
+  Zap: 'Zap'
+  Settings: 'Settings'
+  Plus: 'Plus'
+  HelpCircle: 'HelpCircle'
+  // Social media
+  Twitter: 'Twitter'
+  Linkedin: 'Linkedin'
+  Facebook: 'Facebook'
+  Instagram: 'Instagram'
+  Github: 'Github'
+  // Services
+  Server: 'Server'
+  // There is no 'Network' icon in lucide-react.
+  // Map to a similar existing icon.
+  Network: 'Share2'
+  Recycle: 'Recycle'
+  Truck: 'Truck'
+  HardDrive: 'HardDrive'
+  // Status and actions
+  Check: 'Check'
+  CheckIcon: 'Check'
+  Handshake: 'Handshake'
+  StarIcon: 'Star'
+  // Theme
+  Moon: 'Moon'
+  Sun: 'Sun'
+  // Notifications
+  Bell: 'Bell'
+  // Calendar
+  CalendarIcon: 'Calendar'
+  // Navigation
+  ChevronRight: 'ChevronRight'
+  MoreHorizontal: 'MoreHorizontal'
+  MoreVertical: 'MoreVertical'
+  // Content
+  Quote: 'Quote'
+  // Alerts
+  Info: 'Info'
+  AlertTriangle: 'AlertTriangle'
+  Ban: 'Ban'
+  ShieldAlert: 'ShieldAlert'
+  // Actions
+  Archive: 'Archive'
+  Trash2: 'Trash2'
+  Trash: 'Trash2'
+  Power: 'Power'
+  RefreshCw: 'RefreshCcw'
+  Copy: 'Copy'
+  ClipboardCopy: 'ClipboardCopy'
+  Download: 'Download'
+  // Auth
+  LogIn: 'LogIn'
+  EyeOff: 'EyeOff'
+  Wallet: 'Wallet'
+  // Development
+  Code: 'Code'
+  // Cast to any to work around missing type for Megaphone
+  Megaphone: 'Megaphone' as unknown as keyof typeof LucideIcons
+  Terminal: 'Terminal'
+  // Community
+  ThumbsUp: 'ThumbsUp'
+  ThumbsDown: 'ThumbsDown'
+  Pin: 'Pin'
+  Lock: 'Lock'
+  Trophy: 'Trophy'
+  Award: 'Award'
+  BadgeCheck: 'BadgeCheck'
+  MessageSquare: 'MessageSquare'
+  // Misc
+  Link: 'Link'
+  Briefcase: 'Briefcase'
+  FileText: 'FileText'
+  Clock: 'Clock'
+  Save: 'Save'
+  StarOff: 'Star'
+  LayoutDashboard: 'LayoutDashboard'
+  BarChart: 'BarChart3'
+  BookOpen: 'BookOpen'
+  Key: 'Key'
+  Tag: 'Tag' as keyof typeof LucideIcons}
+type IconProps = LucideIcons.LucideProps;
+// Create a type safe export for each icon
+const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
+  const IconComponent = (props: IconProps) => {
+    // Fix: Use proper type casting to access the icon component
+    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>
+    return <LucideIcon {...props} />
+  }
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
     return <LucideIcon {...props} />;
   };
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
     return <LucideIcon {...props} />
@@ -1091,3 +1194,6 @@ export * from 'lucide-react';
 
 '`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

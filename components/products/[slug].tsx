@@ -6,10 +6,12 @@ const EquipmentDetail: NextPage = () => {
   const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
 import Head from 'next/head';
+
 import { useRouter  } from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import equipment from '@/data/equipment.json';
+<<<<<<< HEAD
 const EquipmentDetail: NextPage;
 origin/cursor/automate-test-improve-and-merge-code-2533
   if (!item) {
@@ -280,3 +282,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 '"`
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -20,6 +20,7 @@
 export const suspicious_phrases = [;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const suspiciousPhrases = [;
@@ -29,6 +30,12 @@ export const suspiciousPhrases = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+// Common constants used across fraud detection modules
+// Phrases that might indicate fraud
+
+export const suspiciousPhrases = [;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "whatsapp me";
   "contact me outside";
   "cashapp only";
@@ -100,6 +107,7 @@ export const suspiciousEmailDomains = [;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "tempmail";
+<<<<<<< HEAD
 =======
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
@@ -111,10 +119,15 @@ export const suspicious_phrases = [;
 =======
   "tempmail";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+// Phrases that might indicate fraud;
+export const suspicious_phrases = [;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "throwaway";
   "fakeemail";
   "mailinator";
   "guerrillamail";
+"10minutemail"
 export const suspiciousEmailDomains = [
   "tempmail",
   "throwaway",
@@ -204,6 +217,7 @@ export const suspiciousEmailDomains = [;"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -215,24 +229,15 @@ export const suspiciousEmailDomains = [;"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Common constants used across fraud detection modules;
 // Phrases that might indicate fraud;
 export const suspicious_phrases = [;
 
-  "whatsapp me";
-  "contact me outside";
-  "cashapp only";
-  "western union";
-  "pay directly";
-  "bypass";
-  "telegram";
-  "signal me";
-  "avoid fees";
-  "payment link";
-  "urgent payment";
-  "deal outside";
-];
 
+<<<<<<< HEAD
 ;
 // Email domains often used for throwaway accounts;
 export const suspiciousEmailDomains = [;
@@ -301,3 +306,5 @@ export const suspiciousEmailDomains = [
   "10minutemail";
 ];
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

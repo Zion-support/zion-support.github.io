@@ -82,6 +82,7 @@ import { Trash2 } from "lucide-react";
 import { SkillItemProps } from "./types";
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -218,6 +219,15 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {}
 }variant="secondary" className="flex items-center gap-1 py-1.5 px-3" > > <Trash2 className="h-3 w-3" /> </Button> </Badge>) 
 };
 );
+=======
+import { Badge  } from '@/components / ui / badge';
+import { Button  } from '@/components / ui / button';
+import { Trash2  } from './lucide-react';
+import { SkillItemProps  } from './types';
+export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: any {
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 };

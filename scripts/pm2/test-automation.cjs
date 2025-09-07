@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -257,6 +258,8 @@ testAutomation.run().catch(error => {
 
 <<<<<<< HEAD
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -275,6 +278,7 @@ main
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
 >>>>>>> origin/automation-improvements-final
@@ -282,22 +286,22 @@ const path = require('path');
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/test-automation.cjs
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class TestAutomation {}
   constructor() {}
-    this.processName = process.env.PM2_PROCESS_NAME || 'test-automation';
+    this.processName = process.env.PM2_PROCESS_NAME ||test-automation';
     this.coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;
-    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true';
-    this.parallelTests = process.env.PARALLEL_TESTS === 'true';
-    this.logFile = path.join(__dirname, '../../logs/pm2/test-automation.log');
+    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED ===true;
+    this.parallelTests = process.env.PARALLEL_TESTS ===true;
+    this.logFile = path.join(__dirname,../../logs/pm2/test-automation.log');
     this.ensureLogDir();
   };
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true }
+      fs.mkdirSync(logDir, { recursive: true })
 });
-    };
-  };
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
@@ -336,6 +340,7 @@ class TestAutomation {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
 =======
@@ -346,6 +351,8 @@ class TestAutomation {}
 
 <<<<<<< HEAD
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
@@ -354,9 +361,9 @@ main
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
-  };
   async runTests() {}
     try {}
+<<<<<<< HEAD
       this.log('Starting test automation...');
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
 
@@ -400,11 +407,17 @@ main
       
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/test-automation.cjs
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const result = execSync(testCommand, { })
-        encoding: 'utf8',
-        stdio: 'pipe',
+        encoding: utf8,
+        stdio: pipe,
         cwd: process.cwd();
       }
+<<<<<<< HEAD
 });
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
 
@@ -449,13 +462,13 @@ main
           return { success: true, output: retryResult, retried: true };
         } catch (retryError) {}
           this.log(`Retry also failed: ${retryError.message}`);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           return { success: false, error: retryError.message, retried: true };
-        };
-      };
       return { success: false, error: error.message };
-    };
-  };
   async checkCoverage() {}
+<<<<<<< HEAD
     try {}
       this.log('Checking test coverage...');
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
@@ -487,10 +500,18 @@ main
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/test-automation.cjs
+=======
+
+      // Try to run coverage command;
+      const coverageCommand = 'npm run test:coverage || npm run coverage || npx jest --coverage';
+      const result = execSync(coverageCommand, { })
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       // Extract coverage percentage (simplified);
       const coverageMatch = result.match(/(\d+)%/);
       const coverage = coverageMatch ? parseInt(coverageMatch[1]) : 0;
+<<<<<<< HEAD
       this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
 
@@ -507,15 +528,16 @@ main
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/test-automation.cjs
       if (coverage < this.coverageThreshold) {}
+=======
+      `;
+      this.log(`Test coverage: ${coverage}% (threshold: ${this.coverageThreshold}%)`);
+      if (coverage < this.coverageThreshold) {}`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.log(`WARNING: Coverage below threshold!`);
         return { coverage, belowThreshold: true };
-      };
       return { coverage, belowThreshold: false };
-    } catch (error) {}
-      this.log(`Coverage check failed: ${error.message}`);
+
       return { coverage: 0, belowThreshold: true, error: error.message };
-    };
-  };
   async generateReport() {}
     const report = {}
       timestamp: new Date().toISOString(),
@@ -527,6 +549,7 @@ main
         coverageThreshold: this.coverageThreshold,
         autoRetry: this.autoRetryFailed,
         parallelTests: this.parallelTests;
+<<<<<<< HEAD
       };
     };
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
@@ -549,10 +572,13 @@ main
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/test-automation.cjs
     this.log(`Test report generated: ${reportFile}`);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return report;
-  };
-  async start() {}
+  async start() {}`;
     this.log(`${this.processName} started`);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
 
     try {}
@@ -574,23 +600,21 @@ main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/test-automation.cjs
+=======
+      const report = await this.generateReport();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (report.testResults.success) {}
         this.log('Test automation completed successfully');
       } else {}
         this.log('Test automation completed with errors');
-      };
       if (report.coverage.belowThreshold) {}
         this.log('WARNING: Test coverage below threshold');
-      };
-    } catch (error) {}
-      this.log(`Test automation error: ${error.message}`);
-    };
-  };
-};
+
 // Start the service;
 if (require.main === module) {}
   const testAutomation = new TestAutomation();
   testAutomation.start().catch(console.error);
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
 <<<<<<< HEAD
 =======
@@ -627,3 +651,7 @@ main
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

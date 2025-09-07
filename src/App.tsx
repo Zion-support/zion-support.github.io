@@ -83,6 +83,7 @@ import React from 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import ErrorBoundary from './components/ErrorBoundary';
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
@@ -92,6 +93,11 @@ import ToastContainer from './components/ToastContainer';
 import { ThemeProvider } from './components/ThemeProvider';
 import ScrollToTop from './components/ScrollToTop';
 <<<<<<< HEAD
+=======
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { BackToTopButton } from './components/BackToTopButton';
 
 // Simple Home component
@@ -118,6 +124,7 @@ const Home = () => (
     </div>
   </div>
 );
+<<<<<<< HEAD
 =======
 import BackToTop from './components/BackToTopButton';
 import About from './pages/About';
@@ -126,10 +133,13 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Pricing from './pages/Pricing';
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 function App() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -208,17 +218,30 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
 =======
     <Router>
       <div className="min-h-screen flex flex-col">
+=======
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </main>
+<<<<<<< HEAD
       </div>
     </Router>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+        <Footer />
+        <BackToTopButton />
+        <ScrollToTop />
+      </div>
+    </Router>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   );
 }
 <<<<<<< HEAD

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -27,6 +28,9 @@ import { Link } from "react-router-dom","
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { useIsMobile } from "@/hooks/use-mobile",
 ;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   appName?: string;
 import React, { useState, useEffect } from './react';'
 import { X, ArrowRight } from './lucide-react';'
@@ -41,10 +45,11 @@ interface SmartAppBannerProps {}
   app_name?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
-  googlePlayUrl?: string;
-  delay?: number, // Delay in milliseconds before showing the banner;
+  googlePlayUrl?: string;}
+  delay?: number, // Delay in milliseconds before showing the banner;}
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -377,3 +382,5 @@ export default SmartAppBanner;
 =======
 '"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

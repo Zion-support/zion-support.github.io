@@ -5,6 +5,7 @@ import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 <<<<<<< HEAD
 
   id: string;
+<<<<<<< HEAD
   type: "success" | "error" | "warning" | "info";
 
 pr-12243
@@ -15,11 +16,24 @@ export interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  type: 'success' | 'error' | 'warning' | 'info';
+
+  id: string;
+  type: "success" | "error" | "warning" | "info";
+interface Notification {
+  id: string;
+  type: "success" | "error" | "warning" | "info";
+
+pr-12243
+  type: 'success' | 'error' | 'warning' | 'info';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   title?: string;
-  message: string;
-  duration?: number;
+  message: string;}
+  duration?: number;}
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -34,11 +48,16 @@ const getNotificationStyles = (type: Notification["type"]): string => {
   }
   return `${baseStyles} ${typeStyles[type]}`;
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface NotificationSystemProps {
   notifications: Notification[];
   onDismiss?: (id: string) => void;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
@@ -59,7 +78,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   useEffect(() => {
     const timers: ReturnType<typeof setTimeout>[] = [];
-    
     notifications.forEach(notification => {
       if (notification.duration && notification.duration > 0) {
         const timer = setTimeout(() => {
@@ -76,7 +94,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   const getNotificationStyles = (type: Notification['type']) => {
     const baseStyles = 'border-l-4';
-    
     switch (type) {
       case 'success':
         return `${baseStyles} border-green-500 bg-green-50 text-green-800`;
@@ -92,11 +109,14 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 pr-12243
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const getIcon = (type: Notification['type']) => {
     switch (type) {
       case 'success':
@@ -132,68 +152,24 @@ pr-12243
   return (
     <div className={`fixed ${getPositionStyles()} z-50 space-y-2`}>
       {visibleNotifications.map(notification => (
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-interface Notification {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  title: string;
-  message: string;
-  duration?: number;
-}
 
-interface NotificationContextType {
-  notifications: Notification[];
-  addNotification: (notification: Omit<Notification, 'id'>) => void;
-  removeNotification: (id: string) => void;
-}
 
-const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
-
-interface NotificationProviderProps {
-  children: ReactNode;
-}
-
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-
-  const addNotification = (notification: Omit<Notification, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9);
-    const newNotification = { ...notification, id };
-    
-    setNotifications(prev => [...prev, newNotification]);
-
-    if (notification.duration !== 0) {
-      setTimeout(() => {
-        removeNotification(id);
-      }, notification.duration || 5000);
-    }
-  };
-
-  const removeNotification = (id: string) => {
-    setNotifications(prev => prev.filter(notification => notification.id !== id));
-  };
-
-  return (
-    <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
-      {children}
-      <NotificationContainer />
-    </NotificationContext.Provider>
-  );
-};
-
-const NotificationContainer: React.FC = () => {
-  const { notifications, removeNotification } = useNotifications();
 
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
       {notifications.map((notification) => (
-        <div
+        <NotificationItem
           key={notification.id}
-          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
+className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
         >
           <div className="flex items-start justify-between">
             <div className="flex-1">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <NotificationItem
           key={notification.id}
@@ -203,6 +179,8 @@ const NotificationContainer: React.FC = () => {
 
 pr-12243
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div className="flex items-start space-x-2">
                 {getIcon(notification.type)}
                 <div className="flex-1">
@@ -210,26 +188,62 @@ pr-12243
                     <h4 className="font-medium mb-1">{notification.title}</h4>
                   )}
                   <p className="text-sm">{notification.message}</p>
+        <div
+          key={notification.id}
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
+        >
+          <div className="flex items-start justify-between">
+            <div className="flex-1">
+        <NotificationItem
+          key={notification.id}
+          notification={notification}
+          onRemove={removeNotification}
+        />
+
+pr-12243
+  return ("
+    <div className=\"fixed top-4 right-4 z-50 space-y-2\" />
+      {notifications.map((notification) => (}
+        <div;}
+key={notification.id}
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
+         />"
+          <div className=\"flex items-start justify-between\" />"
+            <div className=\"flex-1\" />"
+              <div className=\"flex items-start space-x-2\" />
+                {getIcon(notification.type)}"
+                <div className=\"flex-1\" />
+                  {notification.title && (}"
+                    <h4 className=\"font-medium mb-1\" />{notification.title}</h4>
+                  )}"
+                  <p className=\"text-sm\" />{notification.message}</p>
                 </div>
               </div>
             </div>
-            {onDismiss && (
-              <button
-                onClick={() => handleDismiss(notification.id)}
-                className="ml-2 text-gray-400 hover:text-gray-600 transition-colors"
-              >
-                <X className="h-4 w-4" />
+            {onDismiss && (}
+              <button;}
+onClick={() = /> handleDismiss(notification.id)}"
+                className=\"ml-2 text-gray-400 hover: text-gray-600 transition-colors\"
+              >"
+                <X className=\"h-4 w-4\" />
               </button>
             )}
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ))}
     </div>
-  );
+  )
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default NotificationSystem;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               {notification.title && (
               <p className="text-sm">{notification.message}</p>
             </div>
@@ -245,6 +259,22 @@ pr-12243
                 <h4 className="font-medium mb-1">{notification && notification.title}</h4>;
               )}
 }
+}
+
+  return (
+<div className="fixed top - 4 right - 4 z - 50 space - y-2">;
+      {notifications.map ((notification) => (
+        <div;
+          key={notification.id}
+          className={`max - w-sm w - full border rounded - lg p - 4 shadow - lg ${getNotificationStyles (notification.type)}`}
+        >;
+          <div className="flex items - start justify - between">;
+            <div className="flex - 1">;
+              {notification.title && (
+                <h4 className="font - medium mb - 1">{notification.title}</h4>)}
+              <p className="text - sm">{notification.message}</p>;
+            </div>;
+
 }
 const NotificationItem: React.FC<{
   notification: Notification;
@@ -266,27 +296,31 @@ pr-12243
   };
 
   const Icon = icons[notification.type];
+<<<<<<< HEAD
 =======
 export default NotificationSystem;
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export default NotificationSystem;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
-    <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>
-      <div className="flex items-start">
-        <Icon className="w-5 h-5 mt-0.5 mr-3 flex-shrink-0" />
-        <div className="flex-1">
-          <h4 className="font-semibold">{notification.title}</h4>
-          <p className="text-sm opacity-90">{notification.message}</p>
+    <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'} />"
+      <div className=\"flex items-start\" />"
+        <Icon className=\"w-5 h-5 mt-0.5 mr-3 flex-shrink-0\" />"
+        <div className=\"flex-1\" />"
+          <h4 className=\"font-semibold\" />{notification.title}</h4>"
+          <p className=\"text-sm opacity-90\" />{notification.message}</p>
         </div>
-        <button
-          onClick={() => onRemove(notification.id)}
-          className="ml-3 flex-shrink-0 hover:opacity-75"
-        >
-          <X className="w-4 h-4" />
+        <button;
+onClick={() = /> onRemove(notification.id)}"
+          className=\"ml-3 flex-shrink-0 hover: opacity-75\"
+        >"
+          <X className=\"w-4 h-4\" />
         </button>
       </div>
     </div>
-  );
+  )
 };
 
 export const useNotifications = () => {
@@ -296,6 +330,7 @@ export const useNotifications = () => {
   }
   return context;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
 =======
@@ -310,3 +345,18 @@ pr-12243
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+export const useNotifications = (
+ ;
+  const context = useContext(NotificationContext);
+  if (context === undefined) {
+    throw new Error('useNotifications must be used within a NotificationProvider');) => {
+  return $3;}
+}
+  }
+  return context;
+};
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -6,8 +6,14 @@ import type { UserDetails } from "@/types/auth",import {supabase} from "@/integr
 =======
 
 
+<<<<<<< HEAD
 import {supabase} from "@/integrations/supabase/client";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import type { UserDetails } from "@/types/auth";
+import { supabase } from "@/integrations/supabase/client",;
+import type { UserDetails } from "@/types/auth",import {supabase} from "@/integrations/supabase/client";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 =======
 
@@ -15,6 +21,7 @@ import {supabase} from "@/integrations/supabase/client";
 "
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { UserDetails } from "@/types/auth";
+<<<<<<< HEAD
 "
 import { supabase } from "@/integrations/supabase/client","
 import type { UserDetails } from "@/types/auth",
@@ -41,6 +48,11 @@ import type { UserDetails } from "@/types/auth";
 =======
 
 
+=======
+
+import { supabase } from "@/integrations/supabase/client",;
+import type { UserDetails } from "@/types/auth",;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
@@ -51,6 +63,7 @@ import type { UserDetails } from "@/types/auth";
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -859,3 +872,12 @@ export const checkNewRegistration = async (user:UserDetails) => {;
   }
 };
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+import { supabase } from "@/integrations/supabase/client",;
+import type { UserDetails } from "@/types/auth",;
+/**
+ * Utility function to clean up authentication state
+ * This helps prevent auth state inconsistencies and "limbo" states
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

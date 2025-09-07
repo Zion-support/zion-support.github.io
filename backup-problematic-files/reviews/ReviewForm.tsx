@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -17,14 +18,22 @@ export type ReviewFormValues = {
 
 =======
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+=======
+</div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {""
+  submitting ? 'Submitting...' : 'Submit Review
+}</button> </form>)
+}
+type Props = {
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {
-  projectId: string,
-  fromRole: 'client' | 'talent',
-  fromId: string,
-  rating: number,
-  text: string,
+  projectId: string;,
+  fromRole: 'client' | 'talent';,
+  fromId: string;,
+  rating: number;,
+  text: string;,
   categories?: {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     communication?: number;
@@ -35,6 +44,7 @@ export type ReviewFormValues = {
   anonymous?: boolean
 }
 type Props = {
+<<<<<<< HEAD
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 const ReviewForm: React.FC<Props> = ({ initial }) => {
 <<<<<<< HEAD
@@ -55,25 +65,29 @@ class ErrorBoundary extends React.Component {
   }
   render() {
     if (this.state.hasError) {
+=======
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+
+pr-12325
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>
+
+const ReviewForm: React.FC<Props> = ({ initial ;}) => {
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
- </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
+ </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;""
   submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>) 
 };
 type Props = {;
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>
 };import React, { useState } from 'react';
-import StarRating from './StarRating';
 export type ReviewFormValues = {;
-  projectId: string,;
-  fromRole: 'client' | 'talent',;
-  fromId: string,;
-  rating: number,;
-  text: string,;
+  projectId: string;,;
+  fromRole: 'client' | 'talent';,;
+  fromId: string;,;
+  rating: number;,;
+  text: string;,;
   categories?: {;
     communication?: number;
     qualityOfWork?: number;
@@ -83,18 +97,30 @@ export type ReviewFormValues = {;
   anonymous?: boolean
 };
 type Props = {;
+<<<<<<< HEAD
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
+=======
+}</button> </form>) ;
+
+pr-12325
+  initial: Pick<ReviewFormValues;, 'projectId' | 'fromRole' | 'fromId'>;
+
+const ReviewForm: React.FC<Props> = ({ initial ;}) => {;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [communication, setCommunication] = useState<number | undefined>();
+</number>
   const [qualityOfWork, setQualityOfWork] = useState<number | undefined>();
   const [timeliness, setTimeliness] = useState<number | undefined>();
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
-  const [submitting, setSubmitting] = useState(false);
+</boolean>
   const [message, setMessage] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -229,9 +255,15 @@ main:components/reviews/ReviewForm.tsx
       setSubmitting(false);    }
   }
   return (
+=======
+</string>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <form onSubmit={handleSubmit} className='space-y-6'>
+</form>
       <div>
+</div>
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />
+<<<<<<< HEAD
       </div>
       <div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -257,3 +289,8 @@ export default ReviewForm;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      </button>
+      {message && <p className='text-sm'>{message}</p>}
+export default ReviewForm;    </form>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -2,8 +2,9 @@
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false ;};
   }
+<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {}
     return { hasError: true };
@@ -15,12 +16,22 @@ class ErrorBoundary extends React.Component {}
   
   render() {}
     if (this.state.hasError) {}
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true ;};
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: ';, error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 pr-12243
@@ -28,6 +39,9 @@ pr-12243
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 =======
@@ -37,6 +51,7 @@ import React from "react";"
 import SEO from "../components/SEO";"
 import { Check, ExternalLink } from "lucide-react";
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -62,6 +77,8 @@ import { Check, ExternalLink } from "lucide-react";
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from './react';
 import SEO from "../components / SEO";
 import { Check, ExternalLink  } from './lucide-react';
@@ -70,14 +87,39 @@ export default /**
  */
 function SecretsRotationAutomationPage() {
   const features = [;
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
 
+export default function SecretsRotationAutomationPage() {;
+  const features = [;
+    "Automated key and secret rotation",;
+    "JIT credentials with expirations",;
+    "Policy approvals and audit trails",;
+    "CI/CD integration (GitHub Actions, CircleCI)",;
+    "Cloud KMS and Vault support",;
+  ];
+import React from 'react';
+
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+
+<<<<<<< HEAD
 export default function SecretsRotationAutomationPage() {
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 export default function SecretsRotationAutomationPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   const features = [
     "Automated key and secret rotation"
@@ -89,6 +131,7 @@ export default function SecretsRotationAutomationPage() {
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function SecretsRotationAutomationPage() {
   const features = [
 pr-12243
@@ -97,6 +140,11 @@ pr-12243
   const features = [
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+export default function SecretsRotationAutomationPage() {
+  const features = [
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -180,6 +228,7 @@ export default function SecretsRotationAutomationPage() {}
             >;"
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             </a>;
@@ -209,6 +258,8 @@ pr-12243
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
 =======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
             </a>;
           </div>;
@@ -216,6 +267,10 @@ pr-12243
       </main>;
 
     </>);
+<<<<<<< HEAD
+=======
+pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>;
       <SEO;
@@ -238,8 +293,13 @@ return (
   return (
   return (
   return (
+<<<<<<< HEAD
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  return (
+  return (
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>
       <SEO"
         title="Secrets Rotation Automation""
@@ -298,9 +358,14 @@ return (
       </main>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }
 
+</>);
+}
 
 pr-12243
 =======
@@ -308,6 +373,7 @@ pr-12243
     </>);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -326,6 +392,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     </>);
 }
@@ -334,10 +402,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
 	];
 <<<<<<< HEAD
+<<<<<<< HEAD
 	const features = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+	const features = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 	return (
 		<>"
 			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs." />"
@@ -369,6 +442,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 		</>
 );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);
 }
@@ -665,3 +739,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
