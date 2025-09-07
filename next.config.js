@@ -3,12 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
-<<<<<<< HEAD
-    dirs: []
-  },
-  typescript: {
-    ignoreBuildErrors: true
-=======
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -77,7 +71,6 @@ const nextConfig = {
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
     pagesBufferLength: 2
->>>>>>> cursor/expand-services-advertise-and-build-project-e77d
   }
 };
 
