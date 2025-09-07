@@ -48,24 +48,27 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/chore/fix-lint-and-merge
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic';
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 describe('ImageOptimizerdynamic', () => {
   test('renders without crashing', () => {
-    render(<ImageOptimizerdynamic />);
-    expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument();
+    render(<ImageOptimizer />);
+    expect(screen.getByTestId('imageoptimizer')).toBeInTheDocument();
   });
   test('displays correct content', () => {
-    render(<ImageOptimizerdynamic />);
+    render(<ImageOptimizer />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<ImageOptimizerdynamic />);
+    render(<ImageOptimizer />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<ImageOptimizerdynamic />);
+    render(<ImageOptimizer />);
+    // Add styling tests if needed
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ImageOptimizerdynamic from "./components/ImageOptimizer.dynamic"; describe("ImageOptimizerdynamic",() => { test("renders without crashing",() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId("imageoptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ImageOptimizerdynamic />)}); test("handles user interactions",() => { render(<ImageOptimizerdynamic />)}); test("applies correct styling",() => { render(<ImageOptimizerdynamic />)})});''"

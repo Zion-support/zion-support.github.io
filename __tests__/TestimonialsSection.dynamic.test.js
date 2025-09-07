@@ -87,7 +87,7 @@ describe('TestimonialsSectiondynamic'
 >>>>>>> origin/chore/fix-lint-and-merge
 
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic';
 
@@ -145,13 +145,16 @@ describe('TestimonialsSectiondynamic', () => {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   test('displays correct content', () => {
-    render(<TestimonialsSectiondynamic />);
+    render(<TestimonialsSection />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<TestimonialsSectiondynamic />);
+    render(<TestimonialsSection />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<TestimonialsSectiondynamic />);
+    render(<TestimonialsSection />);
+    // Add styling tests if needed
   });
 });
 

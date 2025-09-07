@@ -119,14 +119,14 @@ describe('SecurityHeadersdynamic'
   test('applies correct styling'
 
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic';
 
 describe('SecurityHeadersdynamic', () => {
   test('renders without crashing', () => {
-    render(<SecurityHeadersdynamic />);
-    expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument();
+    render(<SecurityHeaders />);
+    expect(screen.getByTestId('securityheaders')).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -147,13 +147,16 @@ describe('SecurityHeadersdynamic', () => {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   test('displays correct content', () => {
-    render(<SecurityHeadersdynamic />);
+    render(<SecurityHeaders />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<SecurityHeadersdynamic />);
+    render(<SecurityHeaders />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<SecurityHeadersdynamic />);
+    render(<SecurityHeaders />);
+    // Add styling tests if needed
   });
 });
 

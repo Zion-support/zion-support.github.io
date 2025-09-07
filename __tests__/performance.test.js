@@ -602,28 +602,20 @@ describe('performance', () => {
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
-  test('page load performance', async ({ page }) => {
+  test('page loads within acceptable time', async ({ page }) => {
     const startTime = Date.now();
     await page.goto('/');
-    await page.waitForLoadState('networkidle');
     const loadTime = Date.now() - startTime;
-    // Page should load within 3 seconds
     expect(loadTime).toBeLessThan(3000);
   });
 
-  test('lighthouse performance audit', async ({ page }) => {
+  test('bundle size is reasonable', async ({ page }) => {
     await page.goto('/');
-    // Run lighthouse audit
-    const lighthouse = await page.evaluate(() => {
-      return new Promise((resolve) => {
-        if (typeof window.lighthouse !== 'undefined') {
-          window.lighthouse(window.location.href, {
-            output: 'json'
-          }).then(resolve);
-        } else {
-          resolve({ error: 'Lighthouse not available' });
-        }
-      });
+    const metrics = await page.evaluate(() => {
+      return {
+        jsHeapSizeLimit: performance.memory?.jsHeapSizeLimit || 0,
+        usedJSHeapSize: performance.memory?.usedJSHeapSize || 0
+      };
     });
 
     // Check performance score

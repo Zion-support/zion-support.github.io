@@ -119,14 +119,14 @@ describe('WebVitalsdynamic'
   test('applies correct styling'
 
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import WebVitalsdynamic from '../components/WebVitals.dynamic';
 
 describe('WebVitalsdynamic', () => {
   test('renders without crashing', () => {
-    render(<WebVitalsdynamic />);
-    expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument();
+    render(<WebVitals />);
+    expect(screen.getByTestId('webvitals')).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -147,13 +147,16 @@ describe('WebVitalsdynamic', () => {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   test('displays correct content', () => {
-    render(<WebVitalsdynamic />);
+    render(<WebVitals />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<WebVitalsdynamic />);
+    render(<WebVitals />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<WebVitalsdynamic />);
+    render(<WebVitals />);
+    // Add styling tests if needed
   });
 });
 
