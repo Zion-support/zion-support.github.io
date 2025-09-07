@@ -1,48 +1,29 @@
-        const dependencies = lockFile.dependencies || {};
-;
-        // This would need more sophisticated analysis;
-        return [];
-      };
-      return [];
-    } catch (error) {;
-      this.log(`Duplicate dependency check error: ${error.message,}`);
-      return [];
-    };
-  };
-  async start() {;
-    this.log('Build optimizer service started');
-    // Run optimization immediately;
-    await this.optimizeBuild();
-    // Set up interval for periodic optimization;
-    setInterval(async () => {
-      await this.optimizeBuild()}, 24 * 60 * 60 * 1000), // Every 24 hours}};
-// Start the service;
-const buildOptimizer = new BuildOptimizer();
-buildOptimizer.start().catch(console.error);
+
+        const dependencies = $2;
 ,
         // This would need more sophisticated analysis,
-        return [],
-      };
-      return [],
+        return []
+      },
+      return []
     } catch (error) {,
-      this.log(`Duplicate dependency check error: ${error.message}`),
-      return [],
-    };
-  };
+      this.log($2);
+      return []
+    }
+  },
 ,
   async start() {,
-    this.log('Build optimizer service started'),
+    this.log($2);
 ,
     // Run optimization immediately,
-    await this.optimizeBuild(),
+    await this.optimizeBuild($2);
 ,
     // Set up interval for periodic optimization,
     setInterval(async () => {,
-      await this.optimizeBuild(),
-    }, 24 * 60 * 60 * 1000), // Every 24 hours,
-  };
-};
+      await this.optimizeBuild()
+    }, 24 * 60 * 60 * 1000), // Every 24 hours
+  }
+},
 ,
 // Start the service,
-const buildOptimizer = new BuildOptimizer(),
-buildOptimizer.start().catch(console.error),
+const buildOptimizer = new BuildOptimizer($2);
+buildOptimizer.start().catch($2);

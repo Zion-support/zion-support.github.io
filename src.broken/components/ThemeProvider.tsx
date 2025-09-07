@@ -1,36 +1,18 @@
 import { createContext, useContext, useLayoutEffect, useState } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 
-type Theme = 'dark' | 'light' | 'system';
+import { createContext, useContext, useLayoutEffect, useState } from "react"
+import { safeStorage } from "@/utils/safeStorage"
 
-type ThemeProviderProps = {
-  children: React.ReactNode;
-  defaultTheme?: Theme;
-};
-
-type ThemeProviderState = {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
-  toggleTheme: () => void;
-};
-
-const initialState: ThemeProviderState = {
-  theme: 'system',
+type Theme = $2;
   setTheme: () => null,
   toggleTheme: () => null,
 };
 }
 }
 
-export const ThemeProviderContext =
-  createContext<ThemeProviderState>(initialState);
-}
-}
-
-export function ThemeProvider({
-  children,
-  defaultTheme = 'system',
-}: ThemeProviderProps) {
+export const ThemeProviderContext = $2;
+  defaultTheme = "system"}: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
     const stored = safeStorage.getItem('theme') as Theme | null;
     return stored || defaultTheme;
@@ -68,24 +50,14 @@ export function ThemeProvider({
   }, [theme]);
 
   const setCurrentTheme = (newTheme: Theme) => {
-    safeStorage.setItem('theme', newTheme);
-    applyTheme(newTheme);
-    setTheme(newTheme);
-  };
+    safeStorage.setItem($2);
+    applyTheme($2);
+    setTheme(newTheme)
+  },
 
-  const toggleTheme = () => {
-    let currentResolvedTheme = theme;
-    if (currentResolvedTheme === 'system') {
-      currentResolvedTheme = window.matchMedia('(prefers-color-scheme: dark)')
-        .matches
-        ? 'dark'
-        : 'light';
-    }
-    setCurrentTheme(currentResolvedTheme === 'dark' ? 'light' : 'dark');
-  };
-
-  const value = {
-    theme,
+  const toggleTheme = $2;
+    if (currentResolvedTheme = $2;
+  const value = $2;
     setTheme: setCurrentTheme,
     toggleTheme,
   };

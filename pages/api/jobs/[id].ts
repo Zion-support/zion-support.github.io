@@ -1,55 +1,51 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile, writeJsonFile } from '../../../utils/db',
-import type { Job } from '../../../utils/types',
-import { rateLimit } from '../../../utils/rateLimit',
-import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth',
-
-const FILE = 'jobs.json',
-
+import { readJsonFile, writeJsonFile } from '../../../utils/db';
+import type { Job } from '../../../utils/types';
+import { rateLimit } from '../../../utils/rateLimit';
+import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth';
+const FILE = $2;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return,
   const { id } = req.query,
   const jobs = readJsonFile<Job[]>(FILE, []),
-  const idx = jobs.findIndex((j) => j.id === id),
-
+  const idx = $2;
   if (idx === -1) {
-    res.status(404).json({ error: 'Job not found' }),
+    res.status(404).json($2);
     return
   }
 
   if (req.method === 'GET') {
-    res.status(200).json({ job: jobs[idx] }),
+    res.status(200).json($2);
     return
   }
 
   if (req.method === 'PATCH') {
-    const userEmail = getRequestUserEmail(req),
-    const job = jobs[idx],
-    const isOwner = userEmail && userEmail === job.clientEmail,
+    const userEmail = getRequestUserEmail($2);
+    const job = $2;
+    const isOwner = $2;
     if (!isOwner && !isAdminEmail(userEmail)) {
-      res.status(403).json({ error: 'Forbidden' }),
+      res.status(403).json($2);
       return
     }
 
     const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {},
 
-    if (typeof title === 'string') job.title = title,
-    if (typeof description === 'string') job.description = description,
-    if (typeof category === 'string') job.category = category,
-    if (Array.isArray(requiredSkills)) job.requiredSkills = requiredSkills.map(String),
-    if (typeof budgetMinUsd === 'number' || budgetMinUsd === null) job.budgetMinUsd = budgetMinUsd ?? undefined,
-    if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined,
-    if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined,
-    if (typeof status === 'string') job.status = status as Job['status'],
-
-    job.updatedAtIso = new Date().toISOString(),
+    if (typeof title = $2;
+    if (typeof description = $2;
+    if (typeof category = $2;
+    if (Array.isArray(requiredSkills)) job.requiredSkills = requiredSkills.map($2);
+    if (typeof budgetMinUsd = $2;
+    if (typeof budgetMaxUsd = $2;
+    if (typeof deliveryDeadlineIso = $2;
+    if (typeof status = $2;
+    job.updatedAtIso = new Date().toISOString($2);
     jobs[idx] = job,
     writeJsonFile<Job[]>(FILE, jobs),
 
-    res.status(200).json({ job }),
+    res.status(200).json($2);
     return
   }
 
-  res.setHeader('AllowGET, PATCH'),
+  res.setHeader($2);
   res.status(405).end('Method Not Allowed')
 }

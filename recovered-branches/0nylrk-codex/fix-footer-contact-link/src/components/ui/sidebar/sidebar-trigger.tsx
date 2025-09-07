@@ -1,10 +1,11 @@
-import * as React from &quot;react&quot;
-import { PanelLeft } from &quot;lucide-react&quot;
-import { Button } from &quot;@/components/ui/button&quot;
-import { cn } from &quot;@/lib/utils&quot;
-import { useSidebar } from &quot;./sidebar-context&quot;
-export const SidebarTrigger = React.forwardRef<
-  React.ElementRef<typeof Button>
+
+import * as React from "react"
+import { PanelLeft } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { useSidebar } from "./sidebar-context"
+
+export const SidebarTrigger = $2;
   React.ComponentProps<typeof Button>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()

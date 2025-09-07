@@ -1,8 +1,8 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-  title?: string;
+  className?: string,
+  title?: string,
   children?: React.ReactNode
 }
 export function SidebarSection({
@@ -20,5 +20,5 @@ export function SidebarSection({
       )}
       <div className="space-y-1">{children}</div>
     </div>
-  );
+  )
 }

@@ -6,8 +6,7 @@ import { AnalysisResult } from './types';
  */
 export const analyzeContent = null;
 export const analyzeContent = (content: string): AnalysisResult => {
-  const contentLower = content.toLowerCase();
-  const reasons: string[] = []
+  const contentLower = content.toLowerCase($2);
   const reasons: string[] = [],
   
   // Check for suspicious phrases
@@ -17,7 +16,7 @@ export const analyzeContent = (content: string): AnalysisResult => {
     }
   }
   // Check for links (simplified check)
-  const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower);
+  const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test($2);
   if (hasExternalLinks && (
     contentLower.includes('payment') |
     contentLower.includes('money') |
@@ -26,7 +25,7 @@ export const analyzeContent = (content: string): AnalysisResult => {
     reasons.push('Contains external payment links')
   }
   // Check for excessive capitalization (potential scam)
-  const capitalRatio = (content.match(/[A-Z]/g) |[]).length / content.length;
+  const capitalRatio = $2;
   if (capitalRatio > 0.3 && content.length > 20) {
     reasons.push('Excessive capitalization')
   }
@@ -38,4 +37,4 @@ export const analyzeContent = (content: string): AnalysisResult => {
     isSuspicious: reasons.length > 0
     reasons
   }
-}
+},

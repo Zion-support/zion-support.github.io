@@ -10,15 +10,16 @@ import { format } from "date-fns";
 import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
 interface QuotesFilterProps {
-  searchQuery: string;
-  setSearchQuery: (value: string) => void;
-  statusFilter: QuoteStatus | 'all';
-  setStatusFilter: (value: QuoteStatus | 'all') => void;
-  archiveFilter: 'active' | 'archived' | 'all';
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
-  dateRange: DateRange | undefined;
-  setDateRange: (range: DateRange | undefined) => void;
-interface QuotesFilterProps {
+  searchQuery: string,
+  setSearchQuery: (value: string) => void,
+  statusFilter: QuoteStatus | 'all',
+  setStatusFilter: (value: QuoteStatus | 'all') => void,
+  archiveFilter: 'active' | 'archived' | 'all',
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
+  dateRange: DateRange | undefined,
+  setDateRange: (range: DateRange | undefined) => void,
+  onReset: () => void
+}
 
   searchQuery: string
   setSearchQuery: (value: string) => void
@@ -116,29 +117,4 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   )}
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
-                <CalendarComponent
-                  initialFocus
-                  mode="range"
-                  defaultMonth={dateRange?.from}
-                  selected={dateRange}
-                  onSelect={setDateRange}
-                  numberOfMonths={2}
-                />
-              </PopoverContent>
-            </Popover>
-          </div>
-        </div>
-        <div className="mt-4 flex justify-end">
-          <Button
-            variant="outline"
-            onClick={onReset}
-            className="border-zion-blue-light text-zion-slate-light"
-          >
-            <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
+              <PopoverContent className = $2;

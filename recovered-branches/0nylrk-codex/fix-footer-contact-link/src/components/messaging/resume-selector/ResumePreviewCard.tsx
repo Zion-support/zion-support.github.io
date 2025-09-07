@@ -5,20 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Download  } from 'lucide-react';
 import { Resume } from "@/types/resume";
 interface ResumePreviewCardProps {
-  resume: Resume;
-  onDownload: () => void;
-  isLoading: boolean
-}
-export function ResumePreviewCard({
-  resume
-  onDownload
-  isLoading
-}: ResumePreviewCardProps) {
-interface ResumePreviewCardProps {
   resume: Resume,
   onDownload: () => void,
-  isLoading: boolean
-}
+  isLoading: boolean}
 
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
   return (
@@ -70,6 +59,5 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         )}
       </CardContent>
     </Card>
-    </Card>;
-  );
+  )
 }

@@ -1,7 +1,6 @@
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-const AICustomerService: React.FC = () => {
+import React from 'react';
+import Head from 'next/head';
+export default function AICustomerService() {
   return (
     <>
       <Head>
@@ -14,8 +13,8 @@ const AICustomerService: React.FC = () => {
           <h1 className="text-4xl font-bold mb-6">AI Customer Service</h1>
           <p className="text-gray-300">Automate and augment customer support experiences with AI agents and analytics.</p>
         </section>
-      </main>
-    </Layout>
+      </div>
+    </>
   )
 }
 export default AICustomerService

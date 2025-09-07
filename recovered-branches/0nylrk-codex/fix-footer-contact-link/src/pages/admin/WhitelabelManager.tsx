@@ -8,15 +8,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function WhitelabelManager() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("tenants");
+  const { user } = useAuth($2);
+  const [activeTab, setActiveTab] = useState($2);
   // Check if user has admin role
-
-  const isAdmin = user?.role === "admin";
-  
-  // Check if user has admin role
-  const isAdmin = user?.role === "admin",
-  
+  const isAdmin = $2;
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }

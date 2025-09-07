@@ -1,7 +1,121 @@
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-const AdvancedITInfrastructureServices: React.FC = () => {
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, 
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
+  Wifi, Building, Cpu as CpuIcon
+} from 'lucide-react',
+import Layout from '../components/layout/Layout';
+import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
+const contactInfo = $2;
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+const heroStats = [
+  { label: 'Infrastructure Projects', value: '150+', icon: <Server className = $2;
+  { label: 'Enterprise Clients', value: '300+', icon: <Building className = $2;
+  { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className = $2;
+  { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className = $2;
+const serviceCategories = $2;
+    description: 'Next-generation cloud infrastructure with quantum processing capabilities',
+    services: advancedITInfrastructureServices2025.filter($2);
+    icon: Cloud,
+    color: 'from-indigo-500 to-purple-600',
+    features: ['Quantum ProcessingHybrid ComputingAI Acceleration']
+  },
+  {
+    title: 'Edge Computing & IoT',
+    description: 'Autonomous edge infrastructure with intelligent optimization',
+    services: advancedITInfrastructureServices2025.filter($2);
+    icon: Wifi,
+    color: 'from-green-500 to-emerald-600',
+    features: ['Edge ProcessingIoT Orchestration5G Optimization']
+  },
+  {
+    title: 'Cybersecurity',
+    description: 'Comprehensive security framework with continuous verification',
+    services: advancedITInfrastructureServices2025.filter($2);
+    icon: SecurityIcon,
+    color: 'from-red-500 to-orange-600',
+    features: ['Zero TrustThreat DetectionCompliance Automation']
+  },
+  {
+    title: 'Data Center Infrastructure',
+    description: 'Self-managing data center infrastructure with AI optimization',
+    services: advancedITInfrastructureServices2025.filter($2);
+    icon: Building,
+    color: 'from-blue-500 to-cyan-600',
+    features: ['AI ManagementPredictive MaintenanceCost Optimization']
+  },
+  {
+    title: 'Quantum Networking',
+    description: 'Next-generation networking with quantum encryption and optimization',
+    services: advancedITInfrastructureServices2025.filter($2);
+    icon: Network,
+    color: 'from-purple-500 to-pink-600',
+    features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
+  }
+],
+
+const heroFeatures = $2;
+    description: 'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
+    icon: Atom,
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
+  },
+  {
+    title: 'AI-Powered Automation',
+    description: 'Intelligent automation that reduces operational costs by up to 70% while improving reliability.',
+    icon: Brain,
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600'
+  },
+  {
+    title: 'Edge Computing',
+    description: 'Distributed edge infrastructure that reduces latency and provides real-time processing capabilities.',
+    icon: Wifi,
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600'
+  },
+  {
+    title: 'Zero Trust Security',
+    description: 'Continuous verification and monitoring that provides comprehensive protection against modern threats.',
+    icon: Shield,
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
+  }
+],
+
+const testimonials = $2;
+    role: 'CTO, QuantumTech Industries',
+    company: 'QuantumTech Industries',
+    content: 'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',
+    rating: 5,
+    avatar: '👩‍🔬'
+  },
+  {
+    name: 'Robert Thompson',
+    role: 'Infrastructure Director, EdgeNet Solutions',
+    company: 'EdgeNet Solutions',
+    content: 'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',
+    rating: 5,
+    avatar: '👨‍💼'
+  },
+  {
+    name: 'Lisa Chang',
+    role: 'Security CISO, SecureCorp International',
+    company: 'SecureCorp International',
+    content: 'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
+    rating: 5,
+    avatar: '👩‍🔒'
+  }
+],
+
+export default function AdvancedITInfrastructureServices() {
   return (
     <Layout>
       <Head>
@@ -15,11 +129,12 @@ const AdvancedITInfrastructureServices: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/advanced-it-infrastructure-services" />
       </Head>
       {/* Hero Section */}
-      <section className='relative py-20 lg:py-32 overflow-hidden'>
-        <div className='absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20'></div>
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
@@ -33,7 +148,7 @@ const AdvancedITInfrastructureServices: React.FC = () => {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  animate={{ opacity: 1, scale: 1}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30'
                 >
@@ -66,13 +181,14 @@ const AdvancedITInfrastructureServices: React.FC = () => {
           </motion.div>
         </div>
       {/* Features Section */}
-      <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
+            viewport={{ once: true}}
+            className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our IT Infrastructure Services?
@@ -84,11 +200,11 @@ const AdvancedITInfrastructureServices: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='relative group'
+                viewport={{ once: true}}
+                className="relative group"
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -107,13 +223,14 @@ const AdvancedITInfrastructureServices: React.FC = () => {
           </div>
         </div>
       {/* Services Section */}
-      <section id='services' className='py-20 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section id="services" className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
+            viewport={{ once: true}}
+            className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               IT Infrastructure Service Categories
@@ -126,36 +243,10 @@ const AdvancedITInfrastructureServices: React.FC = () => {
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true }}
-                className='relative'
-                key={categoryIndex  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                viewport={{ once: true}}
                 className="relative"
               >
                 <div className="text-center mb-12">
@@ -169,10 +260,10 @@ const AdvancedITInfrastructureServices: React.FC = () => {
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
+                      whileInView={{ opacity: 1, scale: 1}}
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
-                      className='relative group'
+                      viewport={{ once: true}}
+                      className="relative group"
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -238,13 +329,14 @@ const AdvancedITInfrastructureServices: React.FC = () => {
         </div>
       </section>
       {/* Testimonials Section */}
-      <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
+            viewport={{ once: true}}
+            className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -256,11 +348,11 @@ const AdvancedITInfrastructureServices: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
+                viewport={{ once: true}}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20"
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -283,12 +375,13 @@ const AdvancedITInfrastructureServices: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
@@ -324,4 +417,3 @@ const AdvancedITInfrastructureServices: React.FC = () => {
     </Layout>
   )
 }
-export default AdvancedITInfrastructureServices

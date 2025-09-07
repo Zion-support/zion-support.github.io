@@ -9,39 +9,29 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Star, AlertTriangle } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
-  const [activeTab, setActiveTab] = useState("pending");
-  const [reviews, setReviews] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-function ReviewsModerationContent() {
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [reviews, setReviews] = useState([]),
-  const [isLoading, setIsLoading] = useState(true),
-  
+  const [activeTab, setActiveTab] = useState($2);
+  const [reviews, setReviews] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
   const fetchReviews = async () => {
-    setIsLoading(true),
+    setIsLoading($2);
     try {
       // In a real application, you would fetch reviews from an API
       // For now, let's simulate a delay and return empty data
       await new Promise(resolve => setTimeout(resolve, 1000)),
-      setReviews([]),
+      setReviews($2);
       setIsLoading(false)
     } catch (error) {
-      console.error("Error fetching reviews:", error),
-      toast({
-        title: "Error"
-        description: "Failed to load reviews. Please try again later."
-        variant: "destructive"})
+      console.error($2);
+      toast($2);
       setIsLoading(false)
     }
-  }
+  },
+
   useEffect(() => {
     fetchReviews()
-  }, [activeTab]);
-  const handleRefresh = () => {
-    fetchReviews()
-  }
+  }, [activeTab]),
 
+  const handleRefresh = $2;
   return (
     <>
       <SEO
@@ -95,14 +85,6 @@ function ReviewsModerationContent() {
       <Footer />
     </>
   )
-}
-export default function ReviewsModeration() {
-  return (
-    <ProtectedRoute>
-      <ReviewsModerationContent />
-    </ProtectedRoute>
-  )
-}
 }
 
 export default function ReviewsModeration() {

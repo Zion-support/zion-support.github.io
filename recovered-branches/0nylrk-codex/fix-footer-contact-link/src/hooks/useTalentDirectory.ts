@@ -4,29 +4,17 @@ import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
-  const {
-    isAuthenticated;
-
-    userDetails
-    savedTalents
-    handleToggleSave
-  } = useAuthStatus();
-  // Fetch talent data
-  const {
-    talents
-    isLoading
+  const { 
+    isAuthenticated,
     userDetails, 
     savedTalents, 
     handleToggleSave 
-  } = useAuthStatus(),
-
+  } = useAuthStatus($2);
   // Fetch talent data
   const { 
     talents, 
     isLoading 
-  } = useTalentData(),
-
-  } = useTalentData();
+  } = useTalentData($2);
   // Apply filters and sorting
   const {
     filteredTalents,
@@ -45,7 +33,7 @@ export function useTalentDirectory() {
     toggleAvailability,
     toggleRegion,
     clearFilters
-  } = useFilterTalents(talents);
+  } = useFilterTalents($2);
   // Manage UI state
   const {
     isMobileFilterOpen,
@@ -56,7 +44,7 @@ export function useTalentDirectory() {
     setSelectedTalent,
     expandedSections,
     toggleSection
-  } = useUIState();
+  } = useUIState($2);
   return {
     // Talents and loading state
     talents;
@@ -87,11 +75,11 @@ export function useTalentDirectory() {
     userDetails;
     savedTalents;
     // Actions
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters;
-    toggleSection;
-    handleToggleSave;
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
+    toggleSection,
+    handleToggleSave
   }
 }

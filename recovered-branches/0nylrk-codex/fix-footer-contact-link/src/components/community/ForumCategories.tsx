@@ -11,16 +11,6 @@ import {
 import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
-
-    id: "getting-hired"
-    name: "Getting Hired"
-    description: "Tips, strategies, and questions about getting hired on the platform.";
-    adminOnly: false
-
-    icon: "Briefcase"
-  }
-const categories: ForumCategoryInfo[] = [
-  {
     id: "getting-hired",
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
@@ -62,48 +52,21 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true
     icon: "Megaphone"
   }
-];
-const iconMap = {
-  Briefcase;
-  MessageSquare;
-  Code;
-  FileText;
+],
+
+const iconMap = $2;
+  MessageSquare,
+  Code,
+  FileText,
   Megaphone
-}
+},
+
 export const ForumCategories = () => {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
-  const visibleCategories = categories.filter(
-    category => !category.adminOnly |isAdmin
-  );
-
-  const visibleCategories = categories.filter(
-    category => !category.adminOnly || isAdmin
-  ),
-
+  const { user } = useAuth($2);
+  const isAdmin = $2;
+  const visibleCategories = categories.filter($2);
   return (
-    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
-      {visibleCategories.map((category) => {
-        const Icon = iconMap[category.icon as keyof typeof iconMap]
+    <div className = $2;
         return (
-          <Link key={category.id} to={`/community/category/${category.id}`}>
-            <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <div className="p-2 bg-zion-purple/10 rounded-full">
-                  <Icon className="h-6 w-6 text-zion-purple" />
-                </div>
-                <CardTitle className="text-xl">{category.name}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">{category.description}</CardDescription>
-              </CardContent>
-            </Card>
-          </Link>
-        )
-      })}
-    </div>
-  )
-}
-export default ForumCategories;
-
-export default ForumCategories;
+          <Link key = $2;
+export default ForumCategories,

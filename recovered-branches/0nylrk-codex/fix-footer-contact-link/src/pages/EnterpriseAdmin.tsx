@@ -7,14 +7,9 @@ import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {
-  const { user } = useAuth();
+  const { user } = useAuth($2);
   // Check if user has enterprise admin role
-
-  const isEnterpriseAdmin = user?.role === "enterprise_admin";
-
-  // Check if user has enterprise admin role
-  const isEnterpriseAdmin = user?.role === "enterprise_admin",
-  
+  const isEnterpriseAdmin = $2;
   if (!isEnterpriseAdmin) {
     return <Navigate to="/unauthorized" />
   }

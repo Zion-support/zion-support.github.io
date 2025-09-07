@@ -27,6 +27,5 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card",
         </div>
       </CardContent>
     </Card>
-    </Card>;
-  );
+  )
 }

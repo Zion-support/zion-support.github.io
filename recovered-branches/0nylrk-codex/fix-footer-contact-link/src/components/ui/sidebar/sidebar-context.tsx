@@ -5,38 +5,17 @@ import {useIsMobile} from "@/hooks/use-mobile"
 import {cn} from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
-const SIDEBAR_COOKIE_NAME = null;
-;
-const SIDEBAR_COOKIE_NAME = "sidebar:state"
-const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
-const SIDEBAR_KEYBOARD_SHORTCUT = "b"
-const SidebarContext = React.createContext<SidebarContextType | null>(null)
-export function useSidebar(): SidebarContextType {
-  const context = React.useContext(SidebarContext)
-  if (!context) {
-    throw new Error("useSidebar must be used within a SidebarProvider.")
-  }
-  return context as SidebarContextType
-}
-export interface SidebarProviderProps extends React.ComponentProps<"div"> {
-  defaultOpen?: boolean
-  open?: boolean
-  onOpenChange?: (open: boolean) => void
-}
-export const SidebarProvider = React.forwardRef<
-  HTMLDivElement;
-export const SidebarProvider = React.forwardRef<
-  HTMLDivElement,
+const SIDEBAR_COOKIE_NAME = $2;
   SidebarProviderProps
 >(
   (
     {
-      defaultOpen = true;
-      open: openProp
-      onOpenChange: setOpenProp
-      className;
-      style;
-      children;
+      defaultOpen = $2;
+      open: openProp,
+      onOpenChange: setOpenProp,
+      className,
+      style,
+      children,
       ...props
     }
     ref
@@ -56,8 +35,7 @@ export const SidebarProvider = React.forwardRef<
           _setOpen(openState)
         }
         // This sets the cookie to keep the sidebar state.
-        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
-      }
+        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age = $2;
       [setOpenProp, open]
     )
     // Helper to toggle the sidebar.
@@ -83,12 +61,8 @@ export const SidebarProvider = React.forwardRef<
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])
-    // We add a state so that we can do data-state="expanded" or "collapsed".
-    // This makes it easier to style the sidebar with Tailwind classes.
-    const state = open ? "expanded" : "collapsed" as SidebarState
-    const contextValue = React.useMemo(
-      (): SidebarContextType => ({
-        state,
+
+    // We add a state so that we can do data-state = $2;
         open,
         setOpen,
         isMobile,
@@ -98,18 +72,11 @@ export const SidebarProvider = React.forwardRef<
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
     )
     return (
-      <SidebarContext.Provider value={contextValue}>
-        <TooltipProvider delayDuration={0}>
-          <div
-              style={
-              {
-                "--sidebar-width": "16rem",
+      <SidebarContext.Provider value = $2;
                 "--sidebar-width-icon": "3rem",
                 ...style} as CSSProperties
               }
-            className={cn(
-              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
-
+            className = $2;
               className
             )}
             ref={ref}

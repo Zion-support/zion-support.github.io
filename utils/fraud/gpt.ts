@@ -1,91 +1,32 @@
-// GPT-based fraud detection
-import OpenAI from 'openai';
-
-export interface GPTAnalysis {
-  label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
-  reasoning: string;
-  confidence: number;
-}
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
-});
-
-export async function analyzeWithGPT(
-  content: string,
-  metadata: Record<string, any> = {}
-): Promise<GPTAnalysis | null> {
-  if (!process.env.OPENAI_API_KEY) {
-    console.warn('OpenAI API key not configured, skipping GPT analysis');
-    return null;
+import { GptClassification, MonitoredSource } from './types';
+export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {
+  const apiKey = $2;
+  if (!apiKey) {
+    const lower = text.toLowerCase($2);
+    const looksDanger = /(cashapp|paypal\.me|venmo\.com|wa\.me|t\.me|whatsapp|telegram|western union|gift card|crypto only|outside payment)/.test($2);
+    return {
+      label: looksDanger ? 'DANGEROUS' : 'SUSPICIOUS',
+      reason: looksDanger ? 'Heuristic fallback matched high-risk terms' : 'Heuristic fallback matched suspicious language',
+      confidence: looksDanger ? 0.7 : 0.5}
   }
 
+  const { OpenAI } = await import($2);
+  const client = new OpenAI($2);
+  const systemPrompt = 'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.',
+  const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`,
+
+  const completion = await client.chat.completions.create($2);
+  const content = $2;
   try {
-    const prompt = `Analyze the following content for potential fraud or suspicious activity. Consider:
-1. Requests for off-platform communication or payments
-2. Attempts to share personal contact information
-3. Suspicious payment requests or methods
-4. Spam or phishing attempts
-5. Urgent or high-pressure tactics
-
-Content: "${content}"
-
-Metadata: ${JSON.stringify(metadata, null, 2)}
-
-Respond with a JSON object containing:
-- label: "SAFE", "SUSPICIOUS", or "DANGEROUS"
-- reasoning: Brief explanation of your analysis
-- confidence: Number between 0 and 1 indicating confidence level
-
-Example response:
-{
-  "label": "SUSPICIOUS",
-  "reasoning": "Contains request for external communication",
-  "confidence": 0.8
-}`;
-
-    const response = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        {
-          role: 'system',
-          content: 'You are a fraud detection AI. Analyze content for suspicious activity and respond with valid JSON only.'
-        },
-        {
-          role: 'user',
-          content: prompt
-        }
-      ],
-      temperature: 0.1,
-      max_tokens: 200
-    });
-
-    const content = response.choices[0]?.message?.content;
-    if (!content) {
-      throw new Error('No response from OpenAI');
+    const parsed = JSON.parse($2);
+    const label = $2;
+    if (label !== 'SAFE' && label !== 'SUSPICIOUS' && label !== 'DANGEROUS') {
+      return { label: 'SUSPICIOUS', reason: 'Unrecognized label from GPT', confidence: 0.5 }
     }
-
-    // Parse JSON response
-    const analysis = JSON.parse(content);
-    
-    // Validate response format
-    if (!analysis.label || !analysis.reasoning || typeof analysis.confidence !== 'number') {
-      throw new Error('Invalid response format from OpenAI');
-    }
-
-    // Ensure label is valid
-    if (!['SAFE', 'SUSPICIOUS', 'DANGEROUS'].includes(analysis.label)) {
-      analysis.label = 'SAFE';
-    }
-
-    // Ensure confidence is between 0 and 1
-    analysis.confidence = Math.max(0, Math.min(1, analysis.confidence));
-
-    return analysis as GPTAnalysis;
-
-  } catch (error) {
-    console.error('GPT analysis failed:', error);
-    return null;
+    const confidence = typeof parsed.confidence === 'number' ? Math.max(0, Math.min(1, parsed.confidence)) : 0.6,
+    return { label, reason: parsed.reason || 'No reason provided', confidence } as GptClassification
+  } catch {
+    return { label: 'SUSPICIOUS', reason: 'Invalid JSON from GPT', confidence: 0.5 }
   }
 }
 

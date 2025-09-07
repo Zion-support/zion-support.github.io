@@ -20,7 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
 interface ContactFieldsProps {
-  control: Control<BasicInfoFormData>;
+  control: Control<BasicInfoFormData>
 }
 export function ContactFields({ control }: ContactFieldsProps) {
   return (
@@ -81,5 +81,5 @@ export function ContactFields({ control }: ContactFieldsProps) {
         )}
       />
     </div>
-  );
+  )
 }

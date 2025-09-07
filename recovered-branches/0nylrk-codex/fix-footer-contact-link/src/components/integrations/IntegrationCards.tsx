@@ -4,16 +4,6 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink } from "lucide-react";
 interface IntegrationCardProps {
-
-  title: string
-  description: string
-  icon: React.ReactNode
-
-  status?: "connected" | "disconnected" | "pending";
-  href?: string;
-  onConnect?: () => void
-}
-interface IntegrationCardProps {
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -22,10 +12,11 @@ interface IntegrationCardProps {
   onConnect?: () => void
 }
 export function IntegrationCard({
-  title;
-  description;
-  icon;
-  status;
+  title,
+  description,
+  icon,
+  status = $2;
+  href,
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">

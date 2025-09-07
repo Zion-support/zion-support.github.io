@@ -17,80 +17,59 @@ import { toast } from "sonner";
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-
-  const { disputeId } = useParams() as { disputeId?: string }
-  const navigate = useNavigate();
-  const { user } = useAuth();
-  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
-  const [dispute, setDispute] = useState<any>(null);
-  const [messages, setMessages] = useState<DisputeMessage[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [message, setMessage] = useState("");
-  const [isSending, setIsSending] = useState(false);
-  const [resolution, setResolution] = useState({
-    summary: ""
-    resolution_type: "compromise"})
-  const [activeTab, setActiveTab] = useState("overview");
-  // Check if user is admin (placeholder - implement proper admin check)
-  const isAdmin = user?.userType === "admin";
-  useEffect(() => {
-    if (!disputeId) return;
-  
+  const { disputeId } = useParams() as { disputeId?: string },
+  const navigate = useNavigate($2);
+  const { user } = useAuth($2);
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes($2);
   const [dispute, setDispute] = useState<any>(null),
   const [messages, setMessages] = useState<DisputeMessage[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [message, setMessage] = useState(""),
-  const [isSending, setIsSending] = useState(false),
-  const [resolution, setResolution] = useState({
-    summary: "",
-    resolution_type: "compromise"}),
-  const [activeTab, setActiveTab] = useState("overview"),
-
+  const [isLoading, setIsLoading] = useState($2);
+  const [message, setMessage] = useState($2);
+  const [isSending, setIsSending] = useState($2);
+  const [resolution, setResolution] = useState($2);
+  const [activeTab, setActiveTab] = useState($2);
   // Check if user is admin (placeholder - implement proper admin check)
-  const isAdmin = user?.userType === "admin",
-  
+  const isAdmin = $2;
   useEffect(() => {
     if (!disputeId) return,
 
     const loadDisputeData = async () => {
-      setIsLoading(true),
+      setIsLoading($2);
       try {
-        const disputeData = await getDisputeById(disputeId),
+        const disputeData = await getDisputeById($2);
         if (!disputeData) {
-          toast.error("Dispute not found"),
-          navigate("/dashboard/disputes"),
+          toast.error($2);
+          navigate($2);
           return
         }
-        setDispute(disputeData);
-        const messagesData = await getDisputeMessages(disputeId);
+        setDispute($2);
+        const messagesData = await getDisputeMessages($2);
         setMessages(messagesData)
       } catch (error) {
-        console.error("Error loading dispute data:", error),
+        console.error($2);
         toast.error("Failed to load dispute")
       } finally {
         setIsLoading(false)
       }
-    }
+    },
+    
     loadDisputeData()
-  }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
-  const handleStatusChange = async (status: DisputeStatus) => {
-    if (!disputeId) return
-    const success = await updateDisputeStatus(disputeId, status);
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]),
+
+  const handleStatusChange = $2;
+    const success = await updateDisputeStatus($2);
     if (success && dispute) {
       setDispute({ ...dispute, status })
     }
-  }
-  const handleResolveDispute = async () => {
-    if (!disputeId) return;
+  },
 
-  const handleResolveDispute = async () => {
-    if (!disputeId) return,
-    
+  const handleResolveDispute = $2;
     if (!resolution.summary) {
-      toast.error("Please provide a resolution summary"),
+      toast.error($2);
       return
     }
-    const success = await resolveDispute(disputeId, resolution);
+    
+    const success = await resolveDispute($2);
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -100,16 +79,16 @@ export function DisputeDetail() {
         resolved_at: new Date().toISOString()
       })
     }
-  }
-  const handleSendMessage = async () => {
-    if (!disputeId |!message.trim()) return;
-    setIsSending(true);
+  },
+
+  const handleSendMessage = $2;
+    setIsSending($2);
     try {
-      const success = await addDisputeMessage(disputeId, message, isAdmin),
+      const success = await addDisputeMessage($2);
       if (success) {
         // Refresh messages
-        const updatedMessages = await getDisputeMessages(disputeId),
-        setMessages(updatedMessages),
+        const updatedMessages = await getDisputeMessages($2);
+        setMessages($2);
         setMessage("")
       }
     } catch (error) {
@@ -117,36 +96,18 @@ export function DisputeDetail() {
     } finally {
       setIsSending(false)
     }
-  }
+  },
+
   if (isLoading) {
     return (
-      <div className="p-8 text-center">
-        <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
-        <p>Loading dispute details...</p>
-      </div>
-    )
-  }
-  }
-
-  if (!dispute) {
-    return (
-      <div className="p-8 text-center">
-        <p>Dispute not found</p>
-        <Button onClick={() => navigate("/dashboard/disputes")} className="mt-4">
-          Back to Disputes
-        </Button>
-      </div>
-    )
-  }
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
-      case "open": return "default";
-      case "under_review": return "secondary"
+      <div className = $2;
+      case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline"
       case "closed": return "outline",
       default: return "default"
     }
-  }
+  },
+
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -158,7 +119,7 @@ export function DisputeDetail() {
             </Badge>
           </div>
           <p className="text-muted-foreground">
-            Reported {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
+            Reported {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true})}
           </p>
         </div>
         <div className="flex gap-2">
@@ -241,42 +202,8 @@ export function DisputeDetail() {
                   </div>
                 </CardContent>
               </Card>
-              {dispute.status === "resolved" && (
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Resolution</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
-                    {dispute.resolution_type && (
-                      <div className="mt-4">
-                        <Badge>
-                          Resolution: {dispute.resolution_type.replace('_ ')}
-                        </Badge>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              )}
-            </TabsContent>
-            <TabsContent value="messages" className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Messages</CardTitle>
-                  <CardDescription>Communication regarding this dispute</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">
-                    {messages.length === 0 ? (
-                      <div className="text-center py-12">
-                        <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
-                        <p className="text-muted-foreground">No messages yet</p>
-                      </div>
-                    ) : (
-                      messages
-                        .filter(msg => !msg.is_admin_note)
-                        .map((msg) => {
-                          const isCurrentUser = user?.id === msg.user_id,
+              
+              {dispute.status = $2;
                           return (
                             <div
                               key={msg.id}
@@ -447,25 +374,9 @@ export function DisputeDetail() {
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
-                                getDisputeMessages(disputeId!).then(setMessages);
-
+                                getDisputeMessages(disputeId!).then($2);
                                 setMessage("")
                               })
-                      </div>;
-                      <div className="mt-4 space-y-4">;
-                        <Textarea;
-                          placeholder="Add an admin note (only visible to administrators)...";
-                          value={message}
-                          onChange={(e) => setMessage(e.target.value)}
-                        />;
-                        <Button;
-                          variant="outline";
-                          onClick={() => {;
-                            if (message.trim()) {;
-                              addDisputeMessage(disputeId!, message, true).then(() => {;
-                                getDisputeMessages(disputeId!).then(setMessages);
-                                setMessage("");
-                              });
                             }
                           }}
                         >

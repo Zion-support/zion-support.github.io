@@ -1,10 +1,6 @@
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
-
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
 export function EnterpriseHero() {
   return (
     <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">
@@ -52,7 +48,7 @@ export function EnterpriseHero() {
         </div>
       </div>
     </section>
-  );
+  )
 }
   )
 import React from "react",;

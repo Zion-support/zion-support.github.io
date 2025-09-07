@@ -14,8 +14,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 interface ProjectDetailsStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
 export function ProjectDetailsStep({
@@ -139,21 +139,16 @@ export function ProjectDetailsStep({
               id="phone"
               placeholder="Your phone number"
               value={formData.contactInfo.phone}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo
-                    phone: e.target.value
-                  }
-                })
-              }
+              onChange={(e) => updateFormData({ 
+                contactInfo: { ...formData.contactInfo, phone: e.target.value } 
+              })}
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
             />
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
             />;

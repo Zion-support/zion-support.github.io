@@ -8,16 +8,5 @@ function DisputeDetailPage() {
   return (
     <ProtectedRoute>
       <>
-
-        <SEO
-          title="Dispute Details | Zion AI Marketplace"
-          description="View and manage dispute details"
-        />
-        <AppHeader />
-        <DisputeDetail />
-        <Footer />
-      </>
-    </ProtectedRoute>
-  )
-}
-export default DisputeDetailPage;
+        <SEO 
+          title = $2;

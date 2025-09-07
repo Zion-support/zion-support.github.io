@@ -1,131 +1,65 @@
-// Fraud detection types
-export type AdminActionType = 'approve' | 'reject' | 'escalate' | 'dismiss';
-
-export interface AdminAction {
-  id: string;
-  recordId: string;
-  action: AdminActionType;
-  adminId: string;
-  notes?: string;
-  timestamp: string;
+export type MonitoredSource = $2;
+export type GptClassificationLabel = $2;
+export interface FraudEvent {
+  id: string,
+  userId: string | null,
+  source: MonitoredSource,
+  content: string | null,
+  metadata: Record<string, unknown> | null,
+  ipAddress: string | null,
+  createdAt: string, // ISO string
 }
 
-export interface FraudConfig {
-  autoHide: boolean;
-  emailWarnings: boolean;
-  gptAnalysis: boolean;
-  heuristicAnalysis: boolean;
-  severityThresholds: {
-    low: number;
-    medium: number;
-    high: number;
-  };
+export interface HeuristicEvaluation {
+  flagged: boolean,
+  reasons: string[],
+  severity: 'low' | 'medium' | 'high'
 }
 
-export interface FraudMetrics {
-  totalEvents: number;
-  flaggedEvents: number;
-  autoHiddenEvents: number;
-  adminReviewedEvents: number;
-  falsePositives: number;
-  truePositives: number;
-  averageResponseTime: number;
+export interface GptClassification {
+  label: GptClassificationLabel,
+  reason: string,
+  confidence: number, // 0..1
 }
 
-export interface FraudAlert {
-  id: string;
-  recordId: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  message: string;
-  timestamp: string;
-  acknowledged: boolean;
-  acknowledgedBy?: string;
-  acknowledgedAt?: string;
+export type FraudReviewStatus = $2;
+export interface StoredFraudRecord extends FraudEvent {
+  heuristic: HeuristicEvaluation,
+  gpt?: GptClassification,
+  autoHidden: boolean,
+  status: FraudReviewStatus}
+
+export type AdminActionType = $2;
+export interface AdminActionRecord {
+  id: string,
+  fraudId: string,
+  action: AdminActionType,
+  adminId: string | null,
+  reason: string | null,
+  createdAt: string, // ISO
 }
 
-export interface FraudReport {
-  period: {
-    start: string;
-    end: string;
-  };
-  summary: {
-    totalEvents: number;
-    flaggedEvents: number;
-    resolvedEvents: number;
-    pendingEvents: number;
-  };
-  trends: {
-    daily: Array<{
-      date: string;
-      events: number;
-      flagged: number;
-    }>;
-    weekly: Array<{
-      week: string;
-      events: number;
-      flagged: number;
-    }>;
-  };
-  topSources: Array<{
-    source: string;
-    count: number;
-    percentage: number;
-  }>;
-  topUsers: Array<{
-    userId: string;
-    count: number;
-    percentage: number;
-  }>;
-  severityBreakdown: {
-    low: number;
-    medium: number;
-    high: number;
-    critical: number;
-  };
+export interface PrivacySettings {
+  userId: string,
+  monitoringContentAnalysisOptOut: boolean,
+  updatedAt: string, // ISO
 }
 
-export interface FraudRule {
-  id: string;
-  name: string;
-  description: string;
-  pattern: string;
-  severity: 'low' | 'medium' | 'high';
-  enabled: boolean;
-  createdAt: string;
-  updatedAt: string;
-  createdBy: string;
+export interface ListFilters {
+  source?: MonitoredSource,
+  userId?: string,
+  label?: GptClassificationLabel,
+  status?: FraudReviewStatus
 }
 
-export interface FraudWhitelist {
-  id: string;
-  userId?: string;
-  pattern?: string;
-  reason: string;
-  createdAt: string;
-  createdBy: string;
-  expiresAt?: string;
-}
-
-export interface FraudBlacklist {
-  id: string;
-  userId?: string;
-  pattern?: string;
-  reason: string;
-  createdAt: string;
-  createdBy: string;
-  expiresAt?: string;
-}
-
-export interface FraudNotification {
-  id: string;
-  type: 'email' | 'webhook' | 'slack';
-  config: Record<string, any>;
-  enabled: boolean;
-  conditions: {
-    severity: string[];
-    sources: string[];
-    labels: string[];
-  };
-  createdAt: string;
-  updatedAt: string;
+export interface MonthlyReport {
+  month: string, // YYYY-MM
+  totals: {
+    all: number,
+    safe: number,
+    suspicious: number,
+    dangerous: number},
+  bySource: Record<MonitoredSource, number>,
+  falsePositives: number, // count of IGNORED actions
+  topReasons: Array<{ reason: string, count: number}>
 }

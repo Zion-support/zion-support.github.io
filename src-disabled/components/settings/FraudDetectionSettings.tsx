@@ -1,3 +1,44 @@
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Switch } from '@/components/ui/switch';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
+import { ShieldAlert, Info } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger} from "@/components/ui/accordion",
+import { toast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
+export function FraudDetectionSettings() {
+  const { user } = useAuth($2);
+  const [messageScanningEnabled, setMessageScanningEnabled] = useState($2);
+  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState($2);
+  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState($2);
+  const [isSaving, setIsSaving] = useState($2);
+  const handleSavePreferences = $2;
+    setIsSaving($2);
+    try {
+      // In a real implementation, we would save these preferences to the database
+      // For now, we'll just simulate a successful save
+      await new Promise(resolve => setTimeout(resolve, 1000)),
+      
+      toast({
+        title: "Settings saved",
+        description: "Your fraud detection preferences have been updated."})
+    } catch (error) {
+      logErrorToProduction($2);
+      toast({
+        title: "Error",
+        description: "Failed to save your preferences. Please try again.",
+        variant: "destructive"})
+    } finally {
+      setIsSaving(false)
+    }
+  },
 
   return (
     <Card className="mb-8">
@@ -108,4 +149,4 @@
       </CardContent>
     </Card>
   )
-
+}

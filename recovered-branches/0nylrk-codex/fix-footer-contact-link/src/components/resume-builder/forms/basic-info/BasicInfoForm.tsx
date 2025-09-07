@@ -9,44 +9,35 @@ import { basicInfoSchema, BasicInfoFormData } from "./schema",
 import { PersonalInfoFields } from "./PersonalInfoFields";
 import { ContactFields } from "./ContactFields";
 export interface BasicInfoFormProps {
-  resumeId?: string;
-
-  initialData?: Partial<BasicInfoFormData>;
-  onSave: (data: BasicInfoFormData) => void
-
-  skills?: string[];
-  yearsExperience?: number;
-  onComplete?: () => void
-}
-export function BasicInfoForm({
-  resumeId;
+  resumeId?: string,
+  initialData?: Partial<BasicInfoFormData>,
   onSave: (data: BasicInfoFormData) => void,
   skills?: string[],
   yearsExperience?: number,
   onComplete?: () => void
 }
 export function BasicInfoForm({
-  resumeId;
-
-  initialData = {}
-  onSave;
-  skills = [];
-  yearsExperience = 0;
+  resumeId,
+  initialData = $2;
+  onSave,
+  skills = $2;
+  yearsExperience = $2;
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
-    resolver: zodResolver(basicInfoSchema)
+    resolver: zodResolver($2);
     defaultValues: {
-      fullName: ""
-      title: ""
-      email: ""
-      phone: ""
-      location: ""
-      website: ""
-      linkedin: ""
-      github: ""
-      hourlyRate: 0
-      ...initialData}});
+      fullName: "",
+      title: "",
+      email: "",
+      phone: "",
+      location: "",
+      website: "",
+      linkedin: "",
+      github: "",
+      hourlyRate: 0,
+      ...initialData}}),
+
   useEffect(() => {
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
@@ -55,13 +46,14 @@ export function BasicInfoForm({
         }
       })
     }
-  }, [initialData, form]);
+  }, [initialData, form]),
+
   const handleSubmit = (data: BasicInfoFormData) => {
-    onSave(data)
+    onSave($2);
     if (onComplete) {
       onComplete()
     }
-  }
+  },
 
   return (
     <Form {...form}>

@@ -2,20 +2,15 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react";
-
-import {
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
-    min: number;
+    min: number,
+    max: number},
+  keyPoints: string[]
+}
 
     max: number;
   }
@@ -23,7 +18,7 @@ interface GeneratedContent {
 
 }
 interface GeneratedContentDisplayProps {
-  content: GeneratedContent;
+  content: GeneratedContent,
   onApply: () => void
 }
 export function GeneratedContentDisplay({
@@ -77,14 +72,7 @@ export function GeneratedContentDisplay({
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
+    </Card>
   )
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
-        >;
-          Apply to My Listing;
-          <ArrowRight className="ml-2 h-4 w-4" />;
-        </Button>;
-      </CardFooter>;
-    </Card>;
-  );
 }
 ;

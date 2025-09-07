@@ -3,38 +3,6 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button";
 import { StarIcon } from "lucide-react";
 interface ListingScoreCardProps {
-
-  title: string
-  description: string
-  image?: string;
-  category: string
-
-  tags?: string[];
-  author?: string;
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  className?: string
-}
-export function ListingScoreCard({
-  title;
-
-  description
-  image
-  category
-  tags;
-  author
-  authorImage;
-  aiScore = 0;
-  rating = 0;
-  reviewCount = 0;
-  className
-}: ListingScoreCardProps) {
-  return (
-    <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group"
-interface ListingScoreCardProps {
   title: string,
   description: string,
   image?: string,
@@ -48,22 +16,21 @@ interface ListingScoreCardProps {
   className?: string
 }
 
-export function ListingScoreCard({ ;
-  title;
+export function ListingScoreCard({ 
+  title,
   description, 
   image, 
   category, 
   tags,
   author, 
   authorImage,
-  aiScore = 0,
-  rating = 0,
-  reviewCount = 0,
+  aiScore = $2;
+  rating = $2;
+  reviewCount = $2;
   className 
 }: ListingScoreCardProps) {
   return (
-    <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
+    <div className = $2;
       className
     )}>
       {image && (
@@ -94,13 +61,10 @@ export function ListingScoreCard({ ;
           <div className="flex items-center gap-1 mb-4">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((star) => (
-                <StarIcon
-                  key={star}
-                  className={cn(
-                    "h-4 w-4"
-                    star <= Math.round(rating)
-                      ? "text-zion-cyan fill-zion-cyan"
-
+                <StarIcon 
+                  key = $2;
+                    star <= Math.round(rating) 
+                      ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;

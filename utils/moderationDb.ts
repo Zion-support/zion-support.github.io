@@ -1,153 +1,77 @@
-/**
- * Moderation database utilities
- */
-
-export interface ModerationFlag {
-  id: string;
-  type: 'spam' | 'inappropriate' | 'harassment' | 'violence' | 'other';
-  reason: string;
-  reporterId: string;
-  targetId: string;
-  targetType: 'user' | 'post' | 'comment' | 'message';
-  status: 'pending' | 'approved' | 'rejected' | 'resolved';
-  createdAt: string;
-  updatedAt: string;
-  resolvedAt?: string;
-  resolvedBy?: string;
-  metadata?: Record<string, any>;
-}
-
-export interface ModerationAction {
-  id: string;
-  flagId: string;
-  action: 'warn' | 'suspend' | 'ban' | 'remove_content' | 'no_action';
-  reason: string;
-  moderatorId: string;
-  createdAt: string;
-  metadata?: Record<string, any>;
-}
-
-export class ModerationDb {
-  private flags: ModerationFlag[] = [];
-  private actions: ModerationAction[] = [];
-
-  async createFlag(flag: Omit<ModerationFlag, 'id' | 'createdAt' | 'updatedAt'>): Promise<ModerationFlag> {
-    const newFlag: ModerationFlag = {
-      ...flag,
-      id: this.generateId(),
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
-    };
-    
-    this.flags.push(newFlag);
-    return newFlag;
-  }
-
-  async getFlag(id: string): Promise<ModerationFlag | null> {
-    return this.flags.find(flag => flag.id === id) || null;
-  }
-
-  async getFlags(filters?: {
-    status?: string;
-    type?: string;
-    targetType?: string;
-    reporterId?: string;
-  }): Promise<ModerationFlag[]> {
-    let filteredFlags = this.flags;
-    
-    if (filters) {
-      if (filters.status) {
-        filteredFlags = filteredFlags.filter(flag => flag.status === filters.status);
-      }
-      if (filters.type) {
-        filteredFlags = filteredFlags.filter(flag => flag.type === filters.type);
-      }
-      if (filters.targetType) {
-        filteredFlags = filteredFlags.filter(flag => flag.targetType === filters.targetType);
-      }
-      if (filters.reporterId) {
-        filteredFlags = filteredFlags.filter(flag => flag.reporterId === filters.reporterId);
-      }
-    }
-    
-    return filteredFlags.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-  }
-
-  async updateFlag(id: string, updates: Partial<ModerationFlag>): Promise<ModerationFlag | null> {
-    const flagIndex = this.flags.findIndex(flag => flag.id === id);
-    if (flagIndex === -1) return null;
-    
-    this.flags[flagIndex] = {
-      ...this.flags[flagIndex],
-      ...updates,
-      updatedAt: new Date().toISOString()
-    };
-    
-    return this.flags[flagIndex];
-  }
-
-  async createAction(action: Omit<ModerationAction, 'id' | 'createdAt'>): Promise<ModerationAction> {
-    const newAction: ModerationAction = {
-      ...action,
-      id: this.generateId(),
-      createdAt: new Date().toISOString()
-    };
-    
-    this.actions.push(newAction);
-    
-    // Update flag status if action is taken
-    if (action.action !== 'no_action') {
-      await this.updateFlag(action.flagId, {
-        status: 'resolved',
-        resolvedAt: new Date().toISOString(),
-        resolvedBy: action.moderatorId
-      });
-    }
-    
-    return newAction;
-  }
-
-  async getActions(flagId?: string): Promise<ModerationAction[]> {
-    if (flagId) {
-      return this.actions.filter(action => action.flagId === flagId);
-    }
-    return this.actions.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-  }
-
-  async getStats(): Promise<{
-    totalFlags: number;
-    pendingFlags: number;
-    resolvedFlags: number;
-    flagsByType: Record<string, number>;
-    flagsByStatus: Record<string, number>;
-  }> {
-    const totalFlags = this.flags.length;
-    const pendingFlags = this.flags.filter(flag => flag.status === 'pending').length;
-    const resolvedFlags = this.flags.filter(flag => flag.status === 'resolved').length;
-    
-    const flagsByType = this.flags.reduce((acc, flag) => {
-      acc[flag.type] = (acc[flag.type] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-    
-    const flagsByStatus = this.flags.reduce((acc, flag) => {
-      acc[flag.status] = (acc[flag.status] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-    
-    return {
-      totalFlags,
-      pendingFlags,
-      resolvedFlags,
-      flagsByType,
-      flagsByStatus
-    };
-  }
-
-  private generateId(): string {
-    return Math.random().toString(36).substr(2, 9);
+import fs from 'fs';
+import path from 'path';
+import { promisify } from 'util';
+import crypto from 'crypto';
+import { FlaggedContent, ModerationStatus, AiScores } from '../types/moderation';
+const mkdir = promisify($2);
+const readFile = promisify($2);
+const writeFile = promisify($2);
+const ROOT = path.join(process.cwd(), 'data'),
+const MODERATION_FILE = path.join($2);
+async function ensureBaseFiles() {
+  await mkdir($2);
+  try {
+    await readFile(MODERATION_FILE, 'utf8')
+  } catch {
+    await writeFile(MODERATION_FILE, JSON.stringify({ flags: [] }, null, 2), 'utf8')
   }
 }
 
-// Export singleton instance
-export const moderationDb = new ModerationDb();
+export async function readAllFlags(): Promise<FlaggedContent[]> {
+  await ensureBaseFiles($2);
+  const raw = await readFile($2);
+  const data = $2;
+  return data.flags || []
+}
+
+export async function writeAllFlags(flags: FlaggedContent[]): Promise<void> {
+  await ensureBaseFiles($2);
+  await writeFile(MODERATION_FILE, JSON.stringify({ flags }, null, 2), 'utf8')
+}
+
+export function generateFlagId(): string {
+  return `FLG-${crypto.randomBytes(4).toString('hex').toUpperCase()}`
+}
+
+export function generateAiScores(seed?: string): AiScores {
+  const buf = crypto.createHash('sha256').update(seed || String(Date.now())).digest($2);
+  const v = $2;
+  return { toxicity: v(0), nsfw: v(1), scam: v(2) }
+}
+
+export async function getFlagById(id: string): Promise<FlaggedContent | undefined> {
+  const all = await readAllFlags($2);
+  return all.find(f => f.id === id)
+}
+
+export async function upsertFlag(flag: FlaggedContent): Promise<void> {
+  const all = await readAllFlags($2);
+  const idx = all.findIndex($2);
+  if (idx >= 0) all[idx] = flag, else all.push($2);
+  await writeAllFlags(all)
+}
+
+export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' | 'updatedAt' | 'aiScores' | 'status'> & { status?: ModerationStatus, aiScores?: AiScores }): Promise<FlaggedContent> {
+  const now = new Date().toISOString($2);
+  const flag: FlaggedContent = {
+    id: generateFlagId($2);
+    createdAt: now,
+    updatedAt: now,
+    status: init.status || 'pending',
+    aiScores: init.aiScores || generateAiScores($2);
+    ...init},
+  const all = await readAllFlags($2);
+  all.push($2);
+  await writeAllFlags($2);
+  return flag
+}
+
+export async function updateFlagStatus(id: string, status: ModerationStatus, adminNotes?: string): Promise<FlaggedContent | undefined> {
+  const flag = await getFlagById($2);
+  if (!flag) return undefined,
+  flag.status = $2;
+  flag.adminNotes = $2;
+  flag.updatedAt = new Date().toISOString($2);
+  await upsertFlag($2);
+  return flag
+}

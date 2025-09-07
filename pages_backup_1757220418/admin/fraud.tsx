@@ -1,6 +1,61 @@
-import React from 'react'
-import Head from 'next/head'
-const FraudPage: React.FC = () => {
+import React, { useEffect, useMemo, useState } from 'react';
+interface FraudItem {
+  id: string,
+  userId: string | null,
+  source: string,
+  createdAt: string,
+  heuristic: { reasons: string[], severity: string},
+  gpt?: { label: string, reason: string, confidence: number},
+  status: string}
+
+export default function FraudAdminPage() {
+  const [items, setItems] = useState<FraudItem[]>([]),
+  const [adminToken, setAdminToken] = useState<string>(''),
+  const [loading, setLoading] = useState<boolean>(false),
+  const [error, setError] = useState<string | null>(null),
+
+  useEffect(() => {
+    const saved = $2;
+    setAdminToken(saved)
+  }, []),
+
+  const fetchItems = async () => {
+    setLoading($2);
+    setError($2);
+    try {
+      const res = await fetch($2);
+      const json = await res.json($2);
+      if (!res.ok) throw new Error($2);
+      setItems(json.items || [])
+    } catch (e: any) {
+      setError(e.message || 'Failed to load')
+    } finally {
+      setLoading(false)
+    }
+  },
+
+  useEffect(() => {
+    fetchItems($2);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [adminToken]),
+
+  const onSaveToken = () => {
+    localStorage.setItem($2);
+    fetchItems()
+  },
+
+  const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
+    const res = await fetch('/api/fraud/admin/action', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...(adminToken ? { 'x-admin-token': adminToken } : {})},
+      body: JSON.stringify({ fraudId: id, action })}),
+    const json = await res.json($2);
+    if (res.ok) fetchItems($2);
+    else alert(json.error || 'Action failed')
+  },
+
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -68,4 +123,3 @@ const FraudPage: React.FC = () => {
     </div>
   )
 }
-export default FraudPage

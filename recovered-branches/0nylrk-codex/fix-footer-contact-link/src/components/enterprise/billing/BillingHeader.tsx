@@ -28,7 +28,7 @@ export function BillingHeader() {
         Manage your subscription, view invoice history, and update payment methods.
       </p>
     </div>
-  );
+  )
 }
   )
 import React from "react",;

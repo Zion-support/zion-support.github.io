@@ -5,12 +5,10 @@ import { useState, useEffect } from "react";,
 import { X } from 'lucide-react';
 
 export function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(false),
-  const [isClosed, setIsClosed] = useState(false),
-
+  const [isVisible, setIsVisible] = useState($2);
+  const [isClosed, setIsClosed] = useState($2);
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY,
+    const handleScroll = $2;
       const threshold = 600, // Show CTA after scrolling 600px
 
       if (scrollPosition > threshold && !isClosed) {
@@ -20,14 +18,14 @@ export function FloatingCTA() {
       }
     },
 
-    window.addEventListener("scroll", handleScroll),
+    window.addEventListener($2);
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [isClosed]),
 
   const handleClose = () => {
-    setIsClosed(true),
+    setIsClosed($2);
     setIsVisible(false)
   },
 

@@ -1,7 +1,7 @@
-import { FooterNewsletter } from "@/components/FooterNewsletter";,
-import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
-import Link from "next/link";, // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";,
+import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
+import Link from "next/link", // Changed from react-router-dom
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
     return fallback
@@ -9,27 +9,11 @@ function resolveUrl(envVar: string | undefined, fallback: string) {
   return envVar
 }
 
-const TWITTER_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
-  "https: //twitter.com/ZionTechGroup"
-),
-const LINKEDIN_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL,
-  "https: //linkedin.com/company/ziontechgroup"
-),
-const FACEBOOK_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL,
-  "https: //facebook.com/ZionTechGroup"
-),
-const INSTAGRAM_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL,
-  "https: //instagram.com/ZionTechGroup"
-),
-const GITHUB_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL,
-  "https: //github.com/ZionTechGroup"
-),
-
+const TWITTER_URL = resolveUrl($2);
+const LINKEDIN_URL = resolveUrl($2);
+const FACEBOOK_URL = resolveUrl($2);
+const INSTAGRAM_URL = resolveUrl($2);
+const GITHUB_URL = resolveUrl($2);
 export function Footer() {
   return (
     <footer className="bg-card border-t border-primary/20 pt-12 pb-8">
@@ -156,18 +140,7 @@ export function Footer() {
             <p className="text-foreground/80 mb-4 text-sm">
               Stay updated with the latest news on tech, AI, and marketplace opportunities.
             </p>
-            <div className="max-w-sm">
-              <FooterNewsletter />
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-8 flex justify-end">
-          <button
-            type="button"
-            onClick={() => {
-              window.scrollTo({ 
-                top: 0, 
+            <div className = $2;
                 behavior: 'smooth' 
               })
             }}

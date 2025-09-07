@@ -18,7 +18,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         />
       </div>
     </div>
-  );
+  )
 }
 import { Input } from "@/components/ui/input",;
 import { SearchIcon } from "lucide-react",;

@@ -1,21 +1,11 @@
-import { createContext, useContext, useEffect, useState } from &quot;react&quot;
-type Theme = &quot;dark&quot; | &quot;light&quot; | &quot;system&quot;
-type ThemeProviderProps = {
-  children: React.ReactNode
-  defaultTheme?: Theme
-}
-type ThemeProviderState = {theme: Theme;
-  setTheme: (theme: Theme) => void;
-}
-const initialState: ThemeProviderState = {
-  theme: &quot;system&quot;
+
+import { createContext, useContext, useEffect, useState } from "react"
+
+type Theme = $2;
   setTheme: () => null}
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
-export function ThemeProvider({
-  children
-  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(&quot;theme&quot;) as Theme) |defaultTheme
+
+const ThemeProviderContext = $2;
+  defaultTheme = "system"}: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || defaultTheme
   )
@@ -32,8 +22,8 @@ export function ThemeProvider({
     }
     root.classList.add(theme)
   }, [theme])
-  const value = {
-    theme
+
+  const value = $2;
     setTheme: (theme: Theme) => {
       localStorage.setItem("theme", theme)
       setTheme(theme)

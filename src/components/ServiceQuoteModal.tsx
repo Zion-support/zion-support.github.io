@@ -1,21 +1,20 @@
-import React from 'react';
-import { useState } from 'react';,
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";,
-import { Button } from "@/components/ui/button";,
-import { Input } from "@/components/ui/input";,
-import { Textarea } from "@/components/ui/textarea";,
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";,
-import { Label } from "@/components/ui/label";,
-import { Slider } from "@/components/ui/slider";,
-import { Calendar } from "@/components/ui/calendar";,
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";,
-import { format } from "date-fns";,
-import { CalendarIcon } from 'lucide-react';
-import { cn } from "@/lib/utils";,
-import { ProductListing } from "@/types/listings";,
-import { toast } from '@/hooks/use-toast';,
-import { supabase } from "@/integrations/supabase/client";,
-import {logErrorToProduction} from '@/utils/productionLogger';,
+import { useState } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { format } from "date-fns";
+import { CalendarIcon } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { ProductListing } from "@/types/listings";
+import { toast } from '@/hooks/use-toast';
+import { supabase } from "@/integrations/supabase/client";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ServiceQuoteModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
@@ -36,59 +35,38 @@ const TIMELINE_OPTIONS = [
   { label: "6+ months", value: "6+months" }],
 
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
-  const [formData, setFormData] = useState({
-    description: '',
-    email: '',
-    budget: BUDGET_RANGES[0]?.value || '0-5000',
-    timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),
+  const [formData, setFormData] = useState($2);
   const [startDate, setStartDate] = useState<Date | undefined>(new Date()),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-
+  const [isSubmitting, setIsSubmitting] = useState($2);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
   },
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(),
-    setIsSubmitting(true),
-
+    e.preventDefault($2);
+    setIsSubmitting($2);
     try {
       // Call Supabase function to process the quote
-      const { data, error } = await supabase.functions.invoke('process-quote', {
-        body: {
-          service: service ? {
-            id: service.id,
-            title: service.title,
-            category: service.category} : null,
-          quoteDetails: {
-            ...formData,
-            startDate: startDate?.toISOString(),
-            endDate: endDate?.toISOString()}
+      const { data, error } = await supabase.functions.invoke($2);
+            endDate: endDate ?.toISOString()}
         }
       }),
 
       if (error) throw error,
 
       // Show success message
-      toast({
-        title: "Quote Request Submitted!",
-        description: "We've sent your request to the service provider. They will contact you soon."}),
-
+      toast($2);
       // Close the modal and reset form
-      onOpenChange(false),
-      setFormData({
-        description: '',
-        email: '',
-        budget: BUDGET_RANGES[0]?.value || '0-5000',
-        timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),
+      onOpenChange($2);
+      setFormData($2);
       setStartDate(new Date()),
-      setEndDate(undefined),
+      setEndDate($2);
       setCurrentStep('details')
     } catch (error) {
-      logErrorToProduction('Error submitting quote:', { data: error }),
+      logErrorToProduction($2);
       toast({
         title: "Error",
         description: "There was an error submitting your quote request. Please try again.",
@@ -99,15 +77,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   },
 
   const nextStep = () => {
-    if (currentStep === 'details') setCurrentStep('timeline'),
-    else if (currentStep === 'timeline') setCurrentStep('contact')
-  },
-
+    if (currentStep === 'details') setCurrentStep($2);
+    else if (currentStep = $2;
   const prevStep = () => {
-    if (currentStep === 'timeline') setCurrentStep('details'),
-    else if (currentStep === 'contact') setCurrentStep('timeline')
-  },
-
+    if (currentStep === 'timeline') setCurrentStep($2);
+    else if (currentStep = $2;
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -144,7 +118,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <Label htmlFor="budget" className="text-white">Estimated Budget</Label>
                 <Select 
                   value={formData.budget} 
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
+                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value}))}
                 >
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
                     <SelectValue placeholder="Select your budget range" />
@@ -168,30 +142,9 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <Label className="text-white">Project Timeline</Label>
                 <Select 
                   value={formData.timeframe}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
+                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value}))}
                 >
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
-                    <SelectValue placeholder="Select your timeline" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
-                    {TIMELINE_OPTIONS.map((option) => (
-                      <SelectItem key={option.value} value={option.value} className="text-white hover:bg-zion-blue-light">
-                        {option.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label className="text-white">Expected Start Date</Label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button
-                        variant={"outline"}
-                        className="{cn("
-                          "justify-start text-left font-normal w-full",
+                  <SelectTrigger className = $2;
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >
@@ -199,26 +152,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
-                      <Calendar
-                        mode="single"
-                        selected={startDate}
-                        onSelect={setStartDate}
-                        initialFocus
-                        className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
-                      />
-                    </PopoverContent>
-                  </Popover>
-                </div>
-
-                <div className="space-y-2">
-                  <Label className="text-white">Expected End Date</Label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button
-                        variant={"outline"}
-                        className="{cn("
-                          "justify-start text-left font-normal w-full",
+                    <PopoverContent className = $2;
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >

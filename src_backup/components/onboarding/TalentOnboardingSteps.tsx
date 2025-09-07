@@ -2,23 +2,10 @@ import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
-
-return <OnboardingTracker steps={steps} />
-
-import React from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
-
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
-import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
-export /**
- * TalentOnboardingSteps - Function description
- */
-function TalentOnboardingSteps() {
-  const { user } = use_auth ();
-  const onboarding_status = useOnboardingStatus ();
-  const steps: OnboardingStep[] = [;
-
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+export function TalentOnboardingSteps() {
+  const { user } = useAuth($2);
+  const onboardingStatus = useOnboardingStatus($2);
   const steps: OnboardingStep[] = [
     {
       id: "profile",
@@ -41,8 +28,8 @@ function TalentOnboardingSteps() {
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
-
-  const { user } = useAuth();
-  const onboardingStatus = null;
+      link: "/talent-dashboard",
+      action: "View Matches"}],
+  
   return <OnboardingTracker steps={steps} />
 }

@@ -5,22 +5,18 @@ import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 export interface MobileMenuProps {
-  unreadCount?: number;
+  unreadCount?: number,
   onClose: () => void
 }
 
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  
-  const navItems = [
-    {
-      name: "Home"
-      href: "/"
-      icon: Home
-      matches: (path: string) => path === "/"
-    }
+  const location = useLocation($2);
+  const { user } = useAuth($2);
+  const isAuthenticated = $2;
+  const navItems = $2;
+      href: "/",
+      icon: Home,
+      matches: (path: string) => path = $2;
     {
       name: "Browse"
       href: "/talent"
@@ -34,48 +30,30 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
     }
     {
-      name: "Post Job"
-      href: "/post-job"
-      icon: BriefcaseIcon
-      matches: (path: string) => path.startsWith("/post-job")
-      authRequired: true
-    }
+      name: "Post Job",
+      href: "/post-job",
+      icon: BriefcaseIcon,
+      matches: (path: string) => path.startsWith($2);
+      authRequired: true},
     {
-      name: "Messages"
-      href: "/messages"
-      icon: MessageSquare
-      matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
-      badge: unreadCount
-      authRequired: true
-    }
+      name: "Messages",
+      href: "/messages",
+      icon: MessageSquare,
+      matches: (path: string) => path.startsWith("/messages") || path.startsWith($2);
+      badge: unreadCount,
+      authRequired: true},
     {
-      name: "Dashboard"
-      href: "/dashboard"
-      icon: User
-      matches: (path: string) => path.startsWith("/dashboard")
-      authRequired: true
-    }
-  ];
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(item =>
-    !item.authRequired |(item.authRequired && isAuthenticated)
-  );
-  return (
-    <div className="py-6">
-      <div className="flex justify-between items-center px-6 mb-6">
-        <h2 className="text-xl font-bold">Menu</h2>
-        <Button variant="ghost" size="icon" onClick={onClose}>
-          <X className="h-5 w-5" />
-        </Button>
-      </div>
-      <nav className="space-y-1">
-        {visibleItems.map(item => (
-          <Link
-            key={item.name}
-            to={item.href}
-            className={cn(
-              "flex items-center px-6 py-3 text-base font-medium";
+      name: "Dashboard",
+      href: "/dashboard",
+      icon: User,
+      matches: (path: string) => path.startsWith($2);
+      authRequired: true}
+  ],
 
+  // Filter items based on auth status
+  const visibleItems = $2;
+  return (
+    <div className = $2;
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"

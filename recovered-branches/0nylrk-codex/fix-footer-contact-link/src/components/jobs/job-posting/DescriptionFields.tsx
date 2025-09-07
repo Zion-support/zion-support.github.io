@@ -12,15 +12,11 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from './validation';
 interface DescriptionFieldsProps {
-  control: Control<JobSchemaType>;
-  handleEditorChange: (content: string) => void;
-  editorContent: string
-}
-export function DescriptionFields({
-  control
-  handleEditorChange
-  editorContent
-}: DescriptionFieldsProps) {
+  control: Control<JobSchemaType>,
+  handleEditorChange: (content: string) => void,
+  editorContent: string}
+
+export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {
   return (
     <>
       <FormField
@@ -58,9 +54,9 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
             <FormControl>
               <Textarea 
                 value={editorContent}
-                onChange={(e) => {;
-                  handleEditorChange(e.target.value);
-                  field.onChange(e.target.value);
+                onChange={(e) => {
+                  handleEditorChange($2);
+                  field.onChange(e.target.value)
                 }}
                 className="min-h-[200px]"
                 placeholder="Enter a detailed description of the job role"
@@ -154,5 +150,5 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
         )}
       />
     </>
-  );
+  )
 }

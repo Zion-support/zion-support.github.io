@@ -9,11 +9,7 @@ const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
     {...props}
   />
 )
-
-Pagination.displayName = "Pagination"
-
-const PaginationContent = React.forwardRef<
-  HTMLUListElement,"
+Pagination.displayName = $2;
   React.ComponentProps<"ul">
 
 >(({ className, ...props }, ref) => (
@@ -23,44 +19,23 @@ const PaginationContent = React.forwardRef<
     className={cn("flex flex-row items-center gap-1", className)}
 
     {...props}
-
-PaginationContent.displayName = "PaginationContent"
-
-const PaginationItem = React.forwardRef<
-  HTMLLIElement,"
+  />
+))
+PaginationContent.displayName = $2;
   React.ComponentProps<"li">
 >(({ className, ...props }, ref) => (
 
   <li ref={ref} className={cn("", className)} {...props} />
 ))
-
-PaginationItem.displayName = "PaginationItem"
-
-type PaginationLinkProps = {
-  isActive?: boolean
-
-interface PaginationButtonProps
-
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  page: number
-  isActive?: boolean
-}
-
-  className,
+PaginationItem.displayName = $2;
   isActive,
-  size = "icon",
-
-  className,
-  isActive,
-
+  size = $2;
+  ...props
 }: PaginationLinkProps) => (
   <a"
     aria-current={isActive ? "page" : undefined}
-    className={cn(
-
-        variant: isActive ? "outline" : "ghost",
-        size}),
-      className;
+    className={cn($2);
+      className
     )}
     {...props}
   />
@@ -75,20 +50,17 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       type="button"
       aria-label={`Page ${page}`}'
       aria-current={isActive ? 'page' : undefined}
-      className={cn(;
-
-        isActive && 'bg-green-600 text-white',;
-
-        className;
+      className={cn($2);
+        isActive && 'bg-green-600 text-white',
+        className
       )}
       {...props}
     >;
       {page}
     </button>
   )
-
-const PaginationPrevious = ({
-  className,
+)
+PaginationButton.displayName = $2;
   ...props
 
 }: Omit<PaginationLinkProps 'size'>) => (
@@ -97,17 +69,8 @@ const PaginationPrevious = ({
     size="default""
     className={cn("gap-1 pl-2.5", className)}
     {...props}
-  >"
-    <ChevronLeft className="h-4 w-4" />
-    <span>Previous</span>
-  </PaginationLink>
-)
-
-PaginationPrevious.displayName = "PaginationPrevious"
-
-const PaginationNext = ({
-  className,
-
+  >
+    <ChevronLeft className = $2;
   ...props
 
 }: Omit<PaginationLinkProps 'size'>) => (
@@ -117,15 +80,8 @@ const PaginationNext = ({
     className={cn("gap-1 pr-2.5", className)}
     {...props}
   >
-    <span>Next</span>"
-    <ChevronRight className="h-4 w-4" />
-  </PaginationLink>
-)
-
-PaginationNext.displayName = "PaginationNext"
-
-const PaginationEllipsis = ({
-  className,
+    <span>Next</span>
+    <ChevronRight className = $2;
   ...props
 
 }: React.ComponentProps<"span">) => (
@@ -133,15 +89,8 @@ const PaginationEllipsis = ({
     aria-hidden"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
-  >"
-    <MoreHorizontal className="h-4 w-4" />"
-    <span className="sr-only">More pages</span>
-  </span>
-)
-
-export {
-
-  Pagination,
+  >
+    <MoreHorizontal className = $2;
   PaginationContent,
   PaginationEllipsis,
   PaginationItem,

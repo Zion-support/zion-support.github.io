@@ -10,6 +10,13 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+export interface HeaderProps {
+  hideLogin?: boolean,
+  customLogo?: string,
+  customTheme?: {
+    primaryColor: string,
+    backgroundColor: string,
+    textColor: string}
 }
 
 export function Header({ hideLogin;
@@ -24,40 +31,31 @@ export interface HeaderProps {
   }
 }
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
-  const { user } = useAuth();
-  const { isWhitelabel, primaryColor } = useWhitelabel();
-  const navigate = useNavigate();
-  const [query, setQuery] = useState("");
-  const searchSuggestions = generateSearchSuggestions();
-  // If we have a white-label tenant and no specific customTheme is provided;
-  // use the tenant's primary color
-  const effectiveTheme = customTheme |(isWhitelabel ? {
-    primaryColor;
-    backgroundColor: '#0f172a', // Default dark background
-    textColor: '#ffffff', // Default light text
-  } : undefined);
-  
+  const { user } = useAuth($2);
+  const { isWhitelabel, primaryColor } = useWhitelabel($2);
+  const navigate = useNavigate($2);
+  const [query, setQuery] = useState($2);
+  const searchSuggestions = generateSearchSuggestions($2);
   // If we have a white-label tenant and no specific customTheme is provided,
   // use the tenant's primary color
-  const effectiveTheme = customTheme || (isWhitelabel ? {
-    primaryColor,
+  const effectiveTheme = $2;
     backgroundColor: '#0f172a', // Default dark background
     textColor: '#ffffff', // Default light text
   } : undefined),
   
-  const headerStyle = effectiveTheme ? {
-    backgroundColor: effectiveTheme.backgroundColor
-    color: effectiveTheme.textColor
+  const headerStyle = $2;
+    color: effectiveTheme.textColor,
     borderColor: `${effectiveTheme.primaryColor}20`
-  } : {}
+  } : {},
+
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault($2);
     if (query.trim()) {
-      navigate(`/search?q=${encodeURIComponent(query)}`),
+      navigate(`/search?q = $2;
       setQuery("")
     }
-  }
-
+  },
+  
   return (
     <header
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
@@ -82,11 +80,5 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       </div>
     </header>
   )
-}
-          {!hideLogin && <UserMenu />}
-        </div>;
-      </div>;
-    </header>;
-  );
 }
 ;

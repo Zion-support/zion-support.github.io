@@ -11,92 +11,73 @@ import { ProductListing, ListingView } from "@/types/listings",
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 interface PriceRange {
+  min: number,
+  max: number}
 
   min: number
 
   max: number
 }
 interface DynamicListingPageProps {
-  title: string;
-  description: string;
-  categorySlug: string;
-  listings: ProductListing[];
-  categoryFilters: { label: string, value: string }[],
-  title: string
-  description: string
-  categorySlug: string
-  listings: ProductListing[]
-  categoryFilters: { label: string, value: string }[]
+  title: string,
+  description: string,
+  categorySlug: string,
+  listings: ProductListing[],
+  categoryFilters: { label: string, value: string}[],
+  initialPrice?: PriceRange
+}
 
   initialPrice?: PriceRange
 }
 export function DynamicListingPage({
-  title;
-  description;
-  categorySlug;
-
-  listings: allListings
-  categoryFilters;
-  initialPrice = { min: 0, max: 10000 }
+  title,
+  description,
+  categorySlug,
+  listings: allListings,
+  categoryFilters,
+  initialPrice = { min: 0, max: 10000}
 }: DynamicListingPageProps) {
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [view, setView] = useState<ListingView>("grid");
-  const [isLoading, setIsLoading] = useState(false);
-  const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  initialPrice = { min: 0, max: 10000 }
-}: DynamicListingPageProps) {
-  const navigate = useNavigate(),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedCategory, setSelectedCategory] = useState("all"),
+  const navigate = useNavigate($2);
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
   const [view, setView] = useState<ListingView>("grid"),
-  const [isLoading, setIsLoading] = useState(false),
+  const [isLoading, setIsLoading] = useState($2);
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice),
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
 
   useEffect(() => {
-    const listingsWithPrice = allListings.filter(l => l.price !== null),
+    const listingsWithPrice = allListings.filter($2);
     if (listingsWithPrice.length > 0) {
-      const min = Math.min(...listingsWithPrice.map(l => l.price |0));
-      const max = Math.max(...listingsWithPrice.map(l => l.price |0));
+      const min = $2;
+      const max = $2;
       setPriceRange({ min, max })
     }
-  }, [allListings]);
+  }, [allListings]),
+
   const [currentPriceFilter, setCurrentPriceFilter] = useState<[number, number]>([
     initialPrice.min;
     initialPrice.max
-  ]);
+  ]),
+
   const handleSliderChange = (values: number[]) => {
     setCurrentPriceFilter([values[0], values[1]])
-  }
-  const filteredListings = allListings.filter(listing => {
-    const matchesSearch = !searchQuery |
-      listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-      listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-    const matchesCategory = selectedCategory === "all" |listing.category === selectedCategory;
-    const matchesPrice = listing.price === null |(
-      listing.price >= currentPriceFilter[0] &&
-      listing.price <= currentPriceFilter[1]
-    );
-    const matchesRating =
-      selectedRating === null |
-      (listing.rating !== undefined && listing.rating >= selectedRating);
+  },
+
+  const filteredListings = $2;
+    const matchesCategory = $2;
+    const matchesPrice = $2;
+    const matchesRating = $2;
     return matchesSearch && matchesCategory && matchesPrice && matchesRating
-  });
+  }),
+
   const handleRequestQuote = (listingId: string) => {
-    setIsLoading(true);
-    const listing = allListings.find(item => item.id === listingId);
+    setIsLoading($2);
+    const listing = allListings.find($2);
     setTimeout(() => {
-      setIsLoading(false)
+      setIsLoading($2);
       if (listing) {
-        toast({
-          title: "Quote Requested"
-          description: `Your quote request for ${listing.title} has been sent.`
-        });
+        toast($2);
         navigate("/request-quote", {
           state: {
             serviceType: categorySlug
@@ -110,7 +91,8 @@ export function DynamicListingPage({
         })
       }
     }, 500)
-  }
+  },
+
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">
       <div className="container mx-auto">
@@ -133,7 +115,7 @@ export function DynamicListingPage({
                 <Select
                   value={selectedCategory}
                   onValueChange={(value: string) => {
-                    // // // console.log("Category selected:", value),
+                    console.log($2);
                     setSelectedCategory(value)
                   }}
                 >
@@ -181,7 +163,7 @@ export function DynamicListingPage({
                       variant="outline"
                       size="sm"
                       onClick={() => {
-                        // // // console.log("Rating selected:", rating),
+                        console.log($2);
                         setSelectedRating(rating)
                       }}
                       className={`${
@@ -204,14 +186,15 @@ export function DynamicListingPage({
                   ))}
                 </div>
               </div>
-              <Button
-                variant="outline"
+              
+              <Button 
+                variant="outline" 
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
-                  console.log("Resetting filters");
-                  setSearchQuery("");
-                  setSelectedCategory("all")
-                  setCurrentPriceFilter([priceRange.min, priceRange.max]);
+                  console.log($2);
+                  setSearchQuery($2);
+                  setSelectedCategory($2);
+                  setCurrentPriceFilter($2);
                   setSelectedRating(null)
                 }}
               >
@@ -229,7 +212,7 @@ export function DynamicListingPage({
                     placeholder="Search listings..."
                     value={searchQuery}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                      // // // console.log("Search query:", e.target.value),
+                      console.log($2);
                       setSearchQuery(e.target.value)
                     }}
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
@@ -380,10 +363,9 @@ export function DynamicListingPage({
                 <Button
                   variant="outline"
                   onClick={() => {
-                    setSearchQuery("");
-                    setSelectedCategory("all");
-                    setCurrentPriceFilter([priceRange.min, priceRange.max]);
-
+                    setSearchQuery($2);
+                    setSelectedCategory($2);
+                    setCurrentPriceFilter($2);
                     setSelectedRating(null)
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

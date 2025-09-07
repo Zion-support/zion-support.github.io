@@ -3,19 +3,203 @@ this.style.transform = 'translateY(0) scale(1)'
 // Zion Tech Group Website JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById($2);
+    const navMenu = document.getElementById($2);
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+            navMenu.classList.toggle($2);
             navToggle.classList.toggle('active')
         })
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.nav') && navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove($2);
+            navToggle.classList.remove('active')
+        }
+    }),
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault($2);
+            const target = $2;
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            }
+        })
+    }),
+    
+    // Add scroll effects to elements
+    const observerOptions = $2;
+        rootMargin: '0px 0px -50px 0px'
+    },
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-up')
+            }
+        })
+    }, observerOptions),
+    
+    // Observe elements for animation
+    document.querySelectorAll('.service-card, .solution-card, .stat-item').forEach(el = $2;
+    // Header scroll effect
+    const header = document.querySelector($2);
+    let lastScrollTop = $2;
+    window.addEventListener('scroll', function() {
+        const scrollTop = $2;
+        if (scrollTop > 100) {
+            header.classList.add('scrolled')
+        } else {
+            header.classList.remove('scrolled')
+        }
+        
+        lastScrollTop = $2;
+    // Form handling for contact forms
+    const contactForms = document.querySelectorAll($2);
+    contactForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault($2);
+            const formData = new FormData($2);
+            const submitBtn = form.querySelector($2);
+            const originalText = $2;
+            // Show loading state
+            submitBtn.textContent = $2;
+            submitBtn.disabled = $2;
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                submitBtn.textContent = $2;
+                submitBtn.style.background = $2;
+                // Reset form
+                form.reset($2);
+                // Reset button after delay
+                setTimeout(() => {
+                    submitBtn.textContent = $2;
+                    submitBtn.disabled = $2;
+                    submitBtn.style.background = ''
+                }, 3000)
+            }, 2000)
+        })
+    }),
+    
+    // Lazy loading for images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry = $2;
+                    img.src = $2;
+                    img.classList.remove($2);
+                    imageObserver.unobserve(img)
+                }
+            })
+        }),
+        
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img)
+        })
+    }
+    
+    // Search functionality
+    const searchInput = document.querySelector($2);
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase($2);
+            const searchResults = document.querySelector($2);
+            if (query.length > 2) {
+                // Perform search (replace with actual search logic)
+                performSearch(query)
+            } else {
+                if (searchResults) {
+                    searchResults.style.display = 'none'
+                }
+            }
+        })
+    }
+    
+    // Newsletter subscription
+    const newsletterForm = document.querySelector($2);
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault($2);
+            const email = $2;
+            const submitBtn = this.querySelector($2);
+            const originalText = $2;
+            // Show loading state
+            submitBtn.textContent = $2;
+            submitBtn.disabled = $2;
+            // Simulate subscription (replace with actual API call)
+            setTimeout(() => {
+                submitBtn.textContent = $2;
+                submitBtn.style.background = $2;
+                // Reset form
+                this.reset($2);
+                // Reset button after delay
+                setTimeout(() => {
+                    submitBtn.textContent = $2;
+                    submitBtn.disabled = $2;
+                    submitBtn.style.background = ''
+                }, 3000)
+            }, 1500)
+        })
+    }
+    
+    // Service card hover effects
+    const serviceCards = document.querySelectorAll($2);
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = $2;
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = $2;
+    // Stats counter animation
+    const statNumbers = document.querySelectorAll($2);
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter($2);
+                statsObserver.unobserve(entry.target)
+            }
+        })
+    }, { threshold: 0.5 }),
+    
+    statNumbers.forEach(stat = $2;
+    // Back to top button
+    const backToTopBtn = document.createElement($2);
+    backToTopBtn.innerHTML = $2;
+    backToTopBtn.className = $2;
+    backToTopBtn.setAttribute($2);
+    document.body.appendChild($2);
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }),
+    
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible')
+        } else {
+            backToTopBtn.classList.remove('visible')
+        }
+    }),
+    
+    // Initialize tooltips
+    initializeTooltips($2);
+    // Initialize modals
+    initializeModals()
+}),
 
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
     // For now, we'll simulate search results
-
+    const searchResults = document.querySelector($2);
     if (searchResults) {
         const results = [
 
@@ -411,370 +595,102 @@ function performSearch(query) {
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' };
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
-        ].filter(item =>
-            item.title.toLowerCase().includes(query)
-        ));
+        ].filter(item = $2;
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
-            ).join('');
-origin/cursor/automate-test-improve-and-merge-code-2533
+            ).join($2);
+            searchResults.style.display = $2;
             searchResults.style.display = 'block'
-        if (results && results.length > 0) {
-            searchResults && searchResults.innerHTML = results && results.map(result => 
-                `<a href="${result && result.url}" class="search-result-item">${result && result.title}</a>`
-            ).join(''),
-            searchResults && searchResults.style.display = 'block'
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-        } else {
-            searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
-            searchResults && searchResults.style.display = 'block'
-
         }
     }
 }
 // Counter animation
 function animateCounter(element) {
-
-    const timer = setInterval(() => {
-
-        current += step
+    const target = parseInt(element.textContent.replace(/\D/g, '')),
+    const duration = $2;
+    const step = $2;
+    let current = $2;
+    const timer = $2;
         if (current >= target) {
-            current = target
+            current = $2;
             clearInterval(timer)
         }
-
-        const suffix = element && element.textContent.replace(/\d/g, ''),
-        element && element.textContent = Math && Math.floor(current) + suffix
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-    const target = parseInt(element.textContent.replace(/\D/g, ''))
-    const duration = 2000
-    const step = target / (duration / 16)
-    let current = 0
-    const timer = setInterval(() => {
-        current += step;
-        if ({
-            current = target);
-            clearInterval(timer)
-        }
-        const suffix = element.textContent.replace(/\d/g, '');
-        element.textContent = Math.floor(current) + suffix
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-    }, 16)
-}
-// Tooltip initialization
-function initializeTooltips() {
-
-    const tooltipElements = document.querySelectorAll('[data-tooltip]');
-    tooltipElements.forEach(element => {
-        element.addEventListener('mouseenter', function(e) {
-            const tooltip = document.createElement('div');
-            tooltip.className = 'tooltip',
-            tooltip.textContent = this.dataset.tooltip,
-            document.body.appendChild(tooltip);
-            const rect = this.getBoundingClientRect();
-            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px',
-            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px',
-            this.tooltip = tooltip
-        })
-        element.addEventListener('mouseleave', function() {
-            if (this.tooltip) {
-                this.tooltip.remove();
-                this.tooltip = null
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-            }
-        })
-    })
-}
-// Modal initialization
-function initializeModals() {
-
-    const modalTriggers = document.querySelectorAll('[data-modal]');
-    const modals = document.querySelectorAll('.modal');
-    modalTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function(e) {
-            e.preventDefault();
-            const modalId = this.dataset.modal;
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden'
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-            }
-        })
-    })
-    // Close modal on overlay click
-
-    modals.forEach(modal => {
-        modal.addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.remove('active');
-                document.body.style.overflow = ''
-            }
-        })
-        // Close modal on close button click
-        const closeBtn = modal.querySelector('.modal-close');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function() {
-                modal.classList.remove('active');
-                document.body.style.overflow = ''
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-            })
-        }
-    })
-    // Close modal on escape key
-
-            { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
-        ].filter(item => 
-            item.title.toLowerCase().includes(query)
-        ),
         
-        if (results.length > 0) {
-            searchResults.innerHTML = results.map(result =>
-                `<a href="${result.url}" class="search-result-item">${result.title}</a>`
-
-            ).join('')
-
-            searchResults.style.display = 'block'
-        } else {
-            searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>'
-            searchResults.style.display = 'block'
-        }
-    }
-}
-// Counter animation
-function animateCounter(element) {
-    const target = parseInt(element.textContent.replace(/\D/g, ''))
-    const duration = 2000
-    const step = target / (duration / 16)
-    let current = 0
-    const timer = setInterval(() => {
-
-        current += step
-        if (current >= target) {
-            current = target
-            clearInterval(timer)
-        }
-        const suffix = element.textContent.replace(/\d/g, '')
-
+        const suffix = element.textContent.replace($2);
         element.textContent = Math.floor(current) + suffix
+    }, 16)
+}
+
     }, 16)
 }
 // Tooltip initialization
 function initializeTooltips() {
-
-    const tooltipElements = document.querySelectorAll('[data-tooltip]')
+    const tooltipElements = document.querySelectorAll($2);
     tooltipElements.forEach(element => {
         element.addEventListener('mouseenter', function(e) {
-            const tooltip = document.createElement('div')
-            tooltip.className = 'tooltip'
-            tooltip.textContent = this.dataset.tooltip
-            document.body.appendChild(tooltip)
-            const rect = this.getBoundingClientRect()
-            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px'
-            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px'
-
-            this.tooltip = tooltip
-        })
+            const tooltip = document.createElement($2);
+            tooltip.className = $2;
+            tooltip.textContent = $2;
+            document.body.appendChild($2);
+            const rect = this.getBoundingClientRect($2);
+            tooltip.style.left = $2;
+            tooltip.style.top = $2;
+            this.tooltip = $2;
         element.addEventListener('mouseleave', function() {
             if (this.tooltip) {
-
-                this.tooltip.remove()
-
+                this.tooltip.remove($2);
                 this.tooltip = null
+            }
+        })
+    })
+}
+
             }
         })
     })
 }
 // Modal initialization
 function initializeModals() {
-
-    const modalTriggers = document.querySelectorAll('[data-modal]')
-    const modals = document.querySelectorAll('.modal')
+    const modalTriggers = document.querySelectorAll($2);
+    const modals = document.querySelectorAll($2);
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', function(e) {
-            e.preventDefault()
-            const modalId = this.dataset.modal
-            const modal = document.getElementById(modalId)
+            e.preventDefault($2);
+            const modalId = $2;
+            const modal = document.getElementById($2);
             if (modal) {
-                modal.classList.add('active')
-
-                document.body.style.overflow = 'hidden'
-            }
-        })
-    })
+                modal.classList.add($2);
+                document.body.style.overflow = $2;
     // Close modal on overlay click
+
     modals.forEach(modal => {
         modal.addEventListener('click', function(e) {
             if (e.target === this) {
-
-                this.classList.remove('active')
-
-                document.body.style.overflow = ''
-            }
-        })
+                this.classList.remove($2);
+                document.body.style.overflow = $2;
         // Close modal on close button click
-
-        const closeBtn = modal.querySelector('.modal-close')
+        const closeBtn = modal.querySelector($2);
         if (closeBtn) {
             closeBtn.addEventListener('click', function() {
-                modal.classList.remove('active')
-
-                document.body.style.overflow = ''
-            })
-        }
-    })
+                modal.classList.remove($2);
+                document.body.style.overflow = $2;
     // Close modal on escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             modals.forEach(modal => {
                 if (modal.classList.contains('active')) {
-;
-// Modal initialization;
-function initializeModals() {;
-    const modalTriggers = document.querySelectorAll('[data-modal]'),;
-    const modals = document.querySelectorAll('.modal'),;
-    modalTriggers.forEach(trigger => {;
-        trigger.addEventListener('click', function(e) {;
-            e.preventDefault(),;
-            const modalId = this.dataset.modal,;
-            const modal = document.getElementById(modalId),;
-            if (modal) {;
-                modal.classList.add('active'),;
-                document.body.style.overflow = 'hidden';
-            }
-        });
-    }),;
-    // Close modal on overlay click;
-    modals.forEach(modal => {;
-        modal.addEventListener('click', function(e) {;
-            if (e.target === this) {;
-                this.classList.remove('active'),;
-                document.body.style.overflow = '';
-            }
-        }),;
-        // Close modal on close button click;
-        const closeBtn = modal.querySelector('.modal-close'),;
-        if (closeBtn) {;
-            closeBtn.addEventListener('click', function() {;
-                modal.classList.remove('active'),;
-                document.body.style.overflow = '';
-            });
-        }
-    }),;
-    // Close modal on escape key;
-    document.addEventListener('keydown', function(e) {;
-        if (e.key === 'Escape') {;
-            modals.forEach(modal => {;
-                if (modal.classList.contains('active')) {;
-                    modal.classList.remove('active'),;
-                    document.body.style.overflow = '';
-
-// Modal initialization;
-/**
- * initialize_modals - Function description
- */
-function initialize_modals() {
-    const modal_triggers = document.querySelectorAll ('[data - modal]'),
-    const modals = document.querySelectorAll ('.modal'),
-    modal_triggers.for_each (trigger => {
-        trigger.addEventListener ('click', function (e) {
-            e.prevent_default (),
-            const modal_id = this.dataset.modal,
-            const modal = document.getElementById (modal_id),
-            // Check condition
-if ( {) {
-  $2
-}
-                modal.class_list.add ('active'),
-                document.body.style.overflow = 'hidden';
-            }
-        });
-    }),
-    // Close modal on overlay click;
-    modals.for_each (modal => {
-        modal.addEventListener ('click', function (e) {
-            // Check condition
-if ( {) {
-  $2
-}
-                this.class_list.remove ('active'),
-                document.body.style.overflow = '';
-            }
-        }),
-        // Close modal on close button click;
-        const close_btn = modal.query_selector ('.modal - close'),
-        // Check condition
-if ( {) {
-  $2
-}
-            close_btn.addEventListener ('click', function () {
-                modal.class_list.remove ('active'),
-                document.body.style.overflow = '';
-            });
-        }
-    }),
-    // Close modal on escape key;
-    document.addEventListener ('keydown', function (e) {
-        // Check condition
-if ( {) {
-  $2
-}
-            modals.for_each (modal => {
-                if () {) {
-  $2
-}
-                    modal.class_list.remove ('active'),
-                    document.body.style.overflow = '';
-
-                }
-            });
-        }
-    });
-}
-
-                    modal.classList.remove('active')
-
-                }
-            })
-        }
-    })
-}
-
-    if ('performance' in window) {
-
-        console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            modals.forEach(modal => {
-                if (modal.classList.contains('active')) {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = ''
-
-                }
-            })
-        }
-    })
-}
-// Performance monitoring
-function logPerformance() {
-
-    if ('performance' in window) {
-        const perfData = performance.getEntriesByType('navigation')[0]
-        console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms')
-
+                    modal.classList.remove($2);
+                    document.body.style.overflow = $2;
+        console.log($2);
         console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
     }
 }
 // Error tracking
 window.addEventListener('error', function(e) {
+    console.error($2);
+    // Send to error tracking service
+}),
 
     }
 
@@ -790,232 +706,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 })
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
-
-    console.log('Event tracked:', eventName, eventData);
-origin/cursor/automate-test-improve-and-merge-code-2533
-
+    console.log($2);
     // Implement your analytics tracking here
 }
-});
-//Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
 
-  entries.forEach (entry => {
-  if (entry.isIntersecting) {
-  lastScrollTop = scrollTop 
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-});
-//Form handling for contact forms submitBtn.disabled = true;
-//Simulate form submission (replace with actual API call) //Reset form form.reset ();
-//Reset button after delay //Lazy loading for images if ('IntersectionObserver' in window) {
-  const imageObserver = new IntersectionObserver ( (entries, observer) => {
-
-  entries && entries.forEach (entry => {
-  if (entry && entry.isIntersecting) {
-  lastScrollTop = scrollTop 
-
-});
-//Form handling for contact forms submitBtn && submitBtn.disabled = true;
-//Simulate form submission (replace with actual API call) //Reset form form && form.reset ();
-//Reset button after delay //Lazy loading for images if ('IntersectionObserver' in window) {
-  const imageObserver = new IntersectionObserver ( (entries, observer) => {
-
-  entries && entries.forEach (entry => {
-  if (entry && entry.isIntersecting) {
-
-}) 
-}//Newsletter subscription submitBtn && submitBtn.disabled = true;
-//Simulate subscription (replace with actual API call) //Reset form this && this.reset ();
-
-//Reset button after delay //Initialize tooltips initializeTooltips ();
-//Initialize modals initializeModals ()
-// Performance monitoring;
-/**
- * log_performance - Function description
- */
-function log_performance() {
-    // Check condition
-if ( {) {
-  $2
-}
-        const perf_data = performance.getEntriesByType ('navigation')[0],
-        console.log ('Page Load Time:', perf_data.loadEventEnd - perf_data.loadEventStart, 'ms'),
-        console.log ('DOM Content Loaded:', perf_data.domContentLoadedEventEnd - perf_data.domContentLoadedEventStart, 'ms');
-
-    }
-}
-// Error tracking;
-'
-    console.error('JavaScript Error:', e.error)
-
-    // Send to error tracking service;
-})
-// Analytics tracking (replace with your analytics service)
-function trackEvent(eventName, eventData = {}) {}
-    // Implement your analytics tracking here;
-}
-  entries.forEach (entry => {
-  if (entry.isIntersecting) {
-
-}) 
-}//Newsletter subscription submitBtn.disabled = true;
-//Simulate subscription (replace with actual API call) //Reset form this.reset ();
-//Reset button after delay //Initialize tooltips initializeTooltips ();
-//Initialize modals initializeModals () 
-origin/cursor/automate-test-improve-and-merge-code-2533
-});
-
-});
-
-}//Newsletter subscription submit_btn.disabled = true;
-//Simulate subscription (replace with actual API call) //Reset form this.reset ();
-//Reset button after delay //Initialize tooltips initialize_tooltips ();
-//Initialize modals initialize_modals ();
-});
-//Search /**
- * if - Function description;
- */
-
-  title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' 
-};
-{
-  title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' 
-};
-{
-  title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' 
-};
-{
-
-  title: 'Quantum Computing Services', url: '/services/quantum-computing' 
-}].filter (item => item.title.toLowerCase () .includes (query) );
-
-}) 
-}//Performance monitoring 
-
-}//Error tracking window && window.addEventListener ('error', function (e) {
-  console && console.error ('JavaScript Error:', e && e.error);
-//Send to error tracking service 
-
-}//Error tracking window.addEventListener ('error', function (e) {
-  console.error ('JavaScript Error:', e.error);
-//Send to error tracking service 
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-});
-//Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {
-}) {
-  //Implement your analytics tracking here 
-}//Track page views trackEvent ('page view', {
-
-});
-//Track button clicks document.addEventListener ('click', function (e) {
-  if (e.target.matches ('.btn') ) {
-  trackEvent ('button click', {
-
-  button text: e.target.textContent;
-button class: e.target.className;
-});
-origin/cursor/automate-test-improve-and-merge-code-2533
-
+// Track page views
+trackEvent($2);
 // Track button clicks
 document.addEventListener('click', function(e) {
     if (e.target.matches('.btn')) {
         trackEvent('button_click', {
-
-  page: window && window.location.pathname;
-title: document && document.title 
-
-});
-//Track button clicks document && document.addEventListener ('click', function (e) {
-  if (e && e.target.matches ('.btn') ) {
-  trackEvent ('button click', {
-
-  button text: e && e.target.textContent;
-button class: e && e.target.className;
-page: window && window.location.pathname 
-}) 
-
-});
-// Log performance when page is fully loaded window && window.addEventListener ('load', logPerformance);// Track page views
-trackEvent('page_view', {
-
-    page: window && window.location.pathname,
-    title: document && document.title
-}),
-
-// Track button clicks
-document && document.addEventListener('click', function(e) {
-    if (e && e.target.matches('.btn')) {
-        trackEvent('button_click', {
-
-            button_text: e && e.target.textContent,
-            button_class: e && e.target.className,
-            page: window && window.location.pathname
-
+            button_text: e.target.textContent,
+            button_class: e.target.className,
+            page: window.location.pathname
         })
     }
-})
-// Log performance when page is fully loaded
+}),
 
-window.addEventListener('load', logPerformance)
-;
-}//Counter animation //Close modal on overlay click modals.for_each (modal => {
-  modal.addEventListener ('click', function (e) {
-  // Check condition
-if ( {) {
-  $2
-}
-});
-//Close modal on escape key document.addEventListener ('keydown', function (e) {
-  // Check condition
-if ( {) {
-  $2
-}
-  modals.for_each (modal => {
-  if () {) {
-  $2
-}
-});
-}//Performance monitoring;
-}//Error tracking window.addEventListener ('error', function (e) {
-  console.error ('JavaScript Error:', e.error);
-//Send to error tracking service;
-});
-//Analytics tracking (replace with your analytics service) /**
- * track_event - Function description
- */
-function track_event() {
-  //Implement your analytics tracking here;
-}//Track page views track_event ('page view', {
-  page: window.location.pathname;
-title: document.title;
-});
-//Track button clicks document.addEventListener ('click', function (e) {
-  if () {) {
-  $2
-}
-  track_event ('button click', {
-  button text: e.target.text_content;
-button class: e.target.class_name;
-page: window.location.pathname;
-});
-});
-// Log performance when page is fully loaded window.addEventListener ('load', log_performance);// Track page views;
-track_event ('page_view', {
-    page: window.location.pathname,
-    title: document.title;
-}),
-// Track button clicks;
-document.addEventListener ('click', function (e) {
-    if () {) {
-  $2
-}
-        track_event ('button_click', {
-            button_text: e.target.text_content,
-            button_class: e.target.class_name,
-            page: window.location.pathname;
-        });
-    }
-}),
-// Log performance when page is fully loaded;
-window.addEventListener('load', logPerformance),;
+// Log performance when page is fully loaded
+window.addEventListener($2);

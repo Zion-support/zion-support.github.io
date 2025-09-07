@@ -5,22 +5,21 @@ import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react";
 interface TemplateListProps {
-  templates: ContractTemplate[];
-  isLoading: boolean;
-  onSelect: (template: ContractTemplate) => void;
-  templates: ContractTemplate[]
-  isLoading: boolean
-  onSelect: (template: ContractTemplate) => void
+  templates: ContractTemplate[],
+  isLoading: boolean,
+  onSelect: (template: ContractTemplate) => void,
+  onEdit: (template: ContractTemplate) => void
+}
 
   onEdit: (template: ContractTemplate) => void
 }
@@ -31,70 +30,16 @@ export function TemplateList({
   onEdit
 }: TemplateListProps) {
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
-
-  const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId)
-  }
+  const { deleteTemplate, setDefaultTemplate } = useContractTemplates($2);
+  const handleDeleteClick = $2;
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
-      await deleteTemplate.mutateAsync(templateToDelete);
+      await deleteTemplate.mutateAsync($2);
       setTemplateToDelete(null)
     }
-  }
-  const handleSetDefault = async (templateId: string) => {
-    await setDefaultTemplate.mutateAsync(templateId)
-  }
-interface TemplateListProps {
-  templates: ContractTemplate[],
-  isLoading: boolean,
-  onSelect: (template: ContractTemplate) => void,
-  onEdit: (template: ContractTemplate) => void
-import { ContractTemplate } from "@/types/contracts",;
-import { Button } from "@/components/ui/button",;
-import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",;
-import { useContractTemplates } from "@/hooks/useContractTemplates",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Separator } from "@/components/ui/separator",;
-import {;
-  AlertDialog,;
-  AlertDialogAction,;
-  AlertDialogCancel,;
-  AlertDialogContent,;
-  AlertDialogDescription,;
-  AlertDialogFooter,;
-  AlertDialogHeader,;
-  AlertDialogTitle} from "@/components/ui/alert-dialog",;
-import { useState } from "react",;
-interface TemplateListProps {;
-  templates: ContractTemplate[],;
-  isLoading: boolean,;
-  onSelect: (template: ContractTemplate) => void,;
-  onEdit: (template: ContractTemplate) => void;
-}
-;
-export function TemplateList({;
-  templates,;
-  isLoading,;
-  onSelect,;
-  onEdit;
-}: TemplateListProps) {;
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),;
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates(),;
-  const handleDeleteClick = (templateId: string) => {;
-    setTemplateToDelete(templateId);
-  },;
-  const handleDeleteConfirm = async () => {;
-    if (templateToDelete) {;
-      await deleteTemplate.mutateAsync(templateToDelete),;
-      setTemplateToDelete(null);
-    }
   },
 
-  const handleSetDefault = async (templateId: string) => {
-    await setDefaultTemplate.mutateAsync(templateId)
-  },
-
+  const handleSetDefault = $2;
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">

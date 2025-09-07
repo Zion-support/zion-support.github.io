@@ -37,36 +37,32 @@ export default function OfflinePage() {
       logErrorToProduction('Failed to reload page', err);
     }
   }
-  const quickActions = [
+
+  const quickActions = $2;
+      description: 'View recently visited equipment listings',
+      icon: Search,
+      href: '/equipment',
+      available: true},
     {
-      title: 'Browse Cached Equipment'
-      description: 'View recently visited equipment listings'
-      icon: Search
-      href: '/equipment'
-      available: true
-    }
+      title: 'View Bookmarks',
+      description: 'Access your saved items',
+      icon: Bookmark,
+      href: '/bookmarks',
+      available: true},
     {
-      title: 'View Bookmarks'
-      description: 'Access your saved items'
-      icon: Bookmark
-      href: '/bookmarks'
-      available: true
-    }
+      title: 'Visit Marketplace',
+      description: 'Browse all available services and gear',
+      icon: ShoppingCart,
+      href: '/marketplace',
+      available: true},
     {
-      title: 'Visit Marketplace'
-      description: 'Browse all available services and gear'
-      icon: ShoppingCart
-      href: '/marketplace'
-      available: true
-    }
-    {
-      title: 'Go to Homepage'
-      description: 'Return to the main page'
-      icon: Home
-      href: '/'
-      available: true
-    }
-  ];
+      title: 'Go to Homepage',
+      description: 'Return to the main page',
+      icon: Home,
+      href: '/',
+      available: true}
+  ]
+
   return (
     <>
       <Head>
@@ -77,38 +73,12 @@ export default function OfflinePage() {
       <div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900'>
         <div className='container mx-auto px-4 py-8'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}const quickActions = [ {
-  title: 'Browse Cached Equipment', description: 'View recently visited equipment listings', icon: Search, href: '/equipment', available: true 
-}
-{
-  title: 'View Bookmarks', description: 'Access your saved items', icon: Bookmark, href: '/bookmarks', available: true 
-}
-{
-  title: 'Visit Marketplace', description: 'Browse all available services and gear', icon: ShoppingCart, href: '/marketplace', available: true 
-}
-{
-  title: 'Go to Homepage', description: 'Return to the main page', icon: Home, href: '/', available: true 
-}] return (<> <Head> <title>You're Offline - Zion Tech Marketplace</title> <meta name="description" content="You're currently offline. Some features may not be available." /> <meta name="robots" content="noindex, nofollow" /> </Head> <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900" > <div className="container mx-auto px-4 py-8" > <motion.div <motion.div animate= {
-  isOnline ? {
-  scale: [1, 1.1, 1] 
-}: {
-  rotate: [0, -10, 10, -10, 0] 
-}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8"
+          >
+            {/* Connection Status */}
             <div className="mb-6">
               <motion.div
                 animate={
@@ -205,8 +175,8 @@ export default function OfflinePage() {
           </div>
           {/* Quick Actions */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 40}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h2 className='text-2xl font-bold text-center mb-8'>
@@ -216,8 +186,8 @@ export default function OfflinePage() {
               {quickActions.map((action, index) => (
                 <motion.div
                   key={action.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 >
                   <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
@@ -260,8 +230,8 @@ export default function OfflinePage() {
           </motion.div>
           {/* Tips Section */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
             transition={{ duration: 0.6, delay: 0.8 }}
             className='mt-16'
           >
@@ -295,8 +265,8 @@ export default function OfflinePage() {
           {isOnline && (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className='fixed bottom-6 right-6 z-50'
+              animate={{ opacity: 1, scale: 1}}
+              className="fixed bottom-6 right-6 z-50"
             >
               <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800">
                 <CardContent className="p-4">

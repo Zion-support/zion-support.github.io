@@ -11,9 +11,8 @@ import { useEffect, useState } from "react";
 
 export function ModeToggle() {
 
-  const { theme, toggleTheme } = useTheme(),
-  const [isClient, setIsClient] = useState(false),
-
+  const { theme, toggleTheme } = useTheme($2);
+  const [isClient, setIsClient] = useState($2);
   // Ensure we're on the client side to avoid hydration mismatches
   useEffect(() => {
     setIsClient(true)
@@ -23,50 +22,33 @@ export function ModeToggle() {
   const resolvedTheme = (() => {
     if (!isClient) return 'light', // Default for SSR
     
-    if (theme === "system") {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-    }
-    return theme
-  })(),
-
-  const isDarkMode = resolvedTheme === "dark",
-
-  const handleToggle = () => {
-    try {
-      // Determine the new theme we are switching TO
-      const newTheme = isDarkMode ? "light" : "dark",
-
-      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
-
+    if (theme = $2;
+  const isDarkMode = $2;
+  const handleToggle = $2;
+      logInfo($2);
       // Apply the new theme via ThemeProvider
-      toggleTheme(),
-
+      toggleTheme($2);
       // Show user feedback with a developer-centric message
       const messages = newTheme === 'dark' ? darkModeMessages : lightModeMessages
       const title = messages[Math.floor(Math.random() * messages.length)]
-      toast({
-        title,
-        description: `Theme changed to ${newTheme} mode successfully`}),
-
+      toast($2);
       // Accessibility announcement for screen readers
-      const announcement = `Theme switched to ${newTheme} mode`,
-      
+      const announcement = $2;
       // Create a live region announcement
-      const liveRegion = document.createElement('div'),
-      liveRegion.setAttribute('aria-livepolite'),
-      liveRegion.setAttribute('aria-atomictrue'),
-      liveRegion.className = 'sr-only',
-      liveRegion.textContent = announcement,
-      document.body.appendChild(liveRegion),
-      
+      const liveRegion = document.createElement($2);
+      liveRegion.setAttribute($2);
+      liveRegion.setAttribute($2);
+      liveRegion.className = $2;
+      liveRegion.textContent = $2;
+      document.body.appendChild($2);
       // Clean up the announcement after it's been read
       setTimeout(() => {
         document.body.removeChild(liveRegion)
       }, 1000)
       
     } catch (error) {
-      logErrorToProduction('Theme toggle error:', { data: error }),
-      logIssue('Theme switch failed', { error, currentTheme: theme, resolvedTheme }),
+      logErrorToProduction($2);
+      logIssue($2);
       toast({
         title: "Theme switch failed",
         description: "Unable to change theme. Please try again.",

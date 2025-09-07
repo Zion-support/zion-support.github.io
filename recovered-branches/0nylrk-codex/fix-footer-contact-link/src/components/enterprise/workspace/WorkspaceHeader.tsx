@@ -1,13 +1,12 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
 
 import React from "react";
-import {Button} from "@/components/ui/button";
-import {type, Company} from "./CompanyDashboard";
-import {Bell, Users, Settings} from "lucide-react";
-
+import { Button } from "@/components/ui/button";
+import { type Company } from "./CompanyDashboard";
+import { Bell, Users, Settings } from "lucide-react";
 interface WorkspaceHeaderProps {
-  company: Company
-}
+  company: Company}
+
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className="space-y-6">
@@ -39,6 +38,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           </Button>
         </div>
       </div>
+      
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>

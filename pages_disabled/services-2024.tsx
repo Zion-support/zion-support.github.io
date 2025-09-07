@@ -2,109 +2,82 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Search, Star, CheckCircle, Sparkles, Brain, Shield, Cpu, Database, Cloud, TrendingUp, Users, ArrowRight, Zap;
-} from 'lucide-react';
+  Search, Filter, Star, Users, TrendingUp, 
+  Brain, Atom, Cpu, Shield, Database, Cloud,
+  ArrowRight, CheckCircle, Zap, Sparkles
+} from 'lucide-react',
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
-
 const Services2024Page: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'customers'>('name');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'customers'>('name'),
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc'),
 
   // Combine all services
-  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024];
+  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024],
 
   // Filter and sort services
-  const filteredServices = useMemo(() => {
-    const filtered = allServices.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));
-      
-      const matchesCategory = selectedCategory === 'all' || 
-                             (selectedCategory === 'ai' && service.variant.includes('ai')) ||
-                             (selectedCategory === 'quantum' && service.variant.includes('security')) ||
-                             (selectedCategory === 'it' && service.variant.includes('it')) ||
-                             (selectedCategory === 'api' && service.variant.includes('api')) ||
-                             (selectedCategory === 'cloud' && service.variant.includes('cloud')) ||
-                             (selectedCategory === 'marketing' && service.variant.includes('marketing')) ||
-                             (selectedCategory === 'project' && service.variant.includes('project')) ||
-                             (selectedCategory === 'customer' && service.variant.includes('customer'));
-      
-      return matchesSearch && matchesCategory;
-    });
+  const filteredServices = $2;
+      const matchesCategory = $2;
+      return matchesSearch && matchesCategory
+    }),
 
     // Sort services
     filtered.sort((a, b) => {
-      let aValue: unknown, bValue: unknown;
+      let aValue: any, bValue: any,
       
       switch (sortBy) {
         case 'price':
-          aValue = parseFloat(a.price.replace(/[^0-9.]/g, ''));
-          bValue = parseFloat(b.price.replace(/[^0-9.]/g, ''));
-          break;
+          aValue = parseFloat(a.price.replace(/[^0-9.]/g, '')),
+          bValue = parseFloat(b.price.replace(/[^0-9.]/g, '')),
+          break,
         case 'rating':
-          aValue = a.rating;
-          bValue = b.rating;
-          break;
+          aValue = $2;
+          bValue = $2;
+          break,
         case 'customers':
-          aValue = parseInt(a.customers.replace(/[^0-9]/g, ''));
-          bValue = parseInt(b.customers.replace(/[^0-9]/g, ''));
-          break;
-        default:
-          aValue = a.name.toLowerCase();
-          bValue = b.name.toLowerCase();
-      }
-      
-      if (sortOrder === 'asc') {
-        return aValue > bValue ? 1 : -1;
-      } else {
-        return aValue < bValue ? 1 : -1;
-      }
-    });
-
-    return filtered;
-  }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]);
+          aValue = parseInt(a.customers.replace(/[^0-9]/g, '')),
+          bValue = parseInt(b.customers.replace(/[^0-9]/g, '')),
+          break,
+        default: aValue = a.name.toLowerCase($2);
+          bValue = $2;
+    return filtered
+  }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]),
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },
-    { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },
-    { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },
-    { id: 'it', name: 'Enterprise IT', icon: Cpu, count: allServices.filter(s => s.variant.includes('it')).length },
-    { id: 'api', name: 'API & Development', icon: Database, count: allServices.filter(s => s.variant.includes('api')).length },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.variant.includes('cloud')).length },
-    { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },
-    { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },
-    { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length }
-  ];
+    { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s = $2;
+    { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s = $2;
+    { id: 'it', name: 'Enterprise IT', icon: Cpu, count: allServices.filter(s = $2;
+    { id: 'api', name: 'API & Development', icon: Database, count: allServices.filter(s = $2;
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s = $2;
+    { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s = $2;
+    { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s = $2;
+    { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s = $2;
+  const getVariantIcon = $2;
+    if (variant.includes('security')) return Shield,
+    if (variant.includes('it')) return Cpu,
+    if (variant.includes('api')) return Database,
+    if (variant.includes('cloud')) return Cloud,
+    if (variant.includes('marketing')) return TrendingUp,
+    if (variant.includes('project')) return Users,
+    if (variant.includes('customer')) return CheckCircle,
+    return Sparkles
+  },
 
-  const getVariantIcon = (variant: string) => {
-    if (variant.includes('ai')) return Brain;
-    if (variant.includes('security')) return Shield;
-    if (variant.includes('it')) return Cpu;
-    if (variant.includes('api')) return Database;
-    if (variant.includes('cloud')) return Cloud;
-    if (variant.includes('marketing')) return TrendingUp;
-    if (variant.includes('project')) return Users;
-    if (variant.includes('customer')) return CheckCircle;
-    return Sparkles;
-  };
-
-  const getVariantColor = (variant: string) => {
-    if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
-    if (variant.includes('security')) return 'from-red-500 to-pink-500';
-    if (variant.includes('it')) return 'from-green-500 to-emerald-500';
-    if (variant.includes('api')) return 'from-purple-500 to-violet-500';
-    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500';
-    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
-    if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
-    if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
-    return 'from-gray-500 to-slate-500';
-  };
+  const getVariantColor = $2;
+    if (variant.includes('security')) return 'from-red-500 to-pink-500',
+    if (variant.includes('it')) return 'from-green-500 to-emerald-500',
+    if (variant.includes('api')) return 'from-purple-500 to-violet-500',
+    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500',
+    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
+    if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
+    if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
+    return 'from-gray-500 to-slate-500'
+  },
 
   return (
     <>
@@ -122,8 +95,8 @@ const Services2024Page: React.FC = () => {
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
@@ -239,11 +212,9 @@ const Services2024Page: React.FC = () => {
                 {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="group"
-                  >
+                    initial={{ opacity: 0, y: 20}}
+                    animate={{ opacity: 1, y: 0}}
+                    transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                     <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
                       {/* Service Header */}
                       <div className="flex items-start justify-between mb-4">
@@ -313,7 +284,7 @@ const Services2024Page: React.FC = () => {
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
                         <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
-                          {service.variant.replace('-futuristic', '').replace('-', ' ')}
+                          {service.variant.replace('-futuristic', '').replace('- ')}
                         </div>
                       </div>
                     </div>
@@ -328,42 +299,7 @@ const Services2024Page: React.FC = () => {
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of businesses already leveraging our revolutionary 2024 services. 
-                Get started today and experience the future of technology.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <Link
-                  href="/contact"
-                  className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold"
-                >
-                  <Zap className="w-5 h-5" />
-                  <span>Get Started Today</span>
-                </Link>
-                <Link
-                  href="/pricing-2033"
-                  className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold"
-                >
-                  <span>View Pricing Plans</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-}
-
-export default Services2024Page;
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
+export default Services2024Page,

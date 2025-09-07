@@ -2,30 +2,32 @@ import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
-export function FloatingCTA() {;
-  const [isVisible, setIsVisible] = useState(false);
-  const [isClosed, setIsClosed] = useState(false);
+export function FloatingCTA() {
+  const [isVisible, setIsVisible] = useState($2);
+  const [isClosed, setIsClosed] = useState($2);
   useEffect(() => {
+    const handleScroll = $2;
+      const threshold = 600, // Show CTA after scrolling 600px
 
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const threshold = 600; // Show CTA after scrolling 600px
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
       } else {
         setIsVisible(false)
       }
-    }
-    window.addEventListener("scroll", handleScroll);
+    },
+
+    window.addEventListener($2);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll)
     }
-  }, [isClosed]);
+  }, [isClosed]),
+
   const handleClose = () => {
-    setIsClosed(true);
-    setIsVisible(false);
-  }
-  if (!isVisible) return null;
+    setIsClosed($2);
+    setIsVisible(false)
+  },
+
+  if (!isVisible) return null,
 
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
@@ -53,5 +55,5 @@ export function FloatingCTA() {;
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,17 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdminFromApi } from '../../../../utils/auth',
+import { ensureAdminFromApi } from '../../../../utils/auth';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { allowed } = await ensureAdminFromApi(req),
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
-
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' }),
-
+  const { allowed } = await ensureAdminFromApi($2);
+  if (!allowed) return res.status(403).json($2);
+  if (req.method !== 'POST') return res.status(405).json($2);
   const { slides, format, version } = req.body || {},
-  if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' }),
-
-  if (format === 'gslides') {
-    // TODO: integrate Google Slides API and return created deck URL
-    const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`,
+  if (!Array.isArray(slides)) return res.status(400).json($2);
+  if (format = $2;
     return res.status(200).json({ url })
   }
 
@@ -20,8 +15,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     slides.map((s: any, i: number) => `<section style="page-break-after: always, font-family: Arial, sans-serif, padding: 24px,"><h1>${i + 1}. ${escapeHtml(s.title || '')}</h1><pre style="white-space: pre-wrap, font: inherit,">${escapeHtml(s.content || '')}</pre></section>`).join('') +
     `</body></html>`,
 
-  res.setHeader('Content-Typeapplication/octet-stream'),
-  res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version || 'draft'}.html"`),
+  res.setHeader($2);
+  res.setHeader($2);
   res.status(200).send(html)
 }
 

@@ -4,29 +4,22 @@ import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function UsageOverview() {
   // Mock usage data
-
-  const usage = {
-    jobPosts: {
-      used: 32
-      total: 100
-      percentage: 32
-    }
+  const usage = $2;
+      total: 100,
+      percentage: 32},
     interviews: {
-      used: 45
-      total: 150
-      percentage: 30
-    }
+      used: 45,
+      total: 150,
+      percentage: 30},
     messaging: {
-      used: 1250
-      total: 5000
-      percentage: 25
-    }
+      used: 1250,
+      total: 5000,
+      percentage: 25},
     storage: {
-      used: 2.4
-      total: 10
-      percentage: 24
-    }
-  }
+      used: 2.4,
+      total: 10,
+      percentage: 24}
+  },
 
   return (
     <Card>

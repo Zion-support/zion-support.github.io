@@ -4,14 +4,14 @@ import { useForm } from "react-hook-form",
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
   FormMessage} from "@/components/ui/form",
 import {
-  RadioGroup;
+  RadioGroup,
   RadioGroupItem} from "@/components/ui/radio-group",
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
@@ -25,6 +25,12 @@ interface ReviewFormValues {
   is_anonymous?: boolean
 }
 interface ReviewFormProps {
+  projectId: string,
+  revieweeId: string,
+  revieweeName: string,
+  onSubmit: (data: any) => Promise<boolean>, 
+  defaultValues?: Review,
+  isSubmitting: boolean}
 
   projectId: string
   revieweeId: string
@@ -47,16 +53,14 @@ export function ReviewForm({
   onSubmit,
   defaultValues,
   isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0);
-
-  const form = useForm<ReviewFormValues>({
-    defaultValues: defaultValues ? {
-      rating: defaultValues.rating
-      review_text: defaultValues.review_text
-      communication_rating: defaultValues.communication_rating
-      quality_rating: defaultValues.quality_rating
-      timeliness_rating: defaultValues.timeliness_rating
-      would_work_again: defaultValues.would_work_again
+  const [hoveredStar, setHoveredStar] = useState<number>(0),
+  
+  const form = $2;
+      review_text: defaultValues.review_text,
+      communication_rating: defaultValues.communication_rating,
+      quality_rating: defaultValues.quality_rating,
+      timeliness_rating: defaultValues.timeliness_rating,
+      would_work_again: defaultValues.would_work_again,
       is_anonymous: defaultValues.is_anonymous} : {
       rating: 0
       review_text: ""
@@ -65,22 +69,19 @@ export function ReviewForm({
       timeliness_rating: undefined
       would_work_again: undefined
       is_anonymous: false}
-  });
-  const handleSubmit = async (values: ReviewFormValues) => {
-    const formattedData = {
-      ...values
-      project_id: projectId
-      reviewee_id: revieweeId}
-    const success = await onSubmit(formattedData);
+  }),
+  
+  const handleSubmit = $2;
+      project_id: projectId,
+      reviewee_id: revieweeId},
+    
+    const success = await onSubmit($2);
     if (success) {
       form.reset()
     }
-  }
-  const watchRating = form.watch("rating");
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+  },
   
+  const watchRating = form.watch($2);
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
@@ -98,41 +99,7 @@ export function ReviewForm({
                 <div className="flex justify-center gap-1">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <button
-                      key={star}
-                      type="button"
-                      onClick={() => field.onChange(star)}
-                      onMouseEnter={() => setHoveredStar(star)}
-                      onMouseLeave={() => setHoveredStar(0)}
-                      className="focus:outline-none transition-transform hover:scale-110"
-                    >
-                      <Star
-                        className={`h-10 w-10 ${
-                          star <= (hoveredStar |field.value |0)
-                            ? "fill-yellow-400 text-yellow-400"
-                            : "text-gray-300"
-                        } transition-colors`}
-                      />
-                    </button>
-                  ))}
-                </div>
-              </FormControl>
-              <div className="text-center mt-1 h-5">
-                <FormMessage />
-              </div>
-            </FormItem>
-          )}
-        />
-  },;
-  const watchRating = form.watch("rating"),;
-  return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
-        {/* Review Text */}
-        <FormField
-          control={form.control}
-          name="review_text"
-          rules={{
-            required: "Please provide feedback"
+                      key = $2;
             minLength: {
               value: 20
 

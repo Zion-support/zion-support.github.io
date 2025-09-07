@@ -66,7 +66,7 @@ import { Calendar, ArrowRight } from "lucide-react",
         </div>
       </div>
     </section>
-  );
+  )
 }
   )
 import React from "react",;

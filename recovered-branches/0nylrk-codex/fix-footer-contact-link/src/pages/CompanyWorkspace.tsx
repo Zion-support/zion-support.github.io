@@ -9,11 +9,10 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
 import { useWhitelabel } from "@/context/WhitelabelContext";
 export default function CompanyWorkspace() {
-  const { companySlug } = useParams() as { companySlug?: string }
-  const { user } = useAuth();
-  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
-  const { isWhitelabel, tenant, brandName } = useWhitelabel();
-  
+  const { companySlug } = useParams() as { companySlug?: string },
+  const { user } = useAuth($2);
+  const { company, isLoading, error } = useCompanyWorkspace($2);
+  const { isWhitelabel, tenant, brandName } = useWhitelabel($2);
   if (isLoading) {
     return (
 
@@ -22,18 +21,19 @@ export default function CompanyWorkspace() {
       </div>
     )
   }
-  if (error |!company) {
+  
+  if (error || !company) {
     return <Navigate to="/not-found" />
   }
   // In white-label mode, use the tenant's theme instead of the company's theme
-  const effectiveTheme = isWhitelabel ? {
-    primaryColor: tenant?.primary_color |company.theme?.primaryColor
-    backgroundColor: company.theme?.backgroundColor |'var(--background)'
-    textColor: company.theme?.textColor |'var(--foreground)'
-  } : company.theme;
-
+  const effectiveTheme = $2;
+    backgroundColor: company.theme?.backgroundColor || 'var(--background)',
+    textColor: company.theme?.textColor || 'var(--foreground)'
+  } : company.theme,
+  
   // Check if user has access to this company workspace
   const hasAccess = true, // For demo purposes, always grant access
+
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />
   }
@@ -47,7 +47,7 @@ export default function CompanyWorkspace() {
         customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
         customTheme={effectiveTheme}
       />
-      <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor |'var(--background)' }}>
+      <main className="min-h-screen" style={{ backgroundColor: effectiveTheme ?.backgroundColor || 'var(--background)' }}>
         <CompanyDashboard company={company} />
       </main>
       <Footer />

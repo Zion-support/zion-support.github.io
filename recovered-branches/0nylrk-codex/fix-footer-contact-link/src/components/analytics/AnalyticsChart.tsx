@@ -3,31 +3,6 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
 interface AnalyticsChartProps {
-
-  title: string
-  description?: string;
-  data: any[]
-  type?: 'line' | 'bar';
-  dataKeys: string[]
-
-  timeRange?: string;
-  onTimeRangeChange?: (range: string) => void
-}
-export function AnalyticsChart({
-  title;
-
-  description
-  data
-  type = 'line';
-  dataKeys
-  timeRange = '7d';
-  onTimeRangeChange
-}: AnalyticsChartProps) {
-  const [chartType, setChartType] = useState<'line' | 'bar'>(type);
-  const colors = [
-    '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
-  ];
-interface AnalyticsChartProps {
   title: string,
   description?: string,
   data: any[],
@@ -37,21 +12,18 @@ interface AnalyticsChartProps {
   onTimeRangeChange?: (range: string) => void
 }
 
-export function AnalyticsChart({ ;
-  title;
+export function AnalyticsChart({ 
+  title,
   description, 
   data, 
-  type = 'line',
+  type = $2;
   dataKeys, 
-  timeRange = '7d',
+  timeRange = $2;
   onTimeRangeChange
 }: AnalyticsChartProps) {
   const [chartType, setChartType] = useState<'line' | 'bar'>(type),
   
-  const colors = [
-    '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
-  ],
-  
+  const colors = $2;
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -91,20 +63,19 @@ export function AnalyticsChart({ ;
         <div className="h-72 w-full p-4">
           <ResponsiveContainer width="100%" height="100%">
             {chartType === 'line' ? (
-              <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
+              <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25}}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
-                <XAxis
-                  dataKey="date"
-                  tick={{ fill: '#b1b9c6', fontSize: 12 }}
+                <XAxis 
+                  dataKey="date" 
+                  tick={{ fill: '#b1b9c6', fontSize: 12}}
                   angle={-30}
                   textAnchor="end"
                   height={50}
                 />
-                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
-                <Tooltip
-                  contentStyle={{
-                    backgroundColor: '#1a2332'
-                    borderColor: '#293445'
+                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12}} />
+                <Tooltip 
+                  contentStyle = $2;
+                    borderColor: '#293445',
                     color: '#fff'
                   }}
                 />
@@ -115,27 +86,25 @@ export function AnalyticsChart({ ;
                     type="monotone"
                     dataKey={key}
                     stroke={colors[index % colors.length]}
-                    activeDot={{ r: 8 }}
+                    activeDot={{ r: 8}}
                     strokeWidth={2}
                   />
                 ))}
               </LineChart>
             ) : (
-              <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25 }}>
+              <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 25}}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#354151" />
-                <XAxis
-                  dataKey="date"
-                  tick={{ fill: '#b1b9c6', fontSize: 12 }}
+                <XAxis 
+                  dataKey="date" 
+                  tick={{ fill: '#b1b9c6', fontSize: 12}} 
                   angle={-30}
                   textAnchor="end"
                   height={50}
                 />
-                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12 }} />
-                <Tooltip
-                  contentStyle={{
-                    backgroundColor: '#1a2332'
-                    borderColor: '#293445'
-
+                <YAxis tick={{ fill: '#b1b9c6', fontSize: 12}} />
+                <Tooltip 
+                  contentStyle = $2;
+                    borderColor: '#293445',
                     color: '#fff'
                   }}
                 />

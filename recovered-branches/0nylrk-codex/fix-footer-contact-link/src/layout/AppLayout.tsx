@@ -2,8 +2,9 @@ import React from "react",
 import { AppHeader } from "./AppHeader";
 import { Footer } from "@/components/Footer";
 interface AppLayoutProps {
-  children: React.ReactNode;
-interface AppLayoutProps {
+  children: React.ReactNode,
+  hideFooter?: boolean
+}
 
   children: React.ReactNode
 

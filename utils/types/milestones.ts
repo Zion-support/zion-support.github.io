@@ -1,19 +1,37 @@
-export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
-export type ProjectParticipantRole = 'client' | 'talent';
-export type ProjectParticipants = {
-  clientUserId: string;
-  talentUserId: string;
-}
-export type Project = {  id: string;
-  title: string;
-  description?: string;
-  dueDate: string;
-  amountUsd: number;
-  status: 'pending' | 'completed' | 'cancelled';
-  attachments?: MilestoneAttachment[];
-  createdAt: string;
-  updatedAt: string
-}
+export type MilestoneStatus = $2;
+export type MilestoneAttachment = $2;
+  type: 'link' | 'file',
+  url: string,
+  label?: string,
+  uploadedByUserId: string,
+  uploadedAt: string, // ISO date
+},
+
+export type Milestone = $2;
+  title: string,
+  description?: string,
+  dueDate: string, // ISO date
+  amountUsd: number,
+  status: MilestoneStatus,
+  attachments?: MilestoneAttachment[],
+  submittedByUserId?: string,
+  approvedByUserId?: string,
+  paidAt?: string, // ISO date
+  createdAt: string, // ISO date
+  updatedAt: string, // ISO date
+},
+
+export type ProjectParticipantRole = $2;
+export type ProjectParticipants = $2;
+  talentUserId: string},
+
+export type Project = $2;
+  name: string,
+  participants: ProjectParticipants,
+  milestones: Milestone[],
+  createdAt: string,
+  updatedAt: string},
+
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
   return (
     value === 'Pending' |
@@ -21,26 +39,5 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
     value === 'Submitted' |
     value === 'Approved' |
     value === 'Paid'
-  );export interface MilestoneAttachment {
-  id: string;
-  name: string;
-  url: string;
-  type: string;
-  size: number;
-  uploadedAt: string
-}
-export interface CreateMilestoneRequest {
-  title: string;
-  description?: string;
-  dueDate: string;
-  amountUsd: number;
-  attachments?: MilestoneAttachment[]
-}
-export interface UpdateMilestoneRequest {
-  title?: string;
-  description?: string;
-  dueDate?: string;
-  amountUsd?: number;
-  status?: 'pending' | 'completed' | 'cancelled';
-  attachments?: MilestoneAttachment[];
+  )
 }

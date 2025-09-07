@@ -5,11 +5,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
-import { FileText } from 'lucide-react';
+import { FileText } from 'lucide-react'
 
-const faqs = [
-  {
-    question: "How do I publish my AI product or service?",
+const faqs = $2;
     answer:
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."},
   {

@@ -1,66 +1,44 @@
-#!/usr/bin/env node;
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-;
-class CodeQualityMonitor {;
-  constructor() {;
-    this.metrics = {;
-class CodeQualityMonitor {
-  constructor() {
-    this.metrics = {
-      complexity: 0;
-      maintainability: 0;
-      testCoverage: 0;
-      performance: 0;
-      lastUpdated: new Date().toISOString();
-    ,};
-    this.logFile = path.join(__dirname, "logs", "code-quality.log");
-  };
-  log(message) {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
-    fs.appendFileSync(this.logFile, logMessage);
-  };
-  async analyzeCodeQuality() {;
-    try {;
-      this.log("Starting code quality analysis...");
-      this.metrics.complexity = this.calculateComplexity();
-      this.metrics.maintainability = this.calculateMaintainability();
-      this.metrics.testCoverage = this.calculateTestCoverage();
-      this.metrics.performance = this.calculatePerformance();
-      this.metrics.lastUpdated = new Date().toISOString();
-      this.saveMetrics();
-      this.log("Code quality analysis completed successfully");
-      return this.metrics} catch (error) {
-      this.log(`Code quality analysis failed: ${error.message}`, "ERROR");
-      return null;
-    };
-    this.logFile = path.join(__dirname, "logs", "code-quality.log");
-  };
+
+
+#!/usr/bin/env node,
+const fs = require($2);
+const path = require($2);
+const { execSync } = require($2);
+,
+class CodeQualityMonitor {,
+  constructor() {,
+    this.metrics = $2;
+      complexit: 0,
+      maintainabilit: 0,
+      testCoverag: 0,
+      performanc: 0,
+      lastUpdate: new Date().toISOString()
+    },
+    this.logFile = path.join(__dirname, "logs", "code-quality.log")
+  },
 ,
   log(message) {,
-    const timestamp = new Date().toISOString(),
-    const logMessage = `[${timestamp}] ${message}\n`,
-    console.log(message),
-    fs.appendFileSync(this.logFile, logMessage);
-  };
+    const timestamp = new Date().toISOString($2);
+    const logMessage = $2;
+    console.log($2);
+    fs.appendFileSync(this.logFile, logMessage)
+  },
 ,
   async analyzeCodeQuality() {,
     try {,
-      this.log("Starting code quality analysis..."),
+      this.log($2);
 ,
-      this.metrics.complexity = this.calculateComplexity(),
-      this.metrics.maintainability = this.calculateMaintainability(),
-      this.metrics.testCoverage = this.calculateTestCoverage(),
-      this.metrics.performance = this.calculatePerformance(),
-      this.metrics.lastUpdated = new Date().toISOString(),
+      this.metrics.complexity = this.calculateComplexity($2);
+      this.metrics.maintainability = this.calculateMaintainability($2);
+      this.metrics.testCoverage = this.calculateTestCoverage($2);
+      this.metrics.performance = this.calculatePerformance($2);
+      this.metrics.lastUpdated = new Date().toISOString($2);
 ,
-      this.saveMetrics(),
-      this.log("Code quality analysis completed successfully"),
-      return this.metrics;
+      this.saveMetrics($2);
+      this.log($2);
+      return this.metrics
     } catch (error) {,
-      this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
-      return null,
-    };      return null};
+      this.log($2);
+      return null
+    },
+

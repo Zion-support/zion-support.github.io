@@ -1,33 +1,13 @@
 export type User = {;
 
-export type UserRole = 'client' | 'talent';
+export type UserRole = $2;
+  name: 'Jordan Lee',
+  role: 'client',
+  onboardingCompleted: false}
 
-export type User = {
-export type User = {;
-  id: string;
-  name: string;
+export function UserProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null)
 
-  role: UserRole;
-
-  user: User | null;
-  loading: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  logout: () => void;
-  completeOnboarding: () => void;};}
-export type UserContextValue = {;
-  user: User | null;
-  setUser: (user: User | null) => void;
-  logout: () => void;
-  completeOnboarding: () => void;};};
-
-const UserContext = createContext<UserContextValue | undefined>(undefined);
-const DEFAULT_USER: User = {
-  id: 'u_001'
-  name: 'Jordan Lee'
-  role: 'client'
-  onboardingCompleted: false
-}
-export function UserProvider({ children }: { children: React.ReactNode }) {  const [user, setUser] = useState<User | null>(null);  const [user, setUser] = useState<User | null>(null);
   useEffect(() => {
     try {
   completeOnboarding: () => void;
@@ -62,16 +42,10 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
     } catch {}
   }, [user]);
 
-  const value = useMemo<UserContextValue>(
-    () => ({
-      user
-      setUser
-      logout: () => setUser(null)
-      completeOnboarding: () =>
-setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),
-    }),
-    [user]
-  );
+  const value = $2;
+    setUser,
+    logout: () => setUser($2);
+    completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true} : prev)}), [user])
 
 return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 

@@ -1,22 +1,17 @@
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
-import {MilestoneActivity} from './types';
+
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { MilestoneActivity } from './types';
 export const useRecordActivity = () => {
-  const { user } = useAuth();
-  const recordMilestoneActivity = async (
-    milestoneId: string
-    action: string
-    previousStatus: string | null
-    newStatus: string;
-  
-  const recordMilestoneActivity = async (
-    milestoneId: string,
+  const { user } = useAuth($2);
+  const recordMilestoneActivity = $2;
     action: string, 
     previousStatus: string | null, 
     newStatus: string,
     comment?: string
   ) => {
-    if (!user) return null
+    if (!user) return null,
+    
     try {
       const { data, error } = await supabase
         .from('milestone_activities')
@@ -31,15 +26,17 @@ export const useRecordActivity = () => {
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
-        .single();
-      if (error) throw error;
+        .single($2);
+      if (error) throw error,
+      
       return data
     } catch (err: any) {
-      console.error("Error recording activity:", err),
+      console.error($2);
       return null
     }
-  }
+  },
+  
   return {
     recordMilestoneActivity
   }
-}
+},

@@ -1,11 +1,7 @@
 
-import {ResumeBasicInfo} from '@/types/resume';
+import { ResumeBasicInfo } from '@/types/resume';
 interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo
-import { ResumeBasicInfo } from "@/types/resume";
-interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo;
-}
+  basicInfo: ResumeBasicInfo}
 
 export function ResumeBasicInfoSection({
   basicInfo,
@@ -16,6 +12,6 @@ export function ResumeBasicInfoSection({
       {basicInfo.summary && (
         <p className="text-sm">{basicInfo.summary}</p>
       )}
-    </div>;
-  );
+    </div>
+  )
 }

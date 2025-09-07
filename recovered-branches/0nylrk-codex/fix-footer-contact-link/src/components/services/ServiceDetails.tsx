@@ -1,10 +1,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
 interface ServiceDetailsProps {
-  country: string
-}
-// Component to show service details for the selected country
-}
+  country: string}
 
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
@@ -20,9 +17,11 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Canada": ["Toronto", "Montreal", "Vancouver"];
       // Default for other countries
       "default": ["Major metropolitan areas"]
-    }
-    return dataCenters[country] |dataCenters["default"]
-  }
+    },
+    
+    return dataCenters[country] || dataCenters["default"]
+  },
+  
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
@@ -35,9 +34,11 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
-    }
-    return regions[country] |regions["default"]
-  }
+    },
+    
+    return regions[country] || regions["default"]
+  },
+  
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
@@ -49,15 +50,16 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Australia": "AEST/ACDT/AWST depending on location",
       "Singapore": "SGT",
       "default": "Local timezone"
-    }
-    const timezone = timeZones[country] |timeZones["default"];
+    },
+    
+    const timezone = $2;
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
            `For remote locations, additional travel fees may apply.`
-  }
-  const datacenters = getDatacenters(country);
-
+  },
+  
+  const datacenters = getDatacenters($2);
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>

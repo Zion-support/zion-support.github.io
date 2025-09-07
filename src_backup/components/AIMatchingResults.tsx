@@ -1,12 +1,12 @@
-import { useState } from "react";,
-import { MatchResultItem } from "@/lib/ai-matchmaking";,
-import { Card, CardContent } from "@/components/ui/card";,
-import { Badge } from "@/components/ui/badge";,
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";,
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
-import Skeleton from "@/components/ui/skeleton";,
-import { cn } from "@/lib/utils";,
+import { useState } from "react";
+import { MatchResultItem } from "@/lib/ai-matchmaking";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+import Skeleton from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
@@ -20,39 +20,21 @@ interface AIMatchingResultsProps {
   isLoading = false;
   projectDescription = "";
 export function AIMatchingResults({
-  matches;
-  onSelectMatch;
-
-  isLoading = false;
-  projectDescription = "";
+  matches,
+  onSelectMatch,
+  isLoading = $2;
+  projectDescription = $2;
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
-  const [activeTab, setActiveTab] = useState("all");
-  serviceType: _serviceType = ""
-}: AIMatchingResultsProps) {
-  const [activeTab, setActiveTab] = useState("all"),
-  
+  const [activeTab, setActiveTab] = useState($2);
   // Group matches by category
-
-  const categories = {
-    all: matches,
-    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
-    services: matches.filter(match => match.category.toLowerCase().includes("service")),
-    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
-  }
+  const categories = $2;
+    talent: matches.filter(match = $2;
+    services: matches.filter(match = $2;
+    equipment: matches.filter(match = $2;
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
-    const lowerCategory = category.toLowerCase();
-    if (lowerCategory.includes("talent")) return User;
-    if (lowerCategory.includes("equipment")) return Monitor
-    return BriefcaseIcon
-  }
-  },
-  
-  // Get the icon for a category
-  const getCategoryIcon = (category: string) => {
-    const lowerCategory = category.toLowerCase(),
+    const lowerCategory = category.toLowerCase($2);
     if (lowerCategory.includes("talent")) return User,
     if (lowerCategory.includes("equipment")) return Monitor,
     return BriefcaseIcon
@@ -85,51 +67,10 @@ export function AIMatchingResults({
               <p className="text-xs text-zion-slate-light">Your search:</p>
               <p className="text-sm text-white">{projectDescription}</p>
             </div>
-
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
-import Skeleton from "@/components/ui/skeleton",;
-import { cn } from "@/lib/utils",;
-interface AIMatchingResultsProps {;
-  matches: MatchResultItem[],;
-  onSelectMatch?: (match: MatchResultItem) => void,;
-  isLoading?: boolean,;
-  projectDescription?: string,;
-  serviceType?: string;
-}
-;
-export function AIMatchingResults({;
-  matches,;
-  onSelectMatch,;
-  isLoading = false,;
-  projectDescription = "",;
-  serviceType: _serviceType = "";
-}: AIMatchingResultsProps) {;
-  const [activeTab, setActiveTab] = useState("all"),;
-  // Group matches by category;
-  const categories = {;
-    all: matches,;
-    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),;
-    services: matches.filter(match => match.category.toLowerCase().includes("service")),;
-    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"));
-  },;
-  // Get the icon for a category;
-  const getCategoryIcon = (category: string) => {;
-    const lowerCategory = category.toLowerCase(),;
-    if (lowerCategory.includes("talent")) return User,;
-    if (lowerCategory.includes("equipment")) return Monitor,;
-    return BriefcaseIcon;
-  },;
-  if (isLoading) {;
-    return (;
-      <div className="space-y-4">;
-        <Skeleton className="h-10 w-full" />;
-        <div className="space-y-3">;
-          <Skeleton className="h-[120px] w-full" />;
-          <Skeleton className="h-[120px] w-full" />;
-          <Skeleton className="h-[120px] w-full" />;
-        </div>;
-      </div>;
-    );
+          )}
+        </CardContent>
+      </Card>
+    )
   }
 ;
   if (matches.length === 0) {;
@@ -175,16 +116,10 @@ export function AIMatchingResults({;
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
             {items.length > 0 ? (
               items.map((match) => {
-                const CategoryIcon = getCategoryIcon(match.category),
+                const CategoryIcon = getCategoryIcon($2);
                 return (
                   <Card 
-                    key={match.id}
-                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
-                    onClick={() => onSelectMatch && onSelectMatch(match)}
-                  >
-                    <div className="flex">
-                      <div className="{cn("
-                        "w-2", 
+                    key = $2;
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
                         "bg-green-500"
@@ -208,7 +143,22 @@ export function AIMatchingResults({;
                                   {skill}
                                 </Badge>;
                               ))}
-                            </div>;
-
-};
-;
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                )
+              })
+            ) : (
+              <div className="text-center py-8 text-zion-slate-light">
+                No {tab} matches found.
+              </div>
+            )}
+          </TabsContent>
+        ))}
+      </Tabs>
+    </div>
+  )
+}

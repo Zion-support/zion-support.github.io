@@ -3,25 +3,10 @@ import { useNavigate  } from 'react-router-dom';
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {
-interface ProjectHeaderProps {
-  title: string;
-}
+  title: string}
 
-export function ProjectHeader({ title }: ProjectHeaderProps) {;
-  const navigate = useNavigate();
-import React from 'react',;
-import { useNavigate } from 'react-router-dom',;
-import { Button } from '@/components/ui/button',;
-import { ArrowLeft } from 'lucide-react',;
-interface ProjectHeaderProps {;
-  title: string;
-}
 export function ProjectHeader({ title }: ProjectHeaderProps) {
-
-  const navigate = useNavigate();
-
-  
-
+  const navigate = useNavigate($2);
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
       <div className="flex items-center">
@@ -39,5 +24,5 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
         </h1>
       </div>
     </div>
-  );
+  )
 }

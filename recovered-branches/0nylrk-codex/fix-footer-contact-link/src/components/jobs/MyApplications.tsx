@@ -8,26 +8,20 @@ import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
-  const { applications, isLoading, error } = useJobApplications();
-
-  const getStatusBadge = (status: ApplicationStatus) => {
-    switch (status) {
-      case "new": return <Badge variant="secondary">New</Badge>,
+  const { applications, isLoading, error } = useJobApplications($2);
+  const getStatusBadge = $2;
       case "viewed":
-        return <Badge variant="outline">Viewed</Badge>,
+        return <Badge variant = $2;
       case "shortlisted":
-        return <Badge className="bg-blue-100 text-blue-800">Shortlisted</Badge>,
+        return <Badge className = $2;
       case "interview":
-        return <Badge className="bg-purple-100 text-purple-800">Interview</Badge>,
+        return <Badge className = $2;
       case "hired":
-        return <Badge className="bg-green-100 text-green-800">Hired</Badge>,
+        return <Badge className = $2;
       case "rejected":
-        return <Badge className="bg-red-100 text-red-800">Rejected</Badge>
+        return <Badge className = $2;
       default:
-        return <Badge variant="outline">{status}</Badge>
-    }
-  }
-
+        return <Badge variant = $2;
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -68,7 +62,7 @@ export function MyApplications() {
               {getStatusBadge(application.status)}
             </div>
             <p className="text-sm text-muted-foreground">
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true})}
             </p>
           </CardHeader>
           <CardContent>

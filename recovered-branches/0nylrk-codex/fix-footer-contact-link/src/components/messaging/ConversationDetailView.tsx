@@ -9,47 +9,31 @@ import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
-  const { user } = useAuth();
-  const {
-    activeConversation;
-
-    activeMessages
-    sendMessage
+  const { user } = useAuth($2);
+  const { 
+    activeConversation,
+    activeMessages, 
+    sendMessage, 
     loadMessages
-  } = useMessaging();
-  const [messageText, setMessageText] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  } = useMessaging($2);
+  const [messageText, setMessageText] = useState($2);
+  const messagesEndRef = $2;
   useEffect(() => {
     if (activeConversation) {
       loadMessages(activeConversation.id)
     }
-  }, [activeConversation?.id, loadMessages]);
-  useEffect(() => {
-    scrollToBottom()
-  }, [activeMessages]);
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
-  const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!messageText.trim() |!activeConversation) return
-    await sendMessage(activeConversation.id, messageText);
-    setMessageText('')
-  }
+  }, [activeConversation?.id, loadMessages]),
   
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]),
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  },
-  
+  const scrollToBottom = $2;
   const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault($2);
     if (!messageText.trim() || !activeConversation) return,
     
-    await sendMessage(activeConversation.id, messageText),
+    await sendMessage($2);
     setMessageText('')
   },
   
@@ -65,10 +49,11 @@ export function ConversationDetailView() {
     )
   }
   // Group messages by date
-  const groupedMessages: { date: string, messages: any[] }[] = []
+  const groupedMessages: { date: string, messages: any[] }[] = [],
+  
   activeMessages.forEach(message => {
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
-    const existingGroup = groupedMessages.find(group => group.date === messageDate);
+    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd'),
+    const existingGroup = groupedMessages.find($2);
     if (existingGroup) {
       existingGroup.messages.push(message)
     } else {
@@ -77,13 +62,9 @@ export function ConversationDetailView() {
         messages: [message]
       })
     }
-  });
-  const hasContextData = activeConversation.context_data &&
-    (activeConversation.context_data.title |activeConversation.context_data.description);
+  }),
   
-  const hasContextData = activeConversation.context_data && 
-    (activeConversation.context_data.title || activeConversation.context_data.description),
-
+  const hasContextData = $2;
   return (
     <div className="flex-1 flex flex-col h-full">
       {/* Header */}

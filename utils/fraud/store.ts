@@ -1,205 +1,280 @@
 // Fraud detection store utilities
 import fs from 'fs';
 import path from 'path';
+import { createClient } from '@supabase/supabase-js';
+import { v4 as uuidv4 } from 'uuid';
+import {
+  AdminActionRecord,
+  FraudEvent,
+  ListFilters,
+  MonthlyReport,
+  MonitoredSource,
+  PrivacySettings,
+  StoredFraudRecord} from './types',
 
-export interface FraudEvent {
-  source: string;
-  userId?: string;
-  content: string;
-  metadata: Record<string, any>;
-  timestamp: string;
+const dataDir = path.resolve(process.cwd(), 'data/fraud'),
+const eventsPath = path.join($2);
+const actionsPath = path.join($2);
+const privacyPath = path.join($2);
+function ensureFiles() {
+  fs.ensureDirSync($2);
+  if (!fs.existsSync(eventsPath)) fs.writeFileSync($2);
+  if (!fs.existsSync(actionsPath)) fs.writeFileSync($2);
+  if (!fs.existsSync(privacyPath)) fs.writeFileSync(privacyPath, JSON.stringify({}))
 }
 
-export interface HeuristicAnalysis {
-  severity: 'low' | 'medium' | 'high';
-  reasons: string[];
-  confidence: number;
+function isSupabaseConfigured() {
+  return !!(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE)
 }
 
-export interface GPTAnalysis {
-  label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
-  reasoning: string;
-  confidence: number;
+function getSupabaseAdmin() {
+  const url = $2;
+  const key = $2;
+  return createClient(url, key, { auth: { persistSession: false} })
 }
 
-export interface StoredFraudRecord extends FraudEvent {
-  id: string;
-  heuristic: HeuristicAnalysis;
-  gpt?: GPTAnalysis;
-  autoHidden: boolean;
-  status: 'PENDING' | 'REVIEWED' | 'RESOLVED';
-  adminNotes?: string;
-  createdAt: string;
-  updatedAt: string;
-}
+export class FraudStore {
+  async saveEvent(record: Omit<StoredFraudRecord, 'id'> & { id?: string }): Promise<StoredFraudRecord> {
+    const withId: StoredFraudRecord = { ...record, id: record.id ?? uuidv4() } as StoredFraudRecord,
 
-export interface FraudFilter {
-  source?: string;
-  userId?: string;
-  status?: string;
-  label?: string;
-}
+    if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
+      await supabase.from('fraud_events').insert($2);
+      return withId
+    }
 
-class FraudStore {
-  private dataDir: string;
-  private dataFile: string;
-
-  constructor() {
-    this.dataDir = path.join(process.cwd(), 'data', 'fraud');
-    this.dataFile = path.join(this.dataDir, 'records.json');
-    this.ensureDirectoryExists();
+    ensureFiles($2);
+    const line = $2;
+    await fs.appendFile($2);
+    return withId
   }
 
-  private ensureDirectoryExists(): void {
-    if (!fs.existsSync(this.dataDir)) {
-      fs.mkdirSync(this.dataDir, { recursive: true });
+  async updateEventStatus(fraudId: string, status: StoredFraudRecord['status']): Promise<void> {
+    if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
+      await supabase.from('fraud_events').update({ status }).eq($2);
+      return
+    }
+
+    ensureFiles($2);
+    const events = await this._readAllEvents($2);
+    const idx = $2;
+    if (idx >= 0) {
+      events[idx].status = $2;
+      await this._writeAllEvents(events)
     }
   }
 
-  private readRecords(): StoredFraudRecord[] {
-    try {
-      if (!fs.existsSync(this.dataFile)) {
-        return [];
-      }
-      const data = fs.readFileSync(this.dataFile, 'utf-8');
-      return JSON.parse(data);
-    } catch (error) {
-      console.error('Failed to read fraud records:', error);
-      return [];
-    }
-  }
+  async recordAction(action: Omit<AdminActionRecord, 'id' | 'createdAt'> & { id?: string, createdAt?: string }): Promise<AdminActionRecord> {
+    const withId: AdminActionRecord = {
+      id: action.id ?? uuidv4($2);
+      fraudId: action.fraudId,
+      action: action.action,
+      adminId: action.adminId ?? null,
+      reason: action.reason ?? null,
+      createdAt: action.createdAt ?? new Date().toISOString()},
 
-  private writeRecords(records: StoredFraudRecord[]): void {
-    try {
-      fs.writeFileSync(this.dataFile, JSON.stringify(records, null, 2));
-    } catch (error) {
-      console.error('Failed to write fraud records:', error);
-    }
-  }
-
-  async saveEvent(event: Omit<StoredFraudRecord, 'id'>): Promise<StoredFraudRecord> {
-    const records = this.readRecords();
-    const newRecord: StoredFraudRecord = {
-      ...event,
-      id: `fraud_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
-    };
-    
-    records.push(newRecord);
-    this.writeRecords(records);
-    return newRecord;
-  }
-
-  async getRecord(id: string): Promise<StoredFraudRecord | null> {
-    const records = this.readRecords();
-    return records.find(r => r.id === id) || null;
-  }
-
-  async updateRecord(id: string, updates: Partial<StoredFraudRecord>): Promise<StoredFraudRecord | null> {
-    const records = this.readRecords();
-    const index = records.findIndex(r => r.id === id);
-    if (index === -1) return null;
-
-    records[index] = {
-      ...records[index],
-      ...updates,
-      updatedAt: new Date().toISOString()
-    };
-    this.writeRecords(records);
-    return records[index];
-  }
-
-  async listFlagged(limit: number = 50, offset: number = 0, filter: FraudFilter = {}): Promise<StoredFraudRecord[]> {
-    let records = this.readRecords();
-
-    // Apply filters
-    if (filter.source) {
-      records = records.filter(r => r.source === filter.source);
-    }
-    if (filter.userId) {
-      records = records.filter(r => r.userId === filter.userId);
-    }
-    if (filter.status) {
-      records = records.filter(r => r.status === filter.status);
-    }
-    if (filter.label) {
-      records = records.filter(r => r.gpt?.label === filter.label);
+    if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
+      await supabase.from('fraud_actions').insert($2);
+      return withId
     }
 
-    // Sort by creation date (newest first)
-    records.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-
-    // Apply pagination
-    return records.slice(offset, offset + limit);
+    ensureFiles($2);
+    const line = $2;
+    await fs.appendFile($2);
+    return withId
   }
 
-  async getStats(): Promise<{
-    total: number;
-    byStatus: Record<string, number>;
-    bySource: Record<string, number>;
-    byLabel: Record<string, number>;
-    recent: number;
-  }> {
-    const records = this.readRecords();
-    const now = new Date();
-    const oneDayAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+  async listFlagged(limit = 50, offset = 0, filters: ListFilters = {}): Promise<StoredFraudRecord[]> {
+    if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
+      let query = supabase.from('fraud_events').select('*').order('createdAt', { ascending: false}).range($2);
+      if (filters.source) query = query.eq($2);
+      if (filters.userId) query = query.eq($2);
+      if (filters.status) query = query.eq($2);
+      if (filters.label) query = query.contains($2);
+      const { data } = await query,
+      return (data as any) as StoredFraudRecord[]
+    }
 
-    const stats = {
-      total: records.length,
-      byStatus: {} as Record<string, number>,
-      bySource: {} as Record<string, number>,
-      byLabel: {} as Record<string, number>,
-      recent: 0
-    };
-
-    records.forEach(record => {
-      // Status counts
-      stats.byStatus[record.status] = (stats.byStatus[record.status] || 0) + 1;
-      
-      // Source counts
-      stats.bySource[record.source] = (stats.bySource[record.source] || 0) + 1;
-      
-      // Label counts
-      const label = record.gpt?.label || 'UNKNOWN';
-      stats.byLabel[label] = (stats.byLabel[label] || 0) + 1;
-      
-      // Recent counts
-      if (new Date(record.createdAt) > oneDayAgo) {
-        stats.recent++;
-      }
-    });
-
-    return stats;
+    ensureFiles($2);
+    const events = await this._readAllEvents($2);
+    const filtered = $2;
+      if (filters.userId && e.userId !== filters.userId) return false,
+      if (filters.status && e.status !== filters.status) return false,
+      if (filters.label && e.gpt?.label !== filters.label) return false,
+      return true
+    }),
+    return filtered.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1)).slice(offset, offset + limit)
   }
 
-  async deleteRecord(id: string): Promise<boolean> {
-    const records = this.readRecords();
-    const filtered = records.filter(r => r.id !== id);
-    if (filtered.length === records.length) return false;
-    
-    this.writeRecords(filtered);
-    return true;
+  async countEventsByIp(ip: string, source: MonitoredSource, withinMinutes: number): Promise<number> {
+    const since = $2;
+    if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
+      const { data } = await supabase
+        .from('fraud_events')
+        .select('id, createdAt')
+        .eq('ipAddress', ip)
+        .eq('source', source)
+        .gte('createdAt', new Date(since).toISOString()),
+      return (data?.length ?? 0)
+    }
+
+    ensureFiles($2);
+    const events = await this._readAllEvents($2);
+    return events.filter((e) => e.ipAddress === ip && e.source === source && Date.parse(e.createdAt) >= since).length
   }
 
-  async clearOldRecords(daysOld: number = 30): Promise<number> {
-    const records = this.readRecords();
-    const cutoffDate = new Date();
-    cutoffDate.setDate(cutoffDate.getDate() - daysOld);
-    
-    const filtered = records.filter(r => new Date(r.createdAt) > cutoffDate);
-    const deletedCount = records.length - filtered.length;
-    
-    this.writeRecords(filtered);
-    return deletedCount;
+  async countFlaggedForUser(userId: string): Promise<number> {
+    if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
+      const { data } = await supabase.from('fraud_events').select('id').eq($2);
+      return data?.length ?? 0
+    }
+    ensureFiles($2);
+    const events = await this._readAllEvents($2);
+    return events.filter((e) => e.userId === userId).length
+  }
+
+  async getPrivacySettings(userId: string): Promise<PrivacySettings> {
+    const now = new Date().toISOString($2);
+    if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
+      const { data } = await supabase.from('privacy_settings').select('*').eq('userId', userId).limit($2);
+      if (data && data[0]) return data[0] as any as PrivacySettings,
+      return { userId, monitoringContentAnalysisOptOut: false, updatedAt: now}
+    }
+
+    ensureFiles($2);
+    const json = JSON.parse(fs.readFileSync(privacyPath, 'utf8') || '{}'),
+    return (
+      json[userId] || { userId, monitoringContentAnalysisOptOut: false, updatedAt: now}
+    )
+  }
+
+  async setPrivacySettings(userId: string, monitoringContentAnalysisOptOut: boolean): Promise<PrivacySettings> {
+    const updated: PrivacySettings = { userId, monitoringContentAnalysisOptOut, updatedAt: new Date().toISOString() },
+
+    if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
+      await supabase.from('privacy_settings').upsert($2);
+      return updated
+    }
+
+    ensureFiles($2);
+    const json = JSON.parse(fs.readFileSync(privacyPath, 'utf8') || '{}'),
+    json[userId] = updated,
+    fs.writeFileSync(privacyPath, JSON.stringify(json, null, 2)),
+    return updated
+  }
+
+  async generateMonthlyReport(month: string): Promise<MonthlyReport> {
+    // month format: YYYY-MM
+    const [year, mon] = month.split('-').map((v) => parseInt(v, 10)),
+    const start = new Date(Date.UTC(year, mon - 1, 1, 0, 0, 0)),
+    const end = new Date(Date.UTC(year, mon, 1, 0, 0, 0)),
+
+    let events: StoredFraudRecord[] = [],
+
+    if (isSupabaseConfigured()) {
+      const supabase = getSupabaseAdmin($2);
+      const { data } = await supabase
+        .from('fraud_events')
+        .select('*')
+        .gte('createdAt', start.toISOString())
+        .lt('createdAt', end.toISOString()),
+      events = (data as any) as StoredFraudRecord[]
+    } else {
+      ensureFiles($2);
+      events = await this._readAllEvents($2);
+      events = events.filter((e) => {
+        const ts = Date.parse($2);
+        return ts >= start.getTime() && ts < end.getTime()
+      })
+    }
+
+    const totals = $2;
+      safe: events.filter((e) => e.gpt?.label = $2;
+      suspicious: events.filter((e) => e.gpt?.label = $2;
+      dangerous: events.filter((e) => e.gpt?.label = $2;
+    const bySource: MonthlyReport['bySource'] = {
+      signup: 0,
+      job_post: 0,
+      message: 0,
+      quote: 0,
+      review: 0},
+    for (const e of events) bySource[e.source as MonitoredSource]++,
+
+    const actions = await this._readAllActions($2);
+    const falsePositives = $2;
+    const reasonCounts: Record<string, number> = {},
+    for (const e of events) {
+      for (const r of e.heuristic.reasons) reasonCounts[r] = (reasonCounts[r] || 0) + 1,
+      if (e.gpt?.reason) reasonCounts[e.gpt.reason] = (reasonCounts[e.gpt.reason] || 0) + 1
+    }
+    const topReasons = Object.entries(reasonCounts)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10)
+      .map(([reason, count]) => ({ reason, count })),
+
+    return { month, totals, bySource, falsePositives, topReasons }
+  }
+
+  private async _readAllEvents(): Promise<StoredFraudRecord[]> {
+    ensureFiles($2);
+    const text = fs.readFileSync($2);
+    return text
+      .split('\n')
+      .filter(Boolean)
+      .map((line) => {
+        try {
+          return JSON.parse(line) as StoredFraudRecord
+        } catch {
+          return null
+        }
+      })
+      .filter(Boolean) as StoredFraudRecord[]
+  }
+
+  private async _writeAllEvents(events: StoredFraudRecord[]): Promise<void> {
+    ensureFiles($2);
+    const content = $2;
+    await fs.writeFile(eventsPath, content, 'utf8')
+  }
+
+  private async _readAllActions(): Promise<AdminActionRecord[]> {
+    ensureFiles($2);
+    const text = fs.readFileSync($2);
+    return text
+      .split('\n')
+      .filter(Boolean)
+      .map((line) => {
+        try {
+          return JSON.parse(line) as AdminActionRecord
+        } catch {
+          return null
+        }
+      })
+      .filter(Boolean) as AdminActionRecord[]
   }
 }
 
 let fraudStoreInstance: FraudStore | null = null;
 
 export function getFraudStore(): FraudStore {
-  if (!fraudStoreInstance) {
-    fraudStoreInstance = new FraudStore();
-  }
-  return fraudStoreInstance;
+  return new FraudStore()
+}
+
+export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent, 'source'>): FraudEvent {
+  const id = uuidv4($2);
+  return {
+    id,
+    userId: partial.userId ?? null,
+    source: partial.source,
+    content: partial.content ?? null,
+    metadata: partial.metadata ?? null,
+    ipAddress: partial.ipAddress ?? null,
+    createdAt: partial.createdAt ?? new Date().toISOString()}
 }

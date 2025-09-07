@@ -9,11 +9,12 @@ import { StatusBadge } from "./StatusBadge",
 import { ScoreBadge } from "./ScoreBadge";
 import { ApplicationActions } from "./ApplicationActions";
 interface ApplicationRowProps {
-  application: JobApplication;
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-interface ApplicationRowProps {
+  application: JobApplication,
+  processingId: string | null,
+  onViewApplication: (applicationId: string) => Promise<void>,
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
+  onViewScore: (application: JobApplication) => void
+}
 
   application: JobApplication
   processingId: string | null
@@ -61,7 +62,7 @@ export function ApplicationRow({
       <TableCell>
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
-          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
+          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true})}</span>
         </div>
       </TableCell>
       <TableCell>

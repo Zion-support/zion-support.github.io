@@ -4,15 +4,14 @@ export async function ensureAnalyticsTablesExist() {
     // Check if analytics_events table exists
     const { error } = await supabase
       .from('analytics_events')
-      .select('id');
-      .limit(1);
-      
+      .select('id')
+      .limit($2);
     if (error && error.code === 'PGRST204') {
-      // // // console.log('Creating analytics tables...'),
+      console.log($2);
       await createAnalyticsTables()
     }
   } catch (error) {
-    console.warn('Error checking if analytics tables exist:', error);
+    console.warn($2);
     // No need to create tables here, as this could be a connection error
   }
 }
@@ -22,20 +21,18 @@ export async function ensureAnalyticsTablesExist() {
 async function createAnalyticsTables() {
   try {
     // Create analytics_events table
-    await supabase.rpc('exec', {
-      sql: `
-        CREATE TABLE IF NOT EXISTS public.analytics_events (
-          id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    await supabase.rpc($2);
           event_type TEXT NOT NULL,
           path TEXT,
-          user_id UUID REFERENCES auth.users(id),
+          user_id UUID REFERENCES auth.users($2);
           metadata JSONB,
-          created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+          created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW($2);
           session_id TEXT
-        );
-        CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events(event_type);
-        CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public.analytics_events(user_id);
-        CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public.analytics_events(created_at)
+        ),
+
+        CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events($2);
+        CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public.analytics_events($2);
+        CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public.analytics_events($2);
         -- View for daily page views
         CREATE OR REPLACE VIEW public.daily_page_views
         WITH (security_invoker = true) AS
@@ -46,7 +43,8 @@ async function createAnalyticsTables() {
         FROM public.analytics_events
         WHERE event_type = 'page_view'
         GROUP BY DATE_TRUNC('day', created_at), path
-        ORDER BY date DESC, view_count DESC;
+        ORDER BY date DESC, view_count DESC,
+        
         -- View for conversion rates
         CREATE OR REPLACE VIEW public.conversion_rates
         WITH (security_invoker = true) AS
@@ -74,14 +72,13 @@ async function createAnalyticsTables() {
           p.view_count;
           ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate
         FROM conversions c
-        LEFT JOIN page_views p ON c.date = p.date
-        ORDER BY c.date DESC,
+        LEFT JOIN page_views p ON c.date = $2;
       `
-    });
+    }),
+    
     console.log('Analytics tables created successfully')
   } catch (error) {
-    console.error('Error creating analytics tables:', error);
-
+    console.error($2);
     // Tables creation failed, but we can still continue
   }
 }

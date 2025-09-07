@@ -1,15 +1,12 @@
-import React from 'react';
-import { useState } from "react";,
-import { toast } from "@/hooks/use-toast";,
-import { Button } from "@/components/ui/button";,
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";,
-import { AIMatchingResults } from "@/components/AIMatchingResults";,
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking";,
-import { Textarea } from "@/components/ui/textarea";,
-import { Sparkles, Search } from 'lucide-react';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';,
-
-
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AIMatchingResults } from "@/components/AIMatchingResults";
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles, Search } from 'lucide-react'
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
   serviceType?: string,
   onMatchSelect?: (match: any) => void,
@@ -17,45 +14,30 @@ interface AIMatchmakerProps {
 }
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-  const [query, setQuery] = useState(""),
-  const [isMatchmaking, setIsMatchmaking] = useState(false),
-  const [matches, setMatches] = useState([] as MatchResult[]),
-  const [hasSearched, setHasSearched] = useState(false),
-
+  const [query, setQuery] = useState($2);
+  const [isMatchmaking, setIsMatchmaking] = useState($2);
+  const [matches, setMatches] = useState($2);
+  const [hasSearched, setHasSearched] = useState($2);
   const handleSearch = async () => {
     if (!query.trim()) {
-      toast({
-        title: "Please enter a description",
-        description: "Tell us what you're looking for so we can find matches.",
-        variant: "destructive"}),
+      toast($2);
       return
     }
 
-    setIsMatchmaking(true),
-    setHasSearched(true),
-    
+    setIsMatchmaking($2);
+    setHasSearched($2);
     try {
-      logInfo("Starting AI matching", { data: { query, serviceType } }),
-      
+      logInfo($2);
       // Get AI matches
-      const results = await findMatches(
-        query,
-        serviceType,
-        3
-      ),
-      
-      logInfo('AI matching results:', { data: results }),
-      setMatches(results),
-      
+      const results = await findMatches($2);
+      logInfo($2);
+      setMatches($2);
       toast({
         title: "Matches Found",
         description: `Found ${results.length} matches based on your description.`})
     } catch (error) {
-      logErrorToProduction('Error during AI matching:', { data: error }),
-      toast({
-        title: "Matching Error",
-        description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"}),
+      logErrorToProduction($2);
+      toast($2);
       // Set empty matches to show no results found UI
       setMatches([])
     } finally {
@@ -66,7 +48,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const handleItemSelect = (item: any) => {
     if (onMatchSelect) {
       // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id),
+      const matchResult = matches.find($2);
       if (matchResult) {
         onMatchSelect(matchResult)
       }
@@ -74,8 +56,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   },
   
   // Extract just the items from each MatchResult
-  const matchItems = matches.map(match => match.item),
-  
+  const matchItems = matches.map($2);
   return (
     <Card className="{`border" border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
       <CardHeader className="pb-2">

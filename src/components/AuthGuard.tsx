@@ -16,15 +16,14 @@ interface AuthGuardProps {
 
 export function AuthGuard({
   children,
-  requireAuth = true,
+  requireAuth = $2;
   requireRole,
-  redirectTo = '/auth/login',
+  redirectTo = $2;
   fallback,
-  showToast = true,
+  showToast = $2;
   allowGuest = false}: AuthGuardProps) {
-  const { user, isAuthenticated, isLoading } = useAuth(),
-  const router = useRouter(),
-
+  const { user, isAuthenticated, isLoading } = useAuth($2);
+  const router = useRouter($2);
   useEffect(() => {
     // Don't redirect while auth is still loading
     if (isLoading) return,
@@ -38,16 +37,15 @@ export function AuthGuard({
           variant: "destructive"})
       }
 
-      const returnTo = encodeURIComponent(router.asPath),
-      router.push(`${redirectTo}?returnTo=${returnTo}`),
+      const returnTo = encodeURIComponent($2);
+      router.push($2);
       return
     }
 
     // If specific roles are required
     if (requireRole && isAuthenticated && user) {
-      const userRoles = user.role ? [user.role] : [],
-      const hasRequiredRole = requireRole.some(role => userRoles.includes(role)),
-
+      const userRoles = $2;
+      const hasRequiredRole = $2;
       if (!hasRequiredRole) {
         if (showToast) {
           toast({
@@ -64,57 +62,11 @@ export function AuthGuard({
   // Show loading state while auth is being determined
   if (isLoading) {
     return fallback || (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="flex items-center gap-2 text-muted-foreground">
-          <Loader2 className="h-6 w-6 animate-spin" />
-          <span>Loading...</span>
-        </div>
-      </div>
-    )
-  }
-
-  // Show unauthorized state if auth is required but user is not authenticated
-  if (requireAuth && !isAuthenticated && !allowGuest) {
-    return fallback || (
-      <div className="flex flex-col items-center justify-center min-h-screen gap-4">
-        <Shield className="h-12 w-12 text-muted-foreground" />
-        <div className="text-center">
-          <h2 className="text-xl font-semibold mb-2">Authentication Required</h2>
-          <p className="text-muted-foreground">
-            Please log in to access this feature.
-          </p>
-        </div>
-      </div>
-    )
-  }
-
-  // Show role denied state if user doesn't have required role
-  if (requireRole && isAuthenticated && user) {
-    const userRoles = user.role ? [user.role] : [],
-    const hasRequiredRole = requireRole.some(role => userRoles.includes(role)),
-
+      <div className = $2;
+    const hasRequiredRole = $2;
     if (!hasRequiredRole) {
       return fallback || (
-        <div className="flex flex-col items-center justify-center min-h-screen gap-4">
-          <Shield className="h-12 w-12 text-muted-foreground" />
-          <div className="text-center">
-            <h2 className="text-xl font-semibold mb-2">Access Denied</h2>
-            <p className="text-muted-foreground">
-              This feature requires {requireRole.join(' or ')} privileges.
-            </p>
-          </div>
-        </div>
-      )
-    }
-  }
-
-  // Render children if all auth checks pass
-  return <>{children}</>
-}
-
-// Higher-order component for easy wrapping
-export function withAuthGuard<P extends object>(;
-  Component: React.ComponentType<P>,
+        <div className = $2;
   guardOptions?: Omit<AuthGuardProps, 'children'>
 ) {
   return function AuthGuardedComponent(props: P) {
@@ -128,20 +80,17 @@ export function withAuthGuard<P extends object>(;
 
 // Hook for programmatic auth checks
 export function useAuthGuard() {
-  const { user, isAuthenticated, isLoading } = useAuth(),
-  const router = useRouter(),
-
-  const requireAuth = (options?: {
-    redirectTo?: string,
+  const { user, isAuthenticated, isLoading } = useAuth($2);
+  const router = useRouter($2);
+  const requireAuth = $2;
     showToast?: boolean,
     returnUrl?: string
   }) => {
     if (isLoading) return false,
 
     if (!isAuthenticated) {
-      const redirectTo = options?.redirectTo || '/login',
-      const returnUrl = options?.returnUrl || router.asPath,
-      
+      const redirectTo = $2;
+      const returnUrl = $2;
       if (options?.showToast !== false) {
         toast({
           title: "Authentication Required",
@@ -149,7 +98,7 @@ export function useAuthGuard() {
           variant: "destructive"})
       }
 
-      router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`),
+      router.push(`${redirectTo}?returnTo = $2;
       return false
     }
 
@@ -160,11 +109,10 @@ export function useAuthGuard() {
     showToast?: boolean,
     redirectTo?: string
   }) => {
-    if (!requireAuth({ showToast: false })) return false,
+    if (!requireAuth({ showToast: false})) return false,
 
-    const userRoles = user?.role ? [user.role] : [],
-    const hasRequiredRole = roles.some(role => userRoles.includes(role)),
-
+    const userRoles = $2;
+    const hasRequiredRole = $2;
     if (!hasRequiredRole) {
       if (options?.showToast !== false) {
         toast({
@@ -173,19 +121,17 @@ export function useAuthGuard() {
           variant: "destructive"})
       }
 
-      router.push(options?.redirectTo || '/dashboard'),
+      router.push($2);
       return false
     }
 
     return true
   },
 
-  const checkPermission = (permission: string): boolean => {
-    if (!isAuthenticated || !user) return false,
-    
+  const checkPermission = $2;
     // Simple permission check - can be extended based on your permission system
     // Use type assertion for extensibility, as permissions might be added to user type later
-    const userPermissions = (user as any).permissions || [],
+    const userPermissions = $2;
     return userPermissions.includes(permission)
   },
 

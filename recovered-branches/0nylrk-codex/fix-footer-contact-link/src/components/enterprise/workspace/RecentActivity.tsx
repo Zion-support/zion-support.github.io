@@ -3,14 +3,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 export function RecentActivity() {
   // Mock activity data
-
-  const activities = [
-    {
-      id: "act-1"
-      user: "Michael Chen"
-      action: "posted a new job"
-      target: "Senior React Developer"
-      timestamp: "1h ago"
+  const activities = $2;
+      user: "Michael Chen",
+      action: "posted a new job",
+      target: "Senior React Developer",
+      timestamp: "1h ago",
       type: "job"
     }
     {
@@ -37,21 +34,17 @@ export function RecentActivity() {
       timestamp: "2d ago"
       type: "comment"
     }
-  ];
-  const getBadgeForType = (type: string) => {
-    switch (type) {
-      case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
-      case "candidate":
-        return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>,
-      case "interview":
-        return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>,
-      case "comment":
-        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>
-      default:
-        return <Badge variant="outline">Activity</Badge>
-    }
-  }
+  ],
 
+  const getBadgeForType = $2;
+      case "candidate":
+        return <Badge variant = $2;
+      case "interview":
+        return <Badge variant = $2;
+      case "comment":
+        return <Badge variant = $2;
+      default:
+        return <Badge variant = $2;
   return (
     <Card>
       <CardHeader>

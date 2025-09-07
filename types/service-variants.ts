@@ -1,1 +1,1 @@
-
+export type ServiceVariant = $2;

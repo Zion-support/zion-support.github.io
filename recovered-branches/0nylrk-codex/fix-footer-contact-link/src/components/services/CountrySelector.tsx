@@ -3,20 +3,16 @@ import { Globe } from "lucide-react",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
 interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null) => void;
-interface CountrySelectorProps {
+  onCountryChange: (country: CountryPricing | null) => void,
+  selectedCountry: CountryPricing | null
+}
 
   onCountryChange: (country: CountryPricing | null) => void
 
   selectedCountry: CountryPricing | null
 }
 export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
-  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
-  // Set top/popular countries
-  useEffect(() => {
-
-    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"];
-    const top = onsiteServicePricing.filter(item =>
+  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]),
   
   // Set top/popular countries
   useEffect(() => {
@@ -25,12 +21,12 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
     setTopCountries(top)
-  }, []);
+  }, []),
+  
   // Handle country selection
-  const handleCountryChange = (countryName: string) => {
-    const country = onsiteServicePricing.find(item => item.country === countryName) |null
+  const handleCountryChange = $2;
     onCountryChange(country)
-  }
+  },
 
   return (
     <div className="mb-6">

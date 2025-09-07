@@ -1,7 +1,12 @@
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-const AIIoTPlatform: React.FC = () => {
+import React from 'react';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function AIIoTPlatformPage() {
+  const service = $2;
+  if (!service) return null,
+
   return (
     <Layout>
       <Head>
@@ -84,4 +89,3 @@ const AIIoTPlatform: React.FC = () => {
     </Layout>
   )
 }
-export default AIIoTPlatform

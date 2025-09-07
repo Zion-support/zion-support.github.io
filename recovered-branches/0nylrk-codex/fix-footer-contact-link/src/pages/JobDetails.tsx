@@ -10,21 +10,17 @@ import { formatDistanceToNow  } from 'date-fns';
 import { toast  } from 'sonner';
 import { useAuth  } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal  } from '@/components/messaging/job-application';
-import { SEO  } from '@/components/SEO';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
+import { ApplyToJobModal } from '@/components/messaging/job-application';
+import { SEO } from '@/components/SEO';
+import { useWhitelabel } from '@/context/WhitelabelContext';
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
-  const { jobId } = useParams() as { jobId?: string }
-  const { job, isLoading, error } = useJobDetails(jobId);
-  const { user, isAuthenticated } = useAuth();
-
-  const navigate = useNavigate();
-  const { isWhitelabel, brandName } = useWhitelabel();
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
-  
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
-
+  const { jobId } = useParams() as { jobId?: string },
+  const { job, isLoading, error } = useJobDetails($2);
+  const { user, isAuthenticated } = useAuth($2);
+  const navigate = useNavigate($2);
+  const { isWhitelabel, brandName } = useWhitelabel($2);
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState($2);
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -47,25 +43,28 @@ export default function JobDetails() {
   }
   const handleApply = () => {
     if (!isAuthenticated) {
-      toast.error("Please log in to apply for this job"),
-      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),
+      toast.error($2);
+      navigate('/login?redirect = $2;
       return
     }
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
-      toast.error("Only job seekers can apply for jobs"),
+      toast.error($2);
       return
     }
+    
     setIsApplyModalOpen(true)
-  }
+  },
+
   const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success("Application submitted successfully!")
+    toast.success($2);
     setIsApplyModalOpen(false)
-  }
-  const formatBudget = (budget: any) => {
-    if (!budget) return "Not specified"
+  },
+
+  const formatBudget = $2;
     return `$${budget.min} - $${budget.max}`
-  }
-  const isOwnJob = user?.id === job.client_id;
+  },
+
+  const isOwnJob = $2;
   return (
     <>
       <SEO
@@ -92,7 +91,7 @@ export default function JobDetails() {
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
                     <div className="flex items-center text-muted-foreground">
                       <Calendar className="mr-2 h-4 w-4" />
-                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>
+                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true})}</span>
                     </div>
                   </div>
                   <Badge>{job.category}</Badge>
@@ -109,71 +108,11 @@ export default function JobDetails() {
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill: string, i: number) => (
-                      <Badge key={i} variant="secondary">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-          <div>
-            <Card>
-              <CardContent className="pt-6 space-y-4">
-                <div className="flex items-start">
-                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Budget</p>
-                    <p className="font-medium">{formatBudget(job.budget)}</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Deadline</p>
-                    <p className="font-medium">
-                      {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Job Type</p>
-                    <p className="font-medium">Freelance / Remote</p>
-                  </div>
-                </div>
-                {!isOwnJob && (
-                  <Button
-                    className="w-full mt-4"
-                    onClick={handleApply}
-                    disabled={isOwnJob}
-                  >
-                    Apply Now
-                  </Button>
-                )}
-                {isOwnJob && (
-                  <div className="text-center p-2 bg-muted rounded-md mt-4">
-                    <p className="text-sm text-muted-foreground">This is your job posting</p>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </main>
-      <Footer />
-      {/* Job application modal */}
-      {job && (
-        <ApplyToJobModal
-          job={{
-            id: job.id
-            title: job.title
-            description: job.description
-            company_name: job.company_name |"Company"
-            budget: job.budget
-
+                      <Badge key = $2;
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name || "Company",
+            budget: job.budget,
             client_id: job.client_id
           }}
           isOpen={isApplyModalOpen}

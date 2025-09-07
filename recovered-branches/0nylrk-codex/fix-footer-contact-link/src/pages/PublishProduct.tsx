@@ -6,8 +6,7 @@ import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 export default function PublishProduct() {
-  const { isAuthenticated, isLoading } = useAuth();
-  
+  const { isAuthenticated, isLoading } = useAuth($2);
   // Show loading while checking authentication
   if (isLoading) {
     return (
@@ -36,6 +35,7 @@ export default function PublishProduct() {
           <p className="text-zion-slate mb-8">
             Share your products, services, or digital assets with the Zion community.
           </p>
+          
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">
             <ProductSubmissionForm />
           </div>

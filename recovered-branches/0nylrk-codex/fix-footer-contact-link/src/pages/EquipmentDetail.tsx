@@ -9,42 +9,31 @@ import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 interface EquipmentSpecification {
+  name: string,
+  value: string}
 
   name: string
 
   value: string
 }
 interface EquipmentDetails {
-
-  id: string
-  name: string
-  description: string
-  brand: string
-  category: string
-  subcategory?: string;
-  images: string[]
-  price: number
-  currency: string
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[]
-  features: string[]
-
-  warranty?: string;
+  id: string,
+  name: string,
+  description: string,
+  brand: string,
+  category: string,
+  subcategory?: string,
+  images: string[],
+  price: number,
+  currency: string,
+  rating?: number,
+  reviewCount?: number,
+  inStock: boolean,
+  expectedShipping?: string,
+  specifications: EquipmentSpecification[],
+  features: string[],
+  warranty?: string,
   returnPolicy?: string
-}
-// Sample data - in a real app this would come from an API
-const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
-  "pro-camera-x1000": {
-
-    id: "pro-camera-x1000"
-    name: "Pro Camera X1000"
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
-    brand: "CineTech"
-    category: "Equipment"
-    subcategory: "Cameras"
 }
 
 // Sample data - in a real app this would come from an API
@@ -57,16 +46,15 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     category: "Equipment",
     subcategory: "Cameras",
     images: [
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=1200&h=800"
-    ]
-    price: 6999
-    currency: "$"
-    rating: 4.9
-    reviewCount: 87
-    inStock: true
-    expectedShipping: "3-5 business days"
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto = $2;
+      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto = $2;
+      "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto = $2;
+    price: 6999,
+    currency: "$",
+    rating: 4.9,
+    reviewCount: 87,
+    inStock: true,
+    expectedShipping: "3-5 business days",
     specifications: [
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" }
       { name: "Resolution", value: "8K (8192 x 4320)" }
@@ -102,15 +90,14 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     category: "Equipment"
     subcategory: "Audio"
     images: [
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800"
-    ]
-    price: 3499
-    currency: "$"
-    rating: 4.8
-    reviewCount: 42
-    inStock: true
-    expectedShipping: "5-7 business days"
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto = $2;
+      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto = $2;
+    price: 3499,
+    currency: "$",
+    rating: 4.8,
+    reviewCount: 42,
+    inStock: true,
+    expectedShipping: "5-7 business days",
     specifications: [
       { name: "Channels", value: "32 input channels" }
       { name: "Faders", value: "16 motorized faders" }
@@ -136,18 +123,15 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     warranty: "3 years manufacturer warranty"
     returnPolicy: "21-day return policy for items in original condition"
   }
-}
+},
+
 export default function EquipmentDetail() {
-  const { equipmentId } = useParams() as { equipmentId?: string }
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
+  const { equipmentId } = useParams() as { equipmentId?: string },
+  const [selectedImageIndex, setSelectedImageIndex] = useState($2);
+  const [quantity, setQuantity] = useState($2);
+  const [isAdding, setIsAdding] = useState($2);
   // In a real app, this would fetch from an API
-  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
-  
-  // In a real app, this would fetch from an API
-  const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,
-  
+  const equipment = $2;
   if (!equipment) {
     return (
       <>
@@ -165,25 +149,26 @@ export default function EquipmentDetail() {
     )
   }
   const handleAddToCart = () => {
-    setIsAdding(true);
+    setIsAdding($2);
     // Simulate API call
     setTimeout(() => {
-      setIsAdding(false),
+      setIsAdding($2);
       toast({
-        title: "Added to cart"
+        title: "Added to cart",
         description: `${quantity}x ${equipment.name} added to your cart.`})
     }, 800)
-  }
+  },
+
   const handleBuyNow = () => {
-    setIsAdding(true);
+    setIsAdding($2);
     // Simulate API call
     setTimeout(() => {
-      setIsAdding(false),
+      setIsAdding($2);
       toast({
-        title: "Proceeding to checkout"
+        title: "Proceeding to checkout",
         description: `Preparing your order for ${equipment.name}.`})
     }, 800)
-  }
+  },
 
   return (
     <>

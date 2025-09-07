@@ -1,41 +1,38 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { evaluateHeuristics } from '../../../utils/fraud/heuristics',
-import { classifyWithGPT } from '../../../utils/fraud/gpt',
-import { getFraudStore, newEvent } from '../../../utils/fraud/store',
-import { extractClientIp } from '../../../utils/ip',
-import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types',
-import { sendWarningEmail } from '../../../utils/email',
+import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
+import { classifyWithGPT } from '../../../utils/fraud/gpt';
+import { getFraudStore, newEvent } from '../../../utils/fraud/store';
+import { extractClientIp } from '../../../utils/ip';
+import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
+import { sendWarningEmail } from '../../../utils/email';
 const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'],
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
+    res.status(405).json($2);
     return
   }
 
   try {
-    const body = req.body || {};
-    const source = body.source as MonitoredSource;
+    const body = $2;
+    const source = $2;
     if (!allowedSources.includes(source)) {
-      res.status(400).json({ error: 'Invalid source' });
+      res.status(400).json($2);
       return
     }
 
-    const userId = typeof body.userId === 'string' ? body.userId : null;
-    const content = typeof body.content === 'string' ? body.content : null;
-    const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
-
-    const ip = extractClientIp(req);
-
-    const store = getFraudStore();
-    const event = newEvent({ source, userId, content, metadata, ipAddress: ip });
-
-    const heuristic = await evaluateHeuristics(event, { countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m) });
+    const userId = $2;
+    const content = $2;
+    const metadata = $2;
+    const ip = extractClientIp($2);
+    const store = getFraudStore($2);
+    const event = newEvent($2);
+    const heuristic = await evaluateHeuristics(event, { countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m) }),
 
     // Privacy opt-out check for content analysis
-    let gpt: GptClassification | undefined = undefined;
+    let gpt: GptClassification | undefined = $2;
     if (content && userId) {
-      const privacy = await store.getPrivacySettings(userId);
+      const privacy = await store.getPrivacySettings($2);
       if (!privacy.monitoringContentAnalysisOptOut) {
         gpt = await classifyWithGPT(content, source)
       }
@@ -43,29 +40,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       gpt = await classifyWithGPT(content, source)
     }
 
-    let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE');
-    if (heuristic.severity === 'high') combinedLabel = 'DANGEROUS';
-    if (gpt?.label === 'DANGEROUS') combinedLabel = 'DANGEROUS';
-
-    const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message');
-
+    let combinedLabel: GptClassificationLabel = $2;
+    if (heuristic.severity = $2;
+    if (gpt?.label = $2;
+    const autoHide = $2;
     const stored: Omit<StoredFraudRecord, 'id'> = {
       ...event,
       heuristic,
       gpt,
       autoHidden: !!autoHide,
-      status: 'PENDING'};
+      status: 'PENDING'},
 
-    const saved = await store.saveEvent(stored);
-
+    const saved = await store.saveEvent($2);
     if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {
-      const prior = await store.countFlaggedForUser(userId);
+      const prior = await store.countFlaggedForUser($2);
       if (prior <= 1 && combinedLabel !== 'SAFE') {
         await sendWarningEmail({
           toUserId: userId,
           subject: 'Marketplace warning: suspicious activity detected',
-          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`
-        })
+          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`})
       }
     }
 
@@ -76,9 +69,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       heuristic,
       gpt,
       autoHidden: saved.autoHidden,
-      createdAt: saved.createdAt
-    })
+      createdAt: saved.createdAt})
   } catch (e: any) {
-    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
+    res.status(500).json({ error: 'Internal error', details: e ?.message || String(e) })
   }
 }

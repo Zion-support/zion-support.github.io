@@ -14,43 +14,28 @@ import { useIsMobile } from "@/hooks/use-mobile",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
 export default function TranslationManager() {
-  const { t, i18n } = useTranslation();
-
-  const isMobile = useIsMobile();
-  const { supportedLanguages } = useLanguage();
-  const { translateContent, isTranslating } = useTranslationService();
-  const [selectedNamespace, setSelectedNamespace] = useState("translation");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [translations, setTranslations] = useState<Record<string, any>>({});
-  const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
-  const [editingKey, setEditingKey] = useState<string | null>(null);
-  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
-  const [isSaving, setIsSaving] = useState(false);
-  // Simulated translation data - in a real app, this would come from your backend
-  useEffect(() => {
-    // For demo purposes, we're using the loaded translations from i18next
-    const currentTranslations: Record<string, any> = {}
-  
-  const [selectedNamespace, setSelectedNamespace] = useState("translation"),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [translations, setTranslations] = useState<Record<string any>>({}),
+  const { t, i18n } = useTranslation($2);
+  const isMobile = useIsMobile($2);
+  const { supportedLanguages } = useLanguage($2);
+  const { translateContent, isTranslating } = useTranslationService($2);
+  const [selectedNamespace, setSelectedNamespace] = useState($2);
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [translations, setTranslations] = useState<Record<string, any>>({}),
   const [filteredKeys, setFilteredKeys] = useState<string[]>([]),
   const [editingKey, setEditingKey] = useState<string | null>(null),
-  const [editedTranslations, setEditedTranslations] = useState<Record<string Record<SupportedLanguage string>>>({}),
-  const [isSaving, setIsSaving] = useState(false),
-  
+  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({}),
+  const [isSaving, setIsSaving] = useState($2);
   // Simulated translation data - in a real app, this would come from your backend
   useEffect(() => {
     // For demo purposes, we're using the loaded translations from i18next
-    const currentTranslations: Record<string any> = {},
+    const currentTranslations: Record<string, any> = {},
     
-    supportedLanguages.forEach(lang => {
-      const res = i18n.getResourceBundle(lang.code, selectedNamespace),
+    supportedLanguages.forEach($2);
       if (res) {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
           return Object.keys(obj).reduce((acc, key) => {
-            const pre = prefix.length ? `${prefix}.` : '',
+            const pre = $2;
             if (typeof obj[key] === 'object' && obj[key] !== null) {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
@@ -58,135 +43,101 @@ export default function TranslationManager() {
             }
             return acc
           }, {} as Record<string, string>)
-        }
+        },
+        
         currentTranslations[lang.code] = flattenObject(res)
       }
-    });
-    setTranslations(currentTranslations);
+    }),
+    
+    setTranslations($2);
     // Get all unique keys across all languages
-    const allKeys = new Set<string>();
-    Object.values(currentTranslations).forEach(langTranslations => {
-      Object.keys(langTranslations).forEach(key => allKeys.add(key))
-    });
+    const allKeys = $2;
+    Object.values(currentTranslations).forEach(langTranslations = $2;
     setFilteredKeys(Array.from(allKeys))
-  }, [selectedNamespace, i18n]);
+  }, [selectedNamespace, i18n]),
+  
   // Filter keys based on search query
   useEffect(() => {
     if (!searchQuery.trim()) {
       // Get all unique keys across all languages
-      const allKeys = new Set<string>();
-      Object.values(translations).forEach(langTranslations => {
-        Object.keys(langTranslations).forEach(key => allKeys.add(key))
-      });
-      setFilteredKeys(Array.from(allKeys));
+      const allKeys = $2;
+      Object.values(translations).forEach(langTranslations = $2;
+      setFilteredKeys(Array.from(allKeys)),
       return
     }
-    const query = searchQuery.toLowerCase().trim();
-    const filtered: string[] = []
+    
+    const query = searchQuery.toLowerCase().trim($2);
+    const filtered: string[] = [],
+    
     // Search in keys and values
     Object.values(translations).forEach(langTranslations => {
       Object.entries(langTranslations).forEach(([key, value]) => {
         if (
-          key.toLowerCase().includes(query) |
-          (typeof value === 'string' && value.toLowerCase().includes(query))
-        ) {
-          filtered.push(key)
-        }
-      })
-    });
+          key.toLowerCase().includes(query) || 
+          (typeof value = $2;
     setFilteredKeys([...new Set(filtered)])
-  }, [searchQuery, translations]);
+  }, [searchQuery, translations]),
+  
   const handleEdit = (key: string) => {
-    setEditingKey(key)
+    setEditingKey($2);
     // Initialize edited translations for this key
-    const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>;
-    supportedLanguages.forEach(lang => {
-      initialEdits[lang.code] = translations[lang.code]?.[key] |''
-    });
+    const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>,
+    supportedLanguages.forEach($2);
     setEditedTranslations({
       ...editedTranslations;
       [key]: initialEdits
     })
-  }
+  },
+  
   const handleSave = (key: string) => {
-    setIsSaving(true)
+    setIsSaving($2);
     // In a real application, you would save these to your backend
     setTimeout(() => {
       // Update translations with edited values
-      const updatedTranslations = { ...translations }
-      supportedLanguages.forEach(lang => {
-        if (!updatedTranslations[lang.code]) {
-          updatedTranslations[lang.code] = {}
-        }
-        updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
-      });
-      setTranslations(updatedTranslations);
-      setEditingKey(null);
-      setIsSaving(false);
-          updatedTranslations[lang.code] = {}
-        }
-        updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
-      }),
-      
-      setTranslations(updatedTranslations),
-      setEditingKey(null),
-      setIsSaving(false),
-      
-      toast({
-        title: t("translation.saved")
+      const updatedTranslations = $2;
+      supportedLanguages.forEach(lang = $2;
+      setTranslations($2);
+      setEditingKey($2);
+      setIsSaving($2);
+      toast($2);
         description: t("translation.changes_saved")})
     }, 1000)
-  }
-  const handleTranslateKey = async (key: string) => {
-    // Find first non-empty translation to use as source
-    let sourceLanguage: SupportedLanguage = 'en'
-    let sourceText = '';
-    for (const lang of supportedLanguages.map(l => l.code)) {
-      if (translations[lang]?.[key]) {
-        sourceLanguage = lang,
-        sourceText = translations[lang][key],
+  },
+  
+  const handleTranslateKey = $2;
+    let sourceText = $2;
+    for (const lang of supportedLanguages.map(l = $2;
+        sourceText = $2;
         break
       }
     }
     if (!sourceText) {
-      toast({
-        title: t('translation.no_content')
-        description: t('translation.add_content_first')
-        variant: "destructive"})
+      toast($2);
+        description: t($2);
+        variant: "destructive"}),
       return
     }
     try {
-      const { translations: translatedText, error } = await translateContent(
-        sourceText
-        'general'
-        sourceLanguage
-      );
+      const { translations: translatedText, error } = await translateContent($2);
       if (error) {
-        toast({
-          title: t('translation.translation_failed')
-          description: error
-          variant: "destructive"})
+        toast($2);
+          description: error,
+          variant: "destructive"}),
         return
       }
       // Update edited translations with auto-translated content
-      setEditedTranslations({
-        ...editedTranslations,
-        [key]: translatedText
-      });
-      toast({
-        title: t('translation.translation_success')
+      setEditedTranslations($2);
+      toast($2);
         description: t('translation.content_translated')})
     } catch (error) {
-      console.error(`Error translating key ${key}:`, error),
-      toast({
-        title: t('translation.translation_failed')
-        description: error instanceof Error ? error.message : t('translation.unknown_error')
+      console.error($2);
+      toast($2);
+        description: error instanceof Error ? error.message : t($2);
         variant: "destructive"})
     }
-  }
-  const handleCancel = () => {
-    setEditingKey(null)
-  }
+  },
+  
+  const handleCancel = $2;
   const handleChange = (lang: SupportedLanguage, key: string, value: string) => {
     setEditedTranslations({
       ...editedTranslations;
@@ -195,13 +146,9 @@ export default function TranslationManager() {
         [lang]: value
       }
     })
-  }
-  const getMissingLanguages = (key: string): SupportedLanguage[] => {
-    return supportedLanguages
-      .map(lang => lang.code)
-      .filter(lang => !translations[lang]?.[key])
-  }
-
+  },
+  
+  const getMissingLanguages = $2;
   return (
     <>
       <SEO

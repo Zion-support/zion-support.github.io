@@ -1,175 +1,144 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-;
+
 console.log('🔧 Fixing remaining syntax errors...');
-;
-// Fix specific files with known issues;
-const filesToFix = [;
-    'src/components/SEO.tsx',
-    'src/components/ui/button.tsx',
-    'src/components/ui/card.tsx',
-    'src/components/ui/input.tsx',
-    'src/components/talent/TalentCard.jsx';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b;
-];
-;
-function fixFile(filePath) {;
-    if (!fs.existsSync(filePath)) {;
-        console.log(`⚠️  File not "found": ${filePath}`);
-        return;
+
+// Find all TypeScript and JavaScript files
+const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'temp_conflicts') {
+      files = files.concat(findFiles(fullPath, extensions));
+    } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
     }
-;
-;
-// Function to fix remaining syntax errors in a file;
-function fixRemainingSyntax(filePath) {}
-  try {}
+  }
+  
+  return files;
+};
+
+// Fix syntax errors in a file
+const fixSyntaxErrors = (filePath) => {
+  try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-;
-    // Fix unterminated string constants;
-    content = content.replace(/useState\("\)/g, 'useState("")');
-    content = content.replace(/useState\('\)/g, "useState('')");
-    content = content.replace(/parsed\.didHandle \|\| "\)/g, 'parsed.didHandle || "")');
-    content = content.replace(/parsed\.didHandle \|\| '\)/g, "parsed.didHandle || '')");
-;
-    // Fix extra semicolons in object properties;
-    content = content.replace(/,\s*';';/g, ',');
-    content = content.replace(/,\s*';/g, ',');
-;
-    // Fix function parameters with TypeScript types;
-    content = content.replace(/\("props": any\) => \{/g, '(props) => {');}
-    content = content.replace(/\([^)]*: any\)/g, '($1)');
-;
-    // Fix supabase method calls;
-    content = content.replace(/await supabase';/g, 'await supabase');
-    content = content.replace(/\.from\('[^']*'\)';';/g, (match) => match.replace(/';';$/, ''));
-    content = content.replace(/\.from\('[^']*'\)';/g, (match) => match.replace(/';$/, ''));
-    content = content.replace(/\.delete\(\)';';/g, '.delete()');
-    content = content.replace(/\.delete\(\)';/g, '.delete()');
-    content = content.replace(/\.eq\('[^']*',[^)]*\)';';/g, (match) => match.replace(/';';$/, ''));
-    content = content.replace(/\.eq\('[^']*',[^)]*\)';/g, (match) => match.replace(/';$/, ''));
-    content = content.replace(/\.insert\([^)]*\)';';/g, (match) => match.replace(/';';$/, ''));
-    content = content.replace(/\.insert\([^)]*\)';/g, (match) => match.replace(/';$/, ''));
-    content = content.replace(/\.select\('[^']*'\)';';/g, (match) => match.replace(/';';$/, ''));
-    content = content.replace(/\.select\('[^']*'\)';/g, (match) => match.replace(/';$/, ''));
-    content = content.replace(/\.single\(\)';';/g, '.single()');
-    content = content.replace(/\.single\(\)';/g, '.single()');
-;
-    // Fix comments with extra semicolons;
-    content = content.replace(/\/\/ [^;]*';';/g, (match) => match.replace(/';';$/, ''));
-    content = content.replace(/\/\/ [^;]*';/g, (match) => match.replace(/';$/, ''));
-;
-    // Fix standalone semicolons and quotes;
-    content = content.replace(/^';';?\s*$/gm, '');
-    content = content.replace(/^';\s*$/gm, '');
-;
-    // Fix multiple consecutive semicolons;
-    content = content.replace(/;+;+/g, ';');
-;
-    // Fix multiple consecutive quotes;
-    content = content.replace(/['"]+['"]+/g, '"');
-;
-    // Fix missing semicolons after statements;
-    content = content.replace(/}\s*catch\s*\(/g, '} catch (');
-    content = content.replace(/}\s*finally\s*\{/g, '} finally {');}
-;
-    // Fix missing semicolons after variable declarations;
-    content = content.replace(/const\s+[^=]+=[^;]+(?!;)\s*}/g, (match) => {}
-      if (!match.endsWith(';')) {}
-        return match + ';';
-      };
-      return match;
-    }
-});
-;
-    // Fix missing semicolons after function calls;
-    content = content.replace(/setDisplayWeb3\([^)]+\)(?!;)\s*}/g, (match) => {}
-      if (!match.endsWith(';')) {}
-        return match + ';';
-      };
-      return match;
-    }
-});
-;
-    // Write the fixed content back;
-    if (content !== originalContent) {}
+    let modified = false;
+    
+    // Fix common syntax errors
+    const fixes = [
+      // Fix const declarations with commas
+      { pattern: /const\s+(\w+)\s*=\s*useState\([^)]*\),\s*$/gm, replacement: 'const $1 = useState($2);' },
+      // Fix const declarations with colons
+      { pattern: /const:\s*(\w+):\s*/g, replacement: 'const $1: ' },
+      // Fix property syntax errors
+      { pattern: /(\w+):\s*(\w+):\s*/g, replacement: '$1: $2: ' },
+      // Fix interface property syntax
+      { pattern: /(\w+):\s*(\w+)\s*$/gm, replacement: '$1: $2' },
+      // Fix export type syntax
+      { pattern: /export type (\w+) = [^,]+,\s*$/gm, replacement: 'export type $1 = $2;' },
+      // Fix function parameter syntax
+      { pattern: /(\w+):\s*(\w+)\s*\)/g, replacement: '$1: $2)' },
+      // Fix object property syntax
+      { pattern: /(\w+):\s*(\w+)\s*,/g, replacement: '$1: $2,' },
+      // Fix array syntax
+      { pattern: /(\w+):\s*(\w+)\s*\]/g, replacement: '$1: $2]' },
+      // Fix string concatenation issues
+      { pattern: /(\w+):\s*(\w+)\s*\+/g, replacement: '$1: $2 +' },
+      // Fix template literal syntax
+      { pattern: /(\w+):\s*(\w+)\s*`/g, replacement: '$1: $2`' },
+      // Fix JSX attribute syntax
+      { pattern: /(\w+):\s*(\w+)\s*>/g, replacement: '$1: $2>' },
+      // Fix function call syntax
+      { pattern: /(\w+):\s*(\w+)\s*\(/g, replacement: '$1: $2(' },
+      // Fix assignment syntax
+      { pattern: /(\w+):\s*(\w+)\s*=/g, replacement: '$1: $2 =' },
+      // Fix comparison syntax
+      { pattern: /(\w+):\s*(\w+)\s*===/g, replacement: '$1: $2 ===' },
+      // Fix logical operators
+      { pattern: /(\w+):\s*(\w+)\s*&&/g, replacement: '$1: $2 &&' },
+      { pattern: /(\w+):\s*(\w+)\s*\|\|/g, replacement: '$1: $2 ||' },
+      // Fix ternary operators
+      { pattern: /(\w+):\s*(\w+)\s*\?/g, replacement: '$1: $2 ?' },
+      { pattern: /(\w+):\s*(\w+)\s*:/g, replacement: '$1: $2:' },
+      // Fix arrow functions
+      { pattern: /(\w+):\s*(\w+)\s*=>/g, replacement: '$1: $2 =>' },
+      // Fix destructuring
+      { pattern: /(\w+):\s*(\w+)\s*}/g, replacement: '$1: $2}' },
+      { pattern: /(\w+):\s*(\w+)\s*]/g, replacement: '$1: $2]' },
+      // Fix specific patterns found in errors
+      { pattern: /childre:\s*ReactNode/g, replacement: 'children: ReactNode' },
+      { pattern: /const:\s*Layout:\s*/g, replacement: 'const Layout: ' },
+      { pattern: /style\)\s*=>\s*{/g, replacement: 'style}) => {' },
+      { pattern: /focus:\s*outline-none/g, replacement: 'focus:outline-none' },
+      { pattern: /focus:\s*ring-2/g, replacement: 'focus:ring-2' },
+      { pattern: /focus:\s*ring-offset-2/g, replacement: 'focus:ring-offset-2' },
+      { pattern: /focus:\s*ring-offset-black/g, replacement: 'focus:ring-offset-black' },
+      { pattern: /focus:\s*ring-blue-500/g, replacement: 'focus:ring-blue-500' },
+      { pattern: /disabled:\s*opacity-50/g, replacement: 'disabled:opacity-50' },
+      { pattern: /disabled:\s*cursor-not-allowed/g, replacement: 'disabled:cursor-not-allowed' },
+      { pattern: /hover:\s*scale-105/g, replacement: 'hover:scale-105' },
+      { pattern: /active:\s*scale-95/g, replacement: 'active:scale-95' },
+      { pattern: /hover:\s*bg-blue-700/g, replacement: 'hover:bg-blue-700' },
+      { pattern: /hover:\s*bg-gray-700/g, replacement: 'hover:bg-gray-700' },
+      { pattern: /hover:\s*bg-white\/5/g, replacement: 'hover:bg-white/5' },
+      { pattern: /hover:\s*text-white/g, replacement: 'hover:text-white' },
+      { pattern: /hover:\s*shadow-xl/g, replacement: 'hover:shadow-xl' },
+      { pattern: /hover:\s*shadow-lg/g, replacement: 'hover:shadow-lg' },
+      { pattern: /hover:\s*shadow-md/g, replacement: 'hover:shadow-md' },
+      { pattern: /hover:\s*-translate-y-0\.5/g, replacement: 'hover:-translate-y-0.5' },
+      { pattern: /hover:\s*border-gray-500/g, replacement: 'hover:border-gray-500' },
+      // Fix specific error patterns
+      { pattern: /LegalStructure = '[^']+',\s*$/gm, replacement: 'LegalStructure = \'Cayman Foundation\' | \'Swiss Verein\' | \'US 501(c)(6)\' | \'DAO-native Wrapper\';' },
+      { pattern: /setLegalStructure<LegalStructure>\([^)]+\),\s*$/gm, replacement: 'setLegalStructure<LegalStructure>(\'Cayman Foundation\');' },
+      // Fix missing semicolons after statements
+      { pattern: /(\w+)\s*=\s*useState\([^)]*\)\s*,\s*$/gm, replacement: '$1 = useState($2);' },
+      { pattern: /(\w+)\s*=\s*useState<[^>]*>\([^)]*\)\s*,\s*$/gm, replacement: '$1 = useState<$2>($3);' },
+      // Fix missing semicolons after function calls
+      { pattern: /(\w+)\s*\([^)]*\)\s*,\s*$/gm, replacement: '$1($2);' },
+      // Fix missing semicolons after assignments
+      { pattern: /(\w+)\s*=\s*[^,;]+,\s*$/gm, replacement: '$1 = $2;' },
+    ];
+    
+    fixes.forEach(({ pattern, replacement }) => {
+      if (pattern.test(content)) {
+        content = content.replace(pattern, replacement);
+        modified = true;
+      }
+    });
+    
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-;
+      console.log(`✅ Fixed: ${filePath}`);
       return true;
-    };
+    }
+    
     return false;
-  } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
-  };
+  }
 };
-// Function to recursively find and fix files;
-function fixFilesInDirectory(dirPath) {}
-  const files = fs.readdirSync(dirPath);
+
+// Main execution
+const main = () => {
+  const files = findFiles(process.cwd());
   let fixedCount = 0;
-;
-  for (const file of files) {}
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-;
-    // Fix malformed interface declarations;
-    content = content.replace(/interface\s+(\w+)\s*\{;/g, 'interface $1 {');
-;
-    // Fix malformed function declarations;
-    content = content.replace(/export\s+function\s+(\w+)\("props": \s*any\)\s*\{;/g, 'export function $1(props) {');
-    content = content.replace(/export\s+default\s+function\s+(\w+)\("props": \s*any\)\s*\{\}/g, 'export default function $1(props) {');
-;
-    // Fix malformed return statements;
-    content = content.replace(/return\s*\(;/g, 'return (');
-    content = content.replace(/return\s*\(\s*<div[^>]*>\s*;\s*$/gm, 'return (\n    <div>');
-;
-    // Fix malformed JSX;
-    content = content.replace(/<\/HTMLDivElement>/g, '');
-    content = content.replace(/<\/HTMLInputElement>/g, '');
-    content = content.replace(/<\/HTMLParagraphElement>/g, '');
-    content = content.replace(/<\/h3>/g, '');
-;
-    // Fix malformed object destructuring;
-    content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {;
-        return `const { ${user} } = useAuth();
-    const [${savedTalents}] = useState([]);
-    const [${isLoading}] = useState(true);
-    const navigate = useNavigate();
-;
-    useEffect(() => {;
-        const fetchSavedTalents = async () => {;
-            if (!user) return;
-            try {;
-                setIsLoading(true);
-                // Fetch saved talents logic here;
-            } catch (error) {;
-                console.error('Error fetching saved "talents": ', error);
-            } finally {;
-                setIsLoading(false);
-            }
-        };
-        fetchSavedTalents();
-    }, [user]);
-;
-    const handleRequestHire = (talentId) => {;
-        // Handle hire request logic here;
-=======;
-    if (stat.isDirectory()) {}
-      fixedCount += fixFilesInDirectory(filePath);
-    } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {}
-      if (fixRemainingSyntax(filePath)) {}
-        fixedCount++;
-      };
-    };
-  };
-  return fixedCount;
-// Main execution;
-const fixedCount = fixFilesInDirectory('./src');
-=======;
+  
+  console.log(`Found ${files.length} files to check...`);
+  
+  for (const file of files) {
+    if (fixSyntaxErrors(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`\n🎉 Fixed ${fixedCount} files`);
 };
-// Main execution;
-console.log('Starting remaining syntax error fixing...');
-const fixedCount = fixFilesInDirectory('./src');
-console.log(`Fixed ${fixedCount} files with remaining syntax errors.`);
-;
+
+main();

@@ -1,24 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-const bwipjs = require('bwip-js'),
-
+const bwipjs = require($2);
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const code = (req.query.code as string) || '';
+  const code = $2;
   if (!code) {
-    res.status(400).json({ error: 'Missing code' });
+    res.status(400).json($2);
     return
   }
 
   try {
-    const png = await bwipjs.toBuffer({
-      bcid: 'ean13',
-      text: code.replace(/[^0-9]/g, ''),
+    const png = await bwipjs.toBuffer($2);
       scale: 3,
       height: 10,
-      includetext: false
-    });
-    res.setHeader('Content-Type', 'image/png');
+      includetext: false}),
+    res.setHeader($2);
     res.status(200).send(png)
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to render barcode' })
+    res.status(500).json({ error: e ?.message || 'Failed to render barcode' })
   }
 }

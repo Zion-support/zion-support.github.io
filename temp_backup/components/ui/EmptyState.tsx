@@ -1,14 +1,12 @@
-import React from "react";
-import Link from "next/link";
-import EnhancedButton from "./EnhancedButton";
-
-export type EmptyStateProps = {
-  title: string;
-  description?: string;
-  icon?: React.ReactNode;
-  primaryAction?: { label: string; href: string };
-  secondaryAction?: { label: string; href: string };
-};
+import React from 'react';
+import Link from 'next/link';
+import EnhancedButton from './EnhancedButton';
+export type EmptyStateProps = $2;
+  description?: string,
+  icon?: React.ReactNode,
+  primaryAction?: { label: string, href: string},
+  secondaryAction?: { label: string, href: string}
+},
 
 export default function EmptyState({
   title,
@@ -45,5 +43,5 @@ export default function EmptyState({
         </div>
       )}
     </div>
-  );
+  )
 }

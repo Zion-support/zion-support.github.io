@@ -5,99 +5,32 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Globe, Search, ArrowUpDown } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState($2);
   const [sortConfig, setSortConfig] = useState<{
-origin/cursor/automate-test-improve-and-merge-code-2533
-    key: keyof CountryPricing;
-    direction: 'ascending' | 'descending';
-  }>({;
-    key: 'country',;
-    direction: 'ascending',;
-  });
-
-  const sortedData = useMemo(() => {;
-    let filteredData = [...onsiteServicePricing];
-    // Filter by search query;
-    if (searchQuery) {;
-      filteredData = filteredData && filteredData.filter(item =>;
-        item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-      );
-
-  const sortedData = null;
-import { useState, useMemo } from 'react'
-import {
-  onsiteServicePricing
-  CountryPricing
-} from '@/data/onsiteServicePricing'
-import { Input } from '@/components/ui/input'
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from '@/components/ui/table'
-import { Globe, Search, ArrowUpDown } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [sortConfig, setSortConfig] = useState<{
-    key: keyof CountryPricing
-    direction: 'ascending' | 'descending'
+    key: keyof CountryPricing,
+    direction: "ascending" | "descending"
   }>({
-    key: 'country'
-    direction: 'ascending'
-  })
-  const sortedData = useMemo(() => {
-    let filteredData = [...onsiteServicePricing]
+    key: "country",
+    direction: "ascending"}),
+
+  const sortedData = $2;
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter(item =>
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       )
-origin/cursor/automate-test-improve-and-merge-code-2533
     }
-
-    // Sort data;
-    filteredData && filteredData.sort((a, b,) => {;
-      if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
-        return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
-
-      }
-
-  const handleSort = (key: keyof CountryPricing) => {
-    setSortConfig({
-
-      key
-      direction:
-        sortConfig.key === key && sortConfig.direction === 'ascending'
-          ? 'descending'
-          : 'ascending'
-    })
-  }
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-
-        return sortConfig.direction === "ascending" ? -1 : 1
-      }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1
-      }
-      return 0
-    }),
     
+    // Sort data
+    filteredData.sort((a, b) => {
+      if (a[sortConfig.key] < b[sortConfig.key]) {
+        return sortConfig.direction = $2;
     return filteredData
   }, [onsiteServicePricing, searchQuery, sortConfig]),
 
-  const handleSort = (key: keyof CountryPricing) => {
-    setSortConfig({
-      key,
+  const handleSort = $2;
       direction: 
-        sortConfig.key === key && sortConfig.direction === "ascending" 
-          ? "descending" 
-          : "ascending"})
-  },
-
+        sortConfig.key = $2;
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
@@ -159,4 +92,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Table>
       </div>
     </div>
-  );
+  )
+}

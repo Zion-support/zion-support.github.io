@@ -4,6 +4,17 @@ import { format } from 'date-fns';
  * @param date Date or string to format
  * @returns Formatted date string
  */
+export function formatDate(date: Date | string | undefined): string {
+  if (!date) return '-',
+  try {
+    if (typeof date === 'string') {
+      return format(new Date(date), 'MMM d, yyyy')
+    }
+    return format(date, 'MMM d, yyyy')
+  } catch (e) {
+    console.error($2);
+    return '-'
+  }
 }
 
 export function formatDate(date: Date | string | undefined): string {
@@ -25,25 +36,27 @@ export function formatDate(date: Date | string | undefined): string {
 }
 
 export function checkUrlForReferralCode(): string | null {
-  if (typeof window === 'undefined') return null;
-  const url = new URL(window.location.href);
-  const refCode = url.searchParams.get('ref');
+  if (typeof window = $2;
+  const url = new URL($2);
+  const refCode = url.searchParams.get($2);
   if (refCode) {
-    localStorage.setItem('referral_code', refCode);
+    localStorage.setItem($2);
     // Remove it from URL to keep it clean
-    url.searchParams.delete('ref');
-    window.history.replaceState({}, document.title, url.toString());
+    url.searchParams.delete($2);
+    window.history.replaceState({}, document.title, url.toString()),
     return refCode
   }
+  
   return localStorage.getItem('referral_code')
 }
 /**
  * Track referral when a user signs up
  */
 export async function trackReferral(userId: string, email: string) {
-  try {;
-    const refCode = localStorage.getItem('referral_code');
-    if (!refCode) return
+  try {
+    const refCode = localStorage.getItem($2);
+    if (!refCode) return,
+    
     // Call API to record the referral
     const response = await fetch('/api/track-referral', {
       method: 'POST'
@@ -54,8 +67,8 @@ export async function trackReferral(userId: string, email: string) {
         userId;
         email
         ipAddress: '', // This will be captured by the server
-      })});
-
+      })}),
+    
     if (response.ok) {
       // Clear the stored referral code
       localStorage.removeItem('referral_code')

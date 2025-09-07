@@ -1,57 +1,55 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { v4 as uuidv4 } from 'uuid',
-import { readJsonFile, writeJsonFile } from '../../utils/db',
-import type { Conversation, Message } from '../../utils/types',
-import { rateLimit } from '../../utils/rateLimit',
-const FILE = 'conversations.json',
-
+import { v4 as uuidv4 } from 'uuid';
+import { readJsonFile, writeJsonFile } from '../../utils/db';
+import type { Conversation, Message } from '../../utils/types';
+import { rateLimit } from '../../utils/rateLimit';
+const FILE = $2;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return,
 
   if (req.method === 'POST') {
     const { conversationId, sender, text, attachments } = req.body || {},
     if (!conversationId || !sender || (!text && (!attachments || attachments.length === 0))) {
-      res.status(400).json({ error: 'Invalid message' }),
+      res.status(400).json($2);
       return
     }
 
     const conversations = readJsonFile<Conversation[]>(FILE, []),
-    const idx = conversations.findIndex((c) => c.id === String(conversationId)),
+    const idx = $2;
     if (idx === -1) {
-      res.status(404).json({ error: 'Conversation not found' }),
+      res.status(404).json($2);
       return
     }
 
-    const now = new Date().toISOString(),
+    const now = new Date().toISOString($2);
     const msg: Message = {
-      id: uuidv4(),
-      conversationId: String(conversationId),
+      id: uuidv4($2);
+      conversationId: String($2);
       sender: { type: sender.type, id: String(sender.id) },
       text: text ? String(text) : undefined,
       attachments: Array.isArray(attachments) ? attachments : undefined,
       createdAtIso: now,
-      readBy: [{ participantId: String(sender.id), readAtIso: now }]},
+      readBy: [{ participantId: String(sender.id), readAtIso: now}]},
 
-    conversations[idx].messages.push(msg),
-    conversations[idx].updatedAtIso = now,
+    conversations[idx].messages.push($2);
+    conversations[idx].updatedAtIso = $2;
     writeJsonFile<Conversation[]>(FILE, conversations),
 
-    res.status(201).json({ message: msg }),
+    res.status(201).json($2);
     return
   }
 
-  if (req.method === 'GET') {
-    const { conversationId } = req.query,
+  if (req.method = $2;
     const conversations = readJsonFile<Conversation[]>(FILE, []),
-    const conv = conversations.find((c) => c.id === String(conversationId)),
+    const conv = $2;
     if (!conv) {
-      res.status(404).json({ error: 'Conversation not found' }),
+      res.status(404).json($2);
       return
     }
-    res.status(200).json({ conversation: conv }),
+    res.status(200).json($2);
     return
   }
 
-  res.setHeader('AllowGET, POST'),
+  res.setHeader($2);
   res.status(405).end('Method Not Allowed')
 }

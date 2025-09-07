@@ -8,27 +8,26 @@ interface ChatInputProps {
 }
 
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
-  const [message, setMessage] = useState(''),
-  const inputRef = useRef<HTMLTextAreaElement>(null),
-
+  const [message, setMessage] = useState($2);
+  const inputRef = $2;
   useEffect(() => {
     // Focus input when component mounts
     inputRef.current?.focus()
   }, []),
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault(),
+    e.preventDefault($2);
     if (message.trim() && !disabled) {
-      onSend(message),
+      onSend($2);
       setMessage('')
     }
   },
 
   const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault(),
+      e.preventDefault($2);
       if (message.trim() && !disabled) {
-        onSend(message),
+        onSend($2);
         setMessage('')
       }
     }

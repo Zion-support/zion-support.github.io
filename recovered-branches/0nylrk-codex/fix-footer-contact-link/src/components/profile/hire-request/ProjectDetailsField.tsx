@@ -20,7 +20,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>
-  form: UseFormReturn<FormValues>;
 }
 
 import { Textarea } from "@/components/ui/textarea";
@@ -47,5 +46,5 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
         </FormItem>
       )}
     />
-  );
+  )
 }

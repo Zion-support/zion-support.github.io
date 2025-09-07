@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';,
-import { useRouter } from 'next/router';,
-import { Search, X } from 'lucide-react';
-import { Input } from '@/components/ui/input';,
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';,
-import { fireEvent } from '@/lib/analytics';,
-import { SearchSuggestion } from '@/types/search';,
-import { slugify } from '@/lib/slugify';,
-import { useDebounce } from '@/hooks/useDebounce';,
-import { useOnClickOutside } from '@/hooks/useOnClickOutside';,
+import React, { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/router';
+import { Search, X } from 'lucide-react'
+import { Input } from '@/components/ui/input';
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
+import { fireEvent } from '@/lib/analytics';
+import { SearchSuggestion } from '@/types/search';
+import { slugify } from '@/lib/slugify';
+import { useDebounce } from '@/hooks/useDebounce';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 /**
  * SearchBar component props
  */
@@ -36,25 +36,24 @@ interface SearchBarProps {
  * SearchBar component that allows users to search for content.
  */
 export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
-  const router = useRouter(),
+  const router = useRouter($2);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]),
-  const [focused, setFocused] = useState(false),
-  const [highlightedIndex, setHighlightedIndex] = useState(-1),
-  const listId = 'searchbar-autocomplete-list',
-  const debounced = useDebounce(value, 150),
-  const inputRef = useRef<HTMLInputElement>(null),
-  const containerRef = useRef<HTMLDivElement>(null),
-
+  const [focused, setFocused] = useState($2);
+  const [highlightedIndex, setHighlightedIndex] = useState($2);
+  const listId = $2;
+  const debounced = useDebounce($2);
+  const inputRef = $2;
+  const containerRef = $2;
   useEffect(() => {
     if (!debounced) {
-      setSuggestions([]),
-      setHighlightedIndex(-1),
+      setSuggestions($2);
+      setHighlightedIndex($2);
       return
     }
-    const controller = new AbortController(),
+    const controller = new AbortController($2);
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
       .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch suggestions'),
+        if (!res.ok) throw new Error($2);
         return res.json()
       })
       .then(data => {
@@ -70,19 +69,18 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
   }, [debounced]),
 
   useOnClickOutside(containerRef, () => {
-    setFocused(false),
+    setFocused($2);
     setHighlightedIndex(-1)
   }),
 
   const handleSelect = (suggestion: SearchSuggestion) => {
-    onChange(suggestion.text),
-    if (onSelectSuggestion) onSelectSuggestion(suggestion),
-
-    const searchQuery = encodeURIComponent(suggestion.text),
-    router.push(`/search?q=${searchQuery}`),
-    fireEvent('search', { search_term: suggestion.text }),
-    setFocused(false),
-    setHighlightedIndex(-1),
+    onChange($2);
+    if (onSelectSuggestion) onSelectSuggestion($2);
+    const searchQuery = encodeURIComponent($2);
+    router.push($2);
+    fireEvent($2);
+    setFocused($2);
+    setHighlightedIndex($2);
     inputRef.current?.blur()
   },
 
@@ -106,15 +104,13 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={(e) => {
-            setFocused(true),
+            setFocused($2);
             // Ensure the input receives focus properly
             e.target.setSelectionRange(e.target.value.length, e.target.value.length)
           }}
-          onBlur={(e) => {
-            // Only blur if not clicking on suggestions
-            const relatedTarget = e.relatedTarget as HTMLElement,
+          onBlur = $2;
             if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {
-              setFocused(false),
+              setFocused($2);
               setHighlightedIndex(-1)
             }
           }}
@@ -125,17 +121,17 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
           onKeyDown={(e) => {
             if (!focused || suggestions.length === 0) {
               if (e.key === 'Escape') {
-                e.preventDefault(),
-                setFocused(false),
-                setHighlightedIndex(-1),
+                e.preventDefault($2);
+                setFocused($2);
+                setHighlightedIndex($2);
                 inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter
               if (e.key === 'Enter' && value.trim()) {
                 e.preventDefault(), // Prevent form submission if SearchBar is in a form
-                fireEvent('search', { search_term: value }),
-                router.push(`/search?q=${encodeURIComponent(value)}`),
-                setFocused(false),
+                fireEvent($2);
+                router.push(`/search?q = $2;
+                setFocused($2);
                 inputRef.current?.blur()
               }
               return
@@ -143,35 +139,34 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 
             switch (e.key) {
               case 'ArrowDown':
-                e.preventDefault(),
+                e.preventDefault($2);
                 setHighlightedIndex((prev) => (prev + 1) % suggestions.length),
                 break,
               case 'ArrowUp':
-                e.preventDefault(),
+                e.preventDefault($2);
                 setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length),
                 break,
               case 'Enter':
                 if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
-                  e.preventDefault(),
+                  e.preventDefault($2);
                   handleSelect(suggestions[highlightedIndex])
                 } else if (value.trim()) {
                   // This case should ideally be handled by the form's onSubmit,
                   // but if SearchBar is used standalone, this provides a fallback.
-                  e.preventDefault(),
-                  fireEvent('search', { search_term: value }),
-                  router.push(`/search?q=${encodeURIComponent(value)}`),
-                  setFocused(false),
+                  e.preventDefault($2);
+                  fireEvent($2);
+                  router.push(`/search?q = $2;
+                  setFocused($2);
                   inputRef.current?.blur()
                 }
                 break,
               case 'Escape':
-                e.preventDefault(),
-                setFocused(false),
-                setHighlightedIndex(-1),
-                inputRef.current?.blur(),
+                e.preventDefault($2);
+                setFocused($2);
+                setHighlightedIndex($2);
+                inputRef.current?.blur($2);
                 break,
-              default: break
-            }
+              default: break}
           }}
         />
         {value && (

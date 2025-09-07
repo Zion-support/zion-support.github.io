@@ -19,12 +19,10 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
-
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
 export function LanguageSelector() {
-  const { t } = useTranslation();
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
-
+  const { t } = useTranslation($2);
+  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage($2);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -52,5 +50,5 @@ export function LanguageSelector() {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

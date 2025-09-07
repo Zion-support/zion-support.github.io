@@ -11,12 +11,13 @@ import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types
 import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
 interface SmartContractBuilderProps {
-  isOpen: boolean;
-  onClose: () => void;
-  talent: TalentProfile;
-  clientName: string;
-  onContractGenerated?: (contractContent: string) => void;
-interface SmartContractBuilderProps {
+  isOpen: boolean,
+  onClose: () => void,
+  talent: TalentProfile,
+  clientName: string,
+  onContractGenerated?: (contractContent: string) => void,
+  onDeploy?: (contractContent: string) => void
+}
 
   isOpen: boolean
   onClose: () => void
@@ -45,55 +46,50 @@ export function SmartContractBuilder({
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [templateManagerOpen, setTemplateManagerOpen] = useState($2);
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
-
-    network: 'ethereum'
-    useEscrow: true
-
-    deployToChain: false
-  });
-  const [deployStatus, setDeployStatus] = useState<string>('');
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
-  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts();
-
-  const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData)
-  }
+    network: 'ethereum',
+    useEscrow: true,
+    deployToChain: false}),
+  const [deployStatus, setDeployStatus] = useState<string>(''),
+  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
+  
+  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts($2);
+  const handleLoadTemplate = $2;
   // Convert ContractFormValues to contract content string
-  const handleContractGenerated = async (formValues: ContractFormValues) => {
-    if (!formValues) return
+  const handleContractGenerated = $2;
     try {
-      const generatedContractText = await generateSolidityContract(formValues, talent, clientName),
-      setGeneratedContract(generatedContractText),
-      setActiveTab("preview"),
+      const generatedContractText = await generateSolidityContract($2);
+      setGeneratedContract($2);
+      setActiveTab($2);
       if (onContractGenerated) {
         onContractGenerated(generatedContractText)
       }
     } catch (error) {
-      console.error("Error generating contract:", error),
+      console.error($2);
       toast.error("Failed to generate smart contract")
     }
-  }
-  const handleDeployContract = async () => {
-    if (!generatedContract) return;
+  },
+  
+  const handleDeployContract = $2;
     try {
-      setDeployStatus('deploying');
-      const contractInfo = await deploySmartContract(generatedContract, deployOptions);
+      setDeployStatus($2);
+      const contractInfo = await deploySmartContract($2);
       if (contractInfo) {
-        setDeploymentInfo(contractInfo),
-        setDeployStatus('deployed'),
+        setDeploymentInfo($2);
+        setDeployStatus($2);
         toast.success("Smart contract deployed successfully!")
       } else {
-        setDeployStatus('error'),
+        setDeployStatus($2);
         toast.error("Failed to deploy smart contract")
       }
     } catch (error) {
-      console.error("Error deploying contract:", error);
-      setDeployStatus('error');
+      console.error($2);
+      setDeployStatus($2);
       toast.error("Failed to deploy smart contract")
     }
-  }
+  },
+
   // Modified to match the expected interface
   const handleFormSubmit = (contract: string) => {
     // This should be a function that takes a string (contract content)
@@ -101,9 +97,9 @@ export function SmartContractBuilder({
     if (onContractGenerated) {
       onContractGenerated(contract)
     }
-    setGeneratedContract(contract);
+    setGeneratedContract($2);
     setActiveTab("preview")
-  }
+  },
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

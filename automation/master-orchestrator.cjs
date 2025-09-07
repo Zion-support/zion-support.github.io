@@ -95,15 +95,19 @@ class MasterAutomationOrchestrator {
     this.log('🤖 Running automation scripts...');
 
     const scripts = [
-
-
-
+      'enhanced-automation-suite.cjs',
+      'comprehensive-automation-suite.cjs',
+      'app-optimizer.cjs',
+      'performance-optimizer.cjs',
+      'security-scanner.cjs',
+      'seo-optimizer.cjs',
+      'health-check.cjs'
     ];
 
     for (const script of scripts) {
-      const scriptPath = path.join(__dirname, '..', script);
+      const scriptPath = path.join(__dirname, script);
       if (fs.existsSync(scriptPath)) {
-        await this.runCommand(`node ${script}`, `Running ${script}`);
+        await this.runCommand(`node ${scriptPath}`, `Running ${script}`);
       } else {
         this.log(`⚠️ Script not found: ${script}`);
       }

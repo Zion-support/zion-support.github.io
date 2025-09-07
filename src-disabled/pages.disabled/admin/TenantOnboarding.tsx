@@ -15,26 +15,12 @@ import { supabase } from "@/integrations/supabase/client",
 import { Switch } from "@/components/ui/switch";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export default function TenantOnboarding() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-import { Switch } from "@/components/ui/switch",
-import { logErrorToProduction } from '@/utils/productionLogger',
-export default function TenantOnboarding() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("company"),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [formData, setFormData] = useState({
-
-    is_co_branded: true
-:src/pages/admin/TenantOnboarding.tsx
-  });
+  const { user } = useAuth($2);
+  const [activeTab, setActiveTab] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [formData, setFormData] = useState($2);
   // Check if user has admin role
-  const isAdmin = null;
-
-  }),
-  // Check if user has admin role
-  const isAdmin = user?.role === "admin",
+  const isAdmin = $2;
   if (!isAdmin) {
     return // Use router.push('/unauthorized') or redirect in getServerSideProps
   }
@@ -43,24 +29,27 @@ export default function TenantOnboarding() {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
   },
+  
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }))
   },
+  
   const handleSwitchChange = (name: string, checked: boolean) => {
     setFormData(prev => ({ ...prev, [name]: checked }))
   },
+  
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    setIsSubmitting(true),
+    e.preventDefault($2);
+    setIsSubmitting($2);
     try {
       // Generate subdomain if not provided
-      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
+      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace($2);
       // Create landing page copy
-      const landingPageCopy = {
-        headline: "AI Hiring Assistant",
+      const landingPageCopy = $2;
         subtitle: `Find the best talent for your ${formData.industry || "company"}`,
         cta: "Get Started"
       },
+      
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -75,56 +64,12 @@ export default function TenantOnboarding() {
           is_active: true,
           account_manager_id: user.id,
           dns_verified: false,
-          email_template_override: null,
-        })
-        .select('id, brand_name, subdomain')'
-        .single(),
-      if (error) throw error,
-      toast.success("Tenant created successfully!", {"
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com``
-      }),
-      // Reset form
-      setFormData({
-        brand_name: "","
-        subdomain: "","
-        logo_url: "","
-        primary_color: "#9b87f5","
-        theme_preset: "light","
-        company_size: "","
-        industry: "","
-        custom_domain: "","
-        is_co_branded: true
-      })
-    } catch (error:,  any) {,
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' }),'
-      toast.error("Failed to create tenant", {"
+          email_template_override: null})
         .select('id, brand_name, subdomain')
-:src/pages/admin/TenantOnboarding.tsx
-        .single();
-
-      if (error) throw error;
-
-      toast.success('Tenant created successfully!', {
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`,
-      });
-
-      // Reset form
-      setFormData({
-        brand_name: '',
-        subdomain: '',
-        logo_url: '',
-        primary_color: '#9b87f5',
-        theme_preset: 'light',
-        company_size: '',
-        industry: '',
-        custom_domain: '',
-        is_co_branded: true,
-      });
-        .single(),
+        .single($2);
       if (error) throw error,
-      toast.success("Tenant created successfully!", {
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
-      }),
+      
+      toast.success($2);
       // Reset form
       setFormData({
         brand_name: "",
@@ -135,38 +80,17 @@ export default function TenantOnboarding() {
         company_size: "",
         industry: "",
         custom_domain: "",
-        is_co_branded: true
-      })
+        is_co_branded: true})
+      
     } catch (error: any) {
-      logErrorToProduction(
-        error instanceof Error ? error.message : String(error),
-        error instanceof Error ? error : undefined,
-        { message: 'Error creating tenant' }
-      );
-      toast.error('Failed to create tenant', {
-        description: error.message,
-      });
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' }),
+      toast.error("Failed to create tenant", {
+        description: error.message
+      })
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-:src/pages/admin/TenantOnboarding.tsx
-  };
   },
-  return (
-    <>
-      <SEO
-        title="Tenant Onboarding - Zion AI Marketplace""
-        description="Onboard a new white-label tenant to the Zion AI Marketplace platform.""
-      />
-      <Header />
-      <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">"
-        <div className="flex flex-col space-y-6">"
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight">Tenant Onboarding</h1>"
-            <p className="text-muted-foreground mt-2">"
-              Create a new white-label instance of Zion Hire AI for a company.
-            </p>
-          </div>
 
   return (
     <>
@@ -428,7 +352,6 @@ export default function TenantOnboarding() {
         </div>
       </main>
     </>
-:src/pages/admin/TenantOnboarding.tsx
   )
 }
 

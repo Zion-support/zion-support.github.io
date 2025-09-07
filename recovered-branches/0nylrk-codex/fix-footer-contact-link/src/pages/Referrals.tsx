@@ -14,9 +14,8 @@ import { toast  } from '@/hooks/use-toast';
 import { Share, Users  } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 export default function ReferralsPage() {
-
-  const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate($2);
+  const { isAuthenticated } = useAuth($2);
   const {
     isLoading;
     referralCode;
@@ -34,19 +33,15 @@ export default function ReferralsPage() {
     stats,
     getReferralLink,
     copyReferralLink,
-    shareOnSocialMedia} = useReferrals(),
-
+    shareOnSocialMedia} = useReferrals($2);
   useEffect(() => {
     if (!isAuthenticated) {
-      toast({
-        title: "Authentication required"
-        description: "Please login to access the referral program"
-        variant: "destructive"})
+      toast($2);
       navigate("/login")
     }
-  }, [isAuthenticated, navigate]);
-  const referralLink = getReferralLink();
+  }, [isAuthenticated, navigate]),
 
+  const referralLink = getReferralLink($2);
   return (
     <div className="container max-w-7xl py-10">
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">

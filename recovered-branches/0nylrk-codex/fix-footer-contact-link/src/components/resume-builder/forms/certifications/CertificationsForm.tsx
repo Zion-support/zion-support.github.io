@@ -1,95 +1,78 @@
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { Button  } from '@/components/ui/button';
-import { Form  } from '@/components/ui/form';
-import { Certification  } from '@/types/resume';
-import { Loader2  } from 'lucide-react';
-import { useResume  } from '@/hooks/useResume';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { format  } from 'date-fns';
-import { CertificationsList  } from './CertificationsList';
-import { CertificationFormFields  } from './CertificationFormFields';
+
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Form } from '@/components/ui/form';
+import { Certification } from '@/types/resume';
+import { Loader2 } from 'lucide-react';
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { format } from 'date-fns';
+import { CertificationsList } from './CertificationsList';
+import { CertificationFormFields } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
 interface CertificationsFormProps {
-  resumeId: string;
-  certifications: Certification[];
-  onComplete: () => void;
-interface CertificationsFormProps {
-
-  resumeId: string
-  certifications: Certification[]
-  onComplete: () => void
-
+  resumeId: string,
+  certifications: Certification[],
+  onComplete: () => void,
   onBack: () => void
 }
+
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
+  const { addCertification, updateCertification, deleteCertification, isLoading } = useResume($2);
   const [editingId, setEditingId] = useState<string | null>(null),
   const [error, setError] = useState<string | null>(null),
 
   // Helper function to format dates as strings for form inputs
-  const formatDateValue = null;
-  const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
-
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  // Helper function to format dates as strings for form inputs
-  const formatDateValue = (dateValue: string | Date | undefined): string => {
-    if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue
+  const formatDateValue = $2;
+    if (typeof dateValue = $2;
     return format(dateValue, 'yyyy-MM-dd')
-  }
+  },
+
   const form = useForm<CertificationFormValues>({
-    resolver: zodResolver(certificationSchema)
+    resolver: zodResolver($2);
     defaultValues: {
-      name: ''
-      issuing_organization: ''
-      issue_date: ''
-      expiration_date: ''
-      credential_id: ''
-      credential_url: ''}})
+      name: '',
+      issuing_organization: '',
+      issue_date: '',
+      expiration_date: '',
+      credential_id: '',
+      credential_url: ''}}),
+
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
     try {
-      setError(null);
-      let success
-      const certData: Certification = {
-        name: data.name
-        issuing_organization: data.issuing_organization
-        issue_date: data.issue_date |undefined
-        expiration_date: data.expiration_date |undefined
-        credential_id: data.credential_id
-        credential_url: data.credential_url}
+      setError($2);
+      let success,
+
+      const certData: Certification = $2;
+        issuing_organization: data.issuing_organization,
+        issue_date: data.issue_date || undefined,
+        expiration_date: data.expiration_date || undefined,
+        credential_id: data.credential_id,
+        credential_url: data.credential_url},
+
       if (editingId) {
         success = await updateCertification(editingId, certData)
       } else {
         success = await addCertification(resumeId, certData)
       }
       if (success) {
-        form.reset({
-          name: ''
-          issuing_organization: ''
-          issue_date: ''
-          expiration_date: ''
-          credential_id: ''
-          credential_url: ''})
+        form.reset($2);
         setEditingId(null)
       }
     } catch (err: any) {
-      setError(err.message |'An error occurred')
+      setError(err.message || 'An error occurred')
     }
-  }
-  const handleEdit = (cert: Certification) => {
-    setEditingId(cert.id!);
-    form.reset({
-      ...cert
-      issue_date: formatDateValue(cert.issue_date)
-      expiration_date: formatDateValue(cert.expiration_date)})
-  }
-  const handleDelete = async (id: string) => {
-    if (confirm('Are you sure you want to delete this certification?')) {
-      await deleteCertification(id)
-    }
-  }
+  },
 
+  const handleEdit = (cert: Certification) => {
+    setEditingId($2);
+    form.reset($2);
+      expiration_date: formatDateValue(cert.expiration_date)})
+  },
+
+  const handleDelete = $2;
   return (
     <div className="space-y-6">
       <div>
@@ -119,14 +102,13 @@ interface CertificationsFormProps {
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
-                    setEditingId(null),
+                    setEditingId($2);
                     form.reset({
-                      name: ''
-                      issuing_organization: ''
-                      issue_date: ''
-                      expiration_date: ''
-                      credential_id: ''
-
+                      name: '',
+                      issuing_organization: '',
+                      issue_date: '',
+                      expiration_date: '',
+                      credential_id: '',
                       credential_url: ''})
                   } else {
                     onBack()

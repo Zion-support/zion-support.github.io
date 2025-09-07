@@ -1,13 +1,12 @@
-import React from 'react';
-import { useState, useEffect } from "react";,
-import { GradientHeading } from "@/components/GradientHeading";,
-import { ListingScoreCard } from "@/components/ListingScoreCard";,
-import { Button } from "@/components/ui/button";,
-import { Input } from "@/components/ui/input";,
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";,
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
-import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";,
-import { safeStorage } from "@/utils/safeStorage";,
+import { useState, useEffect } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
+import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
+import { safeStorage } from "@/utils/safeStorage";
 // Example listing type
 interface Listing {
   id: string,
@@ -23,15 +22,14 @@ interface Listing {
   rating?: number,
   reviewCount?: number,
   price?: number | null,
-  createdAt: string
-}
+  createdAt: string}
 
 interface CategoryListingPageProps {
   title: string,
   description: string,
   listings: Listing[],
-  sortOptions?: { label: string, value: string }[],
-  filterOptions?: { label: string, value: string }[]
+  sortOptions?: { label: string, value: string}[],
+  filterOptions?: { label: string, value: string}[]
 }
 
 export function CategoryListingPage({ 
@@ -50,15 +48,14 @@ export function CategoryListingPage({
     { label: 'Highly Rated', value: 'high-rating' },
     { label: 'Best AI Match', value: 'best-match' }]
 }: CategoryListingPageProps) {
-  const [searchQuery, setSearchQuery] = useState(""),
+  const [searchQuery, setSearchQuery] = useState($2);
   const [selectedSort, setSelectedSort] = useState(
     () => safeStorage.getItem('category_selected_sort') || sortOptions[0]?.value || 'newest'
   ),
   const [selectedFilter, setSelectedFilter] = useState(
     () => safeStorage.getItem('category_selected_filter') || filterOptions[0]?.value || 'all'
   ),
-  const [isLoading, setIsLoading] = useState(false),
-
+  const [isLoading, setIsLoading] = useState($2);
   useEffect(() => {
     safeStorage.setItem('category_selected_sort', selectedSort)
   }, [selectedSort]),
@@ -68,50 +65,40 @@ export function CategoryListingPage({
   }, [selectedFilter]),
 
   useEffect(() => {
-    let mounted = true,
-    setIsLoading(true),
+    let mounted = $2;
+    setIsLoading($2);
     const timeout = setTimeout(() => {
       if (mounted) setIsLoading(false)
     }, 300),
     return () => {
-      mounted = false,
+      mounted = $2;
       clearTimeout(timeout)
     }
   }, [searchQuery, selectedSort, selectedFilter]),
   
   // Process listings based on filters and search
-  const processedListings = initialListings
-    .filter(listing => {
-      // Apply search filter
-      const matchesSearch = 
-        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (listing.tags && listing.tags.some(tag => 
-          tag.toLowerCase().includes(searchQuery.toLowerCase())
-        )),
-      
+  const processedListings = $2;
       // Apply category filters
-      if (selectedFilter === 'all') return matchesSearch,
-      if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4,
-      if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85,
-      
+      if (selectedFilter = $2;
+      if (selectedFilter = $2;
+      if (selectedFilter = $2;
       return matchesSearch
     })
     .sort((a, b) => {
       // Apply sorting
       switch (selectedSort) {
         case 'newest':
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime($2);
         case 'oldest':
-          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
+          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime($2);
         case 'rating-high':
           return (b.rating || 0) - (a.rating || 0),
         case 'ai-match':
           return (b.aiScore || 0) - (a.aiScore || 0),
         case 'a-z':
-          return a.title.localeCompare(b.title),
+          return a.title.localeCompare($2);
         case 'z-a':
-          return b.title.localeCompare(a.title),
+          return b.title.localeCompare($2);
         default: return 0
       }
     }),
@@ -220,7 +207,7 @@ export function CategoryListingPage({
                 <Button
                   variant="outline"
                   onClick={() => {
-                    setSearchQuery(""),
+                    setSearchQuery($2);
                     setSelectedFilter(filterOptions[0]?.value || 'all')
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

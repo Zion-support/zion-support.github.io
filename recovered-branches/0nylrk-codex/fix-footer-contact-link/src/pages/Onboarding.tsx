@@ -10,84 +10,70 @@ import { Steps, Step } from "@/components/ui/steps",
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 export default function Onboarding() {
-  const { user, updateProfile, isLoading } = useAuth();
-  const [currentStep, setCurrentStep] = useState(0);
-
-  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
-  const navigate = useNavigate();
-
+  const { user, updateProfile, isLoading } = useAuth($2);
+  const [currentStep, setCurrentStep] = useState($2);
+  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),
+  const navigate = useNavigate($2);
   // Convert our user types to match what's expected in the database
-  const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
-    switch (type) {
-      case "serviceProvider": return "creator",
+  const mapUserTypeToDatabase = $2;
       case "talent":
         return "jobSeeker",
       case "client":
-        return "employer"
+        return "employer",
       default:
         return "buyer"
     }
-  }
+  },
+
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
-    setUserType(type);
+    setUserType($2);
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
-      navigate('/service-onboarding')
+      navigate($2);
       return
     } else if (type === "talent") {
-      navigate('/talent-onboarding'),
+      navigate($2);
       return
     }
     // Continue with the onboarding flow for clients
     setCurrentStep(1)
-  }
-  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
-    if (!user |!userType) {
-      toast({
-        title: "Authentication Error"
-        description: "Your session may have expired. Please log in again."
-        variant: "destructive"})
-      navigate('/login');
+  },
+
+  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string}) => {
+    if (!user || !userType) {
+      toast($2);
+      navigate($2);
       return
     }
-    const dbUserType = mapUserTypeToDatabase(userType);
+    
+    const dbUserType = mapUserTypeToDatabase($2);
     try {
-      await updateProfile({
-        id: user.id
-        displayName: data.displayName
-        bio: data.bio, // This is now valid since we added bio to UserDetails
-        userType: dbUserType
-        headline: data.headline
-        profileComplete: true
-      });
+      await updateProfile($2);
       // Update onboarding milestone
-      await supabase.rpc('update_onboarding_milestone', {
-        _user_id: user.id
-        _milestone: 'profile_completed'
-        _status: true
-      });
-      toast({
-        title: 'Profile completed!'
-        description: 'Your profile has been set up successfully.'})
+      await supabase.rpc($2);
+      toast($2);
       // Get the appropriate dashboard route based on user type
-      const dashboardRoute = userType === "client"
-        ? "/client-dashboard"
-        : "/talent-dashboard";
+      const dashboardRoute = $2;
       // Redirect to dashboard
       navigate(dashboardRoute)
+      
     } catch (error) {
-      console.error('Error updating profile:', error),
+      console.error($2);
       toast({
-        title: 'Error'
-        description: 'There was a problem updating your profile. Please try again.'
+        title: 'Error',
+        description: 'There was a problem updating your profile. Please try again.',
         variant: 'destructive'})
     }
-  }
+  },
+
   const steps = [
-    { label: "Select Role", description: "Choose how you'll use the platform" }
-    { label: "Create Profile", description: "Tell us about yourself" }]
+    { label: "Select Role", description: "Choose how you'll use the platform" },
+    { label: "Create Profile", description: "Tell us about yourself" }],
+
   if (!user) {
-    navigate('/login');
+    navigate($2);
+    return null
+  }
 
     return null
   }

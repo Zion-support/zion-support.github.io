@@ -3,23 +3,22 @@ import { format } from "date-fns",
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
 import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",
 
-import {useState, useEffect} from "react";
-import {format} from "date-fns";
-import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
-import {useWebhooks, type, WebhookEventType} from "@/hooks/useWebhooks";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-import {Input} from "@/components/ui/input";
-import {Checkbox} from "@/components/ui/checkbox";
-import {Label} from "@/components/ui/label";
-import {Badge} from "@/components/ui/badge";
-import {Switch} from "@/components/ui/switch";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
-import {ScrollArea} from "@/components/ui/scroll-area";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
+import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react";
+import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function WebhooksManager() {
   const {
     webhooks,
@@ -31,58 +30,63 @@ export function WebhooksManager() {
     deleteWebhook,
     testWebhook,
     clearTestResult
-  } = useWebhooks();
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
+  } = useWebhooks($2);
+  const [showCreateDialog, setShowCreateDialog] = useState($2);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
-  const [showTestResult, setShowTestResult] = useState(false);
+  const [showTestResult, setShowTestResult] = useState($2);
   // Create webhook form state
-  const [webhookName, setWebhookName] = useState("");
-  const [webhookUrl, setWebhookUrl] = useState("");
-  const [webhookSecret, setWebhookSecret] = useState("");
-
-  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]);
-  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
+  const [webhookName, setWebhookName] = useState($2);
+  const [webhookUrl, setWebhookUrl] = useState($2);
+  const [webhookSecret, setWebhookSecret] = useState($2);
+  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
+  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
 
   // Load webhooks on mount
   useEffect(() => {
     fetchWebhooks()
   }, []),
 
-  const handleCreateWebhook = async () => {
-    if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
+  const handleCreateWebhook = $2;
     await createWebhook(
       webhookName
       webhookUrl
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret
-    );
-    setShowCreateDialog(false);
+    ),
+    
+    setShowCreateDialog($2);
     resetWebhookForm()
-  }
+  },
+
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
-  }
+  },
+
   const handleDeleteWebhook = async (webhookId: string) => {
-    await deleteWebhook(webhookId)
+    await deleteWebhook($2);
     setShowDeleteConfirm(null)
-  }
+  },
+
   const handleTestWebhook = async (webhookId: string) => {
-    await testWebhook(webhookId, testEventType),
+    await testWebhook($2);
     setShowTestResult(true)
-  }
+  },
+
   const resetWebhookForm = () => {
-    setWebhookName(""),
-    setWebhookUrl(""),
-    setWebhookSecret(""),
+    setWebhookName($2);
+    setWebhookUrl($2);
+    setWebhookSecret($2);
     setSelectedEvents([])
-  }
+  },
+
   // Event type options
-  const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [
-    { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' }
-    { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' }
-    { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' }
-    { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }]
+  const eventOptions: { value: WebhookEventType, label: string, description: string}[] = [
+    { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
+    { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },
+    { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },
+    { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }],
+
   // Toggle an event selection
   const toggleEvent = (event: WebhookEventType) => {
     setSelectedEvents(prev =>
@@ -90,7 +94,8 @@ export function WebhooksManager() {
         ? prev.filter(e => e !== event)
         : [...prev, event]
     )
-  }
+  },
+
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -338,7 +343,7 @@ export function WebhooksManager() {;
               </div>
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
-                  setShowCreateDialog(false),
+                  setShowCreateDialog($2);
                   resetWebhookForm()
                 }}>
                   Cancel
@@ -443,10 +448,10 @@ export function WebhooksManager() {;
         open={showTestDialog !== null}
         onOpenChange={(open) => {
           if (!open) {
-            setShowTestDialog(null);
-            setTestEventType('new_application');
+            setShowTestDialog($2);
+            setTestEventType($2);
             if (showTestResult) {
-              setShowTestResult(false);
+              setShowTestResult($2);
               clearTestResult()
             }
           }
@@ -521,15 +526,14 @@ export function WebhooksManager() {;
               </div>
               <DialogFooter>
                 <Button variant="default" onClick={() => {
-                  setShowTestDialog(null),
-                  setShowTestResult(false),
+                  setShowTestDialog($2);
+                  setShowTestResult($2);
                   clearTestResult()
                 }}>
                   Close
                 </Button>
                 <Button variant="outline" onClick={() => {
-                  setShowTestResult(false);
-
+                  setShowTestResult($2);
                   clearTestResult()
                 }}>
                   Test Another Event

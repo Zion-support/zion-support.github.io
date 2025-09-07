@@ -2,35 +2,29 @@ import { useState, useEffect  } from 'react';
 import { Skill  } from '@/types/resume';
 import { SkillCategory } from './SkillCategory';
 interface SkillsListProps {
-  skills: Skill[];
+  skills: Skill[],
   onDeleteSkill: (id: string, category: string) => Promise<void>
 }
 
-interface SkillsListProps {
-  skills: Skill[];
-  onDeleteSkill: (id: string, category: string) => Promise<void>;
-}
-
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
-  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
+  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({}),
   
   useEffect(() => {
     // Group skills by category
-    const grouped = skills.reduce(
-      (acc, skill) => {
-        const category = skill.category |"Other";
-        if (!acc[category]) {
-          acc[category] = [];
-        }
-        acc[category].push(skill);
-        return acc;
+    const grouped = skills.reduce((acc, skill) => {
+      const category = $2;
+      if (!acc[category]) {
+        acc[category] = []
       }
-      {} as Record<string, Skill[]>
-    );
-    setSkillsByCategory(grouped);
-  }, [skills]);
+      acc[category].push($2);
+      return acc
+    }, {} as Record<string, Skill[]>),
+    
+    setSkillsByCategory(grouped)
+  }, [skills]),
+  
   if (Object.keys(skillsByCategory).length === 0) {
-    return null;
+    return null
   }
   }
 
@@ -40,18 +34,5 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
-          <SkillCategory
-            key={category}
-            category={category}
-            skills={categorySkills}
-            onDelete={onDeleteSkill}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-};
-  );
-};
+          <SkillCategory 
+            key = $2;

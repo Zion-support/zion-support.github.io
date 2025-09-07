@@ -14,91 +14,81 @@ import { toast } from "sonner",
 import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
 export default function TenantOnboarding() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-
-    brand_name: ""
-    subdomain: ""
-    logo_url: ""
-    primary_color: "#9b87f5"
-    theme_preset: "light"
-    company_size: ""
-    industry: ""
-    custom_domain: ""
-    is_co_branded: true
-  });
+  const { user } = useAuth($2);
+  const [activeTab, setActiveTab] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [formData, setFormData] = useState($2);
   // Check if user has admin role
-  const isAdmin = user?.role === "admin";
+  const isAdmin = $2;
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
-  }
+  },
+  
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }))
-  }
+  },
+  
   const handleSwitchChange = (name: string, checked: boolean) => {
     setFormData(prev => ({ ...prev, [name]: checked }))
-  }
+  },
+  
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true)
+    e.preventDefault($2);
+    setIsSubmitting($2);
     try {
       // Generate subdomain if not provided
-      const subdomain = formData.subdomain |formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace($2);
       // Create landing page copy
-      const landingPageCopy = {
-        headline: "AI Hiring Assistant"
-        subtitle: `Find the best talent for your ${formData.industry |"company"}`
+      const landingPageCopy = $2;
+        subtitle: `Find the best talent for your ${formData.industry || "company"}`,
         cta: "Get Started"
-      }
+      },
+      
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
         .insert({
-          brand_name: formData.brand_name
-          subdomain: subdomain
-          custom_domain: formData.custom_domain |null
-          primary_color: formData.primary_color
-          logo_url: formData.logo_url |null
-          theme_preset: formData.theme_preset
-          landing_page_copy: landingPageCopy
-          is_active: true
-          account_manager_id: user.id
-          dns_verified: false
-          email_template_override: null
-        })
+          brand_name: formData.brand_name,
+          subdomain: subdomain,
+          custom_domain: formData.custom_domain || null,
+          primary_color: formData.primary_color,
+          logo_url: formData.logo_url || null,
+          theme_preset: formData.theme_preset,
+          landing_page_copy: landingPageCopy,
+          is_active: true,
+          account_manager_id: user.id,
+          dns_verified: false,
+          email_template_override: null})
         .select('id, brand_name, subdomain')
-        .single();
-      if (error) throw error;
-      toast.success("Tenant created successfully!", {
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
-      });
+        .single($2);
+      if (error) throw error,
+      
+      toast.success($2);
       // Reset form
       setFormData({
-        brand_name: ""
-        subdomain: ""
-        logo_url: ""
-        primary_color: "#9b87f5"
-        theme_preset: "light"
-        company_size: ""
-        industry: ""
-        custom_domain: ""
-        is_co_branded: true
-      })
+        brand_name: "",
+        subdomain: "",
+        logo_url: "",
+        primary_color: "#9b87f5",
+        theme_preset: "light",
+        company_size: "",
+        industry: "",
+        custom_domain: "",
+        is_co_branded: true})
+      
     } catch (error: any) {
-      console.error("Error creating tenant:", error);
-      toast.error("Failed to create tenant", {
-        description: error.message
+      console.error($2);
+      toast.error("Failed to create tenant", { 
+        description: error.message 
       })
     } finally {
       setIsSubmitting(false)
     }
-  }
+  },
 
   return (
     <>

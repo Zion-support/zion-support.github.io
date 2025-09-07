@@ -7,16 +7,9 @@ import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {
-  const { user } = useAuth();
+  const { user } = useAuth($2);
   // Check if user has billing permissions
-
-  const hasBillingAccess = user?.role === "enterprise_admin" |
-                          (user?.permissions && user.permissions.includes('billing_access'));
-
-  // Check if user has billing permissions
-  const hasBillingAccess = user?.role === "enterprise_admin" || 
-                          (user?.permissions && user.permissions.includes('billing_access')),
-  
+  const hasBillingAccess = $2;
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
   }

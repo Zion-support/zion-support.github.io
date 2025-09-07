@@ -1,31 +1,30 @@
-import {GradientHeading} from "./GradientHeading";
-import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
-import {Button} from "./ui/button";
-const services = [
+
+import { GradientHeading } from "./GradientHeading";
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons";
+import { Button } from "./ui/button";
+const services = $2;
+    description: "Enterprise-grade servers for any workload with 24/7 maintenance and support",
+    icon: <Server className = $2;
   {
-    title: "Servers"
-    description: "Enterprise-grade servers for any workload with 24/7 maintenance and support"
-    icon: <Server className="h-10 w-10" />}
+    title: "Storage",
+    description: "Scalable storage solutions from SSDs to large-scale enterprise storage systems",
+    icon: <HardDrive className = $2;
   {
-    title: "Storage"
-    description: "Scalable storage solutions from SSDs to large-scale enterprise storage systems"
-    icon: <HardDrive className="h-10 w-10" />}
+    title: "Networking",
+    description: "Connectivity solutions including switches, routers, and network security devices",
+    icon: <Network className = $2;
   {
-    title: "Networking"
-    description: "Connectivity solutions including switches, routers, and network security devices";
-    icon: <Network className="h-10 w-10" />}
+    title: "24x7x365 Support",
+    description: "Around-the-clock technical support with rapid response times guaranteed",
+    icon: <Clock className = $2;
   {
-    title: "24x7x365 Support"
-    description: "Around-the-clock technical support with rapid response times guaranteed"
-    icon: <Clock className="h-10 w-10" />}
+    title: "Recycling Services",
+    description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices",
+    icon: <Recycle className = $2;
   {
-    title: "Recycling Services"
-    description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices"
-    icon: <Recycle className="h-10 w-10" />}
-  {
-    title: "Equipment Rentals"
-    description: "Flexible rental options for temporary projects and scaling requirements"
-    icon: <Truck className="h-10 w-10" />}]
+    title: "Equipment Rentals",
+    description: "Flexible rental options for temporary projects and scaling requirements",
+    icon: <Truck className = $2;
 export function GlobalServiceSection() {
   return (
     <section className="py-20 bg-zion-blue" id="global-services">

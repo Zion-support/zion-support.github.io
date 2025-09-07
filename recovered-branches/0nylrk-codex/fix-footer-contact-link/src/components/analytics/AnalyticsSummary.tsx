@@ -5,55 +5,53 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
-
-    queryKey: ['analytics-summary']
-
-    queryFn: async () => {
+    queryKey: ['analytics-summary'],
+    queryFn: async() => {
       // Get total page views
-      const { data: pageViewsData, error: pageViewsError } = await supabase
+      const { data: pageViewsData, error: pageViewsError} = await supabase
         .from('analytics_events')
         .select('count')
-        .eq('event_typepage_view');
-        .single();
-
+        .eq('event_typepage_view')
+        .single($2);
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
       
       // Get unique visitors (by counting distinct user IDs)
-      const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
+      const { data: uniqueVisitorsData, error: uniqueVisitorsError} = await supabase
         .from('analytics_events')
         .select('user_id')
         .eq('event_typepage_view')
-        .is('user_idnot.null');
-      if (uniqueVisitorsError) throw uniqueVisitorsError;
-
-      const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) |[]);
+        .is($2);
+      if (uniqueVisitorsError) throw uniqueVisitorsError,
+      
+      const uniqueUserIds = $2;
       // Get conversion count
-      const { data: conversionsData, error: conversionsError } = await supabase
+      const { data: conversionsData, error: conversionsError} = await supabase
         .from('analytics_events')
         .select('count')
         .eq('event_typeconversion')
-        .single();
-      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
+        .single($2);
+      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError,
+      
       // Get most recent event to calculate "last updated"
-      const { data: lastEventData, error: lastEventError } = await supabase
+      const { data: lastEventData, error: lastEventError} = await supabase
         .from('analytics_events')
         .select('created_at')
-        .order('created_at', { ascending: false })
+        .order('created_at', { ascending: false})
         .limit(1)
-        .single();
-      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
+        .single($2);
+      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
+        
       return {
-        totalPageViews: pageViewsData?.count |0
-        uniqueVisitors: uniqueUserIds.size |0
-        conversions: conversionsData?.count |0
-        lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
-    }
+        totalPageViews: pageViewsData ?.count || 0,
+        uniqueVisitors: uniqueUserIds.size || 0,
+        conversions: conversionsData ?.count || 0,
+        lastUpdated: lastEventData ?.created_at ? new Date(lastEventData.created_at) : null}
+    },
     refetchInterval: 300000, // Refetch every 5 minutes
-  });
+  }),
+  
   // Calculate conversion rate
-  const conversionRate = stats && stats.totalPageViews > 0
-    ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
-    : '0.00';
+  const conversionRate = $2;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
       <StatCard
@@ -83,25 +81,12 @@ export function AnalyticsSummary() {
           isLoading ? (
             <Skeleton className="h-8 w-28 bg-zion-blue-light" />
           ) : stats?.lastUpdated ? (
-            formatDistanceToNow(stats.lastUpdated, { addSuffix: true })
+            formatDistanceToNow(stats.lastUpdated, { addSuffix: true})
           ) : 'Never'
         }
-        icon={
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
-        }
-      />
-    </div>
-  )
-}
-interface StatCardProps {
-  title: string
-  value: React.ReactNode
-}
-;
-interface StatCardProps {;
-  title: string;
-  value: React.ReactNode;
-  icon: React.ReactNode;
+        icon = $2;
+  value: React.ReactNode,
+  icon: React.ReactNode
 }
 
   icon: React.ReactNode

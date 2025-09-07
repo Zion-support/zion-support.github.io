@@ -5,7 +5,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 export interface Message {
-export interface Message {
   id: string,
   role: 'user' | 'assistant',
   message: string,
@@ -21,6 +20,19 @@ export interface Message {
   read?: boolean
 }
 export interface ChatAssistantProps {
+  isOpen: boolean,
+  onClose: () => void,
+  recipient: {
+    id: string,
+    name: string,
+    avatarUrl?: string,
+    role?: string
+  },
+  conversationId?: string,
+  initialMessages?: Message[],
+  onSendMessage: (message: string, conversationId?: string) => Promise<void>,
+  contextHeader?: ReactNode
+}
 
   isOpen: boolean
   onClose: () => void
@@ -37,71 +49,19 @@ export interface ChatAssistantProps {
   contextHeader?: ReactNode
 }
 export function ChatAssistant({
-  isOpen;
-  onClose;
-  recipient;
-  conversationId;
-
-  initialMessages = [];
-  onSendMessage;
+  isOpen,
+  onClose,
+  recipient,
+  conversationId,
+  initialMessages = $2;
+  onSendMessage,
   contextHeader
 }: ChatAssistantProps) {
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const [messages, setMessages] = useState<Message[]>(initialMessages),
+  const messagesEndRef = $2;
   useEffect(() => {
     if (initialMessages.length > 0) {
       setMessages(initialMessages)
-    }
-  }, [initialMessages]);
-  useEffect(() => {
-    scrollToBottom()
-  }, [messages]);
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
-import React, { useState, useEffect, useRef, ReactNode } from 'react',;
-import { ChatMessage } from './ChatMessage',;
-import { ChatInput } from './ChatInput',;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { X } from "lucide-react",;
-export interface Message {;
-  id: string,;
-  role: 'user' | 'assistant',;
-  message: string,;
-  timestamp: Date,;
-  read?: boolean;
-}
-;
-export interface ChatAssistantProps {;
-  isOpen: boolean,;
-  onClose: () => void,;
-  recipient: {;
-    id: string,;
-    name: string,;
-    avatarUrl?: string,;
-    role?: string;
-  },;
-  conversationId?: string,;
-  initialMessages?: Message[],;
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>,;
-  contextHeader?: ReactNode;
-}
-;
-export function ChatAssistant({;
-  isOpen,;
-  onClose,;
-  recipient,;
-  conversationId,;
-  initialMessages = [],;
-  onSendMessage,;
-  contextHeader;
-}: ChatAssistantProps) {;
-  const [messages, setMessages] = useState<Message[]>(initialMessages),;
-  const messagesEndRef = useRef<HTMLDivElement | null>(null),;
-  useEffect(() => {;
-    if (initialMessages.length > 0) {;
-      setMessages(initialMessages);
     }
   }, [initialMessages]),
 
@@ -109,24 +69,23 @@ export function ChatAssistant({;
     scrollToBottom()
   }, [messages]),
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  },
-  
-  const handleSendMessage = async (message: string) => {
-    if (!message.trim()) return
+  const scrollToBottom = $2;
+  const handleSendMessage = $2;
     // Add user message to the chat
     const newMessage: Message = {
-      id: Date.now().toString()
-      role: 'user'
-      message;
+      id: Date.now().toString($2);
+      role: 'user',
+      message,
       timestamp: new Date()
-    }
-    setMessages((prev: Message[]) => [...prev, newMessage]);
+    },
+    
+    setMessages((prev: Message[]) => [...prev, newMessage]),
+    
     // Send message to recipient via the provided handler
     await onSendMessage(message, conversationId)
-  }
-  if (!isOpen) return null;
+  },
+
+  if (!isOpen) return null,
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">

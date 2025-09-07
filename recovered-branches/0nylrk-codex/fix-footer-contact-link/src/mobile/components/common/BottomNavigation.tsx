@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom",
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 export function BottomNavigation() {
-  
+  const location = useLocation($2);
   const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" },
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },
@@ -19,16 +19,10 @@ export function BottomNavigation() {
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" }
     { path: "/mobile/profile", icon: <User />, label: "Profile" }]
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border flex justify-between px-1 py-2 z-50">
-      {navItems.map((item) => {
-        const isActive = location.pathname === item.path,
+    <div className = $2;
         return (
-          <Link
-            key={item.path}
-            to={item.path}
-            className={cn(
-              "flex flex-col items-center justify-center flex-1 py-1 px-2";
-
+          <Link 
+            key = $2;
               isActive ? "text-primary" : "text-muted-foreground"
             )}
           >

@@ -4,59 +4,40 @@ import { quoteRequestService  } from '@/services/quoteRequestService';
 import { useAuth  } from '@/hooks/useAuth';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 import { useToast } from '@/hooks/use-toast';
-export const useTalentQuotes = null;
-import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
-
-import {useToast} from '@/hooks/use-toast';
 export const useTalentQuotes = () => {
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const queryClient = useQueryClient();
-  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
-  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');
+  const { user } = useAuth($2);
+  const { toast } = useToast($2);
+  const queryClient = useQueryClient($2);
+  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all'),
+  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active'),
+
   // Get the talent's ID (user's ID)
-  const talentId = user?.id |'';
+  const talentId = $2;
   // Fetch quotes for this talent
   const { data: allQuotes = [], isLoading, error } = useQuery({
-    queryKey: ['quotestalent', talentId];
-    queryFn: () => quoteRequestService.getByTalentId(talentId)
-    enabled: !!talentId});
+    queryKey: ['quotestalent', talentId],
+    queryFn: () => quoteRequestService.getByTalentId($2);
+    enabled: !!talentId}),
+
   // Count unread quotes
-  const unreadCount = allQuotes.filter(
-    quote => quote.status === 'new' && !quote.viewed_at
-  ).length;
+  const unreadCount = $2;
   // Filter quotes based on selected filters
-  const filteredQuotes = allQuotes.filter((quote) => {
-    // Status filter
-    if (statusFilter !== 'all' && quote.status !== statusFilter) {
-      return false
-    }
-    // Archive filter
-    if (archiveFilter === 'active' && quote.is_archived) {
-      return false
-    }
-    if (archiveFilter === 'archived' && !quote.is_archived) {
-      return false
-    }
-    return true
-  });
+  const filteredQuotes = $2;
   // Mark as viewed/responded mutation
   const updateStatusMutation = useMutation({
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
-      quoteRequestService.updateStatus(id, status);
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus}) => 
+      quoteRequestService.updateStatus($2);
     onSuccess: (_, variables) => {
-      let message = "Status updated",
+      let message = $2;
       if (variables.status === 'in_review') {
         message = "Quote marked as viewed"
       } else if (variables.status === 'responded') {
         message = "Quote marked as responded"
       }
-      toast({
-        title: message
-        description: "The quote request status has been updated"
-      }),
+      
+      toast($2);
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-    }
+    },
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -64,20 +45,16 @@ export const useTalentQuotes = () => {
         variant: "destructive"
       })
     }
-  });
+  }),
+
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
-    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
-      quoteRequestService.toggleArchive(id, isArchived);
+    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean}) => 
+      quoteRequestService.toggleArchive($2);
     onSuccess: (_, variables) => {
-      toast({
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived"
-        description: variables.isArchived
-          ? "The quote request has been archived"
-          : "The quote request has been moved back to active quotes"
-      }),
+      toast($2);
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-    }
+    },
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -85,20 +62,21 @@ export const useTalentQuotes = () => {
         variant: "destructive"
       })
     }
-  });
+  }),
+
   return {
-    quotes: filteredQuotes;
-    unreadCount;
-    isLoading;
-    error;
-    statusFilter;
-    setStatusFilter;
-    archiveFilter;
-    setArchiveFilter
-    markAsViewed: (id: string) =>
-      updateStatusMutation.mutate({ id, status: 'in_review' });
-    markAsResponded: (id: string) =>
-      updateStatusMutation.mutate({ id, status: 'responded' });
-    toggleArchive: (id: string, isArchived: boolean) =>
+    quotes: filteredQuotes,
+    unreadCount,
+    isLoading,
+    error,
+    statusFilter,
+    setStatusFilter,
+    archiveFilter,
+    setArchiveFilter,
+    markAsViewed: (id: string) => 
+      updateStatusMutation.mutate($2);
+    markAsResponded: (id: string) => 
+      updateStatusMutation.mutate($2);
+    toggleArchive: (id: string, isArchived: boolean) => 
       toggleArchiveMutation.mutate({ id, isArchived })}
-}
+},

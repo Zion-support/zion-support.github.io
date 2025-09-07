@@ -6,54 +6,52 @@ import { Input  } from '@/components/ui/input';
 import { Sparkles, Loader2, Copy, Check  } from '@/components/icons';
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementPanelProps {
-
-  title: string
-  defaultOptions: AIEnhancementOptions
-  onApply: (content: string) => void
-
-  onClose?: () => void;
-  showInstructions?: boolean;
+  title: string,
+  defaultOptions: AIEnhancementOptions,
+  onApply: (content: string) => void,
+  onClose?: () => void,
+  showInstructions?: boolean,
   initialContent?: string
 }
 export function AIEnhancementPanel({
-  title;
-  defaultOptions;
-  onApply;
-  onClose;
-
-  showInstructions = true;
+  title,
+  defaultOptions,
+  onApply,
+  onClose,
+  showInstructions = $2;
   initialContent = ''
 }: AIEnhancementPanelProps) {
   const [options, setOptions] = useState<AIEnhancementOptions>({
-    ...defaultOptions;
-    content: initialContent |defaultOptions.content})
-  const [generatedContent, setGeneratedContent] = useState<string>('');
-  const [copied, setCopied] = useState(false);
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+    ...defaultOptions,
+    content: initialContent || defaultOptions.content}),
+  const [generatedContent, setGeneratedContent] = useState<string>(''),
+  const [copied, setCopied] = useState($2);
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer($2);
   const handleGenerate = async () => {
-    const result = await enhanceContent(options);
+    const result = await enhanceContent($2);
     if (result) {
       setGeneratedContent(result)
     }
-  }
+  },
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  const handleInputChange = $2;
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-      ...options
+      ...options,
       [field]: e.target.value})
-  }
+  },
+
   const handleApply = () => {
-    onApply(generatedContent),
+    onApply($2);
     if (onClose) onClose()
-  }
+  },
+
   const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent),
-    setCopied(true),
+    navigator.clipboard.writeText($2);
+    setCopied($2);
     setTimeout(() => setCopied(false), 2000)
-  }
+  },
 
   return (
     <Card className="w-full max-w-2xl mx-auto">

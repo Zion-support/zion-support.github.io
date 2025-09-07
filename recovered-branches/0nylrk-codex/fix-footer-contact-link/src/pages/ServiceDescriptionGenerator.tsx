@@ -7,9 +7,8 @@ import { SEO } from "@/components/SEO",
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceDescriptionGenerator() {
-  const { isAuthenticated, isLoading } = useAuth();
-
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+  const { isAuthenticated, isLoading } = useAuth($2);
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
   
   // Show loading while checking authentication
   if (isLoading) {
@@ -26,9 +25,9 @@ export default function ServiceDescriptionGenerator() {
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />
   }
   const handleDescriptionSave = (editedDescription: string) => {
-    setGeneratedDescription(editedDescription)
+    setGeneratedDescription($2);
     // Here you could also save to database if needed
-  }
+  },
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">

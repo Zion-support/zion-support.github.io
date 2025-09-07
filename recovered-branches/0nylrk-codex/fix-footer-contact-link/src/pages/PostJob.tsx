@@ -7,10 +7,8 @@ import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
-  const { isAuthenticated, isLoading } = useAuth();
-
-  const isMobile = useIsMobile();
-
+  const { isAuthenticated, isLoading } = useAuth($2);
+  const isMobile = useIsMobile($2);
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">

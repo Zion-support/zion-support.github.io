@@ -3,30 +3,22 @@ import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "./ui/button";
 import { 
-  Users;
-  Zap;
-  Settings;
-  MessageSquare;
-  Sparkles;
-  ArrowRight;
-  BarChart3;
-  Plus;
+  Users,
+  Zap, 
+  Settings, 
+  MessageSquare, 
+  Sparkles,
+  ArrowRight,
+  BarChart3,
+  Plus,
   HelpCircle
 } from "lucide-react",
 
-import {Link} from "react-router-dom";
-import {GradientHeading} from "./GradientHeading";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Button} from "./ui/button";
-import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle} from "lucide-react";
-
 export function FeaturesGuideSection() {
-  const features = [
-    {
-      id: "ai-matcher"
-      title: "AI Matcher"
-      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system."
-      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />
+  const features = $2;
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
+      icon: <Sparkles className = $2;
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace",
         "Fill in your project requirements and specifications",
@@ -37,10 +29,10 @@ export function FeaturesGuideSection() {
       buttonText: "Try AI Matcher"
     }
     {
-      id: "talent-directory"
-      title: "Talent Directory"
-      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";
-      icon: <Users className="h-10 w-10 text-zion-purple" />
+      id: "talent-directory",
+      title: "Talent Directory",
+      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",
+      icon: <Users className = $2;
       instructions: [
         "Access the talent directory from the main navigation"
         "Use filters to narrow down by skills, experience, and pricing";
@@ -51,10 +43,10 @@ export function FeaturesGuideSection() {
       buttonText: "Explore Talents"
     }
     {
-      id: "services"
-      title: "Services Marketplace"
-      description: "Discover professional services for your AI and tech needs, from development to consulting.";
-      icon: <Zap className="h-10 w-10 text-zion-cyan" />
+      id: "services",
+      title: "Services Marketplace",
+      description: "Discover professional services for your AI and tech needs, from development to consulting.",
+      icon: <Zap className = $2;
       instructions: [
         "Browse service categories on the marketplace",
         "Compare service offerings and pricing options",
@@ -65,10 +57,10 @@ export function FeaturesGuideSection() {
       buttonText: "View Services"
     }
     {
-      id: "equipment"
-      title: "Equipment Catalog"
-      description: "Rent or buy specialized hardware and tech equipment for AI development and research."
-      icon: <Settings className="h-10 w-10 text-zion-purple" />
+      id: "equipment",
+      title: "Equipment Catalog",
+      description: "Rent or buy specialized hardware and tech equipment for AI development and research.",
+      icon: <Settings className = $2;
       instructions: [
         "Search the equipment catalog by category or specifications",
         "Check availability and rental/purchase options",
@@ -79,10 +71,10 @@ export function FeaturesGuideSection() {
       buttonText: "Browse Equipment"
     }
     {
-      id: "analytics"
-      title: "Marketplace Analytics"
-      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
-      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />
+      id: "analytics",
+      title: "Marketplace Analytics",
+      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
+      icon: <BarChart3 className = $2;
       instructions: [
         "Access analytics from your user dashboard",
         "View interactive charts on market trends and rates",
@@ -93,10 +85,10 @@ export function FeaturesGuideSection() {
       buttonText: "View Analytics"
     }
     {
-      id: "ai-assistant"
-      title: "Zion AI Assistant"
-      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.";
-      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />
+      id: "ai-assistant",
+      title: "Zion AI Assistant",
+      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",
+      icon: <MessageSquare className = $2;
       instructions: [
         "Click on the chat icon in the bottom right corner",
         "Ask questions about available services or talents",
@@ -108,10 +100,10 @@ export function FeaturesGuideSection() {
       action: "openChat"
     }
     {
-      id: "publishing"
-      title: "List Your Services"
-      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace."
-      icon: <Plus className="h-10 w-10 text-zion-cyan" />
+      id: "publishing",
+      title: "List Your Services",
+      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",
+      icon: <Plus className = $2;
       instructions: [
         "Create or log in to your account";
         "Navigate to 'Create Listing' in your dashboard"
@@ -122,10 +114,10 @@ export function FeaturesGuideSection() {
       buttonText: "Create Listing"
     }
     {
-      id: "help-center"
-      title: "Help & Resources"
-      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
-      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />
+      id: "help-center",
+      title: "Help & Resources",
+      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",
+      icon: <HelpCircle className = $2;
       instructions: [
         "Visit our comprehensive knowledge base",
         "Watch video tutorials on specific features",
@@ -205,8 +197,8 @@ export function FeaturesGuideSection() {
           ))}
         </Tabs>
         <div className="mt-12 text-center">
-          <Button
-            variant="outline"
+          <Button 
+            variant="outline" 
             className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
             asChild
           >

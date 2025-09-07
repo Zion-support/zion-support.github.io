@@ -36,7 +36,7 @@ import { Shield, Lock, Award, CheckCircle } from "lucide-react",
         </div>
       </div>
     </section>
-  );
+  )
 }
   )
 import React from "react",;

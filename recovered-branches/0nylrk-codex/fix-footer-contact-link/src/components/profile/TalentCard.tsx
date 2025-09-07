@@ -4,28 +4,12 @@ import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
 import { Link } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";
 export interface TalentCardProps {
-  talent: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire: (talent: TalentProfile) => void;
-  isSaved: boolean;
-  onToggleSave: (id: string, isSaved: boolean) => void;
-  talent: TalentProfile
-  onViewProfile: (id: string) => void
-  onRequestHire: (talent: TalentProfile) => void
-  isSaved: boolean
-  onToggleSave: (id: string, isSaved: boolean) => void
-
-  isAuthenticated: boolean
-}
-export function TalentCard({
-export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire: (talent: TalentProfile) => void,
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
-  isAuthenticated: boolean
-}
+  isAuthenticated: boolean}
 
 export function TalentCard({;
   talent;
@@ -35,67 +19,20 @@ export function TalentCard({;
   onToggleSave;
   isAuthenticated
 }: TalentCardProps) {
-
-  const handleViewProfile = () => {
-    if (onViewProfile) {
-      onViewProfile(talent.id)
-    }
-  }
+  const handleViewProfile = $2;
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation()
+    e.preventDefault($2);
+    e.stopPropagation($2);
     if (onRequestHire) {
       onRequestHire(talent)
     }
-  }
+  },
+
   const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation()
+    e.preventDefault($2);
+    e.stopPropagation($2);
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)
-    }
-  }
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) |[];
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
-import { Link } from "react-router-dom",;
-import { TalentProfile } from "@/types/talent",;
-export interface TalentCardProps {;
-  talent: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire: (talent: TalentProfile) => void,;
-  isSaved: boolean,;
-  onToggleSave: (id: string, isSaved: boolean) => void,;
-  isAuthenticated: boolean;
-}
-;
-export function TalentCard({;
-  talent,;
-  onViewProfile,;
-  onRequestHire,;
-  isSaved,;
-  onToggleSave,;
-  isAuthenticated;
-}: TalentCardProps) {;
-  const handleViewProfile = () => {;
-    if (onViewProfile) {;
-      onViewProfile(talent.id);
-    }
-  },;
-  const handleRequestHire = (e: React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    if (onRequestHire) {;
-      onRequestHire(talent);
-    }
-  },;
-  const handleToggleSave = (e: React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    if (onToggleSave) {;
-      onToggleSave(talent.id, !isSaved);
     }
   },
 

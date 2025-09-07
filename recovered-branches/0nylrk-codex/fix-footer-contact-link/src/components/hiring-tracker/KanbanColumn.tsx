@@ -4,11 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
 interface KanbanColumnProps {
-  id: string;
-  title: string;
-  description: string;
-  applications: JobApplication[];
-interface KanbanColumnProps {
+  id: string,
+  title: string,
+  description: string,
+  applications: JobApplication[],
+  count: number}
 
   id: string
   title: string
@@ -30,10 +30,7 @@ export function KanbanColumn({
   count
 }: KanbanColumnProps) {
   // Add color based on column type
-
-  const getBadgeVariant = (columnId: string) => {
-    switch (columnId) {
-      case "new": return "secondary",
+  const getBadgeVariant = $2;
       case "shortlisted":
         return "outline",
       case "interview":
@@ -41,21 +38,20 @@ export function KanbanColumn({
       case "hired":
         return "success",
       case "rejected":
-        return "destructive"
+        return "destructive",
       default:
         return "outline"
     }
-  }
-  const getColumnBgColor = (columnId: string) => {
-    switch (columnId) {
-      case "hired": return "bg-green-50",
+  },
+  
+  const getColumnBgColor = $2;
       case "rejected":
-        return "bg-red-50"
+        return "bg-red-50",
       default:
         return "bg-muted/30"
     }
-  }
-
+  },
+  
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
       <CardHeader className="pb-2">

@@ -13,8 +13,8 @@ import { AppStoreButtons } from "./AppStoreButtons";
 import { Card, CardContent } from "@/components/ui/card";
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
-  const appStoreUrl = "#"; // Replace with actual App Store URL
-  const googlePlayUrl = "#"; // Replace with actual Google Play URL
+  const appStoreUrl = "#", // Replace with actual App Store URL
+  const googlePlayUrl = "#", // Replace with actual Google Play URL
 
   return (
     <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">
@@ -79,8 +79,5 @@ export const MobileLaunchHero: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-}
-
-  );
-};
+  )
+},

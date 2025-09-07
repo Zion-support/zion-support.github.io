@@ -1,16 +1,10 @@
 
 import React from 'react';
-import {completeSitemap, dynamicPaths} from '@/config/sitemap';
-import {Link} from 'react-router-dom';
-import {ChevronRight} from 'lucide-react';
-import {SEO} from './SEO';
-import {AppLayout} from '@/layout/AppLayout';
-import React from "react";
-import { completeSitemap, dynamicPaths } from "@/config/sitemap";
-import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
-import { SEO } from "./SEO";
-import { AppLayout } from "@/layout/AppLayout";
+import { completeSitemap, dynamicPaths } from '@/config/sitemap';
+import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
+import { SEO } from './SEO';
+import { AppLayout } from '@/layout/AppLayout';
 export const SitemapPage: React.FC = () => {
   return (
     <AppLayout>
@@ -166,20 +160,4 @@ export const SitemapPage: React.FC = () => {
             </p>
             <ul className="space-y-2">
               {Object.entries(dynamicPaths).map(([key, path]) => (
-                <li key={key}>
-                  <div className="flex items-center text-zion-slate">
-                    <ChevronRight className="h-4 w-4 mr-2" />
-                    {path} <span className="ml-2 text-xs italic">({key})</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </AppLayout>
-  );
-}
-
-  );
-};
+                <li key = $2;

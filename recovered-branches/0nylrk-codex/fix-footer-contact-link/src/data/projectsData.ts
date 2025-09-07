@@ -78,4 +78,4 @@ export const PROJECTS: Project[] = [;
       professional_title: "Senior AI Engineer";
     }
   }
-];
+],

@@ -4,14 +4,14 @@ import React, {
   useRef,
   ReactNode,
   useContext} from 'react',
-import { AuthContext } from '../../context/auth/AuthContext';,
-import { useDebounce } from '../../hooks/useDebounce';,
-import { useLocalStorage } from '../../hooks/useLocalStorage';,
-import { ChatMessage } from './ChatMessage';,
-import { ChatInput } from './ChatInput';,
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';,
-import { Button } from '@/components/ui/button';,
-import { X } from 'lucide-react';
+import { AuthContext } from '../../context/auth/AuthContext';
+import { useDebounce } from '../../hooks/useDebounce';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { ChatMessage } from './ChatMessage';
+import { ChatInput } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { X } from 'lucide-react'
 
 export interface Message {
   id: string,
@@ -43,13 +43,12 @@ export function ChatAssistant({
   onClose,
   recipient,
   conversationId,
-  initialMessages = [],
+  initialMessages = $2;
   onSendMessage,
   contextHeader,
   starterQuestions = []}: ChatAssistantProps) {
-  const auth = useContext(AuthContext),
-  const isGuest = !auth?.isAuthenticated,
-
+  const auth = useContext($2);
+  const isGuest = $2;
   // Hooks called unconditionally at the top
   const localStorageKey = `chatHistory-${recipient.id}`, // Key is always generated
   const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<
@@ -60,12 +59,12 @@ export function ChatAssistant({
   const [loggedInMessages, setLoggedInMessages] =
     useState<Message[]>(initialMessages),
 
-  const messagesEndRef = useRef<HTMLDivElement | null>(null),
+  const messagesEndRef = $2;
   const [pendingApiCallParams, setPendingApiCallParams] = useState<{
     message: string,
     conversationId?: string
   } | null>(null),
-  const [showGuestModal, setShowGuestModal] = useState(false),
+  const [showGuestModal, setShowGuestModal] = useState($2);
   const [guestMessage, setGuestMessage] = useState<string | null>(null),
 
   // Effect for guest user messages
@@ -73,7 +72,7 @@ export function ChatAssistant({
     if (isGuest) {
       // Priority: initialMessages prop > localStorage > empty array
       if (initialMessages && initialMessages.length > 0) {
-        setDisplayGuestMessages(initialMessages),
+        setDisplayGuestMessages($2);
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
       } else {
         setDisplayGuestMessages(storedGuestMessages)
@@ -95,26 +94,20 @@ export function ChatAssistant({
   }, [isGuest, initialMessages, recipient.id]),
 
   // Determine currentMessages and setCurrentMessages based on isGuest
-  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages,
-  const setCurrentMessages = (
-    valueOrFn: Message[] | ((val: Message[]) => Message[]),
+  const currentMessages = $2;
+  const setCurrentMessages = $2;
   ) => {
     if (isGuest) {
-      const newMessages =
-        valueOrFn instanceof Function
-          ? valueOrFn(displayGuestMessages)
-          : valueOrFn,
-      setDisplayGuestMessages(newMessages),
+      const newMessages = $2;
+      setDisplayGuestMessages($2);
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {
-      const newMessages =
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
+      const newMessages = $2;
       setLoggedInMessages(newMessages)
     }
   },
 
-  const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000),
-
+  const debouncedApiCallParams = useDebounce($2);
   useEffect(() => {
     if (debouncedApiCallParams) {
       onSendMessage(debouncedApiCallParams.message,
@@ -126,17 +119,12 @@ export function ChatAssistant({
     scrollToBottom()
   }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  },
-
-  const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return,
-
+  const scrollToBottom = $2;
+  const handleSendMessage = $2;
     if (!isGuest) {
       // Logged-in user
       const newMessage: Message = {
-        id: Date.now().toString(),
+        id: Date.now().toString($2);
         role: 'user',
         message: messageContent,
         timestamp: new Date()},
@@ -144,28 +132,25 @@ export function ChatAssistant({
       setPendingApiCallParams({ message: messageContent, conversationId })
     } else {
       // Guest user
-      setGuestMessage(messageContent),
+      setGuestMessage($2);
       setShowGuestModal(true)
     }
   },
 
-  const handleModalSendConfirm = () => {
-    if (!guestMessage) return,
-
+  const handleModalSendConfirm = $2;
     const newMessage: Message = {
-      id: Date.now().toString(),
+      id: Date.now().toString($2);
       role: 'user',
       message: guestMessage,
       timestamp: new Date()},
     setCurrentMessages((prev: Message[]) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages
-    setPendingApiCallParams({ message: guestMessage, conversationId }),
-
-    setShowGuestModal(false),
+    setPendingApiCallParams($2);
+    setShowGuestModal($2);
     setGuestMessage(null)
   },
 
   const handleModalCancel = () => {
-    setShowGuestModal(false),
+    setShowGuestModal($2);
     setGuestMessage(null)
   },
 
@@ -173,11 +158,11 @@ export function ChatAssistant({
     if (!isOpen) return,
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        e.preventDefault(),
+        e.preventDefault($2);
         onClose()
       }
     },
-    document.addEventListener('keydown', handleKeyDown),
+    document.addEventListener($2);
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose]),
 

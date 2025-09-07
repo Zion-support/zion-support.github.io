@@ -5,26 +5,8 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function MetaverseAIPlatformPage() {
-  const service = null;
-import React from "react";
-import Head from "next/head";
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Sparkles
-  Star
-} from "lucide-react";
-import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
-import Button from "../components/ui/Button";
-import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-export default function MetaverseAIPlatformPage() {
-  const service = enhancedRealMicroSaasServices.find((s) =>
-    s.link.endsWith("/metaverse-ai-development-platform")
-  );
-  if (!service) return null;
+  const service = $2;
+  if (!service) return null,
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -63,27 +45,27 @@ export default function MetaverseAIPlatformPage() {
                     <span>{feat}</span>
                   </li>
                 ))}
-              </ul>;
-            </div>;
-            <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit">;
-              <div className="flex items-end justify-between mb-3">;
-                <div>;
-                  <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>;
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup:{service.setupTime}</div>;
-                </div>;
-                <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>;
-              </div>;
-              <Button href="/contact" variant="quantum" size="lg" className="w-full">Request a Demo<ArrowRight className="w-5 h-5 ml-2" /></Button>;
-              <div className="mt-6 space-y-3 text-sm text-slate-300">;
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>;
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>;
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>;
-  ),;
+              </ul>
+            </div>
+            <div className="bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit">
+              <div className="flex items-end justify-between mb-3">
+                <div>
+                  <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
+                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+                </div>
+                <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
+              </div>
+              <Button href="/contact" variant="quantum" size="lg" className="w-full">Request a Demo<ArrowRight className="w-5 h-5 ml-2" /></Button>
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
 }
 }

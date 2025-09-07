@@ -1,30 +1,26 @@
 import { useState  } from 'react';
 import { useAuth } from "@/hooks/useAuth";
-import { supabase  } from '@/integrations/supabase/client';
-import { Interview, InterviewRequest, InterviewResponse  } from '@/types/interview';
-import { toast  } from '@/components/ui/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview';
+import { toast } from '@/components/ui/use-toast';
 export function useInterviews() {
-  const [interviews, setInterviews] = useState<Interview[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [interviews, setInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState($2);
   const [error, setError] = useState<string | null>(null),
-  const { user } = useAuth();
-
+  const { user } = useAuth($2);
   // Request an interview as a client
 
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
-      toast({
-        title: "Authentication required";
-        description: "You must be logged in to request interviews"
-        variant: "destructive"
-      }),
+      toast($2);
       return null
     }
-    setIsLoading(true);
-    setError(null);
+
+    setIsLoading($2);
+    setError($2);
     try {
       // Insert the interview into the database
-      const { data, error: insertError } = await supabase
+      const { data, error: insertError} = await supabase
         .from('interviews')
         .insert({
           client_id: interviewRequest.client_id;
@@ -38,408 +34,210 @@ export function useInterviews() {
           title: interviewRequest.title
           status: 'requested'})
         .select('*')
-        .single();
+        .single($2);
       if (insertError) {
-        console.error("Error requesting interview:", insertError),
-        setError(insertError.message),
+        console.error($2);
+        setError($2);
         return null
       }
       // Create notification for talent
-      await createInterviewNotification(
-        interviewRequest.talent_id,
-        'interview_requestNew Interview Request',
-        `You have received an interview request for ${interviewRequest.scheduled_date}`,
-        data.id
-      );
+      await createInterviewNotification($2);
       return data
     } catch (err: any) {
-      console.error("Error in requestInterview:", err),
-      setError(err.message),
+      console.error($2);
+      setError($2);
       return null
     } finally {
       setIsLoading(false)
     }
-  }
+  },
+
   // Fetch interviews for the current user (as client or talent)
   const fetchInterviews = async (): Promise<Interview[]> => {
     if (!user?.id) {
-      setInterviews([]);
+      setInterviews($2);
       return []
     }
-    setIsLoading(true);
-    setError(null);
 
-    setIsLoading(true),
-    setError(null),
-
+    setIsLoading($2);
+    setError($2);
     try {
       // Get interviews where the user is either the client or the talent
-      const { data, error: fetchError } = await supabase
+      const { data, error: fetchError} = await supabase
         .from('interviews')
-        .select(`
-          *,
-          clients:client_id(id, display_name, avatar_url),
-          talents:talent_id(id, full_name, profile_picture_url)
+        .select($2);
+          talents: talent_id(id, full_name, profile_picture_url)
         `)
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
-        .order('scheduled_date', { ascending: true });
+        .order($2);
       if (fetchError) {
-        console.error("Error fetching interviews:", fetchError),
-        setError(fetchError.message),
+        console.error($2);
+        setError($2);
         return []
       }
       // Transform the data to match Interview type
-      const formattedInterviews = data.map((interview: any): Interview => ({
-        id: interview.id;
-        client_id: interview.client_id;
-        talent_id: interview.talent_id;
-        scheduled_date: interview.scheduled_date;
-        end_time: interview.end_time |'';
-        duration_minutes: interview.duration_minutes;
-        status: interview.status;
-        notes: interview.notes;
-        meeting_link: interview.meeting_link;
-        meeting_platform: interview.meeting_platform;
-        created_at: interview.created_at;
-        updated_at: interview.updated_at;
-        title: interview.title;
-        interview_type: interview.interview_type;
-        client_name: interview.clients?.display_name;
-        talent_name: interview.talents?.full_name;
-        client_avatar: interview.clients?.avatar_url
-        talent_avatar: interview.talents?.profile_picture_url}));
-      setInterviews(formattedInterviews);
+      const formattedInterviews = $2;
+        client_id: interview.client_id,
+        talent_id: interview.talent_id,
+        scheduled_date: interview.scheduled_date,
+        end_time: interview.end_time || '',
+        duration_minutes: interview.duration_minutes,
+        status: interview.status,
+        notes: interview.notes,
+        meeting_link: interview.meeting_link,
+        meeting_platform: interview.meeting_platform,
+        created_at: interview.created_at,
+        updated_at: interview.updated_at,
+        title: interview.title,
+        interview_type: interview.interview_type,
+        client_name: interview.clients?.display_name,
+        talent_name: interview.talents?.full_name,
+        client_avatar: interview.clients?.avatar_url,
+        talent_avatar: interview.talents?.profile_picture_url})),
+
+      setInterviews($2);
       return formattedInterviews
     } catch (err: any) {
-      console.error("Error in fetchInterviews:", err),
-      setError(err.message),
+      console.error($2);
+      setError($2);
       return []
     } finally {
       setIsLoading(false)
     }
-  }
+  },
+
   // Respond to an interview request (as talent)
-  const respondToInterview = async (
-    interviewId: string,
-    response: InterviewResponse
-  ): Promise<boolean> => {
+  const respondToInterview = $2;
+    response: InterviewResponse): Promise<boolean> => {
     if (!user?.id) {
-      toast({
-        title: "Authentication required";
-        description: "You must be logged in to respond to interviews"
-        variant: "destructive"
-      }),
+      toast($2);
       return false
     }
-    setIsLoading(true);
-    setError(null);
+
+    setIsLoading($2);
+    setError($2);
     try {
       // Update the interview status
-      const { error: updateError } = await supabase
+      const { error: updateError} = await supabase
         .from('interviews')
         .update({
           status: response.status
           updated_at: new Date().toISOString()
         })
-        .eq('id', interviewId);
+        .eq($2);
       if (updateError) {
-        console.error("Error responding to interview:", updateError),
-        setError(updateError.message),
+        console.error($2);
+        setError($2);
         return false
       }
       // Get the interview to notify the client
-      const { data: interview, error: fetchError } = await supabase
+      const { data: interview, error: fetchError} = await supabase
         .from('interviews')
         .select('*')
         .eq('id', interviewId)
-        .single();
+        .single($2);
       if (fetchError) {
-        console.error("Error fetching interview:", fetchError);
-        setError(fetchError.message);
+        console.error($2);
+        setError($2);
         return false
       }
       // Create notification for client
-      let notificationType = 'interview_confirmed';
-      let title = 'Interview Confirmed';
-      let message = `Your interview request for ${interview.scheduled_date} has been confirmed`;
-      if (response.status === 'declined') {
-        notificationType = 'interview_declined';
-        title = 'Interview Declined';
-        message = `Your interview request has been declined`
-      } else if (response.status === 'rescheduled') {
-        notificationType = 'interview_rescheduled';
-        title = 'Interview Rescheduled';
-        message = `Your interview has been rescheduled to ${response.alternative_date |'a new time'}`
-      }
-        console.error("Error fetching interview:", fetchError),
-        setError(fetchError.message),
-        return false
-;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      // Get interviews where the user is either the client or the talent;
-      const { data, error: fetchError } = await supabase;
-        .from('interviews');
-        .select(`;
-          *,;
-          clients:client_id(id, display_name, avatar_url),;
-          talents:talent_id(id, full_name, profile_picture_url);
-        `);
-        .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`);
-        .order('scheduled_date', { ascending: true }),;
-      if (fetchError) {;
-        console.error("Error fetching interviews:", fetchError),;
-        setError(fetchError.message),;
-        return [];
-      }
-;
-      // Transform the data to match Interview type;
-      const formattedInterviews = data.map((interview: any): Interview => ({;
-        id: interview.id,;
-        client_id: interview.client_id,;
-        talent_id: interview.talent_id,;
-        scheduled_date: interview.scheduled_date,;
-        end_time: interview.end_time || '',;
-        duration_minutes: interview.duration_minutes,;
-        status: interview.status,;
-        notes: interview.notes,;
-        meeting_link: interview.meeting_link,;
-        meeting_platform: interview.meeting_platform,;
-        created_at: interview.created_at,;
-        updated_at: interview.updated_at,;
-        title: interview.title,;
-        interview_type: interview.interview_type,;
-        client_name: interview.clients?.display_name,;
-        talent_name: interview.talents?.full_name,;
-        client_avatar: interview.clients?.avatar_url,;
-        talent_avatar: interview.talents?.profile_picture_url})),;
-      setInterviews(formattedInterviews),;
-      return formattedInterviews;
-    } catch (err: any) {;
-      console.error("Error in fetchInterviews:", err),;
-      setError(err.message),;
-      return [];
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  // Respond to an interview request (as talent);
-  const respondToInterview = async (;
-    interviewId: string,;
-    response: InterviewResponse;
-  ): Promise<boolean> => {;
-    if (!user?.id) {;
-      toast({;
-        title: "Authentication required",;
-        description: "You must be logged in to respond to interviews",;
-        variant: "destructive";
-      }),;
-      return false;
-    }
-;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      // Update the interview status;
-      const { error: updateError } = await supabase;
-        .from('interviews');
-        .update({;
-          status: response.status,;
-          updated_at: new Date().toISOString();
-        });
-        .eq('id', interviewId),;
-      if (updateError) {;
-        console.error("Error responding to interview:", updateError),;
-        setError(updateError.message),;
-        return false;
-      }
-;
-      // Get the interview to notify the client;
-      const { data: interview, error: fetchError } = await supabase;
-        .from('interviews');
-        .select('*');
-        .eq('id', interviewId);
-        .single(),;
-      if (fetchError) {;
-        console.error("Error fetching interview:", fetchError),;
-        setError(fetchError.message),;
-        return false;
-      }
-;
-      // Create notification for client;
-      let notificationType = 'interview_confirmed',;
-      let title = 'Interview Confirmed',;
-      let message = `Your interview request for ${interview.scheduled_date} has been confirmed`,;
-      if (response.status === 'declined') {;
-        notificationType = 'interview_declined',;
-        title = 'Interview Declined',;
-        message = `Your interview request has been declined`;
-      } else if (response.status === 'rescheduled') {;
-        notificationType = 'interview_rescheduled',;
-        title = 'Interview Rescheduled',;
-        message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`;
+      let notificationType = $2;
+      let title = $2;
+      let message = $2;
+      if (response.status = $2;
+        title = $2;
+        message = $2;
+        title = $2;
+        message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`
       }
 
-      await createInterviewNotification(
-        interview.client_id,
-        notificationType,
-        title,
-        message,
-        interviewId
-      );
+      await createInterviewNotification($2);
       // Refresh the interviews list
-      await fetchInterviews(),
+      await fetchInterviews($2);
       return true
     } catch (err: any) {
-      console.error("Error in respondToInterview:", err),
-      setError(err.message),
+      console.error($2);
+      setError($2);
       return false
     } finally {
       setIsLoading(false)
     }
-  }
+  },
+
   // Helper function to create interview notifications
-  const createInterviewNotification = async (
-    userId: string,
+  const createInterviewNotification = $2;
     type: string,
     title: string,
     message: string,
-    relatedId: string
-  ) => {
+    relatedId: string) => {
     try {
       await supabase.from('notifications').insert({
-        user_id: userId;
-        type;
-        title;
-        message
+        user_id: userId,
+        type,
+        title,
+        message,
         related_id: relatedId})
     } catch (error) {
       console.error("Error creating notification:", error)
     }
-  }
+  },
+
   // Cancel an interview (either client or talent can cancel)
-  const cancelInterview = async (interviewId: string): Promise<boolean> => {
-    if (!user?.id) return false;
-    setIsLoading(true);
-    setError(null)
+  const cancelInterview = $2;
+    setIsLoading($2);
+    setError($2);
     try {
       // Get the interview first to check permissions and get IDs for notifications
-      const { data: interview, error: fetchError } = await supabase
+      const { data: interview, error: fetchError} = await supabase
         .from('interviews')
         .select('*')
         .eq('id', interviewId)
-        .single();
+        .single($2);
       if (fetchError) {
-        setError(fetchError.message);
+        setError($2);
         return false
-      }
-;
-      await createInterviewNotification(;
-        interview.client_id,;
-        notificationType,;
-        title,;
-        message,;
-        interviewId;
-      ),;
-      // Refresh the interviews list;
-      await fetchInterviews(),;
-      return true;
-    } catch (err: any) {;
-      console.error("Error in respondToInterview:", err),;
-      setError(err.message),;
-      return false;
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  // Helper function to create interview notifications;
-  const createInterviewNotification = async (;
-    userId: string,;
-    type: string,;
-    title: string,;
-    message: string,;
-    relatedId: string;
-  ) => {;
-    try {;
-      await supabase.from('notifications').insert({;
-        user_id: userId,;
-        type,;
-        title,;
-        message,;
-        related_id: relatedId});
-    } catch (error) {;
-      console.error("Error creating notification:", error);
-    }
-  },;
-  // Cancel an interview (either client or talent can cancel);
-  const cancelInterview = async (interviewId: string): Promise<boolean> => {;
-    if (!user?.id) return false,;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      // Get the interview first to check permissions and get IDs for notifications;
-      const { data: interview, error: fetchError } = await supabase;
-        .from('interviews');
-        .select('*');
-        .eq('id', interviewId);
-        .single(),;
-      if (fetchError) {;
-        setError(fetchError.message),;
-        return false;
       }
 
       // Check if user is part of this interview
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {
-        setError("You don't have permission to cancel this interview"),
+        setError($2);
         return false
       }
       // Update the interview status
-      const { error: updateError } = await supabase
+      const { error: updateError} = await supabase
         .from('interviews')
         .update({
           status: 'cancelled'
           updated_at: new Date().toISOString()
         })
-        .eq('id', interviewId);
+        .eq($2);
       if (updateError) {
-        setError(updateError.message);
+        setError($2);
         return false
       }
       // Determine who to notify
-      const notifyUserId = interview.client_id === user.id
-        ? interview.talent_id
-        : interview.client_id;
-      // Determine who to notify
-      const notifyUserId = interview.client_id === user.id
-        ? interview.talent_id
-        : interview.client_id,
-
+      const notifyUserId = $2;
       // Create notification for the other party
-      await createInterviewNotification(
-        notifyUserId,
-        'interview_cancelledInterview Cancelled',
-        `The scheduled interview for ${interview.scheduled_date} has been cancelled`,
-        interviewId
-      );
+      await createInterviewNotification($2);
       // Refresh the interviews list
-      await fetchInterviews(),
+      await fetchInterviews($2);
       return true
     } catch (err: any) {
-      console.error("Error in cancelInterview:", err),
-      setError(err.message),
+      console.error($2);
+      setError($2);
       return false
     } finally {
       setIsLoading(false)
     }
-  }
-  return {
-    interviews;
-    isLoading;
-    error;
-    requestInterview;
-    fetchInterviews;
-    respondToInterview;
+  },
 
+  return {
+    interviews,
+    isLoading,
+    error,
+    requestInterview,
+    fetchInterviews,
+    respondToInterview,
     cancelInterview}
 }

@@ -7,24 +7,20 @@ interface ContractPreviewProps {
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
   status?: 'draft' | 'ready' | 'pending',
-  talent?: TalentProfile;
-  onDeploy?: () => void;
-  onSign?: () => void;
-  onClose?: () => void;
-  deployStatus?: string;
+  talent?: TalentProfile,
+  onDeploy?: () => void,
+  onSign?: () => void,
+  onClose?: () => void,
+  deployStatus?: string,
   deploymentInfo?: SmartContractInfo | null
 }
 export function ContractPreview({
   contractContent;
 
-  generatedContract
-  status = 'ready'
-  onDeploy
-  onSign;
-  onClose;
-  deployStatus;
+export function ContractPreview({ 
+  contractContent,
   generatedContract, 
-  status = 'ready', 
+  status = $2;
   onDeploy, 
   onSign,
   onClose,
@@ -32,8 +28,7 @@ export function ContractPreview({
   deploymentInfo
 }: ContractPreviewProps) {
   // Use either contractContent or generatedContract, whichever is provided
-  const displayContent = contractContent |generatedContract |"";
-
+  const displayContent = $2;
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">

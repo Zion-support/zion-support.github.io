@@ -18,8 +18,63 @@ import { useRouter  } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function ContentGenerator() {
 
-  const { user, isLoading } = useAuth();
-  const router = null;
+  const { user, isLoading } = useAuth($2);
+  const router = useRouter($2);
+  const [contentType, setContentType] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog'),
+  const [customPrompt, setCustomPrompt] = useState($2);
+  const [topic, setTopic] = useState($2);
+  const [keywords, setKeywords] = useState($2);
+  const [autoPublish, setAutoPublish] = useState($2);
+  const [includeImage, setIncludeImage] = useState($2);
+  const [isGenerating, setIsGenerating] = useState($2);
+  const [previewContent, setPreviewContent] = useState<any>(null),
+  const [testEmail, setTestEmail] = useState($2);
+  useEffect(() => {
+    if (!isLoading && !user) {
+      router.push("/login?redirect=/content-generator")
+    }
+  }, [user, isLoading, router]),
+
+  const generateContent = async () => {
+    setIsGenerating($2);
+    setPreviewContent($2);
+    try {
+      const keywordsArray = keywords.split().map(k => k.trim()).filter($2);
+      const { data, error } = await supabase.functions.invoke($2);
+      if (error) throw error,
+      
+      setPreviewContent(data), // Expecting { generatedContent: "..." }
+      toast.success(`Content for "${contentType}" generated successfully!`)
+    } catch (error) {
+      logErrorToProduction($2);
+      toast.error("Failed to generate content. Please try again.")
+    } finally {
+      setIsGenerating(false)
+    }
+  },
+
+  const sendTestNewsletter = async () => {
+    if (!testEmail) {
+      toast.error($2);
+      return
+    }
+    
+    if (!previewContent) {
+      toast.error($2);
+      return
+    }
+    
+    try {
+      const { data, error } = await supabase.functions.invoke($2);
+      if (error) throw error,
+      
+      toast.success(`Test newsletter sent to ${testEmail}!`)
+    } catch (error) {
+      logErrorToProduction($2);
+      toast.error("Failed to send test newsletter. Please try again.")
+    }
+  },
+
   // Check if user is still loading
   if (isLoading) {
     return (

@@ -13,9 +13,6 @@ import { Search } from "lucide-react";
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
-// Sample blog data - in a real app this would come from an API or CMS
-const BLOG_POSTS: BlogPost[] = [
-  {
     id: "ai-trends-2025",
     title: "10 Emerging AI Trends to Watch in 2025",
     slug: "ai-trends-2025",
@@ -39,6 +36,21 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>5. AI for Climate Solutions</h2>
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`,
     author: {
+      name: "Dr. Alicia Zhang",
+      title: "AI Research Director",
+      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto = $2;
+    publishedDate: "Apr 15, 2025",
+    readTime: "5 min read",
+    category: "Trends",
+    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"],
+    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto = $2;
+    isFeatured: true},
+  {
+    id: "optimize-ai-listings",
+    title: "How to Optimize Your AI Service Listings for Maximum Visibility",
+    slug: "optimize-ai-listings",
+    excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
+    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 
       name: "Dr. Alicia Zhang"
       title: "AI Research Director"
@@ -68,16 +80,14 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>Leveraging Reviews and Testimonials</h2>
 <p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`,
     author: {
-      name: "Marcus Johnson"
-      title: "Marketing Strategist"
-      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
-    }
-    publishedDate: "Apr 10, 2025";
-    readTime: "8 min read"
-    category: "Marketing"
-    tags: ["Marketing", "AI Services", "Visibility", "SEO"];
-    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
-  }
+      name: "Marcus Johnson",
+      title: "Marketing Strategist",
+      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto = $2;
+    publishedDate: "Apr 10, 2025",
+    readTime: "8 min read",
+    category: "Marketing",
+    tags: ["Marketing", "AI Services", "Visibility", "SEO"],
+    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto = $2;
   {
     id: "green-it"
     title: "Green IT: Reducing Your Data Center's Carbon Footprint"
@@ -95,16 +105,14 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>Measuring and Reporting Impact</h2>
 <p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`,
     author: {
-      name: "Sophia Chen"
-      title: "Sustainability Engineer"
-      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
-    }
-    publishedDate: "Apr 5, 2025";
-    readTime: "6 min read"
-    category: "Sustainability"
-    tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"];
-    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
-  }
+      name: "Sophia Chen",
+      title: "Sustainability Engineer",
+      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto = $2;
+    publishedDate: "Apr 5, 2025",
+    readTime: "6 min read",
+    category: "Sustainability",
+    tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
+    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto = $2;
   {
     id: "ai-ethics-frameworks"
     title: "Implementing Ethical AI Frameworks in Enterprise Applications"
@@ -122,16 +130,14 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>Continuous Ethical Evaluation</h2>
 <p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`,
     author: {
-      name: "Dr. James Peterson"
-      title: "AI Ethics Officer"
-      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
-    }
-    publishedDate: "Mar 30, 2025";
-    readTime: "7 min read"
-    category: "Ethics"
-    tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"];
-    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
-  }
+      name: "Dr. James Peterson",
+      title: "AI Ethics Officer",
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto = $2;
+    publishedDate: "Mar 30, 2025",
+    readTime: "7 min read",
+    category: "Ethics",
+    tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"],
+    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto = $2;
   {
     id: "ai-talent-acquisition"
     title: "Winning the AI Talent War: Recruitment Strategies for 2025"
@@ -149,16 +155,14 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>Retention Through Growth Paths</h2>
 <p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`,
     author: {
-      name: "Elena Rodriguez"
-      title: "Head of AI Talent"
-      avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"
-    }
-    publishedDate: "Mar 22, 2025";
-    readTime: "9 min read"
-    category: "Recruitment"
-    tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"];
-    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"
-  }
+      name: "Elena Rodriguez",
+      title: "Head of AI Talent",
+      avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto = $2;
+    publishedDate: "Mar 22, 2025",
+    readTime: "9 min read",
+    category: "Recruitment",
+    tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
+    featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto = $2;
   {
     id: "ai-compute-optimization"
     title: "AI Compute Optimization: Balancing Performance and Cost"
@@ -176,57 +180,35 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>Inference Serving Architecture</h2>
 <p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`,
     author: {
-      name: "Michael Wong"
-      title: "ML Infrastructure Architect"
-      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
-    }
-    publishedDate: "Mar 15, 2025";
-    readTime: "6 min read"
-    category: "Infrastructure"
-    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
-    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
-  }
-];
+      name: "Michael Wong",
+      title: "ML Infrastructure Architect",
+      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto = $2;
+    publishedDate: "Mar 15, 2025",
+    readTime: "6 min read",
+    category: "Infrastructure",
+    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"],
+    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto = $2;
 // Categories for filtering
-const CATEGORIES = [
-  "All Categories",
+const CATEGORIES = $2;
   "Trends",
   "Marketing",
   "Sustainability",
   "Ethics",
   "Recruitment",
   "Infrastructure"
-];
+],
+
 export default function Blog() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  const [searchQuery, setSearchQuery] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
   // Filter blog posts based on search and category
-  const filteredPosts = BLOG_POSTS.filter(post => {
-    const matchesSearch =
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) |
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === "All Categories" |post.category === selectedCategory;
-    return matchesSearch && matchesCategory
-  });
-  // Get featured posts
-  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured);
-  
-  // Filter blog posts based on search and category
-  const filteredPosts = BLOG_POSTS.filter(post => {
-    const matchesSearch = 
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-      
-    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory,
-    
+  const filteredPosts = $2;
+    const matchesCategory = $2;
     return matchesSearch && matchesCategory
   }),
   
   // Get featured posts
-  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured),
-  
+  const featuredPosts = BLOG_POSTS.filter($2);
   return (
     <>
       <SEO
@@ -378,8 +360,7 @@ export default function Blog() {
               <Button
                 variant="outline"
                 onClick={() => {
-                  setSearchQuery("");
-
+                  setSearchQuery($2);
                   setSelectedCategory("All Categories")
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -393,12 +374,5 @@ export default function Blog() {
       <Footer />
     </>
   )
-}
-          )}
-        </div>;
-      </div>;
-      <Footer />;
-    </>;
-  );
 }
 ;

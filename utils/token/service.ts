@@ -1,128 +1,107 @@
-/**
- * Token service utilities
- */
-
-export interface TokenConfig {
-  id: string;
-  name: string;
-  symbol: string;
-  decimals: number;
-  totalSupply: number;
-  contractAddress?: string;
-  network: string;
-  isActive: boolean;
-  createdAt: string;
-  updatedAt: string;
+import { randomUUID } from "crypto";
+import { tokenStore } from "./storage";
+import { TokenTransaction, WalletSummary } from "./types";
+export function getWalletSummary(userId: string): WalletSummary {
+  const wallet = tokenStore.getWallet($2);
+  const transactions = tokenStore.getTransactions($2);
+  const config = tokenStore.getConfig($2);
+  return { wallet, transactions, config }
 }
 
-export interface TokenTransaction {
-  id: string;
-  from: string;
-  to: string;
-  amount: number;
-  tokenId: string;
-  type: 'mint' | 'burn' | 'transfer' | 'reward';
-  status: 'pending' | 'confirmed' | 'failed';
-  txHash?: string;
-  blockNumber?: number;
-  createdAt: string;
+export function earnTokens(
+  userId: string,
+  amount: number,
+  reason: string,
+  metadata?: Record<string, any>
+): TokenTransaction {
+  if (amount <= 0) throw new Error($2);
+  const wallet = tokenStore.getWallet($2);
+  const newBalance = $2;
+  tokenStore.setWalletBalance($2);
+  const tx: TokenTransaction = {
+    id: randomUUID($2);
+    userId,
+    type: "earn",
+    amount,
+    reason,
+    metadata,
+    createdAt: new Date().toISOString()},
+  tokenStore.addTransaction($2);
+  return tx
 }
 
-export class TokenService {
-  private tokens: TokenConfig[] = [];
-  private transactions: TokenTransaction[] = [];
-
-  async createToken(config: Omit<TokenConfig, 'id' | 'createdAt' | 'updatedAt'>): Promise<TokenConfig> {
-    const token: TokenConfig = {
-      ...config,
-      id: this.generateId(),
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
-    };
-    
-    this.tokens.push(token);
-    return token;
-  }
-
-  async getToken(id: string): Promise<TokenConfig | null> {
-    return this.tokens.find(token => token.id === id) || null;
-  }
-
-  async getTokens(): Promise<TokenConfig[]> {
-    return this.tokens.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-  }
-
-  async updateToken(id: string, updates: Partial<TokenConfig>): Promise<TokenConfig | null> {
-    const tokenIndex = this.tokens.findIndex(token => token.id === id);
-    if (tokenIndex === -1) return null;
-    
-    this.tokens[tokenIndex] = {
-      ...this.tokens[tokenIndex],
-      ...updates,
-      updatedAt: new Date().toISOString()
-    };
-    
-    return this.tokens[tokenIndex];
-  }
-
-  async deleteToken(id: string): Promise<boolean> {
-    const tokenIndex = this.tokens.findIndex(token => token.id === id);
-    if (tokenIndex === -1) return false;
-    
-    this.tokens.splice(tokenIndex, 1);
-    return true;
-  }
-
-  async createTransaction(transaction: Omit<TokenTransaction, 'id' | 'createdAt'>): Promise<TokenTransaction> {
-    const newTransaction: TokenTransaction = {
-      ...transaction,
-      id: this.generateId(),
-      createdAt: new Date().toISOString()
-    };
-    
-    this.transactions.push(newTransaction);
-    return newTransaction;
-  }
-
-  async getTransactions(tokenId?: string): Promise<TokenTransaction[]> {
-    let filteredTransactions = this.transactions;
-    
-    if (tokenId) {
-      filteredTransactions = this.transactions.filter(tx => tx.tokenId === tokenId);
-    }
-    
-    return filteredTransactions.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-  }
-
-  async getTokenStats(tokenId: string): Promise<{
-    totalTransactions: number;
-    totalVolume: number;
-    uniqueUsers: number;
-    transactionsByType: Record<string, number>;
-  }> {
-    const tokenTransactions = this.transactions.filter(tx => tx.tokenId === tokenId);
-    
-    const totalTransactions = tokenTransactions.length;
-    const totalVolume = tokenTransactions.reduce((sum, tx) => sum + tx.amount, 0);
-    const uniqueUsers = new Set(tokenTransactions.flatMap(tx => [tx.from, tx.to])).size;
-    
-    const transactionsByType = tokenTransactions.reduce((acc, tx) => {
-      acc[tx.type] = (acc[tx.type] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-    
-    return {
-      totalTransactions,
-      totalVolume,
-      uniqueUsers,
-      transactionsByType
-    };
-  }
-
-  private generateId(): string {
-    return Math.random().toString(36).substr(2, 9);
-  }
+export function burnTokens(
+  userId: string,
+  amount: number,
+  reason: string,
+  metadata?: Record<string, any>
+): TokenTransaction {
+  if (amount <= 0) throw new Error($2);
+  const wallet = tokenStore.getWallet($2);
+  if (wallet.balance < amount) throw new Error($2);
+  const newBalance = $2;
+  tokenStore.setWalletBalance($2);
+  const tx: TokenTransaction = {
+    id: randomUUID($2);
+    userId,
+    type: "burn",
+    amount,
+    reason,
+    metadata,
+    createdAt: new Date().toISOString()},
+  tokenStore.addTransaction($2);
+  return tx
 }
 
-// Export singleton instance
-export const tokenService = new TokenService();
+export function issueTokens(
+  userId: string,
+  amount: number,
+  reason: string): TokenTransaction {
+  const tx = earnTokens($2);
+  tx.type = $2;
+  return tx
+}
+
+export function revokeTokens(
+  userId: string,
+  amount: number,
+  reason: string): TokenTransaction {
+  const tx = burnTokens($2);
+  tx.type = $2;
+  return tx
+}
+
+export function handleAction(userId: string, action: string, metadata?: Record<string, any>): TokenTransaction {
+  const { earnRules } = tokenStore.getConfig($2);
+  const amount = $2;
+  if (!amount) throw new Error($2);
+  return earnTokens(userId, amount, action, metadata)
+}
+
+export function burnForFeature(userId: string, feature: string, metadata?: Record<string, any>): TokenTransaction {
+  const { burnRules } = tokenStore.getConfig($2);
+  const amount = $2;
+  if (!amount) throw new Error($2);
+  return burnTokens(userId, amount, feature, metadata)
+}
+
+export function redeemToCredits(userId: string, amount: number): { tx: TokenTransaction, usd: number} {
+  const { usdPerToken } = tokenStore.getConfig($2);
+  const tx = burnTokens($2);
+  tx.type = $2;
+  const usd = $2;
+  return { tx, usd }
+}
+
+export function getAllTransactions() {
+  return tokenStore.getTransactions()
+}
+
+export function getConfig() {
+  return tokenStore.getConfig()
+}
+
+export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void {
+  const current = tokenStore.getConfig($2);
+  tokenStore.setConfig({ ...current, ...partial })
+}

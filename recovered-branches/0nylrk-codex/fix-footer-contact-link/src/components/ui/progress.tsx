@@ -4,14 +4,11 @@ import {cn} from '@/lib/utils';
 
 import { cn } from "@/lib/utils"
 
-const Progress = React.forwardRef<
-  React.ElementRef<typeof ProgressPrimitive.Root>
+const Progress = $2;
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
 >(({ className, value, ...props }, ref) => (
   <ProgressPrimitive.Root
-    ref={ref}
-    className={cn(
-      'relative h-4 w-full overflow-hidden rounded-full bg-secondary'
+    ref = $2;
       className
     )}
     {...props}

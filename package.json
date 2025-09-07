@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
+    "ci:build-test": "npm run build && npm run test:smoke",
     "dev": "next dev",
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
     "start": "next start",
@@ -426,10 +428,5 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-  "license": "MIT",
-  "nextConfig": {
-    "compress": true,
-    "poweredByHeader": false,
-    "generateEtags": false
-  }
+  "license": "MIT"
 }

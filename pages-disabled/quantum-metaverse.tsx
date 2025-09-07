@@ -5,7 +5,9 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumInternetSecurityPage() {
-  const service = null;
+  const service = $2;
+  if (!service) return null,
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -92,5 +94,5 @@ export default function QuantumInternetSecurityPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  )
 }

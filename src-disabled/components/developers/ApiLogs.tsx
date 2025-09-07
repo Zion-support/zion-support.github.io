@@ -47,36 +47,38 @@ import { ApiLogsChart } from './ApiLogsChart';
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from 'lucide-react'
-import { useApiKeys } from "@/hooks/useApiKeys",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-:src/components/developers/ApiLogs.tsx
-import { Badge } from "@/components/ui/badge",
-import { ApiLogsChart } from "./ApiLogsChart",
-export function ApiLogs() {
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
-  const [pageSize, setPageSize] = useState(25),
-  const [currentPage, setCurrentPage] = useState(0),
-import { useState, useEffect } from 'react';
-import { format } from 'date-fns';
-import { List, RefreshCw } from 'lucide-react';
-import { useApiKeys } from '@/hooks/useApiKeys';
-
+import { useApiKeys } from "@/hooks/useApiKeys";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { ApiLogsChart } from "./ApiLogsChart";
 export function ApiLogs() {
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
-  const [pageSize, setPageSize] = useState(25);
-  const [currentPage, setCurrentPage] = useState(0);
-:src/components/developers/ApiLogs.tsx
-
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys($2);
+  const [pageSize, setPageSize] = useState($2);
+  const [currentPage, setCurrentPage] = useState($2);
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]),
-
-  const handleRefresh = null;
+  
+  const handleRefresh = () => {
+    fetchApiLogs(pageSize, currentPage * pageSize)
+  },
+  
+  // Helper to format the timestamp
+  const formatTimestamp = (timestamp: string) => {
+    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm: ss')
+  },
+  
+  // Helper to get badge color based on status code
+  const getStatusBadge = $2;
+  // Calculate pagination info
+  const totalPages = Math.ceil($2);
+  const hasNextPage = $2;
+  const hasPrevPage = $2;
+  return (
+    <Card className = $2;
                 setCurrentPage(0), // Reset to first page when changing page size
               }}
             >

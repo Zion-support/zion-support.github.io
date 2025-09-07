@@ -3,15 +3,15 @@ const fs = require('fs');
 const path = require('path');
 ;
 console.log('🔒 Starting Security Scanner...');
-;
-class SecurityScanner {;
-  constructor() {;
-    this.results = {;
-      "timestamp": new Date().toISOString(),
-      "securityScore": 0,
-      "vulnerabilities": [],
-      "recommendations": [],
-      "metrics": {}
+
+class SecurityScanner {
+  constructor() {
+    this.results = {
+      timestamp: new Date().toISOString(),
+      securityScore: 0,
+      vulnerabilities: [],
+      recommendations: [],
+      metrics: {},
     };
   }
 ;
@@ -75,13 +75,13 @@ class SecurityScanner {;
 ;
     secretPatterns.forEach(pattern => {;
       const matches = content.match(pattern);
-      if (matches) {;
-        this.results.vulnerabilities.push({;
-          "type": 'hardcoded_secret',
-          "severity": 'high',
-          "file": filePath,
-          "description": 'Potential hardcoded secret detected',
-          "matches": matches;
+      if (matches) {
+        this.results.vulnerabilities.push({
+          type: 'hardcoded_secret',
+          severity: 'high',
+          file: filePath,
+          description: 'Potential hardcoded secret detected',
+          matches: matches,
         });
       }
     });
@@ -95,13 +95,13 @@ class SecurityScanner {;
 ;
     sqlPatterns.forEach(pattern => {;
       const matches = content.match(pattern);
-      if (matches) {;
-        this.results.vulnerabilities.push({;
-          "type": 'sql_injection',
-          "severity": 'high',
-          "file": filePath,
-          "description": 'Potential SQL injection vulnerability',
-          "matches": matches;
+      if (matches) {
+        this.results.vulnerabilities.push({
+          type: 'sql_injection',
+          severity: 'high',
+          file: filePath,
+          description: 'Potential SQL injection vulnerability',
+          matches: matches,
         });
       }
     });
@@ -130,13 +130,13 @@ class SecurityScanner {;
 ;
     xssPatterns.forEach(pattern => {;
       const matches = content.match(pattern);
-      if (matches) {;
-        this.results.vulnerabilities.push({;
-          "type": 'xss_vulnerability',
-          "severity": 'medium',
-          "file": filePath,
-          "description": 'Potential XSS vulnerability',
-          "matches": matches;
+      if (matches) {
+        this.results.vulnerabilities.push({
+          type: 'xss_vulnerability',
+          severity: 'medium',
+          file: filePath,
+          description: 'Potential XSS vulnerability',
+          matches: matches,
         });
       }
     });
@@ -145,23 +145,22 @@ class SecurityScanner {;
   checkForInsecureDependencies(content, filePath) {;
     if (filePath.endsWith('package.json')) {;
       const packageJson = JSON.parse(content);
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-;
-      // Check for known vulnerable packages;
-      const vulnerablePackages = [;
-        'lodash',
-        'moment',
-        'jquery';
-      ];
-;
-      vulnerablePackages.forEach(pkg => {;
-        if (dependencies[pkg]) {;
-          this.results.vulnerabilities.push({;
-            "type": 'vulnerable_dependency',
-            "severity": 'medium',
-            "file": filePath,
-            "description": `Potentially vulnerable "dependency": ${pkg}`,
-            "package": pkg;
+      const dependencies = {
+        ...packageJson.dependencies,
+        ...packageJson.devDependencies,
+      };
+
+      // Check for known vulnerable packages
+      const vulnerablePackages = ['lodash', 'moment', 'jquery'];
+
+      vulnerablePackages.forEach(pkg => {
+        if (dependencies[pkg]) {
+          this.results.vulnerabilities.push({
+            type: 'vulnerable_dependency',
+            severity: 'medium',
+            file: filePath,
+            description: `Potentially vulnerable dependency: ${pkg}`,
+            package: pkg,
           });
         }
 
@@ -339,40 +338,42 @@ runSecurityCheck('Environment Security', () => {
 ;
   async generateRecommendations() {;
     console.log('💡 Generating security recommendations...');
-;
-    const highSeverityVulns = this.results.vulnerabilities.filter(v => v.severity === 'high');
-;
-    if (highSeverityVulns.length > 0) {;
-      this.results.recommendations.push({;
-        "type": 'immediate_fix',
-        "priority": 'critical',
-        "description": 'Fix high severity vulnerabilities immediately';
+
+    const highSeverityVulns = this.results.vulnerabilities.filter(
+      v => v.severity === 'high'
+    );
+
+    if (highSeverityVulns.length > 0) {
+      this.results.recommendations.push({
+        type: 'immediate_fix',
+        priority: 'critical',
+        description: 'Fix high severity vulnerabilities immediately',
       });
     }
-;
-    this.results.recommendations.push({;
-      "type": 'security_audit',
-      "priority": 'high',
-      "description": 'Run regular security audits with npm audit';
+
+    this.results.recommendations.push({
+      type: 'security_audit',
+      priority: 'high',
+      description: 'Run regular security audits with npm audit',
     });
-;
-    this.results.recommendations.push({;
-      "type": 'dependency_update',
-      "priority": 'medium',
-      "description": 'Keep dependencies updated to latest secure versions';
+
+    this.results.recommendations.push({
+      type: 'dependency_update',
+      priority: 'medium',
+      description: 'Keep dependencies updated to latest secure versions',
     });
-;
-    this.results.recommendations.push({;
-      "type": 'code_review',
-      "priority": 'medium',
-      "description": 'Implement security-focused code review process';
+
+    this.results.recommendations.push({
+      type: 'code_review',
+      priority: 'medium',
+      description: 'Implement security-focused code review process',
     });
   }
 ;
   async saveReport() {;
     const logsDir = path.join(process.cwd(), 'logs');
-    if (!fs.existsSync(logsDir)) {;
-      fs.mkdirSync(logsDir, { "recursive": true });
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
     }
 ;
     const reportPath = path.join(logsDir, `security-scan-${Date.now()}.json`);

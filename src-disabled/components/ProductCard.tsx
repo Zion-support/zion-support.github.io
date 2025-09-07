@@ -8,17 +8,17 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from '@/components/ui/tooltip',
-import { useDispatch } from 'react-redux';,
-import type { AppDispatch } from '@/store';,
-import { addItem } from '@/store/cartSlice';,
-import Image from 'next/image';,
-import React, { useState, useEffect } from 'react';,
-import { useAuth } from '@/context/auth/AuthProvider';,
-import { useRouter } from 'next/router';,
-import { Product } from '@/services/marketplace';,
-import { useMediaQuery } from 'usehooks-ts';,
-import { toast } from '@/hooks/use-toast';,
-import { captureException } from '@/utils/sentry';,
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useRouter } from 'next/router';
+import { Product } from '@/services/marketplace';
+import { useMediaQuery } from 'usehooks-ts';
+import { toast } from '@/hooks/use-toast';
+import { captureException } from '@/utils/sentry';
 interface ProductCardProps {
   product: Product,
   onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure
@@ -27,36 +27,18 @@ interface ProductCardProps {
   buyDisabled?: boolean
 }
 
-:src/components/ProductCard.tsx
-  const stockStatus = null;
-    product.stock === undefined
-      : 'In stock'
-  const stockVariant = null;
-    product.stock === undefined
-  const productTitle = product.title
-  const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null
-  const imageAltText = productTitle
-  const isMobile = useMediaQuery('(max-width: 768px)')
-  const isTablet = useMediaQuery('(max-width: 1200px)')
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw'
-
-  )
-}
-  )
-}
-export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyDisabled;
-    product.stock === undefined;
-
-      ? 'success';
-      : product.stock <= 0;
-      ? 'destructive';
-      : product.stock <= 5;
-      ? 'warning';
-      : 'success',;
-  // Reset redirecting state if component unmounts (e.g., navigation cancelled by user);
-  useEffect(() => {;
-    return () => {;
-      setIsRedirecting(false);
+export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyDisabled = false }: ProductCardProps) {
+  const { isAuthenticated } = useAuth($2);
+  const { isWishlisted, toggle } = useWishlist($2);
+  const [imageError, setImageError] = useState($2);
+  const [isRedirecting, setIsRedirecting] = useState(false), // Added for loading state
+  const router = useRouter($2);
+  const stockStatus = $2;
+  const stockVariant = $2;
+  // Reset redirecting state if component unmounts (e.g., navigation cancelled by user)
+  useEffect(() => {
+    return () => {
+      setIsRedirecting(false)
     }
   }, []),
 
@@ -80,33 +62,39 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
     if (!isAuthenticated) {;
       toast({;
 
-        variant: 'destructive'}),;
-      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`),;
-      return;
+  const active = isWishlisted($2);
+  const dispatch = $2;
+  // Title is now guaranteed to be a non-empty string by the check above.
+  const productTitle = $2;
+  const addToCart = () => {
+    if (!isAuthenticated) {
+      toast($2);
+      router.push(`/auth/login?returnTo = $2;
+      return
     }
-    dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 })),;
-    toast({;
+    dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 })),
+    toast({
+      title: 'Added to cart',
+      description: `${productTitle} has been added to your cart`,
+      action: {
+        label: 'View Cart',
+        onClick: () => router.push('/cart')}})
+  },
 
-      action: {;
-        label: 'View Cart',;
-        onClick: () => router.push('/cart')}});
-  },;
-  const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null,;
-  const imageAltText = productTitle,;
-  const handleImageError = (error: any) => {;
-    if (!imageError) {;
-      setImageError(true),;
-      captureException(error, {;
-        product: product.id,;
-        imageUrl});
+  const imageUrl = $2;
+  const imageAltText = $2;
+  const handleImageError = (error: any) => {
+    if (!imageError) {
+      setImageError($2);
+      captureException(error, {
+        product: product.id,
+        imageUrl})
     }
   },
 
-  const isMobile = useMediaQuery('(max-width: 768px)'),
-  const isTablet = useMediaQuery('(max-width: 1200px)'),
-
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',
-
+  const isMobile = $2;
+  const isTablet = $2;
+  const imageSizes = $2;
   return (
     <div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
       <button
@@ -180,10 +168,10 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  onClick={e => {
-                    e.stopPropagation();
+                  onClick={(e) => {
+                    e.stopPropagation($2);
                     if (onBuy) {
-                      setIsRedirecting(true);
+                      setIsRedirecting($2);
                       onBuy()
                         .catch(() => {
                           // Error is handled by parent, but we still need to reset loading locally
@@ -193,7 +181,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
                           if (onBuyAttemptComplete) {
                             onBuyAttemptComplete(), // Notify parent if it provided this callback
                           }
-                        });
+                        })
                     }
                   }}
                   size="sm"

@@ -5,71 +5,42 @@ import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 interface PreviewHeaderProps {
-  resume: Resume;
+  resume: Resume,
   onBack: () => void
-interface PreviewHeaderProps {
-  resume: Resume;
-  onBack: () => void;
 }
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
-  const [isPrinting, setIsPrinting] = useState(false);
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
-  const [isPrinting, setIsPrinting] = useState(false);
-
-  const isMobile = useIsMobile();
+  const [isPrinting, setIsPrinting] = useState($2);
+  const isMobile = useIsMobile($2);
   const handleBrowserPrint = () => {
-    setIsPrinting(true);
-
+    setIsPrinting($2);
     // Inject print-specific CSS only for the duration of printing
-    const style = document.createElement("style");
+    const style = document.createElement($2);
     style.innerHTML = `
       @media print {
         body * {
-          visibility: hidden
-        }
+          visibility: hidden}
         .print-section, .print-section * {
-          visibility: visible
-        }
+          visibility: visible}
         .print-section {
-          position: absolute
-          left: 0
-          top: 0
+          position: absolute,
+          left: 0,
+          top: 0,
           width: 100%
         }
         .no-print {
           display: none !important
         }
       }
-    `;
-    document.head.appendChild(style);
+    `,
+    document.head.appendChild($2);
     // Trigger print dialog
-    window.print();
+    window.print($2);
     // Remove the temporary style element after printing
     setTimeout(() => {
-      document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
-  }
-    
-    // Trigger print dialog
-    window.print(),
-    
-    // Remove the temporary style element after printing
-    setTimeout(() => {
-      document.head.removeChild(style),
+      document.head.removeChild($2);
       setIsPrinting(false)
     }, 1000)
   },
-
-    // Trigger print dialog
-    window.print();
-
-    // Remove the temporary style element after printing
-    setTimeout(() => {
-      document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
-  };
 
   return (
     <div
@@ -99,5 +70,5 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
         </Button>
       </div>
     </div>
-  );
+  )
 }

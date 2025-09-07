@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button",
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 export default function Profile() {
-  const { user, isLoading, logout } = useAuth();
-
-  const navigate = useNavigate();
+  const { user, isLoading, logout } = useAuth($2);
+  const navigate = useNavigate($2);
   useEffect(() => {
     if (!isLoading && !user) {
-      toast.error("Please log in to view your profile"),
+      toast.error($2);
       navigate("/login?redirect=/profile")
     }
-  }, [user, isLoading, navigate]);
+  }, [user, isLoading, navigate]),
+
   if (isLoading) {
     return (
       <>
@@ -64,8 +64,7 @@ export default function Profile() {
                 <p className="text-zion-slate-light mb-4">{user.email}</p>
                 <Button
                   onClick={() => {
-                    logout();
-
+                    logout($2);
                     navigate("/")
                   }}
                   variant="outline"

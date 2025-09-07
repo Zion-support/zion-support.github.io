@@ -1,240 +1,127 @@
-};
-};
-;
-  log(message, level = "INFO") {;
-}};
-  log(message, level = "INFO") {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(`[${level}] ${message}`);
-    fs.appendFileSync(this.logFile, logMessage);
-  };
-  async runSecurityAudit() {;
-    try {;
-      this.log("Running security audit...");
-      const output = execSync("npm audit --json", { stdio: 'pipe' ,});
-      const auditResult = JSON.parse(output.toString());
-      if (auditResult.vulnerabilities) {;
-        const vulnCount = Object.keys(auditResult.vulnerabilities).length;
-        this.vulnerabilities.push(`${vulnCount} vulnerabilities found`);
-        this.log(`Found ${vulnCount} vulnerabilities`, "WARN");
-      } else {;
-        this.log("✓ No vulnerabilities found");
-      };
-    } catch (error) {;
-      this.log(`Security audit failed: ${error.message,}`, "ERROR");
-    };
-  };
-  async checkSecrets() {;
-    try {;
-      this.log("Checking for exposed secrets...");
-      const files = this.getSourceFiles();
-      let secretCount = 0;
-      files.forEach(file => {;
-        const content = fs.readFileSync(file, "utf8");
-        const secretPatterns = [;
-          /api[_-]?key\s*[:=]\s*["'][^"']+["']/gi;
-          /secret\s*[:=]\s*["'][^"']+["']/gi;
-          /password\s*[:=]\s*["'][^"']+["']/gi;
-          /token\s*[:=]\s*["'][^"']+["']/gi;
-        ];
-        secretPatterns.forEach(pattern => {;
-          if (pattern.test(content)) {;
-            secretCount++;
-          };
-        });
-      });
-      if (secretCount > 0) {;
-        this.vulnerabilities.push(`${secretCount} potential secrets found`);
-        this.log(`Found ${secretCount} potential secrets`, "WARN");
-      } else {;
-        this.log("✓ No exposed secrets found");
-      };
-    } catch (error) {;
-      this.log(`Secret check failed: ${error.message,}`, "ERROR");
-    };
-  };
-  getSourceFiles() {;
-    const files = [];
-    const srcDir = path.join(process.cwd(), "src");
-    if (fs.existsSync(srcDir)) {;
-      const walkDir = (dir) => {;
-        const items = fs.readdirSync(dir);
-        items.forEach(item => {;
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
-          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {;
-            walkDir(fullPath);
-          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {;
-            files.push(fullPath);
-          };
-        });
-      };
-      walkDir(srcDir);
-    };
-    return files;
-  };
-  async generateReport() {;
-    const report = {;
-      timestamp: new Date().toISOString();
-      vulnerabilities: this.vulnerabilities;
-      recommendations: [;
-        "Run npm audit fix to address vulnerabilities";
-        "Review and remove any hardcoded secrets";
-        "Use environment variables for sensitive data";
-        "Implement proper authentication and authorization";
-        "Regularly update dependencies";
-      ];
-    };
-    const reportFile = path.join(__dirname, "reports", "security-report.json");
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Security report saved to: ${reportFile,}`);
-  };
-  async run() {;
-    this.log("🔒 Starting Security Scanner");
-    try {;
-      await this.runSecurityAudit();
-      await this.checkSecrets();
-      await this.generateReport();
-      this.log("=" * 50);
-      this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length,}`);
-      this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`));
-    } catch (error) {;
-      this.log(`❌ Security Scanner failed: ${error.message,}`, "ERROR");
-    };
-  };
-};
-// Main execution;
-if (import.meta.url === `file: //${process.argv[1],}`) {;
-  const scanner = new SecurityScanner();
-  scanner.run().catch(console.error)};
-export default SecurityScanner;
-    };
-  };
+
+
+    }
+  },
 ,
-  log(message, level = "INFO") {,
-    const timestamp = new Date().toISOString(),
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`,
-    console.log(`[${level}] ${message}`),
-    fs.appendFileSync(this.logFile, logMessage),
-  };
+  log(message, level = $2;
+    const timestamp = new Date().toISOString($2);
+    const logMessage = $2;
+    console.log($2);
+    fs.appendFileSync(this.logFile, logMessage)
+  },
 ,
   async runSecurityAudit() {,
     try {,
-      this.log("Running security audit..."),
-      const output = execSync("npm audit --json", { stdio: 'pipe' }),
-      const auditResult = JSON.parse(output.toString()),
+      this.log($2);
+      const output = execSync($2);
+      const auditResult = $2;
 ,
       if (auditResult.vulnerabilities) {,
-        const vulnCount = Object.keys(auditResult.vulnerabilities).length,
-        this.vulnerabilities.push(`${vulnCount} vulnerabilities found`),
-        this.log(`Found ${vulnCount} vulnerabilities`, "WARN"),
+        const vulnCount = $2;
+        this.vulnerabilities.push($2);
+        this.log(`Found ${vulnCount} vulnerabilities`, "WARN")
       } else {,
-        this.log("✓ No vulnerabilities found"),
-      };
+        this.log("✓ No vulnerabilities found")
+      }
     } catch (error) {,
-      this.log(`Security audit failed: ${error.message}`, "ERROR"),
-    };
-  };
+      this.log(`Security audit: failed: ${error.message}`, "ERROR")
+    }
+  },
 ,
   async checkSecrets() {,
     try {,
-      this.log("Checking for exposed secrets..."),
-      const files = this.getSourceFiles(),
-      let secretCount = 0,
+      this.log($2);
+      const files = this.getSourceFiles($2);
+      let secretCount = $2;
 ,
-      files.forEach(file => {,
-        const content = fs.readFileSync(file, "utf8"),
-        const secretPatterns = [,
+      files.forEach($2);
+        const secretPatterns = $2;
           /api[_-]?key\s*[:=]\s*["'][^"']+["']/gi,
           /secret\s*[:=]\s*["'][^"']+["']/gi,
           /password\s*[:=]\s*["'][^"']+["']/gi,
-          /token\s*[:=]\s*["'][^"']+["']/gi,
+          /token\s*[:=]\s*["'][^"']+["']/gi
         ],
 ,
-        secretPatterns.forEach(pattern => {,
+        secretPatterns.forEach(pattern = $2;
           if (pattern.test(content)) {,
-            secretCount++,
-          };
-        }),
+            secretCount++
+          }
+        })
       }),
 ,
       if (secretCount > 0) {,
-        this.vulnerabilities.push(`${secretCount} potential secrets found`),
-        this.log(`Found ${secretCount} potential secrets`, "WARN"),
+        this.vulnerabilities.push($2);
+        this.log(`Found ${secretCount} potential secrets`, "WARN")
       } else {,
-        this.log("✓ No exposed secrets found"),
-      };
+        this.log("✓ No exposed secrets found")
+      }
     } catch (error) {,
-      this.log(`Secret check failed: ${error.message}`, "ERROR"),
-    };
-  };
+      this.log(`Secret check: failed: ${error.message}`, "ERROR")
+    }
+  },
 ,
   getSourceFiles() {,
-    const files = [],
+    const files = $2;
     const srcDir = path.join(process.cwd(), "src"),
 ,
     if (fs.existsSync(srcDir)) {,
-      const walkDir = (dir) => {,
-        const items = fs.readdirSync(dir),
-        items.forEach(item => {,
-          const fullPath = path.join(dir, item),
-          const stat = fs.statSync(fullPath),
+      const walkDir = $2;
+        const items = fs.readdirSync($2);
+        items.forEach($2);
+          const stat = fs.statSync($2);
 ,
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
-            walkDir(fullPath),
+            walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
-            files.push(fullPath),
-          };
-        }),
-      };
+            files.push(fullPath)
+          }
+        })
+      },
 ,
-      walkDir(srcDir),
-    };
+      walkDir(srcDir)
+    },
 ,
-    return files,
-  };
+    return files
+  },
 ,
   async generateReport() {,
-    const report = {,
-      timestamp: new Date().toISOString(),
-      vulnerabilities: this.vulnerabilities,
-      recommendations: [,
-
-
-
-
-
-      ],
-    };
+    const report = $2;
+      timestam: new Date().toISOString($2);
+      vulnerabilitie: this.vulnerabilities,
+      recommendation: [,
+        "Run npm audit fix to address vulnerabilities",
+        "Review and remove any hardcoded secrets",
+        "Use environment variables for sensitive data",
+        "Implement proper authentication and authorization",
+        "Regularly update dependencies"
+      ]
+    },
 ,
-    const reportFile = path.join(__dirname, "reports", "security-report.json"),
+    const reportFile = path.join($2);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
-    this.log(`Security report saved to: ${reportFile}`),
-  };
+    this.log(`Security report saved: to: ${reportFile}`)
+  },
 ,
   async run() {,
-    this.log("🔒 Starting Security Scanner"),
+    this.log($2);
 ,
     try {,
-      await this.runSecurityAudit(),
-      await this.checkSecrets(),
-      await this.generateReport(),
+      await this.runSecurityAudit($2);
+      await this.checkSecrets($2);
+      await this.generateReport($2);
 ,
-      this.log("=" * 50),
-      this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`),
-      this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`)),
-,
-    } catch (error) {,
-      this.log(`❌ Security Scanner failed: ${error.message}`, "ERROR"),
-    };
-  };
-};
+      this.log($2);
+      this.log($2);
+      this.vulnerabilities.forEach(vuln = $2;
+      this.log(`❌ Security Scanner: failed: ${error.message}`, "ERROR")
+    }
+  }
+},
 ,
 // Main execution,
-if (import.meta.url === `file: //${process.argv[1]}`) {,
-  const scanner = new SecurityScanner(),
-  scanner.run().catch(console.error),
-};
+if (import.meta.url = $2;
+  const scanner = new SecurityScanner($2);
+  scanner.run().catch(console.error)
+},
 ,
 export default SecurityScanner,

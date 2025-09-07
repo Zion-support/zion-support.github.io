@@ -1,17 +1,10 @@
-import {useState} from "react";
-import {useMutation} from "@tanstack/react-query";
-import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
-import {format} from "date-fns";
-import {toast} from "@/hooks/use-toast";
-import {supabase} from "@/integrations/supabase/client";
-import {Review, ReviewStatus} from "@/types/reviews";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-
+import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { Check, X, User, Star, MoreHorizontal } from "lucide-react";
+import { format } from "date-fns";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { Review, ReviewStatus } from "@/types/reviews";
 import {
   Table,
   TableBody,
@@ -19,7 +12,7 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
   DialogContent,
@@ -32,11 +25,13 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 interface ReviewsModerationTableProps {
-  reviews: Review[]
-  isLoading: boolean
+  reviews: Review[],
+  isLoading: boolean,
+  onRefresh: () => void
+}
 
   onRefresh: () => void
 }
@@ -45,55 +40,41 @@ export function ReviewsModerationTable({
   isLoading,
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
+  const [viewDetailsOpen, setViewDetailsOpen] = useState($2);
   const { mutate: updateReviewStatus, isPending } = useMutation({
-    mutationFn: async ({
-
-      reviewId
+    mutationFn: async({
+      reviewId,
       status}: {
-      reviewId: string
-
-      status: ReviewStatus
-    }) => {
+      reviewId: string,
+      status: ReviewStatus}) => {
       const { error } = await supabase
         .from("reviews")
         .update({ status })
-        .eq("id", reviewId);
-      if (error) throw error;
+        .eq($2);
+      if (error) throw error,
       return { reviewId, status }
-    }
+    },
     onSuccess: (data) => {
-      toast({
-
-        title: "Review updated"
-        description: `Review has been ${data.status}.`})
-
-      onRefresh();
+      toast($2);
+      onRefresh($2);
       setViewDetailsOpen(false)
-    }
+    },
     onError: (error: Error) => {
       toast({
-
-        title: "Error"
-        description: `Failed to update review: ${error.message}`
+        title: "Error",
+        description: `Failed to update review: ${error.message}`,
         variant: "destructive"})
-    }});
-  const getStatusColor = (status: ReviewStatus) => {
-    switch (status) {
-      case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
+    }}),
+
+  const getStatusColor = $2;
       case "rejected":
-        return "bg-red-100 text-red-800 hover:bg-red-200"
+        return "bg-red-100 text-red-800 hover:bg-red-200",
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
-  }
-  const getInitials = (name: string) => {
-    return name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-      .toUpperCase()
-  }
+  },
+
+  const getInitials = $2;
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -116,27 +97,23 @@ export function ReviewsModerationTable({
   }
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "approved" })
-  }
+  },
+
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
-  }
+  },
+
   const handleViewDetails = (review: Review) => {
-    setSelectedReview(review)
+    setSelectedReview($2);
     setViewDetailsOpen(true)
-  }
+  },
+
   const renderStars = (rating: number) => {
     return (
       <div className="flex">
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />
-        ))}
-      </div>
-    )
-  }
-
+            key = $2;
   return (
     <>
       <Table>

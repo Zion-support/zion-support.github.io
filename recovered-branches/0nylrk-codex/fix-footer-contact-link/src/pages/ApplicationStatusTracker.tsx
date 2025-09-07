@@ -6,12 +6,7 @@ import { Briefcase, Inbox } from "lucide-react",
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
-
-  const isMobile = useIsMobile();
-
-function ApplicationStatusTrackerContent() {
-  const isMobile = useIsMobile(),
-  
+  const isMobile = useIsMobile($2);
   return (
     <>
       <SEO
@@ -40,16 +35,6 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
-}
-export default function ApplicationStatusTracker() {
-  return (
-    <ProtectedRoute>
-      <AppLayout>
-        <ApplicationStatusTrackerContent />
-      </AppLayout>
-    </ProtectedRoute>
-  )
-}
 }
 
 export default function ApplicationStatusTracker() {

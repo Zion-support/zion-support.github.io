@@ -3,16 +3,12 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-
+  const [activeEndpoint, setActiveEndpoint] = useState($2);
   // Sample endpoint data
-
-  const endpoints = [
-    {
-      id: "get-jobs"
-      method: "GET"
-      path: "/api/jobs"
-      description: "Retrieve a list of job postings with optional filtering"
+  const endpoints = $2;
+      method: "GET",
+      path: "/api/jobs",
+      description: "Retrieve a list of job postings with optional filtering",
       parameters: [
         { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" }
         { name: "category", type: "string", description: "Filter by job category" }
@@ -32,10 +28,10 @@ export function ApiReference() {
         "min": 5000;
         "max": 10000
         "currency": "USD"
-      }
-      "status": "open";
-      "created_at": "2023-05-10T15:30:00Z"
-    }
+      },
+      "status": "open",
+      "created_at": "2023-05-10T15: 30: 00Z"
+    },
     // More jobs...
   ],
   "count": 42,
@@ -60,9 +56,7 @@ export function ApiReference() {
         }
       }
       requestExample: `curl -X GET \\
-  https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
-    }
+  https://api.zionai.com/v1/api/jobs?status = $2;
     {
       id: "post-jobs"
       method: "POST"
@@ -87,9 +81,9 @@ export function ApiReference() {
     "min": 3000;
     "max": 5000
     "currency": "USD"
-  }
-  "status": "open";
-  "created_at": "2023-05-15T10:12:00Z"
+  },
+  "status": "open",
+  "created_at": "2023-05-15T10: 12: 00Z"
 }`
         }
         "400": {
@@ -224,9 +218,9 @@ export function ApiReference() {;
       "min": 3000;
       "max": 5000
       "currency": "USD"
-    }
-    "skills": ["Figma", "User Research", "Prototyping"];
-    "deadline": "2023-07-01T00:00:00Z"
+    },
+    "skills": ["Figma", "User Research", "Prototyping"],
+    "deadline": "2023-07-01T00: 00: 00Z"
   }'`
     }
     {
@@ -267,12 +261,9 @@ export function ApiReference() {;
         }
       }
       requestExample: `curl -X GET \\
-  https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
-    }
-  ];
+  https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit = $2;
   // Find the active endpoint data
-  const activeEndpointData = endpoints.find(e => e.id === activeEndpoint);
+  const activeEndpointData = endpoints.find($2);
   return (
     <ApiDocsLayout>
       <div className="grid md:grid-cols-5 gap-8">
@@ -363,46 +354,4 @@ export function ApiReference() {;
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Responses</h3>
                     {Object.entries(activeEndpointData.responses).map(([status, response]) => (
-                      <div key={status} className="mb-6">
-                        <div className="flex items-center mb-3">
-                          <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
-                            status.startsWith('2') ? 'bg-green-950 text-green-500' :
-                            status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
-                            'bg-red-950 text-red-500'
-                          }`}>
-                            {status}
-                          </span>
-                          <span className="text-white">{response.description}</span>
-                        </div>
-                        <CodeBlock
-                          code={response.example}
-                        <CodeBlock 
-                          code={response.example} 
-                          language="json"
-                          showLineNumbers={true}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </TabsContent>
-                <TabsContent value="try">
-                  <div className="p-8 border border-zinc-800 rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>
-                      <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>
-                    </div>
-                  </div>
-                </TabsContent>
-              </Tabs>
-            </div>
-          ) : (
-            <div className="p-8 border border-zinc-800 rounded-lg text-center">
-              <p className="text-zinc-400">Select an endpoint from the list to view details</p>
-            </div>
-          )}
-        </div>
-      </div>
-    </ApiDocsLayout>
-  )
-}
-export default ApiReference;
+                      <div key = $2;

@@ -7,19 +7,13 @@ import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
 interface PaymentSectionProps {
-  selectedCountry: CountryPricing;
-}
+  selectedCountry: CountryPricing}
+
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
-
-  const handlePaymentInitiated = () => {
-    toast({
-      title: "Processing your request"
-      description:
-        "You'll be redirected to our secure payment portal momentarily."
-    });
-  }
-
+  const handlePaymentInitiated = $2;
+      description: "You'll be redirected to our secure payment portal momentarily."})
+  },
   
       description:
         "You'll be redirected to our secure payment portal momentarily.",
@@ -50,5 +44,5 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         billed separately.
       </p>
     </div>
-  );
+  )
 }

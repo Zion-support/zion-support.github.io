@@ -72,5 +72,5 @@ export function RegionFilter({
         </div>
       )}
     </div>
-  );
+  )
 }

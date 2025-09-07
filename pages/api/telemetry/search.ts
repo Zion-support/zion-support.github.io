@@ -1,10 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-const memoryStore: { q: string, ts: number }[] = [],
+const memoryStore: { q: string, ts: number}[] = [],
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
-    const { q } = req.body || {},
+  if (req.method = $2;
     if (typeof q === 'string' && q.trim()) {
       memoryStore.push({ q: q.trim(), ts: Date.now() })
     }

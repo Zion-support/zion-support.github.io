@@ -1,18 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '../../../../lib/integrations/fileStore',
-import { crm } from '../../../../lib/integrations/connectors',
+import { readState, writeState } from '../../../../lib/integrations/fileStore';
+import { crm } from '../../../../lib/integrations/connectors';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  if (req.method !== 'POST') return res.status(405).json($2);
   const { job } = req.body as { job?: Record<string, any> },
-  if (!job) return res.status(400).json({ error: 'Missing job payload' }),
-
-  const state = readState(),
-  const crms = state.connections.filter(c => c.providerId === 'salesforce' || c.providerId === 'hubspot' || c.providerId === 'zoho' || c.providerId === 'pipedrive'),
+  if (!job) return res.status(400).json($2);
+  const state = readState($2);
+  const crms = state.connections.filter($2);
   const results: any[] = [],
   for (const conn of crms) {
-    const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact }),
-    writeState(s => s.logs.push(log)),
-    results.push({ providerId: conn.providerId, ok: true })
+    const { log } = await crm.syncContact($2);
+    writeState(s = $2;
+    results.push({ providerId: conn.providerId, ok: true})
   }
 
   // record Zapier event

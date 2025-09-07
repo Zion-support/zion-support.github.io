@@ -5,12 +5,8 @@ import { Leaf, Server, Cloud } from "lucide-react",
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 export default function GreenIT() {
-
-  const greenITSolutions = [
-    {
-      title: "Energy-Efficient Hardware"
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server}
+  const greenITSolutions = $2;
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
       icon: Server},
     {
       title: "Optimized Cooling Systems"
@@ -83,6 +79,7 @@ export default function GreenIT() {
             </div>
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>
+              
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>

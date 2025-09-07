@@ -1,8 +1,8 @@
-import React from 'react';,
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-import { Button } from '@/components/ui/button';,
-import { Card, CardContent } from '@/components/ui/card';,
-import {logErrorToProduction} from '@/utils/productionLogger';,
+import React from 'react';
+import { AlertTriangle, RefreshCw } from 'lucide-react'
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface Props {
   children: React.ReactNode
 }
@@ -14,8 +14,8 @@ interface State {
 
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
-    super(props),
-    this.state = { hasError: false }
+    super($2);
+    this.state = { hasError: false}
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -39,7 +39,7 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
               </p>
               <div className="flex gap-2 justify-center">
                 <Button 
-                  onClick={() => this.setState({ hasError: false, error: undefined })} 
+                  onClick={() => this.setState({ hasError: false, error: undefined})} 
                   variant="outline"
                 >
                   <RefreshCw className="h-4 w-4 mr-2" />

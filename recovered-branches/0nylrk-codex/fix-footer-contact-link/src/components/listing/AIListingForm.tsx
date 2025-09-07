@@ -6,19 +6,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from "lucide-react";
 interface AIListingFormProps {
   onSubmit: (formData: {
-    title: string;
-    category: string;
-    keyFeatures: string;
-    targetAudience: string
-  }) => void;
-  isLoading: boolean;
-    title: string
-    category: string
-    keyFeatures: string
-    targetAudience: string
-  }) => void;
-  isLoading: boolean
-
+    title: string,
+    category: string,
+    keyFeatures: string,
+    targetAudience: string}) => void,
+  isLoading: boolean,
   initialValues?: {
     title?: string,
     category?: string,
@@ -27,20 +19,15 @@ interface AIListingFormProps {
   }
 }
 
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title || "");
-  const [category, setCategory] = useState(initialValues.category || "");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
-
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
+  const { toast } = useToast($2);
+  const [title, setTitle] = useState($2);
+  const [category, setCategory] = useState($2);
+  const [keyFeatures, setKeyFeatures] = useState($2);
+  const [targetAudience, setTargetAudience] = useState($2);
   const handleSubmit = () => {
-    if (!title |!category) {
-      toast({
-        title: "Missing required fields"
-        description: "Please provide at least a title and category."
-        variant: "destructive"
-      }),
+    if (!title || !category) {
+      toast($2);
       return
     }
     onSubmit({
@@ -49,7 +36,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       keyFeatures,
       targetAudience
     })
-  }
+  },
 
   return (
     <div className="space-y-4">

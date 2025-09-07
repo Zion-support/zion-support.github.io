@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-
-const About: NextPage = () => {
+const Custom404 = () => {
   return (
     <div>
       <Head>
@@ -14,7 +13,7 @@ const About: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default About;
+export default Custom404,

@@ -1,6 +1,4 @@
 import type { TalentProfile } from '@/utils/types/talent';
-}
-
 export const TALENT_PROFILES: TalentProfile[] = [
   {
     slug: 'ava-chen',
@@ -10,20 +8,13 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Toronto, CA',
     timezone: 'America/Toronto',
     region: 'North America',
-    skills: [
-      'LLM Ops',
-      'RAG',
-      'OpenAI',
-      'LangChain',
-      'Vector DBs',
-      'TypeScript',
-    ],
+    skills: ['LLM OpsRAGOpenAILangChainVector DBsTypeScript'],
     summary:
       'Senior LLM Engineer specializing in end-to-end GenAI systems with retrieval, evaluation, and safety guardrails. Proven track record shipping reliable AI products at scale.',
     bio: 'Architects robust LLM applications with retrieval, evaluation, and safety guardrails. Ex-FAANG applied scientist.',
     hourlyRateUsd: 140,
     availability: 'Open',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=1',
+    profileImageUrl: 'https://i.pravatar.cc/300?img = $2;
     portfolio: [
       { title: 'RAG Platform Template', url: 'https://example.com/rag' },
       { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' },
@@ -41,13 +32,13 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Lisbon, PT',
     timezone: 'Europe/Lisbon',
     region: 'Europe',
-    skills: ['AWS', 'Kubernetes', 'Terraform', 'Serverless', 'Networking'],
+    skills: ['AWSKubernetesTerraformServerlessNetworking'],
     summary:
       'Cloud architect focused on scalable multi-account AWS platforms, platform engineering, and secure-by-default patterns for modern teams.',
     bio: 'Designs scalable, secure multi-account AWS platforms and platform engineering toolchains.',
     hourlyRateUsd: 120,
     availability: 'Part-time',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=2',
+    profileImageUrl: 'https://i.pravatar.cc/300?img = $2;
     portfolio: [
       {
         title: 'Multi-Account AWS Landing Zone',
@@ -67,23 +58,14 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Austin, US',
     timezone: 'America/Chicago',
     region: 'North America',
-    skills: [
-      'Python',
-      'PyTorch',
-      'NLP',
-      'Evaluation',
-      'Prompting',
-      'Dashboards',
-    ],
+    skills: ['PythonPyTorchNLPEvaluationPromptingDashboards'],
     summary:
       'Data scientist delivering measurable outcomes with rigorous evaluation, fast iteration, and pragmatic product sense.',
     bio: 'Builds data products end-to-end with strong model evaluation and product sense.',
     hourlyRateUsd: 110,
     availability: 'Open',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=3',
-    portfolio: [
-      { title: 'NLP Evaluation Dashboard', url: 'https://example.com/nlp' },
-    ],
+    profileImageUrl: 'https://i.pravatar.cc/300?img = $2;
+    portfolio: [{ title: 'NLP Evaluation Dashboard', url: 'https://example.com/nlp' }],
     verified: false,
     rating: 4.7,
     reviewsCount: 12,
@@ -97,13 +79,13 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Tokyo, JP',
     timezone: 'Asia/Tokyo',
     region: 'Asia',
-    skills: ['Next.js', 'TypeScript', 'Rust', 'PostgreSQL', 'OpenAI', 'Vercel'],
+    skills: ['Next.jsTypeScriptRustPostgreSQLOpenAIVercel'],
     summary:
       'Full‑stack developer building sleek, performant AI web apps with modern DX, observability, and delightful UX.',
     bio: 'Delivers sleek, performant AI web apps with modern DX and observability.',
     hourlyRateUsd: 95,
     availability: 'Booked',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=4',
+    profileImageUrl: 'https://i.pravatar.cc/300?img = $2;
     portfolio: [{ title: 'AI SaaS Starter', url: 'https://example.com/saas' }],
     verified: true,
     rating: 4.6,
@@ -118,19 +100,15 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Berlin, DE',
     timezone: 'Europe/Berlin',
     region: 'Europe',
-    skills: ['Threat Modeling', 'AppSec', 'SAST/DAST', 'Zero Trust', 'IAM'],
+    skills: ['Threat ModelingAppSecSAST/DASTZero TrustIAM'],
     summary:
       'Security engineer who hardens platforms with developer‑friendly security programs, practical controls, and measurable impact.',
     bio: 'Hardens platforms with practical, developer‑friendly security programs.',
     hourlyRateUsd: 130,
     availability: 'Open',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=5',
-    portfolio: [
-      { title: 'Zero Trust Rollout Case Study', url: 'https://example.com/zt' },
-    ],
+    profileImageUrl: 'https://i.pravatar.cc/300?img = $2;
+    portfolio: [{ title: 'Zero Trust Rollout Case Study', url: 'https://example.com/zt' }],
     verified: false,
     rating: 4.5,
     reviewsCount: 9,
-    createdAt: new Date().toISOString(),
-  },
-];
+    createdAt: new Date().toISOString()}],

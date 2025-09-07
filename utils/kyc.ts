@@ -1,206 +1,73 @@
-// KYC (Know Your Customer) utilities
-export interface KycProfile {
-  userId: string;
-  role: 'individual' | 'business';
-  fullLegalName?: string;
-  businessName?: string;
-  businessRegistrationNumber?: string;
-  documents: KycDocumentMeta[];
-  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
-  amlStatus: 'unknown' | 'pending' | 'passed' | 'failed';
-  flags?: string[];
-  riskScore?: number;
-  createdAt: string;
-  lastUpdatedAt: string;
-  auditTrail: Array<{
-    at: string;
-    by: string;
-    action: string;
-    details?: Record<string, any>;
-  }>;
-}
-
+export type KycRole = $2;
+export type KycStatus = $2;
+export type AmlStatus = $2;
 export interface KycDocumentMeta {
-  id: string;
-  kind: string;
-  filename: string;
-  uploadedAt: string;
+  id: string,
+  kind:
+    | 'government_id_front'
+    | 'government_id_back'
+    | 'selfie'
+    | 'business_registration'
+    | 'tax_certificate'
+    | 'proof_of_address'
+    | 'academic_certificate',
+  filename: string,
+  url?: string,
+  checksumSha256?: string,
+  uploadedAt: string, // ISO
 }
 
-export interface KycDocumentType {
-  kind: string;
-  name: string;
-  required: boolean;
-  description: string;
-  acceptedFormats: string[];
-  maxSizeMB: number;
+export interface KycProfile {
+  userId: string,
+  role: KycRole,
+  fullLegalName?: string,
+  dateOfBirth?: string, // ISO
+  country?: string,
+  businessName?: string,
+  businessRegistrationNumber?: string,
+  documents: KycDocumentMeta[],
+  status: KycStatus,
+  amlStatus: AmlStatus,
+  riskScore?: number, // 0-100
+  flags?: string[], // e.g., ["mismatch","duplicate_ip"]
+  lastUpdatedAt: string, // ISO
+  createdAt: string, // ISO
+  auditTrail: Array<{ at: string, by: string, action: string, details?: Record<string, unknown> }>
 }
 
-const DOCUMENT_TYPES: Record<string, KycDocumentType[]> = {
-  individual: [
-    {
-      kind: 'government_id',
-      name: 'Government ID',
-      required: true,
-      description: 'Driver\'s license, passport, or state ID',
-      acceptedFormats: ['jpg', 'jpeg', 'png', 'pdf'],
-      maxSizeMB: 10
-    },
-    {
-      kind: 'proof_of_address',
-      name: 'Proof of Address',
-      required: true,
-      description: 'Utility bill, bank statement, or lease agreement',
-      acceptedFormats: ['jpg', 'jpeg', 'png', 'pdf'],
-      maxSizeMB: 10
-    },
-    {
-      kind: 'selfie',
-      name: 'Selfie',
-      required: true,
-      description: 'Photo of yourself holding your ID',
-      acceptedFormats: ['jpg', 'jpeg', 'png'],
-      maxSizeMB: 5
-    }
-  ],
-  business: [
-    {
-      kind: 'business_registration',
-      name: 'Business Registration',
-      required: true,
-      description: 'Certificate of incorporation or business license',
-      acceptedFormats: ['pdf', 'jpg', 'jpeg', 'png'],
-      maxSizeMB: 10
-    },
-    {
-      kind: 'tax_id',
-      name: 'Tax ID Document',
-      required: true,
-      description: 'EIN letter or tax registration document',
-      acceptedFormats: ['pdf', 'jpg', 'jpeg', 'png'],
-      maxSizeMB: 10
-    },
-    {
-      kind: 'authorized_representative_id',
-      name: 'Authorized Representative ID',
-      required: true,
-      description: 'Government ID of the authorized representative',
-      acceptedFormats: ['jpg', 'jpeg', 'png', 'pdf'],
-      maxSizeMB: 10
-    },
-    {
-      kind: 'proof_of_business_address',
-      name: 'Proof of Business Address',
-      required: true,
-      description: 'Utility bill or lease agreement for business address',
-      acceptedFormats: ['jpg', 'jpeg', 'png', 'pdf'],
-      maxSizeMB: 10
-    }
-  ]
-};
-
-export function getRequiredDocuments(role: string): KycDocumentType[] {
-  return DOCUMENT_TYPES[role]?.filter(doc => doc.required) || [];
-}
-
-export function getOptionalDocuments(role: string): KycDocumentType[] {
-  return DOCUMENT_TYPES[role]?.filter(doc => !doc.required) || [];
-}
-
-export function getAllDocumentTypes(role: string): KycDocumentType[] {
-  return DOCUMENT_TYPES[role] || [];
-}
-
-export function validateDocumentType(role: string, kind: string): boolean {
-  const documentTypes = getAllDocumentTypes(role);
-  return documentTypes.some(doc => doc.kind === kind);
-}
-
-export function getDocumentTypeInfo(role: string, kind: string): KycDocumentType | null {
-  const documentTypes = getAllDocumentTypes(role);
-  return documentTypes.find(doc => doc.kind === kind) || null;
-}
-
-export function validateDocumentFile(filename: string, role: string, kind: string): {
-  valid: boolean;
-  error?: string;
-} {
-  const docType = getDocumentTypeInfo(role, kind);
-  if (!docType) {
-    return { valid: false, error: 'Invalid document type' };
+export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
+  if (role === 'client') {
+    return ['government_id_frontgovernment_id_backselfie']
   }
-
-  const extension = filename.split('.').pop()?.toLowerCase();
-  if (!extension || !docType.acceptedFormats.includes(extension)) {
-    return { 
-      valid: false, 
-      error: `Invalid file format. Accepted formats: ${docType.acceptedFormats.join(', ')}` 
-    };
+  if (role === 'enterprise') {
+    return ['government_id_frontgovernment_id_backselfiebusiness_registrationtax_certificate']
   }
-
-  return { valid: true };
+  return ['government_id_frontgovernment_id_back'], // talent
 }
 
-export function isKycComplete(profile: KycProfile): boolean {
-  const requiredDocs = getRequiredDocuments(profile.role);
-  const uploadedKinds = profile.documents.map(doc => doc.kind);
-  
-  return requiredDocs.every(doc => uploadedKinds.includes(doc.kind));
+export function getOptionalDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
+  if (role = $2;
+  const labels: string[] = [],
+  if (profile.status === 'approved') labels.push($2);
+  if (profile.role === 'enterprise' && profile.status === 'approved') labels.push($2);
+  return labels
 }
 
-export function getKycProgress(profile: KycProfile): {
-  completed: number;
-  total: number;
-  percentage: number;
-} {
-  const requiredDocs = getRequiredDocuments(profile.role);
-  const uploadedKinds = profile.documents.map(doc => doc.kind);
-  const completed = requiredDocs.filter(doc => uploadedKinds.includes(doc.kind)).length;
-  
-  return {
-    completed,
-    total: requiredDocs.length,
-    percentage: Math.round((completed / requiredDocs.length) * 100)
-  };
-}
-
-export function getMissingDocuments(profile: KycProfile): KycDocumentType[] {
-  const requiredDocs = getRequiredDocuments(profile.role);
-  const uploadedKinds = profile.documents.map(doc => doc.kind);
-  
-  return requiredDocs.filter(doc => !uploadedKinds.includes(doc.kind));
-}
-
-export function calculateRiskScore(profile: KycProfile): number {
-  let score = 0;
-  
-  // Base score
-  score += 10;
-  
-  // Role-based risk
-  if (profile.role === 'business') {
-    score += 20;
+export function validateKycSubmission(profile: Partial<KycProfile>): { ok: boolean, missing: string[] } {
+  const missing: string[] = [],
+  if (!profile.userId) missing.push($2);
+  if (!profile.role) missing.push($2);
+  const required = $2;
+  const uploadedKinds = $2;
+  for (const req of required) {
+    if (!uploadedKinds.has(req)) missing.push(`document:${req}`)
   }
-  
-  // Document completeness
-  const progress = getKycProgress(profile);
-  if (progress.percentage < 100) {
-    score += 30;
+  if (profile.role === 'client' || profile.role === 'enterprise') {
+    if (!profile.fullLegalName) missing.push('fullLegalName')
   }
-  
-  // Flags
-  if (profile.flags) {
-    if (profile.flags.includes('aml_alert')) score += 50;
-    if (profile.flags.includes('fraud_risk')) score += 30;
-    if (profile.flags.includes('duplicate_ip')) score += 20;
+  if (profile.role === 'enterprise') {
+    if (!profile.businessName) missing.push($2);
+    if (!profile.businessRegistrationNumber) missing.push('businessRegistrationNumber')
   }
-  
-  return Math.min(score, 100);
-}
-
-export function getRiskLevel(score: number): 'low' | 'medium' | 'high' | 'critical' {
-  if (score >= 80) return 'critical';
-  if (score >= 60) return 'high';
-  if (score >= 30) return 'medium';
-  return 'low';
+  return { ok: missing.length === 0, missing }
 }

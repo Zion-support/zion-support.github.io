@@ -12,45 +12,16 @@ import {
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 interface ReferralLinkProps {
-  referralLink: string;
-  onCopy: () => void;
+  referralLink: string,
+  onCopy: () => void,
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
 }
 
-export function ReferralLink({
-  referralLink
-  onCopy
-  onShare
-}: ReferralLinkProps) {
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
-interface ReferralLinkProps {
-  referralLink: string;
-  onCopy: () => void;
-  onShare: (platform: "twitter" | "facebook" | "linkedin") => void;
-}
-
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
-  const [copied, setCopied] = useState(false);
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
+  const [copied, setCopied] = useState($2);
   const handleCopy = () => {
-    onCopy();
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  }
-  
-  const handleCopy = () => {
-    onCopy(),
-    setCopied(true),
+    onCopy($2);
+    setCopied($2);
     setTimeout(() => setCopied(false), 2000)
   },
 
@@ -124,7 +95,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </div>
       </CardFooter>
     </Card>
-  );
+  )
 }
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;

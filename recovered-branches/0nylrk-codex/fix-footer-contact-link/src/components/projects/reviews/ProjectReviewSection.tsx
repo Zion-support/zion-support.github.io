@@ -33,15 +33,22 @@ import { useReviews } from "@/hooks/useReviews";
 import { Project } from "@/types/projects";
 import { useAuth } from "@/hooks/useAuth";
 interface ProjectReviewSectionProps {
-  project: Project;
-}
+  project: Project}
 
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
-  const { user } = useAuth();
-  const { reviews, userReview, isLoading, reportReview } = useReviews(
-    project.id,
-  );
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
+  const { user } = useAuth($2);
+  const { reviews, userReview, isLoading, reportReview } = useReviews($2);
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState($2);
+  const isCompleted = $2;
+  const isClient = $2;
+  const isTalent = $2;
+  const clientProfile = $2;
+  const talentProfile = $2;
+  // Determine who the current user needs to review
+  const revieweeId = $2;
+  const revieweeName = $2;
+  const canLeaveReview = $2;
+  const hasLeftReview = $2;
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -123,5 +130,5 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
         />
       )}
     </Card>
-  );
+  )
 }

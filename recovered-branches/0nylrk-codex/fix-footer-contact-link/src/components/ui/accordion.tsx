@@ -6,10 +6,7 @@ const Accordion = AccordionPrimitive.Root;
 
 import { cn } from "@/lib/utils"
 
-const Accordion = AccordionPrimitive.Root
-
-const AccordionItem = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Item>
+const Accordion = $2;
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
@@ -17,37 +14,17 @@ const AccordionItem = React.forwardRef<
     className={cn('border-b', className)}
     {...props}
   />
-));
-AccordionItem.displayName = 'AccordionItem';
-const AccordionTrigger = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Trigger>
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.T</typeof>rigger>
+))
+AccordionItem.displayName = $2;
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Header className="flex">
-    <AccordionPrimitive.Trigger
-      ref={ref}
-      className={cn(
-        'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180'
+  <AccordionPrimitive.Header className = $2;
         className
       )}
     </AccordionPrimitive>  {...props}
     >
       {children}
-      <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />
-    </AccordionPrimitive.Trigger>
-  </AccordionPrimitive.Header>
-));
-AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
-const AccordionContent = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Content>
-  React.ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
-    </AccordionPrimitive.Trigger>
-  </AccordionPrimitive.Header>
-))
-AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
-
-const AccordionContent = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Content>,
+      <ChevronDown className = $2;
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content

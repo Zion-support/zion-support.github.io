@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST'),
+    res.setHeader($2);
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
 
@@ -13,5 +12,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   // Placeholder for persistence, echo the response for now
   const payload = { talentId, action, at: new Date().toISOString() },
-  return res.status(200).json({ ok: true, data: payload })
+  return res.status(200).json({ ok: true, data: payload})
 }

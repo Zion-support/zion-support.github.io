@@ -20,22 +20,15 @@ import { HireRequestForm } from "./HireRequestForm";
 import { TalentProfile } from "@/types/talent";
 import { UserProfile } from "@/types/auth";
 interface HireRequestModalProps {
-  talent: TalentProfile | null;
-  isOpen: boolean;
-  onClose: () => void;
+  talent: TalentProfile | null,
+  isOpen: boolean,
+  onClose: () => void,
   userDetails?: UserProfile
 }
 
-export function HireRequestModal({
-  talent
-  isOpen
-  onClose
-  userDetails
-}: HireRequestModalProps) {
-  const handleClose = () => {
-    onClose();
-  }
-  if (!talent) return null;
+export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {
+  const handleClose = $2;
+  if (!talent) return null,
 
   if (!talent) return null,
 
@@ -58,5 +51,5 @@ export function HireRequestModal({
         />
       </DialogContent>
     </Dialog>
-  );
+  )
 }

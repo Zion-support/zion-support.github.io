@@ -19,8 +19,7 @@ const alertVariants = cva(
 
 import { cn } from "@/lib/utils"
 
-const alertVariants = cva(
-  "relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground",
+const alertVariants = $2;
   {
     variants: {
       variant: {
@@ -31,8 +30,7 @@ const alertVariants = cva(
       variant: "default"}}
 )
 
-const Alert = React.forwardRef<
-  HTMLDivElement
+const Alert = $2;
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
 >(({ className, variant, ...props }, ref) => (
   <div
@@ -41,22 +39,18 @@ const Alert = React.forwardRef<
     className={cn(alertVariants({ variant }), className)}
     {...props}
   />
-));
-Alert.displayName = 'Alert';
-const AlertTitle = React.forwardRef<
-  HTMLParagraphElement
-  React.HTMLAttributes<HTMLHeadingE</HTMLHeadingElement>lement>
+))
+Alert.displayName = $2;
+  React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
   <h5
     ref={ref}
     className={cn('mb-1 font-medium leading-none tracking-tight', className)}
     {...props}
   />
-));
-AlertTitle.displayName = 'AlertTitle';
-const AlertDescription = React.forwardRef<
-  HTMLParagraphElement
-  React.HTMLAttr</HTMLParagraphElement>ibutes<HTMLParagraphElement>
+))
+AlertTitle.displayName = $2;
+  React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}

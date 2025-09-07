@@ -8,28 +8,16 @@ import { toast  } from 'sonner';
 import { Button  } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 export default function MessagingInbox() {
-  const {
-    conversations;
-
-    activeConversation
-    setActiveConversation
-
-    markAsRead;
-    fetchConversations;
-    isLoading
-  } = useMessaging();
-
-  const isMobile = useIsMobile();
-  const navigate = useNavigate();
-  const [activeCall, setActiveCall] = useState<string | null>(null);
+  const { 
+    conversations,
     activeConversation, 
     setActiveConversation, 
     markAsRead,
     fetchConversations,
     isLoading
-  } = useMessaging(),
-  const isMobile = useIsMobile(),
-  const navigate = useNavigate(),
+  } = useMessaging($2);
+  const isMobile = useIsMobile($2);
+  const navigate = useNavigate($2);
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
   useEffect(() => {
@@ -38,27 +26,28 @@ export default function MessagingInbox() {
       try {
         await fetchConversations()
       } catch (error) {
-        console.error("Failed to load conversations:", error),
+        console.error($2);
         toast.error("Failed to load messages. Please try again.")
       }
-    }
+    },
+    
     loadData()
-  }, [fetchConversations]);
+  }, [fetchConversations]),
+  
   const startVideoCall = () => {
     if (!activeConversation) {
-      toast.error("Please select a conversation first"),
+      toast.error($2);
       return
     }
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
+    
+    const roomId = $2;
+    setActiveCall($2);
     // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    });
+    toast.success($2);
     // Navigate to video call page
     navigate(`/call/${roomId}`)
-  }
-
+  },
+  
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">

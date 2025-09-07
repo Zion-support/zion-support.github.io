@@ -1,27 +1,15 @@
 import React, { useState } from "react";
-import {useNavigate} from "react-router-dom";
-import {Button} from "@/components/ui/button";
-import {LanguageThemeSelector} from "../components/onboarding/LanguageThemeSelector";
-import {RolePicker} from "../components/onboarding/RolePicker";
-import {SignUpForm} from "../components/onboarding/SignUpForm";
-type OnboardingStep = "language" | "role" | "signup";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector";
+import { RolePicker } from "../components/onboarding/RolePicker";
+import { SignUpForm } from "../components/onboarding/SignUpForm";
+type OnboardingStep = $2;
 export function MobileOnboarding() {
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
-  const navigate = useNavigate();
-  
-  const goToNextStep = () => {
-    if (currentStep === "language") {
-      setCurrentStep("role")
-    } else if (currentStep === "role") {
-      setCurrentStep("signup")
-    } else {
-      navigate("/mobile")
-    }
-  }
-  const handleRoleSelect = () => {
-    setCurrentStep("signup")
-  }
-
+  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
+  const navigate = useNavigate($2);
+  const goToNextStep = $2;
+  const handleRoleSelect = $2;
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-1 py-8">

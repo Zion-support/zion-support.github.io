@@ -4,8 +4,11 @@ import { CurrentSubscription } from "./CurrentSubscription",
 import { PaymentMethods } from "./PaymentMethods",
 import { InvoiceHistory } from "./InvoiceHistory";
 import { UsageOverview } from "./UsageOverview";
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger} from "@/components/ui/tabs",
 
 export function BillingDashboard() {
   return (
@@ -32,7 +35,7 @@ export function BillingDashboard() {
         </TabsContent>
       </Tabs>
     </div>
-  );
+  )
 }
   )
 import React from "react",;

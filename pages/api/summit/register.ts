@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { supabase } from '../../../utils/supabase/client',
+import { supabase } from '../../../utils/supabase/client';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -23,14 +23,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           source: source || 'zion-global-2025',
           created_at: new Date().toISOString()}])
       .select('*')
-      .single(),
-
+      .single($2);
     if (error) {
       return res.status(500).json({ error: error.message })
     }
 
-    return res.status(200).json({ ok: true, registration: data })
+    return res.status(200).json({ ok: true, registration: data})
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message || 'Unknown error' })
+    return res.status(500).json({ error: e ?.message || 'Unknown error' })
   }
 }

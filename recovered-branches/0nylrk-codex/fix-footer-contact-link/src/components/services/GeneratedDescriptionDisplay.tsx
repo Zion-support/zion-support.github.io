@@ -13,39 +13,25 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from "lucide-react";
 interface GeneratedDescriptionDisplayProps {
-  description: string;
+  description: string,
   onSave: (editedDescription: string) => void
-}
-
-export function GeneratedDescriptionDisplay({
-  description
-  onSave
-
-interface GeneratedDescriptionDisplayProps {
-  description: string;
-  onSave: (editedDescription: string) => void;
 }
 
 export function GeneratedDescriptionDisplay({ 
   description, 
   onSave 
-}: GeneratedDescriptionDisplayProps) {;
-  const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
 }: GeneratedDescriptionDisplayProps) {
-  const { toast } = useToast(),
-  const [isEditing, setIsEditing] = useState(false),
-  const [editedDescription, setEditedDescription] = useState(description),
-
+  const { toast } = useToast($2);
+  const [isEditing, setIsEditing] = useState($2);
+  const [editedDescription, setEditedDescription] = useState($2);
   const handleSave = () => {
-    onSave(editedDescription),
-    setIsEditing(false),
+    onSave($2);
+    setIsEditing($2);
     toast({
       title: "Description Saved"
       description: "Your edited description has been saved."
-    });
-  }
+    })
+  },
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -96,5 +82,5 @@ export function GeneratedDescriptionDisplay({
         </CardFooter>
       )}
     </Card>
-  );
+  )
 }

@@ -1,31 +1,202 @@
-//Combine all 2026 services including new ones const all2026Services = [ ...innovative2026MicroSaasServicesV2
-...emergingTech2026ServicesV2
-...enterpriseIT2026ServicesV2
-...innovative2026AIServicesV3
-...emergingTech2026ServicesV3
-...enterpriseIT2026ServicesV3 ]
-//Enhanced categories for 2026 //Search filter if (searchTerm) {
-  filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) 
-}//Sort services filtered.sort ( (a, b) => {
-  switch (sortBy) {
-  case 'price-low': case 'popularity': return (b.rating * b.reviews) - (a.rating * a.reviews)
-case 'newest': return new Date (b.launchDate) .getTime () - new Date (a.launchDate) .getTime ()
-case 'rating': return filtered
-}, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy])
-//Service statistics return (<UltraFuturisticBackground variant="holographic" intensity="high" > <div className="min-h-screen" > <Head> <title>Enhanced 2026 Services Showcase - Zion Tech Group</title> <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." /> <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" /> <link rel="icon" href="/favicon.svg" /> <motion.div initial= {
-  {
-  opacity: 0, y: 20 
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+import React, { useState, useMemo } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
+import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
+import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
+export default function Services2026ShowcaseEnhancedPage() {
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+
+  // Map service variants to supported card variants
+  const mapServiceVariantToCardVariant = $2;
+    if (serviceVariant.includes('quantum')) return 'quantum',
+    if (serviceVariant.includes('ai')) return 'ai-futuristic',
+    if (serviceVariant.includes('holographic')) return 'holographic',
+    if (serviceVariant.includes('neural')) return 'neural',
+    if (serviceVariant.includes('cyberpunk')) return 'cyberpunk',
+    if (serviceVariant.includes('enterprise')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('cloud')) return 'quantum-advanced',
+    if (serviceVariant.includes('security')) return 'cyberpunk',
+    if (serviceVariant.includes('data')) return 'neural',
+    if (serviceVariant.includes('mobility')) return 'holographic',
+    if (serviceVariant.includes('network')) return 'quantum-advanced',
+    if (serviceVariant.includes('backup')) return 'quantum-advanced',
+    if (serviceVariant.includes('itsm')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('monitoring')) return 'neural',
+    if (serviceVariant.includes('blockchain')) return 'quantum-advanced',
+    if (serviceVariant.includes('metaverse')) return 'holographic',
+    if (serviceVariant.includes('iot')) return 'quantum-iot',
+    if (serviceVariant.includes('edge')) return 'quantum-advanced',
+    if (serviceVariant.includes('ar')) return 'holographic',
+    if (serviceVariant.includes('digital-twin')) return 'quantum-advanced',
+    if (serviceVariant.includes('5g')) return 'quantum-advanced',
+    if (serviceVariant.includes('biometric')) return 'cyberpunk',
+    if (serviceVariant.includes('autonomous')) return 'ai-futuristic',
+    if (serviceVariant.includes('revolutionary')) return 'quantum-advanced',
+    if (serviceVariant.includes('consulting')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('api')) return 'quantum-advanced',
+    if (serviceVariant.includes('integration')) return 'quantum-advanced',
+    if (serviceVariant.includes('analytics')) return 'neural',
+    return 'default'
+  },
+
+  const contactInfo = $2;
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
+
+  // Combine all 2026 services including new ones
+  const all2026Services = $2;
+    ...emergingTech2026ServicesV2,
+    ...enterpriseIT2026ServicesV2,
+    ...innovative2026AIServicesV3,
+    ...emergingTech2026ServicesV3,
+    ...enterpriseIT2026ServicesV3
+  ],
+
+  // Enhanced categories for 2026
+  const categories = [
+    { id: 'all', name: 'All 2026 Services', icon: '🚀', count: all2026Services.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s = $2;
+    { id: 'quantum', name: 'Quantum & Emerging Tech', icon: '⚛️', count: all2026Services.filter(s = $2;
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: all2026Services.filter(s = $2;
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: all2026Services.filter(s = $2;
+    { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: all2026Services.filter(s = $2;
+    { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s = $2;
+    { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s = $2;
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
+    { id: 'premium', name: '$20K+/month', range: '$20K+' }
+  ],
+
+  const sortOptions = [
+    { id: 'name', name: 'Name A-Z' },
+    { id: 'price-low', name: 'Price Low to High' },
+    { id: 'price-high', name: 'Price High to Low' },
+    { id: 'popularity', name: 'Most Popular' },
+    { id: 'newest', name: 'Newest First' },
+    { id: 'rating', name: 'Highest Rated' }
+  ],
+
+  // Filter and sort services
+  const filteredServices = $2;
+    // Search filter
+    if (searchTerm) {
+      filtered = filtered.filter(service =>
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.category.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    }
+
+    // Category filter
+    if (selectedCategory !== 'all') {
+      if (selectedCategory === 'ai') {
+        filtered = filtered.filter(service => service.category.includes('AI'))
+      } else if (selectedCategory === 'quantum') {
+        filtered = filtered.filter(service => service.category.includes('Quantum') || service.category.includes('Emerging'))
+      } else if (selectedCategory === 'enterprise') {
+        filtered = filtered.filter(service => service.category.includes('Enterprise') || service.category.includes('IT'))
+      } else if (selectedCategory === 'micro-saas') {
+        filtered = filtered.filter(service => service.category.includes('SaaS'))
+      } else if (selectedCategory === 'healthcare') {
+        filtered = filtered.filter(service => service.category.includes('Healthcare') || service.category.includes('Biotech'))
+      } else if (selectedCategory === 'financial') {
+        filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading'))
+      } else if (selectedCategory === 'manufacturing') {
+        filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT'))
+      }
+    }
+
+    // Price filter
+    if (selectedPriceRange !== 'all') {
+      filtered = filtered.filter(service => {
+        const price = parseInt(service.price.replace(/[^0-9]/g, '')),
+        if (selectedPriceRange = $2;
+        if (selectedPriceRange = $2;
+        if (selectedPriceRange = $2;
+        if (selectedPriceRange = $2;
+        return true
+      })
+    }
+
+    // Sort services
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'price-low':
+          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
+        case 'price-high':
+          return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),
+        case 'popularity':
+          return (b.rating * b.reviews) - (a.rating * a.reviews),
+        case 'newest':
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime($2);
+        case 'rating':
+          return b.rating - a.rating,
+        default: return a.name.localeCompare(b.name)
+      }
+    }),
+
+    return filtered
+  }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
+
+  // Service statistics
+  const serviceStats = $2;
+    aiServices: all2026Services.filter(s = $2;
+    quantumServices: all2026Services.filter(s = $2;
+    enterpriseServices: all2026Services.filter(s = $2;
+    microSaasServices: all2026Services.filter(s = $2;
+    healthcareServices: all2026Services.filter(s = $2;
+    financialServices: all2026Services.filter(s = $2;
+    manufacturingServices: all2026Services.filter(s = $2;
+  return (
+    <UltraFuturisticBackground variant="holographic" intensity="high">
+      <div className="min-h-screen">
+        <Head>
+          <title>Enhanced 2026 Services Showcase - Zion Tech Group</title>
+          <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." />
+          <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />
+          <link rel="icon" href="/favicon.svg" />
+          
+          {/* Open Graph */}
+          <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
+          <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+          
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
+          <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
+          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+        </Head>
+
+        {/* Enhanced Header Section */}
+        <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
+          <div className="max-w-7xl mx-auto relative z-10 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Enhanced 2026 Services Showcase
@@ -39,7 +210,7 @@ case 'rating': return filtered
                   <motion.div
                     key={key}
                     initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    animate={{ opacity: 1, scale: 1}}
                     transition={{ duration: 0.5, delay: key.length * 0.1 }}
                     className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30"
                   >
@@ -178,9 +349,9 @@ case 'rating': return filtered
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
+                  initial={{ opacity: 0}}
+                  animate={{ opacity: 1}}
+                  exit={{ opacity: 0}}
                   className="text-center py-20"
                 >
                   <div className="text-6xl mb-4">🔍</div>
@@ -192,8 +363,8 @@ case 'rating': return filtered
                   {filteredServices.map((service, index) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 20}}
+                      animate={{ opacity: 1, y: 0}}
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className={viewMode === 'grid' ? '' : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30'}
@@ -314,10 +485,10 @@ case 'rating': return filtered
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -354,10 +525,4 @@ case 'rating': return filtered
       </div>
     </UltraFuturisticBackground>
   )
-}
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }

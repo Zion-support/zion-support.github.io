@@ -10,25 +10,26 @@ import { NotificationCenter } from "@/components/NotificationCenter",
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 export default function Dashboard() {
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-  if (!user) return null;
+  const { user, logout } = useAuth($2);
+  const { toast } = useToast($2);
+  if (!user) return null,
 
   if (!user) return null,
 
   const handleTestNotification = async () => {
-    const result = await createTestNotification(user.id),
+    const result = await createTestNotification($2);
     if (result.success) {
       toast({
-        title: "Test notification created"
+        title: "Test notification created",
         description: "Check your notification center"})
     } else {
       toast({
-        title: "Error creating test notification"
-        description: "Something went wrong"
+        title: "Error creating test notification",
+        description: "Something went wrong",
         variant: "destructive"})
     }
-  }
+  },
+
   return (
     <>
       <Header />
@@ -97,11 +98,7 @@ export default function Dashboard() {
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
-                        await createOnboardingNotification({
-                          userId: user.id
-                          missingMilestone: 'profile_completed'
-                          userRole: user.userType === 'employer' |user.userType === 'buyer' ? 'client' : 'talent'
-                        });
+                        await createOnboardingNotification($2);
                         toast({
                           title: "Onboarding notification sent"
                           description: "Check your notification center"
@@ -115,13 +112,7 @@ export default function Dashboard() {
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
-                        await createSystemNotification({
-                          userId: user.id
-                          title: "New Feature Available!"
-                          message: "We've added a new notification center to help you stay updated with important information."
-                          actionUrl: "/notifications"
-                          actionText: "Explore Now"
-                        }),
+                        await createSystemNotification($2);
                         toast({
                           title: "System notification sent"
 

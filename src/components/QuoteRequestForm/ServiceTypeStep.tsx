@@ -1,23 +1,21 @@
-import { useEffect, useState } from "react";,
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";,
-import { Input } from "@/components/ui/input";,
-import { Card } from "@/components/ui/card";,
-import { Search } from 'lucide-react';
-import { ListingScoreCard } from "@/components/ListingScoreCard";,
-import { captureException } from "@/utils/sentry";,
-import Skeleton from "@/components/ui/skeleton";,
-import { useDebounce } from "@/hooks/useDebounce";,
-import { useIsMounted } from "@/hooks/useIsMounted";,
-import { z } from "zod";,
-import {logErrorToProduction} from '@/utils/productionLogger';,
-const listingSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  category: z.string(),
+import { useEffect, useState } from "react";
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
+import { Input } from "@/components/ui/input";
+import { Card } from "@/components/ui/card";
+import { Search } from 'lucide-react'
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { captureException } from "@/utils/sentry";
+import Skeleton from "@/components/ui/skeleton";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useIsMounted } from "@/hooks/useIsMounted";
+import { z } from "zod";
+import {logErrorToProduction} from '@/utils/productionLogger';
+const listingSchema = z.object($2);
+  title: z.string($2);
+  category: z.string($2);
   image: z.string().optional()}),
 
-const listingsSchema = z.array(listingSchema),
-
+const listingsSchema = z.array($2);
 interface ServiceTypeStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -25,49 +23,45 @@ interface ServiceTypeStepProps {
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const debouncedQuery = useDebounce(searchQuery, 300),
+  const [searchQuery, setSearchQuery] = useState($2);
+  const debouncedQuery = useDebounce($2);
   const [listings, setListings] = useState<ListingItem[]>([]),
-  const [loading, setLoading] = useState(false),
+  const [loading, setLoading] = useState($2);
   const [error, setError] = useState<string | null>(null),
-  const isMounted = useIsMounted(),
-
+  const isMounted = useIsMounted($2);
   // Fetch services when the service type or query changes
   useEffect(() => {
     if (!formData.serviceType) {
-      setListings([]),
+      setListings($2);
       return
     }
 
     const fetchServices = async () => {
-      setLoading(true),
-      setError(null),
-      const url = `/api/public/services?category=${encodeURIComponent(
-        formData.serviceType
-      )}&q=${encodeURIComponent(debouncedQuery)}`,
-      const maxRetries = 3,
-
+      setLoading($2);
+      setError($2);
+      const url = $2;
+      const maxRetries = $2;
       for (let attempt = 0, attempt < maxRetries, attempt++) {
         try {
-          const response = await fetch(url),
-          if (!response.ok) throw new Error('Failed to fetch'),
-          const data = await response.json(),
-          const parsed = listingsSchema.safeParse(data),
-          if (!parsed.success) throw new Error('Invalid response'),
+          const response = await fetch($2);
+          if (!response.ok) throw new Error($2);
+          const data = await response.json($2);
+          const parsed = listingsSchema.safeParse($2);
+          if (!parsed.success) throw new Error($2);
           if (isMounted.current) {
-            setListings(parsed.data as ListingItem[]),
+            setListings($2);
             setError(null)
           }
           return
         } catch (err) {
           if (attempt === maxRetries - 1) {
             if (process.env.NODE_ENV === 'development') {
-              logErrorToProduction('Failed to load services:', { data: err })
+              logErrorToProduction('Failed to load services:', { data: err})
             } else {
               captureException(err)
             }
             if (isMounted.current) {
-              setListings([]),
+              setListings($2);
               setError('Failed to load services')
             }
           } else {
@@ -82,24 +76,18 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     fetchServices()
   }, [formData.serviceType, debouncedQuery, isMounted]),
   
-  const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type })
-  },
-  
-  const handleItemSelect = (item: ListingItem) => {
-    updateFormData({ 
-      specificItem: item,
+  const handleTypeSelect = $2;
+  const handleItemSelect = $2;
       serviceCategory: item.category,
       serviceType: item.category.toLowerCase() as ServiceType
     })
   },
   
-  const sourceListings = listings,
-
+  const sourceListings = $2;
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
-      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
+      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase($2);
       if (!categoryMatch) return false
     }
     

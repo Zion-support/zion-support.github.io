@@ -7,10 +7,10 @@ import PostForm from "@/components/community/PostForm",
 import { useToast } from "@/hooks/use-toast";
 import { ForumCategory } from "@/types/community";
 interface PostFormValues {
-  title: string;
-  content: string;
-  categoryId: ForumCategory;
-interface PostFormValues {
+  title: string,
+  content: string,
+  categoryId: ForumCategory,
+  tags: string}
 
   title: string
   content: string
@@ -19,19 +19,11 @@ interface PostFormValues {
   tags: string
 }
 export default function CreatePostPage() {
-
-  const navigate = useNavigate();
-  const { toast } = useToast();
-  const [searchParams] = useSearchParams();
+  const navigate = useNavigate($2);
+  const { toast } = useToast($2);
+  const [searchParams] = useSearchParams($2);
   // Get category from URL query params if available
-  const initialCategory = searchParams.get("category") as ForumCategory | null;
-  const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory |"project-help"
-  }
-  
-  // Get category from URL query params if available
-  const initialCategory = searchParams.get("category") as ForumCategory | null,
-  
+  const initialCategory = $2;
   const initialValues: Partial<PostFormValues> = {
     categoryId: initialCategory || "project-help"
   },
@@ -41,11 +33,8 @@ export default function CreatePostPage() {
       // Here we would normally save to the database
       // For now, we'll just simulate a successful post creation
       // Parse tags into an array
-      const tagsArray = values.tags.split(",").map(tag => tag.trim());
-      toast({
-        title: "Post created"
-        description: "Your post has been published successfully"
-      });
+      const tagsArray = values.tags.split(",").map(tag = $2;
+      toast($2);
       // Redirect to the forum category
       navigate(`/community/category/${values.categoryId}`)
     } catch (error) {
@@ -55,7 +44,7 @@ export default function CreatePostPage() {
         variant: "destructive"
       })
     }
-  }
+  },
 
   return (
     <AppLayout>

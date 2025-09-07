@@ -9,14 +9,12 @@ import { SeverityIndicator } from "../common/SeverityIndicator",
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 interface Milestone {
-interface Milestone {
   id: string,
   title: string,
   dueDate: string,
   status: "completed" | "in_progress" | "pending",
   paymentStatus: "paid" | "pending" | "overdue",
-  amount: string
-}
+  amount: string}
 
   id: string
   title: string
@@ -28,51 +26,37 @@ interface Milestone {
 }
 interface ProjectViewProps {
   project: {
-    id: string;
-    title: string;
+    id: string,
+    title: string,
     client: {
-      name: string;
+      name: string,
       avatar?: string
     },
-    startDate: string;
-    endDate?: string;
-    status: string;
-    totalAmount: string;
-    progress: number;
-    id: string
-    title: string
-    client: {
-      name: string
-      avatar?: string
-    }
-    startDate: string
-    endDate?: string;
-    status: string
-    totalAmount: string
-    progress: number
+    startDate: string,
+    endDate?: string,
+    status: string,
+    totalAmount: string,
+    progress: number,
+    description: string},
+  milestones: Milestone[]
+}
 
     description: string
   }
   milestones: Milestone[]
 }
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
-
-  const navigate = useNavigate();
-  
-  const startProjectCall = () => {
-    const roomId = `project-${project.id}`,
-    toast.success("Starting project call", {
-      description: "Initializing video connection..."
-    });
+  const navigate = useNavigate($2);
+  const startProjectCall = $2;
+    toast.success($2);
     navigate(`/call/${roomId}`)
-  }
+  },
+  
   const messageClient = () => {
-    toast.info("Opening message thread with client", {
-      description: `Messaging ${project.client.name}...`
-    }),
+    toast.info($2);
     // Navigate to messaging with this client
-  }
-
+  },
+  
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>

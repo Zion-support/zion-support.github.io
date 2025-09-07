@@ -6,25 +6,23 @@ import { SearchSuggestion } from "@/types/search",
 import { useAISearch } from "@/hooks/useAISearch";
 import { AppLayout } from "@/layout/AppLayout";
 export default function SearchPage() {
-  const [params] = useSearchParams();
-
-  const navigate = useNavigate();
-  const initial = params.get("q") |"";
-  const [query, setQuery] = useState(initial);
-  const { results, loading, search } = useAISearch();
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions()
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-
+  const [params] = useSearchParams($2);
+  const navigate = useNavigate($2);
+  const initial = $2;
+  const [query, setQuery] = useState($2);
+  const { results, loading, search } = useAISearch($2);
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions($2);
   useEffect(() => {
     if (initial) {
       search(initial)
     }
-  }, [initial]);
+  }, [initial]),
+
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    navigate(`/search?q=${encodeURIComponent(query)}`);
+    e.preventDefault($2);
+    navigate(`/search?q = $2;
     search(query)
-  }
+  },
 
   return (
     <AppLayout>

@@ -17,31 +17,29 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
 type ResumeStep = "basics" | "experience" | "education" | "skills",;
 
-export function MobileResumeBuilder() {;
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
-
-  const renderStepContent = () => {;
-    switch (currentStep) {;
-      case "basics": return <BasicsStep />,;
-      case "experience":;
-        return <ExperienceStep />,;
-      case "education":;
-        return <EducationStep />,;
-      case "skills":;
-        return <SkillsStep />,;
-      default:;
-        return <BasicsStep />;
-
+type ResumeStep = $2;
+export function MobileResumeBuilder() {
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),
+  
+  const renderStepContent = $2;
+      case "experience":
+        return <ExperienceStep />,
+      case "education":
+        return <EducationStep />,
+      case "skills":
+        return <SkillsStep />,
+      default:
+        return <BasicsStep />
     }
   },
   
@@ -122,17 +120,15 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-
-        >;
-          Skills;
-        </Button>;
-      </div>;
-
-      <Button variant="default" className="w-full" size="lg">;
-        Save & Preview;
-      </Button>;
-    </div>;
-  );
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+            rows={4}
+          />
+        </div>
+      </CardContent>
+    </Card>
+  )
 }
 
     <Card>;
@@ -177,17 +173,13 @@ function BasicsStep() {
             placeholder="Write a brief summary about yourself" 
 
 function ExperienceStep() {
-  const [experiences, setExperiences] = useState([{ id: '1' }]),
-  
+  const [experiences, setExperiences] = useState($2);
   const addExperience = () => {
-    const newId = (experiences.length + 1).toString(),
-    setExperiences([...experiences, { id: newId }])
+    const newId = (experiences.length + 1).toString($2);
+    setExperiences([...experiences, { id: newId}])
   },
   
-  const removeExperience = (id: string) => {
-    setExperiences(experiences.filter(exp => exp.id !== id))
-  },
-  
+  const removeExperience = $2;
   return (
     <div className="space-y-4">
       {experiences.map((exp, index) => (
@@ -248,32 +240,25 @@ function ExperienceStep() {
   )
 }
 
-  };
-};
-
-  );
-}
-;
-function EducationStep() {;
-  const [educations, setEducations] = useState([{ id: '1' }]),;
-  const addEducation = () => {;
-    const newId = (educations.length + 1).toString(),;
-    setEducations([...educations, { id: newId }]);
-  },;
-  const removeEducation = (id: string) => {;
-    setEducations(educations.filter(edu => edu.id !== id));
-  },;
-  return (;
-    <div className="space-y-4">;
-      {educations.map((edu, index) => (;
-        <Card key={edu.id}>;
-          <CardContent className="p-4 space-y-4">;
-            <div className="flex justify-between items-center">;
-              <h3 className="font-medium">Education {index + 1}</h3>;
-              {educations.length > 1 && (;
-                <Button;
-                  variant="ghost";
-                  size="icon";
+function EducationStep() {
+  const [educations, setEducations] = useState($2);
+  const addEducation = () => {
+    const newId = (educations.length + 1).toString($2);
+    setEducations([...educations, { id: newId}])
+  },
+  
+  const removeEducation = $2;
+  return (
+    <div className="space-y-4">
+      {educations.map((edu, index) => (
+        <Card key={edu.id}>
+          <CardContent className="p-4 space-y-4">
+            <div className="flex justify-between items-center">
+              <h3 className="font-medium">Education {index + 1}</h3>
+              {educations.length > 1 && (
+                <Button
+                  variant="ghost"
+                  size="icon"
                   onClick={() => removeEducation(edu.id)}
                   aria-label="Remove education";
                 >;
@@ -311,25 +296,93 @@ function EducationStep() {;
         variant="outline";
         className="w-full gap-2";
         onClick={addEducation}
-      >;
-        <Plus className="h-4 w-4" /> Add Another Education;
-      </Button>;
-    </div>;
+      >
+        <Plus className="h-4 w-4" /> Add Another Education
+      </Button>
+    </div>
+  )
+}
 
-;
-
-;
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {
-  );
-
-};";
-  () => removeSkill (skill.id) ";
-}aria-label="Remove skill" > <Trash2 className="h-4 w-4 text-destructive" /> </Button>) ;
-}</div>) ) ";
-}<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>) ;
-}"
+function SkillsStep() {
+  const [skills, setSkills] = useState($2);
+  const addSkill = () => {
+    const newId = (skills.length + 1).toString($2);
+    setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
+  },
+  
+  const removeSkill = $2;
+  const updateSkill = (id: string, field: string, value: string) => {
+    setSkills(skills.map(skill => 
+      skill.id === id ? { ...skill, [field]: value } : skill
+    ))
+  },
+  
+  return (
+    <div className="space-y-4">
+      <Card>
+        <CardContent className="p-4">
+          <div className="space-y-4">
+            {skills.map((skill) => (
+              <div key={skill.id} className="flex items-center gap-2">
+                <Input
+                  placeholder="Skill (e.g. JavaScript, Figma)"
+                  value={skill.name}
+                  onChange={(e) => updateSkill(skill.id, "name", e.target.value)}
+                  className="flex-1"
+                />
+                <Select
+                  value={skill.proficiency}
+                  onValueChange={(value) => updateSkill(skill.id, "proficiency", value)}
+                >
+                  <SelectTrigger className="w-[130px]">
+                    <SelectValue placeholder="Level" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="beginner">Beginner</SelectItem>
+                    <SelectItem value="intermediate">Intermediate</SelectItem>
+                    <SelectItem value="advanced">Advanced</SelectItem>
+                    <SelectItem value="expert">Expert</SelectItem>
+                  </SelectContent>
+                </Select>
+                {skills.length > 1 && (
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => removeSkill(skill.id)}
+                    aria-label="Remove skill"
+                  >
+                    <Trash2 className="h-4 w-4 text-destructive" />
+                  </Button>
+                )}
+              </div>
+            ))}
+            
+            <Button 
+              variant="outline" 
+              className="w-full gap-2" 
+              onClick={addSkill}
+            >
+              <Plus className="h-4 w-4" /> Add Another Skill
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+      
+      <Card>
+        <CardContent className="p-4">
+          <div className="space-y-2">
+            <Label>Skill Categories</Label>
+            <div className="grid grid-cols-2 gap-2">
+              <Button variant="outline" className="justify-start">Development</Button>
+              <Button variant="outline" className="justify-start">Design</Button>
+              <Button variant="outline" className="justify-start">Marketing</Button>
+              <Button variant="outline" className="justify-start">Business</Button>
+              <Button variant="outline" className="justify-start">Data Analysis</Button>
+              <Button variant="outline" className="justify-start">Languages</Button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}

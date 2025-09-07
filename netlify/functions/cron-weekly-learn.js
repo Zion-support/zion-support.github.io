@@ -1,5 +1,12 @@
-exports && exports.handler = async function () {
+const fs = require($2);
+const path = require($2);
+const { upsertFile } = require($2);
+exports.handler = async function() {
   try {
+    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+    const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8')),
 
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
     const coursesPath = path && path.join(
@@ -36,13 +43,7 @@ const { upsert_file } = require ('./_lib / github');
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
     const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));
     const summary = {
-      updatedAt: Date.now();
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json')
-    const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
-    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'))
-    const summary = {
-      updatedAt: Date.now()
+      updatedAt: Date.now($2);
       totals: {
         users: Object.keys(users).length,
 
@@ -67,67 +68,14 @@ completions: Object.values(users).reduce(
       },
       topBadges: Object.values(users).reduce((map, u) => {
         (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
-
         return map
-
       }, {})
     },
-      updated_at: Date.now (),
-  users: Object.keys (users).length,
-        courses: courses.length,
-        completions: Object.values (users).reduce ()
-          (acc, u) => acc + (u.certifications?.length || 0),
-          0),
-      top_badges: Object.values (users).reduce ((map, u) => {
-        (u.badges || []).for_each (boolean => {)
-          map[b] = (map[b] || 0) + 1;
-        });
-        return map;
-      }, {}),
-        content,
-        message: 'chore (automation): weekly learning insights',
-        token,
 
-      });
-    }
-        return map;
-      }, {})
-pr-12325
-    const owner = process && process.env.GITHUB_OWNER,
-    const repo = process && process.env.GITHUB_REPO,
-    const token = process && process.env.GITHUB_TOKEN,
-
-    const content = JSON && JSON.stringify(summary, null, 2),
-    if (owner && repo && token) {'
-      await upsertFile({ owner, repo, path: 'data/learn/insights-weekly && weekly.json', content, message: 'chore(automation): weekly learning insights', token })
-    }
-    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
-
-};      }
-      topBadges: Object.values(users).reduce((map, u) => {}
-        (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })
-        return map;
-      }, {})
-    }
-    const owner = process.env.GITHUB_OWNER;
-    const repo = process.env.GITHUB_REPO;
-    const token = process.env.GITHUB_TOKEN;
-    const content = JSON.stringify(summary, null, 2);
-    if (owner && repo && token) {
-      await upsertFile({
-        owner
-        repo
-        path: 'data/learn/insights-weekly.json'
-        content
-        message: 'chore(automation): weekly learning insights'
-        token
-      });
-    }
-
+    const owner = $2;
+    const repo = $2;
+    const token = $2;
+    const content = JSON.stringify($2);
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
@@ -136,13 +84,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-
-};      }
-      topBadges: Object.values(users).reduce((map, u) => {
-        (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })
-        return map
-      }, {})
-    }
-    const owner = process.env.GITHUB_OWNER
-    const repo = process.env.GITHUB_REPO
-    const token = process.env.GITHUB_TOKEN
+},

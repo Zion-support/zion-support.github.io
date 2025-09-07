@@ -1,0 +1,13 @@
+import React from 'react';
+interface FilterSidebarProps {
+  className?: string,
+  children?: React.ReactNode
+}
+
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
+  className,
+  children 
+}) => {
+  return (
+    <div className = $2;
+export default FilterSidebar,

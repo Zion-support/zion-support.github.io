@@ -23,8 +23,6 @@ import { FormValues } from "./useHireRequestForm";
 interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>,
   talent?: TalentProfile
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
 }
 
 import { TalentProfile } from "@/types/talent";
@@ -82,5 +80,5 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
         )}
       />
     </>
-  );
+  )
 }

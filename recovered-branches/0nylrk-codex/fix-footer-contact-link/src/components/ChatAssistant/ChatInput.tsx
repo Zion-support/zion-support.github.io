@@ -9,31 +9,35 @@ import React, {
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 interface ChatInputProps {
-  onSend: (message: string) => void;
+  onSend: (message: string) => void,
   disabled?: boolean
 }
 
-export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
-  const [message, setMessage] = useState("");
-  const inputRef = useRef<HTMLTextAreaElement>(null);
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+  const [message, setMessage] = useState($2);
+  const inputRef = $2;
   useEffect(() => {
     // Focus input when component mounts
-    inputRef.current?.focus();
-  }, []);
+    inputRef.current?.focus()
+  }, []),
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault($2);
     if (message.trim() && !disabled) {
-      (onSend(message), setMessage(""));
+      onSend($2);
+      setMessage('')
     }
-  }
+  },
+
   const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault($2);
       if (message.trim() && !disabled) {
-        (onSend(message), setMessage(""));
+        onSend($2);
+        setMessage('')
       }
     }
-  }
+  },
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
@@ -55,7 +59,5 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         <Send className="h-5 w-5" />
       </Button>
     </form>
-  );
-}
-  );
+  )
 }

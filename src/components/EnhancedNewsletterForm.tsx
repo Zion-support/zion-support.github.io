@@ -1,41 +1,36 @@
-import React from 'react';
-import { Button } from "@/components/ui/button";,
-import { Input } from "@/components/ui/input";,
-import { useState, useRef } from "react";,
-import { Mail } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";,
-import {logErrorToProduction} from '@/utils/productionLogger';,
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState, useRef } from "react";
+import { Mail } from 'lucide-react'
+import { useToast } from "@/hooks/use-toast";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
 
-  const [email, setEmail] = useState(""),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
-  const { toast } = useToast(),
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-
-  const lastSubmit = useRef(0),
-
+  const [email, setEmail] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [isSubmitted, setIsSubmitted] = useState($2);
+  const { toast } = useToast($2);
+  const EMAIL_REGEX = $2;
+  const lastSubmit = useRef($2);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    const now = Date.now(),
+    e.preventDefault($2);
+    const now = Date.now($2);
     if (now - lastSubmit.current < 1000) return,
-    lastSubmit.current = now,
-
-    const trimmed = email.trim(),
+    lastSubmit.current = $2;
+    const trimmed = email.trim($2);
     if (!EMAIL_REGEX.test(trimmed)) {
-      toast.error("Invalid email"),
+      toast.error($2);
       return
     }
 
-    setIsSubmitting(true),
+    setIsSubmitting($2);
     try {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed })}),
+        body: JSON.stringify({ email: trimmed})}),
 
-      const data = await res.json().catch(() => ({})),
-
+      const data = $2;
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
@@ -43,15 +38,15 @@ export function EnhancedNewsletterForm() {
         } else {
           toast.success(data.message || "Thanks for subscribing!")
         }
-        setIsSubmitted(true),
+        setIsSubmitted($2);
         setEmail("")
       } else {
         // Handle error responses
-        logErrorToProduction('Newsletter subscription failed:', { data: data }),
+        logErrorToProduction($2);
         toast.error(data.error || "Subscription failed. Please try again.")
       }
     } catch (err: any) {
-      logErrorToProduction('Newsletter subscription error:', { data: err }),
+      logErrorToProduction($2);
       toast.error("Unable to subscribe right now. Please try again later.")
     } finally {
       setIsSubmitting(false)

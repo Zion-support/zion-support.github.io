@@ -1,20 +1,17 @@
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground'
-import Button from '../components/ui/Button'
+import React from 'react';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
 export default function HolographicAICommunicationPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
 
-  const features = [
-    'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
-  ],
-
-  return (_<UltraAdvancedFuturisticBackground>
+  const features = $2;
+  return (
+    <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Holographic AI Communication Platform - Zion Tech Group</title>
         <meta name="description" content="AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control." />

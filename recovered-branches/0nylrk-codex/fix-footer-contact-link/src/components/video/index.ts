@@ -4,4 +4,4 @@ export const Index = () => {
   return null;
 };
 
-export * from './VideoCallRoom';
+export * from './VideoCallRoom',

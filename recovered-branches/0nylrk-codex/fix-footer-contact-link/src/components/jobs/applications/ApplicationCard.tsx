@@ -9,53 +9,24 @@ import { StatusBadge } from "./StatusBadge",
 import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
 interface ApplicationCardProps {
-  application: JobApplication
-}
-export function ApplicationCard({ application }: ApplicationCardProps) {
-  const [expanded, setExpanded] = useState(false);
-  const handleDownloadResume = null;
-interface ApplicationCardProps {
-  application: JobApplication
-}
+  application: JobApplication}
 
-export function ApplicationCard({ application }: ApplicationCardProps) {;
-  const [expanded, setExpanded] = useState(false);
 export function ApplicationCard({ application }: ApplicationCardProps) {
-  const [expanded, setExpanded] = useState(false),
-
-  const handleDownloadResume = () => {
-    // This would typically download the resume file
-    toast.info("Resume download functionality will be implemented soon")
-  }
+  const [expanded, setExpanded] = useState($2);
+  const handleDownloadResume = $2;
   const renderActionButtons = () => {
     switch (application.status) {
-      case "shortlisted": return (
-          <Button variant="default" size="sm">
-            <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
-          </Button>
-        ),
+      case "shortlisted": return($2);
       case "interview":
-        return (
-          <Button variant="default" size="sm">
-            <Calendar className="h-4 w-4 mr-1" /> View Interview Details
-          </Button>
-        ),
+        return($2);
       case "hired":
-        return (
-          <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">
-            <FileText className="h-4 w-4 mr-1" /> View Offer
-          </Button>
-        ),
+        return($2);
       case "rejected":
-        return (
-          <Button variant="outline" size="sm">
-            <HelpCircle className="h-4 w-4 mr-1" /> View Feedback
-          </Button>
-        )
+        return($2);
       default:
         return null
     }
-  }
+  },
 
   return (
     <Card className="overflow-hidden">
@@ -64,7 +35,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <div>
             <CardTitle>{application.job?.title |"Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true})}
             </div>
           </div>
           <StatusBadge status={application.status} />

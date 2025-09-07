@@ -2,9 +2,7 @@ import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 export function ApiErrorCodes() {
-
-  const errorExample = `{
-  "error": "validation_error",
+  const errorExample = $2;
   "message": "The request was invalid",
   "details": [
     {
@@ -16,17 +14,16 @@ export function ApiErrorCodes() {
       "error": "Budget minimum must be greater than 0"
     }
   ]
-}`;
-  const rateLimitExample = `{
-  "error": "rate_limit_exceeded",
+}`,
+
+  const rateLimitExample = $2;
   "message": "Rate limit exceeded. Try again in 30 seconds",
   "retry_after": 30
-}`;
-  const errorCodes = [
-    {
-      status: 400
-      code: "validation_error"
-      message: "The request was invalid. Check the details for specific field errors."
+}`,
+
+  const errorCodes = $2;
+      code: "validation_error",
+      message: "The request was invalid. Check the details for specific field errors.",
       details: "Includes field-specific validation errors."
     }
     {
@@ -77,11 +74,10 @@ export function ApiErrorCodes() {
       message: "Service temporarily unavailable."
       details: "The API is temporarily unavailable due to maintenance or high load."
     }
-  ];
-  const rateLimits = [
-    {
-      endpoint: "All GET endpoints"
-      limit: "100 requests per minute"
+  ],
+
+  const rateLimits = $2;
+      limit: "100 requests per minute",
       notes: "Aggregate limit across all GET endpoints"
     }
     {
@@ -114,7 +110,8 @@ export function ApiErrorCodes() {
       limit: "N/A"
       notes: "Webhooks don't count against your rate limits"
     }
-  ];
+  ],
+
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
@@ -165,6 +162,7 @@ export function ApiErrorCodes() {
         <h2>Handling Errors</h2>
         <p>
           Your application should be prepared to handle error responses appropriately: </p>
+        
         <ul>
           <li><strong>401 and 403 errors</strong>: Check your API key and permissions</li>
           <li><strong>429 errors</strong>: Implement retry logic with backoff</li>
@@ -218,13 +216,5 @@ export function ApiErrorCodes() {
         </ul>
         <h2>Need Help?</h2>
         <p>
-          If you're encountering persistent errors or need higher rate limits, please
-          <a href="#" className="text-zion-cyan"> contact our support team</a>.
-        </p>
-      </div>
-    </ApiDocsLayout>
-  )
-}
-export default ApiErrorCodes;
-
-export default ApiErrorCodes;
+          If you're encountering persistent errors or need higher rate limits, please 
+          <a href = $2;

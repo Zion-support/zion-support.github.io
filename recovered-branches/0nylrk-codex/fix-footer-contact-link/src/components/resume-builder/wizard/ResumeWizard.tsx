@@ -1,12 +1,13 @@
-import { useState, useEffect  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { useResume  } from '@/hooks/useResume';
-import { Tabs  } from '@/components/ui/tabs';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';
-import { Button  } from '@/components/ui/button';
-import { Resume  } from '@/types/resume';
+
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useResume } from '@/hooks/useResume';
+import { Tabs } from '@/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Resume } from '@/types/resume';
 // Import components
 import { ResumeProgress  } from './ResumeProgress';
 import { EmptyResumeState  } from './EmptyResumeState';
@@ -17,53 +18,46 @@ import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
 export function ResumeWizard() {
-  const { user } = useAuth();
-  const {
-    isLoading;
-
-    error
-    resume
-
-    fetchResume;
+  const { user } = useAuth($2);
+  const { 
+    isLoading,
+    error, 
+    resume, 
+    fetchResume,
     createResume
-  } = useResume();
-  const [activeTab, setActiveTab] = useState('basic-info');
-  const [showNewResumeForm, setShowNewResumeForm] = useState(false);
+  } = useResume($2);
+  const [activeTab, setActiveTab] = useState($2);
+  const [showNewResumeForm, setShowNewResumeForm] = useState($2);
   // Use the extracted hook for progress calculation
-
-  const progress = useResumeProgress(resume);
+  const progress = useResumeProgress($2);
   useEffect(() => {
     if (user) {
       fetchResume()
     }
-  }, [user, fetchResume]);
-  const handleCreateNewResume = async (title: string) => {
-    const resumeId = await createResume({ title: title.trim() })
+  }, [user, fetchResume]),
+  
+  const handleCreateNewResume = $2;
     if (resumeId) {
-      await fetchResume(resumeId);
+      await fetchResume($2);
       setShowNewResumeForm(false)
     }
-  }
+  },
+  
   const nextStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    const currentIndex = RESUME_STEPS.findIndex($2);
     if (currentIndex < RESUME_STEPS.length - 1) {
       setActiveTab(RESUME_STEPS[currentIndex + 1].id)
     }
-  }
+  },
+  
   const prevStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    const currentIndex = RESUME_STEPS.findIndex($2);
     if (currentIndex > 0) {
       setActiveTab(RESUME_STEPS[currentIndex - 1].id)
     }
-  }
-  const handleResumeChange = (resumeId: string) => {
-    fetchResume(resumeId)
-  }
-
-  const handleResumeChange = (resumeId: string) => {
-    fetchResume(resumeId)
   },
-  
+
+  const handleResumeChange = $2;
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">

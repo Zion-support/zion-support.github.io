@@ -7,27 +7,22 @@ export function EducationSection({ education }: EducationSectionProps) {
   // Sort education by date (newest first)
 
   const sortedEducation = [...education].sort((a, b) => {
-    if (a.is_current && !b.is_current) return -1;
-    if (!a.is_current && b.is_current) return 1;
-    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
-    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
+    if (a.is_current && !b.is_current) return -1,
+    if (!a.is_current && b.is_current) return 1,
+    
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date($2);
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date($2);
     return dateB.getTime() - dateA.getTime()
-  });
-  const formatDate = (date: Date | string | undefined) => {
-    if (!date) return ''
+  }),
+
+  const formatDate = $2;
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
     }
     return format(date, 'MMM yyyy')
-  }
-  if (sortedEducation.length === 0) return null;
-
-    }
-    return format(date, 'MMM yyyy')
   },
 
-  if (sortedEducation.length === 0) return null,
-  
+  if (sortedEducation.length = $2;
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Education</h2>

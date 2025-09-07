@@ -1,17 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-const SAMPLE_QUERIES = [
-  'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero TrustNext.js freelancers in Berlin'
-],
-
-const SKILLS = [
-  'ReactNext.jsTypeScriptNodePythonAWSKubernetesDevOps', 'DockerTerraformOpenAILangChainRAGNLPPostgreSQLRust'
-],
-
+const SAMPLE_QUERIES = $2;
+const SKILLS = $2;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const q = ((req.query.q as string) || '').toLowerCase(),
-  const suggestions = new Set<string>(),
-
+  const q = ((req.query.q as string) || '').toLowerCase($2);
+  const suggestions = $2;
   for (const s of SAMPLE_QUERIES) {
     if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
   }

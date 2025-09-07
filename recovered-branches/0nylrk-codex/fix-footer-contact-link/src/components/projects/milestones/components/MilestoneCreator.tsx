@@ -1,14 +1,12 @@
 import React from 'react';
 import { AddMilestoneForm } from '../AddMilestoneForm';
 interface MilestoneCreatorProps {
-
-  onSubmit: (data: any) => Promise<void>
-  isSubmitting: boolean
-  onCancel: () => void
-
-  projectScope?: string;
-  projectStartDate?: string;
-  projectEndDate?: string | null;
+  onSubmit: (data: any) => Promise<void>,
+  isSubmitting: boolean,
+  onCancel: () => void,
+  projectScope?: string,
+  projectStartDate?: string,
+  projectEndDate?: string | null,
   projectType?: string
 }
 export function MilestoneCreator({

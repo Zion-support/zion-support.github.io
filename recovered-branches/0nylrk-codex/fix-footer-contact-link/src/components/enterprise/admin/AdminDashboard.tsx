@@ -4,8 +4,11 @@ import { TeamManagement } from "./TeamManagement",
 import { UsageStats } from "./UsageStats",
 import { RoleManagement } from "./RoleManagement";
 import { TeamActivity } from "./TeamActivity";
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger} from "@/components/ui/tabs",
 
 export function AdminDashboard() {
   return (
@@ -32,7 +35,7 @@ export function AdminDashboard() {
         </TabsContent>
       </Tabs>
     </div>
-  );
+  )
 }
   )
 import React from "react",;

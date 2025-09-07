@@ -1,10 +1,33 @@
 
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Mail, Send} from "lucide-react";
-import {useState} from "react";
-import {toast} from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Send } from "lucide-react";
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+interface ProfileContactProps {
+  email?: string,
+  profileName: string,
+  profileType: 'service' | 'talent'
+}
+
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+  const [message, setMessage] = useState($2);
+  const [subject, setSubject] = useState($2);
+  const [isSending, setIsSending] = useState($2);
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault($2);
+    setIsSending($2);
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending($2);
+      setMessage($2);
+      setSubject($2);
+      toast({
+        title: "Message Sent",
+        description: `Your message has been sent to ${profileName}.`})
+    }, 1000)
+  },
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -55,7 +78,7 @@ import {toast} from "@/hooks/use-toast";
         </div>
       </form>
     </div>
-  );
+  )
 }
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;

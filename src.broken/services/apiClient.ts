@@ -4,84 +4,25 @@ import { supabase } from '@/integrations/supabase/client';
 import axiosRetry from 'axios-retry';
 import { logErrorToProduction, logDebug } from '@/utils/productionLogger';
 import type { AxiosResponse } from 'axios';
-
-axios.defaults.baseURL =
-  process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com/v1';
-
+axios.defaults.baseURL = $2;
 // Global interceptor for all axios instances
 
 // Define the global error handler (exported for testing purposes)
 }
 
 export const globalAxiosErrorHandler = (error: unknown) => {
-  const contentType =
-    typeof error === 'object' &&
-    error &&
-    'response' in error &&
-    error.response &&
-    'headers' in error.response
-      ? (error.response as { headers?: Record<string, unknown> }).headers?.[
-          'content-type'
-        ]
-      : undefined;
-  if (typeof contentType === 'string' && contentType.includes('text/html')) {
-    showError('html-error', 'Server returned HTML instead of JSON');
-  }
+  const contentType = typeof error === 'object' && error && 'response' in error && error.response && 'headers' in error.response ? (error.response as { headers?: Record<string, unknown> }).headers?.['content-type'] : undefined,
+  if (typeof contentType = $2;
+  const axiosRetryState = config['axios-retry'], // Standard property used by axios-retry
 
-  const config =
-    typeof error === 'object' && error && 'config' in error
-      ? (error as { config?: unknown }).config || {}
-      : {};
-  const axiosRetryState = config['axios-retry']; // Standard property used by axios-retry
-
-  const isRetryingAndNotFinalConfiguredRetry =
-    axiosRetryState &&
-    axiosRetryState.attemptNumber <= axiosRetryState.retryCount;
-
-  const status =
-    typeof error === 'object' &&
-    error &&
-    'response' in error &&
-    error.response &&
-    'status' in error.response
-      ? (error.response as { status?: number }).status
-      : undefined;
-  const method = (config.method || '').toUpperCase();
-  const url = config.url || '';
-
+  const isRetryingAndNotFinalConfiguredRetry = $2;
+  const status = $2;
+  const method = (config.method || '').toUpperCase($2);
+  const url = $2;
   // Handle DELETE 404 as success (item already removed)
-  if (status === 404 && method === 'DELETE') {
-    return Promise.resolve(
-      typeof error === 'object' && error && 'response' in error
-        ? (error as { response?: unknown }).response
-        : undefined
-    );
-  }
-
-  // Suppress 404 toast if retries are pending
-  if (status === 404 && isRetryingAndNotFinalConfiguredRetry) {
-    return Promise.reject(error);
-  }
-
-  // URLs that should not trigger user-facing error toasts
-  const SILENT_ERROR_PATTERNS = [
-    '/health',
-    '/status',
-    '/heartbeat',
-    '/ping',
-    '/analytics',
-    '/metrics',
-    '/telemetry',
-    'supabase.co',
-    'googleapis.com',
-    'github.com/api',
-  ];
-
+  if (status = $2;
   // Check if URL should fail silently
-  const shouldFailSilently = (url: string): boolean => {
-    return SILENT_ERROR_PATTERNS.some(pattern => url.includes(pattern));
-  };
-
+  const shouldFailSilently = $2;
   // Check if error should be shown to user
   const shouldShowErrorToUser = (
     status: number,
@@ -90,107 +31,64 @@ export const globalAxiosErrorHandler = (error: unknown) => {
   ): boolean => {
     // Never show errors for silent URLs
     if (shouldFailSilently(url)) {
-      return false;
+      return false
     }
 
     // Only show user-facing errors for specific cases
     switch (status) {
       case 401: // Unauthorized - only for auth-related endpoints
-        return (
-          url.includes('/auth/') ||
-          url.includes('/login') ||
-          url.includes('/signup')
-        );
+        return url.includes('/auth/') || url.includes('/login') || url.includes($2);
       case 403: // Forbidden - only for user-initiated actions (POST, PUT, DELETE)
-        return ['POST', 'PUT', 'DELETE', 'PATCH'].includes(method);
+        return ['POSTPUTDELETEPATCH'].includes($2);
       case 404: // Not found - only for user resources, not background calls
-        return (
-          ['POST', 'PUT', 'DELETE', 'PATCH'].includes(method) ||
-          url.includes('/user/') ||
-          url.includes('/profile/')
-        );
+        return ['POSTPUTDELETEPATCH'].includes(method) || url.includes('/user/') || url.includes($2);
       case 422: // Validation errors - show for user forms
-        return ['POST', 'PUT', 'PATCH'].includes(method);
+        return ['POSTPUTPATCH'].includes($2);
       case 429: // Rate limiting - always show to user
-        return true;
+        return true,
       case 500: // Server errors - only for user-initiated actions
       case 502:
       case 503:
       case 504:
-        return ['POST', 'PUT', 'DELETE', 'PATCH'].includes(method);
-      default:
-        return false;
+        return ['POSTPUTDELETEPATCH'].includes($2);
+      default: return false
     }
-  };
+  },
 
   // Only show error toast if it's a user-facing error
-  if (
-    typeof status === 'number' &&
-    shouldShowErrorToUser(status, method, url)
-  ) {
-    showApiError(error);
+  if (typeof status === 'number' && shouldShowErrorToUser(status, method, url)) {
+    showApiError(error)
   } else {
     // Log background errors without showing toast
-    logDebug(`Background API request failed (${status} ${method}): ${url}`, {
-      data:
-        typeof error === 'object' &&
-        error &&
-        'response' in error &&
-        error.response &&
-        'data' in error.response
-          ? (error.response as { data?: unknown }).data
-          : undefined,
-    });
-  }
-
-  return Promise.reject(error);
-};
-
+    logDebug(`Background API request failed (${status} ${method}): ${url}`, { data: typeof error = $2;
 // Apply the global interceptor
 axios.interceptors.response.use(
   (response: AxiosResponse) => response,
   globalAxiosErrorHandler
-);
+),
 
-const API_BASE = axios.defaults.baseURL;
-const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
-  withCredentials: true,
-});
-}
-
+const API_BASE = $2;
+const apiClient = axios.create($2);
 export function setAuthToken(token: string) {
-  (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
-
-apiClient.interceptors.response.use(
-  (response: AxiosResponse) => response,
+  (apiClient.defaults.headers.common as any).Authorization = $2;
   async (error: unknown) => {
-    const status =
-      typeof error === 'object' &&
-      error &&
-      'response' in error &&
-      error.response &&
-      'status' in error.response
-        ? (error.response as { status?: number }).status
-        : undefined;
-
+    const status = $2;
     if (status === 401) {
       try {
-        if (!supabase) throw new Error('Supabase client not initialized');
-        await supabase.auth.signOut({ scope: 'global' });
+        if (!supabase) throw new Error($2);
+        await supabase.auth.signOut({ scope: 'global' })
       } catch (e) {
-        logErrorToProduction('Failed to logout after 401', { data: e });
+        logErrorToProduction('Failed to logout after 401', { data: e})
       }
       if (typeof window !== 'undefined') {
-        window.location.assign('/login');
+        window.location.assign('/login')
       }
     } else {
-      const message = error.response?.data?.message || 'Something went wrong';
-      toast.error(message);
+      const message = $2;
+      toast.error(message)
     }
-    return Promise.reject(error);
+    return Promise.reject(error)
   }
-);
-}
+),
 
-export default apiClient;
+export default apiClient,

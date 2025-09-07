@@ -1,13 +1,7 @@
-import {GradientHeading} from "./GradientHeading";
-import {Check, Handshake, Search, Send} from "lucide-react";
-const steps = [
-  {
-    title: "Post"
-    description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
-    icon: Send}
-const steps = [
-  {
-    title: "Post",
+
+import { GradientHeading } from "./GradientHeading";
+import { Check, Handshake, Search, Send } from "lucide-react";
+const steps = $2;
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.",
     icon: Send},
   {
@@ -19,9 +13,10 @@ const steps = [
     description: "Connect directly with matched providers and complete your transaction securely."
     icon: Handshake}
   {
-    title: "Done"
-    description: "Enjoy hassle-free delivery and support for your technology solutions."
-    icon: Check}]
+    title: "Done",
+    description: "Enjoy hassle-free delivery and support for your technology solutions.",
+    icon: Check}],
+
 export function HowItWorksSection() {
   return (
     <section className="py-20 bg-zion-blue">

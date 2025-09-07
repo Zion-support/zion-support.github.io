@@ -7,8 +7,9 @@ import {
   Card;
   CardContent
 } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Navigate } from "react-router-dom",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Navigate } from "react-router-dom";
+import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { ExportToCSV } from "@/components/quotes/ExportToCSV";
@@ -23,14 +24,10 @@ import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
 export default function QuoteManager() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
-  
+  const { user } = useAuth($2);
+  const isAdmin = $2;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
-  const [showDetails, setShowDetails] = useState(false),
-
+  const [showDetails, setShowDetails] = useState($2);
   const {
     quotes,
     isLoading,
@@ -46,14 +43,27 @@ export default function QuoteManager() {
     updateStatus,
     toggleArchive,
     deleteQuote
-  } = useAdminQuotes();
+  } = useAdminQuotes($2);
   // Count quotes by status
-  const statusCounts = {
-    new: quotes.filter(q => q.status === 'new').length
-    in_review: quotes.filter(q => q.status === 'in_review').length
-    accepted: quotes.filter(q => q.status === 'accepted').length
-    responded: quotes.filter(q => q.status === 'responded').length
-    closed: quotes.filter(q => q.status === 'closed').length
+  const statusCounts = $2;
+    in_review: quotes.filter(q = $2;
+    accepted: quotes.filter(q = $2;
+    responded: quotes.filter(q = $2;
+    closed: quotes.filter(q = $2;
+  const handleViewDetails = (quote: QuoteRequest) => {
+    setSelectedQuote($2);
+    setShowDetails(true)
+  },
+
+  const handleResetFilters = () => {
+    setStatusFilter($2);
+    setArchiveFilter($2);
+    setSearchQuery($2);
+    setDateRange({ from: undefined, to: undefined})
+  },
+
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" replace />
   }
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote)
@@ -135,8 +145,7 @@ export default function QuoteManager() {
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
-            setShowDetails(false);
-
+            setShowDetails($2);
             setSelectedQuote(null)
           }}
         />

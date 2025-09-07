@@ -1,27 +1,22 @@
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
-
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
+import { 
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormMessage 
+} from "@/components/ui/form",
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
 interface BasicInfoFieldsProps {
   control: Control<any>
 }
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
-  control
-}) => {
-  const [minBudget, setMinBudget] = useState<string>("");
-  const [maxBudget, setMaxBudget] = useState<string>("");
-  const handleSuggestionApplied = (min: number, max: number) => {
-    (setMinBudget(min.toString()), setMaxBudget(max.toString()));
-  }
+
+export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
+  const [minBudget, setMinBudget] = useState<string>(""),
+  const [maxBudget, setMaxBudget] = useState<string>(""),
 
   const handleSuggestionApplied = (min: number, max: number) => {
     setMinBudget(min.toString()),
@@ -92,10 +87,10 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
                 <Input
                   type="number"
                   placeholder="e.g. 30"
-                  value={minBudget |rest.value}
-                  onChange={(e) => {
-                    setMinBudget(e.target.value);
-                    onChange(e);
+                  value={minBudget || rest.value}
+                  onChange={e => {
+                    setMinBudget($2);
+                    onChange(e)
                   }}
                   {...rest}
                 />
@@ -114,10 +109,10 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
                 <Input
                   type="number"
                   placeholder="e.g. 60"
-                  value={maxBudget |rest.value}
-                  onChange={(e) => {
-                    setMaxBudget(e.target.value);
-                    onChange(e);
+                  value={maxBudget || rest.value}
+                  onChange={e => {
+                    setMaxBudget($2);
+                    onChange(e)
                   }}
                   {...rest}
                 />
@@ -157,9 +152,5 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
         )}
       />
     </div>
-  );
-}
-
-};
-  );
-};
+  )
+},

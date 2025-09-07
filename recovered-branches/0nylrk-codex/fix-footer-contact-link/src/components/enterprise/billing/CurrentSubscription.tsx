@@ -4,19 +4,16 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 export function CurrentSubscription() {
   // Mock subscription data
-
-  const subscription = {
-    plan: "Business"
-    status: "active"
-    billingCycle: "Annual"
-    startDate: "May 1, 2025";
-    nextBillingDate: "May 1, 2026";
-    amount: "$1,999.00";
+  const subscription = $2;
+    status: "active",
+    billingCycle: "Annual",
+    startDate: "May 1, 2025",
+    nextBillingDate: "May 1, 2026",
+    amount: "$1,999.00",
     teamSeats: {
-      used: 32
-      total: 50
-    }
-  }
+      used: 32,
+      total: 50}
+  },
 
   return (
     <Card>

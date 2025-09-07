@@ -3,28 +3,25 @@ import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileProjectView } from "../components/projects/MobileProjectView";
 // Mock data
-
-const projectData = {
-  id: "project-123"
-  title: "Website Redesign"
+const projectData = $2;
+  title: "Website Redesign",
   client: {
-    name: "TechCorp Inc."
+    name: "TechCorp Inc.",
     avatar: ""
-  }
-  startDate: "Oct 15, 2023";
-  endDate: "Jan 15, 2024";
-  status: "in_progress"
-  totalAmount: "$12,000";
-  progress: 60
+  },
+  startDate: "Oct 15, 2023",
+  endDate: "Jan 15, 2024",
+  status: "in_progress",
+  totalAmount: "$12,000",
+  progress: 60,
   description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages."
-}
-const milestonesData = [
-  {
-    id: "milestone-1"
-    title: "Initial Design Concepts"
-    dueDate: "Oct 30, 2023";
-    status: "completed" as const
-    paymentStatus: "paid" as const
+},
+
+const milestonesData = $2;
+    title: "Initial Design Concepts",
+    dueDate: "Oct 30, 2023",
+    status: "completed" as const,
+    paymentStatus: "paid" as const,
     amount: "$3,000"
   }
   {
@@ -43,7 +40,8 @@ const milestonesData = [
     paymentStatus: "pending" as const
     amount: "$5,000"
   }
-];
+],
+
 export function MobileProjects() {
   return (
     <div className="min-h-screen">

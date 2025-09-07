@@ -16,8 +16,7 @@ import { Badge } from "@/components/ui/badge";
 import { WebhookManager } from "./WebhookManager";
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
 export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace");
-
+  const [activeTab, setActiveTab] = useState($2);
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
@@ -131,7 +130,7 @@ export function IntegrationsHub() {
         </div>
       </Tabs>
     </div>
-  );
+  )
 }
   );
 }

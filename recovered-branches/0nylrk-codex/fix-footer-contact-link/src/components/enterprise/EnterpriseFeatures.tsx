@@ -1,11 +1,8 @@
 import React from "react";
-
-import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
-const features = [
-  {
-    title: "Private Hiring Portal"
-    description: "Create a secure, private hiring portal accessible only to your team members.";
-    icon: Shield}
+import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react";
+const features = $2;
+    description: "Create a secure, private hiring portal accessible only to your team members.",
+    icon: Shield},
   {
     title: "Dedicated Talent Pool"
     description: "Access to a curated pool of pre-vetted talent matched to your industry and needs."
@@ -23,9 +20,10 @@ const features = [
     description: "Powerful analytics and management tools for team leaders and administrators."
     icon: Settings}
   {
-    title: "Global Access"
-    description: "Connect with talent across multiple regions with localized interfaces."
-    icon: Globe}]
+    title: "Global Access",
+    description: "Connect with talent across multiple regions with localized interfaces.",
+    icon: Globe}],
+
 export function EnterpriseFeatures() {
   return (
     <section className="py-20 px-4 md:px-6 bg-muted/50">

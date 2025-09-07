@@ -4,10 +4,10 @@ import { useToast } from "@/hooks/use-toast",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuSeparator;
+  DropdownMenu,
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuSeparator, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu",
 
@@ -19,20 +19,13 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 export function UserMenu() {
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-
-  const handleSignOut = async () => {
-    try {
-      await logout()
-    } catch (error) {
-      toast({
-        title: "Error signing out"
-        description: "There was an error signing you out. Please try again."
-        variant: "destructive"
-      });
+  const { user, logout } = useAuth($2);
+  const { toast } = useToast($2);
+  const handleSignOut = $2;
+        description: "There was an error signing you out. Please try again.",
+        variant: "destructive"})
     }
-  }
+  },
 
   if (!user) {
     return (
@@ -89,5 +82,5 @@ export function UserMenu() {
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

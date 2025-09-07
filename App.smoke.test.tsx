@@ -11,8 +11,6 @@ describe('App Smoke Tests', () => {
     expect(container.firstChild).toBeTruthy();
   });
 });
-});
-});
 
 describe('App Smoke Test', () => {
   it('renders without crashing', () => {

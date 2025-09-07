@@ -1,20 +1,9 @@
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
 interface ReviewsListProps {
-  reviews: Review[];
-  isLoading: boolean;
+  reviews: Review[],
+  isLoading: boolean,
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>
-}
-export function ReviewsList({
-  reviews
-  isLoading
-  onReportReview
-import { Review } from "@/types/reviews";
-import { ReviewCard } from "./ReviewCard";
-interface ReviewsListProps {
-  reviews: Review[];
-  isLoading: boolean;
-  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
 
 export function ReviewsList({
@@ -47,7 +36,7 @@ export function ReviewsList({
             </div>
           ))}
       </div>
-    );
+    )
   }
 import { Review } from "@/types/reviews",;
 import { ReviewCard } from "./ReviewCard",;
@@ -90,7 +79,7 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
           Once reviews are submitted and approved, they will appear here.
         </p>
       </div>
-    );
+    )
   }
 
   return (
@@ -99,5 +88,5 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
         <ReviewCard key={review.id} review={review} onReport={onReportReview} />
       ))}
     </div>
-  );
+  )
 }

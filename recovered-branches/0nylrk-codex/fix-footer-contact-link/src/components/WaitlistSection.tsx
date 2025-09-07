@@ -6,44 +6,40 @@ import { Label } from "@/components/ui/label",
 import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
 export function WaitlistSection() {
-  const [email, setEmail] = useState(""),
-  const [name, setName] = useState(""),
-  const [role, setRole] = useState(""),
-  const [agreeTerms, setAgreeTerms] = useState(false),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const { toast } = useToast(),
-
+  const [email, setEmail] = useState($2);
+  const [name, setName] = useState($2);
+  const [role, setRole] = useState($2);
+  const [agreeTerms, setAgreeTerms] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const { toast } = useToast($2);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email |!name |!role |!agreeTerms) {
-      toast({
-        variant: "destructive"
-        title: "Missing information"
-        description: "Please fill all fields and agree to the terms."})
+    e.preventDefault($2);
+    if (!email || !name || !role || !agreeTerms) {
+      toast($2);
       return
     }
-    setIsSubmitting(true);
+    
+    setIsSubmitting($2);
     try {
       // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      toast({
-        title: "Success!"
-        description: "Thank you for registering with Zion. We'll be in touch soon."})
+      await new Promise(resolve => setTimeout(resolve, 1000)),
+      
+      toast($2);
       // Reset form
-      setEmail(""),
-      setName(""),
-      setRole(""),
+      setEmail($2);
+      setName($2);
+      setRole($2);
       setAgreeTerms(false)
     } catch (error) {
       toast({
-        variant: "destructive"
-        title: "Something went wrong"
+        variant: "destructive",
+        title: "Something went wrong",
         description: "Please try again later."})
     } finally {
       setIsSubmitting(false)
     }
-  }
-
+  },
+  
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">
       {/* Background elements */}

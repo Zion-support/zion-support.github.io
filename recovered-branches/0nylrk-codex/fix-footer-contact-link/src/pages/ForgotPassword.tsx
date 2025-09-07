@@ -1,40 +1,38 @@
-import { useState } from "react",
-import { Link } from "react-router-dom",
-import { useForm, type UseFormReturn } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Mail } from "lucide-react",
-import { useAuth } from "@/hooks/useAuth",
+
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useForm, type UseFormReturn } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Mail } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 // Form validation schema
-
-const forgotPasswordSchema = z.object({
-  email: z.string().email("Please enter a valid email")})
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+const forgotPasswordSchema = $2;
+type ForgotPasswordFormValues = $2;
 export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
-  
+  const { resetPassword, isLoading } = useAuth($2);
+  const [submitted, setSubmitted] = useState($2);
   // Initialize react-hook-form
-  const form = useForm({
-    resolver: zodResolver(forgotPasswordSchema)
+  const form = useForm($2);
     defaultValues: {
-      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>
+      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>,
+
   // Form submission handler
   const onSubmit = async (data: ForgotPasswordFormValues) => {
-    await resetPassword(data.email)
+    await resetPassword($2);
     setSubmitted(true)
-  }
+  },
 
   return (
     <>

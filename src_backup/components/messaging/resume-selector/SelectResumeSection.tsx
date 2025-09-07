@@ -6,25 +6,12 @@ import { FileText } from 'lucide-react';
 import { ResumeOption } from '../resume-selector/types';
 import { ResumePreviewCard } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
-
-import React from 'react';
-import { FileText } from 'lucide-react'
-import { ResumeOption  } from '../resume-selector/types';
-import { ResumePreviewCard  } from './ResumePreviewCard';
-import { Resume } from '@/types/resume';
 interface SelectResumeSectionProps {
-  resumeOptions: ResumeOption[];
-  selectedResume: ResumeOption | null;
-  handleResumeSelect: (resumeId: string) => void;
-  handleDownloadResume: () => void;
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/resume-selector/SelectResumeSection.tsx
-  isLoading: boolean
-export function SelectResumeSection({
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/resume-selector/SelectResumeSection.tsx
+  resumeOptions: ResumeOption[],
+  selectedResume: ResumeOption | null,
+  handleResumeSelect: (resumeId: string) => void,
+  handleDownloadResume: () => void,
+  isLoading: boolean}
 
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
@@ -88,6 +75,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             />;
           )}
         </>
-      )});
-
-};
+      )}
+    </div>
+  )
+}

@@ -1,12 +1,8 @@
 import { Loader2 } from "lucide-react";
 interface ResultsHeaderProps {
-  isLoading: boolean;
-  resultCount: number
-import { Loader2 } from "lucide-react";
-interface ResultsHeaderProps {
-  isLoading: boolean;
-  resultCount: number;
-}
+  isLoading: boolean,
+  resultCount: number}
+
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
@@ -50,6 +46,6 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
         </span>
       )}
     </div>
-  );
+  )
 }
 ;

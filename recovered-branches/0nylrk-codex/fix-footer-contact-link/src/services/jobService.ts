@@ -5,13 +5,12 @@ export async function createJob(jobData: any) {
     const { data, error } = await supabase
       .from('jobs')
       .insert([jobData])
-      .select();
-      .single();
-      
+      .select()
+      .single($2);
     if (error) throw error,
     return data
   } catch (error: any) {
-    console.error("Error creating job:", error),
+    console.error($2);
     throw new Error(error.message || "Failed to create job")
   }
 }
@@ -21,13 +20,12 @@ export async function updateJob(jobId: string, jobData: any) {
       .from('jobs')
       .update(jobData)
       .eq('id', jobId)
-      .select();
-      .single();
-      
+      .select()
+      .single($2);
     if (error) throw error,
     return data
   } catch (error: any) {
-    console.error("Error updating job:", error),
+    console.error($2);
     throw new Error(error.message || "Failed to update job")
   }
 }
@@ -36,14 +34,13 @@ export async function getJobById(jobId: string) {
     const { data, error } = await supabase
       .from('jobs')
       .select('*')
-      .eq('id', jobId);
-      .single();
-      
+      .eq('id', jobId)
+      .single($2);
     if (error) throw error,
     return data
   } catch (error: any) {
-    console.error("Error fetching job:", error),
-    toast.error("Failed to load job details"),
+    console.error($2);
+    toast.error($2);
     return null
   }
 }

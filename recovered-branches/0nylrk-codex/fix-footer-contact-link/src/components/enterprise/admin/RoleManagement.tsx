@@ -1,20 +1,27 @@
 import React from "react";
-
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-import {Switch} from "@/components/ui/switch";
-import {toast} from "@/hooks/use-toast";
-import {InfoIcon} from "lucide-react";
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { toast } from "@/hooks/use-toast";
+import { InfoIcon } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from "@/components/ui/tooltip",
 
 export function RoleManagement() {
   // Mock team members data
-  const teamMembers = [
-    {
-      id: 1
-      name: "Alex Johnson"
-      email: "alex@example.com"
-      role: "Admin"
+  const teamMembers = $2;
+      name: "Alex Johnson",
+      email: "alex@example.com",
+      role: "Admin",
       permissions: {
         viewCandidates: true
         editCandidates: true
@@ -52,18 +59,20 @@ export function RoleManagement() {
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
-        viewCandidates: true
-        editCandidates: false
-        createJobs: false
-        manageTeam: false
-        viewBilling: false
-        manageBilling: false}}]
+        viewCandidates: true,
+        editCandidates: false,
+        createJobs: false,
+        manageTeam: false,
+        viewBilling: false,
+        manageBilling: false}}],
+
   const handlePermissionChange = (memberId: number, permission: string, value: boolean) => {
     // In a real app, this would make an API call to update permissions
     toast({
-      title: "Permission updated"
+      title: "Permission updated",
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
-  }
+  },
+
   const roleDescriptions: Record<string, string> = {
     "Admin": "Full access to all features and settings";
     "Recruiter": "Can manage candidates and job postings";
