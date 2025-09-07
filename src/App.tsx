@@ -27,6 +27,12 @@ const LoadingFallback = () => (
 
 const Partners = React.lazy(() => import('./pages/Partners'));
 
+// New innovative services showcase 2027
+const InnovativeServicesShowcase2027 = lazy(() => import('./pages/InnovativeServicesShowcase2027'));
+
+// New comprehensive pricing 2027
+const ComprehensivePricing2027 = lazy(() => import('./pages/ComprehensivePricing2027'));
+
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 

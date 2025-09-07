@@ -47,6 +47,9 @@ interface SEOProps {
   image?: string;
   type?: 'website' | 'article' | 'profile' | 'product';
   author?: string;
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product' | 'service';
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
@@ -100,7 +103,7 @@ export function SEO({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
+      <meta name="description" content={fullDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author || 'Zion Tech Group'} />
       {/* Canonical URL */}

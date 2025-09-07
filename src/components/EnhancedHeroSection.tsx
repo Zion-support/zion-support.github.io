@@ -108,7 +108,60 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
     setIsAutoPlaying(false);
   };
 
-  const currentSlideData = heroSlides[currentSlide];
+  // Preload images for better performance
+  useEffect(() => {
+    const imagePromises = heroSlides.map(slide => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = resolve;
+        img.onerror = resolve;
+        img.src = slide.image;
+      });
+    });
+
+    Promise.all(imagePromises).then(() => {
+      setIsLoading(false);
+    });
+  }, []);
+
+  const handleDragEnd = useCallback((e: any, { offset, velocity }: any) => {
+    const swipe = swipePower(offset.x, velocity.x);
+
+    if (swipe < -swipeConfidenceThreshold) {
+      paginate(1);
+    } else if (swipe > swipeConfidenceThreshold) {
+      paginate(-1);
+    }
+  }, [paginate]);
+
+  // Accessibility: Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        paginate(-1);
+      } else if (e.key === 'ArrowRight') {
+        paginate(1);
+      } else if (e.key === ' ') {
+        e.preventDefault();
+        setIsPlaying(!isPlaying);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [paginate, isPlaying]);
+
+  if (isLoading) {
+    return (
+      <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+        <div className="text-center text-white">
+          <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-cyan-400" />
+          <p className="text-xl font-medium">Loading amazing content...</p>
+          <p className="text-sm text-gray-400 mt-2">Powered by Zion Tech Group</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">

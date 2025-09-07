@@ -352,3 +352,43 @@ export function PerformanceOptimizer() {
     </Card>
   );
 }
+
+// Performance monitoring hook
+export function usePerformanceMonitoring() {
+  const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
+
+  useEffect(() => {
+    if (!('PerformanceObserver' in window)) return;
+
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const newMetrics: Partial<PerformanceMetrics> = {};
+
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          newMetrics.fcp = entry.startTime;
+        } else if (entry.entryType === 'largest-contentful-paint') {
+          newMetrics.lcp = entry.startTime;
+        } else if (entry.entryType === 'first-input') {
+          newMetrics.fid = (entry as any).processingStart - entry.startTime;
+        } else if (entry.entryType === 'layout-shift') {
+          newMetrics.cls = (entry as any).value;
+        }
+      });
+
+      if (Object.keys(newMetrics).length > 0) {
+        setMetrics(prev => ({ ...prev, ...newMetrics }));
+      }
+    });
+
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (error) {
+      console.warn('PerformanceObserver not supported:', error);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return metrics;
+}

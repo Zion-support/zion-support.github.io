@@ -263,4 +263,187 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
       </AnimatePresence>
     </>
   );
-};
+
+  return (
+    <AccessibilityContext.Provider value={{ settings, announceToScreenReader }}>
+      <SkipLinks />
+      
+      <div className="accessibility-controls">
+        <AccessibilityToggle />
+        <AccessibilityMenu />
+      </div>
+
+      {/* Focus trap for accessibility menu */}
+      {isMenuOpen && (
+        <FocusTrap
+          onDeactivate={() => setIsMenuOpen(false)}
+          focusTrapOptions={{
+            clickOutsideDeactivates: true,
+            escapeDeactivates: true
+          }}
+        >
+          <AccessibilityMenu />
+        </FocusTrap>
+      )}
+
+      {children}
+    </AccessibilityContext.Provider>
+  );
+}
+
+// Context for accessibility settings
+const AccessibilityContext = React.createContext<{
+  settings: AccessibilitySettings;
+  announceToScreenReader: (message: string) => void;
+}>({
+  settings: {
+    highContrast: false,
+    reducedMotion: false,
+    fontSize: 'medium',
+    focusIndicator: true,
+    skipLinks: true
+  },
+  announceToScreenReader: () => {}
+});
+
+export const useAccessibility = () => React.useContext(AccessibilityContext);
+
+// Focus trap component for modals
+function FocusTrap({ children, onDeactivate, focusTrapOptions }: {
+  children: React.ReactNode;
+  onDeactivate: () => void;
+  focusTrapOptions: any;
+}) {
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const focusableElements = containerRef.current.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    if (firstElement) {
+      firstElement.focus();
+    }
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  return (
+    <div ref={containerRef} className="focus-trap">
+      {children}
+    </div>
+  );
+}
+
+// Screen reader only text component
+export function ScreenReaderOnly({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="sr-only">
+      {children}
+    </span>
+  );
+}
+
+// Accessible button component
+export function AccessibleButton({
+  children,
+  onClick,
+  disabled = false,
+  loading = false,
+  ...props
+}: {
+  children: React.ReactNode;
+  onClick?: () => void;
+  disabled?: boolean;
+  loading?: boolean;
+  [key: string]: any;
+}) {
+  const { announceToScreenReader } = useAccessibility();
+
+  const handleClick = useCallback(() => {
+    if (onClick && !disabled && !loading) {
+      onClick();
+      announceToScreenReader('Button clicked');
+    }
+  }, [onClick, disabled, loading, announceToScreenReader]);
+
+  return (
+    <button
+      onClick={handleClick}
+      disabled={disabled || loading}
+      aria-busy={loading}
+      {...props}
+    >
+      {loading && (
+        <span className="loading-spinner" aria-hidden="true">
+          <svg className="animate-spin" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+          </svg>
+        </span>
+      )}
+      {children}
+    </button>
+  );
+}
+
+// Accessible form field component
+export function AccessibleFormField({
+  label,
+  error,
+  required = false,
+  children,
+  ...props
+}: {
+  label: string;
+  error?: string;
+  required?: boolean;
+  children: React.ReactNode;
+  [key: string]: any;
+}) {
+  const id = React.useId();
+  const errorId = React.useId();
+
+  return (
+    <div className="form-field" {...props}>
+      <label htmlFor={id} className="form-label">
+        {label}
+        {required && <span className="required-indicator" aria-label="required">*</span>}
+      </label>
+      
+      {React.cloneElement(children as React.ReactElement, {
+        id,
+        'aria-describedby': error ? errorId : undefined,
+        'aria-invalid': error ? 'true' : 'false',
+        required
+      })}
+      
+      {error && (
+        <div id={errorId} className="error-message" role="alert">
+          {error}
+        </div>
+      )}
+    </div>
+  );
+}
