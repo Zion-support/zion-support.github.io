@@ -67,7 +67,7 @@ const nextConfig = {
   },
   
   // Output configuration
-  output: 'standalone',
+  // output: 'standalone', // Commented out to fix build issues
   
   // Trailing slash
   trailingSlash: false,
