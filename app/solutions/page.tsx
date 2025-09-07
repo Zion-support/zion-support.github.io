@@ -1,216 +1,91 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+import React from 'react';
 import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata = {
   title: "Solutions | Zion Tech Group",
-  description: "Comprehensive AI and technology solutions designed to transform your business operations.",
-=======
-import Link from "next/link";
-
-export const metadata = {
-  title: "Solutions | Zion Tech Group",
-  description: "Professional solutions for your business needs.",
-  keywords: "solutions, business, technology"
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'Solutions - Zion Tech Group',
-  description: 'Comprehensive technology solutions for modern businesses.',
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+  description: "Explore our comprehensive range of AI solutions, micro SaaS development, and IT services designed to accelerate your business growth.",
 };
 
 export default function SolutionsPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Our Solutions
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our comprehensive technology solutions designed to transform your business.
+            Comprehensive technology solutions designed to accelerate your business growth and drive innovation.
           </p>
         </div>
-<<<<<<< HEAD
 
-        <div className="max-w-6xl mx-auto">
-          {/* Solutions Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="flex items-center mb-6">
-                  <span className="text-4xl mr-4">{solution.icon}</span>
-                  <h3 className="text-xl font-semibold text-gray-900">{solution.title}</h3>
-                </div>
-                <p className="text-gray-600 mb-6">{solution.description}</p>
-                <ul className="space-y-2">
-                  {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          {/* Industry Focus */}
-          <div className="bg-white rounded-xl shadow-lg p-12 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Industry Focus</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏥</span>
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Healthcare</h3>
-                <p className="text-sm text-gray-600">HIPAA-compliant solutions for healthcare providers</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💰</span>
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Finance</h3>
-                <p className="text-sm text-gray-600">Secure financial technology solutions</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🛒</span>
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">E-commerce</h3>
-                <p className="text-sm text-gray-600">Scalable online retail platforms</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏭</span>
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Manufacturing</h3>
-                <p className="text-sm text-gray-600">IoT and automation solutions</p>
-              </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span className="text-2xl">🤖</span>
             </div>
-          </div>
-
-          {/* Process Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
-                <h3 className="font-semibold text-gray-900 mb-2">Discovery</h3>
-                <p className="text-sm text-gray-600">Understanding your business needs and challenges</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
-                <h3 className="font-semibold text-gray-900 mb-2">Strategy</h3>
-                <p className="text-sm text-gray-600">Developing a customized solution strategy</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
-                <h3 className="font-semibold text-gray-900 mb-2">Implementation</h3>
-                <p className="text-sm text-gray-600">Building and deploying your solution</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
-                <h3 className="font-semibold text-gray-900 mb-2">Support</h3>
-                <p className="text-sm text-gray-600">Ongoing maintenance and optimization</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center bg-white rounded-xl shadow-lg p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss your specific needs and create a custom solution
-              that drives real business value.
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Solutions</h3>
+            <p className="text-gray-600 mb-6">
+              Custom AI implementations that solve real business problems and drive efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get Started
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
-              >
-                View All Services
-              </Link>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li>• Machine Learning Models</li>
+              <li>• Natural Language Processing</li>
+              <li>• Computer Vision</li>
+              <li>• Predictive Analytics</li>
+            </ul>
+            <Link 
+              href="/contact" 
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span className="text-2xl">⚡</span>
             </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
+            <p className="text-gray-600 mb-6">
+              Scalable software solutions designed for rapid deployment and growth.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li>• Web Applications</li>
+              <li>• Mobile Apps</li>
+              <li>• API Development</li>
+              <li>• Cloud Integration</li>
+            </ul>
+            <Link 
+              href="/contact" 
+              className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span className="text-2xl">🔧</span>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
+            <p className="text-gray-600 mb-6">
+              Comprehensive IT services to support your business infrastructure needs.
+            </p>
+            <ul className="space-y-2 text-sm text-gray-600 mb-6">
+              <li>• Cloud Migration</li>
+              <li>• DevOps & SRE</li>
+              <li>• Security Audits</li>
+              <li>• System Monitoring</li>
+            </ul>
+            <Link 
+              href="/contact" 
+              className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
-=======
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Solutions
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Professional solutions for your business needs.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🚀</span>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Business Solutions
-          </h3>
-          <p className="text-gray-600">
-            Comprehensive business solutions tailored to your specific needs.
-          </p>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">⚡</span>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Quick Delivery
-          </h3>
-          <p className="text-gray-600">
-            Deliver solutions quickly and efficiently with modern technology.
-          </p>
-        </div>
-
-        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-            <span className="text-2xl">🎯</span>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Custom Solutions
-          </h3>
-          <p className="text-gray-600">
-            Create custom solutions tailored to your specific business needs.
-          </p>
-        </div>
-      </div>
-
-      <div className="text-center">
-        <Link 
-          href="/contact" 
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Get Started
-        </Link>
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-=======
->>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
       </div>
     </div>
   );

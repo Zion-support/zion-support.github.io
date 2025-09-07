@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "target": "ES2017",
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
     "lib": [
       "dom",
       "dom.iterable",
@@ -24,54 +21,38 @@
       {
         "name": "next"
       }
-<<<<<<< HEAD
-    ]
-  },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "src_backup/**",
-    "recovered-branches/**",
-    "temp_backup/**",
-    "api.disabled/**",
-    "lib/analytics.ts"
-=======
     ],
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "./*"
       ],
       "@/components/*": [
-        "./src/components/*"
+        "./components/*"
       ],
       "@/pages/*": [
-        "./src/pages/*"
+        "./pages/*"
       ],
       "@/utils/*": [
-        "./src/utils/*"
+        "./utils/*"
       ],
       "@/hooks/*": [
-        "./src/hooks/*"
+        "./hooks/*"
       ],
       "@/types/*": [
-        "./src/types/*"
+        "./types/*"
       ],
       "@/styles/*": [
-        "./src/styles/*"
+        "./styles/*"
       ],
       "@/assets/*": [
-        "./src/assets/*"
+        "./assets/*"
       ]
     },
     "allowSyntheticDefaultImports": true,
-    "target": "ES2017",
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "maxNodeModuleJsDepth": 0,
+    "disableSourceOfProjectReferenceRedirect": true
   },
   "include": [
     "next-env.d.ts",
@@ -105,7 +86,15 @@
     "src.pages.disabled.auto",
     "components.disabled",
     "src.disabled",
-    "src.pages.disabled"
->>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
-  ]
+    "src.pages.disabled",
+    "src_backup/**",
+    "recovered-branches/**",
+    "temp_backup/**",
+    "api.disabled/**",
+    "lib/analytics.ts"
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true
+  }
 }

@@ -1,12 +1,8 @@
-
-  },
-  experimental: {
-    esmExternals: false,
-    newNextLinkBehavior: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -14,14 +10,14 @@
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ['ziontechgroup.com'],
+    domains: ['ziontechgroup.com', 'localhost', 'images.unsplash.com', 'via.placeholder.com'],
     unoptimized: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   webpack: (config, { dev, isServer }) => {
-    // Completely exclude problematic directories from the build
+    // Exclude problematic directories from the build
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -36,7 +32,6 @@
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
-        /^components\//, // Exclude root components directory
       ],
     });
 
@@ -50,17 +45,11 @@
 
     return config;
   },
-  // Try to exclude problematic directories at the Next.js level
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  pageExtensions: ['tsxtsjsx', 'js'],
   onDemandEntries: {
-    // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
-    // number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2,
   },
 };
 
-module.exports = nextConfig;
-
-
+export default nextConfig;
