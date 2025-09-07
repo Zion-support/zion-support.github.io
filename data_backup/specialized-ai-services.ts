@@ -2731,7 +2731,7 @@ export const specializedAIServices: SpecializedAIService[] = [{
 ;
 :corrupted_backup/specialized-ai-services.ts;
 :data_backup/specialized-ai-services.ts;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface SpecializedAIService  {\"id\": string;
   name: string;
@@ -3589,7 +3589,7 @@ export const specializedAIServices: SpecializedAIService[] = [ { id:,ai-powered-
   variant: 'seo-ai-futuristic,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address:,364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https:,}
 },realImplementation: true,implementationDetails:,Complete SEO AI platform with content optimization,search analysis,and performance tracking capabilities.',launchDate: '2024-08-01,customers: 267,rating: 4.6,reviews: 134 ],
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export interface SpecializedAIService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
 }realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number;
@@ -3834,7 +3834,7 @@ export const specializedAIServices: SpecializedAIService[] = [ { id:,ai-powered-
   website: 'https:,}
 },realImplementation: true,implementationDetails:,Complete SEO AI platform with content optimization,search analysis,and performance tracking capabilities.',launchDate: '2024-08-01,customers: 267,rating: 4.6,reviews: 134 ],
 }ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface SpecializedAIService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
 }realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number;

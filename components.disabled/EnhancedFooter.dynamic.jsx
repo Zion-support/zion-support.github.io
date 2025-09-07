@@ -5,11 +5,7 @@ const EnhancedFooter = dynamic(() => import(\"./EnhancedFooter\"),{'; \"loading\
 </p>'
 </p>'
 
-
-
-
 </p>'
-
 
 </p>'
 

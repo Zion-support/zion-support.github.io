@@ -1,4 +1,5 @@
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'Ai Project Manager | Zion Tech Group',
   description: 'Professional ai project manager services for your business needs.',

@@ -1,6 +1,6 @@
 :pages.disabled_auto/blog/index.tsx;
 ursor/fix-website-loading-errors-and-merge-6662;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 :backup-problematic-files/pages.broken/blog/index.tsx;
 import type { NextPage } from \'next\'; import Head from \'next/head\'; import Link from \'next/link\'; import { Calendar,User,ArrowRight,Search,Filter } from \'lucide-react\'; const \"Blog\": NextPage = () => {}},{}},{}},{}},{}},{}},{}},{}},{}},{}} ]; const categories = [\'All Posts\',\'AI & Machine Learning\',\'Blockchain\',\'Cloud Computing\',\'Cybersecurity\',\'Data Analytics\',\'DevOps\',\'Software Architecture\',\'Emerging Tech\',\'Sustainability\' ]; const featuredPost = blogPosts.find(post => post.featured)const regularPosts = blogPosts.filter(post => !post.featured)const formatDate = () => {
   return $3;}
@@ -8,14 +8,14 @@ import type { NextPage } from \'next\'; import Head from \'next/head\'; import L
 import React from 'react';
 interface IndexProps  {:pages.disabled_auto/blog/index.tsx;
   // Add props here as needed;
-ursor/automate-test-improve-and-merge-code-646c;
-export default function Index() {ursor/automate-test-improve-and-merge-code-646c;
+;
+export default function Index() {;
   return (<div />;
       <h1 />Index</h1>;
       <p />This component is currently under development.</p>;}
     </div>;}
   )}}ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 :backup-problematic-files/pages.broken/blog/index.tsx;
   className?: string;
 }const Index: React.FC<IndexProps /> = ({ className }) => {return (<div className={className || ''} />;

@@ -1,7 +1,6 @@
 
 \"export\": interface InnovativeAIService  {id: string;
 
-
 \"export\": interface InnovativeAIService {
    id: string;
    name: string;

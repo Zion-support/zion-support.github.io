@@ -71,7 +71,7 @@ export default { apps: [ { name: 'bolt-zion-app',
   BUNDLE_SIZE_LIMIT: '2MB,}
 },log_file: 'logs/pm2/performance-monitor.log',
   error_file: 'logs/pm2/performance-monitor-error.log',out_file: 'logs/pm2/performance-monitor-out.log'} ,
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export default {\"apps\": [{name: 'bolt-zion-app',\"script\": 'npm',\"args\": 'run preview',\"cwd\": './',\"instances\": 1,\"autorestart\": true,\"watch\": false,\"max_memory_restart\": '1G',\"env\": {NODE_ENV: 'production,}
 },\"log_file\": 'logs/pm2/preview.log',\"error_file\": 'logs/pm2/preview-error.log',\"out_file\": 'logs/pm2/preview-out.log'},{\"name\": 'auto-fix',\"script\": 'node',\"args\": 'scripts/pm2/auto-fix.js',\"instances\": 1,\"autorestart\": true,\"watch\": false,\"max_memory_restart\": '512M',\"env\": {NODE_ENV: 'production';}
@@ -581,7 +581,7 @@ export default { apps: [ { name: 'bolt-zion-app',
   BUNDLE_SIZE_LIMIT: '2MB,}
 },log_file: 'logs/pm2/performance-monitor.log',
   error_file: 'logs/pm2/performance-monitor-error.log',out_file: 'logs/pm2/performance-monitor-out.log'} ,
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export default { apps: [ { name: 'bolt-zion-app',
   script: 'npm',args: 'run preview',

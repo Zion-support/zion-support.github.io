@@ -52,7 +52,8 @@
     "strictNullChecks": true,
     "incremental": true,
     "module": "esnext",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "tsBuildInfoFile": ".next/tsconfig.tsbuildinfo"
   },
   "include": [
     "next-env.d.ts",
@@ -72,7 +73,10 @@
     "zion/**/*.ts",
     "zion/**/*.tsx",
     "protocol/**/*.ts",
-    "protocol/**/*.tsx"
+    "protocol/**/*.tsx",
+    "App.tsx",
+    "middleware.ts",
+    "jest.setup.ts"
   ],
   "exclude": [
     "node_modules",

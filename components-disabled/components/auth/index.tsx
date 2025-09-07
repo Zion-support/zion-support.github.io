@@ -62,7 +62,6 @@ export default function AuthIndexPage() {return (<div className='container mx-au
     </div>);}
 }
 
-
 export default function AuthIndexPage() {
   return (
     <div className='container mx-auto px-4 py-10' />

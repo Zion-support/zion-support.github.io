@@ -310,7 +310,6 @@ const features = [
   'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 ];
 
-
 const features  = null;return (<>;
 			<SEO title=\"API Performance Testing\" description=\"Load, latency and regression testing-as-a-service with CI and SLOs.\" />;
 			<main id=\"main\" className=\"container mx-auto px-4 py-24\" />;
@@ -359,9 +358,6 @@ const features  = null;return (<>;
 }
 }
 
-
-
-
     </>);
 }
 
@@ -405,7 +401,6 @@ const features = [
   return (
 
   return (
-
 
 return (
   return (

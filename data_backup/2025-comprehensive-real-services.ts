@@ -1,6 +1,6 @@
 
 ;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface ComprehensiveService  {\"id\": string;
   name: string;
@@ -535,7 +535,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [ { id:,ai-cont
   email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709',}
 },trialDays: 60,setupTime:,4-6 weeks',competitors[ 'PTC','Siemens','GE Digital','Rockwell Automation'],roi: 'Average customer sees 600% ROI through operational improvements,launchDate: '2024-01-10',
   customers: 950,rating: 4.9,reviews: 520 ],
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export interface ComprehensiveService  {\"id\": string;
 }
@@ -1868,7 +1868,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [// AI & Machin
     ],\"category\": 'Manufacturing & IoT,marketSize:,$28.9B',\"targetAudience\": Manufacturing companies, industrial facilities, supply chain managers, operations teams,,\"competitiveAdvantage\": High accuracy predictive maintenance, comprehensive IoT integration, and proven operational improvements,,useCases['Predictive maintenance optimization','Production efficiency improvement','Quality control automation','Supply chain optimization','Energy consumption reduction';}
     ],integrations['SAP','Oracle','Siemens','Rockwell','GE Digital','PTC'],compliance['ISO 9001','ISO 14001','OHSAS 18001','SOC2','ISO 27001'],\"website\": 'https://ziontechgroup.com/ai-manufacturing-optimizer,\"contact\": {phone:,+1 302 464 0950',\"email\": 'kleber@ziontechgroup.com,\"address\": '364 E Main St STE 1008 Middletown DE 19709';}
     },\"trialDays\": 60,setupTime:,4-6 weeks',competitors['PTC','Siemens','GE Digital','Rockwell Automation'],\"roi\": 'Average customer sees 600% ROI through operational improvements,\"launchDate\": '2024-01-10',\"customers\": 950,\"rating\": 4.9,\"reviews\": 520;
-]}}ursor/automate-test-improve-and-merge-code-646c;
+]}};
 
 export interface ComprehensiveService { id: string; name: string; tagline: string; description: string; price: string; period: string; features: string[]; category: string; marketSize: string; targetAudience: string; competitiveAdvantage: string; useCases: string[]; integrations: string[]; compliance: string[]; website: string; contact: { phone: string; email: string; address: strin,}
 }trialDays: number; setupTime: string; competitors: string[]; roi: string; launchDate: string; customers: number; rating: number; reviews: number;

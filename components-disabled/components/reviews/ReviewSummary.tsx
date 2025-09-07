@@ -33,7 +33,6 @@ type Props = {
 const ReviewSummary: React.FC<Props /> = ({ summary   ,}
 }) => {
 
-
 ;
 
   return (
@@ -92,10 +91,7 @@ export default ReviewSummary;      <div />;
   )
 };
 
-
 const ReviewSummary: React.FC<Props /> = ({ summary    }) => {
-
-
 
   return (
     <div className=\"enhanced-card flex items-center justify-between\" />
@@ -137,14 +133,11 @@ export default ReviewSummary;
   )
 };
 
-
 export default ReviewSummary;  )
 };
 
-
 export default ReviewSummary;
 };
-
 
 export default ReviewSummary;
 
@@ -152,7 +145,6 @@ export default ReviewSummary;
 
 const ReviewSummary: React.FC < Props> = ({ summary   ,}
 }) => {
-
 
 return (<div className='enhanced - card flex items - center justify - between' />;
       <div />;
@@ -196,10 +188,8 @@ export default ReviewSummary;
     </div>)
 };
 
-
 export default ReviewSummary)
 };
-
 
 export default ReviewSummary;
 ;

@@ -5,9 +5,7 @@ const SecurityDashboard = dynamic(() => import(\"./SecurityDashboard\"),{'; load
 </p>'
 </p>'
 
-
 </p>'
-
 
 </p>'
 

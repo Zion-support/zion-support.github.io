@@ -5,9 +5,7 @@ const SEO = dynamic(() => import(\"./SEO\"),{'; loading: () => <p />Loading...</
 </p>'
 </p>'
 
-
 </p>'
-
 
 </p>'
 

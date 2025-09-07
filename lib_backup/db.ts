@@ -38,7 +38,7 @@ const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefi
 export;
   const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;
 
-export default prisma;ursor/automate-test-improve-and-merge-code-646c;
+export default prisma;;
 import { PrismaClient } from '@prisma/client';
 
 const globalForPrisma = globalThis as unknown as { prisma: 'PrismaClient | undefined;' }
@@ -75,7 +75,7 @@ const globalForPrisma = globalThis as unknown as {\"prisma\": PrismaClient | und
 export;
   const prisma = globalForPrisma && globalForPrisma.prisma ?? new PrismaClient()if (process && process.env.NODE_ENV !== 'production') globalForPrisma && globalForPrisma.prisma = prisma;
 
-export default prisma;ursor/automate-test-improve-and-merge-code-646c;
+export default prisma;;
 import { PrismaClient } from '@prisma/client';
 
 const globalForPrisma = globalThis as unknown as {}

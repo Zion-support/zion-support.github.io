@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 const services = [
   {
@@ -39,48 +39,24 @@ const services = [
   }
 ];
 
-export default function App(): React.JSX.Element {
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <main className="container mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Welcome to Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Leading the future of technology with AI, blockchain, and innovative solutions
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started
-            </button>
-            <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-              Learn More
-            </button>
+    <main>
+      <h1>Welcome to Zion Tech Group</h1>
+      <p>Leading the future of technology with AI, blockchain, and innovative solutions</p>
+      <div className="services-grid">
+        {services.map((service, index) => (
+          <div key={index} className="service-card">
+            <h3>{service.icon} {service.title}</h3>
+            <p>{service.description}</p>
+            <ul>
+              {service.features.map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
           </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Why Choose Zion Tech Group?
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value. Our team of experts is dedicated to helping you succeed in the digital age.
-          </p>
-        </div>
-      </main>
-    </div>
+        ))}
+      </div>
+    </main>
   );
 }

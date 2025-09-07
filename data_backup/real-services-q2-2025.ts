@@ -12,7 +12,6 @@ export const \"realServicesQ22025\": RealServiceQ22025[] = [{id:,q2-service-1',\
   },{id:,q2-service-2',\"name\": 'Q2 Service 2,tagline:,Advanced Q2 solutions',\"price\": '$499,\"features\": [,Advanced features','Enhanced performance','Full integration'],\"category\": 'Q2 Services;
 ];
 
-
 export interface RealServiceQ22025 {}
   id: string; name: string; tagline: string; price: string; features: string[]; category?: string}
 }

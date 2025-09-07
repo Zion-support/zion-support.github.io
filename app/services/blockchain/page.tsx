@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { Metadata } from 'next';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
   title: 'Blockchain Solutions | Zion Tech Group',
   description: 'Professional blockchain development services including smart contracts, DeFi, NFTs, and Web3 applications.',

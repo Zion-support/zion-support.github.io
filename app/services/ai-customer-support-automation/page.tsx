@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import React from 'react';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'AI Customer Support Automation | Zion Tech Group',
   description: 'Intelligent customer support automation with AI chatbots, ticket routing, sentiment analysis, and 24/7 multilingual support for enhanced customer experience.',

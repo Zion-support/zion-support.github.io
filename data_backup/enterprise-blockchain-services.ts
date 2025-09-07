@@ -1440,7 +1440,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [// E
 ;
 :corrupted_backup/enterprise-blockchain-services.ts;
 :data_backup/enterprise-blockchain-services.ts;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 import { ServiceVariant  } from '../types/service-variants';
 
 export interface EnterpriseBlockchainService  {\"id\": string;
@@ -1666,7 +1666,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [// E
 ]}}
 :data_backup/enterprise-blockchain-services.ts;
 ursor/integrate-build-improve-and-re-verify-8f7d;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface EnterpriseBlockchainService  {\"id\": string;
   name: string;
@@ -1727,7 +1727,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [// E
     ],\"popular\": true,icon:,🆔',\"color\": 'from-teal-600 to-cyan-600,textColor:,text-teal-400',\"link\": 'https://ziontechgroup.com/blockchain-identity,marketPosition:,Leading edge in blockchain identity. Competes with Okta ($2/user/month) and Auth0 ($23/user/month) with blockchain security.',\"targetAudience\": Financial institutions, Healthcare organizations, Government agencies, Educational institutions, Technology companies, Identity providers',\"trialDays\": 21,setupTime:,3-6 weeks',\"category\": 'Blockchain Identity,\"realService\": true,technology[,Ethereum','Zero-Knowledge Proofs','DID Standards','React','Node.js','PostgreSQL','Redis','AWS'],integrations['SSO platforms','Identity providers','Access management systems','Compliance tools','Custom applications','IoT devices'],useCases['User authentication','Identity verification','Access control','Compliance management','Privacy protection','Digital credentials'],\"roi\": 'Average customer sees 300% ROI within 8 months through enhanced security and compliance.,competitors[,Okta','Auth0','Ping Identity','Custom solutions'],\"marketSize\": '$22B identity management market,growthRate:,250% annual growth',\"variant\": 'quantum-cyberpunk,\"contactInfo\": {mobile:,+1 302 464 0950',\"email\": 'kleber@ziontechgroup.com,address:,364 E Main St STE 1008 Middletown DE 19709',\"website\": 'https://ziontechgroup.com;}
     },\"realImplementation\": true,implementationDetails:,Full blockchain identity platform with self-sovereign identity, zero-knowledge proofs, and comprehensive security features.',\"launchDate\": '2024-01-10,\"customers\": 112,\"rating\": 4.8,\"reviews\": 89;
 ]}}ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface EnterpriseBlockchainService  {\"id\": string;
   name: string;

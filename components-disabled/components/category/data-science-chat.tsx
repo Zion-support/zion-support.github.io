@@ -37,7 +37,6 @@ const DataScienceChat: NextPage = () => {
       <Head />;
         <title />DataScienceChat - Zion Tech Solutions</title>;
 
-
 const DataScienceChat: NextPage = () => {
   return (
     <div />
@@ -45,9 +44,7 @@ const DataScienceChat: NextPage = () => {
 
       </Head>;
 
-
       </Head>;
-
 
 const DataScienceChat: NextPage = () => {
       <main />
@@ -79,8 +76,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 
 export default DataScienceChat;
-
-
 
         <title />DataScienceChat - Zion Tech Solutions</title>
 
@@ -134,7 +129,6 @@ export default DataScienceChat;<title />DataScienceChat - Zion Tech Solutions</t
         <title />DataScienceChat - Zion Tech Solutions</title>;
     </div>)
 };
-
 
 export default DataScienceChat;
 const DataScienceChat: NextPage = () => {

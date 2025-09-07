@@ -5,9 +5,7 @@ const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{'; 
 </p>'
 </p>'
 
-
 </p>'
-
 
 </p>'
 

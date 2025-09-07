@@ -1,6 +1,6 @@
 
 ;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export const real2026Q2Additions = [{id:,ai-governance-compliance-hub',\"name\": 'AI Governance & Compliance Hub,category:,AI & Data',\"tagline\": Policy, risk, and model governance with automated evidence and audit trails.,,\"description\": Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.,,features[;
   'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI Act','Automated risk and impact assessments with mitigations','Dataset lineage, consent tracking, and PII classification','Prompt and output red-teaming with evidence logging','Human-in-the-loop approvals and audit workflows','Realtime controls dashboard and drift alerts','Export auditor-ready reports (SOC2, ISO, HIPAA add-ons)';
@@ -188,7 +188,7 @@ export;
   tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.,description: 'MSP-grade remote monitoring and management for SMB fleets: inventory,patching,scripts,alerts,and remote access with compliance-ready logs.,,features[ 'Windows/macOS/Linux agent and lightweight mode','Patch automation and health policies','Remote scripts and secure sessions','Inventory,software metering,and alerts','Ticketing and customer portals' ],useCases[ 'MSPs and IT providers','Internal IT for SMBs','BYOD governance'],integrations[ 'Azure AD','Okta','Slack','ServiceNow'],competitors[ 'Atera','NinjaOne'],price: '$4,period: '/device/month',
   trialDays: 14,setupTime:,Fast',marketPosition: 'Cost-effective RMM for partners and IT teams,roi:,Reduce mean-time-to-repair by 35% and manual toil by 50%',}
   link: 'https: ,}
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export const real2026Q2Additions = [ { id:,ai-governance-compliance-hub',name: 'AI Governance & Compliance Hub,category:,AI & Data',
   tagline: Policy,risk,and model governance with automated evidence and audit trails.,,description: Centralize AI model governance with policy mapping,automated risk assessments,lineage,PII scanning,red-teaming evidence,and auditor-ready reports. Integrates with Jira,ServiceNow,Slack,GitHub,and leading MLOps platforms.,,features[ 'Policy mapping to ISO/IEC 23894,NIST AI RMF,EU AI Act','Automated risk and impact assessments with mitigations','Dataset lineage,consent tracking,and PII classification','Prompt and output red-teaming with evidence logging','Human-in-the-loop approvals and audit workflows','Realtime controls dashboard and drift alerts','Export auditor-ready reports (SOC2,ISO,HIPAA add-ons)' ],useCases[ 'Enterprise AI model governance','Regulatory readiness and audits','Vendor model risk management' ],integrations[ 'Jira','ServiceNow','Slack','GitHub','Azure OpenAI','Vertex AI','Datadog'],competitors[ 'Monitaur','CalypsoAI','Credo AI'],price: $2,500,,period: '/month,trialDays: 14,setupTime:,Fast',}
@@ -618,7 +618,7 @@ export;
   tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.,description: 'MSP-grade remote monitoring and management for SMB fleets: inventory,patching,scripts,alerts,and remote access with compliance-ready logs.,,features[ 'Windows/macOS/Linux agent and lightweight mode','Patch automation and health policies','Remote scripts and secure sessions','Inventory,software metering,and alerts','Ticketing and customer portals' ],useCases[ 'MSPs and IT providers','Internal IT for SMBs','BYOD governance'],integrations[ 'Azure AD','Okta','Slack','ServiceNow'],competitors[ 'Atera','NinjaOne'],price: '$4,period: '/device/month',
   trialDays: 14,setupTime:,Fast',marketPosition: 'Cost-effective RMM for partners and IT teams,roi:,Reduce mean-time-to-repair by 35% and manual toil by 50%',}
   link: 'https: ,}
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 ]}]}
 
 export const real2026Q2Additions = [ { id:,ai-governance-compliance-hub',name: 'AI Governance & Compliance Hub,category:,AI & Data',

@@ -122,10 +122,8 @@ export const trackEvent = (; if (typeof window !== \"undefined\" && window.gtag)
   return $3;}
 }),} } declare global {; interface Window {; gtag: (void) => $3; gtag: (; command: string,targetId: string,config?: Record<string,unknown />; ) => void} } \"
 
-
-
 ;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 // Analytics and performance monitoring utilities;
 export const trackEvent = (if (typeof window !== \"undefined\" && window.gtag) {\";) => {
   return $3;}
@@ -289,7 +287,7 @@ export const trackEvent = (if (typeof window !== \"undefined\" && window.gtag) {
 } } return null} interface WebVitalMetric  {name: string; valu,e: number; i,d: string}export const trackWebVitals = (\"; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"event\",metric.name,{value: Math.round(metric.value),event_category: \"Web Vitals\",event_label: metric.id,non_interaction: true) => {
   return $3;}
 })} } declare global {interface Window  {gtag: (void) => $3; gtag: (command: string,targetId: string,config?: Record<string,unknown />; ) => void} } \";
-ursor/automate-test-improve-and-merge-code-646c;
+;
 export const trackEvent = (if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"event\",eventName,properties)) => {
   return $3;}
 } } export const trackPageView = (\"; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"config\",\"GA_MEASUREMENT_ID\",{page_path: url) => {
@@ -475,7 +473,7 @@ export const trackEvent = (if (typeof window !== \"undefined\" && window.gtag) {
 } } return null} interface WebVitalMetric  {name: string; valu,e: number; i,d: string}export const trackWebVitals = (\"; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"event\",metric.name,{value: Math.round(metric.value),event_category: \"Web Vitals\",event_label: metric.id,non_interaction: true) => {
   return $3;}
 })} } declare global {interface Window  {gtag: (void) => $3; gtag: (command: string,targetId: string,config?: Record<string,unknown />; ) => void} } \";
-ursor/automate-test-improve-and-merge-code-646c;
+;
 export const trackEvent = (if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"event\",eventName,properties)) => {
   return $3;}
 } } export const trackPageView = (\"; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"config\",\"GA_MEASUREMENT_ID\",{page_path: 'url',) => {
@@ -800,8 +798,6 @@ export const trackEvent = (; if (typeof window !== \"undefined\" && window.gtag)
   return $3;}
 }),} } declare global {; interface Window {; gtag: (void) => $3; gtag: (; command: string,targetId: string,config?: Record<string,unknown />; ) => void} } \"
 
-
-
 export const trackEvent = (; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"event\",eventName,properties),) => {
   return $3;}
 } } export const trackPageView = (\"; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"config\",\"GA_MEASUREMENT_ID\",{; page_path: url,,) => {
@@ -830,8 +826,6 @@ export const trackEvent = (; if (typeof window !== \"undefined\" && window.gtag)
   return $3;}
 }),} } declare global {; interface Window {; gtag: (void) => $3; gtag: (; command: string,targetId: string,config?: Record<string,unknown />; ) => void} } \"
 
-
-
 export const trackEvent = (; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"event\",eventName,properties),) => {
   return $3;}
 } } export const trackPageView = (\"; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"config\",\"GA_MEASUREMENT_ID\",{; page_path: url,,) => {
@@ -841,7 +835,6 @@ export const trackEvent = (; if (typeof window !== \"undefined\" && window.gtag)
 } } return null} interface WebVitalMetric {; name: string; valu,e: number; i,d: string} ; export const trackWebVitals = (\"; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"event\",metric.name,{; value: Math.round(metric.value),event_category: \"Web Vitals\",event_label: metric.id,non_interaction: true) => {
   return $3;}
 }),} } declare global {; interface Window {; gtag: (void) => $3; gtag: (; command: string,targetId: string,config?: Record<string,unknown />; ) => void} } \"
-
 
 export const trackEvent = (; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"event\",eventName,properties),) => {
   return $3;}
@@ -983,7 +976,6 @@ export const trackEvent = (; if (typeof window !== \"undefined\" && window.gtag)
 } } return null} interface WebVitalMetric {; name: string; valu,e: number; i,d: string} ; export const trackWebVitals = (\"; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"event\",metric.name,{; value: Math.round(metric.value),event_category: \"Web Vitals\",event_label: metric.id,non_interaction: true) => {
   return $3;}
 }),} } declare global {; interface Window {; gtag: (void) => $3; gtag: (; command: string,targetId: string,config?: Record<string,unknown />; ) => void} } \"
-
 
 export const trackEvent = (; if (typeof window !== \"undefined\" && window.gtag) {\"; window.gtag(\"event\",eventName,properties),) => {
   return $3;}

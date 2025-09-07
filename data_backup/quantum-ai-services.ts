@@ -4381,7 +4381,7 @@ export const quantumAIServices: QuantumAIService[] = [{
 ;
 :corrupted_backup/quantum-ai-services.ts;
 :data_backup/quantum-ai-services.ts;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface QuantumAIService  {\"id\": string;
   name: string;
@@ -6917,7 +6917,7 @@ export const quantumAIServices: QuantumAIService[] = [ { id:,quantum-ai-brain-co
   variant: 'quantum-ai-futuristic,contactInfo: { mobile:,+1 302 464 0950 ',email: 'kleber@ziontechgroup.com,address:,364 E Main St STE 1008 Middletown DE 19709 ',}
   website: 'https:,}
 },realImplementation: true,implementationDetails:,Complete quantum robotics platform with AI decision making,advanced control,and comprehensive management. Includes mobile app and hardware integration. ',launchDate: '2024-03-01,customers: 75,rating: 5.0,reviews: 38 ],
-}ursor/automate-test-improve-and-merge-code-646c;
+};
 
 export interface QuantumAIService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
 }realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number;
@@ -7704,7 +7704,7 @@ export const quantumAIServices: QuantumAIService[] = [ { id:,quantum-ai-brain-co
   website: 'https:,}
 },realImplementation: true,implementationDetails:,Complete quantum robotics platform with AI decision making,advanced control,and comprehensive management. Includes mobile app and hardware integration. ',launchDate: '2024-03-01,customers: 75,rating: 5.0,reviews: 38 ],
 }ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+;
 
 export interface QuantumAIService { id: string; name: string; tagline: string; price: string; period: string; description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: string; contactInfo: { mobile: string; email: string; address: string; website: strin,}
 }realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number;

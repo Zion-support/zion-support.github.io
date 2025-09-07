@@ -21,7 +21,7 @@ loading: boolean;
 }
 }
 }
-ursor/automate-test-improve-and-merge-code-646c;
+;
 }ursor/fix-website-loading-errors-and-merge-6662;
 interface ApiState<T /> {}import { useState, useEffect   } from 'react';interface ApiState < T> {}import { useState, useEffect  } from 'react';
 interface ApiState<T /> {}interface ApiState<T />  {data: T | null;
@@ -94,7 +94,6 @@ export function use_api < T>(url: string, options?: RequestInit) {
     data: null,
     loading: true,
     error: null,
-
 
 data: null,
     loading: true,}
@@ -184,7 +183,6 @@ interface ApiState<T /> {
   )}
 }
 
-
 interface UseApiOptions {}
   immediate?: boolean;}
 }
@@ -254,7 +252,6 @@ export function useApi<T />(
       fetchData();}
     }
   }, [fetchData, options.immediate]);
-
 
 }
   }, [api_function, options]);

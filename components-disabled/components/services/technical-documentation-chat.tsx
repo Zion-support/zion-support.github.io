@@ -152,7 +152,6 @@ export default TechnicalDocumentationChat;<title />TechnicalDocumentationChat - 
     </div>)
 };
 
-
       </main>;
     </div>);
 

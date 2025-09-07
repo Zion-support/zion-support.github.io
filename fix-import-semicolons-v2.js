@@ -43,7 +43,6 @@ const modified = false;
       (match) => {
         return match.replace (\",\", \";\");
 
-
     content = content.replace(;
       /import\s+.*?from\s+['\"][^'\"]+['\"],\s*;/g,
 
