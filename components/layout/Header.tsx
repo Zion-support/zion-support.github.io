@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Menu, X, SparklesIcon } from 'lucide-react';
 
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
