@@ -1,3 +1,30 @@
+const fs = require('fs');
+const path = require('path');
+const { execSync, spawn } = require('child_process');
+const { promisify } = require('util');
+
+const execAsync = promisify(require('child_process').exec);
+
+class RunAllAutomations {
+  constructor() {
+    this.results = {
+      success: [],
+      failed: [],
+      warnings: []
+    };
+    this.logFile = path.join(__dirname, '..', 'automation-logs.txt');
+    this.ensureLogFile();
+  }
+
+  ensureLogFile() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -52,13 +79,13 @@
       { name: 'Lint Fix', command: 'npm run lint:fix' },
       { name: 'Build Application', command: 'npm run build' },
       { name: 'Test Smoke', command: 'npm run test:smoke' },
-      { name: 'Security Audit', command: 'npm run security:audit' },
-      { name: 'Performance Monitor', command: 'npm run perf:monitor' },
-      { name: 'SEO Optimizer', command: 'npm run automation:seo' },
-      { name: 'Health Check', command: 'npm run automation:health' },
-      { name: 'Quick Improvements', command: 'node scripts/quick-app-improvements.cjs' },
-      { name: 'Performance Improver', command: 'node scripts/performance-improver.cjs' },
-      { name: 'Security Improver', command: 'node scripts/security-improver.cjs' },
+      { name: 'Security Audit', command: 'npm audit' },
+      { name: 'Performance Monitor', command: 'node scripts/performance-monitor.js' },
+      { name: 'SEO Optimizer', command: 'node scripts/seo-optimizer.js' },
+      { name: 'Health Check', command: 'node scripts/health-checker.js' },
+      { name: 'Quick Improvements', command: 'node scripts/quick-improvements.cjs' },
+      { name: 'Performance Improver', command: 'node scripts/performance-optimizer.js' },
+      { name: 'Security Improver', command: 'node scripts/security-auditor.js' },
       { name: 'Git Status', command: 'git status' },
       { name: 'Git Add', command: 'git add .' },
       { name: 'Git Commit', command: 'git commit -m "Automated improvements and fixes"' },
@@ -126,7 +153,3 @@ if (require.main === module) {
 }
 
 module.exports = RunAllAutomations;
-=======
-=======
-        "impact"
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
