@@ -1,23 +1,23 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic';
-describe('InteractiveElementsdynamic', () => {
+import InteractiveElements from '../components/InteractiveElements';
+
+describe('InteractiveElements', () => {
   test('renders without crashing', () => {
-    render(<InteractiveElementsdynamic />);
-    expect(
-      screen.getByTestId('interactiveelements.dynamic')
-    ).toBeInTheDocument();
+    render(<InteractiveElements />);
+    expect(screen.getByTestId('interactiveelements')).toBeInTheDocument();
   });
   test('displays correct content', () => {
-    render(<InteractiveElementsdynamic />);
+    render(<InteractiveElements />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<InteractiveElementsdynamic />);
+    render(<InteractiveElements />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<InteractiveElementsdynamic />);
+    render(<InteractiveElements />);
+    // Add styling tests if needed
   });
 });
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import InteractiveElementsdynamic from "./components/InteractiveElements.dynamic"; describe("InteractiveElementsdynamic",() => { test("renders without crashing",() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId("interactiveelements.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<InteractiveElementsdynamic />)}); test("handles user interactions",() => { render(<InteractiveElementsdynamic />)}); test("applies correct styling",() => { render(<InteractiveElementsdynamic />)})});''"
-import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});

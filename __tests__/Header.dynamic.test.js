@@ -1,21 +1,23 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Headerdynamic from '../components/Header.dynamic';
-describe('Headerdynamic', () => {
+import Header from '../components/Header';
+
+describe('Header', () => {
   test('renders without crashing', () => {
-    render(<Headerdynamic />);
-    expect(screen.getByTestId('header.dynamic')).toBeInTheDocument();
+    render(<Header />);
+    expect(screen.getByTestId('header')).toBeInTheDocument();
   });
   test('displays correct content', () => {
-    render(<Headerdynamic />);
+    render(<Header />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<Headerdynamic />);
+    render(<Header />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<Headerdynamic />);
+    render(<Header />);
+    // Add styling tests if needed
   });
 });
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Headerdynamic from "./components/Header.dynamic"; describe("Headerdynamic",() => { test("renders without crashing",() => { render(<Headerdynamic />); expect(screen.getByTestId("header.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Headerdynamic />)}); test("handles user interactions",() => { render(<Headerdynamic />)}); test("applies correct styling",() => { render(<Headerdynamic />)})});''"
-import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});

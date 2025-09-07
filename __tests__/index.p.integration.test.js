@@ -1,32 +1,23 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import indexp from '../pages/index.p'
-describe('index.p Integration Tests'
-  test('page renders correctly'
-    expect(screen.getByRole('main'
-  test('navigation works'
-  test('page content is accessible'
-  test('page loads with correct data'
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data"
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import indexp from '../pages/index.p';
-describe('index.p Integration Tests', () => {
-  test('page renders correctly', () => {
-    render(<indexp />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+import IndexIntegration from '../components/index.p.integration';
+
+describe('IndexIntegration', () => {
+  test('renders without crashing', () => {
+    render(<IndexIntegration />);
+    expect(screen.getByTestId('index-integration')).toBeInTheDocument();
   });
-  test('navigation works', () => {
-    render(<indexp />);
+  test('displays correct content', () => {
+    render(<IndexIntegration />);
+    // Add specific content tests based on component
   });
-  test('page content is accessible', () => {
-    render(<indexp />);
+  test('handles user interactions', () => {
+    render(<IndexIntegration />);
+    // Add interaction tests based on component functionality
   });
-  test('page loads with correct data', () => {
-    render(<indexp />);
+  test('applies correct styling', () => {
+    render(<IndexIntegration />);
+    // Add styling tests if needed
   });
 });
-const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe("index.p Integration Tests",() => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data",() => { render(<indexp />)})});''"
-import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import indexp from '../pages/index.p'; describe('index.p Integration Tests',() => { test('page renders correctly',() => { render(<indexp />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('navigation works',() => { render(<indexp />)}); test('page content is accessible',() => { render(<indexp />)}); test('page loads with correct data',() => { render(<indexp />)})});
