@@ -1,8 +1,27 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env"" node;
+#!/usr/bin/env node;
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();"
@@ -13,7 +32,18 @@ class $1 {}
 ;"
   log(message, type = "info") {}"
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
+=======
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
   async ensureDirectoryExists(dirPath) {}
   if (!fs.existsSync(dirPath)) {}"
@@ -35,6 +65,75 @@ class $1 {}
     const result = await this.runCommand("npm audit --json");"
     if (result.success) {}
   const auditData = JSON.parse(result.output);
+<<<<<<< HEAD
+        if (auditData.vulnerabilities) {}
+  const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, "warn");
+          for (const ["packageName", "vuln"] of Object.entries(auditData.vulnerabilities)) {this.errorsFound.push(`Security vulnerability in ${packageName}: ${vuln.title} (${vuln.severity})`)};
+        } else {}
+  this.log("No security vulnerabilities found", "success");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  async runCommand(command, options = {}) {}
+  try {}
+  const result = execSync(command, {})
+  "encoding": "utf8",
+        "cwd": this.projectRoot,
+        "stdio": "pipe",
+        ...options }
+});
+      return { "success": true, "output": result };
+    } catch (error) {}
+  return { "success": false, "output": error.message, "code": error.status };
+    };
+  };
+;
+  async checkSecurityVulnerabilities() {}
+  this.log("Checking for security vulnerabilities...");
+    const result = await this.runCommand("npm audit --json");
+    if (result.success) {}
+  try {}
+  const auditData = JSON.parse(result.output);
+        if (auditData.vulnerabilities) {}
+  const vulnCount = Object.keys(auditData.vulnerabilities).length;this.log(`Found ${vulnCount} security vulnerabilities`, "warn");
+          for (const ["packageName", "vuln"] of Object.entries(auditData.vulnerabilities)) {this.errorsFound.push(`Security vulnerability in ${packageName}: ${vuln.title} (${vuln.severity})`)};
+        } else {}
+  this.log("No security vulnerabilities found", "success")};
+        ;
+        return auditData} catch (error) {  this.log(`Error parsing audit "data": ${error.message  }`, "error")};
+    } else {this.log(`npm audit "failed": ${result.output}`, "error")};
+    ;
+    return null};
+;
+  async checkOutdatedDependencies() {}
+  this.log("Checking for outdated dependencies...");
+    const result = await this.runCommand("npm outdated --json");
+    if (result.success) {}
+  try {}
+  const outdatedData = JSON.parse(result.output);
+        if (Object.keys(outdatedData).length > 0) {this.log(`Found ${Object.keys(outdatedData).length} outdated dependencies`, "warn");
+          for (const ["packageName", "info"] of Object.entries(outdatedData)) {this.errorsFound.push(`Outdated "dependency": ${packageName} ("current": ${info.current}, "latest": ${info.latest})`)};
+        } else {}
+  this.log("All dependencies are up to date", "success")};
+        ;
+        return outdatedData} catch (error) {  this.log(`Error parsing outdated "data": ${error.message  }`, "error")};
+    } else {this.log(`npm outdated "failed": ${result.output}`, "error")};
+    ;
+    return null};
+;
+  async checkLicenseCompliance() {}
+  this.log("Checking license compliance...");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  async checkLicenseCompliance() {}
+  this.log("Checking license compliance...");
+    const result = await this.runCommand("npm ls --json");
+    if (result.success) {}
+  try {}
+=======
 
         ...options }
   return { "success": false, "output": error.message, "code": error.status };"
@@ -48,6 +147,7 @@ class $1 {}
   this.log("All dependencies are up to date", "success")};"
 
     const result = await this.runCommand("npm ls --json");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const depsData = JSON.parse(result.output);
         // Check for problematic licenses;"
         const problematicLicenses = ["GPL", "AGPL", "LGPL"];"
@@ -124,8 +224,36 @@ class $1 {}
   await this.fixSecurityIssues()};
 
       await this.generateReport()};
+<<<<<<< HEAD
+  };
+};
+;
+<<<<<<< HEAD
+// Run the security monitor;
+const monitor = new SecurityMonitor();
+<<<<<<< HEAD
+
+=======
+monitor.run().catch(console.error);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Run the security monitor;
 const monitor = new SecurityMonitor();
 
+<<<<<<< HEAD
+monitor.run().catch(console.error);
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+monitor.run().catch(console.error);
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

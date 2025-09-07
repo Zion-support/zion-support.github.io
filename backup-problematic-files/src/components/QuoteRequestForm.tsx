@@ -1,4 +1,26 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import { useState } from "react",;
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import { useToast } from "@/hooks/use-toast",;
+import { useRouter } from 'next/router',;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { StepProgress } from "@/components/QuoteRequestForm/StepProgress",;
+import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep",;
+import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep",;
+import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep",;
+import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep",;
+import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep",;
+import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal",;
+import { QuoteFormData } from "@/types/quotes",;
+=======
 import { useState } from "react";""
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from "@/hooks/use-toast";""
@@ -14,6 +36,7 @@ import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep";""
 import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep";""
 import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal";""
 import { QuoteFormData } from "@/types/quotes";""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Sparkles, Loader2 } from 'lucide-react';
 import { z } from "zod";"
 ;"
@@ -44,9 +67,20 @@ export function QuoteRequestForm() {;
           specificItem: formData.specificItem;}),;
         if (!result.success) {;
           toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            title:"Service Required",;
+            description:"Please select a service before continuing.",;
+=======
+            title:"Service Required",,
+  description:"Please select a service before continuing.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            variant:"destructive"}),;
+=======
             title: "Service Required";,,
   description: "Please select a service before continuing.";,;
             variant: "destructive";}),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           return,;
         }
         setCurrentStep("details"),;
@@ -94,16 +128,37 @@ export function QuoteRequestForm() {;
       await new Promise(resolve => setTimeout(resolve, 1500)),;
       ;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Quote Request Submitted",;
+        description:"We've received your request and will get back to you soon."}),;
+=======
+        title:"Quote Request Submitted",,
+  description:"We've received your request and will get back to you soon."}),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
         title: "Quote Request Submitted";,,
   description: "We've received your request and will get back to you soon.";}),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ;
       // Redirect to confirmation page or homepage;
       router.push("/"),;
     } catch (error) {;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Submission Failed",;
+        description:"There was an error submitting your request. Please try again.",;
+=======
+        title:"Submission Failed",,
+  description:"There was an error submitting your request. Please try again.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        variant:"destructive"}),;
+=======
         title: "Submission Failed";,,
   description: "There was an error submitting your request. Please try again.";,;
         variant: "destructive";}),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } finally {;
       setIsSubmitting(false),;
     }
@@ -131,9 +186,20 @@ export function QuoteRequestForm() {;
     } catch (err) {;
       logErrorToProduction("Auto-fill API error", err as Error, { component: 'QuoteRequestForm';, projectDescription: description ;}),;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Auto-fill Failed",;
+        description:"We couldn't process your request. Please try again.",;
+=======
+        title:"Auto-fill Failed",,
+  description:"We couldn't process your request. Please try again.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        variant:"destructive"}),;
+=======
         title: "Auto-fill Failed";,,
   description: "We couldn't process your request. Please try again.";,;
         variant: "destructive";}),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } finally {;
       setAutoFillLoading(false),;
     }
@@ -214,3 +280,8 @@ pr-12325
 }loading= {;
   autoFillLoading ;
 }/> </div>) ;
+<<<<<<< HEAD
+}'"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

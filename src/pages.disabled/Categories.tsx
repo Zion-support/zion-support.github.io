@@ -1,8 +1,11 @@
+<<<<<<< HEAD:src_backup/pages/Categories.tsx
+=======
 
 import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
 import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Categories.tsx
 import useSWR from 'swr';
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -20,12 +23,15 @@ interface CategoryType {
   slug: string;
   icon: string
 
+<<<<<<< HEAD:src_backup/pages/Categories.tsx
+=======
 
       logErrorToProduction ('Categories API error:', { data: response.status_text }),
       return CATEGORIES as CategoryType[];
     fallback_data: initial_categories}),
   const categories = data || [];
   const is_loading = !data && !error;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Categories.tsx
   );
 
 };';
@@ -184,6 +190,8 @@ const Categories: React.FC = () => {}
 export default Categories""
 "
   )}
+<<<<<<< HEAD:src_backup/pages/Categories.tsx
+=======
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -279,6 +287,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
 
 }
 ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/pages.disabled/Categories.tsx
 export: default Categories
 export default Categories," ]
 export default Categories"")))))))))

@@ -147,14 +147,36 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
       
       setError(errorMessage),
       
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      toast({
+        title: &quot;Error&quot;,
+        description: errorMessage,
+        variant: "destructive"}),
+=======
       toast({
         title: &quot;Error&quot;,
         description: errorMessage,
         variant: "destructive"}),      
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  }
+        title: "Error", _description: errorMessage, _variant: "destructive"});
+
+      return {_success: false, _error: errorMessage};
+    } finally {_setIsSubmitting(false);}
+  };
+
+  return {_submitHireRequest, _isSubmitting, _error};
+}finally {
+  setIsSubmitting (false)
+=======
   },
   
   return {
@@ -171,11 +193,16 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
   return {_submitHireRequest, _isSubmitting, _error};
 }finally {
   setIsSubmitting (false) 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 };
 return {
   submitHireRequest;
 isSubmitting;
+<<<<<<< HEAD
+error
+=======
 error 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 }

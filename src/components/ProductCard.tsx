@@ -1,7 +1,102 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import Link from 'next/link',;
+import { Heart } from 'lucide-react';
+import { useWishlist } from '@/hooks/useWishlist',;
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger} from '@/components/ui/tooltip',;
+import { useDispatch } from 'react-redux',;
+import type { AppDispatch } from '@/store',;
+import { addItem } from '@/store/cartSlice',;
+import Image from 'next/image',;
+import React, { useState, useEffect } from 'react',;
+import { useAuth } from '@/context/auth/AuthProvider',;
+import { useRouter } from 'next/router',;
+import { Product } from '@/services/marketplace',;
+import { useMediaQuery } from 'usehooks-ts',;
+import { toast } from '@/hooks/use-toast',;
+import { captureException } from '@/utils/sentry',;
+interface ProductCardProps {;
+  product: Product,;
+  onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure;
+  onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail);
+  /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */;
+  buyDisabled?: boolean;
+}
+;
+export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyDisabled = false }: ProductCardProps) {;
+  const { isAuthenticated } = useAuth(),;
+  const { isWishlisted, toggle } = useWishlist(),;
+  const [imageError, setImageError] = useState(false),;
+  const [isRedirecting, setIsRedirecting] = useState(false), // Added for loading state;
+  const router = useRouter(),;
+  const stockStatus =;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+const stockStatus =;
+    product && product.stock === undefined;
+      : 'In stock';
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   const stockVariant =;
     product && product.stock === undefined;
   const productTitle = product && product.title;
+<<<<<<< HEAD
+
+  const imageUrl = Array && Array.isArray(product && product.images) && product && product.images.length > 0 ? product && product.images[0] : null;
+  const imageAltText = productTitle;
+'
+  const isMobile = useMediaQuery('(max-width: 768px)'),;'
+  const isTablet = useMediaQuery('(max-width: 1200px)'),;
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+
+  );
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  );
+}
+
+  const stock_status =;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+    product.stock === undefined;
+      ? 'In stock';
+      : product.stock <= 0;
+      ? 'Out of stock';
+      : product.stock <= 5;
+      ? 'Low stock';
+      : 'In stock',;
+  const stockVariant =;
+=======
+    product.stock === undefined;'
+      : 'In stock';
+  const stock_variant =;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    product.stock === undefined;
+<<<<<<< HEAD
+=======
+    product.stock === undefined;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
   const imageUrl = Array && Array.isArray(product && product.images) && product && product.images.length > 0 ? product && product.images[0] : null;,
   const imageAltText = productTitle;
   const isMobile = useMediaQuery('(max-width: 768px)'),;
@@ -10,6 +105,7 @@
   );
 }
     product.stock === undefined;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ? 'success';
       : product.stock <= 0;
       ? 'destructive';
@@ -42,16 +138,36 @@
   const addToCart = () => {;
     if (!isAuthenticated) {;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
         title: 'Login Required',;
         description: 'Please log in to add items to your cart.',;
+=======
+        title: 'Login Required',,
+  description: 'Please log in to add items to your cart.',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        title: 'Login Required',;
+        description: 'Please log in to add items to your cart.',;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant: 'destructive'}),;
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`),;
       return;
     }
     dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 })),;
     toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
       title: 'Added to cart',;
       description: `${productTitle} has been added to your cart`,;
+=======
+      title: 'Added to cart',,
+  description: `${productTitle} has been added to your cart`,;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      title: 'Added to cart',;
+      description: `${productTitle} has been added to your cart`,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       action: {;
         label: 'View Cart',;
         onClick: () => router.push('/cart')}});
@@ -183,10 +299,112 @@
             </Tooltip>;
           </TooltipProvider>;
         )}
+<<<<<<< HEAD
+      </div>;
+    </div>;
+<<<<<<< HEAD
+=======
+  const product_title = product.title;
+  const image_url = Array.is_array (product.images) && product.images.length > 0 ? product.images[0] : null;
+  const imageAltText = product_title;'
+  const is_mobile = useMediaQuery ('(max - width: 768px)'),'
+  const is_tablet = useMediaQuery ('(max - width: 1200px)'),'
+  const image_sizes = is_mobile ? '100vw' : is_tablet ? '50vw' : '33vw');
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  );
+}
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import Link from 'next/link';
+import { Heart } from 'lucide-react'
+import { useWishlist  } from '@/hooks/useWishlist';
+import { Button  } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger } from '@/components/ui/tooltip';
+import { useDispatch  } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem  } from '@/store/cartSlice';
+import Image from 'next/image',
+import React, { useState, useEffect } from 'react';
+import { useAuth  } from '@/context/auth/AuthProvider';
+import { useRouter  } from 'next/router';
+import { Product  } from '@/services/marketplace';
+import { useMediaQuery  } from 'usehooks-ts';
+import { toast } from '@/hooks/use-toast';
+import { captureException } from '@/utils/sentry';
+interface ProductCardProps {
+  product: Product;
+  onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure
+  onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
+  /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */
+  buyDisabled?: boolean
+}
+
+  );
+
+}onError= {;
+  (e) => handleImageError (e) ;
+}priority= {;
+  false ;
+}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
+}src= {;
+  imageUrl ;
+}alt= {;
+  imageAltText ;
+}style= {;
+  {';
+  objectFit: 'cover' ;
+
+}onError= {;
+  (e) => handleImageError (e) ;
+}priority= {;
+  false ";
+}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
+}{;
+  product.currency ;
+}{;
+  product.price ;
+}</p>) ;
+}Add to Cart </Button> {;
+  onBuy && (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button onClick={;
+  (e) => {;
+  e.stopPropagation ();
+if (onBuy) {;
+  setIsRedirecting (true);
+onBuy () > {'";
+  isRedirecting ? (<> <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true" ></span> Processing... </>) : ('Buy Now') ;
+}</Button> </TooltipTrigger> {;
+  !isAuthenticated && !isRedirecting && (<TooltipContent>Login required</TooltipContent>) ;
+}</Tooltip> </TooltipProvider>) ;
+}</div> </div>) ;
+}'"
+=======
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   )
 }
   )
 }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

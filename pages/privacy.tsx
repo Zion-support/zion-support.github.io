@@ -1,6 +1,53 @@
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import Head from 'next/head';
+
+export default function Privacy() {
+  return (
+    <>
+      <Head>
+        <title>Privacy Policy - Zion Tech Group</title>
+        <meta name="description" content="Privacy Policy for Zion Tech Group" />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        <div className="max-w-4xl mx-auto px-4 py-16">
+          <h1 className="text-4xl font-extrabold mb-8 text-center">Privacy Policy</h1>
+          <p className="text-lg text-slate-400 mb-12 text-center">
+            Last updated: {new Date().toLocaleDateString()}
+          </p>
+          <div className="space-y-8">
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">Information We Collect</h2>
+              <p className="text-slate-300 leading-relaxed">
+                We collect information you provide directly to us when you use our services or contact us.
+              </p>
+            </section>
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">Contact Us</h2>
+              <p className="text-slate-300 leading-relaxed">
+                Questions? Contact us at kleber@ziontechgroup.com or +1 302 464 0950.
+=======
+import MainLayout from '../components/layout/MainLayout';
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -12,6 +59,24 @@ import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 origin/automation-improvements-final
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+
+
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+=======
 import { motion } from 'framer-motion';
 import { Shield, Eye, Lock, Database, UserCheck, AlertTriangle } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
@@ -46,6 +111,7 @@ const privacyPrinciples = [
     icon: AlertTriangle,
     title: "Breach Notification",
     description: "In the unlikely event of a data breach, we will notify affected users and relevant authorities within 72 hours."
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
   }
 ];
 
@@ -115,7 +181,13 @@ const rights = [
   }
 }
 
+<<<<<<< HEAD:pages/privacy.tsx
+=======
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 ursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import Head from 'next/head';
@@ -130,6 +202,15 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 origin/automation-improvements-final
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -143,11 +224,14 @@ import { motion } from "framer-motion";
   MapPin,
   Users,;
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+=======
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
 
 ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
 
@@ -157,8 +241,207 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
+<<<<<<< HEAD:pages_backup/privacy.tsx
+ursor/fix-lint-push-and-merge-to-main-ae4e
+import { 
+  Shield, Lock, Eye, Database, Globe, 
+  User, Settings, AlertTriangle, CheckCircle, Mail
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+=======
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
+
+} from 'lucide-react';
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+} from 'lucide-react';
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+
+} from 'lucide-react';
+
+<<<<<<< HEAD:pages_backup/privacy.tsx
+      icon: <Database className="w-8 h-8" />,
+      color: 'from-cyan-500 to-blue-500',
+      content: [
+        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)'
+      ]
+    };
+    {
+      title: 'How We Use Your Information',
+      icon: <Settings className="w-8 h-8" />,
+      color: 'from-purple-500 to-pink-500',
+      content: [
+        'Provide and improve our servicesCommunicate with you about our servicesProcess payments and manage accountsSend marketing communications (with consent)Analyze usage patterns and improve user experienceComply with legal obligations'
+      ]
+    };
+    {
+      title: 'Information Sharing',
+      icon: <Globe className="w-8 h-8" />,
+      color: 'from-green-500 to-emerald-500',
+      content: [
+        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)'
+      ]
+    };
+    {
+      title: 'Data Security',
+      icon: <Lock className="w-8 h-8" />,
+      color: 'from-orange-500 to-red-500',
+      content: [
+        'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
+      ]
+    }
+
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  ];
+
+  const rights = [
+    {
+      title: 'Access',
+      description: 'Request access to your personal information',
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+      icon: <Eye className='w-6 h-6' />,
+    },
+    {
+      title: 'Correction',
+      description: 'Request correction of inaccurate information',
+      icon: <CheckCircle className='w-6 h-6' />,
+    },
+    {
+      title: 'Deletion',
+      description: 'Request deletion of your personal information',
+      icon: <AlertTriangle className='w-6 h-6' />,
+    },
+    {
+      title: 'Portability',
+      description: 'Request transfer of your data to another service',
+      icon: <Database className='w-6 h-6' />,
+    },
+    {
+      title: 'Objection',
+      description: 'Object to processing of your personal information',
+      icon: <User className='w-6 h-6' />,
+    },
+    {
+      title: 'Restriction',
+      description: 'Request restriction of processing activities',
+      icon: <Settings className='w-6 h-6' />,
+    },
+
+      icon: <Eye className="w-6 h-6" />
+    };
+    {
+      title: 'Correction',
+      description: 'Request correction of inaccurate information',
+      icon: <CheckCircle className="w-6 h-6" />
+    };
+    {
+      title: 'Deletion',
+      description: 'Request deletion of your personal information',
+      icon: <AlertTriangle className="w-6 h-6" />
+    };
+    {
+      title: 'Portability',
+      description: 'Request transfer of your data to another service',
+      icon: <Database className="w-6 h-6" />
+    };
+    {
+      title: 'Objection',
+      description: 'Object to processing of your personal information',
+      icon: <User className="w-6 h-6" />
+    };
+    {
+      title: 'Restriction',
+      description: 'Request restriction of processing activities',
+      icon: <Settings className="w-6 h-6" />
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
 
 
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Shield
+  Lock
+  Eye
+  Database
+  Mail
+  Phone
+  MapPin
+  Users
+} from "lucide-react";
+import MainLayout from "../components/layout/MainLayout";
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/automation-improvements-final
+
+
+
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/automation-improvements-final
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+origin/automation-improvements-final
+
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+export default function PrivacyPage() {
+export default function PrivacyPage() {;
+  return (
+
+<<<<<<< HEAD:pages/privacy.tsx
+=======
+
+
+
+=======
+export default function PrivacyPage() {
+export default function PrivacyPage() {;
+  return (
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 export default function PrivacyPage() {
 export default function PrivacyPage() {;
   return (
@@ -174,14 +457,27 @@ export default function PrivacyPage() {;
 
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 ursor/fix-website-loading-errors-and-merge-6662
 
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD:pages_backup/privacy.tsx
+
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+  return (
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -194,7 +490,15 @@ origin/automation-improvements-final
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Privacy Policy
               </h1>
@@ -224,6 +528,15 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 return (
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -236,17 +549,61 @@ return (
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+
+<<<<<<< HEAD
+
+=======
+
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
+
+
+
+
+<<<<<<< HEAD:pages_backup/privacy.tsx
+
+<<<<<<< HEAD:pages/privacy.tsx
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
 
 
 
 
 
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 ursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+
+
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
@@ -447,6 +804,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <SEOOptimizer />
       <AnalyticsTracker />
       <Layout>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+=======
         <main className="relative z-10 pt-8">
           {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -480,6 +839,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
                 <div className="flex items-center justify-center gap-4 text-gray-400">
                   <Shield className="w-6 h-6" />
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 <main className='relative z-10 pt-8'>
           {/* Hero Section */}
           <section className='py-20 px-4'>
@@ -504,6 +864,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
             </div>
           </section>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+=======
           {/* Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -579,6 +941,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">99.9%</div>
                           <div className="text-gray-400">Uptime</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 
           {/* Overview */}
 <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
@@ -650,6 +1013,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </section>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
           {/* Privacy Principles */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -972,9 +1341,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
+<<<<<<< HEAD:pages_backup/privacy.tsx
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+=======
 ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 
           {/* Privacy Principles */}
 <section className='py-20 px-4'>
@@ -987,14 +1368,46 @@ className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
                   Our Privacy Principles
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 </h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as
                   when you create an account, use our services, or contact us
                   for support.
                 </p>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 
 
 
@@ -1003,15 +1416,52 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className="text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+                
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
 
 
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 
 
                 <h3 className="text-xl font-semibold mb-4">
@@ -1026,6 +1476,24 @@ origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 <ul className="list-disc pl-6 mb-6">
                   <li>Name and contact information</li>
                   <li>Email address</li>
@@ -1038,10 +1506,34 @@ origin/automation-improvements-final
                   Usage Information
                 </h3>
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -1050,12 +1542,55 @@ origin/automation-improvements-final
                   <li>Operating system</li>
                 </ul>
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
 
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
               </motion.div>
@@ -1109,14 +1644,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   improve our services.
                 </p>
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+=======
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and improve our services.
                 </p>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 
 origin/automation-improvements-final
+<<<<<<< HEAD:pages_backup/privacy.tsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+origin/automation-improvements-final
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+origin/automation-improvements-final
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -1126,12 +1694,55 @@ origin/automation-improvements-final
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
 
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -1139,13 +1750,54 @@ ursor/fix-website-loading-errors-and-merge-6662
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
 
 
 
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
@@ -1164,6 +1816,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
                 <p className="mb-6">
+<<<<<<< HEAD:pages_backup/privacy.tsx
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
@@ -1189,11 +1849,60 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+                  If you have any questions about this Privacy Policy, please contact us at:
+                </p>
+                
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+
+origin/automation-improvements-final
+<<<<<<< HEAD:pages/privacy.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+                  If you have any questions about this Privacy Policy, please contact us at:
+                </p>
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+origin/automation-improvements-final
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
 
 origin/automation-improvements-final
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
@@ -1212,6 +1921,13 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 
 
 
@@ -1234,6 +1950,23 @@ origin/automation-improvements-final
                 <p className="mb-6">
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -1441,6 +2174,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+                <p className="text-sm text-gray-600 mt-8">
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+main
+
+
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
 
 
@@ -1450,6 +2226,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-sm text-gray-600 mt-8">
 origin/automation-improvements-final
 main
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                   Last updated: January 2024
                 </p>
               </div>
@@ -1457,6 +2234,28 @@ main
           </div>
         </section>
       </div>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+=======
+    </MainLayout>;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+    </MainLayout>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+  );
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
     </MainLayout>;
   );
@@ -1577,6 +2376,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           </section>
     </MainLayout>
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
               transition={{ duration: 0 && 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
               <div className="prose prose-lg max-w-none">;
@@ -1604,6 +2404,13 @@ export default /**
  */
 function PrivacyPage() {
   return (
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
     <MainLayout;
       title="Privacy Policy - Zion Tech Group";
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information.";
@@ -1645,10 +2452,44 @@ function PrivacyPage() {
                 </h2>;
                 <p className="mb - 6">;
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                   We collect information you provide directly to us, such as;
                   when you create an account, use our services, or contact us;
                   for support.;
                 </p>;
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 
                 <h3 className="text - xl font - semibold mb - 4">;
                   Personal Information;
@@ -1690,10 +2531,44 @@ function PrivacyPage() {
                 </h2>;
                 <p className="mb - 6">;
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                   We do not sell, trade, or otherwise transfer your personal;
                   information to third parties without your consent, except as;
                   described in this policy.;
                 </p>;
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
                 <p className="mb - 6">;
@@ -1704,11 +2579,45 @@ function PrivacyPage() {
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
                 <p className="mb - 6">;
 
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
                   You have the right to access, update, or delete your personal;
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
+<<<<<<< HEAD:pages_backup/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -1867,14 +2776,26 @@ export default function PrivacyPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Policy</span>
               </h1>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Your privacy is important to us. Learn how we collect, use, and
+                protect your information.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Your privacy is important to us. Learn how we collect, use, and protect your personal information.
               </p>
               <p className="text-sm text-gray-400">
                 Last updated: January 15, 2024
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
               </p>
-            </motion.div>
+            </section>
           </div>
+<<<<<<< HEAD:pages_backup/privacy.tsx
+        </div>
+      </main>
+    </>
+=======
         </section>
 
         {/* Privacy Principles */}
@@ -2096,8 +3017,602 @@ export default function PrivacyPage() {
         </section>
       </div>
     </MainLayout>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx
+  );
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+<<<<<<< HEAD:pages_backup/privacy.tsx
+                </div>
+              </motion.div>
+            </div>
+          </section>
+{/* Overview */}
+          <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+<h2 className="text-4xl font-bold mb-6 text-white">
+                    Our Commitment to Privacy
+                  </h2>
+                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                    At Zion Tech Group, we are committed to protecting your privacy and ensuring the security 
+                    of your personal information. This Privacy Policy explains how we collect, use, disclose;
+                    and safeguard your information when you use our services.
+                  </p>
+                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                    We believe in transparency and want you to understand how your information is handled. 
+                    This policy applies to all users of our website, services, and applications.
+                  </p>
+                  <div className="flex items-center gap-4 text-cyan-400">
+                    <Lock className="w-6 h-6" />
+                    <span className="font-medium">Your data is safe with us</span>
+                  </div>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+className="relative"
+                >
+                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
+                    <div className="text-center space-y-6">
+                      <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
+                        <Shield className="w-12 h-12 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white">Data Protection</h3>
+                      <p className="text-gray-300">Enterprise-grade security for your information</p>
+                      <div className="grid grid-cols-2 gap-4 text-sm">
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-cyan-400">256-bit</div>
+                          <div className="text-gray-400">Encryption</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-purple-400">99.9%</div>
+                          <div className="text-gray-400">Uptime</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </section>
+{/* Privacy Principles */}
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+className="text-center mb-16"
+              >
+                <h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
+                <p className="text-xl text-gray-300">The foundation of how we handle your data</p>
+              </motion.div>
+              <div className="grid md:grid-cols-2 gap-8">
+                {privacySections.map((section, index) => (
+                  <motion.div
+                    key={section.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
+                  >
+                    <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
+                      <div className="text-white">
+                        {section.icon}
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
+                    <ul className="space-y-3">
+                      {section.content.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-300">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+{/* Your Rights */}
+          <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+className="text-center mb-16"
+              >
+                <h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
+                <p className="text-xl text-gray-300">You have control over your personal information</p>
+              </motion.div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {rights.map((right, index) => (
+                  <motion.div
+                    key={right.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <div className="text-white">
+                        {right.icon}
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{right.title}</h3>
+                    <p className="text-gray-300 text-sm">{right.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+{/* Detailed Policy */}
+          <section className="py-20 px-4">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+className="space-y-12"
+              >
+                <div>
+                  <h2 className="text-3xl font-bold text-white mb-6">Detailed Privacy Information</h2>
+                  <div className="space-y-8">
+                    <div>
+                      <h3 className='text-2xl font-bold text-white mb-4'>
+                        Information Collection
+                      </h3>
+                      <p className='text-gray-300 mb-4 leading-relaxed'>
+                        We collect information you provide directly to us, such
+                        as when you create an account, request a quote, or
+                        contact our support team. We also automatically collect
+                        certain information about your device and how you
+                        interact with our services.
+                      </p>
+                      <p className='text-gray-300 leading-relaxed'>
+                        This may include your IP address, browser type,
+                        operating system, referring URLs, access times, and
+                        pages viewed. We use this information to improve our
+                        services and provide a better user experience.                      </p>
+                    </div>
+<div>
+                      <h3 className="text-2xl font-bold text-white mb-4">Data Usage and Purpose</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        We use your information to provide, maintain, and improve our services, process 
+                        transactions, send you technical notices and support messages, and respond to your 
+                        comments and questions.
+                      </p>
+<p className="text-gray-300 leading-relaxed">
+                        With your consent, we may also use your information to send you marketing communications 
+                        about our services, special offers, and updates. You can opt out of these communications 
+                        at any time.
+                      </p>
+                      <p className='text-gray-300 leading-relaxed'>
+                        With your consent, we may also use your information to
+                        send you marketing communications about our services,
+                        special offers, and updates. You can opt out of these
+                        communications at any time.                      </p>
+                    </div>
+<div>
+                      <h3 className="text-2xl font-bold text-white mb-4">Data Sharing and Disclosure</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        We do not sell, trade, or otherwise transfer your personal information to third parties 
+                        without your consent, except as described in this policy. We may share your information 
+                        with trusted third-party service providers who assist us in operating our business.
+                      </p>
+<p className="text-gray-300 leading-relaxed">
+                        These service providers are contractually obligated to keep your information confidential 
+                        and use it only for the purposes for which we disclose it to them.
+                      </p>
+                      <p className='text-gray-300 leading-relaxed'>
+                        These service providers are contractually obligated to
+                        keep your information confidential and use it only for
+                        the purposes for which we disclose it to them.                      </p>
+                    </div>
+<div>
+                      <h3 className="text-2xl font-bold text-white mb-4">Data Security Measures</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        We implement appropriate technical and organizational security measures to protect 
+                        your personal information against unauthorized access, alteration, disclosure, or destruction.
+                      </p>
+                      <p className="text-gray-300 leading-relaxed">
+                        These measures include encryption, access controls, regular security assessments;
+                        and employee training on data protection best practices.
+                      </p>
+                      <p className='text-gray-300 leading-relaxed'>
+                        These measures include encryption, access controls,
+                        regular security assessments, and employee training on
+                        data protection best practices.                      </p>
+                    </div>
+                    <div>
+<h3 className="text-2xl font-bold text-white mb-4">Data Retention</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        We retain your personal information for as long as necessary to provide our services;
+                        comply with legal obligations, resolve disputes, and enforce our agreements.
+                      </p>
+                      <p className="text-gray-300 leading-relaxed">
+                        When we no longer need your information, we will securely delete or anonymize it 
+                        in accordance with our data retention policies.
+                      </p>
+                      <p className='text-gray-300 leading-relaxed'>
+                        When we no longer need your information, we will
+                        securely delete or anonymize it in accordance with our
+                        data retention policies.                      </p>
+                    </div>
+<div>
+                      <h3 className="text-2xl font-bold text-white mb-4">International Data Transfers</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        Your information may be transferred to and processed in countries other than your own. 
+                        We ensure that such transfers comply with applicable data protection laws and that 
+                        appropriate safeguards are in place.
+                      </p>
+<p className="text-gray-300 leading-relaxed">
+                        For transfers to countries outside the European Economic Area, we rely on adequacy 
+                        decisions, standard contractual clauses, or other appropriate safeguards.
+                      </p>
+                      <p className='text-gray-300 leading-relaxed'>
+                        For transfers to countries outside the European Economic
+                        Area, we rely on adequacy decisions, standard
+                        contractual clauses, or other appropriate safeguards.                      </p>
+                    </div>
+<div>
+                      <h3 className="text-2xl font-bold text-white mb-4">Cookies and Tracking Technologies</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        We use cookies and similar tracking technologies to enhance your experience on our 
+                        website, analyze usage patterns, and provide personalized content.
+                      </p>
+                      <p className="text-gray-300 leading-relaxed">
+                        You can control cookie settings through your browser preferences. However, disabling 
+                        certain cookies may affect the functionality of our services.
+                      </p>
+                      <p className='text-gray-300 leading-relaxed'>
+                        You can control cookie settings through your browser
+                        preferences. However, disabling certain cookies may
+                        affect the functionality of our services.                      </p>
+                    </div>
+<div>
+                      <h3 className="text-2xl font-bold text-white mb-4">Children's Privacy</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        Our services are not intended for children under the age of 13. We do not knowingly 
+                        collect personal information from children under 13.
+                      </p>
+                      <p className="text-gray-300 leading-relaxed">
+                        If you believe we have collected information from a child under 13, please contact 
+                        us immediately, and we will take steps to remove such information.
+                      </p>
+                      <p className='text-gray-300 leading-relaxed'>
+                        If you believe we have collected information from a
+                        child under 13, please contact us immediately, and we
+                        will take steps to remove such information.                      </p>
+                    </div>
+<div>
+                      <h3 className="text-2xl font-bold text-white mb-4">Changes to This Policy</h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        We may update this Privacy Policy from time to time to reflect changes in our 
+                        practices or applicable laws. We will notify you of any material changes by posting 
+                        the updated policy on our website.
+                      </p>
+<p className="text-gray-300 leading-relaxed">
+                        Your continued use of our services after such changes constitutes acceptance of 
+                        the updated policy. We encourage you to review this policy periodically.
+                      </p>
+                      <p className='text-gray-300 leading-relaxed'>
+                        Your continued use of our services after such changes
+                        constitutes acceptance of the updated policy. We
+                        encourage you to review this policy periodically.                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+{/* Contact Information */}
+          <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+<h2 className="text-4xl font-bold mb-6 text-white">
+                  Questions About Privacy?
+                </h2>
+                <p className='text-xl text-gray-300 mb-8'>
+                  If you have any questions about this Privacy Policy or our
+                  data practices, please don't hesitate to contact us.
+                </p>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Contact Information */}
+<section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+<h2 className='text-4xl font-bold mb-6 text-white'>
+                  Questions About Privacy?
+                </h2>
+                <p className='text-xl text-gray-300 mb-8'>
+                  If you have any questions about this Privacy Policy or our
+                  data practices, please don't hesitate to contact us.
+                </p>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <a
+                    href='mailto:kleber@ziontechgroup.com'
+                    className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2'
+                  >
+                    <Mail className='w-5 h-5' />
+                    Email Us
+                  </a>
+                  <a
+                    href='/contact'
+                    className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2'
+                  >
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+                    <User className='w-5 h-5' />                    Contact Form
+                  </a>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    </MainLayout>;
   );
 }
 
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+                  >
+                    <Mail className="w-5 h-5" />
+                    Email Us
+                  </Link>
+                  <a
+                    href="/contact"
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+                  >
+                    <User className="w-5 h-5" />
+                    Contact Form
+                  </Link>
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <a
+                    href=&quot;/contact&quot;
+                    className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2&quot;
+                  >
+                    <User className=&quot;w-5 h-5&quot; />
+                    Contact Form
+                  </Link>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+                    <User className='w-5 h-5' />
+                    Contact Form
+                  </a>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 
 
+                    <User className='w-5 h-5' />
+                    Contact Form
+                  </a>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+                    <User className='w-5 h-5' />
+                    Contact Form
+                  </a>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        </main>
+      </Layout>
+    </ErrorBoundary>
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+};
+export default PrivacyPage;
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  )
+};
+
+export default PrivacyPage;
+
+                <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+=======
+<h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+<h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+                <p className="mb - 6">;
+                  If you have any questions about this Privacy Policy, please;
+                  contact us at:;
+                </p>;
+                <div className="bg - gray - 50 rounded - lg p - 6">;
+                  <div className="flex items - center mb - 4">;
+                    <Mail className="w - 5 h - 5 text - blue - 600 mr - 3" />;
+                    <span > kleber@ziontechgroup.com</span>;
+                  </div>;
+                  <div className="flex items - center mb - 4">;
+                    <Phone className="w - 5 h - 5 text - blue - 600 mr - 3" />;
+                    <span>+1 302 464 0950</span>;
+                  </div>;
+                  <div className="flex items - start">;
+                    <Users className="w - 5 h - 5 text - blue - 600 mr - 3 mt - 1" />;
+                    <div>;
+                      <p > Zion Tech Group</p>;
+                      <p > 364 E Main St STE 1008</p>;
+                      <p > Middletown, DE 19709</p>;
+                    </div>;
+                  </div>;
+                </div>;
+<p className="text - sm text - gray - 600 mt - 8">;
+                  Last updated: January 2024;
+                </p>;
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </MainLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                  <a;
+                    href="mailto:kleber@ziontechgroup.com";
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2";
+                  >;
+                    <Mail className="w-5 h-5" />;
+                    Email Us;
+                  </a>;
+                  <a;
+                    href="/contact";
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2";
+                  >;
+                    <User className="w-5 h-5" />;
+                    Contact Form;
+                  </a>;
+                </div>;
+              </motion.div>;
+            </div>;
+          </section>;
+        </main>;
+      </Layout>;
+    </ErrorBoundary>;
+  );
+},;
+export default PrivacyPage;
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/privacy.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+};
+export default PrivacyPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+main
+
+
+
+);
+};
+export default PrivacyPage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/privacy.tsx
+=======
+
+main
+
+
+
+);
+};
+export default PrivacyPage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/privacy.tsx

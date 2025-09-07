@@ -1,3 +1,128 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { useTheme } from "@/hooks/useTheme",
+import { Moon, Sun, Check } from 'lucide-react'
+import { Card, CardContent } from "@/components/ui/card",
+
+interface Language {
+  code: string,
+  name: string,
+  flag: string
+}
+
+const languages: Language[] = [
+  { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
+  { code: "zh", name: "中文", flag: "🇨🇳" }],
+
+export function LanguageThemeSelector() {
+  const { theme, setTheme } = useTheme(),
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
+
+  return (
+    <div className="space-y-8 px-4">
+      <div className="space-y-2">
+        <h2 className="text-xl font-medium">Select your language</h2>
+        <p className="text-muted-foreground">Choose your preferred language</p>
+        
+        <div className="grid grid-cols-2 gap-3 mt-4">
+          {languages.map((language) => (
+            <Card 
+              key={language.code}
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+key={language.code}
+              className={`cursor-pointer transition-all ${}
+                selectedLanguage === language.code;
+                  ? "border-primary bg-primary/5"
+              onClick = {(,) => setSelectedLanguage(language && language.code),}
+            >;
+              <CardContent className='p-3 flex items-center justify-between'>;'
+                <div className='flex items-center'>;'
+                  <span className='text-xl mr-2'>{language && language.flag}</span>;
+                  <span>{language && language.name}</span>;
+                </div>;
+                {selectedLanguage === language && language.code && (;'
+                  <Check className='h-4 w-4 text-primary' />                )}          {languages && languages.map((language) => (;
+<<<<<<< HEAD
+            <Card
+              key={language && language.code}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+              className={`cursor-pointer transition-all ${
+                selectedLanguage === language && language.code 
+                  ? "border-primary bg-primary/5" 
+                  : "border-border hover:border-primary/40"
+=======
+            <Card;
+              key={language && language.code}`
+              className={`cursor-pointer transition-all ${}
+                selectedLanguage === language.code "
+                  ? "border-primary bg-primary/5" "
+                  : "border-border hover:border-primary/40"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+              }`}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              onClick={() => setSelectedLanguage(language.code)}
+            >
+              <CardContent className="p-3 flex items-center justify-between">
+                <div className="flex items-center">
+                  <span className="text-xl mr-2">{language.flag}</span>
+                  <span>{language.name}</span>
+                </div>
+                {selectedLanguage === language.code && (
+                  <Check className="h-4 w-4 text-primary" />
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { useTheme } from "@/hooks/useTheme",;
+import { Moon, Sun, Check } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card",;
+interface Language {;
+  code: string,;
+  name: string,;
+  flag: string;
+}
+;
+const languages: Language[] = [;
+  { code: "en", name: "English", flag: "🇺🇸" },;
+  { code: "es", name: "Español", flag: "🇪🇸" },;
+  { code: "fr", name: "Français", flag: "🇫🇷" },;
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },;
+  { code: "zh", name: "中文", flag: "🇨🇳" }],;
+export function LanguageThemeSelector() {;
+  const { theme, setTheme } = useTheme();
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+  return (;
+    <div className="space-y-8 px-4">;
+      <div className="space-y-2">;
+        <h2 className="text-xl font-medium">Select your language</h2>;
+        <p className="text-muted-foreground">Choose your preferred language</p>;
+        <div className="grid grid-cols-2 gap-3 mt-4">;
+          {languages.map((language) => (;
+            <Card;
+              key={language.code}
+              className={`cursor-pointer transition-all ${;
+                selectedLanguage === language.code;
+                  ? "border-primary bg-primary/5";
+                  : "border-border hover:border-primary/40";
+              }`}
+              onClick={() => setSelectedLanguage(language.code)}
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+              onClick={() => setSelectedLanguage(language.code)}
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
 
 
               onClick={() => setSelectedLanguage(language.code)}
@@ -44,13 +169,19 @@ export function LanguageThemeSelector() {;
                   : "border-border hover:border-primary/40";
               }`}
               onClick={() => setSelectedLanguage(language.code)}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >;
               <CardContent className="p-3 flex items-center justify-between">;
                 <div className="flex items-center">;
+=======
+            >;"
+              <CardContent className="p-3 flex items-center justify-between">;"
+                <div className="flex items-center">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <span className="text-xl mr-2">{language.flag}</span>;
                   <span>{language.name}</span>;
                 </div>;
-                {selectedLanguage === language.code && (;
+                {selectedLanguage === language.code && (;"
                   <Check className="h-4 w-4 text-primary" />;
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -114,6 +245,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </CardContent>;
             </Card>;
           ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+        </div>;
+      </div>;
+'
+      <div className='space-y-2'>;'
+        <h2 className='text-xl font-medium'>Choose theme</h2>;'
+        <p className='text-muted-foreground'>;
+          Select your preferred appearance;
+        </p>;
+'
+        <div className='flex gap-3 mt-4'>;
+
+<<<<<<< HEAD
+=======
+=======
         </div>;
       </div>;
       <div className='space-y-2'>;
@@ -123,6 +275,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>;
         <div className='flex gap-3 mt-4'>;
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
       </div>
 
@@ -134,6 +287,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className='flex gap-3 mt-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
           <Card
+<<<<<<< HEAD
+              theme === 'light'
+                ? 'border-primary bg-primary/5'
+                : 'border-border hover:border-primary/40'
+            }`}
+=======
+          <Card'
+              theme === 'light''
+                ? 'border-primary bg-primary/5''
+                : 'border-border hover:border-primary/40'`
+            }`}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            onClick = {() => setTheme('light'),}
+          >;'
+            <CardContent className='p-3 flex flex-col items-center justify-center'>;'
+=======
               theme === 'light''
                 ? 'border-primary bg-primary/5''
                 : 'border-border hover:border-primary/40''
@@ -141,14 +310,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick = {() => setTheme('light'),}'
           >;
             <CardContent className='p-3 flex flex-col items-center justify-center'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Sun className='h-8 w-8 mb-2' />;
-              <span>Light</span>;
-              {theme === 'light' && (;
+              <span>Light</span>;'
+              {theme === 'light' && (;'
                 <Check className='h-4 w-4 text-primary mt-2' />;
               )}
             </CardContent>;
           </Card>;
 
+<<<<<<< HEAD
           <Card
             className={`flex-1 cursor-pointer transition-all ${`
               theme === 'dark''
@@ -158,13 +329,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick = {() => setTheme('dark'),}'
           >;
             <CardContent className='p-3 flex flex-col items-center justify-center'>;
+=======
+
+          <Card;`
+            className={`flex-1 cursor-pointer transition-all ${'
+              theme === 'dark''
+                ? 'border-primary bg-primary/5''
+                : 'border-border hover:border-primary/40'`
+            }`}'
+            onClick = {() => setTheme('dark'),}
+          >;'
+            <CardContent className='p-3 flex flex-col items-center justify-center'>;'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               <Moon className='h-8 w-8 mb-2' />;
+<<<<<<< HEAD
+              <span>Dark</span>;'
+              {theme === 'dark' && (;'
+                <Check className='h-4 w-4 text-primary mt-2' />              )}              )}
+=======
               <span>Dark</span>;
               {theme === 'dark' && (;
                 <Check className='h-4 w-4 text-primary mt-2' />              )}              )}'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </CardContent>;
-          </Card>;
+          </Card>;"
                 <Check className="h-4 w-4 text-primary mt-2" />;
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         </div>
       </div>
       <div className="space-y-2">"
@@ -179,18 +373,62 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }`}`
             onClick={() => setTheme('light')}'
 
+<<<<<<< HEAD
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Choose theme</h2>
+=======
+"
+      <div className="space-y-2">"
+        <h2 className="text-xl font-medium">Choose theme</h2>"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <p className="text-muted-foreground">Select your preferred appearance</p>
+<<<<<<< HEAD
+        "
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         <div className="flex gap-3 mt-4">
-          <Card 
-            className={`flex-1 cursor-pointer transition-all ${
-              theme === 'light' 
-                ? "border-primary bg-primary/5" 
+          <Card;`
+            className={`flex-1 cursor-pointer transition-all ${'
+              theme === 'light' "
+                ? "border-primary bg-primary/5" "
                 : "border-border hover:border-primary/40"
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             }`}
+=======
+
+`
+            }`}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             onClick={() => setTheme('light')}
+<<<<<<< HEAD
+          >"
+            <CardContent className="p-3 flex flex-col items-center justify-center">"
+              <Sun className="h-8 w-8 mb-2" />
+              <span>Light</span>'
+              {theme === 'light' && ("
+                <Check className="h-4 w-4 text-primary mt-2" />
+              )}
+<<<<<<< HEAD
+=======
+
+            </CardContent>;
+          </Card>;
+
+          <Card;`
+            className={`flex-1 cursor-pointer transition-all ${}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            </CardContent>
+          </Card>
+<<<<<<< HEAD
+=======
+=======
           >
             <CardContent className="p-3 flex flex-col items-center justify-center">"
               <Sun className="h-8 w-8 mb-2" />"
@@ -214,18 +452,71 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             }`}`
             onClick={() => setTheme('dark')}'
               )}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+<<<<<<< HEAD
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               theme === 'dark' 
                 ? "border-primary bg-primary/5" 
                 : "border-border hover:border-primary/40"
             }`}
+=======
+          <Card;`
+            className={`flex-1 cursor-pointer transition-all ${}
+          <Card;`
+            className={`flex-1 cursor-pointer transition-all ${}
+'
+              theme === 'dark' "
+                ? "border-primary bg-primary/5" "
+                : "border-border hover:border-primary/40"`
+            }`}'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             onClick={() => setTheme('dark')}
+<<<<<<< HEAD
+<<<<<<< HEAD
+          >
+            <CardContent className="p-3 flex flex-col items-center justify-center">
+              <Moon className="h-8 w-8 mb-2" />
+              <span>Dark</span>
+              {theme === 'dark' && (
+                <Check className="h-4 w-4 text-primary mt-2" />
+              )}
+            </CardContent>;
+          </Card>;
+        </div>;
+      </div>;
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+=======
+
+              )}
+
+      </div>;
+    </div>;
+  )
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+};
+
+<<<<<<< HEAD
+=======
 
               )}
 
@@ -234,25 +525,50 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 };
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { use_theme } from '@/hooks / use_theme';
 import { Moon, Sun, Check } from 'lucide-react';
+<<<<<<< HEAD
+=======
+'
+import React, { useState } from 'react';'
+import { Button } from '@/components / ui / button';'
+import { use_theme } from '@/hooks / use_theme';'
+import { Moon, Sun, Check } from 'lucide-react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { Card, CardContent } from '@/components / ui / card';
+interface Language {}
+  code: string;
+  name: string;
+  flag: string;
+const languages: Language[] = [;'
+=======
 import { Card, CardContent } from '@/components / ui / card';
 interface Language {
   code: string;,
   name: string;,
   flag: string;,
 const languages: Language[] = [;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   { code: 'en', name: 'English', flag: '🇺🇸' },'
   { code: 'es', name: 'Español', flag: '🇪🇸' },'
   { code: 'fr', name: 'Français', flag: '🇫🇷' },'
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },'
+<<<<<<< HEAD
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
+=======
   { code: 'zh', name: '中文', flag: '🇨🇳' },'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ];
-export /**
- * LanguageThemeSelector - Function description
+export /**;
+ * LanguageThemeSelector - Function description;
  */
+<<<<<<< HEAD
+function LanguageThemeSelector() {}
+  const { theme, set_theme } = use_theme ();'
+=======
 function LanguageThemeSelector() {
   const { theme, set_theme } = use_theme ();,
   const { theme, set_theme } = use_theme ();
@@ -343,35 +659,65 @@ key={language.code}
             onClick={() => setTheme('dark')}
 
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const [selected_language, setSelectedLanguage] = useState < string>('en');
-  return (
-    <div className='space - y-8 px - 4'>;
-      <div className='space - y-2'>;
-        <h2 className='text - xl font - medium'>Select your language</h2>;
-        <p className='text - muted - foreground'>Choose your preferred language</p>;
+  return ('
+    <div className='space - y-8 px - 4'>;'
+      <div className='space - y-2'>;'
+        <h2 className='text - xl font - medium'>Select your language</h2>;'
+        <p className='text - muted - foreground'>Choose your preferred language</p>;'
         <div className='grid grid - cols - 2 gap - 3 mt - 4'>;
           {languages.map (language => (
+<<<<<<< HEAD
             <Card;
               key={language.code}    <div className="space - y-8 px-4">;
       <div className="space-y-2">;
         <h2 className="text - xl font-medium">Select your language</h2>;
         <p className="text - muted-foreground">Choose your preferred language</p>;
         <div className="grid grid - cols - 2 gap - 3 mt-4">;
+=======
+            <Card;"
+              key={language.code}    <div className="space - y-8 px - 4">;"
+      <div className="space - y-2">;"
+        <h2 className="text - xl font - medium">Select your language</h2>;"
+        <p className="text - muted - foreground">Choose your preferred language</p>;"
+        <div className="grid grid - cols - 2 gap - 3 mt - 4">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           {languages.map ((language, ) => (
             <Card;
+<<<<<<< HEAD
+              key = {language.code, }`
+              className={`cursor - pointer transition - all ${}
+                selected_language === language.code;'
+                  ? 'border - primary bg - primary / 5';'
+                  : 'border - border hover:border - primary / 40';`
+              }`}
+=======
               key = {language.code, }
               className={`cursor - pointer transition - all ${`
                 selected_language === language.code;
                   ? 'border - primary bg - primary / 5';
                   : 'border - border hover:border - primary / 40';
               }`}`
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               on_click = {(, ) => setSelectedLanguage (language.code), }
-            >;
-              <CardContent className='p - 3 flex items - center justify - between'>;
-                <div className='flex items - center'>;
+            >;'
+              <CardContent className='p - 3 flex items - center justify - between'>;'
+                <div className='flex items - center'>;'
                   <span className='text - xl mr - 2'>{language.flag}</span>;
                   <span>{language.name}</span>;
                 </div>;
+<<<<<<< HEAD
+                {selected_language === language.code && ('
+                  <Check className='h - 4 w - 4 text - primary' />                )}          {languages.map ((language) => (
+            <Card;
+              key={language.code}`
+              className={`cursor - pointer transition - all ${}
+                selected_language === language.code;"
+                  ? "border - primary bg - primary / 5";"
+                  : "border - border hover:border - primary / 40";`
+              }`}
+=======
                 {selected_language === language.code && (
                   <Check className='h - 4 w - 4 text - primary' />                )}          {languages.map ((language) => ('
             <Card;
@@ -381,7 +727,9 @@ pr-12325
                   ? "border - primary bg - primary / 5";
                   : "border - border hover:border - primary / 40";
               }`}`
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               on_click={() => setSelectedLanguage (language.code)}
+<<<<<<< HEAD
             >;
               <CardContent className="p - 3 flex items - center justify-between">;
                 <div className="flex items-center">;
@@ -391,16 +739,55 @@ pr-12325
                 {selected_language === language.code && (
                   <Check className="h - 4 w - 4 text - primary" />)}"
                   <Check className="h - 4 w - 4 text-primary" />)}
+=======
+            >;"
+              <CardContent className="p - 3 flex items - center justify - between">;"
+                <div className="flex items - center">;"
+                  <span className="text - xl mr - 2">{language.flag}</span>;
+                  <span>{language.name}</span>;
+                </div>;
+                {selected_language === language.code && ("
+                  <Check className="h - 4 w - 4 text - primary" />)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </CardContent>;
             </Card>))}
         </div>;
-      </div>;
-      <div className='space - y-2'>;
-        <h2 className='text - xl font - medium'>Choose theme</h2>;
+      </div>;'
+      <div className='space - y-2'>;'
+        <h2 className='text - xl font - medium'>Choose theme</h2>;'
         <p className='text - muted - foreground'>;
           Select your preferred appearance;
-        </p>;
+        </p>;'
         <div className='flex gap - 3 mt - 4'>;
+<<<<<<< HEAD
+          <Card;'
+              theme === 'light';'
+                ? 'border - primary bg - primary / 5';'
+                : 'border - border hover:border - primary / 40';`
+            }`}'
+            on_click = {() => set_theme ('light'), }
+          >;'
+            <CardContent className='p - 3 flex flex - col items - center justify - center'>;'
+              <Sun className='h - 8 w - 8 mb - 2' />;
+              <span > Light</span>;'
+              {theme === 'light' && ('
+                <Check className='h - 4 w - 4 text - primary mt - 2' />)}
+            </CardContent>;
+          </Card>;
+          <Card;`
+            className={`flex - 1 cursor - pointer transition - all ${'
+              theme === 'dark';'
+                ? 'border - primary bg - primary / 5';'
+                : 'border - border hover:border - primary / 40';`
+            }`}'
+            on_click = {() => set_theme ('dark'), }
+          >;'
+            <CardContent className='p - 3 flex flex - col items - center justify - center'>;'
+              <Moon className='h - 8 w - 8 mb - 2' />;
+              <span > Dark</span>;'
+              {theme === 'dark' && ('
+                <Check className='h - 4 w - 4 text - primary mt - 2' />              )}              )}
+=======
           <Card;
               theme === 'light';
                 ? 'border - primary bg - primary / 5';
@@ -428,12 +815,28 @@ pr-12325
               <span > Dark</span>;
               {theme === 'dark' && ('
                 <Check className='h - 4 w - 4 text - primary mt - 2' />              )}              )}'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </CardContent>;
+<<<<<<< HEAD
           </Card>;
                 <Check className="h - 4 w - 4 text - primary mt - 2" />)}"
                 <Check className="h - 4 w - 4 text - primary mt-2" />)}
+=======
+          </Card>;"
+                <Check className="h - 4 w - 4 text - primary mt - 2" />)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
+          <Card;`
+            className={`flex - 1 cursor - pointer transition - all ${'
+              theme === 'dark';"
+                ? "border - primary bg - primary / 5";"
+                : "border - border hover:border - primary / 40";`
+            }`}'
+            on_click={() => set_theme ('dark')}
+<<<<<<< HEAD
+=======
           <Card;
             className={`flex - 1 cursor - pointer transition - all ${`
               theme === 'dark';
@@ -441,6 +844,7 @@ pr-12325
                 : "border - border hover:border - primary / 40";
             }`}`
             on_click={() => set_theme ('dark')}'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           >;
             <CardContent className="p - 3 flex flex - col items - center justify-center">;
               <Moon className="h - 8 w - 8 mb-2" />;
@@ -449,6 +853,14 @@ pr-12325
                 <Check className="h - 4 w - 4 text - primary mt - 2" />)}"
               {theme === 'dark' && (
                 <Check className="h - 4 w - 4 text - primary mt-2" />)}
+=======
+          >;"
+            <CardContent className="p - 3 flex flex - col items - center justify - center">;"
+              <Moon className="h - 8 w - 8 mb - 2" />;
+              <span > Dark</span>;'
+              {theme === 'dark' && ("
+                <Check className="h - 4 w - 4 text - primary mt - 2" />)}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </CardContent>;
           </Card>;
         </div>;
@@ -456,7 +868,9 @@ pr-12325
   );
 }
     </div>);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD
 ;
         </div>
       </div>
@@ -517,6 +931,12 @@ pr-12325
     </div>
   );
 }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+;'"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
               key={language.code}    <div className="space - y-8 px - 4">;"
       <div className="space - y-2">;"
@@ -583,3 +1003,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     </div>);"`;
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

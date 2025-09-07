@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import { useState } from "react",;
+import { useParams } from "react-router-dom",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",;
+import { toast } from "@/hooks/use-toast",;
+=======
 import { useState } from "react";""
 import { useParams } from "react-router-dom";""
 import { Header } from "@/components/Header";""
@@ -9,17 +25,30 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AspectRatio } from "@/components/ui/aspect-ratio";""
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";""
 import { toast } from "@/hooks/use-toast";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
 interface EquipmentSpecification {;
   name: string;,;
   value:string;}
 interface EquipmentDetails {;
+<<<<<<< HEAD
+  id:string,;
+<<<<<<< HEAD
+  name:string,;
+=======
+  name:string,,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  description:string,;
+  brand:string,;
+  category:string,;
+=======
   id: string;,;
   name: string;,,
 pr-12325
   description: string;,;
   brand: string;,;
   category: string;,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   subcategory?:string,;
   images: string[];,;
   price: number;,;
@@ -36,12 +65,26 @@ pr-12325
 // Sample data - in a real app this would come from an API;
 const SAMPLE_EQUIPMENT: { [key:string]:EquipmentDetails ;} = {;
   "pro-camera-x1000":{;
+<<<<<<< HEAD
+    id:"pro-camera-x1000",;
+<<<<<<< HEAD
+    name:"Pro Camera X1000",;
+    description:"Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",;
+=======
+    name:"Pro Camera X1000",,
+  description:"Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    brand:"CineTech",;
+    category:"Equipment",;
+    subcategory:"Cameras",;
+=======
     id: "pro-camera-x1000";,;
     name: "Pro Camera X1000";,,
   description: "Professional-grade cinema camera with 8K resolution;, advanced color science, and exceptional low-light window.window.window.performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",;
     brand: "CineTech";,;
     category: "Equipment";,;
     subcategory: "Cameras";,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     images:[;
       "https: //images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";,;
       "https: //images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";,;
@@ -94,12 +137,26 @@ pr-12325
     returnPolicy:"30-day return policy for unused items in original packaging";
   },;
   "audio-mixer-pro":{;
+<<<<<<< HEAD
+    id:"audio-mixer-pro",;
+<<<<<<< HEAD
+    name:"AudioMixer Pro Digital Mixing Console",;
+    description:"Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",;
+=======
+    name:"AudioMixer Pro Digital Mixing Console",,
+  description:"Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    brand:"AudioTech",;
+    category:"Equipment",;
+    subcategory:"Audio",;
+=======
     id: "audio-mixer-pro";,;
     name: "AudioMixer Pro Digital Mixing Console";,,
   description: "Professional digital mixing console designed for studio recording;, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",;
     brand: "AudioTech";,;
     category: "Equipment";,;
     subcategory: "Audio";,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     images:[;
       "https: //images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";,;
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800";
@@ -197,23 +254,47 @@ export default function EquipmentDetail() {;
     setTimeout(() => {;
       setIsAdding(false),;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Added to cart",;
+        description:`${quantity}x ${equipment.name} added to your cart.`}),;
+=======
+        title:"Added to cart",,
+  description:`${quantity}x ${equipment.name} added to your cart.`}),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
         title: "Added to cart";,,
   description: `${quantity;}x ${equipment.name} added to your cart.`}),;
         title: "Added to cart";,;")
         description: `${quantity;}x ${equipment.name} added to your cart.`}),;
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }, 800),;
   const handleBuyNow = () => {;
     // Simulate API call;
     setTimeout(() => {;
       setIsAdding(false),;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Proceeding to checkout",;
+        description:`Preparing your order for ${equipment.name}.`}),;
+=======
+        title:"Proceeding to checkout",,
+  description:`Preparing your order for ${equipment.name}.`}),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
         title: "Proceeding to checkout";,,
   description: `Preparing your order for ${equipment.name;}.`}),;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }, 800),;
   },;
 ;
   return (;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -224,6 +305,12 @@ pr-12325
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
                 {/* Main Image */}
                 <div className="aspect-video w-full relative">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
       toast({;"
         title: "Proceeding to checkout";,;")`;
         description: `Preparing your order for ${equipment.name;}.`}),;
@@ -233,6 +320,7 @@ pr-12325
                 <div className="aspect-video w-full relative">;"
 </div>
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <img ;
                     src={equipment.images[selectedImageIndex]} ;
                     alt={equipment.name} ;"
@@ -248,6 +336,61 @@ pr-12325
                           alt={`${equipment.name} - image ${index + 1}`} ;"
                           className="w-full h-full object-cover";"
                       </div>;                    ))}
+<<<<<<< HEAD
+                  </div>;
+                )}
+              </div>;
+;
+              {/* Product Details Tabs */}
+              <div className="mt-8">;
+                <Tabs defaultValue="description" className="w-full">;
+                  <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-3 h-auto">;
+                    <TabsTrigger value="description" className="py-3 data-[state=active]:bg-zion-purple/10">;
+                      Description;
+                    </TabsTrigger>;
+                    <TabsTrigger value="specifications" className="py-3 data-[state=active]:bg-zion-purple/10">;
+                      Specifications;
+                    </TabsTrigger>;
+                    <TabsTrigger value="features" className="py-3 data-[state=active]:bg-zion-purple/10">;
+                      Features;
+                    </TabsTrigger>;
+                  </TabsList>;
+                  ;
+                  <TabsContent value="description" className="mt-4">;
+                    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                      <p className="text-zion-slate-light whitespace-pre-line">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                        {equipment.description}
+                      </p>;
+                    </div>;
+                  </TabsContent>;
+<<<<<<< HEAD
+
+=======
+                  ;
+                  <TabsContent value="specifications" className="mt-4">;
+                    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+                        {equipment.specifications.map((spec, index) => (;
+                          <div key={index} className="border-b border-zion-blue-light pb-2 mb-2 last:border-0 last:mb-0 last:pb-0">;
+                            <div className="flex justify-between">;
+                              <span className="text-zion-slate-light">{spec.name}</span>;
+                              <span className="text-white font-medium">{spec.value}</span>;
+                            </div>;
+                          </div>;
+                        ))}
+                      </div>;
+                    </div>;
+                  </TabsContent>;
+                  ;
+                  <TabsContent value="features" className="mt-4">;
+                    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                      <ul className="space-y-2">;
+                        {equipment.features.map((feature, index) => (;
+                          <li key={index} className="flex items-start gap-2">;
+                            <div className="text-zion-cyan mt-1 flex-shrink-0"></div>;
+                            <span className="text-zion-slate-light">{feature}</span>;
+=======
               <div className="mt-8">;"
                 <Tabs defaultValue="description" className="w-full">;"
                   <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-3 h-auto">;"
@@ -276,8 +419,44 @@ pr-12325
 </li>"
                             <div className="text-zion-cyan mt-1 flex-shrink-0"></div>;""
                             <span className="text-zion-slate-light">{feature}</span>;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                           </li>;                        ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       </ul>;
+<<<<<<< HEAD
+                    </div>;
+                  </TabsContent>;
+                </Tabs>;
+              </div>;
+            </div>;
+<<<<<<< HEAD
+
+=======
+            ;
+            {/* Right Column - Purchase Info */}
+            <div className="lg:col-span-1">;
+              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
+                {/* Category and Brand */}
+                <div className="flex flex-wrap gap-2 mb-3">;
+                  <Badge variant="outline" className="text-zion-slate-light border-zion-blue-light">;
+                    {equipment.category}
+                  </Badge>;
+                  {equipment.subcategory && (;
+                    <Badge variant="outline" className="text-zion-slate-light border-zion-blue-light">;
+                      {equipment.subcategory}
+                    </Badge>;                  )}
+                </div>;
+                ;
+                {/* Product Title */}
+                <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>;
+                <p className="text-zion-cyan mb-4">Brand:{equipment.brand}</p>;
+                ;
+                {/* Rating */}
+                {equipment.rating && (;
+                  <div className="flex items-center gap-2 mb-4">;
+                    <div className="flex items-center">;
+                      {[...Array(5)].map((_, i) => (;
+=======
             <div className="lg:col-span-1">;"
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;"
                 <div className="flex flex-wrap gap-2 mb-3">;"
@@ -289,15 +468,31 @@ pr-12325
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand;}</p>;""
                   <div className="flex items-center gap-2 mb-4">;"
                     <div className="flex items-center">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                         <Star;
                           key={i}`;
                           className={`h-5 w-5 ${;
+<<<<<<< HEAD
+                            i < Math.floor(equipment.rating!) ;
+                              ? "text-zion-cyan fill-zion-cyan" ;
+                              :"text-zion-slate-light";                          }`}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                        />;
+                      ))}
+                    </div>;
+                    <span className="text-sm text-zion-slate-light">;
+<<<<<<< HEAD
+
+=======
+                      {equipment.rating.toFixed(1)} ({equipment.reviewCount} reviews);
+=======
                             i < Math.floor(equipment.rating!) ;"
                               ? "text-zion-cyan fill-zion-cyan" ;""`;
                               :"text-zion-slate-light";                          }`}"
 
                     <span className="text-sm text-zion-slate-light">;"
 </span>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     </span>;
                   </div>;                )}"
                 <div className="text-3xl font-bold text-white mb-4">;                  {equipment.currency}{equipment.price.toLocaleString()}"
@@ -310,10 +505,25 @@ pr-12325
                       <span className="w-2 h-2 bg-rose-400 rounded-full"></span>;"
                       <span>Out of Stock</span>;
                     </div>;                  )}
+<<<<<<< HEAD
+                </div>;
+                ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                {/* Quantity */}
+                <div className="mb-6">;
+                  <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>;
+                  <div className="flex items-center border border-zion-blue-light rounded-md w-32">;
+<<<<<<< HEAD
+
+=======
+                    <button ;
+                      className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50";
+=======
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>;""
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">;"
                     <button ;"
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
 </button>
                       disabled={quantity <= 1 || !equipment.inStock}
@@ -327,13 +537,98 @@ pr-12325
                       readOnly;
 </input>
                       onClick={() => setQuantity(prev => prev + 1)}
+<<<<<<< HEAD
+                      disabled={!equipment.inStock}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    >;
+                      +;
+                    </button>;
+                  </div>;
+                </div>;
+<<<<<<< HEAD
+
+=======
+                ;
+                {/* Purchase Buttons */}
+                <div className="space-y-3 mb-6">;
+=======
                 <div className="space-y-3 mb-6">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   <Button ;
                     onClick={handleBuyNow}
                     disabled={isAdding || !equipment.inStock}"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";"
 
                     onClick={handleAddToCart}
+<<<<<<< HEAD
+                    disabled={isAdding || !equipment.inStock}
+                    variant="outline";
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
+                  >;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    <ShoppingCart className="h-4 w-4 mr-2" />;
+                    Add to Cart;
+                  </Button>;
+                </div>;
+<<<<<<< HEAD
+
+=======
+                ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                {/* Additional Info */}
+                <div className="space-y-4 border-t border-zion-blue-light pt-4">;
+                  {/* Shipping */}
+                  <div className="flex gap-3 text-zion-slate-light">;
+                    <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
+                    <div>;
+                      <p className="text-white text-sm font-medium">Free Shipping</p>;
+                      <p className="text-xs">For orders over $100 within the US</p>;
+                    </div>;
+                  </div>;
+<<<<<<< HEAD
+
+=======
+                  ;
+                  {/* Warranty */}
+                  {equipment.warranty && (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    <div className="flex gap-3 text-zion-slate-light">;
+                      <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
+                      <div>;
+                        <p className="text-white text-sm font-medium">Warranty</p>;
+<<<<<<< HEAD
+
+=======
+                        <p className="text-xs">{equipment.warranty}</p>;
+                      </div>;
+                    </div>;                  )}
+                  ;
+                  {/* Return Policy */}
+                  {equipment.returnPolicy && (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    <div className="flex gap-3 text-zion-slate-light">;
+                      <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
+                      <div>;
+                        <p className="text-white text-sm font-medium">Returns</p>;
+<<<<<<< HEAD
+
+=======
+                        <p className="text-xs">{equipment.returnPolicy}</p>;
+                      </div>;
+                    </div>;
+                  )}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+<<<<<<< HEAD
+
+=======
+=======
                     variant="outline";""
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";"
                     <ShoppingCart className="h-4 w-4 mr-2" />;"
@@ -355,6 +650,7 @@ pr-12325
                         <p className="text-white text-sm font-medium">Returns</p>;""
                         <p className="text-xs">{equipment.returnPolicy}</p>;"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     </>;
   ),; interface EquipmentSpecification {
   // TODO: Implement
@@ -530,4 +826,9 @@ if (!equipment) {"
 }<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {"
 }</p> </div> </div>) 
 }</div> </div> </div> </div> </div> </div> <Footer /> </>) 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}
+=======
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

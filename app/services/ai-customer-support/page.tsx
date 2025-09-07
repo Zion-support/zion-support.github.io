@@ -1,17 +1,20 @@
-import React from 'react';
+<<<<<<< HEAD
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
 
-export const metadata = {
-  title: 'AI Customer Support | Zion Tech Group',
-  description: 'Intelligent customer support automation with AI chatbots, sentiment analysis, and 24/7 multilingual support. Reduce support costs by 70% while improving satisfaction.',
-};
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+import React from 'react';
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+
+
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: 'AI Customer Support - Zion Tech Group',
-  description: 'Advanced AI-powered customer support solutions for modern businesses.',
-};
+
 
 export default function ServicePage() {
   return (
@@ -45,6 +48,45 @@ export default function ServicePage() {
       <section className="py-16">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Intelligent Support Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai customer support solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai customer support solutions run smoothly.
+            </p>
+<<<<<<< HEAD
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                Get Started
+                <ArrowRightIcon className="h-5 w-5 ml-2" />
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
           <FeatureCard
             icon="🤖"
             title="AI Chatbots"
@@ -200,37 +242,37 @@ export default function ServicePage() {
             icon="🏦"
             title="Financial Services"
             description="Bank-grade security with compliance features for financial institutions."
-            features={["PCI DSS compliance", "Fraud detection", "Account verification", "Regulatory reporting"]
+            features={["PCI DSS compliance", "Fraud detection", "Account verification", "Regulatory reporting"]}
           />
           <IndustryCard
             icon="🛒"
             title="E-commerce"
             description="Optimized for online retail with order tracking and product recommendations."
-            features={["Order management", "Product recommendations", "Return processing", "Inventory queries"]
+            features={["Order management", "Product recommendations", "Return processing", "Inventory queries"]}
           />
           <IndustryCard
             icon="🏥"
             title="Healthcare"
             description="HIPAA-compliant support for healthcare providers and patients."
-            features={["HIPAA compliance", "Appointment scheduling", "Medical queries", "Insurance support"]
+            features={["HIPAA compliance", "Appointment scheduling", "Medical queries", "Insurance support"]}
           />
           <IndustryCard
             icon="🎓"
             title="Education"
             description="Student and parent support for educational institutions."
-            features={["Student queries", "Parent communication", "Enrollment support", "Academic guidance"]
+            features={["Student queries", "Parent communication", "Enrollment support", "Academic guidance"]}
           />
           <IndustryCard
             icon="🏠"
             title="Real Estate"
             description="Property inquiries and client support for real estate professionals."
-            features={["Property searches", "Client matching", "Document support", "Market information"]
+            features={["Property searches", "Client matching", "Document support", "Market information"]}
           />
           <IndustryCard
             icon="🚗"
             title="Automotive"
             description="Vehicle support and service scheduling for automotive businesses."
-            features={["Service scheduling", "Warranty support", "Parts ordering", "Technical assistance"]
+            features={["Service scheduling", "Warranty support", "Parts ordering", "Technical assistance"]}
           />
         </div>
       </section>
@@ -418,6 +460,7 @@ function TestimonialCard({ name, role, company, content, avatar }: {
             <Link href="/services" className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors">
               View All Services
             </Link>
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
           </div>
         </div>
       </div>

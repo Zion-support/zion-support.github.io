@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+// Contact information
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 // Contact information;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface ContactInfo {
   // TODO: Implement
 }
@@ -9,6 +17,9 @@ export interface ContactInfo {
 
 // Service interfaces;
 export interface Service {
+<<<<<<< HEAD
+
+=======
   id: string;
   name: string,
   description: string;
@@ -18,6 +29,7 @@ export interface Service {
     max: number;
     currency: string
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   features: string[];
   // TODO: Implement
   id: string;,
@@ -36,17 +48,102 @@ pr-12325
   support: string;
   image?: string;
   popular?: boolean;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export interface SEOProps {
+  title: string;
+=======
+}
+
+export interface ServiceCategory {
+  title: string,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 
 export interface ServiceCategory {
   title: string,
   // TODO: Implement
   title: string;,
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description: string;
   count: number;,
   features: string[];
   href: string;,
   color: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  title: string, description: string,
+  features: string[], href: string,
+  icon: string, color: string,
+export interface ServiceCategory {;
+}
+export interface ServiceCategory {
+  title: string, description: string,
+  count: number, features: string[],
+  href: string, color: string,
+export interface SEOProps {;
+  title: string, description: string,
+  keywords?: string;
+  canonical?: string;
+  og_image?: string;
+  url?: string;
+  type?: string;
+  noindex?: boolean;
+export interface LoadingState {;
+  isLoading: boolean, error?: string,
+export interface AnimationState {;
+  isLoaded: boolean, hasError: boolean,
+export interface ContactInfo {,
+  phone: string,
+  email: string,
+  address: string,
+  site: string,
+};
+,
+export interface Service {,
+  title: string,
+  description: string,
+  features: string[],
+  href: string,
+  icon: string,
+  color: string,
+};
+,
+export interface ServiceCategory {,
+  title: string,
+  description: string,
+  count: number,
+  features: string[],
+  href: string,
+  color: string,
+};
+,
+export interface SEOProps {,
+  title: string,
+  description: string,
+  keywords?: string,
+  canonical?: string,
+  ogImage?: string,
+  noindex?: boolean,
+};
+,
+export interface LoadingState {,
+  isLoading: boolean,
+  error?: string,
+};
+,
+export interface AnimationState {,
+  isLoaded: boolean,
+  hasError: boolean,
+};
+}
+
+=======
+}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // SEO and performance;
 export interface SEOProps {
@@ -60,13 +157,22 @@ export interface PerformanceMetrics {
   cls?: number;
   ttfb?: number;
 
+<<<<<<< HEAD
+// Loading and error states
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 // Loading and error states;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export interface LoadingState {
   // TODO: Implement
   isLoading: boolean;
   error?: string;
   progress?: number;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface ErrorInfo {
   // TODO: Implement
   message: string;
@@ -75,6 +181,14 @@ export interface ErrorInfo {
   timestamp: string;
   userAgent?: string;
   url?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Form interfaces;
 export interface ContactForm {
@@ -98,6 +212,12 @@ export interface FormField {
     min?: number;
     max?: number;
     pattern?: string;
+<<<<<<< HEAD
+    message?: string;
+  };
+}
+
+=======
     message?: string
 };
 }
@@ -216,6 +336,7 @@ export interface PaginatedResponse<T> {
 }
 
 // User and preferences
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface User {
   id: string;
   email: string;
@@ -229,6 +350,10 @@ export interface User {
     experience: number;
     location: string;
     timezone: string;
+<<<<<<< HEAD
+  };
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   preferences: {
     theme: 'light' | 'dark' | 'auto';
     language: string;
@@ -236,6 +361,25 @@ export interface User {
       email: boolean;
       push: boolean;
       sms: boolean;
+<<<<<<< HEAD
+    };
+  };
+  activity: {
+    lastLogin: Date;
+    loginCount: number;
+    projects: string[];
+    tasks: string[];
+  };
+  subscription: {
+    plan: 'free' | 'basic' | 'premium' | 'enterprise';
+    status: 'active' | 'inactive' | 'cancelled' | 'expired';
+    startDate: Date;
+    endDate: Date;
+    features: string[];
+  };
+}
+
+=======
 }
 
 export interface UserPreferences {
@@ -271,6 +415,7 @@ export interface SocialLink {
 }
 
 // Notifications
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface Notification {
   id: string;
   type: 'info' | 'success' | 'warning' | 'error';
@@ -281,11 +426,29 @@ export interface Notification {
   action?: {
     label: string;
     url: string;
+<<<<<<< HEAD
+  };
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   category: 'system' | 'project' | 'team' | 'client' | 'billing';
   priority: 'low' | 'medium' | 'high';
   expires?: Date;
 }
 
+<<<<<<< HEAD
+export interface BaseComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+export interface InputProps {
+  className?: string;
+=======
 // Project management
 export interface Project {
   id: string;
@@ -346,19 +509,39 @@ export interface BaseComponentProps {
   id?: string;
   disabled?: boolean;
   loading?: boolean;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
+<<<<<<< HEAD
+  onClick?: () => void;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   error?: string;
   required?: boolean;
 }
 
+<<<<<<< HEAD
+=======
 // Environment
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

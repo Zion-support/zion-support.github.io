@@ -2,6 +2,11 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     log("4. Continue with your workflow", "blue"),}
 
 }
@@ -13,6 +18,21 @@ if (require.main === module) {;
   main()}
 module.exports = { resolveMergeConflict, findConflictedFiles }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
 
 
@@ -20,6 +40,7 @@ module.exports = { resolveMergeConflict, findConflictedFiles }
 
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

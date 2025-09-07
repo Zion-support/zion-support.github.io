@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+
+}
+;
+// Check pages directory structure;
+
+}
+;
+// Check for any problematic files;
+
+=======
 const fs = require('fs');
 const path = require('path');
 ;
@@ -70,3 +81,4 @@ console.log(' Debug completed');}
 }catch (error) {
   // Skip directories that can't be read;
 }return files;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

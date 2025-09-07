@@ -1,8 +1,27 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/""usr/bin/env"" node;
+#!/usr/bin/env node;
+const { execSync, spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 #!/usr/bin/env node;"
 #!/usr/bin/env node"
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class $1 {}
   constructor() {}"
   this.projectRoot = path.resolve(__dirname, "../../");"
@@ -24,6 +43,34 @@ class $1 {}
 ;"
   log(message, level = "INFO") {}"
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    const logEntry = `[${timestamp}] [${level}] ${message}`;`
+    console.log("logEntry);
+    // Append to log file;
+    fs.appendFileSync(this.logFile, logEntry + "\n");
+<<<<<<< HEAD
+  log(message, level = "INFO") {}
+  const timestamp = new Date().toISOString();
+    const logEntry = "[${timestamp}] [${level}] ${message}";
+=======
+
+  log(message, level = "INFO") {}
+  const timestamp = new Date().toISOString();
+    const logEntry = "[${timestamp}] [${level}] ${message}";
+    
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    // Append to log file;
+    fs.appendFileSync(this.logFile, logEntry + "\n")};
+;
+=======
     const logEntry = `[${timestamp}] [${level}] ${message};`"
     console.log("logEntry);"
     // Append to log file;"
@@ -32,11 +79,39 @@ class $1 {}
     const logEntry = "[${timestamp}] [${level}] ${message}";"
     // Append to log file;"
     fs.appendFileSync(this.logFile, logEntry + "\n")};"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runCommand(command, cwd = this.projectRoot) {}
   // Append to log file;"
     fs.appendFileSync(this.logFile, logEntry + "\n");")}");
 ");
   async runCommand(command, cwd = this.projectRoot) {");}
+<<<<<<< HEAD
+    return new Promise((resolve, reject) => {this.log(Running "command": ${command}");
+      const child = spawn(command, [], {})
+  "shell": true,
+        cwd,
+        "stdio": ["pipe", "pipe", "pipe"]}
+});
+      let stdout = "";
+      let stderr = "";
+      child.stdout.on("data", data => {})
+  stdout += data.toString();this.log(""STDOUT": ${data.toString().trim()}")}
+});
+      child.stderr.on("data", data => {})
+  stderr += data.toString();this.log(""STDERR": ${data.toString().trim()}")}
+});
+      child.on("close", code => {})
+  if (code === 0) {this.log("Command completed successfully with code ${code}");
+          resolve({ code, stdout, stderr })} else {this.log("Command failed with code ${code}", "ERROR");reject(new Error("Command failed with code ${code}: ${stderr}"))};
+      }
+});
+      child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
+=======
     return new Promise((resolve, reject) => {this.log(Running "command": ${command}");"
       const child = spawn(command, [], {})"
   "shell": true,"
@@ -45,6 +120,7 @@ class $1 {}
 });"
 
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         reject(error)})})};
   async installDependencies() {}"
   this.log("Installing dependencies...");"
@@ -54,11 +130,34 @@ class $1 {}
       return true} catch (error) {  this.log("Failed to install "dependencies": ${error.message  }", "ERROR");"
       return false};
   };
+<<<<<<< HEAD
+;
+  async runBuild() {}
+  this.log("Building project for testing...");
+    try {}
+  await this.runCommand("npm run build");
+      this.log("Build completed successfully");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  async runBuild() {}
+  this.log("Building project for testing...");
+    try {}
+  await this.runCommand("npm run build");
+      this.log("Build completed successfully");
+      return true} catch (error) {  this.log("Build "failed": ${error.message  }", "ERROR");
+      return false};
+  };
+;
+  async verifyBuildOutput() {}
+=======
   async runBuild() {}"
   this.log("Building project for testing...");"
 
       return true} catch (error) {  this.log("Build "failed": ${error.message  }", "ERROR");"
   async verifyBuildOutput() {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   this.log("Verifying build output...");
     const distPath = path.join(this.projectRoot, "dist");"
     if (!fs.existsSync(distPath)) {}"
@@ -96,14 +195,105 @@ class $1 {}
       // Wait a bit for server to start;
       await new Promise(resolve => setTimeout(resolve, 3000));
       // Test if server is responding;
+<<<<<<< HEAD
+      try {}
+  const testResult = await this.runCommand(curl -s -o /""dev/null"" -w "%{http_code}" "http": //localhost:5000";)
+        );
+        if (testResult.stdout.includes("200")) {}
+  this.log("Asset paths verification passed`);
+          serverProcess.kill();
+          return true} else {}
+  this.log(Asset paths verification "failed": HTTP ${testResult.stdout}`,`)
+            "ERROR";
+    try {}
+  // Start a simple HTTP server to test the build;
+      const httpServer = require("http-server");
+      const serverPath = path.join(this.projectRoot, "dist");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      // Check if http-server is available;
+      try {}
+  await this.runCommand("npx http-server --version")} catch (error) {}
+  this.log("Installing http-server...");
+        await this.runCommand("npm install -g http-server")};
+;
+      // Start server in background;
+      const serverProcess = spawn(npx",)
+        ["http-server", "serverPath", "-p", "5000", "-s"],
+        {}
+  "shell": true,
+          "cwd": this.projectRoot,
+          "stdio": "pipe"};
+      );
+<<<<<<< HEAD
+      // Wait a bit for server to start;
+      await new Promise(resolve => setTimeout(resolve, 3000));
+=======
+=======
 
             "ERROR";"
   // Start a simple HTTP server to test the build;"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       // Wait a bit for server to start;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       // Test if server is responding;
+<<<<<<< HEAD
+      try {}
+  const testResult = await this.runCommand(curl -s -o /"dev/null" -w "%{http_code} "http": //localhost:5000";)
+        );
+        if (testResult.stdout.includes("200")) {}
+  this.log("Asset paths verification passed");
+          serverProcess.kill();
+          return true} else {}
+  this.log(Asset paths verification "failed": HTTP ${testResult.stdout}",)
+            "ERROR";
+          );
+          serverProcess.kill();
+          return false};
+      } catch (error) {}
+  this.log(Asset paths verification "failed": Could not connect to test server",)
+          "ERROR"} catch (error) {}
+  this.log(Asset paths verification "failed": Could not connect to test server",)
+          "ERROR";
+        );
+          "ERROR";
+        );
+serverProcess.kill();
+        return false};
+    } catch (error) {  this.log("Asset paths verification "failed": ${error.message  }", "ERROR");
+      return false};
+  };
+;
+  async runTests() {}
+  this.log("Running tests...");
+    try {}
+  // Check if test script exists;
+      const packageJson = JSON.parse(;)
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+  async runTests() {}
+  this.log("Running tests...");
+    try {}
+  // Check if test script exists;
+      const packageJson = JSON.parse(;)
+        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");
+      );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+      if (!packageJson.scripts.test) {}
+  this.log("No test script found in package.json", "WARN");
+        return {}
+=======
   const testResult = await this.runCommand(curl -s -o /"dev/null" -w "%{http_code} "http": //localhost:5000";)"
 
   this.log("Asset paths verification passed");"
@@ -121,6 +311,7 @@ class $1 {}
       if (!packageJson.scripts.test) {}"
   this.log("No test script found in package.json", "WARN");"
         return {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   "success": true,
           "message": "No tests configured",
           "testCount": 0};"
@@ -156,8 +347,18 @@ this.log("Tests completed successfully. Test "count": ${testCount}");"
       "buildInfo": {}"
   nodeVersion: process.version,"
         "platform": process.platform,
+<<<<<<< HEAD
+        "arch": process.arch}};
+;
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Test report "generated": ${this.reportFile}");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
         "arch": process.arch}};"
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Test report "generated": ${this.reportFile}");"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return report};
   async run() {}"
   this.log("Starting test automation...");"
@@ -167,15 +368,40 @@ this.log("Tests completed successfully. Test "count": ${testCount}");"
     results.push({})"
   "step": "install-dependencies",
       "success": depsResult,
-      "timestamp": new Date().toISOString(),"
+<<<<<<< HEAD
+      "timestamp": new Date().toISOString(),
+<<<<<<< HEAD
+  async run() {}
+  this.log("Starting test automation...");
+    const results = [];
+=======
 
+  async run() {}
+  this.log("Starting test automation...");
+
+    const results = [];
+=======
+      "timestamp": new Date().toISOString(),"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Install dependencies;
 
       "timestamp": new Date().toISOString()}"
 });
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    if (!depsResult) {}
+  this.log(Skipping remaining steps due to dependency installation failure",)
+        "ERROR";
+      );
+=======
     if (!depsResult) {}"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       await this.generateTestReport(results);
       return};
     // Run build;
@@ -199,4 +425,28 @@ if (require.main === module) {}
   test.run().catch(error => {})"
   console.error("Test automation "failed": ", error);"
     process.exit(1)})};
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+module.exports = TestAutomation;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+module.exports = TestAutomation;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = TestAutomation;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+module.exports = TestAutomation;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

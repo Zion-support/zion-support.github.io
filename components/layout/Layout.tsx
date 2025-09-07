@@ -1,5 +1,29 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+main
+import React, { ReactNode } from 'react';
+React from
+  'react'
+import Header from 'react'
+  './Header';import Footer from 'react'
+  './Footer'
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+import React from 'react';
 import Head from 'next/head';
 import React, { ReactNode } from 'react';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+import Head from 'next/head';
+import React, { ReactNode } from 'react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -102,16 +126,86 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+main
+pr-12243
+=======
+<<<<<<< HEAD
+
+main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
 
 
 main
 pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  keywords?: string;
+}
+
+export default function Layout({ 
+  children, 
+  title = "Zion Tech Group", 
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS"
+}: LayoutProps) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {children}
+    </div>
+  );
+}
+import React, { ReactNode } from 'react';
+import Header from '../Header';
+import Footer from './Footer';
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Layout;
+main
+main
+pr-12243
+=======
+
+<<<<<<< HEAD
+
+interface LayoutProps {}
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
@@ -129,6 +223,10 @@ export default function Layout({ children, title = "Zion Tech Group", descriptio
     </>
   );
 }
+<<<<<<< HEAD
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   keywords?: string;
 }
 
@@ -190,3 +288,4 @@ pr-12243
     </>
   );
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

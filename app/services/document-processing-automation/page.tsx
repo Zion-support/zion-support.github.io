@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = {
   title: "Document Processing Automation | Zion Tech Group",
   description:
@@ -96,6 +97,130 @@ export default function DocumentProcessingAutomationPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+export const metadata = {}
+  title: "Document Processing Automation | Zion Tech Group",
+  description:"
+    "Automate document workflows with AI-powered processing, data extraction, and intelligent classification for maximum efficiency.",;
+};
+
+export default function DocumentProcessingAutomationPage() {}
+  return ("
+    <section className="max-w-6xl mx-auto px-4 py-16">"
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">;
+        Document Processing Automation;
+      </h1>"
+      <p className="text-xl text-gray-600 mb-12">
+        Automate document workflows with AI-powered processing, data extraction,
+        and intelligent classification for maximum efficiency.
+      </p>
+"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <FeatureCard"
+          title="Intelligent Data Extraction"
+          features={["
+            "OCR text recognition","
+            "Form field extraction","
+            "Table data parsing","
+            "Handwriting recognition",
+          ]}
+        />
+        <FeatureCard"
+          title="Document Classification"
+          features={["
+            "Automatic categorization","
+            "Content analysis","
+            "Priority assignment","
+            "Workflow routing",
+          ]}
+        />
+        <FeatureCard"
+          title="Process Automation"
+          features={["
+            "Batch processing","
+            "Quality validation","
+            "Exception handling","
+            "Integration workflows",
+          ]}
+        />
+      </div>
+"
+      <div className="bg-gradient-to-r from-slate-50 to-gray-50 border border-slate-200 rounded-xl p-8 mb-16">"
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Why Choose Our Document Processing Automation?
+        </h2>"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+          <div className="flex items-start">"
+            <span className="text-slate-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">
+                Reduce Processing Time by 90%
+              </h3>"
+              <p className="text-gray-600">
+                Automate repetitive document tasks and focus on high-value work;
+              </p>
+            </div>
+          </div>"
+          <div className="flex items-start">"
+            <span className="text-slate-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">
+                99.5% Accuracy Rate;
+              </h3>"
+              <p className="text-gray-600">
+                AI-powered validation ensures data accuracy and reduces errors;
+              </p>
+            </div>
+          </div>"
+          <div className="flex items-start">"
+            <span className="text-slate-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">
+                Multi-Format Support;
+              </h3>"
+              <p className="text-gray-600">
+                Process PDFs, images, Word docs, Excel files, and more;
+              </p>
+            </div>
+          </div>"
+          <div className="flex items-start">"
+            <span className="text-slate-500 mr-3 text-xl">✓</span>
+            <div>"
+              <h3 className="font-semibold text-gray-900">
+                Compliance & Security;
+              </h3>"
+              <p className="text-gray-600">
+                GDPR compliant with audit trails and secure data handling;
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Pricing />
+"
+      <div className="mt-16 text-center">"
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Ready to Automate Your Document Workflows?
+        </h2>"
+        <p className="text-gray-600 mb-6">
+          Start with a free document analysis and see how much time you can;
+          save.
+        </p>"
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a"
+            href="tel:+13024640950""
+            className="bg-slate-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-slate-700 transition-colors"
+          >
+            Call +1 302 464 0950;
+          </a>
+          <a"
+            href="mailto:kleber@ziontechgroup.com""
+            className="border-2 border-slate-600 text-slate-600 px-8 py-3 rounded-lg font-semibold hover:bg-slate-600 hover:text-white transition-colors"
+          >
+            Email Us;
+=======
 
       <Pricing />
 
@@ -119,6 +244,7 @@ export default function DocumentProcessingAutomationPage() {
             className="border-2 border-slate-600 text-slate-600 px-8 py-3 rounded-lg font-semibold hover:bg-slate-600 hover:text-white transition-colors"
           >
             Email Us
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </a>
         </div>
       </div>
@@ -126,6 +252,21 @@ export default function DocumentProcessingAutomationPage() {
   );
 }
 
+<<<<<<< HEAD
+function FeatureCard({}
+  title,
+  features,
+}: {}
+  title: string;
+  features: string[];
+}) {}
+  return ("
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">"
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>"
+      <ul className="space-y-2 text-gray-600">
+        {features.map((f) => ("
+          <li key={f} className="flex items-center">"
+=======
 function FeatureCard({
   title,
   features,
@@ -139,6 +280,7 @@ function FeatureCard({
       <ul className="space-y-2 text-gray-600">
         {features.map((f) => (
           <li key={f} className="flex items-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-slate-500 mr-2">•</span> {f}
           </li>
         ))}
@@ -147,6 +289,33 @@ function FeatureCard({
   );
 }
 
+<<<<<<< HEAD
+function Pricing() {}
+  return ("
+    <div className="mt-16">"
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Pricing Plans;
+      </h2>"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan"
+          name="Starter""
+          price="$1,499/mo"
+          features={["
+            "Basic document processing","
+            "Up to 5,000 documents/month","
+            "Standard support","
+            "Cloud deployment",
+          ]}
+        />
+        <Plan"
+          name="Professional""
+          price="$3,999/mo"
+          features={["
+            "Advanced AI processing","
+            "Up to 50,000 documents/month","
+            "Custom workflows","
+            "Priority support","
+=======
 function Pricing() {
   return (
     <div className="mt-16">
@@ -172,10 +341,21 @@ function Pricing() {
             "Up to 50,000 documents/month",
             "Custom workflows",
             "Priority support",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "API access",
           ]}
           popular={true}
         />
+<<<<<<< HEAD
+        <Plan"
+          name="Enterprise""
+          price="$9,999/mo"
+          features={["
+            "Unlimited processing","
+            "Custom model training","
+            "On-premise deployment","
+            "Dedicated support","
+=======
         <Plan
           name="Enterprise"
           price="$9,999/mo"
@@ -184,6 +364,7 @@ function Pricing() {
             "Custom model training",
             "On-premise deployment",
             "Dedicated support",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             "White-label solution",
           ]}
         />
@@ -192,16 +373,41 @@ function Pricing() {
   );
 }
 
+<<<<<<< HEAD
+function Plan({}
+=======
 function Plan({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name,
   price,
   features,
   popular = false,
+<<<<<<< HEAD
+}: {}
+=======
 }: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   name: string;
   price: string;
   features: string[];
   popular?: boolean;
+<<<<<<< HEAD
+}) {}
+  return (
+    <div"
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-slate-500 ring-2 ring-slate-200" : "border-gray-200"}`}
+    >
+      {popular && ("
+        <div className="bg-slate-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular;
+        </div>
+      )}"
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>"
+      <div className="text-3xl font-bold text-slate-600 mb-4">{price}</div>"
+      <ul className="space-y-2 text-gray-600 mb-6">
+        {features.map((f) => ("
+          <li key={f} className="flex items-center">"
+=======
 }) {
   return (
     <div
@@ -217,10 +423,28 @@ function Plan({
       <ul className="space-y-2 text-gray-600 mb-6">
         {features.map((f) => (
           <li key={f} className="flex items-center">
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <span className="text-green-500 mr-2">✓</span> {f}
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
+      <a"
+        href="tel:+13024640950"`
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
+          popular"
+            ? "bg-slate-600 text-white hover:bg-slate-700""
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"`
+        }`}
+      >
+        Get Started;
+      </a>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    </div>
+  );
+}
+"`
+=======
       <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
@@ -234,3 +458,4 @@ function Plan({
     </div>
   );
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

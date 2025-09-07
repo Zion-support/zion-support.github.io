@@ -10,6 +10,11 @@
     "h1": ""
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "route": "/about",
     "title": "About Us — Zion Tech Group | Leading-Edge Technology Solutions",
     "h1": "About Zion Tech Group"
@@ -23,6 +28,7 @@
   },
   {  },
   {  },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   {
     "route": "/",
     "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
@@ -34,6 +40,15 @@
     "h1": "2025 Pricing & Services"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  }
+    "h1": "Industry Solutions"  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+]
+=======
     "route": "/resources",
     "title": "Resources — Zion Tech Group | Documentation, Tools & Community",
     "h1": "Resources Hub"
@@ -51,3 +66,4 @@
     "h1": "Industry Solutions"  }
     "h1": "Industry Solutions"  }
 ]
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

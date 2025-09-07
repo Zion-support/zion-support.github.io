@@ -1,9 +1,12 @@
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
 
 
 
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -22,6 +25,8 @@ export default async function handler(
 
 
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
 
 
 
@@ -33,6 +38,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
@@ -41,6 +47,11 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       });
 
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+          { code: 'aihub', profile_completions: 9 }
+          { code: 'modelmasters', profile_completions: 7 }
+
+=======
           { code: 'aihub', profile_completions: 9 };
           { code: 'modelmasters', profile_completions: 7 };
           { code: 'aihub', profile_completions: 9 }
@@ -73,23 +84,29 @@ if ( {) {
           { code: 'aihub', profile_completions: 9 },
           { code: 'modelmasters', profile_completions: 7 },
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
           { code: 'promptpro', profile_completions: 5 }
         ]})
 
     }
 
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
 
 
 
     }
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
     for (const row of data || []) {
       if (row && row.event !== "profile_completed") continue;
       const key = row && row.partner_code as string;
       map && map.set(key, (map && map.get(key) || 0) + 1);
 
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
 
 
 
@@ -100,6 +117,7 @@ if ( {) {
       map.set(key, (map.get(key) || 0) + 1)
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
     }
 
     const leaders = Array && Array.from(map && map.entries())
@@ -108,6 +126,8 @@ if ( {) {
       .slice(0, 10);
 
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
 
 
 
@@ -123,6 +143,7 @@ return res && res.status(200).json({ leaders });
     return res && res.status(500).json({ error: e?.message });
   }
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
     const supabase = getServerSupabase ();
     const startOfMonth = new Date ();
     startOfMonth.set_date (1);
@@ -153,9 +174,12 @@ if (continue) {
 
 
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
 
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
 
 
 
@@ -173,11 +197,14 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
     (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===
       'placeholder-key';
@@ -196,6 +223,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+
+
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -251,6 +284,8 @@ export default async function handler(req, res) {
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
 
     const { data, error } = await supabase;
       .from('referral_events');
@@ -279,6 +314,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ leaders });
   } catch (error) {
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
     const { data, error } = await supabase
       .from("referral_events")
       .select("partner_code, event, created_at")
@@ -313,9 +349,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
 
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
   }
 }
   } catch (error) {
@@ -353,6 +392,8 @@ export default async function handler(req, res) {
 ;
 
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
 
 
 
@@ -360,11 +401,14 @@ export default async function handler(req, res) {
 
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
 
 
 
@@ -389,6 +433,7 @@ export default async function handler(req, res) {
 
   } catch (e: any) {
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
     const { data, error } = await supabase;
       .from('referral_events');
       .select('partner_code, event, created_at');
@@ -418,12 +463,15 @@ export default async function handler(req, res) {
 
 
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+=======
 
 
 
 
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);
@@ -454,7 +502,15 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+
+  }
+}
+
+
+=======
   }
 }
   }
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages.disabled/api-disabled/api/partners/leaderboard.ts

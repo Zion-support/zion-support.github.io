@@ -17,18 +17,24 @@ export default function RAGEvaluationLabPage() {
 
   return (
     <>;
-      <SEO
-        title='RAG Evaluation Lab'
+      <SEO;
+        title='RAG Evaluation Lab''
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
+<<<<<<< HEAD
+              {'
+                title: 'Grounding & Faithfulness''
+                desc: 'Measure factual consistency, citation quality, and hallucination rate.'
+=======
               {
                 title: 'Grounding & Faithfulness'
                 desc: 'Measure factual consistency;, citation quality, and hallucination rate.'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }
-              {
-              <div
-                key={f && f.title}
-                className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'>;
-                <h3 className='text-lg font-semibold text-white'>{f && f.title}</h3>;
+              {}
+              <div;
+                key={f && f.title}'
+                className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'>;'
+                <h3 className='text-lg font-semibold text-white'>{f && f.title}</h3>;'
                 <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
               </div>;
             ))}
@@ -36,41 +42,53 @@ export default function RAGEvaluationLabPage() {
                   </span>;
                 </p>;
               </div>;
-						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
-						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
+						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>"
+						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>"
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
 					</div>
 				</div>
 			</section>
 		</>
 	)
-}
+}'
           <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
-            <Link;
-              href='/contact';
+            <Link;'
+              href='/contact';'
               className='px - 5 py - 3 rounded - lg bg - cyan - 400 text - black font - semibold';
             >;
               Start Evaluating;
             </Link>;
-            <a;
-              href='mailto:kleber@ziontechgroup.com';
+            <a;'
+              href='mailto:kleber@ziontechgroup.com';'
               className='px - 5 py - 3 rounded - lg border border - white / 20';
             >;
               Email: kleber@ziontechgroup.com;
-            </a>;
+            </a>;'
             <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </section>;
     </>);					<div className="mt - 12 flex flex - wrap items-center gap-4">;
       <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - cyan - 400 text-black font-semibold">Start Evaluating</Link>;
       <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded-lg border border-white / 20">Email: kleber@ziontechgroup.com</a>;
       <span className="text-gray-400">Call: +1 302 464 0950</span>;
+=======
+      </section>;"
+    </>);					<div className="mt - 12 flex flex - wrap items - center gap - 4">;"
+      <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - cyan - 400 text - black font - semibold">Start Evaluating</Link>;"
+      <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded - lg border border - white / 20">Email: kleber@ziontechgroup.com</a>;"
+      <span className="text - gray - 400">Call: +1 302 464 0950</span>;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>;
     </div>;
   </section>;
   </>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
@@ -158,3 +176,6 @@ export default function RAGEvaluationLabPage() {
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

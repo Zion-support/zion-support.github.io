@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import { useState, useEffect } from "react",;
+import { useRouter } from 'next/router',;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { ProductListingCard } from "@/components/ProductListingCard",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 import { useState, useEffect } from "react";""
 import { useRouter } from 'next/router';
 import { GradientHeading } from "@/components/GradientHeading";""
@@ -5,17 +18,30 @@ import { ProductListingCard } from "@/components/ProductListingCard";""
 import { Button } from "@/components/ui/button";""
 import { Input } from "@/components/ui/input";""
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Select,;
   SelectValue,;
   SelectTrigger,;
   SelectContent,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  SelectItem} from "@/components/ui/select",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import Skeleton from "react-loading-skeleton",;
+import "react-loading-skeleton/dist/skeleton.css",;
+import { Slider } from "@/components/ui/slider",;
+import { ProductListing, ListingView } from "@/types/listings",;
+=======
   SelectItem} from "@/components/ui/select",;""
 import { Checkbox } from "@/components/ui/checkbox";""
 import Skeleton from "react-loading-skeleton";""
 import "react-loading-skeleton/dist/skeleton.css";""
 import { Slider } from "@/components/ui/slider";""
 import { ProductListing, ListingView } from "@/types/listings";""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
 import { toast } from "@/hooks/use-toast";""
 import { captureException } from "@/utils/sentry";"
@@ -98,6 +124,7 @@ export function DynamicListingPage({;
         selectedRating === null ||;
         (listing.rating !== undefined && listing.rating >= selectedRating),;
       return (;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         matchesSearch &&;
         matchesCategory &&;
         matchesPrice &&;
@@ -106,6 +133,9 @@ export function DynamicListingPage({;
         matchesSpecs &&;
         matchesAvailability;)
       );
+<<<<<<< HEAD
+
+=======
     }),;
     filteredListings.sort((a, b) => {;
       switch (sortOption) {;"
@@ -182,8 +212,54 @@ pr-12325
                         htmlFor={`cat-${filter.value}`}"
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer";"
                       >;                        {filter.label}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       </label>;
                     </div>;
+<<<<<<< HEAD
+                  ))}
+                </div>;
+              </div>;
+<<<<<<< HEAD
+
+=======
+;
+              {brandOptions.length > 0 && (;
+                <div className="mb-6">;
+                  <label className="text-sm font-medium text-zion-slate-light block mb-2">;
+                    Brand;
+                  </label>;
+                  <Select;
+                    value={selectedBrand}
+                    onValueChange={(value:string) => setSelectedBrand(value)}
+                  >;
+                    <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
+                      <SelectValue placeholder="Select Brand" />;
+                    </SelectTrigger>;
+                    <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+                      <SelectItem value="all" className="text-white">;
+                        All Brands;
+                      </SelectItem>;
+                      {brandOptions.map((b) => (;
+                        <SelectItem key={b || 'unknown-brand'} value={b || ''} className="text-white">;
+                          {b || 'N/A'}
+                        </SelectItem>;                      ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    </SelectContent>;
+                  </Select>;
+                </div>;
+              )}
+<<<<<<< HEAD
+
+=======
+;
+              <div className="mb-6">;
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">;
+                  Specifications;
+                </label>;
+                <Input;
+                  type="text";
+                  placeholder="Search specifications...";                  value={specQuery}
+=======
                   <Select;
                     value={selectedBrand}
                     onValueChange={(value: string) => setSelectedBrand(value);}
@@ -199,10 +275,44 @@ pr-12325
                 <Input;"
                   type="text";""
                   placeholder="Search specifications...";                  value={specQuery}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   onChange={(e:React.ChangeEvent<HTMLInputElement>) =>;
 
                     value={selectedAvailability}
                     onValueChange={(value:string) =>;
+<<<<<<< HEAD
+                      setSelectedAvailability(value);
+                    }
+                  >;
+                    <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
+                      <SelectValue placeholder="Select Availability" />;
+                    </SelectTrigger>;
+                    <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+                      <SelectItem value="all" className="text-white">;
+                        All;
+                      </SelectItem>;
+                      {availabilityOptions.map((a) => (;
+                        <SelectItem key={a || 'unknown-availability'} value={a || ''} className="text-white">;
+                          {a || 'N/A'}
+                        </SelectItem>;                      ))}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    </SelectContent>;
+                  </Select>;
+                </div>;
+              )}
+<<<<<<< HEAD
+
+=======
+;
+              <div className="mb-6">;
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">;
+                  Price Range;
+                </label>;
+                <div className="mt-6 px-2">;
+                  <Slider;
+                    aria-label="Price range";                    defaultValue={[0, priceRange.max]}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
                       <SelectValue placeholder="Select Availability" />;"
 
 
@@ -211,10 +321,40 @@ pr-12325
                 <div className="mt-6 px-2">;"
                   <Slider;"
                     aria-label="Price range";                    defaultValue={[0, priceRange.max]}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     min={0}
                     max={priceRange.max}
                     step={priceRange.max / 100}
                     value={currentPriceFilter}
+<<<<<<< HEAD
+                    onValueChange={handleSliderChange}
+<<<<<<< HEAD
+
+=======
+                    className="mb-4";
+                  />;
+                  <div className="flex justify-between text-sm text-zion-slate-light">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    <span>${currentPriceFilter[0].toLocaleString()}</span>;
+                    <span>${currentPriceFilter[1].toLocaleString()}</span>;
+                  </div>;
+                </div>;
+              </div>;
+<<<<<<< HEAD
+
+=======
+;
+              <div className="mb-6">;
+                <label className="text-sm font-medium text-zion-slate-light block mb-2">;
+                  Minimum Rating;
+                </label>;
+                <div className="flex flex-wrap gap-2">;
+                  {[null, 3, 4, 5].map((rating) => (;
+                    <Button;
+                      key={rating === null ? "any" :rating}
+                      variant="outline";
+                      size="sm";
+=======
                     onValueChange={handleSliderChange}"
                     className="mb-4";"
                   />;
@@ -226,6 +366,7 @@ pr-12325
                       key={rating === null ? "any" :rating}""
                       variant="outline";""
                       size="sm";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       onClick={() => {;
                         <div className="flex items-center">;"
                             <Star;
@@ -233,6 +374,48 @@ pr-12325
                               className="h-3 w-3 fill-zion-cyan text-zion-cyan";"
                           <span className="ml-1">& Up</span>;"
                         </div>;                      )}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    </Button>;
+                  ))}
+                </div>;
+              </div>;
+<<<<<<< HEAD
+
+=======
+;
+              <Button;
+                variant="outline";
+                className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+                onClick={() => {;
+                  logInfo("Clearing filters"),;
+                  setSearchQuery(""),;
+                  clearCategories(),;
+                  setCurrentPriceFilter([0, priceRange.max]),;
+                  setSelectedRating(null),;
+                  setSelectedBrand("all"),;
+                  setSpecQuery(""),;
+                  setSelectedAvailability("all"),;
+                }}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              >;
+                Clear All;
+              </Button>;
+            </div>;
+          </div>;
+<<<<<<< HEAD
+
+=======
+;
+          <div className="lg:col-span-3">;
+            <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">;
+              <div className="flex flex-col md:flex-row gap-4">;
+                <div className="relative flex-grow">;
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                  <Input;
+                    type="text";
+                    placeholder="Search listings...";
+=======
                 className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10";"
 
           <div className="lg:col-span-3">;"
@@ -242,11 +425,55 @@ pr-12325
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;"
 
                     placeholder="Search listings...";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     value={searchQuery}
                     onChange={(e:React.ChangeEvent<HTMLInputElement>) => {;
 
                 <div className="flex items-center gap-2 ml-auto">;"
                   <Select value={sortOption} onValueChange={setSortOption}>;
+<<<<<<< HEAD
+                    <SelectTrigger className="w-[150px] bg-zion-blue border border-zion-blue-light text-white">;
+                      <SelectValue placeholder="Sort" />;
+                    </SelectTrigger>;
+                    <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+                      <SelectItem value="newest" className="text-white">Newest</SelectItem>;
+                      <SelectItem value="price-asc" className="text-white">Price:Low to High</SelectItem>;
+                      <SelectItem value="price-desc" className="text-white">Price:High to Low</SelectItem>;
+                      <SelectItem value="rating" className="text-white">Highest Rating</SelectItem>;
+                    </SelectContent>;
+                  </Select>;
+                  <Button;
+                    variant="outline";
+                    size="icon";
+                    onClick={() => setView(isGrid ? "list" :"grid")}
+                    aria-label={isGrid ? "List view" :"Grid view"}
+                    title={isGrid ? "List view" :"Grid view"}
+                    className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple";
+                  >;
+                    {ToggleViewIcon}
+                    <span className="sr-only">;
+                      {isGrid ? "List view" :"Grid view"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                    </span>;
+                  </Button>;
+                </div>;
+              </div>;
+            </div>;
+<<<<<<< HEAD
+
+=======
+;
+            <div className="mb-6">;
+              <p className="text-zion-slate-light">;
+                Showing {filteredListings.length} results;
+                {selectedCategories.length > 0 &&;
+                  ` in ${selectedCategories.join(', ')}`}
+                {searchQuery && ` for "${searchQuery}"`}
+              </p>;
+            </div>;
+;
+            {isLoading ? (;
+=======
                     <SelectTrigger className="w-[150px] bg-zion-blue border border-zion-blue-light text-white">;"
                       <SelectValue placeholder="Sort" />;"
 
@@ -260,6 +487,7 @@ pr-12325
 </span>
                     </span>;
               <p className="text-zion-slate-light">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <div;
                 className={;"
                   view === "grid";""
@@ -305,6 +533,7 @@ pr-12325
                     setSelectedAvailability("all"),;
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 >;
                   Clear All;
                 </Button>;
@@ -314,6 +543,9 @@ pr-12325
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
+
+=======
   ),; import {;
   Select;
 SelectValue;
@@ -427,5 +659,11 @@ setSelectedRating (null);";""
 }</div> No listings found </h3> <p className="text-zion-slate-light mb-6" > Try adjusting your filters or search query </p> <Button clearCategories ();"
 setCurrentPriceFilter ([0, priceRange.max]);
 setSelectedRating (null);
+<<<<<<< HEAD
+> Clear All </Button> </div>) ;
+}</div> </div> </div> </div>) ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 > Clear All  </div>) ;
 }</div> </div> </div> </div>) ;"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { Sparkles, ArrowRight } from "@/components/icons",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Badge } from "@/components/ui/badge",;
+=======
 import React, { useState } from "react";""
 import { useToast } from "@/hooks/use-toast";""
 import { Button } from "@/components/ui/button";""
@@ -8,12 +25,24 @@ import { Skeleton } from "@/components/ui/skeleton";""
 import { Sparkles, ArrowRight } from "@/components/icons";""
 import { supabase } from "@/integrations/supabase/client";""
 import { Badge } from "@/components/ui/badge";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;
+<<<<<<< HEAD
+interface GeneratedContent {;
+=======
 interface GeneratedContent {,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  description:string,;
+  tags:string[],;
+  suggestedPrice:{;
+    min:number,;
+=======
   description: string;,;
   tags: string[];,;
   suggestedPrice: {;,
   min: number;,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     max:number;
   },;
   keyPoints:string[];
@@ -48,8 +77,18 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
   const handleGenerate = async () => {;
     if (!title || !category) {;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Missing required fields",;
+        description:"Please provide at least a title and category.",;
+=======
+        title:"Missing required fields",,
+  description:"Please provide at least a title and category.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
         title: "Missing required fields";,,
   description: "Please provide at least a title and category.";,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant:"destructive";
         title: "Missing required fields";,;""
         description: "Please provide at least a title and category.";,;""
@@ -67,14 +106,33 @@ pr-12325
         throw new Error(data.error),;
       setGeneratedContent(data.generated),;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Content Generated",;
+        description:"AI has created optimized listing content for you.";
+=======
+        title:"Content Generated",,
+=======
         title: "Content Generated";,,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description:"AI has created optimized listing content for you.";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
     } catch (error) {;
       console.error("Error generating content: ";, error),;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Generation Failed",;
+        description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
+=======
+        title:"Generation Failed",,
+  description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
         title: "Generation Failed";,,
   description: error instanceof Error ? error.message :"Failed to generate content. Please try again.";,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         variant:"destructive";
       }),;
         title: "Content Generated";,;""
@@ -91,8 +149,17 @@ pr-12325
     if (generatedContent && onApplyGenerated) {;
       onApplyGenerated(generatedContent),;
       toast({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title:"Content Applied",;
+        description:"The generated content has been applied to your listing.";
+=======
+        title:"Content Applied",,
+=======
         title: "Content Applied";,,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   description:"The generated content has been applied to your listing.";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       }),;
     }
   },;
@@ -124,3 +191,125 @@ pr-12325
               id="title";"
               value={title})"
               onChange={(e) => handleInputChange(e, 'title')}
+<<<<<<< HEAD
+<<<<<<< HEAD
+              placeholder="Enter your product or service title";
+              className="bg-zion-blue border border-zion-blue-light text-white";
+              disabled={isLoading}
+            />;
+          </div>;
+          <div className="space-y-2">;
+            <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
+            <Input;
+              id="category";
+              value={category}
+              onChange={(e) => handleInputChange(e, 'category')}
+              placeholder="e.g. AI Tool, Digital Product, Service";
+              className="bg-zion-blue border border-zion-blue-light text-white";
+              disabled={isLoading}
+            />;
+          </div>;
+          <div className="space-y-2">;
+            <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
+            <Textarea;
+              id="keyFeatures";
+              value={keyFeatures}
+              onChange={(e) => handleInputChange(e, 'keyFeatures')}
+<<<<<<< HEAD
+              placeholder="Briefly describe the main features or benefits";
+              className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
+              disabled={isLoading}
+            />;
+          </div>;
+          <div className="space-y-2">;
+            <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
+            <Input;
+              id="targetAudience";
+              value={targetAudience}
+              onChange={(e) => handleInputChange(e, 'targetAudience')}
+              placeholder="e.g. Developers, Marketers, Startups";
+              className="bg-zion-blue border border-zion-blue-light text-white";}
+}export function AIListingGenerator ({
+  onApplyGenerated, initialValues = {
+  
+}
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+
+    try {
+      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
+        body: { title, category, keyFeatures, targetAudience }
+
+            <Input
+              id=&quot;title&quot;
+              value={title}
+              onChange={(e) => handleInputChange(e, 'title')}
+
+            <Input
+              id=&quot;category&quot;
+              value={category}
+              onChange={(e) => handleInputChange(e, 'category')}
+
+            <Textarea
+              id=&quot;keyFeatures&quot;
+              value={keyFeatures}
+              onChange={(e) => handleInputChange(e, 'keyFeatures')}
+
+            <Input
+              id=&quot;targetAudience&quot;
+              value={targetAudience}
+              onChange={(e) => handleInputChange(e, 'targetAudience')}
+
+              <>;
+                <Sparkles className="h-4 w-4 mr-2" />;
+                Generate Optimized Content;
+              </>;
+            )}
+          </Button>;
+        </CardContent>;
+      </Card>;
+
+      {isLoading && (;
+        <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
+          <CardHeader>;
+            <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />;
+          </CardHeader>;
+          <CardContent className="space-y-4">;
+            <Skeleton className="h-32 w-full bg-zion-blue-light/20" />;
+            <div className="flex flex-wrap gap-2">;
+              {[...Array(5)].map((_, i) => (;
+                <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />;
+              ))}
+            </div>;
+            <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
+            <div className="space-y-2">;
+              {[...Array(3)].map((_, i) => (;
+                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />;
+              ))}
+            </div>;
+          </CardContent>;
+        </Card>;
+      )}
+
+      {generatedContent && !isLoading && (;
+        <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+          <CardHeader>;
+            <CardTitle className="text-white">Generated Content</CardTitle>;
+          </CardHeader>;
+          <CardContent className="space-y-4">;
+            <div>;
+              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>;
+
+                  <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>;
+                ))}
+              </div>;
+            </div>;
+
+              </ul>;
+            </div>;
+          </CardContent>;
+          <CardFooter>;
+            <Button;
+
+}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

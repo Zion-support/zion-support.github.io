@@ -1,6 +1,24 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+console.log('🔧 Fixing syntax errors in the codebase...');
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+        replacement: ''
+      },
+      // Fix malformed function declarations
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       {
         pattern: /^[\s\n]*\}[\w\s]*\([\s\S]*?\)\s*\{[\s\S]*?\}[\s\S]*$/,
         replacement: `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default async function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`
@@ -22,6 +40,32 @@ const path = require('path');
       return true;
 
 
+<<<<<<< HEAD
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      fixedCount += findAndFixApiFiles(filePath);
+    } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+
+<<<<<<< HEAD
+    // Fix merge conflict markers
+      modified = true;
+    }
+
+    // Fix unterminated string literals
+    const lines = content.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Fix unterminated strings
+      if (line.includes('"') && !line.match(/".*"/)) {
+        if (line.includes('"') && !line.includes('\\"')) {
+          lines[i] = line.replace(/"([^"]*)$/, '"$1"');
+=======
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -52,46 +96,131 @@ function fixSyntaxErrors(filePath) {
             jsxContent.replace(/^\s*/, '    ') + '\n' +
             '  );\n' +
             '}';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           modified = true;
         }
 
-      }
-    }
-    // Remove stray commit hashes
-    content = content.replace(/[a-f0-9]{40}/g, '');
-    // Remove any remaining merge conflict markers
-    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>>/g, '');
-    if (modified) {
+<<<<<<< HEAD
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+// Function to fix common syntax errors in service pages
+function fixServicePage(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
+    // Fix missing closing braces in IndustryCard components
+    content = content.replace(
+      /features=\[([^\]]+)\]\s*\/>/g,
+      (match, features) => {
+        // Check if the features array is properly closed
+        if (!features.includes(']')) {
+          return match.replace(']', ']');
+        }
+        return match;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
+      }
+    );
+
+    // Fix duplicate metadata exports
+    const metadataRegex = /export const metadata = \{[\s\S]*?\};/g;
+    const metadataMatches = content.match(metadataRegex);
+    if (metadataMatches && metadataMatches.length > 1) {
+      // Keep only the first metadata export
+      content = content.replace(metadataRegex, (match, index) => {
+        return index === 0 ? match : '';
+      });
+      modified = true;
+    }
+
+    // Fix metadata in JSX
+    content = content.replace(
+      /\/\/ eslint-disable-next-line react-refresh\/only-export-components\nexport const metadata = \{[\s\S]*?\};\n/g,
+      ''
+    );
+
+    // Fix missing closing tags
+    content = content.replace(/(<IndustryCard[^>]*>)(?![\s\S]*?<\/IndustryCard>)/g, (match) => {
+      return match + '</IndustryCard>';
+    });
+
+    // Fix duplicate description in metadata
+    content = content.replace(
+      /description: '[^']*',\s*description: '[^']*',/g,
+      (match) => {
+        const firstDesc = match.match(/description: '([^']*)'/)[1];
+        return `description: '${firstDesc}',`;
+      }
+    );
+
+    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath});
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  } catch (error) {
+    console.log(`  ❌ Error fixing ${filePath}: ${error.message}`);
+  }
+<<<<<<< HEAD
+  return false;
+}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       fs.writeFileSync(filePath, content, 'utf8');
       return true;
     }
     return false;
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
   } catch (error) {
-
     console.error(`Error fixing ${filePath}:`, error.message);
+  }
   return false;
+}
 
+// Find all service page files
+const servicesDir = path.join(__dirname, 'app', 'services');
+const serviceFiles = [];
 
-function findAndFixFiles(dir) {
+function findServiceFiles(dir) {
   const files = fs.readdirSync(dir);
-  let fixedCount = 0;
   files.forEach(file => {
-
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {
+      findServiceFiles(filePath);
+    } else if (file === 'page.tsx') {
+      serviceFiles.push(filePath);
+    }
+  });
+}
 
-      if (fixSyntaxErrors(filePath)) {
-        console.log(`Fixed syntax errors in: ${filePath}`);
-        fixedCount++;
+findServiceFiles(servicesDir);
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
+console.log('🎯 Syntax error fixing complete!');
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+console.log(`Found ${serviceFiles.length} service page files`);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ea63
 
+let fixedCount = 0;
+serviceFiles.forEach(file => {
+  if (fixServicePage(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);

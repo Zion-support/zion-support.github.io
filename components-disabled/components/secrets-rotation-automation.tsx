@@ -1,7 +1,12 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD:components/secrets-rotation-automation.tsx
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+=======
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false ;}}static getDerivedStateFromError(error) {return { hasError: true ;,}
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary: ';, error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     }return this.props.children;
   }
 }import React from 'react';
@@ -32,11 +37,24 @@ import React from 'react';,export default function SecretsRotationAutomationPage
 ];
 return (<>;
   
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/secrets-rotation-automation.tsx
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+<<<<<<< HEAD:components/secrets-rotation-automation.tsx
+  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {}
     super(props);}
     this.state = { hasError: false ;};
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   static getDerivedStateFromError(error) {
     return { hasError: true ;};
 
@@ -60,6 +78,33 @@ class ErrorBoundary extends React.Component {
   const features = [
   export default function SecretsRotationAutomationPage() {
 
+<<<<<<< HEAD
+=======
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/secrets-rotation-automation.tsx
+
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * SecretsRotationAutomationPage - Function description
+ */
+function SecretsRotationAutomationPage() {
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   const features = [;
 
 import React from \"react\";}
@@ -177,16 +222,32 @@ export default function SecretsRotationAutomationPage() {
               <ExternalLink className=\"w - 4 h - 4\" /> HashiCorp Vault Docs;
             </a>;
             <a;
+<<<<<<< HEAD
+              href="https://cloud.google.com / kms";
+              target="_blank";
+              rel="noreferrer";
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
+            >;
+              <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
+<<<<<<< HEAD:components/secrets-rotation-automation.tsx
+<<<<<<< HEAD
+=======
               href=\"https://cloud.google.com / kms\";
               target=\"_blank\";
               rel=\"noreferrer\";
               className=\"inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300\" />
 
               <ExternalLink className=\"w - 4 h - 4\" /> Google Cloud KMS;
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
   return (return (return (</a>;
           </div>;
         </section>;
       </main>;</>)return (<>;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/secrets-rotation-automation.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
             </a>;
           </div>;
@@ -619,6 +680,10 @@ href=\"https://cloud.google.com/kms\"
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+<<<<<<< HEAD:components/secrets-rotation-automation.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
     </>;
   )return (<>;
       <SEO;
@@ -685,4 +750,10 @@ href=\"https://cloud.google.com/kms\"
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/secrets-rotation-automation.tsx
+=======
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee

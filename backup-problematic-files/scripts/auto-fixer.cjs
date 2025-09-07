@@ -93,12 +93,28 @@ class AutoFixer {}
       this.log("info", `Fixed TypeScript errors in ${fixedFiles} files`);"
   async runAllFixes() {}"
     this.log("info", "Starting comprehensive auto-fix process...");
+<<<<<<< HEAD
+    const results = {"timestamp": new Date().toISOString(),"mergeConflicts": await this.fixMergeConflicts(),"syntaxErrors": await this.fixSyntaxErrors();}
+      importErrors: await this.fixImportErrors();
+      typescriptErrors: await this.fixTypeScriptErrors();
+      totalFixes: 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
+      totalFixes: 0,
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
     const results = {"timestamp": new Date().toISOString(),"mergeConflicts": await this.fixMergeConflicts(),"syntaxErrors": await this.fixSyntaxErrors();}"
       importErrors: await this.fixImportErrors();,
   typescriptErrors: await this.fixTypeScriptErrors();
       totalFixes: 0;,
   importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
       totalFixes: 0,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       duration: 0};
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors;
 
@@ -119,5 +135,19 @@ if (require.main === module) {}
     .catch(error => {})"
       console.error("Auto-fixer "failed": ", error);"
       process.exit(1)})};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = AutoFixer;
+module.exports = AutoFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 module.exports = AutoFixer;
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

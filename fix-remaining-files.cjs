@@ -1,7 +1,21 @@
 const fs = require('fs');
+<<<<<<< HEAD
+=======
 
     conten: t: `import React, { useState } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Link from 'next/link';
 
 >import Link from 'next/link';
@@ -389,4 +403,47 @@ files.forEach(file => {
   }
 
 });
+<<<<<<< HEAD
+<<<<<<< HEAD
+main
 
+
+<<<<<<< HEAD
+console.log('Fixed remaining files');
+    console.log('Fixe: d:', file.path);
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+
+<<<<<<< HEAD
+  }
+});
+;
+console.log('Fixed remaining files');
+;
+console.log('Fixed remaining files');
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,16 @@
 }};
+<<<<<<< HEAD
+
+    };
+  };
+,
+  async analyzeBuild() {,
+    try {,
+      this.log('🏗️  Analyzing current build...'),
+,
+      if (!fs.existsSync('dist')) {,
+        this.log('📦 Building project first...'),
+=======
 ; const buildStats = {_; totalSize: 0, fileCount: 0, largestFiles: []; jsFiles: []; cssFiles: []; assetFiles: []};
 ; const analyzeDirectory = (dir) = > {_; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath);
 ; if (stat.isDirectory()) {; analyzeDirectory(fullPath)} else {_; const fileInfo = {; path: fullPath.replace(this.projectRoot + '/dist/', _); size: stat.size; sizeKB: Math.round(stat.size / 1024 * 100) / 100};
@@ -664,6 +676,7 @@ pr-12325
       this.log('  Analyzing current build...'),
       if (!fs.existsSync('dist')) {,
         this.log(' Building project first...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         execSync('npm run build', {,
           cwd: this.projectRoot,
           stdio: 'pipe)
@@ -692,8 +705,13 @@ pr-12325
             } else if (item.endsWith('.css')) {,
               buildStats.cssFiles.push(fileInfo)
               buildStats.assetFiles.push(fileInfo)
+<<<<<<< HEAD
+            };
+          };
+=======
             }
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         })
       };
 ,
@@ -709,6 +727,15 @@ pr-12325
     } catch (error) {,
         error: error.message,
         stats: null
+<<<<<<< HEAD
+      };
+    };
+  };
+,
+  async checkBundleAnalyzer() {,
+    try {,
+      this.log('📊 Checking bundle analyzer availability...'),
+=======
       }
 }
 };
@@ -716,6 +743,11 @@ pr-12325
 pr-12325
   async checkBundleAnalyzer() {,
       this.log(' Checking bundle analyzer availability...'),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const hasAnalyzer = packageJson.devDependencies &&,
         (packageJson.devDependencies['webpack-bundle-analyzer'] ||,')
@@ -728,6 +760,15 @@ pr-12325
       return {,
         available: false,
         error: error.message
+<<<<<<< HEAD
+      };
+    };
+  };
+,
+  async checkOptimizationSettings() {,
+    try {,
+      this.log('⚙️  Checking optimization settings...'),
+=======
       }
 }
 };
@@ -735,6 +776,11 @@ pr-12325
 pr-12325
   async checkOptimizationSettings() {,
       this.log('  Checking optimization settings...'),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const settings = {,
         compression: false;
       // Check Next.js config,
@@ -755,9 +801,15 @@ pr-12325
         success: false,
         error: error.message,
         settings: null
+<<<<<<< HEAD
+      };
+    };
+  };
+=======
       }
 }
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
 pr-12325
   async generateOptimizationReport(buildStats, analyzerInfo, settingsInfo) {,
@@ -817,6 +869,13 @@ pr-12325
       this.log(`Report saved to: ${this.reportFile}`)
     } catch (error) {,
       this.log(`Error saving report: ${error.message}`)
+<<<<<<< HEAD
+    };
+  };
+,
+  async run() {,
+    this.log('🚀 Starting Build Optimizer...'),
+=======
     }
 };
 ,
@@ -824,7 +883,12 @@ pr-12325
     } catch (error) {,`;
 pr-12325
   async run() {,
+<<<<<<< HEAD
+    this.log(' Starting Build Optimizer...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
     this.log(' Starting Build Optimizer...'),`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project root: ${this.projectRoot}`),
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
@@ -835,28 +899,67 @@ pr-12325
       const analyzerInfo = await this.checkBundleAnalyzer(),
       const settingsInfo = await this.checkOptimizationSettings(),
       // Generate report,
+<<<<<<< HEAD
+      this.log('📊 Generating optimization report...'),
+=======
       this.log(' Generating optimization report...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateOptimizationReport(buildStats, analyzerInfo, settingsInfo),
       // Save report,
       await this.saveReport(report),
       const duration = Date.now() - this.startTime,
       // Log summary,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      this.log('\n📊 Build Optimizer Summary: '),
+=======
+      this.log('\n Build Optimizer Summary: '),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+      this.log(`Build size: ${report.summary.buildSize} MB`),
+      this.log(`File count: ${report.summary.fileCount}`),
+      this.log(`Optimization score: ${report.summary.optimizationScore}/100`),
+=======
       this.log('\n Build Optimizer Summary: '),`;
       this.log(`Build size: ${report.summary.buildSize} MB`),`;
       this.log(`File count: ${report.summary.fileCount}`),`;
       this.log(`Optimization score: ${report.summary.optimizationScore}/100`),`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`Duration: ${duration}ms`),
       if (report.optimizations.length > 0) {,
+<<<<<<< HEAD
+        this.log('\n💡 Optimization Recommendations: '),
+=======
         this.log('\n Optimization Recommendations: '),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        report.optimizations.forEach(opt => {,
+          this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),
+          this.log(`    Action: ${opt.action}`),
+          this.log(`    Impact: ${opt.impact}`)
+        })
+      } else {,
+<<<<<<< HEAD
+        this.log('\n✨ Build is well optimized!')
+      };
+
+    } catch (error) {,
+      this.log(`❌ Error running build optimizer: ${error.message}`),
+      process.exit(1)
+    };
+  };
+=======
+=======
         report.optimizations.forEach(opt => {,)`;
           this.log(`  [${opt.priority.toUpperCase()}] ${opt.message}`),`;
           this.log(`    Action: ${opt.action}`),`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         this.log('\n Build is well optimized!')
 
       this.log(` Error running build optimizer: ${error.message}`),
       process.exit(1)
     }
 }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 ,
 pr-12325
@@ -864,4 +967,14 @@ pr-12325
 const optimizer = new BuildOptimizer(),
 optimizer.run().catch(error => {,)
 }),
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

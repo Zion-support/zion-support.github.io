@@ -1,4 +1,159 @@
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+<<<<<<< HEAD:pages/case-studies.tsx
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+=======
+import React from 'react';
 
+<<<<<<< HEAD
+const Page = () => {
+  return (
+    <MainLayout
+      title="Case Studies - Zion Tech Group"
+      description="Success stories and case studies from our clients"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Case Studies</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies.tsx
+export default Page;
+
+
+<<<<<<< HEAD:pages/case-studies.tsx
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies.tsx
+=======
+export default Page;
+
+
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  TrendingUp
+  CheckCircle
+  Users
+  Building
+  Globe
+  Award
+  Clock
+  BarChart3
+  Cloud
+  Shield
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+  CheckCircle,
+  Users,
+  Building,
+  Globe,
+  Award,
+  Clock,
+  BarChart3,
+  Cloud,
+  Shield;
+} from 'lucide-react';
+const caseStudies = [
+  {
+    id: 1
+    title: "AI-Powered Customer Service Transformation"
+    client: "Global E-commerce Retailer"
+    industry: "E-commerce"
+    challenge: "High customer service costs and inconsistent response quality"
+    solution: "Implemented AI-powered chatbot and intelligent routing system"
+    results: [
+      "60% reduction in support costs"
+      "40% faster response times"
+      "95% customer satisfaction rate"
+      "$2M annual savings"
+    ]
+    duration: "3 months"
+    team: "8 experts"
+    technologies: ["AI/ML", "NLP", "Cloud", "Analytics"]
+    image: "/images/case-studies/ecommerce-ai.jpg"
+  }
+  {
+    id: 2
+    title: "Cloud Migration for Financial Services"
+    client: "Regional Bank"
+    industry: "Financial Services"
+    challenge: "Legacy systems limiting scalability and innovation"
+    solution: "Complete cloud migration with microservices architecture"
+    results: [
+      "99.9% uptime achieved"
+      "50% faster application deployment"
+      "30% reduction in infrastructure costs"
+      "Enhanced security compliance"
+    ]
+    duration: "6 months"
+    team: "12 experts"
+    technologies: ["AWS", "Kubernetes", "Microservices", "DevOps"]
+    image: "/images/case-studies/cloud-migration.jpg"
+  }
+  {
+    id: 3
+    title: "Cybersecurity Enhancement for Healthcare"
+    client: "Healthcare Network"
+    industry: "Healthcare"
+    challenge: "Increasing cyber threats and compliance requirements"
+    solution: "Comprehensive security framework and threat detection system"
+    results: [
+      "Zero security breaches"
+      "100% compliance with HIPAA"
+      "24/7 threat monitoring"
+      "50% faster incident response"
+    ]
+    duration: "4 months"
+    team: "6 experts"
+    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"]
+    image: "/images/case-studies/healthcare-security.jpg"
+  }
+];
+const stats = [
+  { number: "500+", label: "Projects Completed" }
+  { number: "50+", label: "Happy Clients" }
+  { number: "99.9%", label: "Success Rate" }
+  { number: "24/7", label: "Support Available" }
+];
+
+        <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+          </div>;
+
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
+
+import React from 'react',
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/case-studies.tsx
 export default function CaseStudiesPage() {
   return (
     <MainLayout
@@ -459,6 +614,19 @@ transition={{ duration: 0 && 0.8 }}
                   href="/services"
 import Head from 'next/head';
 
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+import Head from 'next/head';
+
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/case-studies.tsx
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
                   Explore Our Services;
                 </a>;
@@ -474,6 +642,7 @@ className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white 
 import Head from 'next/head';
 export default function CaseStudiesPage() {;
 import Head from 'next/head';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/case-studies.tsx
   return (
     <Layout>;
       <Head>;
@@ -482,6 +651,14 @@ import Head from 'next/head';
         <meta
           name='description'
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/case-studies.tsx
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -605,13 +782,28 @@ export default function CaseStudies() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/case-studies.tsx
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/case-studies.tsx
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Head from 'next/head';
 
 import Head from 'next/head';
 
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+=======
 import Head from 'next/head';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/case-studies.tsx
   );
 
 
@@ -705,6 +897,58 @@ import Link from 'next / link';
 import Layout from '../components / Layout';
 ;
 
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+export default /**
+ * CaseStudiesPage - Function description
+ */
+function CaseStudiesPage() {
+  return (
+    <Layout>;
+      <Head>;
+        <title > Case Studies | Zion Tech Group</title>;
+        <link rel='canonical' href='https://ziontechgroup.com / case - studies' />;
+        <meta;
+          name='description';
+          content='Proven outcomes across AI, IT, and micro SaaS deployments.';
+        />;
+      </Head>;
+      <section className='container mx - auto px - 4 py - 24'>;
+        <h1 className='text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6'>;
+          Case Studies;
+        </h1>;
+        <p className='text - gray - 300'>;
+          Proven outcomes and detailed success stories. Coming soon.;
+        </p>;
+      </section>;
+    </Layout>);
+;
+</Head> </section> </Layout>;
+return (
+  <Layout>;
+  <Head>;
+    <title > Case Studies | Zion Tech Group</title>;
+    <link rel="canonical" href="https://ziontechgroup.com / case - studies" />;
+    <meta name="description" content="Proven outcomes across AI, IT, and micro SaaS deployments." />;
+  </Head>;
+  <section className="container mx - auto px - 4 py - 24">;
+    <h1 className="text - 4xl md: text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6">Case Studies</h1>;
+    <p className="text - gray - 300">Proven outcomes and detailed success stories. Coming soon.</p>;
+  </section>;
+  </Layout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
 export default /**
  * CaseStudiesPage - Function description
  */
@@ -744,6 +988,7 @@ return (
   </Layout>);
 }
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/case-studies.tsx
 import MainLayout from '../src/components/layout/MainLayout';
 
 const Page = () => {
@@ -756,6 +1001,94 @@ const Page = () => {
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Case Studies</h1>
           <p className="text-xl text-gray-600">Coming soon...</p>
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+=======
+import Head from 'next/head';
+
+export default function CaseStudies() {
+  const caseStudies = [
+    {
+      title: "AI-Powered E-commerce Platform",
+      client: "TechRetail Inc.",
+      industry: "E-commerce",
+      challenge: "Needed to increase conversion rates and personalize customer experience",
+      solution: "Implemented AI recommendation engine and dynamic pricing system",
+      results: ["40% increase in conversion rates", "25% boost in average order value", "60% improvement in customer satisfaction"],
+      image: "/api/placeholder/600/400"
+    },
+    {
+      title: "Healthcare Data Analytics Platform",
+      client: "MediCare Solutions",
+      industry: "Healthcare",
+      challenge: "Required real-time analysis of patient data for better treatment outcomes",
+      solution: "Built comprehensive data analytics platform with predictive modeling",
+      results: ["50% faster diagnosis times", "30% reduction in readmission rates", "95% data accuracy improvement"],
+      image: "/api/placeholder/600/400"
+    },
+    {
+      title: "Financial Risk Management System",
+      client: "SecureBank Corp",
+      industry: "Finance",
+      challenge: "Needed advanced fraud detection and risk assessment capabilities",
+      solution: "Developed AI-powered risk management system with real-time monitoring",
+      results: ["80% reduction in false positives", "45% decrease in fraud incidents", "99.9% system uptime"],
+      image: "/api/placeholder/600/400"
+    }
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful projects and see how we've helped businesses achieve their goals with AI and technology solutions." />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-b border-gray-800">
+          <div className="max-w-7xl mx-auto px-4 py-16">
+            <div className="text-center">
+              <h1 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Success Stories
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover how we've helped businesses transform their operations and achieve remarkable results 
+                with our AI and technology solutions.
+              </p>
+            </div>
+          </div>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies.tsx
+        </div>
+
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+export default Page;
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies.tsx
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
         </div>
       </div>
     </MainLayout>
@@ -764,6 +1097,7 @@ const Page = () => {
 
 export default Page;
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/case-studies.tsx
         {/* Case Studies */}
         <section id="case-studies" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -809,10 +1143,54 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <li key={resultIndex} className="flex items-center">
                             <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                             <span className="text-gray-700">{result}</span>
+=======
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <div className="space-y-16">
+            {caseStudies.map((study, index) => (
+              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+                  <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
+                    <span className="text-gray-400">Case Study Image</span>
+                  </div>
+                </div>
+                
+                <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
+                  <div className="space-y-6">
+                    <div>
+                      <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">{study.industry}</span>
+                      <h2 className="text-3xl font-bold mt-4 mb-2">{study.title}</h2>
+                      <p className="text-gray-400 text-lg">{study.client}</p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-xl font-bold mb-3">Challenge</h3>
+                      <p className="text-gray-300">{study.challenge}</p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-xl font-bold mb-3">Solution</h3>
+                      <p className="text-gray-300">{study.solution}</p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-xl font-bold mb-3">Results</h3>
+                      <ul className="space-y-2">
+                        {study.results.map((result, resultIndex) => (
+                          <li key={resultIndex} className="flex items-center text-gray-300">
+                            <svg className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            {result}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies.tsx
                           </li>
                         ))}
                       </ul>
                     </div>
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+                    
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/case-studies.tsx
                     <div className="flex items-center space-x-6 text-sm text-gray-500 mb-6">
                       <div className="flex items-center">
                         <Clock className="w-4 h-4 mr-1" />
@@ -902,4 +1280,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </>
   );
 }
+<<<<<<< HEAD:pages_backup/case-studies.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD:pages/case-studies.tsx
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/case-studies.tsx
+=======
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-t border-gray-800">
+          <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Success Story?</h2>
+            <p className="text-gray-300 mb-8">
+              Let's discuss how we can help your business achieve similar results.
+            </p>
+            <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:pages/case-studies.tsx
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages/case-studies.tsx

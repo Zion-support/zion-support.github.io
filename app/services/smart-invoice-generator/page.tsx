@@ -1,7 +1,16 @@
 export const metadata = {
+<<<<<<< HEAD
+  title: 'Smart Invoice Generator - Zion Tech Group',
+  description: 'Professional smart invoice generator solutions for your business needs.',
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
   title: "Smart Invoice Generator | Zion Tech Group",
   description:
     "Automate your invoicing process with AI-powered smart invoice generation, payment tracking, and financial analytics.",
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 };
 
 export default function SmartInvoiceGeneratorPage() {

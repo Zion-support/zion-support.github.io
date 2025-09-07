@@ -1,8 +1,349 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-  useEffect(() => {
+import { useState, useEffect  } from 'react';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { FilePlus, Loader2  } from 'lucide-react';
+import { ProjectCard  } from './ProjectCard';
+import { ProjectForm  } from './ProjectForm';
+import { PortfolioProject  } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+export function PortfolioBuilder() {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+import {useState, useEffect} from 'react';
+import {Card, CardContent} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {FilePlus, Loader2} from 'lucide-react';
+import {ProjectCard} from './ProjectCard';
+import {ProjectForm} from './ProjectForm';
+import {PortfolioProject} from '@/types/resume';
+import {usePortfolio} from '@/hooks/usePortfolio';
+<<<<<<< HEAD
+<<<<<<< HEAD
+export function PortfolioBuilder() {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import { useState, useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FilePlus, Loader2 } from "lucide-react";
+import { ProjectCard } from "./ProjectCard";
+import { ProjectForm } from "./ProjectForm";
+import { PortfolioProject } from "@/types/resume";
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from "react";"
+import { Card, CardContent } from "@/components/ui/card";"
+import { Button } from "@/components/ui/button";"
+import { FilePlus, Loader2 } from "lucide-react";"
+import { ProjectCard } from "./ProjectCard";"
+import { ProjectForm } from "./ProjectForm";"
+import { PortfolioProject } from "@/types/resume";"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import { usePortfolio } from "@/hooks/usePortfolio";
+export function PortfolioBuilder() {};
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+=======
+export function PortfolioBuilder() {;  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+export function PortfolioBuilder() {;  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { usePortfolio } from "@/hooks/usePortfolio";
+export function PortfolioBuilder() {
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  const [showAddProject, setShowAddProject] = useState(false);
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
+    null,
+  );
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+  useEffect(() => {}
     fetchProjects();
   }, [fetchProjects]);
 
+<<<<<<< HEAD
+  const handleAddSuccess = () => {}
+    setShowAddProject(false);
+    fetchProjects();
+  };
+
+  const handleEditSuccess = () => {}
+    setEditingProject(null);
+    fetchProjects();
+  };
+
+  const handleDeleteProject = async (projectId: string) => {}
+    const success = await deleteProject(projectId);
+    if (success) {}
+      fetchProjects();
+    }
+<<<<<<< HEAD
+  }
+  };
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  };
+
+<<<<<<< HEAD
+=======
+  };
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+import { useState, useEffect } from 'react',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { FilePlus, Loader2 } from 'lucide-react',;
+import { ProjectCard } from './ProjectCard',;
+import { ProjectForm } from './ProjectForm',;
+import { PortfolioProject } from '@/types/resume',;
+import { usePortfolio } from '@/hooks/usePortfolio',;
+export function PortfolioBuilder() {;
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),;
+  const [showAddProject, setShowAddProject] = useState(false),;
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),;
+  useEffect(() => {;
+    fetchProjects();
+  }, [fetchProjects]),;
+  const handleAddSuccess = () => {;
+    setShowAddProject(false),;
+    fetchProjects();
+  },;
+  const handleEditSuccess = () => {;
+    setEditingProject(null),;
+    fetchProjects();
+  },;
+  const handleDeleteProject = async (projectId: string) => {;
+    const success = await deleteProject(projectId),;
+    if (success) {;
+      fetchProjects();
+    }
+  },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  
+=======
+
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+  if (isLoading) {
+=======
+    if (isLoading) {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    if (isLoading) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  };
+
+  if (isLoading) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    return (
+      <div className="flex justify-center items-center h-64">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+        <div>
+          <h1 className="text-2xl font-bold">Portfolio Projects</h1>
+          <p className="text-muted-foreground">
+            Showcase your best work and projects
+          </p>
+        </div>
+        <Button
+          onClick={() => setShowAddProject(true)}
+          className="gap-2"
+          disabled={showAddProject |!!editingProject}
+        >
+          <FilePlus className="h-4 w-4" />
+          Add Project
+        </Button>
+      </div>
+
+      {/* Edit or Add Form */}
+      {(showAddProject |editingProject) && (
+        <Card>
+          <CardContent className="pt-6">
+            <h2 className="text-xl font-semibold mb-6">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              {editingProject ? "Edit Project" : "Add New Project"}
+            </h2>
+            <ProjectForm
+              project={editingProject |undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {
+                setShowAddProject(false);
+                setEditingProject(null);
+
+              {editingProject ? 'Edit Project' : 'Add New Project'}
+            </h2>;
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {useState, useEffect} from 'react';
+import {Card, CardContent} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {FilePlus, Loader2} from 'lucide-react';
+import {ProjectCard} from './ProjectCard';
+import {ProjectForm} from './ProjectForm';
+import {PortfolioProject} from '@/types/resume';
+import {usePortfolio} from '@/hooks/usePortfolio';
+export function PortfolioBuilder() {;
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+  const [showAddProject, setShowAddProject] = useState(false);
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null);
+
+  useEffect(() => {;
+    fetchProjects();
+  }, [fetchProjects]);
+
+  const handleAddSuccess = () => {;
+    setShowAddProject(false);
+    fetchProjects();
+  };
+
+  const handleEditSuccess = () => {;
+    setEditingProject(null);
+    fetchProjects();
+  };
+
+  const handleDeleteProject = async (projectId: string) => {;
+    const success = await deleteProject(projectId),;
+    if (success) {;
+      fetchProjects();
+    }
+  };
+
+  if (isLoading) {;
+    return (
+      <div className="flex justify-center items-center h-64">;
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+      </div>;
+    );
+  }
+
+  return (
+    <div className="space-y-6">;
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">;
+        <div>;
+          <h1 className="text-2xl font-bold">Portfolio Projects</h1>;
+          <p className="text-muted-foreground">Showcase your best work and projects</p>;
+        </div>;
+        <Button
+          onClick={() => setShowAddProject(true)} ;
+          className="gap-2";
+          disabled={showAddProject || !!editingProject}
+        >;
+          <FilePlus className="h-4 w-4" />;
+          Add Project;
+        </Button>;
+      </div>;
+
+      {/* Edit or Add Form */}
+      {(showAddProject || editingProject) && (;
+        <Card>;
+          <CardContent className="pt-6">;
+            <h2 className="text-xl font-semibold mb-6">;
+=======
+
+
+              {editingProject ? 'Edit Project' : 'Add New Project'}
+            </h2>;
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+              {editingProject ? "Edit Project" : "Add New Project"}
+            </h2>
+
+            <ProjectForm
+              project={editingProject || undefined}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               }}
             />;
           </CardContent>;
@@ -189,7 +530,16 @@ if ( {) {
                 </p>;
                 <Button;
                   on_click={() => setShowAddProject (true)}
+<<<<<<< HEAD
+<<<<<<< HEAD
                   className="mt-2";
+=======
+=======
+                  className="mt - 2";
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+                  className="mt-2";
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
                 >;
                   Add Your First Project;
@@ -197,6 +547,19 @@ if ( {) {
               </div>;
             </CardContent>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+          </Card>))}
+    </div>);
+}
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
           ;
         ;"
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;"
@@ -293,3 +656,4 @@ pr-12325
 }
 {editingProject ? "Edit Project" : "Add New Project"}
             </h2>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

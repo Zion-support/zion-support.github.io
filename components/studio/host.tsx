@@ -1,9 +1,120 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState } from 'react';
 
 type PersonaConfig = any;
 
+<<<<<<< HEAD
+  });
+  const [inviteeName, setInviteeName] = useState('');
+  const [inviteeBio, setInviteeBio] = useState('');
+=======
+    voice: 'Visionary''
+    language: 'English''
+    voice: 'Visionary','
+    language: 'English',;
+
+
+  });'
+  const [inviteeName, setInviteeName] = useState('');'
+  const [inviteeBio, setInviteeBio] = useState('');'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  const [topic, setTopic] = useState('');
+
+export default function StudioHostPage() { return null; }
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;'
+  const [inviteeName, setInviteeName] = useState('');'
+  const [inviteeBio, setInviteeBio] = useState('');'
+  const [topic, setTopic] = useState('');'
+  const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
+  const [operatorPrompt, setOperatorPrompt] = useState(
+    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
+  );
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+  const [generating, setGenerating] = useState(false);
+  const [episode, setEpisode] = useState<any>(null);
+  const [synthesizing, setSynthesizing] = useState(false);
+  const [publishing, setPublishing] = useState(false);
+<<<<<<< HEAD
+  const handleGenerate = async () => {
+    setGenerating(true);
+    try {
+      const res = await fetch('/api/podcast/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({
+          persona,
+          invitee: { name: inviteeName, bio: inviteeBio },
+          topic,
+          operatorPrompt,
+        }),
+      });
+      const data = await res.json();
+      setEpisode(data.episode);
+origin/cursor/automate-test-improve-and-merge-code-2533
+    } catch (e) {
+      console.error (e);
+=======
+    } catch (e) {}
+      console.error (e);'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      alert ('Failed to generate episode');
+    } finally {}
+      set_generating (false);
+    }
+
+  return ('
+    <div className='space-y-8'>;'
+      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
+'
+      <section className='space-y-3'>;'
+        <h2 className='text-xl font-semibold'>AI Persona</h2>;'
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+          <div>;'
+            <label className='block text-sm font-medium'>Voice</label>;
+<<<<<<< HEAD
+      setGenerating(false);
+    }
+  }
+  const handleSynthesize = async () => {
+    if (!episode?.id) return;
+    setSynthesizing(true);
+    try {
+      const res = await fetch('/api/podcast/synthesize', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify({ episodeId: episode.id, persona }),
+      });
+      const data = await res.json();
+      setEpisode(data.episode);
+    } catch (e) {
+      console.error(e);
+      alert('Failed to synthesize audio');
+    } finally {
+      setSynthesizing(false);
+    }
+  }
+  const handlePublishRss = async () => {
+    if (!episode?.id) return;
+    setPublishing(true);
+    try {
+const res = await fetch('/api/podcast/rss', { method: 'POST' });
+      await res.json();
+      alert('RSS feed updated. Platforms will pull on next refresh.');
+    } catch (e) {
+      console.error(e);
+      alert('Failed to update RSS');
+    } finally {
+      setPublishing(false);
+    }
+  }
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
 <div className='space-y-8'>
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
@@ -14,6 +125,9 @@ type PersonaConfig = any;
             <label className='block text-sm font-medium'>Voice</label>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <select
+=======
+            <select'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className='mt-1 w-full border rounded p-2'
               value={persona && persona.voice}
               onChange={e =>;
@@ -22,14 +136,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 ;
-  return (
-    <div className='space - y-8'>;
-      <h1 className='text - 3xl font - bold'>Podcast Studio Host</h1>;
-      <section className='space - y-3'>;
-        <h2 className='text - xl font - semibold'>AI Persona</h2>;
+  return ('
+    <div className='space - y-8'>;'
+      <h1 className='text - 3xl font - bold'>Podcast Studio Host</h1>;'
+      <section className='space - y-3'>;'
+        <h2 className='text - xl font - semibold'>AI Persona</h2>;'
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'>;
-          <div>;
+          <div>;'
             <label className='block text - sm font - medium'>Voice</label>;
+<<<<<<< HEAD
+            <select;'
+              className='mt - 1 w - full border rounded p - 2';
+              value={persona.voice}
+              on_change={e =>;
+                set_persona ({ ...persona, voice: e.target.value as any });
+              }
+            >;'
+              <option value='Visionary'>Visionary</option>;'
+              <option value='Grounded'>Grounded</option>;'
+              <option value='Technical'>Technical</option>;
+=======
 <div className='space-y-8' />
       <h1 className='text-3xl font-bold' />Podcast Studio Host</h1>
       <section className='space-y-3' />
@@ -62,12 +188,18 @@ className='mt-1 w-full border rounded p-2'
               <option value='Visionary' />Visionary</option>;
               <option value='Grounded' />Grounded</option>;
               <option value='Technical' />Technical</option>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </select>;
           </div>;
           <div />}
             />;
           </div>;
+<<<<<<< HEAD
+          <div>;'
+              value={persona && persona.cloneStyleText || ''}
+=======
           <div />value={persona && persona.cloneStyleText || ''}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               onChange={e =>;
 }
                 setPersona({ ...persona, cloneStyleText: e && e.target.value,}
@@ -75,18 +207,22 @@ className='mt-1 w-full border rounded p-2'
               }
             />          </div>;
         </div>;
-      </section>;
-      <section className='space-y-3'>;
-        <h2 className='text-xl font-semibold'>Episode Generator</h2>;
+      </section>;'
+      <section className='space-y-3'>;'
+        <h2 className='text-xl font-semibold'>Episode Generator</h2>;'
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>          </div>;
         </div>;
-      </section>;
-      <section className='space-y-3'>;
-        <h2 className='text-xl font-semibold'>Episode Generator</h2>;
+      </section>;'
+      <section className='space-y-3'>;'
+        <h2 className='text-xl font-semibold'>Episode Generator</h2>;'
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
-          <div>;
+          <div>;'
             <label className='block text-sm font-medium'>Invitee Name</label>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             />
           </div>
         </div>
@@ -99,6 +235,9 @@ className='mt-1 w-full border rounded p-2'
             <label className='block text-sm font-medium'>Invitee Name</label>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <input
+=======
+            <input'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               className='mt-1 w-full border rounded p-2'
 <section className='space-y-3' />
         <h2 className='text-xl font-semibold' />Episode Generator</h2>
@@ -112,67 +251,111 @@ className='mt-1 w-full border rounded p-2'
               onChange={e = /> setInviteeName(e && e.target.value,}
 }
             />;
+<<<<<<< HEAD
+          </div>;'
+          <div className='md:col-span-2'>;'
+            <label className='block text-sm font-medium'>Invitee Bio</label>;
+            <textarea'
+              className='mt-1 w-full border rounded p-2'
+=======
           </div>;
           <div className='md:col-span-2' />;
             <label className='block text-sm font-medium' />Invitee Bio</label>;
             <textarea;
               className='mt-1 w-full border rounded p-2';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               rows={3}
               value={inviteeBio}
               onChange={e = /> setInviteeBio(e && e.target.value)}
             />;
+<<<<<<< HEAD
+          </div>;'
+          <div className='md:col-span-3'>;'
+            <label className='block text-sm font-medium'>Topic</label>;
+            <input'
+              className='mt-1 w-full border rounded p-2'
+=======
           </div>;
           <div className='md:col-span-3' />;
             <label className='block text-sm font-medium' />Topic</label>;
             <input;
               className='mt-1 w-full border rounded p-2';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               value={topic}
               onChange={e = /> setTopic(e && e.target.value)}
             />;
+<<<<<<< HEAD
+          </div>;'
+          <div className='md:col-span-3'>;'
+            <label className='block text-sm font-medium'>Operator Prompt</label>;
+            <textarea'
+              className='mt-1 w-full border rounded p-2'
+=======
           </div>;
           <div className='md:col-span-3' />;
             <label className='block text-sm font-medium' />Operator Prompt</label>;
             <textarea;
               className='mt-1 w-full border rounded p-2';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               rows={3}
               value={operatorPrompt}
               onChange={e = /> setOperatorPrompt(e && e.target.value)}
             />;
           </div>;
         </div>;
+<<<<<<< HEAD
+        <button'
+          className='px-4 py-2 bg-blue-600 text-white rounded'
+          onClick={handleGenerate}'
+=======
 
         <button;
 className='px-4 py-2 bg-blue-600 text-white rounded'
           onClick={handleGenerate}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
-      <section className="space-y-3">;
-        <h2 className="text-xl font-semibold">AI Persona</h2>;
+      <section className="space-y-3">;"
+        <h2 className="text-xl font-semibold">AI Persona</h2>;"
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
-          <div>;
+          <div>;"
             <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>;
-            <select
+            <select"
               className="mt-1 w-full border rounded p-2"
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
+          <div>"
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>"
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
-          </div>
-          <div className="md:col-span-2">
-            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>
+          </div>"
+          <div className="md:col-span-2">"
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>"
             <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />
-          </div>
-          <div className="md:col-span-3">
-            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>
+          </div>"
+          <div className="md:col-span-3">"
+            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>"
             <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e.target.value)} />
-          </div>
-          <div className="md:col-span-3">
-            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>
+          </div>"
+          <div className="md:col-span-3">"
+            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>"
             <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
           </div>
+<<<<<<< HEAD
         </div>
         <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
           disabled={generating}
         >
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
+=======
+        </div>"
+        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          {generating ? 'Generating…' : 'Generate Episode'}
+        </button>
+      </section>
+      {episode && ("
+          <h2 className="text-xl font-semibold">Episode Draft</h2>"
+          <div className="border rounded p-4 space-y-3">"
+            <p className="text-sm text-gray-600">ID: {episode.id}</p>"
+=======
 
           disabled={generating}
          />
@@ -183,83 +366,84 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className="text-xl font-semibold">Episode Draft</h2>
           <div className="border rounded p-4 space-y-3">
             <p className="text-sm text-gray-600">ID: {episode.id}</p>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             <h3 className="text-lg font-bold">{episode.title}</h3>
-            <div>
-              <h4 className="font-semibold">Questions</h4>
+            <div>"
+              <h4 className="font-semibold">Questions</h4>"
               <ol className="list-decimal list-inside space-y-1">
               value={persona && persona.voice}
               onChange={(e) => setPersona({ ...persona, voice: e && e.target.value as any })}
-            >;
-              <option value="Visionary">Visionary</option>;
-              <option value="Grounded">Grounded</option>;
+            >;"
+              <option value="Visionary">Visionary</option>;"
+              <option value="Grounded">Grounded</option>;"
               <option value="Technical">Technical</option>;
             </select>;
           </div>;
-          <div>;
-            <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>;
+          <div>;"
+            <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>;"
             <input className="mt-1 w-full border rounded p-2" value={persona && persona.language} onChange={(e) => setPersona({ ...persona, language: e && e.target.value })} />;
           </div>;
-          <div>;
-            <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>;
+          <div>;"
+            <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>;'"
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona && persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e && e.target.value })} />;
           </div>;
         </div>;
       </section>;
-          <div>;
-            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>;
+          <div>;"
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>;"
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e && e.target.value)} />;
-          </div>;
-          <div className="md:col-span-2">;
-            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>;
+          </div>;"
+          <div className="md:col-span-2">;"
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>;"
             <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e && e.target.value)} />;
-          </div>;
-          <div className="md:col-span-3">;
-            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>;
+          </div>;"
+          <div className="md:col-span-3">;"
+            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>;"
             <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e && e.target.value)} />;
-          </div>;
-          <div className="md:col-span-3">;
-            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>;
+          </div>;"
+          <div className="md:col-span-3">;"
+            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>;"
             <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e && e.target.value)} />;
           </div>;
-        </div>;
-        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>;
+        </div>;"
+        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>;'
           {generating ? 'Generating…' : 'Generate Episode'}
         </button>;
       </section>;
-      {episode && (;
-        <section className='space-y-4'>;
-          <h2 className='text-xl font-semibold'>Episode Draft</h2>;
-          <div className='border rounded p-4 space-y-3'>;
-            <p className='text-sm text-gray-600'>ID: {episode && episode.id}</p>;
+      {episode && (;'
+        <section className='space-y-4'>;'
+          <h2 className='text-xl font-semibold'>Episode Draft</h2>;'
+          <div className='border rounded p-4 space-y-3'>;'
+            <p className='text-sm text-gray-600'>ID: {episode && episode.id}</p>;'
             <h3 className='text-lg font-bold'>{episode && episode.title}</h3>;
-            <div>;
-              <h4 className='font-semibold'>Questions</h4>;
-              <ol className='list-decimal list-inside space-y-1'>                {episode && episode.questions?.map((q: string, idx: number) => (        <section className="space-y-4">;
-          <h2 className="text-xl font-semibold">Episode Draft</h2>;
-          <div className="border rounded p-4 space-y-3">;
-            <p className="text-sm text-gray-600">ID: {episode && episode.id}</p>;
+            <div>;'
+              <h4 className='font-semibold'>Questions</h4>;'"
+              <ol className='list-decimal list-inside space-y-1'>                {episode && episode.questions?.map((q: string, idx: number) => (        <section className="space-y-4">;"
+          <h2 className="text-xl font-semibold">Episode Draft</h2>;"
+          <div className="border rounded p-4 space-y-3">;"
+            <p className="text-sm text-gray-600">ID: {episode && episode.id}</p>;"
             <h3 className="text-lg font-bold">{episode && episode.title}</h3>;
-            <div>;
-              <h4 className="font-semibold">Questions</h4>;
+            <div>;"
+              <h4 className="font-semibold">Questions</h4>;"
               <ol className="list-decimal list-inside space-y-1">;
                   <li key={idx}>{q}</li>;
                 {episode.audio.mp3Url && (
                   <a;
-                    href={episode.audio.mp3Url}
+                    href={episode.audio.mp3Url}'
                     className='text - blue - 600 underline';
                   >;
                     Download MP3;
                   </a>)}
                 {episode.audio.wav_url && (
                   <a;
-                    href={episode.audio.wav_url}
+                    href={episode.audio.wav_url}'
                     className='text - blue - 600 underline';
                   >;
                     Download WAV;
                   </a>)}
                 {episode.audio.mp4Url && (
                   <a;
-                disabled={publishing}
+                disabled={publishing}'
               >                {publishing ? 'Publishing…' : 'Update RSS'}
 <section className='space-y-4'>
           <h2 className='text-xl font-semibold'>Episode Draft</h2>
@@ -341,7 +525,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               </button>
             </div>
+<<<<<<< HEAD
             {episode.audio && (
+<<<<<<< HEAD
+<div className='flex gap-3'>
+=======
+            {episode.audio && ('
+              <div className='flex gap-3'>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                {episode.audio.mp3Url && (
+                  <a;
+                    href={episode.audio.mp3Url}'
+                    className='text-blue-600 underline'
+                  >
+                    Download MP3;
+                  </a>
+                )}
+                {episode.audio.wavUrl && (
+                  <a;
+                    href={episode.audio.wavUrl}'
+                    className='text-blue-600 underline'
+                  >
+                    Download WAV;
+                  </a>
+                )}
+                {episode.audio.mp4Url && (
+                  <a;
+                    href={episode.audio.mp4Url}'
+                    className='text-blue-600 underline'
+                  >
+<<<<<<< HEAD
+                    Download MP4
+                  </a>
+                )}
+              </div>
+=======
+                    Download MP4;
+                  </a>"
+                )}              </div>              <div className="flex gap-3">"
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}"
+                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}"
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
 <div className='flex gap-3' />
                 {episode.audio.mp3Url && (}
                   <a;}
@@ -366,6 +592,7 @@ href={episode.audio.mp3Url}
                   </a>;
                 )}
               </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             )}
           </div>;
         </section>;
@@ -378,9 +605,16 @@ href={episode.audio.mp3Url}
 ;
 
             {episode.audio && (
-
+'
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
             {episode.audio && (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

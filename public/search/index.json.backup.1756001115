@@ -140,6 +140,10 @@
     "h1": ""
   },
   {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-7e54
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "route": "/ai-seo-suite",
     "title": "AI-Powered SEO Suite | Zion Tech Group - Advanced SEO Tools & Analytics",
     "h1": "AI-Powered SEO Suite"
@@ -210,6 +214,7 @@
     "h1": "Automation Insights"
   },
   {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "route": "/autonomous-vehicle-ai-platform",
     "title": "{service.name} - Zion Tech Group",
     "h1": ""
@@ -580,11 +585,23 @@
     "h1": ""
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     "route": "/quantum-neural-network-platform",
     "title": "Quantum Neural Network Platform - Zion Tech Group",
     "h1": ""
   },
   {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-7e54
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    "h1": ""
+    "title": "Revolutionary 2025 Technology Services | Zion Tech Group",    "h1": ""
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "route": "/quantum-secure-cloud-infrastructure",
     "title": "",
     "h1": "Quantum-Secure Cloud Infrastructure 2045"
@@ -665,6 +682,7 @@
     "h1": ""
     "title": "Revolutionary 2025 Technology Services | Zion Tech Group",    "h1": ""
     "title": "Revolutionary 2025 Technology Services | Zion Tech Group",    "h1": ""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   },
   {
     "route": "/site-health",
@@ -3956,4 +3974,8 @@
     "title": "",
     "h1": "Founder Course: Launch Your Zion Instance"
   }
+<<<<<<< HEAD
 ]
+=======
+]
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

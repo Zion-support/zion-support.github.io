@@ -77,6 +77,10 @@ describe('/api/products API Endpoint', () => {
   describe('GET /api/products with fuzzy search', () => {
     it('should return products matching "gpt" with similarity >= 0.8', async () => {
       // 1. Mock database responses
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const mockRawResults = [{
           "id": 'product-gpt-high-score',
           "name_similarity": 0.9,
@@ -92,6 +96,12 @@ describe('/api/products API Endpoint', () => {
           "name_similarity": 0.82,
           "description_similarity": 0.85
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const mockRawResults = [
         {
           id: 'product-gpt-high-score',
@@ -109,6 +119,26 @@ describe('/api/products API Endpoint', () => {
           description_similarity: 0.85,
         },
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+=======
+      const mockRawResults = [{
+          "id": 'product-gpt-high-score',
+          "name_similarity": 0.9,
+          "description_similarity": 0.5
+        },
+        {
+          "id": 'product-other',
+          "name_similarity": 0.2,
+          "description_similarity": 0.1
+        },
+        {
+          "id": 'product-gpt-medium-score',
+          "name_similarity": 0.82,
+          "description_similarity": 0.85
+        }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       ];
       // Note: The API sorts by GREATEST(name_similarity, description_similarity) DESC
       // So, product-gpt-high-score (0.9) should come first, then product-gpt-medium-score (0.85)
@@ -202,12 +232,24 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       });
     });
   });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          "id"
+=======
+});
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
 
 
 
 
 
           "id"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 });
 
           "id"
@@ -223,6 +265,24 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
           "id"
 
+<<<<<<< HEAD
+});
+});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+main
+});
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
 });
 
@@ -241,3 +301,4 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   let req: ReturnType<typeof createRequest>;
   let res: ReturnType<typeof createResponse>;
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

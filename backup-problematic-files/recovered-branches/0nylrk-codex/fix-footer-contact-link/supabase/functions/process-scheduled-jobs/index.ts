@@ -237,6 +237,13 @@ async function processContentGeneration(supabase, contentType) {;
   }
 }}
 });
+<<<<<<< HEAD
+
+      {
+        method: &quot;POST&quot;,
+        headers: {
+
+=======
 async function processOnboardingReminder (supabase, userId, milestone, role) {
   try {
     // // // console.log(`Starting scheduled content generation for ${contentType}`),    
@@ -281,6 +288,7 @@ async function processContentGeneration(_supabase, _contentType) {_try {
     const _contentData = await response.json();
     
     
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {_// Get admin email from profiles
       const { data: adminProfiles} = await supabase
@@ -288,6 +296,19 @@ async function processContentGeneration(_supabase, _contentType) {_try {
         .select('email')
         .eq('roleadmin')
         .limit(1),
+<<<<<<< HEAD
+
+      if (adminProfiles && adminProfiles.length > 0) {
+        const adminEmail = adminProfiles[0].email,
+
+        // Send test newsletter to admin
+        await fetch(
+
+          {
+            method: &quot;POST&quot;,
+            headers: {
+
+=======
       
       if (adminProfiles && adminProfiles.length > 0) {
         const adminEmail = adminProfiles[0].email,
@@ -304,10 +325,18 @@ async function processContentGeneration(_supabase, _contentType) {_try {
               subject: contentData.subject,
               previewText: contentData.previewText,
               body: contentData.body,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               testMode: true,
               testEmail: adminEmail
             })}
         ),
+<<<<<<< HEAD
+
+        // Create notification for admin
+        await supabase.from('notifications').insert({
+          user_id: null, // System notification visible to admins
+
+=======
         
         // Create notification for admin
         await supabase.from('notifications').insert({
@@ -315,12 +344,20 @@ async function processContentGeneration(_supabase, _contentType) {_try {
           title: &quot;Newsletter Draft Ready&quot;,
           message: &quot;AI-generated newsletter draft has been sent to your email for review.&quot;,
           type: &quot;system&quot;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           read: false
         })
       }
     }
+<<<<<<< HEAD
+
+    return contentData
+  } catch (error) {
+
+=======
     
     return contentData
   } catch (error) {
     console.error(`Error processing ${contentType} generation:`, error)
   }}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

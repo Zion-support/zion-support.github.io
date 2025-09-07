@@ -1,24 +1,51 @@
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
 import { Check, X } from 'lucide-react'
 
 
 
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 
 import { Check, X } from 'lucide-react
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
 TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
+=======
 import React from "react","
 import { Button } from "@/components/ui/button","
 import { Check, X } from 'lucide-react''
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Check, X } from 'lucide-react'
 import {
   Table,
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+import { Check, X } from 'lucide-react'
+
+<<<<<<< HEAD
+=======
+=======
   TableBody,
   TableCell,
   TableHead,
@@ -78,6 +105,7 @@ import { Button } from '@/components/ui/button';
 import { Check, X } from 'lucide-react';
 import {  Table,  Table,;
   TableRow} from "@/components/ui/table",
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
 import { Badge } from "@/components/ui/badge",
 
 import { Badge } from "@/components/ui/badge",;
@@ -94,7 +122,276 @@ import {
 import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
   const plans = null;
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
+export function EnterprisePricingTable() {
+  const plans = [
+    {
+      name: "Teams",
+      price: "$599",
+      billing: "/month",
+      description: "Perfect for small teams",
+      users: "Up to 10 users",
+      popular: false,
+      features: [
+        { name: "Private hiring portal", included: true },
+        { name: "Dedicated talent pool", included: true },
+        { name: "Standard SLA (24h)", included: true },
+        { name: "Basic branding", included: true },
+        { name: "Admin dashboard", included: true },
+        { name: "Team collaboration", included: true },
+        { name: "API access", included: false },
+        { name: "Custom integrations", included: false },
+        { name: "Dedicated success manager", included: false }]},
+    {
+      name: "Business",
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD
+      price: "$1,999",      billing: "/month",
+=======
+=======
+      price: "$1,999";
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
 
+      billing: "/month",
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+      description: "Ideal for growing companies",
+      users: "Up to 50 users",
+      popular: true,
+      features: [
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD
+        { name: 'Private hiring portal', included: true }
+        { name: 'Dedicated talent pool', included: true }
+        { name: 'Enhanced SLA (8h)', included: true }
+        { name: 'Advanced branding', included: true }
+        { name: 'Admin dashboard', included: true }
+        { name: 'Team collaboration', included: true }
+        { name: 'API access', included: true }
+        { name: 'Custom integrations', included: false }
+        { name: 'Dedicated success manager', included: false }
+      ]
+    }
+    {
+      name: 'Enterprise'
+      price: 'Custom'
+      billing: ''
+      description: 'For large organizations'
+      users: 'Unlimited users'
+      popular: false
+<<<<<<< HEAD
+      features: [      <div className="container mx-auto max-w-7xl">
+=======
+      features: [
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
+
+        { name: "Private hiring portal", included: true },
+        { name: "Dedicated talent pool", included: true },
+        { name: "Enhanced SLA (8h)", included: true },
+        { name: "Advanced branding", included: true },
+        { name: "Admin dashboard", included: true },
+        { name: "Team collaboration", included: true },
+        { name: "API access", included: true },
+        { name: "Custom integrations", included: false },
+        { name: "Dedicated success manager", included: false }]},
+    {
+      name: "Enterprise",
+      price: "Custom",
+      billing: "",
+      description: "For large organizations",
+      users: "Unlimited users",
+      popular: false,
+      features: [
+
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+=======
+
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
+      <div className="container mx-auto max-w-7xl">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Check, X } from 'lucide-react';
+import {  Table,  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow,;
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+  TableRow} from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge";
+export function EnterprisePricingTable() {;
+  const plans = [;
+    {;
+      name: 'Teams',;
+      price: '$599',;
+      billing: '/month',,
+  description: 'Perfect for small teams',;
+      users: 'Up to 10 users',;
+      popular: false,;
+      features: [;
+        { name: 'Private hiring portal', included: true },;
+        { name: 'Dedicated talent pool', included: true },;
+        { name: 'Standard SLA (24h)', included: true },;
+        { name: 'Basic branding', included: true },;
+        { name: 'Admin dashboard', included: true },;
+        { name: 'Team collaboration', included: true },;
+        { name: 'API access', included: false },;
+        { name: 'Custom integrations', included: false },;
+        { name: 'Dedicated success manager', included: false },;
+      ],;
+    },;
+    {;
+      name: 'Business',;
+      price: '$1,999',;
+      billing: '/month',,
+  description: 'Ideal for growing companies',;
+      users: 'Up to 50 users',;
+      popular: true,;
+      features: [;
+        { name: 'Private hiring portal', included: true },;
+        { name: 'Dedicated talent pool', included: true },;
+        { name: 'Enhanced SLA (8h)', included: true },;
+        { name: 'Advanced branding', included: true },;
+        { name: 'Admin dashboard', included: true },;
+        { name: 'Team collaboration', included: true },;
+        { name: 'API access', included: true },;
+        { name: 'Custom integrations', included: false },;
+        { name: 'Dedicated success manager', included: false },;
+      ],;
+    },;
+    {;
+      name: 'Enterprise',;
+      price: 'Custom',;
+      billing: '',,
+  description: 'For large organizations',;
+      users: 'Unlimited users',;
+      popular: false,;
+      features: [;
+        { name: 'Private hiring portal', included: true },;
+        { name: 'Dedicated talent pool', included: true },;
+        { name: 'Premium SLA (1h)', included: true },;
+        { name: 'Full white labeling', included: true },;
+        { name: 'Admin dashboard', included: true },;
+        { name: 'Team collaboration', included: true },;
+        { name: 'API access', included: true },;
+        { name: 'Custom integrations', included: true },;
+        { name: 'Dedicated success manager', included: true },;
+      ],;
+    },;
+  ];
+
+  return (
+    <section id='pricing' className='py-20 px-4 md:px-6'>;
+      <div className='container mx-auto max-w-7xl'>;
+        <div className='text-center mb-12'>;
+          <h2 className='text-3xl md:text-4xl font-bold mb-4'>;
+            Enterprise Plans;
+          </h2>;
+          <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>            Choose the perfect plan for your team size and requirements;
+          </p>;
+        </div>;
+
+        <div className='overflow-x-auto'>;
+          <Table className='border rounded-lg'>    <section id="pricing" className="py-20 px-4 md:px-6">;
+      <div className="container mx-auto max-w-7xl">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>;
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;
+          </p>;
+        </div>;
+
+        <div className='overflow-x-auto'>;
+          <Table className='border rounded-lg'>;
+            <TableHeader>;
+              <TableRow>;
+                <TableHead className='w-[200px]'>Plan Features</TableHead>;
+                {plans && plans.map(plan => (;
+                  <TableHead key={plan && plan.name} className='text-center'>;
+                    <div className='flex flex-col items-center'>                <TableHead className="w-[200px]">Plan Features</TableHead>;
+                {plans && plans.map((plan,) => (;
+                  <TableHead key={plan && plan.name} className="text-center">;
+                    <div className="flex flex-col items-center">;
+                      {plan && plan.popular && (;
+                        <Badge className='mb-2 bg-zion-purple'>;
+                          Most Popular;
+                        </Badge>;
+                      )}
+                      <span className='font-bold text-xl'>{plan && plan.name}</span>;
+                      <div className='flex items-baseline mt-1'>;
+                        <span className='text-2xl font-bold'>{plan && plan.price}</span>;
+                        <span className='text-sm text-muted-foreground ml-1'>;
+                          {plan && plan.billing}
+                        </span>;
+                      </div>;
+                      <p className='text-sm text-muted-foreground mt-1'>;
+                        {plan && plan.description}
+                      </p>;
+                      <p className='text-sm font-medium mt-2'>{plan && plan.users}</p>                      <Button
+                        className={`mt-4 w-full ${plan && plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
+                        variant={plan && plan.popular ? 'default' : 'outline'}>;
+                        {plan && plan.name === 'Enterprise';
+                          ? 'Request Quote';
+                          : 'Get Started'}                      </Button>                      <p className="text-sm font-medium mt-2">{plan && plan.users}</p>;
+                      <Button
+                        className={`mt-4 w-full ${plan && plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
+                        variant = {plan && plan.popular ? 'default' : 'outline',}>;
+                        {plan && plan.name === 'Enterprise';
+                          ? 'Request Quote';
+                          : 'Get Started'}                        {plan && plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
+                      </Button>;
+                    </div>;
+                  </TableHead>;
+
+            Choose the perfect plan for your team size and requirements
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
+          </p>
+        </div>
+
+<<<<<<< HEAD
+=======
+
+        { name: 'Private hiring portal', included: true }
+        { name: 'Dedicated talent pool', included: true }
+        { name: 'Premium SLA (1h)', included: true }
+        { name: 'Full white labeling', included: true }
+        { name: 'Admin dashboard', included: true }
+        { name: 'Team collaboration', included: true }
+        { name: 'API access', included: true }
+        { name: 'Custom integrations', included: true }
+        { name: 'Dedicated success manager', included: true }
+      ]
+    }
+  ]
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
   return (
     <section id='pricing' className='py-20 px-4 md:px-6'>
       <div className='container mx-auto max-w-7xl'>
@@ -127,12 +424,28 @@ export function EnterprisePricingTable() {
                       <div className='flex items-baseline mt-1'>
                         <span className='text-2xl font-bold'>{plan.price}</span>
                         <span className='text-sm text-muted-foreground ml-1'>
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
                           {plan.billing}
                         </span>
                       </div>
                       <p className='text-sm text-muted-foreground mt-1'>
                         {plan.description}
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD
+
+                      </Button>
+                    </div>
+                  </TableHead>
+                ))}      </div>
+=======
+          </p>
+        </div>
+=======
 
 
 
@@ -185,6 +498,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
 
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
 
                       </p>
                       <p className='text-sm font-medium mt-2'>{plan.users}</p>
@@ -200,6 +514,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </TableHead>
                 ))}
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
+
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
               </TableRow>;
             </TableHeader>;
             <TableBody>;
@@ -250,11 +578,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="mt-8 text-center text-sm text-muted-foreground">"
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
       </div>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     </section>
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
       </div>;
     </section>;
-  );
+  )
 };
               </TableRow>;
             </TableHeader>;
@@ -275,9 +617,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </TableRow>
                 </TableRow>;
               ))}
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD
+
             </TableBody>;
           </Table>;
         </div>;
+
+=======
+            </TableBody>;
+          </Table>;
+        </div>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
         <div className='mt-8 text-center text-sm text-muted-foreground'>;
           All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated;
           support        </div>;
@@ -291,6 +643,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </section>;
   );
 }
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
+=======
           All plans include SSL security, 99.9% uptime SLA, and dedicated support;
         </div>;
       </div>;
@@ -298,17 +656,172 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
 
   );
 }
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from 'lucide-react';
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+import {  Table,  Table,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
 import {  Table,  Table,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+export function EnterprisePricingTable() {
+  const plans = [
+    {
+      name: "Teams",
+      price: "$599",
+      billing: "/month",
+      description: "Perfect for small teams",
+      users: "Up to 10 users",
+      popular: false,
+      features: [
+        { name: "Private hiring portal", included: true },
+        { name: "Dedicated talent pool", included: true },
+        { name: "Standard SLA (24h)", included: true },
+        { name: "Basic branding", included: true },
+        { name: "Admin dashboard", included: true },
+        { name: "Team collaboration", included: true },
+        { name: "API access", included: false },
+        { name: "Custom integrations", included: false },
+        { name: "Dedicated success manager", included: false }]},
+    {
+      name: "Business",
+      price: "$1,999",
+      billing: "/month",
+      description: "Ideal for growing companies",
+      users: "Up to 50 users",
+      popular: true,
+      features: [
+        { name: "Private hiring portal", included: true },
+        { name: "Dedicated talent pool", included: true },
+        { name: "Enhanced SLA (8h)", included: true },
+        { name: "Advanced branding", included: true },
+        { name: "Admin dashboard", included: true },
+        { name: "Team collaboration", included: true },
+        { name: "API access", included: true },
+        { name: "Custom integrations", included: false },
+        { name: "Dedicated success manager", included: false }]},
+    {
+      name: "Enterprise",
+      price: "Custom",
+      billing: "",
+      description: "For large organizations",
+      users: "Unlimited users",
+      popular: false,
+      features: [
+        { name: "Private hiring portal", included: true },
+        { name: "Dedicated talent pool", included: true },
+        { name: "Premium SLA (1h)", included: true },
+        { name: "Full white labeling", included: true },
+        { name: "Admin dashboard", included: true },
+        { name: "Team collaboration", included: true },
+        { name: "API access", included: true },
+        { name: "Custom integrations", included: true },
+        { name: "Dedicated success manager", included: true }]}],
+
+  return (
+    <section id="pricing" className="py-20 px-4 md:px-6">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Choose the perfect plan for your team size and requirements
+          </p>
+        </div>
+
+        <div className="overflow-x-auto">
+          <Table className="border rounded-lg">
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-[200px]">Plan Features</TableHead>
+                {plans.map((plan) => (
+                  <TableHead key={plan.name} className="text-center">
+                    <div className="flex flex-col items-center">
+                      {plan.popular && (
+                        <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Check, X } from 'lucide-react';
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+export function EnterprisePricingTable() {;
+  const plans = [;
+    {;
+      name: "Teams",;
+      price: "$599",;
+      billing: "/month",;
+      description: "Perfect for small teams",;
+      users: "Up to 10 users",;
+      popular: false,;
+      features: [;
+        { name: "Private hiring portal", included: true },;
+        { name: "Dedicated talent pool", included: true },;
+        { name: "Standard SLA (24h)", included: true },;
+        { name: "Basic branding", included: true },;
+        { name: "Admin dashboard", included: true },;
+        { name: "Team collaboration", included: true },;
+        { name: "API access", included: false },;
+        { name: "Custom integrations", included: false },;
+        { name: "Dedicated success manager", included: false }]},;
+    {;
+      name: "Business",;
+      price: "$1,999",;
+      billing: "/month",;
+      description: "Ideal for growing companies",;
+      users: "Up to 50 users",;
+      popular: true,;
+      features: [;
+        { name: "Private hiring portal", included: true },;
+        { name: "Dedicated talent pool", included: true },;
+        { name: "Enhanced SLA (8h)", included: true },;
+        { name: "Advanced branding", included: true },;
+        { name: "Admin dashboard", included: true },;
+        { name: "Team collaboration", included: true },;
+        { name: "API access", included: true },;
+        { name: "Custom integrations", included: false },;
+        { name: "Dedicated success manager", included: false }]},;
+    {;
+      name: "Enterprise",;
+      price: "Custom",;
+      billing: "",;
+      description: "For large organizations",;
+      users: "Unlimited users",;
+      popular: false,;
+      features: [;
+        { name: "Private hiring portal", included: true },;
+        { name: "Dedicated talent pool", included: true },;
+        { name: "Premium SLA (1h)", included: true },;
+        { name: "Full white labeling", included: true },;
+        { name: "Admin dashboard", included: true },;
+        { name: "Team collaboration", included: true },;
+        { name: "API access", included: true },;
+        { name: "Custom integrations", included: true };
+        { name: "Dedicated success manager", included: true }]}];
+  return (;
+    <section id="pricing" className="py-20 px-4 md:px-6">;
+      <div className="container mx-auto max-w-7xl">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>;
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;
+            Choose the perfect plan for your team size and requirements;
+=======
   TableRow,
 } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -458,19 +971,26 @@ pr-12325
             Enterprise Plans;
           </h2>;
           <p className='text - xl text - muted - foreground max - w-2xl mx - auto'>            Choose the perfect plan for your team size and requirements;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
           </p>;
         </div>;
-        <div className='overflow - x-auto'>;
-          <Table className='border rounded - lg'>    <section id="pricing" className="py - 20 px - 4 md:px - 6">;
-      <div className="container mx - auto max - w-7xl">;
-        <div className="text - center mb - 12">;
-          <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">Enterprise Plans</h2>;
-          <p className="text - xl text - muted - foreground max - w-2xl mx - auto">;
-          </p>;
-        </div>;
-        <div className='overflow - x-auto'>;
-          <Table className='border rounded - lg'>;
+        <div className="overflow-x-auto">;
+          <Table className="border rounded-lg">;
             <TableHeader>;
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+              <TableRow>;
+                <TableHead className="w-[200px]">Plan Features</TableHead>;
+                {plans.map((plan) => (;
+                  <TableHead key={plan.name} className="text-center">;
+                    <div className="flex flex-col items-center">;
+                      {plan.popular && (;
+                        <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>;
+                      )}
+                      <span className="font-bold text-xl">{plan.name}</span>;
+                      <div className="flex items-baseline mt-1">;
+                        <span className="text-2xl font-bold">{plan.price}</span>;
+                        <span className="text-sm text-muted-foreground ml-1">;
+=======
               <TableRow>;,
                 <TableHead className='w-[200px]'>Plan Features</TableHead>;
                 {plans.map (plan => (
@@ -507,12 +1027,53 @@ pr-12325
                       <div className='flex items - baseline mt - 1'>;
                         <span className='text - 2xl font - bold'>{plan.price}</span>;
                         <span className='text - sm text - muted - foreground ml - 1'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
                           {plan.billing}
                         </span>;
                       </div>;
-                      <p className='text - sm text - muted - foreground mt - 1'>;
+                      <p className="text-sm text-muted-foreground mt-1">;
                         {plan.description}
                       </p>;
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+                      <p className="text-sm font-medium mt-2">{plan.users}</p>;
+                      <Button;
+                        className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
+                        variant={plan.popular ? 'default' : 'outline'}
+                      >
+                        {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
+                      </Button>
+                    </div>
+                  </TableHead>
+                ))}
+              </TableRow>;
+            </TableHeader>;
+            <TableBody>;
+<<<<<<< HEAD
+              {(plans[0]?.features || []).map((feature, index) => (;
+                <TableRow key={feature.name}>;
+                  <TableCell className="font-medium">{feature.name}</TableCell>;
+                  {plans.map((plan) => (;
+                    <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;
+                      {plan.features[index]?.included ? (;
+                        <Check className="h-5 w-5 text-green-500 mx-auto" />;
+                      ) : (;
+                        <X className="h-5 w-5 text-muted-foreground mx-auto" />;
+                      )}
+                    </TableCell>;
+                  ))}
+                </TableRow>;
+              ))}
+            </TableBody>;
+          </Table>;
+        </div>;
+        <div className="mt-8 text-center text-sm text-muted-foreground">;
+          All plans include SSL security, 99.9% uptime SLA, and dedicated support;
+        </div>;
+      </div>;
+    </section>;
+  );
+=======
+=======
                       <p className='text - sm font - medium mt - 2'>{plan.users}</p>                      <Button;
                         className={`mt - 4 w - full ${plan.popular ? 'bg - zion - purple hover:bg - zion - purple / 90' : ''}`}`
                         variant={plan.popular ? 'default' : 'outline'}'
@@ -533,6 +1094,7 @@ pr-12325
               </TableRow>;
             </TableHeader>;
             <TableBody>;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
               {(plans[0]?.features || []).map ((feature, index, ) => (
                 <TableRow key={feature.name}>;
                   <TableCell className='font - medium'>{feature.name}</TableCell>;
@@ -562,6 +1124,14 @@ pr-12325
         </div>;
       </div>;
     </section>);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          All plans include SSL security, 99.9% uptime SLA, and dedicated support;
+        </div>;
+      </div>;
+    </section>;
+  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 ;)))]]
         <div className="mt-8 text-center text-sm text-muted-foreground">;
@@ -573,6 +1143,20 @@ pr-12325
 }
 ;
 ;
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx
             </TableBody>
           </Table>
         </div>
@@ -585,7 +1169,14 @@ pr-12325
     </section>
   );
 }
+<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD:src_backup/components/enterprise/EnterprisePricingTable.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/enterprise/EnterprisePricingTable.tsx
+=======
                       <p className='text - sm text - muted - foreground mt - 1'>;
                       <p className='text - sm font - medium mt - 2'>{plan.users}</p>                      <Button;`;
                         className={`mt - 4 w - full ${plan.popular ? 'bg - zion - purple hover:bg - zion - purple / 90' : }`}
@@ -615,3 +1206,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }        <div className="mt - 8 text - center text - sm text - muted - foreground">;"
     </section>);"`;
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:src/components/enterprise/EnterprisePricingTable.tsx

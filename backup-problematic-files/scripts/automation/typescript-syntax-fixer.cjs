@@ -21,18 +21,82 @@ class TypeScriptSyntaxFixer {}
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
+<<<<<<< HEAD
+    runTypeScriptCheck() {}
+        this.log('Running TypeScript type check...');
+        
+        try {}
+            const result = execSync('npm run type-check', { })
+<<<<<<< HEAD
+                "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+            };);
+            
+            this.log('TypeScript type check passed');
+            return {;}
+                "status": 'success',
+                "output": result,
+                "errors": 0;
+            }} catch (error) {}
+            this.log(`TypeScript type check "failed": ${error.message}`);
+            return {;}
+                "status": 'failed',
+                "output": error.stdout || error.message,
+                "errors": this.extractErrorCount(error.stdout || error.message);
+=======
     runTypeScriptCheck() {}"
 
                 "errors": this.extractErrorCount(error.stdout || error.message);"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             }};
     extractErrorCount(output) {}
         const errorMatch = output.match(/(\d+)\s+error/;i;);
         return errorMatch ? parseInt(errorMatch[1]) : 0};
+<<<<<<< HEAD
+    runESLintFix() {}
+        this.log('Running ESLint with auto-fix...');
+        
+        try {}
+            const result = execSync('npm run "lint": fix', { })
+<<<<<<< HEAD
+                "cwd": this.projectRoot,
+=======
+                "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+            };);
+            
+            this.log('ESLint auto-fix completed');
+            return {;}
+                "status": 'success',
+                "output": result,
+                "fixed": true;
+            }} catch (error) {}
+            this.log(`ESLint auto-fix "failed": ${error.message}`);
+            return {;}
+                "status": 'failed',
+                "output": error.stdout || error.message,
+                "fixed": false;
+            }};
+    };
+    findTypeScriptFiles() {}
+        this.log('Finding TypeScript files...');
+        
+        const files = [];
+        const extensions = ['.ts', '.tsx'];
+        
+=======
     runESLintFix() {}"
 
                 "fixed": false;"
     findTypeScriptFiles() {}"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
@@ -93,5 +157,19 @@ class TypeScriptSyntaxFixer {}
     const fixer = new TypeScriptSyntaxFixer) {}
     const fixer = new TypeScriptSyntaxFixer}(;);
     fixer.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = TypeScriptSyntaxFixer;
+module.exports = TypeScriptSyntaxFixer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 module.exports = TypeScriptSyntaxFixer;
 "`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

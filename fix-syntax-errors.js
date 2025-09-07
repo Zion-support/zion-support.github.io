@@ -320,7 +320,10 @@ if (&&) {$2;}
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }},
 ,
 // Run all fixes,
@@ -556,5 +559,9 @@ const fs = require('fs')const path  = require('path')console.log('🔧 Fixing sy
 };
 
 main();
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
  // Mock window.scrollTo global.window.scrollTo = vi.fn (), // vi should be globally available // Ensure React Testing Library cleans up and mocks are restored between tests // ----------------------------------------------------------------------------- // Jest-compatibility shim ------------------------------------------------------ // ----------------------------------------------------------------------------- // A lot of legacy test files still call `jest.fn () `, `jest.mock () ` etc. Rather // than refactor them all at once we map those calls to Vitest's equivalent // (`vi`) . The shim only runs in the test environment and has no effect on // production bundles. // deliberately attaching to global for test environment setup // We expose it so imports compile even if we don't use it. SnapshotSerializer: () => {
   
 }
@@ -5,6 +8,7 @@ import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
 import { vi, afterEach } from 'vitest';
 ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {;
   observe() { /* do nothing */ }
@@ -22,11 +26,22 @@ afterEach(() => {;
   cleanup();
   vi.restoreAllMocks(); // Changed from jest to vi;
 });
-;
+<<<<<<< HEAD
+
 // -----------------------------------------------------------------------------;
 // Jest-compatibility shim ------------------------------------------------------;
 // -----------------------------------------------------------------------------;
 // A lot of legacy test files still call `jest.fn()`, `jest.mock()` etc.  Rather;
+=======
+;
+// -----------------------------------------------------------------------------;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Jest-compatibility shim ------------------------------------------------------;
+// -----------------------------------------------------------------------------;
+// A lot of legacy test files still call `jest.fn()`, `jest.mock()` etc.  Rather;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // than refactor them all at once we map those calls to Vitest's equivalent;
 // (`vi`).  The shim only runs in the test environment and has no effect on;
 // production bundles.;
@@ -39,6 +54,10 @@ afterEach(() => {;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any;
 (globalThis as any).jest = {;
   // Core mocking utilities;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   fn:vi.fn.bind(vi);
   mock:vi.mock.bind(vi);
   spyOn:vi.spyOn.bind(vi);
@@ -52,8 +71,12 @@ afterEach(() => {;
   restoreAllMocks:vi.restoreAllMocks.bind(vi);
   clearAllMocks:vi.clearAllMocks.bind(vi);
   // Snapshot placeholder (no-op) – Vitest has its own snapshot system.;
+<<<<<<< HEAD
+=======
+=======
   // We expose it so imports compile even if we don't use it.;
    ;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   fn:vi.fn.bind(vi),;
   mock:vi.mock.bind(vi),;
   spyOn:vi.spyOn.bind(vi),;
@@ -67,6 +90,7 @@ afterEach(() => {;
   restoreAllMocks:vi.restoreAllMocks.bind(vi),;
   clearAllMocks:vi.clearAllMocks.bind(vi),;
   // Snapshot placeholder (no-op)  Vitest has its own snapshot system.;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // We expose it so imports compile even if we don't use it.;
   SnapshotSerializer:() => {}};
 export default function Setup({ }: SetupProps) {
@@ -76,8 +100,15 @@ export default function Setup({ }: SetupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 }
 </div>
       <h1>Setup</h1>
       <p>This component is currently under development.</p>
     </div>)`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

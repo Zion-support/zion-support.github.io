@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?[^\n]+/g, '')
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+    .replace(/^=======$/gm, '')
+    .replace(/^[^\n]+$/gm, '');
+=======
+    .replace(/<<<<<<< [^\n]+[\s\S]*?
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+    .replace(/^
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Function to clean common syntax errors;)
 function cleanSyntaxErrors(content) {
@@ -32,14 +46,57 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     let cleaned = cleanMergeConflicts(content);
     cleaned = cleanSyntaxErrors(cleaned);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+    if (cleaned !== content) {
+      fs.writeFileSync(filePath, cleaned);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.log(`Error processing ${filePath}: ${error.message}`);
+    return false;
+  }
+}
 
+// Function to recursively process directory
+function processDirectory(dirPath) {
+  let processedCount = 0;
+// Function to recursively find all files with merge conflicts
+function findConflictedFiles(dir, conflictedFiles = []) {
+  const files = fs.readdirSync(dir);
+
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findConflictedFiles(filePath, conflictedFiles);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      const content = fs.readFileSync(filePath, 'utf8');
+  content = content.replace(/[a-f0-9]+\n?/g, '');
+  content = content.replace(/origin\/[^\n]+\n?/g, '');
+  content = content.replace(/ursor\/[^\n]+\n?/g, '');
+=======
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
 
   content = content.replace(/
+<<<<<<< HEAD
+  content = content.replace(/
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+  
+  // Clean up any remaining artifacts
+=======
   // Clean up any remaining artifacts;)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
   // Remove any remaining conflict markers;
 

@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:components/ui/UltraFuturisticBackground.tsx
+<<<<<<< HEAD
+
+;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/ui/UltraFuturisticBackground.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 import React from 'react';
 
 ;

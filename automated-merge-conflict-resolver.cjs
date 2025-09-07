@@ -1,7 +1,15 @@
 
 const { execSync } = require('child_process');
 console.log('🔧 Automated Merge Conflict Resolver');
+<<<<<<< HEAD
+<<<<<<< HEAD
+console.log('==');
+ursor/fix-lint-push-and-merge-to-main-28da
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
 // Strategy for resolving conflicts;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const conflictResolutionStrategy = {
   // For pages, prefer the newer version (HEAD)

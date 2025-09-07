@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 import React from "react";""
 import { Star } from 'lucide-react';
@@ -29,11 +33,61 @@ export const CommunityTrust:React.FC = () => {;
               <div className="text-3xl md: text-4xl font-bold text-zion-cyan mb-2">{stat.value;}</div>;""
               <div className="text-zion-slate-light">{stat.label}</div>;")
             </div>;          ))}
+<<<<<<< HEAD
+        </div>;
+        ;
+        {/* Rating display */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
+          <div className="flex justify-center mb-4">;
+            {[1, 2, 3, 4, 5].map((star) => (;
+              <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />;
+            ))}
+          </div>;
+          <blockquote className="text-center text-lg text-white italic mb-4">;
+            "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere.";
+          </blockquote>;
+          <div className="text-center">;
+            <div className="font-semibold text-zion-cyan">Sarah Johnson</div>;
+            <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>;
+  ),;
+},; import {;
+  {;
+  {;
+  Star ;
+}from 'lucide-react' export const CommunityTrust: React.FC = () => {;
+  //Stats display with social proof const stats = [ ];
+:temp_broken_files/mobile-app/CommunityTrust.tsx
+=======
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;"
           <div className="flex justify-center mb-4">;"
               <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 }</div>) ) ;
+<<<<<<< HEAD
+}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
+};"'"
+}</div>) ) ;
+}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
+};
+<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/CommunityTrust.tsx
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/CommunityTrust.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/CommunityTrust.tsx
+=======
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) 
 };"'"
 }</div>) ) ;
@@ -41,6 +95,9 @@ export const CommunityTrust:React.FC = () => {;
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/CommunityTrust.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
           <blockquote className="text-center text-lg text-white italic mb-4">;"
 </blockquote>
           </blockquote>;"
@@ -53,3 +110,4 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/CommunityTr
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;"
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;""
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

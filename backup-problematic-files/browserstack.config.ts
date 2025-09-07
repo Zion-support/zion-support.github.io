@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { defineConfig, devices } from '@playwright/test';
+=======
+<<<<<<< HEAD
+=======
+import { defineConfig, devices } from '@playwright/test';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { defineConfig, devices } from '@playwright/test';
 ;
 export default defineConfig({;
@@ -40,7 +48,21 @@ export default defineConfig({;
     ['list'];
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 });import { defineConfig, devices } from "@playwright/test";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { defineConfig, devices } from '@playwright/test';
+=======
+import { defineConfig, devices } from "@playwright/test";
+>>>>>>> 43ad6f92a8904cde8bad8d22878159f38917cf55
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
+
+    trace: 'on-first-retry'
+=======
+=======
+import { defineConfig, devices } from '@playwright/test';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
@@ -50,14 +72,25 @@ export default defineConfig({
     trace: 'on-first-retry'
     baseURL: process.env.PLAYWRIGHT_BASE_URL || "http://localhost:3000",
     trace: "on-first-retry",
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
   projects: [
     {
       name: "Desktop Chrome",
       use: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    {
+      name: "Mobile Safari",
+      use: {
+
+=======
+=======
         browserName: 'chromium',
         channel: 'chrome'
       }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         browserName: "chromium",
         channel: "chrome",
       },
@@ -110,6 +143,9 @@ export default defineConfig({
     ["html", { outputFolder: "playwright-logs/html-report", open: "never" }],
   ],
 });
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 import { defineConfig, devices } from "@playwright/test";"
 export default defineConfig({"
   testDir: "tests/e2e","
@@ -139,3 +175,4 @@ export default defineConfig({"
   ],)
 });
 "
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

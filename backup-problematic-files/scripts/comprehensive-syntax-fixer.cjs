@@ -38,9 +38,19 @@
   // Fix common syntax errors;
   fixSyntaxErrors(content) {
     let fixed = content;
+<<<<<<< HEAD
+    
+    // Fix merge conflicts by keeping the HEAD version
+<<<<<<< HEAD
+    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
+    // Fix merge conflicts by keeping the HEAD version
+=======
+
+=======
     // Fix merge conflicts by keeping the HEAD version;
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n;
     // Fix merge conflicts by keeping the HEAD version;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     fixed = fixed.replace(/
     // Fix common syntax patterns;)"
 
@@ -286,3 +296,22 @@ class ComprehensiveSyntaxFixer {}
       fixedFileList: this.fixedFiles,
       errorList: this.errors;
 
+<<<<<<< HEAD
+    const reportPath = 'syntax-fix-report.json';
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`📊 Report saved to ${reportPath}`);
+  };
+};
+// Run if called directly;
+if (require.main === module) {}
+  const fixer = new ComprehensiveSyntaxFixer();
+  fixer.fixAll().then(() => {}
+    console.log('🎉 Comprehensive syntax fixing completed!');
+    process.exit(0);
+  }
+});
+};
+module.exports = ComprehensiveSyntaxFixer;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

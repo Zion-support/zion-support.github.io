@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import { useState, useEffect } from "react",;
+import { useNavigate, useLocation } from "react-router-dom",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { useForm } from "react-hook-form",;
+import { z } from "zod",;
+import { LockKeyhole } from "lucide-react",;
+;
+import { supabase } from "@/integrations/supabase/client",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+=======
 import { useState, useEffect } from "react";""
 import { useNavigate, useLocation } from "react-router-dom";""
 import { zodResolver } from "@hookform/resolvers/zod";""
@@ -9,6 +25,7 @@ import { LockKeyhole } from "lucide-react";"
 import { supabase } from "@/integrations/supabase/client";""
 import { Button } from "@/components/ui/button";""
 import { Input } from "@/components/ui/input";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {;
   Form,;
   FormControl,;
@@ -60,10 +77,18 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,;
 ;
   // Form submission handler;
   const onSubmit = async (data:UpdatePasswordFormValues) => {;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (!accessToken) {;
       setError("No access token found. Please request a new password reset link."),;
       return;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 ;
     setIsLoading(true),;
     try {;
@@ -109,8 +134,12 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,;
   },;
 ;
   return (;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
 
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>;
       <Header />;
 "
@@ -125,6 +154,25 @@ pr-12325
               <p className="mt-2 text-sm text-zion-slate-light">;"
 </p>
               </p>;
+<<<<<<< HEAD
+            </div>;
+<<<<<<< HEAD
+
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            <div className="bg-zion-blue-dark rounded-lg p-6">;
+              {error && (;
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
+                  <p className="text-sm">{error}</p>;
+<<<<<<< HEAD
+
+=======
+                  <Button ;
+                    className="mt-3 text-xs";
+                    variant="outline";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
             </div>;"
             <div className="bg-zion-blue-dark rounded-lg p-6">;"
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;"
@@ -132,26 +180,153 @@ pr-12325
                   <Button ;"
                     className="mt-3 text-xs";""
                     variant="outline";")"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                     onClick={() => navigate('/forgot-password')}
 
                 </div>;
+<<<<<<< HEAD
+              )}
+<<<<<<< HEAD
+
+=======
+;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              {success ? (;
+                <div className="text-center py-8">;
+                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;
+                    <LockKeyhole className="h-6 w-6 text-zion-purple" />;
+                  </div>;
+                  <h3 className="text-lg font-medium text-white">Password updated</h3>;
+                  <p className="mt-2 text-sm text-zion-slate-light">;
+                    Your password has been successfully updated.;
+                  </p>;
+                  <p className="mt-2 text-sm text-zion-slate-light">;
+                    Redirecting you to login...;
+                  </p>;
+                </div>;
+<<<<<<< HEAD
+
+=======
+              ) :(;
+=======
                 <div className="text-center py-8">;"
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">;"
                     <LockKeyhole className="h-6 w-6 text-zion-purple" />;"
 
                   <h3 className="text-lg font-medium text-white">Password updated</h3>;""
                   </p>;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <Form {...form}>;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;"
 </form>
                     <FormField;
+<<<<<<< HEAD
+                      control={form.control}
+                      name="password";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
                       control={form.control}"
                       name="password";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                       render={({ field }) => (;
 
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">New Password;"
                           <FormControl>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+                            <Input;
+                              type="password";
+                              className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
+                              placeholder="";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                              disabled={isLoading}
+                              {...field}
+                            />;
+                          </FormControl>;
+                          <FormMessage className="text-red-400" />;
+                        </FormItem>;
+                      )}
+                    />;
+<<<<<<< HEAD
+
+=======
+;
+                    <FormField;
+                      control={form.control}
+                      name="confirmPassword";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                      render={({ field }) => (;
+                        <FormItem>;
+                          <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
+                          <FormControl>;
+<<<<<<< HEAD
+
+=======
+                            <Input;
+                              type="password";
+                              className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                              disabled={isLoading}
+                              {...field}
+                            />;
+                          </FormControl>;
+                          <FormMessage className="text-red-400" />;
+                        </FormItem>;
+                      )}
+                    />;
+<<<<<<< HEAD
+
+=======
+;
+                    <Button;
+                      type="submit";
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+                      disabled={isLoading || !accessToken}
+                    >;
+                      {isLoading ? "Updating..." :"Update Password"}
+                    </Button>;
+;
+                    <div className="text-center">;
+                      <Button;
+                        variant="link";
+                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0";
+                        onClick={() => navigate("/login")}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                        type="button";
+                      >;
+                        Back to login;
+                      </Button>;
+                    </div>;
+                  </form>;
+<<<<<<< HEAD
+
+=======
+                </Form>;
+              )}
+            </div>;
+          </div>;
+        </div>;
+        <div className="hidden lg:block relative w-0 flex-1">;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
+            <div className="flex flex-col justify-center items-center h-full px-8">;
+              <div className="max-w-md text-center">;
+                <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;
+                <p className="text-lg text-white/80">;
+<<<<<<< HEAD
+
+=======
+                  Set a strong password to secure your account and continue your journey in the Zion marketplace.;
+                </p>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+=======
 
                             <Input;"
                               type="password";""
@@ -189,6 +364,7 @@ pr-12325
               <div className="max-w-md text-center">;"
                 <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;""
                 <p className="text-lg text-white/80">;"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Footer />;
 
     </>;
@@ -233,6 +409,19 @@ setTimeout ( () => {
 }finally {
   // TODO: Implement
   setIsLoading (false) 
+<<<<<<< HEAD
+}
+};
+flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24"> <div className=" mx-auto w-full max-w-sm lg:w-96"> <div className=" text-center mb-10"> <h2 className=" text-3xl font-bold tracking-tight text-white"> Update your password </h2> <p className=" mt-2 text-sm text-zion-slate-light"> Enter your new password below. </p> </div> > Request new reset link </Button> </div>) 
+}</div> <h3 className=" text-lg font-medium text-white">Password updated</h3> <p className=" mt-2 text-sm text-zion-slate-light"> Your password has been successfully updated. </p> <p className=" mt-2 text-sm text-zion-slate-light"> Redirecting you to login... </p> </div>) : (<Form {
+  ...form 
+}> <FormItem> <FormLabel className=" text-zion-slate-light">New Password</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Confirm Password</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) 
+}/> <Button </Button> <div className=" text-center" > <Button > Back to login </Button> </div> </form> </Form>) 
+}</div> </div> </div> Set a strong password to secure your account and continue your journey in the Zion marketplace. </p> </div> </div> </div> </div> </div> <Footer /> </>) 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+}
+=======
 };"
 flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-center px-4 py-12 sm: px-6 lg:px-20 xl:px-24"> <div className=" mx-auto w-full max-w-sm lg:w-96"> <div className=" text-center mb-10"> <h2 className=" text-3xl font-bold tracking-tight text-white"> Update your password </h2> <p className=" mt-2 text-sm text-zion-slate-light"> Enter your new password below. </p> </div> > Request new reset link  </div>)"";
 }</div> <h3 className=" text-lg font-medium text-white">Password updated</h3> <p className=" mt-2 text-sm text-zion-slate-light"> Your password has been successfully updated. </p> <p className=" mt-2 text-sm text-zion-slate-light"> Redirecting you to login... </p> </div>) : (<Form {"
@@ -242,3 +431,4 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
 }/> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Confirm Password <FormControl> <Input />  <FormMessage className=" text-red-400"/> )"
 }/> <Button  <div className=" text-center" > <Button > Back to login  </div> </form> )"
 }</div> </div> </div> Set a strong password to secure your account and continue your journey in the Zion marketplace. </p> </div> </div> </div> </div> </div> <Footer /> </>) 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

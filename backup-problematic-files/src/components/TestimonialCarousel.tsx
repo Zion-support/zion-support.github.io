@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {;
   Carousel,;
   CarouselContent,;
@@ -44,6 +48,14 @@ export function TestimonialCarousel() {;
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;"
 
                           <Image;                            src={testimonial.avatar}
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                            alt={testimonial.author}
+                            width={80}
+                            height={80}
+<<<<<<< HEAD
+
+=======
                             alt={testimonial.author}
                             width={80}
                             height={80}"
@@ -60,6 +72,47 @@ export function TestimonialCarousel() {;
                           <Image;                            src={testimonial.companyLogo}
                             alt={`${testimonial.company} logo`}
                             width={32}
+<<<<<<< HEAD
+                            height={32}
+                            className="h-8 w-auto";
+                            loading="lazy";
+                          />;
+                          <span className="text-white font-semibold">{testimonial.company}</span>;
+                        </div>;
+                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />;
+                        <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>;
+                      </div>;
+                    </CardContent>;
+                    <CardFooter className="p-6 pt-0">;
+                      <Button variant="link" className="text-zion-cyan p-0" asChild>;
+                        <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study </Link>;
+                      </Button>;
+                    </CardFooter>;
+                  </Card>;
+                </CarouselItem>;
+              ))}
+            </CarouselContent>;
+            <div className="flex justify-center mt-8 gap-2">;
+              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
+              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            </div>;
+          </Carousel>;
+        </div>;
+      </div>;
+<<<<<<< HEAD
+
+=======
+    </section>;
+  );}
+ const testimonials = CASE STUDIES;
+Discover how Zion is transforming the tech and AI marketplace ecosystem </p> </div> <div className="max-w-5xl mx-auto px-8" > <Carousel opts= {;
+  {";
+  </div> </div> <div className="flex-1" > <div className="flex items-center gap-3 mb-4" > <Image </Button> </CardFooter> </Card> </CarouselItem>) ) ;
+}</CarouselContent> </div> </Carousel> </div> </div> </section>) ;
+}"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
                             height={32}"
                             className="h-8 w-auto";""
                           <span className="text-white font-semibold">{testimonial.company}</span>;"
@@ -78,3 +131,4 @@ Discover how Zion is transforming the tech and AI marketplace ecosystem </p> </d
 </div>)"
   </div> </div> <div className="flex-1" > <div className="flex items-center gap-3 mb-4" > <Image    ) ) ;"
 } </div>  </div> </div> </section>) ;"`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

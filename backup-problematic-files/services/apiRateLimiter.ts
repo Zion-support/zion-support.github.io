@@ -438,6 +438,20 @@ export const API_RATE_LIMITER_PRICING = {;
 }; 'Authorization': `Bearer $ {
   this.apiKey 
 }`;
+<<<<<<< HEAD
+'Content-Type': 'application/json'
+};
+body: JSON.stringify (rule)
+});
+return {
+  ...rule, id: `rule $ {
+  Date.now ()
+}`;
+createdAt: new Date ();
+updatedAt: new Date ()
+}
+
+=======
 'Content-Type': 'application/json' 
 };
 body: JSON.stringify (rule) 
@@ -539,3 +553,4 @@ isActive: true
 topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice (0, 5) 
 }
 }// Pricing tiers for the API Rate Limiter service 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

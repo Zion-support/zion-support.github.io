@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 use client';
 
 import React, { useEffect, useState } from 'react';
@@ -10,6 +14,7 @@ interface PerformanceData {
   firstContentfulPaint: number;
   resourceCount: number;
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   memory: {
     used: number;
     total: number;
@@ -17,12 +22,18 @@ pr-12325
   } | null;
 }
 import React, { useEffect } from 'react';
+=======
+import React, { useEffect } from "react";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-interface PerformanceMonitorProps {
+interface PerformanceMonitorProps {}
   onPerformanceData?: (data: any) => void;
 }
+<<<<<<< HEAD
+=======
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 interface Performance {
   getEntriesByType (type: string): PerformanceEntry[];
   now (): number;
@@ -41,6 +52,11 @@ interface PerformanceData {;
     total: number;,;
     limit: number;,;
   } | null;
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useEffect, useState } from 'react'
 interface PerformanceMetrics {
 import React, { useEffect, useState } from 'react' from 'react'';interface PerformanceMetrics {'
@@ -171,7 +187,30 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         } : null
       };
 
+<<<<<<< HEAD
+      const navigationEntries = window.performance.getEntriesByType('navigation');
+      const navigation = navigationEntries[0] as PerformanceNavigationTiming;
+      const paintEntries = window.performance.getEntriesByType('paint');
+      const performanceData = {
+        // Navigation timing
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
+        // Paint timing
+        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime |0
+        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime |0
+        // Resource timing
+        resourceCount: window.performance.getEntriesByType('resource').length
+// Memory usage (if available)
+ursor/fix-syntax-push-and-merge-to-main-7db5
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+      }
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (onPerformanceData) {
         onPerformanceData(performanceData);
       }
@@ -282,6 +321,24 @@ interface PerformanceMetrics {fcp?: number;
         )}
           </div>;
         )}
+<<<<<<< HEAD
+=======
+import React, { useEffect } from 'react';
+
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: any) => void;
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
+  onPerformanceData,
+}) => {}
+  useEffect(() => {}
+    // Only run on client side"
+    if (typeof window === "undefined" || typeof performance === "undefined") {}
+      return;
+<<<<<<< HEAD
+=======
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData ;}) => {
   useEffect(() => {
@@ -310,6 +367,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
           limit: (performance as any).memory.jsHeapSizeLimit
         } : null
       };
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (typeof window === 'undefined') return
     // Only show in development or for admin users
     const isDev = process.env.NODE_ENV === 'development'
@@ -351,6 +409,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         'paint', 'largest-contentful-paint'
       ] })
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     }
   useEffect(() => {
     const collectPerformanceData = () => {
@@ -358,6 +421,54 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         return;
 pr-12325
 
+<<<<<<< HEAD
+    const measurePerformance = () => {}
+      const navigation = performance.getEntriesByType("
+        "navigation",
+      )[0] as PerformanceNavigationTiming;"
+      const paint = performance.getEntriesByType("paint");
+
+      const performanceData = {}
+        // Navigation timing;
+        domContentLoaded:
+          navigation.domContentLoadedEventEnd -
+          navigation.domContentLoadedEventStart,
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+
+        // Paint timing;
+        firstPaint:"
+          paint.find((entry) => entry.name === "first-paint")?.startTime || 0,
+        firstContentfulPaint:"
+          paint.find((entry) => entry.name === "first-contentful-paint")
+            ?.startTime || 0,
+
+        // Resource timing"
+        resourceCount: performance.getEntriesByType("resource").length,
+
+        // Memory usage (if available)
+        memory: (performance as any).memory;
+          ? {}
+              used: (performance as any).memory.usedJSHeapSize,
+              total: (performance as any).memory.totalJSHeapSize,
+              limit: (performance as any).memory.jsHeapSizeLimit,
+            }
+          : null,
+      };
+<<<<<<< HEAD
+pr-12243
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import React, { useEffect, useState } from 'react';
+
+<<<<<<< HEAD
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+}
+=======
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = window.performance.getEntriesByType('paint');
       const resources = window.performance.getEntriesByType('resource');
@@ -383,6 +494,7 @@ pr-12325
 
       setPerformanceData(data);
       onPerformanceData?.(data);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -406,7 +518,11 @@ const PerformanceMonitor: React.FC = () => {
             renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;,
             memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0;
           });
+<<<<<<< HEAD
+      const metrics: PerformanceMetrics = {};
+=======
       const metrics: PerformanceMetrics = {;};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       // Monitor Largest Contentful Paint (LCP)
       const lcpObserver = new PerformanceObserver((list) => {
@@ -447,12 +563,42 @@ const PerformanceMonitor: React.FC = () => {
 origin/cursor/analyze-improve-and-deploy-application-347d
         }
       });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       observer.observe({ entryTypes: ['navigation'] ;});
 
 // Log performance data in development
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
+        console.log('Performance Metrics:', performanceData);
+=======
+      if (onPerformanceData) {}
+        onPerformanceData(performanceData);
+      }
+
+      // Log performance data in development"
+      if (process.env.NODE_ENV === "development") {"
+        console.log("Performance Metrics:", performanceData);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+      }
+    };
+
+    // Measure performance after page load"
+    if (document.readyState === "complete") {}
+      measurePerformance();
+    } else {"
+      window.addEventListener("load", measurePerformance);
+    }
+=======
         console.log('Performance Metrics: ';, performanceData);
       }
     };
@@ -464,10 +610,21 @@ pr-12325
       collectPerformanceData();
     } else {
       window.addEventListener('load', collectPerformanceData);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+<<<<<<< HEAD
     return () => {
+<<<<<<< HEAD
+<<<<<<< HEAD
       observer.disconnect ();
       clear_timeout (timer);
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+      observer.disconnect ();
+      clear_timeout (timer);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 if (typeof window ===, undefined
   ') return'    // Only show in development or for admin users
     const isDev = process.env.NODE_ENV ===
@@ -673,6 +830,10 @@ if (return 'Needs Improvement) {
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
       window.removeEventListener('load', measurePerformance);
+=======
+    return () => {"
+      window.removeEventListener("load", measurePerformance);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     };
   }, [onPerformanceData]);
 pr-12243
@@ -731,12 +892,17 @@ pr-12243
 origin/cursor/analyze-improve-and-deploy-application-347d
     }
   }, []);
+<<<<<<< HEAD
+
+  if (!metrics) return null;
+=======
       window.removeEventListener('load', collectPerformanceData);
   }, [onPerformanceData]);
 pr-12325
 
   if (!performanceData) {
     return null;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   return (
     <div className="performance-monitor fixed bottom-4 left-4 z-50 bg-black bg-opacity-75 text-white text-xs p-2 rounded font-mono">
@@ -753,10 +919,40 @@ pr-12325
 };
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return null; // This component doesn't render anything
 };
 
 export default PerformanceMonitor;
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [onPerformanceData]);
+
+  if (!metrics) return null;
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
+      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
+      <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   );
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

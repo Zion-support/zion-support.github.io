@@ -1,4 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+main
+=======
+=======
+<<<<<<< HEAD
 
+;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+import React from 'react';
+import Head from 'next/head';
+
+<<<<<<< HEAD
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
 import Head from 'next/head';
 
@@ -8,7 +28,15 @@ interface LayoutProps {
   description?: string;
 }
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+<<<<<<< HEAD
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -182,10 +210,21 @@ const Layout: React.FC<LayoutProps> = ({ children ;}) => {
   );
 };
 export default Layout;
+<<<<<<< HEAD
+<<<<<<< HEAD
+pr-12243
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 
 
 
 pr-12243
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -219,8 +258,19 @@ interface LayoutProps {
   ogTitle?: string;
   ogDescription?: string;
   ogUrl?: string;
+<<<<<<< HEAD
+=======
+interface LayoutProps {
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+<<<<<<< HEAD
+=======
 }
 
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",
@@ -232,20 +282,92 @@ export default function Layout({
   ogUrl
 }: LayoutProps) {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <meta name="keywords" content={keywords} />
+        <meta property="og:title" content={ogTitle || title} />
+        <meta property="og:description" content={ogDescription || description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl || "https://ziontechgroup.com"} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={ogTitle || title} />
+        <meta name="twitter:description" content={ogDescription || description} />
+        <meta name="twitter:image" content={ogImage} />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />
+      </Head>
+      
+      <div className="min-h-screen flex flex-col bg-gray-50">
+        <Header />
+        
+        <main className="flex-1">
+          {children}
+        </main>
+        
+        <Footer />
+        
+        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+=======
+
+export default function Layout({ children, title, description }: LayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title || 'Zion Tech Group'}</title>
+        <meta name="description" content={description || 'Leading provider of AI-powered solutions and digital transformation services.'} />
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen bg-gray-50">
         {children}
+<<<<<<< HEAD
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       </div>
     </>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+        <meta name="description" content={description} />
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
+=======
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         <meta name="keywords" content={keywords} />
         <meta name="keywords" content={keywords} />
 
@@ -277,6 +399,7 @@ export default function Layout({
     </>
   );
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React, { ReactNode } from 'react';
 
 }
@@ -300,13 +423,33 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 };
 
 export default Layout;
+<<<<<<< HEAD
+=======
 
 
 
 
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 main
 main
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+<<<<<<< HEAD
 pr-12243
+<<<<<<< HEAD
+=======
+
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 }
+<<<<<<< HEAD
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
+>>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

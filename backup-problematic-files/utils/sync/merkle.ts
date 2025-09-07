@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import crypto from "crypto";
 import { ProposalVoteEntry } from "./types";
 export function sha256Hex(input: string): string {;
@@ -33,6 +37,24 @@ export function computeMerkleRootFromLeaves(leaves: string[]): string {;
     }
     layer = next;
   }
+<<<<<<< HEAD
+}
+
+export function createMerkleTree(data: any[]): MerkleTree {
+  return new MerkleTree(data);
+}
+
+export function verifyMerkleProof(leafData: any, proof: string[], rootHash: string): boolean {
+  const tree = new MerkleTree([leafData]);
+  return tree.verifyProof(leafData, proof, rootHash);
+
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
   return layer[0];
 }
 ;
@@ -43,6 +65,7 @@ export function verifyVotesAgainstMerkleRoot(;
   const root = computeMerkleRootFromVotes(votes);
   return root === merkleRoot;
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import crypto from 'crypto';
 export interface MerkleNode {
   // TODO: Implement
@@ -51,3 +74,9 @@ export interface MerkleNode {
   left?: MerkleNode;
   right?: MerkleNode;
   data?: any;
+<<<<<<< HEAD
+}
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

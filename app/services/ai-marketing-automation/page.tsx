@@ -1,11 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'AI-Powered Marketing Automation Platform | Zion Tech Group',
-  description: 'Intelligent marketing automation with AI-driven personalization, predictive analytics, and automated campaign optimization. Increase conversion rates by 60% with smart marketing insights.',
-  keywords: 'AI marketing automation, personalized campaigns, predictive analytics, lead scoring, email marketing, social media automation'
-};
+
 
 export default function AIMarketingAutomationPage() {
   return (
@@ -276,11 +272,7 @@ function FeatureCard({ icon, title, description, benefits }: {
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
 
-export const metadata = {
-  title: 'AI Marketing Automation Platform | Zion Tech Group',
-  description: 'Intelligent marketing automation with AI-driven personalization, predictive analytics, and automated campaign optimization. Increase conversion rates by 65% with smart marketing AI.',
-  keywords: 'AI marketing automation, personalized marketing, campaign optimization, lead nurturing, marketing analytics, customer segmentation'
-};
+
 
 interface FeatureCardProps {
   icon: string;

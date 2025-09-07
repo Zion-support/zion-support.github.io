@@ -1,12 +1,52 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Settings, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Cpu, Wrench, Activity, Database, FileText, Users } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+import { Settings, 
+  Brain, 
+  Shield, 
+  BarChart3, 
+<<<<<<< HEAD
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/manufacturing.tsx
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import {
+=======
 import {
   // TODO: Implement;
 }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   Settings,
   Brain,
   Shield,
@@ -17,6 +57,35 @@ import {
   Wrench,
   Activity,
   Database,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+  Users;
+} from 'lucide-react';
+<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
+import Layout from '../../components/Layout';';
+const services = [;
+  {}
+    title: 'Smart Factory Solutions,',
+    description: 'IoT-enabled manufacturing systems for intelligent production management.,',
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/manufacturing.tsx
+=======
+  Users;
+} from 'lucide-react';
+import Layout from '../../components/Layout';';
+const services = [;
+  {}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import Layout from '../../components/Layout';
+const services = [
+  {
+    title: 'Smart Factory Solutions',
+    description: 'IoT-enabled manufacturing systems for intelligent production management.',
+    icon: Settings,
+=======
   Users;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
@@ -27,10 +96,48 @@ const services = [
     title: 'Smart Factory Solutions';,
     description: 'IoT-enabled manufacturing systems for intelligent production management.';,
     icon: Settings;,
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     features: [;
       'Real-time production monitoring,',
       'Automated quality control',',
       'Predictive maintenance',',
+<<<<<<< HEAD
+<<<<<<< HEAD
+    title: 'Smart Factory Solutions,',;
+    description: 'IoT-enabled manufacturing systems for intelligent production management.,',;
+import Layout from '../../components/Layout';
+const services = [;
+  {;
+    title: 'Smart Factory Solutions',;
+    description: 'IoT-enabled manufacturing systems for intelligent production management.',;
+=======
+    title: 'Smart Factory Solutions,',,
+  description: 'IoT-enabled manufacturing systems for intelligent production management.,',;
+import Layout from '../../components/Layout';
+const services = [;
+  {;
+    title: 'Smart Factory Solutions',,
+  description: 'IoT-enabled manufacturing systems for intelligent production management.',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    icon: Settings,;
+    features: [,;
+      'Real-time production monitoring,',;
+      'Automated quality control',',;
+      'Predictive maintenance',',;
+      'Supply chain integration'';
+    ];
+  },;
+  {}
+<<<<<<< HEAD
+    title: 'Predictive Maintenance AI,',;
+    description: 'AI-powered systems to predict and prevent equipment failures.,',;
+=======
+    title: 'Predictive Maintenance AI,',,
+  description: 'AI-powered systems to predict and prevent equipment failures.,',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    icon: Brain,;
+    features: [,;
+=======
     title: 'Smart Factory Solutions;,',,
   description: 'IoT-enabled manufacturing systems for intelligent production management.;,',;
 const services = [;
@@ -55,6 +162,7 @@ pr-12325
     description: 'AI-powered systems to predict and prevent equipment failures.;,',;
 pr-12325
     icon: Brain;,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Equipment health monitoring,',;
       'Failure prediction algorithms',',;
       'Maintenance scheduling',',;
@@ -62,6 +170,17 @@ pr-12325
     ];
   },;
   {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    title: 'IoT Sensor Networks,',;
+    description: 'Connected sensor systems for comprehensive factory monitoring.,',;
+=======
+    title: 'IoT Sensor Networks,',,
+  description: 'Connected sensor systems for comprehensive factory monitoring.,',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    icon: Cpu,;
+    features: [,;
+=======
     title: 'IoT Sensor Networks;,',,
   description: 'Connected sensor systems for comprehensive factory monitoring.;,',;
       'Cost optimization;']
@@ -69,6 +188,7 @@ pr-12325
     description: 'Connected sensor systems for comprehensive factory monitoring.;,',;
 pr-12325
     icon: Cpu;,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Environmental monitoring,',;
       'Equipment status tracking',',;
       'Data collection systems',',;
@@ -76,6 +196,17 @@ pr-12325
     ];
   },;
   {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    title: 'Quality Control Systems,',;
+    description: 'Automated quality assurance using computer vision and AI.,',;
+=======
+    title: 'Quality Control Systems,',,
+  description: 'Automated quality assurance using computer vision and AI.,',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    icon: Shield,;
+    features: [,;
+=======
     title: 'Quality Control Systems;,',,
   description: 'Automated quality assurance using computer vision and AI.;,',;
       'Real-time alerts;']
@@ -83,6 +214,7 @@ pr-12325
     description: 'Automated quality assurance using computer vision and AI.;,',;
 pr-12325
     icon: Shield;,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Visual inspection systems,',;
       'Defect detection algorithms',',;
       'Quality metrics tracking',',;
@@ -90,6 +222,17 @@ pr-12325
     ];
   },;
   {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    title: 'Supply Chain Optimization,',;
+    description: 'AI-driven supply chain management for improved efficiency.,',;
+=======
+    title: 'Supply Chain Optimization,',,
+  description: 'AI-driven supply chain management for improved efficiency.,',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    icon: BarChart3,;
+    features: [,;
+=======
     title: 'Supply Chain Optimization;,',,
   description: 'AI-driven supply chain management for improved efficiency.;,',;
       'Automated reporting;']
@@ -97,6 +240,7 @@ pr-12325
     description: 'AI-driven supply chain management for improved efficiency.;,',;
 pr-12325
     icon: BarChart3;,;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       'Demand forecasting,',;
       'Inventory optimization',',;
       'Supplier management',',;
@@ -104,6 +248,64 @@ pr-12325
     ];
   },;
   {}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    title: 'Digital Twin Technology,',;
+    description: 'Virtual replicas of physical manufacturing systems for simulation.,',;
+=======
+    title: 'Digital Twin Technology,',,
+  description: 'Virtual replicas of physical manufacturing systems for simulation.,',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    icon: Database,;
+    features: [,;
+      '3D factory modeling,',;
+      'Process simulation',',;
+      'Performance optimization',',;
+      'Scenario planning'';
+    ];
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
+;];
+const benefits = [;
+  {}
+    title: 'Increased Efficiency,',;
+    description: 'Automated processes and AI optimization improve production efficiency.,',;
+    icon: Activity;
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/manufacturing.tsx
+];
+const benefits = [;
+  {;
+    title: 'Increased Efficiency',;
+    description: 'Automated processes and AI optimization improve production efficiency.',;
+    icon: Activity;
+  },;
+  {}
+    title: 'Reduced Downtime,',;
+    description: 'Predictive maintenance prevents unexpected equipment failures.,',;
+    icon: Wrench,;
+  },;
+  {}
+    title: 'Better Quality,',;
+    description: 'Automated quality control ensures consistent product quality.,',;
+    icon: Shield,;
+  },;
+  {}
+    title: 'Cost Savings,',;
+    description: 'Optimized operations and reduced waste lower manufacturing costs.,',;
+    icon: BarChart3,;
+  }
+<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
+=======
+=======
+import Layout from '../../components/Layout';';
+const services = [;
+  {}
+    title: 'Smart Factory Solutions,',
+    description: 'IoT-enabled manufacturing systems for intelligent production management.,',
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
     title: 'Digital Twin Technology;,',,
   description: 'Virtual replicas of physical manufacturing systems for simulation.;,',;
       'Logistics coordination;']
@@ -119,12 +321,41 @@ pr-12325
 import { Settings, 
     title: 'Smart Factory Solutions;,',
     description: 'IoT-enabled manufacturing systems for intelligent production management.;,',']
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;];
 const benefits = [;
   {}
     title: 'Increased Efficiency;,',,
   description: 'Automated processes and AI optimization improve production efficiency.;,',;
     icon: Activity;
+<<<<<<< HEAD
+<<<<<<< HEAD
+];
+const benefits = [;
+  {;
+    title: 'Increased Efficiency',,
+  description: 'Automated processes and AI optimization improve production efficiency.',;
+    icon: Activity;
+  },;
+  {}
+    title: 'Reduced Downtime,',,
+  description: 'Predictive maintenance prevents unexpected equipment failures.,',;
+    icon: Wrench,;
+  },;
+  {}
+    title: 'Better Quality,',,
+  description: 'Automated quality control ensures consistent product quality.,',;
+    icon: Shield,;
+  },;
+  {}
+    title: 'Cost Savings,',,
+  description: 'Optimized operations and reduced waste lower manufacturing costs.,',;
+    icon: BarChart3,;
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
 ];
 const benefits = [;
   {;
@@ -147,6 +378,7 @@ const benefits = [;
   description: 'Optimized operations and reduced waste lower manufacturing costs.;,',;
     icon: BarChart3;,;
   }
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 ;];
     title: 'Increased Efficiency;,',;
     description: 'Automated processes and AI optimization improve production efficiency.;,',;
@@ -206,6 +438,90 @@ export default function ManufacturingPage() {;
               </div>;
             </motion && motion.div>;
         </section>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/manufacturing.tsx
+];
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+];
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  return (
+    <Layout
+      title="Manufacturing Technology Solutions - Zion Tech Group"
+      description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
+          </div>;
+          <div className="container mx-auto px-4 relative z-10">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <div className="flex items-center justify-center mb-6">
+                <Settings className="w-12 h-12 text-blue-400 mr-4" />
+                <h1 className="text-5xl md:text-6xl font-bold">
+                  Manufacturing
+                  <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    Technology Solutions
+                  </span>
+                </h1>
+              </div>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Revolutionize manufacturing with Industry 4.0 technologies including smart factories,
+                IoT networks, predictive maintenance, and digital twin solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get Manufacturing Consultation
+                </Link>
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  View Manufacturing Case Studies
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+        {/* Services Section */}
+        <section className="py-20 bg-white">"
+          <div className="container mx-auto px-4">";
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Manufacturing Technology Services;
+              </h2>;
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+<<<<<<< HEAD
+                Comprehensive Industry 4.0 solutions designed for modern manufacturing operations,
+=======
+                Comprehensive Industry 4.0 solutions designed for modern manufacturing operations, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                from small workshops to large industrial facilities.;
+=======
     <Layout;"
       title="Manufacturing Technology Solutions - Zion Tech Group"""
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology.""
@@ -223,10 +539,107 @@ export default function ManufacturingPage() {;
 </h2>
               </h2>;"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               </p>;
             </motion.div>;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";"
                 <motion.div}),
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/manufacturing.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Manufacturing Technology Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive Industry 4.0 solutions designed for modern manufacturing operations,
+                from small workshops to large industrial facilities.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
+                >;
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";
+                    <service.icon className="w-6 h-6 text-white" />";
+                  </div>;
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
+                  <ul className="space-y-3">";
+                    {service.features.map((feature, featureIndex) => (,
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/manufacturing.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                  <ul className="space-y-3">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>,
+                    ))}
+                  </ul>,
+                </motion.div>;
+              ))}
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
+            </div>,
+          </div>;
+        </section>;
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/manufacturing.tsx
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            </div>
+          </div>
+        </section>
+        {/* Benefits Section */}
+        <section className="py-20 bg-gray-50">"
+          <div className="container mx-auto px-4">";
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
               className="text-center mb-16""
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"
@@ -265,19 +678,33 @@ export default function ManufacturingPage() {;
         <section className="py-20 bg-gray-50">""
           <div className="container mx-auto px-4">";"
               transition={{ duration: 0.8 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Why Choose Our Manufacturing Solutions?;
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+<<<<<<< HEAD
+                Our manufacturing technology solutions deliver measurable improvements in efficiency,
+=======
                 Our manufacturing technology solutions deliver measurable improvements in efficiency, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 quality, and cost reduction.,
               </p>;
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/manufacturing.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -292,9 +719,15 @@ export default function ManufacturingPage() {;
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
+<<<<<<< HEAD
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+=======
                   initial={{ opacity: 0;, y: 20 ;}}
                   animate={{ opacity: 1;, y: 0 ;}}
                   transition={{ duration: 0.6;, delay: index * 0.1 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                   className="text-center""
                 >;
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">";
@@ -304,9 +737,24 @@ export default function ManufacturingPage() {;
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
             </div>,
           </div>;
         </section>;
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/manufacturing.tsx
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             </div>
           </div>
         </section>
@@ -314,9 +762,24 @@ export default function ManufacturingPage() {;
         <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
+<<<<<<< HEAD
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/pages_backup/industries/manufacturing.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
               initial={{ opacity: 0;, y: 20 ;}}
               animate={{ opacity: 1;, y: 0 ;}}
               transition={{ duration: 0.8 ;}}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Manufacturing?;
@@ -507,7 +970,17 @@ export default function ManufacturingPage() {;
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>;
+<<<<<<< HEAD
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/industries/manufacturing.tsx
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    </Layout>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?
@@ -529,6 +1002,18 @@ export default function ManufacturingPage() {;
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+=======
+  )
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+=======
+    </Layout>;
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   )
 };
 pr-12325
@@ -619,3 +1104,4 @@ pr-12325
             </motion.div>
         </section>
     
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,4 +1,17 @@
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+    this.projectRoot = process.cwd();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    this.reportsDir = path.join(this.projectRoot, 'security-reports');
+    this.ensureDirectories()}
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     this.ensureDirectories()}
   ensureDirectories() {
@@ -55,7 +68,45 @@
         "envFiles": foundEnvFiles,"
         sensitiveVars,"
 
+<<<<<<< HEAD
+      return {
+        "envFiles": foundEnvFiles,
+        sensitiveVars,
+        "status": sensitiveVars.length > 0 ? 'needs_review' : 'secure'
+      }} catch (error) {
+      this.log(`❌ Environment variables check "failed": ${error.message}`);
+      return { "error": error.message }}
+  }
+
+  async checkDependencies() {
+    this.log('📦 Checking dependencies...');
+    try {
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
+      if (!fs.existsSync(packageJsonPath)) {
+        throw new Error('package.json not found')}
+
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+      
+      // Check for known vulnerable packages
+      const vulnerablePackages = ['lodash',
+        'moment',
+        'jquery',
+        'express',
+        'request'
+      ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const foundVulnerable = Object.keys(dependencies).filter(dep =>
+=======
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      const foundVulnerable = Object.keys(dependencies).filter(dep => 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
       const foundVulnerable = Object.keys(dependencies).filter(dep => )
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         vulnerablePackages.some(vuln => dep.includes(vuln))
       );`;
       this.log(`📦 Found ${foundVulnerable.length} potentially vulnerable packages`);
@@ -111,6 +162,97 @@ if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.run()
     .then((report) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      
+      
+      
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      process.exit(0)})
+    .catch((error) => {
+      console.error('\n💥 Security Auditor "failed": ', error.message);
+      process.exit(1)})}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = SecurityAuditor;
+<<<<<<< HEAD:backup-problematic-files/scripts/security-auditor.cjs
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-auditor.cjs
+=======
+module.exports = SecurityAuditor;
+
+module.exports = SecurityAuditor;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+module.exports = SecurityAuditor;
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.reportsDir = path.join(this.projectRoot, 'security-reports')
+    this.log(' Running npm audit...')
+      const result = execSync('npm audit --audit-level=moderate --json')
+        "encoding"
+        "status"
+        "status"
+        "status"
+          "name"
+          "severity"
+          "name"
+          "severity"
+          "name"
+          "severity"
+          "name"
+          "pattern": /console\.log\s*\(\s*['"")]
+          "severity"
+        "status"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+      console.error('\n� Security Auditor "failed")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      console.error('\n� Security Auditor "failed")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
       process.exit(0)})
     .catch((error) => {"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

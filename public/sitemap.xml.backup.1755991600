@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <changefreq>weekly</changefreq>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -12,6 +20,7 @@
     <changefreq>weekly</changefreq>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <changefreq>weekly</changefreq>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <changefreq>weekly</changefreq>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <priority>0.6</priority>
   </url>
   <url>
@@ -3699,6 +3708,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-092529</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-092529</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -3709,6 +3725,7 @@
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-092529</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-092532</loc>
@@ -3771,6 +3788,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-092944</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-092944</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -3781,6 +3805,7 @@
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-092944</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-092952</loc>
@@ -3789,6 +3814,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-093009</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -3801,6 +3831,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-093015</loc>
@@ -3899,6 +3930,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-093605</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -3906,9 +3941,15 @@
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-093605</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-093605</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-093628</loc>
@@ -3917,6 +3958,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-093629</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -3929,6 +3975,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-093727</loc>
@@ -3943,6 +3990,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/guides/guide-2025-08-14-093747</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -3973,6 +4025,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13-2020</loc>
@@ -3981,6 +4034,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13-2021</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -3993,6 +4051,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13-2029</loc>
@@ -4043,6 +4102,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13-2100</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13-2100</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -4053,6 +4119,7 @@
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13-2100</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13-2119</loc>
@@ -4073,6 +4140,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13-2147</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13-2147</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -4083,6 +4157,7 @@
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13-2147</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13-2150</loc>
@@ -4385,6 +4460,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13T22-37</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13T22-37</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -4395,6 +4477,7 @@
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13T22-37</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13T22-40</loc>
@@ -4427,6 +4510,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13T23-23</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13T23-23</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -4437,6 +4527,7 @@
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13T23-23</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13T23-26</loc>
@@ -4457,6 +4548,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13T23-30</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -4469,6 +4565,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-13T23-40</loc>
@@ -4531,6 +4628,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-14-0013</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -4543,6 +4645,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-14-0015</loc>
@@ -4557,6 +4660,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-14-0017</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-14-0017</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -4567,6 +4677,7 @@
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-14-0017</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-14-0018</loc>
@@ -4611,6 +4722,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-14-0027</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-14-0027</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -4621,6 +4739,7 @@
     <loc>https://ziontechgroup.com/reports/innovations/insight-2025-08-14-0027</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/quantum-energy/</loc>
@@ -15057,6 +15176,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-13T23-56</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15069,6 +15193,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0000</loc>
@@ -15125,6 +15250,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0017</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0017</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15135,6 +15267,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0017</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0018</loc>
@@ -15149,6 +15282,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0020</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15161,6 +15299,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0024</loc>
@@ -15169,6 +15308,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0025</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0025</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15179,6 +15325,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0025</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0026</loc>
@@ -15205,6 +15352,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0030</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0030</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15215,6 +15369,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0030</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0031</loc>
@@ -15247,6 +15402,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0036</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0036</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15257,6 +15419,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0036</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0037</loc>
@@ -15313,6 +15476,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0046</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0046</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15323,6 +15493,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0046</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0047</loc>
@@ -15331,6 +15502,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0048</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0048</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15341,6 +15519,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0048</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0049</loc>
@@ -15361,6 +15540,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0052</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0052</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15371,6 +15557,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0052</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0053</loc>
@@ -15379,6 +15566,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0054</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0054</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15389,6 +15583,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0054</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0055</loc>
@@ -15475,6 +15670,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0109</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15487,6 +15687,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0111</loc>
@@ -15495,6 +15696,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0112</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15555,6 +15761,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0122</loc>
@@ -15563,6 +15770,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0123</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0123</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15573,6 +15787,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0123</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0124</loc>
@@ -15593,6 +15808,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0127</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0127</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15603,6 +15825,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0127</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0128</loc>
@@ -15617,6 +15840,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0130</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -15635,6 +15863,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0133</loc>
@@ -15643,6 +15872,14 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <changefreq>weekly</changefreq>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14-0134</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17513,6 +17750,7 @@
     <changefreq>weekly</changefreq>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <changefreq>weekly</changefreq>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <changefreq>weekly</changefreq>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <priority>0.6</priority>
   </url>
   <url>
@@ -17528,6 +17766,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-39</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-39</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17538,6 +17783,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-39</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-40</loc>
@@ -17558,6 +17804,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-43</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17570,6 +17821,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-45</loc>
@@ -17578,6 +17830,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T01-40</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T01-40</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17588,6 +17847,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T01-40</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T01-50</loc>
@@ -17668,6 +17928,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T04-31</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T04-31</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17678,6 +17945,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T04-31</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T04-41</loc>
@@ -17686,6 +17954,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T05-10</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17698,6 +17971,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T05-30</loc>
@@ -17706,6 +17980,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T05-40</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T05-40</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17716,6 +17997,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T05-40</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T05-50</loc>
@@ -17736,6 +18018,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T06-30</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T06-30</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17746,6 +18035,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T06-30</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T06-40</loc>
@@ -17754,6 +18044,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T07-00</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17772,6 +18067,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T07-40</loc>
@@ -17780,6 +18076,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T07-50</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17792,6 +18093,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T08-08</loc>
@@ -17836,6 +18138,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-09</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17890,6 +18197,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-18</loc>
@@ -17904,6 +18212,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-20</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17922,6 +18235,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-24</loc>
@@ -17930,6 +18244,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-25</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17942,6 +18261,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-29</loc>
@@ -17950,6 +18270,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-30</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -17962,6 +18287,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-34</loc>
@@ -17994,6 +18320,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/site-health</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/site-health</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -18004,6 +18337,7 @@
     <loc>https://ziontechgroup.com/site-health</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/services/ai-seo-auditor</loc>
@@ -18018,6 +18352,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <loc>https://ziontechgroup.com/services/landing-page-generator</loc>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <changefreq>weekly</changefreq>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     <loc>https://ziontechgroup.com/services/landing-page-generator</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -18028,6 +18369,7 @@
     <loc>https://ziontechgroup.com/services/landing-page-generator</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>    <priority>0.6</priority>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   </url>
   <url>
     <loc>https://ziontechgroup.com/services/price-intelligence-service</loc>
@@ -18035,4 +18377,8 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+<<<<<<< HEAD
 </urlset>
+=======
+</urlset>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

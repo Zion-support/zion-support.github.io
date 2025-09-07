@@ -8,6 +8,19 @@ class ComponentReplacer {}
     const workingComponent = "import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { }
+<<<<<<< HEAD
+  Bot,
+  User,
+  Send,
+  Paperclip,
+  Mic,
+  MicOff,
+  Settings,
+  X,
+  ThumbsUp,
+  ThumbsDown,
+  Sparkles,
+=======
   Bot, 
   User, 
   Send, 
@@ -19,6 +32,7 @@ import { }
   ThumbsUp, 
   ThumbsDown, 
   Sparkles, 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Clock,
   MessageCircle,
   HelpCircle,
@@ -44,6 +58,136 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 "
   const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}"
 
+<<<<<<< HEAD
+  // Sample welcome message;
+  useEffect(() => {}
+    if (isOpen && messages.length === 0) {}
+      const "welcomeMessage": ChatMessage = {}
+        id: 'welcome',
+        "content": "Hello! I'm Zion AI, your intelligent assistant. I can help you "with": \\n\\n• Information about our services\\n• Technical support and guidance\\n• Project inquiries and quotes\\n• General questions about Zion Tech Group\\n\\nHow can I assist you today?",
+        "sender": 'bot',
+        "timestamp": new Date(),
+        "type": 'text',
+        "status": 'sent',
+        "metadata": {}
+          confidence: 0.95,
+          "suggestions": ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
+          "relatedServices": ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
+          "estimatedResponseTime": 2;
+        };
+      };
+      setMessages([welcomeMessage])};
+  }, [isOpen, messages.length]);
+
+  // Auto-scroll to bottom;
+  useEffect(() => {}
+    if (autoScroll && messagesEndRef.current) {}
+      messagesEndRef.current.scrollIntoView({ "behavior": 'smooth' })};
+  }, [messages, autoScroll]);
+
+  // Simulate AI response;
+  const simulateAIResponse = useCallback(async ("userInput": string) => {}
+    setIsTyping(true);
+    
+    // Simulate processing delay;
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+    
+    const responses = [{}]
+        "content": "I'd be happy to help you with that! Our team specializes in cutting-edge technology solutions.",
+        "suggestions": ['Tell me more', 'Get a quote', 'View services', 'Contact us'],
+        "relatedServices": ['AI Solutions', 'Cloud Services', 'Digital Transformation'];
+      },
+      {}
+        "content": "That's a great question! Let me provide you with detailed information about our services.",
+        "suggestions": ['Learn more', 'Schedule demo', 'Request quote', 'View portfolio'],
+        "relatedServices": ['Consulting', 'Implementation', 'Support'];
+      },
+      {}
+        "content": "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences.",
+        "suggestions": ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
+        "relatedServices": ['Digital Transformation', 'Process Optimization', 'Change Management'];
+      };
+    ];
+
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+
+    const "botMessage": ChatMessage = {}
+      id: Date.now().toString(),
+      "content": randomResponse.content,
+      "sender": 'bot',
+      "timestamp": new Date(),
+      "type": 'text',
+      "status": 'sent',
+      "metadata": {}
+        confidence: 0.85 + Math.random() * 0.1,
+        "suggestions": randomResponse.suggestions,
+        "relatedServices": randomResponse.relatedServices,
+        "estimatedResponseTime": 1 + Math.random() * 2;
+      };
+    };
+
+    setMessages(prev => [...prev, botMessage]);
+    setIsTyping(false)}, []);
+
+  // Handle message submission;
+  const handleSubmit = useCallback(async ("e": React.FormEvent) => {}
+    e.preventDefault();
+    if (!inputValue.trim() || isTyping) return;
+
+    const userMessage: ChatMessage = {}
+      id: Date.now().toString(),
+      "content": inputValue.trim(),
+      "sender": 'user',
+      "timestamp": new Date(),
+      "type": 'text',
+      "status": 'sent'
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setInputValue('');
+    
+    await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse]);
+
+  // Handle suggestion clicks;
+  const handleSuggestionClick = useCallback(("suggestion": string) => {}
+    setInputValue(suggestion)}, []);
+
+  // Handle file upload;
+  const handleFileUpload = useCallback(("e": React.ChangeEvent<HTMLInputElement>) => {}
+    const file = e.target.files?.[0];
+    if (file) {}
+      const fileMessage: ChatMessage = {}
+        id: Date.now().toString(),
+        "content": \"Uploaded: \${file.name}\",
+        "sender": 'user',
+        "timestamp": new Date(),
+        "type": 'file',
+        "status": 'sent'
+      };
+      setMessages(prev => [...prev, fileMessage])};
+  }, []);
+
+  // Toggle voice input;
+  const toggleVoiceInput = useCallback(() => {}
+    setIsListening(!isListening)}, [isListening]);
+<<<<<<< HEAD
+  // Rate response;
+  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
+    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+<<<<<<< HEAD
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+  // Rate response;
+  const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
+    console.log(\"Rated message \${messageId} as \${rating}\")}, []);
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+  return ()
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     <>
       {/* Chat Toggle Button */};
       <button;
@@ -152,8 +296,29 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})"
 if (require.main === module) {}
   const automation = new ComponentReplacer();
   automation.run();
+<<<<<<< HEAD
+    .then(() => {}
+      console.log('Component Replacer completed successfully!');
+      process.exit(0)}
+});
+    .catch(error => {})
+      console.error('Component Replacer "failed": ', error);
+      process.exit(1)})};
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+module.exports = ComponentReplacer;
+module.exports = ComponentReplacer;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
     .then(() => {}"
 
       process.exit(1)})};
 module.exports = ComponentReplacer;
 `;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

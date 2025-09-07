@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+import React, { useState } from "react",;
+=======
 import React, { useState } from "react";""
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import { MessageCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button";""
 import { Input } from "@/components/ui/input";""
@@ -88,14 +95,28 @@ export const CommunityDiscussion:React.FC = () => {;
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale";"
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() || !newBody.trim()}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               >;
 
             </div>;
+<<<<<<< HEAD
+          </CardContent>;
+<<<<<<< HEAD
+
+=======
+        </Card>;
+      )}
+      <div className="flex flex-col gap-6">;
+        {posts.map((post) => (;
+          <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">;
+            <CardContent className="py-4 flex gap-4">;
+=======
         ;"
       <div className="flex flex-col gap-6">;"
           <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">;"
             <CardContent className="py-4 flex gap-4">;"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
               <Avatar>;
 
                 <AvatarFallback>;
@@ -150,11 +171,15 @@ setShowNew (false)
   newTitle ;
 }onChange= {;
   (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) ;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }maxLength= {;
   80 ";
 }/> <Textarea /> <div className=" flex gap-3 justify-end"> <Button > Cancel </Button> <Button > Post </Button> </div> </CardContent> </Card>) ";
 }.join ("") .toUpperCase () .slice (0, 2) ";
 }</AvatarFallback> </Avatar> <div> <div className="flex gap-2 items-center"> <span className="font-semibold text-white"> {;
+<<<<<<< HEAD
+
+=======
   post.author ";
 }</span> <span className="text-xs text-zion-slate-light"> {;
   post.time ";
@@ -166,6 +191,9 @@ setShowNew (false)
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center">  Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) 
 };
 '"
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
                 <div className="flex gap-2 items-center">;"
                   <span className="font-semibold text-white">{post.author}</span>;""
                   <span className="text-xs text-zion-slate-light">{post.time}</span>;"
@@ -184,3 +212,4 @@ setShowNew (false)
 }</p> </div>  ) ) ";""
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center">  Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) ;""
 pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -37,6 +37,30 @@ export default function IncidentAutomationSuitePage() {
               <div className="flex items-end justify-between mb-3">"
 </div>
                 <div>
+<<<<<<< HEAD
+                  <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
+<<<<<<< HEAD
+                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
+=======
+                  <div className="text-slate-400">{service.trialDays}-day free trial  Setup: {service.setupTime}</div>
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                </div>
+              </div>
+              <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+}
+;
+=======
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>""
                   <div className="text-slate-400">{service.trialDays}-day free trial  Setup: {service.setupTime;}</div>"
               <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" />"
@@ -45,3 +69,4 @@ export default function IncidentAutomationSuitePage() {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>""
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>"
     )"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

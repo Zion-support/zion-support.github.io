@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 /* eslint-env node */
 /* eslint-disable no-undef */
 module.exports = {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 /* eslint - env node */;
 /* eslint-env node */
@@ -13,10 +17,21 @@ module.exports = {
 /* eslint-env node */
 module.exports = {
 module && module.exports = {
+=======
+/* eslint-env node */
+/* eslint-disable no-undef */
+module.exports = {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   env: {
     node: true,
     es2021: true
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   globals: {
     module: 'readonly',
     require: 'readonly',
@@ -26,6 +41,7 @@ module && module.exports = {
     global: 'readonly',
     Buffer: 'readonly',
     console: 'readonly'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
@@ -69,11 +85,25 @@ ursor/add-new-services-and-deploy-updates-0462
     },
     ecmaVersion: 12,
     sourceType: 'module',
+=======
+  globals: {
+    module: 'readonly',
+    require: 'readonly',
+    exports: 'readonly',
+    __dirname: 'readonly',
+    __filename: 'readonly',
+    global: 'readonly',
+    Buffer: 'readonly',
+    console: 'readonly'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   },
   extends: ['next/core-web-vitals'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     '@typescript-eslint/no-unused-vars': [
       'warn',
       { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
@@ -82,6 +112,7 @@ ursor/add-new-services-and-deploy-updates-0462
     '@typescript-eslint/no-empty-object-type': 'warn',
     '@next/next/no-html-link-for-pages': 'warn'
   },
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
@@ -153,12 +184,125 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     'react/no-unescaped-entities': 'off'
   },
+<<<<<<< HEAD
+  env: {
+    browser: true,
+    es2021: true,
+  },
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+    node: true,
+    browser: true,
+    es2021: true,
+    jest: true,
+    vitest: true
+  },
+
+
+
+
+    node: true,
+    browser: true,
+    es2021: true
+  },
+  env: {
+    node: true,
+    es2021: true
+  },
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off"
+  },
+    node: true,
+    browser: true,
+    es2021: true
+  },
+ursor/integrate-build-improve-and-re-verify-8f7d
+  env: {
+    node: true,
+    es2021: true
+  },
+  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+/* eslint-env node */
+module.exports = {
+  env: {
+    node: true,
+    es2021: true,
+  },
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off"
+  },
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off"
+  },
+
+
+
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+    ],
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
+    '@next/next/no-html-link-for-pages': 'warn'
+  },
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ignorePatterns: [
     'node_modules/',
     '.next/',
     'out/',
     'build/',
     'dist/',
+<<<<<<< HEAD
+    '*.config.js',
+    '*.config.ts',
+    'scripts/',
+    'automation/',
+    'netlify/',
+    'src/',
+    'apps/'
+=======
     '*.config.js',
     '*.config.ts',
     'scripts/',
@@ -172,7 +316,9 @@ module.exports = {
     '*.config.js',
     '*.config.cjs',
     '*.config.ts'
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   ]
+<<<<<<< HEAD
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -536,6 +682,11 @@ module.exports = {;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   root: true,
   env: {
     browser: true,
@@ -570,4 +721,13 @@ module.exports = {;
   },
 }
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 };
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+};
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

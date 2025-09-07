@@ -18,8 +18,15 @@ title?: string;
   og_type?: string;
   twitter_card?: string;
   structured_data?: object;
+<<<<<<< HEAD
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+  noindex?: boolean;
+  nofollow?: boolean;
+<<<<<<< HEAD:components/SEOHead.tsx
+=======
   noindex?: boolean;}
   nofollow?: boolean;}
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 }
       <meta name=\"twitter: title\" content={titl,}
 } />;
@@ -53,6 +60,11 @@ title?: string;
       <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" cross_origin=\"anonymous\" />;
       <link rel=\"preconnect\" href=\"https://images.unsplash.com\" />;
     </Head>)}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd:components-disabled/components/SEOHead.tsx
+=======
+>>>>>>> 50a1590683ade09c2b82559a54c039a45bcbfcee
 
 const SEOHead: React.FC<SEOHeadProps> = ({
 
