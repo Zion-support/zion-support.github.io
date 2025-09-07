@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
   Heart, 
+  Activity, 
   Brain, 
   Activity, 
   Shield, 
@@ -23,7 +24,7 @@ import {
   AlertTriangle
 } from 'lucide-react';
 
-export default function AIHealthcareAnalyticsPlatform() {
+const AIHealthcareAnalyticsPlatform: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -176,7 +177,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -211,7 +212,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -289,7 +290,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -435,7 +436,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -446,7 +447,6 @@ export default function AIHealthcareAnalyticsPlatform() {
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of healthcare providers already using our AI-powered platform
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -464,4 +464,6 @@ export default function AIHealthcareAnalyticsPlatform() {
       </section>
     </div>
   );
-}
+};
+
+export default AIHealthcareAnalyticsPlatform;
