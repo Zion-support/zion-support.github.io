@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
   customers: number;
+=======
+customers: number;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   rating: number;
   reviews: number;
   customers: number;
@@ -250,24 +254,32 @@ export interface InnovativeAgricultureService  {id: string;
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
   website: 'https://ziontechgroup.com'};
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 
+=======
+  website: 'https://ziontechgroup.com',};
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com' }
 ;
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  address: "address",
+    website: 'https://ziontechgroup.com'
 }
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -403,7 +415,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens']
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
-
       'Compliance management'
     ];
       'Compliance management'
@@ -583,6 +594,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
     implementation_details: 'AI - powered vertical farming platform with intelligent climate control and crop optimization capabilities.';
     launch_date: '2025 - 02 - 02';
     customers: 123;
+<<<<<<< HEAD
     rating: 4.6,reviews: 89;
   }
 ];;
@@ -624,6 +636,13 @@ import { ServiceVariant } from '../types/service-variants',export interface Inno
 ;
 
 import { ServiceVariant } from '../types/service-variants',;
+=======
+    rating: 4.6,
+    reviews: 89;
+  }
+];
+;import { ServiceVariant } from '../types/service-variants';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export interface InnovativeAgricultureService {;
   id: string,;
   name: string,;

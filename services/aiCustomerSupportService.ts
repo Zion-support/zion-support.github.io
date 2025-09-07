@@ -62,6 +62,7 @@ export interface SupportTicket {
   resolution_time?: number, // in hours;id: string;
   content: string;
 }
+<<<<<<< HEAD
 }
 export interface TicketMessage  {id: string;
   content: string;
@@ -77,6 +78,17 @@ export interface TicketMessage  {id: string;
 
 }
 export interface TicketMessage {
+=======
+export interface Customer {
+  createdAt: Date;
+  updatedAt: Date;
+  resolvedAt?: Date
+  firstResponseTime?: number, // in minutes
+  resolutionTime?: number, // in hours
+}
+export interface TicketMessage {
+export interface TicketMessage {;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   id: string;
   content: string;
 }
@@ -98,10 +110,20 @@ export interface TicketMessage  {export interface TicketMessage  {id: string;
   content: string;
   senderType: 'customer' | 'agent' | 'system';
   senderId: string;
+<<<<<<< HEAD
   isInternal: boolean;createdAt: Date;
   attachments: Attachment[];
 }
 export interface Customer  {export interface Customer  {id: string;
+=======
+  isInternal: boolean;
+  createdAt: Date;
+    attachments: Attachment[]
+}
+export interface Customer {
+export interface Customer {;
+  id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   email: string;
   company?: string;
@@ -170,8 +192,15 @@ export interface AgentPerformance {
   averageResolutionTime: number, // in hours;
   customer_satisfaction: number, // 1 - 5;
   firstResponseTime: number, // in minutes;
+<<<<<<< HEAD
   escalation_rate: number, // percentage;}
 export interface ChatbotSession  {id: string;
+=======
+  escalation_rate: number, // percentage;
+}
+export interface ChatbotSession {
+  id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   customer_id: string;
   start_time: Date;
   end_time?: Date;isAvailable: boolean;
@@ -188,7 +217,6 @@ export interface ChatbotSession  {id: string;
 
   escalated: boolean,
   satisfaction: number, // 1 - 5;
-
 }
 export interface AgentPerformance  {ticketsResolved: number;
   averageResolutionTime: number, // in hours;
@@ -214,7 +242,6 @@ export interface ChatbotMessage  {id: string;
   intent?: string,confidence?: number;}
 export interface KnowledgeBaseArticle  {id: string;
   timestamp: Date;
-
   intent?: string,
   confidence?: number;
 
@@ -270,7 +297,6 @@ export interface AIRecommendation {
 
   confidence: number,
   action_items: string[];
-
 }
 export interface SupportAnalytics  {totalTickets: number;
   openTickets: number;
@@ -313,6 +339,7 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
   }
   private initializeSampleData() {
     // Initialize sample customers
+<<<<<<< HEAD
 
     this && this.customers = [
 
@@ -324,6 +351,9 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
     // Initialize sample customers
       {
         id: 'cust_001';
+=======
+    this && this.customers = [        id: 'cust_001';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         name: 'John Doe';
         email: 'john && john.doe@company && company.com';
         company: 'TechCorp Inc.';
@@ -381,10 +411,8 @@ class AICustomerSupportService {private tickets: SupportTicket[] = [];
       {id: 'cust_002';
         name: 'Jane Smith';email: 'jane && jane.smith@startup && startup.com';
         averageResponseTime: 15;
-
         satisfactionScore: 4 && 4.5;
         lastContactDate: new Date('2025-01-10'),
-
         createdAt: new Date('2024-06-01')
         satisfaction_score: 4.5;
         lastContactDate: new Date ('2025 - 01 - 10'),
@@ -795,7 +823,6 @@ class AICustomerSupportService {
         createdAt: new Date('2024-08-15')
       }
     ];
-
     // Initialize sample agents
     this.agents = [
       {
@@ -1744,14 +1771,12 @@ export interface Attachment {;
       this.updateAnalytics()
       ticket && ticket.status = status;
       ticket && ticket.updatedAt = new Date();
-      
       if (status === 'resolved') {
         ticket && ticket.resolvedAt = new Date(),
         if (ticket && ticket.createdAt && ticket && ticket.resolvedAt) {
           ticket && ticket.resolutionTime = (ticket && ticket.resolvedAt.getTime() - ticket && ticket.createdAt.getTime()) / (1000 * 60 * 60)
         }
       }
-      
       this && this.updateAnalytics()
     }
   }
@@ -1965,7 +1990,6 @@ export interface Attachment {;
       this.updateAnalytics()
     }
   }
-
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this.tickets.find(t => t.id === ticketId);
 
@@ -2284,9 +2308,12 @@ if ( {) {
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
@@ -2364,6 +2391,7 @@ if ( {) {$2;
       return { intent: 'general_inquiry', confidence: 0 && 0.6 }
     }
   }
+<<<<<<< HEAD
 
 
 
@@ -2371,10 +2399,11 @@ if ( {) {$2;
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
     const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
     if (session) {
-
       session && session.endTime = new Date();
       session && session.resolved = resolved;
       session && session.escalated = escalated;
@@ -2440,9 +2469,12 @@ if ( {) {$2;
     },;
     this.knowledgeBase.push(article),;
     return article;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {}
   }async getAIRecommendations(): Promise<AIRecommendation[]> {const recommendations: AIRecommendation[] = [];
@@ -2565,6 +2597,7 @@ if ( {) {
       article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b.views - a.views)
   }
+<<<<<<< HEAD
 
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
@@ -2588,6 +2621,15 @@ if ( {) {
 
 
         confidence: 90,
+=======
+    const lowerQuery = query && query.toLowerCase(),
+    return this && this.knowledgeBase.filter(article => 
+      article && article.title.toLowerCase().includes(lowerQuery) ||
+      article && article.content.toLowerCase().includes(lowerQuery) ||
+      article && article.tags.some(tag => tag && tag.toLowerCase().includes(lowerQuery))
+    ).sort((a, b) => b && b.views - a && a.views)
+      recommendations && recommendations.push({        confidence: 90,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         action_items: [;
           'Reallocate agents to handle high priority tickets_implement automated prioritization system_review ticket classification criteria';
         ];
@@ -2971,6 +3013,11 @@ if ( {) {
       agent_performance;
     }
   }
+<<<<<<< HEAD
+=======
+    return this && this.tickets.find(t => t && t.id === ticketId) || null
+    }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {if (status) {return this && this.tickets.filter(t => t && t.status === status)}
     return this && this.tickets;
@@ -2980,6 +3027,7 @@ if ( {) {
     return this && this.customers.find(c => c && c.id === customerId) || null  }
   async getCustomers(): Promise<Customer[]> {return this && this.customers;
   async getCustomer(customerId: string): Promise<Customer | null> {
+<<<<<<< HEAD
 
     return this && this.customers.find(c => c && c.id === customerId) || null
 
@@ -2987,6 +3035,9 @@ if ( {) {
     return this && this.customers.find(c => c && c.id === customerId) || null
 
   }
+=======
+    return this && this.customers.find(c => c && c.id === customerId) || null  }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   async getCustomers(): Promise<Customer[]> {
     return this && this.customers
   }
@@ -3020,6 +3071,7 @@ if ( {) {$2;
   async get_analytics (): Promise < SupportAnalytics> {return this.analytics;
   }
 }
+<<<<<<< HEAD
 export const aiCustomerSupportService  = new AICustomerSupportService ()export const aiCustomerSupportService  = new AICustomerSupportService()private updateAnalytics():void {const totalTickets = this.tickets.length,const openTickets = this.tickets.filter(t => ['openin_progress', 'waiting_customer'].includes(t.status)).length,const resolvedTickets  = this.tickets.filter(t => t.status === 'resolved').length,const resolutionTimes = this.tickets;
       .filter(t => t.resolutionTime).map(t => t.resolutionTime!),const averageResolutionTime = resolutionTimes.length > 0 ;
 
@@ -3063,6 +3115,9 @@ if ( {) {
 }
 export const aiCustomerSupportService = new AICustomerSupportService ();
 ;
+=======
+export const aiCustomerSupportService = new AICustomerSupportService();
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ;
   private updateAnalytics():void {;
     const totalTickets = this.tickets.length,;
@@ -3079,6 +3134,7 @@ export const aiCustomerSupportService = new AICustomerSupportService ();
       ? responseTimes.reduce((sum, time) => sum + time, 0) / responseTimes.length;
       :0,const satisfactionScores = this.customers.map(c => c.satisfactionScore),const customerSatisfaction = satisfactionScores.length > 0;
       ? satisfactionScores.reduce((sum, score) => sum + score, 0) / satisfactionScores.length;
+<<<<<<< HEAD
       :0,const chatbotResolved = this.chatbotSessions.filter(s => s.resolved && !s.escalated).length,const chatbotTotal = this.chatbotSessions.filter(s => s.endTime).length,const chatbotResolutionRate  = chatbotTotal > 0 ? (chatbotResolved / chatbotTotal) * 100 :0,const categoryCounts = this.tickets.reduce((acc, ticket) => {acc[ticket.category] = (acc[ticket.category] || 0) + 1,return acc}, {} as Record<string number>),const topCategories = Object.entries(categoryCounts).map(([category, count]) => ({ category, count })).sort((a, b) => b.count - a.count).slice(0, 5),const agentPerformance = this.agents.map(agent => ({agentId:agent.id,ticketsResolved:agent.window.window.window.performance.ticketsResolved,satisfaction:agent.window.window.window.performance.customerSatisfaction;
     })),this.analytics = {totalTickets,openTickets,resolvedTickets,averageResolutionTime,averageFirstResponseTime,customerSatisfaction,chatbotResolutionRate,topCategories,agentPerformance;
     }}async getTicket(ticketId:string):Promise<SupportTicket | null> {return this.tickets.find(t => t.id === ticketId) || null;
@@ -3089,6 +3145,79 @@ export const aiCustomerSupportService = new AICustomerSupportService ();
   // Initialize sample customers this.customers = [ {}];
 // Initialize sample tickets this.tickets = [ {id: 'msg 001', content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?', senderType: 'customer', senderId: 'cust 001', isInternal: false, createdAt: new Date ('2025-01-10T10:00:00Z'), attachments: [];
 }{id: 'msg 002', content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.', senderType: 'agent', senderId: 'agent 001', isInternal: false, createdAt: new Date ('2025-01-10T10:15:00Z'), attachments: [];
+=======
+      :0,;
+;
+    const chatbotResolved = this.chatbotSessions.filter(s => s.resolved && !s.escalated).length,;
+    const chatbotTotal = this.chatbotSessions.filter(s => s.endTime).length,;
+    const chatbotResolutionRate = chatbotTotal > 0 ? (chatbotResolved / chatbotTotal) * 100 :0,;
+;
+    const categoryCounts = this.tickets.reduce((acc, ticket) => {;
+      acc[ticket.category] = (acc[ticket.category] || 0) + 1,;
+      return acc,;
+    }, {} as Record<string number>),;
+;
+    const topCategories = Object.entries(categoryCounts);
+      .map(([category, count]) => ({ category, count }));
+      .sort((a, b) => b.count - a.count);
+      .slice(0, 5),;
+;
+    const agentPerformance = this.agents.map(agent => ({;
+      agentId:agent.id,;
+      ticketsResolved:agent.window.window.window.performance.ticketsResolved,;
+      satisfaction:agent.window.window.window.performance.customerSatisfaction;
+    })),;
+;
+    this.analytics = {;
+      totalTickets,;
+      openTickets,;
+      resolvedTickets,;
+      averageResolutionTime,;
+      averageFirstResponseTime,;
+      customerSatisfaction,;
+      chatbotResolutionRate,;
+      topCategories,;
+      agentPerformance;
+    },;  }
+;
+  async getTicket(ticketId:string):Promise<SupportTicket | null> {;
+    return this.tickets.find(t => t.id === ticketId) || null;
+  }
+;
+  async getTickets(status?:SupportTicket['status']):Promise<SupportTicket[]> {;
+    if (status) {;
+      return this.tickets.filter(t => t.status === status),;
+    }
+    return this.tickets,;  }
+;
+  async getCustomer(customerId:string):Promise<Customer | null> {;
+    return this.customers.find(c => c.id === customerId) || null;
+  }
+;
+  async getCustomers():Promise<Customer[]> {;
+    return this.customers,;
+  }
+;
+  async getAgents():Promise<SupportAgent[]> {;
+    return this.agents,;
+  }
+;
+  async getChatbotSessions():Promise<ChatbotSession[]> {;
+    return this.chatbotSessions,;
+  }
+;
+  async getKnowledgeBase():Promise<KnowledgeBaseArticle[]> {;
+    return this.knowledgeBase,;
+  }
+;
+  async getAnalytics():Promise<SupportAnalytics> {;
+    return this.analytics,;
+  }
+}
+;
+export const aiCustomerSupportService = new AICustomerSupportService(),; private initializeSampleData () {
+  // Initialize sample customers this.customers = [ {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }];
 createdAt: new Date ('2025-01-10T10:00:00Z')updatedAt: new Date ('2025-01-10T10:15:00Z')firstResponseTime: 15;
 }];
@@ -3096,11 +3225,38 @@ createdAt: new Date ('2025-01-10T10:00:00Z')updatedAt: new Date ('2025-01-10T10:
 status: 'open';
 attachments: [];
 messages: [];
+<<<<<<< HEAD
 createdAt: new Date ()updatedAt: new Date ()}this.tickets.push (ticket)this.updateAnalytics ()return ticket;
 }if (ticket) {ticket.status = status;
 ticket.updatedAt = new Date ()if (status === 'resolved') {ticket.resolvedAt = new Date ()if (ticket.createdAt && ticket.resolvedAt) {}this.updateAnalytics ()if (ticket.createdAt && ticket.resolvedAt) {}this.updateAnalytics ()}
 }if (!ticket) {throw new Error (`Ticket $ {ticketId;
 }not found`)}const message: TicketMessage = {id: `msg $ {Date.now ()}$ {Math.random () .toString (36) .substr (2, 9)}`;
+=======
+createdAt: new Date ();
+updatedAt: new Date () 
+};
+this.tickets.push (ticket);
+this.updateAnalytics ();
+return ticket 
+}if (ticket) {
+  ticket.status = status;
+ticket.updatedAt = new Date ();
+if (status === 'resolved') {
+  ticket.resolvedAt = new Date ();
+if (ticket.createdAt && ticket.resolvedAt) {
+}this.updateAnalytics () 
+}
+}if (!ticket) {
+  throw new Error (`Ticket $ {
+  ticketId 
+}not found`) 
+}const message: TicketMessage = {
+  id: `msg $ {
+  Date.now () 
+}$ {
+  Math.random () .toString (36) .substr (2, 9) 
+}`;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ...messageData;
 createdAt: new Date ()}ticket.messages.push (message)ticket.updatedAt = new Date ()// Update first response time if this is the first agent response this.updateAnalytics ()return message;
 }async startChatbotSession (customerId: string) : Promise<ChatbotSession> {const session: ChatbotSession = {id: `chat $ {Date.now ()}$ {Math.random () .toString (36) .substr (2, 9)}`;
@@ -3123,9 +3279,17 @@ notHelpful: 0;
 createdBy: 'system';
 lastUpdated: new Date ()}this.knowledgeBase.push (article)return article;
 }return this.knowledgeBase.filter (article => article.title.toLowerCase () .includes (lowerQuery) || article.content.toLowerCase () .includes (lowerQuery) || article.tags.some (tag => tag.toLowerCase () .includes (lowerQuery) ) // Ticket prioritization recommendation const highPriorityOpenTickets = this.tickets.filter (t => t.priority === 'high' && t.status === 'open') .length;
+<<<<<<< HEAD
 if (highPriorityOpenTickets > 5) {recommendations.push ({}return recommendations;
   recommendations.push ({}return recommendations;
 }const resolutionTimes = this.tickets .filter (t => t.resolutionTime) const responseTimes = this.tickets .filter (t => t.firstResponseTime)}
+=======
+if (highPriorityOpenTickets > 5) {
+  recommendations.push ({
+}return recommendations 
+}const resolutionTimes = this.tickets .filter (t => t.resolutionTime) const responseTimes = this.tickets .filter (t => t.firstResponseTime) 
+    }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   }
   async getTicket(ticketId: string): Promise<SupportTicket | null> {return this.tickets.find(t => t.id === ticketId) |null;
   }
@@ -3144,4 +3308,14 @@ if (highPriorityOpenTickets > 5) {recommendations.push ({}return recommendations
   }
   async getAnalytics(): Promise<SupportAnalytics> {return this.analytics;
   }
+<<<<<<< HEAD
 }export const aiCustomerSupportService  = new AICustomerSupportService()export const aiCustomerSupportService  = new AICustomerSupportService()export const aiCustomerSupportService  = new AICustomerSupportService()
+=======
+}
+;
+export const aiCustomerSupportService = new AICustomerSupportService();
+;
+export const aiCustomerSupportService = new AICustomerSupportService();
+;
+export const aiCustomerSupportService = new AICustomerSupportService();
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

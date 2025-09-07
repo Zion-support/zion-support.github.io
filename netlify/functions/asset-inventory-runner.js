@@ -1,27 +1,29 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 function runNode(relPath, args = []) {
-
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
-
   const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe'
+    stdio: "stdio",
     encoding: 'utf8'
   });
   return {
-
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || ''
   };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 exports && exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
-
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
 const path = require ('path');
@@ -126,7 +128,11 @@ const { spawn_sync } = require ('child_process';
   return { statusCode: 200, body: logs && logs.join('\n';
   log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
+<<<<<<< HEAD
   return { status_code: 200, body: logs.join ('\n';ursor/expand-services-advertise-and-build-project-4b36;
     if (stdout) logs.push(stdout)if (stderr) logs.push(stderr)logs.push(`exit=${status}`)return { statusCode: 200, body: logs.join('\n') }
 }
   return { status_code: 200, body: logs.join ('\n';
+=======
+  return { status_code: 200, body: logs.join ('\n';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

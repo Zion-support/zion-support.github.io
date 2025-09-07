@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 export const metadata = {
   title: "E-commerce Solutions | Zion Tech Group",
@@ -7,6 +6,7 @@ export const metadata = {
 };
 
 export default function ECommerceSolutionsPage() {
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
@@ -72,4 +72,5 @@ export default function ECommerceSolutionsPage() {
       </div>
     </div>
   );
+
 }

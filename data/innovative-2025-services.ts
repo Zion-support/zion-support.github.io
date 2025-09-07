@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -601,6 +602,9 @@ export interface Innovative2025Service  {{id: 'ai-multimodal-fusion-platform';
   }
 ];
     id: 'ai - emotional - intelligence - platform',
+=======
+id: 'ai - emotional - intelligence - platform',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     name: 'AI Emotional Intelligence Platform',
     tagline: 'Advanced emotion recognition and response generation',
     price: '$1, 799',
@@ -691,8 +695,8 @@ export interface Innovative2025Service  {{id: 'ai-multimodal-fusion-platform';
     reviews: 89
   },
       'Production financial AI platform with real-time trading and comprehensive risk management.'
-    launchDate: '2025-01-15'
-    customers: 45
+    launchDate: "launchDate",
+    customers: 45;
     rating: 4.8
     reviews: 32
   }
@@ -704,7 +708,6 @@ export interface Innovative2025Service  {{id: 'ai-multimodal-fusion-platform';
     description:;
       'Advanced financial platform that uses AI to analyze markets, execute trades, and manage portfolios with superior performance and risk management.',
     features: [;
-
       'AI market analysis',
       'Algorithmic trading',
       'Portfolio optimization',
@@ -712,6 +715,7 @@ export interface Innovative2025Service  {{id: 'ai-multimodal-fusion-platform';
       'Real - time monitoring',
       'Regulatory compliance'
     ],
+<<<<<<< HEAD
     popular: true,
       'Production financial AI platform with real-time trading and comprehensive risk management.',
     launchDate: '2025-01-15',
@@ -1438,3 +1442,7 @@ export const innovative2025Services: Innovative2025Service[] = [;
 
   }
 ];
+=======
+    popular: true,  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

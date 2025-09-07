@@ -223,8 +223,8 @@ import { ApiDocsSpec } from './types';
   ]
 }
 export default v1;
-
   ];
+<<<<<<< HEAD
 
   product: 'Zion OS'
   versions: ['v1']
@@ -247,12 +247,12 @@ const v1: ApiDocsSpec = {
           ],
           versions: ['v1']
         }
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       ]
     },
-
-      id: 'talent'
-      title: 'Talent Profiles'
-
+      id: "id",
+    title: 'Talent Profiles'
       endpoints: [
         {
           id: 'talent-get'
@@ -265,20 +265,16 @@ const v1: ApiDocsSpec = {
           params: { talentId: 'The UUID of the talent' }
           responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } }
           samples: [
-
             { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r && r.json())` },
             { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
-
           ],
           versions: ['v1']
         }
       ]
     },
-
       id: 'jobs'
       title: 'Job Listings'
-
       endpoints: [
         {
           id: 'jobs-list'
@@ -291,14 +287,17 @@ const v1: ApiDocsSpec = {
           query: { q: 'Search text', status: 'open|closed' }
           responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } }
           samples: [
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         }
       ];
     }
-
             { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
+<<<<<<< HEAD
             { language: 'python', code: `import requests\nrequests ;
 
 
@@ -313,3 +312,6 @@ export default v1;
 ;
 export default v1;
 ;
+=======
+            { language: 'python', code: `import requests\nrequests ;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

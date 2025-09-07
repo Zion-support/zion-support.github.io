@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -470,6 +471,9 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       address: '364 E Main St STE 1008 Middletown DE 19709';website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true;
         'Continuous identity verification and authentication',
+=======
+'Continuous identity verification and authentication',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         'Micro - segmentation and network isolation',
         'Adaptive access controls and policies',
         'Real - time threat detection and response',
@@ -518,8 +522,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       useCases: [
         'Threat detection, Incident response, Vulnerability management, Security monitoring, Threat hunting'
       ]
-      roi: 'Security teams report 380% ROI through improved threat detection and reduced response time.'
-      competitors: [
+      roi: "roi",
+    competitors: [
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -612,16 +616,20 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       popular: true
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
       launchDate: '2024-09-25'
-      customers: 43
-      rating: 4.7
+      customers: 43;
+    rating: 4.7
       reviews: 21
     }
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launchDate: '2024-09-25',
       customers: 43,
       rating: 4.7,
+<<<<<<< HEAD
       reviews: 21
 
+=======
+      reviews: 21,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     },;
       id: 'iot - security - platform',
       name: 'IoT Security Platform',
@@ -631,7 +639,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       description:;
         'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
       features: [;
-
         'IoT device authentication and management',
         'Network traffic monitoring and analysis',
         'Threat detection and response',
@@ -666,6 +673,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       rating: 4 && 4.7,
       reviews: 21
   ];    features: [
+<<<<<<< HEAD
 
   id: string, name: string,
   tagline: string, price: string,
@@ -688,6 +696,9 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
   
     },
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+=======      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
@@ -746,7 +757,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Adva
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedCybersecurityService {;
   id: string,;
   name: string,;
@@ -861,6 +872,10 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 ];
 ];
 ;
+<<<<<<< HEAD
+=======
+import { ServiceVariant } from '../types/service-variants';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export interface AdvancedCybersecurityService {;
   id: string,;
   name: string,;

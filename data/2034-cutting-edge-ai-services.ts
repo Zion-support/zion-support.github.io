@@ -73,12 +73,15 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		| 'AI Quantum Computing';
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
+<<<<<<< HEAD
 
 
 
 
   {
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     id: 'ai - product - spec - writer',
     name: 'AI Product Spec Writer',
     description:;
@@ -86,18 +89,20 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Business Management',
     pricing: { starter: '$79 / mo' },
     features: [;
-
       'PRD templates',
       'Story generation',
       'Acceptance criteria',
       'Analytics alignment'
     ],
     integrations: ['Jira', 'Linear'],
-
     use_cases: ['Faster planning', 'Better alignment'],
     link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
+<<<<<<< HEAD
     real_service: true
 
+=======
+    real_service: true,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   },
   {
     id: 'ai - creative - studio',
@@ -107,7 +112,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Creativity',
     pricing: { starter: '$149 / mo' },
     features: [;
-
       'Brand kit',
       'Image & video gen',
       'Review & approvals',
@@ -119,7 +123,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     realService: true
   },;
 ];	id: string;
-
 ];	id: string;
 
     useCases: ['Marketing velocity', 'Cost savings'],
@@ -129,7 +132,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 ];	id: string;
 	id: string, name: string,
 	description: string,
-
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -186,10 +188,17 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 	{
 		id: 'ai-emotional-support-agent';
+<<<<<<< HEAD
 		name: 'AI Emotional Support Agent';
 		description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';
 		category: 'AI Emotional Intelligence'
 		pricing: { starter: '$99/mo' }
+=======
+		name: 'AI Emotional Support Agent',
+  description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';
+		category: "category",
+    pricing: { starter: '$99/mo' }
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'];
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
@@ -220,10 +229,15 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
 	}
 ];
+<<<<<<< HEAD
 
 
 name: string;
 description: string;
+=======
+name: string,
+  description: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 category:;
   | 'AI Consciousness';
   | 'AI Emotional Intelligence';
@@ -357,7 +371,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 export type CuttingEdgeAIService = {}
 ];
 ;
-
 export type CuttingEdgeAIService = {;
 	id: string,;
 	name: string,;
@@ -420,7 +433,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 	}
 ];
 ;
-
 export type CuttingEdgeAIService = {;
 	id: string,;
 	name: string,;
@@ -481,7 +493,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		realService: true;
 	}
 ];
-
 export type CuttingEdgeAIService = {
   id: string;
   name: string;

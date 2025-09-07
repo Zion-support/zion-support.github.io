@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -793,6 +794,9 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
       address: '364 E Main St STE 1008 Middletown DE 19709';website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true;
         'Predictive analytics with 95% accuracy',
+=======
+'Predictive analytics with 95% accuracy',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
         'Natural language query interface',
         'Automated report generation',
         'Custom dashboard builder',
@@ -1028,8 +1032,8 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
       rating: 4 && 4.7,
       reviews: 700
     },
-      id: 'quantum-blockchain-infrastructure-2026'
-      name: 'Quantum Blockchain Infrastructure 2026'
+      id: "id",
+    name: 'Quantum Blockchain Infrastructure 2026'
       tagline:
         'Quantum-secured blockchain infrastructure for the future of decentralized finance'
       price: '$699'
@@ -1048,8 +1052,8 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
         'Performance analytics'
         'Developer tools and APIs'
       ]
-      popular: true
-      color: 'from-violet-600 to-purple-700'
+      popular: true;
+    color: 'from-violet-600 to-purple-700'
       textColor: 'text-violet-400'
       link: 'https://ziontechgroup.com/quantum-blockchain-infrastructure-2026'
       marketPosition:
@@ -1072,7 +1076,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
         'Quantum - secured blockchain',
         'Post - quantum cryptography',
         'Ultra - fast transactions',
-
         'Smart contract automation',
         'DeFi protocol integration',
         'Cross - chain interoperability',
@@ -1198,7 +1201,7 @@ import { ServiceVariant } from '../types/service-variants',export interface Inno
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants',;
+import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026MicroSaasService {;
   id: string,;
   name: string,;
@@ -1338,6 +1341,10 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
 ];
 ];
 ;
+<<<<<<< HEAD
+=======
+import { ServiceVariant } from '../types/service-variants';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export interface Innovative2026MicroSaasService {;
   id: string,;
   name: string,;

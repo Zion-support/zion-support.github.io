@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
       'Intent classification + prioritization';
@@ -323,13 +324,16 @@
 	{id: 'ai-email-responder', name: 'AI Email Responder',tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support',price: '$39', period: '/month',description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.',features: [;
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs';
       'Intent classification + prioritization'
+=======
+'Intent classification + prioritization'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'On-brand response drafting'
       'Automatic polite follow-ups'
       'Lead/contact enrichment'
       'Analytics and response SLAs'
     ]
-    popular: true
-    icon: '📧'
+    popular: true;
+    icon: "icon",
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300'
     link: 'https://ziontechgroup.com/services/ai-email-responder'
@@ -353,7 +357,6 @@
       'On-brand response drafting',
       'Automatic polite follow-ups',
       'Lead/contact enrichment',
-
       'Intent classification + prioritization',
       'On - brand response drafting',
       'Automatic polite follow - ups',
@@ -816,11 +819,13 @@
       'CI integration'
     ],
     popular: false,
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   {
-
     id: 'postgres - index - advisor - pro',
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -915,7 +920,6 @@
     description:;
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
     features: [
-
     id: 'api - breaking - change - watcher',
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -924,7 +928,6 @@
     description:;
       'Monitor OpenAPI / GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
     features: [;
-
       'Schema registry',
       'Diff rules',
       'Owner mapping',
@@ -952,7 +955,6 @@
     reviews: 3
   },
   {
-
   {
     id: 'postgres-index-advisor-pro'
     name: 'Postgres Index Advisor Pro'
@@ -2352,14 +2354,16 @@
 		customers: 24;
 ];
 ;
+	}
+];
+<<<<<<< HEAD
 
 	}
 ];
 
-	}
-];
 
-
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   id: 'ai - email - responder';
   name: 'AI Email Responder',
   tagline: 'Autonomous email triage, drafting, and follow - ups for sales and support';
@@ -3611,6 +3615,7 @@ const contact  = null;
   rating: 4.6,
   reviews: 6;
 }
+<<<<<<< HEAD
 		rating: 4.6
 		reviews: 6
 
@@ -5610,3 +5615,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		reviews: 6;
 	}
 ];
+=======
+=======	}
+];	}
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

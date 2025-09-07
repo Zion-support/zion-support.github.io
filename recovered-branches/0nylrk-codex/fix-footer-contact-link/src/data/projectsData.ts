@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,6 +6,11 @@
     job: {
       title: 'AI Dashboard Development'
       description: 'Develop dashboards using React and integrate ML models'
+=======
+job: {
+      title: "title",
+    description: 'Develop dashboards using React and integrate ML models'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     }
     talent_profile: {
       full_name: 'Alexandra Chen'
@@ -87,6 +93,7 @@ export const PROJECTS: Project[] = [;
     }
   }
 ];
+<<<<<<< HEAD
 
 
 
@@ -107,3 +114,9 @@ export const PROJECTS: Project[] = [;
 
 
 
+=======
+;
+    }
+  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

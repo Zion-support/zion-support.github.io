@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export interface NextGenAi2026Service  {export interface NextGenAi2026Service  {export interface NextGenAi2026Service  {id: string;
   name: string;
@@ -58,6 +59,9 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [;
 ];
 
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -65,12 +69,11 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [;
   features: string[];
   link: string;
   category: string;
-
     address: string;
   }
 export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {
-    id: '2026-next-gen-ai'
+    id: "id",
     name: '2026 Next-Gen AI Platform'
     tagline: 'Next-generation AI for 2026'
     price: '$299/month'
@@ -85,7 +88,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     ]
     link: '/services/2026-next-gen-ai'
     category: 'Next-Gen AI 2026'
-    realImplementation: true
+    realImplementation: true;
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -94,6 +97,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
   }
 ];      mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
+<<<<<<< HEAD
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
@@ -125,6 +129,9 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     }
   }
 
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"],
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 ],
 
 
@@ -141,6 +148,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
+<<<<<<< HEAD
 ]
 ];
 
@@ -149,3 +157,7 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
 
 
 ],
+=======
+],
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

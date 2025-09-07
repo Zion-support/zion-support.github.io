@@ -4,9 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "dev": "vite",
     "build": "vite build",
     "start": "vite preview --port 4173",
+=======
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+>>>>>>> b1030359e255a9b6ea76da45370d91289a2e9194
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
@@ -349,6 +355,7 @@
   },
   "optionalDependencies": {
     "@esbuild/linux-x64": "^0.25.9"
+<<<<<<< HEAD
   },
   "devDependencies": {
     "@axe-core/cli": "^4.10.2",
@@ -387,6 +394,48 @@
     "typescript": "^5.9.2",
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
+=======
+  },
+  "devDependencies": {
+    "@types/next": "^8.0.7",
+    "@types/node": "^18.0.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/react": "19.1.12",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.32",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "jest": "^30.1.3",
+    "jsdom": "^24.0.0",
+    "pm2": "^6.0.8",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "terser": "^5.43.1",
+    "ts-jest": "^29.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0",
+    "vite": "^5.4.19",
+    "web-vitals": "^5.1.0",
+    "@heroicons/react": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.32",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.0.0"
+>>>>>>> b1030359e255a9b6ea76da45370d91289a2e9194
   },
   "engines": {
     "node": ">=18.0.0",

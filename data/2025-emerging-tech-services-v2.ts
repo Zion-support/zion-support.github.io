@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   {'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS';
@@ -13,6 +14,9 @@ export interface EmergingTechService  {id: string;name: string;
     enterprise: number;
   },features: string[];
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   description: string;
@@ -21,8 +25,11 @@ export interface EmergingTechService  {id: string;name: string;
     monthly: number;
     yearly: number;
     currency: string;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   features: string[];
   benefits: string[];
   target_audience: string[];
@@ -44,6 +51,7 @@ export interface EmergingTechService  {id: string;name: string;
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
     implementationDetails:;
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.';
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.';
@@ -287,6 +295,9 @@ export interface EmergingTechService  {id: string;name: string;
     integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'],support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.',compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'],link: 'https://ziontechgroup.com/space-mining-platform';
     implementationDetails:
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
+=======
+    implementationDetails: "implementationDetails",
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
     useCases: [
       'Asteroid mining'
@@ -327,6 +338,7 @@ export interface EmergingTechService  {id: string;name: string;
     ]
     support:
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
+<<<<<<< HEAD
     compliance: [
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -424,6 +436,9 @@ export interface EmergingTechService  {id: string;name: string;
   },;
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
+=======
+    compliance: [];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
@@ -642,8 +657,6 @@ export interface EmergingTechService {;
   }
 ];
 ;
-
 export interface EmergingTechService {;
-
   }
 ];

@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
   id: string;
+=======
+id: string;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   name: string;
   tagline: string;
   price: string;
@@ -393,17 +397,16 @@ import { ServiceVariant  } from '../types/service-variants';
       'Metadata filters'
       'Access controls'
     ]
-    category: 'AI & Search'
+    category: "category",
     link: 'https://ziontechgroup.com/vector-search-starter'
     variant: 'quantum'
-    rating: 4.6
+    rating: 4.6;
     customers: 410
     trialDays: 14
     setupTime: '2 hours'
     contactInfo
   }
 ];import { ServiceVariant  } from "../types/service-variants";
-
 export interface MarketValidatedService {
     id: 'vector - search - starter',
     name: 'Vector Search Starter',

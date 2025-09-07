@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
 const abs  = path && path.resolve(__dirname, '..', '..', relPath)function runNode() {const abs  = path && path.resolve(__dirname, '..', '..', relPath)ursor/expand-services-advertise-and-build-project-4b36;
@@ -53,6 +54,10 @@ function log_step() {logs.push (`\number=== ${name} ===`),const { status, stdout
 const abs = path && path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
+=======
+const res = spawnSync('node', [abs, ...args], {
+    stdio: "stdio",
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     encoding: 'utf8'
   });
   return {

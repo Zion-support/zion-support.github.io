@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   {'Quantum-secured space communication',id: 'quantum - space - communications',name: 'Quantum Space Communications',tagline: 'Revolutionary quantum - secured space communication network',price: '$75, 999',period: '/month',description:;
@@ -67,6 +68,9 @@ export interface EmergingTechService  {id: string;name: string;
 
   {
 
+=======
+{
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       'Quantum-secured space communication',
     id: 'quantum - space - communications',
     name: 'Quantum Space Communications',
@@ -77,7 +81,6 @@ export interface EmergingTechService  {id: string;name: string;
       "World's first quantum - secured space communication network that provides unhackable communication between Earth, satellites, and space stations. Enables secure space exploration and commercial space operations.",
     features: [;
       'Quantum - secured space communication',
-
       'Satellite quantum key distribution',
       'Interplanetary communication protocols',
       'Quantum encryption for space data',
@@ -1076,21 +1079,22 @@ export interface EmergingTechService  {id: string,name: string,tagline: string,p
 ];
 export interface EmergingTechService  {id: string;
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
-
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services
   {
+<<<<<<< HEAD
+=======
+    id: 'quantum-internet-security-platform', name: 'Quantum Internet Security Platform',
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     tagline: 'Unhackable quantum-secured internet infrastructure',
     price: '$12,999',
     period: '/month',
@@ -1109,11 +1113,9 @@ export const emergingTechServices: EmergingTechService[] = [
     useCases: ['Secure government communicationsMilitary command systemsFinancial transactionsHealthcare data exchangeCritical infrastructure protectionDefense intelligence'],
     roi: 'Prevents cyber attacks worth $6M+ annually, 500% ROI through security cost avoidance',
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
-    reviews: 28
-  id: string,;
+    reviews: 28;
+    id: string,;
   name: string,;
   tagline: string,;
   price: string,;
@@ -1199,8 +1201,7 @@ export const emergingTechServices: EmergingTechService[] = [;
     reviews: 28;
 ;
     realImplementation: true
-    implementationDetails:
-      'Fully functional AI robotics platform with computer vision, predictive maintenance, and multi-robot coordination. Includes robotic operations center and 24/7 support.'
+    implementationDetails: "implementationDetails",
     launchDate: '2024-11-15'
     customers: 45
     rating: 4.7
@@ -1969,6 +1970,7 @@ export const emergingTechServices: EmergingTechService[] = [;
     launchDate: '2024-09-01';
     customers: 35;
     rating: 4.8
+<<<<<<< HEAD
 
     reviews: 28
   }
@@ -3073,3 +3075,6 @@ export const emergingTechServices: EmergingTechService[] = [
 ;
   }
 ];
+=======
+    reviews: 28
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

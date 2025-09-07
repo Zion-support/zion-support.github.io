@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 import { useState, useEffect, useCallback  } from 'react';
 interface UseApiOptions  {immediate?: boolean;
 }interface UseApiResult<T>  {data: T | null;
+=======
+import { useState, useEffect, useCallback } from 'react';
+interface UseApiOptions {
+  immediate?: boolean;
+}
+interface UseApiResult<T> {
+  data: T | null;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   loading: boolean;
   error: Error | null;
   execute: () => Promise<void>;
@@ -30,7 +39,6 @@ export function use_api < T>() {loading: true;
           error: error instanceof Error ? error && error.message : 'An error occurred';
         })}
 }
-
 export const useApi = <T>(
   apiFunction: () => Promise<T>,
   options: UseApiOptions = {}
@@ -38,7 +46,6 @@ export const useApi = <T>(
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
-
   const execute = useCallback(async () => {
     setLoading(true);
     setError(null);
@@ -51,18 +58,23 @@ export const useApi = <T>(
       setLoading(false);
     }
   }, [apiFunction]);
-
   useEffect(() => {
     if (options.immediate) {
       execute();
     }
   }, [execute, options.immediate]);
+<<<<<<< HEAD
 
   return { data, loading, error, execute };
 };
       setLoading(false)};
 
   return { data, loading, error, execute }};
+=======
+  return { data, loading, error, execute }
+};      setLoading(false)};
+  return { data, loading, error, execute }}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 };
 };
 };
@@ -80,8 +92,12 @@ interface ApiState<T> {
   loading: boolean;
   error: string | null;
 }
+<<<<<<< HEAD
     data: null
     loading: true
+=======
+    loading: true;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     error: null
     data: null,
     loading: true,
@@ -92,12 +108,14 @@ export function use_api < T>(url: string, options?: RequestInit) {
     data: null,
     loading: true,
     error: null,
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     data: null,
     loading: true,
     error: null,;
-
   });
 ;
   useEffect (() => {
@@ -152,7 +170,6 @@ export default useApi;
   const [error, set_error] = useState < any>(null);
   const execute = useCallback (async (...args: any[]) => {
     try {
-
       set_loading (true);
       set_error (null);
       const result = await api_function (...args);
@@ -163,10 +180,10 @@ export default useApi;
       const error = err instanceof Error ? err : new Error (String (err));
       set_error (error);
       options.on_error?.(error);
-
       throw error;
       set_loading (false);
     }
+<<<<<<< HEAD
 
 
   }, [execute, options && options.immediate]);
@@ -184,6 +201,9 @@ interface UseApiProps {
 }
 import { useState, useEffect } from 'react';
 
+=======
+import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 interface ApiState<T> {
   data: T | null;
   loading: boolean;
@@ -198,6 +218,7 @@ interface ApiState<T> {
     </div>;
   )}
 }
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462;
 interface ApiState<T>  {data: T | null, loading: boolean,error: string | null,origin/automation-improvements-final;
 interface ApiState<T>  {data: T | null, loading: boolean,error: string | null,interface ApiState<T>  {data: T | null, loading: boolean,error: string | null;
@@ -228,10 +249,11 @@ ursor/fix-lint-push-and-merge-to-main-ae4e;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 }}
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 interface UseApiOptions {
   immediate?: boolean;
 }
-
 export function useApi<T>(
   apiCall: () => Promise<T>,
   options: UseApiOptions = {}
@@ -239,11 +261,9 @@ export function useApi<T>(
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const fetchData = async () => {
     setLoading(true);
     setError(null);
-    
     try {
       const result = await apiCall();
       setData(result);
@@ -253,7 +273,6 @@ export function useApi<T>(
       setLoading(false);
     }
   };
-
   useEffect(() => {
     if (options.immediate) {
       execute()}
@@ -268,6 +287,17 @@ export default function UseApi({}: UseApiProps) {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+ursor/add-new-services-and-deploy-updates-0462
+interface ApiState<T> {
+  data: T | null, loading: boolean,
+  error: string | null,
+origin/automation-improvements-final
+interface ApiState<T> {
+  data: T | null, loading: boolean,
+  error: string | null,
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
 }
 export function useApi<T>(
@@ -277,7 +307,6 @@ export function useApi<T>(
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
     try {
     const result = await apiCall(),
     setData(result)
@@ -292,13 +321,17 @@ export function useApi<T>(
       fetchData();
     }
   }, [fetchData, options.immediate]);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 }
   }, [api_function, options]);
   useEffect (() => {
     // Check condition
 if ( {) {
+<<<<<<< HEAD
   $2
 
 
@@ -313,3 +346,6 @@ if ( {) {
     if (options.immediate !== false) {fetchData()}
   }, [])return {data,loading,error,refetch: fetchData;
   }}ursor/automate-test-improve-and-merge-code-646c;
+=======
+  $2
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

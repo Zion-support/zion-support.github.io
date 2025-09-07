@@ -4,11 +4,14 @@ export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026Se
 export interface EnterpriseIt2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {import { ServiceVariant  } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV2  {export interface EnterpriseIt2026ServiceV2  {id: string;
 export interface EnterpriseIt2026ServiceV2 {
+<<<<<<< HEAD
 
 
 
+=======
+export interface EnterpriseIt2026ServiceV2 {
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export interface EnterpriseIt2026ServiceV2 {;
-
 export interface EnterpriseIt2026ServiceV2 {
 
 
@@ -333,8 +336,8 @@ export interface EnterpriseIT2026ServiceV2 {
   reviews: number
 }
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
-    launchDate: '2026-05-01'
-    customers: 280
+    launchDate: "launchDate",
+    customers: 280;
     rating: 4.9
     reviews: 180
   }
@@ -354,15 +357,16 @@ export interface EnterpriseIT2026ServiceV2 {
     launchDate: '2026-05-01';
     customers: 280;
     rating: 4.9
-
     reviews: 180
   }
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
   {
-
     id: 'zero-trust-network-architecture-pro', name: 'Zero Trust Network Architecture Pro',
     tagline: 'Never trust, always verify - comprehensive zero trust security',
     price: '$1,199',
@@ -384,9 +388,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper'], marketSize: '$67.8B market',
     growthRate: '220% annual growth', variant: 'security-futuristic',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 180
       website: 'https://ziontechgroup.com';
@@ -397,8 +399,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     customers: 280;
     rating: 4.9,
     reviews: 180;
+<<<<<<< HEAD
 ];
 import { ServiceVariant } from '../types/service-variants',;
+=======
+];import { ServiceVariant } from '../types/service-variants';
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
   name: string,;
@@ -839,4 +845,8 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
   }
 ];
   }
+<<<<<<< HEAD
 ;
+=======
+}
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38

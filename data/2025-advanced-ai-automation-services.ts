@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   contactInfo: {contactInfo: {import { ServiceVariant  } from '../types / service - variants';
 export interface AdvancedAIAutomationService  {{}
@@ -337,15 +338,16 @@ export interface AdvancedAIAutomationService  {{}
   }
 ];;
   contactInfo: {},
+=======
+contactInfo: {    },
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -353,12 +355,19 @@ export interface AdvancedAIAutomationService  {{}
     launch_date: '2024 - 10 - 01';
     customers: 89;
     rating: 4.8,
+<<<<<<< HEAD
     reviews: 38;
   }
 ;
     realImplementation: true
     implementationDetails:
       'Enterprise-grade DevOps automation platform with AI-powered optimization, multi-cloud support, and advanced monitoring capabilities.'
+=======
+    reviews: 38
+};
+    realImplementation: true;
+    implementationDetails: "implementationDetails",
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     launchDate: '2024-09-20'
     customers: 45
     rating: 4.8
@@ -556,6 +565,7 @@ export interface AdvancedAIAutomationService  {{}
     launchDate: '2024-10-01';
     customers: 89;
     rating: 4.8
+<<<<<<< HEAD
 
     reviews: 38
   }
@@ -825,3 +835,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   }
 ];
 ;
+=======
+    reviews: 38  }
+];
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
