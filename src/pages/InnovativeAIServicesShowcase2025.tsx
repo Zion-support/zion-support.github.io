@@ -270,8 +270,8 @@ export default function InnovativeAIServicesShowcase2025() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredServices.map((service, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
@@ -470,7 +470,7 @@ export default function InnovativeAIServicesShowcase2025() {
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
