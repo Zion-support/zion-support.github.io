@@ -1,7 +1,9 @@
-import type { Metadata } from 'next';
+import React from 'react';
 
-export const metadata: Metadata = {
-  title: 'AI Project Management Suite - Intelligent Project Management | Zion Tech Group',
+
+
+export const metadata = {
+  title: 'AI Project Management Suite | Zion Tech Group',
   description: 'Intelligent project management with AI-powered task automation, resource optimization, risk prediction, and smart scheduling for enhanced team productivity.',
   keywords: 'AI project management, task automation, resource optimization, risk prediction, team productivity, project planning AI',
 };
@@ -14,10 +16,10 @@ interface FeatureProps {
 
 function Feature({ title, description, icon }: FeatureProps) {
   return (
-    <div className="p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:shadow-lg transition-shadow">
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
       <div className="text-3xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
-      <p className="text-gray-300">{description}</p>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
 }
@@ -32,6 +34,7 @@ interface PricingTierProps {
   cta: string;
 }
 
+
 function PricingTier({
   name,
   price,
@@ -43,8 +46,9 @@ function PricingTier({
 }: PricingTierProps) {
   return (
     <div
-      className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-600" : "border-white/20 bg-white/10 backdrop-blur-sm"} shadow-lg`}
+      className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
     >
+
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -52,171 +56,332 @@ function PricingTier({
           </span>
         </div>
       )}
-      <div className="text-center">
-        <h3 className="text-2xl font-bold text-white mb-2">{name}</h3>
-        <div className="text-4xl font-bold text-blue-400 mb-2">{price}</div>
-        <div className="text-gray-300 mb-4">{period}</div>
-        <p className="text-gray-300 mb-6">{description}</p>
-        <ul className="space-y-3 mb-8 text-left">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-center text-gray-300">
-              <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-              {feature}
-            </li>
-          ))}
-        </ul>
-        <button
-          className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-            popular
-              ? "bg-white text-blue-600 hover:bg-gray-100"
-              : "bg-blue-600 text-white hover:bg-blue-700"
-          }`}
-        >
-          {cta}
-        </button>
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
+        <div className="text-4xl font-bold text-blue-600 mb-2">
+          {price}
+          <span className="text-lg text-gray-500 font-normal">/{period}</span>
+        </div>
+        <p className="text-gray-600">{description}</p>
       </div>
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center">
+
+            <svg
+              className="w-5 h-5 text-green-500 mr-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
+
+            </svg>
+            <span className="text-gray-700">{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <a
+        href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Suite Quote - {name}"
+        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+          popular
+
+            ? "bg-blue-600 text-white hover:bg-blue-700"
+            : "bg-gray-900 text-white hover:bg-gray-800"
+
+        }`}
+      >
+        {cta}
+      </a>
     </div>
   );
 }
 
 export default function AIProjectManagementSuitePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            AI Project Management Suite
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Intelligent project management with AI-powered task automation, resource optimization, 
-            risk prediction, and smart scheduling for enhanced team productivity.
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-indigo-50 to-purple-100 rounded-lg">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          AI Project Management Suite
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Transform your project management with AI-powered automation, intelligent resource allocation, and predictive analytics. Boost team productivity and project success rates.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Demo"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Free Demo
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            AI-Powered Project Features
+          </h2>
+
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Comprehensive AI solutions to optimize your project management and team collaboration.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Feature
-            title="AI Task Automation"
-            description="Automatically assign tasks, set priorities, and optimize workflows based on team capacity and project requirements."
             icon="🤖"
+            title="Smart Task Automation"
+            description="AI automatically assigns tasks, sets priorities, and creates dependencies based on team capacity and project requirements"
           />
           <Feature
-            title="Resource Optimization"
-            description="Intelligent resource allocation and capacity planning to maximize team efficiency and project success."
-            icon="⚡"
-          />
-          <Feature
-            title="Risk Prediction"
-            description="AI-powered risk assessment and early warning system to prevent project delays and budget overruns."
-            icon="⚠️"
-          />
-          <Feature
-            title="Smart Scheduling"
-            description="Automated scheduling with dependency management, deadline optimization, and conflict resolution."
-            icon="📅"
-          />
-          <Feature
-            title="Progress Tracking"
-            description="Real-time project monitoring with predictive analytics and automated status reporting."
             icon="📊"
+            title="Resource Optimization"
+            description="Intelligent resource allocation that matches team members to tasks based on skills, availability, and workload"
           />
           <Feature
-            title="Team Collaboration"
-            description="Enhanced collaboration tools with AI-powered communication and knowledge sharing capabilities."
-            icon="👥"
+            icon="🔮"
+            title="Risk Prediction"
+            description="AI analyzes project patterns to predict potential risks and suggest mitigation strategies before issues occur"
+          />
+          <Feature
+            icon="⏰"
+            title="Smart Scheduling"
+            description="Automated scheduling that considers deadlines, dependencies, and team availability for optimal project timelines"
+          />
+          <Feature
+            icon="📈"
+            title="Performance Analytics"
+            description="Comprehensive dashboards with AI insights on team productivity, project health, and delivery metrics"
+          />
+          <Feature
+            icon="💬"
+            title="Intelligent Communication"
+            description="AI-powered communication tools that facilitate collaboration and ensure important updates reach the right people"
           />
         </div>
+      </section>
 
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Key Benefits</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">40%</div>
-              <p className="text-gray-300">Faster Project Delivery</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">60%</div>
-              <p className="text-gray-300">Reduced Project Risks</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">85%</div>
-              <p className="text-gray-300">Resource Utilization</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">95%</div>
-              <p className="text-gray-300">On-Time Delivery</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Pricing Plans</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <PricingTier
-              name="Starter"
-              price="$99"
-              period="per user/month"
-              description="Perfect for small teams and simple projects"
-              features={[
-                'Up to 10 projects',
-                'Basic AI automation',
-                'Standard reporting',
-                'Email support',
-                'Mobile app access'
-              ]}
-              cta="Get Started"
-            />
-            <PricingTier
-              name="Professional"
-              price="$199"
-              period="per user/month"
-              description="Advanced features for growing teams"
-              features={[
-                'Up to 50 projects',
-                'Advanced AI features',
-                'Resource optimization',
-                'Risk prediction',
-                'Priority support',
-                'Custom integrations'
-              ]}
-              popular={true}
-              cta="Most Popular"
-            />
-            <PricingTier
-              name="Enterprise"
-              price="$399"
-              period="per user/month"
-              description="Complete solution for large organizations"
-              features={[
-                'Unlimited projects',
-                'Custom AI models',
-                'Advanced analytics',
-                'White-label solution',
-                '24/7 dedicated support',
-                'Custom development'
-              ]}
-              cta="Contact Sales"
-            />
-          </div>
-        </div>
-
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Project Management?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join leading companies who trust our AI Project Management Suite to deliver projects faster and more efficiently.
+      {/* Integration Options */}
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Connect with your existing tools and platforms for a unified project management experience.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
-              Start Free Trial
-            </button>
-            <button className="border border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-4 px-8 rounded-lg transition-colors">
-              Schedule Demo
-            </button>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {[
+            { name: 'Jira', icon: '🎫', description: 'Issue tracking' },
+            { name: 'Asana', icon: '📋', description: 'Task management' },
+            { name: 'Trello', icon: '📌', description: 'Kanban boards' },
+            { name: 'Monday.com', icon: '📅', description: 'Work management' },
+            { name: 'Slack', icon: '💬', description: 'Team communication' },
+            { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
+            { name: 'GitHub', icon: '🐙', description: 'Code management' },
+            { name: 'Figma', icon: '🎨', description: 'Design collaboration' },
+          ].map((integration, index) => (
+            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+              <div className="text-3xl mb-3">{integration.icon}</div>
+              <h3 className="font-semibold text-gray-900 mb-1">{integration.name}</h3>
+              <p className="text-xs text-gray-600">{integration.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            How It Works
+          </h2>
+
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Simple 4-step process to implement AI-powered project management.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              1
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Setup & Integration</h3>
+            <p className="text-gray-600">Connect your existing tools and configure AI settings for your team</p>
           </div>
-          <div className="mt-8 text-gray-400">
-            <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              2
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Learning</h3>
+
+            <p className="text-gray-600">AI analyzes your team&apos;s work patterns and project history to optimize recommendations</p>
+
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              3
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Automation & Optimization</h3>
+            <p className="text-gray-600">AI automatically manages tasks, schedules, and resources for maximum efficiency</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              4
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">Monitor & Improve</h3>
+            <p className="text-gray-600">Track performance and let AI continuously optimize your project management processes</p>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="text-center mb-12">
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Pricing Plans
+          </h2>
+
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Choose the plan that fits your team size and project management needs.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <PricingTier
+            name="Team"
+            price="$99"
+            period="month"
+            description="Perfect for small teams"
+            features={[
+              'Up to 10 team members',
+              'Basic AI task automation',
+              'Project templates',
+              'Basic analytics',
+              'Email support',
+              '5 active projects',
+            ]}
+            cta="Start Free Trial"
+          />
+          <PricingTier
+            name="Professional"
+            price="$299"
+            period="month"
+            description="Most popular for growing teams"
+            features={[
+              'Up to 50 team members',
+              'Advanced AI features',
+              'Resource optimization',
+              'Risk prediction',
+              'Advanced analytics',
+              'Priority support',
+              'Unlimited projects',
+              'API access',
+            ]}
+            popular={true}
+            cta="Start Free Trial"
+          />
+          <PricingTier
+            name="Enterprise"
+            price="$799"
+            period="month"
+            description="For large organizations"
+            features={[
+              'Unlimited team members',
+              'Full AI optimization suite',
+              'Custom AI training',
+              'White-label options',
+              'Dedicated account manager',
+              '24/7 phone support',
+              'Custom integrations',
+              'Advanced reporting',
+            ]}
+            cta="Contact Sales"
+          />
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our AI Project Management?</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Proven results and cutting-edge AI technology to transform your project management.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">📈</span>
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">40% Productivity Boost</h3>
+            <p className="text-gray-600">Average increase in team productivity with AI optimization</p>
+          </div>
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">⏰</span>
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">50% Time Savings</h3>
+            <p className="text-gray-600">Reduce time spent on project management tasks and focus on execution</p>
+          </div>
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🎯</span>
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">95% On-Time Delivery</h3>
+            <p className="text-gray-600">AI scheduling and risk prediction improve project success rates</p>
+          </div>
+          <div className="text-center p-6">
+            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">💰</span>
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">30% Cost Reduction</h3>
+            <p className="text-gray-600">Optimized resource allocation reduces project costs and waste</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
+
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Transform Your Project Management?
+        </h2>
+
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Start your free trial today and see how AI can revolutionize your project management processes.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Project Management Suite Demo Request"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Start Free Trial
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+        <div className="mt-8 text-sm">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>Email: kleber@ziontechgroup.com</p>
+        </div>
+      </section>
     </div>
   );
 }

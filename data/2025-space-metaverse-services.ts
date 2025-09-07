@@ -656,6 +656,7 @@ export interface SpaceMetaverseService {;
     rating: 4.7,
     reviews: 1400;
   }
+
 ;
     rating: 4.7,
     reviews: 1400;

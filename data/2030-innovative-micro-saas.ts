@@ -1336,5 +1336,4 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
   }
 ];
 
-;
 

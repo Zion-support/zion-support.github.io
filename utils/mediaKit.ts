@@ -121,6 +121,17 @@ export function buildPressRelease (
     company_name: string;
 export function buildPressRelease(
 
+  type: PressReleaseType
+;
+  // Check condition
+if (return [...base, ...web3Extras]) {
+  $2
+}
+  return base;
+;
+export function buildPressRelease (
+  type: PressReleaseType,
+  params: {
   type: PressReleaseType,
   params: {;
     companyName: string;

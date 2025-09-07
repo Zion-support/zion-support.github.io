@@ -298,7 +298,7 @@ import { define_config, devices } from '@playwright / test',export default defin
   reporter: [
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
       use: {
         browser_name: 'firefox';
         browser_name: 'firefox';
@@ -330,12 +330,8 @@ import { define_config, devices } from '@playwright / test',export default defin
         browser_name: 'webkit',
         ...devices['i_phone 12'];
 
-      }
 
-    }
 
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
-});
 
 
 
@@ -405,9 +401,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
   ]
   reporter: [
 
-    ['list']
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
-]
 
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
