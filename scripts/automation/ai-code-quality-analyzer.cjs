@@ -1,4 +1,9 @@
-//
+
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
 const fs = require('fs')
 const path = require('path')
@@ -61,7 +66,7 @@ fs.mkdirSync(logDir, { recursive: true })
           severity: error,
           count: errorCount,
 
-main
+
 
   async analyzeReactComponents(analysis) {
     this.log('Analyzing React components...)
@@ -120,6 +125,16 @@ this.log('Analyzing performance patterns...)
   generateRecommendations($2) {
   if($2) {
       analysis.recommendations.push({
+
+    }
+  }
+}
+
+
+
+// Run the analyzer
+const analyzer = new AICodeQualityAnalyzer();
+analyzer.run().catch(console.error);
 
 const analyzer = new AICodeQualityAnalyzer()
 analyzer.analyzeCodeQuality()

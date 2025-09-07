@@ -1,21 +1,6 @@
 <<<<<<< HEAD
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-main
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -23,58 +8,9 @@ main
     log('info', `Low "severity": ${securityReport.summary.low}`);
     log('info', `Security "score": ${securityReport.summary.securityScore}/100`);
     if (securityReport.vulnerabilities.length > 0) {
-      log('warn', 'Vulnerabilities "found": ');
-=======
-main
-    log('info', `Total "checks": ${securityReport.summary.totalChecks}`)
-    log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`)
-    log('info', `High "severity": ${securityReport.summary.high}`)
-    log('info', `Medium "severity": ${securityReport.summary.medium}`)
-    log('info', `Low "severity": ${securityReport.summary.low}`)
-    log('info', `Security "score": ${securityReport.summary.securityScore}/100`)
-  if($2) {
-      log('warn', 'Vulnerabilities "found": ')
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
-      securityReport.vulnerabilities.forEach(vuln => {
-        log('warn', `- [${vuln.severity.toUpperCase()}] ${vuln.description}`)})}
-  if($2) {
-      log('info', 'Security "Recommendations": ')
-      securityReport.recommendations.forEach(rec => {
-        log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`)
-        log('info', `  "Action": ${rec.action}`)})}
-
-    // Save report
-    const reportPath = path.join(process.cwd(), `enhanced-security-report-${securityReport.sessionId}.json`)
-    fs.writeFileSync(reportPath, JSON.stringify(securityReport, null, 2))
-    log('info', `Enhanced security report saved "to": enhanced-security-report-${securityReport.sessionId}.json`)
-    // Exit with appropriate status
-  if($2) {
-      log('error', 'Security score is below 50% - immediate attention required')
-      process.exit(1)} else if (securityReport.summary.securityScore < 80) {
-      log('warn', 'Security score is below 80% - security improvements recommended')
-      process.exit(0)} else {
-      log('info', 'Security scan completed successfully')
-      process.exit(0)}
-
-  } catch (error) {
-    log('error', 'Fatal error in enhanced security scanner', error.message)
-    process.exit(1)}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-main();#!/usr/bin/env node;
-
-main();
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
 
-<<<<<<< HEAD
-main
-=======
 
 
 =======
@@ -85,9 +21,6 @@ main();
 
 
 #!/usr/bin/env node;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
 main();#!/usr/bin/env node;
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -136,14 +69,3 @@ console.log('======')
       log('warn', 'Vulnerabilities "found")
 <<<<<<< HEAD
       log('info', 'Security "Recommendations")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
-      log('info', 'Security "Recommendations")
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

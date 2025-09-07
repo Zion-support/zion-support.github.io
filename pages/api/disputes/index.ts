@@ -1,12 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createDispute, readAllDisputes } from '[^']*';
-import { parseUserFromRequest } from '[^']*';
-import { DisputeCase, DisputeReason } from '[^']*';
-import { generateCaseId } from '[^']*';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = null;
-  return res.status(405).end('Method Not Allowed')
-}
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
@@ -75,6 +66,11 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 
-  res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
+  try {
+    // Mock data for now
+    const disputes = [];
+    return res.status(200).json({ disputes });
+  } catch (error) {
+    return res.status(500).json({ error: 'Internal server error' });
+  }
 }

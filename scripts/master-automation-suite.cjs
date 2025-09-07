@@ -1,4 +1,8 @@
-///usr/bin/env node
+
+
+
+#!/usr/bin/env node;
+
 /**
  * Master Automation Suite
  * Orchestrates all automation scripts in a comprehensive workflow
@@ -34,8 +38,7 @@
   masterSuite.runMasterSuite()
     .then(results => {)
 
-module.exports = MasterAutomationSuite
-main
+
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')

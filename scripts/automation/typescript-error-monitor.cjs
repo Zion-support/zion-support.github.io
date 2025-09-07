@@ -1,6 +1,7 @@
-#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
+#!/usr/bin/env node;"
+#!/usr/bin/env node"
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -360,14 +361,8 @@ class TypeScriptErrorMonitor {
   monitor.run().catch(error => {)
 
     process.exit(1)})}
-;
-module.exports = TypeScriptErrorMonitor
-
-module.exports = TypeScriptErrorMonitor
-
-module.exports = TypeScriptErrorMonitor
-
 module.exports = TypeScriptErrorMonitor
 module.exports = TypeScriptErrorMonitor
 
 module.exports = TypeScriptErrorMonitor
+

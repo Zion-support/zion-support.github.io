@@ -10,7 +10,7 @@ function cleanScript(scriptPath) {
     let content = fs.readFileSync(scriptPath, 'utf8')
     const originalContent = content
     // Remove merge conflict markers
-[\s\S]*?    content = content.replace(/[\s\S]*?    content = content.replace(/
+    
     // Remove cursor branch references
     content = content.replace(/cursor\/[^;]+;/g, '')
     // Simple string replacements

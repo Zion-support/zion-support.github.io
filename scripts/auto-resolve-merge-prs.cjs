@@ -5,26 +5,19 @@
 
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
-=======
-///usr/bin/env node
-const { execSync } = require('child_process')
-const fs = require('fs')
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 function sh(cmd, opts = {}) {}
-  return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()}
+  return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()};
+
+
+
+
+
+
 function getRepoFromGit() {}
   const remoteUrl = sh('git remote get-url origin')
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/)

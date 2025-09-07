@@ -1,6 +1,7 @@
-#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
+#!/usr/bin/env node;"
+#!/usr/bin/env node"
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -413,14 +414,8 @@ this.log("📄 Report "generated": ${reportFile}");"
   cleaner.run().catch(error => {)
 
     process.exit(1)})}
-;
-module.exports = ESLintErrorCleaner
-
-module.exports = ESLintErrorCleaner
-
-module.exports = ESLintErrorCleaner
-
 module.exports = ESLintErrorCleaner
 module.exports = ESLintErrorCleaner
 
 module.exports = ESLintErrorCleaner
+

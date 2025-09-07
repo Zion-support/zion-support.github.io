@@ -1,6 +1,13 @@
-// Simple conflict resolution - take the incoming change
+            // Simple conflict resolution - take the incoming change
 
-[\s\S]*?
+main
+
+            // Simple conflict resolution - take the incoming change
+            const resolved = content.replace(/\n<<<<<<<[\s\S]*?[\s\S]*?>>>>>>>\n/g, '\n');
+
+
+
+            // Simple conflict resolution - take the incoming change;
             const resolved = content.replace(/\n<<<<<<<[\s\S]*?
 )
             fs.writeFileSync(file, resolved)
@@ -34,27 +41,34 @@
 
       const logsDir = path.dirname(this.reportFile)
       if (!fs.existsSync(logsDir)) {
-fs.mkdirSync(logsDir, { recursive: true })
-      // Generate workflow report
-      const report = await this.generateWorkflowReport()
-      await this.saveReport(report)
-      // Auto-cleanup if enabled
-  if($2) {
-        await this.cleanupOldBranches()
-      // Resolve any merge conflicts
-      await this.resolveMergeConflicts()
-      process.exit(1)
-// Run if called directly
-  if($2) {
-  const automator = new GitWorkflowAutomator()
-  automator.run()
-module.exports = GitWorkflowAutomator;'
+        fs.mkdirSync(logsDir, { recursive: true });
 
-module.exports = GitWorkflowAutomator
+
+      // Generate workflow report;
+      const report = await this.generateWorkflowReport();
+      await this.saveReport(report);
+
+      // Auto-cleanup if enabled;
+      if (this.config.cleanupOldBranches) {
+        await this.cleanupOldBranches();
+
+      // Resolve any merge conflicts;
+      await this.resolveMergeConflicts();
+
+
+      process.exit(1);
+
+// Run if called directly;
+if (require.main === module) {
+  const automator = new GitWorkflowAutomator();
+  automator.run();
+
+
+
+
+
+
 '
-module.exports = GitWorkflowAutomator;'
-
-main
 
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"

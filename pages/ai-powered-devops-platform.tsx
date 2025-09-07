@@ -1,6 +1,12 @@
-import React from 'react',
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Powered DevOps Platform - Zion Tech Group',
+  description: 'Professional AI powered DevOps platform services to help your business grow and succeed.',
+  keywords: 'AI DevOps platform, business solutions, professional services'
+};
+
 export default function AIPoweredDevOpsPlatformPage() {
 
 export default function aipowereddevopsplatformPage() {

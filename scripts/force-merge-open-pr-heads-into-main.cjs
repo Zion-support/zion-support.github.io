@@ -5,16 +5,8 @@
 
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -46,6 +38,11 @@ async function gh(path, method = 'GET') {}
       "Accept": 'application/vnd.github.v3+json',
 <<<<<<< HEAD
       'User-Agent': 'force-merge-script'
+
+
+
+
+
 
     };
   }

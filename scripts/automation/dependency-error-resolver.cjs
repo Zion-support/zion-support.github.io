@@ -1,6 +1,7 @@
-#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class $1 { constructor() {""
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
+#!/usr/bin/env node;"
+#!/usr/bin/env node"
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -165,8 +166,6 @@ throw error}
     this.resolutionsApplied = 0;
     this.dependencyHistory = []}
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    }
     console.log(`[${timestamp}] [${level}] ${message}`)}
 
   async runDependencyCheck() {
@@ -206,13 +205,9 @@ throw error}
 
     return resolutionsApplied}
   async checkPackageLockIssues() {
-    try {
-      this.log('Checking package-lock.json integrity...', 'INFO')
-      execSync('npm ci --dry-run', { "stdio": 'pipe' })
-      return { "success": true, "issues": [] }} catch (error) {
-const output = error.stdout?.toString() || error.stderr?.toString() || ''
-      return {
-        "success": false,        "issues": [{
+      return { 
+        "success": false, 
+        "issues": [{
           type: 'package-lock',
           "message": 'Package-lock.json integrity issues detected',
           "details": output
@@ -230,22 +225,9 @@ const output = error.stdout?.toString() || error.stderr?.toString() || ''
       if (fs.existsSync('node_modules')) {
 
   async checkDuplicateDependencies() {
-    try {
-      this.log('Checking for duplicate dependencies...', 'INFO')
-      const output = execSync('npm ls --depth=0', { "stdio": 'pipe' }).toString()
-      const duplicates = []
-      const lines = output.split('\n')
-  for($2) {
-        if (line.includes('UNMET PEER DEPENDENCY') || line.includes('npm ERR!')) {
-          duplicates.push({
-            "type": 'peer-dependency',
-            "message": line.trim()
-          })}
-
-      return { "success": duplicates.length === 0, duplicates }} catch (error) {
-const output = error.stdout?.toString() || error.stderr?.toString() || ''
-      return {
-        "success": false,        "duplicates": [{
+      return { 
+        "success": false, 
+        "duplicates": [{
           type: 'dependency-conflict',
           "message": 'Dependency conflicts detected',
           "details": output
@@ -259,24 +241,23 @@ const output = error.stdout?.toString() || error.stderr?.toString() || ''
   // TODO: Implement
 
   // TODO: Implement
-// Run comprehensive dependency checks
+      // Run comprehensive dependency checks;
       const [vulnCheck, outdatedCheck, packageLockCheck, duplicateCheck] = await Promise.all([this.runDependencyCheck(),
         this.runOutdatedCheck(),
         this.checkPackageLockIssues(),
         this.checkDuplicateDependencies()]
-])
-      const totalIssues = vulnCheck.count + outdatedCheck.count +                         (packageLockCheck.success ? 0 : 1) + duplicateCheck.duplicates.length
-  if($2) {
+      ]);
+      const totalIssues = vulnCheck.count + outdatedCheck.count + 
+                         (packageLockCheck.success ? 0 : 1) + duplicateCheck.duplicates.length;
+      if (totalIssues === 0) {
 
       // Resolve issues
       // Fix vulnerabilities and outdated dependencies
       resolutionsApplied += await this.resolveDependencyIssues(
-vulnCheck.vulnerabilities,        outdatedCheck.outdated
-      )
-      // Fix package-lock issues
+        vulnCheck.vulnerabilities, 
         outdatedCheck.outdated;)
-      // Fix package-lock issues
-  if($2) {
+      // Fix package-lock issues;
+      if (!packageLockCheck.success) {
         if (await this.fixPackageLockIssues()) {
           resolutionsApplied += 1}
       // Fix duplicate dependencies
@@ -322,14 +303,8 @@ vulnCheck.vulnerabilities,        outdatedCheck.outdated
   process.on('SIGTERM', () => {
   // Start resolver
     process.exit(1)})}
-;
-module.exports = DependencyErrorResolver
-
-module.exports = DependencyErrorResolver
-
-module.exports = DependencyErrorResolver
-
 module.exports = DependencyErrorResolver
 module.exports = DependencyErrorResolver
 
 module.exports = DependencyErrorResolver
+

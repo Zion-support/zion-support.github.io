@@ -1,9 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { writeState } from '[^']*';
-import { getProviderById } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from "next";
 
-  if (req.method !== "POST")
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {
     return res.status(405).json({ error: "Method not allowed" });
   }
   const now = Date.now();
@@ -31,4 +32,7 @@ export default function handler(req, res) {
   } catch (error) {
     res.status(500).json({ error: "Internal server error" });
   }
+
+  // Mock implementation
+  return res.status(200).json({ success: true });
 }

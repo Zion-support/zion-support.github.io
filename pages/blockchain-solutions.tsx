@@ -1,13 +1,5 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const BlockchainSolutions: NextPage;
-const BlockchainSolutions: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>BlockchainSolutions - Zion Tech Solutions</title>
-        <meta name='description' content='BlockchainSolutions page' />
-      </Head>
+import React from 'react';
+import { Metadata } from 'next';
 
       <main>
         <h1>BlockchainSolutions</h1>
@@ -16,4 +8,3 @@ const BlockchainSolutions: NextPage = () => {
     </div>
   )
 }
-export default BlockchainSolutions;

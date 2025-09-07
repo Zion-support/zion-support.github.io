@@ -1,7 +1,20 @@
-export const metadata = {
-  title: "About | Zion Tech Group",
-  description:
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+import React from 'react';
+import Link from 'next/link';
+import { Metadata } from 'next';
+import { Award, Users, Target, Globe, CheckCircle, Star } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'About | Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+  keywords: 'about, company, mission, AI solutions, micro SaaS, IT services, enterprise software',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'About | Zion Tech Group',
+    description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Zion Tech Group',
+  },
 };
 export default function AboutPage() {
   return (

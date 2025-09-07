@@ -1,6 +1,12 @@
-import React from 'react',
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AI Powered Cybersecurity - Zion Tech Group',
+  description: 'Professional AI powered cybersecurity services to help your business grow and succeed.',
+  keywords: 'AI cybersecurity, business solutions, professional services'
+};
+
 export default function AIPoweredCybersecurityPage() {
 
 export default function AiPoweredCybersecurityPage() {
