@@ -6,8 +6,8 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-<<<<<<< HEAD
 import nextPlugin from '@next/eslint-plugin-next';
+import globals from 'globals';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -15,15 +15,7 @@ const __dirname = dirname(__filename);
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-=======
-// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
-import globals from 'globals';
-
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 });
 
 export default [
@@ -43,7 +35,6 @@ export default [
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn'
-<<<<<<< HEAD
     }
   },
   {
@@ -71,8 +62,6 @@ export default [
       'prefer-const': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off'
-=======
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     }
   },
   {
@@ -186,7 +175,6 @@ export default [
       'system-*.js',
       'ultimate-*.js',
       '*.js',
-<<<<<<< HEAD
       'public/**',
       'services-broken.tsx',
       'services/**/*.ts',
@@ -211,10 +199,30 @@ export default [
       'pages-backup/**',
       'pages-disabled/**',
       'pages-quarantine/**',
-      'app/**'
-=======
       'src_backup_temp/**',
+      'src/**',
+      'src.pages.disabled.auto/**',
+      'types/**',
+      'test-utils.jsx',
+      'vite.config.ts',
       'temp-backup/**',
+      'App.test.ts',
+      'App.test.tsx',
+      'App.tsx',
+      'AppMinimal.test.tsx',
+      'ai-optimization-backups/**',
+      'api-documentation.tsx',
+      'api.disabled.temp/**',
+      'api.tsx',
+      'apps/**',
+      'blog/**',
+      'browserstack.config.ts',
+      'components.disabled_full/**',
+      'cypress/**',
+      'fix_utils_files.ts',
+      'providers/**',
+      'services/**',
+      'app/services/**',
       'temp_exclude/**',
       'temp_components/**',
       'temp_broken_files/**',
@@ -232,11 +240,10 @@ export default [
       'pages_disabled/**',
       'src.pages.disabled/**',
       'vite.config-backup.ts'
->>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     ]
   },
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -266,7 +273,6 @@ export default [
       'react': react,
       'react-hooks': reactHooks,
       '@next/next': nextPlugin
-      // '@next/next': nextPlugin, // Not needed for Vite project
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -307,9 +313,6 @@ export default [
       }
     },
     rules: {
-      'no-console': 'off'
-    }
-  }
       'no-console': 'off'
     }
   }
