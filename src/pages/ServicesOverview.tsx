@@ -50,7 +50,7 @@ import {
   Rocket as Space
 } from 'lucide-react';
 
-export default function ServicesOverview() {
+const ServicesOverview: React.FC = () => {
   const serviceCategories = [
     {
       name: 'AI & Machine Learning',
@@ -511,4 +511,6 @@ export default function ServicesOverview() {
       </section>
     </div>
   );
-}
+};
+
+export default ServicesOverview;

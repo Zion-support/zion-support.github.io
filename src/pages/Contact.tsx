@@ -80,8 +80,7 @@ import {
 const Contact: React.FC = () => {
 const Contact = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
     phone: '',
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -214,8 +213,7 @@ const Contact = () => {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        firstName: '',
-        lastName: '',
+        name: '',
         email: '',
         phone: '',
         service: '',
@@ -831,7 +829,7 @@ const Contact = () => {
                     className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {isSubmitting ? (
-                      <div className="flex items-center justify-center">
+                      <>
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                         Sending Message...
                       </>
@@ -841,7 +839,7 @@ const Contact = () => {
                         Send Message
                       </>
                     )}
-                  </button>
+                  </motion.button>
                 </form>
               )}
               </div>
