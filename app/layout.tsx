@@ -66,8 +66,6 @@ export const metadata: Metadata = {
   category: 'technology',
   classification: 'Business Technology Services',
   referrer: 'origin-when-cross-origin',
-  colorScheme: 'light',
-  themeColor: '#000000',
 };
 
 export default function RootLayout({
