@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 export const metadata = {
   title: "AI Services | Zion Tech Group",
@@ -205,7 +204,7 @@ export default function AIServicesPage() {
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
         <p className="text-xl mb-8">
-          Let's discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
+          Let&apos;s discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

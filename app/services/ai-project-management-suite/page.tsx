@@ -1,5 +1,15 @@
 import React from 'react';
 
+interface PricingTierProps {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+  cta: string;
+}
+
 export const metadata = {
   title: "AI Project Management Suite | Zion Tech Group",
   description: "Professional AI project management suite services for your business needs.",
