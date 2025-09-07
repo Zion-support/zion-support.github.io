@@ -1,5 +1,4 @@
-
-// Memory optimization settings
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -11,10 +10,10 @@ const nextConfig = {
   images: {
     domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
-    unoptimized: true
+    unoptimized: true,
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   webpack: (config, { dev, isServer }) => {
     // Exclude problematic directories from webpack compilation
@@ -63,7 +62,7 @@ const nextConfig = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-      tls: false
+      tls: false,
     };
 
     return config;
@@ -71,8 +70,8 @@ const nextConfig = {
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2
-  }
+    pagesBufferLength: 2,
+  },
 };
 
 export default nextConfig;

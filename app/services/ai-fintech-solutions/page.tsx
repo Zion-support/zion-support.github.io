@@ -3,6 +3,7 @@
 import React from 'react';
 
 
+
 export const metadata = {
   title: 'AI Fintech Solutions | Zion Tech Group',
   description: 'Advanced AI-powered fintech solutions for fraud detection, risk assessment, algorithmic trading, credit scoring, and financial data analysis.',

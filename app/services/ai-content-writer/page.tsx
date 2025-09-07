@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+
 export const metadata = {
   title: 'AI Content Writer | Zion Tech Group',
   description: 'AI-powered content creation platform. Generate blog posts, social media content, and marketing copy with advanced AI.',

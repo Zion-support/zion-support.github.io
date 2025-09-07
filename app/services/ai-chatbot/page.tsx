@@ -1,118 +1,11 @@
 export const metadata = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  title: 'AI Chatbot Development | Zion Tech Group',
-  description: 'Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.',
-<<<<<<< HEAD
-=======
   title: 'AI-Powered Chatbot Solutions | Zion Tech Group',
   description: 'Intelligent AI chatbots that understand context, learn from interactions, and provide 24/7 customer support. Reduce response time by 90% and increase customer satisfaction.',
   keywords: 'ai-chatbot, customer support, automation, nlp, machine learning, business intelligence'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-=======
-
-  title: 'Ai Chatbot | Zion Tech Group',
-  description: 'Professional ai chatbot services for your business needs.',
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-  keywords: 'ai-chatbot, services, business, technology'
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
-  title: 'Ai Chatbot | Zion Tech Group',
-  description: 'Professional ai chatbot services for your business needs.',
-  keywords: 'ai-chatbot, services, business, technology',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
 };
 
 export default function ServicePage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <section className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Chatbot Development</h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Build intelligent AI chatbots with natural language processing, multi-channel support, and seamless human handoff capabilities.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item
-            title="Natural Language Processing"
-            details={[
-              'Intent recognition',
-              'Entity extraction',
-              'Context understanding',
-              'Multi-language support',
-              'Sentiment analysis',
-              'Conversation flow',
-              'Fallback handling',
-            ]}
-          />
-          <Item
-            title="Multi-Channel Integration"
-            details={[
-              'Website chat widget',
-              'Facebook Messenger',
-              'WhatsApp Business',
-              'Slack integration',
-              'Telegram support',
-              'Voice interfaces',
-              'Mobile apps',
-            ]}
-          />
-          <Item
-            title="Advanced Features"
-            details={[
-              'Human handoff',
-              'Knowledge base integration',
-              'API connections',
-              'Analytics dashboard',
-              'A/B testing',
-              'Custom training',
-              'White-label options',
-            ]}
-          />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Chatbot
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai chatbot services for your business needs.
-          </p>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Tailored ai chatbot solutions designed for your specific business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
-            <p className="text-gray-300">
-              Cutting-edge technology and best practices to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your ai chatbot solutions run smoothly.
-            </p>
-          </div>
-        </div>
-<<<<<<< HEAD
-      </section>
-
-      <Pricing />
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -123,16 +16,6 @@ export default function ServicePage() {
             Transform your customer support with intelligent AI chatbots that understand context, 
             learn from interactions, and provide instant, accurate responses 24/7. 
             Reduce response time by 90% and increase customer satisfaction by 40%.
-=======
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-      <div className='container mx-auto px-4 py-16'>
-        <div className='text-center mb-16'>
-          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-            Ai Chatbot
-          </h1>
-          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-            Professional ai chatbot services for your business needs.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -149,7 +32,6 @@ export default function ServicePage() {
             </a>
           </div>
         </div>
-<<<<<<< HEAD
         
         {/* Key Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -305,117 +187,9 @@ export default function ServicePage() {
           </div>
           <div className="mt-8 text-gray-400">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
-
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>
-              Expert Solutions
-            </h3>
-            <p className='text-gray-300'>
-              Tailored ai chatbot solutions designed for your specific business
-              requirements.
-            </p>
-          </div>
-
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>
-              Advanced Technology
-            </h3>
-            <p className='text-gray-300'>
-              Cutting-edge technology and best practices to deliver exceptional
-              results.
-            </p>
-          </div>
-
-          <div className='bg-gray-800 rounded-lg p-6'>
-            <h3 className='text-xl font-bold text-white mb-4'>24/7 Support</h3>
-            <p className='text-gray-300'>
-              Round-the-clock support to ensure your ai chatbot solutions run
-              smoothly.
-            </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </div>
   );
 }
-<<<<<<< HEAD
-
-function Item({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
-        {details.map((detail, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-blue-500 mr-2 mt-1">•</span>
-            <span className="text-gray-600">{detail}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function Pricing() {
-  return (
-    <section>
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Chatbot Pricing</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan
-          name="Basic Chatbot"
-          price="$8k–$15k"
-          duration="4–6 weeks"
-          features={[
-            'Basic NLP capabilities',
-            'Single channel integration',
-            'Pre-built responses',
-            'Simple analytics',
-            'Basic customization',
-            'Email support',
-            'Standard hosting',
-          ]}
-        />
-        <Plan
-          name="Professional Chatbot"
-          price="$15k–$35k"
-          duration="6–10 weeks"
-          features={[
-            'Everything in Basic',
-            'Multi-channel support',
-            'Custom training',
-            'Advanced analytics',
-            'API integrations',
-            'Human handoff',
-            'Priority support',
-          ]}
-        />
-        <Plan
-          name="Enterprise Chatbot"
-          price="$35k+"
-          duration="8–16 weeks"
-          features={[
-            'Everything in Professional',
-            'Custom development',
-            'Advanced AI models',
-            'White-label options',
-            'Dedicated support',
-            'SLA guarantees',
-            'On-premise deployment',
-          ]}
-        />
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-      </div>
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

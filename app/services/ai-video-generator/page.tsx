@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 
 
+
 export const metadata = {
   title: 'AI Video Generator | Zion Tech Group',
   description: 'Create professional videos with AI. Generate marketing videos, explainer content, and social media videos automatically.',
