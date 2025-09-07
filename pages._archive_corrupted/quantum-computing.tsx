@@ -6,7 +6,7 @@ interface QuantumcomputingProps {
 
 
 
-export default function Quantumcomputing({ }: QuantumcomputingProps) {
+export default function Quantumcomputing({}: QuantumcomputingProps) {
   return (
     <div>
       <h1>Quantumcomputing</h1>
@@ -14,4 +14,16 @@ export default function Quantumcomputing({ }: QuantumcomputingProps) {
     </div>
   );
 
+;
+ursor/fix-website-loading-errors-and-merge-6662;
+ursor/automate-test-improve-and-merge-code-646c;
+interface QuantumcomputingProps  {// Add props here as needed;
+}ursor/automate-test-improve-and-merge-code-646c;
+export default function Quantumcomputing() {export default function Quantumcomputing() {return (<div>;
+      <h1>Quantumcomputing</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}}ursor/fix-syntax-push-and-merge-to-main-40de;
+}}ursor/automate-test-improve-and-merge-code-646c;
+}
 }

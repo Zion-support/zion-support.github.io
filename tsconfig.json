@@ -9,8 +9,14 @@
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
+<<<<<<< HEAD
     "esModuleInterop": true,
+    "module": "ESNext",
+=======
+    "incremental": true,
     "module": "esnext",
+    "esModuleInterop": true,
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -22,34 +28,82 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/assets/*": ["./src/assets/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+=======
       "@/*": [
-        "./*"
+        "./src/*"
       ],
       "@/components/*": [
-        "./components/*"
+        "./src/components/*"
       ],
-      "@/app/*": [
-        "./app/*"
+      "@/pages/*": [
+        "./src/pages/*"
       ],
       "@/utils/*": [
-        "./utils/*"
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
       ],
       "@/types/*": [
-        "./types/*"
+        "./src/types/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/assets/*": [
+        "./src/assets/*"
       ]
     },
     "allowSyntheticDefaultImports": true,
-    "incremental": true,
-    "target": "ES2017",
-    "strictNullChecks": true
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "api-backup",
+    "pages.disabled",
+    "backup-pages",
+    "automation/backups",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled",
+    "src",
+    "src.pages.disabled",
+    "src.pages.disabled.auto",
+    "components.disabled",
+    "src.disabled",
+    "src.pages.disabled"
   ]
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
 }

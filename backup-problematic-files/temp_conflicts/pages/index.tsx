@@ -1,141 +1,50 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import { ;
-  ExternalLink;
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase',;
-import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection',;
-;
-export default function HomePage() {;
-  const [isVisible, setIsVisible] = useState(false),;
-;
-  useEffect(() => {;
-    setIsVisible(true),;
-  }, []),;
-;
-  const services = [;
-    {;
-      title:"AI Business Intelligence",,
-  description:"Transform data into actionable insights with AI-powered analytics",;
-      color:"from-purple-500 to-pink-500",;
-      link:"https://ziontechgroup.com/ai-business-intelligence",;
-      price:"$499/month",;
-      features:["AI-powered dashboards", "Predictive analytics", "Real-time insights"];
-    },;
-    {;
-      title:"Quantum Cybersecurity",,
-  description:"Future-proof security with quantum-resistant encryption and AI threat detection",;
-      color:"from-red-500 to-orange-500",;
-      link:"https://ziontechgroup.com/quantum-cybersecurity",;
-      price:"$799/month",;
-      features:["Quantum-resistant encryption", "AI threat detection", "Zero-trust architecture"];
-    },;
-    {;
-    <UltraFuturisticBackground2029>;
+import React from 'react',import Head from 'next/head',import { motion } from 'framer-motion',import {ExternalLink;
+} from 'lucide-react',import EnhancedNavigation from '../components/EnhancedNavigation',import EnhancedFooter from '../components/EnhancedFooter',import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase',import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection',export default function HomePage() {const [isVisible, setIsVisible]  = useState(false),useEffect(() => {setIsVisible(true),}, []),const services = [;
+    {title:"AI Business Intelligence",,description:"Transform data into actionable insights with AI-powered analytics",color:"from-purple-500 to-pink-500",link:"https://ziontechgroup.com/ai-business-intelligence",price:"$499/month",features:["AI-powered dashboards", "Predictive analytics", "Real-time insights"];
+    },{title:"Quantum Cybersecurity",,description:"Future-proof security with quantum-resistant encryption and AI threat detection",color:"from-red-500 to-orange-500",link:"https://ziontechgroup.com/quantum-cybersecurity",price:"$799/month",features:["Quantum-resistant encryption", "AI threat detection", "Zero-trust architecture"];
+    },{<UltraFuturisticBackground2029>;
       <Head>;
         <title>Zion Tech Group - 2029 Revolutionary Technology Services | AI, Quantum Computing, Space Tech</title>;
         <meta name="description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology. Transform your business with cutting-edge solutions." />;
         <meta name="keywords" content="AI consciousness, quantum computing, space mining, biotechnology, 2029 technology, revolutionary services, Zion Tech Group" />;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
-        <link rel="icon" href="/favicon.ico" />;
-        ;
-        {/* Open Graph */}
+        <link rel="icon" href="/favicon.ico" />;{/* Open Graph */}
         <meta property="og:title" content="Zion Tech Group - 2029 Revolutionary Technology Services" />;
         <meta property="og:description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />;
         <meta property="og:type" content="website" />;
         <meta property="og:url" content="https://ziontechgroup.com" />;
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />;
-        ;
-        {/* Twitter */}
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />;{/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />;
         <meta name="twitter:title" content="Zion Tech Group - 2029 Revolutionary Technology Services" />;
         <meta name="twitter:description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />;
-        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />;
-        ;
-        {/* Additional Meta Tags */}
+        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />;{/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />;
-        <link rel="canonical" href="https://ziontechgroup.com" />;
-        ;
-        {/* Structured Data */}
+        <link rel="canonical" href="https://ziontechgroup.com" />;{/* Structured Data */}
         <script type="application/ld+json">;
-          {JSON.stringify({;
-            "@context":"https://schema.org",;
-            "@type":"Organization",;
-            "name":"Zion Tech Group",;
-            "description":"Leading provider of revolutionary 2029 technology services",;
-            "url":"https://ziontechgroup.com",;
-            "logo":"https://ziontechgroup.com/logo.png",;
-            "contactPoint":{;
-              "@type":"ContactPoint",;
-              "telephone":"+1-302-464-0950",;
-              "contactType":"customer service",;
-              "email":"kleber@ziontechgroup.com";
-            },;
-            "address":{;
-              "@type":"PostalAddress",;
-              "streetAddress":"364 E Main St STE 1008",;
-              "addressLocality":"Middletown",;
-              "addressRegion":"DE",;
-              "postalCode":"19709",;
-              "addressCountry":"US";
+          {JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Zion Tech Group","description":"Leading provider of revolutionary 2029 technology services","url":"https://ziontechgroup.com","logo":"https://ziontechgroup.com/logo.png","contactPoint":{"@type":"ContactPoint","telephone":"+1-302-464-0950","contactType":"customer service","email":"kleber@ziontechgroup.com";
+            },"address":{"@type":"PostalAddress","streetAddress":"364 E Main St STE 1008","addressLocality":"Middletown","addressRegion":"DE","postalCode":"19709","addressCountry":"US";
             }
           })}
         </script>;
-      title:"AI Customer Experience",,
-  description:"Deliver personalized customer experiences with intelligent automation",;
-      color:"from-blue-500 to-cyan-500",;
-      link:"https://ziontechgroup.com/ai-customer-experience",;
-      price:"$599/month",;
-      features:["Chatbot automation", "Personalized recommendations", "Customer journey optimization"];
+      title:"AI Customer Experience",,description:"Deliver personalized customer experiences with intelligent automation",color:"from-blue-500 to-cyan-500",link:"https://ziontechgroup.com/ai-customer-experience",price:"$599/month",features:["Chatbot automation", "Personalized recommendations", "Customer journey optimization"];
     }
-  ],;
-;
-  const stats = [;
-  ],;
-;
-  const features = [;
-    {;
-      title:"Cutting-Edge Technology",,
-  description:"Leverage the latest advancements in AI, quantum computing, and cybersecurity",;
-    },;
-    {;
-      title:"Enterprise-Grade Security",,
-  description:"Bank-level security with SOC 2 compliance and regular penetration testing",;
-    },;
-    {;
-      title:"Scalable Solutions",,
-  description:"Built to grow with your business, from startup to enterprise",;
-    },;
-    {;
-      title:"Expert Support",,
-  description:"24/7 technical support with dedicated account managers",;
-    }
-  ],;
-;
-  return (;
-    <>;
+  ],const stats = [;
+  ],const features = [;
+    {title:"Cutting-Edge Technology",,description:"Leverage the latest advancements in AI, quantum computing, and cybersecurity",},{title:"Enterprise-Grade Security",,description:"Bank-level security with SOC 2 compliance and regular penetration testing",},{title:"Scalable Solutions",,description:"Built to grow with your business, from startup to enterprise",},{title:"Expert Support",,description:"24/7 technical support with dedicated account managers",}
+  ],return (<>;
       <Head>;
         <title>Zion Tech Group - Leading-Edge Technology Solutions</title>;
         <meta name="description" content="Transform your business with Zion Tech Group's cutting-edge AI, quantum computing, and cybersecurity solutions. Enterprise-grade technology for the modern world." />;
         <meta name="keywords" content="AI, quantum computing, cybersecurity, business intelligence, technology solutions" />;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
         <link rel="icon" href="/favicon.ico" />;
-      </Head>;
-;
-      <UltraFuturisticBackground2029>;
+      </Head>;<UltraFuturisticBackground2029>;
         {/* Navigation */}
-        <UltraFuturisticNavigation2029 />;
-;
-      {/* Hero Section */}
+        <UltraFuturisticNavigation2029 />;{/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" />;
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />;
-        ;
-        {/* Content */}
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />;{/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">;
           <motion.div;
             initial={{ opacity:0, y:30 }}
@@ -167,9 +76,7 @@ export default function HomePage() {;
                 Get Started;
               </a>;
             </div>;
-          </motion.div>;
-;
-          {/* Trust Indicators */}
+          </motion.div>;{/* Trust Indicators */}
           <motion.div;
             initial={{ opacity:0, y:20 }}
             animate={{ opacity:isVisible ? 1 :0, y:isVisible ? 0 :20 }}
@@ -179,17 +86,13 @@ export default function HomePage() {;
             <span>Trusted by Fortune 500 companies</span>;
             <span>24/7 Enterprise Support</span>;
           </motion.div>;
-        </div>;
-;
-        {/* Floating Elements */}
+        </div>;{/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">;
           <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />;
           <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-1000" />;
           <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-purple-400 rounded-full animate-pulse delay-2000" />;
         </div>;
-      </section>;
-;
-      {/* Features Section */}
+      </section>;{/* Features Section */}
       <section className="py-20 px-6 bg-gradient-to-b from-slate-900 to-slate-800">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
@@ -205,11 +108,8 @@ export default function HomePage() {;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
               We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results.;
             </p>;
-          </motion.div>;
-;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {features.map((feature, index) => (;
-              <motion.div;
+          </motion.div>;<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            {features.map((feature, index) => (<motion.div;
                 key={feature.title}
                 initial={{ opacity:0, y:30 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -224,9 +124,7 @@ export default function HomePage() {;
             ))}
           </div>;
         </div>;
-      </section>;
-;
-      {/* Services Section */}
+      </section>;{/* Services Section */}
       <section className="py-20 px-6 bg-slate-800">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
@@ -242,11 +140,8 @@ export default function HomePage() {;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
               Comprehensive technology solutions designed to accelerate your digital transformation journey.;
             </p>;
-          </motion.div>;
-;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {services.map((service, index) => (;
-              <motion.div;
+          </motion.div>;<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {services.map((service, index) => (<motion.div;
                 key={service.title}
                 initial={{ opacity:0, y:30 }}
                 whileInView={{ opacity:1, y:0 }}
@@ -254,41 +149,28 @@ export default function HomePage() {;
                 viewport={{ once:true }}
                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105";
               >;
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
-                ;
-                <div className="relative z-10">;
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;<div className="relative z-10">;
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 flex items-center justify-center`}>;
                     <span className="text-3xl">{service.icon}</span>;
-                  </div>;
-                  ;
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>;
-                  <p className="text-white/70 mb-6 leading-relaxed">{service.description}</p>;
-                  ;
-                  <div className="mb-6">;
+                  </div>;<h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>;
+                  <p className="text-white/70 mb-6 leading-relaxed">{service.description}</p>;<div className="mb-6">;
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>;
                     <div className="text-sm text-white/50">Starting price</div>;
-                  </div>;
-                  ;
-                  <div className="space-y-1">;
-                    {service.features.map((feature, idx) => (;
-                      <div key={idx} className="flex items-center gap-2 text-xs text-white/70">;
+                  </div>;<div className="space-y-1">;
+                    {service.features.map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-xs text-white/70">;
                         <span>{feature}</span>;
                       </div>;
                     ))}
                   </div>;
                 </motion.div>;
               ))}
-            </div>;
-;
-            {/* Enhanced Service Showcase Components */}
+            </div>;{/* Enhanced Service Showcase Components */}
             <Enhanced2026ServicesShowcase />;
             <Revolutionary2026ServiceShowcase />;
             <Revolutionary2027ServicesShowcase />;
             <Enhanced2029ServicesShowcase />;
           </div>;
-        </section>;
-;
-        {/* Service Categories Section */}
+        </section>;{/* Service Categories Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion.div;
@@ -306,12 +188,9 @@ export default function HomePage() {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 Explore our extensive range of revolutionary technology services across all major categories;
               </p>;
-            </motion.div>;
-;
-            {/* Service Categories Grid */}
+            </motion.div>;{/* Service Categories Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {Object.entries(servicesByCategory).slice(0, 9).map(([category, services], index) => (;
-                <motion.div;
+              {Object.entries(servicesByCategory).slice(0, 9).map(([category, services], index) => (<motion.div;
                   key={category}
                   initial={{ opacity:0, y:20 }}
                   whileInView={{ opacity:1, y:0 }}
@@ -334,9 +213,7 @@ export default function HomePage() {;
               ))}
             </div>;
           </div>;
-        </section>;
-;
-        {/* Why Choose Zion Tech Group Section */}
+        </section>;{/* Why Choose Zion Tech Group Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/10 to-purple-900/10"></div>;
           <div className="max-w-7xl mx-auto relative z-10">;
@@ -355,48 +232,16 @@ export default function HomePage() {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                 We're not just another technology company. We're the architects of tomorrow, building solutions that will define the next decade of innovation.;
               </p>;
-            </motion.div>;
-;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            </motion.div>;<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {[;
-                {;
-                  icon:Rocket,;
-                  title:"Cutting-Edge Innovation",,
-  description:"We stay ahead of the curve, constantly researching and implementing the latest technological breakthroughs.",;
-                  color:"from-purple-500 to-pink-500";
-                },;
-                {;
-                  icon:Brain,;
-                  title:"AI-First Approach",,
-  description:"Every solution we create is built with artificial intelligence at its core, ensuring maximum efficiency and intelligence.",;
-                  color:"from-blue-500 to-cyan-500";
-                },;
-                {;
-                  icon:Atom,;
-                  title:"Quantum-Ready Solutions",,
-  description:"Our services are designed to leverage quantum computing capabilities as they become commercially available.",;
-                  color:"from-green-500 to-emerald-500";
-                },;
-                {;
-                  icon:Shield,;
-                  title:"Unbreakable Security",,
-  description:"Quantum internet protocol suite with unbreakable encryption and quantum network security.",;
-                  color:"from-indigo-500 to-blue-500";
-                },;
-                {;
-                  icon:Zap,;
-                  title:"Future-Ready Solutions",,
-  description:"Cutting-edge technology services designed for the challenges and opportunities of 2029 and beyond.",;
-                  color:"from-yellow-500 to-orange-500";
-                },;
-                {;
-                  icon:Star,;
-                  title:"Proven Results",,
-  description:"Our services deliver measurable ROI and transformative business outcomes for clients worldwide.",;
-                  color:"from-pink-500 to-rose-500";
+                {icon:Rocket,title:"Cutting-Edge Innovation",,description:"We stay ahead of the curve, constantly researching and implementing the latest technological breakthroughs.",color:"from-purple-500 to-pink-500";
+                },{icon:Brain,title:"AI-First Approach",,description:"Every solution we create is built with artificial intelligence at its core, ensuring maximum efficiency and intelligence.",color:"from-blue-500 to-cyan-500";
+                },{icon:Atom,title:"Quantum-Ready Solutions",,description:"Our services are designed to leverage quantum computing capabilities as they become commercially available.",color:"from-green-500 to-emerald-500";
+                },{icon:Shield,title:"Unbreakable Security",,description:"Quantum internet protocol suite with unbreakable encryption and quantum network security.",color:"from-indigo-500 to-blue-500";
+                },{icon:Zap,title:"Future-Ready Solutions",,description:"Cutting-edge technology services designed for the challenges and opportunities of 2029 and beyond.",color:"from-yellow-500 to-orange-500";
+                },{icon:Star,title:"Proven Results",,description:"Our services deliver measurable ROI and transformative business outcomes for clients worldwide.",color:"from-pink-500 to-rose-500";
                 }
-              ].map((feature, index) => (;
-                <motion.div;
+              ].map((feature, index) => (<motion.div;
                   key={feature.title}
                   initial={{ opacity:0, y:30 }}
                   whileInView={{ opacity:1, y:0 }}
@@ -415,9 +260,7 @@ export default function HomePage() {;
               ))}
             </div>;
           </div>;
-        </section>;
-;
-        {/* Call to Action Section */}
+        </section>;{/* Call to Action Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
@@ -432,9 +275,7 @@ export default function HomePage() {;
               </h2>;
               <p className="text-xl text-gray-300 mb-8">;
                 Contact our team of technology experts to discuss how our revolutionary 2029 services can transform your business and propel you into the future.;
-              </p>;
-              ;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
+              </p>;<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
                 <Link href="/contact">;
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105">;
                     <Phone className="inline-block w-5 h-5 mr-2" />;
@@ -448,9 +289,7 @@ export default function HomePage() {;
                   </button>;
                 </Link>;
               </div>;
-            </motion.div>;
-;
-              {/* Contact Information */}
+            </motion.div>;{/* Contact Information */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">;
                 <div className="flex items-center justify-center space-x-2">;
                   <Phone className="w-5 h-5 text-cyan-400" />;
@@ -460,14 +299,11 @@ export default function HomePage() {;
             ))}
           </div>;
         </div>;
-      </section>;
-;
-      {/* Stats Section */}
+      </section>;{/* Stats Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-            {stats.map((stat, index) => (;
-              <motion.div;
+            {stats.map((stat, index) => (<motion.div;
                 key={stat.label}
                 initial={{ opacity:0, scale:0.8 }}
                 whileInView={{ opacity:1, scale:1 }}
@@ -486,17 +322,11 @@ export default function HomePage() {;
             </motion.div>;
           </div>;
         </section>;
-      </main>;
-;
-      {/* Enhanced Services Showcase */}
+      </main>;{/* Enhanced Services Showcase */}
       <div id="services">;
         <EnhancedServicesShowcase />;
-      </div>;
-;
-      {/* Enhanced Testimonials Section */}
-      <EnhancedTestimonialsSection />;
-;
-      {/* Latest Updates Section */}
+      </div>;{/* Enhanced Testimonials Section */}
+      <EnhancedTestimonialsSection />;{/* Latest Updates Section */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
@@ -512,9 +342,7 @@ export default function HomePage() {;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
               Stay updated with our latest innovations and industry insights;
             </p>;
-          </motion.div>;
-;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+          </motion.div>;<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">;
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
               </div>;
@@ -529,9 +357,7 @@ export default function HomePage() {;
             </a>;
           </div>;
         </div>;
-      </section>;
-;
-      {/* CTA Section */}
+      </section>;{/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
@@ -562,9 +388,6 @@ export default function HomePage() {;
             </div>;
           </motion.div>;
         </div>;
-      </section>;
-;
-      <EnhancedFooter />;
+      </section>;<EnhancedFooter />;
     </>;
-  );
-}
+  )}

@@ -36,7 +36,7 @@ export const Button: Reac t.FC<ButtonProps> = ({';';';';';
     ';';';';';
     ghost: 'text-gray-700 hover: b g-gray-100 focus: rin g-blue-500',',';';';';
     ';';';';';
-    link: 'text-blue-600 hover: underline focus:ring-blue-500'};';';';';';
+    link: 'text-blue-600 hover: underline focus:ring-blue-500'}';';';';';
   const sizeClasses = {',';';';';
     ';';';';';
     sm: 'px-3 py-1.5 text-sm',',';';';';
@@ -46,14 +46,11 @@ export const Button: Reac t.FC<ButtonProps> = ({';';';';';
     lg: 'px-6 py-3 text-base',',';';';';
     ';';';';';
 import React from 'react';';';
-interface ButtonProps {;
-  ';';';: "any;
+interface ButtonProps  {';';';: "any;
   "children": React.ReactNode;'",';';
   ';';';: "any;
-  variant?: 'default' | 'outline' | 'ghost' | 'link'",',';';
-  ;: "any;
-interface ButtonProps {
-  ';';';: any;
+  variant?: 'default' | 'outline' | 'ghost' | 'link'",',';';: "any;
+interface ButtonProps  {';';';: any;
   children: React.ReactNode;',';';
   ';';';: any;
   variant?: 'default' | 'outline' | 'ghost' | 'link',',';';
@@ -68,7 +65,7 @@ interface ButtonProps {
 "}';';
 export const "Button": "React.FC<ButtonProps> = ({';';';
   children",',';';
-  disabled?: boolean
+  disabled?: boolean;
 }';';
 export const Button: React.FC<ButtonProps> = ({';';';
   children,',';';
@@ -93,7 +90,7 @@ export const Button: React.FC<ButtonProps> = ({';';';
     ';';';
     "ghost": 'text-gray-700 "hover": "b g-gray-100 "focus": rin g-blue-500'",',';';
     ';';';
-    "link": 'text-blue-600 "hover": "underline "focus":ring-blue-500'"};';';';
+    "link": 'text-blue-600 "hover": "underline "focus":ring-blue-500'"}';';';
   const sizeClasses = {',';';
     ';';';
     "sm": 'px-3 py-1.5 text-sm',',';';
@@ -102,14 +99,10 @@ export const Button: React.FC<ButtonProps> = ({';';';
     ';';';
     "lg": 'px-6 py-3 text-base',',';';
     ';';';
-    icon: 'w-10 h-10 p-0'};
-    "icon": 'w-10 h-10 p-0'};
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-  if (asChild) {
-    return <span className={classes}>{children}</span>;
+    icon: 'w-10 h-10 p-0'}"icon": 'w-10 h-10 p-0'}const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  if (asChild) {return <span className={classes}>{children}</span>;
   }
-  return (
-    <button
+  return (<button;
       type={type}
       className={classes}
       onClick={onClick}
@@ -117,17 +110,17 @@ export const Button: React.FC<ButtonProps> = ({';';';
     >';
       {children}';';
     </button>';';';
-  );';';';'
-};';';';';';
+  )';';';';
+}';';';';';
 export default Button;"';';';';';
-</ButtonProps>;';;';
+</ButtonProps>;';';
     >;
-    >
+    >;
       {children}
     </button>';
-  );';'
-};';';';
+  )';';
+}';';';
 export default Button;";
 </ButtonProps>;
 export default Button;"';';';';
-</ButtonProps>
+</ButtonProps>;

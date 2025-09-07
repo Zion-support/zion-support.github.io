@@ -227,8 +227,8 @@ export default function ContactPage() {
               href="/services"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center"
             >
-              Explore Our Solutions
-              <ArrowRightIcon className="inline-block h-5 w-5 ml-2" />
+              View Our Services
+              <ArrowRightIcon className="h-5 w-5 ml-2" />
             </Link>
           </div>
         </div>

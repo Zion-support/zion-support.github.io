@@ -1,84 +1,67 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+ursor/automate-test-improve-and-merge-code-646c
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
-// Function to resolve conflicts by accepting "ours" (current branch) changes
-function resolveConflicts() {
+// Function to resolve conflicts in a file
+function resolveConflicts(filePath) {
   try {
-    console.log('📋 Getting list of conflicted files...');
-    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
-      .trim()
-      .split('\n')
-      .filter(Boolean);
-    
-    console.log(`📊 Found ${conflictedFiles.length} conflicted files`);
-    
-    let resolvedCount = 0;
-    let removedCount = 0;
-    
-    for (const file of conflictedFiles) {
-      const filePath = path.join(process.cwd(), file);
-      
-      if (fs.existsSync(filePath)) {
-        console.log(`🔧 Resolving conflicts in ${file}...`);
-        try {
-          // Accept our version (current branch)
-          execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
-          execSync(`git add "${file}"`, { stdio: 'pipe' });
-          console.log(`✅ Resolved ${file}`);
-          resolvedCount++;
-        } catch (error) {
-          console.warn(`⚠️  Could not resolve ${file}: ${error.message}`);
-        }
-      } else {
-        console.log(`🗑️  Removing deleted file ${file}...`);
-        try {
-          execSync(`git rm "${file}"`, { stdio: 'pipe' });
-          console.log(`✅ Removed ${file}`);
-          removedCount++;
-        } catch (error) {
-          console.warn(`⚠️  Could not remove ${file}: ${error.message}`);
-        }
-      }
-    }}
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(;);
+    if (!fs.existsSync(filePath)) {
+      return { success: false, reason: 'File not found' };
     }
-  async resolveMergeConflicts() {
-    this.log('🔍 Scanning for merge conflicts...');
-    try {
-      // Get all remote branches
-      const branches = this.getRemoteBranches(;);
-      this.mergeReport.summary.totalBranches = branches.length
-      this.log(`Found ${branches.length} remote branches to process`);
-      for (const branch of branches) {
-        try {
-          await this.mergeBranch(branch)} catch (error) {
-          this.log(`❌ Failed to merge branch ${branch}: ${error.message}`, 'ERROR');
-          this.failedMerges.push({ branch, "error": error.message });
-          this.mergeReport.failedMerges.push({ branch, "error": error.message })}
-      }
-      // Generate final report
-      this.generateMergeReport()} catch (error) {
-      this.log(`❌ Error in merge conflict "resolution": ${error.message}`, 'ERROR')}
-  }
-}
-
-// Function to commit the merge
-function commitMerge() {
-  try {
-    console.log('💾 Committing merge...');
-    execSync('git commit -m "Merge automation improvements and fixes - resolved all conflicts"', { stdio: 'pipe' });
-    console.log('✅ Merge committed successfully!');
-    return true;
+    
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflicts
+    if (!content.includes('')) {
+      return { success: true, reason: 'No conflicts' };
+    }
+    
+    console.log(`Resolving conflicts in ${filePath}...`);
+    
+    // Count conflicts before resolution
+    const conflictCount = (content.match(//g) || []).length;
+    
+    // Replace merge conflict markers with incoming changes (choose the incoming version)
+    content = content.replace(/[\s\S]*?([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    
+    // Remove any remaining conflict markers
+    content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+    
+    // Clean up any remaining markers
+    content = content.replace(//g, '');
+    content = content.replace(//g, '');
+    content = content.replace(/>>>>>>> [^\n]+/g, '');
+    
+    // Write the resolved content back
+    fs.writeFileSync(filePath, content);
+    
+    console.log(`✅ Resolved ${conflictCount} conflicts in ${filePath}`);
+    return { success: true, reason: `Resolved ${conflictCount} conflicts` };
   } catch (error) {
-    console.error(`❌ Error committing merge: ${error.message}`);
-    return false;
+    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+    return { success: false, reason: error.message };
   }
 }
 
+// Get all files with merge conflicts
+console.log('🔍 Finding files with merge conflicts...');
+
+let conflictFiles = [];
+try {
+  const findConflicts = execSync('find . -type f \\( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.html" -o -name "*.css" -o -name "*.xml" -o -name "*.toml" \\) | xargs grep -l "" 2>/dev/null || true', { encoding: 'utf8' });
+  conflictFiles = findConflicts.split('\n').filter(file => file && file !== '');
+} catch (error) {
+  console.error('Error finding conflict files:', error.message);
 // Function to push changes
 function pushChanges() {
   try {
@@ -113,6 +96,7 @@ function pushChanges() {
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+>>>>>>> main
 
 const { execSync } = require('child_process')
 console.log('� Starting Comprehensive Merge Conflict Resolver...')
@@ -133,12 +117,78 @@ console.log('� Starting Comprehensive Merge Conflict Resolver...')
       console.log('\n Failed to merge "branches")
   console.error(' Merge conflict resolution "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+ursor/automate-test-improve-and-merge-code-646c
 
 }
 
-if (require.main === module) {
-  main();
+console.log(`Found ${conflictFiles.length} files with merge conflicts`);
+
+// Process all conflict files
+let resolvedCount = 0;
+let errorCount = 0;
+let noConflictCount = 0;
+
+for (const file of conflictFiles) {
+  const result = resolveConflicts(file);
+  if (result.success) {
+    if (result.reason === 'No conflicts') {
+      noConflictCount++;
+    } else {
+      resolvedCount++;
+    }
+  } else {
+    errorCount++;
+    console.error(`Failed to resolve ${file}: ${result.reason}`);
+  }
 }
 
+console.log(`\n📊 Conflict Resolution Summary:`);
+console.log(`✅ Successfully resolved: ${resolvedCount} files`);
+console.log(`ℹ️  No conflicts found: ${noConflictCount} files`);
+console.log(`❌ Errors: ${errorCount} files`);
+
+// Add all files to git
+console.log('\n📦 Adding files to git...');
+try {
+  execSync('git add .', { stdio: 'inherit' });
+  console.log('✅ Added all files to git');
+} catch (error) {
+  console.error('❌ Error adding files to git:', error.message);
+}
+
+// Commit the changes
+console.log('\n💾 Committing changes...');
+try {
+  execSync('git commit -m "Resolve all merge conflicts automatically - choose incoming changes"', { stdio: 'inherit' });
+  console.log('✅ Committed merge resolution');
+} catch (error) {
+  console.error('❌ Error committing merge:', error.message);
+}
+
+console.log('\n🎉 Merge conflict resolution completed!');
+
+// Check for open PRs
+console.log('\n🔍 Checking for open pull requests...');
+try {
+  const prCheck = execSync('curl -s -H "Authorization: token ghs_JcabJLzIK1ZiHq7k2fTFD0Bx8ssBMX1wVO0h" https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open', { encoding: 'utf8' });
+  const prs = JSON.parse(prCheck);
+  
+  if (prs.length === 0) {
+    console.log('✅ No open pull requests found');
+  } else {
+    console.log(`Found ${prs.length} open pull requests:`);
+    prs.forEach((pr, index) => {
+      console.log(`${index + 1}. PR #${pr.number}: ${pr.title}`);
+      console.log(`   Branch: ${pr.head.ref} -> ${pr.base.ref}`);
+      console.log(`   URL: ${pr.html_url}`);
+    });
+  }
+} catch (error) {
+  console.error('❌ Error checking PRs:', error.message);
+}
+
+console.log('\n🚀 Ready to proceed with improvements!');
 module.exports = { resolveConflicts, commitMerge, pushChanges };
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 

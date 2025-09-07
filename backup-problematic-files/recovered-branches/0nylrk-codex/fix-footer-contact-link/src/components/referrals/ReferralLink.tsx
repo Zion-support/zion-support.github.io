@@ -1,34 +1,12 @@
 
-import { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",;
-;
-interface ReferralLinkProps {;
-  referralLink:string,;
-  onCopy:() => void,;
-  onShare:(platform:'twitter' | 'facebook' | 'linkedin') => void;
-}
-;
-export function ReferralLink({ referralLink, onCopy, onShare } ReferralLinkProps) {;
-  const [copied, setCopied] = useState(false),;
-  ;
-  const handleCopy = () => {;
-    onCopy(),;
-    setCopied(true),;
-    setTimeout(() => setCopied(false), 2000),;
-  },;
-;
-  return (;
-    <Card className="mt-6">;
+import { useState } from "react",import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",import { Input } from "@/components/ui/input",import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",interface ReferralLinkProps  {referralLink:string,onCopy:() => void,onShare:(platform:'twitter' | 'facebook' | 'linkedin') => void;
+}export function ReferralLink() {const [copied, setCopied]  = useState(false),const handleCopy = () => {onCopy(),setCopied(true),setTimeout(() => setCopied(false), 2000),},return (<Card className="mt-6">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <Link className="h-5 w-5" />;
           Your Referral Link;
         </CardTitle>;
-        <CardDescription>;
-          Share this link with others to earn rewards when they join and complete onboarding;
+        <CardDescription>Share this link with others to earn rewards when they join and complete onboarding;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
@@ -43,10 +21,7 @@ export function ReferralLink({ referralLink, onCopy, onShare } ReferralLinkProps
               <Copy className="h-4 w-4" />;
               <span className="sr-only">Copy</span>;
             </Button>;
-          </div>;
-          ;
-          {copied && (;
-            <p className="text-sm text-green-600 dark:text-green-500">;
+          </div>;{copied && (<p className="text-sm text-green-600 dark:text-green-500">;
               Copied to clipboard!;
             </p>;
           )}
@@ -87,17 +62,8 @@ export function ReferralLink({ referralLink, onCopy, onShare } ReferralLinkProps
         </div>;
       </CardFooter>;
     </Card>;
-  ),;}
- interface ReferralLinkProps {
-  referralLink: string;
+  ),}
+ interface ReferralLinkProps  {referralLink: string;
 onCopy: () => void;
-onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void 
-}export function ReferralLink ({
-  referralLink, onCopy, onShare 
-}: ReferralLinkProps) {
-  const [copied, setCopied] = useState (false);
-const handleCopy = () => {
-  onCopy ();
-setCopied (true);
-setTimeout ( () => setCopied (false), 2000) 
-};
+onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
+}export function ReferralLink () {const [copied, setCopied] = useState (false)const handleCopy = () => {onCopy ()setCopied (true)setTimeout ( () => setCopied (false), 2000)}

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -11,16 +13,38 @@ const nextConfig = {
   'next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
+=======
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
   reactStrictMode: true,
   eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  experimental: {
+    esmExternals: false
+  },
+  images: {
+    domains: ['ziontechgroup.com', 'localhost', 'images.unsplash.com', 'via.placeholder.com'],
+    unoptimized: true
+  },
     ignoreDuringBuilds: true,
-=======
   reactStrictMode: false,
   swcMinify: false,
+=======
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+>>>>>>> origin/chore/fix-automation-and-build
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+<<<<<<< HEAD
   experimental: {
     forceSwcTransforms: false},
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
@@ -47,7 +71,7 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'},
   webpack: (config, { dev, isServer }) => {
-    // Completely exclude problematic directories from the build
+    // Exclude problematic directories from the build
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -61,7 +85,9 @@ const nextConfig = {
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
-        /hardhat/,
+        /hardhat/
+      ]
+    });
         /^components\//, // Exclude root components directory
       ]});
 
@@ -74,8 +100,8 @@ const nextConfig = {
 
     return config;
   },
-  // Try to exclude problematic directories at the Next.js level
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js']
+};
   pageExtensions: ['tsxtsjsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
@@ -84,6 +110,7 @@ const nextConfig = {
     pagesBufferLength: 2}};
 
 module.exports = nextConfig;
+<<<<<<< HEAD
 =======
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -109,3 +136,32 @@ module.exports = nextConfig;
 export default nextConfig;
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
+=======
+  images: {
+    domains: ["localhost", "ziontechgroup.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  experimental: {
+    // Remove optimizePackageImports to satisfy Next 12 validation
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' }
+        ]
+      }
+    ];
+  }
+};
+
+module.exports = nextConfig;
+>>>>>>> origin/chore/fix-automation-and-build

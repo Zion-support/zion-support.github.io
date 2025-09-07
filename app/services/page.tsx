@@ -1,15 +1,12 @@
-
 import Link from "next/link";
 
 export const metadata = {
   title: "Services | Zion Tech Group",
   description: "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-
 };
 
-export default function ServicesOverviewPage() {
+export default function ServicePage() {
   return (
-
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -141,6 +138,149 @@ export default function ServicesOverviewPage() {
           icon="📊"
           pricing="From $3,500/month"
         />
+        <ServiceCard
+          href="/services/ai-content-generator"
+          title="AI Content Generator Pro"
+          description="Advanced AI-powered content creation platform for blogs, social media, and marketing materials"
+          bullets={[
+            "Multi-language support",
+            "SEO optimization",
+            "Brand voice consistency",
+            "Plagiarism detection"
+          ]}
+          icon="✍️"
+          pricing="From $199/month"
+        />
+        <ServiceCard
+          href="/services/smart-invoice-generator"
+          title="Smart Invoice Generator"
+          description="Automated invoice creation with AI-powered expense categorization and payment tracking"
+          bullets={[
+            "Auto-expense categorization",
+            "Payment reminders",
+            "Multi-currency support",
+            "Tax compliance"
+          ]}
+          icon="🧾"
+          pricing="From $149/month"
+        />
+        <ServiceCard
+          href="/services/ai-social-scheduler"
+          title="AI Social Media Scheduler"
+          description="Intelligent social media management with optimal posting times and content suggestions"
+          bullets={[
+            "Optimal timing AI",
+            "Content suggestions",
+            "Multi-platform posting",
+            "Analytics dashboard"
+          ]}
+          icon="📱"
+          pricing="From $99/month"
+        />
+        <ServiceCard
+          href="/services/ai-meeting-assistant"
+          title="AI Meeting Assistant"
+          description="Automated meeting transcription, action item extraction, and follow-up management"
+          bullets={[
+            "Real-time transcription",
+            "Action item extraction",
+            "Meeting summaries",
+            "Calendar integration"
+          ]}
+          icon="🎤"
+          pricing="From $179/month"
+        />
+        <ServiceCard
+          href="/services/ai-customer-insights"
+          title="AI Customer Insights Platform"
+          description="Advanced customer behavior analysis and predictive insights for business growth"
+          bullets={[
+            "Behavioral analytics",
+            "Churn prediction",
+            "Personalization engine",
+            "ROI tracking"
+          ]}
+          icon="👥"
+          pricing="From $299/month"
+        />
+        <ServiceCard
+          href="/services/ai-project-manager"
+          title="AI Project Manager"
+          description="Intelligent project management with automated task assignment and progress tracking"
+          bullets={[
+            "Smart task assignment",
+            "Progress prediction",
+            "Resource optimization",
+            "Risk assessment"
+          ]}
+          icon="📋"
+          pricing="From $249/month"
+        />
+        <ServiceCard
+          href="/services/ai-finance-analyzer"
+          title="AI Finance Analyzer"
+          description="Automated financial analysis, budgeting, and investment recommendations"
+          bullets={[
+            "Expense categorization",
+            "Budget optimization",
+            "Investment insights",
+            "Financial forecasting"
+          ]}
+          icon="💰"
+          pricing="From $199/month"
+        />
+        <ServiceCard
+          href="/services/ai-email-optimizer"
+          title="AI Email Optimizer"
+          description="Email marketing optimization with AI-powered subject lines and content suggestions"
+          bullets={[
+            "Subject line optimization",
+            "Send time optimization",
+            "A/B testing automation",
+            "Open rate improvement"
+          ]}
+          icon="📧"
+          pricing="From $129/month"
+        />
+        <ServiceCard
+          href="/services/ai-seo-analyzer"
+          title="AI SEO Analyzer"
+          description="Comprehensive SEO analysis and optimization recommendations powered by AI"
+          bullets={[
+            "Keyword research",
+            "Content optimization",
+            "Competitor analysis",
+            "Ranking predictions"
+          ]}
+          icon="🔍"
+          pricing="From $179/month"
+        />
+        <ServiceCard
+          href="/services/ai-inventory-manager"
+          title="AI Inventory Manager"
+          description="Smart inventory management with demand forecasting and automated reordering"
+          bullets={[
+            "Demand forecasting",
+            "Automated reordering",
+            "Waste reduction",
+            "Cost optimization"
+          ]}
+          icon="📦"
+          pricing="From $299/month"
+        />
+        <ServiceCard
+          href="/services/ai-hr-assistant"
+          title="AI HR Assistant"
+          description="Automated HR processes including resume screening, interview scheduling, and employee analytics"
+          bullets={[
+            "Resume screening",
+            "Interview scheduling",
+            "Employee analytics",
+            "Performance tracking"
+          ]}
+          icon="👔"
+          pricing="From $229/month"
+        />
       </div>
       
       <CTA />
@@ -232,7 +372,6 @@ function CTA() {
       <div className="mt-6 text-sm text-gray-600">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
-
     </div>
   );
 }

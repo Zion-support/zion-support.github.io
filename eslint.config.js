@@ -1,188 +1,73 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
+<<<<<<< HEAD
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+});
+=======
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
+// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
 import globals from 'globals';
-=======
-const { FlatCompat } = require('@eslint/eslintrc');
-const js = require('@eslint/js');
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
-=======
-import { FlatCompat } from '@eslint/eslintrc';
-import js from '@eslint/js';
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all
 });
 
 export default [
-  js.configs.recommended,
+<<<<<<< HEAD
+  ...compat.extends('next/core-web-vitals'),
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
+    rules: {
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-console': 'warn'
+    }
+  },
+  {
     ignores: [
       'node_modules/**',
+      '.next/**',
+      'out/**',
       'dist/**',
-      'build/**',
-      'coverage/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
-      'scripts/**',
       'automation/**',
       'backup-problematic-files/**',
-      'src.disabled/**',
-      'components.disabled/**',
-      'pages.disabled/**',
-      'zion-os/**',
-      'zion-website/**',
-      'zion_academy/**',
-      'api/**',
-      'api-backup/**',
-      'api-disabled/**',
-      'api.disabled/**',
-      'backup/**',
-      'backups/**',
-      'broken_files_backup/**',
-      'corrupted-files-backup/**',
-      'cypress_backup/**',
-      'data_backup/**',
-      'deployment/**',
-      'e2e/**',
-      'server/**',
-      'temp_*/**',
-      'test_build/**',
       'tests/**',
-      '__tests__/**',
-      'types/**',
-      '*.cjs',
-      '*.mjs',
-      'supabase/**',
-      'ultimate-*.cjs',
-      'advanced-*.js',
-      'comprehensive-*.js',
-      'enhanced-*.js',
-      'fix-*.js',
-      'merge-*.js',
-      'run-*.js',
-      'test-*.js',
       '*.test.js',
+      '*.test.ts',
+      '*.test.tsx',
       '*.spec.js',
-      'aggressive-*.js',
-      'batch-*.js',
-      'clean-*.js',
-      'critical-*.js',
-      'execute-*.js',
-      'final-*.js',
-      'health-*.js',
-      'improve-*.js',
-      'maintenance-*.js',
-      'monitoring-*.js',
-      'optimized-*.js',
-      'performance-*.js',
-      'resolve-*.js',
-      'seo-*.js',
-      'simple-*.js',
-      'structural-*.js',
-      'system-*.js',
-      'ultimate-*.js',
-      '*.js'
-    ],
-  },
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 'latest',
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
-      },
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin,
-    },
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'react/display-name': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/ban-ts-comment': 'off',
-      'no-unused-vars': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'prefer-const': 'error',
-      'no-debugger': 'warn',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  {
-    files: ['**/*.js'],
-    languageOptions: {
+      '*.spec.ts',
+      '*.spec.tsx'
+    ]
 =======
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn'
-    },
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 'latest',
+      ecmaVersion: 2022,
       sourceType: 'module',
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
-=======
-    languageOptions: {
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
-      globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-<<<<<<< HEAD
-        exports: 'readonly',
-      },
-    },
-    rules: {
-      'no-console': 'off',
-    },
-  },
-=======
-        exports: 'readonly'
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
       }
     },
     rules: {
@@ -211,9 +96,36 @@ export default [
       'src.disabled/**',
       'components.disabled/**',
       'pages.disabled/**',
+      'pages_backup/**',
+      'pages_backup_*/**',
+      'pages_backup_conflict/**',
+      'pages_backup_conflicts/**',
+      'pages_minimal/**',
+      'pages.broken/**',
+      'pages.corrupted.*/**',
+      'pages.disabled*/**',
+      'pages.disabled_*/**',
+      'pages.disabled_full/**',
+      'pages.old/**',
+      'pages_api.disabled/**',
+      'pages_disabled/**',
+      'pages.__backup/**',
+      'pages._archive_corrupted/**',
+      'pages._quarantine/**',
+      'pages.bak/**',
+      'pages.blog.disabled/**',
+      'solutions.disabled/**',
+      'src.corrupted/**',
+      'src.pages.disabled/**',
+      'src_backup/**',
+      'temp-backup/**',
+      'tests.disabled/**',
       'zion-os/**',
       'zion-website/**',
       'zion_academy/**',
+      'zion-ai-assistant/**',
+      'zion-os.disabled/**',
+      'api/**',
       'api-backup/**',
       'api-disabled/**',
       'api.disabled/**',
@@ -274,9 +186,105 @@ export default [
       'structural-*.js',
       'system-*.js',
       'ultimate-*.js',
-      'pages_backup_conflict/**',
-      'data.disabled/**'
+      '*.js',
+      'src_backup_temp/**',
+      'temp-backup/**',
+      'temp_exclude/**',
+      'temp_components/**',
+      'temp_broken_files/**',
+      'temp_working/**',
+      'zion-os.disabled/**',
+      'zion-ai-assistant/**',
+      'tools/**',
+      'utils/**',
+      'recovered-branches/**',
+      'pages._archive_corrupted/**',
+      'pages.bak/**',
+      'pages.disabled_full/**',
+      'pages_api.disabled/**',
+      'pages_backup_conflicts/**',
+      'pages_disabled/**',
+      'src.pages.disabled/**',
+      'vite.config-backup.ts'
     ]
+  },
+  {
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
+      },
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin
+      // '@next/next': nextPlugin, // Not needed for Vite project
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/display-name': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      'no-unused-vars': 'off',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'prefer-const': 'error',
+      'no-debugger': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn'
+    },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    }
+  },
+  {
+    files: ['**/*.js'],
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly'
+      }
+    },
+    rules: {
+      'no-console': 'off'
+    }
   }
->>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
+      'no-console': 'off'
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
+  }
 ];
