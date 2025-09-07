@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { title: 'AI Marketing Automation | Zion Tech Group' };
 
 export default function AIMarketingAutomationPage() {
@@ -104,49 +105,29 @@ export default function AIMarketingAutomationPage() {
 =======
 import React from 'react';
 
+=======
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 export const metadata = {
-  title: 'AI-Powered Marketing Automation Platform | Zion Tech Group',
-  description: 'Intelligent marketing automation with AI-driven personalization, predictive analytics, and automated campaign optimization. Increase conversion rates by 60% with smart marketing insights.',
-  keywords: 'AI marketing automation, personalized campaigns, predictive analytics, lead scoring, email marketing, social media automation'
+  title: 'Ai Marketing Automation | Zion Tech Group',
+  description: 'Professional ai marketing automation services for your business needs.',
+  keywords: 'ai-marketing-automation, services, business, technology'
 };
 
-export default function AIMarketingAutomationPage() {
+export default function ServicePage() {
   return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-pink-50 to-purple-100 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          AI-Powered Marketing Automation
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your marketing with AI-driven personalization, predictive analytics, and automated campaign optimization. 
-          Our platform increases conversion rates by 60% and reduces marketing costs by 40%.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation Platform Inquiry"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Start Free Trial
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-      </section>
-
-      {/* Key Features */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Intelligent Marketing Automation</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI-powered platform learns from customer behavior to deliver personalized experiences at scale.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Marketing Automation
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai marketing automation services for your business needs.
           </p>
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           <FeatureCard
             icon="🎯"
             title="AI-Powered Personalization"
@@ -619,6 +600,28 @@ function CaseStudy({ company, industry, result, description, metrics }: {
               {metric}
             </div>
           ))}
+=======
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai marketing automation solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai marketing automation solutions run smoothly.
+            </p>
+          </div>
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
         </div>
       </div>
     </div>

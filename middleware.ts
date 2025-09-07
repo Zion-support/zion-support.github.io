@@ -21,7 +21,7 @@ export function middleware(request: NextRequest) {
     "img-src 'self' data: https:",
     "font-src 'self'",
     "connect-src 'self'",
-    "frame-ancestors 'none'",
+    "frame-ancestors 'none'"
   ].join('; ');
 
   response.headers.set('Content-Security-Policy', csp);
@@ -31,6 +31,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
+    '/((?!api|_next/static|_next/image|favicon.ico).*)'
+  ]
 };

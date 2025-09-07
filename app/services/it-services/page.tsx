@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 
@@ -13,10 +14,17 @@ export const metadata = {
   title: "IT Services | Zion Tech Group",
   description: "Comprehensive IT services including cloud migration, DevOps, cybersecurity, and infrastructure management for enterprise-scale solutions.",
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+export const metadata = {
+  title: 'It Services | Zion Tech Group',
+  description: 'Professional it services services for your business needs.',
+  keywords: 'it-services, services, business, technology'
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 };
 
 export default function ITServicesPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
@@ -212,6 +220,41 @@ function CTA() {
       </div>
       <div className="mt-6 text-sm text-gray-600">
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            It Services
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional it services services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored it services solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your it services solutions run smoothly.
+            </p>
+          </div>
+        </div>
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
       </div>
     </div>
   );

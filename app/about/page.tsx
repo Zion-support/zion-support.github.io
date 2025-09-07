@@ -2,7 +2,11 @@ import React from 'react';
 
 export const metadata = {
   title: 'About | Zion Tech Group',
+<<<<<<< HEAD
   description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+=======
+  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.'
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 };
 
 export default function AboutPage() {

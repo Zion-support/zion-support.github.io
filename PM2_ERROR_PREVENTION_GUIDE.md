@@ -93,8 +93,7 @@ The system automatically detects and fixes:
 
 ### Code Quality Issues
 
-- ✅ Merge conflict markers (`, `, `>>>>>>>`)
-- ✅ Unterminated strings
+- ✅ Merge conflict markers (`, `, `- ✅ Unterminated strings
 - ✅ Duplicate page files (.js vs .tsx)
 - ✅ Missing dependencies
 

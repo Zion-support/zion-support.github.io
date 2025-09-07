@@ -1,8 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { title: 'AI Analytics Platform | Zion Tech Group' };
+=======
+export const metadata = {
+  title: 'Ai Analytics Platform | Zion Tech Group',
+  description: 'Professional ai analytics platform services for your business needs.',
+  keywords: 'ai-analytics-platform, services, business, technology'
+};
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 
-export default function AIAnalyticsPlatformPage() {
+export default function ServicePage() {
   return (
+<<<<<<< HEAD
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -275,6 +284,8 @@ export const metadata = {
 
 export default function ServicePage() {
   return (
+=======
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -287,6 +298,7 @@ export default function ServicePage() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Feature 1</h3>
             <p className="text-gray-300 mb-6">Description of the first key feature.</p>
@@ -315,6 +327,27 @@ export default function ServicePage() {
               <li>• Benefit 2</li>
               <li>• Benefit 3</li>
             </ul>
+=======
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai analytics platform solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai analytics platform solutions run smoothly.
+            </p>
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
           </div>
         </div>
       </div>

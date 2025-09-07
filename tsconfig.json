@@ -1,14 +1,25 @@
 {
   "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "es6",
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
+      "es2021",
+      "es2022"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
     "incremental": true,
     "module": "esnext",
@@ -17,14 +28,21 @@
     "esModuleInterop": true,
     "module": "ESNext",
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+    "esModuleInterop": true,
+    "module": "esnext",
+    "module": "ESNext",
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
     ]
   },
@@ -39,6 +57,8 @@
   ]
 }
 =======
+=======
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
     ],
     "baseUrl": ".",
     "paths": {
@@ -53,7 +73,45 @@
     },
     "allowSyntheticDefaultImports": true
   },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "apps",
+    "temp_conflicts",
+    "pages_backup*",
+    "pages.*",
+    "pages-*",
+    "pages_disabled*",
+    "pages.disabled*",
+    "pages.broken*",
+    "pages.corrupted*",
+    "pages.old*",
+    "pages._*",
+    "pages.__*",
+    "backup-pages",
+    "src.pages.disabled",
+    "lib_backup*",
+    "src_backup*",
+    "corrupted-files-backup*",
+    "performance-reports*",
+    "log-analysis-reports*",
+    "link-reports*",
+    "lint-target*",
+    "monitoring*",
+    "pm2-automation*",
+    "automation/logs*",
+    "automation/backup*"
+  ],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
+<<<<<<< HEAD
 }
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+}
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f

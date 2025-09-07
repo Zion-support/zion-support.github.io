@@ -1,6 +1,7 @@
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 /// <reference path="./.next/types/routes.d.ts" />
 
 // NOTE: This file should not be edited
@@ -13,3 +14,8 @@
 >>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
 =======
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/building-your-application/configuring/typescript for more information.
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f

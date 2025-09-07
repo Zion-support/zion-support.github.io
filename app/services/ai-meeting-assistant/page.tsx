@@ -1,16 +1,19 @@
+<<<<<<< HEAD
 import React from 'react';
 import TestimonialCard from '@/components/TestimonialCard';
 import Link from 'next/link';
 
+=======
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 export const metadata = {
-  title: 'AI Meeting Assistant | Zion Tech Group',
-  description: 'Revolutionary AI meeting platform with real-time transcription, intelligent summaries, and action item extraction. Transform your meetings with 95% accuracy and 50% time savings.',
-  keywords: 'AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings'
+  title: 'Ai Meeting Assistant | Zion Tech Group',
+  description: 'Professional ai meeting assistant services for your business needs.',
+  keywords: 'ai-meeting-assistant, services, business, technology'
 };
 
-
-export default function AIMeetingAssistantPage() {
+export default function ServicePage() {
   return (
+<<<<<<< HEAD
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
@@ -55,23 +58,42 @@ export default function AIMeetingAssistantPage() {
             <h3 className="text-xl font-semibold mb-3">Real-time Transcription</h3>
             <p className="text-gray-600">
               Get instant, accurate transcription of all your meetings with 95% accuracy in multiple languages.
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Meeting Assistant
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai meeting assistant services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai meeting assistant solutions designed for your specific business requirements.
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="text-3xl mb-4">📝</div>
-            <h3 className="text-xl font-semibold mb-3">Smart Summaries</h3>
-            <p className="text-gray-600">
-              Automatically generate concise meeting summaries highlighting key decisions and outcomes.
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="text-3xl mb-4">✅</div>
-            <h3 className="text-xl font-semibold mb-3">Action Items</h3>
-            <p className="text-gray-600">
-              Extract and track action items automatically, ensuring nothing falls through the cracks.
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai meeting assistant solutions run smoothly.
             </p>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -142,3 +164,9 @@ export default function AIMeetingAssistantPage() {
     </div>
   );
 }
+=======
+      </div>
+    </div>
+  );
+}
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f

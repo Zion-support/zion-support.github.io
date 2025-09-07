@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 
@@ -6,10 +7,17 @@ export const metadata = {
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
   keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
+=======
+export const metadata = {
+  title: 'Micro Saas | Zion Tech Group',
+  description: 'Professional micro saas services for your business needs.',
+  keywords: 'micro-saas, services, business, technology'
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 };
 
 export default function MicroSaaSPage() {
   return (
+<<<<<<< HEAD
     <div className="space-y-16">
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -87,64 +95,46 @@ export default function MicroSAASPage() {
               description="Scalable cloud deployment on AWS, Azure, or GCP with automated CI/CD pipelines and monitoring."
               benefits={["Cloud infrastructure", "Auto-scaling", "CI/CD pipelines", "24/7 monitoring"]}
             />
-          </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Micro Saas
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional micro saas services for your business needs.
+          </p>
         </div>
-
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Zion for Micro SaaS?</h2>
-          <div className="space-y-6">
-            <BenefitCard
-              icon="💰"
-              title="Revenue-Focused Development"
-              description="We build products that generate revenue from day one, with proven monetization strategies and pricing models."
-            />
-            <BenefitCard
-              icon="⚡"
-              title="Rapid Time-to-Market"
-              description="Launch your micro SaaS product in 8-12 weeks with our proven development process and pre-built components."
-            />
-            <BenefitCard
-              icon="📈"
-              title="Scalable Architecture"
-              description="Built to scale from MVP to enterprise, ensuring your product can grow with your business and user base."
-            />
-            <BenefitCard
-              icon="🛠️"
-              title="Ongoing Support"
-              description="Complete maintenance, updates, and feature additions to keep your micro SaaS product competitive and profitable."
-            />
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored micro saas solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your micro saas solutions run smoothly.
+            </p>
           </div>
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
         </div>
       </div>
-
-      <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Micro SaaS Development Process</h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          We follow a proven methodology to deliver successful micro SaaS products that generate revenue.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <ProcessStep
-            step="1"
-            title="Discovery & Strategy"
-            description="Market research, user personas, feature planning, and monetization strategy development."
-          />
-          <ProcessStep
-            step="2"
-            title="Development & Testing"
-            description="Agile development with regular testing, user feedback, and iterative improvements."
-          />
-          <ProcessStep
-            step="3"
-            title="Launch & Growth"
-            description="Product launch, marketing support, user onboarding, and ongoing optimization."
-          />
-        </div>
-      </div>
-
-      <CTA />
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -218,4 +208,6 @@ function CTA() {
     </div>
   );
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 }

@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,8 +60,13 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
+<<<<<<< HEAD
           950: '#030712'
         }
+=======
+          950: '#030712',
+        },
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -72,9 +77,12 @@ module.exports = {
         'slide-up': 'slideUp 0.5s ease-out',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
@@ -86,14 +94,21 @@ module.exports = {
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
 =======
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
+<<<<<<< HEAD
           '100%': { opacity: '1' }
+=======
+          '100%': { opacity: '1' },
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
@@ -101,6 +116,7 @@ module.exports = {
 <<<<<<< HEAD
           '100%': { transform: 'translateY(0)', opacity: '1' }
         },
+<<<<<<< HEAD
       },
     },
   },
@@ -111,21 +127,23 @@ module.exports = {
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
           '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
+=======
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0px)', opacity: '1' }
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         slideLeft: {
           '0%': { transform: 'translateX(20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0px)', opacity: '1' }
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         slideRight: {
           '0%': { transform: 'translateX(-20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0px)', opacity: '1' }
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         scaleIn: {
           '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' }
+          '100%': { transform: 'scale(1)' },
         },
         bounceIn: {
           '0%': { transform: 'scale(0.3)', opacity: '0' },
@@ -136,31 +154,31 @@ module.exports = {
         'gradient-x': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'left center'
+            'background-position': 'left center',
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'right center'
+            'background-position': 'right center',
           },
         },
         'gradient-y': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'center top'
+            'background-position': 'center top',
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'center bottom'
+            'background-position': 'center bottom',
           },
         },
         'gradient-xy': {
           '0%, 100%': {
             'background-size': '400% 400%',
-            'background-position': 'left center'
+            'background-position': 'left center',
           },
           '50%': {
             'background-size': '400% 400%',
-            'background-position': 'right center'
+            'background-position': 'right center',
           },
         },
       },
@@ -179,14 +197,15 @@ module.exports = {
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
-        '128': '32rem'
+        '128': '32rem',
       },
       borderRadius: {
         '4xl': '2rem',
-        '5xl': '2.5rem'
+        '5xl': '2.5rem',
       },
     },
   },
+<<<<<<< HEAD
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
@@ -198,3 +217,7 @@ module.exports = {
 =======
 };
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+  plugins: [],
+};
+>>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
