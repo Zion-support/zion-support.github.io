@@ -477,6 +477,22 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Floating Action Button */}
+        <motion.div
+          className="fixed bottom-6 right-6 z-50"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 1, type: "spring" }}
+        >
+          <Link
+            to="/request-quote"
+            className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-110"
+            aria-label="Get Quote"
+          >
+            <MessageCircle className="w-6 h-6" />
+          </Link>
+        </motion.div>
       </div>
 
       {/* Floating Contact Button */}
