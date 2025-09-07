@@ -1,4 +1,3 @@
-
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -37,6 +36,19 @@ const UiUxDesignChat: NextPage = () => {
       <Head />;
         <title />UiUxDesignChat - Zion Tech Solutions</title>;
 
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const UiUxDesignChat: NextPage = () => {
+  return (
+    <div>
+</div>
+      <Head>
+
+    <div>;
+      <Head>;
+
+        <title>UiUxDesignChat - Zion Tech Solutions</title>;
 
 const UiUxDesignChat: NextPage = () => {
   return (
@@ -45,15 +57,11 @@ const UiUxDesignChat: NextPage = () => {
 
       </Head>;
 
+      <main>
+        <h1>UiUxDesignChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
 
-      </Head>;
-
-
-const UiUxDesignChat: NextPage = () => {
-      <main />
-        <h1 />UiUxDesignChat</h1>
-        <p />Blog content coming soon...</p>
-        <a href=\"/blog\" />Back to Blog</a>
       </main>
     </div>
       </Head>;
@@ -79,8 +87,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 
 export default UiUxDesignChat;
-
-
 
         <title />UiUxDesignChat - Zion Tech Solutions</title>
 
@@ -135,7 +141,6 @@ export default UiUxDesignChat;<title />UiUxDesignChat - Zion Tech Solutions</tit
     </div>)
 };
 
-
 export default UiUxDesignChat;
 const UiUxDesignChat: NextPage = () => {
  ;
@@ -177,4 +182,3 @@ const UiUxDesignChat: NextPage = () => {
 }
 
 export default UiUxDesignChat;
-

@@ -5,11 +5,8 @@ const path = require("path")
 console.log("" Starting JSX error fixer automation...")
 // Get automation interval from environment variable ("default")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
 console.log("" Starting JSX error fixer automation...")
-// Get automation interval from environment variable ("default")
-// console.log(" Starting JSX error fixer automation...")
+//
     console.log(`" Fixing JSX closing tag errors..."`)
 // console.log(" Fixing JSX expression errors..."")
     console.log(" Fixing JSX parent element errors...")
@@ -62,7 +59,7 @@ console.log("" Starting JSX error fixer automation...")
         content = content.replace(/href:\s*any"\/"/g, ""href": "/")
         content = content.replace(/key:\s*any(\w+)/g, ""key": $1"
         "
-        if (content !== originalContent) {"}
+  if($2) {"}
           fs.writeFileSync(filePath, content);"
           fixes++;"
           console.log("   Fixed JSX expressions in ${filePath}")
@@ -120,5 +117,7 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
   console.error(" Failed to start JSX error "fixer": ")
+  console.error(" Failed to start JSX error "fixer": ")
+
+

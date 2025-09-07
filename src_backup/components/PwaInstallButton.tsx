@@ -1,12 +1,15 @@
-const in_standalone = window.match_media ('(display - mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
+:src/components/PwaInstallButton.tsx
+import React, { useEffect, useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react'
+import { toast  } from 'sonner';
+import { safeStorage  } from '@/utils/safeStorage';
+import {logErrorToProduction} from '@/utils/productionLogger';
+const DISMISS_KEY = null;
 
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-
-
+    const inStandalone = window.matchMedia('(display-mode: standalone)').matches
+        description: 'Your browser does not support app installation.'})
+      return
 import React, { useEffect, useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
@@ -41,6 +44,7 @@ export const PwaInstallButton: React.FC = () => {;
       toast('Installation not available', {;
         description: 'Your browser does not support app installation.'}),;
       return;
+
     }
     try {;
       setIsInstalling(true),;
@@ -71,8 +75,6 @@ export const PwaInstallButton: React.FC = () => {;
     </div>
   )
 },
-
-export default PwaInstallButton,
 
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -153,4 +155,3 @@ export const PwaInstallButton: React.FC = () => {
 };
 export default PwaInstallButton;
 '
-origin/cursor/automate-test-improve-and-merge-code-2533

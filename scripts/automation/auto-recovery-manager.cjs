@@ -52,6 +52,7 @@ this.log(Found ${issues.length} system issues")
         "severity": "high"
   const content = fs.readFileSync(filePath, "utf8")
           content.includes("")
+          content.includes(">>>>>>>")
   "type": "corruption"
             "name": "merge-conflicts","description": "Merge conflicts detected in ${filePath}"
             "severity": "high"
@@ -237,6 +238,7 @@ this.log( Unreadable file "recovered")
         "recoveredIssues"
         "recoveryRate"
       "recoveryResults"
-
-
       "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+      "recommendations": ["Review recovered files to ensure they meet your requirements", "Consider implementing backup strategies for critical files", "Monitor system resources regularly", "Implement automated testing to catch issues early", "]
+
+

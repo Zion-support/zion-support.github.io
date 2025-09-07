@@ -1,4 +1,3 @@
-
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -37,6 +36,19 @@ const AiConsultingChat: NextPage = () => {
       <Head />;
         <title />AiConsultingChat - Zion Tech Solutions</title>;
 
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const AiConsultingChat: NextPage = () => {
+  return (
+    <div>
+</div>
+      <Head>
+
+    <div>;
+      <Head>;
+
+        <title>AiConsultingChat - Zion Tech Solutions</title>;
 
 const AiConsultingChat: NextPage = () => {
   return (
@@ -45,15 +57,11 @@ const AiConsultingChat: NextPage = () => {
 
       </Head>;
 
+      <main>
+        <h1>AiConsultingChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
 
-      </Head>;
-
-
-const AiConsultingChat: NextPage = () => {
-      <main />
-        <h1 />AiConsultingChat</h1>
-        <p />Blog content coming soon...</p>
-        <a href=\"/blog\" />Back to Blog</a>
       </main>
     </div>
       </Head>;
@@ -79,8 +87,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 
 export default AiConsultingChat;
-
-
 
         <title />AiConsultingChat - Zion Tech Solutions</title>
 
@@ -135,7 +141,6 @@ export default AiConsultingChat;<title />AiConsultingChat - Zion Tech Solutions<
     </div>)
 };
 
-
 export default AiConsultingChat;
 const AiConsultingChat: NextPage = () => {
  ;
@@ -177,4 +182,3 @@ const AiConsultingChat: NextPage = () => {
 }
 
 export default AiConsultingChat;
-

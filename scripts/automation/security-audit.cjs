@@ -4,8 +4,7 @@ const fs = require("fs")
 const path = require("path")
 console.log(""� Starting continuous security audit automation...")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log(""� Starting continuous security audit automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Running npm security audit..."`)
@@ -58,5 +57,7 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
   console.error(" Failed to start continuous security "audit")
+  console.error(" Failed to start continuous security "audit")
+
+

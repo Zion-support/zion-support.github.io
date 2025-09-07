@@ -31,7 +31,7 @@ class DependencyErrorResolver {
     const report = {
       "timestamp": new Date().toISOString()
       dependencies: {
-        missin;
+        missin
     g: []
         outdated: []
         vulnerable: []
@@ -136,9 +136,4 @@ import { execSync, spawn } from;
   'UNMET DEPENDENCY') || line.includes('';"missing")
   'npm outdated --json', { "stdio"}
         "type": ';outdated, '}))    } "catch"
-            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
-            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
-            "type": ';outdated, '}))} "catch"
-            "type": ';outdated, '}))} "catch"
-            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
             "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"

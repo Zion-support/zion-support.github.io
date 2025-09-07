@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export function authenticateRequest(req: NextApiRequest, res: NextApiResponse): boolean {
@@ -32,4 +33,17 @@ export function getUserId(req: NextApiRequest): string | null {
   }
 
   return null;
+=======
+import type { NextApiRequest } from 'next';
+export function getRequestUserEmail(req: NextApiRequest): string | null {
+  const emailHeader = $2;
+  if (Array.isArray(emailHeader)) return emailHeader[0] || null,
+  return (emailHeader as string) || null
+}
+
+export function isAdminEmail(email: string | null | undefined): boolean {
+  if (!email) return false,
+  const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter($2);
+  return admins.includes(email.toLowerCase())
+>>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff
 }

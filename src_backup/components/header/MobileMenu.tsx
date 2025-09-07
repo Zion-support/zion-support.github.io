@@ -1,4 +1,3 @@
-}
 
               onClose(), // Close mobile menu on any click
             }}
@@ -18,17 +17,18 @@
       <div className="mt-6 px-6">
         <ModeToggle />
       </div>
+
     </div>
-;
 
+    name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
+}
   );
+}
 
-}> {';
-  item.badge > 9 ? '9+' : item.badge ;
-}</span>) ;
-}</div> {;
-  item.name ;
-}</Link>) ) ";
-}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
-}'"
-origin/cursor/automate-test-improve-and-merge-code-2533
+name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
+}
+  );
+}
+
+}
+

@@ -62,7 +62,7 @@ const glob = require("glob")
   const filePath = path.join(this.projectRoot, ")
         let content = await fs.readFile(filePath", "utf8")
         if (content.includes("React") && !content.includes(")
-  content = import React from "react";
+  content = import React from "react"
         if (content.includes("useState") && !content.includes(import { useState }")
             /import React from "react"/,import React, { useState } from "react""
   modified = true;")}"
@@ -189,5 +189,7 @@ const glob = require("glob")
       return report} catch (error) {  await this.log(` Error in "automation": ${error.message  }`)} catch (error) {await this.log(` Error in "automation"`})
       throw error} catch (error) {  await this.log(` Error in "automation"`})
   console.log("Automation completed successfully")
-
   console.error("Automation "failed": ")
+  console.error("Automation "failed": ")
+
+

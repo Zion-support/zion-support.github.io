@@ -6,7 +6,6 @@ class_name, class_names,  showOutsideDays = true, ...props;
 }/>) ;
 }";
 
-
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { DayPicker } from "react-day-picker",
@@ -35,4 +34,3 @@ export { Calendar }
 }: CalendarProps) {
 }/>)
 }"
-origin/cursor/automate-test-improve-and-merge-code-2533

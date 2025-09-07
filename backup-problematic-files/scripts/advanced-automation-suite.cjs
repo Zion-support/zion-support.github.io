@@ -1,9 +1,3 @@
-
-
-
-
-
-
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -285,8 +279,8 @@ echo "✅ Deployment completed successfully!";";
 // Function to create CI/CD pipeline
 function createCICDPipeline() {
   console.log('\n🔄 Creating CI/CD Pipeline...');
-  const githubActions = `"name": CI/CD Pipeline;
-    on:
+  const githubActions = `"name": CI/CD Pipeline
+on:
   push:
     branches: [main, develop ]
   "pull_request": branches: [main ]
@@ -298,8 +292,8 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: "version",
-    cache: 'npm'
+        node-version: '18'
+        cache: 'npm'
     - name: Install dependencies
       run: npm ci
     - name: Run linting
@@ -587,5 +581,3 @@ main().catch(console.error);
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
 automation.runAllAutomations().catch(console.error);
-automation.runAllAutomations().catch(console.error);
-

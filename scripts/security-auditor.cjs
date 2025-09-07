@@ -1,134 +1,100 @@
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 class SecurityAuditor {
   constructor() {
-    this.auditResults = [];
+    this.vulnerabilities = [];
+    this.recommendations = [];
   }
 
-  async runSecurityAudit() {
-    console.log('🔒 Running security audit...');
-    
+  async auditDependencies() {
     try {
+      console.log('Auditing dependencies...');
       const result = execSync('npm audit --json', { encoding: 'utf8' });
       const auditData = JSON.parse(result);
       
       if (auditData.vulnerabilities) {
-        const vulnCount = Object.keys(auditData.vulnerabilities).length;
-        console.log(`⚠️ Found ${vulnCount} vulnerabilities`);
-        this.auditResults.push(`${vulnCount} vulnerabilities found`);
-      } else {
-        console.log('✅ No vulnerabilities found');
-        this.auditResults.push('No vulnerabilities found');
+        this.vulnerabilities = Object.values(auditData.vulnerabilities);
+        console.log(`Found ${this.vulnerabilities.length} vulnerabilities`);
       }
     } catch (error) {
-      console.log('❌ Security audit failed:', error.message);
-      this.auditResults.push('Security audit failed');
+      console.error('Error auditing dependencies:', error);
     }
   }
 
-  checkEnvironmentVariables() {
-    console.log('🔐 Checking environment variables...');
-    
-    const envPath = path.join(process.cwd(), '.env.local');
-    if (fs.existsSync(envPath)) {
-      const envContent = fs.readFileSync(envPath, 'utf8');
-      
-      // Check for common security issues
-      const issues = [];
-      if (envContent.includes('password') && !envContent.includes('PASSWORD=')) {
-        issues.push('Potential password exposure');
-      }
-      if (envContent.includes('secret') && !envContent.includes('SECRET=')) {
-        issues.push('Potential secret exposure');
-      }
-      
-      if (issues.length > 0) {
-        console.log('⚠️ Environment variable issues found:', issues);
-        this.auditResults.push(...issues);
-      } else {
-        console.log('✅ Environment variables look secure');
-        this.auditResults.push('Environment variables secure');
-      }
-    } else {
-      console.log('ℹ️ No .env.local file found');
-      this.auditResults.push('No environment file found');
-    }
-  }
-
-  checkDependencies() {
-    console.log('📦 Checking dependencies...');
-    
-    try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      
-      // Check for known vulnerable packages
-      const vulnerablePackages = [];
-      const knownVulnerable = ['lodash', 'moment', 'jquery'];
-      
-      for (const pkg of knownVulnerable) {
-        if (dependencies[pkg]) {
-          vulnerablePackages.push(pkg);
-        }
-      }
-      
-      if (vulnerablePackages.length > 0) {
-        console.log('⚠️ Potentially vulnerable packages found:', vulnerablePackages);
-        this.auditResults.push(`Vulnerable packages: ${vulnerablePackages.join(', ')}`);
-      } else {
-        console.log('✅ Dependencies look secure');
-        this.auditResults.push('Dependencies secure');
-      }
-    } catch (error) {
-      console.log('❌ Dependency check failed:', error.message);
-      this.auditResults.push('Dependency check failed');
-    }
-  }
-
-  generateReport() {
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      auditResults: this.auditResults,
-      total: this.auditResults.length,
-      recommendations: [
-        'Keep dependencies updated',
-        'Use environment variables for secrets',
-        'Enable HTTPS in production',
-        'Implement proper authentication',
-        'Regular security audits'
-      ]
+      vulnerabilities: this.vulnerabilities,
+      recommendations: this.recommendations
     };
 
     const reportPath = path.join(process.cwd(), 'security-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Security audit report saved to ${reportPath}`);
-    
-    return report;
+    console.log(`Security audit report generated: ${reportPath}`);
   }
 
   async run() {
-    console.log('🛡️ Starting security audit...');
-    
-    await this.runSecurityAudit();
-    this.checkEnvironmentVariables();
-    this.checkDependencies();
-    
-    const report = this.generateReport();
-    
-    console.log('✅ Security audit completed!');
-    console.log(`📊 Total checks: ${report.total}`);
-    
-    return report;
+    console.log('🔒 Starting Security Audit');
+    await this.auditDependencies();
+    await this.generateReport();
   }
 }
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-// Main execution
 if (require.main === module) {
   const auditor = new SecurityAuditor();
-  auditor.run().catch(console.error);
-}
+  auditor.run()
+    .then((report) => {
+
+      process.exit(0)})
+    .catch((error) => {
+      console.error('\n💥 Security Auditor "failed": ', error.message);
+      process.exit(1)})}
 
 module.exports = SecurityAuditor;
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+    this.reportsDir = path.join(this.projectRoot, 'security-reports')
+    this.log(' Running npm audit...')
+      const result = execSync('npm audit --audit-level=moderate --json')
+        "encoding"
+        "status"
+        "status"
+        "status"
+          "name"
+          "severity"
+          "name"
+          "severity"
+          "name"
+          "severity"
+          "name"
+          "pattern": /console\.log\s*\(\s*['"")]
+          "severity"
+        "status"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+        "type"
+        "priority"
+        "message"
+        "impact"
+      console.error('\n� Security Auditor "failed")

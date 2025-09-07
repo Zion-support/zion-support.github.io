@@ -1,4 +1,3 @@
-
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -37,6 +36,19 @@ const WebDevelopmentChat: NextPage = () => {
       <Head />;
         <title />WebDevelopmentChat - Zion Tech Solutions</title>;
 
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const WebDevelopmentChat: NextPage = () => {
+  return (
+    <div>
+</div>
+      <Head>
+
+    <div>;
+      <Head>;
+
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>;
 
 const WebDevelopmentChat: NextPage = () => {
   return (
@@ -45,15 +57,11 @@ const WebDevelopmentChat: NextPage = () => {
 
       </Head>;
 
+      <main>
+        <h1>WebDevelopmentChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
 
-      </Head>;
-
-
-const WebDevelopmentChat: NextPage = () => {
-      <main />
-        <h1 />WebDevelopmentChat</h1>
-        <p />Blog content coming soon...</p>
-        <a href=\"/blog\" />Back to Blog</a>
       </main>
     </div>
       </Head>;
@@ -79,8 +87,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 
 export default WebDevelopmentChat;
-
-
 
         <title />WebDevelopmentChat - Zion Tech Solutions</title>
 
@@ -135,7 +141,6 @@ export default WebDevelopmentChat;<title />WebDevelopmentChat - Zion Tech Soluti
     </div>)
 };
 
-
 export default WebDevelopmentChat;
 const WebDevelopmentChat: NextPage = () => {
  ;
@@ -177,4 +182,3 @@ const WebDevelopmentChat: NextPage = () => {
 }
 
 export default WebDevelopmentChat;
-

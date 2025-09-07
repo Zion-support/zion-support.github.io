@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export function setSessionCookie(res: NextApiResponse, token: string) {
@@ -30,3 +31,8 @@ export function isInternalAgentRequest(req: NextApiRequest): boolean {
   const userAgent = req.headers['user-agent'] || '';
   return userAgent.includes('internal-agent') || userAgent.includes('bot');
 }
+=======
+// Stub admin auth utility - placeholder for missing functionality
+export const requireAdminAuth = $2;
+export const isAdmin = $2;
+>>>>>>> ecc7d9f9794e0ded6a8fec40c9673b04874eb1ff

@@ -9,8 +9,8 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        MONITOR_INTERVAL: 30000, // 30 seconds;
-    LOG_LEVEL: 'info'
+        MONITOR_INTERVAL: 30000, // 30 seconds
+        LOG_LEVEL: 'info'
       },
       error_file: 'automation/logs/error-prevention-error.log',
       out_file: 'automation/logs/error-prevention-out.log',

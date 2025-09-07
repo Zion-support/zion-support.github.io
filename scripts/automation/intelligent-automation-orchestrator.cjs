@@ -12,8 +12,7 @@ console.log("🧠 Starting intelligent automation orchestrator...")
   "maintenance"
     "automations": ["smart-documentation-generator", "ai-code-analyzer"]
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log(""🧠 Starting intelligent automation orchestrator...")
 // Get automation interval from environment variable ("default")
 console.log("🧠 Starting intelligent automation orchestrator...")
@@ -152,7 +151,7 @@ console.log("🧠 Starting intelligent automation orchestrator...")
   const automationScripts = {enhanced-error-fixer": "./"scripts/automation/enhanced-error-fixer.cjs"",console-error-fixer": "./"scripts/automation/console-error-fixer.cjs"",code-quality-automation"}
       "./"scripts/automation/code-quality-automation.cjs"",link-checker": "./"scripts/automation/link-checker.cjs"",security-audit": "./"scripts/automation/security-audit.cjs"",performance-monitor": "./"scripts/automation/performance-monitor.cjs"",dependency-updates": "./"scripts/automation/dependency-updates.cjs"",quality-checks": "./"scripts/automation/quality-checks.cjs"",smart-documentation-generator"
       "./"scripts/automation/smart-documentation-generator.cjs"",ai-code-analyzer": "./"scripts/automation/ai-code-analyzer.cjs""
-  if (!scriptPath) {throw new Error("Unknown "automation": ${automationName}")
+  if($2) {throw new Error("Unknown "automation": ${automationName}")
   if (!fs.existsSync(scriptPath)) {throw new Error("Automation script not "found": ${scriptPath}")
   // Execute the automation scriptconst result = execSync("node ${scriptPath}")
   "stdio": "pipe"
@@ -226,5 +225,7 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
   console.error( Failed to start intelligent automation "orchestrator")
+  console.error( Failed to start intelligent automation "orchestrator")
+
+

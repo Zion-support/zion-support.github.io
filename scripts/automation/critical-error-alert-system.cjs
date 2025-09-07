@@ -22,7 +22,7 @@ const { execSync } = require("child_process")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log("� Checking for critical errors...")
     const resourceStatus = await this.checkSystemResources();"
-    if (resourceStatus.critical) {"}
+  if($2) {"}
       criticalErrors.push(resourceStatus);")}"
 this.log(Found ${criticalErrors.length} critical error conditions")
   this.log(" Checking build status...")
@@ -176,5 +176,7 @@ this.log(`� Report "generated"`)
         "criticalErrors"
         "alerts"
   this.log(� Critical Error Alert System "failed")
-
         "ERROR"
+        "ERROR"
+
+

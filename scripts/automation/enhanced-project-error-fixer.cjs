@@ -106,7 +106,7 @@ const glob = require("glob")
             !content.includes("import * as React")
               content.includes("export default")
               content.includes("export {"})
-  content = "import React from "react";
+  content = "import React from "react"
             file.endsWith(".ts")
             content.includes("<")
             content.includes(">")
@@ -140,7 +140,7 @@ const glob = require("glob")
             content.includes("<")
             !content.includes("import React")
             !content.includes("import * as React")
-  content = import React from "react";
+  content = import React from "react"
             /<>\s*<\/>/g,<React.Fragment></React.Fragment>"
             "className={$1}"
             this.fixesApplied.push(""FIXED_REACT")
@@ -198,5 +198,7 @@ const glob = require("glob")
         "totalErrors"
         "success"
     this.log(" Report generated")
-
   this.log("Remaining "errors": ")
+  this.log("Remaining "errors": ")
+
+

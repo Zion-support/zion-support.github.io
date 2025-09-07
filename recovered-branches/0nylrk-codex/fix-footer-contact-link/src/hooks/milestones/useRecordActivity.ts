@@ -1,76 +1,42 @@
-export const useRecordActivity = (;) => {
-  return $3;}
-}
-  const { user } = useAuth();import { useAuth } from '@/hooks/useAuth',
-import { supabase } from '@/integrations/supabase/client',
-import { MilestoneActivity } from './types',
-export const useRecordActivity = (
-    milestoneId: string,
+
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { MilestoneActivity } from './types';
+export const useRecordActivity = () => {
+  const { user } = useAuth($2);
+  const recordMilestoneActivity = $2;
     action: string, 
     previousStatus: string | null, 
     newStatus: string,
-    comment?: string;
+    comment?: string
   ) => {
-    if (!user) return null;
-try {) => {
-  return $3;}
-}
-      const { data, error } = await supabase;
+    if (!user) return null,
+    
+    try {
+      const { data, error } = await supabase
         .from('milestone_activities')
-        .insert({          comment})
+        .insert({
+          milestone_id: milestoneId;
+          user_id: user.id;
+          action;
+          previous_status: previousStatus;
+          new_status: newStatus
+          comment})
         .select(`
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
-        `)    }
-  };
-  return {}
-    recordMilestoneActivity;}
-import { supabase } from '@/integrations/supabase/client';
-import { MilestoneActivity } from './types';
-export const useRecordActivity = (;) => {
-  return $3;}
-}
-  const { user } = useAuth(),;
-  const recordMilestoneActivity = async (;
-    milestoneId: string,;
-    action: string,;
-    previousStatus: string | null,;
-    newStatus: string,;
-    comment?: string;
-  ) => {;
-    if (!user) return null,;}
-    try {;}
-      const { data, error } = await supabase;
-        .from('milestone_activities');
-        .insert({;
-          milestone_id: milestoneId,;
-          user_id: user.id,;
-          action,;
-          previous_status: previousStatus,;}
-          new_status: newStatus,;}
-          comment});
-        .select(`;
-          *,;
-          created_by_profile:profiles!user_id(display_name, avatar_url);
-        `);
-        .single(),;
-      if (error) throw error,;
-      return data;
-    } catch (err: any) {;
-      console.error(\"Error recording activity:\", err),;}
-      return null;}
+        `)
+        .single($2);
+      if (error) throw error,
+      
+      return data
+    } catch (err: any) {
+      console.error($2);
+      return null
+    }
+  },
+  
+  return {
+    recordMilestoneActivity
   }
-}
-};
-  return {;}
-    recordMilestoneActivity;}
-  }
-  return {}
-    recordMilestoneActivity}
-  }
-}
-  };
-  return {;}
-    recordMilestoneActivity;}
-  }
-};
+},

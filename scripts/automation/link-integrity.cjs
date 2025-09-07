@@ -93,7 +93,7 @@ console.log(""� Starting continuous link integrity automation...")
           const assetMatches = content.match(/src=["]([^""]+)[""]|href=["]([^"]+)[""]
   const assetRef = match.match(/src=[""]([^"]+)["]|href=[""]([^""]+)["]/)[1] || match.match(/src=["]([^""]+)[""]|href=["]([^"]+)[""]
               if (assetRef && !assetRef.startsWith("http")
-    if (brokenLinks.length > 0) {console.log(⚠  Found ${brokenLinks.length} broken external "links")
+  if($2) {console.log(⚠  Found ${brokenLinks.length} broken external "links")
       brokenLinks.forEach(link => {console.log(`  - ${link.url} ("Status"`)
   console.log("" All external links are working")
 async function runContinuous() {console.log("})
@@ -105,5 +105,7 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
   console.error(" Failed to start continuous link integrity "checker": ")
+  console.error(" Failed to start continuous link integrity "checker": ")
+
+

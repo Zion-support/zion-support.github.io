@@ -32,7 +32,14 @@ import { execSync, spawn } from;
       console.error(')
   '\\n'
     const nameMatch = message.match(/Cannot find name '(.+?)'
-        React: "React",
-    useEffect: "
+        React: "
+        useState: "
+        useEffect: "
         useRef: "
         FC: "
+        ReactNode: "
+        ReactNode: "
+#!/usr/bin/env node
+import { execSync, spawn } from;
+
+

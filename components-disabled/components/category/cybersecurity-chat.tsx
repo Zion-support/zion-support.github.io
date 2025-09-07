@@ -1,4 +1,3 @@
-
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -37,6 +36,19 @@ const CybersecurityChat: NextPage = () => {
       <Head />;
         <title />CybersecurityChat - Zion Tech Solutions</title>;
 
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const CybersecurityChat: NextPage = () => {
+  return (
+    <div>
+</div>
+      <Head>
+
+    <div>;
+      <Head>;
+
+        <title>CybersecurityChat - Zion Tech Solutions</title>;
 
 const CybersecurityChat: NextPage = () => {
   return (
@@ -45,15 +57,11 @@ const CybersecurityChat: NextPage = () => {
 
       </Head>;
 
+      <main>
+        <h1>CybersecurityChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
 
-      </Head>;
-
-
-const CybersecurityChat: NextPage = () => {
-      <main />
-        <h1 />CybersecurityChat</h1>
-        <p />Blog content coming soon...</p>
-        <a href=\"/blog\" />Back to Blog</a>
       </main>
     </div>
       </Head>;
@@ -79,8 +87,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 
 export default CybersecurityChat;
-
-
 
         <title />CybersecurityChat - Zion Tech Solutions</title>
 
@@ -135,7 +141,6 @@ export default CybersecurityChat;<title />CybersecurityChat - Zion Tech Solution
     </div>)
 };
 
-
 export default CybersecurityChat;
 const CybersecurityChat: NextPage = () => {
  ;
@@ -177,4 +182,3 @@ const CybersecurityChat: NextPage = () => {
 }
 
 export default CybersecurityChat;
-

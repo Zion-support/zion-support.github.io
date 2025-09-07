@@ -5,7 +5,7 @@ const AvatarMenu = () => {
     <div>
       {/* AvatarMenu component */}
     </div>
-  );
+  )
 };
 
 export default AvatarMenu;
@@ -95,4 +95,3 @@ export const AvatarMenu: React.FC = () => {
 };
 export default AvatarMenu;
 "
-origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,41 +1,60 @@
 
-
-
-
-
-
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
-console.log('🔧 Smart Code Fixer');
-console.log('=====');
-
+// Function to fix unescaped entities only in JSX content;
+=======
+const { execSync } = require('child_process')
 // Function to fix unescaped entities only in JSX content
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals
   // This regex looks for single quotes that are not preceded by import, from, or within quotes
-  return content.replace(/(?<!import\s+.*?from\s+['"])(?<!['"])(?<![a-zA-Z_$])'([^'"]*?)'(?!['"])(?![a-zA-Z_$])/g, (match, content) => {
     // Only replace if it's likely JSX content (contains spaces or common JSX patterns)
     if (content.includes('&') || content.includes('<') || content.includes('>')) {
+<<<<<<< HEAD
       return `&apos;${content}&apos;`;
     }
     return match;
   });
-}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-// Function to fix specific linting issues
+// Function to fix specific linting issues;
 function fixSpecificIssues(content, filePath) {
   let modified = false;
 
+  // Fix unused imports;
+  if (content.includes("import Image from 'next/image'") && !content.includes('<Image')) {
+
+
+  return { content, modified };
+
+// Function to process a single file;
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+}
+
+=======
+return `&apos;${content}&apos;`
+    return match
+  })
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+// Function to fix specific linting issues
+function fixSpecificIssues(content, filePath) {
+  let modified = false
   // Fix unused imports
   if (content.includes("import Image from 'next/image'") && !content.includes('<Image')) {
-    content = content.replace(/import Image from 'next\/image'/, '// import Image from \'next/image\';');
-    modified = true;
-  }
 
+<<<<<<< HEAD
   if (content.includes("import { Mail, Phone, MapPin } from 'lucide-react'") && !content.includes('<Mail')) {
     content = content.replace(/import { Mail, Phone, MapPin } from 'lucide-react'/, 'import { Phone, MapPin } from \'lucide-react\';');
     modified = true;
@@ -75,51 +94,123 @@ function fixSpecificIssues(content, filePath) {
 }
 
 // Function to process a single file
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  // TODO: Implement
+
     let modifiedContent = content;
     let hasChanges = false;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // Apply fixes;
+=======
     // Apply fixes
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    // Apply fixes
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const result = fixSpecificIssues(modifiedContent, filePath);
     modifiedContent = result.content;
     hasChanges = result.modified;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // Fix unescaped entities;
+=======
     // Fix unescaped entities
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+    // Fix unescaped entities
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const originalContent = modifiedContent;
     modifiedContent = fixUnescapedEntities(modifiedContent);
     if (modifiedContent !== originalContent) {
       hasChanges = true;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    // Write back if modified;
+=======
     }
 
     // Write back if modified
-    if (hasChanges) {
-      fs.writeFileSync(filePath, modifiedContent, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
-    } else {
-      console.log(`ℹ️  No changes needed: ${filePath}`);
-      return false;
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
     }
-  } catch (error) {
+
+    // Write back if modified
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    if (hasChanges) {
+
+      return false;
+  } catch (error) {`;
     console.error(`❌ Error processing ${filePath}:`, error.message);
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+// Function to find all relevant files;
+
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     return false;
   }
 }
+=======
+return { content, modified }
+// Function to process a single file;function processFile(filePath) {
+  try {
+  // TODO: Implement
 
+    let modifiedContent = content
+    let hasChanges = false
+    // Apply fixes;    const result = fixSpecificIssues(modifiedContent, filePath)
+    modifiedContent = result.content
+    hasChanges = result.modified
+    // Fix unescaped entities;    const originalContent = modifiedContent
+    modifiedContent = fixUnescapedEntities(modifiedContent)
+  if($2) {
+      hasChanges = true
+    // Write back if modified;    if (hasChanges) {
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
+
+      return false
+  } catch (error) {`
+    console.error(`❌ Error processing ${filePath}:`, error.message)
 // Function to find all relevant files
+<<<<<<< HEAD
 function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   const files = [];
   
+=======
+const files = []
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
   function traverse(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        try {
+  // TODO: Implement
+      const items = fs.readdirSync(currentDir)
+  for($2) {
+        const fullPath = path.join(currentDir, item)
+  // TODO: Implement
+<<<<<<< HEAD
           const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            traverse(fullPath);
+          } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+`;
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
           
           if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
             traverse(fullPath);
@@ -185,3 +276,13 @@ if (require.main === module) {
 }
 
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
+<<<<<<< HEAD
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
+const stat = fs.statSync(fullPath)
+            traverse(fullPath)
+          } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+`
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

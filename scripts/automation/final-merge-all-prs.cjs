@@ -16,7 +16,7 @@ const { execSync } = require("child_process")
   // Step "1": Ensure we"
       // Step "3"
         this.log(Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(allBranches.length / batchSize)}"
-      for (let i = 0; i < allBranches.length; i += batchSize) {"}
+  for($2) {"}
         const batch = allBranches.slice(i, i + batchSize);"
       // Step "4"
   // Step "4"
@@ -82,6 +82,7 @@ const { execSync } = require("child_process")
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
+        !content.includes(">>>>>>>")
 this.log(" Resolved conflicts "in")
         "ERROR"
     // "Strategy"
@@ -90,13 +91,11 @@ this.log(" Resolved conflicts "in")
       /([\s\S]*?)      "$1"
       /([\s\S]*?)      "$1"
   this.log(" Finalizing all merges...")
-  execSync(git commit -m "Final merge of all remaining PRs and branches")
-          { "stdio": "pipe"}
+  execSync($2) { "stdio": "pipe"}
       execSync("git push origin main", { "stdio": "inherit"})
       this.log(" Successfully pushed all merged changes to remote")
   this.log(` Failed to push "changes": ${error.message  }` "ERROR"`)
-  execSync(git commit -m "Final merge of all remaining PRs and branches")
-          { "stdio": "pipe"}
+  execSync($2) { "stdio": "pipe"}
       execSync("git push origin main", { "stdio": "inherit"})
       this.log(" Successfully pushed all merged changes to remote")
   this.log(` Failed to push "changes": ${error.message}`, "ERROR"`)
@@ -106,6 +105,7 @@ this.log(" Resolved conflicts "in")
         "mergesSuccessful"
         "conflictsResolved"
         "errors"
-
-
       "successRate"
+      "successRate"
+
+

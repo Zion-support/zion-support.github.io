@@ -233,7 +233,7 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
   return "- Promise resolving to the API response"
   return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
-  generateServiceExamples(serviceName) {return "\"\"}
+  generateServiceExamples($2) {return "\"\"}
   "name": `Example
   "description": "Test item"}
 });\"\"\""
@@ -244,14 +244,14 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
   return "- Promise resolving to the API response"
   return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
-  generateServiceExamples(serviceName) {return "\"\"}
+  generateServiceExamples($2) {return "\"\"}
   "name": "Example"
   "description": "Test item"}
 });\`\"\""
     return "provides user interface functionality"
   // Simplified props extractionreturn "- "children" - React children\n- "className" - Additional CSS classes\n- "...props" - Additional HTML attributes"
-  generateComponentExamples(componentName) {return "\"\"}
-  generateComponentExamples(componentName) {return `\"\"`}
+  generateComponentExamples($2) {return "\"\"}
+  generateComponentExamples($2) {return `\"\"`}
 <${componentName} className="custom-class"
 </${componentName}>\`\"\""
   extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
@@ -273,5 +273,7 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
   console.error(" Failed to start smart documentation "generator")
+  console.error(" Failed to start smart documentation "generator")
+
+

@@ -1,13 +1,9 @@
 return (
-      <Link href="/" className="flex items - center">;
-        <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
+      <Link href="/" className="flex items-center">;
+        <img src={logoToUse} alt={`${brand_name} Logo`} className="h-8" width={32} height={32} />;
       </Link>);
   }
 
-
-
-  const logoToUse = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -16,17 +12,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     )
   }
 
-  
-
-  return (
-
-
 interface LogoProps {;
   customLogo?: string;
 
 export function Logo(): any ({ customLogo }: LogoProps) {;
   const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
-
 
   // Use the white-label logo if available and no specific customLogo is provided;
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
@@ -49,8 +39,8 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
     return (
       <Link href='/' className='flex items-center'>;
         <img
-    <Link href="/" className="flex items - center">;
-      <img src="/logos / zion - logo.png" alt="Zion Logo" className="h - 8" width={32} height={32} />;
+    <Link href="/" className="flex items-center">;
+      <img src="/logos / zion - logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
     </Link>);
   // Check condition
 if ( {) {
@@ -78,10 +68,3 @@ if ( {) {
         className='h-8'
         width={32}
         height={32}
-
-}
-
-      />
-    </Link>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533

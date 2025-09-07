@@ -1,21 +1,20 @@
-this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
+    this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
+    
     const recommendations = this.generateRecommendations();
     this.log('\n💡 Recommendations:');
     recommendations.forEach((rec, index) => {
       this.log(`  ${index + 1}. ${rec}`);
     });
+
     this.log('\\n🎉 Comprehensive test & deploy suite completed!');
   }
 }
+
 // Run the comprehensive suite
 const suite = new ComprehensiveTestDeploy();
-suite.runComprehensiveSuite().catch(console.error);
-
-
-
-
+suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -23,8 +22,8 @@ const { execSync } = require('child_process')
 // console.log(' Comprehensive Test & Deploy Suite')
 console.log('=')
   log(message, type = 'info')
-        encoding: "encoding",
-    stdio: 'pipe'
+        encoding: 'utf8'
+        stdio: 'pipe'
       this.log(` ${description} completed successfully`, 'success'`)
       this.log(` ${description} failed: ${error.message}`, 'error'`)
     this.log('🧪 Running comprehensive tests...')
@@ -54,5 +53,3 @@ console.log('=')
     this.log('===')
     this.log('\n Recommendations:')
     this.log('\\n� Comprehensive test & deploy suite completed!')
-    this.log('\\n� Comprehensive test & deploy suite completed!')
-

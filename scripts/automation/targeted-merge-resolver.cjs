@@ -21,12 +21,12 @@ const { execSync } = require("child_process")
   this.log("� Ensuring we are on main branch...")
   const currentBranch = execSync("git branch --show-current")
   "encoding": "utf8"
-      if (currentBranch !== "main") {this.log("Switching from ${currentBranch} to main...")
+  if($2) {this.log("Switching from ${currentBranch} to main...")
         execSync("git checkout main", { "stdio": "inherit"})
   this.log("� Ensuring we are on main branch...")
   const currentBranch = execSync("git branch --show-current")
   "encoding": "utf8"
-      if (currentBranch !== "main") {this.log("Switching from ${currentBranch} to main...")
+  if($2) {this.log("Switching from ${currentBranch} to main...")
         execSync("git checkout main", { "stdio": "inherit"})
       this.log("Pulling latest changes from main...")
       execSync("git pull origin main", { "stdio": "inherit" })} catch (error) {  throw new Error("Failed to ensure main "branch": ${error.message  }")
@@ -79,11 +79,13 @@ const { execSync } = require("child_process")
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
+        !content.includes(">>>>>>>")
 this.log(" Resolved conflicts "in")
         "ERROR"
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
+        !content.includes(">>>>>>>")
 this.log(` Resolved conflicts "in": ${filePath}"`)
   this.log( Failed to resolve conflicts in ${filePath}: ${error.message}")
         "ERROR"
@@ -130,6 +132,7 @@ this.log("� Detailed report saved "to": ${reportPath}")
     const reportPath = path.join(this.logsDir, "targeted-merge-report.json")
     this.log("� Targeted Merge Resolution "Summary": ");this.log("   Branches Processed: ${report.summary.branchesProcessed}");this.log("   Conflicts "Resolved": ${report.summary.conflictsResolved}");this.log("   Successful "Merges": ${report.summary.mergesSuccessful}");this.log("   "Errors": ${report.summary.errors}");this.log("   Success "Rate": ${report.successRate}%")
 this.log("� Detailed report saved "to": ${reportPath}")
-
-
   console.error(" Fatal "error")
+  console.error(" Fatal "error")
+
+

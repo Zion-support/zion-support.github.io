@@ -1,218 +1,196 @@
-import { useState, useEffect } from \"react\",
-import { toast } from \"@/hooks/use-toast\",
-import { useAuth } from \"@/hooks/useAuth\",
-import { supabase } from \"@/integrations/supabase/client\";
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from \"@/types/referrals\";
-export function useReferrals() {}
-  const { user } = useAuth();
-  const [referralCode, setReferralCode] = useState<ReferralCode | null />(null),
-  const [isLoading, setIsLoading] = useState(true);
-  const [referrals, setReferrals] = useState<Referral[] />([]),
-  const [rewards, setRewards] = useState<ReferralReward[] />([]),
-  const [stats, setStats] = useState<ReferralStats />({
-    totalReferrals: 0;
-    pendingReferrals: 0;}
-    completedReferrals: 0;}
-    totalRewards: 0});
-import { supabase } from \"@/integrations/supabase/client\",
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from \"@/types/referrals\",
-export function useReferrals() {}
-  const { user } = useAuth(),
-  const [referralCode, setReferralCode] = useState<ReferralCode | null />(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [referrals, setReferrals] = useState<Referral[] />([]),
-  const [rewards, setRewards] = useState<ReferralReward[] />([]),
-  const [stats, setStats] = useState<ReferralStats />({
+import { useState, useEffect } from "react",
+import { toast } from "@/hooks/use-toast",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client";
+import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals";
+export function useReferrals() {
+  const { user } = useAuth($2);
+  const [referralCode, setReferralCode] = useState<ReferralCode | null>(null),
+  const [isLoading, setIsLoading] = useState($2);
+  const [referrals, setReferrals] = useState<Referral[]>([]),
+  const [rewards, setRewards] = useState<ReferralReward[]>([]),
+  const [stats, setStats] = useState<ReferralStats>({
     totalReferrals: 0,
-    pendingReferrals: 0,}
-    completedReferrals: 0,}
-    totalRewards: 0}),import { useState, useEffect } from './react';
-import { toast } from '@/hooks / use - toast';
-import { use_auth } from '@/hooks / use_auth';
-import { supabase } from '@/integrations / supabase / client';
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from '@/types / referrals';
-export /**
- * useReferrals - Function description;
- */
-function useReferrals() {}
-  const { user } = use_auth ();
-  const [referral_code, setReferralCode] = useState < ReferralCode | null>(null);
-  const [is_loading, setIsLoading] = useState (true);
-  const [referrals, set_referrals] = useState < Referral[]>([]);
-  const [rewards, set_rewards] = useState < ReferralReward[]>([]);
-  const [stats, set_stats] = useState < ReferralStats>({
-    total_referrals: 0;
-    pending_referrals: 0;}
-    completed_referrals: 0,}
-    total_rewards: 0});
-;
-  useEffect (() => {
-    // Check condition;
-if ( {) {}
-  $2}
-}
-      fetchReferralCode ();
-      fetchReferralStats ();
-      fetch_referrals ();
-      fetch_rewards ();
+    pendingReferrals: 0,
+    completedReferrals: 0,
+    totalRewards: 0}),
+
+  useEffect(() => {
+    if (user) {
+      fetchReferralCode($2);
+      fetchReferralStats($2);
+      fetchReferrals($2);
+      fetchRewards()
     }
-  }, [user]);
-;
+  }, [user]),
+
   const fetchReferralCode = async () => {
     try {
-        .single(),}
-      if (error) {}
-        console && console.error(\"Error fetching referral code:\", error);    } finally {}
-      setIsLoading (false);}
+      setIsLoading($2);
+      const { data, error } = await supabase
+        .from('referral_codes')
+        .select('*')
+        .eq('user_id', user?.id)
+        .single($2);
+      if (error) {
+        console.error($2);
+        return
+      }
+
+      setReferralCode(data)
+    } catch (error) {
+      console.error("Error in fetchReferralCode:", error)
+    } finally {
+      setIsLoading(false)
     }
   },
-  const fetchReferrals = async () => {
-    try {}
-      if (!user) return,}
-      const { data, error } = await supabase;
+
+  const fetchReferrals = $2;
+      const { data, error } = await supabase
         .from('referrals')
         .select('*')
         .eq('referrer_id', user.id)
-        .order('created_at', { ascending: false }),
+        .order($2);
       if (error) throw error,
+      
       setReferrals(data || [])
-    } catch (error) {}
-      console.error(\"Error fetching referrals:\", error)}
+    } catch (error) {
+      console.error("Error fetching referrals:", error)
     }
   },
-  const fetchRewards = async () => {
-    try {}
-      if (!user) return,}
-      const { data, error } = await supabase;
+
+  const fetchRewards = $2;
+      const { data, error } = await supabase
         .from('referral_rewards')
         .select('*')
         .eq('user_id', user.id)
-        .order('created_at', { ascending: false }),
+        .order($2);
       if (error) throw error,
+      
       setRewards(data || [])
-    } catch (error) {}
-      console.error(\"Error fetching rewards:\", error)}
+    } catch (error) {
+      console.error("Error fetching rewards:", error)
     }
   },
-  const fetchReferralStats = async () => {
-    try {
-      if (!user) return,
-              .eq('referrer_id', user.id),
-      if (refError) throw refError,}
-      // Get rewards;}
-const { data: rewards, error: rewardsError } = await supabase;
+
+  const fetchReferralStats = $2;
+      // Get total referrals
+      const { data: referrals, error: refError} = await supabase
+        .from('referrals')
+        .select('id, status')
+        .eq($2);
+      if (refError) throw refError,
+      
+      // Get rewards
+      const { data: rewards, error: rewardsError} = await supabase
         .from('referral_rewards')
-        .select('amount')  const generateReferralCode = async () => {
+        .select('amount')
+        .eq($2);
+      if (rewardsError) throw rewardsError,
+      
+      // Calculate stats
+      const totalReferrals = $2;
+      const pendingReferrals = $2;
+      const completedReferrals = $2;
+      const totalRewards = rewards ? rewards.reduce((sum, item) => {
+        return sum + (item.amount || 0)
+      }, 0) : 0,
+      
+      setStats({
+        totalReferrals,
+        pendingReferrals,
+        completedReferrals,
+        totalRewards
+      })
+      
+    } catch (error) {
+      console.error("Error fetching referral stats:", error)
+    }
+  },
+
+  const generateReferralCode = async () => {
     try {
       if (!user) {
-        toast({
-          title: \"Authentication required\",}
-          description: \"You need to be logged in to generate a referral code\",}
-          variant: \"destructive\"}),
-        return;
+        toast($2);
+        return
       }
-      const { data, error } = await supabase && supabase.rpc('generate_referral_code', {}
-        user_id: user && user.id;}
-variant: \"destructive\"})
+
+      const { data, error } = await supabase.rpc($2);
+      if (error) throw error,
+
+      toast($2);
+      // Refresh the code
+      fetchReferralCode($2);
+      return data
+    } catch (error: any) {
+      console.error($2);
+      toast({
+        title: "Error generating code",
+        description: error.message || "There was a problem generating your referral code",
+        variant: "destructive"})
     }
-  }
-  // Get the referral link for the current user;
-const getReferralLink = (
-    if (!referralCode) return \"\";  // Copy the referral link to clipboard;
-const copyReferralLink = () => {
-    const link = getReferralLink(),
-    if (link) {) => {
-  return $3;}
-}
-    }
-  }
-;
-  // Get the referral link for the current user;
-  const getReferralLink = () =>: any {
-    // Check condition;
-if (return \"\") {}
-  $2}
-}
-    const base_url = window.location.origin;
-    return `${base_url}/?ref=${referral_code.code}`;
-  }
-;
-  // Copy the referral link to clipboard;
-  const copyReferralLink = () =>: any {
-    const link = getReferralLink ();
-    // Check condition;
-if ( {) {}
-  $2}
-}
-      navigator.clipboard.write_text (link);
-      toast ({
-        title: \"Copied!\",}
-  description: \"Referral link copied to clipboard\",}
-        variant: \"success\"});
+  },
+
+  // Get the referral link for the current user
+  const getReferralLink = $2;
+    const baseUrl = $2;
+    return `${baseUrl}/?ref = $2;
+  // Copy the referral link to clipboard
+  const copyReferralLink = () => {
+    const link = getReferralLink($2);
+    if (link) {
+      navigator.clipboard.writeText($2);
+      toast({
+        title: "Copied!",
+        description: "Referral link copied to clipboard",
+        variant: "success"})
     } else {
-      toast ({
-        title: \"Cannot copy link\";
-        title: \"Cannot share\",}
-  description: \"description\",}
-    variant: \"destructive\"});
-      return;
+      toast({
+        title: "Cannot copy link",
+        description: "Please generate a referral code first",
+        variant: "destructive"})
     }
-        title: \"Cannot share\",
-        description: \"Please generate a referral code first\",
-        variant: \"destructive\"}),
-      return;
-import { useState, useEffect } from \"react\";
-import { toast } from \"@/hooks/use-toast\";
-import { useAuth } from \"@/hooks/useAuth\",;
-import { supabase } from \"@/integrations/supabase/client\",;
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from \"@/types/referrals\",;
-export function useReferrals() {;}
-  const { user } = useAuth(),;
-  const [referralCode, setReferralCode] = useState<ReferralCode | null />(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [referrals, setReferrals] = useState<Referral[] />([]),;
-  const [rewards, setRewards] = useState<ReferralReward[] />([]),;
-  const [stats, setStats] = useState<ReferralStats />({;
-    totalReferrals: 0,;
-    pendingReferrals: 0,;}
-    completedReferrals: 0,;}
-    totalRewards: 0}),;
-  useEffect(() => {;
-    if (user) {;
-      fetchReferralCode(),;
-      fetchReferralStats(),;
-      fetchReferrals(),;}
-      fetchRewards();}
+  },
+
+  // Share on social media platforms
+  const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') => {
+    const link = getReferralLink($2);
+    const text = $2;
+    if (!link) {
+      toast($2);
+      return
     }
-  }, [user]),;
-  const fetchReferralCode = async () => {;
-    try {;}
-      setIsLoading(true),;}
-      const { data, error } = await supabase;
-        .from('referral_codes');
-        .select('*');
-        .eq('user_id', user?.id);
-        .single(),;
-      if (error) {;
-        console.error(\"Error fetching referral code:\", error),;}
-        return;}
-      }
-;
-      setReferralCode(data);
-    } catch (error) {;}
-      console.error(\"Error in fetchReferralCode:\", error);}
-    } finally {;
-      setIsLoading(false);  return {
-    referral_code;
-    is_loading;
+    
+    let shareUrl = $2;
+    switch (platform) {
+      case 'twitter':
+        shareUrl = $2;
+        break,
+      case 'facebook':
+        shareUrl = $2;
+        break,
+      case 'linkedin':
+        shareUrl = $2;
+        break
+    }
+    if (shareUrl) {
+      window.open(shareUrl, '_blank')
+    }
+  },
+
+  return {
+    referralCode;
+    isLoading;
     stats;
-    referrals, // Added this property;
-    rewards,   // Added this property;
+    referrals, // Added this property
+    rewards,   // Added this property
     generateReferralCode;
     getReferralLink;
     copyReferralLink;
-    shareOnSocialMedia;}
-    fetchReferralStats;}
+    shareOnSocialMedia;
+    fetchReferralStats;
+
+    fetchReferrals, // Added this method for refreshing referrals
+    fetchRewards,   // Added this method for refreshing rewards
   }
-}  }
 }

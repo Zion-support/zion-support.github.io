@@ -3,8 +3,7 @@ const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "reports")
-const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
   fs.mkdirSync(this.reportsDir, { "recursive"})
@@ -46,7 +45,7 @@ const { execSync } = require("child_process")
     const reactFiles = this.findFiles(["**/*.tsx"", "**/*.jsx")]
   let content = fs.readFileSync(file, "utf8")
         if (content.includes("React") && !content.includes("import React")
-  content = "import React from "react";
+  content = "import React from "react"
         if (content.includes("<Helmet>") && !content.includes("<>")
   content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")
             /<\/Helmet>\s*<\/div>/g,</Helmet>\n      </div>\n    </>"
@@ -102,5 +101,11 @@ const { execSync } = require("child_process")
     const reportFile = path.join(this.reportsDir, `error-fixer-report-${timestamp.replace(/[:.]/g, "-"`})
     this.log(` Report "generated"`)
   this.log(" Starting Error Fixer Automation")
-
       this.log(")
+      this.log(")
+
+        if (content.includes("<Helmet>") && !content.includes("<>")"
+"
+  content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")"
+
+

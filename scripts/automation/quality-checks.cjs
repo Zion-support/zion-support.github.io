@@ -4,8 +4,7 @@ const fs = require("fs")
 const path = require("path")
 console.log("" Starting continuous quality checks automation...")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log("" Starting continuous quality checks automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Running ESLint..."`)
@@ -71,5 +70,7 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
   console.error(" Failed to start continuous quality "checks": ")
+  console.error(" Failed to start continuous quality "checks": ")
+
+

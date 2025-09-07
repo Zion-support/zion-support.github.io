@@ -1,23 +1,9 @@
-import React from 'react';,import FocusLock from 'react-focus-lock';,import {Dialog,DialogContent,DialogHeader,DialogTitle} from '@/components/ui/dialog',import { Button } from '@/components/ui/button',import { Input } from '@/components/ui/input',import { Textarea } from '@/components/ui/textarea',Form,FormField,FormItem,FormLabel,FormControl,FormMessage} from '@/components/ui/form',import { useForm, type Resolver } from 'react-hook-form',import { yupResolver } from '@hookform/resolvers/yup',import * as yup from 'yup',import { SendIcon, Mail  } from 'lucide-react';
-import api from '@/services/apiClient';,import { toast } from '@/hooks/use-toast',import { useAuth } from '@/hooks/useAuth',import { LoginModal } from '@/components/auth/LoginModal',interface ContactPublisherModalProps  {isOpen:boolean,onClose:() => void,publisherName:string,publisherEmail?:string,productId?:string;}
-}type FormValues = {subject:string,message:string;}
-},const schema:yup.ObjectSchema<FormValues /> = yup;
-  .object({subject:yup;}
-      .string().min(5, 'Subject must be at least 5 characters').required('Subject is required'),message:yup;}
-      .string().min(20, 'Message must be at least 20 characters').required('Message is required')}).required(),export function ContactPublisherModal() {const { user } = useAuth(),const [isSubmitting, setIsSubmitting] = React.useState(false),const [error, setError] = React.useState<string | null />(null),const [loginOpen, setLoginOpen]  = React.useState(false),const form = useForm<FormValues />({resolver:yupResolver(schema) as Resolver<FormValues />,mode: 'onChange',
-  defaultValues:{ subject: '',}
-  message:'' }}),const handleSend = async () => {if (!user) {setLoginOpen(true),return,}
-    const values = form.getValues(),setIsSubmitting(true),setError(null),try {await api.post('/api/messages', {productId,subject:values.subject,body:values.message,fromUser:user.id}),toast.success('Message sent'),form.reset(),onClose(),} finally {setIsSubmitting(false),}
-  },const handleKeyDown = (if (e.key === 'Escape') {e.stopPropagation(),onClose()) => {
-  return $3;}
-}
-  },return (<>;
-import React from 'react';
-import FocusLock from 'react-focus-lock';
+import React from 'react',;
+import FocusLock from 'react-focus-lock',;
 import {;
   Dialog,;
-  DialogContent,;}
-  DialogHeader,;}
+  DialogContent,;
+  DialogHeader,;
   DialogTitle} from '@/components/ui/dialog',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -26,14 +12,14 @@ import {;
   Form,;
   FormField,;
   FormItem,;
-  FormLabel,;}
-  FormControl,;}
+  FormLabel,;
+  FormControl,;
   FormMessage} from '@/components/ui/form',;
 import { useForm, type Resolver } from 'react-hook-form',;
 import { yupResolver } from '@hookform/resolvers/yup',;
 import * as yup from 'yup',;
 import { SendIcon, Mail } from 'lucide-react';
-import api from \"api\";
+import api from '@/services/apiClient',;
 import { toast } from '@/hooks/use-toast',;
 import { useAuth } from '@/hooks/useAuth',;
 import { LoginModal } from '@/components/auth/LoginModal',;
@@ -42,48 +28,47 @@ interface ContactPublisherModalProps {;
   isOpen:boolean,;
   onClose:() => void,;
   publisherName:string,;
-  publisherEmail?:string,;}
-  productId?:string;}
+  publisherEmail?:string,;
+  productId?:string;
 }
 ;
 type FormValues = {;
-  subject:string,;}
-  message:string;}
+  subject:string,;
+  message:string;
 },;
 ;
-const schema:yup.ObjectSchema<FormValues /> = yup;
+const schema:yup.ObjectSchema<FormValues> = yup;
   .object({;
     subject:yup;
       .string();
       .min(5, 'Subject must be at least 5 characters');
       .required('Subject is required'),;
     message:yup;
-      .string();}
-      .min(20, 'Message must be at least 20 characters');}
+      .string();
+      .min(20, 'Message must be at least 20 characters');
       .required('Message is required')});
   .required(),;
 ;
 export function ContactPublisherModal({;
   isOpen,;
   onClose,;
-  publisherName,;}
-  publisherEmail,;}
-  productId} ContactPublisherModalProps) {;}
+  publisherName,;
+  publisherEmail,;
+  productId} ContactPublisherModalProps) {;
   const { user } = useAuth(),;
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
-  const [error, setError] = React.useState<string | null />(null),;
+  const [error, setError] = React.useState<string | null>(null),;
   const [loginOpen, setLoginOpen] = React.useState(false),;
 ;
-  const form = useForm<FormValues />({;
-    resolver:yupResolver(schema) as Resolver<FormValues />,;}
-    mode:'onChange',;}
-    defaultValues:{ subject: '',}
-  message:'' }}),;
+  const form = useForm<FormValues>({;
+    resolver:yupResolver(schema) as Resolver<FormValues>,;
+    mode:'onChange',;
+    defaultValues:{ subject:'', message:'' }}),;
 ;
   const handleSend = async () => {;
     if (!user) {;
-      setLoginOpen(true),;}
-      return,;}
+      setLoginOpen(true),;
+      return,;
     }
     const values = form.getValues(),;
     setIsSubmitting(true),;
@@ -91,87 +76,88 @@ export function ContactPublisherModal({;
     try {;
       await api.post('/api/messages', {;
         productId,;
-        subject:values.subject,;}
-        body:values.message,;}
+        subject:values.subject,;
+        body:values.message,;
         fromUser:user.id}),;
       toast.success('Message sent'),;
       form.reset(),;
       onClose(),;
-    } finally {;}
+    } finally {;
       setIsSubmitting(false),;    }
   },;
 ;
-  const handleKeyDown = (;
+  const handleKeyDown = (e:React.KeyboardEvent) => {;
     if (e.key === 'Escape') {;
       e.stopPropagation(),;
-      onClose();) => {
-  return $3;}
-}
+      onClose();
     }
   },;
 ;
   return (;
     <>;
-    <Dialog open={isOpen} onOpenChange={onClose} />;
-      <FocusLock disabled={!isOpen} returnFocus />;
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <FocusLock disabled={!isOpen} returnFocus>;
         <DialogContent;
-          className=\"bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md\";
+          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md";
           onKeyDown={handleKeyDown}
-          aria-modal=\"true\";
-          aria-labelledby=\"contact-publisher-title\";
-         />;
-          <DialogHeader />;
-            <DialogTitle id=\"contact-publisher-title\" className=\"text-xl font-bold text-white flex items-center gap-2\" />;
-              <Mail className=\"h-5 w-5 text-zion-cyan\" />;
+          aria-modal="true";
+          aria-labelledby="contact-publisher-title";
+        >;
+          <DialogHeader>;
+            <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2">;
+              <Mail className="h-5 w-5 text-zion-cyan" />;
               Contact Publisher;
             </DialogTitle>;
           </DialogHeader>;
-          {error && <p className=\"text-red-500 mb-2\" />{error}</p>}
-          {publisherEmail && (<div className=\"mb-4 text-zion-slate-light\" />;}
-            <span className=\"block\" />Email:</span>;}
-            <a href={`mailto:${publisherEmail}`} className=\"text-zion-cyan hover:underline truncate block\" />;
+          {error && <p className="text-red-500 mb-2">{error}</p>}
+          {publisherEmail && (;
+            <div className="mb-4 text-zion-slate-light">;
+            <span className="block">Email:</span>;
+            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">;
               {publisherEmail}
             </a>;
           </div>;
         )}
-        <Form {...form} />;
-          <form onSubmit={(e) = /> e.preventDefault()} className=\"space-y-4\">;
+        <Form {...form}>;
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">;
             <FormField;
               control={form.control}
-              name=\"subject\";
-              render={({ field } { field:any }) = /> (<FormItem />;
-                  <FormLabel />Subject</FormLabel>;
-                  <FormControl />;
+              name="subject";
+              render={({ field } { field:any }) => (;
+                <FormItem>;
+                  <FormLabel>Subject</FormLabel>;
+                  <FormControl>;
                     <Input;
-                      placeholder=\"Subject\";
-                      className=\"bg-zion-blue border-zion-blue-light text-white\";
+                      placeholder="Subject";
+                      className="bg-zion-blue border-zion-blue-light text-white";
                       {...field}
                     />;
                   </FormControl>;
-                  <FormMessage className=\"text-red-500\" />;
+                  <FormMessage className="text-red-500" />;
                 </FormItem>;              )}
             />;
             <FormField;
               control={form.control}
-              name=\"message\";
-              render={({ field } { field:any }) = /> (<FormItem />;
-                  <FormLabel />Message</FormLabel>;
-                  <FormControl />;
+              name="message";
+              render={({ field } { field:any }) => (;
+                <FormItem>;
+                  <FormLabel>Message</FormLabel>;
+                  <FormControl>;
                     <Textarea;
                       placeholder={`Message to ${publisherName}...`}
-                      className=\"bg-zion-blue border-zion-blue-light text-white min-h-[120px]\";
+                      className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]";
                       {...field}
                     />;
                   </FormControl>;
-                  <FormMessage className=\"text-red-500\" />;
+                  <FormMessage className="text-red-500" />;
                 </FormItem>;              )}
             />;
             <Button;
               onClick={handleSend}
-              className=\"w-full\";
+              className="w-full";
               disabled={!form.formState.isValid || isSubmitting}
-             />;
-              <SendIcon className=\"mr-2\" />;
+            >;
+              <SendIcon className="mr-2" />;
               {isSubmitting ? 'Sending...' :'Send Message'}
             </Button>;
           </form>;
@@ -181,33 +167,19 @@ export function ContactPublisherModal({;
     </Dialog>;
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
-  ),}
- const schema: yup.ObjectSchema<FormValues /> = yup .object ({subject: yup .string () .min (5, 'Subject must be at least 5 characters') .required ('Subject is required'),  message: yup .string () .min (20, 'Message must be at least 20 characters') .required ('Message is required')}) .required ()return (<> <Dialog open= {isOpen ;}
-}onOpenChange= {onClose ;}
-} /> <FocusLock disabled= {!isOpen ;}
-}returnFocus /> <DialogContent  /> <DialogHeader /> <DialogTitle id=\"contact-publisher-title\" className=\"text-xl font-bold text-white flex items-center gap-2\"  /> <Mail className=\"h-5 w-5 text-zion-cyan\" /> Contact Publisher </DialogTitle> </DialogHeader> <FormItem /> <FormLabel />Subject</FormLabel> <FormControl /> <Input /> </FormControl> <FormMessage className=\"text-red-500\" /> </FormItem>) \";\"}/> <FormField <FormItem /> <FormLabel />Message</FormLabel> <FormControl /> <Textarea /> </FormControl> <FormMessage className=\"text-red-500\" /> </FormItem>)}/> <Button </Button /> </form> </Form> </DialogContent> </FocusLock> </Dialog> <LoginModal isOpen= {loginOpen ;}
-}onOpenChange= {setLoginOpen ;}
-:temp_broken_files/profile/ContactPublisherModal.tsx;}
-}/> </>)\"}'\";
-}/> </>)}'\";
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ContactPublisherModal.tsx;
   ),;}
- const schema: yup.ObjectSchema<FormValues /> = yup .object ({;}
-  subject: yup .string () .min (5, 'Subject must be at least 5 characters') .required ('Subject is required'),  message: yup .string () .min (20, 'Message must be at least 20 characters') .required ('Message is required') ;}
+ const schema: yup.ObjectSchema<FormValues> = yup .object ({;
+  subject: yup .string () .min (5, 'Subject must be at least 5 characters') .required ('Subject is required'),  message: yup .string () .min (20, 'Message must be at least 20 characters') .required ('Message is required') ;
 }) .required ();
-return (<> <Dialog open= {;}
-  isOpen ;}
-}onOpenChange= {;}
-  onClose ;}
-} /> <FocusLock disabled= {;}
-  !isOpen ;}
-}returnFocus /> <DialogContent  /> <DialogHeader /> <DialogTitle id=\"contact-publisher-title\" className=\"text-xl font-bold text-white flex items-center gap-2\"  /> <Mail className=\"h-5 w-5 text-zion-cyan\" /> Contact Publisher </DialogTitle> </DialogHeader> <FormItem /> <FormLabel />Subject</FormLabel> <FormControl /> <Input /> </FormControl> <FormMessage className=\"text-red-500\" /> </FormItem>) \";\"}/> <FormField <FormItem /> <FormLabel />Message</FormLabel> <FormControl /> <Textarea /> </FormControl> <FormMessage className=\"text-red-500\" /> </FormItem>) ;
-}/> <Button </Button /> </form> </Form> </DialogContent> </FocusLock> </Dialog> <LoginModal isOpen= {;}
-  loginOpen ;}
+return (<> <Dialog open= {;
+  isOpen ;
 }onOpenChange= {;
-  setLoginOpen ;}
-:temp_broken_files/profile/ContactPublisherModal.tsx}
-}/> </>) ;\"}'\"
-}/> </>) ;
-}'\"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ContactPublisherModal.tsx;
+  onClose ;
+}> <FocusLock disabled= {;
+  !isOpen ;
+}returnFocus> <DialogContent > <DialogHeader> <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2" > <Mail className="h-5 w-5 text-zion-cyan" /> Contact Publisher </DialogTitle> </DialogHeader> <FormItem> <FormLabel>Subject</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage className="text-red-500" /> </FormItem>) ";"}/> <FormField <FormItem> <FormLabel>Message</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage className="text-red-500" /> </FormItem>) ;
+}/> <Button </Button> </form> </Form> </DialogContent> </FocusLock> </Dialog> <LoginModal isOpen= {;
+  loginOpen ;
+}onOpenChange= {;
+  setLoginOpen ;
+}/> </>) ;"}'"

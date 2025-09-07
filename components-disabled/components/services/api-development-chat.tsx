@@ -1,4 +1,3 @@
-
 ;
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -37,6 +36,19 @@ const ApiDevelopmentChat: NextPage = () => {
       <Head />;
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>;
 
+import type { NextPage } from "next";""
+import Head from "next/head";""
+import Link from "next/link";""
+const ApiDevelopmentChat: NextPage = () => {
+  return (
+    <div>
+</div>
+      <Head>
+
+    <div>;
+      <Head>;
+
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
 
 const ApiDevelopmentChat: NextPage = () => {
   return (
@@ -45,15 +57,11 @@ const ApiDevelopmentChat: NextPage = () => {
 
       </Head>;
 
+      <main>
+        <h1>ApiDevelopmentChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
 
-      </Head>;
-
-
-const ApiDevelopmentChat: NextPage = () => {
-      <main />
-        <h1 />ApiDevelopmentChat</h1>
-        <p />Service details coming soon...</p>
-        <a href=\"/services\" />Back to Services</a>
       </main>
     </div>
       </Head>;
@@ -79,8 +87,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 
 export default ApiDevelopmentChat;
-
-
 
         <title />ApiDevelopmentChat - Zion Tech Solutions</title>
 
@@ -135,7 +141,6 @@ export default ApiDevelopmentChat;<title />ApiDevelopmentChat - Zion Tech Soluti
     </div>)
 };
 
-
 export default ApiDevelopmentChat;
 const ApiDevelopmentChat: NextPage = () => {
  ;
@@ -177,4 +182,3 @@ const ApiDevelopmentChat: NextPage = () => {
 }
 
 export default ApiDevelopmentChat;
-
