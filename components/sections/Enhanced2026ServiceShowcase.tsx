@@ -27,7 +27,6 @@ import {
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
-import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
 
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';

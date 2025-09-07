@@ -1,3 +1,6 @@
+import React from 'react';
+import Head from 'next/head';
+import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 
 
   Search;

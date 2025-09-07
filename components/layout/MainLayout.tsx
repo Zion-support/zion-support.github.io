@@ -335,7 +335,6 @@ const MainLayout: React.FC<MainLayoutProps    /> = ({ children,title = 'Zion Tec
 };
 
 export default MainLayout;
-import React from 'react'; import Head from 'next/head'; import Header from './Header'; import Footer from './Footer'; import PerformanceOptimizer from '../PerformanceOptimizer'; import AccessibilityEnhancer from '../AccessibilityEnhancer'; import SEOEnhancer from '../SEOEnhancer';
 
 interface MainLayoutProps {}
   children: React && React.ReactNode; title?: string; description?: string; keywords?: string; ogImage?: string}
@@ -521,7 +520,6 @@ export default MainLayout;
       <div className=\"min - h-screen bg - white\"    />;
         {children}
       </div>;
-import React from 'react'; import Head from 'next/head'; import Header from './Header'; import Footer from './Footer'; import PerformanceOptimizer from '../PerformanceOptimizer'; import AccessibilityEnhancer from '../AccessibilityEnhancer'; import SEOEnhancer from '../SEOEnhancer';
 
 interface MainLayoutProps {}
   children: React.ReactNode; title?: string; description?: string; keywords?: string; ogImage?: string}

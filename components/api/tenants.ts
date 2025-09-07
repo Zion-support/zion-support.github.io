@@ -64,7 +64,6 @@ const result = rotateTenantApiKey(tenantId);
 import { authenticate_request } from '@/utils / auth';'
   }
 import { authenticate_request } from '@/utils / auth';
-import {
   create_tenant,
   get_tenants,
   rotateTenantApiKey,}
@@ -155,7 +154,6 @@ return res.status (405).json ({ error: 'Method not allowed',}
   }
 
 
-import {
   createTenant,
   getTenants,
   rotateTenantApiKey,;}

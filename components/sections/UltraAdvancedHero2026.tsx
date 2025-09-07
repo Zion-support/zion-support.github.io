@@ -168,7 +168,6 @@ const containerVariants = {}
 import {motio}
 } from 'framer-motion';
 import Link from 'next / link';
-import {
   ArrowRight,
   Star,
   TrendingUp,

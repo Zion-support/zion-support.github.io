@@ -79,7 +79,6 @@ label: string;
 
 
 ;
-import React from 'react';
 
 export type Badge = any;id: string;
 label: string;

@@ -30,7 +30,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     else if (action === 'suspend') suspendVendor(String(vendorId), true);
     else if (action === 'unsuspend') suspendVendor(String(vendorId), false);
 
-import {
   try {
     if (action === 'approve') setVendorApproval(String(vendorId), true);
     else if (action === 'revoke') setVendorApproval(String(vendorId), false);

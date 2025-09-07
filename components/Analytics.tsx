@@ -13,6 +13,9 @@ const 'Analytics': React.FC<AnalyticsProps> = ({ trackingId = process.env.NEXT_P
 
 }
 
+interface AnalyticsProps {
+  trackingId?: string;
+}
 
 useEffect(() => {
 }

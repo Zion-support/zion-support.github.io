@@ -1,3 +1,5 @@
+import React from 'react';
+import { Brain, Building, Target, Cpu, Shield, Check, Phone, Mail, MapPin, TrendingUp, Zap, Globe } from 'lucide-react';
 
 
 
