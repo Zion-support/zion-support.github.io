@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
@@ -28,4 +24,3 @@ export default function AccessibilityPage() {
     </Layout>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

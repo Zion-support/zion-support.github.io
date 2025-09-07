@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const TechnologyImplementationStrategies: NextPage = $2;
-export default TechnologyImplementationStrategies,
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -27,4 +21,3 @@ export default function technologyimplementationstrategies() {
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

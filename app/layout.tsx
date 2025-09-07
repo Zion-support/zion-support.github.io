@@ -1,18 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import StructuredData, { organizationStructuredData, websiteStructuredData } from './components/StructuredData';
+import './globals.css';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
-export const "metadata": Metadata = {
-}
-import React from 'react';'
-import './globals.css';'
-import type { Metadata } from 'next''
-import { Inter } from 'next/font/google''
-import './globals.css''
-
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
   metadataBase: new URL('https://zion.app'),
   robots: {

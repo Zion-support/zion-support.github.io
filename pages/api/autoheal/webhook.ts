@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { Octokit } from '@octokit/rest';
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
-const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
-=======
-<<<<<<< HEAD
-
-import { Octokit } from '@octokit/rest',;
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ''
-const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
->>>>>>> origin/main
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -50,15 +38,6 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
       // ignore if missing
     }
 
-<<<<<<< HEAD
-    return res.status(200).json({ ok: true, issue: issue.data.number })
-  } catch (e) {
-    console.error(e);
-    return res.status(500).json({ error: 'Failed to process webhook' })
-  }
-}
-=======
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -73,5 +52,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ received: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const AutomationStatus: NextPage = $2;
-export default AutomationStatus,
-=======
 import React from 'react'
 import Head from 'next/head'
 const AutomationStatus: React.FC = () => {
@@ -21,4 +15,3 @@ const AutomationStatus: React.FC = () => {
   )
 }
 export default AutomationStatus
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

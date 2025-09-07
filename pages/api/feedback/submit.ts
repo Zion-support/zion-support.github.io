@@ -25,35 +25,8 @@ export default function handler() {
   writeAll(rows);
   return res.status(200).json({ "ok": true });
 }
-=======
   return res.status(200).json({ ok: true });
 
-<<<<<<< HEAD:pages_backup/api/feedback/submit.ts
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-  const entry = {
-    id: response_id
-    rating
-    comment: String (comment || "").slice (0, 2000)
-    page_path: String (page_path || "")
-    ai_model: String (ai_model || "")
-    user_agent: req.headers["user - agent"] || ""
-    ts: Date.now ()
-  }
-  const rows = read_all ();
-  rows.push (entry);
-  write_all (rows);
-  return res.status (200).json ({ ok: true });
-}
-
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -64,5 +37,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ message: 'Endpoint working' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

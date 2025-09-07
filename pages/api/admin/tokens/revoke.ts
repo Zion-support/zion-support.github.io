@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json($2);
-  const { userId, amount, reason } = req.body || {},
-  if (!userId || typeof amount !== "number") return res.status(400).json($2);
-  try {
-    const tx = revokeTokens(userId, Math.floor(amount), reason || "admin_revoke"),
-    return res.status(200).json({ tx })
-
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -25,4 +14,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

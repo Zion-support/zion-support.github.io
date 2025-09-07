@@ -78,7 +78,6 @@ async function tryWriteToFirestore(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -104,69 +103,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ok: true,
       id: doc.id
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   } catch (error) {
     res.status(500).json({
       ok: false,
       error: 'Internal server error'
     });
   }
-<<<<<<< HEAD
-}
-    const db = admin.firestore()
-    await db.collection("interaction_feedback").doc(doc.id).set(doc)
-    return true
-  } catch (e) {
-    return false
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export default async function handler(req, res) {
-  try {
-  if (req.method !== "POST") return bad(res, "Method not allowed", 405)
-  const { rating, comment, kind, context } = req.body || {}
-  const r = Number(rating)
-  if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5")
-  const k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general"
-  const user = {
-    id: (req.headers["x-demo-user-id"] as string) || undefined
-    role: (req.headers["x-demo-user-role"] as string) || undefined
-    talentSlug: (req.headers["x-demo-talent-slug"] as string) || undefined}
-  const doc: FeedbackRecord = {
-    id: uuidv4()
-    createdAtIso: new Date().toISOString()
-    user
-    rating: r
-    comment: comment || undefined
-    kind: k
-    context: context || undefined}
-  const wrote = await tryWriteToFirestore(doc)
-  if (!wrote) saveFeedbackFallback(doc)
-  return ok(res, { id: doc.id })
->>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store";
@@ -235,7 +177,6 @@ const "k": FeedbackRecord["kind"] =;"
   if (!wrote) saveFeedbackFallback(doc);
   return ok(res, { "id": doc.id });
 }
-=======
   return ok(res, { id: doc.id });
   } catch (error) {
     console.error("Error:", error);
@@ -250,12 +191,4 @@ const "k": FeedbackRecord["kind"] =;"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages_backup/api/feedback.ts
-  return ok(res, { id: doc.id });
-
-}}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

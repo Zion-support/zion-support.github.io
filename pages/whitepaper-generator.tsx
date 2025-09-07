@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-export default function WhitepaperGeneratorRedirect() {
-  const router = useRouter($2);
-  useEffect(() => {
-    router.replace('/tokenomics')
-  }, [router]),
-  return null
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -30,5 +20,4 @@ export default function whitepapergenerator() {
       </div>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

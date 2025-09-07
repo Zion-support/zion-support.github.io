@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-    return
-  }
-  // TODO: Implement authentication logic here
-  res.status(200).json({ message: 'Auth endpoint placeholder' })
-} 
-
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -18,4 +9,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Implement authentication logic here
   res.status(200).json({ message: 'Auth endpoint' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

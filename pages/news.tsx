@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/main
 import { 
   Newspaper;
   Calendar, 
@@ -1107,8 +1099,6 @@ export default function NewsPage() {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
 }
             >;
               <h2 className="text-4xl font-bold text-white mb-6">;
@@ -1161,7 +1151,6 @@ export default function NewsPage() {
 
 ;
 
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -1209,5 +1198,3 @@ export default function NewsPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

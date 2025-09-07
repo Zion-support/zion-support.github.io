@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/main
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -776,10 +771,6 @@ export default Support;
   )
 };
 
-<<<<<<< HEAD
-export default SupportPage;
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -827,5 +818,3 @@ export default function SupportPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

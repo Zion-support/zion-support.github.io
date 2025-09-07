@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const Page: NextPage = $2;
-export default Page,
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -27,4 +21,3 @@ export default function autoupdate20250823t235959376z() {
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 
-import { randomUUID } from 'crypto',;
+import { randomUUID } from 'crypto';
 type Note = {
   id: string
   targetType: string

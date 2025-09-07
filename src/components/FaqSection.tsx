@@ -1,5 +1,3 @@
-import React, { useState } from 'react';'
-import { ChevronDown, ChevronUp  } from 'lucide-react';'
 
 const "FaqSection": React.FC = () => {const [openIndex, setOpenIndex]  =;
   }
@@ -40,30 +38,15 @@ const toggleFaq = ("index": number) => {setOpenIndex(openIndex === index ? null 
 
                 <h3 className="text-lg font-semibold text-gray-900 pr-4">;"
                   {faq.question}
-                </h3>;
-                {openIndex === index ? (<ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />;"
-                ) : (<ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />;"
-                )}
-              </button>;
-              {openIndex === index && (<div className="px-6 pb-4">;"
-                  <p className="text-gray-600 leading-relaxed">;"
-                    {faq.answer}
-                  </p>;
-                </div>;
-              )}
-            </div>;
-          ))}
-        </div>;
-        <div className="mt-12 text-center">;"
-          <p className="text-gray-600 mb-4">;"
-            Still have questions? We&apos;re here to help!;
-          </p>;
-          <button className="bg-blue-600 "hover":bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">;"
-            Contact Us;
-          </button>;
-        </div>;
-      </div>;
-    </section>;
-  )}
-
-export default FaqSection;
+                </AccordionTrigger>
+                <AccordionContent className="text-zion-slate-light">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
+  )
+}

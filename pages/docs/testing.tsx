@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-export default function TestingDocRedirect() {
-  return (
-    <>
-      <Head>
-        <meta httpEquiv="refresh" content="0, url=/TESTING.md" />
-      </Head>
-      <main style={{ padding: 24}}>
-        <p>Redirecting to Testing documentation…</p>
-      </main>
-    </>
-  )
-}
-
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -37,4 +21,3 @@ export default function testing() {
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

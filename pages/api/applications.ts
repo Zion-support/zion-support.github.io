@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
@@ -55,11 +50,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
-<<<<<<< HEAD
-}
-=======
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -70,5 +61,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ applications: [] });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

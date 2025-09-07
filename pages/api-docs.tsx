@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-  }
-];
-
-export default function APIDocsPage() {
-
-=======
 import React from 'react';
 import Head from 'next/head';
 import { 
@@ -64,4 +56,3 @@ export default function APIDocsPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

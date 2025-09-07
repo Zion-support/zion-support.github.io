@@ -1,82 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { GetServerSideProps } from 'next';
-import fs from 'fs';
-import path from 'path';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
-interface LogEntry {
-  id: string,
-  timestamp: string,
-  level: 'debug' | 'info' | 'warn' | 'error' | 'critical',
-  message: string,
-  category: string,
-  context?: Record<string, unknown>,
-  stack?: string,
-  url?: string,
-  userAgent?: string,
-  userId?: string,
-  sessionId: string,
-  source: 'client' | 'server' | 'middleware' | 'api',
-  component?: string,
-  feature?: string,
-  error?: {
-    name: string,
-    message: string,
-    stack?: string,
-    cause?: unknown
-  },
-  performance?: {
-    memory?: number,
-    timing?: number,
-    fps?: number
-  }
-}
-
-interface LogsPageProps {
-  logs: LogEntry[],
-  errorCount: number,
-  warningCount: number,
-  totalCount: number,
-  lastUpdated: string}
-
-const LogLevelIcon = $2;
-    case 'info':
-      return <Info className = $2;
-    case 'warn':
-      return <AlertTriangle className = $2;
-    case 'error':
-      return <AlertCircle className = $2;
-    case 'critical':
-      return <XCircle className = $2;
-    default: return <Info className = $2;
-const LogLevelBadge = $2;
-    info: 'bg-green-100 text-green-800',
-    warn: 'bg-yellow-100 text-yellow-800',
-    error: 'bg-red-100 text-red-800',
-    critical: 'bg-red-200 text-red-900'},
-
-  return (
-    <Badge className = $2;
-export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
-  const [logs, setLogs] = useState<LogEntry[]>(initialLogs),
-  const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs),
-  const [searchTerm, setSearchTerm] = useState($2);
-  const [levelFilter, setLevelFilter] = useState<string>('all'),
-  const [categoryFilter, setCategoryFilter] = useState<string>('all'),
-  const [sourceFilter, setSourceFilter] = useState<string>('all'),
-  const [isLoading, setIsLoading] = useState($2);
-  const categories = Array.from(new Set(logs.map(log => log.category))).filter($2);
-  const sources = Array.from(new Set(logs.map(log => log.source))).filter($2);
-  useEffect(() => {
-    let filtered = $2;
-    // Search filter
-=======
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 interface LogEntry {
@@ -153,7 +74,6 @@ const AdminLogsPage: React.FC = () => {
   }, [])
   useEffect(() => {
     let filtered = [...logs]
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
     if (searchTerm) {
       filtered = filtered.filter(log =>
         log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -172,58 +92,6 @@ const AdminLogsPage: React.FC = () => {
       filtered = filtered.filter(log => log.category === categoryFilter)
     }
 
-<<<<<<< HEAD
-    // Source filter
-    if (sourceFilter !== 'all') {
-      filtered = filtered.filter(log => log.source === sourceFilter)
-    }
-
-    setFilteredLogs(filtered)
-  }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]),
-
-  const refreshLogs = async () => {
-    setIsLoading($2);
-    try {
-      const response = await fetch($2);
-      if (response.ok) {
-        const data = await response.json($2);
-        setLogs(data.logs)
-      }
-    } catch (error) {
-      logErrorToProduction('Failed to refresh logs:', error)
-    } finally {
-      setIsLoading(false)
-    }
-  },
-
-  const exportLogs = () => {
-    const dataStr = JSON.stringify($2);
-    const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent($2);
-    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,
-    
-    const linkElement = document.createElement($2);
-    linkElement.setAttribute($2);
-    linkElement.setAttribute($2);
-    linkElement.click()
-  },
-
-  const formatTimestamp = $2;
-  const formatPerformance = $2;
-    const parts = $2;
-    if (performance.memory) {
-      parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`)
-    }
-    if (performance.timing) {
-      parts.push(`Timing: ${performance.timing}ms`)
-    }
-    if (performance.fps) {
-      parts.push(`FPS: ${performance.fps}`)
-    }
-    
-    return parts.length > 0 ? parts.join() : null
-  },
-
-=======
     setFilteredLogs(filtered)
   }, [logs, searchTerm, levelFilter, categoryFilter])
   const getLevelColor = (level: string) => {
@@ -246,7 +114,6 @@ const AdminLogsPage: React.FC = () => {
   const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length
   const warningCount = logs.filter(log => log.level === 'warn').length
   const totalCount = logs.length
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -447,71 +314,9 @@ const AdminLogsPage: React.FC = () => {
               </div>
             )}
           </div>
-<<<<<<< HEAD
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  try {
-    const logsDir = path.join(process.cwd(), 'logs'),
-    const logs: LogEntry[] = [],
-
-    // Read all log files
-    if (fs.existsSync(logsDir)) {
-      const files = fs.readdirSync($2);
-      const logFiles = $2;
-      for (const file of logFiles) {
-        try {
-          const filePath = path.join($2);
-          const content = fs.readFileSync($2);
-          const lines = $2;
-          for (const line of lines) {
-            try {
-              const logEntry = JSON.parse($2);
-              logs.push(logEntry)
-            } catch (parseError) {
-              // Skip malformed log entries
-            }
-          }
-        } catch (fileError) {
-          // Skip problematic files
-        }
-      }
-    }
-
-    // Sort logs by timestamp (newest first)
-    logs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()),
-
-    // Calculate statistics
-    const errorCount = $2;
-    const warningCount = $2;
-    const totalCount = $2;
-    return {
-      props: {
-        logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
-        errorCount,
-        warningCount,
-        totalCount,
-        lastUpdated: new Date().toISOString()}}
-  } catch (error) {
-            logErrorToProduction($2);
-    return {
-      props: {
-        logs: [],
-        errorCount: 0,
-        warningCount: 0,
-        totalCount: 0,
-        lastUpdated: new Date().toISOString()}}
-  }
-}, 
-=======
         </div>
       </main>
     </>
   )
 }
 export default AdminLogsPage
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

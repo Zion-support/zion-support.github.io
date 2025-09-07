@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { NextRequest, NextResponse } from 'next/server';
-
-=======
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -210,6 +206,5 @@ const updatedUser = {
       { error: "Internal server error" },
       { status: 500}
     )
->>>>>>> origin/main
   }
 }

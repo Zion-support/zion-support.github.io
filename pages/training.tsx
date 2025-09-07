@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-
-import React from 'react';
-import React from 'react';
-
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -24,12 +17,7 @@ export default function training() {
             Professional training solutions tailored to your business needs.
           </p>
         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       </div>
     </MainLayout>
   );
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

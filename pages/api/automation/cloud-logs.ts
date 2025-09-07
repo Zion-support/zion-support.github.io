@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next',;
-
-import fs from 'fs',;
-import path from 'path',;
-async function fetchFromGitHub(): Promise<any[]> {
-  try {
-
-      } catch {
-        // ignore
-      }
-    }
-    return results
-  } catch {
-    return []
-  }
-}
-
-  return res.status(200).json({ logs: remote })
-};
-
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -48,4 +25,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: 'Internal server error' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

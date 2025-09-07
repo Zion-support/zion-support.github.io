@@ -1,28 +1,10 @@
-<<<<<<< HEAD
-import React from "react";
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
-import dynamic from "next/dynamic";
-<<<<<<< HEAD
-const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
-=======
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false}),
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
 
 export default function wallet() {
   return (
-<<<<<<< HEAD
-    <EnhancedLayout title="Your ZION$ Wallet">
-      <div className="max-w-2xl mx-auto">
-        <WalletPanel />
-      </div>
-    </EnhancedLayout>
-  )
-=======
     <Layout>
       <Head>
         <title>Wallet - Zion Tech Group</title>
@@ -39,5 +21,4 @@ export default function wallet() {
       </div>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

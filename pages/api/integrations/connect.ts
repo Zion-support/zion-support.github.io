@@ -50,15 +50,7 @@ const existingIdx = state.connections.findIndex(;
     "ok": true,
     "connection": updated.connections.find((c) => c.providerId === providerId)
   });
-<<<<<<< HEAD
-  res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
-}
-=======
 
-<<<<<<< HEAD:pages_backup/api/integrations/connect.ts
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -69,5 +61,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ connected: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

@@ -1,25 +1,11 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-const AutoIndex: NextPage = () => {
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
 
 export default function index() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
-        <title>Autonomous Cloud Agents - Zion</title>
-        <meta name="description" content="Autonomous agents that run in the cloud, no human needed." />
-      </Head>
-      <main className = $2;
-export default AutoIndex,
-=======
         <title>Index - Zion Tech Group</title>
         <meta name="description" content="Index solutions and services." />
       </Head>
@@ -35,4 +21,3 @@ export default AutoIndex,
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

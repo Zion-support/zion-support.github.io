@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-export default function AdminIndex() {
-  return (
-    <div className="space-y-2">
-      <h1 className="text-2xl font-semibold">Admin</h1>
-      <ul className="list-disc pl-6">
-        <li><Link href="/admin/partners"><a className="text-blue-600 underline">Partners</a></Link></li>
-      </ul>
-    </div>
-  )
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -32,5 +20,4 @@ export default function index() {
       </div>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

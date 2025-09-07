@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-const bwipjs = require('bwip-js');
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/main
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string) || '';
@@ -26,11 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to render barcode' })
   }
-<<<<<<< HEAD
-}
-=======
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -41,5 +30,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ isbn: 'mock-isbn' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

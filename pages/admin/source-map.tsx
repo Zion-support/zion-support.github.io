@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export { default } from "../dev/tree",
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -24,4 +21,3 @@ export default function sourcemap() {
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

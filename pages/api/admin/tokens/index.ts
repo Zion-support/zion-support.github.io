@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-  const { userId } = req.query
-  const txs = getAllTransactions()
-  const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs
-  res.status(200).json({ transactions: filtered })
-
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -16,4 +8,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ tokens: [] });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

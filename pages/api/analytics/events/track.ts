@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const LOG_DIR = path.join(process.cwd(), 'dataanalytics');
-const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl');
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
 
 function ensureLogFile() {
   if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
@@ -37,13 +28,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // ignore file errors in serverless
   }
 
-<<<<<<< HEAD
-  res.status(200).json({ ok: true });
-}
-=======
   res.status(200).json({ ok: true })
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -54,5 +40,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ tracked: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

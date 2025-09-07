@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-const BlockchainSolutions: NextPage = $2;
-export default BlockchainSolutions,
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -52,4 +46,3 @@ export default function BlockchainSolutionsPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

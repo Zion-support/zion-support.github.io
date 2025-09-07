@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import { GetServerSideProps } from 'next';
-export const getServerSideProps: GetServerSideProps = $2;
-      permanent: false}}
-},
-
-export default function SupportRedirect() { return null }
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -29,4 +21,3 @@ export default function index() {
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

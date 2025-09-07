@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
@@ -58,6 +55,11 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const os = require('os');
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+const os = require('os')
 // console.log(' Comprehensive Monitoring & Alerting v2.0')
 console.log('')
 const output = execSync('df -h /', { "encoding"});
@@ -104,16 +106,3 @@ const output = execSync('ps aux | wc -l', { "encoding"});
     "action"
       log('warn', 'Alerts "generated")
       log('info', 'Monitoring "Recommendations")
-<<<<<<< HEAD
-main()
-///usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-const os = require('os')
-=======
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

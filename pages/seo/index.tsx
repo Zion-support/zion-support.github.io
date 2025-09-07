@@ -1,34 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-export default function SEOIndex() {
-  const [slugs, setSlugs] = React.useState<string[]>([]),
-
-  React.useEffect(() => {
-    // In a real app, list from API or build-time, here we rely on directory hint not available at runtime.
-    setSlugs([])
-  }, []),
-=======
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 export default function index() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1 className="text-2xl font-semibold mb-4">SEO Landing Pages</h1>
-      {slugs.length === 0 ? (
-        <div className="text-sm text-gray-500">Generated pages will appear once deployed.</div>
-      ) : (
-        <ul className="list-disc ml-5">
-          {slugs.map((s) => (
-            <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</a></li>
-          ))}
-        </ul>
-      )}
-    </div>
-  )
-=======
     <Layout>
       <Head>
         <title>Index - Zion Tech Group</title>
@@ -45,5 +20,4 @@ export default function index() {
       </div>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

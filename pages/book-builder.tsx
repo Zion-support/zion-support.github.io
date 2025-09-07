@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import dynamic from 'next/dynamic';
-const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false }),
-
-export default function BookBuilderPage() {
-  return <BookBuilder />
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -27,5 +20,4 @@ export default function bookbuilder() {
       </div>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

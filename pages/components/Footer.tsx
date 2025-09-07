@@ -1,102 +1,3 @@
-<<<<<<< HEAD
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Github,;
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Facebook,;
-  Twitter,;
-  Linkedin,;
-  Instagram,;
-  Github,;
-
-} from "lucide-react";
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-import React from 'react';
-
-  const footerLinks = {
-    services: [
-      { name: "AI Services", href: "/ai-services" }
-      { name: "IT Services", href: "/it-services" }
-      { name: "Micro SaaS", href: "/micro-saas" }
-      { name: "Cloud Solutions", href: "/cloud-solutions" }
-      { name: "Cybersecurity", href: "/cybersecurity" }
-      { name: "Database Solutions", href: "/database-solutions" }
-    ]
-    solutions: [
-      { name: "Enterprise Solutions", href: "/enterprise-solutions" }
-      { name: "Startup Solutions", href: "/startup-solutions" }
-      { name: "Industries", href: "/industries" }
-      { name: "Custom Development", href: "/custom-development" }
-      { name: "Digital Transformation", href: "/digital-transformation" }
-      { name: "Consulting", href: "/consulting" }
-    ]
-    company: [
-      { name: "About Us", href: "/about" }
-      { name: "Our Team", href: "/team" }
-      { name: "Careers", href: "/careers" }
-      { name: "Case Studies", href: "/case-studies" }
-      { name: "News", href: "/news" }
-      { name: "Partners", href: "/partners" }
-    ]
-    resources: [
-      { name: "Blog", href: "/blog" }
-      { name: "Documentation", href: "/docs" }
-      { name: "API Documentation", href: "/docs/api" }
-      { name: "Tutorials", href: "/tutorials" }
-      { name: "White Papers", href: "/white-papers" }
-      { name: "Webinars", href: "/webinars" }
-    ]
-    legal: [
-      { name: "Privacy Policy", href: "/privacy" }
-      { name: "Terms of Service", href: "/terms" }
-      { name: "Cookie Policy", href: "/cookies" }
-      { name: "Security", href: "/security" }
-      { name: "Compliance", href: "/compliance" }
-      { name: "Accessibility", href: "/accessibility" }
-    ]
-  }
-  const socialLinks = [
-    { name: "Facebook", href: "#", icon: Facebook }
-    { name: "Twitter", href: "#", icon: Twitter }
-    { name: "LinkedIn", href: "#", icon: Linkedin }
-    { name: "Instagram", href: "#", icon: Instagram }
-    { name: "GitHub", href: "#", icon: Github }
-=======
 import React from 'react'
 import Link from 'next/link'
 import { 
@@ -253,7 +154,6 @@ const itServiceCategories = [
   { title: 'Infrastructure', icon: Building, count: 22 }
 ]
 export default function Footer() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -451,15 +351,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
-            </motion && motion.div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
-  );
-
-=======
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

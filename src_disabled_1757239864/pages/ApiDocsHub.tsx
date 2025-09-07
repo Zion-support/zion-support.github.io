@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import Link from "next/link";
@@ -37,12 +38,16 @@ export function ApiDocsHub() {
       color: "from-red-500 to-rose-500"}],
 
   return (
+=======
+return (
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
     <ApiDocsLayout>
       <div className="max-w-4xl">
         <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>
         <p className="text-zinc-400 text-lg mb-12">
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.
         </p>
+<<<<<<< HEAD
 
         <div className="grid gap-6 md:grid-cols-2">
           {sections.map((section) => (
@@ -52,6 +57,8 @@ export function ApiDocsHub() {
               className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all"
             >
               <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
                 <section.icon className="h-6 w-6 text-white" />
               </div>
               <h2 className="text-xl font-semibold text-white mb-2">{section.title}</h2>
@@ -63,6 +70,7 @@ export function ApiDocsHub() {
             </Link>
           ))}
         </div>
+<<<<<<< HEAD
 
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
@@ -72,6 +80,12 @@ export function ApiDocsHub() {
           <Link
             href="/developers/portal"
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover: bg-zion-purple/90 transition-colors"
+=======
+          </p>
+          <Link,
+  href="/developers/portal"
+            className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors"
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
           >
             Go to Developer Portal
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -79,7 +93,12 @@ export function ApiDocsHub() {
         </div>
       </div>
     </ApiDocsLayout>
+<<<<<<< HEAD
   )
 }
 
 export default ApiDocsHub;
+=======
+}
+export default ApiDocsHub;
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57

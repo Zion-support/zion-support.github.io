@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-=======
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
@@ -24,4 +21,3 @@ export default function test() {
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

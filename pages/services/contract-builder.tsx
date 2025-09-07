@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-export default function ContractBuilderRedirect() {
-  const router = useRouter($2);
-  useEffect(() => {
-    router.replace('/automation/contract-builder')
-  }, [router]),
-  return null
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -30,5 +20,4 @@ export default function contractbuilder() {
       </div>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

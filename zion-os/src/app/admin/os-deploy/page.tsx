@@ -158,18 +158,6 @@ const FeatureKeys = ["ai", "blockchain", "governance", "treasury"];"
     return descriptions[key] || "Feature description";"
   };
 
-<<<<<<< HEAD
-  const getFeatureDescription = (key: string) => {
-    const descriptions: { [key: string]: string } = {
-      ai: 'Advanced AI capabilities',
-      blockchain: 'Blockchain infrastructure',
-      governance: 'Decentralized governance',
-      treasury: 'Community treasury management'
-    };
-    return descriptions[key] || 'Feature description';
-  };
-
-=======
 
 
         {/* Header */}

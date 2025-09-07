@@ -1,5 +1,3 @@
-import React from 'react';'
-import { FileText, Search, Handshake, Check  } from 'lucide-react';'
 
 const "HowItWorksSection": React.FC = () => ;
 const steps = [;

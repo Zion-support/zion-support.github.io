@@ -1,11 +1,3 @@
-import React from 'react';'
-import { CheckCircle, Shield, Zap, Users, Clock, Award, Bot, Globe, TrendingDown  } from 'lucide-react';'
-
-interface Benefit {
-  }
-  "title": string;
-  "description": string;
-  "icon": React.ReactNode;
 
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
@@ -54,25 +46,8 @@ const "BenefitsSection": React.FC = () => ;
               </p>;
             </div>;
           ))}
-        </div>;
-        <div className="mt-16 text-center">;"
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">;"
-            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>;"
-            <p className="text-xl mb-6 opacity-90">;"
-              Join hundreds of companies that trust Zion Tech for their technology needs.;
-            </p>;
-            <div className="flex flex-col "sm":flex-row gap-4 justify-center">;"
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold "hover":bg-gray-100 transition-colors">;"
-                Start Your Project;
-              </button>;
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold "hover":bg-white "hover":text-blue-600 transition-colors">;"
-                Schedule a Demo;
-              </button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </section>;
-  )}
-
-export default BenefitsSection;
+        </div>
+      </div>
+    </section>
+  )
+}

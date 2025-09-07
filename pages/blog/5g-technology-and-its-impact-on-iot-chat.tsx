@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = $2;
-export default Chat5gTechnologyAndItsImpactOnIotChat,
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -28,4 +21,3 @@ export default function FiveGTechnologyAndItsImpactOnIotChat() {
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

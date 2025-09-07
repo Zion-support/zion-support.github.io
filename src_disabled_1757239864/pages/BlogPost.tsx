@@ -10,11 +10,12 @@ import type { BlogPost as BlogPostType } from "@/types/blog";
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
 import {logErrorToProduction} from '@/utils/productionLogger';
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
+// Importing the sample blog posts - in a real app, you would fetch this from an API,
+  import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {
+<<<<<<< HEAD
 
   const router = useRouter();
   const { slug } = router.query as { slug: string },
@@ -25,6 +26,16 @@ export default function BlogPost() {
   const [error, setError] = useState<string | null>(null);
   const timedOut = useSkeletonTimeout(20000);
   
+=======
+  const router = useRouter($2);
+  const { slug } = router.query as { slug: string},
+  const [post, setPost] = useState<BlogPostType | null>(null),
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
+  const [showShareMenu, setShowShareMenu] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+  const timedOut = useSkeletonTimeout($2);
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
   useEffect(() => {
     const fetchPost = async () => {
       setIsLoading(true);
@@ -45,8 +56,12 @@ export default function BlogPost() {
         logErrorToProduction('Failed to fetch blog post', { data: err }),
         setError('Failed to load article')
       }
+<<<<<<< HEAD
 
       const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
+=======
+      const currentPost = $2;
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
       if (currentPost) {
         setPost(currentPost);
         const related = BLOG_POSTS.filter(
@@ -60,12 +75,19 @@ export default function BlogPost() {
         router.replace('/blog')
       }
       setIsLoading(false)
+<<<<<<< HEAD
     };
 
     fetchPost();
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router]);
   
+=======
+    },
+    fetchPost(),
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [slug, router]),
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -73,7 +95,6 @@ export default function BlogPost() {
       </div>
     )
   }
-
   if (!post && (error || timedOut)) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
@@ -82,8 +103,7 @@ export default function BlogPost() {
       </div>
     )
   }
-
-  // If post is still null after loading, show not found
+  // If post is still null after loading, show not found,
   if (!post) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4">
@@ -92,6 +112,7 @@ export default function BlogPost() {
       </div>
     )
   }
+<<<<<<< HEAD
 
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
@@ -100,6 +121,13 @@ export default function BlogPost() {
     const url = encodeURIComponent(window.location.href);
     const title = encodeURIComponent(post.title);
     
+=======
+  // Helper function to get share URL,
+  const getShareUrl = (platform: string) => {,
+    if (!post) return '',
+    const url = encodeURIComponent(window.location.href),
+    const title = encodeURIComponent(post.title),
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
     switch (platform) {
       case 'facebook':
         return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
@@ -109,6 +137,7 @@ export default function BlogPost() {
         return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
       default: return '#'
     }
+<<<<<<< HEAD
   };
 
   const articleLd = {
@@ -118,14 +147,23 @@ export default function BlogPost() {
     description: post.excerpt,
     image: post.featuredImage,
     datePublished: post.publishedDate,
+=======
+  },
+  const articleLd = {;
+    "@context": "https: //schema.org";
+    "@type": "BlogPosting",
+    headline: post.title;
+    description: post.excerpt;
+    image: post.featuredImage;
+    datePublished: post.publishedDate;
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
     author: {
       "@type": "Person";
       name: post.author.name}},
-  
   return (
     <>
-      <SEO
-        title={post.title}
+      <SEO,
+  title={post.title}
         description={post.excerpt}
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
@@ -136,8 +174,8 @@ export default function BlogPost() {
         <div className="container mx-auto">
           {/* Back to blog button */}
           <div className="mb-8">
-            <Button 
-              variant="outline" 
+            <Button,
+  variant="outline" 
               className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
               asChild
             >
@@ -159,7 +197,6 @@ export default function BlogPost() {
             <p className="text-xl text-zion-slate-light mb-8">
               {post.excerpt}
             </p>
-            
             {/* Author and metadata */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
               <div className="flex items-center mb-4 sm:mb-0">
@@ -174,7 +211,6 @@ export default function BlogPost() {
                   <p className="text-sm text-zion-slate-light">{post.author.title}</p>
                 </div>
               </div>
-              
               <div className="flex items-center space-x-4">
                 <div className="flex items-center text-zion-slate-light">
                   <Calendar className="h-4 w-4 mr-1" />
@@ -185,8 +221,8 @@ export default function BlogPost() {
                   <span className="text-sm">{post.readTime}</span>
                 </div>
                 <div className="relative">
-                  <Button 
-                    variant="ghost" 
+                  <Button,
+  variant="ghost" 
                     size="sm"
                     className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
                     onClick={() => setShowShareMenu(!showShareMenu)}
@@ -194,11 +230,10 @@ export default function BlogPost() {
                     <Share2 className="h-4 w-4 mr-1" />
                     <span className="text-sm">Share</span>
                   </Button>
-                  
                   {showShareMenu && (
                     <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">
-                      <a
-                        href={getShareUrl('facebook')}
+                      <a,
+  href={getShareUrl('facebook')}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
@@ -236,19 +271,17 @@ export default function BlogPost() {
               </div>
             </div>
           </div>
-          
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
-              <ImageWithRetry
-                src={post.featuredImage}
+              <ImageWithRetry,
+  src={post.featuredImage}
                 alt={post.featuredImageAlt || post.title}
                 className="object-cover w-full h-full"
                 fallbackSrc="/images/blog-placeholder.svg"
               />
             </div>
           </div>
-          
           {/* Article content */}
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg prose-invert max-w-none">
@@ -256,21 +289,18 @@ export default function BlogPost() {
                 {post.content}
               </ReactMarkdown>
             </div>
-            
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-12">
               {post.tags.map(tag => (
-                <span 
-                  key={tag} 
+                <span,
+  key={tag} 
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
                   #{tag}
                 </span>
               ))}
             </div>
-            
             <Separator className="my-12 bg-zion-blue-light" />
-            
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className="mt-12">
@@ -299,7 +329,6 @@ export default function BlogPost() {
                 </div>
               </div>
             )}
-
             <div className="mt-12 text-center">
               <p className="text-zion-slate-light">
                 Ready to put these ideas into action? Explore our{' '}
@@ -308,11 +337,10 @@ export default function BlogPost() {
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
               </p>
             </div>
-
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12">
-              <Button
-                variant="outline"
+              <Button,
+  variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 asChild
               >
@@ -326,5 +354,10 @@ export default function BlogPost() {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   )
 }
+=======
+  ),
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57

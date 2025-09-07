@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import { ensureAdminFromApi } from '../../../../utils/auth';
-
-<<<<<<< HEAD
-interface AnalyticsEvent {
-=======
 interface EventRow {
->>>>>>> origin/main
   name: string
   page?: string
   userType?: string
@@ -79,17 +68,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const days = Object.keys(byDay).sort();
   const line = days.map((d) => ({ date: d, value: byDay[d] }));
-<<<<<<< HEAD
-=======
 
   const funnelStages = ['Visit', 'AI Prompt Used', 'Post Created', 'Message Sent'];
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }));
 
   res.status(200).json({ pagesMostUsed, events: eventsList, line, funnel });
 }
->>>>>>> origin/main
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const byFeature: Record<string, number> = {
@@ -109,4 +94,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     byDay
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

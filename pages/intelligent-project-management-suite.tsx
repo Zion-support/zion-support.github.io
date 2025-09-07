@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
-export async function getStaticProps() {
-	return (getSlugStaticProps as any)({ params: { slug: 'intelligent-project-management-suite' } })
-}
-
-export default function IntelligentProjectManagementSuite(props: any) {
-	return <ServicePage {...props} />
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -29,5 +20,4 @@ export default function intelligentprojectmanagementsuite() {
       </div>
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

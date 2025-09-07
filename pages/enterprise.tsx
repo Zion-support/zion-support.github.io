@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -21,72 +18,6 @@ import {
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
-<<<<<<< HEAD
-
-      permanent: false}}
-}
-export default function EnterpriseRedirect() { return null }
-
-<<<<<<< HEAD:pages_backup/enterprise.tsx
-
-
-
-
-
-
-ursor/fix-website-loading-errors-and-merge-6662
-
-
-      destination: '/plans/enterprise',
-      permanent: false}}
-}
-export default function EnterpriseRedirect() { return null }
-import type { GetServerSideProps } from 'next',
-import type { GetServerSideProps } from 'next';
-
-import type { GetServerSideProps } from 'next',;
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
-      destination: '/plans/enterprise'
-      permanent: false}}
-}
-export default function EnterpriseRedirect() { return null }
-
-},
-;
-export default function EnterpriseRedirect() { return null };
-import type { GetServerSideProps } from 'next';
-export const getServerSideProps: GetServerSideProps = async () => {;
-  return {;
-    redirect: {;
-      destination: '/plans/enterprise';
-      permanent: false}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};
-export default function EnterpriseRedirect() { return null   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-<<<<<<< HEAD:pages_backup/enterprise.tsx
-
-import type { GetServerSideProps } from 'next';
-export const getServerSideProps: GetServerSideProps;
-export default function EnterpriseRedirect() { return null }
-
-
-
-import type { GetServerSideProps } from 'next';
-export const getServerSideProps: GetServerSideProps;
-export default function EnterpriseRedirect() { return null }
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 export default function EnterprisePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -131,4 +62,3 @@ export default function EnterprisePage() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

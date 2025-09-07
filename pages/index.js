@@ -1,50 +1,81 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield } from 'lucide-react';
-import EnhancedNavigation from '../components/layout/EnhancedNavigation';
-import EnhancedFooter from '../components/layout/EnhancedFooter';
+import { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function HomePage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  });
+
+  const [counters, setCounters] = useState({
+    projects: 0,
+    clients: 0,
+    years: 0,
+    satisfaction: 0
+  });
+
+  useEffect(() => {
+    // Animate counters on scroll
+    const animateCounters = () => {
+      setCounters({
+        projects: 150,
+        clients: 75,
+        years: 8,
+        satisfaction: 98
+      });
+    };
+
+    const timer = setTimeout(animateCounters, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+    alert('Thank you for your message! We\'ll get back to you soon.');
+    setFormData({ name: '', email: '', company: '', message: '' });
+  };
+
   return (
     <>
       <Head>
         <title>Zion Tech Group - AI Solutions & IT Services</title>
-        <meta name="description" content="Leading provider of AI solutions, micro SaaS development, and enterprise IT services. Transform your business with cutting-edge technology." />
+        <meta name="description" content="Leading provider of AI solutions, micro SaaS development, and enterprise IT services." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <EnhancedNavigation />
       <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                Transform Your Business with
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  {' '}AI Solutions
-                </span>
+        <section className="relative overflow-hidden">
+          <div className="container mx-auto px-4 py-20">
+            <div className="text-center">
+              <h1 className="text-6xl font-bold text-gray-900 mb-6">
+                Zion Tech Group
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Leading provider of AI solutions, micro SaaS development, and comprehensive enterprise IT services. 
-                Accelerate your digital transformation with cutting-edge technology.
+                Leading provider of AI solutions, micro SaaS development, and enterprise IT services.
+                Transforming businesses through innovative technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/solutions" 
-                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                >
-                  Explore Solutions
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link 
-                  href="/contact" 
-                  className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
-                >
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
                   Get Started
-                </Link>
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
@@ -53,22 +84,22 @@ export default function HomePage() {
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="space-y-2">
-                <div className="text-4xl font-bold text-blue-600">500+</div>
+                <div className="text-4xl font-bold text-blue-600">{counters.projects}+</div>
                 <div className="text-gray-600">Projects Completed</div>
               </div>
               <div className="space-y-2">
-                <div className="text-4xl font-bold text-blue-600">50+</div>
-                <div className="text-gray-600">AI Solutions</div>
+                <div className="text-4xl font-bold text-blue-600">{counters.clients}+</div>
+                <div className="text-gray-600">Happy Clients</div>
               </div>
               <div className="space-y-2">
-                <div className="text-4xl font-bold text-blue-600">99%</div>
+                <div className="text-4xl font-bold text-blue-600">{counters.years}+</div>
+                <div className="text-gray-600">Years Experience</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-blue-600">{counters.satisfaction}%</div>
                 <div className="text-gray-600">Client Satisfaction</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-4xl font-bold text-blue-600">24/7</div>
-                <div className="text-gray-600">Support Available</div>
               </div>
             </div>
           </div>
@@ -79,210 +110,181 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive AI and technology solutions designed to accelerate your business growth
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Comprehensive technology solutions tailored to your business needs
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Solutions */}
-              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-blue-600" />
+                  <TrendingUp className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Services</h3>
                 <p className="text-gray-600 mb-6">
-                  Advanced AI and machine learning solutions tailored to your business needs. 
-                  From predictive analytics to intelligent automation.
+                  Machine learning, natural language processing, and AI-powered solutions to automate and optimize your business processes.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    AI Analytics Dashboard
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Content Generation
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Customer Insights
-                  </li>
-                </ul>
-                <Link href="/services/ai-powered-tools" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold mt-4">
-                  Learn More
-                  <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
+                <a href="/ai-services" className="text-blue-600 hover:text-blue-700 font-medium">
+                  Learn More →
+                </a>
               </div>
 
-              {/* Micro SaaS */}
-              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Micro SaaS</h3>
-                <p className="text-gray-600 mb-6">
-                  Custom micro SaaS development and deployment services. 
-                  Build, scale, and monetize your software solutions.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Custom Development
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Cloud Deployment
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Scalable Architecture
-                  </li>
-                </ul>
-                <Link href="/solutions" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold mt-4">
-                  Learn More
-                  <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
-              </div>
-
-              {/* IT Services */}
-              <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-green-600" />
+                  <Users className="h-6 w-6 text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">IT Services</h3>
                 <p className="text-gray-600 mb-6">
-                  Comprehensive enterprise IT infrastructure and support services. 
-                  Keep your systems running smoothly and securely.
+                  Complete IT infrastructure management, cloud solutions, and technical support to keep your business running smoothly.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Infrastructure Management
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Security Solutions
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    24/7 Support
-                  </li>
-                </ul>
-                <Link href="/solutions" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold mt-4">
-                  Learn More
-                  <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
+                <a href="/it-services" className="text-blue-600 hover:text-blue-700 font-medium">
+                  Learn More →
+                </a>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                  <Award className="h-6 w-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Micro SaaS</h3>
+                <p className="text-gray-600 mb-6">
+                  Custom software development and micro SaaS solutions designed to solve specific business challenges efficiently.
+                </p>
+                <a href="/micro-saas" className="text-blue-600 hover:text-blue-700 font-medium">
+                  Learn More →
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Testimonials Section */}
+        {/* Why Choose Us Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-              <p className="text-xl text-gray-600">
-                Don't just take our word for it - hear from our satisfied clients
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                We deliver exceptional results through expertise, innovation, and dedication
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-blue-600" />
                 </div>
-                <p className="text-gray-600 mb-6">
-                  "Zion Tech Group transformed our business with their AI solutions. 
-                  The results exceeded our expectations and our productivity increased by 300%."
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Expertise</h3>
+                <p className="text-gray-600">
+                  Years of experience delivering successful projects across various industries
                 </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-blue-600 font-semibold">JS</span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">John Smith</div>
-                    <div className="text-gray-600 text-sm">CEO, TechCorp</div>
-                  </div>
-                </div>
               </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="h-8 w-8 text-green-600" />
                 </div>
-                <p className="text-gray-600 mb-6">
-                  "The micro SaaS solution they built for us is incredible. 
-                  It's scalable, reliable, and has helped us reach new markets."
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quality Assurance</h3>
+                <p className="text-gray-600">
+                  Rigorous testing and quality control processes ensure reliable solutions
                 </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-purple-600 font-semibold">MJ</span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">Maria Johnson</div>
-                    <div className="text-gray-600 text-sm">CTO, InnovateLab</div>
-                  </div>
-                </div>
               </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-purple-600" />
                 </div>
-                <p className="text-gray-600 mb-6">
-                  "Their IT services are top-notch. They keep our systems running smoothly 
-                  and provide excellent support whenever we need it."
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Client-Focused</h3>
+                <p className="text-gray-600">
+                  We prioritize your success and maintain long-term partnerships
                 </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-green-600 font-semibold">DB</span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">David Brown</div>
-                    <div className="text-gray-600 text-sm">IT Director, GlobalCorp</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our AI solutions and IT services can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-50 transition-colors font-semibold"
-              >
-                Get Free Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link 
-                href="/solutions" 
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-              >
-                View Our Solutions
-              </Link>
+        {/* Contact Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p className="text-xl text-gray-600">
+                  Ready to transform your business? Let's discuss your project
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-12">
+                <div className="space-y-6">
+                  <div className="flex items-center">
+                    <Phone className="h-6 w-6 text-blue-600 mr-4" />
+                    <span className="text-gray-700">+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Mail className="h-6 w-6 text-blue-600 mr-4" />
+                    <span className="text-gray-700">info@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="h-6 w-6 text-blue-600 mr-4" />
+                    <span className="text-gray-700">Delaware, United States</span>
+                  </div>
+                </div>
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      name="company"
+                      placeholder="Company Name"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <textarea
+                      name="message"
+                      placeholder="Your Message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={4}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </section>
       </main>
-      <EnhancedFooter />
     </>
   );
 }

@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-export default function Reports() {
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 export default function reports() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
     <Layout>
       <Head>
@@ -23,11 +18,6 @@ export default function reports() {
           </p>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-  )
-=======
     </Layout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

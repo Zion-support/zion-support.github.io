@@ -1,53 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { 
-  Star,
-  Clock,
-  Users,
-  TrendingUp,
-  Database,
-  Network,
-  Target,
-  Rocket,
-  Brain,
-  Shield,
-  Zap,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
-
-const aiServices = [
-  {
-    title: "Machine Learning Models",
-    description: "Custom ML models for your specific business needs",
-    icon: Brain,
-    features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision"]
-  },
-  {
-    title: "AI Automation",
-    description: "Automate repetitive tasks with intelligent systems",
-    icon: Zap,
-    features: ["Process Automation", "Data Processing", "Customer Service"]
-  },
-  {
-    title: "AI Security",
-    description: "Advanced security solutions powered by AI",
-    icon: Shield,
-    features: ["Threat Detection", "Fraud Prevention", "Access Control"]
-  }
-];
-
-const stats = [
-  { number: "500+", label: "AI Models Deployed" },
-  { number: "99.9%", label: "Uptime Guarantee" },
-  { number: "24/7", label: "AI Monitoring" },
-  { number: "50+", label: "Enterprise Clients" }
-];
-
-export default function AIServices() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -59,7 +10,6 @@ export default function AIServicesPage() {
         <meta name="description" content="Professional AI services for your business needs." />
       </Head>
       
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">

@@ -1,32 +1,16 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { Interface } from 'ethers';
-=======
-<<<<<<< HEAD
-
-import { Interface } from 'ethers',;
->>>>>>> origin/main
 // Simple ABI for demonstration (release/refund)
 const abi = [
   'constructor(address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release() externalfunction refund() externalfunction client() view returns (address)function talent() view returns (address)function totalAmount() view returns (uint256)'
 ];
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   if (req.method !== 'POST') {
     res.setHeader('Allow', ['POST']);
     return res.status(405).end('Method Not Allowed');
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const { bytecode, constructorArgs } = req.body |{}
-  if (!bytecode |!constructorArgs) {
->>>>>>> origin/main
 
   const { bytecode, constructorArgs } = req.body || {};
 
@@ -45,9 +29,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' })
   }
-<<<<<<< HEAD
-}
-=======
 
 }
 
@@ -89,9 +70,6 @@ if ( {) {
 
 }
 
-=======
   
   res.status(200).json({ deployed: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-
-}
-
-  res.setHeader('Content-Typeapplication/json');
-  res.status(200).json(v1)
-
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,4 +8,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ message: 'Endpoint working' });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

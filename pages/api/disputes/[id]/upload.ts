@@ -101,32 +101,6 @@ async function fsPromisesWrite("filePath": string, "data": Buffer): Promise<void
       }
     );
   });
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
-}
-}
-}
-
-
-}
-
-    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
-      if (err) return reject(err);
-      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
-    })
-  })
-}
-}
-
-}
-
-
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['POST']);
-  return res.status(405).end('Method Not Allowed');
->>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
 import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
@@ -140,29 +114,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
   const user = parseUserFromRequest(req);
 
-<<<<<<< HEAD
-  if (req.method === 'POST') {
-    const dispute = await getDisputeById(id);
-    if (!dispute) return res.status(404).json({ error: 'Not found' });
-    try {
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
-    } catch (e: any) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
-    }
-
-    const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] };
-    if (!Array.isArray(files) || files.length === 0) return res.status(400).json({ error: 'No files' });
-=======
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
-
-}
-
-
-}
-
-
-}
->>>>>>> origin/main
 
     const now = new Date().toISOString();
     const dir = await ensureDisputeUploadDir(dispute.id);
@@ -191,24 +142,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('AllowPOST');
   return res.status(405).end('Method Not Allowed')
 }
-<<<<<<< HEAD:pages_backup/api/disputes/[id]/upload.ts
-
-<<<<<<< HEAD
-async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
-  const fs = await import('fs');
-  await new Promise<void>((resolve, reject) => {
-    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
-      if (err) return reject(err);
-      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
-    })
-  })
-}
-=======
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -219,5 +156,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   res.status(200).json({ uploaded: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

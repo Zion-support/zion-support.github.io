@@ -1,21 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Brain, DollarSign, TrendingUp, Shield, Zap, 
-  CheckCircle, ArrowRight, Star, Users, Award;
-  Clock, Globe, BarChart3, Target, Microscope;
-  Phone, Mail, MapPin, ArrowUpRight, Play;
-  BarChart, PieChart, LineChart, Activity
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
 } from 'lucide-react',
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
 import Layout from '../components/layout/Layout';
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -24,14 +9,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
-const features = [
-  {
-    title: 'Real-time Market Sentiment Analysis',
-=======
-<<<<<<< HEAD
-const features = $2;
->>>>>>> origin/main
     description: 'Advanced AI algorithms analyze market sentiment with 94% accuracy using neural networks and natural language processing.',
     icon: Brain,
     color: 'from-violet-500 to-purple-600'
@@ -456,62 +433,8 @@ const NeuralFinanceAI: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                viewport={{ once: true }}
-                className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="text-4xl mb-3">{integration.logo}</div>
-                <h3 className="text-sm font-semibold text-white mb-1">{integration.name}</h3>
-                <p className="text-xs text-gray-400">{integration.category}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Trading?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join leading investment firms using Neural Finance AI to gain competitive advantages 
-              in today's dynamic financial markets.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link
-                href="/contact"
-                className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
-              >
-                Start Free Trial
-              </Link>
-              <Link
-                href="/contact"
-                className="border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200"
-              >
-                Schedule Demo
-              </Link>
-            </div>
-            
-            <div className="text-sm text-gray-400">
-              <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p>
-              <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-  )
-};
-
-export default NeuralFinanceAI;
-=======
                 viewport = $2;
 export default NeuralFinanceAI,
-=======
 export default function neuralfinanceai() {
   return (
     <Layout>
@@ -531,5 +454,3 @@ export default function neuralfinanceai() {
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main

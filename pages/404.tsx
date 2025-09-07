@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import MainLayout from '../components/layout/MainLayout';
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -22,7 +17,6 @@ const NotFound = () => {
       }
     }
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
 const Page = () => {
   return (
@@ -43,11 +37,7 @@ const Page = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Page;
-=======
 export default NotFound;
-=======
 import React from 'react'
 
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -57,5 +47,3 @@ import React from 'react'
 
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

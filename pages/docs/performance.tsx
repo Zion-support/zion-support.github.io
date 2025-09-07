@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-export default function PerformanceDocRedirect() {
-  return (
-    <>
-      <Head>
-        <meta httpEquiv="refresh" content="0, url=/PERFORMANCE.md" />
-      </Head>
-      <main style={{ padding: 24}}>
-        <p>Redirecting to Performance documentation…</p>
-      </main>
-    </>
-  )
-}
-
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -37,4 +21,3 @@ export default function performance() {
     </Layout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

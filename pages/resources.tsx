@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
->>>>>>> origin/main
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -292,9 +286,6 @@ export default function ResourcesPage() {
       <EnhancedFooter />
     </>
   )
-<<<<<<< HEAD
-}
-=======
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>;
             <p className="text-xl text-blue-100 mb-8">;
@@ -318,7 +309,6 @@ export default function ResourcesPage() {
       </section>;
       <EnhancedFooter />;
 
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -366,5 +356,3 @@ export default function ResourcesPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
