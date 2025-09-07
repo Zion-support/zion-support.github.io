@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -484,6 +488,8 @@ export default function IntelligentProjectManagementSuite() {
       </section>
     </div>
   );
+<<<<<<< HEAD
+=======
 =======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
@@ -494,4 +500,8 @@ export async function getStaticProps() {
 export default function IntelligentProjectManagementSuite(props: any) {
 	return <ServicePage {...props} />;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e11d
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

@@ -6,3 +6,4 @@ describe('community category listing',() => { it('displays posts in Getting Hire
 });''
 });''
 });''
+});''

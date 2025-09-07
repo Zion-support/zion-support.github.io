@@ -1,12 +1,18 @@
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export async function getStaticProps() {
 	return (getSlugStaticProps as any)({ params: { slug: 'ai-customer-success-platform' } });
 }
 
 export default function AICustomerSuccessPlatform(props: any) {
 	return <ServicePage {...props} />;
+<<<<<<< HEAD
+=======
 =======
 export default function AICustomerSuccessPlatform() {
 	return (
@@ -31,4 +37,8 @@ export default function AICustomerSuccessPlatform() {
 		/>
 	);
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-adc1
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

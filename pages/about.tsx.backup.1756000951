@@ -1,6 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { 
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award, 
@@ -8,6 +12,8 @@ import {
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -270,6 +276,10 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function AboutPage() {
   const stats = [
@@ -560,8 +570,17 @@ export default function AboutPage() {
     </>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 3c1dda747d3aa200ea8a4e49d78b84af83a4d328
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

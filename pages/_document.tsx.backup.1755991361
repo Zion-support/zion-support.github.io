@@ -13,8 +13,8 @@ class MyDocument extends Document {
 <<<<<<< HEAD
         <body className="bg-high-contrast-primary text-high-contrast">
 =======
-        <body className="bg-white dark:bg-black text-gray-900 dark:text-gray-100">
->>>>>>> origin/cursor/build-zion-ai-notification-center-5a66
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Main />
           <NextScript />
         </body>
@@ -26,5 +26,5 @@ class MyDocument extends Document {
 <<<<<<< HEAD
 export default MyDocument;
 =======
-export default MyDocument;
->>>>>>> origin/cursor/build-zion-ai-notification-center-5a66
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

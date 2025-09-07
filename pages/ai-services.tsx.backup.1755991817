@@ -6,6 +6,10 @@ import Link from 'next/link';
 export default function AIServicesPage() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
         <title>AI Services | Zion Tech Group</title>
@@ -43,6 +47,8 @@ export default function AIServicesPage() {
                 </ul>
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
 =======
     <UltraAdvancedFuturisticBackground>
       <SEO title="AI Services | Zion Tech Group" description="LLM apps, RAG, evaluation, guardrails, and automation with transparent pricing." canonical="https://ziontechgroup.com/ai-services/" />
@@ -65,6 +71,10 @@ export default function AIServicesPage() {
               </Link>
             ))}
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
           <div className="text-sm text-gray-400">Questions? <Link className="text-cyan-400 underline" href="/contact">Contact us</Link>.</div>
         </div>

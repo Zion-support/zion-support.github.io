@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function News() {
   const featuredNews = [
     {
@@ -178,6 +182,11 @@ export default function News() {
                         <span
                           key={tag}
                           className="bg-gray-800/50 text-gray-300 text-sm px-3 py-1 rounded-full border border-gray-700/50"
+<<<<<<< HEAD
+
+export default function NewsPage() {
+  return (
+=======
 =======
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
@@ -390,6 +399,7 @@ import SEO from '../components/SEO';
 export default function NewsPage() {
   return (
 <<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Layout>
       <SEO 
         title="News & Press - Zion Tech Group"
@@ -536,6 +546,8 @@ export default function NewsPage() {
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
                 <Newspaper className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
+=======
 =======
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -1585,3 +1597,11 @@ export default function News() {
   );
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-45bf
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+export default function NewsPage() {
+  return (
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

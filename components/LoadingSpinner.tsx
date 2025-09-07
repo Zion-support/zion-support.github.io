@@ -1,11 +1,108 @@
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4';,
+    md: 'w-8 h-8';,
+    lg: 'w-12 h-12';
+  };
+<<<<<<< HEAD
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md', text,
+  className = '', }) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4';, md: 'w-8 h-8';,
+    lg: 'w-12 h-12';, }
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+    sm: 'h-4 w-4';,
+    md: 'h-8 w-8';,
+    lg: 'h-12 w-12';
+  }
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  return (
+    <div className={`inline-block ${className}`}>
+      <div 
+        className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
+        role="status"
+        aria-label="Loading"
+      >
+        <span className="sr-only">Loading...</span>
+      </div>
+    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  );
+};
+
+export default LoadingSpinner;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  )
+React from, react''
+import { Loader2  } from 'lucide-react'';interface LoadingSpinnerProps {'
+  size?: 'sm ' | 'md ' | 'lg '
+   text?: string
+   className?: string
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size =, md', text, '  className = ''}) => {
+  '  const sizeClasses = {'    sm: 'w-4 h-4;, md:, w-8 h-8', '    lg: 'w-12 h-12;}'  return ('
+    <div className={`flex flex-col items-center justify-center ${className}`}>`      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />`      {text && (
+        <p className='mt-2 text-sm text-gray-600 animate-pulse'>{text}</p>'      )}'    </div>)
+}
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+pr-12243
+
 ;
 
 interface LoadingSpinnerProps {
-
-
-
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -29,15 +126,15 @@ const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({
   text = 'Loading...',
   class_name = '', }) => {
   const size_classes = {
-    sm: 'w - 4 h - 4',
-    md: 'w - 8 h - 8',
-    lg: 'w - 12 h - 12',
+    sm: 'w - 4 h - 4';,
+    md: 'w - 8 h - 8';,
+    lg: 'w - 12 h - 12';,
   }
 ;
   const color_classes = {
-    blue: 'text - blue - 600',
-    white: 'text - white',
-    gray: 'text - gray - 600',
+    blue: 'text - blue - 600';,
+    white: 'text - white';,
+    gray: 'text - gray - 600';,
     slate: 'text - slate - 600';
   }
 ;
@@ -70,9 +167,9 @@ interface LoadingSpinnerProps {;
   text?: string;'  class_name?: string;
 }
 const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({
-  size = 'md', text, '  class_name = ; }) => {'  const size_classes = {'    sm: 'w - 4 h - 4',
-    md: 'w - 8 h - 8',
-    md: '    lg: 'w - 12 h - 12', }
+  size = 'md', text, '  class_name = ; }) => {'  const size_classes = {'    sm: 'w - 4 h - 4';,
+    md: 'w - 8 h - 8';,
+    md: '    lg: 'w - 12 h - 12';, }
   return (
     <div className={`flex flex - col items - center justify - center ${class_name}}>      <Loader2 className={`${size_classes[size]} animate - spin text - blue - 600`} />`      {text && (
         <p className="mt - 2 text - sm text - gray - 600 animate - pulse>{text}</p>      )}"    </div>);
@@ -91,7 +188,24 @@ export default function LoadingSpinner() {
     </div>
   );
   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error("Error: ";, error);
+    return res.status(500).json({ error: "Internal server error" ;});
   }
 }
+pr-12243
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+
+=======
+  );
+};
+
+export default LoadingSpinner;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

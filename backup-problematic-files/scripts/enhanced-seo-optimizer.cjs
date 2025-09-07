@@ -1,12 +1,13 @@
-#!/usr/bin/env node;
-const fs = require("fs")";const path = require("path")""
-      "seo-optimization-report.json""),"
-    console.log(`[${new Date().toISOString()}] ${message}`);
-    this.log("� Checking meta tags");""
-      "pages": [],""issues": [],,"
+#!/usr/bin/env node
+const fs = require("fs")";const path = require("path")
+      "seo-optimization-report.json),
+    console.log(`[${new Date().toISOString()}] ${message});"
+    this.log("� Checking meta tags");
+      "pages": [],issues": [],,"
     const pagesDir = path.join(this.projectRoot, "src", "pages");";    if (!fs.existsSync(pagesDir)) {";      results.issues.push("Pages directory not found");";      return results,"}
-    const files = this.getAllFiles(pagesDir, [".tsx", ".jsx", ".ts", ".js"]);""
+    const files = this.getAllFiles(pagesDir, [".tsx", ".jsx", ".ts", ".js"]);
         const content = fs.readFileSync(file, "utf8");";        const pageName = path.basename(file);"
+<<<<<<< HEAD
           "file": pageName,""hasTitle": content.includes("<title>") || content.includes(""title":"),""hasDescription":;";            content.includes("description") ||";            content.includes("meta name="description""),""hasKeywords":;";            content.includes("keywords") ||";            content.includes("meta name="keywords""),""hasOpenGraph":;";            content.includes(""og":") || content.includes("property=""og":"),""hasTwitterCard":;";            content.includes(""twitter":") || content.includes("name=""twitter":"),"};"
           results.issues.push("${pageName}: Missing title tag");"
           results.issues.push(`${pageName}: Missing meta description`);
@@ -35,5 +36,15 @@ const fs = require("fs")";const path = require("path")""
       this.log(" SEO optimization check completed");";      return report,"
       this.log(` SEO optimization check "failed"`)
   .then(report => {);    console.log(" SEO optimization check completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
   .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
   .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          "file": pageName,hasTitle": content.includes("<title>") || content.includes(title":"),hasDescription":;";            content.includes("description") ||";            content.includes("meta name="description),hasKeywords":;";            content.includes("keywords") ||";            content.includes("meta name="keywords),hasOpenGraph":;";            content.includes(og":") || content.includes("property=og":"),hasTwitterCard":;";            content.includes(twitter":") || content.includes("name=twitter":"),"};
+</title>"
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

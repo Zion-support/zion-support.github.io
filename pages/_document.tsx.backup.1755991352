@@ -3,15 +3,8 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
 =======
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
->>>>>>> origin/cursor/build-zion-ai-marketplace-chat-assistant-9918
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   render() {
     return (
       <Html lang="en">
@@ -19,8 +12,8 @@ class MyDocument extends Document {
 <<<<<<< HEAD
         <body>
 =======
-        <body className="bg-white dark:bg-black">
->>>>>>> origin/cursor/build-zion-ai-marketplace-chat-assistant-9918
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <Main />
           <NextScript />
         </body>
@@ -32,5 +25,5 @@ class MyDocument extends Document {
 <<<<<<< HEAD
 export default MyDocument;
 =======
-export default MyDocument;
->>>>>>> origin/cursor/build-zion-ai-marketplace-chat-assistant-9918
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

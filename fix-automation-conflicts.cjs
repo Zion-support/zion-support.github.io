@@ -26,7 +26,7 @@ for (const file of files) {
     console.log(`🔧 Fixing ${file}...`);
     
     try {
-      let content = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
       
       // Remove merge conflict markers and keep "ours" version

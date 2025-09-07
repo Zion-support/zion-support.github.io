@@ -5,6 +5,10 @@ export default function EventsPage() {
 	return (
 		<>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			<SEO title="Events | Zion Tech Group" description="Upcoming events, conferences, and community sessions hosted by Zion Tech Group." />
 			<section className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-6">Events</h1>
@@ -19,6 +23,8 @@ export default function EventsPage() {
 		</>
 	);
 }
+<<<<<<< HEAD
+=======
 =======
 			<SEO title="Events | Zion Tech Group" description="Upcoming events and conferences." canonical="/events" />
 			<div className="container mx-auto px-4 py-16">
@@ -29,3 +35,7 @@ export default function EventsPage() {
 	);
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-4a15
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
@@ -387,6 +391,8 @@ const SitemapPage: React.FC = () => {
 };
 
 export default SitemapPage;
+<<<<<<< HEAD
+=======
 =======
 import Head from 'next/head';
 
@@ -421,3 +427,7 @@ export default function SitemapPage() {
 	);
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

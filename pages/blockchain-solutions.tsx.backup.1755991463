@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react";
 
 export default function BlockchainSolutionsPage() {
@@ -9,6 +13,8 @@ export default function BlockchainSolutionsPage() {
     </main>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -31,3 +37,7 @@ const BlockchainSolutions: NextPage = () => {
 
 export default BlockchainSolutions;
 >>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

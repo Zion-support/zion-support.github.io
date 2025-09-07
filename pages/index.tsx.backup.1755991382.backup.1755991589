@@ -1,5 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/index.tsx.backup.1755991283.backup.1756001154
+========
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991382.backup.1755991589
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Link from 'next/link';
 
@@ -95,6 +102,8 @@ const Home = () => {
           />
         </div>
       </section>
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 export default function Home(){
@@ -117,11 +126,19 @@ const Index: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function Feature({ title, description, href }: { title: string; description: string; href: string }) {
   return (
     <Link href={href} legacyBehavior>
@@ -134,15 +151,28 @@ function Feature({ title, description, href }: { title: string; description: str
 }
 
 export default Home;
+<<<<<<< HEAD
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+<<<<<<<< HEAD:components/index.tsx.backup.1755991283.backup.1756001154
+========
 =======
 export default Index;
 >>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Link from 'next/link';
 
 export default function Home() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="space-y-4">
       <h1 className="text-2xl font-bold">Zion</h1>
@@ -184,3 +214,10 @@ export default function HomePage() { return null }
 >>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991382.backup.1755991589
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -19,8 +19,8 @@ export default function MicroSaasPage() {
 <<<<<<< HEAD
       examples: ['Quantum AI: 2 hours', 'Manufacturing AI: 1 day', 'Cybersecurity: 4 hours']
 =======
-      marketData: 'Average setup time: 2 hours vs. competitors: 2-4 weeks'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '💰',
@@ -31,8 +31,8 @@ export default function MicroSaasPage() {
 <<<<<<< HEAD
       examples: ['Quantum AI: $299 vs $2000+', 'Manufacturing: $199 vs $500+', 'Space Tech: $399 vs $1000+']
 =======
-      marketData: 'Save 60-95% vs. enterprise competitors'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '🔒',
@@ -43,8 +43,8 @@ export default function MicroSaasPage() {
 <<<<<<< HEAD
       examples: ['Quantum-resistant encryption', 'AI threat detection', 'Zero-trust architecture']
 =======
-      marketData: '99.9% uptime guarantee vs. industry average 99.5%'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '📊',
@@ -55,8 +55,8 @@ export default function MicroSaasPage() {
 <<<<<<< HEAD
       examples: ['Quantum AI: 1000% ROI', 'Manufacturing: 400% ROI', 'Cybersecurity: 300% ROI']
 =======
-      marketData: 'Average customer ROI: 400-1200% within 6-12 months'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '🌐',
@@ -67,8 +67,8 @@ export default function MicroSaasPage() {
 <<<<<<< HEAD
       examples: ['Single sign-on', 'Integrated billing', 'Cross-service integration']
 =======
-      marketData: '150+ services on one platform vs. managing multiple vendors'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '🎯',
@@ -79,9 +79,8 @@ export default function MicroSaasPage() {
       bgColor: 'from-rose-500/10 to-pink-500/10',
       examples: ['Quantum AI for research', 'Manufacturing for production', 'Space tech for satellites']
 =======
-      bgColor: 'from-rose-500/10 to-rose-500/10',
-      marketData: 'Specialized expertise vs. jack-of-all-trades approach'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -133,11 +132,8 @@ export default function MicroSaasPage() {
     competitivePricing: getCompetitivePricing(service)
   }));
 =======
-  // New revolutionary services showcase with enhanced market data
-  const revolutionaryServices = enhancedRealMicroSaasServices.filter(service => 
-    service.realImplementation && service.popular
-  ).slice(0, 6);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   function getMarketAdvantage(service: any) {
     switch (service.category) {
@@ -776,11 +772,8 @@ export default function MicroSaasPage() {
                 <p className="text-gray-600 leading-relaxed">{advantage.description}</p>
               </Card>
 =======
-                <h3 className="text-xl font-semibold text-white mb-3">{advantage.title}</h3>
-                <p className="text-slate-300">{advantage.description}</p>
-                <p className="text-slate-400 text-sm mt-2">{advantage.marketData}</p>
-              </motion.div>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
           </div>
         </div>
@@ -810,9 +803,8 @@ export default function MicroSaasPage() {
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
 =======
-                key={service.name}
-                initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}

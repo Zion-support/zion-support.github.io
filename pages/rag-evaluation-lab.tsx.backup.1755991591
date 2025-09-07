@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 import { Brain, Search, Target, Zap, Shield, Cpu, Database, Network, Server, Monitor, Globe, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, TrendingUp, ArrowRight, BarChart3, FileText, CheckCircle, AlertCircle } from 'lucide-react';
 
@@ -21,6 +25,8 @@ const RAGEvaluationLab: React.FC = () => {
     'Consistency & Reliability',
     'User Experience Metrics'
   ];
+<<<<<<< HEAD
+=======
 =======
 import SEO from '../components/SEO';
 import Link from 'next/link';
@@ -51,6 +57,10 @@ export default function RAGEvaluationLabPage() {
 						))}
 					</div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0a60
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const useCases = [
     'Enterprise Knowledge Management',
@@ -62,6 +72,10 @@ export default function RAGEvaluationLabPage() {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const benefits = [
     'Improve RAG system performance',
     'Reduce hallucinations and errors',
@@ -217,6 +231,8 @@ export default function RAGEvaluationLabPage() {
 };
 
 export default RAGEvaluationLab;
+<<<<<<< HEAD
+=======
 =======
 					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
@@ -229,3 +245,7 @@ export default RAGEvaluationLab;
 	);
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0a60
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

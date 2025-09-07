@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 #!/usr/bin/env node;
 ;
 const fs = require('fs');
@@ -186,3 +189,4 @@ try {;
   console.error('Erro:r:', error.message);
   process.exit(1);
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

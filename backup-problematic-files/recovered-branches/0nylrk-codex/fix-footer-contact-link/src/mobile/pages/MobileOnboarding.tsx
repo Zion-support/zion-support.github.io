@@ -1,4 +1,6 @@
 
+<<<<<<< HEAD
+=======
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -90,4 +92,5 @@ const handleRoleSelect = () => {
 }/> Continue </Button> </div> </div>) 
 }</div> <SignUpForm /> </div>) 
 }</div> </div>) 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }

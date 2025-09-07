@@ -42,6 +42,10 @@ export function buildPrintableHtml(project: BookProject): string {
   .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap }
   .visual { break-inside: avoid, margin: 12px 0 }
   .visual img { max-width: 100%, height: auto }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 </style>
 </head>
 <body>
@@ -69,4 +73,8 @@ function paragraphize(text: string): string {
 
 function escapeHtml(s: string): string {
   return s
+<<<<<<< HEAD
     .replace(/&/g, '&amp,')
+=======
+    .replace(/&/g, '&amp,');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

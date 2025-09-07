@@ -30,14 +30,24 @@ import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
 import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { augmentedServicesBatch3 } from '../data/real-augmented-services-2025-batch3';
 import { real2025Q3Additions } from '../data/real-2025-q3-additions';
 import { realQ4Services2025 } from '../data/real-2025-q4-additions';
 import { real2026Q1Additions } from '../data/real-2026-q1-additions';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
+<<<<<<< HEAD
+=======
 =======
 import { realImplementationServices2025 } from '../data/real-implementation-services-2025';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServiceFallbackPage() {
   const router = useRouter();
@@ -175,6 +185,10 @@ function collectAllServices(): Svc[] {
       comprehensiveITSolutions as Svc[],
       marketValidatedServices as Svc[],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       curatedMarketServices as Svc[],
       cuttingEdgeITServices as Svc[],
       nextGenerationAIServices as Svc[],
@@ -187,11 +201,17 @@ function collectAllServices(): Svc[] {
       realQ4Services2025 as Svc[],
       real2026Q1Additions as Svc[],
       ultimateFuturisticServices2025 as unknown as Svc[]
+<<<<<<< HEAD
+=======
 =======
       newRealInnovations as Svc[],
       realMarketServices as Svc[],
       realImplementationServices2025 as unknown as Svc[]
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     );
 }
 

@@ -7,14 +7,8 @@ import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
 =======
-import Link from 'next/link';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight } from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-real-micro-saas-services';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ec1e
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -148,7 +142,7 @@ export default function ServicesPage() {
       default:
         return 'neural';
     }
-=======
+
       icon: <FlaskConical className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length,
       color: 'from-green-500 to-emerald-600'
@@ -316,6 +310,8 @@ export default function ServicesPage() {
         <meta property="og:title" content="Micro SaaS Services - Zion Tech Group" />
         <meta property="og:description" content="200+ revolutionary micro SaaS services for modern businesses" />
         <meta property="og:url" content="https://ziontechgroup.com/services" />
+<<<<<<< HEAD
+=======
 =======
     <UltraFuturisticBackground>
       <Head>
@@ -327,11 +323,19 @@ export default function ServicesPage() {
         <meta property="og:url" content="https://ziontechgroup.com/services" />
         <meta property="og:type" content="website" />
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ec1e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
 
       {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -887,6 +891,8 @@ export default function ServicesPage() {
                 variant="secondary" 
                 size="lg"
                 className="group relative overflow-hidden"
+<<<<<<< HEAD
+=======
 =======
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Transform</span> Your Business?
@@ -935,6 +941,8 @@ export default function ServicesPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
+<<<<<<<< HEAD:components/services.tsx.backup.1755991886.backup.1756001157
+========
 =======
             </div>
           </div>
@@ -1697,6 +1705,11 @@ export default function ServicesPage() {
       </section>
     </UltraFuturisticBackground>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ec1e
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991993
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

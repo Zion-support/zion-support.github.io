@@ -20,5 +20,5 @@ const NotFoundPage: NextPage = () => {
 
 export default NotFoundPage;
 =======
-export default function NotFound() { return null; }
->>>>>>> origin/cursor/create-founder-onboarding-course-for-zion-launch-eb81
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

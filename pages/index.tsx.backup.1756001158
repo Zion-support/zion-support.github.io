@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -549,6 +553,8 @@ export default function HomePage() {
           </div>
         </footer>
       </div>
+<<<<<<< HEAD
+=======
 =======
     <QuantumHolographicMatrixBackground>
       <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -586,6 +592,10 @@ export default function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2750
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Navigation */}
@@ -647,11 +657,17 @@ export default function HomePage() {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <EnhancedFooter />
 
       {/* Toast Container */}
       <ToastContainer toasts={toasts} onRemove={removeToast} />
     </div>
+<<<<<<< HEAD
+=======
 =======
         {/* Features Section */}
         <div className="py-12 bg-black/20">
@@ -788,5 +804,9 @@ export default function HomePage() {
       </div>
     </>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2750
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

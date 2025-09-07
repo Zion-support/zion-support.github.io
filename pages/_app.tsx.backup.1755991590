@@ -104,6 +104,10 @@ import React, { useState, useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { store } from '@/store';
@@ -287,6 +291,8 @@ export default function App({ Component, pageProps }: AppProps) {
     </ProviderWrapper>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import { useRouter } from 'next/router';
@@ -308,3 +314,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ca73
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -88,5 +88,10 @@ export function updateMilestone(
   project.milestones[idx] = next,
   project.updatedAt = now,
   saveProject(project),
+<<<<<<< HEAD
   return next
+
+=======
+  return next;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }

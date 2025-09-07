@@ -4,6 +4,12 @@ import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+=======
+<<<<<<< HEAD
 export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
@@ -14,3 +20,7 @@ function ZionApp({ Component, pageProps }: AppProps) {
 
 export default ZionApp;
 >>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -6,16 +6,12 @@ import '../styles/modern-design-system.css';
 <<<<<<< HEAD
 export default function MyApp({ Component, pageProps }: AppProps) {
 =======
-function MyApp({ Component, pageProps }: AppProps) {
->>>>>>> origin/cursor/deploy-zion-protocol-metrics-dashboard-eac6
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <EnhancedLayout>
       <Component {...pageProps} />
     </EnhancedLayout>
   );
 }
-<<<<<<< HEAD
-=======
 
-export default MyApp;
->>>>>>> origin/cursor/deploy-zion-protocol-metrics-dashboard-eac6

@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/enhanced-home.tsx.backup.1755991404.backup.1756001154
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/enhanced-home.tsx.backup.1755991502
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -19,6 +26,11 @@ const EnhancedHome: NextPage = () => {
 };
 
 export default EnhancedHome;
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/enhanced-home.tsx.backup.1755991404.backup.1756001154
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+========
 =======
 import Link from 'next/link';
 
@@ -32,3 +44,8 @@ export default function EnhancedHome() {
   );
 }
 >>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/enhanced-home.tsx.backup.1755991502
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

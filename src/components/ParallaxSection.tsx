@@ -1,29 +1,36 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-
 interface ParallaxSectionProps {
-  children: React.ReactNode;
+  children: React.ReactNode;,
   speed?: number;
   className?: string;
   direction?: 'up' | 'down' | 'left' | 'right';
 }
-
-const ParallaxSection: React.FC<ParallaxSectionProps> = ({
+const ParallaxSection: React.FC<ParallaxSectionProps> = ({,
   children,
   speed = 0.5,
+<<<<<<< HEAD
   className = '',
   direction = 'up',
+=======
+className = '','
+  direction = 'up''
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
+<<<<<<< HEAD
     offset: ['start end', 'end start'],
+=======
+offset: ["start end", "end start"]"
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
   });
-
   const getTransform = () => {
     const baseTransform = scrollYProgress.get() * 100 * speed;
 
     switch (direction) {
+<<<<<<< HEAD
       case 'up':
         return useTransform(
           scrollYProgress,
@@ -48,6 +55,16 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
           [0, 1],
           [-100 * speed, 100 * speed],
         );
+=======
+      case 'up':'
+        return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);
+      case 'down':'
+        return useTransform(scrollYProgress, [0, 1], [-100 * speed, 100 * speed]);
+      case 'left':'
+        return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);
+      case 'right':'
+        return useTransform(scrollYProgress, [0, 1], [-100 * speed, 100 * speed]);
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       default:
         return useTransform(
           scrollYProgress,
@@ -56,10 +73,8 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
         );
     }
   };
-
   const y = direction === 'up' || direction === 'down' ? getTransform() : 0;
   const x = direction === 'left' || direction === 'right' ? getTransform() : 0;
-
   return (
     <motion.div ref={ref} style={{ y, x }} className={className}>
       {children}

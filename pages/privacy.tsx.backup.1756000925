@@ -1,6 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
@@ -272,6 +276,8 @@ export default function Privacy() {
 
         <SmartFooter />
       </div>
+<<<<<<< HEAD
+=======
 =======
 import { motion } from 'framer-motion';
 import { 
@@ -597,6 +603,10 @@ export default function PrivacyPage() {
 
       <EnhancedFooter />
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 }

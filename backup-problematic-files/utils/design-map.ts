@@ -1,7 +1,21 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const tailwindConfig = require('../tailwind.config.js')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 export type DesignMapSection = {_id: string
   title: string
   description?: string
   items: { id: string, title: string, description?: string }[]
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export type DesignMap = {_route: string
@@ -117,17 +131,40 @@ export function getZionDesignMap(): DesignMap {_return {
 }
 
 export type TokenSet = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  colors: Record<string, string>
+  typography: {
+    fontSizes: Record<string, string>
+=======
   colors: Record<string string>
   typography: {
     fontSizes: Record<string string>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  colors: Record<string, string>
+  typography: {
+    fontSizes: Record<string, string>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 
 export async function buildTokenSet(): Promise<TokenSet> {
   // Dynamically import Tailwind config for color extraction
+<<<<<<< HEAD
+<<<<<<< HEAD
   const tailwindConfig = require('../tailwind.config.js')
   const extendedColors = tailwindConfig?.theme?.extend?.colors || {}
+  const colors: Record<string, string> = {}
+=======
+  const extendedColors = tailwindConfig?.theme?.extend?.colors || {}
   const colors: Record<string string> = {}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  const tailwindConfig = require('../tailwind.config.js')
+  const extendedColors = tailwindConfig?.theme?.extend?.colors || {}
+  const colors: Record<string, string> = {}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   function flattenColors(_prefix: string, _obj: unknown) {_Object.entries(obj || {}).forEach(_([key, _value]) => {_const _newKey = prefix ? `${prefix}.${_key}` : key
       if (typeof value === 'string') {_colors[newKey] = value} else if (typeof value === 'object') {_flattenColors(newKey, _value)}
@@ -143,7 +180,15 @@ export async function buildTokenSet(): Promise<TokenSet> {
 
 export type UIKitKind = 'tailwind' | 'chakra' | 'react'
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export function buildUIKit(kind: UIKitKind): Record<string, string> {
+=======
 export function buildUIKit(kind: UIKitKind): Record<string string> {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export function buildUIKit(kind: UIKitKind): Record<string, string> {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (kind === 'tailwind') {
     return {
       'README.md': '# Zion OS Tailwind UI Kit\n\nUse components with Tailwind classes from the design map.components/Button.tsx': "export function Button({ children }: { children: React.ReactNode }) { return <button className=\"px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90\">{children}</button> }",
@@ -164,5 +209,13 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {_
     const _res = await fetch(`${base.replace(/\/$/, _'')}/api/design-tokens`)
     if (!res.ok) return null
     return (await res.json()) as Partial<TokenSet>
+<<<<<<< HEAD
+<<<<<<< HEAD
   } catch {_return null}
+=======
+  } catch {_return null};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+  } catch {_return null}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }

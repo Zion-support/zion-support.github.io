@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { 
@@ -483,6 +487,8 @@ export default function EntertainmentMediaSolutions() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -503,3 +509,7 @@ export default function EntertainmentMediaSolutions() {
 	);
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-c45d
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

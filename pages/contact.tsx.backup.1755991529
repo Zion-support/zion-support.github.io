@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '../components/SEO';
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+=======
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 =======
@@ -8,6 +16,7 @@ import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Phone, Mail, MapPin, Clock, MessageCircle, Globe } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
@@ -16,6 +25,8 @@ const ContactPage: React.FC = () => {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
+=======
 =======
 import { 
   Phone, Mail, MapPin, Clock, MessageCircle, 
@@ -41,6 +52,14 @@ const ContactPage: React.FC = () => {
       [e.target.name]: e.target.value
     });
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -88,6 +107,10 @@ const ContactPage: React.FC = () => {
   return (
     <Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <SEO 
         title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group. Contact us for innovative AI, Quantum Computing, Space Technology, and IT solutions. Mobile: +1 302 464 0950, Email: kleber@ziontechgroup.com"
@@ -161,6 +184,8 @@ const ContactPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105 group"
+<<<<<<< HEAD
+=======
 =======
       <main className="relative z-10 pt-8">
         {/* Hero Section */}
@@ -192,6 +217,10 @@ const ContactPage: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="space-y-8"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Mail className="w-8 h-8 text-white" />
@@ -291,6 +320,10 @@ const ContactPage: React.FC = () => {
 
                 <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     Service of Interest
                   </label>
@@ -306,6 +339,8 @@ const ContactPage: React.FC = () => {
                       <option key={index} value={service}>{service}</option>
                     ))}
                   </select>
+<<<<<<< HEAD
+=======
 =======
                   <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                     Let's Start a Conversation
@@ -388,6 +423,10 @@ const ContactPage: React.FC = () => {
                     </li>
                   </ul>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
 
                 <div>
@@ -641,6 +680,10 @@ const ContactPage: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Contact Form */}
         <section className="py-16 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-4xl mx-auto">
@@ -846,6 +889,8 @@ const ContactPage: React.FC = () => {
                 </a>
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
 =======
         {/* Additional Contact Methods */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
@@ -971,6 +1016,10 @@ const ContactPage: React.FC = () => {
               ))}
             </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
       </main>

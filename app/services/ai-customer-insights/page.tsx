@@ -1,30 +1,49 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 
 export const metadata = {
   title: 'AI Customer Insights | Zion Tech Group',
   description:
     'Unlock customer behavior insights with AI-powered analytics, sentiment analysis, and predictive modeling. Drive growth with data-driven decisions.',
 };
+=======
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-export default function AICustomerInsightsPage() {
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
+
+export default function ServicePage() {
   return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          AI Customer Insights
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Unlock customer behavior insights with AI-powered analytics, sentiment
-          analysis, and predictive modeling. Drive growth with data-driven
-          decisions and personalized customer experiences.
-        </p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            AI Customer Insights
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your customer data into competitive advantage with AI-powered insights and analytics.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <Link 
+              href="/contact" 
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+            >
+              Get Started
+              <ArrowRightIcon className="h-5 w-5 ml-2" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Key Features
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            Ready to Unlock Customer Insights?
           </h2>
+<<<<<<< HEAD
           <div className="space-y-6">
             <FeatureItem
               icon="🧠"
@@ -106,133 +125,30 @@ export default function AICustomerInsightsPage() {
               ]}
               popular={false}
             />
+=======
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our AI Customer Insights solutions can help you understand your customers better.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Email Us
+            </a>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           </div>
         </div>
       </div>
-
-      <div className="bg-gradient-to-r from-teal-50 to-blue-50 border border-teal-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Insight Categories
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <InsightCategory
-            icon="💰"
-            title="Revenue Insights"
-            description="Customer lifetime value, purchase patterns, and revenue optimization opportunities"
-          />
-          <InsightCategory
-            icon="🎯"
-            title="Engagement Insights"
-            description="Customer engagement levels, content preferences, and interaction patterns"
-          />
-          <InsightCategory
-            icon="😊"
-            title="Satisfaction Insights"
-            description="Customer satisfaction scores, sentiment trends, and feedback analysis"
-          />
-          <InsightCategory
-            icon="🔄"
-            title="Retention Insights"
-            description="Churn risk factors, retention strategies, and loyalty program effectiveness"
-          />
-          <InsightCategory
-            icon="📱"
-            title="Behavioral Insights"
-            description="Customer journey mapping, touchpoint analysis, and conversion optimization"
-          />
-          <InsightCategory
-            icon="🔮"
-            title="Predictive Insights"
-            description="Future behavior predictions, market trends, and growth opportunities"
-          />
-        </div>
-      </div>
-
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          Key Benefits
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <BenefitCard
-            icon="📈"
-            title="30% Revenue Increase"
-            description="Data-driven strategies typically increase revenue by 30% within 6 months"
-          />
-          <BenefitCard
-            icon="🎯"
-            title="50% Better Targeting"
-            description="AI-powered segmentation improves marketing campaign effectiveness by 50%"
-          />
-          <BenefitCard
-            icon="💰"
-            title="25% Cost Reduction"
-            description="Optimized marketing spend and reduced churn lower customer acquisition costs"
-          />
-          <BenefitCard
-            icon="⚡"
-            title="Real-time Insights"
-            description="Instant access to customer insights for immediate decision making"
-          />
-          <BenefitCard
-            icon="🔍"
-            title="Deep Understanding"
-            description="Comprehensive view of customer behavior across all touchpoints"
-          />
-          <BenefitCard
-            icon="🚀"
-            title="Competitive Advantage"
-            description="Stay ahead with predictive insights and proactive customer management"
-          />
-        </div>
-      </div>
-
-      <div className="bg-gradient-to-r from-purple-50 to-teal-50 border border-purple-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Data Sources
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <DataSourceCard name="CRM Systems" icon="👥" />
-          <DataSourceCard name="E-commerce" icon="🛒" />
-          <DataSourceCard name="Social Media" icon="📱" />
-          <DataSourceCard name="Email Marketing" icon="📧" />
-          <DataSourceCard name="Website Analytics" icon="🌐" />
-          <DataSourceCard name="Customer Support" icon="🎧" />
-          <DataSourceCard name="Mobile Apps" icon="📱" />
-          <DataSourceCard name="Surveys" icon="📋" />
-        </div>
-      </div>
-
-      <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          Use Cases
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <UseCaseCard
-            icon="🛍️"
-            title="E-commerce Optimization"
-            description="Online retailers optimizing product recommendations, pricing, and customer experience"
-          />
-          <UseCaseCard
-            icon="🏢"
-            title="SaaS Customer Success"
-            description="Software companies improving user onboarding, feature adoption, and retention"
-          />
-          <UseCaseCard
-            icon="🏦"
-            title="Financial Services"
-            description="Banks and fintech companies managing customer relationships and risk"
-          />
-          <UseCaseCard
-            icon="🏥"
-            title="Healthcare Analytics"
-            description="Healthcare providers improving patient engagement and outcomes"
-          />
-        </div>
-      </div>
-
-      <CTA />
     </div>
   );
+<<<<<<< HEAD
 }
 
 function FeatureItem({
@@ -400,3 +316,6 @@ function CTA() {
     </div>
   );
 }
+=======
+}
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

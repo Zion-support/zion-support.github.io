@@ -89,19 +89,8 @@ export default function ServicesPage() {
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI' || s.category === 'AI & Machine Learning').length,
       color: 'from-purple-600 to-indigo-700'
 =======
-      icon: <Brain className="w-6 h-6" />,
-      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI' || s.category === 'AI & Machine Learning').length,
-      marketSize: '$12.5B+',
-      growthRate: '400%'
-    },
-    {
-      name: 'Space Technology & Mining',
-      description: 'AI-powered space exploration and asteroid mining platforms',
-      icon: <Rocket className="w-6 h-6" />,
-      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Space Technology & Mining' || s.category === 'Space Technology & Colonization').length,
-      marketSize: '$70B+',
-      growthRate: '500%'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Manufacturing & Industry 4.0',
@@ -111,19 +100,33 @@ export default function ServicesPage() {
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Manufacturing & Industry 4.0' || s.category === 'Robotics & Automation').length,
       color: 'from-orange-500 to-red-600'
 =======
-      icon: <Factory className="w-6 h-6" />,
-      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Manufacturing & Industry 4.0' || s.category === 'Robotics & Automation').length,
-      marketSize: '$45B+',
-      growthRate: '350%'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Healthcare & Biotechnology',
       description: 'AI-powered biomedical research and drug discovery platforms',
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <FlaskIcon className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length,
       color: 'from-blue-600 to-cyan-700'
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991843.backup.1756001157
+  // Enhanced service highlights
+  const serviceHighlights = [
+    {
+      icon: <Star className="w-8 h-8 text-yellow-400" />,
+      title: '300+ Production-Ready Services',
+      description: 'All services are fully functional and deployed in production, not just mockups or prototypes.',
+      color: 'from-yellow-500 to-orange-600'
+========
+<<<<<<< HEAD
+      icon: <FlaskIcon className="w-6 h-6" />,
+      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length,
+      color: 'from-blue-600 to-cyan-700'
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991970
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     {
       name: 'Cybersecurity',
@@ -183,6 +186,10 @@ export default function ServicesPage() {
     'Research & Development': <Microscope className="w-6 h-6" />,
     'Government & Defense': <ShieldCheck className="w-6 h-6" />,
     'Education & Training': <GraduationCap className="w-6 h-6" />
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991843.backup.1756001157
+========
 =======
   // Get variant for service category
   const getCategoryVariant = (category: string) => {
@@ -329,6 +336,11 @@ export default function ServicesPage() {
       "🌍 Global 24/7 Support"
     ]
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991970
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 
   return (
@@ -434,7 +446,7 @@ export default function ServicesPage() {
                     Show Popular Only
                   </button>
                 </div>
-=======
+
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <Head>
         <title>Micro SaaS Services - Zion Tech Group | 500+ Revolutionary Solutions</title>
@@ -747,7 +759,7 @@ export default function ServicesPage() {
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-=======
+
                   transition={{ duration: 0.6, delay: index * 0.05 }}
                 >
                   <UltraFuturisticCard

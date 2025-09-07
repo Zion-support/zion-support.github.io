@@ -1,6 +1,10 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Brain, Sparkles, Zap, Target, Users, Award, Clock, CheckCircle, Shield, Globe, Lock, TrendingUp, Building, Star, Map, Navigation, ExternalLink, ArrowRight, Handshake, MessageCircle, FileText, Briefcase, BookOpen, Gavel, ShoppingCart, Heart } from 'lucide-react';
 
 export default function Sitemap() {
@@ -393,6 +397,8 @@ export default function Sitemap() {
     </Layout>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
@@ -781,3 +787,7 @@ const SitemapPage: React.FC = () => {
 
 export default SitemapPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

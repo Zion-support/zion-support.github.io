@@ -553,10 +553,14 @@ import ContactForm from '../components/forms/ContactForm';
           </div>
         </div>
       </section>
-=======
+
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 import { 
   Brain, 
@@ -611,6 +615,11 @@ import {
   Server as InfraIcon,
   ShoppingCart,
   Mail
+<<<<<<< HEAD
+} from 'lucide-react';
+
+export default function HomePage() {
+=======
 =======
 import { motion } from 'framer-motion';
 import { 
@@ -621,6 +630,7 @@ import {
 
 export default function HomePage() {
 <<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const heroServices = [
     {
       title: "AI-Powered Business Intelligence",
@@ -643,6 +653,8 @@ export default function HomePage() {
       description: "Enterprise-grade security solutions with SOC 2 compliance and threat detection",
       icon: <Shield className="w-8 h-8" />,
       color: "from-green-500 to-emerald-600",
+<<<<<<< HEAD
+=======
 =======
   const [isVisible, setIsVisible] = useState(false);
 
@@ -676,6 +688,14 @@ export default function HomePage() {
       color: "from-green-500 to-teal-500",
       link: "https://ziontechgroup.com/ai-customer-experience",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+} from 'lucide-react';
+
+export default function HomePage() {
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       price: "$399/month",
       features: ["Threat Detection", "Compliance Reporting", "Penetration Testing", "Security Training"]
     }

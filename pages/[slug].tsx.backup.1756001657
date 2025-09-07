@@ -16,6 +16,13 @@ import { verified2025Additions } from '../data/verified-2025-additions';
 import { realServicesQ12025 } from '../data/real-services-q1-2025';
 import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { realImplementationServices2025 } from '../data/real-implementation-services-2025';
+
+type Service = typeof enhancedRealMicroSaasServices[number];
+
+=======
+<<<<<<< HEAD
 import { realImplementationServices2025 } from '../data/real-implementation-services-2025';
 =======
 import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
@@ -42,6 +49,7 @@ import path from 'path';
 type Service = typeof enhancedRealMicroSaasServices[number];
 
 <<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const service = useMemo(() => {
     if (!slug) return undefined;
     const all: any[] = ([] as any[])
@@ -193,6 +201,8 @@ function extractRootSlugFromLink(link?: string): string | null {
   } catch {
     return null;
   }
+<<<<<<< HEAD
+=======
 =======
 const contactInfo = {
 	mobile: '+1 302 464 0950',
@@ -235,6 +245,14 @@ function getAllServices(): Service[] {
 function toSlug(value: string): string {
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+type Service = typeof enhancedRealMicroSaasServices[number];
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 function getExistingRootPageSlugs(): Set<string> {
@@ -355,6 +373,10 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 						</Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function DynamicPage({ title, slug, description }: PageProps) {
 	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com';
 	const canonical = `${baseUrl.replace(/\/$/, '')}/${slug}/`;
@@ -386,6 +408,8 @@ export default function DynamicPage({ title, slug, description }: PageProps) {
 		</>
 	);
 }
+<<<<<<< HEAD
+=======
 =======
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
@@ -430,3 +454,7 @@ export default function DynamicPage({ title, slug, description }: PageProps) {
 	);
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

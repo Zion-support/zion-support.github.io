@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -458,6 +462,8 @@ export default function PartnersPage() {
 };
 
 export default PartnersPage;
+<<<<<<< HEAD
+=======
 =======
 import Head from 'next/head';
 
@@ -484,3 +490,7 @@ export default function PartnersPage() {
 	);
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

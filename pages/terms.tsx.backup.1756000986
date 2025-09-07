@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -11,6 +15,8 @@ const Terms: NextPage = () => {
         <meta name="description" content="Read Zion Tech Group's terms of service, user agreements, and conditions for using our website and services." />
         <meta name="keywords" content="terms of service, user agreement, legal terms, service conditions" />
       </Head>
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
       ]
@@ -104,6 +110,10 @@ import {
   BookOpen, Lock, Zap, Building, Brain, Rocket
 } from 'lucide-react';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -116,6 +126,10 @@ import {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Terms Content */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -123,6 +137,8 @@ import {
             <div className="mb-8">
               <p className="text-gray-600">
                 <strong>Last updated:</strong> March 15, 2024
+<<<<<<< HEAD
+=======
 =======
 import { motion } from 'framer-motion';
 import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react';
@@ -241,6 +257,10 @@ export default function Terms() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 These terms govern your use of our services and establish our mutual rights and obligations.
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <p className="text-gray-600">
                 These Terms of Service ("Terms") govern your use of Zion Tech Group's website and services. By accessing or using our services, you agree to be bound by these Terms.
@@ -416,6 +436,10 @@ export default function Terms() {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
       </section>
 
@@ -437,6 +461,8 @@ export default function Terms() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
+=======
 =======
         </section>
 
@@ -1453,11 +1479,15 @@ export default function Terms() {
       </div>
     </Layout>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 
 export default Terms;
-=======
+
             </div>
           </section>
 

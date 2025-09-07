@@ -2,6 +2,10 @@ import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AiAutonomousResearchAssistant() {
 	return (
 		<ServiceLanding
@@ -22,6 +26,8 @@ export default function AiAutonomousResearchAssistant() {
 				"One-click share and exports"
 			]}
 			industries={["SaaS", "Consulting", "VC/PE", "Enterprises"]}
+<<<<<<< HEAD
+=======
 =======
 export default function AIAutonomousResearchAssistant() {
 	return (
@@ -43,6 +49,10 @@ export default function AIAutonomousResearchAssistant() {
 			]}
 			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-adc1
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			canonical="https://ziontechgroup.com/ai-autonomous-research-assistant"
 		/>
 	);

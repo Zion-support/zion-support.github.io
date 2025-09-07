@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -253,16 +257,26 @@ export default function Home() {
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
 =======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network, Calendar
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
@@ -271,6 +285,9 @@ import SEOHead from '../components/SEOHead';
 import { ToastContainer, useToast } from '../components/ui/Toast';
 import { Service, Feature, Stat, UpdateItem } from '../types';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -281,7 +298,10 @@ export default function HomePage() {
   }, []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const services = [
+<<<<<<< HEAD
+=======
 =======
   const features: Feature[] = [
     {
@@ -324,6 +344,10 @@ export default function HomePage() {
 
   const services: Service[] = [
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     {
       title: "AI Business Intelligence",
       description: "Transform data into actionable insights with AI-powered analytics",
@@ -354,6 +378,10 @@ export default function HomePage() {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const microSaasServices = [
     {
       category: "Business Intelligence & Analytics",
@@ -607,6 +635,8 @@ export default function HomePage() {
       content: "The cybersecurity solutions provided by Zion Tech Group helped us achieve SOC 2 compliance in record time.",
       rating: 5
     }
+<<<<<<< HEAD
+=======
 =======
   const stats: Stat[] = [
     { number: "500+", label: "Projects Delivered", icon: CheckCircle },
@@ -614,6 +644,10 @@ export default function HomePage() {
     { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
     { number: "24/7", label: "Support Available", icon: Clock }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const updates: UpdateItem[] = [
@@ -639,6 +673,10 @@ export default function HomePage() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>
       <Head>
         <title>Zion Tech Group - Leading AI, IT & Micro SAAS Solutions Provider</title>
@@ -651,6 +689,8 @@ export default function HomePage() {
         <meta name="keywords" content="AI solutions, IT services, micro SAAS, cloud computing, cybersecurity, business intelligence, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
+<<<<<<< HEAD
+=======
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <SEOHead
@@ -661,6 +701,10 @@ export default function HomePage() {
         type="website"
       />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white">
         {/* Header */}
@@ -769,6 +813,10 @@ export default function HomePage() {
           </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Content Categories Overview */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-xl">
@@ -885,6 +933,8 @@ export default function HomePage() {
                 View Report <span aria-hidden>→</span>
               </div>
             </a>
+<<<<<<< HEAD
+=======
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {updates.map((update, index) => (
@@ -906,6 +956,10 @@ export default function HomePage() {
               </motion.a>
             ))}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
 
           {/* View All Content CTA */}
@@ -1202,7 +1256,7 @@ export default function HomePage() {
           </div>
         </footer>
       </div>
-=======
+
     <QuantumHolographicMatrixBackground>
       <div className="min-h-screen bg-black text-white relative overflow-hidden">
         <Head>
@@ -1424,6 +1478,10 @@ export default function HomePage() {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1504,6 +1562,8 @@ export default function HomePage() {
       {/* Footer */}
       <UltraFuturisticFooter2029 />
     </>
+<<<<<<< HEAD
+=======
 =======
       <EnhancedFooter />
 
@@ -1511,8 +1571,12 @@ export default function HomePage() {
       <ToastContainer toasts={toasts} onRemove={removeToast} />
     </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
-  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  );
+
 import Layout from '../components/layout/Layout';
 import Homepage2025 from '../components/Homepage2025';
 

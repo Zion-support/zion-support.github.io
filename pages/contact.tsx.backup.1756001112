@@ -1,7 +1,12 @@
-=======
-=======
+
+
 import React, { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '../components/SEO';
+=======
 <<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
@@ -38,6 +43,10 @@ import Card from '../components/ui/Card';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -165,7 +174,7 @@ export default function ContactPage() {
               <p>✓ 30-day free trial on all services</p>
               <p>✓ 24/7 AI support and emergency hotline</p>
               <p>✓ Custom implementation and training</p>
-=======
+
   const services = [
     'AI Business Intelligence',
     'Quantum Cybersecurity',
@@ -198,10 +207,18 @@ export default function ContactPage() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+=======
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
 =======
     <UltraAdvancedFuturisticBackground>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>Contact Us | Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI, quantum computing, and technology solutions. Contact us for consultations, quotes, and support." />
@@ -506,7 +523,7 @@ export default function ContactPage() {
                       <Clock className="w-4 h-4 text-orange-400" />
                       <span>{office.timezone}</span>
                     </div>
-=======
+
 
       {/* Contact Methods */}
       <section className="py-20 px-6">
@@ -648,6 +665,10 @@ export default function ContactPage() {
                 </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-white font-medium mb-2">
@@ -897,6 +918,8 @@ export default function ContactPage() {
 
       <SmartFooter />
     </div>
+<<<<<<< HEAD
+=======
 =======
         {/* CTA Section */}
         <div className="text-center">
@@ -939,6 +962,10 @@ export default function ContactPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

@@ -20,5 +20,5 @@ const EnhancedHome: NextPage = () => {
 
 export default EnhancedHome;
 =======
-export default function EnhancedHome() { return null; }
->>>>>>> origin/cursor/deploy-zion-omnichain-bridge-and-depin-integration-3253
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

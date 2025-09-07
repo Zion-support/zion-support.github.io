@@ -12,6 +12,10 @@ import {
 
 export default function CommunityPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const communityFeatures = [
     {
       icon: <MessageCircle className="w-8 h-8" />,
@@ -588,6 +592,8 @@ export default function CommunityPage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 	return (
 		<UltraFuturisticBackground>
@@ -609,3 +615,7 @@ export default function CommunityPage() {
 	);
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-5a95
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,12 +1,8 @@
-import React from 'react';
+import React from "react";
 
-interface PrivacyProps {
-  className?: string;
-}
-
-const Privacy: React.FC<PrivacyProps> = ({ className }) => {
+export default function PrivacyPage() {
   return (
-    <div className={className || ''}>
+<div className={className || ""}>
       <h1>Privacy</h1>
       <p>This component is under development.</p>
     </div>

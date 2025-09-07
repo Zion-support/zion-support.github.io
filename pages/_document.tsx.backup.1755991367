@@ -12,17 +12,8 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head />
 =======
-import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-export default class MyDocument extends Document {
-  render() {
-    return (
-      <Html lang="en">
-        <Head>
-          <meta name="theme-color" content="#0ea5e9" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
->>>>>>> origin/cursor/build-zion-ai-talent-profile-system-f64e
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <body className="bg-white dark:bg-black text-gray-900 dark:text-gray-100">
           <Main />
           <NextScript />
@@ -35,5 +26,5 @@ export default class MyDocument extends Document {
 
 export default MyDocument;
 =======
-}
->>>>>>> origin/cursor/build-zion-ai-talent-profile-system-f64e
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

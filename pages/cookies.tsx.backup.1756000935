@@ -1,6 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
@@ -324,6 +328,8 @@ export default function Cookies() {
         </main>
 
         <SmartFooter />
+<<<<<<< HEAD
+=======
 =======
 import { motion } from 'framer-motion';
 import { Cookie, Settings, Eye, BarChart3, Globe, Mail, Phone, MapPin } from 'lucide-react';
@@ -605,6 +611,10 @@ export default function CookiePolicy() {
 
         <EnhancedFooter />
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>
     </>
   );

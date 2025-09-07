@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+}
+=======
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -171,3 +175,4 @@ return publicUrl;
 };
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

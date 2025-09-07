@@ -1,4 +1,4 @@
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -10,6 +10,10 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AboutPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -105,6 +109,8 @@ export default function AboutPage() {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
 =======
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
@@ -288,11 +294,19 @@ const AboutPage: React.FC = () => {
       expertise: "Emerging Technologies, Product Strategy, Innovation",
       avatar: "👩‍🚀"
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Layout
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group's mission, values, and journey in transforming businesses through innovative technology solutions."
@@ -456,6 +470,8 @@ const AboutPage: React.FC = () => {
               {timeline.map((item, index) => (
                 <motion.div
                   key={item.year}
+<<<<<<< HEAD
+=======
 =======
     <>
       <Head>
@@ -572,11 +588,19 @@ const AboutPage: React.FC = () => {
                 <motion.div
                   key={value.title}
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className={`relative flex items-center ${
                     index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                   }`}
@@ -591,6 +615,8 @@ const AboutPage: React.FC = () => {
                       <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                       <p className="text-gray-300">{item.description}</p>
                     </div>
+<<<<<<< HEAD
+=======
 =======
                   className="bg-slate-800/50 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group"
                 >
@@ -685,12 +711,20 @@ const AboutPage: React.FC = () => {
                     <p className="text-cyan-400 font-medium mb-3">{member.role}</p>
                     <p className="text-white/70 text-sm leading-relaxed">{member.expertise}</p>
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
       </section>
 
@@ -749,6 +783,8 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
+=======
 =======
         </section>
 
@@ -782,6 +818,10 @@ const AboutPage: React.FC = () => {
       <EnhancedFooter />
     </>
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

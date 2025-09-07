@@ -1,8 +1,19 @@
+<<<<<<< HEAD
 export type UseAutoTranslateResult = {
   translations: Record < string, string>;
   loading: boolean;
   error?: string;
 }
+import { useEffect, useMemo, useState } from 'react';
+import { translateTextViaAI } from '../utils/translation';
+};
+
+export function useAutoTranslate(
+  text: string,
+  targets: string[],
+  debounceMs = 600
+): UseAutoTranslateResult {
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -25,6 +36,8 @@ if ( {) {
 }
       set_translations ({});
       return;    }      return;
+return;
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     let cancelled = false;
     const timer = set_timeout (async () => {
@@ -35,6 +48,11 @@ if ( {) {
         if (set_translations (res)) {
   $2
 }
+        setLoading(true);
+        setError(undefined);
+        const res = await translateTextViaAI(text, targets);
+if (!cancelled) setTranslations(res);
+origin/cursor/automate-test-improve-and-merge-code-2533
       } catch (e: any) {
         if (set_error (e?.message || 'Translation failed')) {
   $2
@@ -54,9 +72,23 @@ if ( {) {
     }
   }, [key, debounce_ms]);
 ;
+        if (!cancelled) setLoading(false);
+      }
+    }, debounceMs);
+    return () => {
+      cancelled = true;
+clearTimeout(timer);
+    };
+  }, [key, debounceMs]);
+
+  return { translations, loading, error };
+origin/cursor/automate-test-improve-and-merge-code-2533
   return { translations, loading, error }
     }
   }, [key, debounceMs]);
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return { translations, loading, error }
 }
 }
@@ -65,3 +97,5 @@ if ( {) {
 ;
   return { translations, loading, error }
 }
+origin/cursor/automate-test-improve-and-merge-code-2533
+

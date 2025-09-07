@@ -13,10 +13,16 @@ export default function LinkedInRedirect() {
 			<Head>
 				<title>LinkedIn | Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 				<meta name="robots" content="index, follow" />
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
 				<p>Redirecting to LinkedIn...</p>
+<<<<<<< HEAD
+=======
 =======
 				<link rel="canonical" href="https://www.linkedin.com/company/zion-tech-group" />
 				<meta httpEquiv="refresh" content="0;url=https://www.linkedin.com/company/zion-tech-group" />
@@ -27,6 +33,10 @@ export default function LinkedInRedirect() {
 					Continue to LinkedIn
 				</a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-0e1c
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			</div>
 		</>
 	);

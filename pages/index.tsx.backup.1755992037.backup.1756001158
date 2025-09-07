@@ -5,8 +5,8 @@ import Features from '../components/sections/Features';
 <<<<<<< HEAD
 import FeaturedServices from '../components/sections/FeaturedServices';
 =======
-import MicroSaasServices from '../components/sections/MicroSaasServices';
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-a78d
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Code, Lock, Link, QrCode, FileText, Database } from 'lucide-react';
@@ -89,7 +89,7 @@ export default function HomePage() {
       price: 'Starting at $49/month',
       marketSize: '$50B+ global market',
       competitors: 'Stripe, PayPal, Square'
-=======
+
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Code Review Assistant',
       description: 'AI-powered code analysis with security, performance, and maintainability insights. Support for JavaScript, Python, and TypeScript.',
@@ -367,14 +367,8 @@ export default function HomePage() {
         </div>
       </section>
 =======
-      {/* Micro SaaS Services */}
-      <MicroSaasServices
-        title="Our Micro SaaS Portfolio"
-        subtitle="Discover our collection of innovative, AI-powered micro SaaS solutions that solve real business problems. Each service is designed to be powerful, affordable, and easy to use."
-        maxServices={6}
-        featured={true}
-      />
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-a78d
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Technology Stack */}
       <section className="py-24 bg-gray-900">

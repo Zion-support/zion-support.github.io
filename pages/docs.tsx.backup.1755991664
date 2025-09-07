@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -363,6 +367,8 @@ const DocsPage: React.FC = () => {
 };
 
 export default DocsPage;
+<<<<<<< HEAD
+=======
 =======
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -388,3 +394,7 @@ export default function DocsPage() {
 	);
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e274
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

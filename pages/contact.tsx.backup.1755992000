@@ -1,13 +1,13 @@
 export default function Page(){return null}
-=======
-=======
+
+
 import React from 'react';
-=======
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import React from 'react';
 import SEO from '../components/SEO';
-=======
+
 import { 
   Mail, Phone, MapPin, Send, Clock, Globe, MessageSquare, CheckCircle, 
   ArrowRight, Star, Users, Shield, Zap, Brain, Factory, FlaskConical, 
@@ -111,21 +111,8 @@ export default function ContactPage() {
       color: 'from-green-500 to-green-600',
       bgColor: 'from-green-500/10 to-green-600/10'
 =======
-      icon: '📧',
-      title: 'Email',
-      description: 'Get in touch with our team',
-      contact: 'kleber@ziontechgroup.com',
-      color: 'text-cyan-400',
-      gradient: 'from-cyan-400 to-blue-500',
-    },
-    {
-      icon: '📱',
-      title: 'Phone',
-      description: 'Speak with an expert',
-      contact: '+1 302 464 0950',
-      color: 'text-fuchsia-400',
-      gradient: 'from-fuchsia-400 to-purple-500',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-f757
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -162,26 +149,8 @@ export default function ContactPage() {
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and 99.99% uptime guarantee'
 =======
-      city: 'Middletown',
-      country: 'United States',
-      address: '364 E Main St STE 1008, Middletown, DE 19709',
-      icon: '🏢',
-      gradient: 'from-blue-400 to-cyan-500',
-    },
-    {
-      city: 'Global Support',
-      country: 'Worldwide',
-      address: '24/7 Remote Support & Consulting Available',
-      icon: '🌍',
-      gradient: 'from-purple-400 to-pink-500',
-    },
-    {
-      city: 'Cloud Operations',
-      country: 'Multi-Region',
-      address: 'AWS, Azure, GCP Infrastructure Worldwide',
-      icon: '☁️',
-      gradient: 'from-green-400 to-teal-500',
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-f757
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: <Users className="w-5 h-5" />,
@@ -646,7 +615,7 @@ export default function ContactPage() {
           <a href="mailto:kleber@ziontechgroup.com" className="block hover:text-purple-400">kleber@ziontechgroup.com</a>
         </div>
       </div>
-=======
+
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div

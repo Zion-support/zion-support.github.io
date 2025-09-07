@@ -6,7 +6,7 @@ import Button from '../components/ui/Button';
 import QuantumCard from '../components/ui/QuantumCard';
 import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
 import { expandedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/expanded-micro-saas-services';
-=======
+
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
@@ -208,9 +208,8 @@ export default function ServicesPage() {
       marketData: '$3.2B customer service software market, 220% annual growth',
       savings: 'Save 60% vs. competitors'
 =======
-      savings: 'Save 40% vs. competitors',
-      contactInfo: 'Contact: +1 302 464 0950 | kleber@ziontechgroup.com'
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -632,16 +631,13 @@ export default function ServicesPage() {
                 </Button>
               )}
             </div>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
             {/* Services Grid */}
             <div className={`grid gap-8 ${
               viewMode === 'grid' 
 =======
-          ) : (
-                        <div className={`grid gap-8 ${
-                viewMode === 'grid' 
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
                 : 'grid-cols-1'
             }`}>
@@ -770,22 +766,8 @@ export default function ServicesPage() {
                   </div>
                 </QuantumCard>
 =======
-                  <UltraAdvancedFuturisticCard
-                    title={service.name}
-                    description={service.description}
-                    price={`${service.price}${service.period}`}
-                    features={service.features}
-                    link={service.link}
-                    color={service.color}
-                    marketData={`${service.marketSize}, ${service.growthRate}`}
-                    competitors={service.competitors.join(', ')}
-                    savings={`Save ${service.roi.match(/(\d+)%/)?.[1] || '50'}% vs. competitors`}
-                    contactInfo={`Contact: ${service.contactInfo.mobile} | ${service.contactInfo.email}`}
-                    icon={service.icon}
-                    variant={service.variant as any}
-                  />
-                </motion.div>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </section>
@@ -870,22 +852,8 @@ export default function ServicesPage() {
                   </Button>
                 </QuantumCard>
 =======
-                  <UltraAdvancedFuturisticCard
-                    title={service.name}
-                    description={service.description}
-                    price={`${service.price}${service.period}`}
-                    features={service.features}
-                    link={service.link}
-                    color={service.color}
-                    marketData={`${service.marketSize}, ${service.growthRate}`}
-                    competitors={service.competitors.join(', ')}
-                    savings={`Save ${service.roi.match(/(\d+)%/)?.[1] || '50'}% vs. competitors`}
-                    contactInfo={`Contact: ${service.contactInfo.mobile} | ${service.contactInfo.email}`}
-                    icon={service.icon}
-                    variant={service.variant as any}
-                  />
-                </motion.div>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4ac2
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
@@ -931,7 +899,7 @@ export default function ServicesPage() {
     </UltraFuturisticBackground>
   );
 }
-=======
+
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -950,4 +918,4 @@ export default function Placeholder() {
     </main>
   );
 }
-=======
+

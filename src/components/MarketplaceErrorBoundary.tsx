@@ -1,52 +1,69 @@
-import { RefreshCcw, AlertCircle } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface MarketplaceErrorFallbackProps extends FallbackProps {
-  // Additional props if needed
-      resetErrorBoundary()
-    } catch (retryError) {
-      logErrorToProduction('Error during retry:', { data: retryError })
-      Sentry.captureException(retryError)
-    }
-  }
+
+    >
+      {children}
+    </ErrorBoundary>
+  );
+} 
+origin/cursor/automate-test-improve-and-merge-code-2533
+      FallbackComponent={MarketplaceErrorFallback}
+      onError={handleError}>;
+      {children}
+    </ErrorBoundary>;
+  );
+} ;
+  );
+}
+interface MarketplaceErrorBoundaryProps {
+  children: React.ReactNode,
+}
+export function MarketplaceErrorBoundary({ children }:,  MarketplaceErrorBoundaryProps) {
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
+    // Log boundary errors to Sentry
+    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack });
+    Sentry.withScope((scope) => {
+      scope.setTag('errorBoundarymarketplace');
+      scope.setContext('errorInfo', {'
+        componentStack: errorInfo.componentStack || undefined});
+      scope.setLevel('error');
+      Sentry.captureException(error)
+    })
+  };
   return (
-    <div className='flex items-center justify-center min-h-[400px] p-6'>
-      <div className='max-w-md w-full space-y-4'>
-        <Alert variant='destructive'>
-          <AlertCircle className='h-4 w-4' />
-          <AlertDescription className='mt-2'>
-            {error?.message |
-              'An unexpected error occurred while loading marketplace content.'}
-          </AlertDescription>
-        </Alert>
-        <div className='flex flex-col space-y-2'>
-          <Button onClick={handleRetry} className='w-full' variant='default'>
-            <RefreshCcw className='mr-2 h-4 w-4' />
-            Retry
-          </Button>
-          <Button
-            onClick={() => window.location.reload()}
-            variant='outline'
-            className='w-full'          >
-            Reload Page
-          </Button>
-        </div>            variant="outline"
-            className="w-full"
-import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
-import * as Sentry from '@sentry/nextjs';
-import { mutate } from 'swr';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+    <ErrorBoundary
+    <ErrorBoundary;
+      FallbackComponent={MarketplaceErrorFallback}
+      on_error={handle_error}
+    >;
+      {children}
+}
+    </ErrorBoundary>);
+}
+}}}}}}}
+import React from 'react',;
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary',;
+import * as Sentry from '@sentry/nextjs',;
+import { mutate } from 'swr',;
+import { Button } from '@/components/ui/button',;
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',;
 import { RefreshCcw, AlertCircle } from 'lucide-react';
-  return (function MarketplaceErrorFallback(): any ({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface MarketplaceErrorFallbackProps extends FallbackProps {;
+  // Additional props if needed;
+}
+;
+function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {;
   const handleRetry = async () => {;
     try {;
       // Re-call SWR mutate('*') to refresh all cached data;
-      await mutate((,) => true, undefined, { revalidate: true }),;
+      await mutate(() => true, undefined, { revalidate: true }),;
       resetErrorBoundary();
     } catch (retryError) {;
       logErrorToProduction('Error during retry:', { data: retryError }),;
-      Sentry && Sentry.captureException(retryError);
+      Sentry.captureException(retryError);
     }
+  },
+
+  return (
     <div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
         <Alert variant="destructive">
@@ -56,7 +73,6 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>
         </Alert>
-        
         <div className="flex flex-col space-y-2">
           <Button 
             onClick={handleRetry}
@@ -66,7 +82,6 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
             <RefreshCcw className="mr-2 h-4 w-4" />
             Retry
           </Button>
-          
           <Button 
             onClick={() => window.location.reload()}
             variant="outline"
@@ -77,76 +92,16 @@ import { RefreshCcw, AlertCircle } from 'lucide-react';
         </div>
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
-          <a
-            href="mailto: support@example.com"
-            className="text-primary hover:underline"
-
-          >
-
-
-        
-        
-
-        <div className="text-center text-sm text-muted-foreground">
-          If the problem persists, please{' '}
           <a 
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
-
-
+          >
             contact support
-          </a>
+          </Link>
         </div>
       </div>
     </div>
-
-  },;
-  return (;
-    <div className="flex items-center justify-center min-h-[400px] p-6">;
-      <div className="max-w-md w-full space-y-4">;
-        <Alert variant="destructive">;
-          <AlertCircle className="h-4 w-4" />;
-          <AlertTitle>Something went wrong in the marketplace</AlertTitle>;
-          <AlertDescription className="mt-2">;
-            {error?.message || 'An unexpected error occurred while loading marketplace content.'}
-          </AlertDescription>;
-        </Alert>;
-        <div className='flex flex - col space - y-2'>;
-          <Button on_click={handle_retry} className='w - full' variant='default'>;
-            <RefreshCcw className='mr - 2 h - 4 w - 4' />;
-            Retry;
-          </Button>;
-          <Button;
-            on_click={() => window.location.reload ()}
-            variant='outline';
-            className='w - full'          >;
-            Reload Page;
-          </Button>;
-        </div>            variant="outline";
-            className="w - full";
-            on_click={() => window.location.reload ()}
-            variant="outline";
-            className="w - full";
-interface MarketplaceErrorBoundaryProps {
-  children: React.ReactNode
-export function MarketplaceErrorBoundary({
-  children
-}: MarketplaceErrorBoundaryProps) {
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
-    // Log boundary errors to Sentry
-    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {
-      componentStack: errorInfo.componentStack
-    })
-    Sentry.withScope(scope => {
-      scope.setTag('errorBoundary', 'marketplace')
-      scope.setContext('errorInfo', {
-        componentStack: errorInfo.componentStack |undefined
-      })
-      scope.setLevel('error')
-      Sentry.captureException(error)
-    })
-  }
-    <ErrorBoundary 
+  )
   },;
   return (;
     <div className="flex items-center justify-center min-h-[400px] p-6">;
@@ -209,28 +164,82 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     <ErrorBoundary;
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}
-    >
+    >;
       {children}
     </ErrorBoundary>;
   );
 } ;
-
-  );
+    </ErrorBoundary>
+  )
 }
+origin/cursor/automate-test-improve-and-merge-code-2533
+            contact support;
+    </div>"
+    <div className='flex items - center justify - center min - h-[400px] p - 6'>;
+      <div className='max - w-md w - full space - y-4'>;
+        <Alert variant='destructive'>;
 
-interface MarketplaceErrorBoundaryProps {
-  children: React.ReactNode,
-}
+          <AlertCircle className='h - 4 w - 4' />;
 
-export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
-    // Log boundary errors to Sentry
-    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack });
-    Sentry.withScope((scope) => {
-      scope.setTag('errorBoundarymarketplace');
-      scope.setContext('errorInfo', {
-        componentStack: errorInfo.componentStack || undefined});
-      scope.setLevel('error');
-      Sentry.captureException(error)
-    })
-  };
+          <AlertDescription className='mt - 2'>;
+
+          ;
+        <div className='flex flex - col space - y-2'>;
+          <Button on_click={handle_retry} className='w - full' variant='default'>;
+
+            <RefreshCcw className='mr - 2 h - 4 w - 4' />;
+
+          <Button;
+            on_click={() => window.location.reload ()}
+
+        </div>            variant="outline";"
+        </div>;"
+        <div className='text - center text - sm text - muted - foreground'>;
+          <a;
+            href='mailto:support@example.com';
+            className='text - primary hover:underline'          >;
+        <div className="text - center text - sm text - muted - foreground">;"
+            href="mailto: support@example.com";""
+            className="text - primary hover:underline";"
+          </a>;
+        </div>;
+    </div>);
+    );"
+    <div className='flex items-center justify-center min-h-[400px] p-6'>;
+      <div className='max-w-md w-full space-y-4'>;
+
+          <AlertCircle className='h-4 w-4' />;
+
+          <AlertDescription className='mt-2'>;
+
+    <ErrorBoundary;
+  },;
+  return (;
+    <div className="flex items-center justify-center min-h-[400px] p-6">;"
+      <div className="max-w-md w-full space-y-4">;"
+        <Alert variant="destructive">;"
+          <AlertCircle className="h-4 w-4" />;"
+
+          <AlertTitle>Something went wrong in the marketplace;"
+          <AlertDescription className="mt-2">;"
+
+        ;"
+        <div className='flex flex-col space-y-2'>;
+          <Button onClick={handleRetry} className='w-full' variant='default'>;
+
+            <RefreshCcw className='mr-2 h-4 w-4' />;
+
+          <Button;)
+            onClick={() => window && window.location.reload()}
+
+        <div className='text-center text-sm text-muted-foreground'>;
+            href='mailto:support@example && example.com
+            className='text-primary hover:underline'>        ;
+        <div className="text-center text-sm text-muted-foreground">;"
+            href="mailto: support@example && example.com"""
+      FallbackComponent={MarketplaceErrorFallback}
+      onError={handleError}>;
+
+      on_error={handle_error}
+    >;
+pr-12325

@@ -5,7 +5,18 @@ import {
   Brain, Building, Target, Cpu, Shield,
   Check, Phone, Mail, MapPin,
   TrendingUp, Zap, Globe
+<<<<<<< HEAD:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
+} from 'lucide-react';
+
+// Import our new service data
+import { advancedBusinessIntelligenceServices2025 } from '../data/2025-advanced-business-intelligence-services';
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+=======
 } from 'lucide-react',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase.tsx
 
 // Import our new service data,
 import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services',
@@ -16,6 +27,15 @@ import { emergingTechnologyServices } from '../data/2025-emerging-technology-ser
 const ComprehensiveServicesShowcase2025 = () => {
   const [activeTab, setActiveTab] = useState('all'),
 
+<<<<<<< HEAD:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
+  const allServices = [
+    ...advancedBusinessIntelligenceServices2025,
+    ...advancedAIAutomationServices2025,
+    ...innovative2025ITInfrastructureServices,
+    ...innovativeMicroSaasSolutions2025,
+    ...cuttingEdgeAIServices2025
+  ];
+=======
 // Helper function to get service pricing,
 const getServicePricing = (service: any) => {
   if (service.pricing?.starter) return service.pricing.starter,
@@ -52,6 +72,7 @@ const allServices = [
   ...industrySpecificSolutions,
   ...emergingTechnologyServices
 ],
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase.tsx
 
   const categories = [
     { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },
@@ -257,6 +278,10 @@ href={_`tel:${(service as any).mobile || '+1 302 464 0950'}`}
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase.tsx
 
           {_/* Services Display */}
           <AnimatePresence mode="wait">
@@ -529,4 +554,9 @@ href="https://ziontechgroup.com"
   )
 },
 
+<<<<<<< HEAD:components/2025-comprehensive-services-showcase.tsx.backup.1756001147
+<<<<<<< HEAD
+export default ComprehensiveServicesShowcase2025;
+=======
 export default ComprehensiveServicesShowcase,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/temp_broken_files/components/2025-comprehensive-services-showcase.tsx

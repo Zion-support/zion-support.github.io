@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/blockchain-solutions.tsx.backup.1755991364.backup.1756001151
+========
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 
 export default function BlockchainSolutionsPage() {
@@ -10,14 +16,16 @@ export default function BlockchainSolutionsPage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 export default function BlockchainSolutionsPage() {
   return <div className="py-8 text-slate-300">Blockchain Solutions</div>;
 }
 >>>>>>> origin/cursor/build-zion-ai-talent-directory-page-f450
 =======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/blockchain-solutions.tsx.backup.1755991364.backup.1755991589
 import React from "react";
-<<<<<<< HEAD
 
 export default function BlockchainSolutionsPage() {
   return (
@@ -27,29 +35,15 @@ export default function BlockchainSolutionsPage() {
     </main>
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
-import type { NextPage } from 'next';
-import Head from 'next/head';
 
-const BlockchainSolutions: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>BlockchainSolutions - Zion Tech Solutions</title>
-        <meta name="description" content="BlockchainSolutions page" />
-      </Head>
-      
-      <main>
-        <h1>BlockchainSolutions</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  );
-};
 
-export default BlockchainSolutions;
->>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178
-=======
+import React from "react";
+
+
 import Head from "next/head";
 
 const Page: React.FC = () => {
@@ -67,8 +61,9 @@ const Page: React.FC = () => {
 };
 
 export default Page;
-=======
+
 export default function BlockchainSolutions() { return null; }
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

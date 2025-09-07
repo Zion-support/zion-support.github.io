@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 
 export default function AIHealthcareDiagnosticsPage() {
@@ -16,6 +20,8 @@ export default function AIHealthcareDiagnosticsPage() {
 			</div>
 		</>
 	);
+<<<<<<< HEAD
+=======
 =======
 import SEO from '../components/SEO';
 
@@ -30,4 +36,8 @@ export default function AIHealthcareDiagnosticsPage() {
     </div>
   );
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-45bf
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

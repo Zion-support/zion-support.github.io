@@ -8,13 +8,5 @@ export default function AboutPage() {
   );
 }
 =======
-import React from 'react';
 
-export default function AboutPage() {
-  return <div>About Zion</div>;
-}
-=======
-export default function About(){
-  return <div style={{padding:20}}>About Zion</div>
-}
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

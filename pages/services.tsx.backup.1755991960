@@ -10,10 +10,8 @@ import QuantumHolographicBackground from '../components/ui/QuantumHolographicBac
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
 =======
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
-import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-real-micro-saas-services';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d7ba
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 
@@ -133,7 +131,7 @@ export default function ServicesPage() {
       </div>
     </div>
   );
-=======
+
   // Enhanced service categories with better descriptions
   const enhancedCategories = [
     {
@@ -536,7 +534,58 @@ export default function ServicesPage() {
                   Clear All Filters
                 </Button>
               </div>
+<<<<<<< HEAD
             )}
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991833.backup.1756001157
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400 mb-2">30 Days</div>
+                <div className="text-slate-300">Free Trial</div>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 text-lg font-semibold rounded-lg"
+              >
+                Contact Us
+                <Mail className="w-5 h-5 ml-2" />
+              </Button>
+              <Button
+                href="/micro-saas"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 text-lg font-semibold rounded-lg"
+              >
+                View All Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </UltraAdvancedFuturisticBackground>
+=======
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Our Team
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+              <Button
+                href="/pricing"
+                variant="outline"
+                className="border-2 border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
+              >
+                View Enterprise Plans
+              </Button>
+            </div>
+========
+            )}
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991960
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>
         </section>
 
@@ -912,7 +961,7 @@ import Link from 'next/link';
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">200+</div>
                 <div className="text-slate-300">Revolutionary Services</div>
-=======
+
         {/* Services Grid */}
         <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -1021,6 +1070,10 @@ import Link from 'next/link';
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Active Filters Display */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {selectedCategory !== 'All' && (
@@ -1174,6 +1227,8 @@ import Link from 'next/link';
               </Card>
             ))}
           </div>
+<<<<<<< HEAD
+=======
 =======
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -1294,6 +1349,10 @@ import Link from 'next/link';
             </div>
           </motion.div>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d7ba
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         )}
 
         {/* No Results Message */}
@@ -1551,7 +1610,7 @@ import Link from 'next/link';
         </section>
       </div>
     </EnhancedFuturisticBackground>
-=======
+
   );
 };
 

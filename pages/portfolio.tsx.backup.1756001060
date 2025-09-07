@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -6,6 +10,8 @@ import {
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award, 
   Target, Star, Globe, Code, Server, Zap, Heart, Eye, Lightbulb,
   ChevronRight, ArrowRight, CheckCircle, Clock, TrendingUp, ExternalLink, Building
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -14,11 +20,19 @@ import {
   Rocket, Brain, Atom, Shield, Cloud, BarChart3, 
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const PortfolioPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
@@ -525,6 +539,8 @@ const PortfolioPage: React.FC = () => {
                         <li key={idx} className="flex items-center space-x-2 text-sm text-white/80">
                           <CheckCircle className="w-4 h-4 text-cyan-400" />
                           <span>{result}</span>
+<<<<<<< HEAD
+=======
 =======
 export default function PortfolioPage() {
   const projects = [
@@ -744,11 +760,19 @@ export default function PortfolioPage() {
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
                           {result}
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         </li>
                       ))}
                     </ul>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
                   <div className="border-t border-white/10 pt-4">
                     <blockquote className="text-white/80 text-sm italic">
@@ -794,6 +818,8 @@ export default function PortfolioPage() {
 };
 
 export default PortfolioPage;
+<<<<<<< HEAD
+=======
 =======
                   
                   <div className="flex items-center justify-between">
@@ -841,3 +867,7 @@ export default PortfolioPage;
   );
 }
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

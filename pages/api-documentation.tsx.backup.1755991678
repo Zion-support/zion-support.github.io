@@ -4,6 +4,10 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import Card from '../components/ui/Card';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function ApiDocumentationPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -33,6 +37,8 @@ export default function ApiDocumentationPage() {
 						<li>Address: 364 E Main St STE 1008 Middletown DE 19709</li>
 					</ul>
 				</div>
+<<<<<<< HEAD
+=======
 =======
 export default function APIDocumentation() {
 	return (
@@ -50,6 +56,10 @@ export default function APIDocumentation() {
 					<li><a className="text-cyan-400" href="/docs">Developer Docs</a></li>
 				</ul>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			</div>
 		</div>
 	);

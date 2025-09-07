@@ -1,61 +1,59 @@
+
+<<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require('child_process')
+
 
 #!/usr/bin/env node
 const { execSync } = require('child_process')
 
+main
+
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function run(cmd) {
   return execSync(cmd, { stdio: 'inherit' })
 }
+
 function currentBranch() {
   return execSync('git rev-parse --abbrev-ref HEAD').toString().trim()
-}
+
+
 function ensureUpstream() {
   try {
-    execSync('git remote get-url origin', { stdio: 'ignore' })
+  // TODO: Implement
+
   } catch (_) {
     throw new Error('No git remote named origin is configured')
-  }
-}
+
 function commitAll(message) {
   run('git add -A')
-  try {
+  // TODO: Implement
     run(`git commit -m ${JSON.stringify(message)}`)
-  } catch (_) {
-    // no changes to commit
-  }
-}
+    // no changes to commit;
+
 function push(branch) {
-  ensureUpstream()
-  run(`git push -u origin ${branch}`)
-}
+
+
 function mergeIntoMain(fromBranch) {
   ensureUpstream()
   const original = currentBranch()
-  if (original !== 'main') run('git fetch origin main:main')
-  if (currentBranch() !== 'main') run('git checkout main')
-  run(`git merge --no-ff ${fromBranch}`)
-  run('git push origin main')
-  if (currentBranch() !== original) run(`git checkout ${original}`)
-}
+
+
 if (require.main === module) {
   const action = process.argv[2]
   switch (action) {
-    case 'commit-push': {
-      const msg = process.argv[3] || 'chore: automated fixes'
+
       const branch = currentBranch()
       commitAll(msg)
       push(branch)
-      break
-    }
-    case 'merge-into-main': {
-      const branch = process.argv[3] || currentBranch()
-      mergeIntoMain(branch)
-      break
-    }
-    default:
-      console.log('Usage: git-workflow.cjs <commit-push|merge-into-main> [arg]')
-  }
-}
+      break;
 
-module.exports = { run, currentBranch, commitAll, push, mergeIntoMain }

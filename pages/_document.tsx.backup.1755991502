@@ -8,10 +8,8 @@ class MyDocument extends Document {
   }
 
 =======
-import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-class MyDocument extends Document {
->>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   render() {
     return (
       <Html lang="en">
@@ -28,5 +26,5 @@ class MyDocument extends Document {
 <<<<<<< HEAD
 export default MyDocument;
 =======
-export default MyDocument;
->>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

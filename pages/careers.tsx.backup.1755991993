@@ -4,6 +4,10 @@ import Head from 'next/head';
 export default function Careers() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>
       <Head>
         <title>Careers | Zion Tech Group</title>
@@ -15,6 +19,8 @@ export default function Careers() {
           <h1 className="text-4xl font-bold mb-6">Careers</h1>
           <p className="text-gray-300 mb-8">We are always looking for exceptional talent. Check back soon for open positions and hiring updates.</p>
           <a className="text-cyan-400 hover:text-cyan-300 underline" href="mailto:careers@ziontechgroup.com">careers@ziontechgroup.com</a>
+<<<<<<< HEAD
+=======
 =======
     <UltraFuturisticBackground>
       <div className="min-h-screen">
@@ -244,6 +250,10 @@ export default function Careers() {
             </motion.div>
           </div>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ec1e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         </section>
       </div>
     </>

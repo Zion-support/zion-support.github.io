@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import Head from 'next/head';
     message: '',
     service: 'general'
   });
+<<<<<<< HEAD
+=======
 =======
 export default function Page(){return null}
 =======
@@ -30,6 +36,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -397,7 +407,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
         </div>
       </main>
     </div>
-=======
+
 import { useState } from 'react';
 
 const Contact: NextPage = () => {
@@ -411,6 +421,10 @@ const Contact: NextPage = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+=======
 <<<<<<< HEAD
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 =======
@@ -438,6 +452,10 @@ const Contact: NextPage = () => {
     .filter(service => service.popular)
     .slice(0, 6);
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -463,18 +481,32 @@ const Contact: NextPage = () => {
         message: ''
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000);
     }, 2000);
+<<<<<<< HEAD
+=======
 =======
     }, 3000);
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 
   const contactMethods = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       title: "Email Us",
       description: "Send us a message and we'll get back to you within 24 hours",
       contact: "info@ziontechgroup.com",
@@ -529,6 +561,8 @@ const Contact: NextPage = () => {
                 <p className="text-gray-600 mb-4">{method.description}</p>
                 <p className="text-blue-600 font-medium">{method.contact}</p>
               </div>
+<<<<<<< HEAD
+=======
 =======
       icon: '📧',
       title: 'Email',
@@ -1033,12 +1067,20 @@ const Contact: NextPage = () => {
                 </UltraFuturisticCard>
               </motion.div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             ))}
           </div>
         </div>
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Contact Form & Info */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -1276,6 +1318,8 @@ const Contact: NextPage = () => {
 };
 
 export default ContactPage;
+<<<<<<< HEAD
+=======
 =======
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
@@ -1567,5 +1611,9 @@ export default ContactPage;
       </UltraFuturisticBackground>
     </div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

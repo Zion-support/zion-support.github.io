@@ -15,5 +15,5 @@ export default class MyDocument extends Document {
 <<<<<<< HEAD
 }
 =======
-}
->>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

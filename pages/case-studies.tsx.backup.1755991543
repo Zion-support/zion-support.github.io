@@ -1,10 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, TrendingUp, Users, DollarSign, Clock, ArrowRight, Star, CheckCircle, Target, Rocket, Brain, Atom } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -16,6 +24,10 @@ import {
 } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const CaseStudiesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
@@ -177,6 +189,8 @@ const CaseStudiesPage: React.FC = () => {
     const matchesIndustry = selectedIndustry === 'all' || study.industry === selectedIndustry;
     return matchesSearch && matchesIndustry;
   });
+<<<<<<< HEAD
+=======
 =======
 const caseStudies = [
   {
@@ -344,12 +358,20 @@ const testimonials = [
   }
 ];
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <Layout>
       <main className="relative z-10 pt-8">
         {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <motion.div
@@ -401,6 +423,8 @@ const testimonials = [
 
             <div className="space-y-8">
               {caseStudies.filter(study => study.featured).map((study, index) => (
+<<<<<<< HEAD
+=======
 =======
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10" />
@@ -630,12 +654,20 @@ const testimonials = [
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <motion.div
                   key={study.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30 overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="p-8">
@@ -716,6 +748,8 @@ const testimonials = [
                         </a>
                       </div>
                     </div>
+<<<<<<< HEAD
+=======
 =======
                   viewport={{ once: true }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 text-center"
@@ -733,6 +767,10 @@ const testimonials = [
                     <div className="text-sm text-gray-400">{testimonial.position}</div>
                     <div className="text-sm text-gray-400">{testimonial.company}</div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
@@ -741,6 +779,10 @@ const testimonials = [
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Search and Filter */}
         <section className="py-12 px-4">
           <div className="max-w-6xl mx-auto">
@@ -874,6 +916,8 @@ const testimonials = [
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join the ranks of successful companies that have transformed their business with our technology solutions
+<<<<<<< HEAD
+=======
 =======
         {/* CTA Section */}
         <section className="py-20 px-4">
@@ -890,11 +934,19 @@ const testimonials = [
               <p className="text-xl text-gray-300 mb-8">
                 Let's discuss how our revolutionary technology solutions can transform your business
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
                 >
                   Start Your Transformation
@@ -905,6 +957,8 @@ const testimonials = [
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Explore Our Services
+<<<<<<< HEAD
+=======
 =======
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
@@ -916,6 +970,10 @@ const testimonials = [
                 >
                   Schedule Consultation
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               </div>
             </motion.div>

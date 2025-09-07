@@ -4,6 +4,10 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import Card from '../components/ui/Card';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function APIDocumentationPage() {
 	return (
 		<UltraFuturisticBackground variant="holographic" intensity="high">
@@ -34,6 +38,8 @@ export default function APIDocumentationPage() {
 				<div className="mt-8 text-sm text-gray-400">Questions? Call +1 302 464 0950.</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
+=======
 =======
 export default function ApiDocumentationPage() {
 	return (
@@ -67,5 +73,9 @@ export default function ApiDocumentationPage() {
 			</div>
 		</div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-bb37
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	);
 }

@@ -1,4 +1,5 @@
 
+=======
 import React from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -13,25 +14,10 @@ const MobileAppPage:React.FC = () => {;
   return (;
     <AppLayout>;
       <SEO ;
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         title="Zion AI Marketplace App";
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now.";
         keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs";
       />;
-      ;
-      <MobileAppHero />;
-      ;
-      <AppFeatures />;
-      ;
-      <AppScreenshots />;
-      ;
-      <AppTestimonials />;
-      ;
-      <DownloadSection />;
-      ;
-      <AppStoreBanner />;
-    </AppLayout>;
-  ),;
-},;
-;
-export default MobileAppPage,; const MobileAppPage: React.FC = () => {
-  return (<AppLayout> <SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now." keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs" 
+<<<<<<< HEAD
+

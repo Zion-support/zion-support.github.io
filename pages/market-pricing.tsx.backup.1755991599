@@ -257,6 +257,11 @@ export default function MarketPricing() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $0–$500/month for hosted tools; internal policies recommended.</div>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/market-pricing.tsx.backup.1755992086.backup.1756001155
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">LLM & AI Platforms</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -315,6 +320,10 @@ export default function MarketPricing() {
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $15–$200/month depending on volume and features.</div>
             </div>
 
+<<<<<<< HEAD
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/market-pricing.tsx.backup.1755991599
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="bg-black/30 rounded-2xl border border-pink-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Contact Center & Voice AI</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -423,6 +432,10 @@ export default function MarketPricing() {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Competitive Analysis Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -506,6 +519,8 @@ export default function MarketPricing() {
                 </div>
               </motion.div>
             ))}
+<<<<<<< HEAD
+=======
 =======
           <div className="space-y-6">
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
@@ -761,6 +776,10 @@ export default function MarketPricing() {
           <div className="text-center text-slate-400 mt-10">
             Need help benchmarking? <a href="/contact" className="text-cyan-400 underline">Contact us</a> — we align to transparent, vendor-verifiable pricing.
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1967
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>

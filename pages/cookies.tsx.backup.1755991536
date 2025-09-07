@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { Shield, Cookie, Settings, Eye, Lock, Database } from 'lucide-react';
 import Link from 'next/link';
@@ -232,6 +236,8 @@ const CookiePolicy = () => {
 };
 
 export default CookiePolicy;
+<<<<<<< HEAD
+=======
 =======
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -787,3 +793,7 @@ const CookiesPage: React.FC = () => {
 
 export default CookiesPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

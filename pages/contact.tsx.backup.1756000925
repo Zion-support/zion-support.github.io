@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -89,6 +93,8 @@ export default function ContactPage() {
     "Quantum Neural Networks",
     "Custom AI Development",
     "Other"
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -177,17 +183,27 @@ export default function ContactPage() {
       answer: "We implement enterprise-grade security including end-to-end encryption, multi-factor authentication, regular security audits, and compliance with SOC 2, GDPR, and other industry standards."
     }
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   return (
     <>
       <Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Contact Zion Tech Group for AI, quantum computing, and autonomous technology solutions. Get expert consultation and support for your innovation needs." />
         <meta name="keywords" content="contact Zion Tech Group, AI consultation, quantum computing support, autonomous technology help" />
         <meta property="og:title" content="Contact Us - Zion Tech Group" />
         <meta property="og:description" content="Get in touch with our experts for AI and quantum technology solutions." />
+<<<<<<< HEAD
+=======
 =======
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group. Contact our experts for AI, quantum computing, cybersecurity, and space technology solutions. We're here to help transform your business." />
@@ -195,6 +211,10 @@ export default function ContactPage() {
         <meta property="og:title" content="Contact Us - Zion Tech Group" />
         <meta property="og:description" content="Get in touch with Zion Tech Group. Contact our experts for AI, quantum computing, cybersecurity, and space technology solutions." />
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/contact" />
       </Head>
@@ -202,6 +222,10 @@ export default function ContactPage() {
       <EnhancedNavigation />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <main className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-6">
@@ -511,6 +535,8 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
+<<<<<<< HEAD
+=======
 =======
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -752,12 +778,24 @@ export default function ContactPage() {
       {/* Contact Form */}
       <EnhancedContactForm />
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <EnhancedFooter />
     </>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

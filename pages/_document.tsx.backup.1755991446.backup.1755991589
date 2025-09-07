@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
 class MyDocument extends Document {
@@ -8,16 +12,25 @@ class MyDocument extends Document {
     return { ...initialProps };
   }
 
+<<<<<<< HEAD
+=======
 =======
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 export default class MyDocument extends Document {
 >>>>>>> origin/cursor/create-and-automate-service-index-page-b746
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   render() {
     return (
       <Html lang="en">
         <Head />
         <body>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
@@ -29,6 +42,7 @@ export default class MyDocument extends Document {
         <Head />
         <body className="min-h-full bg-white dark:bg-black">
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Main />
           <NextScript />
         </body>
@@ -41,10 +55,23 @@ export default class MyDocument extends Document {
 
 export default MyDocument;
 =======
+<<<<<<< HEAD
+}
+
+export default MyDocument;
+=======
 }
 >>>>>>> origin/cursor/create-and-automate-service-index-page-b746
 =======
 =======
+=======
+
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export default class ZionDocument extends Document {
 	render() {
 		return (
@@ -66,6 +93,11 @@ export default class ZionDocument extends Document {
 			</Html>
 		);
 	}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-and-automate-web-app-with-ai-ae0d
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+

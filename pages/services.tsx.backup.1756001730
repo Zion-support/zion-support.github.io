@@ -81,7 +81,7 @@ export default function ServicesPage() {
     ...innovativeAIServices,
     ...emergingTechAdvancedServices,
     ...itInfrastructureServices
-=======
+
     ...newOperationalServices2025,
     ...realServicesQ12025,
     ...realEnterpriseServices2025,
@@ -117,7 +117,7 @@ export default function ServicesPage() {
     { id: 'finance', name: 'Financial Technology', icon: <DollarSign className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'iot', name: 'IoT & Edge Computing', icon: <Wifi className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge')).length }
   ];
-=======
+
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -143,6 +143,10 @@ import { real2026Q2Services } from '../data/real-2026-q2-services';
 
 // Import existing service data
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
@@ -153,6 +157,8 @@ import { marketReadyServices } from '../data/market-ready-services';
 import { marketValidatedServices } from '../data/market-validated-services';
 import { industryRealServices } from '../data/industry-real-services';
 import { real2025Q4AdditionsBatch2 } from '../data/real-2025-q4-additions-batch2';
+<<<<<<< HEAD
+=======
 =======
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
 import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
@@ -161,6 +167,10 @@ import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
 import { newRealServices2026 } from '../data/2025-2026-new-real-services';
 import { additionalRealMicroSaas2026 } from '../data/2026-additional-real-micro-saas';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78c2
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 // Helper function to get service category
 const getServiceCategory = (service: any) => {
@@ -207,6 +217,10 @@ const allServices = [
   ...innovativeMicroSaasSolutions,
   ...cuttingEdgeAIServices,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ...real2026Q2Services,
   ...realMicroSaasServices,
   ...innovativeAIServices,
@@ -218,6 +232,8 @@ const allServices = [
   ...marketValidatedServices,
   ...industryRealServices,
   ...real2025Q4AdditionsBatch2
+<<<<<<< HEAD
+=======
 =======
   ...realMicroSaasServices2025,
   ...innovativeAIServices2025,
@@ -226,6 +242,10 @@ const allServices = [
   ...newRealServices2026,
   ...additionalRealMicroSaas2026
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78c2
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ];
 
 const categories = [
@@ -465,7 +485,7 @@ export default function Services() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
-=======
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Head>
@@ -627,7 +647,7 @@ export default function Services() {
 
       <EnhancedFooter />
     </>
-=======
+
       {/* Services Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -744,7 +764,7 @@ export default function Services() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-=======
+
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                 >

@@ -11,4 +11,8 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
+<<<<<<< HEAD
   matcher: ['/dashboard/dashboard/']},
+=======
+  matcher: ['/dashboard/dashboard/']},;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

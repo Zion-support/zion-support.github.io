@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Clock, MessageCircle, 
   ArrowRight, Send, Building, Globe, Users,
   CheckCircle, AlertCircle, Star, Sparkles
+<<<<<<< HEAD
+=======
 =======
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
@@ -17,6 +23,10 @@ import {
   Send, CheckCircle, AlertCircle, Building,
   Globe, Users, Target, Award
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
@@ -45,12 +55,21 @@ const ContactPage: React.FC = () => {
     // Simulate form submission
     setTimeout(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      setSubmitStatus('success');
+      setIsSubmitting(false);
+=======
+<<<<<<< HEAD
       setSubmitStatus('success');
       setIsSubmitting(false);
 =======
       setIsSubmitting(false);
       setSubmitStatus('success');
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setFormData({
         name: '',
         email: '',
@@ -60,6 +79,10 @@ const ContactPage: React.FC = () => {
         message: ''
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }, 2000);
   };
 
@@ -70,6 +93,8 @@ const ContactPage: React.FC = () => {
     website: 'https://ziontechgroup.com',
     hours: 'Monday - Friday: 9:00 AM - 6:00 PM EST'
   };
+<<<<<<< HEAD
+=======
 =======
       
       // Reset success message after 5 seconds
@@ -108,11 +133,20 @@ const ContactPage: React.FC = () => {
     }
   ];
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const services = [
     'AI & Machine Learning',
     'Quantum Computing',
     'IT Infrastructure',
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Business Automation',
+    'Micro SAAS Solutions',
+=======
 <<<<<<< HEAD
     'Business Automation',
     'Micro SAAS Solutions',
@@ -120,6 +154,10 @@ const ContactPage: React.FC = () => {
     'Micro SAAS Solutions',
     'Business Automation',
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     'Customer Success',
     'Marketing & Sales',
     'Finance & Legal',
@@ -131,6 +169,10 @@ const ContactPage: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Layout>
       <main className="relative z-10 pt-8">
         {/* Hero Section */}
@@ -339,6 +381,8 @@ const ContactPage: React.FC = () => {
                       Proven track record of success
                     </li>
                   </ul>
+<<<<<<< HEAD
+=======
 =======
     <ErrorBoundary>
       <SEOOptimizer />
@@ -704,6 +748,10 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
 
                 <div>
@@ -954,6 +1002,10 @@ const ContactPage: React.FC = () => {
               </motion.div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>
         </section>
 
@@ -1084,12 +1136,18 @@ const ContactPage: React.FC = () => {
         </section>
       </main>
     </Layout>
+<<<<<<< HEAD
+=======
 =======
           </section>
         </main>
       </Layout>
     </ErrorBoundary>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

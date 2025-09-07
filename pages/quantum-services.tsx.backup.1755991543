@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Atom, Zap, Shield, Target, TrendingUp, Users, Globe, Rocket, Brain, Lock } from 'lucide-react';
@@ -103,6 +107,8 @@ export default function QuantumServices() {
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
+<<<<<<< HEAD
+=======
 =======
 import { motion } from 'framer-motion';
 import { Atom, Brain, Shield, Rocket, Target, Users, Globe, Star, Zap } from 'lucide-react';
@@ -213,11 +219,19 @@ export default function QuantumServices() {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10" />
           <div className="relative z-10 max-w-7xl mx-auto text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-500 to-purple-600 bg-clip-text text-transparent">
                 Quantum Technology
@@ -233,6 +247,8 @@ export default function QuantumServices() {
                   Schedule a Demo
                 </button>
               </div>
+<<<<<<< HEAD
+=======
 =======
               className="mb-8"
             >
@@ -243,10 +259,20 @@ export default function QuantumServices() {
                 Breakthrough quantum computing solutions and cutting-edge emerging technologies that define the future
               </p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Services Grid */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+=======
 <<<<<<< HEAD
         {/* Services Grid */}
         <section className="py-20 px-4">
@@ -256,6 +282,10 @@ export default function QuantumServices() {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -264,6 +294,10 @@ export default function QuantumServices() {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
                 Quantum Services Portfolio
               </h2>
@@ -291,6 +325,8 @@ export default function QuantumServices() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent mb-6">
                 Quantum Computing Solutions
@@ -325,10 +361,18 @@ export default function QuantumServices() {
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <Star className="w-4 h-4 text-purple-400 mr-2" />
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {feature}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text-blue-400 font-semibold text-lg">{service.price}</div>
+=======
 <<<<<<< HEAD
                   <div className="text-blue-400 font-semibold text-lg">{service.price}</div>
 =======
@@ -342,12 +386,22 @@ export default function QuantumServices() {
                     </button>
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Applications Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-blue-900/30 to-black/50">
+          <div className="max-w-6xl mx-auto">
+=======
 <<<<<<< HEAD
         {/* Applications Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-blue-900/30 to-black/50">
@@ -357,6 +411,10 @@ export default function QuantumServices() {
         <section className="py-20 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -365,6 +423,10 @@ export default function QuantumServices() {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
                 Quantum Applications
               </h2>
@@ -388,6 +450,8 @@ export default function QuantumServices() {
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-white">{application.title}</h3>
                   <p className="text-gray-400">{application.description}</p>
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
                 Emerging Technologies
@@ -435,6 +499,10 @@ export default function QuantumServices() {
                     </button>
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -442,6 +510,10 @@ export default function QuantumServices() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -483,10 +555,16 @@ export default function QuantumServices() {
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-blue-900/30 to-black/50">
+<<<<<<< HEAD
+=======
 =======
         {/* CTA Section */}
         <section className="py-20 px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -495,6 +573,10 @@ export default function QuantumServices() {
               viewport={{ once: true }}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
                 Ready for the Quantum Future?
               </h2>
@@ -507,6 +589,8 @@ export default function QuantumServices() {
                 </button>
                 <button className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                   Contact Quantum Experts
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-cyan-500 bg-clip-text text-transparent mb-6">
                 Ready for the Quantum Future?
@@ -521,6 +605,10 @@ export default function QuantumServices() {
                 <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                   Learn More
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </button>
               </div>
             </motion.div>

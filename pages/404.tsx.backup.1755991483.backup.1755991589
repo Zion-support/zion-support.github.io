@@ -1,3 +1,7 @@
+
+<<<<<<< HEAD
+const 404: NextPage = () => {
+=======
 <<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -7,6 +11,9 @@ const 404: NextPage = () => {
 =======
 const NotFound404: NextPage = () => {
 >>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <div>
       <Head>
@@ -22,6 +29,10 @@ const NotFound404: NextPage = () => {
   );
 };
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default 404;
+=======
 <<<<<<< HEAD
 export default 404;
 =======
@@ -43,3 +54,10 @@ export default function NotFoundPage() {
 }
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

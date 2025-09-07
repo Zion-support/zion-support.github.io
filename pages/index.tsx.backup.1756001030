@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Hero from '../components/sections/Hero';
@@ -86,6 +90,10 @@ export default function HomePage() {
       price: 'Starting at $49/month',
       marketSize: '$50B+ global market',
       competitors: 'Stripe, PayPal, Square'
+<<<<<<< HEAD
+
+  return (
+=======
 =======
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Code Review Assistant',
@@ -275,6 +283,7 @@ import ContactForm from '../components/forms/ContactForm';
 
   return (
 <<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>
       <Head>
         <title>Zion Tech Group — AI-Powered Micro SaaS Services with Competitive Pricing</title>
@@ -315,6 +324,8 @@ import ContactForm from '../components/forms/ContactForm';
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 =======
     <Layout>
       <HeroSection />
@@ -324,6 +335,13 @@ import ContactForm from '../components/forms/ContactForm';
   );
 };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b8f6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+  return (
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Platform Capabilities */}
       <Features

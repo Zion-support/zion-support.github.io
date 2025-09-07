@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { 
   Check, Star, ArrowRight, Zap, Shield, 
@@ -151,6 +155,8 @@ export default function Pricing() {
       ],
       popular: false,
       color: 'from-emerald-500 to-teal-600'
+<<<<<<< HEAD
+=======
 =======
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -176,11 +182,19 @@ const Pricing: React.FC = () => {
       cta: 'Get Started',
       href: '/contact'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: <TrendingUp className="w-8 h-8 text-blue-400" />,
       monthlyPrice: 299,
       yearlyPrice: 2990,
@@ -198,6 +212,8 @@ const Pricing: React.FC = () => {
       ],
       popular: true,
       color: 'from-blue-500 to-indigo-600'
+<<<<<<< HEAD
+=======
 =======
       price: '$999',
       period: 'month',
@@ -216,11 +232,19 @@ const Pricing: React.FC = () => {
       cta: 'Start Free Trial',
       href: '/contact'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       name: 'Enterprise',
       description: 'For large organizations with complex needs',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: <Crown className="w-8 h-8 text-purple-400" />,
       monthlyPrice: 999,
       yearlyPrice: 9990,
@@ -298,6 +322,8 @@ const Pricing: React.FC = () => {
       description: 'Comprehensive training for your team',
       price: 200,
       period: 'person'
+<<<<<<< HEAD
+=======
 =======
       price: '$1,999',
       period: 'month',
@@ -368,11 +394,19 @@ const Pricing: React.FC = () => {
       description: 'Seamless transition to our platforms',
       price: 'From $1,000'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -694,6 +728,10 @@ const Pricing: React.FC = () => {
 };
 
 export default Pricing;
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/pricing.tsx.backup.1755991379.backup.1756001156
+========
 =======
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
@@ -908,3 +946,8 @@ export default Pricing;
 
 export default Pricing;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/pricing.tsx.backup.1755991522
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

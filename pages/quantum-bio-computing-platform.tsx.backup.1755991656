@@ -5,6 +5,10 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 export default function QuantumBioComputingPlatformPage() {
 	return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>Quantum Bio-Computing Platform | Zion Tech Group</title>
@@ -14,6 +18,8 @@ export default function QuantumBioComputingPlatformPage() {
 			<div className="container mx-auto px-4 py-24 text-white">
 				<h1 className="text-4xl md:text-6xl font-bold mb-4">Quantum Bio-Computing Platform</h1>
 				<p className="text-gray-300 max-w-3xl">Exploring quantum-biological computation. Contact: +1 302 464 0950 • kleber@ziontechgroup.com.</p>
+<<<<<<< HEAD
+=======
 =======
 		<UltraFuturisticBackground>
 			<Head>
@@ -31,6 +37,10 @@ export default function QuantumBioComputingPlatformPage() {
 					<li>Ethics and safety considerations</li>
 				</ul>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-b32e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			</div>
 		</UltraFuturisticBackground>
 	);

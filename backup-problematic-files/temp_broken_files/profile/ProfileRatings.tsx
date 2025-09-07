@@ -1,6 +1,12 @@
 
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from "react",;
+import { Star } from "lucide-react",;
+=======
 import { useState, useEffect } from "react",;
 import { Star } from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ReviewStats } from "@/components/reviews/ReviewStats",;
 import { ReviewsList } from "@/components/reviews/ReviewsList",;
 import { useReviews } from "@/hooks/useReviews",;
@@ -58,30 +64,47 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 } Pr
             ;
             <TabsContent value="all">;
               <ReviewsList;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />;
             </TabsContent>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
             ;
             <TabsContent value="positive">;
               <ReviewsList;
                 reviews={reviews.filter((r) => r.rating >= 4)}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />;
             </TabsContent>;
+<<<<<<< HEAD
+
+=======
             ;
             <TabsContent value="critical">;
               <ReviewsList;
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               />;
             </TabsContent>;
           </Tabs>;
         </div>;
       </div>;
+<<<<<<< HEAD
+
+}
+=======
     </div>;
   ),; interface ProfileRatingsProps {;
   userId: string;
@@ -127,3 +150,4 @@ reviews.forEach ( (review) => {;
 }onReportReview= {;
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;"}"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

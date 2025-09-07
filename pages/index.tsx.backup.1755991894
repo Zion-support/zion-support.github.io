@@ -14,6 +14,10 @@ const HomePage: React.FC = () => {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function Home() {
   return (
     <>
@@ -24,6 +28,8 @@ export default function Home() {
         </main>
       </Layout>
     </>
+<<<<<<< HEAD
+=======
 =======
   // Enhanced service advertising content with real market data and competitive advantages
   const serviceHighlights = [
@@ -676,5 +682,9 @@ export default function Home() {
       </div>
     </QuantumHolographicMatrixBackground>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-98d9
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

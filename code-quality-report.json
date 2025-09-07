@@ -1,6 +1,5 @@
 {
-  "timestamp": "2025-09-06T17:35:18.805Z",
-  "totalIssues": 204,
+
   "issues": [
     {
       "file": "/workspace/src/components/AIListingGenerator.tsx",
@@ -1022,6 +1021,9 @@
       "type": "any",
       "message": "TypeScript any type used - consider more specific typing"
     }
+
+  ]
+}
   ],
   "summary": {
     "consoleLogs": 8,
@@ -1029,3 +1031,6 @@
     "anyTypes": 193
   }
 }
+  ]
+}
+origin/cursor/fix-syntax-push-and-merge-to-main-8452

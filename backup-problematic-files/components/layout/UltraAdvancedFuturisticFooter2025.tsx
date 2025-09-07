@@ -78,6 +78,15 @@ const footerSections: FooterSection[] = [;
 ],
 
 const socialLinks = [
+<<<<<<< HEAD:components/layout/UltraAdvancedFuturisticFooter2025.tsx.backup.1756001073
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" />, color: 'hover:text-blue-400' },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" />, color: 'hover:text-sky-400' },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" />, color: 'hover:text-blue-600' },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" />, color: 'hover:text-pink-500' },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" />, color: 'hover:text-red-500' },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" />, color: 'hover:text-gray-400' }
+];
+=======
   { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
   { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
   { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
@@ -90,6 +99,7 @@ const quickLinks = [;
   { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },;
   { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
 ],
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/components/layout/UltraAdvancedFuturisticFooter2025.tsx
 
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
@@ -336,6 +346,51 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD:components/layout/UltraAdvancedFuturisticFooter2025.tsx.backup.1756001073
+                  >
+                    Subscribe
+                  </motion.button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Bottom Section - Copyright & Links */}
+        <div className="border-t border-gray-800/50 bg-black/20">
+          <div className="container mx-auto px-4 py-8">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
+              {/* Copyright */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center lg:text-left"
+              >
+                <p className="text-gray-400 text-sm">
+                  © 2025 Zion Tech Group. All rights reserved. 
+                  <span className="text-cyan-400 ml-2">Revolutionizing Technology</span>
+                </p>
+              </motion.div>
+
+              {/* Bottom Links */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="flex flex-wrap items-center gap-6 text-sm"
+              >
+                <Link href="/about" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  About
+                </Link>
+                <Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  Services
+                </Link>
+                <Link href="/contact" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  Contact
+                </Link>
+                <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+=======
                   >;
                     Subscribe;
                   </motion.button>;
@@ -357,10 +412,21 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
               <div className="text-gray-400 text-sm">
                  2024 Zion Tech Group. All rights reserved. | 
                 <Link href="/privacy" className="hover:text-white transition-colors duration-200 ml-2">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/components/layout/UltraAdvancedFuturisticFooter2025.tsx
                   Privacy Policy
                 </a> | 
                 <Link href="/terms" className="hover:text-white transition-colors duration-200 ml-2">
                   Terms of Service
+<<<<<<< HEAD:components/layout/UltraAdvancedFuturisticFooter2025.tsx.backup.1756001073
+                </Link>
+                <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  Cookie Policy
+                </Link>
+                <Link href="/sitemap" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+                  Sitemap
+                </Link>
+              </motion.div>
+=======
                 </a>
               </div>
               
@@ -381,6 +447,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   <span>Space Technology</span>
                 </div>
               </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/components/layout/UltraAdvancedFuturisticFooter2025.tsx
             </div>
           </div>
         </motion.div>

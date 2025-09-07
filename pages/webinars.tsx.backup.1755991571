@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { 
   Video, Calendar, Clock, Users, ArrowRight, 
@@ -28,17 +32,27 @@ export default function WebinarsPage() {
 		}
 	];
 
+<<<<<<< HEAD
+=======
 =======
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 export default function WebinarsPage() {
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-d08b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	return (
 		<>
 			<Head>
 				<title>Webinars | Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 				<meta name="description" content="On-demand and upcoming webinars from Zion Tech Group on AI, automation, and enterprise IT." />
 				<link rel="canonical" href="https://ziontechgroup.com/webinars/" />
 			</Head>
@@ -71,6 +85,8 @@ export default function WebinarsPage() {
 		</>
 	);
 }
+<<<<<<< HEAD
+=======
 =======
 				<meta name="description" content="On-demand and upcoming webinars from Zion Tech Group." />
 				<link rel="canonical" href="https://ziontechgroup.com/webinars/" />
@@ -85,3 +101,7 @@ export default function WebinarsPage() {
 	);
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-d08b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,3 +1,68 @@
+<<<<<<< HEAD
+
+                    </Button>;
+                    <Button;
+                      variant="ghost";
+                      size="icon";
+
+                    <FormControl>;
+                      <Input placeholder="Google, Microsoft, etc." {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Start Date</FormLabel>;
+                    <FormControl>;
+
+                      />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
+                )}
+              />;
+
+                        />;
+                      </FormControl>;
+                      <div className="space-y-1 leading-none">;
+                        <FormLabel>I currently work here</FormLabel>;
+                      </div>;
+                    </FormItem>;
+                  )}
+                />;
+
+                    render={({ field }) => (;
+                      <FormItem>;
+                        <FormLabel>End Date</FormLabel>;
+                        <FormControl>;
+
+                  />;
+                )}
+              </div>;
+            </div>;
+
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel className="flex justify-between">;
+                    <span>Job Description</span>;
+
+                      onEnhanced={handleEnhanceDescription}
+                    />;
+                  </FormLabel>;
+                  <FormControl>;
+
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+
+                  <Button type="button" onClick={onComplete}>;
+                    Next;
+                  </Button>;
+                )}
+
+}
+=======
  type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
 <div> <h2 className="text-xl font-semibold mb-2" >Work Experience</h2> <p className="text-muted-foreground" > Add your work history to showcase your professional experience. </p> </div> {;
   workExperiences.map ( (work) => (<Card key= {;"  work.id ";"}className="bg-muted/40" > <CardContent className="pt-6" > <div className="flex justify-between" > <div> ? work.start date : format (work.start date, 'MMM yyyy') ;
@@ -21,3 +86,4 @@ form.reset ({;
   editingId ? 'Cancel': 'Back' ;
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;"}'"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

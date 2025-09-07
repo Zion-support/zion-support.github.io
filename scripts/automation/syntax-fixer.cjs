@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+#!/usr/bin/env node;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("fs")
 const path = require("path")
 const { exec } = require("child_process")
@@ -16,11 +37,11 @@ const { exec } = require("child_process")
   this.log("error", "Failed to create backup for ${filePath  }:")
   this.log("error", "Failed to create backup for ${filePath}:")
     fixed = fixed.replace(/^([^"\\n]*)"([^")]
-  if (!after.includes("")
+  if (!after.includes()
         return before + " + after + "
     fixed = fixed.replace(/^([^\\n]*)"([^")]
-  if (!after.includes("")
-        return before + "" + after + ""
+  if (!after.includes()
+        return before +  + after + 
     return { "content"}
     fixed = fixed.replace(/^    fixed = fixed.replace(/^\\n/gm, () => { changes++; return "}
     return { "content"}
@@ -32,7 +53,7 @@ const { exec } = require("child_process")
       return before + " = "
     return { "content"}
     fixed = fixed.replace(/const\\s+(\\w+)\\s*=\\s*require\\(["]([^"]+)["]
-      return "import ${varName} from `${moduleName}`;``
+      return "import ${varName} from `${moduleName};``
 "
   this.log("warn", "File not "found": ${filePath}")
       const originalContent = fs.readFileSync(filePath, "utf8")
@@ -65,3 +86,23 @@ const { exec } = require("child_process")
   this.log("info", "Syntax Fixer heartbeat - running normally")
   this.log("info", "Syntax Fixer shutting down...")
   fixer.log("info", "Syntax Fixer started in continuous mode")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error("Syntax fixer "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error("Syntax fixer "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error("Syntax fixer "failed")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

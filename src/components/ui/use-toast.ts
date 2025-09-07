@@ -1,5 +1,4 @@
 import { toast } from 'react-hot-toast';
-
 interface ToastOptions {
   duration?: number;
   position?:
@@ -10,9 +9,8 @@ interface ToastOptions {
     | 'bottom-center'
     | 'bottom-left';
 }
-
 export function useToast() {
-  const showToast = (message: string, options?: ToastOptions) => {
+  const showToast = (message: string, options?:,  ToastOptions) => {
     return toast(message, options);
   };
 

@@ -3,7 +3,7 @@ import Link from 'next/link',
 export default function Placeholder() {
   return (
     <main className=&quot;min-h-screen p-8&quot;>      <Head>
-        <title>Services  Customer-support-chatbot - Placeholder</title>
+        <title>Services • Customer-support-chatbot - Placeholder</title>
         <meta name=&quot;robots&quot; content=&quot;noindex&quot; />
       </Head>
       

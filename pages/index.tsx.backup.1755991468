@@ -16,9 +16,5 @@ export default function HomePage() {
   );
 }
 =======
-import React from 'react';
 
-export default function HomePage() {
-  return <div>Welcome to Zion App</div>;
-}
->>>>>>> origin/cursor/deploy-ai-podcast-host-with-ziongpt-9517
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

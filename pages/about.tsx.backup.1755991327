@@ -18,9 +18,5 @@ const Page: React.FC = () => {
 
 export default Page;
 =======
-export default function About() { return null; }
-=======
-export default function AboutPage() {
-  return <div className="py-10">About Zion: Building AI-first marketplaces.</div>;
-}
->>>>>>> origin/cursor/build-real-time-salary-benchmarking-tool-dea9
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

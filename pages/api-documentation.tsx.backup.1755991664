@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -348,6 +352,10 @@ export default function APIDocumentation() {
     </Layout>
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/api-documentation.tsx.backup.1755992072.backup.1756001149
+========
 =======
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -386,3 +394,8 @@ export default function APIDocumentationPage() {
 	);
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e274
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/api-documentation.tsx.backup.1755991664
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

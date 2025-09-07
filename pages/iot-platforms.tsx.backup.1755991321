@@ -18,5 +18,5 @@ const Page: React.FC = () => {
 
 export default Page;
 =======
-export default function IoTPlatforms() { return null; }
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

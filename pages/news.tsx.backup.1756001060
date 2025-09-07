@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -32,6 +36,8 @@ export default function NewsPage() {
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
         </Head>
 
+<<<<<<< HEAD
+=======
 =======
       id: 1,
       title: 'Zion Tech Group Achieves Breakthrough in AI Consciousness Technology',
@@ -268,6 +274,10 @@ import React, { useState } from 'react';
 import React from 'react';
 import Head from 'next/head';
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 import { 
   Newspaper, Globe, Award, Users, Rocket, Brain, 
@@ -556,6 +566,10 @@ export default function NewsPage() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -578,6 +592,8 @@ export default function NewsPage() {
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Subscribe
               </button>
+<<<<<<< HEAD
+=======
 =======
                     <a
                       href={`/news/${news.id}`}
@@ -641,10 +657,20 @@ export default function NewsPage() {
                 Contact Media Relations
               </button>
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </div>
+  );
+}
+=======
 <<<<<<< HEAD
     </div>
   );
@@ -871,6 +897,10 @@ export default function NewsPage() {
 
       <EnhancedFooter />
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </div>
   );
 }

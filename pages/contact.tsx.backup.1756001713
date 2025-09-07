@@ -1,6 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { 
     <Layout
       title="Contact Us - Zion Tech Group"
@@ -12,6 +16,8 @@ import {
 };
 
 const Contact: NextPage = () => {
+<<<<<<< HEAD
+=======
 =======
   Mail, Phone, MapPin, Clock, MessageSquare, Send, 
   Globe, Building, Users, Award, Shield, Rocket
@@ -692,11 +698,19 @@ export default function ContactPage() {
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e3a5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			<Head>
 				<title>Contact | Zion Tech Group</title>
 				<link rel="canonical" href="https://ziontechgroup.com/contact" />
 			</Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			<section className="container mx-auto px-4 py-24">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Contact Us</h1>
 				<p className="text-gray-300 mb-10">We respond quickly. Reach us via phone or email.</p>
@@ -718,6 +732,8 @@ export default function ContactPage() {
 		</Layout>
 	);
 }
+<<<<<<< HEAD
+=======
 =======
 			<div className="container mx-auto px-4 py-20 text-white">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Talk to Us</h1>
@@ -744,3 +760,7 @@ export default function ContactPage() {
 	);
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e3a5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

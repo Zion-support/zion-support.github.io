@@ -110,7 +110,7 @@ const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / 
     else sentimentLabel = 'very-positive',
 
     // Keyword analysis,
-const wordCounts = new Map<string number>(),
+const wordCounts = new Map<string, number>(),
     text.toLowerCase().split(/\s+/).forEach(word => {
       const cleanWord = word.replace(/[^\w]/g, ''),
       if (cleanWord.length > 2) {
@@ -128,8 +128,8 @@ const wordCounts = new Map<string number>(),
 
     // Bigrams and trigrams,
 const wordsArray = text.toLowerCase().split(/\s+/),
-    const bigramCounts = new Map<string number>(),
-    const trigramCounts = new Map<string number>(),
+    const bigramCounts = new Map<string, number>(),
+    const trigramCounts = new Map<string, number>(),
 
     for (let i = 0, i < wordsArray.length - 1, i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`,

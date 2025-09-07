@@ -39,6 +39,10 @@ export default function MarketPricingPage() {
 					</Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 					<Card className="p-6 bg-black/40 border border-gray-800">
 						<h2 className="text-xl font-semibold mb-2">Cloud Databases</h2>
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">
@@ -46,6 +50,8 @@ export default function MarketPricingPage() {
 							<li>AWS RDS (Postgres): {ext('https://aws.amazon.com/rds/postgresql/pricing/')}</li>
 						</ul>
 					</Card>
+<<<<<<< HEAD
+=======
 =======
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Security & Compliance</h2>
@@ -58,6 +64,10 @@ export default function MarketPricingPage() {
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$5,000/month based on scale and compliance scope.</div>
             </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 					<Card className="p-6 bg-black/40 border border-gray-800">
 						<h2 className="text-xl font-semibold mb-2">Identity & SSO/SCIM</h2>
@@ -95,11 +105,17 @@ export default function MarketPricingPage() {
 				</div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 				<div className="mt-10 text-sm text-gray-400">Need a quote? <a href="/contact" className="text-cyan-300 underline">Contact sales</a> or call +1 302 464 0950.</div>
 			</div>
 		</UltraFuturisticBackground>
 	);
 }
+<<<<<<< HEAD
+=======
 =======
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Kubernetes & FinOps</h2>
@@ -396,3 +412,7 @@ export default function MarketPricingPage() {
   );
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

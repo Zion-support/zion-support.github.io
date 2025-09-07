@@ -12,9 +12,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     </EnhancedLayout>
   );
 =======
-import '../styles/globals.css';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
->>>>>>> origin/cursor/build-white-labeled-zion-hire-ai-saas-21f7
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

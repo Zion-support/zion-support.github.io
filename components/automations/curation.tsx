@@ -1,32 +1,50 @@
 
 
-
-
-
-
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 type Experiment = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
+=======
+
+
+
+
+
+
+type Experiment = {}
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     return this.props.children;
   }
+<<<<<<< HEAD
 }
+import React from "react",
+import fs from "fs";
+import path from "path";
+type Experiment = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import fs from 'fs';
+=======
+}'
+import React from 'react';'
+import fs from 'fs';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import path from 'path';
 
 type Experiment = {;
@@ -37,26 +55,25 @@ effort?: number;
 
 impact?: number;
 }
-type Props = {
+type Props = {}
   updated_at: string | null;
 items: Experiment[] }
-  return (type Experiment = {
-  title: string
-  title: string
-import React from "react";
-import fs from "fs";
+  return (type Experiment = {}
+  title: string;
+  title: string;
+import React from "react";"
+import fs from "fs";"
 import path from "path";
-type Experiment = {
+type Experiment = {}
   title: string,
 
   title: string,;
-
 
   hypothesis?: string;
   metric?: string;
   effort?: number;
 
-impact?: number ;
+impact?: number 
 };
 type Props = {;
   updatedAt: string | null;
@@ -67,76 +84,103 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
   hypothesis?: string;
   metric?: string;
   effort?: number;
-  impact?: number;
+  impact?: number
 };
 
 type Props = {;
   updatedAt: string | null,;
-  items: Experiment[];
+  items: Experiment[]
+};
+<<<<<<< HEAD
+
+  updatedAt: string | null;
+items: Experiment[]
 };
 
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (
+<main className='mx-auto max-w-4xl px-4 py-12'>
+      <h1 className='text-2xl font-bold text-gray-900'>
+        AI Curated Growth Experiments
+      </h1>
+        <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>
+      ) : (
+        <p className='mt-2 text-sm text-gray-600'>
+          No curated output yet. It will appear here automatically after the
+          next run.
+        </p>
+      )}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
-          <div
-            key={idx}
+          <div;
+            key={idx}'
             className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'
-          >
+          >'
             <div className='text-base font-semibold text-gray-900'>
               {exp.title}
             </div>
-            {(exp.hypothesis |exp.metric) && (
+            {(exp.hypothesis |exp.metric) && ('
               <div className='mt-2 text-sm text-gray-700'>
                 {exp.hypothesis && (
-                  <div>
+                  <div>'
                     <span className='font-medium'>Hypothesis:</span>{' '}
                     {exp.hypothesis}
                   </div>
                 )}
                 {exp.metric && (
-                  <div>
+                  <div>'
                     <span className='font-medium'>Metric:</span> {exp.metric}
                   </div>
                 )}
               </div>
             )}
-            {(exp.effort |exp.impact) && (
+            {(exp.effort |exp.impact) && ('
               <div className='mt-2 text-xs text-gray-500'>
+<<<<<<< HEAD
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
-                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
+                {exp.effort && exp.impact ? ' · ' : null}
+=======
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}'"`
+                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
   return (
-  return (
-    <main className='mx-auto max-w-4xl px-4 py-12'>;
+  return ('
+    <main className='mx-auto max-w-4xl px-4 py-12'>;'
       <h1 className='text-2xl font-bold text-gray-900'>;
         AI Curated Growth Experiments;
-      </h1>;
+      </h1>;'
         <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>;
-      ) : (;
+      ) : (;'
         <p className='mt-2 text-sm text-gray-600'>;
           No curated output yet. It will appear here automatically after the;
           next run.;
         </p>;
       )}
-            key={idx}
+            key={idx}'
             className='rounded - xl border border - gray - 200 bg - white p - 5 shadow - sm';
-          >;
+          >;'
             <div className='text - base font - semibold text - gray - 900'>;
-              {exp.title}
-            className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'>;
+              {exp.title}'
+            className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'>;'
             <div className='text-base font-semibold text-gray-900'>;
               {exp && exp.title}
             </div>;
-            {(exp && exp.hypothesis || exp && exp.metric) && (;
+            {(exp && exp.hypothesis || exp && exp.metric) && (;'
               <div className='mt-2 text-sm text-gray-700'>;
                 {exp && exp.hypothesis && (;
                   <div>;
-
+'
                     <span className='font-medium'>Hypothesis:</span>{' '}
                     {exp && exp.hypothesis}
                   </div>;
                 )}
                 {exp && exp.metric && (;
-                  <div>;
+                  <div>;'
                     <span className='font-medium'>Metric:</span> {exp && exp.metric}
                   </div>;
                 )}
@@ -145,155 +189,150 @@ type Props = {;
             )}
           </div>;
         ))}
-        {!items && items.length && (;
+        {!items && items.length && (;'"
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">;
             Nothing to show yet.;
           </div>;
-export default function CurationPage({ updatedAt, items }: Props) {
-  return (
-    <main className="mx-auto max-w-4xl px-4 py-12">
+export default function CurationPage({ updatedAt, items }: Props) {}
+  return ("
+    <main className="mx-auto max-w-4xl px-4 py-12">"
       <h1 className="text-2xl font-bold text-gray-900">AI Curated Growth Experiments</h1>
-      {updatedAt ? (
+      {updatedAt ? ("
         <p className="mt-2 text-sm text-gray-600">Last updated: {updatedAt}</p>
-      ) : (
+      ) : ("
         <p className="mt-2 text-sm text-gray-600">No curated output yet. It will appear here automatically after the next run.</p>
-      )}
+      )}"
       <div className="mt-6 space-y-4">
-        {items.map((exp, idx) => (
-          <div key={idx} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+        {items.map((exp, idx) => ("
+          <div key={idx} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">"
             <div className="text-base font-semibold text-gray-900">{exp.title}</div>
-            {(exp.hypothesis || exp.metric) && (
-              <div className="mt-2 text-sm text-gray-700">
-                {exp.hypothesis && <div><span className="font-medium">Hypothesis:</span> {exp.hypothesis}</div>}
+            {(exp.hypothesis || exp.metric) && ("
+              <div className="mt-2 text-sm text-gray-700">"
+                {exp.hypothesis && <div><span className="font-medium">Hypothesis:</span> {exp.hypothesis}</div>}"
                 {exp.metric && <div><span className="font-medium">Metric:</span> {exp.metric}</div>}
               </div>
             )}
-            {(exp.effort || exp.impact) && (
-              <div className="mt-2 text-xs text-gray-500">
-                {exp.effort ? `Effort: ${exp.effort}/5` : null}
-                {exp.effort && exp.impact ? " · " : null}
-                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+            {(exp.effort || exp.impact) && ("
+              <div className="mt-2 text-xs text-gray-500">`
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}"
+                {exp.effort && exp.impact ? " · " : null}`
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}`
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
 
               </div>
             )}
           </div>
         ))}
-        {!items.length && (
+        {!items.length && ('
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
 
+<div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>
+origin/cursor/automate-test-improve-and-merge-code-2533
             Nothing to show yet.
 
         )}
       </div>
-    </main>
+    </main>;
   );
-export async function getStaticProps() {
-  try {;
-    const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
+export async function getStaticProps() {};
+  try {;"
+    const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");"
     const raw = fs.readFileSync(filePath, "utf8");
 
     const parsed = JSON.parse(raw);
+<<<<<<< HEAD
     );
-    const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
+    const raw = fs.readFileSync(filePath, 'utf8');
+    const parsed = JSON.parse(raw);
     return {
       props: {
+=======
+    );'
+    const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
+    return {}
+      props: {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>;
-            {(exp.hypothesis || exp.metric) && (
+            {(exp.hypothesis || exp.metric) && ('
               <div className='mt - 2 text - sm text - gray - 700'>;
                 {exp.hypothesis && (
-                  <div>;
+                  <div>;'
                     <span className='font - medium'>Hypothesis:</span>{' '}
                     {exp.hypothesis}
                   </div>)}
                 {exp.metric && (
-                  <div>;
+                  <div>;'
                     <span className='font - medium'>Metric:</span> {exp.metric}
                   </div>)}
               </div>)}
-            {(exp.effort || exp.impact) && (
-              <div className='mt - 2 text - xs text - gray - 500'>;
-                {exp.effort ? `Effort: ${exp.effort}/5` : null}
-                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
+            {(exp.effort || exp.impact) && ('
+              <div className='mt - 2 text - xs text - gray - 500'>;`
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}'"`
+                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}`
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
               </div>)}
           </div>))}
+<<<<<<< HEAD
         {!items.length && (
+          <div className='rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600'>            Nothing to show yet.          <div className="rounded - xl border border - gray - 200 bg - white p - 6 text - center text-gray-600">;
+=======
+        {!items.length && ('"
           <div className='rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600'>            Nothing to show yet.          <div className="rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             Nothing to show yet.;
           </div>)}
       </div>;
     </main>);
 ;
-export async /**
- * getStaticProps - Function description
+export async /**;
+ * getStaticProps - Function description;
  */
-function getStaticProps() {
-  try {
+function getStaticProps() {}
+  try {}
     const file_path = path.join (
-      process.cwd (),
-      'data',
-      'ai - curation',
-      'growth - experiments.json');
+      process.cwd (),'
+      'data','
+      'ai - curation','
+      'growth - experiments.json');'
     const raw = fs.readFileSync (file_path, 'utf8');    const parsed = JSON.parse (raw);
-    return {
-      props: {
+    return {}
+      props: {}
         updated_at: parsed.updated_at || null,
         items: parsed.items || [],
       },
       revalidate: 300,
-    return {
-      props: {
+    return {}
+      props: {}
         updated_at: null, }
-export async /**
- * getStaticProps - Function description
+export async /**;
+ * getStaticProps - Function description;
  */
-function getStaticProps() {
-  try {
-    const file_path = path.join (process.cwd (), "data", "ai - curation", "growth - experiments.json");
+function getStaticProps() {}
+  try {"
+    const file_path = path.join (process.cwd (), "data", "ai - curation", "growth - experiments.json");"
     const raw = fs.readFileSync (file_path, "utf8");
-    return {
-      props: {
+    return {}
+      props: {}
         updated_at: parsed.updated_at || null,
         items: parsed.items || [],
       },
       revalidate: 300,
     }        items: parsed.items || []},
       revalidate: 300}
-  } catch {
-    return {
-      props: {
-
-export async function getStaticProps() {;
-  try {;
-    const filePath = path && path.join(;
-      process && process.cwd(),;
-      'data',;
-      'ai-curation',;
-      'growth-experiments && experiments.json';
-    );
-    const raw = fs && fs.readFileSync(filePath, 'utf8');    const parsed = JSON && JSON.parse(raw);
-    return {;
-      props: {;
-        updatedAt: parsed && parsed.updatedAt || null,;
-        items: parsed && parsed.items || [],;
+  } catch {}
+    return {}
+      props: {}
+export async function getStaticProps() { return null; }
       },;
-      revalidate: 300,;
-    };  } catch {;
+      revalidate: 300,
+};  } catch {;
     return {;
       props: {;
         updatedAt: null,}
-export async function getStaticProps() {;
-  try {;
-    const filePath = path && path.join(process && process.cwd(), "data", "ai-curation", "growth-experiments && experiments.json");
-    const raw = fs && fs.readFileSync(filePath, "utf8");
-    return {;
-      props: {;
-        updatedAt: parsed && parsed.updatedAt || null,;
-        items: parsed && parsed.items || [],;
+export async function getStaticProps() { return null; }
       },;
-      revalidate: 300,;
-    };        items: parsed && parsed.items || []},;
+      revalidate: 300,
+};        items: parsed && parsed.items || []},;
       revalidate: 300}
   } catch {;
     return {;
@@ -301,13 +340,13 @@ export async function getStaticProps() {;
         updatedAt: null,;
         items: [],;
       },;
-      revalidate: 300,;
-    };
+      revalidate: 300,
+};
   }        items: []},;
-        updatedAt: null
+        updatedAt: null;
         items: []
       }
-      revalidate: 300
+      revalidate: 300;
     }
   }        items: []}
 
@@ -330,6 +369,28 @@ export async function getStaticProps() {;
       revalidate: 300,
     };
   }        items: []},
+        updatedAt: parsed.updatedAt || null,
+items: parsed.items || [],
+      },
+      revalidate: 300,
+    };
+  } catch {
+    return {
+      props: {
+        updatedAt: null,
+items: [],
+      },
+      revalidate: 300,
+    };
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
       revalidate: 300}
 }
 }
+'"`
+=======
+}
+
+}
+}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

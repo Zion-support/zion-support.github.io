@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 import { Brain, Atom, Zap, Shield, Cpu, Database, Network, Server, Monitor, Globe, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, ArrowRight } from 'lucide-react';
 
@@ -56,6 +60,8 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 Learn More
               </button>
             </div>
+<<<<<<< HEAD
+=======
 =======
 import Head from 'next/head';
 import Link from 'next/link';
@@ -170,11 +176,19 @@ const QuantumNeuralNetworkPlatform = () => {
               </div>
             </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
 
         {/* Features Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -191,6 +205,8 @@ const QuantumNeuralNetworkPlatform = () => {
                     Advanced quantum computing capabilities integrated with cutting-edge neural network technology.
                   </p>
                 </div>
+<<<<<<< HEAD
+=======
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -226,6 +242,10 @@ const QuantumNeuralNetworkPlatform = () => {
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
@@ -233,6 +253,10 @@ const QuantumNeuralNetworkPlatform = () => {
 
         {/* Benefits Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 px-4 bg-black/20">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -251,6 +275,8 @@ const QuantumNeuralNetworkPlatform = () => {
                     </p>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -283,6 +309,10 @@ const QuantumNeuralNetworkPlatform = () => {
                   <span className="text-gray-300">{benefit}</span>
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
@@ -290,6 +320,10 @@ const QuantumNeuralNetworkPlatform = () => {
 
         {/* Use Cases Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-pink-400 to-cyan-500 bg-clip-text text-transparent">
@@ -303,6 +337,8 @@ const QuantumNeuralNetworkPlatform = () => {
                     Leverage quantum neural networks for breakthrough results in this domain.
                   </p>
                 </div>
+<<<<<<< HEAD
+=======
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -335,12 +371,20 @@ const QuantumNeuralNetworkPlatform = () => {
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Call to Action */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -364,6 +408,8 @@ const QuantumNeuralNetworkPlatform = () => {
                 View All Quantum Services
               </a>
             </div>
+<<<<<<< HEAD
+=======
 =======
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -391,11 +437,19 @@ const QuantumNeuralNetworkPlatform = () => {
               </div>
             </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
       </div>
     </>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 }
 =======
@@ -403,3 +457,7 @@ const QuantumNeuralNetworkPlatform = () => {
 
 export default QuantumNeuralNetworkPlatform;
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface FaqProps {
   className?: string;
@@ -6,7 +6,7 @@ interface FaqProps {
 
 const Faq: React.FC<FaqProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div className={className || ""}>
       <h1>Faq</h1>
       <p>This component is under development.</p>
     </div>

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -10,6 +14,8 @@ export default function App({ Component, pageProps }: AppProps) {
     </ErrorBoundary>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 import type { AppProps } from 'next/app'
 import Layout from '../components/layout/Layout'
@@ -23,3 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
   )
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9756
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

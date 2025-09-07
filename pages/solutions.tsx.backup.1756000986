@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+=======
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -18,11 +24,19 @@ import {
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const Solutions: NextPage = () => {
   const industrySolutions = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       industry: "Healthcare",
       description: "Digital transformation solutions for healthcare providers, including patient management systems, telemedicine platforms, and compliance management.",
       icon: "🏥",
@@ -141,6 +155,8 @@ const Solutions: NextPage = () => {
         "Improved customer service",
         "Market insights and trends"
       ]
+<<<<<<< HEAD
+=======
 =======
       id: 'healthcare',
       name: 'Healthcare Solutions',
@@ -234,6 +250,10 @@ const Solutions: NextPage = () => {
       description: 'Data-driven decision making',
       icon: <BarChart3 className="w-6 h-6" />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -275,6 +295,10 @@ const Solutions: NextPage = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>
       <Head>
         <title>Industry Solutions - Zion Tech Group</title>
@@ -519,6 +543,8 @@ const Solutions: NextPage = () => {
         </div>
       </section>
     </>
+<<<<<<< HEAD
+=======
 =======
     <UltraFuturisticBackground>
       <div className="min-h-screen">
@@ -730,6 +756,10 @@ const Solutions: NextPage = () => {
       </main>
     </Layout>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

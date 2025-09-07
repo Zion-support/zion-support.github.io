@@ -11,140 +11,8 @@ import QuantumHolographicBackground from '../components/ui/QuantumHolographicBac
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import { enhancedRealMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-real-micro-saas-services';
 =======
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
-import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
-import { enhancedMicroSaasServices, serviceCategories, getServicesByCategory, getPopularServices, getServicesByPriceRange } from '../data/enhanced-micro-saas-services';
-import { motion } from 'framer-motion';
-import { ArrowRight as ArrowRightIcon } from 'lucide-react';
-import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 
-export default function ServicesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
-  const [showFilters, setShowFilters] = useState(false);
-  const [selectedService, setSelectedService] = useState<string | null>(null);
-
-  const priceRanges = [
-    { value: 'All', label: 'All Prices' },
-    { value: '0-200', label: '$0 - $200' },
-    { value: '201-500', label: '$201 - $500' },
-    { value: '501-1000', label: '$501 - $1,000' },
-    { value: '1001+', label: '$1,001+' }
-  ];
-
-  const sortOptions = [
-    { value: 'name', label: 'Name A-Z' },
-    { value: 'price', label: 'Price Low-High' },
-    { value: 'popularity', label: 'Most Popular' },
-    { value: 'category', label: 'Category' }
-  ];
-
-  // Filter and sort services
-  let filteredServices = enhancedRealMicroSaasServices;
-
-  // Category filter
-  if (selectedCategory !== 'All') {
-    filteredServices = enhancedRealMicroSaasServices.filter(service => 
-      service.category === selectedCategory
-    );
-  }
-
-  // Price range filter
-  if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
-    filteredServices = filteredServices.filter(service => {
-      const price = parseInt(service.price.replace('$', ''));
-      return price >= min && (max === Infinity ? true : price <= max);
-    });
-  }
-
-  // Search filter
-  if (searchQuery) {
-    filteredServices = filteredServices.filter(service =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  }
-
-  // Sort services
-  filteredServices.sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
-      case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      case 'category':
-        return a.category.localeCompare(b.category);
-      default:
-        return a.name.localeCompare(b.name);
-    }
-
-    // Apply category filter
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-
-    // Apply sorting
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'name':
-          return a.name.localeCompare(b.name);
-        case 'price':
-          return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
-        case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-        case 'category':
-          return a.category.localeCompare(b.category);
-        case 'roi': {
-          const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
-          const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
-          return bRoi - aRoi;
-        }
-        default:
-          return a.name.localeCompare(b.name);
-      }
-    });
-
-    return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
-
-  // Get popular services
-  const getPopularServices = () => {
-    return enhancedRealMicroSaasServices.filter(service => service.popular).slice(0, 6);
-  };
-=======
-import { motion } from 'framer-motion';
-import { 
-  Star, 
-  Check, 
-  ExternalLink, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  TrendingUp, 
-  Users, 
-  Award,
-  Zap,
-  Shield,
-  Brain,
-  Rocket,
-  DollarSign,
-  Clock,
-  Target,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
-import { realMicroSaasServices } from '../data/real-micro-saas-services-enhanced';
-import { useState } from 'react';
-
-export default function ServicesPage() {
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7c3d
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -169,43 +37,8 @@ export default function ServicesPage() {
         <meta property="og:title" content="Micro SaaS Services - Zion Tech Group | Revolutionary AI & Quantum Solutions" />
         <meta property="og:description" content="Explore 20+ revolutionary micro SaaS services powered by quantum computing and AI. From $199/month with 30-day free trials." />
 =======
-  const categories = ['All', 'AI & Machine Learning', 'Cybersecurity', 'Industrial AI', 'Healthcare AI', 'Financial Technology', 'Space Technology', 'Energy Technology', 'Transportation AI', 'Marketing AI', 'Data Analytics'];
 
-  const filteredServices = selectedCategory === 'All' 
-    ? realMicroSaasServices 
-    : realMicroSaasServices.filter(service => service.category === selectedCategory);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
-  return (
-    <>
-      <Head>
-        <title>Revolutionary Micro SAAS Services | Zion Tech Group</title>
-        <meta name="description" content="Discover our portfolio of cutting-edge micro SAAS solutions including quantum AI, autonomous manufacturing, biomedical research, and emerging technologies. Starting from $49/month with 21-day free trials." />
-        <meta name="keywords" content="micro SAAS, quantum AI, autonomous manufacturing, biomedical AI, space technology, smart energy, autonomous vehicles, cybersecurity, AI services" />
-        <meta property="og:title" content="Revolutionary Micro SAAS Services | Zion Tech Group" />
-        <meta property="og:description" content="Cutting-edge micro SAAS solutions with unprecedented ROI. Quantum AI, autonomous systems, and emerging technologies." />
-        <meta property="og:url" content="https://ziontechgroup.com/services" />
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7c3d
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/services" />
         <meta property="og:image" content="https://ziontechgroup.com/services-og-image.jpg" />
@@ -315,6 +148,11 @@ export default function ServicesPage() {
                 </div>
               </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991669.backup.1756001157
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -333,6 +171,8 @@ export default function Placeholder() {
     </main>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 =======
               {/* Category Filter */}
@@ -782,5 +622,10 @@ export default function Placeholder() {
       </div>
     </>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7c3d
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991782
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -191,6 +195,21 @@ export default function MarketPricing() {
   };
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/market-pricing.tsx.backup.1755992146.backup.1756001155
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>Market Pricing & Competitor References | Zion Tech Group</title>
+        <meta name="description" content="Transparent market pricing references and competitor links for AI, security, analytics, and cloud services." />
+        <link rel="canonical" href="https://ziontechgroup.com/market-pricing" />
+      </Head>
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-8">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Market Pricing & References</h1>
+          <p className="text-slate-300">Below are easy-to-verify vendor references and typical pricing ranges to help you benchmark our offerings.</p>
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -237,6 +256,8 @@ export default function MarketPricing() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import SEO from '../components/SEO';
@@ -250,6 +271,11 @@ export default function MarketPricingPage() {
 					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">Market Pricing</h1>
 					<p className="mt-4 text-gray-300">High-level, vendor-agnostic pricing bands gathered from public references and our experience. For precise quotes, see <a href="/pricing" className="text-cyan-400 underline">Pricing</a> or <a href="/contact" className="text-cyan-400 underline">Contact</a>.</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-680f
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/market-pricing.tsx.backup.1755991620
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 					<div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
 						<div className="p-6 rounded-lg bg-white/5 backdrop-blur border border-white/10">
@@ -287,6 +313,10 @@ export default function MarketPricingPage() {
 					</div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">AI Guardrails & Safety</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -892,6 +922,8 @@ export default function MarketPricingPage() {
 };
 
 export default MarketPricing;
+<<<<<<< HEAD
+=======
 =======
 					<div className="mt-10 flex gap-3">
 						<a href="/pricing" className="px-4 py-2 rounded-lg bg-white text-black font-medium">See Pricing</a>
@@ -904,3 +936,7 @@ export default MarketPricing;
 	);
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-680f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

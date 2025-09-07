@@ -1,22 +1,36 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+<<<<<<< HEAD
 import React from 'react';
 =======
 =======
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React, { useState } from 'react';
 import Head from 'next/head';
 import React from 'react';
 import SEO from '../components/SEO';
-=======
+
 import { 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import ContactForm from '../components/forms/ContactForm';
 
   return (
 import { useState } from 'react';
+<<<<<<< HEAD
+=======
 =======
     <Layout
       title="Contact Us - Zion Tech Group"
@@ -45,18 +59,28 @@ import SmartFooter from '../components/SmartFooter';
 
 export default function ContactPage() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     subject: '',
     message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+<<<<<<< HEAD
+=======
 =======
     service: '',
     message: '',
@@ -67,6 +91,10 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -84,11 +112,17 @@ export default function ContactPage() {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setSubmitStatus('success');
     setIsSubmitting(false);
     
     // Reset form after success
     setTimeout(() => {
+<<<<<<< HEAD
+=======
 =======
     setIsSubmitted(true);
     setIsSubmitting(false);
@@ -97,17 +131,27 @@ export default function ContactPage() {
     setTimeout(() => {
       setIsSubmitted(false);
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       setFormData({
         name: '',
         email: '',
         company: '',
         phone: '',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         subject: '',
         message: ''
       });
       setSubmitStatus('idle');
     }, 3000);
+<<<<<<< HEAD
+=======
 =======
         service: '',
         message: '',
@@ -116,6 +160,10 @@ export default function ContactPage() {
       });
     }, 5000);
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   };
 
   const contactMethods = [
@@ -123,50 +171,85 @@ export default function ContactPage() {
       icon: Phone,
       title: 'Call Us',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       details: '+1 (555) 123-4567',
       description: 'Available 24/7 for urgent inquiries',
       color: 'from-blue-500 to-cyan-500',
       action: 'tel:+15551234567'
+<<<<<<< HEAD
+=======
 =======
       value: '+1 (302) 464-0950',
       description: 'Available 24/7 for urgent inquiries',
       color: 'from-blue-500 to-cyan-500',
       action: 'tel:+13024640950'
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: Mail,
       title: 'Email Us',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       details: 'contact@ziontechgroup.com',
       description: 'Response within 2 hours guaranteed',
       color: 'from-purple-500 to-pink-500',
       action: 'mailto:contact@ziontechgroup.com'
+<<<<<<< HEAD
+=======
 =======
       value: 'kleber@ziontechgroup.com',
       description: 'Response within 2 hours guaranteed',
       color: 'from-green-500 to-emerald-500',
       action: 'mailto:kleber@ziontechgroup.com'
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: MapPin,
       title: 'Visit Us',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       details: 'San Francisco, CA',
       description: 'Global headquarters and innovation center',
       color: 'from-green-500 to-emerald-500',
       action: '#'
+<<<<<<< HEAD
+=======
 =======
       value: 'Middletown, DE',
       description: 'Global headquarters and innovation center',
       color: 'from-purple-500 to-pink-500',
       action: 'https://maps.google.com/?q=Middletown,DE'
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: Clock,
       title: 'Business Hours',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      details: '24/7 Support',
+      description: 'Global team across all time zones',
+=======
 <<<<<<< HEAD
       details: '24/7 Support',
       description: 'Global team across all time zones',
@@ -174,12 +257,20 @@ export default function ContactPage() {
       value: '24/7 Support',
       description: 'Always here when you need us',
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       color: 'from-orange-500 to-red-500',
       action: '#'
     }
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const officeLocations = [
     {
       city: 'San Francisco',
@@ -300,6 +391,8 @@ export default function ContactPage() {
           <a href="mailto:kleber@ziontechgroup.com" className="block hover:text-purple-400">kleber@ziontechgroup.com</a>
         </div>
       </div>
+<<<<<<< HEAD
+=======
 =======
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -416,10 +509,19 @@ export default function ContactPage() {
                 Call Now
               </a>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      </UltraFuturisticBackground>
+    </div>
+=======
 <<<<<<< HEAD
       </UltraFuturisticBackground>
     </div>
@@ -724,6 +826,10 @@ export default function ContactPage() {
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${method.color} p-4 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     <method.icon className="w-8 h-8 text-white" />
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{method.title}</h3>
                   <p className="text-cyan-400 font-semibold text-lg mb-2">{method.value}</p>
@@ -736,6 +842,10 @@ export default function ContactPage() {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Department Contacts */}
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto">
@@ -821,6 +931,8 @@ export default function ContactPage() {
 
       <EnhancedFooter />
     </>
+<<<<<<< HEAD
+=======
 =======
       {/* Contact Form */}
       <section id="contact-form" className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -1164,6 +1276,10 @@ export default function ContactPage() {
       <SmartFooter />
     </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

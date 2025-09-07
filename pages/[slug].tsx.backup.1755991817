@@ -1,11 +1,17 @@
 import React, { useMemo } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useRouter } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+=======
 =======
 import { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
@@ -42,6 +48,10 @@ import { realQ4Services2025 } from '../data/real-2025-q4-additions';
 import { real2026Q1Additions } from '../data/real-2026-q1-additions';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function DynamicServicePage() {
   const router = useRouter();
@@ -50,7 +60,13 @@ export default function DynamicServicePage() {
   const service = useMemo(() => {
     if (!slug) return undefined;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const byLink = enhancedRealMicroSaasServices.find(s => s.link?.endsWith(`/${slug}`));
+=======
+<<<<<<< HEAD
+    const byLink = enhancedRealMicroSaasServices.find(s => s.link?.endsWith(`/${slug}`));
+<<<<<<<< HEAD:components/[slug].tsx.backup.1755992120.backup.1756001148
+========
 =======
     const all: any[] = ([] as any[])
       .concat(
@@ -90,6 +106,11 @@ export default function DynamicServicePage() {
       }
     });
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/[slug].tsx.backup.1755991817
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     if (byLink) return byLink;
     const byId = enhancedRealMicroSaasServices.find(s => s.id === slug);
     if (byId) return byId;
@@ -159,9 +180,8 @@ export default function DynamicServicePage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 // Static export support: generate root-level pages for service slugs
 type Svc = typeof enhancedRealMicroSaasServices[number];
 
@@ -179,6 +199,13 @@ function collectAllServices(): Svc[] {
       emergingTechnologyServices as unknown as Svc[],
       comprehensiveITSolutions as Svc[],
       marketValidatedServices as Svc[],
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/[slug].tsx.backup.1755992120.backup.1756001148
+      newRealInnovations as Svc[],
+      realMarketServices as Svc[]
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       curatedMarketServices as Svc[],
       cuttingEdgeITServices as Svc[],
       nextGenerationAIServices as Svc[],
@@ -191,6 +218,10 @@ function collectAllServices(): Svc[] {
       realQ4Services2025 as Svc[],
       real2026Q1Additions as Svc[],
       ultimateFuturisticServices2025 as unknown as Svc[]
+<<<<<<< HEAD
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/[slug].tsx.backup.1755991817
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     );
 }
 
@@ -308,3 +339,5 @@ export default function DynamicPage({ title, slug, description }: PageProps) {
 	);
 }
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

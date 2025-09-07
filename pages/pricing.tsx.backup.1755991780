@@ -385,8 +385,8 @@ export default function PricingPage() {
 <<<<<<< HEAD
     <EnhancedFuturisticBackground variant="quantum-advanced" intensity="medium">
 =======
-    <EnhancedFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7a5d
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="min-h-screen">
         <Head>
           <title>Pricing Plans | Zion Tech Group - Transparent Pricing for 75+ Services</title>

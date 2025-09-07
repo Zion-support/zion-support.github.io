@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
   Brain, Shield, Rocket, Cpu, Database, Globe, 
   Users, Target, Star, CheckCircle, TrendingUp, Zap, ExternalLink
+<<<<<<< HEAD
+=======
 =======
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -13,11 +19,19 @@ import {
   Briefcase, ExternalLink, Github, Calendar, Users, Award, 
   Filter, Code, Database, Shield, Cpu, Globe, Brain
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function PortfolioPage() {
   const featuredProjects = [
     {
@@ -168,6 +182,8 @@ export default function PortfolioPage() {
     { name: "Data Analytics", count: 35, icon: Database },
     { name: "Space Technology", count: 15, icon: Rocket }
   ];
+<<<<<<< HEAD
+=======
 =======
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -266,11 +282,19 @@ export default function Portfolio() {
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <title>Our Portfolio - Zion Tech Group</title>
         <meta name="description" content="Explore our portfolio of successful technology implementations across industries. See how we've transformed businesses with AI, cybersecurity, space technology, and more." />
         <meta name="keywords" content="portfolio, case studies, projects, AI implementations, cybersecurity solutions, space technology, Zion Tech Group" />
@@ -623,6 +647,8 @@ export default function Portfolio() {
       </section>
 
       <EnhancedFooter />
+<<<<<<< HEAD
+=======
 =======
         <title>Portfolio | Zion Tech Group</title>
         <meta name="description" content="Explore our portfolio of successful technology projects including AI solutions, cybersecurity implementations, and quantum computing applications." />
@@ -859,6 +885,10 @@ export default function Portfolio() {
         <EnhancedFooter />
       </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 }

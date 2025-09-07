@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 
-<<<<<<< HEAD
 export default function Home() {
   return (
     <div className="py-16">
@@ -11,6 +14,8 @@ export default function Home() {
         <div className="mt-8">
           <Link href="/talent"><a className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-blue-500 via-violet-500 to-cyan-500 text-white shadow-lg shadow-blue-500/20 hover:opacity-90 transition">Browse Talent</a></Link>
         </div>
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -26,10 +31,20 @@ export default function HomePage() {
         <Link href="/admin/quotes"><a className="block p-5 border rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900">Admin • Quote Request Manager</a></Link>
         <Link href="/dashboard/requests"><a className="block p-5 border rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900">Talent • My Requests</a></Link>
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+<<<<<<<< HEAD:components/index.tsx.backup.1755991270.backup.1756001154
+========
 =======
 <<<<<<< HEAD
 export default function HomePage() {
@@ -53,3 +68,10 @@ export default function HomePage() {
 }
 >>>>>>> origin/cursor/deploy-ai-podcast-host-with-ziongpt-9517
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991369.backup.1755991589
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,6 +1,12 @@
 
+<<<<<<< HEAD
+=======
+import { useState } from "react",;
+import { Briefcase, Star, User } from "lucide-react",;
+=======
 import { useState } from "react",;
 import { Briefcase, Star, User } from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Button } from "@/components/ui/button",;
 ;
 interface UserTypeOption {;
@@ -38,6 +44,10 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
   ],;
 ;
   return (;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Choose your role</h3>;
@@ -45,6 +55,10 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
           This helps us personalize your experience;
         </p>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
       ;
       <div className="grid gap-4 md:grid-cols-3">;
         {userTypes.map((type) => {;
@@ -55,10 +69,14 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
             <Button;
               key={type.id}
               onClick={() => onSelect(type.id)}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               variant="outline";
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${;
                 isSelected ;
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;
+<<<<<<< HEAD
+
+=======
                   :"border-zion-blue-light hover:border-zion-cyan/50 text-white";
               }`}
             >;
@@ -93,3 +111,4 @@ type.id ;
 }) ;
 }</div> </div>) ;
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

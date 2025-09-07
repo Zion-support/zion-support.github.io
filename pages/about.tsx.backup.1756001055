@@ -1,18 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award, 
-  Target, Star, Globe, Code, Server, Zap, Heart, Eye, Lightbulb
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
 
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
@@ -204,12 +206,19 @@ export default function AboutPage() {
       image: '/api/placeholder/150/150',
       color: 'from-red-500 to-orange-500'
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const milestones = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       year: "2020",
       title: "Company Founded",
       description: "Zion Tech Group established with a vision to revolutionize technology through AI and quantum computing."
@@ -277,6 +286,8 @@ export default function AboutPage() {
       role: "Chief Innovation Officer",
       expertise: "Emerging Technologies, Product Strategy, Innovation",
       avatar: "👩‍🚀"
+<<<<<<< HEAD
+=======
 =======
       year: '2020',
       title: 'Company Founded',
@@ -307,11 +318,19 @@ export default function AboutPage() {
       title: 'Future Vision',
       description: 'Continuing to push boundaries with autonomous AI systems and consciousness technology.'
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
@@ -558,6 +577,8 @@ export default function AboutPage() {
 
       <EnhancedFooter />
     </>
+<<<<<<< HEAD
+=======
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -916,6 +937,10 @@ export default function AboutPage() {
       <SmartFooter />
     </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

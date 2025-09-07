@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -333,6 +337,8 @@ export default function BlogPage() {
                         <span
                           key={tagIndex}
                           className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs"
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -558,12 +564,20 @@ export default function Blog() {
                           key={tag}
                           className="px-2 py-1 bg-gray-800/50 text-gray-300 rounded text-xs"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <a
                       href={`/blog/${article.id}`}
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
@@ -732,6 +746,8 @@ export default function Blog() {
     </Layout>
   );
 }
+<<<<<<< HEAD
+=======
 =======
                     
                     <div className="flex items-center justify-between">
@@ -952,3 +968,7 @@ export default function Blog() {
   );
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

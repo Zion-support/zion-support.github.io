@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
@@ -102,6 +106,8 @@ const CookiesPage: React.FC = () => {
       title: 'Security and Safety',
       description: 'Protect against fraud and abuse',
       icon: <CheckCircle className="w-6 h-6" />
+<<<<<<< HEAD
+=======
 =======
 import { motion } from 'framer-motion';
 import { 
@@ -186,11 +192,19 @@ export default function Cookies() {
       type: 'Marketing',
       provider: 'Zion Tech Group'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -638,6 +652,8 @@ export default function Cookies() {
 };
 
 export default CookiesPage;
+<<<<<<< HEAD
+=======
 =======
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -1055,3 +1071,7 @@ export default CookiesPage;
   );
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

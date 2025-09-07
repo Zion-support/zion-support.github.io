@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -191,6 +195,8 @@ export default function Support() {
                   <BookOpen className="w-5 h-5 inline mr-2" />
                   View Documentation
                 </motion.button>
+<<<<<<< HEAD
+=======
 =======
 import React, { useState } from 'react';
 import Layout from '../components/layout/Layout';
@@ -361,12 +367,20 @@ const SupportPage: React.FC = () => {
                   Browse Resources
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* FAQ Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-orange-900/20 to-red-900/20">
         <div className="max-w-7xl mx-auto">
@@ -382,6 +396,8 @@ const SupportPage: React.FC = () => {
         {/* Contact Support Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD
+=======
 =======
         {/* Support Categories */}
         <section className="py-20">
@@ -560,12 +576,20 @@ const SupportPage: React.FC = () => {
                 ))}
               </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -680,6 +704,8 @@ const SupportPage: React.FC = () => {
                   Get Help
                 </button>
               </motion.div>
+<<<<<<< HEAD
+=======
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
@@ -842,11 +868,19 @@ const SupportPage: React.FC = () => {
                       Access
                     </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           ) : (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -968,6 +1002,8 @@ const SupportPage: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+=======
 =======
   );
 };
@@ -1025,3 +1061,7 @@ export default Support;
 
 export default SupportPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-ca53
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

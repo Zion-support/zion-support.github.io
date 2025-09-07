@@ -4,11 +4,8 @@ import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/do
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
 =======
-import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from "next/document";
 
-export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
@@ -29,5 +26,5 @@ export default class MyDocument extends Document {
 
 export default MyDocument;
 =======
-}
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

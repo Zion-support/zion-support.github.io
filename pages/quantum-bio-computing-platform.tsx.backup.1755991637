@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
@@ -20,6 +24,8 @@ export default function QuantumBioComputingPlatformPage() {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
+=======
 =======
 import Link from 'next/link';
 
@@ -56,5 +62,9 @@ export default function QuantumBioComputingPlatform() {
 			</section>
 		</div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-b089
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	);
 }

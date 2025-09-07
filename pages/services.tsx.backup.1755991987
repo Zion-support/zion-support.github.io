@@ -16,15 +16,34 @@ export default function ServicesPage() {
 
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
+<<<<<<< HEAD
     { value: '0-50', label: '$0 - $50' },
     { value: '51-100', label: '$51 - $100' },
     { value: '101-200', label: '$101 - $200' },
+    { value: '201-500', label: '$201 - $500' },
+    { value: '501+', label: '$501+' }
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991860.backup.1756001157
+    { value: '0-100', label: '$0 - $100' },
+    { value: '101-200', label: '$101 - $200' },
+    { value: '201-500', label: '$201 - $500' },
+    { value: '501+', label: '$501+' }
+========
+    { value: '0-50', label: '$0 - $50' },
+    { value: '51-100', label: '$51 - $100' },
+    { value: '101-200', label: '$101 - $200' },
+<<<<<<< HEAD
 <<<<<<< HEAD
     { value: '201-500', label: '$201 - $500' },
     { value: '501+', label: '$501+' }
 =======
     { value: '201+', label: '$201+' }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991987
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   const sortOptions = [
@@ -82,14 +101,22 @@ export default function ServicesPage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   const popularServices = getPopularServices();
 
-<<<<<<< HEAD
   // Enhanced service categories with better descriptions
-=======
-  // Enhanced service categories with better descriptions and market data
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
   const enhancedCategories = [
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991860.backup.1756001157
+  // Enhanced service advertising content with comprehensive market data
+  const serviceHighlights = [
+========
+  const popularServices = getPopularServices();
+
+
+  const enhancedCategories = [
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991987
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       name: 'Quantum Computing & AI',
       description: 'Revolutionary quantum AI solutions with unprecedented computing power',
@@ -147,7 +174,7 @@ export default function ServicesPage() {
       default:
         return 'neural';
     }
-=======
+
       icon: <FlaskConical className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Healthcare & Biotechnology').length,
       color: 'from-green-500 to-emerald-600'
@@ -307,6 +334,10 @@ export default function ServicesPage() {
                 <span className="text-white font-semibold text-center text-sm">{contactInfo.address}</span>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
           </div>
         </section>
@@ -364,6 +395,8 @@ export default function ServicesPage() {
             </motion.div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
 =======
     <UltraAdvancedFuturisticBackground variant="holographic-matrix">
       <Head>
@@ -604,6 +637,10 @@ export default function ServicesPage() {
               </motion.div>
             )}
           </div>
+<<<<<<<< HEAD:components/services.tsx.backup.1755991860.backup.1756001157
+          {viewMode === 'grid' ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+========
         </div>
       </section>
 
@@ -1384,6 +1421,11 @@ export default function ServicesPage() {
       </div>
     </EnhancedFuturisticBackground>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991987
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

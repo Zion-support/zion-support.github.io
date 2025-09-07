@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useRouter } from 'next/router';
 import { Check, Star, TrendingUp, Clock, DollarSign, ShieldCheck, Search, Filter, Grid3X3, List, Phone, Mail, MapPin, ArrowRight, ExternalLink, Brain, Rocket, Globe, Cpu, Lock, Eye, Zap } from 'lucide-react';
 import Button from '../components/ui/Button';
@@ -313,6 +317,8 @@ export default function ServicesPage() {
               No setup required, just use and scale as needed.
             </p>
           </div>
+<<<<<<< HEAD
+=======
 =======
 import { motion } from 'framer-motion';
 import { 
@@ -482,17 +488,25 @@ const ServicesPage: React.FC = () => {
     { number: '2500%', label: 'Average ROI', icon: TrendingUp, color: 'text-yellow-400' }
   ];
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {microServices.map((service, index) => (
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
+<<<<<<< HEAD
 =======
   return (
     <>
       <Head>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <title>Micro SaaS Services | Zion Tech Group - Real Solutions with Market Pricing</title>
         <meta name="description" content="Discover our real micro SaaS services: AI-powered social media analytics, SEO optimization, email marketing automation, and more. Competitive pricing with enterprise features." />
         <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" />
@@ -791,14 +805,14 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology services including AI automation, cloud infrastructure, security, and specialized micro SaaS solutions for modern businesses." />
-      </Head>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-black">
         {/* Header Section */}
         <section className="pt-32 pb-20">
@@ -895,6 +909,8 @@ const ServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
+<<<<<<< HEAD
+=======
 =======
       {/* Micro SaaS Services CTA */}
       <section className="section-padding bg-gradient-to-r from-purple-600 to-pink-600 relative overflow-hidden">
@@ -1313,11 +1329,18 @@ const ServicesPage: React.FC = () => {
                   View Case Studies
                 </button>
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </AdvancedFuturisticCard>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </AdvancedFuturisticBackground>
+=======
 <<<<<<< HEAD
     </AdvancedFuturisticBackground>
 =======
@@ -1358,12 +1381,24 @@ const ServicesPage: React.FC = () => {
 
       <EnhancedFooter />
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+export default Services;
+=======
+<<<<<<< HEAD
 export default Services;
 =======
 export default ServicesPage;
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

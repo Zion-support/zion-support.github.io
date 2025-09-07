@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+      }
+      setIsLoading(false),;
+    }
+
+=======
 import { useState } from 'react',;
 import { ;
   DropdownMenu,;
@@ -41,6 +47,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
   },;
 ;
   return (;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="flex items-center gap-2">;
       <span className="text-sm text-muted-foreground">Resume:</span>;
       <DropdownMenu>;
@@ -51,6 +58,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
           </Button>;
         </DropdownMenuTrigger>;
         <DropdownMenuContent align="end">;
+<<<<<<< HEAD
+
+=======
           {existingResumes.map((resume) => (;
             <DropdownMenuItem ;
               key={resume.id}
@@ -61,10 +71,14 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
             </DropdownMenuItem>;          ))}
           <DropdownMenuSeparator />;
           <DropdownMenuItem ;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             onClick={() => setSaveDialogOpen(true)}
             className="cursor-pointer";
           >;
             <Plus className="h-4 w-4 mr-2" />;
+<<<<<<< HEAD
+
+=======
             Save as new version;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
@@ -79,10 +93,14 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
             <Input;
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               placeholder="Enter resume title (e.g. DevOps Resume)";
             />;
           </div>;
           <DialogFooter>;
+<<<<<<< HEAD
+
+=======
             <Button ;
               variant="outline" ;
               onClick={() => setSaveDialogOpen(false)}
@@ -96,11 +114,16 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
             >;
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
               <Save className="h-4 w-4" />;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Save;
             </Button>;
           </DialogFooter>;
         </DialogContent>;
       </Dialog>;
+<<<<<<< HEAD
+
+}
+=======
     </div>;
   ),; ;
 }
@@ -109,3 +132,4 @@ export function ResumeVersionSelector({ currentResume, onResumeChange } ResumeVe
   resume.basic info.title ;
 }</DropdownMenuItem>) ) ;
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>) ;"}"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

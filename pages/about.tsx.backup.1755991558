@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -47,6 +51,8 @@ export default function AboutPage() {
       role: 'Founder & CEO',
       bio: 'Visionary technology leader with 20+ years of experience in AI, quantum computing, and enterprise solutions.',
       image: '/images/leadership/kleber.jpg'
+<<<<<<< HEAD
+=======
 =======
 import { motion } from 'framer-motion';
 import { 
@@ -105,11 +111,19 @@ export default function About() {
       description: 'Building the future with quantum-secure infrastructure and quantum-enhanced applications.',
       expertise: ['Quantum Computing', 'Cryptography', 'Quantum Algorithms']
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Layout>
       <SEO 
         title="About Zion Tech Group - Revolutionary Technology Solutions"
@@ -363,6 +377,8 @@ export default function About() {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
+=======
 =======
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -629,6 +645,10 @@ export default function About() {
       </section>
     </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

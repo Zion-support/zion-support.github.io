@@ -1,12 +1,16 @@
-const nextJest = require('next/jest')
+<<<<<<< HEAD
 
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+const nextJest = require('next/jest')
 const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
-  dir: './',
+  // Provide the path to your Next.js app to load next.config.js and .env files;
+
 })
 
-// Add any custom config to be passed to Jest
+// Add any custom config to be passed to Jest;
 const customJestConfig = {
+<<<<<<< HEAD
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
   testMatch: [
@@ -17,11 +21,17 @@ module.exports = {
   testMatch: [
     '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
     '**/*.(test|spec).(js|jsx|ts|tsx)'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/.next/',
     '/out/',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     '/dist/',
     '/recovered-branches/',
     '/src_backup/',
@@ -45,6 +55,12 @@ module.exports = {
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)
+<<<<<<< HEAD
+
+=======
+// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+module.exports = createJestConfig(customJestConfig)
+=======
     '/dist/'
   ],
   collectCoverageFrom: [
@@ -61,3 +77,7 @@ module.exports = createJestConfig(customJestConfig)
   },
 
 };
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

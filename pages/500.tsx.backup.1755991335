@@ -12,7 +12,5 @@ const ErrorPage: NextPage = () => {
 
 export default ErrorPage;
 =======
-export default function FiveHundred(){
-  return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;
-}
->>>>>>> origin/cursor/build-white-labeled-zion-hire-ai-saas-21f7
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

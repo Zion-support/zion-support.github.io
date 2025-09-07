@@ -1,6 +1,10 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { Atom, Brain, Zap, Target, Cpu, Shield, TrendingUp, Users } from 'lucide-react';
 
@@ -37,6 +41,8 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 </button>
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
 =======
 import { Brain, Atom, Zap, Shield, Cpu, Database, Network, Server, Monitor, Globe, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, ArrowRight } from 'lucide-react';
 
@@ -94,11 +100,19 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               </button>
             </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
 
         {/* Features Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -162,6 +176,8 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-white/70">{feature.description}</p>
                 </motion.div>
+<<<<<<< HEAD
+=======
 =======
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -180,12 +196,20 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                   </p>
                 </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -211,6 +235,8 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 </button>
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
 =======
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-black/20">
@@ -279,6 +305,10 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               </a>
             </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-838a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </section>
       </div>

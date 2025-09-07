@@ -3,5 +3,5 @@ export default function NotFound() {
   return <div>Page not found</div>;
 }
 =======
-export default function Page(){return null}
->>>>>>> origin/cursor/enable-vendor-agency-marketplace-operations-5a51
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

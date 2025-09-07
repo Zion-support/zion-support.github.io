@@ -1,6 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -76,6 +80,8 @@ export default function SmartCrmIntelligenceSuitePage() {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
+=======
 =======
 import Link from 'next/link';
 
@@ -100,5 +106,9 @@ export default function SmartCRMSuite() {
 			</section>
 		</>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	);
 }

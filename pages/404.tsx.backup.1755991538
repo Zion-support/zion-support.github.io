@@ -8,6 +8,5 @@ export default function NotFound() {
   );
 }
 =======
-  return <div>Page not found</div>;
-}
->>>>>>> origin/cursor/develop-zion-trust-scoring-engine-7911
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

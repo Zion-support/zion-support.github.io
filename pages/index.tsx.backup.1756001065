@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Code Review Assistant',
       description: 'AI-powered code analysis with security, performance, and maintainability insights. Support for JavaScript, Python, and TypeScript.',
@@ -177,6 +181,8 @@
       services: ['Rate Limiting', 'Security Scanning', 'Monitoring']
     }
   ];
+<<<<<<< HEAD
+=======
 =======
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
@@ -1455,6 +1461,10 @@ export default function HomePage() {
         </footer>
       </div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-da97
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 }

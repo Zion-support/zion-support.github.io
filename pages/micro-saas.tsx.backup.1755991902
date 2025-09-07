@@ -109,8 +109,8 @@ export default function MicroSaasPage() {
 <<<<<<< HEAD
     <EnhancedFuturisticBackground>
 =======
-          <EnhancedFuturisticBackground variant="neural-cyber" intensity="high">
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <div className="min-h-screen">
         <Head>
           <title>100+ Micro SaaS Services | Zion Tech Group - AI, Cloud, Security Solutions</title>
@@ -137,17 +137,8 @@ export default function MicroSaasPage() {
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
                 Revolutionary Micro SAAS Services
 =======
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="container mx-auto px-4 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 futuristic-glow">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  100+ Micro SaaS Services
-                </span>
-                <br />
-                <span className="text-white">Ready to Deploy</span>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-a01f
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Transform your business with 150+ cutting-edge micro SAAS services powered by quantum AI, autonomous systems, and breakthrough technology. 

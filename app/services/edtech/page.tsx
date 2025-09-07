@@ -1,13 +1,13 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'EdTech Solutions | Zion Tech Group',
-  description: 'Comprehensive EdTech solutions including learning management systems, virtual classrooms, educational AI, and student analytics for modern education.',
+<<<<<<< HEAD
+export const metadata = {
+  title: "EdTech Solutions | Zion Tech Group",
+  description:
+    "Complete educational technology solutions including LMS systems, virtual classrooms, AI-powered learning, and personalized education platforms.",
 };
 
 export default function EdTechPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-orange-100">
@@ -33,11 +33,516 @@ export default function EdTechPage() {
               >
                 Email kleber@ziontechgroup.com
               </a>
+=======
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            EdTech Solutions
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Complete educational technology solutions including LMS systems,
+            virtual classrooms, AI-powered learning, and personalized education
+            platforms.
+          </p>
+        </div>
+
+        {/* EdTech Categories */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <EdTechCategory
+            title="Learning Management System (LMS)"
+            icon="📚"
+            description="Comprehensive LMS platforms for educational institutions"
+            services={[
+              "Course management",
+              "Student enrollment",
+              "Grade tracking",
+              "Content delivery",
+              "Assessment tools",
+              "Progress analytics",
+            ]}
+            pricing="$40,000 - $200,000"
+            marketSize="$18B"
+          />
+          <EdTechCategory
+            title="Virtual Classroom Platform"
+            icon="🎓"
+            description="Complete virtual classroom and online learning solutions"
+            services={[
+              "Live video sessions",
+              "Interactive whiteboards",
+              "Screen sharing",
+              "Breakout rooms",
+              "Recording capabilities",
+              "Mobile access",
+            ]}
+            pricing="$35,000 - $175,000"
+            marketSize="$12B"
+          />
+          <EdTechCategory
+            title="AI-Powered Personalized Learning"
+            icon="🤖"
+            description="AI-driven personalized learning and adaptive education"
+            services={[
+              "Adaptive learning paths",
+              "Personalized content",
+              "Learning analytics",
+              "Intelligent tutoring",
+              "Performance prediction",
+              "Custom recommendations",
+            ]}
+            pricing="$60,000 - $300,000"
+            marketSize="$8B"
+          />
+          <EdTechCategory
+            title="Student Information System (SIS)"
+            icon="👥"
+            description="Complete student information and administration systems"
+            services={[
+              "Student records",
+              "Enrollment management",
+              "Academic planning",
+              "Financial aid",
+              "Parent portals",
+              "Reporting tools",
+            ]}
+            pricing="$50,000 - $250,000"
+            marketSize="$6B"
+          />
+          <EdTechCategory
+            title="Assessment & Testing Platform"
+            icon="📝"
+            description="Digital assessment and testing solutions"
+            services={[
+              "Online assessments",
+              "Automated grading",
+              "Plagiarism detection",
+              "Performance analytics",
+              "Certification management",
+              "Proctoring tools",
+            ]}
+            pricing="$30,000 - $150,000"
+            marketSize="$4B"
+          />
+          <EdTechCategory
+            title="Educational Content Management"
+            icon="📖"
+            description="Content creation and management for educational materials"
+            services={[
+              "Content authoring",
+              "Multimedia support",
+              "Version control",
+              "Collaboration tools",
+              "Publishing workflows",
+              "Accessibility features",
+            ]}
+            pricing="$25,000 - $125,000"
+            marketSize="$3B"
+          />
+        </div>
+
+        {/* Additional EdTech Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <EdTechService
+            title="Gamification & Engagement Platform"
+            description="Gamified learning experiences and student engagement tools"
+            features={[
+              "Achievement systems",
+              "Leaderboards",
+              "Badges & rewards",
+              "Progress tracking",
+              "Social learning",
+              "Competition features",
+            ]}
+            pricing="$35,000 - $175,000"
+            icon="🎮"
+          />
+          <EdTechService
+            title="Language Learning Platform"
+            description="AI-powered language learning and practice solutions"
+            features={[
+              "Interactive lessons",
+              "Speech recognition",
+              "Conversation practice",
+              "Progress tracking",
+              "Cultural content",
+              "Mobile apps",
+            ]}
+            pricing="$45,000 - $225,000"
+            icon="🌍"
+          />
+          <EdTechService
+            title="STEM Education Platform"
+            description="Specialized STEM learning and coding education"
+            features={[
+              "Coding environments",
+              "Virtual labs",
+              "Math tools",
+              "Science simulations",
+              "Project portfolios",
+              "Mentor matching",
+            ]}
+            pricing="$55,000 - $275,000"
+            icon="🔬"
+          />
+          <EdTechService
+            title="Special Education Support"
+            description="Accessibility and special needs education tools"
+            features={[
+              "Accessibility features",
+              "Assistive technology",
+              "Custom learning paths",
+              "Progress monitoring",
+              "Parent communication",
+              "IEP management",
+            ]}
+            pricing="$40,000 - $200,000"
+            icon="♿"
+          />
+          <EdTechService
+            title="Professional Development Platform"
+            description="Corporate training and professional development solutions"
+            features={[
+              "Skill assessments",
+              "Learning paths",
+              "Certification programs",
+              "Progress tracking",
+              "Compliance training",
+              "Analytics dashboard",
+            ]}
+            pricing="$30,000 - $150,000"
+            icon="💼"
+          />
+          <EdTechService
+            title="Educational Analytics & BI"
+            description="Learning analytics and educational business intelligence"
+            features={[
+              "Student performance analytics",
+              "Learning outcome tracking",
+              "Predictive modeling",
+              "Custom dashboards",
+              "Reporting tools",
+              "Data visualization",
+            ]}
+            pricing="$35,000 - $175,000"
+            icon="📊"
+          />
+        </div>
+
+        {/* Learning Technologies */}
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            Advanced Learning Technologies
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-3xl mb-2">🧠</div>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                AI & Machine Learning
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Personalized learning experiences powered by AI
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-2">🥽</div>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                VR & AR Learning
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Immersive virtual and augmented reality education
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-2">📱</div>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                Mobile Learning
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Cross-platform mobile learning applications
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-2">🔗</div>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                Integration APIs
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Seamless integration with existing systems
+              </p>
+            </div>
+          </div>
+<<<<<<< HEAD
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 2</h3>
+            <p className="text-gray-300 mb-6">Description of the second key feature.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Feature 3</h3>
+            <p className="text-gray-300 mb-6">Description of the third key feature.</p>
+            <ul className="space-y-2 text-gray-300">
+              <li>• Benefit 1</li>
+              <li>• Benefit 2</li>
+              <li>• Benefit 3</li>
+            </ul>
+=======
+export const metadata = {}
+  title: "EdTech Solutions | Zion Tech Group",
+  description:"
+    "Complete educational technology solutions including LMS systems, virtual classrooms, AI-powered learning, and personalized education platforms.",;
+};
+
+export default function EdTechPage() {}
+  return ("
+    <div className="min-h-screen bg-gray-50 py-12">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+        <div className="text-center mb-16">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">;
+            EdTech Solutions;
+          </h1>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Complete educational technology solutions including LMS systems,
+            virtual classrooms, AI-powered learning, and personalized education;
+            platforms.
+          </p>
+        </div>
+
+        {/* EdTech Categories */}"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <EdTechCategory"
+            title="Learning Management System (LMS)""
+            icon="📚""
+            description="Comprehensive LMS platforms for educational institutions"
+            services={["
+              "Course management","
+              "Student enrollment","
+              "Grade tracking","
+              "Content delivery","
+              "Assessment tools","
+              "Progress analytics",
+            ]}"
+            pricing="$40,000 - $200,000""
+            marketSize="$18B"
+          />
+          <EdTechCategory"
+            title="Virtual Classroom Platform""
+            icon="🎓""
+            description="Complete virtual classroom and online learning solutions"
+            services={["
+              "Live video sessions","
+              "Interactive whiteboards","
+              "Screen sharing","
+              "Breakout rooms","
+              "Recording capabilities","
+              "Mobile access",
+            ]}"
+            pricing="$35,000 - $175,000""
+            marketSize="$12B"
+          />
+          <EdTechCategory"
+            title="AI-Powered Personalized Learning""
+            icon="🤖""
+            description="AI-driven personalized learning and adaptive education"
+            services={["
+              "Adaptive learning paths","
+              "Personalized content","
+              "Learning analytics","
+              "Intelligent tutoring","
+              "Performance prediction","
+              "Custom recommendations",
+            ]}"
+            pricing="$60,000 - $300,000""
+            marketSize="$8B"
+          />
+          <EdTechCategory"
+            title="Student Information System (SIS)""
+            icon="👥""
+            description="Complete student information and administration systems"
+            services={["
+              "Student records","
+              "Enrollment management","
+              "Academic planning","
+              "Financial aid","
+              "Parent portals","
+              "Reporting tools",
+            ]}"
+            pricing="$50,000 - $250,000""
+            marketSize="$6B"
+          />
+          <EdTechCategory"
+            title="Assessment & Testing Platform""
+            icon="📝""
+            description="Digital assessment and testing solutions"
+            services={["
+              "Online assessments","
+              "Automated grading","
+              "Plagiarism detection","
+              "Performance analytics","
+              "Certification management","
+              "Proctoring tools",
+            ]}"
+            pricing="$30,000 - $150,000""
+            marketSize="$4B"
+          />
+          <EdTechCategory"
+            title="Educational Content Management""
+            icon="📖""
+            description="Content creation and management for educational materials"
+            services={["
+              "Content authoring","
+              "Multimedia support","
+              "Version control","
+              "Collaboration tools","
+              "Publishing workflows","
+              "Accessibility features",
+            ]}"
+            pricing="$25,000 - $125,000""
+            marketSize="$3B"
+          />
+        </div>
+
+        {/* Additional EdTech Services */}"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <EdTechService"
+            title="Gamification & Engagement Platform""
+            description="Gamified learning experiences and student engagement tools"
+            features={["
+              "Achievement systems","
+              "Leaderboards","
+              "Badges & rewards","
+              "Progress tracking","
+              "Social learning","
+              "Competition features",
+            ]}"
+            pricing="$35,000 - $175,000""
+            icon="🎮"
+          />
+          <EdTechService"
+            title="Language Learning Platform""
+            description="AI-powered language learning and practice solutions"
+            features={["
+              "Interactive lessons","
+              "Speech recognition","
+              "Conversation practice","
+              "Progress tracking","
+              "Cultural content","
+              "Mobile apps",
+            ]}"
+            pricing="$45,000 - $225,000""
+            icon="🌍"
+          />
+          <EdTechService"
+            title="STEM Education Platform""
+            description="Specialized STEM learning and coding education"
+            features={["
+              "Coding environments","
+              "Virtual labs","
+              "Math tools","
+              "Science simulations","
+              "Project portfolios","
+              "Mentor matching",
+            ]}"
+            pricing="$55,000 - $275,000""
+            icon="🔬"
+          />
+          <EdTechService"
+            title="Special Education Support""
+            description="Accessibility and special needs education tools"
+            features={["
+              "Accessibility features","
+              "Assistive technology","
+              "Custom learning paths","
+              "Progress monitoring","
+              "Parent communication","
+              "IEP management",
+            ]}"
+            pricing="$40,000 - $200,000""
+            icon="♿"
+          />
+          <EdTechService"
+            title="Professional Development Platform""
+            description="Corporate training and professional development solutions"
+            features={["
+              "Skill assessments","
+              "Learning paths","
+              "Certification programs","
+              "Progress tracking","
+              "Compliance training","
+              "Analytics dashboard",
+            ]}"
+            pricing="$30,000 - $150,000""
+            icon="💼"
+          />
+          <EdTechService"
+            title="Educational Analytics & BI""
+            description="Learning analytics and educational business intelligence"
+            features={["
+              "Student performance analytics","
+              "Learning outcome tracking","
+              "Predictive modeling","
+              "Custom dashboards","
+              "Reporting tools","
+              "Data visualization",
+            ]}"
+            pricing="$35,000 - $175,000""
+            icon="📊"
+          />
+        </div>
+
+        {/* Learning Technologies */}"
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">"
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            Advanced Learning Technologies;
+          </h3>"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
+            <div className="text-center">"
+              <div className="text-3xl mb-2">🧠</div>"
+              <h4 className="font-semibold text-gray-900 mb-2">
+                AI & Machine Learning;
+              </h4>"
+              <p className="text-gray-600 text-sm">
+                Personalized learning experiences powered by AI;
+              </p>
+            </div>"
+            <div className="text-center">"
+              <div className="text-3xl mb-2">🥽</div>"
+              <h4 className="font-semibold text-gray-900 mb-2">
+                VR & AR Learning;
+              </h4>"
+              <p className="text-gray-600 text-sm">
+                Immersive virtual and augmented reality education;
+              </p>
+            </div>"
+            <div className="text-center">"
+              <div className="text-3xl mb-2">📱</div>"
+              <h4 className="font-semibold text-gray-900 mb-2">
+                Mobile Learning;
+              </h4>"
+              <p className="text-gray-600 text-sm">
+                Cross-platform mobile learning applications;
+              </p>
+            </div>"
+            <div className="text-center">"
+              <div className="text-3xl mb-2">🔗</div>"
+              <h4 className="font-semibold text-gray-900 mb-2">
+                Integration APIs;
+              </h4>"
+              <p className="text-gray-600 text-sm">
+                Seamless integration with existing systems;
+              </p>
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
             </div>
           </div>
         </div>
-      </section>
 
+<<<<<<< HEAD
       {/* Our EdTech Solutions */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -274,9 +779,36 @@ export default function EdTechPage() {
               icon="🏫"
             />
           </div>
+=======
+        {/* CTA Section */}"
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">"
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Ready to Transform Education?
+          </h3>"
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Our EdTech experts will help you build innovative educational;
+            solutions that enhance learning outcomes and engage students like;
+            never before.
+          </p>"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a"
+              href="tel:+13024640950""
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Call +1 302 464 0950;
+            </a>
+            <a"
+              href="mailto:kleber@ziontechgroup.com""
+              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Email Us;
+            </a>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
         </div>
-      </section>
 
+<<<<<<< HEAD
       {/* Why Choose Our EdTech Solutions */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -371,25 +903,35 @@ export default function EdTechPage() {
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Let's discuss how our EdTech solutions can enhance learning, improve engagement, and streamline educational administration.
             Our team has delivered 200+ successful EdTech projects serving 5M+ students worldwide.
+=======
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Ready to Transform Education?
+          </h3>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Our EdTech experts will help you build innovative educational
+            solutions that enhance learning outcomes and engage students like
+            never before.
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
             >
-              Email kleber@ziontechgroup.com
+              Email Us
             </a>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           </div>
-          <p className="text-sm text-gray-500 mt-4">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </p>
         </div>
+<<<<<<< HEAD
       </section>
     </div>
   );
@@ -418,14 +960,54 @@ function EdTechServiceCard({
       <div className="mb-4">
         <div className="text-lg font-semibold text-purple-600 mb-1">{pricing}</div>
         <div className="text-sm text-gray-500">{marketSize}</div>
+=======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
       </div>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-sm text-gray-600">
-            <span className="text-purple-500 mr-2">✓</span>
-            {feature}
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+
+function EdTechCategory({}
+=======
+}
+
+function EdTechCategory({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  title,
+  icon,
+  description,
+  services,
+  pricing,
+  marketSize,
+<<<<<<< HEAD
+}: {}
+=======
+}: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  title: string;
+  icon: string;
+  description: string;
+  services: string[];
+  pricing: string;
+  marketSize: string;
+<<<<<<< HEAD
+}) {}
+  return ("
+    <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">"
+      <div className="text-4xl mb-4">{icon}</div>"
+      <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>"
+      <p className="text-gray-600 mb-4">{description}</p>"
+      <ul className="text-gray-600 space-y-2 mb-4">
+        {services.map((service) => ("
+          <li key={service} className="flex items-center">"
+            <span className="text-blue-500 mr-2">•</span> {service}
           </li>
         ))}
+<<<<<<< HEAD
       </ul>
     </div>
   );
@@ -454,25 +1036,27 @@ function EdTechPricingCard({
   features: string[];
   bestFor: string;
   popular?: boolean;
+=======
+      </ul>"
+      <div className="border-t pt-4">"
+        <div className="flex justify-between items-center">"
+          <span className="text-lg font-semibold text-blue-600">{pricing}</span>"
+=======
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172
 }) {
   return (
-    <div className={`relative bg-white border rounded-xl p-8 ${popular ? 'border-purple-500 shadow-lg' : 'border-gray-200'}`}>
-      {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-        </div>
-      )}
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <div className="text-3xl font-bold text-purple-600 mb-1">{price}</div>
-      <div className="text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <span className="text-purple-500 mr-3">✓</span>
-            {feature}
+    <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="text-gray-600 space-y-2 mb-4">
+        {services.map((service) => (
+          <li key={service} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {service}
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
       <div className="text-sm text-gray-500 mb-4">Best for: {bestFor}</div>
       <a
         href="tel:+13024640950"
@@ -487,3 +1071,74 @@ function EdTechPricingCard({
     </div>
   );
 }
+=======
+      <div className="border-t pt-4">
+        <div className="flex justify-between items-center">
+          <span className="text-lg font-semibold text-blue-600">{pricing}</span>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          <span className="text-sm text-gray-500">Market: {marketSize}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+<<<<<<< HEAD
+function EdTechService({}
+=======
+function EdTechService({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  title,
+  description,
+  features,
+  pricing,
+  icon,
+<<<<<<< HEAD
+}: {}
+=======
+}: {
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  title: string;
+  description: string;
+  features: string[];
+  pricing: string;
+  icon: string;
+<<<<<<< HEAD
+}) {}
+  return ("
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">"
+      <div className="text-3xl mb-3">{icon}</div>"
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{title}</h4>"
+      <p className="text-gray-600 mb-3">{description}</p>"
+      <ul className="text-gray-600 space-y-1 mb-3">
+        {features.map((feature) => ("
+          <li key={feature} className="flex items-center text-sm">"
+            <span className="text-blue-500 mr-2">•</span> {feature}
+          </li>
+        ))}
+      </ul>"
+=======
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+      <div className="text-3xl mb-3">{icon}</div>
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{title}</h4>
+      <p className="text-gray-600 mb-3">{description}</p>
+      <ul className="text-gray-600 space-y-1 mb-3">
+        {features.map((feature) => (
+          <li key={feature} className="flex items-center text-sm">
+            <span className="text-blue-500 mr-2">•</span> {feature}
+          </li>
+        ))}
+      </ul>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      <div className="text-lg font-semibold text-blue-600">{pricing}</div>
+    </div>
+  );
+}
+<<<<<<< HEAD
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 1c09286d1558200887d8869d925675c122bd9172

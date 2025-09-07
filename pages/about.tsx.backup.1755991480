@@ -1,14 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/about.tsx.backup.1755991384.backup.1756001148
+export default function About(){
+  return <div style={{padding:20}}>About Zion</div>
+}
+========
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 
 export default function AboutPage() {
   return <div>About Zion</div>;
 }
+<<<<<<< HEAD
+=======
 =======
 export default function About(){
   return <div style={{padding:20}}>About Zion</div>
 }
 =======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/about.tsx.backup.1755991480
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -29,4 +41,11 @@ const About: NextPage = () => {
 };
 
 export default About;
+<<<<<<<< HEAD:components/about.tsx.backup.1755991384.backup.1756001148
+========
 >>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/about.tsx.backup.1755991480
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

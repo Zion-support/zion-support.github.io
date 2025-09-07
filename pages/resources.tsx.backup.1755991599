@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -609,6 +613,8 @@ export default function Resources() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import SEO from '../components/SEO';
@@ -644,6 +650,10 @@ export default function ResourcesPage() {
       </div>
     </UltraFuturisticBackground>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1967
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

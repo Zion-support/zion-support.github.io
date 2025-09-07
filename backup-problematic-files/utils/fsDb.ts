@@ -1,6 +1,6 @@
-import fs from 'fs',;
-import path from 'path',;
-const dataRoot = path.join(process.cwd(), 'data'),;
+import fs from 'fs';
+import path from 'path';
+const dataRoot = path.join(process.cwd(), 'data');
 function ensureDir(dirPath: string) {;
   if (!fs.existsSync(dirPath)) {;
     fs.mkdirSync(dirPath, { recursive: true });
@@ -8,9 +8,9 @@ function ensureDir(dirPath: string) {;
 }
 ;
 export function readJson<T>(relativePath: string, fallback: T): T {;
-  const full = path.join(dataRoot, relativePath),;
+  const full = path.join(dataRoot, relativePath);
   try {;
-    const raw = fs.readFileSync(full, 'utf-8'),;
+    const raw = fs.readFileSync(full, 'utf-8');
     return JSON.parse(raw) as T;
   } catch (_) {;
     return fallback;

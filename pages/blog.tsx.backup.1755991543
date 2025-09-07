@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -98,6 +102,8 @@ const BlogPage: React.FC = () => {
     'Innovation', 'Autonomous AI', 'Development', 'Micro-SaaS', 'Business Strategy',
     'Cybersecurity', 'AI Security', 'Space Tech', 'Future Tech'
   ];
+<<<<<<< HEAD
+=======
 =======
 import { motion } from 'framer-motion';
 import { BookOpen, Calendar, User, Clock, ArrowRight, Search, Filter, Tag } from 'lucide-react';
@@ -192,15 +198,25 @@ const featuredTags = [
   'AI', 'Quantum', 'Space', 'Automation', 'Security', 'Innovation', 'Technology', 'Research'
 ];
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function Blog() {
   return (
     <Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <main className="relative z-10 pt-8">
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
+<<<<<<< HEAD
+=======
 =======
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
         {/* Hero Section */}
@@ -208,17 +224,27 @@ export default function Blog() {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-green-500/10" />
           <div className="relative z-10 max-w-7xl mx-auto text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Insights & Innovation
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Explore the latest insights, trends, and breakthroughs in AI, quantum computing, and emerging technologies
+<<<<<<< HEAD
+=======
 =======
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-blue-500 to-green-600 bg-clip-text text-transparent mb-6">
                 Blog & Insights
@@ -226,6 +252,10 @@ export default function Blog() {
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Stay updated with the latest insights, research, and developments in AI, quantum computing, and emerging technologies
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -298,6 +328,10 @@ export default function Blog() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Search and Filter */}
         <section className="py-12 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-6xl mx-auto">
@@ -327,6 +361,8 @@ export default function Blog() {
                   </button>
                 ))}
               </div>
+<<<<<<< HEAD
+=======
 =======
         {/* Featured Posts */}
         <section className="py-20 px-4">
@@ -387,11 +423,19 @@ export default function Blog() {
                 </motion.article>
               ))}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Featured Post */}
         <section id="featured-posts" className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -559,6 +603,8 @@ export default function Blog() {
         </section>
 
         {/* Popular Tags */}
+<<<<<<< HEAD
+=======
 =======
         {/* All Posts */}
         <section className="py-20 px-4 bg-black/30">
@@ -620,6 +666,10 @@ export default function Blog() {
 
         {/* Newsletter Signup */}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -659,6 +709,10 @@ export default function Blog() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -666,6 +720,8 @@ export default function Blog() {
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Get the latest insights, breakthroughs, and technology trends delivered to your inbox
+<<<<<<< HEAD
+=======
 =======
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -677,21 +733,35 @@ export default function Blog() {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Get the latest insights and updates delivered directly to your inbox
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   placeholder="Enter your email address"
                   className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
                 <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+<<<<<<< HEAD
+=======
 =======
                   placeholder="Enter your email"
                   className="flex-1 px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400/50 focus:ring-2 focus:ring-purple-400/20"
                 />
                 <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   Subscribe
                 </button>
               </div>
@@ -704,6 +774,10 @@ export default function Blog() {
       </main>
     </Layout>
   );
+
+<<<<<<< HEAD
+export default BlogPage;
+=======
 <<<<<<< HEAD
 };
 
@@ -711,3 +785,6 @@ export default BlogPage;
 =======
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-91ed
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

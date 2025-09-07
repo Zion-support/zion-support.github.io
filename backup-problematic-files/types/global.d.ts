@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 /// <reference types="next/navigation-types/navigation" />
@@ -71,4 +74,11 @@ declare namespace NodeJS {
     NEXT_PUBLIC_GA_TRACKING_ID?: string;
   }
 }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+=======
+/// <reference types="next" />"
+</reference>"
+/// <reference types="next/image-types/global" />"
+/// <reference types="next/navigation-types/navigation" />"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

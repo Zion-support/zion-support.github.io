@@ -18,14 +18,5 @@ export default function NotificationsPage() {
   );
 }
 =======
-import React from 'react';
-import dynamic from 'next/dynamic';
 
-const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
-  ssr: false,
-});
-
-export default function NotificationsPage() {
-  return <NotificationCenter />;
-}
->>>>>>> origin/cursor/build-zion-ai-notification-center-5a66
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

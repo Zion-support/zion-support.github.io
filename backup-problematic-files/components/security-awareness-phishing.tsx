@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:backup-problematic-files/components/autonomous-vehicle-ai-platform.tsx.backup.1755991683
+import React from 'react',
+import Head from 'next/head',
+import { Phone, Mail, MapPin, Check, ArrowRight, Car, Star } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button',
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+export default function AutonomousVehicleAIPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-vehicle-ai-platform')),
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield } from 'lucide-react',
@@ -6,6 +19,10 @@ import Button from '../components/ui/Button'
 import { extraServices } from '../data/extra-services'
 export default function SecurityAwarenessPhishingPage() {
   const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'))
+<<<<<<< HEAD
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/components/security-awareness-phishing.tsx
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!service) return null,
 
   return (
@@ -35,7 +52,11 @@ export default function SecurityAwarenessPhishingPage() {
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
+<<<<<<< HEAD
+                  <div className="text-slate-400">{service.trialDays ? `${service.trialDays}-day free trial • ` : ''}Setup: {service.setupTime}</div>
+=======
                   <div className="text-slate-400">{service.trialDays ? `${service.trialDays}-day free trial  ` : ''}Setup: {service.setupTime}</div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>

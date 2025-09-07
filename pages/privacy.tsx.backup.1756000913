@@ -1,6 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, CheckCircle } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
@@ -253,6 +257,8 @@ export default function PrivacyPage() {
       </main>
 
       <EnhancedFooter />
+<<<<<<< HEAD
+=======
 =======
 import Link from 'next/link';
 import SmartHeader from '../components/SmartHeader';
@@ -526,6 +532,10 @@ export default function Privacy() {
         <SmartFooter />
       </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-d3ae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 }

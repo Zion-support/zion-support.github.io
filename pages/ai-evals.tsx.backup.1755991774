@@ -6,9 +6,8 @@ import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolograp
 import { Button } from '../components/ui/Button';
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 =======
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7754
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function AIEvalsPage() {
 	const contactInfo = {
@@ -31,8 +30,8 @@ export default function AIEvalsPage() {
 <<<<<<< HEAD
 		<QuantumHolographicMatrixBackground intensity={1.5}>
 =======
-		<QuantumHolographicMatrixBackground>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7754
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			<Head>
 				<title>AI Evals & Observability | Zion Tech Group</title>
 				<meta name="description" content="Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included." />
@@ -48,12 +47,8 @@ export default function AIEvalsPage() {
 						<Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl"><Rocket className="w-4 h-4 mr-2" />Get a Demo</Button>
 						<Link href="/resources" variant="outline" className="border-gray-600 text-gray-200">Read Docs</Button>
 =======
-			<section className="min-h-screen pt-28 pb-20 px-4">
-				<div className="max-w-6xl mx-auto">
-					<div className="text-center mb-12">
-						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Evals & Observability</h1>
-						<p className="mt-4 text-xl text-gray-300">Continuous evaluation, drift detection, and quality gates to ship safe, trustworthy AI.</p>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7754
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</div>
 
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
@@ -106,8 +101,8 @@ export default function AIEvalsPage() {
 						</div>
 					</div>
 				</div>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 				<div className="max-w-3xl mx-auto mt-16 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
 						<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><span>{contactInfo.mobile}</span></div>
@@ -120,8 +115,7 @@ export default function AIEvalsPage() {
 				</div>
 			</div>
 =======
-			</section>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7754
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 		</QuantumHolographicMatrixBackground>
 	);
 }

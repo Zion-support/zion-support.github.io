@@ -112,6 +112,10 @@ const SolutionsPage: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <UltraFuturisticBackground>
       <div className="min-h-screen">
         <Head>
@@ -155,6 +159,8 @@ const SolutionsPage: React.FC = () => {
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
+<<<<<<< HEAD
+=======
 =======
     <Layout>
       <SEO 
@@ -193,11 +199,19 @@ const SolutionsPage: React.FC = () => {
                 </a>
               </div>
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Solutions Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -243,6 +257,8 @@ const SolutionsPage: React.FC = () => {
                       <li key={featureIndex} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
+<<<<<<< HEAD
+=======
 =======
         {/* Solution Capabilities */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
@@ -343,17 +359,27 @@ const SolutionsPage: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
                         {feature}
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       </li>
                     ))}
                   </ul>
                   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <a
                     href={solution.href}
                     className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1"
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
+<<<<<<< HEAD
+=======
 =======
                   <a 
                     href="/contact" 
@@ -361,6 +387,10 @@ const SolutionsPage: React.FC = () => {
                   >
                     Get Started
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </a>
                 </motion.div>
               ))}

@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
@@ -70,6 +74,8 @@ const AboutPage: React.FC = () => {
       role: 'Business Technology',
       description: 'Experts in digital transformation, process automation, and enterprise infrastructure.',
       expertise: ['Digital Transformation', 'Process Automation', 'Cloud Architecture', 'DevOps']
+<<<<<<< HEAD
+=======
 =======
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -119,11 +125,19 @@ export default function AboutPage() {
       bio: 'Visionary technology leader with 20+ years of experience in AI, quantum computing, and enterprise solutions.',
       image: '/images/leadership/kleber.jpg'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -402,6 +416,8 @@ export default function AboutPage() {
         </main>
       </Layout>
     </ErrorBoundary>
+<<<<<<< HEAD
+=======
 =======
     <Layout>
       <SEO 
@@ -657,6 +673,10 @@ export default function AboutPage() {
       </div>
     </Layout>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

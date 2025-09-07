@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -123,6 +127,8 @@ const PartnersPage: React.FC = () => {
         {/* Hero Section */}
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
+<<<<<<< HEAD
+=======
 =======
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -296,12 +302,20 @@ export default function PartnersPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-4 text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
                 Partnership Opportunities
               </h1>
@@ -321,6 +335,8 @@ export default function PartnersPage() {
                 >
                   Learn More
                 </a>
+<<<<<<< HEAD
+=======
 =======
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Partner With Us
@@ -342,11 +358,21 @@ export default function PartnersPage() {
                   <span>Innovation Leadership</span>
                 </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Partnership Benefits */}
+        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+          <div className="max-w-6xl mx-auto">
+=======
 <<<<<<< HEAD
         {/* Partnership Benefits */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
@@ -356,6 +382,10 @@ export default function PartnersPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -364,6 +394,10 @@ export default function PartnersPage() {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Partnership Benefits
               </h2>
@@ -389,6 +423,8 @@ export default function PartnersPage() {
                     <h3 className="text-xl font-semibold text-white">{benefit.title}</h3>
                   </div>
                   <p className="text-gray-300">{benefit.description}</p>
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl font-bold text-white mb-4">
                 Partnership Opportunities
@@ -434,12 +470,22 @@ export default function PartnersPage() {
                     </ul>
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Partnership Types */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+=======
 <<<<<<< HEAD
         {/* Partnership Types */}
         <section className="py-20 px-4">
@@ -449,6 +495,7 @@ export default function PartnersPage() {
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -457,6 +504,9 @@ export default function PartnersPage() {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Partnership Types
               </h2>
@@ -514,6 +564,8 @@ export default function PartnersPage() {
                   >
                     Partner With Us
                   </a>
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why Partner With Zion Tech Group?
@@ -549,10 +601,9 @@ export default function PartnersPage() {
             </div>
           </div>
         </section>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-        {/* Partnership Process */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -560,46 +611,8 @@ export default function PartnersPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Partnership Process
-              </h2>
-              <p className="text-xl text-gray-400">
-                Simple steps to establish a successful partnership
-              </p>
-            </motion.div>
-            
-            <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {partnershipProcess.map((step, index) => (
-                <motion.div
-                  key={step.step}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="flex gap-6 p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50"
-                >
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-2xl">
-                      {step.step}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-300 mb-3">
-                      {step.description}
-                    </p>
-                    <div className="text-cyan-400 font-medium">
-                      Timeline: {step.duration}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
+<<<<<<< HEAD
         {/* Existing Partners */}
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
@@ -661,6 +674,9 @@ export default function PartnersPage() {
                     </a>
                   </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -669,12 +685,21 @@ export default function PartnersPage() {
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+        <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+          <div className="max-w-4xl mx-auto text-center">
+=======
+<<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
 =======
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -682,6 +707,10 @@ export default function PartnersPage() {
               viewport={{ once: true }}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Ready to Partner?
               </h2>
@@ -700,6 +729,8 @@ export default function PartnersPage() {
                   className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Discussion
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Partner With Us?
@@ -720,16 +751,28 @@ export default function PartnersPage() {
                 >
                   Explore Our Solutions
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+      </main>
+=======
+<<<<<<< HEAD
       </main>
 =======
       </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a4dc
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </Layout>
   );
 };

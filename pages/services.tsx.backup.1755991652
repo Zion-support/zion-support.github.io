@@ -11,15 +11,25 @@ import {
 import Link from 'next/link';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Import our new service data
 // Note: Removed non-existent data imports (2034 datasets) to prevent build errors.
 import { real2025Q4AugmentedBatch } from '../data/real-2025-q4-augmented-batch';
 import { real2029Q3Additions } from '../data/real-2029-q3-additions';
 import { newServices2026 } from '../data/2026-new-services';
+<<<<<<< HEAD
+=======
 =======
 // Import our service data
 import { realMarketServices } from '../data/real-market-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5350
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
@@ -62,9 +72,16 @@ const getServiceDescription = (service: any) => {
 // Create unified services array with new 2035 services
 const allServices = [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   ...realMarketServices,
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5350
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ...realMicroSaasServices,
   ...innovativeAIServices,
   ...enterpriseITServices,
@@ -74,13 +91,20 @@ const allServices = [
   ...marketReadyServices,
   ...marketValidatedServices,
 <<<<<<< HEAD
+<<<<<<< HEAD
   ...industryRealServices,
   ...real2025Q4AugmentedBatch,
   ...real2029Q3Additions,
   ...newServices2026
+<<<<<<< HEAD
+=======
 =======
   ...industryRealServices
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5350
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 ];
 
 const categories = [

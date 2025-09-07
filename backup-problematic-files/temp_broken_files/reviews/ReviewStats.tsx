@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
+=======
+import { Star } from "lucide-react",;
+=======
 import { Star } from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Progress } from "@/components/ui/progress",;
 ;
 interface ReviewStatsProps {;
@@ -19,6 +24,10 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution } 
   },;
   ;
   return (;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="bg-card border rounded-lg p-4">;
       <div className="flex items-center justify-between mb-4">;
         <div>;
@@ -26,19 +35,32 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution } 
           <div className="flex items-center">;
             <div className="flex mr-2">;
               {[1, 2, 3, 4, 5].map((i) => (;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
                 <Star;
                   key={i}
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" :"text-gray-300";                  }`}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 />;
               ))}
             </div>;
             <span className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
+
+=======
               {totalReviews} {totalReviews === 1 ? "review" :"reviews"}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </span>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+
+}
+=======
       ;
       {ratingDistribution && (;
         <div className="space-y-2">;
@@ -78,3 +100,4 @@ return (<div className="bg-card border rounded-lg p-4" > <div className="flex it
 }
 }</div>) ;
 }</div>) ;"}"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

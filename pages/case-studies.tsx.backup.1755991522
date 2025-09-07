@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -422,6 +426,8 @@ export default function CaseStudies() {
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                             {result}
                           </li>
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import Layout from '../components/layout/Layout';
@@ -614,11 +620,19 @@ const CaseStudies: React.FC = () => {
                         {[...Array(study.rating)].map((_, i) => (
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         ))}
                       </ul>
                     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <a 
                       href={`/case-studies/${study.id}`}
                       className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300"
@@ -626,6 +640,8 @@ const CaseStudies: React.FC = () => {
                       Read Full Case Study
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
+<<<<<<< HEAD
+=======
 =======
                     <div className="lg:col-span-2">
                       <div className="mb-6">
@@ -741,6 +757,10 @@ const CaseStudies: React.FC = () => {
                     <div className="text-sm text-gray-400">{testimonial.title}</div>
                     <div className="text-sm text-cyan-400">{testimonial.company}</div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
@@ -750,6 +770,10 @@ const CaseStudies: React.FC = () => {
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -776,6 +800,8 @@ const CaseStudies: React.FC = () => {
                 Explore Our Services
               </a>
             </div>
+<<<<<<< HEAD
+=======
 =======
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -802,6 +828,10 @@ const CaseStudies: React.FC = () => {
               </div>
             </motion.div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </motion.div>
       </div>
@@ -810,7 +840,15 @@ const CaseStudies: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+export default CaseStudiesPage;
+=======
+<<<<<<< HEAD
 export default CaseStudiesPage;
 =======
 export default CaseStudies;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

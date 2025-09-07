@@ -1,30 +1,35 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
 }
-import React from "react";
+import React from "react";"
 import Head from "next/head";
 
-export default function DiversityInclusionPage() {;
+export default function DiversityInclusionPage() { return null; }
+}'
+import React from './react';'
+=======
+
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -85,61 +90,99 @@ export default function DiversityInclusionPage() {;
   );
 }
 import React from './react';
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import Head from './next / head';
-export default /**
- * DiversityInclusionPage - Function description
+export default /**;
+ * DiversityInclusionPage - Function description;
  */
+<<<<<<< HEAD
 function DiversityInclusionPage() {
   return (
+    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
+=======
+function DiversityInclusionPage() {}
+  return ("
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>;
         <title > Diversity & Inclusion | Zion Tech Group</title>;
-        <meta;
-          name="description";
+        <meta;"
+          name="description";"
           content="Our commitment to diversity, equity, and inclusion.";
         />;
-        <link;
-          rel="canonical";
+        <link;"
+          rel="canonical";"
           href="https://ziontechgroup.com / diversity - inclusion";
         />;
+<<<<<<< HEAD
       </Head>;
-      <div className="max - w-4xl mx - auto space - y-6">;
-        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+      <div className="max - w-4xl mx-auto space-y-6">;
+        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">;
           Diversity & Inclusion;
         </h1>;
-        <p className="text - slate - 300">;
+        <p className="text-slate-300">;
           We believe diverse teams build better products. We foster inclusive;
           hiring, growth, and a respectful workplace.;
         </p>;
+        <ul className="list - disc list - inside text - slate-300 space-y-1">;
+=======
+      </Head>;"
+      <div className="max - w-4xl mx - auto space - y-6">;"
+        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+          Diversity & Inclusion;
+        </h1>;"
+        <p className="text - slate - 300">;
+          We believe diverse teams build better products. We foster inclusive;
+          hiring, growth, and a respectful workplace.;
+        </p>;"
         <ul className="list - disc list - inside text - slate - 300 space - y-1">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <li > Inclusive hiring practices and diverse panels</li>;
           <li > Equal opportunities and career development</li>;
           <li > Respectful, safe, and collaborative culture</li>;
         </ul>;
       </div>;
     </div>);
+<<<<<<< HEAD
   return (
+    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
+=======
+  return ("
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>;
         <title > Diversity & Inclusion | Zion Tech Group</title>;
-        <meta;
-          name="description";
+        <meta;"
+          name="description";"
           content="Our commitment to diversity, equity, and inclusion.";
         />;
-        <link;
-          rel="canonical";
+        <link;"
+          rel="canonical";"
           href="https://ziontechgroup.com / diversity - inclusion";
         />;
+<<<<<<< HEAD
       </Head>;
-      <div className="max - w-4xl mx - auto space - y-6">;
-        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+      <div className="max - w-4xl mx-auto space-y-6">;
+        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">;
           Diversity & Inclusion;
         </h1>;
-        <p className="text - slate - 300">;
+        <p className="text-slate-300">;
           We believe diverse teams build better products. We foster inclusive;
           hiring, growth, and a respectful workplace.;
         </p>;
+        <ul className="list - disc list - inside text - slate-300 space-y-1">;
+=======
+      </Head>;"
+      <div className="max - w-4xl mx - auto space - y-6">;"
+        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+          Diversity & Inclusion;
+        </h1>;"
+        <p className="text - slate - 300">;
+          We believe diverse teams build better products. We foster inclusive;
+          hiring, growth, and a respectful workplace.;
+        </p>;"
         <ul className="list - disc list - inside text - slate - 300 space - y-1">;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           <li > Inclusive hiring practices and diverse panels</li>;
           <li > Equal opportunities and career development</li>;
           <li > Respectful, safe, and collaborative culture</li>;
@@ -147,3 +190,12 @@ function DiversityInclusionPage() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

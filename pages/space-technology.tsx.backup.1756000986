@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import {
@@ -130,6 +134,8 @@ export default function SpaceTechnologyPage() {
         "Executive reporting"
       ],
       popular: false
+<<<<<<< HEAD
+=======
 =======
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -240,11 +246,19 @@ const SpaceTechnologyPage: React.FC = () => {
       description: 'Eco-friendly space infrastructure',
       icon: <Heart className="w-6 h-6" />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>
       <Head>
         <title>Space Technology - Zion Tech Group</title>
@@ -326,6 +340,8 @@ const SpaceTechnologyPage: React.FC = () => {
                 <p className="text-slate-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
+<<<<<<< HEAD
+=======
 =======
     <Layout>
       <SEO 
@@ -365,11 +381,19 @@ const SpaceTechnologyPage: React.FC = () => {
               </div>
             </motion.div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           </div>
         </div>
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Benefits */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -615,6 +639,8 @@ const SpaceTechnologyPage: React.FC = () => {
     </>
   );
 }
+<<<<<<< HEAD
+=======
 =======
         {/* Space Capabilities */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
@@ -770,3 +796,7 @@ const SpaceTechnologyPage: React.FC = () => {
 export default SpaceTechnologyPage;
 
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

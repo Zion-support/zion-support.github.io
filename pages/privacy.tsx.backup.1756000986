@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -224,6 +228,8 @@ const Privacy: NextPage = () => {
 };
 
 export default Privacy;
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import Layout from '../components/layout/Layout';
@@ -664,3 +670,7 @@ export default PrivacyPage;
 
  
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

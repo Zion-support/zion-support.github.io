@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ApiProps {
   className?: string;
@@ -6,7 +6,7 @@ interface ApiProps {
 
 const Api: React.FC<ApiProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div className={className || ""}>
       <h1>Api</h1>
       <p>This component is under development.</p>
     </div>

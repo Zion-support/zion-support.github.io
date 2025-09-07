@@ -6,9 +6,8 @@ import Button from '../components/ui/Button';
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 =======
-import MicroSaasServices from '../components/sections/MicroSaasServices';
-import ServiceComparison from '../components/sections/ServiceComparison';
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-a78d
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const services = [
@@ -449,6 +448,11 @@ export default function ServicesPage() {
     }
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991929.backup.1756001157
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Individual Services */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -553,7 +557,7 @@ export default function ServicesPage() {
                             </ul>
                           </div>
                         ))}
-=======
+
                     
                     {/* Pricing and Category */}
                     <div className="flex items-center justify-between">
@@ -634,6 +638,10 @@ export default function ServicesPage() {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Micro SaaS Services Promotion */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
@@ -714,6 +722,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 =======
       {/* Micro SaaS Services */}
       <MicroSaasServices
@@ -725,6 +735,10 @@ export default function ServicesPage() {
       {/* Service Comparison */}
       <ServiceComparison />
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-a78d
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       {/* Technology Stack */}
       <section className="section-padding bg-gradient-cursor">
@@ -733,7 +747,15 @@ export default function ServicesPage() {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
               Technology Stack
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992037
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Head>
@@ -987,7 +1009,7 @@ export default function ServicesPage() {
         </section>
       </div>
     </AdvancedFuturisticBackground>
-=======
+
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />

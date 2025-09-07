@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,6 +14,8 @@ import {
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
+<<<<<<< HEAD
+=======
 =======
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { quantumSpaceServices } from '../data/quantum-space-services';
@@ -54,6 +60,10 @@ import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -61,6 +71,10 @@ export default function ServicesPage() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: 0 },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: 0 },
@@ -207,6 +221,8 @@ export default function ServicesPage() {
       features: ['Smart contracts', 'Governance automation', 'Voting systems', 'Transparency tools'],
       link: '/ai-blockchain-governance'
     }
+<<<<<<< HEAD
+=======
 =======
   // Combine all services
   const allServices = [
@@ -326,6 +342,10 @@ export default function ServicesPage() {
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length + comprehensiveEnterpriseITServices.length },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: enhancedRealMicroSaasServices.length + innovativeMicroSaasSolutions.length }
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   ];
 
   // Calculate category counts
@@ -335,6 +355,10 @@ export default function ServicesPage() {
   }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Filter services based on search and category
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -367,6 +391,8 @@ export default function ServicesPage() {
       color: 'from-indigo-500 to-purple-500'
     }
   ];
+<<<<<<< HEAD
+=======
 =======
   // Filter and sort services
   const filteredServices = useMemo(() => {
@@ -415,6 +441,10 @@ export default function ServicesPage() {
     website: 'https://ziontechgroup.com'
   };
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   const filteredServices = activeCategory === 'all' 
     ? allServices 
@@ -432,9 +462,13 @@ export default function ServicesPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
-=======
+
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>AI & Technology Services | Zion Tech Group</title>
@@ -619,6 +653,8 @@ export default function ServicesPage() {
                   <span>{category.name}</span>
                 </motion.button>
               ))}
+<<<<<<< HEAD
+=======
 =======
     <div className="min-h-screen bg-black text-white">
       <Head>
@@ -659,6 +695,10 @@ export default function ServicesPage() {
               <div className="text-2xl font-bold text-cyan-400 mb-1">{allServices.length}+</div>
               <div className="text-sm text-gray-400">Total Services</div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
             <div className="bg-black/20 backdrop-blur-sm border border-purple-500/20 rounded-lg p-4">
               <div className="text-2xl font-bold text-purple-400 mb-1">{categories.length - 1}</div>
@@ -676,6 +716,11 @@ export default function ServicesPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+            {/* Services Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
 <<<<<<< HEAD
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -779,11 +824,19 @@ export default function ServicesPage() {
           {viewMode === 'grid' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -1033,6 +1086,8 @@ export default function ServicesPage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+=======
 =======
 
       <EnhancedFooter />
@@ -1362,11 +1417,19 @@ export default function ServicesPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
@@ -1387,6 +1450,8 @@ export default function ServicesPage() {
               >
                 Contact Us
               </a>
+<<<<<<< HEAD
+=======
 =======
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
               Ready to Transform Your Business?
@@ -1431,15 +1496,15 @@ export default function ServicesPage() {
                 View Pricing
               </Button>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 
-      <SmartFooter />
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     </div>
   );
 };

@@ -1,6 +1,9 @@
-export default function Dashboard() {
-
+<<<<<<< HEAD
+export default function Dashboard() {}
   const params =
+<<<<<<< HEAD
+  const params = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
     typeof window !== 'undefined'
       : new URLSearchParams();
   const tenantId = params.get('tenantId') |'';
@@ -12,158 +15,193 @@ export default function Dashboard() {
   const tenantId = params.get('tenantId') |'';
 export default function Dashboard() {;
   const params =;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     typeof window !== 'undefined';
-      ? new URLSearchParams(window && window.location.search);
-      : new URLSearchParams();
-  const tenantId = params && params.get('tenantId') || '';
-  const [branding, setBranding] = useState<{;
+      : new URLSearchParams();'
+  const tenantId = params.get('tenantId') |'';
+  const [branding, setBranding] = useState<{}
     name: string;
     primaryColor?: string;
-    logoUrl?: string;
-  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
+    logoUrl?: string;'
+  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();'
+  const tenantId = params.get('tenantId') |'';
+export default function Dashboard() { return null; }
+  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();'
   const tenantId = params && params.get('tenantId') || '';
-  const [branding, setBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null);
+  const [branding, setBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null);'
         setBranding({ name: 'Zion Hire AI' });
       }
     }
-    fetchBranding();  }, [tenantId]);      } catch {;
+    fetchBranding();  }, [tenantId]);      } catch {;'
+        setBranding({ name: 'Zion Hire AI' });
+      }
+    }
+    fetchBranding();
+  }, [tenantId]);'
+  const accent = branding?.primaryColor |'#111827';
+
+  return ('
+    <div className='min-h-screen bg-gray-50'>;'
+      <header className='px-6 py-4 bg-white border-b flex items-center gap-3'>;
+        {branding?.logoUrl && (;'
+          <img src={branding && branding.logoUrl} alt='logo' className='h-8 w-8 rounded' />;
+  } | null>(null);
+
+  useEffect(() => {
+    async function fetchBranding() {
+      try {
+        const resp = await fetch('/api/tenants');
+        const data = await resp.json();
+const t = (data.tenants || []).find((x: any) => x.id === tenantId);
+        setBranding(t?.branding || { name: 'Zion Hire AI' });
+      } catch {
         setBranding({ name: 'Zion Hire AI' });
       }
     }
     fetchBranding();
   }, [tenantId]);
   const accent = branding?.primaryColor |'#111827';
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return (
-    <div className='min-h-screen bg-gray-50'>;
-      <header className='px-6 py-4 bg-white border-b flex items-center gap-3'>;
-        {branding?.logoUrl && (;
-          <img src={branding && branding.logoUrl} alt='logo' className='h-8 w-8 rounded' />;
+<div className='min-h-screen bg-gray-50'>
+      <header className='px-6 py-4 bg-white border-b flex items-center gap-3'>
+        {branding?.logoUrl && (
+          <img src={branding.logoUrl} alt='logo' className='h-8 w-8 rounded' />
+origin/cursor/automate-test-improve-and-merge-code-2533
         )}
-            <input
-              className='border rounded px-3 py-2'
+            <input'
+              className='border rounded px-3 py-2''
               placeholder='Primary Color (hex)'
             />;
-            <input
-              className='border rounded px-3 py-2 md:col-span-2'
+            <input'
+              className='border rounded px-3 py-2 md:col-span-2''
               placeholder='Hiring Needs (e && e.g., 3 engineers, 1 PM)'
             />;
+<<<<<<< HEAD
+            <button'
+              type='button''
+              className='bg-gray-900 text-white rounded px-3 py-2 md:col-span-2'>;'
+=======
             <button
               type='button'
               className='bg-gray-900 text-white rounded px-3 py-2 md:col-span-2'>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import {useEffect, useMemo, useState} from 'react';
-export default /**
- * Dashboard - Function description
+export default /**;
+ * Dashboard - Function description;
  */
-function Dashboard() {
-  const params =;
+function Dashboard() {}
+  const params =;'
     typeof window !== 'undefined';
       ? new URLSearchParams (window.location.search);
-      : new URLSearchParams ();
+      : new URLSearchParams ();'
   const tenant_id = params.get ('tenant_id') || '';
 ;
-  const [branding, set_branding] = useState<{
+  const [branding, set_branding] = useState<{}
     name: string;
     primary_color?: string;
-    logo_url?: string;
-  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams (window.location.search) : new URLSearchParams ();
+    logo_url?: string;'
+  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams (window.location.search) : new URLSearchParams ();'
   const tenant_id = params.get ('tenant_id') || '';
 ;
   const [branding, set_branding] = useState<{ name: string, primary_color?: string, logo_url?: string } | null>(null);
-  useEffect (() => {
+  useEffect (() => {}
     async /**
- * fetch_branding - Function description
+ * fetch_branding - Function description;
  */
-function fetch_branding() {
-      try {
+function fetch_branding() {}
+      try {'
         const resp = await fetch ('/api / tenants');
         const data = await resp.json ();
-        const t = (data.tenants || []).find ((coordinate_x: any) => x.id === tenant_id);
+        const t = (data.tenants || []).find ((coordinate_x: any) => x.id === tenant_id);'
         set_branding (t?.branding || { name: 'Zion Hire AI' });
-      } catch {
+      } catch {'
         set_branding ({ name: 'Zion Hire AI' });
       }
     }
-    fetch_branding ();  }, [tenant_id]);      } catch {
+    fetch_branding ();  }, [tenant_id]);      } catch {'
         set_branding ({ name: 'Zion Hire AI' });
       }
     }
     fetch_branding ();
   }, [tenant_id]);
-;
+;'
   const accent = branding?.primary_color || '#111827';
 ;
-  return (
-    <div className='min - h-screen bg - gray - 50'>;
+  return ('
+    <div className='min - h-screen bg - gray - 50'>;'
       <header className='px - 6 py - 4 bg - white border - b flex items - center gap - 3'>;
-        {branding?.logo_url && (
-          <img src={branding.logo_url} alt='logo' className='h - 8 w - 8 rounded' />)}
-        <h1 className='text - lg font - semibold' style={{ color: accent }}>;
+        {branding?.logo_url && ('
+          <img src={branding.logo_url} alt='logo' className='h - 8 w - 8 rounded' />)}'
+        <h1 className='text - lg font - semibold' style={{ color: accent }}>;'
           {branding?.name || 'Zion Hire AI'}
-        </h1>;
-        <span className='ml - auto text - xs text - gray - 400'>;
+        </h1>;'
+        <span className='ml - auto text - xs text - gray - 400'>;'
           Tenant: {tenant_id ? tenant_id.slice (0, 8) : '—'}
-        </span>;
-      <main className='max - w-6xl mx - auto p - 6 grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
-        <section className='col - span - 1 md:col - span - 2 bg - white border rounded p - 4'>;
-          <h2 className='font - semibold mb - 3'>Onboarding</h2>;
+        </span>;'
+      <main className='max - w-6xl mx - auto p - 6 grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;'
+        <section className='col - span - 1 md:col - span - 2 bg - white border rounded p - 4'>;'
+          <h2 className='font - semibold mb - 3'>Onboarding</h2>;'
           <form className='grid grid - cols - 1 md:grid - cols - 2 gap - 3'>;
-            <input;
-              className='border rounded px - 3 py - 2';
-              placeholder='Company Name';
+            <input;'
+              className='border rounded px - 3 py - 2';'
+              placeholder='Company Name';'
               default_value={branding?.name || ''}
             />;
-            <input;
-              className='border rounded px - 3 py - 2';
+            <input;'
+              className='border rounded px - 3 py - 2';'
               placeholder='Primary Color (hex)';
             />;
-            <input;
-              className='border rounded px - 3 py - 2 md:col - span - 2';
+            <input;'
+              className='border rounded px - 3 py - 2 md:col - span - 2';'
               placeholder='Hiring Needs (e.g., 3 engineers, 1 PM)';
             />;
-            <button;
-              type='button';
+            <button;'
+              type='button';'
               className='bg - gray - 900 text - white rounded px - 3 py - 2 md:col - span - 2';
             >;
               Save;
             </button>;
           </form>;
         </section>;
-          <h2 className="font-semibold mb-3">Candidate Flow</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
-            <div className="border rounded p-3"><div className="font-medium">Applied</div><div className="text-gray-500">0</div></div>
-            <div className="border rounded p-3"><div className="font-medium">Screen</div><div className="text-gray-500">0</div></div>
-            <div className="border rounded p-3"><div className="font-medium">Interview</div><div className="text-gray-500">0</div></div>
+          <h2 className="font-semibold mb-3">Candidate Flow</h2>"
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">"
+            <div className="border rounded p-3"><div className="font-medium">Applied</div><div className="text-gray-500">0</div></div>"
+            <div className="border rounded p-3"><div className="font-medium">Screen</div><div className="text-gray-500">0</div></div>"
+            <div className="border rounded p-3"><div className="font-medium">Interview</div><div className="text-gray-500">0</div></div>"
             <div className="border rounded p-3"><div className="font-medium">Offer</div><div className="text-gray-500">0</div></div>
               Generate JD with AI;
             </button>;
           </form>;
         </section>;
-
-        <section className='col-span-1 md:col-span-3 bg-white border rounded p-4'>;
-          <h2 className='font-semibold mb-3'>Candidate Flow</h2>;
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-4 text-sm'>;
-            <div className='border rounded p-3'>;
-              <div className='font-medium'>Applied</div>;
+'
+        <section className='col-span-1 md:col-span-3 bg-white border rounded p-4'>;'
+          <h2 className='font-semibold mb-3'>Candidate Flow</h2>;'
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-4 text-sm'>;'
+            <div className='border rounded p-3'>;'
+              <div className='font-medium'>Applied</div>;'
               <div className='text-gray-500'>0</div>;
-            </div>;
-            <div className='border rounded p-3'>;
-              <div className='font-medium'>Screen</div>;
+            </div>;'
+            <div className='border rounded p-3'>;'
+              <div className='font-medium'>Screen</div>;'
               <div className='text-gray-500'>0</div>;
-            </div>;
-            <div className='border rounded p-3'>;
-              <div className='font-medium'>Interview</div>;
+            </div>;'
+            <div className='border rounded p-3'>;'
+              <div className='font-medium'>Interview</div>;'
               <div className='text-gray-500'>0</div>;
-            </div>;
-            <div className='border rounded p-3'>;
-              <div className='font-medium'>Offer</div>;
-              <div className='text-gray-500'>0</div>;
-            </div>          </div>        <section className="col-span-1 md:col-span-3 bg-white border rounded p-4">;
-          <h2 className="font-semibold mb-3">Candidate Flow</h2>;
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">;
-            <div className="border rounded p-3"><div className="font-medium">Applied</div><div className="text-gray-500">0</div></div>;
-            <div className="border rounded p-3"><div className="font-medium">Screen</div><div className="text-gray-500">0</div></div>;
-            <div className="border rounded p-3"><div className="font-medium">Interview</div><div className="text-gray-500">0</div></div>;
+            </div>;'
+            <div className='border rounded p-3'>;'
+              <div className='font-medium'>Offer</div>;'
+              <div className='text-gray-500'>0</div>;"
+            </div>          </div>        <section className="col-span-1 md:col-span-3 bg-white border rounded p-4">;"
+          <h2 className="font-semibold mb-3">Candidate Flow</h2>;"
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">;"
+            <div className="border rounded p-3"><div className="font-medium">Applied</div><div className="text-gray-500">0</div></div>;"
+            <div className="border rounded p-3"><div className="font-medium">Screen</div><div className="text-gray-500">0</div></div>;"
+            <div className="border rounded p-3"><div className="font-medium">Interview</div><div className="text-gray-500">0</div></div>;"
             <div className="border rounded p-3"><div className="font-medium">Offer</div><div className="text-gray-500">0</div></div>;
         </section>;
       </main>;
@@ -171,9 +209,58 @@ function fetch_branding() {
   );
 
 }fetchBranding () ;
-}, [tenantId]);
+}, [tenantId]);"
 </header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) }
 
+              className='bg-gray-900 text-white rounded px-3 py-2 md:col-span-2'
+            >
+              Save
+            </button>
+          </form>
+        </section>
+        <section className='bg-white border rounded p-4'>
+          <h2 className='font-semibold mb-3'>Post a Job</h2>
+          <form className='space-y-2'>
+            <input
+              className='border rounded px-3 py-2 w-full'
+              placeholder='Title'
+            />
+            <input
+              className='border rounded px-3 py-2 w-full'
+              placeholder='Location'
+            />
+            <input
+              className='border rounded px-3 py-2 w-full'
+              placeholder='Level'
+            />
+            <button
+              type='button'
+              className='bg-gray-900 text-white rounded px-3 py-2 w-full'
+            >
+              Generate JD with AI
+            </button>
+          </form>
+        </section>
+        <section className='col-span-1 md:col-span-3 bg-white border rounded p-4'>
+          <h2 className='font-semibold mb-3'>Candidate Flow</h2>
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-4 text-sm'>
+            <div className='border rounded p-3'>
+              <div className='font-medium'>Applied</div>
+              <div className='text-gray-500'>0</div>
+            </div>
+            <div className='border rounded p-3'>
+              <div className='font-medium'>Screen</div>
+              <div className='text-gray-500'>0</div>
+            </div>
+            <div className='border rounded p-3'>
+              <div className='font-medium'>Interview</div>
+              <div className='text-gray-500'>0</div>
+            </div>
+            <div className='border rounded p-3'>
+              <div className='font-medium'>Offer</div>
+              <div className='text-gray-500'>0</div>
+            </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </section>
       </main>
@@ -181,5 +268,16 @@ function fetch_branding() {
   );
 
 }fetchBranding () 
-}, [tenantId]);
+}, [tenantId]);"
 </header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}fetchBranding () 
+}, [tenantId]);
+</header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>)
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

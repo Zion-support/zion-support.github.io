@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { 
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award, 
@@ -521,6 +525,8 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
+<<<<<<< HEAD
+=======
 =======
 import Layout from '../components/layout/Layout';
 
@@ -539,3 +545,7 @@ export default function BlogPage() {
 	);
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e946
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

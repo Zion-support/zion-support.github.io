@@ -11,8 +11,8 @@ class MyDocument extends Document {
 <<<<<<< HEAD
       <Html>
 =======
-      <Html lang="en">
->>>>>>> origin/cursor/deploy-zion-omnichain-bridge-and-depin-integration-3253
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <Head />
         <body>
           <Main />
@@ -26,5 +26,5 @@ class MyDocument extends Document {
 <<<<<<< HEAD
 export default MyDocument;
 =======
-export default MyDocument;
->>>>>>> origin/cursor/deploy-zion-omnichain-bridge-and-depin-integration-3253
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

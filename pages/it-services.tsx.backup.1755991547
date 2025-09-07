@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { 
   Cpu, Cloud, Shield, Settings, Database, Network, 
@@ -50,6 +54,8 @@ export default function ITServices() {
       icon: <Building className="w-12 h-12 text-pink-400" />,
       features: ['Technology Assessment', 'Digital Transformation', 'IT Strategy', 'Vendor Management'],
       applications: ['Technology Roadmaps', 'Cost Optimization', 'Risk Management', 'Compliance Planning']
+<<<<<<< HEAD
+=======
 =======
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -160,6 +166,10 @@ const ITServicesPage: React.FC = () => {
       description: 'Robust networking infrastructure',
       icon: <Network className="w-6 h-6" />
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -210,6 +220,10 @@ const ITServicesPage: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -575,6 +589,8 @@ const ITServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+=======
 =======
     <Layout>
       <SEO 
@@ -765,6 +781,10 @@ const ITServicesPage: React.FC = () => {
       </main>
     </Layout>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

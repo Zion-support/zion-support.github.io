@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { Button } from '@/components/ui/button',;
 import { Form } from '@/components/ui/form',;
 import { Certification } from '@/types/resume',;
+<<<<<<< HEAD
+import { Loader2 } from 'lucide-react',;
+=======
 import { Loader2 } from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useResume } from '@/hooks/useResume',;
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -91,6 +99,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   },;
 ;
   return (;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>;
@@ -98,6 +110,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           Add any professional certifications, licenses, or credentials you have earned.;
         </p>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 ;
       {certifications.length > 0 && (;
         <CertificationsList ;
@@ -147,6 +163,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                 </Button>;
 ;
                 <Button type="button" onClick={onComplete}>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Next;
                 </Button>;
               </div>;
@@ -154,6 +171,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           </form>;
         </Form>;
       </div>;
+<<<<<<< HEAD
+
+}
+=======
     </div>;
   ),; return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Certifications & Licenses</h2> <p className="text-muted-foreground" > Add any professional certifications, licenses, or credentials you have earned. </p> </div> {;
   certifications.length > 0 && (<CertificationsList certifications= {;
@@ -169,3 +190,4 @@ form.reset ({;
 }>{;
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;"}'"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

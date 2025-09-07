@@ -1,12 +1,8 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-
-/**
- * Fix syntax errors in test files
- */
 class TestSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -14,76 +10,44 @@ class TestSyntaxFixer {
     this.errors = [];
   }
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
-
-  fixImportSyntax(content) {
-    // Fix common import syntax errors
-    return content
-      .replace(/import\s+([^,]+),\s*;\s*$/gm, 'import $1;')
-      .replace(/import\s+([^,]+),\s*$/gm, 'import $1;')
-      .replace(/from\s+['"]([^'"]+)['"],\s*;$/gm, "from '$1';")
-      .replace(/from\s+['"]([^'"]+)['"],\s*$/gm, "from '$1';")
-      .replace(/import\s+([^,]+),\s*;\s*$/gm, 'import $1;');
-  }
-
-  fixTestSyntax(content) {
-    // Fix test syntax errors
-    return content
-      .replace(/test\s*\(\s*['"]([^'"]+)['"]\s*,\s*async\s*\(\s*\{\s*page\s*\}\s*\)\s*=>\s*\{\s*await:\s*/gm, "test('$1', async ({ page }) => {\n  await ")
-      .replace(/await:\s*/gm, 'await ')
-      .replace(/await\s+page\.goto\('\/\)'/gm, "await page.goto('/')")
-      .replace(/await\s+page\.goto\('\/contact\)'/gm, "await page.goto('/contact')")
-      .replace(/await\s+expect\(page\)\.toHaveTitle\(\/Zion Tech Group\/\)/gm, "await expect(page).toHaveTitle(/Zion Tech Group/)")
-      .replace(/await\s+expect\(page\.locator\('h1\)\)\.toBeVisible\(\)/gm, "await expect(page.locator('h1')).toBeVisible()")
-      .replace(/await\s+page\.click\('text=Services\)'/gm, "await page.click('text=Services')")
-      .replace(/await\s+expect\(page\)\.toHaveURL\(\/\.\*services\/\)/gm, "await expect(page).toHaveURL(/.*services/)")
-      .replace(/await\s+page\.fill\('input\[name="name\]Test User\)'/gm, "await page.fill('input[name=\"name\"]', 'Test User')")
-      .replace(/await\s+page\.fill\('input\[name="email"\]test@example\.com\)'/gm, "await page.fill('input[name=\"email\"]', 'test@example.com')")
-      .replace(/await\s+page\.fill\('textarea\[name=message"\]Test message\)'/gm, "await page.fill('textarea[name=\"message\"]', 'Test message')")
-      .replace(/await\s+page\.click\('button\[type="submit\]\)'/gm, "await page.click('button[type=\"submit\"]')")
-      .replace(/await\s+expect\(page\.locator\('\.success-message\)\)\.toBeVisible\(\)/gm, "await expect(page.locator('.success-message')).toBeVisible()");
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
   fixFile(filePath) {
     try {
-      this.log(`Fixing: ${filePath}`);
-      
+      if (!fs.existsSync(filePath)) {
+        this.log(`⚠️ File not found: ${filePath}`);
+        return false;
+      }
+
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
+
+      // Fix trailing commas in import statements
+      content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;');
       
-      // Fix import syntax
-      content = this.fixImportSyntax(content);
+      // Fix other common syntax issues
+      content = content.replace(/,\s*}/g, '}');
+      content = content.replace(/,\s*]/g, ']');
+      content = content.replace(/,\s*\)/g, ')');
       
-      // Fix test syntax
-      content = this.fixTestSyntax(content);
-      
-      // Remove duplicate lines and clean up
-      const lines = content.split('\n');
-      const uniqueLines = [...new Set(lines)];
-      content = uniqueLines.join('\n');
-      
-      // Clean up extra commas and semicolons
-      content = content
-        .replace(/,\s*;\s*$/gm, ';')
-        .replace(/,\s*$/gm, ';')
-        .replace(/;\s*;\s*$/gm, ';')
-        .replace(/\s+$/gm, '');
-      
+      // Fix function declarations with trailing commas
+      content = content.replace(/function\s+([^(]+)\([^)]*,\s*\)/g, (match, funcName) => {
+        return match.replace(/,\s*\)$/, ')');
+      });
+
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
+        this.log(`✅ Fixed syntax in: ${filePath}`);
         this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed: ${filePath}`, 'SUCCESS');
         return true;
       } else {
-        this.log(`No changes needed: ${filePath}`, 'WARNING');
+        this.log(`ℹ️ No changes needed: ${filePath}`);
         return false;
       }
     } catch (error) {
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`, 'ERROR');
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
       this.errors.push({ file: filePath, error: error.message });
       return false;
     }
@@ -91,18 +55,20 @@ class TestSyntaxFixer {
 
   findTestFiles() {
     const testFiles = [];
-    const directories = [
+    
+    // Find test files in various directories
+    const searchPaths = [
       '__tests__',
-      'e2e',
       'src_backup',
-      'recovered-branches'
+      'recovered-branches',
+      'tests'
     ];
 
-    directories.forEach(dir => {
-      if (fs.existsSync(dir)) {
-        this.findFilesRecursively(dir, testFiles);
+    for (const searchPath of searchPaths) {
+      if (fs.existsSync(searchPath)) {
+        this.findFilesRecursively(searchPath, testFiles);
       }
-    });
+    }
 
     return testFiles;
   }
@@ -110,24 +76,23 @@ class TestSyntaxFixer {
   findFilesRecursively(dir, files) {
     const items = fs.readdirSync(dir);
     
-    items.forEach(item => {
+    for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
         this.findFilesRecursively(fullPath, files);
-      } else if (item.match(/\.(test|spec)\.(ts|tsx|js|jsx)$/)) {
+      } else if (stat.isFile() && (item.endsWith('.test.js') || item.endsWith('.test.ts') || item.endsWith('.test.tsx') || item.endsWith('.test.jsx'))) {
         files.push(fullPath);
       }
-    });
+    }
   }
 
   async run() {
     this.log('🔧 Starting Test Syntax Fixer');
-    this.log('='.repeat(50));
-
+    
     const testFiles = this.findTestFiles();
-    this.log(`Found ${testFiles.length} test files`);
+    this.log(`📁 Found ${testFiles.length} test files`);
 
     let fixedCount = 0;
     for (const file of testFiles) {
@@ -136,29 +101,38 @@ class TestSyntaxFixer {
       }
     }
 
-    this.log('\n📊 Fix Summary');
-    this.log('='.repeat(50));
-    this.log(`Total files processed: ${testFiles.length}`);
-    this.log(`Files fixed: ${fixedCount}`);
-    this.log(`Errors: ${this.errors.length}`);
-
-    if (this.fixedFiles.length > 0) {
-      this.log('\n✅ Fixed files:');
-      this.fixedFiles.forEach(file => this.log(`  - ${file}`));
-    }
-
+    this.log(`✅ Fixed ${fixedCount} files`);
+    
     if (this.errors.length > 0) {
-      this.log('\n❌ Errors:');
-      this.errors.forEach(({ file, error }) => this.log(`  - ${file}: ${error}`));
+      this.log(`❌ ${this.errors.length} errors encountered:`);
+      this.errors.forEach(error => {
+        this.log(`   - ${error.file}: ${error.error}`);
+      });
     }
 
-    this.log('\n🎉 Test syntax fixing completed!');
+    // Generate report
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalFiles: testFiles.length,
+      fixedFiles: fixedCount,
+      errors: this.errors,
+      fixedFileList: this.fixedFiles
+    };
+
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'test-syntax-fix-report.json'),
+      JSON.stringify(report, null, 2)
+    );
+
+    this.log('📊 Report saved to test-syntax-fix-report.json');
+    return report;
   }
 }
 
 // Run the fixer
-const fixer = new TestSyntaxFixer();
-fixer.run().catch(console.error);
+if (require.main === module) {
+  const fixer = new TestSyntaxFixer();
+  fixer.run().catch(console.error);
+}
 
 module.exports = TestSyntaxFixer;
-

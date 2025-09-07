@@ -97,6 +97,9 @@ import Link from 'next/link',
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
         </Head>
 
+  const newsArticles = [
+    {
+
       id: 1,
       title: "Zion Tech Group Launches Revolutionary Quantum AI Platform",
       excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.",
@@ -172,6 +175,9 @@ export default function News() {
       date: '2024-01-15',
       readTime: '5 min read',
       image: '/api/placeholder/600/400',
+      tags: ['AI', 'Quantum Computing', 'Innovation'],
+import Head from 'next/head';
+
       tags: ['AIQuantum ComputingInnovation'],
 import Head from 'next/head',
 export default function NewsPage() {
@@ -267,6 +273,7 @@ export default function NewsPage() {
             </div>
           </section>
         )}
+
 ;
         {/* Category Filter */}
         <section className="py-12 bg-black/50">
@@ -407,6 +414,8 @@ export default function NewsPage() {
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import { 
@@ -702,6 +711,17 @@ export default function News() {;
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
+    'All News',
+    'Company News',
+    'Partnerships',
+    'AI & Ethics',
+    'Quantum Technology',
+    'Space Technology',
+    'Micro SAAS',
+    'IT Services',
+    'Metaverse',
+    'Industry Insights'
+  ];
     'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services',
     'MetaverseIndustry Insights'
   ],

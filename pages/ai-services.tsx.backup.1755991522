@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -62,6 +66,8 @@ export default function AIServices() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
+<<<<<<< HEAD
+=======
 =======
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -143,12 +149,20 @@ const AIServices: React.FC = () => {
         <section className="pt-32 pb-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 AI & Machine Learning Services
               </h1>
@@ -170,6 +184,8 @@ const AIServices: React.FC = () => {
                 >
                   Get Consultation
                 </motion.button>
+<<<<<<< HEAD
+=======
 =======
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 AI & Machine Learning
@@ -185,6 +201,10 @@ const AIServices: React.FC = () => {
                   View Pricing
                 </button>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
@@ -192,6 +212,10 @@ const AIServices: React.FC = () => {
 
         {/* Services Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -205,6 +229,8 @@ const AIServices: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Comprehensive AI solutions designed to transform your business and accelerate innovation
+<<<<<<< HEAD
+=======
 =======
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -221,11 +247,19 @@ const AIServices: React.FC = () => {
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                 Comprehensive AI solutions designed to meet the unique needs of modern enterprises
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {aiServices.map((service, index) => (
                 <motion.div
                   key={service.title}
@@ -233,6 +267,8 @@ const AIServices: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
+<<<<<<< HEAD
+=======
 =======
               {services.map((service, index) => (
                 <motion.div
@@ -243,11 +279,19 @@ const AIServices: React.FC = () => {
                   viewport={{ once: true }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   <div className="mb-6">
                     {service.icon}
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
@@ -258,6 +302,8 @@ const AIServices: React.FC = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+<<<<<<< HEAD
+=======
 =======
                   <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
                   <p className="text-gray-400 mb-6">{service.description}</p>
@@ -266,11 +312,19 @@ const AIServices: React.FC = () => {
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                         {feature}
                       </li>
                     ))}
                   </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <motion.a
                     href={service.href}
                     whileHover={{ x: 5 }}
@@ -278,6 +332,8 @@ const AIServices: React.FC = () => {
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </motion.a>
+<<<<<<< HEAD
+=======
 =======
                   <div className="text-cyan-400 font-semibold text-lg">{service.price}</div>
                 </motion.div>
@@ -320,6 +376,10 @@ const AIServices: React.FC = () => {
                   <h3 className="text-xl font-bold mb-3 text-white">{benefit.title}</h3>
                   <p className="text-gray-400">{benefit.description}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -328,6 +388,10 @@ const AIServices: React.FC = () => {
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -356,6 +420,8 @@ const AIServices: React.FC = () => {
                 >
                   View Case Studies
                 </motion.button>
+<<<<<<< HEAD
+=======
 =======
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -379,11 +445,21 @@ const AIServices: React.FC = () => {
                   Schedule a Demo
                 </button>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </>
+  );
+}
+=======
 <<<<<<< HEAD
     </>
   );
@@ -395,3 +471,7 @@ const AIServices: React.FC = () => {
 
 export default AIServices;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

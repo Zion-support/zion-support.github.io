@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -602,6 +606,8 @@ export default function CaseStudiesPage() {
     </Layout>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -1060,3 +1066,7 @@ export default function CaseStudies() {
   );
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8cd7
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

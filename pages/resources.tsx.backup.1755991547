@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -243,6 +247,8 @@ export default function Resources() {
                   placeholder="Search resources, documentation, and support..."
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                 />
+<<<<<<< HEAD
+=======
 =======
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -539,6 +545,10 @@ const ResourcesPage: React.FC = () => {
                   Schedule Consultation
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </div>
 
@@ -604,6 +614,10 @@ const ResourcesPage: React.FC = () => {
             ))}
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
       </section>
 
@@ -740,6 +754,8 @@ const ResourcesPage: React.FC = () => {
 };
 
 export default ResourcesPage;
+<<<<<<< HEAD
+=======
 =======
         </section>
       </main>
@@ -749,3 +765,7 @@ export default ResourcesPage;
 
 export default ResourcesPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

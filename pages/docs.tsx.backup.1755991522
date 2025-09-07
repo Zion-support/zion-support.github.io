@@ -101,6 +101,10 @@ export default function Documentation() {
       readTime: '40 min',
       lastUpdated: '2023-12-28',
       featured: false
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/docs.tsx.backup.1755992096.backup.1756001154
+========
 =======
 import React from 'react';
 import Layout from '../components/layout/Layout';
@@ -182,12 +186,21 @@ const Docs: React.FC = () => {
       ],
       color: 'from-yellow-500/20 to-orange-500/20'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/docs.tsx.backup.1755991522
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const quickLinks = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       title: 'API Status',
       description: 'Check service availability and performance',
       icon: <CheckCircle className="w-6 h-6" />,
@@ -205,6 +218,8 @@ const Docs: React.FC = () => {
       title: 'Support Portal',
       description: 'Get help from our technical support team',
       icon: <ExternalLink className="w-6 h-6" />,
+<<<<<<< HEAD
+=======
 =======
       title: 'API Documentation',
       description: 'Complete API reference and examples',
@@ -224,11 +239,19 @@ const Docs: React.FC = () => {
       description: 'Get help and support',
       icon: <Users className="w-6 h-6" />,
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       href: '/support',
       color: 'text-purple-400'
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       title: 'Community Forum',
       description: 'Connect with other developers and users',
       icon: <ExternalLink className="w-6 h-6" />,
@@ -551,6 +574,8 @@ const Docs: React.FC = () => {
     </Layout>
   );
 }
+<<<<<<< HEAD
+=======
 =======
       title: 'Resources',
       description: 'Additional resources and downloads',
@@ -858,3 +883,7 @@ const Docs: React.FC = () => {
 
 export default Docs;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-7fae
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

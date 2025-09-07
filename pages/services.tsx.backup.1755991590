@@ -1,8 +1,17 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991484.backup.1756001157
+========
 =======
 import React from 'react';
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991590
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -26,9 +35,16 @@ export default function Services() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -48,6 +64,11 @@ export default function Placeholder() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

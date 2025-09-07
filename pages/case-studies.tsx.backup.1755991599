@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { 
   TrendingUp, Users, DollarSign, Clock, ArrowRight, 
@@ -455,6 +459,8 @@ export default function CaseStudies() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -471,3 +477,7 @@ export default function CaseStudiesPage() {
   );
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1967
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

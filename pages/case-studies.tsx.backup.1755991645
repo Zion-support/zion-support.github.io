@@ -1,6 +1,10 @@
 import React from 'react';
 import SEO from '../components/SEO';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 export default function CaseStudiesPage() {
@@ -14,6 +18,8 @@ export default function CaseStudiesPage() {
     </UltraFuturisticBackground>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 
 export default function CaseStudiesPage() {
@@ -28,3 +34,7 @@ export default function CaseStudiesPage() {
   );
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-45bf
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

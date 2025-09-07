@@ -1,10 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '../components/SEO';
+import Layout from '../components/layout/Layout';
+=======
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
 =======
 import React, { useState } from 'react';
 >>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9d10
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import { motion } from 'framer-motion';
 import { 
   Brain, Shield, Rocket, Globe, Cpu, Database, 
@@ -12,6 +22,10 @@ import {
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { innovative2025AIServices } from '../data/innovative-2025-ai-services-batch';
 import { innovative2025ITServices } from '../data/innovative-2025-it-services-batch';
 import { innovative2025MicroSaasServices } from '../data/innovative-2025-micro-saas-batch';
@@ -66,6 +80,8 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           <motion.h1
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8"
             initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
+=======
 =======
 
 // Import our new innovative services
@@ -172,6 +188,10 @@ const Innovative2025ServicesShowcase: React.FC = () => {
             className="relative z-20 py-8 px-4 sm:px-6 lg:px-8"
             initial={{ opacity: 0, y: -20 }}
 >>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9d10
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -199,6 +219,10 @@ const Innovative2025ServicesShowcase: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <a 
               href="#services"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
@@ -424,6 +448,8 @@ const Innovative2025ServicesShowcase: React.FC = () => {
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
+=======
 =======
             <div className="max-w-7xl mx-auto">
               {/* Search Bar */}
@@ -699,6 +725,10 @@ const Innovative2025ServicesShowcase: React.FC = () => {
       </div>
     </>
 >>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9d10
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

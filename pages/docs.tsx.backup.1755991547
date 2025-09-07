@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { BookOpen, FileText, Code, Database, Server, Shield, Brain, Atom, Rocket, Search, Download, ExternalLink, ChevronRight } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -112,6 +116,8 @@ export default function Documentation() {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10" />
           <div className="relative z-10 max-w-7xl mx-auto text-center">
+<<<<<<< HEAD
+=======
 =======
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -246,11 +252,19 @@ const DocsPage: React.FC = () => {
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="mb-8"
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent mb-6">
@@ -275,6 +289,8 @@ const DocsPage: React.FC = () => {
                   placeholder="Search documentation..."
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400/50 focus:ring-2 focus:ring-blue-400/20"
                 />
+<<<<<<< HEAD
+=======
 =======
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
@@ -297,15 +313,26 @@ const DocsPage: React.FC = () => {
                   Get Support
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Quick Start Guides */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -313,47 +340,24 @@ const DocsPage: React.FC = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-6">
-                Quick Start Guides
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Get up and running quickly with our step-by-step guides
-              </p>
-            </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {quickStartGuides.map((guide, index) => (
-                <motion.a
-                  key={guide.title}
-                  href={guide.href}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    {guide.icon}
-                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                    {guide.title}
-                  </h3>
-                  <p className="text-sm text-gray-400">{guide.description}</p>
-                </motion.a>
-              ))}
-            </div>
-          </div>
-        </section>
 
+<<<<<<< HEAD
         {/* Documentation Categories */}
         <section className="py-20 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
 =======
         {/* Documentation Categories */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-6xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -362,6 +366,9 @@ const DocsPage: React.FC = () => {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-cyan-500 bg-clip-text text-transparent mb-6">
                 Documentation by Category
               </h2>
@@ -374,6 +381,8 @@ const DocsPage: React.FC = () => {
               {documentationCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-cyan-500 bg-clip-text text-transparent">
                 Documentation Categories
@@ -388,11 +397,15 @@ const DocsPage: React.FC = () => {
                 <motion.div
                   key={category.id}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
                 >
                   <div className="flex items-center gap-4 mb-6">
@@ -419,6 +432,8 @@ const DocsPage: React.FC = () => {
                         </div>
                       </div>
                     ))}
+<<<<<<< HEAD
+=======
 =======
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-teal-500 transition-all duration-300 cursor-pointer"
                 >
@@ -430,6 +445,9 @@ const DocsPage: React.FC = () => {
                     <p className="text-gray-300 mb-4">{category.description}</p>
                     <div className="text-teal-400 font-semibold">{category.count}</div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </motion.div>
               ))}
@@ -437,6 +455,12 @@ const DocsPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* API Resources */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+=======
 <<<<<<< HEAD
         {/* API Resources */}
         <section className="py-20 px-4">
@@ -446,6 +470,10 @@ const DocsPage: React.FC = () => {
         <section id="featured" className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -454,6 +482,10 @@ const DocsPage: React.FC = () => {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
                 API Resources
               </h2>
@@ -467,6 +499,8 @@ const DocsPage: React.FC = () => {
                 <motion.a
                   key={resource.name}
                   href={resource.href}
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-cyan-500 bg-clip-text text-transparent">
                 Featured Documentation
@@ -481,11 +515,19 @@ const DocsPage: React.FC = () => {
                 <motion.article
                   key={doc.id}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className="flex items-center gap-3 mb-4">
@@ -497,6 +539,8 @@ const DocsPage: React.FC = () => {
                   </h3>
                   <p className="text-sm text-gray-400">{resource.description}</p>
                 </motion.a>
+<<<<<<< HEAD
+=======
 =======
                   className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-teal-500 transition-all duration-300 overflow-hidden"
                 >
@@ -590,6 +634,10 @@ const DocsPage: React.FC = () => {
                   </a>
                 </motion.article>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               ))}
             </div>
           </div>
@@ -605,6 +653,10 @@ const DocsPage: React.FC = () => {
               viewport={{ once: true }}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent mb-6">
                 Need Help?
               </h2>
@@ -623,6 +675,8 @@ const DocsPage: React.FC = () => {
                   className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   View Support Center
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-cyan-500 bg-clip-text text-transparent">
                 Need More Help?
@@ -643,16 +697,26 @@ const DocsPage: React.FC = () => {
                 >
                   Schedule Consultation
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>
     </Layout>
   );
 }
+<<<<<<< HEAD
+=======
 =======
       </main>
     </Layout>
@@ -661,3 +725,7 @@ const DocsPage: React.FC = () => {
 
 export default DocsPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

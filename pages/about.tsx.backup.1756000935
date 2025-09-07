@@ -3,18 +3,31 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
 <<<<<<< HEAD
+<<<<<<< HEAD
+  Brain, Shield, Rocket, Cpu, Database, Users, Award, 
+  Globe, Target, Star, CheckCircle, TrendingUp
+=======
+<<<<<<< HEAD
   Brain, Shield, Rocket, Cpu, Database, Users, Award, 
   Globe, Target, Star, CheckCircle, TrendingUp
 =======
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, Award, 
   Globe, Code, Server, Network, CheckCircle, TrendingUp
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
 export default function AboutPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const values = [
     {
       icon: Brain,
@@ -39,6 +52,8 @@ export default function AboutPage() {
       title: "Global Impact",
       description: "Our solutions reach across borders, helping businesses worldwide transform and grow.",
       color: "from-blue-500 to-cyan-500"
+<<<<<<< HEAD
+=======
 =======
   const stats = [
     { number: '35+', label: 'Real Micro SaaS Services', icon: Rocket },
@@ -72,12 +87,20 @@ export default function AboutPage() {
       description: 'Your success is our mission. We provide personalized support and guidance every step of the way.',
       color: 'from-green-500 to-teal-500'
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
   const team = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       name: "Dr. Sarah Chen",
       role: "Chief Technology Officer",
       bio: "Former AI researcher at Stanford, leading our quantum computing initiatives.",
@@ -141,6 +164,8 @@ export default function AboutPage() {
         <meta property="og:description" content="Learn about Zion Tech Group's mission to democratize advanced technology and empower businesses with cutting-edge AI, quantum computing, and digital transformation solutions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/about" />
+<<<<<<< HEAD
+=======
 =======
       name: 'Kleber',
       role: 'Founder & CEO',
@@ -173,11 +198,19 @@ export default function AboutPage() {
         <meta property="og:url" content="https://ziontechgroup.com/about" />
         <link rel="canonical" href="https://ziontechgroup.com/about" />
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </Head>
 
       <EnhancedNavigation />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-6">
@@ -408,6 +441,8 @@ export default function AboutPage() {
             >
               <div className="text-4xl font-bold text-white mb-2">24/7</div>
               <div className="text-blue-100">Support Available</div>
+<<<<<<< HEAD
+=======
 =======
       <main className="min-h-screen bg-black text-white">
         {/* Hero Section */}
@@ -451,11 +486,19 @@ export default function AboutPage() {
                 ))}
               </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* CTA */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -485,6 +528,8 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 =======
         {/* Mission Section */}
         <section className="py-20 relative">
@@ -655,6 +700,10 @@ export default function AboutPage() {
         </section>
       </main>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <EnhancedFooter />
     </>

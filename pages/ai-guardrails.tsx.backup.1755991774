@@ -26,8 +26,8 @@ export default function AIGuardrailsPage() {
 <<<<<<< HEAD
 		<UltraFuturisticBackground variant="quantum" intensity={1.5}>
 =======
-		<UltraAdvancedFuturisticBackground>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7754
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			<Head>
 				<title>AI Guardrails Suite | Zion Tech Group</title>
 				<meta name="description" content="Production-grade safety and governance for AI apps: policy enforcement, jailbreak detection, PII/PHI controls and audit logs with SDKs and proxies." />
@@ -43,12 +43,8 @@ export default function AIGuardrailsPage() {
 						<Button href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl"><Rocket className="w-4 h-4 mr-2" />Request a Demo</Button>
 						<Button href="/resources" variant="outline" className="border-gray-600 text-gray-200">Explore Docs</Button>
 =======
-			<section className="min-h-screen pt-28 pb-20 px-4">
-				<div className="max-w-6xl mx-auto">
-					<div className="text-center mb-12">
-						<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-rose-400 via-red-500 to-orange-500 bg-clip-text text-transparent">AI Guardrails Suite</h1>
-						<p className="mt-4 text-xl text-gray-300">Safety and governance for LLM apps with minimal integration and strong guarantees.</p>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7754
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 					</div>
 
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">

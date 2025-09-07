@@ -620,6 +620,11 @@
     "h1": "Resources"
   },
   {
+<<<<<<< HEAD:public/search/meta.json.backup.1756001082
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
     "route": "/revolutionary-2028-pricing",
     "title": "2028 Revolutionary Pricing - Zion Tech Group",
     "h1": ""
@@ -914,6 +919,7 @@
     "title": "",
     "h1": "Reports"
   },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:backup-problematic-files/public/search/index.json
   {
     "route": "/reports/links",
     "title": "",

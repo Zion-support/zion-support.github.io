@@ -1,9 +1,42 @@
 
+<<<<<<< HEAD
+import { useState } from 'react';
+
+export function useLocalStorage<T>(key: string, initialValue: T) {
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 interface UseLocalStorageProps {
-  // Add props here as needed
+  // TODO: Implement
 }
+  // Add props here as needed;
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
+<<<<<<< HEAD
+
+    try {
+
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+
+=======
+:hooks/useLocalStorage.ts
+    try {;
+main:hooks/useLocalStorage.ts
+    try {
+:backup-problematic-files/hooks/useLocalStorage.ts
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+:backup-problematic-files/hooks/useLocalStorage.ts
+      // Error reading localStorage key
+      return initialValue;
+      console.error(`Error reading localStorage key "${key}":`, error);
+main:hooks/useLocalStorage.ts
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
   });
 
@@ -17,10 +50,16 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
         window.localStorage.setItem(key, JSON.stringify(valueToStore));
       }
     } catch (error) {
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   };
 
   return [storedValue, setValue] as const;
 }
+<<<<<<< HEAD
+
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
   return [storedValue, setValue] as const};
@@ -28,3 +67,18 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
 };
 };
 };
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      console.error(`Error setting localStorage key "${key}":`, error)}
+};
+  return [storedValue, setValue] as const}
+};
+}
+}
+};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

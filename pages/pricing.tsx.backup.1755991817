@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Button from '../components/ui/Button';
@@ -712,6 +716,8 @@ export default function PricingPage() {
           </div>
         </section>
     </div>
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -988,6 +994,10 @@ export default function Pricing() {
       </div>
     </Layout>
 >>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { Award, TrendingUp, Users, DollarSign, Clock, ArrowRight, Star, CheckCircle, Target, Rocket, Brain, Atom } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -185,6 +189,8 @@ const testimonials = [
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10" />
           <div className="relative z-10 max-w-7xl mx-auto text-center">
+<<<<<<< HEAD
+=======
 =======
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -346,11 +352,19 @@ const CaseStudiesPage: React.FC = () => {
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="mb-8"
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -358,6 +372,8 @@ const CaseStudiesPage: React.FC = () => {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Real-world success stories showcasing how our revolutionary technology solutions transform businesses
+<<<<<<< HEAD
+=======
 =======
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-violet-400 via-purple-500 to-fuchsia-600 bg-clip-text text-transparent">
@@ -366,6 +382,10 @@ const CaseStudiesPage: React.FC = () => {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Explore real-world success stories and implementations of our technology solutions across various industries
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
@@ -384,6 +404,10 @@ const CaseStudiesPage: React.FC = () => {
             </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Categories */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -403,6 +427,8 @@ const CaseStudiesPage: React.FC = () => {
                   {category}
                 </button>
               ))}
+<<<<<<< HEAD
+=======
 =======
         {/* Case Study Categories */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
@@ -421,6 +447,10 @@ const CaseStudiesPage: React.FC = () => {
                 Explore success stories across different technology domains
               </p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -449,12 +479,21 @@ const CaseStudiesPage: React.FC = () => {
 
         {/* Featured Case Studies */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+=======
+<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
 =======
         <section id="featured" className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -463,6 +502,10 @@ const CaseStudiesPage: React.FC = () => {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent mb-6">
                 Featured Success Stories
               </h2>
@@ -473,6 +516,8 @@ const CaseStudiesPage: React.FC = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
               {caseStudies.filter(study => study.featured).map((study, index) => (
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
                 Featured Case Studies
@@ -485,6 +530,10 @@ const CaseStudiesPage: React.FC = () => {
             <div className="space-y-12">
               {featuredCaseStudies.map((caseStudy, index) => (
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 <motion.article
                   key={caseStudy.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -492,6 +541,10 @@ const CaseStudiesPage: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className="flex items-center gap-4 mb-6">
@@ -500,6 +553,8 @@ const CaseStudiesPage: React.FC = () => {
                       <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full border border-green-500/30">
                         Featured
                       </span>
+<<<<<<< HEAD
+=======
 =======
                   className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-violet-500 transition-all duration-300 overflow-hidden"
                 >
@@ -538,6 +593,10 @@ const CaseStudiesPage: React.FC = () => {
                         </ul>
                       </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </div>
                   </div>
 
@@ -672,6 +731,12 @@ const CaseStudiesPage: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Testimonials */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+=======
+<<<<<<< HEAD
         {/* Testimonials */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -680,6 +745,10 @@ const CaseStudiesPage: React.FC = () => {
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-6xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -688,6 +757,10 @@ const CaseStudiesPage: React.FC = () => {
               className="text-center mb-16"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-green-500 bg-clip-text text-transparent mb-6">
                 Client Testimonials
               </h2>
@@ -700,6 +773,8 @@ const CaseStudiesPage: React.FC = () => {
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={study.id}
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
                 Recent Case Studies
@@ -714,11 +789,19 @@ const CaseStudiesPage: React.FC = () => {
                 <motion.article
                   key={caseStudy.id}
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 text-center"
                 >
                   <div className="flex justify-center mb-4">
@@ -733,6 +816,8 @@ const CaseStudiesPage: React.FC = () => {
                     <div className="font-semibold text-white">{testimonial.author}</div>
                     <div className="text-sm text-gray-400">{testimonial.position}</div>
                     <div className="text-sm text-gray-400">{testimonial.company}</div>
+<<<<<<< HEAD
+=======
 =======
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-violet-500 transition-all duration-300"
                 >
@@ -754,6 +839,10 @@ const CaseStudiesPage: React.FC = () => {
                       <p className="text-gray-300 text-sm">{caseStudy.solution}</p>
                     </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-violet-400 mb-2">Results</h4>
@@ -782,6 +871,10 @@ const CaseStudiesPage: React.FC = () => {
               viewport={{ once: true }}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-purple-500 bg-clip-text text-transparent mb-6">
                 Ready to Write Your Success Story?
               </h2>
@@ -798,6 +891,8 @@ const CaseStudiesPage: React.FC = () => {
                 <a
                   href="/contact"
                   className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+<<<<<<< HEAD
+=======
 =======
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
                 Ready to Create Your Success Story?
@@ -816,6 +911,10 @@ const CaseStudiesPage: React.FC = () => {
                   href="/contact" 
                   className="px-8 py-4 border-2 border-violet-400 text-violet-400 font-semibold rounded-lg hover:bg-violet-400 hover:text-black transition-all duration-300 transform hover:scale-105"
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 >
                   Schedule Consultation
                 </a>
@@ -829,7 +928,15 @@ const CaseStudiesPage: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+export default CaseStudiesPage;
+=======
+<<<<<<< HEAD
 export default CaseStudiesPage;
 =======
 export default CaseStudiesPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

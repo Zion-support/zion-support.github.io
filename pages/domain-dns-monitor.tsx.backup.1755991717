@@ -22,12 +22,42 @@ export default function DomainDNSMonitorPage() {
     'Alerts, webhooks and change history'
   ];
 
-  return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+  return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
+=======
+<<<<<<<< HEAD:pages/domain-dns-monitor.tsx.backup.1755991717
+  return (
+    <QuantumHolographicMatrixBackground intensity={1.5}>
+<<<<<<<< HEAD:components/domain-dns-monitor.tsx.backup.1755991607.backup.1756001154
+========
 =======
     		<QuantumHolographicMatrixBackground intensity={1.5}>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-42d1
+========
+<<<<<<< HEAD:pages/audit-log-vault.tsx.backup.1755991722
+  return (
+<<<<<<< HEAD
+    <UltraFuturisticBackground variant="holographic" intensity="high">
+=======
+    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
+=======
+  return (_<UltraAdvancedFuturisticBackground>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/components/audit-log-vault.tsx
+>>>>>>>> 207d7230e0649fa517bb469b27623282180528c9:backup-problematic-files/components/audit-log-vault.tsx
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/domain-dns-monitor.tsx.backup.1755991717
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<
+=
+
+
+  return (_<UltraAdvancedFuturisticBackground>
+
+>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>Domain & DNS Health Monitor | Zion Tech Group</title>
         <meta name="description" content="Track domain expiry, DNS provider health, NS/DS drift, DNSSEC, and MX/SPF/DMARC correctness. Catch misconfigurations before outages." />

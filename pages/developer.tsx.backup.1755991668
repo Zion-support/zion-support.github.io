@@ -6,10 +6,19 @@ import Card from '../components/ui/Card';
 export default function DeveloperPage() {
 	return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>Developer Portal | Zion Tech Group</title>
 				<meta name="description" content="SDKs, API docs, and developer resources for building with Zion Tech Group." />
+<<<<<<< HEAD
+				<link rel="canonical" href="https://ziontechgroup.com/developer" />
+				<meta name="description" content="Developer resources, docs, and SDK links for Zion Tech Group services." />
+			</Head>
+=======
 =======
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -19,6 +28,7 @@ export default function DeveloperPage() {
 				<meta name="description" content="Developer resources, docs, and SDK links for Zion Tech Group services." />
 			</Head>
 <<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			<div className="container mx-auto px-4 py-16 text-white">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Developer Portal</h1>
 				<p className="text-gray-300 max-w-3xl mb-8">Jumpstart your integration with our APIs and templates.</p>
@@ -29,6 +39,8 @@ export default function DeveloperPage() {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
+=======
 =======
 			<div className="max-w-5xl mx-auto space-y-6 text-slate-200">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Developer Portal</h1>
@@ -44,5 +56,13 @@ export default function DeveloperPage() {
 			</div>
 		</div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+				<link rel="canonical" href="https://ziontechgroup.com/developer" />
+				<meta name="description" content="Developer resources, docs, and SDK links for Zion Tech Group services." />
+			</Head>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	);
 }

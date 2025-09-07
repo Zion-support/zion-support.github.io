@@ -61,12 +61,12 @@ const result = await Promise.allSettled([
 
     const activeProjects = projectsData.filter(p => p.status === 'active').length,
 
-    const categoryCounts: Record<string number> = {},
+    const categoryCounts: Record<string, number> = {},
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 }),
 
     const referralConversions = referralsData.filter(r => r.converted).length,
 
-    const geoCounts: Record<string number> = {},
+    const geoCounts: Record<string, number> = {},
     usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 }),
     res.status(200).json({totals: { totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects},
       topCategories: Object.entries(categoryCounts).sort(_(a, b) => b[1] - a[1]).slice(0, 5).map(_([label, value]) => ({label, value})),

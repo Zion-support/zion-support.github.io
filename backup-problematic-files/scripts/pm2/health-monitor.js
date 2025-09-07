@@ -1,8 +1,17 @@
 }};
+<<<<<<< HEAD
+
+    };
+  };
+,;
+  async checkSystemResources() {,;
+    try {,;
+      this.log('💻 Checking system resources...'),;
+=======
 ; const memInfo = execSync('free -m', _{ encoding: 'utf8'}); const diskInfo = execSync('df -h', {encoding: 'utf8'}); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', {encoding: 'utf8'});
 ; // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
-; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0';
-; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0;
+; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ): '0';
+; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', ).trim())): 0;
 ; return {_; success: true, memory: {; total: parseInt(memTotal); used: parseInt(memUsed); free: parseInt(memFree); usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)}; disk: {_; usagePercent: parseInt(diskUsage)}; cpu: {_; usagePercent: Math.round(cpuUsage)}}} catch (error) {_; return {; success: false, error: error.message; memory: null, disk: null, cpu: null}}};
 ; async checkProcessHealth() {_; try {; this.log(' Checking process health...');
 ; const pm2List = execSync('pm2 list --json', _{ encoding: 'utf8'}); const processes = JSON.parse(pm2List);
@@ -36,15 +45,15 @@
 ; if (logInfo.success && logInfo.totalSize > 500 * 1024 * 1024) {_; report.recommendations.push({; priority: 'medium'; message: 'Large log files detected'; action: 'Implement log rotation or cleanup'})};
 ; return report};
 ; async saveReport(report) {_; try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, _{ recursive: true})};
-; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {_; this.log(`Error saving report: ${error.message}`)}};
+; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {_; this.log(`Error saving report: ${error.message}`)}};`;
 ; async run() {_; this.log(' Starting Health Monitor...'); this.log(`Project root: ${this.projectRoot}`);
 ; try {_; // Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, _{ recursive: true})};
 ; // Run all health checks; const systemInfo = await this.checkSystemResources(); const processInfo = await this.checkProcessHealth(); const appInfo = await this.checkApplicationHealth(); const logInfo = await this.checkLogHealth();
 ; // Generate report; this.log(' Generating health report...'); const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo);
 ; // Save report; await this.saveReport(report);
-; const duration = Date.now() - this.startTime;
-; // Log summary; this.log('\n Health Monitor Summary: '); this.log(`System: ${report.summary.systemHealth}`); this.log(`Processes: ${report.summary.processHealth}`); this.log(`Application: ${report.summary.applicationHealth}`); this.log(`Logs: ${report.summary.logHealth}`); this.log(`Overall: ${report.summary.overallHealth}`); this.log(`Health Score: ${report.summary.healthScore}/100`); this.log(`Duration: ${duration}ms`);
-; if (report.recommendations.length > 0) {_; this.log('\n Recommendations: '); report.recommendations.forEach(rec = > {; this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {_; this.log('\n All systems are healthy!')}
+; const duration = Date.now() - this.startTime;`;
+; // Log summary; this.log('\n Health Monitor Summary: '); this.log(`System: ${report.summary.systemHealth}`); this.log(`Processes: ${report.summary.processHealth}`); this.log(`Application: ${report.summary.applicationHealth}`); this.log(`Logs: ${report.summary.logHealth}`); this.log(`Overall: ${report.summary.overallHealth}`); this.log(`Health Score: ${report.summary.healthScore}/100`); this.log(`Duration: ${duration}ms`);`;
+; if (report.recommendations.length > 0) {_; this.log('\n Recommendations: '); report.recommendations.forEach(rec = > {; this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {_; this.log('\n All systems are healthy!')}`;
 } catch (error) {_; this.log(` Error running health monitor: ${error.message}`); process.exit(1)}}};
 ;
 // Run the health monitor;
@@ -52,53 +61,44 @@ const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error = > {_; process.exit(1)})
 }
 };
-;
   async checkSystemResources() {_;
     try {;
       this.log(' Checking system resources...');
-;
       const memInfo = execSync('free -m', { encodin:g:'utf8' });
       const diskInfo = execSync('df -h', { encodin:g:'utf8' });
-      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encodin:g:'utf8' });};
+      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encodin:g:'utf8' })
+}
 };
 ;
+      const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encodin:g:'utf8' });};
+pr-12325
   async checkSystemResources() {;
-    try {;
-      this.log(' Checking system resources...');
-;
       const memInfo = execSync('free -m', { encoding: 'utf8' });
       const diskInfo = execSync('df -h', { encoding: 'utf8' });
       const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
-;
       // Parse memory info;
       const memLines = memInfo.split('\n');
       const memTotal = memLines[1].split(/\s+/)[1];
       const memUsed = memLines[1].split(/\s+/)[2];
       const memFree = memLines[1].split(/\s+/)[3];
-;
       // Parse disk info;
       const diskLines = diskInfo.split('\n');
       const rootDisk = diskLines.find(line => line.includes('/'));
-      const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', '') :'0';
-;
+      const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ) :'0';
       // Parse CPU info;
       const cpuUsage = cpuInfo.includes('id') ?;
-        (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())) :0;
-;
+        (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', ).trim())) :0;
       return {_;
         success: true,
-        memory: {;
-          total: parseInt(memTotal);
-          used: parseInt(memUsed);
-          free: parseInt(memFree);
+        memory: {;,
+  total: parseInt(memTotal);
+          used: parseInt(memUsed);,
+  free: parseInt(memFree);
           usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100);
-        ;
-        disk: {;
-          usagePercent: parseInt(diskUsage);
-        ;
-        cpu: {;
-          usagePercent: Math.round(cpuUsage)
-        }
+        disk: {;,
+  usagePercent: parseInt(diskUsage);
+        cpu: {;,
+  usagePercent: Math.round(cpuUsage)
     } catch (error) {_;
       return {;
         succes:s:true;
@@ -112,60 +112,68 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
           usagePercen:t:parseInt(diskUsage);
         ;
         cp:u:{;
-          usagePercen:t:Math.round(cpuUsage);        ;
-      };
+          usagePercen:t:Math.round(cpuUsage)
+};
     } catch (error) {;
       return {;
         succes:s:false;
         erro:r:error.message;
         memor:y:null;
         dis:k:null;
-        cp:u:null;      ;
+        cp:u:null
 };
+        succes: s:true;,
+  memor:y: {;,
+  tota:l: parseInt(memTotal);,
+  use:d: parseInt(memUsed);,
+  fre:e: parseInt(memFree);,
+  usagePercen:t:Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100);
+        dis: k:{;,
+  usagePercen:t:parseInt(diskUsage);
+        cp: u:{;,
+  usagePercen:t:Math.round(cpuUsage);        ;
+    } catch (error) {;
+        succes: s:false;,
+  erro:r: error.message;,
+  memor:y: null;,
+  dis:k: null;,
+  cp:u:null;      ;
+pr-12325
         success: false,
-        error: error.message;
-        memory: null,
+        error: error.message;,
+  memory: null,
         disk: null,
-        cpu: null
-      }
-};
-;
+        cpu: null;
   async checkProcessHealth() {_;
-    try {;
       this.log(' Checking process health...');
-;
       const pm2List = execSync('pm2 list --json', { encodin:g:'utf8' });
       const processes = JSON.parse(pm2List);
-;
       const processHealth = {;
-        tota:l:processes.length;
-        onlin:e:0;
-        stoppe:d:0;
-        errore:d:0;
-        processe:s:[];
+        tota: l:processes.length;,
+  onlin:e: 0;,
+  stoppe:d: 0;,
+  errore:d: 0;,
+  processe:s:[];
       const pm2List = execSync('pm2 list --json', _{ encoding: 'utf8'});
-      const processes = JSON.parse(pm2List);
-;
       const processHealth = {_;
-        total: processes.length;
-        online: 0,
+        total: processes.length;,
+  online: 0,
         stopped: 0,
         errored: 0,
         processes: [];
       processes.forEach(proc => {;
         const status = proc.pm2env?.status || 'unknown';
         processHealth.processes.push({;
-          nam:e:proc.name;
-          statu:s:status;
-          memor:y:proc.monit?.memory || 0;
-          cp:u:proc.monit?.cpu || 0;
-          uptim:e:proc.pm2_env?.uptime || 0;        });
-          name: proc.name;
-          status: status,
-          memory: proc.monit?.memory || 0;
-          cpu: proc.monit?.cpu || 0;
+          nam: e:proc.name;,
+  statu:s: status;,
+  memor:y: proc.monit?.memory || 0;,
+  cp:u: proc.monit?.cpu || 0;,)
+  uptim:e:proc.pm2_env?.uptime || 0;        });
+          name: proc.name;,
+  status: status,
+          memory: proc.monit?.memory || 0;,
+  cpu: proc.monit?.cpu || 0;
           uptime: proc.pm2env?.uptime || 0});
-;
         if (status === 'online') processHealth.online++;
         else if (status === 'stopped') processHealth.stopped++;
         else if (status === 'errored') processHealth.errored++
@@ -183,7 +191,7 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
       return {;
         succes:s:false;
         erro:r:error.message;
-        healt:h:null;      ;
+        healt:h:null
 };
         success: false,
         error: error.message;
@@ -191,68 +199,49 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
       }
 };
 ;
+        health: processHealth;
+  healt:h:processHealth;
+  healt:h:null;      ;
+  health: null;
+pr-12325
   async checkApplicationHealth() {_;
-    try {;
       this.log(' Checking application health...');
-;
       const healthChecks = [];
-;
       // Check if the application is running;
-      try {;
         const pm2List = execSync('pm2 list', { encodin:g:'utf8' });        const pm2List = execSync('pm2 list', { encoding: 'utf8' });
         const hasRunningApp = pm2List.includes('bolt-zion-app') && pm2List.includes('online');
-;
         healthChecks.push({_;
-          name: 'PM2 App Status';
-          status: hasRunningApp ? 'healthy' : 'unhealthy';
+          name: 'PM2 App Status';',
+  status: hasRunningApp ? 'healthy' : 'unhealthy';')
           message: hasRunningApp ? 'Application is running' : 'Application is not running'})
-      } catch (error) {_;
         healthChecks.push({;
-          nam:e:'PM2 App Status';
-          statu:s:hasRunningApp ? 'healthy' :'unhealthy';
-          messag:e:hasRunningApp ? 'Application is running' :'Application is not running';
-        });
-      } catch (error) {;
-        healthChecks.push({;
-          nam:e:'PM2 App Status';
-          statu:s:'error';
-          messag:e:'Could not check PM2 status';        });
-          name: 'PM2 App Status';
-          status: 'error';
+          nam: e:'PM2 App Status';',
+  statu:s: hasRunningApp ? 'healthy' :'unhealthy';',
+  messag:e:hasRunningApp ? 'Application is running' :'Application is not running';')
+  statu:s: 'error';',)
+  messag:e:'Could not check PM2 status';        });
+  status: 'error';
           message: 'Could not check PM2 status'})
-      };
-;
       // Check if build files exist;
       const buildExists = fs.existsSync('dist') || fs.existsSync('.next');
-      healthChecks.push({;
-        nam:e:'Build Files';
-        statu:s:buildExists ? 'healthy' :'unhealthy';
-        messag:e:buildExists ? 'Build files exist' :'Build files missing';      });
-      healthChecks.push({_;
-        name: 'Build Files';
-        status: buildExists ? 'healthy' : 'unhealthy';
+        nam: e:'Build Files';',
+  statu:s: buildExists ? 'healthy' :'unhealthy';',)
+  messag:e:buildExists ? 'Build files exist' :'Build files missing';      });
+        name: 'Build Files';',
+  status: buildExists ? 'healthy' : 'unhealthy';')
         message: buildExists ? 'Build files exist' : 'Build files missing'});
-;
       // Check if package.json exists and is valid;
       try {_;
         const packageJson = JSON.parse(fs.readFileSync('package.json', _'utf8'));
-        healthChecks.push({;
-          nam:e:'Package.json';
-          statu:s:'healthy';
-          messag:e:'Package.json is valid';
-        });
-      } catch (error) {;
-        healthChecks.push({;
-          nam:e:'Package.json';
-          statu:s:'unhealthy';
-          messag:e:'Package.json is invalid or missing';        });
-          name: 'Package.json';
-          status: 'healthy';
+          nam: e:'Package.json';',
+  statu:s: 'healthy';',
+  messag:e:'Package.json is valid';')
+  statu:s: 'unhealthy';',)
+  messag:e:'Package.json is invalid or missing';        });
+          name: 'Package.json';',
+  status: 'healthy';
           message: 'Package.json is valid'})
-      } catch (error) {_;
-        healthChecks.push({;
-          name: 'Package.json';
-          status: 'unhealthy';
+  status: 'unhealthy';')
           message: 'Package.json is invalid or missing'})
       };
 ;
@@ -268,7 +257,7 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
       return {;
         succes:s:false;
         erro:r:error.message;
-        check:s:[];      ;
+        check:s:[]
 };
         success: false,
         error: error.message;
@@ -276,16 +265,18 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
       }
 };
 ;
+        checks: healthChecks;
+  check:s:healthChecks;
+  check:s:[];      ;
+  checks: []
+pr-12325
   async checkLogHealth() {_;
-    try {;
       this.log(' Checking log health...');
-;
       const logsDir = path.join(this.projectRoot, _'logs/pm2');
       const logFiles = [];
-;
       if (fs.existsSync(logsDir)) {;
         const files = fs.readdirSync(logsDir);
-        files.forEach(file => {;
+        files.forEach(file => {;)
           if (file.endsWith('.log')) {;
             const filePath = path.join(logsDir, file);
             const stats = fs.statSync(filePath);
@@ -293,33 +284,33 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
               nam:e:file;
               siz:e:stats.size;
               sizeM:B:Math.round(stats.size / (1024 * 1024) * 100) / 100;
-              lastModifie:d:stats.mtime;            });
-          };
+              lastModifie:d:stats.mtime;            })
+};
         });
+              nam: e:file;,
+  siz:e: stats.size;,)
+  sizeM:B: Math.round(stats.size / (1024 * 1024) * 100) / 100;,
+  lastModifie:d:stats.mtime;            });
+pr-12325
               name: file,
-              size: stats.size;
-              sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100;
+              size: stats.size;,
+  sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100;
               lastModified: stats.mtime})
-          }
         })
-      };
-;
-      return {_;
-        success: true,
         logFiles: logFiles,
         totalSize: logFiles.reduce(_(sum, file) => sum + file.size, 0)}
     } catch (error) {_;
       return {;
         succes:s:true;
         logFile:s:logFiles;
-        totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0);
-      };
+        totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0)
+};
     } catch (error) {;
       return {;
         succes:s:false;
         erro:r:error.message;
         logFile:s:[];
-        totalSiz:e:0;      ;
+        totalSiz:e:0
 };
         success: false,
         error: error.message;
@@ -328,50 +319,51 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
       }
 };
 ;
+  logFile:s: logFiles;,
+  totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0);
+  logFile:s: [];,
+  totalSiz:e:0;      ;
+  logFiles: [];
+        totalSize: 0;
+pr-12325
   async generateReport(systemInfo, processInfo, appInfo, logInfo) {_;
     const report = {;
-      timestam:p:new Date().toISOString();
-      summar:y:{;
-        systemHealt:h:'unknown';
-        processHealt:h:'unknown';
-        applicationHealt:h:'unknown';
-        logHealt:h:'unknown';
-        overallHealt:h:'unknown';
-        healthScor:e:0;
-      ;
-      detail:s:{;
-        syste:m:systemInfo;
-        processe:s:processInfo;
-        applicatio:n:appInfo;
-        log:s:logInfo;
-      ;
-      recommendation:s:[];
-      timestamp: new Date().toISOString();
-      summary: {;
-        systemHealth: 'unknown';
-        processHealth: 'unknown';
-        applicationHealth: 'unknown';
-        logHealth: 'unknown';
-        overallHealth: 'unknown';
+      timestam: p:new Date().toISOString();,
+  summar:y: {;,
+  systemHealt:h: 'unknown';',
+  processHealt:h: 'unknown';',
+  applicationHealt:h: 'unknown';',
+  logHealt:h: 'unknown';',
+  overallHealt:h: 'unknown';',
+  healthScor:e:0;
+      detail: s:{;,
+  syste:m: systemInfo;,
+  processe:s: processInfo;,
+  applicatio:n: appInfo;,
+  log:s:logInfo;
+      recommendation: s:[];,
+  timestamp: new Date().toISOString();
+      summary: {;,
+  systemHealth: 'unknown';
+        processHealth: 'unknown';',
+  applicationHealth: 'unknown';
+        logHealth: 'unknown';',
+  overallHealth: 'unknown';
         healthScore: 0,
-      ;
-      details: {;
-        system: systemInfo,
+      details: {;,
+  system: systemInfo,
         processes: processInfo,
         application: appInfo,
         logs: logInfo,
-      ;
       recommendations: [];
     // Calculate health scores;
     let totalScore = 0;
     let maxScore = 0;
-;
     // System health;
     if (systemInfo.success) {;
       const memUsage = systemInfo.memory?.usagePercent || 0;
       const diskUsage = systemInfo.disk?.usagePercent || 0;
       const cpuUsage = systemInfo.cpu?.usagePercent || 0;
-;
       if (memUsage < 80 && diskUsage < 80 && cpuUsage < 80) {;
         report.summary.systemHealth = 'healthy';
         totalScore += 25} else if (memUsage < 90 && diskUsage < 90 && cpuUsage < 90) {_;
@@ -379,9 +371,7 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
         totalScore += 15} else {_;
         report.summary.systemHealth = 'unhealthy';
         totalScore += 5}
-};
     maxScore += 25;
-;
     // Process health;
     if (processInfo.success && processInfo.health) {_;
       const health = processInfo.health;
@@ -389,27 +379,16 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
         report.summary.processHealth = 'healthy';
         totalScore += 25} else if (health.errored === 0) {_;
         report.summary.processHealth = 'warning';
-        totalScore += 15} else {_;
         report.summary.processHealth = 'unhealthy';
-        totalScore += 5}
-};
-    maxScore += 25;
-;
     // Application health;
     if (appInfo.success) {_;
       const healthyChecks = appInfo.checks.filter(check => check.status === 'healthy').length;
       const totalChecks = appInfo.checks.length;
-;
       if (healthyChecks === totalChecks) {;
         report.summary.applicationHealth = 'healthy';
         totalScore += 25} else if (healthyChecks >= totalChecks * 0.5) {_;
         report.summary.applicationHealth = 'warning';
-        totalScore += 15} else {_;
         report.summary.applicationHealth = 'unhealthy';
-        totalScore += 5}
-};
-    maxScore += 25;
-;
     // Log health;
     if (logInfo.success) {_;
       const totalLogSize = logInfo.totalSize / (1024 * 1024), _// MB;
@@ -417,135 +396,115 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
         report.summary.logHealth = 'healthy';
         totalScore += 25} else if (totalLogSize < 500) {_;
         report.summary.logHealth = 'warning';
-        totalScore += 15} else {_;
         report.summary.logHealth = 'unhealthy';
-        totalScore += 5}
-};
-    maxScore += 25;
-;
     report.summary.healthScore = Math.round((totalScore / maxScore) * 100);
-;
     // Determine overall health;
     if (report.summary.healthScore >= 80) {_;
       report.summary.overallHealth = 'healthy'} else if (report.summary.healthScore >= 60) {_;
       report.summary.overallHealth = 'warning'} else {_;
       report.summary.overallHealth = 'unhealthy'};
-;
     // Generate recommendations;
     if (systemInfo.success) {_;
       if (systemInfo.memory?.usagePercent > 80) {;
         report.recommendations.push({;
-          priorit:y:'high';
-          messag:e:'High memory usage detected';
-          actio:n:'Consider restarting processes or increasing memory';        });
-          priority: 'high';
-          message: 'High memory usage detected';
+          priorit: y:'high';',
+  messag:e: 'High memory usage detected';',)
+  actio:n:'Consider restarting processes or increasing memory';        });
+          priority: 'high';',
+  message: 'High memory usage detected';
           action: 'Consider restarting processes or increasing memory'})
-      };
       if (systemInfo.disk?.usagePercent > 80) {_;
         report.recommendations.push({;
           priorit:y:'high';
           messag:e:'High disk usage detected';
-          actio:n:'Clean up logs and temporary files';        });
-      };
+          actio:n:'Clean up logs and temporary files';        })
+};
           priority: 'high';
           message: 'High disk usage detected';
+  messag:e: 'High disk usage detected';',)
+  actio:n:'Clean up logs and temporary files';        });
+  message: 'High disk usage detected';
+pr-12325
           action: 'Clean up logs and temporary files'})
-      }
-};
-;
     if (processInfo.success && processInfo.health?.errored > 0) {_;
-      report.recommendations.push({;
-        priorit:y:'critical';
-        messag:e:'Errored processes detected';
-        actio:n:'Restart errored processes and investigate logs';      });
-        priority: 'critical';
-        message: 'Errored processes detected';
+        priorit: y:'critical';',
+  messag:e: 'Errored processes detected';',)
+  actio:n:'Restart errored processes and investigate logs';      });
+        priority: 'critical';',
+  message: 'Errored processes detected';
         action: 'Restart errored processes and investigate logs'})
-};
-;
     if (logInfo.success && logInfo.totalSize > 500 * 1024 * 1024) {_;
-      report.recommendations.push({;
-        priorit:y:'medium';
-        messag:e:'Large log files detected';
-        actio:n:'Implement log rotation or cleanup';      });
-        priority: 'medium';
-        message: 'Large log files detected';
+        priorit: y:'medium';',
+  messag:e: 'Large log files detected';',)
+  actio:n:'Implement log rotation or cleanup';      });
+        priority: 'medium';',
+  message: 'Large log files detected';
         action: 'Implement log rotation or cleanup'})
-};
-;
-    return report
-};
-;
+    return report;
   async saveReport(report) {_;
-    try {;
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {;
-        fs.mkdirSync(reportDir, { recursiv:e:true });
-      };
+        fs.mkdirSync(reportDir, { recursiv:e:true })
+};
 ;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved:to:${this.reportFile}`);
     } catch (error) {;
-      this.log(`Error saving:report:${error.message}`);};
-        fs.mkdirSync(reportDir, _{ recursive: true})
-      };
-;
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      this.log(`Report saved to: ${this.reportFile}`)
-    } catch (error) {_;
-      this.log(`Error saving report: ${error.message}`)
-}
+      this.log(`Error saving:report:${error.message}`)
 };
-;
+        fs.mkdirSync(reportDir, { recursiv:e:true });
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));`;
+      this.log(`Report saved:to:${this.reportFile}`);
+    } catch (error) {;`;
+      this.log(`Error saving:report:${error.message}`);};
+pr-12325
+        fs.mkdirSync(reportDir, _{ recursive: true})
+      this.log(`Report saved to: ${this.reportFile}`)
+    } catch (error) {_;`;
+      this.log(`Error saving report: ${error.message}`)
   async run() {_;
-    this.log(' Starting Health Monitor...');
+    this.log(' Starting Health Monitor...');`;
     this.log(`Project:root:${this.projectRoot}`);    this.log(`Project root: ${this.projectRoot}`);
-;
-    try {_;
       // Create logs directory if it doesn't exist;
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {;
-        fs.mkdirSync(logsDir, { recursiv:e:true });        fs.mkdirSync(logsDir, { recursive: true });
-      };
+        fs.mkdirSync(logsDir, { recursiv:e:true });        fs.mkdirSync(logsDir, { recursive: true })
+};
 ;
+        fs.mkdirSync(logsDir, { recursiv:e:true });        fs.mkdirSync(logsDir, { recursive: true });
+pr-12325
       // Run all health checks;
       const systemInfo = await this.checkSystemResources();
       const processInfo = await this.checkProcessHealth();
       const appInfo = await this.checkApplicationHealth();
       const logInfo = await this.checkLogHealth();
-;
       // Generate report;
       this.log(' Generating health report...');
       const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo);
-;
       // Save report;
       await this.saveReport(report);
-;
       const duration = Date.now() - this.startTime;
-;
       // Log summary;
-      this.log('\n Health Monitor:Summary:');
-      this.log(`Syste:m:${report.summary.systemHealth}`);
-      this.log(`Processe:s:${report.summary.processHealth}`);
-      this.log(`Applicatio:n:${report.summary.applicationHealth}`);
-      this.log(`Log:s:${report.summary.logHealth}`);
-      this.log(`Overal:l:${report.summary.overallHealth}`);
-      this.log(`Health:Score:${report.summary.healthScore}/100`);
+      this.log('\n Health Monitor:Summary:');`;
+      this.log(`Syste:m:${report.summary.systemHealth}`);`;
+      this.log(`Processe:s:${report.summary.processHealth}`);`;
+      this.log(`Applicatio:n:${report.summary.applicationHealth}`);`;
+      this.log(`Log:s:${report.summary.logHealth}`);`;
+      this.log(`Overal:l:${report.summary.overallHealth}`);`;
+      this.log(`Health:Score:${report.summary.healthScore}/100`);`;
       this.log(`Duratio:n:${duration}ms`);
-;
       if (report.recommendations.length > 0) {;
         this.log('\n Recommendation:s:');
-        report.recommendations.forEach(rec => {;
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
+        report.recommendations.forEach(rec => {;)`;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);`;
           this.log(`    Actio:n:${rec.action}`);        });
       } else {;
-        this.log('\n All systems are healthy!');
-      };
+        this.log('\n All systems are healthy!')
+};
 ;
     } catch (error) {;
-      this.log(` Error running health:monitor:${error.message}`);      process.exit(1);
-};
+      this.log(` Error running health:monitor:${error.message}`);      process.exit(1)
+}
 };
       this.log('\n Health Monitor Summary: ');
       this.log(`System: ${report.summary.systemHealth}`);
@@ -554,55 +513,55 @@ healthMonitor.run().catch(error = > {_; process.exit(1)})
       this.log(`Logs: ${report.summary.logHealth}`);
       this.log(`Overall: ${report.summary.overallHealth}`);
       this.log(`Health Score: ${report.summary.healthScore}/100`);
+        this.log('\n All systems are healthy!');
+      this.log(` Error running health:monitor:${error.message}`);      process.exit(1);
+      this.log('\n Health Monitor Summary: ');`;
+      this.log(`System: ${report.summary.systemHealth}`);`;
+      this.log(`Processes: ${report.summary.processHealth}`);`;
+      this.log(`Application: ${report.summary.applicationHealth}`);`;
+      this.log(`Logs: ${report.summary.logHealth}`);`;
+      this.log(`Overall: ${report.summary.overallHealth}`);`;
+      this.log(`Health Score: ${report.summary.healthScore}/100`);`;
+pr-12325
       this.log(`Duration: ${duration}ms`);
-;
       if (report.recommendations.length > 0) {_;
         this.log('\n Recommendations: ');
-        report.recommendations.forEach(rec => {;
-          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`)
-        })
       } else {_;
         this.log('\n All systems are healthy!')}
-
-    } catch (error) {_;
       this.log(` Error running health monitor: ${error.message}`);
       process.exit(1)
-}
+// Run the health monitor;
+healthMonitor.run().catch(error => {;)
+  process.exit(1);
+})
 }
 };
-;
-// Run the health monitor;
-const healthMonitor = new HealthMonitor();
-healthMonitor.run().catch(error => {;
-  process.exit(1);
-});
-    };
-  };
+pr-12325
 ,;
   async checkSystemResources() {,;
     try {,;
       this.log(' Checking system resources...'),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const memInfo = execSync('free -m', { encodin:g:'utf8' }),;
       const diskInfo = execSync('df -h', { encodin:g:'utf8' }),;
       const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encodin:g:'utf8' }),;
-,;
       // Parse memory info,;
       const memLines = memInfo.split('\n'),;
       const memTotal = memLines[1].split(/\s+/)[1],;
       const memUsed = memLines[1].split(/\s+/)[2],;
       const memFree = memLines[1].split(/\s+/)[3],;
-,;
       // Parse disk info,;
       const diskLines = diskInfo.split('\n'),;
       const rootDisk = diskLines.find(line => line.includes('/')),;
-      const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', '') :'0',;
-,;
+      const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ) :'0',;
       // Parse CPU info,;
       const cpuUsage = cpuInfo.includes('id') ?,;
-        (100 - parseFloat(cpuInfo.split('id')[0].split()[3].replace('%id', '').trim())) :0,;
-,;
+        (100 - parseFloat(cpuInfo.split('id')[0].split()[3].replace('%id', ).trim())) :0,;
       return {,;
         succes:s:true,;
         memor:y:{,;
@@ -613,17 +572,27 @@ healthMonitor.run().catch(error => {;
         },;
         dis:k:{,;
           usagePercen:t:parseInt(diskUsage),;
-        },;
         cp:u:{,;
+<<<<<<< HEAD
           usagePercen:t:Math.round(cpuUsage),;
         };
       };
+=======
+          usagePercen:t:Math.round(cpuUsage),
+}
+};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          usagePercen:t:Math.round(cpuUsage),;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     } catch (error) {,;
-      return {,;
         succes:s:false,;
         erro:r:error.message,;
         memor:y:null,;
         dis:k:null,;
+<<<<<<< HEAD
         cp:u:null,;
       };
     };
@@ -631,19 +600,39 @@ healthMonitor.run().catch(error => {;
 ,;
   async checkProcessHealth() {,;
     try {,;
-      this.log(' Checking process health...'),;
+      this.log('🔄 Checking process health...'),;
+=======
+        cp:u:null,
+};
+    }
+};
 ,;
+        cp:u:null,;
+pr-12325
+  async checkProcessHealth() {,;
+      this.log(' Checking process health...'),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const pm2List = execSync('pm2 list --json', { encodin:g:'utf8' }),;
       const processes = JSON.parse(pm2List),;
-,;
       const processHealth = {,;
         tota:l:processes.length,;
         onlin:e:0,;
         stoppe:d:0,;
         errore:d:0,;
+<<<<<<< HEAD
         processe:s:[],;
       };
+=======
+        processe:s:[],
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+        processe:s:[],;
+pr-12325
       processes.forEach(proc => {,;
         const status = proc.pm2_env?.status || 'unknown',;
         processHealth.processes.push({,;
@@ -651,9 +640,8 @@ healthMonitor.run().catch(error => {;
           statu:s:status,;
           memor:y:proc.monit?.memory || 0,;
           cp:u:proc.monit?.cpu || 0,;
-          uptim:e:proc.pm2_env?.uptime || 0,;
+          uptim:e:proc.pm2_env?.uptime || 0,;)
         }),;
-,;
         if (status === 'online') processHealth.online++,;
         else if (status === 'stopped') processHealth.stopped++,;
         else if (status === 'errored') processHealth.errored++,;
@@ -661,12 +649,18 @@ healthMonitor.run().catch(error => {;
 ,;
       return {,;
         succes:s:true,;
+<<<<<<< HEAD
         healt:h:processHealth,;
       };
+=======
+        healt:h:processHealth,
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
+<<<<<<< HEAD
         healt:h:null,;
       };
     };
@@ -674,49 +668,56 @@ healthMonitor.run().catch(error => {;
 ,;
   async checkApplicationHealth() {,;
     try {,;
+      this.log('🌐 Checking application health...'),;
+=======
+        healt:h:null,
+};
+    }
+};
+,;
+        healt:h:processHealth,;
+        healt:h:null,;
+pr-12325
+  async checkApplicationHealth() {,;
       this.log(' Checking application health...'),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const healthChecks = [],;
-,;
       // Check if the application is running,;
-      try {,;
         const pm2List = execSync('pm2 list', { encodin:g:'utf8' }),;
         const hasRunningApp = pm2List.includes('bolt-zion-app') && pm2List.includes('online'),;
-,;
         healthChecks.push({,;
           nam:e:'PM2 App Status',;
           statu:s:hasRunningApp ? 'healthy' :'unhealthy',;
-          messag:e:hasRunningApp ? 'Application is running' :'Application is not running',;
-        }),;
-      } catch (error) {,;
-        healthChecks.push({,;
-          nam:e:'PM2 App Status',;
+          messag:e:hasRunningApp ? 'Application is running' :'Application is not running',;')
           statu:s:'error',;
           messag:e:'Could not check PM2 status',;
+<<<<<<< HEAD
         }),;
       };
+=======
+        }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+          messag:e:'Could not check PM2 status',;')
+pr-12325
       // Check if build files exist,;
       const buildExists = fs.existsSync('dist') || fs.existsSync('.next'),;
-      healthChecks.push({,;
         nam:e:'Build Files',;
         statu:s:buildExists ? 'healthy' :'unhealthy',;
-        messag:e:buildExists ? 'Build files exist' :'Build files missing',;
-      }),;
-,;
+        messag:e:buildExists ? 'Build files exist' :'Build files missing',;')
       // Check if package.json exists and is valid,;
-      try {,;
         const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
-        healthChecks.push({,;
           nam:e:'Package.json',;
           statu:s:'healthy',;
-          messag:e:'Package.json is valid',;
-        }),;
-      } catch (error) {,;
-        healthChecks.push({,;
-          nam:e:'Package.json',;
+          messag:e:'Package.json is valid',;')
           statu:s:'unhealthy',;
           messag:e:'Package.json is invalid or missing',;
+<<<<<<< HEAD
         }),;
       };
 ,;
@@ -724,10 +725,20 @@ healthMonitor.run().catch(error => {;
         succes:s:true,;
         check:s:healthChecks,;
       };
+=======
+        }),
+};
+,;
+      return {,;
+        succes:s:true,;
+        check:s:healthChecks,
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
+<<<<<<< HEAD
         check:s:[],;
       };
     };
@@ -735,42 +746,81 @@ healthMonitor.run().catch(error => {;
 ,;
   async checkLogHealth() {,;
     try {,;
-      this.log(' Checking log health...'),;
+      this.log('📝 Checking log health...'),;
+=======
+        check:s:[],
+};
+    }
+};
 ,;
+          messag:e:'Package.json is invalid or missing',;')
+        check:s:healthChecks,;
+        check:s:[],;
+pr-12325
+  async checkLogHealth() {,;
+      this.log(' Checking log health...'),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,;
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const logsDir = path.join(this.projectRoot, 'logs/pm2'),;
       const logFiles = [],;
-,;
       if (fs.existsSync(logsDir)) {,;
         const files = fs.readdirSync(logsDir),;
-        files.forEach(file => {,;
+        files.forEach(file => {,;)
           if (file.endsWith('.log')) {,;
             const filePath = path.join(logsDir, file),;
             const stats = fs.statSync(filePath),;
             logFiles.push({,;
               nam:e:file,;
-              siz:e:stats.size,;
+              siz:e:stats.size,;)
               sizeM:B:Math.round(stats.size / (1024 * 1024) * 100) / 100,;
               lastModifie:d:stats.mtime,;
+<<<<<<< HEAD
             }),;
           };
         }),;
       };
+=======
+            }),
+};
+        }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       return {,;
         succes:s:true,;
         logFile:s:logFiles,;
+<<<<<<< HEAD
         totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0),;
       };
+=======
+        totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {,;
       return {,;
         succes:s:false,;
         erro:r:error.message,;
         logFile:s:[],;
+<<<<<<< HEAD
         totalSiz:e:0,;
       };
     };
   };
+=======
+        totalSiz:e:0,
+};
+    }
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+        logFile:s:logFiles,;
+        totalSiz:e:logFiles.reduce((sum, file) => sum + file.size, 0),;
+        logFile:s:[],;
+        totalSiz:e:0,;
+pr-12325
   async generateReport(systemInfo, processInfo, appInfo, logInfo) {,;
     const report = {,;
       timestam:p:new Date().toISOString(),;
@@ -781,26 +831,30 @@ healthMonitor.run().catch(error => {;
         logHealt:h:'unknown',;
         overallHealt:h:'unknown',;
         healthScor:e:0,;
-      },;
       detail:s:{,;
         syste:m:systemInfo,;
         processe:s:processInfo,;
         applicatio:n:appInfo,;
         log:s:logInfo,;
       },;
+<<<<<<< HEAD
       recommendation:s:[],;
     };
+=======
+      recommendation:s:[],
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+      recommendation:s:[],;
+pr-12325
     // Calculate health scores,;
     let totalScore = 0,;
     let maxScore = 0,;
-,;
     // System health,;
     if (systemInfo.success) {,;
       const memUsage = systemInfo.memory?.usagePercent || 0,;
       const diskUsage = systemInfo.disk?.usagePercent || 0,;
       const cpuUsage = systemInfo.cpu?.usagePercent || 0,;
-,;
       if (memUsage < 80 && diskUsage < 80 && cpuUsage < 80) {,;
         report.summary.systemHealth = 'healthy',;
         totalScore += 25,;
@@ -809,180 +863,302 @@ healthMonitor.run().catch(error => {;
         totalScore += 15,;
       } else {,;
         report.summary.systemHealth = 'unhealthy',;
+<<<<<<< HEAD
         totalScore += 5,;
       };
     };
+=======
+        totalScore += 5,
+}
+};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+        totalScore += 5,;
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     maxScore += 25,;
-,;
     // Process health,;
     if (processInfo.success && processInfo.health) {,;
       const health = processInfo.health,;
       if (health.errored === 0 && health.stopped === 0) {,;
         report.summary.processHealth = 'healthy',;
-        totalScore += 25,;
       } else if (health.errored === 0) {,;
         report.summary.processHealth = 'warning',;
-        totalScore += 15,;
-      } else {,;
         report.summary.processHealth = 'unhealthy',;
+<<<<<<< HEAD
         totalScore += 5,;
       };
     };
+=======
+        totalScore += 5,
+}
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     maxScore += 25,;
 ,;
+pr-12325
     // Application health,;
     if (appInfo.success) {,;
       const healthyChecks = appInfo.checks.filter(check => check.status === 'healthy').length,;
       const totalChecks = appInfo.checks.length,;
-,;
       if (healthyChecks === totalChecks) {,;
         report.summary.applicationHealth = 'healthy',;
-        totalScore += 25,;
       } else if (healthyChecks >= totalChecks * 0.5) {,;
         report.summary.applicationHealth = 'warning',;
-        totalScore += 15,;
-      } else {,;
         report.summary.applicationHealth = 'unhealthy',;
+<<<<<<< HEAD
         totalScore += 5,;
       };
     };
+=======
+        totalScore += 5,
+}
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     maxScore += 25,;
 ,;
+pr-12325
     // Log health,;
     if (logInfo.success) {,;
       const totalLogSize = logInfo.totalSize / (1024 * 1024), // MB,;
       if (totalLogSize < 100) {,;
         report.summary.logHealth = 'healthy',;
-        totalScore += 25,;
       } else if (totalLogSize < 500) {,;
         report.summary.logHealth = 'warning',;
-        totalScore += 15,;
-      } else {,;
         report.summary.logHealth = 'unhealthy',;
+<<<<<<< HEAD
         totalScore += 5,;
       };
     };
+=======
+        totalScore += 5,
+}
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     maxScore += 25,;
 ,;
+pr-12325
     report.summary.healthScore = Math.round((totalScore / maxScore) * 100),;
-,;
     // Determine overall health,;
     if (report.summary.healthScore >= 80) {,;
       report.summary.overallHealth = 'healthy',;
     } else if (report.summary.healthScore >= 60) {,;
       report.summary.overallHealth = 'warning',;
     } else {,;
+<<<<<<< HEAD
       report.summary.overallHealth = 'unhealthy',;
     };
+=======
+      report.summary.overallHealth = 'unhealthy',
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+      report.summary.overallHealth = 'unhealthy',;
+pr-12325
     // Generate recommendations,;
-    if (systemInfo.success) {,;
       if (systemInfo.memory?.usagePercent > 80) {,;
         report.recommendations.push({,;
           priorit:y:'high',;
           messag:e:'High memory usage detected',;
           actio:n:'Consider restarting processes or increasing memory',;
+<<<<<<< HEAD
         }),;
       };
+=======
+        }),
+};
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          actio:n:'Consider restarting processes or increasing memory',;')
+pr-12325
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (systemInfo.disk?.usagePercent > 80) {,;
-        report.recommendations.push({,;
-          priorit:y:'high',;
           messag:e:'High disk usage detected',;
           actio:n:'Clean up logs and temporary files',;
+<<<<<<< HEAD
         }),;
       };
     };
+=======
+        }),
+}
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+          actio:n:'Clean up logs and temporary files',;')
+pr-12325
     if (processInfo.success && processInfo.health?.errored > 0) {,;
-      report.recommendations.push({,;
         priorit:y:'critical',;
         messag:e:'Errored processes detected',;
         actio:n:'Restart errored processes and investigate logs',;
+<<<<<<< HEAD
       }),;
     };
+=======
+      }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+        actio:n:'Restart errored processes and investigate logs',;')
+pr-12325
     if (logInfo.success && logInfo.totalSize > 500 * 1024 * 1024) {,;
-      report.recommendations.push({,;
         priorit:y:'medium',;
         messag:e:'Large log files detected',;
         actio:n:'Implement log rotation or cleanup',;
+<<<<<<< HEAD
       }),;
     };
 ,;
     return report,;
   };
+=======
+      }),
+};
 ,;
+    return report,
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+,;
+        actio:n:'Implement log rotation or cleanup',;')
+    return report,;
+pr-12325
   async saveReport(report) {,;
-    try {,;
       const reportDir = path.dirname(this.reportFile),;
       if (!fs.existsSync(reportDir)) {,;
+<<<<<<< HEAD
         fs.mkdirSync(reportDir, { recursiv:e:true }),;
       };
+=======
+        fs.mkdirSync(reportDir, { recursiv:e:true }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;
       this.log(`Report saved:to:${this.reportFile}`),;
     } catch (error) {,;
+<<<<<<< HEAD
       this.log(`Error saving:report:${error.message}`),;
     };
   };
 ,;
   async run() {,;
-    this.log(' Starting Health Monitor...'),;
-    this.log(`Project:root:${this.projectRoot}`),;
+    this.log('🏥 Starting Health Monitor...'),;
+=======
+      this.log(`Error saving:report:${error.message}`),
+}
+};
 ,;
-    try {,;
+        fs.mkdirSync(reportDir, { recursiv:e:true }),;
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),;`;
+      this.log(`Report saved:to:${this.reportFile}`),;
+    } catch (error) {,;`;
+      this.log(`Error saving:report:${error.message}`),;
+pr-12325
+  async run() {,;
+<<<<<<< HEAD
+    this.log(' Starting Health Monitor...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    this.log(' Starting Health Monitor...'),;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    this.log(`Project:root:${this.projectRoot}`),;
       // Create logs directory if it doesn't exist,;
       const logsDir = path.dirname(this.logFile),;
       if (!fs.existsSync(logsDir)) {,;
+<<<<<<< HEAD
         fs.mkdirSync(logsDir, { recursiv:e:true }),;
       };
+=======
+        fs.mkdirSync(logsDir, { recursiv:e:true }),
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,;
+        fs.mkdirSync(logsDir, { recursiv:e:true }),;
+pr-12325
       // Run all health checks,;
       const systemInfo = await this.checkSystemResources(),;
       const processInfo = await this.checkProcessHealth(),;
       const appInfo = await this.checkApplicationHealth(),;
       const logInfo = await this.checkLogHealth(),;
-,;
       // Generate report,;
+<<<<<<< HEAD
+      this.log('📊 Generating health report...'),;
+=======
       this.log(' Generating health report...'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo),;
-,;
       // Save report,;
       await this.saveReport(report),;
-,;
       const duration = Date.now() - this.startTime,;
-,;
       // Log summary,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+      this.log('\n📊 Health Monitor:Summary:'),;
+=======
       this.log('\n Health Monitor:Summary:'),;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log(`Syste:m:${report.summary.systemHealth}`),;
       this.log(`Processe:s:${report.summary.processHealth}`),;
       this.log(`Applicatio:n:${report.summary.applicationHealth}`),;
       this.log(`Log:s:${report.summary.logHealth}`),;
       this.log(`Overal:l:${report.summary.overallHealth}`),;
       this.log(`Health:Score:${report.summary.healthScore}/100`),;
+=======
+      this.log('\n Health Monitor:Summary:'),;`;
+      this.log(`Syste:m:${report.summary.systemHealth}`),;`;
+      this.log(`Processe:s:${report.summary.processHealth}`),;`;
+      this.log(`Applicatio:n:${report.summary.applicationHealth}`),;`;
+      this.log(`Log:s:${report.summary.logHealth}`),;`;
+      this.log(`Overal:l:${report.summary.overallHealth}`),;`;
+      this.log(`Health:Score:${report.summary.healthScore}/100`),;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`Duratio:n:${duration}ms`),;
-,;
       if (report.recommendations.length > 0) {,;
+<<<<<<< HEAD
+        this.log('\n💡 Recommendation:s:'),;
+=======
         this.log('\n Recommendation:s:'),;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         report.recommendations.forEach(rec => {,;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;
+=======
+        report.recommendations.forEach(rec => {,;)`;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),;`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.log(`    Actio:n:${rec.action}`),;
         }),;
       } else {,;
-        this.log('\n All systems are healthy!'),;
+<<<<<<< HEAD
+        this.log('\n✨ All systems are healthy!'),;
       };
 ,;
     } catch (error) {,;
-      this.log(` Error running health:monitor:${error.message}`),;
+      this.log(`❌ Error running health:monitor:${error.message}`),;
       process.exit(1),;
     };
   };
+=======
+        this.log('\n All systems are healthy!'),
 };
 ,;
+    } catch (error) {,;
+      this.log(` Error running health:monitor:${error.message}`),;
+      process.exit(1),
+};
+  }
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+};
+,;
+        this.log('\n All systems are healthy!'),;
+      this.log(` Error running health:monitor:${error.message}`),;
+      process.exit(1),;
+pr-12325
 // Run the health monitor,;
 const healthMonitor = new HealthMonitor(),;
-healthMonitor.run().catch(error => {,;
-  process.exit(1),;
+healthMonitor.run().catch(error => {,;)
 }),;      // Parse memory info,
       const memLines = memInfo.split('\n'),
       const memTotal = memLines[1].split(/\s+/)[1],
@@ -992,12 +1168,10 @@ healthMonitor.run().catch(error => {,;
       // Parse disk info,
       const diskLines = diskInfo.split('\n'),
       const rootDisk = diskLines.find(line => line.includes('/')),
-      const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', '') : '0',
-,
+      const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ) : '0',
       // Parse CPU info,
       const cpuUsage = cpuInfo.includes('id') ?,
-        (100 - parseFloat(cpuInfo.split('id')[0].split()[3].replace('%id', '').trim())) : 0,
-,
+        (100 - parseFloat(cpuInfo.split('id')[0].split()[3].replace('%id', ).trim())) : 0,
       return {,
         succes: s: true,
         memor: y: {,
@@ -1008,154 +1182,113 @@ healthMonitor.run().catch(error => {,;
         },
         dis: k: {,
           usagePercen: t: parseInt(diskUsage)
-        },
         cp: u: {,
           usagePercen: t: Math.round(cpuUsage)
-        }
-      }
     } catch (error) {,
-      return {,
         succes: s: false,
         erro: r: error.message,
         memor: y: null,
         dis: k: null,
-        cp: u: null
-      }
+        cp: u: null;
     }  };
-,
   async checkProcessHealth() {,
     try {,
+<<<<<<< HEAD
+      this.log('🔄 Checking process health...'),
+=======
       this.log(' Checking process health...'),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }),
       const processes = JSON.parse(pm2List),
-,
       const processHealth = {,
         tota: l: processes.length,
         onlin: e: 0,
         stoppe: d: 0,
         errore: d: 0,
         processe: s: []      };
-,
       processes.forEach(proc => {,
         const status = proc.pm2env?.status || 'unknown',
         processHealth.processes.push({,
           nam: e: proc.name,
           statu: s: status,
           memor: y: proc.monit?.memory || 0,
-          cp: u: proc.monit?.cpu || 0,
+          cp: u: proc.monit?.cpu || 0,)
           uptim: e: proc.pm2env?.uptime || 0        }),
-,
         if (status === 'online') processHealth.online++,
         else if (status === 'stopped') processHealth.stopped++,
-        else if (status === 'errored') processHealth.errored++
       }),
-,
-      return {,
-        succes: s: true,
-        healt: h: processHealth
-      }
-    } catch (error) {,
-      return {,
-        succes: s: false,
-        erro: r: error.message,
-        healt: h: null
-      }
-    }  };
-,
+        healt: h: processHealth;
+        healt: h: null;
   async checkApplicationHealth() {,
+<<<<<<< HEAD
     try {,
+<<<<<<< HEAD
+      this.log('🌐 Checking application health...'),
+=======
       this.log(' Checking application health...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
+=======
+      this.log(' Checking application health...'),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const healthChecks = [],
-,
       // Check if the application is running,
-      try {,
         const pm2List = execSync('pm2 list', { encoding: 'utf8' }),
         const hasRunningApp = pm2List.includes('bolt-zion-app') && pm2List.includes('online'),
-,
         healthChecks.push({,
           nam: e: 'PM2 App Status',
           statu: s: hasRunningApp ? 'healthy' : 'unhealthy',
-          messag: e: hasRunningApp ? 'Application is running' : 'Application is not running'
-        })
-      } catch (error) {,
-        healthChecks.push({,
-          nam: e: 'PM2 App Status',
-          statu: s: 'error',
+          messag: e: hasRunningApp ? 'Application is running' : 'Application is not running)
+          statu: s: 'error',')
           messag: e: 'Could not check PM2 status'        })
-      };
-,
       // Check if build files exist,
       const buildExists = fs.existsSync('dist') || fs.existsSync('.next'),
-      healthChecks.push({,
         nam: e: 'Build Files',
-        statu: s: buildExists ? 'healthy' : 'unhealthy',
+        statu: s: buildExists ? 'healthy' : 'unhealthy',')
         messag: e: buildExists ? 'Build files exist' : 'Build files missing'      }),
-,
       // Check if package.json exists and is valid,
-      try {,
         const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
-        healthChecks.push({,
           nam: e: 'Package.json',
           statu: s: 'healthy',
-          messag: e: 'Package.json is valid'
-        })
-      } catch (error) {,
-        healthChecks.push({,
-          nam: e: 'Package.json',
-          statu: s: 'unhealthy',
+          messag: e: 'Package.json is valid)
+          statu: s: 'unhealthy',')
           messag: e: 'Package.json is invalid or missing'        })
-      };
-,
-      return {,
-        succes: s: true,
-        check: s: healthChecks
-      }
-    } catch (error) {,
-      return {,
-        succes: s: false,
-        erro: r: error.message,
+        check: s: healthChecks;
         check: s: []
-      }
-    }  };
-,
   async checkLogHealth() {,
+<<<<<<< HEAD
     try {,
+<<<<<<< HEAD
+      this.log('📝 Checking log health...'),
+=======
       this.log(' Checking log health...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ,
+=======
+      this.log(' Checking log health...'),
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const logsDir = path.join(this.projectRoot, 'logs/pm2'),
       const logFiles = [],
-,
       if (fs.existsSync(logsDir)) {,
         const files = fs.readdirSync(logsDir),
-        files.forEach(file => {,
+        files.forEach(file => {,)
           if (file.endsWith('.log')) {,
             const filePath = path.join(logsDir, file),
             const stats = fs.statSync(filePath),
             logFiles.push({,
               nam: e: file,
-              siz: e: stats.size,
+              siz: e: stats.size,)
               sizeM: B: Math.round(stats.size / (1024 * 1024) * 100) / 100,
-              lastModifie: d: stats.mtime
-            })
+              lastModifie: d: stats.mtime;
           }        })
-      };
-,
-      return {,
-        succes: s: true,
         logFile: s: logFiles,
         totalSiz: e: logFiles.reduce((sum, file) => sum + file.size, 0)
-      }
-    } catch (error) {,
-      return {,
-        succes: s: false,
-        erro: r: error.message,
         logFile: s: [],
-        totalSiz: e: 0
-      }
-    }  };
-,
+        totalSiz: e: 0;
   async generateReport(systemInfo, processInfo, appInfo, logInfo) {,
     const report = {,
       timestam: p: new Date().toISOString(),
@@ -1165,189 +1298,171 @@ healthMonitor.run().catch(error => {,;
         applicationHealt: h: 'unknown',
         logHealt: h: 'unknown',
         overallHealt: h: 'unknown',
-        healthScor: e: 0
-      },
+        healthScor: e: 0;
       detail: s: {,
         syste: m: systemInfo,
         processe: s: processInfo,
         applicatio: n: appInfo,
-        log: s: logInfo
-      },
+        log: s: logInfo;
       recommendation: s: []    };
-,
     // Calculate health scores,
     let totalScore = 0,
     let maxScore = 0,
-,
     // System health,
     if (systemInfo.success) {,
       const memUsage = systemInfo.memory?.usagePercent || 0,
       const diskUsage = systemInfo.disk?.usagePercent || 0,
       const cpuUsage = systemInfo.cpu?.usagePercent || 0,
-,
       if (memUsage < 80 && diskUsage < 80 && cpuUsage < 80) {,
         report.summary.systemHealth = 'healthy',
-        totalScore += 25
+        totalScore += 25;
       } else if (memUsage < 90 && diskUsage < 90 && cpuUsage < 90) {,
         report.summary.systemHealth = 'warning',
-        totalScore += 15
+        totalScore += 15;
       } else {,
         report.summary.systemHealth = 'unhealthy',
-        totalScore += 5
+        totalScore += 5;
       }    };
     maxScore += 25,
-,
     // Process health,
     if (processInfo.success && processInfo.health) {,
       const health = processInfo.health,
       if (health.errored === 0 && health.stopped === 0) {,
         report.summary.processHealth = 'healthy',
-        totalScore += 25
       } else if (health.errored === 0) {,
         report.summary.processHealth = 'warning',
-        totalScore += 15
-      } else {,
         report.summary.processHealth = 'unhealthy',
-        totalScore += 5
-      }    };
-    maxScore += 25,
-,
     // Application health,
     if (appInfo.success) {,
       const healthyChecks = appInfo.checks.filter(check => check.status === 'healthy').length,
       const totalChecks = appInfo.checks.length,
-,
       if (healthyChecks === totalChecks) {,
         report.summary.applicationHealth = 'healthy',
-        totalScore += 25
       } else if (healthyChecks >= totalChecks * 0.5) {,
         report.summary.applicationHealth = 'warning',
-        totalScore += 15
-      } else {,
         report.summary.applicationHealth = 'unhealthy',
-        totalScore += 5
-      }    };
-    maxScore += 25,
-,
     // Log health,
     if (logInfo.success) {,
       const totalLogSize = logInfo.totalSize / (1024 * 1024), // MB,
       if (totalLogSize < 100) {,
         report.summary.logHealth = 'healthy',
-        totalScore += 25
       } else if (totalLogSize < 500) {,
         report.summary.logHealth = 'warning',
-        totalScore += 15
-      } else {,
         report.summary.logHealth = 'unhealthy',
-        totalScore += 5
-      }    };
-    maxScore += 25,
-,
     report.summary.healthScore = Math.round((totalScore / maxScore) * 100),
-,
     // Determine overall health,
     if (report.summary.healthScore >= 80) {,
-      report.summary.overallHealth = 'healthy'
+      report.summary.overallHealth = 'healthy
     } else if (report.summary.healthScore >= 60) {,
-      report.summary.overallHealth = 'warning'
-    } else {,
-      report.summary.overallHealth = 'unhealthy'
-    };
-,
+      report.summary.overallHealth = 'warning
+      report.summary.overallHealth = 'unhealthy
     // Generate recommendations,
-    if (systemInfo.success) {,
       if (systemInfo.memory?.usagePercent > 80) {,
         report.recommendations.push({,
           priorit: y: 'high',
-          messag: e: 'High memory usage detected',
+          messag: e: 'High memory usage detected',')
           actio: n: 'Consider restarting processes or increasing memory'        })
-      };
       if (systemInfo.disk?.usagePercent > 80) {,
-        report.recommendations.push({,
-          priorit: y: 'high',
           messag: e: 'High disk usage detected',
-          actio: n: 'Clean up logs and temporary files'
-        })
-      }    };
-,
+          actio: n: 'Clean up logs and temporary files)
     if (processInfo.success && processInfo.health?.errored > 0) {,
-      report.recommendations.push({,
         priorit: y: 'critical',
-        messag: e: 'Errored processes detected',
+        messag: e: 'Errored processes detected',')
         actio: n: 'Restart errored processes and investigate logs'      })
-    };
-,
     if (logInfo.success && logInfo.totalSize > 500 * 1024 * 1024) {,
-      report.recommendations.push({,
         priorit: y: 'medium',
-        messag: e: 'Large log files detected',
+        messag: e: 'Large log files detected',')
         actio: n: 'Implement log rotation or cleanup'      })
-    };
-,
-    return report
-  };
-,
   async saveReport(report) {,
-    try {,
       const reportDir = path.dirname(this.reportFile),
       if (!fs.existsSync(reportDir)) {,
         fs.mkdirSync(reportDir, { recursiv: e: true })
-      };
-,
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),`;
       this.log(`Report saved: to: ${this.reportFile}`)
-    } catch (error) {,
+    } catch (error) {,`;
       this.log(`Error saving: report: ${error.message}`)
-    }  };
-,
   async run() {,
+<<<<<<< HEAD
+<<<<<<< HEAD
+    this.log('🏥 Starting Health Monitor...'),
+=======
     this.log(' Starting Health Monitor...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    this.log(' Starting Health Monitor...'),`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`Project root: ${this.projectRoot}`),
-,
-    try {,
       // Create logs directory if it doesn't exist,
       const logsDir = path.dirname(this.logFile),
       if (!fs.existsSync(logsDir)) {,
         fs.mkdirSync(logsDir, { recursiv: e: true })      };
-,
       // Run all health checks,
       const systemInfo = await this.checkSystemResources(),
       const processInfo = await this.checkProcessHealth(),
       const appInfo = await this.checkApplicationHealth(),
       const logInfo = await this.checkLogHealth(),
-,
       // Generate report,
+<<<<<<< HEAD
+      this.log('📊 Generating health report...'),
+=======
       this.log(' Generating health report...'),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const report = await this.generateReport(systemInfo, processInfo, appInfo, logInfo),
-,
       // Save report,
       await this.saveReport(report),
-,
       const duration = Date.now() - this.startTime,
-,
       // Log summary,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      this.log('\n📊 Health Monitor Summary: '),
+=======
       this.log('\n Health Monitor Summary: '),
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log(`System: ${report.summary.systemHealth}`),
       this.log(`Processes: ${report.summary.processHealth}`),
       this.log(`Application: ${report.summary.applicationHealth}`),
       this.log(`Logs: ${report.summary.logHealth}`),
       this.log(`Overall: ${report.summary.overallHealth}`),
       this.log(`Health Score: ${report.summary.healthScore}/100`),
+=======
+      this.log('\n Health Monitor Summary: '),`;
+      this.log(`System: ${report.summary.systemHealth}`),`;
+      this.log(`Processes: ${report.summary.processHealth}`),`;
+      this.log(`Application: ${report.summary.applicationHealth}`),`;
+      this.log(`Logs: ${report.summary.logHealth}`),`;
+      this.log(`Overall: ${report.summary.overallHealth}`),`;
+      this.log(`Health Score: ${report.summary.healthScore}/100`),`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.log(`Duration: ${duration}ms`),
-,
       if (report.recommendations.length > 0) {,
+<<<<<<< HEAD
+        this.log('\n💡 Recommendations: '),
+=======
         this.log('\n Recommendations: '),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
           this.log(`    Actio: n: ${rec.action}`)
         })
       } else {,
-        this.log('\n All systems are healthy!')
+<<<<<<< HEAD
+        this.log('\n✨ All systems are healthy!')
       }
 
     } catch (error) {,
+      this.log(`❌ Error running health: monitor: ${error.message}`),
+=======
+=======
+        report.recommendations.forEach(rec => {,)`;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),`;
+          this.log(`    Actio: n: ${rec.action}`)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        this.log('\n All systems are healthy!')
+
       this.log(` Error running health: monitor: ${error.message}`),
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       process.exit(1)
     }
   }};
@@ -1357,6 +1472,18 @@ const healthMonitor = new HealthMonitor(),
 healthMonitor.run().catch(error => {,
   process.exit(1)
 }),
+<<<<<<< HEAD
+
+=======
 const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error => {_;
   process.exit(1)});
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Run the health monitor,
+const healthMonitor = new HealthMonitor(),
+healthMonitor.run().catch(error => {,)
+healthMonitor.run().catch(error => {_;)
+  process.exit(1)});
+`;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,11 +1,19 @@
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
 import { Tabs } from '@/components/ui/tabs',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',;
+<<<<<<< HEAD
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react',;
+=======
 import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Button } from '@/components/ui/button',;
 import { Resume } from '@/types/resume',;
 ;
@@ -52,20 +60,28 @@ export function ResumeWizard() {;
   const nextStep = () => {;
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),;
     if (currentIndex < RESUME_STEPS.length - 1) {;
+<<<<<<< HEAD
+      setActiveTab(RESUME_STEPS[currentIndex + 1].id),;
+=======
       const nextStep = RESUME_STEPS[currentIndex + 1],;
       if (nextStep) {;
         setActiveTab(nextStep.id),;
       }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   },;
   ;
   const prevStep = () => {;
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),;
     if (currentIndex > 0) {;
+<<<<<<< HEAD
+      setActiveTab(RESUME_STEPS[currentIndex - 1].id),;
+=======
       const prevStep = RESUME_STEPS[currentIndex - 1],;
       if (prevStep) {;
         setActiveTab(prevStep.id),;
       }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   },;
 ;
@@ -98,14 +114,23 @@ export function ResumeWizard() {;
   if (showNewResumeForm) {;
     return (;
       <CreateResumeForm ;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         onCreateResume={handleCreateNewResume}
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
       />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
     ),;
   }
   ;
   return (;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="space-y-6">;
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
         <h1 className="text-2xl font-bold">Resume Builder</h1>;
@@ -122,13 +147,20 @@ export function ResumeWizard() {;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+
+=======
       ;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <Card>;
         <CardContent className="pt-6">;
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">;
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
             <ResumeProgress resume={resume} progress={progress} />;
           </div>;
+<<<<<<< HEAD
+
+=======
           ;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
             <ResumeSteps ;
@@ -140,6 +172,7 @@ export function ResumeWizard() {;
             {resume && (;
               <ResumeStepContent ;
                 activeTab={activeTab}                resume={resume as Resume}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
               />;
@@ -148,6 +181,10 @@ export function ResumeWizard() {;
         </CardContent>;
       </Card>;
     </div>;
+<<<<<<< HEAD
+
+}
+=======
   ),; const [activeTab, setActiveTab] = useState ('basic-info');
 const [showNewResumeForm, setShowNewResumeForm] = useState (false);
 //Use the extracted hook for progress calculation ;
@@ -188,3 +225,4 @@ const [showNewResumeForm, setShowNewResumeForm] = useState (false);
   prevStep ;
 }/>) ;
 }</Tabs> </CardContent> </Card> </div>) ;"}'"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

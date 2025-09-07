@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+
+=======
+import React, { useState } from "react",;
+import { Star } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { ExternalLink } from "lucide-react",;
+import { TalentProfile } from "@/types/talent",;
+import { HireRequestModal } from "@/components/profile/hire-request",;
+import { useAuthStatus } from "@/hooks/talent",;
+import { UserProfile } from "@/types/auth",;
+import { useNavigate } from "react-router-dom",;
+=======
 import React, { useState } from "react",;
 import { Star } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -7,6 +20,7 @@ import { HireRequestModal } from "@/components/profile/hire-request",;
 import { useAuthStatus } from "@/hooks/talent",;
 import type { UserProfile } from "@/types/auth",;
 import { useRouter } from 'next/router',;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 interface TalentCardFooterProps {;
   profile:TalentProfile,;
@@ -17,11 +31,23 @@ interface TalentCardFooterProps {;
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire } TalentCardFooterProps) {;
   const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
   const { userDetails } = useAuthStatus(),;
+<<<<<<< HEAD
+  const navigate = useNavigate(),;
+=======
   const router = useRouter(),;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   // Create a compatible UserProfile from UserDetails;
   const userProfile:UserProfile = {;
     id:userDetails?.id,;
+<<<<<<< HEAD
+    displayName:userDetails?.name || '',;
+    email:userDetails?.email || '',;
+    userType:'',;
+    profileComplete:false,;
+    createdAt:new Date().toISOString(),;
+    updatedAt:new Date().toISOString();
+=======
     name:userDetails?.name || '',;
     email:userDetails?.email || '',;
     userType:null,;
@@ -32,6 +58,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire } Talen
     displayName:userDetails?.name || '',;
     points:0,;
     avatarUrl:userDetails?.avatar || '';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },;
 ;
   // Handle request to hire;
@@ -51,7 +78,11 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire } Talen
     e.stopPropagation(),;
     ;
     // Navigate to the talent profile page;
+<<<<<<< HEAD
+    navigate(`/talent/${profile.id || ''}`),;
+=======
     router.push(`/talent/${profile.id || ''}`),;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ;
     // Also call the onViewProfile callback if provided;
     if (onViewProfile) {;
@@ -60,10 +91,18 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire } Talen
   },;
 ;
   return (;
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>;
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">;
         {/* Experience or Hourly Rate */}
         <div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
           {profile.hourly_rate ? (;
             <div>;
               <span className="text-zion-slate-light text-xs">Hourly Rate</span>;
@@ -93,12 +132,17 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire } Talen
             onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
           >;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             View;
             <ExternalLink className="h-3 w-3 ml-1" />;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+
+=======
       ;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Hire Request Modal */}
       <HireRequestModal;
         talent={profile}        isOpen={isHireModalOpen}
@@ -106,6 +150,10 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire } Talen
         userDetails={userProfile}
       />;
     </>;
+<<<<<<< HEAD
+
+}
+=======
   ),; interface TalentCardFooterProps {;
   profile: TalentProfile;
 onViewProfile: (id: string) => void;
@@ -156,3 +204,4 @@ profile.id || '' ;
 }userDetails= {;
   userProfile ;
 }/> </>) ;"}'"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,7 +1,18 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+
+=======
+<<<<<<<< HEAD:backup-problematic-files/components/leadership.tsx.backup.1755992072
+import React from 'react',
+import Head from 'next/head',
+========
 import React from 'react';
 import Head from 'next/head';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function Leadership() {
   return (
     <>
@@ -19,7 +30,10 @@ export default function Leadership() {
     </>
   );
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/leadership.tsx.backup.1755991678
 export default function LeadershipPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -44,6 +58,14 @@ export default function LeadershipPage() {
 				<div className="mt-10 text-slate-300">Contact: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> • <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a></div>
 			</div>
 		</div>
-	);
+	)
 }
+<<<<<<<< HEAD:backup-problematic-files/components/leadership.tsx.backup.1755992072
+;
+========
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1749
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/leadership.tsx.backup.1755991678
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -27,8 +27,8 @@ export const trackPerformance = () => {;
       // Send to analytics;
       if (typeof gtag !== 'undefined') {;
         gtag('eventpage_load_time', {;
-          valu:e:Math.round(loadTime),;
-          event_categor:y:'Performance',;
+          valu:e:Math.round(loadTime);
+          event_categor:y:'Performance';
         });
       }
     });
@@ -39,9 +39,9 @@ export const trackErrors = () => {;
   window.addEventListener('error', event => {;
     if (typeof gtag !== 'undefined') {;
       gtag('eventjavascript_error', {;
-        event_categor:y:'Error',;
-        event_labe:l:event.message,;
-        valu:e:1,;
+        event_categor:y:'Error';
+        event_labe:l:event.message;
+        valu:e:1;
       });
     }
   });

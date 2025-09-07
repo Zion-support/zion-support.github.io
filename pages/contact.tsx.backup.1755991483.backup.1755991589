@@ -1,10 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/contact.tsx.backup.1755991404.backup.1756001154
+========
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 
 export default function ContactPage() {
   return <div>Contact Zion</div>;
 }
+<<<<<<< HEAD
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/contact.tsx.backup.1755991483.backup.1755991589
 =======
 export default function Contact(){
   return <div style={{padding:20}}>Contact</div>
@@ -12,6 +21,10 @@ export default function Contact(){
 =======
 =======
 >>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -32,11 +45,21 @@ const Contact: NextPage = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+export default Contact;
+=======
+<<<<<<<< HEAD:components/contact.tsx.backup.1755991404.backup.1756001154
+========
+<<<<<<< HEAD
 export default Contact;
 =======
 export default Contact;
 >>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 export default function Contact() {
   return (
     <div className="space-y-2">
@@ -45,18 +68,29 @@ export default function Contact() {
     </div>
   );
 }
-=======
+
 export default function Contact() {
   return <div>Contact Us</div>;
 }
-=======
+
 export default function Page(){return null}
+<<<<<<< HEAD
 =======
 =======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/contact.tsx.backup.1755991483.backup.1755991589
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import React from 'react';
 
 export default function ContactPage() {
   return (
+<<<<<<<< HEAD:components/contact.tsx.backup.1755991404.backup.1756001154
+    <div>
+      <h1 className="text-2xl font-bold">Contact</h1>
+      <p className="text-gray-600 dark:text-gray-300">Get in touch.</p>
+========
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Contact</h1>
 import type { NextPage } from 'next';
@@ -71,10 +105,17 @@ const Contact: NextPage = () => (
 );
 
 export default Contact;
-=======
+
       <p className="mt-2 text-gray-600 dark:text-gray-300">Get in touch with us.</p>
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/contact.tsx.backup.1755991483.backup.1755991589
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

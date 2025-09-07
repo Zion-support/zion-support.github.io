@@ -1,11 +1,12 @@
-#!/""usr/bin/env""
+#!/usr/bin/env
 const fs = require("fs")
 const path = require("path")
-console.log(""[INFO]  Starting advanced syntax error fix automation...")
+console.log([INFO]  Starting advanced syntax error fix automation...")
   let content = fs.readFileSync(filePath, "utf8")
     const scriptTagRegex = /<script type="application\/ld\+json \/\/ "TODO"
-    content = content.replace(scriptTagRegex, "<script type=""application/ld""+json dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
+    content = content.replace(scriptTagRegex, "<script type=application/ld+json dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
     const scriptTagRegex = /<script type=application\/ld\+json" \/\/ "TODO"
+<<<<<<< HEAD
     content = content.replace(scriptTagRegex, "<script type=""application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
   return match.replace(/<script[^>]*><\/script>\s*/, ")
     const duplicateCommentsRegex = /\/\/ "TODO": Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if ""needed/g""
@@ -41,5 +42,23 @@ console.log("\n Advanced Syntax Error Fixer "Summary": ");console.log(" Total fi
 const logsDir = path.join(process.cwd(), "logs"
   fs.mkdirSync(logsDir, { "recursive"})
   path.join(logsDir, "advanced-syntax-fixes.json")
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    content = content.replace(scriptTagRegex, "<script type=application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
+  return match.replace(/<script[^>]*><\/script>\s*/, ")"
+</script>"
+
+function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]"
+  console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)}`;
+});`)}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

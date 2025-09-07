@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Homepage2036 from '../components/Homepage2036';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
@@ -8,11 +12,17 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import MobileOptimizer from '../components/MobileOptimizer';
+<<<<<<< HEAD
+=======
 =======
 import SEO from '../components/SEO';
 import Homepage2025 from '../components/Homepage2025';
 import Layout from '../components/layout/Layout';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-231c
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const HomePage: React.FC = () => {
   const seoConfig = {
@@ -27,6 +37,10 @@ const HomePage: React.FC = () => {
 export default function Home() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -81,6 +95,8 @@ export default function Home() {
  
 {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
     </div>
+<<<<<<< HEAD
+=======
 =======
     <>
       <SEO />
@@ -91,5 +107,9 @@ export default function Home() {
       </Layout>
     </>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-231c
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 }

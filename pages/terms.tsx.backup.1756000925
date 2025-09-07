@@ -2,17 +2,29 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { FileText, CheckCircle, AlertTriangle, Shield, Users, Clock } from 'lucide-react';
+=======
+<<<<<<< HEAD
 import { FileText, CheckCircle, AlertTriangle, Shield, Users, Clock } from 'lucide-react';
 =======
 import { 
   FileText, Calendar, Mail, Phone, Globe, Users
 } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
 export default function TermsPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const termsSections = [
     {
       title: "Acceptance of Terms",
@@ -64,25 +76,41 @@ export default function TermsPage() {
     "Liability limitations and dispute resolution",
     "Terms modification and termination rights"
   ];
+<<<<<<< HEAD
+=======
 =======
   const lastUpdated = "January 15, 2025";
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
         <title>Terms of Service - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <meta name="description" content="Read Zion Tech Group's Terms of Service. Understand the terms and conditions for using our AI and quantum computing services." />
         <meta name="keywords" content="terms of service, Zion Tech Group, legal terms, service agreement" />
         <meta property="og:title" content="Terms of Service - Zion Tech Group" />
         <meta property="og:description" content="Terms and conditions for using our services." />
+<<<<<<< HEAD
+=======
 =======
         <meta name="description" content="Zion Tech Group's terms of service. Read about the terms and conditions governing your use of our services and website." />
         <meta name="keywords" content="terms of service, terms and conditions, service agreement, Zion Tech Group" />
         <meta property="og:title" content="Terms of Service - Zion Tech Group" />
         <meta property="og:description" content="Zion Tech Group's terms of service. Read about the terms and conditions governing your use of our services." />
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/terms" />
       </Head>
@@ -90,6 +118,10 @@ export default function TermsPage() {
       <EnhancedNavigation />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <main className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-6">
@@ -223,6 +255,8 @@ export default function TermsPage() {
           </div>
         </section>
       </main>
+<<<<<<< HEAD
+=======
 =======
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -510,6 +544,10 @@ export default function TermsPage() {
         </div>
       </section>
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d26
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
       <EnhancedFooter />
     </>

@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { Rocket, Satellite, Globe, Star, Zap, Target, Atom, Users, ArrowRight, Shield, Brain } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -48,6 +52,11 @@ const spaceServices = [
     features: ['Autonomous Rovers', 'Maintenance Robots', 'Exploration Drones']
   }
 ];
+<<<<<<< HEAD
+
+export default function SpaceTechnology() {
+  return (
+=======
 =======
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -164,6 +173,7 @@ const SpaceTechnologyPage: React.FC = () => {
 export default function SpaceTechnology() {
   return (
 <<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>
       <SEO 
         title="Space Technology Solutions | Zion Tech Group"
@@ -175,6 +185,8 @@ export default function SpaceTechnology() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
+<<<<<<< HEAD
+=======
 =======
     <Layout>
       <SEO 
@@ -188,12 +200,24 @@ export default function SpaceTechnology() {
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+export default function SpaceTechnology() {
+  return (
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-purple-400 bg-clip-text text-transparent mb-6">
                 Space Technology Solutions
               </h1>
@@ -215,6 +239,8 @@ export default function SpaceTechnology() {
                 >
                   Space Consultation
                 </motion.button>
+<<<<<<< HEAD
+=======
 =======
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-orange-600 bg-clip-text text-transparent">
                 Space Technology
@@ -236,12 +262,20 @@ export default function SpaceTechnology() {
                   Schedule Demo
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -292,6 +326,8 @@ export default function SpaceTechnology() {
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </motion.a>
+<<<<<<< HEAD
+=======
 =======
         {/* Space Capabilities */}
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
@@ -329,6 +365,10 @@ export default function SpaceTechnology() {
                   </div>
                   <p className="text-gray-300">{capability.description}</p>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -336,6 +376,10 @@ export default function SpaceTechnology() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Space Innovation Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-900/20 to-red-900/20">
           <div className="max-w-7xl mx-auto">
@@ -392,6 +436,8 @@ export default function SpaceTechnology() {
                   <p className="text-gray-400">
                     {innovation.description}
                   </p>
+<<<<<<< HEAD
+=======
 =======
         {/* Space Services */}
         <section className="py-20 px-4">
@@ -461,6 +507,10 @@ export default function SpaceTechnology() {
                     Get Started
                   </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </motion.div>
               ))}
             </div>
@@ -469,6 +519,10 @@ export default function SpaceTechnology() {
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -497,6 +551,8 @@ export default function SpaceTechnology() {
                 >
                   Space Technology Assessment
                 </motion.button>
+<<<<<<< HEAD
+=======
 =======
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -526,10 +582,19 @@ export default function SpaceTechnology() {
                   Schedule Consultation
                 </a>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      </div>
+    </>
+=======
 <<<<<<< HEAD
       </div>
     </>
@@ -537,6 +602,10 @@ export default function SpaceTechnology() {
       </main>
     </Layout>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-8ae6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

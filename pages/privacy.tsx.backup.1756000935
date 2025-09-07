@@ -2,6 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { 
   Shield, Lock, Eye, Users, Database, Globe, 
   Calendar, Mail, Phone
@@ -11,6 +15,8 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 export default function PrivacyPage() {
   const lastUpdated = "January 15, 2025";
+<<<<<<< HEAD
+=======
 =======
 import { Shield, Eye, Lock, Database, Globe, Mail, Phone, MapPin } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
@@ -79,11 +85,19 @@ export default function PrivacyPolicy() {
     }
   ];
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
   return (
     <>
       <Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <title>Privacy Policy - Zion Tech Group</title>
         <meta name="description" content="Zion Tech Group's privacy policy. Learn how we collect, use, and protect your personal information in accordance with applicable privacy laws." />
         <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, Zion Tech Group" />
@@ -384,6 +398,8 @@ export default function PrivacyPolicy() {
                       <div className="font-medium text-slate-900">Data Protection Officer</div>
                       <div className="text-slate-600">dpo@ziontechgroup.com</div>
                     </div>
+<<<<<<< HEAD
+=======
 =======
         <title>Privacy Policy | Zion Tech Group</title>
         <meta name="description" content="Learn how Zion Tech Group collects, uses, and protects your personal information. Our comprehensive privacy policy ensures transparency and data protection." />
@@ -503,22 +519,36 @@ export default function PrivacyPolicy() {
                     <p className="text-white font-semibold">Address</p>
                     <p className="text-gray-300">San Francisco, CA</p>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   </div>
                 </div>
               </div>
             </motion.div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
       </section>
 
       <EnhancedFooter />
+<<<<<<< HEAD
+=======
 =======
         </section>
 
         <EnhancedFooter />
       </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
 }

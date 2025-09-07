@@ -1,15 +1,28 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+=======
+<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 =======
 import SEO from '../components/SEO';
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-4a15
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function PressPage() {
 	return (
 		<>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			<Head>
 				<title>Press | Zion Tech Group</title>
 				<meta name="description" content="Press releases, media coverage, and company news from Zion Tech Group." />
@@ -24,6 +37,8 @@ export default function PressPage() {
 		</>
 	);
 }
+<<<<<<< HEAD
+=======
 =======
 			<SEO title="Press | Zion Tech Group" description="News, media resources, and press inquiries." canonical="/press" />
 			<div className="container mx-auto px-4 py-16">
@@ -34,3 +49,7 @@ export default function PressPage() {
 	);
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-4a15
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

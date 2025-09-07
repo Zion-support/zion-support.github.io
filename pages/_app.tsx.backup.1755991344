@@ -6,16 +6,12 @@ import '../styles/modern-design-system.css';
 <<<<<<< HEAD
 function MyApp({ Component, pageProps }: AppProps) {
 =======
-export default function MyApp({ Component, pageProps }: AppProps) {
->>>>>>> origin/cursor/build-zion-ai-marketplace-analytics-suite-7b81
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <EnhancedLayout>
       <Component {...pageProps} />
     </EnhancedLayout>
   );
 }
-<<<<<<< HEAD
 
-export default MyApp;
-=======
->>>>>>> origin/cursor/build-zion-ai-marketplace-analytics-suite-7b81

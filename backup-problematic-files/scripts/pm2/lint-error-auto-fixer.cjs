@@ -1,5 +1,6 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 import { execSync, spawn } from;
+<<<<<<< HEAD
   'child_process'
   'fs'
   'path'
@@ -33,11 +34,11 @@ import { execSync, spawn } from;
       const lines = content.split('\\n')
       switch (rule) {'}
         case 'no-unused-vars'
-        case: 'no-console', ',:'
-        case: 'quotes', ',:'
-        case: 'semi', ',:'
-        case: 'indent', ',:'
-        case: 'no-trailing-spaces', ',:'
+        case: 'no-console';';:'
+        case: 'quotes';';:'
+        case: 'semi';';:'
+        case: 'indent';';:'
+        case: 'no-trailing-spaces';';:'
   eol-last';: modified: = this.fixEolLast(lines)'
         case: 'prefer-const '
         fs.writeFileSync(file + '.backup')
@@ -46,5 +47,16 @@ import { execSync, spawn } from;
     const varMatch = message.match(/'(.+?)'
     if (line.includes('console.')
     if (message.includes('single quotes')
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
       lines[lineIndex] = line.replace(/"/g, ")
       lines[lineIndex] = line.replace(/"/g, ")
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

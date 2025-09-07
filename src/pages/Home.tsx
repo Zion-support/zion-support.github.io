@@ -1,152 +1,113 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import ServiceCard from '../components/ServiceCard';
 
 const Home: React.FC = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-      },
-    },
-  };
-
   return (
-    <motion.div
-      className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="container mx-auto px-4 py-16">
-        <motion.div className="text-center mb-12" variants={itemVariants}>
-          <h1 className="text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
             Zion Tech Group
           </h1>
-          <p className="text-2xl text-gray-300 mb-8">
-            Leading AI & Technology Solutions for a Smarter Future
+          <p className="text-2xl text-blue-100 mb-8">
+            AI, Micro SaaS, and IT Services
+          </p>
+          <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+            Leading technology solutions provider specializing in AI, cybersecurity, 
+            cloud infrastructure, and digital transformation services. Empowering businesses 
+            with cutting-edge technology and innovative solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              variant="primary"
-              size="large"
-              onClick={() => (window.location.href = '/services')}
-            >
-              Explore Our Services
-            </Button>
-            <Button
-              variant="secondary"
-              size="large"
-              onClick={() => (window.location.href = '/contact')}
-            >
-              Get Started
-            </Button>
+            <Link to="/contact">
+              <Button variant="primary" size="lg">
+                Get Started
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button variant="secondary" size="lg">
+                Learn More
+              </Button>
+            </Link>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
-          variants={itemVariants}
-        >
-          <ServiceCard
-            title="AI Services"
-            description="Transform your business with cutting-edge AI solutions."
-            icon="✨"
-            features={[
-              'Machine Learning',
-              'Natural Language Processing',
-              'Computer Vision',
-              'Predictive Analytics',
-            ]}
-          />
-          <ServiceCard
-            title="Cybersecurity"
-            description="Protect your digital assets with advanced security solutions."
-            icon="🔒"
-            features={[
-              'Threat Detection',
-              'Data Encryption',
-              'Security Audits',
-              'Incident Response',
-            ]}
-          />
-          <ServiceCard
-            title="Cloud Infrastructure"
-            description="Scale your operations with robust cloud solutions."
-            icon="☁️"
-            features={[
-              'Cloud Migration',
-              'Auto Scaling',
-              'Load Balancing',
-              'Disaster Recovery',
-            ]}
-          />
-        </motion.div>
+        {/* Features Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <Card className="text-center p-8 bg-slate-800/50 backdrop-blur-sm">
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🤖</span>
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4">AI Solutions</h3>
+            <p className="text-gray-300">
+              Advanced artificial intelligence and machine learning solutions to automate and optimize your business processes.
+            </p>
+          </Card>
+          
+          <Card className="text-center p-8 bg-slate-800/50 backdrop-blur-sm">
+            <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">☁️</span>
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4">Cloud Services</h3>
+            <p className="text-gray-300">
+              Scalable cloud infrastructure and migration services to modernize your IT environment.
+            </p>
+          </Card>
+          
+          <Card className="text-center p-8 bg-slate-800/50 backdrop-blur-sm">
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">🔒</span>
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4">Cybersecurity</h3>
+            <p className="text-gray-300">
+              Comprehensive security solutions to protect your digital assets and ensure compliance.
+            </p>
+          </Card>
+        </div>
 
-        <motion.div className="mt-16 text-center" variants={itemVariants}>
-          <h2 className="text-4xl font-bold mb-8">Why Choose Us?</h2>
+        {/* Services Preview */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-8">Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card
-              title="Innovation"
-              description="Pioneering the next generation of technology."
+            <ServiceCard
+              title="AI-Powered Analytics"
+              description="Transform your data into actionable insights with our advanced AI analytics platform."
+              icon="📊"
+              features={["Real-time analytics", "Predictive modeling", "Custom dashboards"]}
             />
-            <Card
-              title="Expertise"
-              description="Team of industry-leading professionals."
+            <ServiceCard
+              title="Cloud Migration"
+              description="Seamlessly migrate your infrastructure to the cloud with our expert guidance."
+              icon="☁️"
+              features={["Zero-downtime migration", "Cost optimization", "Security compliance"]}
             />
-            <Card
-              title="Reliability"
-              description="Trusted solutions for critical operations."
-            />
-            <Card
-              title="Scalability"
-              description="Solutions designed to grow with you."
-            />
-            <Card
-              title="Security"
-              description="Robust protection for all your data."
-            />
-            <Card
-              title="Support"
-              description="24/7 dedicated customer assistance."
+            <ServiceCard
+              title="Cybersecurity Audit"
+              description="Comprehensive security assessment to identify and mitigate potential vulnerabilities."
+              icon="🛡️"
+              features={["Vulnerability scanning", "Penetration testing", "Compliance review"]}
             />
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div className="mt-20 text-center" variants={itemVariants}>
-          <h2 className="text-3xl font-bold mb-8">
+        {/* CTA Section */}
+        <div className="text-center bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of companies that trust Zion Tech Group for their
-            technology needs. Let's build the future together.
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our solutions can help you achieve your goals.
           </p>
-          <Button
-            variant="primary"
-            size="large"
-            onClick={() => (window.location.href = '/contact')}
-          >
-            Start Your Journey
-          </Button>
-        </motion.div>
+          <Link to="/contact">
+            <Button variant="primary" size="lg" className="bg-white text-cyan-600 hover:bg-gray-100">
+              Start Your Project
+            </Button>
+          </Link>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

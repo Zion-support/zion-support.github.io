@@ -56,12 +56,8 @@ export default function ServicesPage() {
       gradient: 'from-green-400 to-emerald-500',
       cta: 'Try for Free'
 =======
-      color: 'bg-gradient-to-br from-emerald-500 to-green-600',
-      textColor: 'text-emerald-400',
-      gradient: 'from-emerald-400 to-emerald-500',
-      pricing: '$89/month',
-      link: 'https://seo.zion.app'
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-d4e7
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     },
     {
       icon: '📧',
@@ -134,6 +130,31 @@ export default function ServicesPage() {
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
       textColor: 'text-teal-400',
       gradient: 'from-teal-400 to-cyan-500',
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991934.backup.1756001157
+    {
+      metric: 'Average Growth Rate',
+      value: '22.1%',
+      description: 'Compound annual growth rate across segments',
+      trend: 'up',
+      change: '+3.2% vs 2023'
+    },
+    {
+      metric: 'Customer Acquisition Cost',
+      value: '$89',
+      description: 'Average CAC for micro SaaS services',
+      trend: 'down',
+      change: '-12% YoY'
+    },
+    {
+      metric: 'Customer Lifetime Value',
+      value: '$2,847',
+      description: 'Average LTV across micro SaaS customers',
+      trend: 'up',
+      change: '+18% YoY'
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       cta: 'View Demo'
     },
     {
@@ -159,6 +180,8 @@ export default function ServicesPage() {
       textColor: 'text-indigo-400',
       gradient: 'from-indigo-400 to-purple-500',
       cta: 'Build Your Bot'
+<<<<<<< HEAD
+=======
 =======
       color: 'bg-gradient-to-br from-rose-500 to-pink-600',
       textColor: 'text-rose-400',
@@ -286,6 +309,11 @@ export default function ServicesPage() {
       pricing: '$55/month',
       link: 'https://inventory.zion.app'
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-d4e7
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992043
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     }
   ];
 
@@ -388,7 +416,7 @@ export default function ServicesPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
-=======
+
   return (
     <>
       <Head>
@@ -708,7 +736,7 @@ export default function ServicesPage() {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
               Technology Stack
-=======
+
   return (
     <>
       <Head>
@@ -901,7 +929,7 @@ export default function ServicesPage() {
         </section>
       </div>
     </AdvancedFuturisticBackground>
-=======
+
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />

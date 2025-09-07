@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
 import { Atom, Brain, Zap, Shield, Globe, Cpu } from 'lucide-react';
@@ -86,6 +90,8 @@ export default function QuantumNeuralNetworkPlatform() {
               >
                 Learn More
               </Link>
+<<<<<<< HEAD
+=======
 =======
 import Layout from '../components/layout/Layout';
 import { Brain, Atom, Zap, Shield, Cpu, Database, Network, Server, Monitor, Globe, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, ArrowRight } from 'lucide-react';
@@ -143,12 +149,20 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 Learn More
               </button>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>
 
         {/* Features Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-16 text-white">
@@ -162,12 +176,16 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Applications Section */}
         <section className="py-20 px-6 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
           <div className="max-w-7xl mx-auto">
@@ -181,6 +199,8 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                     <Atom className="w-6 h-6" />
                   </div>
                   <h3 className="text-lg font-semibold text-white">{app}</h3>
+<<<<<<< HEAD
+=======
 =======
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -198,6 +218,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                     Advanced quantum computing capabilities integrated with cutting-edge neural network technology.
                   </p>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
               ))}
             </div>
@@ -205,6 +226,9 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Section */}
         <section className="py-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
@@ -227,6 +251,8 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               >
                 Meet Our Team
               </Link>
+<<<<<<< HEAD
+=======
 =======
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-black/20">
@@ -294,6 +320,10 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 View All Quantum Services
               </a>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </div>
           </div>
         </section>

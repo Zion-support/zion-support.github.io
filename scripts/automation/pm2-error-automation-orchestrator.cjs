@@ -301,16 +301,16 @@ class PM2ErrorAutomationOrchestrator {
   async runCommand(command) {
     return new Promise((resolve) => {
       try {
-        const output = execSync(command, { 
-          "cwd": this.projectRoot, 
+        const output = execSync(command, {
+          "cwd": this.projectRoot,
           "encoding": 'utf8',
           "stdio": 'pipe',
           "timeout": 300000 // 5 minutes
         });
         resolve({ "success": true, output })} catch (error) {
-        resolve({ 
-          "success": false, 
-          "output": error.stdout || error.stderr || error.message 
+        resolve({
+          "success": false,
+          "output": error.stdout || error.stderr || error.message
         })}
     })}
   saveReport(type, data) {

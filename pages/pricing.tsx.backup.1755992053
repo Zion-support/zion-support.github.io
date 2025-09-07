@@ -627,9 +627,8 @@ export default function Pricing() {
 <<<<<<< HEAD
                 Focused solutions with competitive pricing, market validation, and proven demand. All services include 14-day free trials.
 =======
-                Discover our 20 specialized micro SaaS solutions covering every essential business operation. 
-                Focused solutions for specific business needs with transparent, competitive pricing and 14-day free trials.
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-marketing-dece
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               </p>
             </div>
 

@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       title: 'AI Consciousness Services',
       terms: [
         'Services are provided on an "as-is" basis with no warranties',
@@ -55,6 +59,8 @@ import React from 'react';
         'Data protection and privacy laws',
         'Export control regulations',
         'Industry-specific compliance requirements'
+<<<<<<< HEAD
+=======
 =======
       ]
     },
@@ -136,12 +142,20 @@ const TermsPage: React.FC = () => {
         'License to use our services as intended',
         'Prohibition of reverse engineering'
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       ]
     }
   ];
 
   const prohibitedActivities = [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'Attempting to gain unauthorized access to our systems',
     'Using services for illegal or harmful purposes',
     'Violating intellectual property rights',
@@ -164,6 +178,8 @@ const TermsPage: React.FC = () => {
   return (
     <>
       <SEO title="Terms of Service | Zion Tech Group" description="Terms of Service for Zion Tech Group - Learn about our service terms and conditions." url="https://ziontechgroup.com/terms/" />
+<<<<<<< HEAD
+=======
 =======
 import { motion } from 'framer-motion';
 import { 
@@ -1386,11 +1402,19 @@ export default function Terms() {
                         </p>
                       </div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                     </div>
                   </div>
                 </div>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
           </div>
         </div>
@@ -1642,6 +1666,8 @@ export default function Terms() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+=======
 =======
               <FileText className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -1959,3 +1985,7 @@ export default Terms;
 
 export default TermsPage;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-cf6f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

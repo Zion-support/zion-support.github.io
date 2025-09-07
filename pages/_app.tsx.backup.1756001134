@@ -1,6 +1,10 @@
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -9,6 +13,8 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Component {...pageProps} />
 		</Layout>
 	);
+<<<<<<< HEAD
+=======
 =======
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -19,4 +25,8 @@ export default function App({ Component, pageProps }: AppProps) {
     </ErrorBoundary>
   );
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }

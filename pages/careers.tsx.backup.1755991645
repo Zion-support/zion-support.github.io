@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { 
   Users, Rocket, Brain, Atom, Shield, Zap, 
@@ -154,6 +158,11 @@ export default function Careers() {
       description: 'Your growth, well-being, and success are our top priorities'
     }
   ];
+<<<<<<< HEAD
+
+export default function CareersPage() {
+  return (
+=======
 =======
 import SEO from '../components/SEO';
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-45bf
@@ -161,6 +170,7 @@ import SEO from '../components/SEO';
 export default function CareersPage() {
   return (
 <<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -453,6 +463,8 @@ export default function CareersPage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 =======
     <div className="min-h-[60vh] px-6 py-24">
       <SEO title="Careers | Zion Tech Group" description="Careers at Zion Tech Group" />
@@ -464,3 +476,11 @@ export default function CareersPage() {
   );
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-45bf
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+export default function CareersPage() {
+  return (
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

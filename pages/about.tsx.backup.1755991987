@@ -1,6 +1,6 @@
 export default function Page(){return null}
-=======
-=======
+
+
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -107,6 +107,12 @@ import Button from '../components/ui/Button';
 
 export default function AboutPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/about.tsx.backup.1755991860.backup.1756001148
+========
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="min-h-[60vh] px-6 py-24">
       <SEO title="About | Zion Tech Group" description="About Zion Tech Group" />
@@ -115,6 +121,9 @@ export default function AboutPage() {
         <p className="text-gray-300 mb-6">Zion Tech Group delivers revolutionary technology solutions across AI, quantum computing, and micro SaaS. We help organizations accelerate innovation and achieve measurable outcomes.</p>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/about.tsx.backup.1755991987
 =======
   const values = [
     {
@@ -201,6 +210,10 @@ export default function AboutPage() {
         </div>
       </section>
 
+<<<<<<<< HEAD:components/about.tsx.backup.1755991860.backup.1756001148
+<<<<<<< HEAD
+export default About;
+========
       {/* Mission & Vision */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
@@ -411,6 +424,11 @@ export default function AboutPage() {
       </section>
     </>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/about.tsx.backup.1755991987
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

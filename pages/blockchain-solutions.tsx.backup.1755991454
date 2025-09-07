@@ -20,5 +20,5 @@ const BlockchainSolutions: NextPage = () => {
 
 export default BlockchainSolutions;
 =======
-export default function BlockchainSolutions() { return null; }
->>>>>>> origin/cursor/create-founder-onboarding-course-for-zion-launch-eb81
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

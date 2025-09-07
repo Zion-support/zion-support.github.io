@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 export async function getStaticProps() {
@@ -8,6 +12,8 @@ export async function getStaticProps() {
 export default function RealEstateTechnologySolutions(props: any) {
 	return <ServicePage {...props} />;
 }
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -30,3 +36,7 @@ export default function RealEstateTechnologySolutions() {
   );
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-a851
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

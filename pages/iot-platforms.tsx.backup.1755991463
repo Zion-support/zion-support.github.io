@@ -9,6 +9,11 @@ export default function IoTPlatformsPage() {
     </main>
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/iot-platforms.tsx.backup.1755991364.backup.1756001155
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+========
 =======
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -31,3 +36,8 @@ const IotPlatforms: NextPage = () => {
 
 export default IotPlatforms;
 >>>>>>> origin/cursor/create-responsive-talent-onboarding-form-e178
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/iot-platforms.tsx.backup.1755991463
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import HeroSection from '../components/sections/HeroSection';
 import ServicesSection from '../components/sections/ServicesSection';
 import ContactForm from '../components/forms/ContactForm';
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -233,6 +239,10 @@ const heroFeatures = [
   }
 ];
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -258,6 +268,10 @@ const itemVariants = {
 export default function Home() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Layout>
       <HeroSection />
       <ServicesSection />
@@ -806,6 +820,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -1941,9 +1957,13 @@ export default function HomePage() {
       {/* Footer */}
       <UltraFuturisticFooter2029 />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     </>
   );
-=======
+
 import Layout from '../components/layout/Layout';
 import Homepage2025 from '../components/Homepage2025';
 

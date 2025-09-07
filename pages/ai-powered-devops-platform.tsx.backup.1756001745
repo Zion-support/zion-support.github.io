@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIPoweredDevOpsPlatform() {
@@ -23,6 +27,8 @@ export default function AIPoweredDevOpsPlatform() {
 			industries={["Software", "Fintech", "Healthcare", "Telecom"]}
 			canonical="https://ziontechgroup.com/ai-powered-devops-platform"
 		/>
+<<<<<<< HEAD
+=======
 =======
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
@@ -55,5 +61,9 @@ export default function AIPoweredDevOpsPlatformPage() {
 			/>
 		</>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-757c
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	);
 }

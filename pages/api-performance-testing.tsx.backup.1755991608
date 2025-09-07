@@ -13,6 +13,10 @@ export default function ApiPerformanceTestingPage() {
 
 	return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 		<>
 			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -40,6 +44,8 @@ export default function ApiPerformanceTestingPage() {
 				</section>
 			</main>
 		</>
+<<<<<<< HEAD
+=======
 =======
 		<div className="relative isolate">
 			<section className="px-6 lg:px-10 py-16 lg:py-24">
@@ -94,5 +100,9 @@ export default function ApiPerformanceTestingPage() {
 			</section>
 		</div>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-0e1c
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 	);
 }

@@ -5,10 +5,18 @@ export default function FacebookRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
 <<<<<<< HEAD
+<<<<<<< HEAD
+			window.location.replace('https://www.facebook.com/profile.php?id=ziontechgroup');
+=======
+<<<<<<< HEAD
 			window.location.replace('https://www.facebook.com/profile.php?id=ziontechgroup');
 =======
 			window.location.replace('https://www.facebook.com/ziontechgroup');
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7466
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 		}
 	}, []);
 
@@ -17,10 +25,16 @@ export default function FacebookRedirect() {
 			<Head>
 				<title>Facebook | Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 				<meta name="robots" content="index, follow" />
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
 				<p>Redirecting to Facebook...</p>
+<<<<<<< HEAD
+=======
 =======
 				<link rel="canonical" href="https://www.facebook.com/ziontechgroup" />
 				<meta httpEquiv="refresh" content="0;url=https://www.facebook.com/ziontechgroup" />
@@ -31,6 +45,10 @@ export default function FacebookRedirect() {
 					Continue to Facebook
 				</a>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7466
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			</div>
 		</>
 	);

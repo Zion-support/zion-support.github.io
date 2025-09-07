@@ -22,8 +22,8 @@ export default function AIGuardrailsPage() {
 <<<<<<< HEAD
 		<UltraFuturisticBackground variant="holographic" intensity="high">
 =======
-		<UltraFuturisticBackground variant="quantum" intensity={1.5}>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 			<Head>
 				<title>AI Guardrails Platform | Zion Tech Group</title>
 				<meta name="description" content="Safety and compliance for AI. PII redaction, toxicity and jailbreak detection, policy enforcement with audit logs." />

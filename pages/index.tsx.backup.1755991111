@@ -21,6 +21,10 @@ const HomePage: React.FC = () => {
 export default function Home() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -28,6 +32,8 @@ export default function Home() {
       <PerformanceMonitor />
       <AccessibilityEnhancer />
     </ErrorBoundary>
+<<<<<<< HEAD
+=======
 =======
     <UltraFuturisticNeonBackground>
       <SEO 
@@ -42,10 +48,11 @@ export default function Home() {
           'Zion Tech Group'
         ]}
       />
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
-      {/* Futuristic Navigation */}
-      <UltraFuturisticNavigation2026 />
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0 }}
@@ -791,7 +798,10 @@ export default function Home() {
 </main>
     </div>
 >>>>>>> origin/courses/cursor/invent-and-deploy-autonomous-cloud-automations-8982
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-9d10
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 

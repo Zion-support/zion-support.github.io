@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import AnimatedBackground from '../components/AnimatedBackground';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -18,6 +22,8 @@ export default function ContactPage() {
       [name]: value
     }));
   };
+<<<<<<< HEAD
+=======
 =======
     message: '',
     service: 'general'
@@ -730,11 +736,15 @@ const Contact: NextPage = () => {
       </section>
     </>
 >>>>>>> origin/cursor/website-audit-and-enhancement-79f3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   );
 };
 
 export default ContactPage;
-=======
+
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
     

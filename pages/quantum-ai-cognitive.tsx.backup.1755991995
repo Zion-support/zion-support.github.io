@@ -18,8 +18,8 @@ export default function QuantumAICognitivePage() {
 <<<<<<< HEAD
     <UltraAdvancedFuturisticBackground intensity="high">
 =======
-    <UltraAdvancedFuturisticBackground variant="quantum-holographic">
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ee3d
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />

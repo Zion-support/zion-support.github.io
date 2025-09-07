@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 <<<<<<< HEAD:pages/ai-customer-success-platform.tsx.backup.1755991630
 import Layout from '../components/layout/Layout';
@@ -222,6 +226,8 @@ const AICustomerSuccessPlatform: React.FC = () => {
       </div>
     </>
   );
+<<<<<<< HEAD
+=======
 =======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
@@ -232,8 +238,14 @@ export async function getStaticProps() {
 export default function AICustomerSuccessPlatform(props: any) {
 	return <ServicePage {...props} />;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e11d
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 =======
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIPredictiveMaintenancePlatform() {
@@ -259,4 +271,4 @@ export default function AIPredictiveMaintenancePlatform() {
 		/>
 	);
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066:pages/ai-predictive-maintenance-platform.tsx
+

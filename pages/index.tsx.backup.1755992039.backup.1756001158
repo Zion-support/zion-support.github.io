@@ -8,8 +8,8 @@ import Button from '../components/ui/Button';
 <<<<<<< HEAD
 import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Code, Lock, Link, QrCode, FileText, Database } from 'lucide-react';
 =======
-import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Target, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-b249
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 export default function HomePage() {
   const heroStats = [
@@ -89,7 +89,7 @@ export default function HomePage() {
       price: 'Starting at $49/month',
       marketSize: '$50B+ global market',
       competitors: 'Stripe, PayPal, Square'
-=======
+
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Code Review Assistant',
       description: 'AI-powered code analysis with security, performance, and maintainability insights. Support for JavaScript, Python, and TypeScript.',
@@ -574,8 +574,8 @@ export default function HomePage() {
 <<<<<<< HEAD
               href="/pricing"
 =======
-              href="/services"
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-b249
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
@@ -583,8 +583,8 @@ export default function HomePage() {
 <<<<<<< HEAD
               View Pricing
 =======
-              View Our Services
->>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-b249
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             </Button>
           </div>
         </div>

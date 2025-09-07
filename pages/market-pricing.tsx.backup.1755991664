@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import SEO from '../components/SEO';
 
 export default function MarketPricingPage() {
@@ -90,6 +94,8 @@ export default function MarketPricingPage() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$3,000/month depending on storage, queries, and concurrency.</div>
             </div>
+<<<<<<< HEAD
+=======
 =======
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -147,6 +153,10 @@ export default function MarketPricingPage() {
 						</ul>
 					</Card>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e274
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 					<Card className="p-6 bg-black/40 border border-gray-800">
 						<h2 className="text-xl font-semibold mb-2">Status & Synthetic Monitoring</h2>
@@ -157,6 +167,10 @@ export default function MarketPricingPage() {
 					</Card>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">PDF & Document Generation</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -167,6 +181,8 @@ export default function MarketPricingPage() {
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $15–$200/month depending on volume and features.</div>
             </div>
+<<<<<<< HEAD
+=======
 =======
 					<Card className="p-6 bg-black/40 border border-gray-800">
 						<h2 className="text-xl font-semibold mb-2">Edge/Platform</h2>
@@ -177,6 +193,10 @@ export default function MarketPricingPage() {
 						</ul>
 					</Card>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e274
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 					<Card className="p-6 bg-black/40 border border-gray-800">
 						<h2 className="text-xl font-semibold mb-2">Privacy Analytics</h2>
@@ -188,6 +208,10 @@ export default function MarketPricingPage() {
 				</div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Kubernetes & FinOps</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -469,6 +493,8 @@ export default function MarketPricingPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
+<<<<<<< HEAD
+=======
 =======
 				<div className="mt-10 text-sm text-gray-400">Need a quote? <a href="/contact" className="text-cyan-300 underline">Contact sales</a> or call +1 302 464 0950.</div>
 			</div>
@@ -476,3 +502,7 @@ export default function MarketPricingPage() {
 	);
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e274
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

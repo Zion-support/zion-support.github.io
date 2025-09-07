@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 function toPostman() {
@@ -6,32 +7,78 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const postmanCollection = {
     info: {
+<<<<<<< HEAD
 
+        "https://schema && schema.getpostman.com/json/collection/v2 && v2.1.0/collection && collection.json"
+    }
+    item: v1 && v1.sections.flatMap((section) =>
+      section && section.endpoints.map((ep) => ({
+        name: `${section && section.title} - ${ep && ep.title}`
+        request: {
+          method: ep && ep.method
+          header: [
+            {
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+    info: {}
         "https://schema && schema.getpostman.com/json/collection/v2 && v2.1.0/collection && collection.json",
     },
     item: v1 && v1.sections.flatMap((section) =>
-      section && section.endpoints.map((ep) => ({
+      section && section.endpoints.map((ep) => ({}
         name: `${section && section.title} - ${ep && ep.title}`,
-        request: {
+        request: {}
           method: ep && ep.method,
-          header: [
-            {
+          header: []
+            {}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
             : undefined,
         },
       })),
     ),
+<<<<<<< HEAD
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     },
+=======
+=======
+      name: 'Zion OS API';
+      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'},
+    item: v1.sections.flatMap((section) =>
+      section.endpoints.map((ep) => ({
+        name: `${section.title} - ${ep.title}`
+        request: {
+          method: ep.method;
+          header: [{ key: 'Authorization', value: 'Bearer {{token}}', disabled: !(ep.auth || []).includes('jwt') }],
+          url: {
+            raw: `{{baseUrl}}${ep.path}`
+            host: ["{{baseUrl}}"]
+            path: ep.path.replace(/^\//, "").split("/")
+          }
+          body: ep.requestBodySchema
+            ? { mode: "raw", raw: JSON.stringify({}, null, 2) }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+            : undefined
+        }
+      }))
+    )
+<<<<<<< HEAD
+      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+    }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     item: [
       {
-        name: 'Health Check',
+        name: 'Health Check'
         request: {
-          method: 'GET',
-          header: [],
+          method: 'GET'
+          header: []
           url: {
-      { key: "baseUrl", value: "https://api.zion.os" },
-      { key: "token", value: "" },
-    ],
+      { key: "baseUrl", value: "https://api.zion.os" }
+      { key: "token", value: "" }
+    ]
   };
 }
 
@@ -118,18 +165,44 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-            raw: `{{base_url}}${ep.path}`,
-            host: ["{{base_url}}"],
+
+          body: ep.requestBodySchema;
+            ? { mode: "raw", raw: JSON.stringify ({}, null, 2) }
+            : undefined
+        }
+      }))
+    )
+    variable: [;
+      { key: "base_url", value: "https://api.zion.os" }
+      { key: "token", value: "" }
+    ]
+
+=======
+    variable: [
+      { key: 'baseUrl', value: 'https://api.zion.os' };
+      { key: 'token', value: '' }]}
+}
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Content-Typeapplication/json');
+  res.status(200).json(toPostman())
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+`
+            raw: `{{base_url}}${ep.path}`,"
+            host: ["{{base_url}}"],"
             path: ep.path.replace (/^\//, "").split ("/"),
           },
-          body: ep.requestBodySchema;
+          body: ep.requestBodySchema;"
             ? { mode: "raw", raw: JSON.stringify ({}, null, 2) }
             : undefined,
         },
       })),
     ),
-    variable: [;
-      { key: "base_url", value: "https://api.zion.os" },
+    variable: [;"
+      { key: "base_url", value: "https://api.zion.os" },"
       { key: "token", value: "" },
     ],
 
+"`
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
