@@ -1,269 +1,78 @@
-<<<<<<< HEAD
 import React from 'react';
 
-export default function AboutPage() {
-	return (
-		<main className="p-8">
-			<h1>About Zion Tech Group</h1>
-			<p>Learn about our mission and services.</p>
-		</main>
-	);
-}
-=======
-
-export const metadata = {;
-  title: "About | Zion Tech Group",;
-  description:;
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  description:
-
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
-
-<<<<<<< HEAD
-  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
 export const metadata = {
   title: "About | Zion Tech Group",
-  description:
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
+  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
 };
-export default function AboutPage() {;
+
+export default function AboutPage() {
   return (
-    <div className="animate-fade-in">;
-      {" "}
-      <div className="max-w-4xl mx-auto">;
-        {" "}
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">;
-          About Zion Tech Group;
-        </h1>{" "}
-        <div className="prose prose-lg max-w-none">;
-          {" "}
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">;
-            {" "}
-            We are a technology consulting firm specializing in AI,micro SaaS;
-            development,and enterprise IT solutions. Our mission is to help;
-            businesses leverage cutting-edge technology to drive growth and;
-            efficiency.{" "}
-          </p>{" "}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">;
-            {" "}
-            <div>;
-              {" "}
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">;
-                Our Mission;
-              </h2>{" "}
-              <p className="text-gray-600 leading-relaxed">;
-                {" "}
-                To democratize access to enterprise-grade technology;
-                solutions,making AI,cloud infrastructure,and software;
-  description:;
-    "Learn about Zion Tech Group's mission to deliver enterprise - grade AI, micro SaaS, and IT solutions that drive real business results.",
-}
-export default /**
- * AboutPage - Function description
- */
-function AboutPage() {
-  return (
-    <div className="animate - fade - in">;
-      {" "}
-      <div className="max - w-4xl mx - auto">;
-        {" "}
-        <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">;
-          About Zion Tech Group;
-        </h1>{" "}
-        <div className="prose prose - lg max - w-none">;
-          {" "}
-          <p className="text - xl text - gray - 600 mb - 8 leading - relaxed">;
-            {" "}
-            We are a technology consulting firm specializing in AI, micro SaaS;
-            development, and enterprise IT solutions. Our mission is to help;
-            businesses leverage cutting - edge technology to drive growth and;
-            efficiency.{" "}
-          </p>{" "}
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 mb - 12">;
-            {" "}
-            <div>;
-              {" "}
-              <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">;
-                Our Mission;
-              </h2>{" "}
-              <p className="text - gray - 600 leading - relaxed">;
-                {" "}
-                To democratize access to enterprise - grade technology;
-                solutions, making AI, cloud infrastructure, and software;
-                development accessible to businesses of all sizes.{" "}
-              </p>{" "}
-            </div>{" "}
-            <div>;
-              {" "}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">;
-                Our Vision;
-              </h2>{" "}
-              <p className="text - gray - 600 leading - relaxed">;
-                {" "}
-                A world where every business can leverage advanced technology to;
-                compete effectively and scale efficiently, regardless of their;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                technical expertise.{" "}
-              </p>{" "}
-            </div>{" "}
-          </div>{" "}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          <div className="bg - gray - 50 rounded - lg p - 8 mb - 12">;
-            {" "}
-            <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
-              Our Values;
-            </h2>{" "}
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-              {" "}
-              <div className="text - center">;
-                {" "}
-                <div className="text - 4xl mb - 3">🎯</div>{" "}
-                <h3 className="font - semibold text - gray - 900 mb - 2">;
-                  Results - Driven;
-                </h3>{" "}
-                <p className="text - sm text - gray - 600">;
-                  We focus on delivering measurable business outcomes;
-                </p>{" "}
-              </div>{" "}
-              <div className="text - center">;
-                {" "}
-                <div className="text - 4xl mb - 3">🚀</div>{" "}
-                <h3 className="font - semibold text - gray - 900 mb - 2">Innovation</h3>{" "}
-                <p className="text - sm text - gray - 600">;
-                  We stay ahead of technology trends and best practices;
-                </p>{" "}
-              </div>{" "}
-              <div className="text - center">;
-                {" "}
-                <div className="text - 4xl mb - 3">🤝</div>{" "}
-                <h3 className="font - semibold text - gray - 900 mb - 2">;
-                  Partnership;
-                </h3>{" "}
-                <p className="text - sm text - gray - 600">;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  We work as an extension of your team;
-                </p>{" "}
-              </div>{" "}
-            </div>{" "}
-          </div>{" "}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          <div className="mb - 12">;
-            {" "}
-            <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
-              Our Expertise;
-            </h2>{" "}
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-              {" "}
-              <div className="border border - gray - 200 rounded - lg p - 6">;
-                {" "}
-                <h3 className="font - semibold text - gray - 900 mb - 3">;
-                  AI & Machine Learning;
-                </h3>{" "}
-                <ul className="text - gray - 600 space - y-2">;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  {" "}
-                  <li>• Large Language Model (LLM) applications</li>{" "}
-                  <li>• Retrieval - Augmented Generation (RAG)</li>{" "}
-                  <li>• AI agents and automation</li>{" "}
-                  <li>• MLOps and model deployment</li>{" "}
-                </ul>{" "}
-              </div>{" "}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              <div className="border border - gray - 200 rounded - lg p - 6">;
-                {" "}
-                <h3 className="font - semibold text - gray - 900 mb - 3">;
-                  Cloud & Infrastructure;
-                </h3>{" "}
-                <ul className="text - gray - 600 space - y-2">;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  {" "}
-                  <li>• AWS, GCP, and Azure migration</li>{" "}
-                  <li>• Kubernetes and containerization</li>{" "}
-                  <li>• DevOps and CI / CD pipelines</li>{" "}
-                  <li>• Security and compliance</li>{" "}
-                </ul>{" "}
-              </div>{" "}
-            </div>{" "}
-          </div>{" "}
-<<<<<<< HEAD
-              Let's discuss how we can help your business leverage technology;
-=======
-
-              Let's discuss how we can help your business leverage technology;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              for growth.{" "}
-            </p>{" "}
-            <a
-              href="/contact"
-              className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">;
-          <div className="text - center">;
-            {" "}
-            <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">;
-              Ready to Get Started?;
-            </h2>{" "}
-            <p className="text - gray - 600 mb - 6">;
-              {" "}
-              Let's discuss how we can help your business leverage technology;
-              for growth.{" "}
-            </p>{" "}
-            <a;
-              href="/contact";
-              className="inline - block bg - blue - 600 text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 700 transition - colors";
-            >;
-              {" "}
-              Contact Us Today{" "}
-            </a>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
-<<<<<<< HEAD
-    </div>
+    <main className="min-h-screen bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">About Zion Tech Group</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We're a team of passionate technologists dedicated to delivering enterprise-grade solutions that drive real business results.
+          </p>
+        </div>
+        
+        <div className="prose prose-lg max-w-none">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Our Mission</h2>
+              <p className="text-gray-600 mb-4">
+                To accelerate digital transformation through cutting-edge AI, micro SaaS, and IT solutions that deliver measurable business value.
+              </p>
+              <p className="text-gray-600">
+                We believe technology should be an enabler, not a barrier. Our solutions are designed to be intuitive, scalable, and results-driven.
+              </p>
+            </div>
+            
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Our Values</h2>
+              <ul className="space-y-3 text-gray-600">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                  <span>Innovation: We stay ahead of the curve with emerging technologies</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                  <span>Quality: We deliver solutions that exceed expectations</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                  <span>Partnership: We work closely with our clients as trusted advisors</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                  <span>Results: We measure success by business impact, not just technical metrics</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Rapid Delivery</h3>
+                <p className="text-gray-600">We deliver solutions faster without compromising quality</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">🔧</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Expert Team</h3>
+                <p className="text-gray-600">Our team combines deep technical expertise with business acumen</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">📈</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Results</h3>
+                <p className="text-gray-600">We've helped 500+ companies achieve their digital transformation goals</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   );
-    </div>);
-    </div>;
-  );
-=======
-
-    </div>);
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
->>>>>>> merged-prs-20250907-203621
