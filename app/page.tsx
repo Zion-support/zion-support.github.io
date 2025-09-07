@@ -177,3 +177,4 @@ function Card({ title, href, description, icon }: {
       <p className="text-slate-400">{description}</p>
     </Link>
   )
+}
