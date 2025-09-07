@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading";
 import {
@@ -75,3 +76,5 @@ export function FaqSection() {
     </section>
   )
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57

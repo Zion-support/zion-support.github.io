@@ -381,6 +381,10 @@
     "@types/react-dom": "^19.1.9",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
+<<<<<<< HEAD
+=======
+    "audit-ci": "^7.1.0",
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
     "eslint": "^9.35.0",
     "eslint-config-next": "^15.5.2",
     "eslint-config-prettier": "^10.1.8",
@@ -433,5 +437,14 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
+<<<<<<< HEAD
   "license": "MIT"
+=======
+  "license": "MIT",
+  "nextConfig": {
+    "compress": true,
+    "poweredByHeader": false,
+    "generateEtags": false
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 }

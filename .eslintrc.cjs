@@ -67,7 +67,7 @@ module.exports = {
     '"eslint": recommended',
     '@typescript-eslint/recommended',
   ],
-:.eslintrc.cjs
+:.eslintrc.cjs,
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
@@ -97,12 +97,3 @@ module.exports = {
   },
   globals: {
     KeyboardEvent: 'readonly',
-<<<<<<< HEAD
-    MouseEvent: 'readonly',
-    Event: 'readonly'
-  }
-};
-=======
-  }
-};
->>>>>>> origin/main

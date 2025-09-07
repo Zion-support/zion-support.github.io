@@ -1,10 +1,7 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
+#!/usr/bin/env node,
+  const fs = require('fs');
 const path = require('path');
-
 console.log('🧹 Cleaning main source files...');
-
 // Files to clean (main source files only)
 const filesToClean = [
   'app/layout.tsx',
@@ -44,37 +41,27 @@ const filesToClean = [
   'pages/api-docs.tsx',
   'pages/api-documentation.tsx'
 ];
-
 function cleanFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${filePath}`);
       return;
     }
-
     let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
-    // Clean up any remaining merge conflict markers
-    content = content.replace(/<<<<<<< HEAD/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
-    
-    // Remove empty lines and clean up syntax
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    // Remove merge conflict markers,
+  content = content.replace(/
+    content = content.replace(/
+    // Clean up any remaining merge conflict markers,
+  content = content.replace(/
+    // Remove empty lines and clean up syntax,
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     content = content.replace(/;\s*;/g, ';');
     content = content.replace(/,\s*,/g, ',');
-    
-    // Basic React component template
-    if (filePath.endsWith('.tsx') && !filePath.includes('api/')) {
+    // Basic React component template,
+  if (filePath.endsWith('.tsx') && !filePath.includes('api/')) {
       if (!content.includes('export default') && !content.includes('function') && !content.includes('const')) {
         const componentName = path.basename(filePath, '.tsx').replace(/[^a-zA-Z0-9]/g, '');
         content = `import React from 'react';
-
 export default function ${componentName}() {
   return (
     <div>
@@ -86,16 +73,12 @@ export default function ${componentName}() {
 `;
       }
     }
-    
     fs.writeFileSync(filePath, content);
     console.log(`✅ Cleaned: ${filePath}`);
-    
   } catch (error) {
     console.error(`❌ Error cleaning ${filePath}:`, error.message);
   }
 }
-
-// Clean all files
-filesToClean.forEach(cleanFile);
-
+// Clean all files,
+  filesToClean.forEach(cleanFile);
 console.log('🎉 Main source files cleaned!');
