@@ -77,6 +77,8 @@ process.on('SIGTERM', () => {}
 
 // Run the main function;
 });
+
+});
 });
 
 

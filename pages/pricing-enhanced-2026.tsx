@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -180,8 +181,15 @@ export default function PricingEnhanced2026Page() {
       color: 'from-blue-500 to-cyan-600'
     }
   ],
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
+export default function pricingenhanced2026() {
   return (
+<<<<<<< HEAD
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
         <Head>
@@ -521,4 +529,22 @@ export default function PricingEnhanced2026Page() {
       </div>
     </UltraFuturisticBackground>
   )
+=======
+    <Layout>
+      <Head>
+        <title>Pricing Enhanced 2026 - Zion Tech Group</title>
+        <meta name="description" content="Pricing Enhanced 2026 solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Pricing Enhanced 2026</h1>
+          <p className="text-lg text-gray-600">
+            Professional pricing enhanced 2026 solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

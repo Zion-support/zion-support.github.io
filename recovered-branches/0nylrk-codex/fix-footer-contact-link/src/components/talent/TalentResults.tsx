@@ -3,6 +3,7 @@ import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
 import { ResultsHeader } from "@/components/talent/ResultsHeader";
 import { TalentGrid } from "@/components/talent/TalentGrid";
+import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],
 interface TalentResultsProps {
   filteredTalents: TalentProfile[],
   isLoading: boolean,
@@ -22,6 +23,7 @@ interface TalentResultsProps {
     setPriceRange: (range: [number, number]) => void,
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
+export function TalentResults({;
     clearFilters: () => void
   }
 }
@@ -48,6 +50,16 @@ export function TalentResults({
 }: TalentResultsProps) {
   return (
     <div className="flex-1">
+}: TalentResultsProps) {
+  return (
+    <div className="flex-1">
+    setPriceRange: (range: [number, number]) => void;
+    experienceRange: [number, number],
+    setExperienceRange: (range: [number, number]) => void;
+    clearFilters: () => void;
+  }
+}
+
       {/* Active filters */}
       <ActiveFilters {...activeFiltersProps} />
       {/* Results count */}
@@ -62,6 +74,18 @@ export function TalentResults({
         onTalentClick={viewProfile}
         viewProfile={viewProfile}
         handleRequestHire={handleRequestHire}
+export function TalentResults(): any ({;      />;
+    </div>;
+  );
+}
+;;
+        is_authenticated={is_authenticated}
+        clear_filters={activeFiltersProps.clear_filters}
+      />;
+    </div>);
+}
+;
+
         savedTalentIds={savedTalents}
         onToggleSave={handleToggleSave}
         isAuthenticated={isAuthenticated}

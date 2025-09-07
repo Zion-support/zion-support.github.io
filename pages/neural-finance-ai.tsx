@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -8,7 +9,13 @@ import {
   Clock, Globe, BarChart3, Target, Microscope;
   Phone, Mail, MapPin, ArrowUpRight, Play;
   BarChart, PieChart, LineChart, Activity
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+} from 'lucide-react',
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main
 import Layout from '../components/layout/Layout';
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -17,9 +24,14 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
+<<<<<<< HEAD
 const features = [
   {
     title: 'Real-time Market Sentiment Analysis',
+=======
+<<<<<<< HEAD
+const features = $2;
+>>>>>>> origin/main
     description: 'Advanced AI algorithms analyze market sentiment with 94% accuracy using neural networks and natural language processing.',
     icon: Brain,
     color: 'from-violet-500 to-purple-600'
@@ -444,6 +456,7 @@ const NeuralFinanceAI: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
                 viewport={{ once: true }}
                 className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -495,3 +508,28 @@ const NeuralFinanceAI: React.FC = () => {
 };
 
 export default NeuralFinanceAI;
+=======
+                viewport = $2;
+export default NeuralFinanceAI,
+=======
+export default function neuralfinanceai() {
+  return (
+    <Layout>
+      <Head>
+        <title>Neural Finance Ai - Zion Tech Group</title>
+        <meta name="description" content="Neural Finance Ai solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Neural Finance Ai</h1>
+          <p className="text-lg text-gray-600">
+            Professional neural finance ai solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

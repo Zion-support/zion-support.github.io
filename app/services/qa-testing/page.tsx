@@ -43,6 +43,18 @@ export default function ServicePage() {
             <p className="text-gray-300">
               Grow with your business with our flexible and scalable platform.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:kleber@ziontechgroup.com?subject=Qa Testing Inquiry"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+              >
+                Contact Us
+              </a>
+            </div>
+            <div className="mt-6 text-sm text-gray-300">
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+            </div>
           </div>
         </div>
 
@@ -57,5 +69,9 @@ export default function ServicePage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

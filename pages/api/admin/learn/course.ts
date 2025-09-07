@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 
 interface Course {
   id: string;
@@ -57,6 +61,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ ok: true, course: body });
   } catch (e: any) {
+<<<<<<< HEAD
     res.status(500).json({ error: e?.message ?? 'Failed to save course' });
   }
 }
+=======
+    res.status(500).json({ error: e?.message ?? 'Failed to save course' })
+  };
+
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Course endpoint' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

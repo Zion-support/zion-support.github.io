@@ -64,6 +64,10 @@ function restorePage(pagePath) {
       const parts = backupContent.split($2);
       if (parts.length > 1) {
         // Take the content after the conflict resolution
+
+
+
+
         backupContent = parts[1].split('>>>>>>>')[0]
       }
     }
@@ -94,6 +98,26 @@ function fixSpecificPages() {
     restored: 0,
     failed: 0,
     details: []
+
+
+  }
+
+
+  },
+  
+  console.log('🚀 Starting targeted page restoration...'),
+  console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
+  
+  // // // console.log('🚀 Starting targeted page restoration...'),
+
+
+  // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)
+
+
+
+  },
+
+
   },
   
   console.log($2);
@@ -105,6 +129,12 @@ function fixSpecificPages() {
       results.details.push($2);
       continue
     }
+
+
+    console.log(`\n🔍 Checking: ${pagePath}`)
+    const result = restorePage(pagePath)
+
+    // // // console.log(`\n🔍 Checking: ${pagePath}`),
     
     console.log($2);
     const result = restorePage($2);
@@ -114,6 +144,8 @@ function fixSpecificPages() {
       console.log($2);
       console.log(`   Corrupted backup: ${result.corruptedBackup}`)
     } else {
+
+
       results.failed++,
       console.log($2);
       console.log(`   Reason: ${result.reason}`)
@@ -125,6 +157,117 @@ function fixSpecificPages() {
     })
   }
   // Generate summary
+
+
+
+      results.failed++,
+
+
+
+  return results
+
+      // // // console.log(`❌ Failed: ${pagePath}`),
+      // // // console.log(`   Reason: ${result.reason}`)
+;
+// Function to fix specific corrupted pages;
+function fixSpecificPages() {;
+  const results = {;
+    total: corruptedPages.length;
+    restored: 0,;
+    failed: 0,;
+    details: [];
+  },console.log('🚀 Starting targeted page restoration...'),console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),// // // console.log('🚀 Starting targeted page restoration...'),// // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)// // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)}}
+  console.log('🚀 Starting targeted page restoration...')console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)for (const pagePath of corruptedPages) {if (!fs.existsSync(pagePath)) {console.log(`⚠️  Page not found: ${pagePath}`)results.failed++;
+  },// // // console.log('🚀 Starting targeted page restoration...'),// // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),for (const pagePath of corruptedPages) {if (!fs.existsSync(pagePath)) {// // // console.log(`⚠️  Page not found: ${pagePath}`),results.failed++,results.details.push({file: pagePath;
+        restored: false;
+        reason: 'Page not found';
+      })continue;
+    }console.log(`\n🔍 Checking: ${pagePath}`)const result = restorePage(pagePath)console.log(`\n🔍 Checking: ${pagePath}`)const result = restorePage(pagePath)console.log(`\n🔍 Checking: ${pagePath}`)const result = restorePage(pagePath)// // // console.log(`\n🔍 Checking: ${pagePath}`),console.log(`\n🔍 Checking: ${pagePath}`),// // // console.log(`\n🔍 Checking: ${pagePath}`),const result = restorePage(pagePath),// // // console.log(`\n🔍 Checking: ${pagePath}`),const result = restorePage(pagePath),const result = restorePage(pagePath),if (result.restored) {results.restored++;
+      console.log(`✅ Restored: ${pagePath}`)console.log(`   Used backup: ${result.backupUsed}`)console.log(`   Corrupted backup: ${result.corruptedBackup}`)} else {results.failed++;
+      console.log(`❌ Failed: ${pagePath}`)results.failed++,console.log(`❌ Failed: ${pagePath}`),console.log(`   Reason: ${result.reason}`)}
+    results.details.push({file: pagePath;
+      ...result;
+    })}
+  // Generate summary;
+      results.failed++,return results;
+      // // // console.log(`❌ Failed: ${pagePath}`),// // // console.log(`   Reason: ${result.reason}`)// Function to fix specific corrupted pages;
+function fixSpecificPages() {const results = {total: corruptedPages.length;
+    restored: 0,failed: 0,details: [];
+  },// // // console.log('🚀 Starting targeted page restoration...'),// // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),for (const pagePath of corruptedPages) {if (!fs.existsSync(pagePath)) {// // // console.log(`⚠️  Page not found: ${pagePath}`),results.failed++,results.details.push({file: pagePath,restored: false,reason: 'Page not found';
+      }),continue;
+    }// // // console.log(`\n🔍 Checking: ${pagePath}`),const result = restorePage(pagePath)if (result.restored) {results.restored++,// // // console.log(`✅ Restored: ${pagePath}`),// // // console.log(`   Used backup: ${result.backupUsed}`),// // // console.log(`   Corrupted backup: ${result.corruptedBackup}`)} else {results.failed++,// // // console.log(`❌ Failed: ${pagePath}`),// // // console.log(`   Reason: ${result.reason}`)}results.details.push({file: pagePath,...result;
+    })}
+  // // // console.log('\n📊 Restoration Summary: '),;
+  // // // console.log(`   Total pages: ${results.total}`),;
+  // // // console.log(`   Restored: ${results.restored}`),;
+  // // // console.log(`   Failed: ${results.failed}`),;
+  // // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),;
+  // Save detailed report;
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json');
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
+  // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
+  return results;
+
+  console.log('\n📊 Restoration Summary: ')
+  console.log(`   Total pages: ${results.total}`)
+  console.log(`   Restored: ${results.restored}`)
+  console.log(`   Failed: ${results.failed}`)
+  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
+  // Save detailed report
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json')
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
+  console.log(`\n📄 Detailed report saved to: ${reportPath}`)
+
+  return results
+      // // // console.log(`❌ Failed: ${pagePath}`),
+      // // // console.log(`   Reason: ${result.reason}`)
+;
+// Function to fix specific corrupted pages;
+function fixSpecificPages() {;
+  const results = {;
+    total: corruptedPages.length;
+    restored: 0,;
+    failed: 0,;
+    details: [];
+  },;
+  // // // console.log('🚀 Starting targeted page restoration...'),;
+  // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),;
+  for (const pagePath of corruptedPages) {;
+    if (!fs.existsSync(pagePath)) {;
+      // // // console.log(`⚠️  Page not found: ${pagePath}`),;
+      results.failed++,;
+      results.details.push({;
+        file: pagePath,;
+        restored: false,;
+        reason: 'Page not found';
+      }),;
+      continue;
+    }
+;
+    // // // console.log(`\n🔍 Checking: ${pagePath}`),;
+    const result = restorePage(pagePath);
+    if (result.restored) {;
+      results.restored++,;
+      // // // console.log(`✅ Restored: ${pagePath}`),;
+      // // // console.log(`   Used backup: ${result.backupUsed}`),;
+      // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+    } else {;
+      results.failed++,;
+      // // // console.log(`❌ Failed: ${pagePath}`),;
+      // // // console.log(`   Reason: ${result.reason}`);
+    }
+;
+    results.details.push({;
+      file: pagePath,;
+      ...result;
+    });
+  }
+  // Generate summary
+  // // // console.log('\n📊 Restoration Summary: '),
+  // // // console.log(`   Total pages: ${results.total}`),
+  // // // console.log(`   Restored: ${results.restored}`),
+  // // // console.log(`   Failed: ${results.failed}`),
+  // // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
   console.log($2);
   console.log($2);
   console.log($2);
@@ -136,6 +279,154 @@ function fixSpecificPages() {
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
   console.log($2);
   return results
+}
+// Run the restoration if this script is executed directly
+if ({
+  fixSpecificPages()
+}
+
+
+
+// Function to fix specific corrupted pages;
+/**
+ * fixSpecificPages - Function description
+ */
+function fixSpecificPages() {
+  const results = {
+    total: corrupted_pages.length,
+    restored: 0,
+    failed: 0,
+    details: [];
+  },
+  console.log ('🚀 Starting targeted page restoration...'),
+  console.log (`📋 Targeting ${corrupted_pages.length} specific corrupted pages`),
+  for (const page_path of corrupted_pages) {
+    if () {) {
+  $2
+}
+      console.log (`⚠️  Page not found: ${page_path}`),
+      results.failed++,
+      results.details.push ({
+        file: page_path,
+        restored: false,
+        reason: 'Page not found';
+      }),
+      continue;
+    }
+    console.log (`\n🔍 Checking: ${page_path}`),
+    const result = restore_page (page_path),
+    // Check condition
+if ( {) {
+  $2
+}
+      results.restored++,
+      console.log (`✅ Restored: ${page_path}`),
+      console.log (`   Used backup: ${result.backup_used}`),
+      console.log (`   Corrupted backup: ${result.corrupted_backup}`);
+    } else {
+      results.failed++,
+      console.log (`❌ Failed: ${page_path}`),
+      console.log (`   Reason: ${result.reason}`);
+    }
+    results.details.push ({
+      file: page_path,
+      ...result;
+    });
+  }
+  // Generate summary;
+  // // // console.log('\n📊 Restoration Summary: '),// // // console.log(`   Total pages: ${results.total}`),// // // console.log(`   Restored: ${results.restored}`),// // // console.log(`   Failed: ${results.failed}`),// // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),// Save detailed report;
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json'),fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),// // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),return results;// Generate summary;
+  // // // console.log('\n📊 Restoration Summary: '),// // // console.log(`   Total pages: ${results.total}`),// // // console.log(`   Restored: ${results.restored}`),// // // console.log(`   Failed: ${results.failed}`),// // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),// Save detailed report;
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json'),fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),// // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),return results;console.log('\n📊 Restoration Summary: ')console.log(`   Total pages: ${results.total}`)console.log(`   Restored: ${results.restored}`)console.log(`   Failed: ${results.failed}`)console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)// Save detailed report;
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json')fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))console.log(`\n📄 Detailed report saved to: ${reportPath}`)return results;
+      // // // console.log(`❌ Failed: ${pagePath}`),// // // console.log(`   Reason: ${result.reason}`)// Function to fix specific corrupted pages;
+function fixSpecificPages() {const results = {total: corruptedPages.length;
+    restored: 0,failed: 0,details: [];
+  },// // // console.log('🚀 Starting targeted page restoration...'),// // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),for (const pagePath of corruptedPages) {if (!fs.existsSync(pagePath)) {// // // console.log(`⚠️  Page not found: ${pagePath}`),results.failed++,results.details.push({file: pagePath,restored: false,reason: 'Page not found';
+      }),continue;
+    }// // // console.log(`\n🔍 Checking: ${pagePath}`),const result = restorePage(pagePath)if (result.restored) {results.restored++,// // // console.log(`✅ Restored: ${pagePath}`),// // // console.log(`   Used backup: ${result.backupUsed}`),// // // console.log(`   Corrupted backup: ${result.corruptedBackup}`)} else {results.failed++,// // // console.log(`❌ Failed: ${pagePath}`),// // // console.log(`   Reason: ${result.reason}`)}results.details.push({file: pagePath,...result;
+    })}
+  // Generate summary;
+  // // // console.log('\n📊 Restoration Summary: '),// // // console.log(`   Total pages: ${results.total}`),// // // console.log(`   Restored: ${results.restored}`),// // // console.log(`   Failed: ${results.failed}`),// // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),// Save detailed report;
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json'),fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),// // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),return results;// Generate summary;
+  // // // console.log('\n📊 Restoration Summary: '),// // // console.log(`   Total pages: ${results.total}`),// // // console.log(`   Restored: ${results.restored}`),// // // console.log(`   Failed: ${results.failed}`),// // // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),// Save detailed report;
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json'),fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),// // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),return results;}
+// Run the restoration if this script is executed directly;
+if ({fixSpecificPages()}// Function to fix specific corrupted pages;
+/**;
+ * fixSpecificPages - Function description;
+ */;
+function fixSpecificPages() {const results = {total: corrupted_pages.length,restored: 0,failed: 0,details: [];
+  },console.log ('🚀 Starting targeted page restoration...'),console.log (`📋 Targeting ${corrupted_pages.length} specific corrupted pages`),for (const page_path of corrupted_pages) {if () {) {$2;
+}
+      console.log (`⚠️  Page not found: ${page_path}`),results.failed++,results.details.push ({file: page_path,restored: false,reason: 'Page not found';
+      }),continue;
+    }
+    console.log (`\n🔍 Checking: ${page_path}`),const result = restore_page (page_path),// Check condition;
+if ( {) {$2;
+}
+      results.restored++,console.log (`✅ Restored: ${page_path}`),console.log (`   Used backup: ${result.backup_used}`),console.log (`   Corrupted backup: ${result.corrupted_backup}`)} else {results.failed++,console.log (`❌ Failed: ${page_path}`),console.log (`   Reason: ${result.reason}`)}
+    results.details.push ({file: page_path,...result;
+    })}
+  // Generate summary;
+  console.log ('\n📊 Restoration Summary: '),console.log (`   Total pages: ${results.total}`),console.log (`   Restored: ${results.restored}`),console.log (`   Failed: ${results.failed}`),console.log (`   Success rate: ${((results.restored / results.total) * 100).to_fixed (1)}%`),// Save detailed report;
+  const report_path = path.join (process.cwd (), 'targeted - page - restoration - report.json'),fs.writeFileSync (report_path, JSON.stringify (results, null, 2)),console.log (`\n📄 Detailed report saved to: ${report_path}`),return results;
+}
+// Run the restoration if this script is executed directly;
+// Check condition;
+if ( {) {$2;
+}
+  fixSpecificPages ()}module.exports = {restorePage;
+  fixSpecificPages;
+  findBestBackup;
+}}}module.exports = {restorePage,fixSpecificPages,findBestBackup;
+}module.exports = {restore_page,fixSpecificPages,findBestBackup;main;
+module.exports = {restorePage,fixSpecificPages,findBestBackup;
+}}main;
+  fixSpecificPages ();
+}
+
+}
+
+
+
+}
+
+
+;
+module.exports = {;
+  restorePage,;
+  fixSpecificPages,;
+  findBestBackup;
+};
+
+
+
+
+module.exports = {
+  restore_page,
+  fixSpecificPages,
+  findBestBackup;
+
+
+};
+
+
+};
+
+
+main
+
+module.exports = {
+  restorePage,
+  fixSpecificPages,
+  findBestBackup;
+},;
+
+};
+main
+
+
 }
 // Run the restoration if this script is executed directly
 if (require.main = $2;

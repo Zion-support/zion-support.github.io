@@ -2,6 +2,12 @@ import React from "react",
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Link } from "react-router-dom",  icon;
+  title;
+  description;
+  action;
+  secondaryAction;
+  className}: EmptyStateProps) {;    text: string,
 interface EmptyStateProps {
   icon: React.ReactNode,
   title: string,
@@ -16,6 +22,7 @@ interface EmptyStateProps {
     href?: string,
     onClick?: () => void
   },
+export function EmptyState({;
   className?: string
 }
 
@@ -49,6 +56,11 @@ export function EmptyState({
   description,
   action,
   secondaryAction,
+  secondaryAction;    <div
+
+      className={cn(        "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
+
+        className
   className}: EmptyStateProps) {
   return (
     <div
@@ -77,6 +89,7 @@ import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 interface EmptyStateProps {;
   icon: React.ReactNode,;
+  title: string,,
   title: string,;
   description: string,;
   action?: {;
@@ -106,6 +119,38 @@ export function EmptyState({;
         className;
       )}
     >
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">              className="bg-zion-purple hover:bg-zion-purple-light"
+              onClick={action && action.onClick}>;
+              {action && action.text}
+            </Button>;
+          );
+        )}
+
+            <Button 
+              size="lg" 
+              className="bg-zion-purple hover:bg-zion-purple-light"
+              onClick={action.onClick}
+            >
+              {action.text}
+            </Button>
+          )
+        )}
+        {secondaryAction && (
+          secondaryAction.href ? (
+            <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
+              <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
+            </Button>
+          ) : (              size="lg"
+              className="border-zion-blue-light hover:bg-zion-blue-light"
+              onClick={secondaryAction && secondaryAction.onClick}>;
+              {secondaryAction && secondaryAction.text}
+            </Button>;
+          );
+        )}
+
+      </div>;
+    </div>;
+  );
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
         {icon}
       </div>;
@@ -146,4 +191,5 @@ export function EmptyState({;
       </div>
     </div>
   )
+}
 }

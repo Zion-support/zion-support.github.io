@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
@@ -6,6 +7,10 @@ const path = require('path');
 /**
  * Generate search index for the application
  */
+=======
+const fs = require('fs');
+const path = require('path');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 class SearchIndexGenerator {
   constructor() {
     this.index = {
@@ -256,10 +261,13 @@ class SearchIndexGenerator {
   }
 }
 
+<<<<<<< HEAD
 // Run the search index generator
 if (require.main === module) {
   const generator = new SearchIndexGenerator();
   generator.generate().catch(console.error);
 }
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 module.exports = SearchIndexGenerator;

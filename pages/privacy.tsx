@@ -1,8 +1,54 @@
 import React from 'react';
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+  Shield,
+  Lock,
+  Eye,
+  Database,
+  Mail,
+  Phone,
+  MapPin,
+  Users,;
+
+} from "lucide-react";
+import MainLayout from "../components/layout/MainLayout";
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+import Link from 'next/link';
+>>>>>>> origin/main
 import { motion } from 'framer-motion';
 import { 
   Shield, Lock, Eye, Database, Globe, 
@@ -418,4 +464,82 @@ const PrivacyPage: React.FC = () => {
 
 export default PrivacyPage;
 
+<<<<<<< HEAD
  
+=======
+                <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
+
+                <p className="mb - 6">;
+                  If you have any questions about this Privacy Policy, please;
+                  contact us at:;
+                </p>;
+                <div className="bg - gray - 50 rounded - lg p - 6">;
+                  <div className="flex items - center mb - 4">;
+                    <Mail className="w - 5 h - 5 text - blue - 600 mr - 3" />;
+                    <span > kleber@ziontechgroup.com</span>;
+                  </div>;
+                  <div className="flex items - center mb - 4">;
+                    <Phone className="w - 5 h - 5 text - blue - 600 mr - 3" />;
+                    <span>+1 302 464 0950</span>;
+                  </div>;
+                  <div className="flex items - start">;
+                    <Users className="w - 5 h - 5 text - blue - 600 mr - 3 mt - 1" />;
+                    <div>;
+                      <p > Zion Tech Group</p>;
+                      <p > 364 E Main St STE 1008</p>;
+                      <p > Middletown, DE 19709</p>;
+                    </div>;
+                  </div>;
+                </div>;
+<p className="text - sm text - gray - 600 mt - 8">;
+                  Last updated: January 2024;
+                </p>;
+
+=======
+
+export default function PrivacyPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Privacy | Zion Tech Group</title>
+        <meta name="description" content="Professional privacy solutions for your business." />
+      </Head>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Privacy
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional privacy solutions for your business.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 1</h3>
+            <p className="text-gray-300">
+              Professional solutions for your business needs.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 2</h3>
+            <p className="text-gray-300">
+              Advanced technology solutions.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 3</h3>
+            <p className="text-gray-300">
+              Scalable and reliable solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

@@ -1,3 +1,5 @@
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
 
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
@@ -25,6 +27,16 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
 import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
+export function DeveloperPortal() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+export function DeveloperPortal() {
+  const { user } = useAuth();
+
+  const { user } = useAuth();
+
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+
 import { ApiLogs } from "@/components/developers/ApiLogs",
 interface TabDefinition {
   id: string
@@ -55,6 +67,9 @@ export function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
+              return (
       {/* Tabs */}
       <div className = $2;
             return (
@@ -91,3 +106,7 @@ export default function ProtectedDeveloperPortal() {
     </ProtectedRoute>
   )
 }
+      <div className="border - b border - zinc - 800 mb-8">;
+        <div className="flex flex - wrap -mb-px">;
+          {tabs.map ((tab) => {
+            const Icon = tab.icon;

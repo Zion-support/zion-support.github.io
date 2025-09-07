@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import { useEffect, useState } from 'react';
@@ -28,16 +29,28 @@ export default function TalentDashboard() {
 
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function talent() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <div className="space-y-4">
-      <EnhancedCard>
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-lg font-semibold">Welcome back</h1>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Complete onboarding to unlock better matches.</p>
-          </div>
-          <div className="text-sm font-medium">{progress}%</div>
+    <Layout>
+      <Head>
+        <title>Talent - Zion Tech Group</title>
+        <meta name="description" content="Talent solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Talent</h1>
+          <p className="text-lg text-gray-600">
+            Professional talent solutions tailored to your business needs.
+          </p>
         </div>
+<<<<<<< HEAD
         <div className="mt-3 h-2 w-full bg-gray-100 dark:bg-gray-800 rounded">
           <div className="h-2 rounded bg-blue-600" style={{ width: `${progress}%` }} />
         </div>
@@ -63,4 +76,9 @@ export default function TalentDashboard() {
       </EnhancedCard>
     </div>
   )
+=======
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

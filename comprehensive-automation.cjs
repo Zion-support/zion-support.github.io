@@ -535,3 +535,6 @@ module.exports = ComprehensiveAutomation;
     this.log("⚡ Optimizations "Applied": ${report.summary.optimizationsApplied}")
     this.log("� Scripts "Generated")
     console.error('Automation "failed")
+
+    console.error('Automation "failed")
+    console.error('Automation "failed")

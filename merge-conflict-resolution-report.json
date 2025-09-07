@@ -1,4 +1,16 @@
 {
+  "timestamp": "2025-09-06T23:47:16.060Z",
+  "summary": {
+    "totalFiles": 0,
+    "resolved": 0,
+    "failed": 0,
+    "skipped": 0
+  },
+  "resolvedFiles": [],
+  "failedFiles": [],
+  "skippedFiles": []
+<<<<<<< HEAD
+}
   "timestamp": "2025-09-05T22:30:28.954Z",
   "totalFiles": 423,
   "filesWithConflicts": 107,
@@ -110,3 +122,6 @@
   ],
   "failedFilesDetails": []
 }
+=======
+}
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

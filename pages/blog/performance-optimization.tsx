@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/blog/performance-optimization.tsx
+import React from 'react';
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
@@ -274,3 +278,30 @@ export default function PerformanceOptimization() {
     </>
   )
 }
+<<<<<<< HEAD:pages_backup/blog/performance-optimization.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function performanceoptimization() {
+  return (
+    <Layout>
+      <Head>
+        <title>Performance Optimization - Zion Tech Group</title>
+        <meta name="description" content="Performance Optimization solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Performance Optimization</h1>
+          <p className="text-lg text-gray-600">
+            Professional performance optimization solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

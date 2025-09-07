@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -50,7 +54,7 @@ const { execSync } = require("child_process")
   const content = fs.readFileSync(filePath, "utf8")
       if (content.includes(".ts") || content.includes(.ts"")
       const importLines = content.match(/import.*"from/g")
-  if($2) {console.log(⚠  Found ${importIssues} import issues"")
+    if (importIssues > 0) {console.log(⚠  Found ${importIssues} import issues"")
   console.log("" No import issues found")
   const content = fs.readFileSync(filePath, "utf8")
       if (content.includes("any"")
@@ -60,7 +64,7 @@ const { execSync } = require("child_process")
       if (content.includes("any"")
       if (content.includes("<\\w+")
       if (content.includes("\\w+\\w+":")
-  if($2) {console.log("})
+    if (syntaxIssues > 0) {console.log("})
   console.log("" No syntax issues found")
       const result = execSync("npm run lint -- --quiet")
   "cwd"
@@ -68,7 +72,7 @@ const { execSync } = require("child_process")
         "stdio": "pipe"
       const unusedImportCount = (result.match(/""unused/g"")
   console.log("" No syntax issues found")
-  if($2) {"}
+      if (this.config.autoFix) {"}
         await this.autoFixSyntaxIssues();")}")} else {"}
       console.log(" No syntax issues found")
       const result = execSync("npm run lint -- --quiet")
@@ -76,7 +80,7 @@ const { execSync } = require("child_process")
         "encoding": "utf8"
         "stdio": "pipe"
       const unusedImportCount = (result.match(/"unused/g")
-  if($2) {console.log(⚠  Found ${unusedImportCount} unused imports")
+      if (unusedImportCount > 0) {console.log(⚠  Found ${unusedImportCount} unused imports")
 // console.log(" No unused imports found")
       console.log(")
 // console.log(" No unused imports found")
@@ -128,7 +132,41 @@ const { execSync } = require("child_process")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+  console.log("� Received SIGTERM, shutting down gracefully...")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
   console.log("� Received SIGTERM, shutting down gracefully...")
 
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

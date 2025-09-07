@@ -17,6 +17,32 @@ export function StructuredData() {
       "@type": "Organization",
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com",
+"use client";
+export function StructuredData() {const structuredData = {;
+    "@context": "https://schema.org";
+    "@type": "SoftwareApplication";
+    "name": "Zion OS";
+    "description": "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.";
+    "url": "https://ziontechgroup.com";
+    "applicationCategory": "BusinessApplication";
+    "operatingSystem": "Web";
+    "offers": {;
+      "@type": "Offer";
+      "price": "0";
+      "priceCurrency": "USD";
+    }
+    "provider": {"@type": "Organization";
+      "name": "Zion Tech Group";
+      "url": "https://ziontechgroup.com";
+      "logo": "https://ziontechgroup.com/logo.png";
+      "sameAs": [;
+        "https://twitter.com/ziontechgroup";
+        "https://github.com/ziontechgroup";
+        "https://linkedin.com/company/ziontechgroup";
+      ];
+=======      ];
+    },
+    "feature_list": [;
       "logo": "https://ziontechgroup.com/logo.png",
       "sameAs": [
         "https://twitter.com/ziontechgroup",
@@ -45,6 +71,13 @@ export function StructuredData() {
     "author": {
       "@type": "Organization",
       "name": "Zion Tech Group",
+  return (  return (;
+  return (
+  return (;
+    <script;
+      type="application / ld + json";
+      dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
+    />)}
       "url": "https://ziontechgroup.com"
     }
   },

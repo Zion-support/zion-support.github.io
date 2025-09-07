@@ -1,10 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-export default function CaseStudyPage() {
+import Layout from '../../components/layout/Layout';
+
+export default function cloudinfrastructureoptimization() {
   return (
-    <>
+    <Layout>
       <Head>
+<<<<<<< HEAD
         <title>Cloud Infrastructure Optimization - Case Study | Zion Tech Group</title>
         <meta name="description" content="Discover how an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure. Read our detailed case study." />
         <meta name="keywords" content="cloud optimization, auto-scaling, infrastructure automation, cost reduction, DevOps" />
@@ -265,4 +267,20 @@ export default function CaseStudyPage() {
       </div>
     </>
   )
+=======
+        <title>Cloud Infrastructure Optimization - Zion Tech Group</title>
+        <meta name="description" content="Cloud Infrastructure Optimization solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cloud Infrastructure Optimization</h1>
+          <p className="text-lg text-gray-600">
+            Professional cloud infrastructure optimization solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

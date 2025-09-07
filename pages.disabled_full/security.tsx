@@ -24,6 +24,7 @@ interface SecurityProps  {// Add props here as needed;
 =>;
 interface SecurityProps {
   // Add props here as needed
+=>
 }
 export default function Security({ }: SecurityProps) {
   return (

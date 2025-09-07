@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { 
   Brain, Zap, Target, BarChart3, Users, TrendingUp, 
@@ -20,15 +21,18 @@ import {
 } from 'lucide-react',
 
 export default function ZionTechGroupPage() {
+=======
+import Layout from '../components/layout/Layout';
+
+export default function ziontechgroup() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
   return (
-    <>
+    <Layout>
       <Head>
-        <title>About Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems</title>
-        <meta name="description" content="Discover Zion Tech Group's mission to revolutionize technology with quantum AI, autonomous systems, and cutting-edge platforms. Learn about our innovative solutions and global impact." />
-        <meta name="keywords" content="Zion Tech Group, about us, quantum AI, autonomous systems, technology innovation, company mission" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Zion Tech Group - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group solutions and services." />
       </Head>
+<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Navigation */}
@@ -416,4 +420,17 @@ export default function ZionTechGroupPage() {
       </div>
     </>
   )
+=======
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Zion Tech Group</h1>
+          <p className="text-lg text-gray-600">
+            Professional zion tech group solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

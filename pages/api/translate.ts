@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/api/translate.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+const openai = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
@@ -37,6 +43,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!text || !Array.isArray(targets) || targets.length === 0) {
     return res.status(400).json({ error: 'Invalid input' })
   }
+<<<<<<< HEAD:pages_backup/api/translate.ts
+import type { NextApiRequest, NextApiResponse } from 'next'
+import OpenAI from 'openai'
+const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY })
 
 }
 
@@ -88,3 +98,19 @@ if (|| targets.length === 0) {) {
   }
 }
 
+<<<<<<< HEAD:pages_backup/api/translate.ts
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

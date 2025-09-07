@@ -1,14 +1,14 @@
+import { motion  } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { Cloud, Server, Shield, Zap  } from 'lucide-react';
 
 
-=======
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
 
-=======
-=======
 
 const cloudServices = [
   {
@@ -65,8 +65,6 @@ export default function CloudServicesPage() {
               transition={{ duration: 0.8 }}
 
 
-=======
-=======
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -82,8 +80,6 @@ export default function CloudServicesPage() {
         </section>
 
 
-=======
-=======
 
         {/* Services Grid */}
         <section className="py-16 px-4">

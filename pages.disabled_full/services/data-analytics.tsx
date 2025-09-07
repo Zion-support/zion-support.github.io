@@ -20,6 +20,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 =>;
 interface DataanalyticsProps {
   // Add props here as needed
+=>
 }
 export default function Dataanalytics({ }: DataanalyticsProps) {
   return (

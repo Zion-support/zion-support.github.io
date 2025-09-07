@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
@@ -8,13 +9,29 @@ export default function CloudAutomationHub() {
       .then((d) => setLogs(d.logs || []))
       .catch(() => setLogs([]))
   }, []),
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
+export default function cloud() {
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold">Autonomous Cloud Automation</h1>
-        <p className="text-sm text-gray-600 dark:text-gray-400">Runs scheduled workflows: roadmap synthesis, link health checks, market intelligence, sitemap refresh, and logging.</p>
+    <Layout>
+      <Head>
+        <title>Cloud - Zion Tech Group</title>
+        <meta name="description" content="Cloud solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Cloud</h1>
+          <p className="text-lg text-gray-600">
+            Professional cloud solutions tailored to your business needs.
+          </p>
+        </div>
       </div>
+<<<<<<< HEAD
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <a href="/docs/ROADMAP.md" className="rounded-lg border p-4 hover:bg-gray-50 dark: hover: bg-gray-900">
@@ -50,4 +67,8 @@ export default function CloudAutomationHub() {
       </div>
     </div>
   )
+=======
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

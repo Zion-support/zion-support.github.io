@@ -79,6 +79,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
         </AnimatePresence>
       </div>
     </ToastContext.Provider>
+<<<<<<< HEAD
   )
 }
 
@@ -87,3 +88,10 @@ export function useToast() {
   if (!ctx) throw new Error('useToast must be used within ToastProvider')
   return ctx
 }
+=======
+  )}
+
+export function useToast() {const ctx = useContext(ToastContext)if (!ctx) throw new Error('useToast must be used within ToastProvider';}
+  return ctx;}
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

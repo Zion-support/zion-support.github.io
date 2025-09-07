@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/main
 import { 
   Newspaper;
   Calendar, 
@@ -1102,3 +1107,107 @@ export default function NewsPage() {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+}
+            >;
+              <h2 className="text-4xl font-bold text-white mb-6">;
+                Stay Updated;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+                Get the latest news, product updates, and industry insights delivered to your inbox. Never miss a breakthrough announcement.;
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <a;
+                  href="/contact";
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105";
+                >;
+                  Subscribe to Updates;
+                </a>;
+                <a;
+                  href="/contact";
+                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300";
+                >;
+                  Media Inquiries;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+};
+;
+}
+
+}
+
+}
+    <div className="min - h-[60vh] px - 6 py - 24">;
+      <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />;
+      <div className="max - w-3xl mx - auto">;
+        <h1 className="text - 4xl font - bold text - white mb - 4">News & Press</h1>;
+        <p className="text - gray - 300">Press releases and announcements will appear here.</p>;
+      </div>;
+      <EnhancedFooter />;
+    </div>);
+}
+
+;
+
+=======
+import React from 'react';
+import Head from 'next/head';
+
+export default function NewsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>News | Zion Tech Group</title>
+        <meta name="description" content="Professional news solutions for your business." />
+      </Head>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            News
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional news solutions for your business.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 1</h3>
+            <p className="text-gray-300">
+              Professional solutions for your business needs.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 2</h3>
+            <p className="text-gray-300">
+              Advanced technology solutions.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 3</h3>
+            <p className="text-gray-300">
+              Scalable and reliable solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

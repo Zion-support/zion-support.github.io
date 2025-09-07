@@ -7,4 +7,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FilePlus } from "lucide-react";
 import { EmptyResumeProps } from "./types";
+  )
+};
+
+  );
+}
+
+};            Create Resume;
+          </Button>;
+        </div>;
+      </CardContent>;
+
+    </Card>);
+}
+;
 export const EmptyResumeState = $2;

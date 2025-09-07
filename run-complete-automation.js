@@ -53,9 +53,18 @@ class CompleteAutomation {
       }
     ];
     const results = [];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     for (const step of automationSteps) {
       const result = await this.runScript(step.script, step.description);
       results.push({ ...step, ...result })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    for (const step of automationSteps) {
+      const result = await this.runScript(step.script, step.description);
+      results.push({ ...step, ...result })}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     // Generate final summary report
     const summary = {
       "timestamp": new Date().toISOString(),
@@ -94,7 +103,14 @@ class CompleteAutomation {
     this.log(`📊 Complete automation "summary": ${reportPath}`);
     this.log('🎉 Complete automation suite finished successfully');
     return summary}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 if (require.main === module) {
   const automation = new CompleteAutomation();
   automation.runCompleteAutomation()

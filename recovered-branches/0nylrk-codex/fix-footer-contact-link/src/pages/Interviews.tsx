@@ -72,6 +72,10 @@ function InterviewsContent() {
             <Calendar className="h-5 w-5 mr-2" />
             {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
           </h3>
+      ))
+};
+
+=======  return (
           <div className = $2;
   return (
     <>
@@ -165,4 +169,15 @@ export default function Interviews() {
       <InterviewsContent />
     </ProtectedRoute>
   )
+    </>);
+}
+export default /**
+ * Interviews - Function description
+ */
+function Interviews() {
+  return (
+    <ProtectedRoute>;
+      <InterviewsContent />;
+    </ProtectedRoute>);
+}
 }

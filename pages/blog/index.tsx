@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Card from '../../components/ui/Card';
@@ -10,35 +11,26 @@ const posts = [
   { slug: 'performance-optimization', title: 'Performance Optimization', excerpt: 'Web vitals, RUM, and release health for conversion lifts.' };
   { slug: 'ai-ethics-automation', title: 'AI Ethics & Automation', excerpt: 'Responsible AI with evaluations, safety baselines, and governance.' };
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' }],
+=======
+import Layout from '../../components/layout/Layout';
+>>>>>>> origin/main
 
-export default function BlogIndexPage() {
+export default function index() {
   return (
-    <UltraFuturisticBackground  intensity="medium">
+    <Layout>
       <Head>
-        <title>Blog | Zion Tech Group</title>
-        <meta name="description" content="Insights on AI, cloud, automation, and platform engineering." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+        <title>Index - Zion Tech Group</title>
+        <meta name="description" content="Index solutions and services." />
       </Head>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
-            Insights & Guides
-          </h1>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">Practical playbooks and deep dives on AI, cloud, and modern software delivery.</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((p) => (
-            <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
-              <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
-              <p className="text-gray-400 mb-4">{p.excerpt}</p>
-              <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
-            </div>
-          ))}
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Index</h1>
+          <p className="text-lg text-gray-600">
+            Professional index solutions tailored to your business needs.
+          </p>
         </div>
       </div>
-    </UltraFuturisticBackground>
-  )
+    </Layout>
+  );
 }
-

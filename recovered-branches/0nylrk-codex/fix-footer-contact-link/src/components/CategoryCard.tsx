@@ -25,6 +25,18 @@ export function CategoryCard({ title, description, icon, color, count, className
       )}
     >
       <div
+import { Link } from "react-router-dom",  const slug = slugify(title);
+  return (
+    <Link
+      to={`/category/${slug}`}
+      className={cn(interface CategoryCardProps {;
+  title: string,,
+  description: string,;
+  icon: ReactNode | string,;
+  /**;
+   * Optional color to use for the icon. If not provided the default cyan;
+   * accent colour is used. Previously this prop was ignored which meant;
+   * callers could not customise the icon colour as intended.;
         className = $2;
           !color && "text-zion-cyan"
         )}
@@ -39,4 +51,5 @@ export function CategoryCard({ title, description, icon, color, count, className
       )}
     </Link>
   )
+   */;}
 }

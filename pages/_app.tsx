@@ -5,6 +5,7 @@ import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
+<<<<<<< HEAD
 =======
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -23,3 +24,10 @@ export default function App({ Component, pageProps }: AppProps) {
   );
 >>>>>>> origin/cursor/merge-conflicts-resolution
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

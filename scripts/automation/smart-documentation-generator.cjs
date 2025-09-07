@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -233,7 +237,7 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
   return "- Promise resolving to the API response"
   return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
-  generateServiceExamples($2) {return "\"\"}
+  generateServiceExamples(serviceName) {return "\"\"}
   "name": `Example
   "description": "Test item"}
 });\"\"\""
@@ -244,17 +248,21 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
   // Simplified parameter extractionreturn "- "params" - Parameters object\n- "options" - Optional configuration"
   return "- Promise resolving to the API response"
   return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages"
-  generateServiceExamples($2) {return "\"\"}
+  generateServiceExamples(serviceName) {return "\"\"}
   "name": "Example"
   "description": "Test item"}
 });\`\"\""
     return "provides user interface functionality"
   // Simplified props extractionreturn "- "children" - React children\n- "className" - Additional CSS classes\n- "...props" - Additional HTML attributes"
-  generateComponentExamples($2) {return "\"\"}
-  generateComponentExamples($2) {return `\"\"`}
+  generateComponentExamples(componentName) {return "\"\"}
+  generateComponentExamples(componentName) {return `\"\"`}
 <${componentName} className="custom-class"
 </${componentName}>\`\"\""
   extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   "fetch": "Fetches data from the API"
       "create": "Creates a new resource"
       "update": "Updates an existing resource"
@@ -273,7 +281,41 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   console.error(" Failed to start smart documentation "generator")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+  console.error(" Failed to start smart documentation "generator")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Failed to start smart documentation "generator")
+<<<<<<< HEAD
   console.error(" Failed to start smart documentation "generator")
 
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

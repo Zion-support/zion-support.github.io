@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 type ProposalListItem = $2;
@@ -33,27 +34,33 @@ export default function InternationalProposalsPage() {
             <option>APAC</option>
             <option>EU</option>
           </select>
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+
+export default function international() {
+  return (
+    <Layout>
+      <Head>
+        <title>International - Zion Tech Group</title>
+        <meta name="description" content="International solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">International</h1>
+          <p className="text-lg text-gray-600">
+            Professional international solutions tailored to your business needs.
+          </p>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
         </div>
-        <div className="divide-y border rounded">
-          {filtered.map((i) => (
-            <div key={i.id} className="p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-              <div>
-                <div className="font-medium">{i.title}</div>
-                <div className="text-sm text-gray-600">{i.targetInstitution} • {i.type} • {i.regionalScope}</div>
-                <div className="text-xs text-gray-500">Created {new Date(i.createdAt).toLocaleString()}</div>
-              </div>
-              <div className="flex items-center gap-4 text-sm">
-                <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{i.status}</span>
-                <a className="text-blue-600 underline" href={`/api/proposals?id=${i.id}`} target="_blank" rel="noreferrer">JSON</a>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.md`} target="_blank" rel="noreferrer">Markdown</a>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</a>
-              </div>
-            </div>
-          ))}
-          {filtered.length === 0 && <div className="p-4 text-sm text-gray-600">No proposals yet.</div>}
-        </div>
-        <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
+<<<<<<< HEAD
     </EnhancedLayout>
   )
+=======
+    </Layout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 }

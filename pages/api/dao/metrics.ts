@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> origin/main
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -79,6 +85,24 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     writeJson(cachePath, result);
     return res.status(200).json(result)
   } catch (e: any) {
+<<<<<<< HEAD
     return res.status(500).json({ error: e?.message ?? 'Failed to load DAO metrics' })
   }
 }
+=======
+
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+// Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited, use rich list approximation via token transactions + unique addresses) // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ metrics: {} });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

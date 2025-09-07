@@ -19,6 +19,10 @@ export interface EnhancedServiceItem  {id: string;
    trialDays: number;
    setupTime: string;
    contactInfo: {mobile: string;
+<<<<<<< HEAD:src_backup/data/comprehensive-services-2025-enhanced.ts
+   email: string;
+   address: string;
+   website: string} badges: string[] technologyStack: string[] integrations: string[] compliance: string[] scalability: string security: string[] } export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [';';;
    email: string;}
    address: string;}
    website: string} badges: string[] technologyStack: string[] integrations: string[] compliance: string[] scalability: string security: string[]

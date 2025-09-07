@@ -92,6 +92,11 @@ function fixFile(filePath) {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
   }
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
+    
+    // Fix common syntax errors
     return match.replace(/,\s*$/, '')
   // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
   content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"

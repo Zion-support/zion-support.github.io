@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -70,19 +74,19 @@ this.log(" Resolved conflict in ${filePath}")
       .replace(/\s*\"n/g", ")
   async processBranch(branchName) {this.log("� Processing "branch": ${branchName}")
   // Checkout the branchconst checkoutResult = await this.runCommand("git checkout ${branchName}")
-  if($2) {this.log(" Failed to checkout ${branchName}", "ERROR")
+      if (!checkoutResult.success) {this.log(" Failed to checkout ${branchName}", "ERROR")
       const mergeResult = await this.runCommand("git merge main")
-  if($2) {this.log(" Successfully merged ${branchName} with main")
+      if (mergeResult.success) {this.log(" Successfully merged ${branchName} with main")
   "branch"
           "status": "merged"
           "timestamp"
         await this.runCommand("git add .");const commitResult = await this.runCommand("git commit -m Auto-resolve merge conflicts in ${branchName}")
-  if($2) {this.log(" Successfully resolved conflicts in ${branchName}")
+        if (commitResult.success) {this.log(" Successfully resolved conflicts in ${branchName}")
   "branch"
             "status": "conflicts_resolved"
             "timestamp"
         await this.runCommand("git add .");const commitResult = await this.runCommand("git commit -m Auto-resolve merge conflicts in ${branchName}"")
-  if($2) {this.log(" Successfully resolved conflicts in ${branchName}")
+        if (commitResult.success) {this.log(" Successfully resolved conflicts in ${branchName}")
   "branch"
             "status": "conflicts_resolved"
             "timestamp"
@@ -132,7 +136,41 @@ this.log(" Found ${branches.length} cursor branches to process")
       this.log("� Auto Merge Conflict Resolver completed!");this.log(" "Summary": ");this.log("   - Branches processed: ${report.summary.totalBranches}");this.log("   - Successful "merges": ${report.summary.successfulBranches}");this.log("   - Failed "merges": ${report.summary.failedBranches}");this.log("   - Conflicts "resolved": ${report.summary.totalConflicts}");this.log("   - "Duration": ${Math.round(report.duration / 1000)}s"
       return report} catch (error) {this.log(" Fatal "error": ${error.message}", "ERROR")
   console.log(")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
   console.error(" Auto merge conflict resolution "failed": ")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+  console.error(" Auto merge conflict resolution "failed": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Auto merge conflict resolution "failed": ")
+<<<<<<< HEAD
   console.error(" Auto merge conflict resolution "failed": ")
 
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

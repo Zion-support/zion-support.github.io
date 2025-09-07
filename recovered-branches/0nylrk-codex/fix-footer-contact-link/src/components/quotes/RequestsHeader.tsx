@@ -1,3 +1,5 @@
+import React from "react",
+import { Badge } from "@/components/ui/badge",
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -7,6 +9,8 @@ import {
   SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select",
+type RequestsHeaderProps = {
+  unreadCount: number,
 import type { QuoteStatus } from "@/types/quotes";
 type RequestsHeaderProps = $2;
   statusFilter: QuoteStatus | 'all',
@@ -14,6 +18,56 @@ type RequestsHeaderProps = $2;
   archiveFilter: 'active' | 'archived' | 'all',
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 },
+  setArchiveFilter;
+}) => {;
+  return (},
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue;
+} from "@/components/ui/select",;
+import type { QuoteStatus } from "@/types/quotes",;
+type RequestsHeaderProps = {;
+  unreadCount: number,;
+  statusFilter: QuoteStatus | 'all',;
+  setStatusFilter: (value: QuoteStatus | 'all') => void,;
+  archiveFilter: 'active' | 'archived' | 'all',;
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
+},;
+export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
+  unreadCount,;
+  statusFilter,;
+  setStatusFilter,;
+  archiveFilter;
+  setArchiveFilter;
+}) => {;
+  return (;
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;
+      <div>;
+        <div className="flex items-center gap-3">;
+          <h1 className="text-3xl font-bold text-white">Hire Requests</h1>;
+          {unreadCount > 0 && (;
+            <Badge className="bg-blue-500">;
+              {unreadCount} New;
+            </Badge>;
+          )}
+        </div>;
+        <p className="text-zion-slate-light mt-2">;
+          Manage client requests to hire your services;
+        </p>;
+      </div>;            <SelectValue placeholder="Active Only" />;
+          </SelectTrigger>;
+          <SelectContent>;
+            <SelectItem value="active">Active Only</SelectItem>;
+            <SelectItem value="archived">Archived Only</SelectItem>;
+            <SelectItem value="all">All Requests</SelectItem>;
+          </SelectContent>;
+        </Select>;
+      </div>;
 
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount;

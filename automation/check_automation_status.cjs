@@ -1,4 +1,5 @@
 
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -23,15 +24,19 @@ main
   
 
 
+main
+
   const statusReport = {
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
     "automationScripts": [],
     "systemHealth": {},
+
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
 
 
@@ -52,6 +57,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // TODO: Implement
 
       );
+
+      
+    } catch (error) {
+      
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      
+    } catch (error) {
+      
+
+
+
     } catch (error) {
       
     } catch (error) {
@@ -75,7 +95,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
     } catch (error) {
       console.log('⚠️  PM2 not available or no processes running');
+
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
+    } catch (error) {
+      console.log('⚠️  PM2 not available or no processes running');
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
+
+
+
+
+
+      
+    } catch (error) {
+      
+
+main
+
 
 
 
@@ -122,16 +157,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'automation/master-orchestrator.cjs',
     console.log('📋 Checking automation scripts...');
     const automationScripts = [
+      'scripts/comprehensive-automation-suite.cjs',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+    console.log('📋 Checking automation scripts...');
+    const automationScripts = [
+      'automation/master-orchestrator.cjs',
+    console.log('📋 Checking automation scripts...');
+    const automationScripts = [
 
 
 
 
 
     
+
+
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
       'automation/security-scanner.cjs',
+
+
       'automation/master-orchestrator.cjs',
       'automation/master-orchestrator.cjs',
 ursor/automate-test-improve-and-merge-code-2480
@@ -139,12 +189,12 @@ origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+
     // Check automation scripts;
 
 
 
 
-      'automation/master-orchestrator.cjs',
 
 
 
@@ -158,6 +208,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
+
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
+
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -184,6 +244,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       nodeVersion: process.version,
       platform: process.platform,
     };
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+main
+
+
+
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 main
 
@@ -234,6 +300,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
 
     // Save report
+
+
+
 
 
 
@@ -294,6 +363,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     }
 
+
+main
+
+
+
+
+    }
+
     const reportPath = path.join(
     }
 
@@ -331,6 +408,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'automation-status-report.json
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
+    
+    
+    
+    
+    
+
+
+    return statusReport;
+
+  } catch (error) {
+    console.error('❌ Error checking automation "status": ', error.message);
 
     console.log('📋 Checking system health...');
   // TODO: Implement
@@ -351,6 +439,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+
+
+
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -362,12 +453,35 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
 
+
+
+
+
     const reportPath = path.join(
 
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
+    
+    
+    
+    
+    
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+main
+    console.log('📊 Status Report:');
+    console.log(`   Overall Status: ${statusReport.overallStatus}`);
+    console.log(`   PM2 Processes: ${runningProcesses.length} running`);
+    console.log(
+      `   Available Scripts: ${availableScripts.length}/${automationScripts.length}`
+    );
+    console.log(`   Report saved to: ${reportPath}`);
+    return statusReport;
+  } catch (error) {
+    console.error('❌ Error checking automation status:', error.message);
+
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
@@ -392,6 +506,7 @@ main
       console.log('⚠️  Could not save report file');
     }
   } catch (error) {
+
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
@@ -402,12 +517,34 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+
+    statusReport.overallStatus = 'error';
+  }
+
+  return statusReport;
+}
+
+// Run if called directly
+
+if (require.main === module) {
+
+
+// Run if called directly
     statusReport.overallStatus = 'error';
   }
 
 module.exports = checkAutomationStatus;
 
 if (require.main === module) {
+
+
+
+// Run if called directly
+if (require.main === module) {
+
+
+
+
 
 
   checkAutomationStatus()
@@ -455,6 +592,19 @@ module.exports = checkAutomationStatus;
 
 module.exports = { checkAutomationStatus };
 
+
+// Run if called directly
+main
+if (require.main === module) {
+
+
+
+
+
+
+
+
+
 #!/usr/bin/env node;
 
 
@@ -464,6 +614,7 @@ const { execSync } = require('child_process')
   console.log(' Checking Automation Status...')
       console.error('Fatal "error")
 
+
 if (require.main === module) {
   checkAutomationStatus().then(report => {
     process.exit(report.overallStatus === 'healthy' ? 0 : 1);
@@ -472,6 +623,17 @@ if (require.main === module) {
 module.exports = checkAutomationStatus;
 
 module.exports = checkAutomationStatus;
+module.exports = checkAutomationStatus;
+
+module.exports = checkAutomationStatus;
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
     "overallStatus"""

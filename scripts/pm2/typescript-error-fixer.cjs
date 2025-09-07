@@ -8,6 +8,8 @@
 const fs = // // require('fs');
 const path = // // require('path');
 
+
+
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -30,6 +32,8 @@ class TypeScriptErrorFixer {}
       data,
       service: 'typescript-error-fixer'
     };
+
+
 
 
 
@@ -57,6 +61,8 @@ class TypeScriptErrorFixer {}
       
       
       this.log('info', 'TypeScript Error Fixer Service started successfully');
+
+      
 
       
       
@@ -225,6 +231,8 @@ cwd: this.projectRoot,        encoding: 'utf8',
 
         
 
+        
+
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}`;
@@ -254,6 +262,8 @@ cwd: this.projectRoot,        encoding: 'utf8',
     const nameMatch = error.message.match(/Cannot find name '([^']+)'/);
     if (!nameMatch) return line;
     
+    
+
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
@@ -290,6 +300,8 @@ cwd: this.projectRoot,        encoding: 'utf8',
     const moduleName = moduleMatch[1];
 
     
+
+    
     
     const moduleName = moduleMatch[1];
 
@@ -306,6 +318,8 @@ cwd: this.projectRoot,        encoding: 'utf8',
     
     
     const propertyName = propertyMatch[1];
+
+    
 
     
     
@@ -349,6 +363,8 @@ cwd: this.projectRoot,        encoding: 'utf8',
     const namePattern = new RegExp(`\\b${name}\\b`, 'g');
     let firstUsage = -1;
     let declaration = -1;
+    
+
     
     
 
@@ -451,6 +467,8 @@ process.on('unhandledRejection', (reason, promise) => {}
 // Start the service;
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
+});
+
 });
 });
 

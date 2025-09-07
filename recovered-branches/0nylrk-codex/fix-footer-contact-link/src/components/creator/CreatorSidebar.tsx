@@ -1,3 +1,37 @@
+import {
+
+import {;
+  Bell,;
+  FileText,;
+  Home,;
+  Mail,;
+  Search,;
+  Settings,;  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+
+  Users,;
+} from "lucide-react";  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+  Users,;
+} from "lucide-react";
+import {;
+  Sidebar,;
+  SidebarContent,;
+  SidebarGroup,;
+  SidebarMenu,;
+  SidebarMenuItem,;
+  SidebarMenuButton,;
+  SidebarGroupLabel,;
+  SidebarGroupContent,;
+
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
 import {
 
@@ -61,6 +95,7 @@ import {
                   <a href="/publish">
                     <FileText size={16} />
                     <span>My Content</span>
+                  </Link>                  </Link>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -69,6 +104,7 @@ import {
                   <a href="/analytics">
                     <Search size={16} />
                     <span>Analytics</span>
+                  </Link>                  </Link>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -84,6 +120,7 @@ import {
                   <a href="/profile">
                     <Users size={16} />
                     <span>Profile</span>
+        </SidebarGroup>                </SidebarMenuButton>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -92,6 +129,7 @@ import {
                   <a href="/settings">
                     <Settings size={16} />
                     <span>Settings</span>
+                  </Link>                  </Link>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -99,6 +137,24 @@ import {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+  );
+}
+  )
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
+import {;
+  Sidebar,;
+  SidebarContent,;
+  SidebarGroup,;
+  SidebarMenu,;
+  SidebarMenuItem,;
+  SidebarMenuButton,;
+  SidebarGroupLabel,;
+  SidebarGroupContent} from "@/components/ui/sidebar";
+export function AppSidebar() {;
+  return (;                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
     </Sidebar>
   )
 }

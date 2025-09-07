@@ -16,6 +16,27 @@ import {
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
 
+  const teamMembers = [
+import React from './react';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
+import { Badge } from '@/components / ui / badge';
+import { Switch } from '@/components / ui / switch';
+import { toast } from '@/hooks / use - toast';
+import { InfoIcon } from './lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
+;
+export /**
+ * RoleManagement - Function description
+ */
+function RoleManagement() {
+  // Mock team members data;
+  const team_members = [;
+    {
+      id: 1
+      name: "Alex Johnson"
+      email: "alex@example.com"
+      role: "Admin"
+      permissions: {    {
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = $2;
@@ -59,6 +80,11 @@ export function RoleManagement() {
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+  },
+  description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  }
         viewCandidates: true,
         editCandidates: false,
         createJobs: false,
@@ -424,6 +450,20 @@ export function RoleManagement() {;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
+  TooltipTrigger} from "@/components/ui/tooltip",;                    }
+                  />;
+                </TableCell>;
+              </TableRow>;
+
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+
+            ))}
+
+        </Table>;
+      </div>;
+    </div>;
+  );
             {teamMembers.map((member) => (;
               <TableRow key={member.id}>;
                 <TableCell>;
@@ -490,4 +530,5 @@ export function RoleManagement() {;
       </div>
     </div>
   )
+}
 }

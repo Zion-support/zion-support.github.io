@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -15,6 +17,10 @@ export default async function handler(
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
 
       "placeholder-key";
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+
+
+
 
   try {
     if (usingPlaceholder) {
@@ -22,6 +28,8 @@ export default async function handler(
         leaders: [
 
       });
+
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
 
           { code: 'aihub', profile_completions: 9 }
           { code: 'modelmasters', profile_completions: 7 }
@@ -31,10 +39,15 @@ export default async function handler(
 
     }
 
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+
     for (const row of data || []) {
       if (row && row.event !== "profile_completed") continue;
       const key = row && row.partner_code as string;
       map && map.set(key, (map && map.get(key) || 0) + 1);
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+
+
 
     }
 
@@ -42,6 +55,9 @@ export default async function handler(
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+
+
 
     const supabase = getServerSupabase ();
     const startOfMonth = new Date ();
@@ -70,6 +86,51 @@ if (continue) {
     return res.status (200).json ({ leaders });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+
+
+
+
+
+
+
+
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '[^']*';
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  const usingPlaceholder = null;
+    return res.status(200).json({ leaders })
+origin/cursor/automate-test-improve-and-merge-code-2533
+export default async function handler(
+  _req: NextApiRequest
+  res: NextApiResponse
+) {
+  const usingPlaceholder =
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===
+      'placeholder-key';
+origin/cursor/automate-test-improve-and-merge-code-2533
+  try {
+    if (usingPlaceholder) {
+      return res.status(200).json({
+        leaders: [
+          { code: 'aihub', profile_completions: 9 },
+          { code: 'modelmasters', profile_completions: 7 },
+{ code: 'promptpro', profile_completions: 5 },
+        ],
+      });
+    }
+
+
+
+
+
+
+
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
@@ -91,6 +152,30 @@ export default async function handler(req, res) {
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+    const { data, error } = await supabase
+      .from("referral_events")
+      .select("partner_code, event, created_at")
+      .gte("created_at", startOfMonth.toISOString());
+    if (error) return res.status(500).json({ error: "Database error" });
+    const map = new Map<string, number>();
+    for (const row of data |[]) {
+      if (row.event !== "profile_completed") continue;
+      const key = row.partner_code as string;
+map.set(key, (map.get(key) || 0) + 1);
+    }
+    const leaders = Array.from(map.entries())
+      .map(([code, profile_completions]) => ({ code, profile_completions }))
+      .sort((a, b) => b.profile_completions - a.profile_completions)
+      .slice(0, 10);
+
+return res.status(200).json({ leaders });
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+  }
+
+  } catch (e: any) {
+origin/cursor/automate-test-improve-and-merge-code-2533
 
     const { data, error } = await supabase;
       .from('referral_events');
@@ -128,6 +213,9 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+
+
 
   }
 }
@@ -182,11 +270,16 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
   }
 }
 ;
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+
+
 
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+
 
     const { data, error } = await supabase;
       .from('referral_events');
@@ -214,6 +307,10 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       .slice(0, 10);
     return res.status(200).json({ leaders });
   } catch (error) {
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+
+
+
 
     return res.status(500).json({ error: e?.message });
     } catch (error) {
@@ -224,4 +321,43 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/partners/leaderboard.ts
+origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
+  }
+}
+
+
+
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

@@ -19,6 +19,7 @@ export function CountryTabs({
   handleCountrySelect, 
   searchQuery, 
   setSearchQuery 
+
 }: CountryTabsProps) {
   return (
     <Tabs defaultValue="featured" className="w-full">
@@ -58,6 +59,10 @@ interface CountryTabsProps {;
   searchQuery: string,;
   setSearchQuery: (query: string) => void;
 }
+            .map(country => (  filteredCountries, ;
+  handleCountrySelect, ;
+  searchQuery, ;
+  setSearchQuery ;    <Tabs defaultValue="featured" className="w-full">;
 ;
 export function CountryTabs({;
   popularCountries,;
@@ -75,6 +80,7 @@ export function CountryTabs({;
         <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">;
           All Countries;
         </TabsTrigger>;
+      </TabsList>;      <TabsContent value="featured" className="mt-0">;
       </TabsList>;
       <TabsContent value="featured" className="mt-0">;
         <div className="mb-6">;
@@ -83,6 +89,14 @@ export function CountryTabs({;
             Browse our most popular service destinations;
           </p>;
         </div>;
+            .map(country => (;              <CountryServiceCard
+                key={country && country.country} 
+                country={country} 
+
+              <CountryServiceCard 
+                key={country.country} 
+                country={country} 
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">;
           {filteredCountries;
             .filter(country => popularCountries.includes(country.country));
@@ -135,3 +149,9 @@ export function CountryTabs({;
     </Tabs>
   )
 }
+        <div className="mb-6 max-w-md mx-auto">;
+          <div className="relative">;
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;              onSelect={handleCountrySelect}
+              isPopular={popularCountries && popularCountries.includes(country && country.country)}
+            />;
+          ))}

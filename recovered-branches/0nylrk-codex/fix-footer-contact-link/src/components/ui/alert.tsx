@@ -16,6 +16,10 @@ const alertVariants = cva(
     }
   }
 );
+import { cn } from "@/lib/utils"
+
+const alertVariants = cva(
+  "relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground",
 
 import { cn } from "@/lib/utils"
 
@@ -29,6 +33,9 @@ const alertVariants = $2;
     defaultVariants: {
       variant: "default"}}
 )
+const Alert = React.forwardRef<
+  HTMLDivElement
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
 
 const Alert = $2;
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
@@ -39,6 +46,24 @@ const Alert = $2;
     className={cn(alertVariants({ variant }), className)}
     {...props}
   />
+const AlertTitle = React && React.forwardRef<;
+  HTMLParagraphElement,;
+  React && React.HTMLAttributes<HTMLHeadingE</HTMLHeadingElement>lement>;
+>(({ className, ...props }, ref) => (;
+  <h5
+  />));
+Alert.display_name = 'Alert';
+;
+const AlertTitle = React.forward_ref<;
+  HTMLParagraphElement,
+  React.HTMLAttributes < HTMLHeadingE</HTMLHeadingElement > lement>;
+>(({ class_name, ...props }, ref) => (
+  <h5;
+    ref={ref}
+    className={cn ('mb - 1 font - medium leading - none tracking - tight', class_name)}
+    {...props}
+
+  />
 ))
 Alert.displayName = $2;
   React.HTMLAttributes<HTMLHeadingElement>
@@ -48,6 +73,12 @@ Alert.displayName = $2;
     className={cn('mb-1 font-medium leading-none tracking-tight', className)}
     {...props}
   />
+>(({ className, ...props }, ref) => (AlertTitle && AlertTitle.displayName = 'AlertTitle';
+
+const AlertDescription = React && React.forwardRef<;
+  HTMLParagraphElement,;
+  React && React.HTMLAttr</HTMLParagraphElement>ibutes<HTMLParagraphElement>;
+>(({ className, ...props }, ref) => (;
 ))
 AlertTitle.displayName = $2;
   React.HTMLAttributes<HTMLParagraphElement>
@@ -58,5 +89,14 @@ AlertTitle.displayName = $2;
     {...props}
   />
 ));
+AlertDescription.display_name = 'AlertDescription';
+;
+export { Alert, AlertTitle, AlertDescription }
+;));
+AlertDescription.displayName = 'AlertDescription';
+export { Alert, AlertTitle, AlertDescription }
+))
+AlertDescription.displayName = "AlertDescription"
+
 AlertDescription.displayName = 'AlertDescription';
 export { Alert, AlertTitle, AlertDescription }

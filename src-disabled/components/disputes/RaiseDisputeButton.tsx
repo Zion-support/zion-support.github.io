@@ -1,3 +1,18 @@
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+
+;
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import {Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+  DialogDescription} from "@/components/ui/dialog",
+import { DisputeForm } from "./DisputeForm";
+import { useRouter } from 'next/router';
+origin/cursor/automate-test-improve-and-merge-code-2533
 :src/components/disputes/RaiseDisputeButton.tsx
 projectId: string,
 
@@ -21,6 +36,21 @@ import {  Dialog
   DialogDescription
 } from '@/components/ui/dialog'
 import { DisputeForm } from './DisputeForm'
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533
+import { ShieldAlert } from 'lucide-react'
+  DialogDescription} from "@/components/ui/dialog"
+import { DisputeForm } from "./DisputeForm"
+import { useRouter } from 'next/router'
+interface RaiseDisputeButtonProps {
+  projectId: string;
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  className?: string
+return (
+    <>;
+
 Dialog,
   DialogContent,
   DialogHeader,
@@ -70,6 +100,17 @@ export function RaiseDisputeButton({
   size,
   className 
 }: RaiseDisputeButtonProps) {
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+
+
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+}
+
+export function RaiseDisputeButton({ 
+  projectId;
+  milestoneId;
+  variant;
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
   
@@ -78,6 +119,7 @@ export function RaiseDisputeButton({
     router.push(`/dashboard/disputes/${disputeId}`)
   },
   
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
 Dialog,
   DialogContent,
   DialogHeader,
@@ -149,6 +191,44 @@ export function RaiseDisputeButton({
               this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+
+  DialogDescription} from "@/components/ui/dialog",import { DisputeForm  } from './DisputeForm';
+import { useRouter  } from 'next/router';
+import { Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
+  DialogDescription;
+ } from '@/components/ui/dialog';
+Dialog,DialogContent,DialogHeader,DialogTitle,import { ShieldAlert  } from 'lucide-react';
+  DialogDescription} from "@/components/ui/dialog";
+interface RaiseDisputeButtonProps  {projectId: string;
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  className?: string;
+export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter(),const handleDisputeCreated = (disputeId: string) => {setIsDialogOpen(false),router.push(`/dashboard/disputes/${disputeId}`)}}export function RaiseDisputeButton({projectId;
+  milestoneId;
+  variant;return (<>;
+      <Button;
+        variant={variant}size={size}className={className}onClick={() => setIsDialogOpen(true)}
+      >;
+        <ShieldAlert className="h-4 w-4 mr-2" />;
+        Raise Dispute;
+      </Button>;
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className='sm:max-w-[550px]'>;
+          <DialogHeader>;
+            <DialogTitle>Raise a Dispute</DialogTitle>;
+            <DialogDescription>Please provide details about the issue you're experiencing with;
+              this project.;
+            </DialogDescription>;
+          </DialogHeader>;
+        onClick={() => setIsDialogOpen(true)}      >;
+        <ShieldAlert className='h-4 w-4 mr-2' />;
+        Raise Dispute;
+      </Button>;<Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         onClick={() => setIsDialogOpen(true)}      >;
         <ShieldAlert className='h-4 w-4 mr-2' />;
         Raise Dispute;
@@ -168,6 +248,15 @@ export function RaiseDisputeButton({
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
         <DialogContent className='sm:max - w-[550px]'>;,
           <DialogHeader>;
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+            <DialogTitle > Raise a Dispute</DialogTitle>;<DialogDescription>Please provide details about the issue you're experiencing with;
+              this project.;
+            </DialogDescription>;
+          </DialogHeader>;onCancel={() => setIsDialogOpen(false)}          />;
+        </DialogContent>;
+      </Dialog>;
+    </>;
+  )}<DisputeForm;
             <DialogTitle > Raise a Dispute</DialogTitle>;
             <DialogDescription>;
               Please provide details about the issue you're experiencing with;
@@ -183,7 +272,18 @@ export function RaiseDisputeButton({
           <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
             onDisputeCreated={handleDisputeCreated}
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+            on_cancel={() => setIsDialogOpen (false)}          />;
+        </DialogContent>;
+      </Dialog>;
+    </>);
+}
+
+
+
 
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
@@ -192,6 +292,8 @@ export function RaiseDisputeButton({
 :src/components/disputes/RaiseDisputeButton.tsx
   )
 }
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+          
 
             on_cancel={() => setIsDialogOpen (false)}          />;
         </DialogContent>;
@@ -253,11 +355,18 @@ export function RaiseDisputeButton({;
 };
   return (;
     <>;
+            onDisputeCreated={handleDisputeCreated}onCancel={() => setIsDialogOpen(false)}          />;
+        </DialogContent>;
+      </Dialog>;
+    </>;
+  )}on_cancel={() => setIsDialogOpen (false)}          />;
+        </DialogContent>;
+      </Dialog>;
+    </>)}<DisputeForm;
+  Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from "@/components/ui/dialog",interface RaiseDisputeButtonProps  {projectId: string,milestoneId?: string,variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",size?: "default" | "sm" | "lg" | "icon",className?: string;
+}export function RaiseDisputeButton() {const [isDialogOpen, setIsDialogOpen] = useState(false),const router = useRouter(),const handleDisputeCreated = (disputeId: string) => {setIsDialogOpen(false)router.push(`/dashboard/disputes/${disputeId}`)}return (<>;
       <Button;
-        variant={variant} ;
-        size={size} ;
-        className={className} ;
-        onClick={() => setIsDialogOpen(true)}
+        variant={variant}size={size}className={className}onClick={() => setIsDialogOpen(true)}
       >;
         <ShieldAlert className="h-4 w-4 mr-2" />;
         Raise Dispute;
@@ -267,21 +376,36 @@ export function RaiseDisputeButton({;
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
-            <DialogDescription>;
-              Please provide details about the issue you're experiencing with this project.;
+            <DialogDescription>Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
           </DialogHeader>;
           <DisputeForm;
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+            onCancel={() => setIsDialogOpen(false)}          />;
 
             onCancel={() => setIsDialogOpen(false)}
           />;
         </DialogContent>;
       </Dialog>;
     </>;
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
   );
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+<<<<<<< HEAD:src_backup/components/disputes/RaiseDisputeButton.tsx
+
+}
+;
+
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+  )})
+
+
+}
+;
 :src/components/disputes/RaiseDisputeButton.tsx
 };
 

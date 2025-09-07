@@ -120,6 +120,8 @@ class ErrorFixer {}
     } else {}
       process.exit(1);
 module.exports = ErrorFixer;
+
+module.exports = ErrorFixer;
 module.exports = ErrorFixer;
 
 

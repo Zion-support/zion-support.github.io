@@ -7,6 +7,16 @@ const fs = require('fs')
 const path = require('path')
 
 
+const { execSync } = require('child_process')
+// console.log(' Starting Bundle Analysis...')
+    console.log(' Analyzing bundle size...')
+    execSync('npx @next/bundle-analyzer', { "stdio"})
+        "recommendations"
+
+    console.error(' Bundle analysis "failed")
+
+
+
 
 const { execSync } = require('child_process')
     console.error(' Bundle analysis "failed")

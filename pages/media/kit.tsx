@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
@@ -87,6 +88,7 @@ const KitPage = () => {
     const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName });
     const onCopy = () => navigator.clipboard.writeText(text);
     return (
+<<<<<<< HEAD
       <div className="p-4 border rounded-lg space-y-2">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">{title}</h4>
@@ -97,13 +99,25 @@ const KitPage = () => {
     )
   };
 
-  return (
-    <div>
-      <Head>
-        <title>Media Kit - Zion</title>
-        <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
-      </Head>
+=======
+      <div className = $2;
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 
+export default function kit() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main
+  return (
+    <Layout>
+      <Head>
+        <title>Kit - Zion Tech Group</title>
+        <meta name="description" content="Kit solutions and services." />
+      </Head>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
       <div className="space-y-8">
         <header className="flex items-center justify-between">
           <h1 className="text-2xl font-bold">Media Kit</h1>
@@ -171,3 +185,21 @@ const KitPage = () => {
 };
 
 export default KitPage;
+=======
+      <div className = $2;
+export default KitPage,
+=======
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Kit</h1>
+          <p className="text-lg text-gray-600">
+            Professional kit solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

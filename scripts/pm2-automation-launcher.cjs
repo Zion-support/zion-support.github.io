@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+=======
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+#!/usr/bin/env node;
+#!/usr/bin/env node;
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 
@@ -10,7 +29,7 @@ const { execSync, spawn } = require("child_process")
       "logs",pm2-automation-launcher.log"
       __dirname,.."
       "logs",pm2-automation-launcher.log"
-";";const { execSync, spawn } = require("child_process")
+const fs = require("fs")";const path = require("path")";const { execSync, spawn } = require("child_process")
     this.logFile = path.join();      __dirname,..", logs",pm2-automation-launcher.log);"
       fs.mkdirSync(logDir, { "recursive"})
       fs.mkdirSync(logDir, { recursive"})"
@@ -24,18 +43,18 @@ const { execSync, spawn } = require("child_process")
       return processes.filter(proc => proc.name !== "pm2-logrotate")} catch (error) { this.log(` Failed to get PM2 "status"`})
       this.log(" No automation configuration found")
     this.log(" Starting PM2 automation processes...")
-  if($2) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}, { "stdio": "pipe"`})
+        if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}, { "stdio": "pipe"`})
           const scriptPath = path.resolve(__dirname, "..")
               "stdio": "pipe"
               "env"
       this.log(" No automation configuration found")
     this.log(" Starting PM2 automation processes...")
       const output = execSync("pm2 jlist", { encoding": "utf8" }")"
-});      const processes = JSON.parse(output);      return processes.filter(proc => proc.name !== "pm2-logrotate")} catch (error) {this.log(` Failed to get PM2 status": ${error.message})
+});      const processes = JSON.parse(output);      return processes.filter(proc => proc.name !== "pm2-logrotate")} catch (error) {this.log(` Failed to get PM2 status": ${error.message});
       this.log(" No automation configuration found");      return false,"
     this.log(" Starting PM2 automation processes...");"
       try {this.log(" Starting ${process.name}...");"
-  if($2) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}, { "stdio": "pipe"`})
+        if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}, { "stdio": "pipe"`})
           const scriptPath = path.resolve(__dirname, "..")
               "stdio": "pipe"
               "env": { ...process.env, ...process.env },}
@@ -43,15 +62,15 @@ const { execSync, spawn } = require("child_process")
     this.log(" PM2 automation processes started")
     this.log(" PM2 automation processes started")
     this.log("� Stopping PM2 automation processes...")
-  if($2) {execSync(`pm2 stop ${proc.name}, { "stdio": "pipe"`})
+        if (proc.name !== "pm2-logrotate") {execSync(`pm2 stop ${proc.name}, { "stdio": "pipe"`})
       this.log(" All automation processes stopped")} catch (error) { this.log(` Error stopping "processes"`})
     this.log("� Restarting PM2 automation processes...")
-  if($2) {execSync(`pm2 restart ${proc.name}, { "stdio": "pipe"`})
+        if (proc.name !== "pm2-logrotate") {execSync(`pm2 restart ${proc.name}, { "stdio": "pipe"`})
     this.log("� Restarting PM2 automation processes...")
-  if($2) {execSync(`pm2 restart ${proc.name}, { "stdio": "pipe"`})
+        if (proc.name !== "pm2-logrotate") {execSync(`pm2 restart ${proc.name}, { "stdio": "pipe"`})
       this.log(" All automation processes restarted")} catch (error) { this.log(` Error restarting "processes"`})
     this.log("� Deleting PM2 automation processes...")
-  if($2) {execSync(`pm2 delete ${proc.name}, { "stdio": "pipe"`})
+        if (proc.name !== "pm2-logrotate") {execSync(`pm2 delete ${proc.name}, { "stdio": "pipe"`})
       this.log(" All automation processes deleted")} catch (error) { this.log(` Error deleting "processes"`})
     this.log(" PM2 Automation "Status": ")
     this.log(" PM2 Automation Status:")
@@ -68,22 +87,22 @@ const { execSync, spawn } = require("child_process")
         console.log("   "CPU": ${proc.monit.cpu}%")
         p => p.pm2_env.status === "
       console.log(\n "Summary": ${onlineCount}/${totalCount} processes online`)} catch (error) { this.log(` Error getting "status"`})
-  if($2) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}, { stdio": "pipe" }")"
+        if (exists) {this.log(`⚠ Process ${process.name} already exists, restarting...`);execSync(`pm2 restart ${process.name}, { stdio": "pipe" }")"
 });"} else {"`}
           const scriptPath = path.resolve(__dirname, "..", process.script);";          if (fs.existsSync(scriptPath)) {execSync("pm2 start ${scriptPath} --name ${process.name}", {";              "stdio": "pipe", ";              "env": { ...process.env, ...process.env })}
-});this.log(` Started ${process.name});"} else {this.log(" Script not found": ${scriptPath}")
+});this.log(` Started ${process.name});"} else {this.log(" Script not found": ${scriptPath}");
         await this.sleep(2000)} catch (error) {this.log(` Failed to start ${process.name}: ${error.message});"
     this.log(" PM2 automation processes started");    return true,"
     this.log("� Stopping PM2 automation processes...");"
-  if($2) {execSync("pm2 stop ${proc.name}", { stdio": "pipe" }")"
-});this.log("� Stopped ${proc.name}");"}"}";      this.log(" All automation processes stopped");"} catch (error) {this.log(` Error stopping "processes": ${error.message})
-  if($2) {this.log("� Showing logs for ${processName}:");execSync("pm2 logs ${processName} --lines ${lines}")
+        if (proc.name !== "pm2-logrotate") {execSync("pm2 stop ${proc.name}", { stdio": "pipe" }")"
+});this.log("� Stopped ${proc.name}");"}"}";      this.log(" All automation processes stopped");"} catch (error) {this.log(` Error stopping "processes": ${error.message});
+      if (processName) {this.log("� Showing logs for ${processName}:");execSync("pm2 logs ${processName} --lines ${lines}")
           "stdio": "inherit"
     this.log("� Restarting PM2 automation processes...");"
-  if($2) {execSync(`pm2 restart ${proc.name}, { stdio": "pipe" }")"
+        if (proc.name !== "pm2-logrotate") {execSync(`pm2 restart ${proc.name}, { stdio": "pipe" }")"
 });this.log(`� Restarted ${proc.name})}"}";      this.log(" All automation processes restarted")} catch (error) {this.log(" Error restarting processes": ${error.message}");"
     this.log("� Deleting PM2 automation processes...");"
-  if($2) {execSync(`pm2 delete ${proc.name}, { stdio": "pipe" }")"
+        if (proc.name !== "pm2-logrotate") {execSync(`pm2 delete ${proc.name}, { stdio": "pipe" }")"
 });this.log(`� Deleted ${proc.name})}"}";      this.log(" All automation processes deleted")} catch (error) {this.log(" Error deleting processes": ${error.message}");"
     this.log(" PM2 Automation Status":");"
         this.log("ℹ No automation processes running");        return,"
@@ -159,7 +178,39 @@ process.on("SIGINT")
       case "help":";      default
 
   } catch (error) {launcher.log(` Command failed``})
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+<<<<<<< HEAD
 process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
 
 
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5

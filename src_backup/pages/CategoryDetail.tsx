@@ -284,3 +284,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     </>
   )
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/main

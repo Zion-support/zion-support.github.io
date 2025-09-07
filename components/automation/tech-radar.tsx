@@ -1,8 +1,74 @@
+<<<<<<< HEAD
+ 
+<<<<<<< HEAD
+
+ 
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+;
+}
+type Props = { pypi: Item[], crates: Item[], github: { [key: string]: Item[] } },
+export const getStaticProps: GetStaticProps < Props> = async () => {
+  try {
+    const file = path.join (process.cwd (), 'publicautomationtech - radar.json');
+    const raw = fs.readFileSync (file, 'utf8');
+    const data = JSON.parse (raw);
+    return {
+      props: {
+      revalidate: 7200}
+  } catch {;
+    return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
+  }
 import fs from 'fs';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import fs from 'fs';,
+=======
+import fs from 'fs',
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const getStaticProps: GetStaticProps<Props> = async () => {
+=======
+
+export const getStaticProps: GetStaticProps<Props> = async () => {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+;
+}
+type Props = { pypi: Item[], crates: Item[], github: { [key: string]: Item[] } },
+export const getStaticProps: GetStaticProps < Props> = async () => {}
+  try {};
+    const file = path.join (process.cwd (), 'publicautomationtech - radar.json');'
+    const raw = fs.readFileSync (file, 'utf8');
+    const data = JSON.parse (raw);
+    return {}
+      props: {}
+      revalidate: 7200}
+  } catch {;
+    return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
+  }
+  const langs = Object.keys(github);
+
+import fs from 'fs',
+=======
+import fs from 'fs';
+import fs from 'fs';;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Item = { source: string, name: string, url: string, description?: string, downloads?: number },
 
+<<<<<<< HEAD
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -24,6 +90,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 export default function TechRadar({ pypi, crates, github }: Props) {
   const langs = Object.keys($2);
   return (
+<<<<<<< HEAD
     <div className="space-y-8">
       <header className="space-y-2">
         <h1 className="text-3xl font-bold">Tech Radar</h1>
@@ -38,12 +105,324 @@ export default function TechRadar({ pypi, crates, github }: Props) {
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+type Item = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+<<<<<<< HEAD
+    <div className="space-y-8">"
+      <header className="space-y-2">"
+        <h1 className="text-3xl font-bold">Tech Radar</h1>"
+        <p className="text-gray-600 dark:text-gray-300">Trending packages and projects across ecosystems.</p>
+      </header>
+      <section>"
+        <h2 className="font-semibold text-lg mb-3">PyPI (30 days)</h2>"
+        <ul className="grid md:grid-cols-2 gap-3">
+          {pypi.map((it, i) => ("
+            <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">"
+              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>'
+              {typeof it.downloads === 'number' && ("
+                <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
+=======
+    <div className=\"space-y-8\" />"
+      <header className=\"space-y-2\" />"
+        <h1 className=\"text-3xl font-bold\" />Tech Radar</h1>"
+        <p className=\"text-gray-600 dark:text-gray-300\" />Trending packages and projects across ecosystems.</p>
+      </header>
+      <section />"
+        <h2 className=\"font-semibold text-lg mb-3\" />PyPI (30 days)</h2>"
+        <ul className=\"grid md:grid-cols-2 gap-3\" />
+          {pypi.map((it, i) => (}"
+            <li key={i} className=\"p-4 rounded-lg border border-gray-200 dark: border-gray-800\" />"
+              <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font-medium text-blue-600 dark: text-cyan-400\" />{it.name;}</a>
+              {typeof it.downloads === 'number' && (}"
+                <div className=\"text-xs text-gray-500\" />Downloads: {it.downloads.toLocaleString();}</div>
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               )}
             </li>
           ))}
         </ul>
       </section>
 
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+;
+export const getStaticProps: GetStaticProps<Props>  = async () => {}
+type Props = { pypi: Item[], crates: Item[], github: { [key: string]: Item[] } },export const getStaticProps: GetStaticProps < Props> = async () => {try {const file = path.join (process.cwd (), 'publicautomationtech - radar.json')const raw = fs.readFileSync (file, 'utf8')const data = JSON.parse (raw)return {props: {revalidate: 7200}
+  } catch {return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
+  }
+  const langs  = Object.keys(github)import fs from 'fs',import path from 'path';
+import type { GetStaticProps } from 'next';
+type Item = any;return (<div className="space-y-8">;
+      <header className="space-y-2">;
+        <h1 className="text-3xl font-bold">Tech Radar</h1>;
+        <p className="text-gray-600 dark:text-gray-300">Trending packages and projects across ecosystems.</p>;
+      </header>;
+      <section>;
+        <h2 className="font-semibold text-lg mb-3">PyPI (30 days)</h2>;
+        <ul className="grid md:grid-cols-2 gap-3">;
+          {pypi.map((it, i) => (<li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">;
+              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>;
+              {typeof it.downloads === 'number' && (<div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>;
+              )}
+            </li>;
+          ))}</ul>;
+      </section>;<section>;
+        <h2 className="font-semibold text-lg mb-3">crates && crates.io</h2>;
+        <ul className="grid md:grid-cols-2 gap-3">;
+          {crates && crates.map((it, i) => (<li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">;
+              <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;
+              {it && it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it && it.description}</div>}
+            </li>;
+          ))}
+        </ul>;
+      </section>;{langs && langs.map((lang) => (<section key={lang}>;
+          <h2 className="font-semibold text-lg mb-3">GitHub Trending: {lang}</h2>;
+          <ul className="grid md:grid-cols-2 gap-3">;
+            {(github[lang] || []).map((it, i) => (<li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">;
+                <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;
+                {it && it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it && it.description}</div>}
+=======
+<<<<<<< HEAD
+      <section>;"
+        <h2 className="font-semibold text-lg mb-3">crates && crates.io</h2>;"
+        <ul className="grid md:grid-cols-2 gap-3">;
+          {crates && crates.map((it, i) => (;"
+            <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">;"
+              <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;"
+              {it && it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it && it.description}</div>}
+            </li>;
+          ))}
+        </ul>;
+      </section>;
+
+      {langs && langs.map((lang) => (;
+        <section key={lang}>;"
+          <h2 className="font-semibold text-lg mb-3">GitHub Trending: {lang}</h2>;"
+          <ul className="grid md:grid-cols-2 gap-3">;
+            {(github[lang] || []).map((it, i) => (;"
+              <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">;"
+                <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;"
+                {it && it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it && it.description}</div>}
+              </li>;
+
+            ))}
+          </ul>
+        </section>
+      ))}
+}
+;
+export default /**;
+ * TechRadar - Function description;
+ */
+function TechRadar() {}
+  const langs = Object.keys (github);
+<<<<<<< HEAD
+  return (
+    <div className="space-y-8">;
+      <header className="space-y-2">;
+        <h1 className="text-3xl font-bold">Tech Radar</h1>;
+        <p className="text - gray - 600 dark:text-gray-300">Trending packages and projects across ecosystems.</p>;
+=======
+      <section />;"
+        <h2 className=\"font-semibold text-lg mb-3\" />PyPI (30 days)</h2>;"
+        <ul className=\"grid md:grid-cols-2 gap-3\" />;"
+          {pypi.map((it, i) => (<li key={i} className=\"p-4 rounded-lg border border-gray-200 dark:border-gray-800\" />;"
+              <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font-medium text-blue-600 dark: text-cyan-400\" />{it.nam;}
+}</a>;"
+              {typeof it.downloads === 'number' && (<div className=\"text-xs text-gray-500\" />Downloads: {it.downloads.toLocaleString(;}
+}</div>;
+              )}
+            </li>;
+          ))}</ul>;
+      </section>;<section />;"
+        <h2 className=\"font-semibold text-lg mb-3\" />crates && crates.io</h2>;"
+        <ul className=\"grid md:grid-cols-2 gap-3\" />;"
+          {crates && crates.map((it, i) => (<li key={i} className=\"p-4 rounded-lg border border-gray-200 dark:border-gray-800\" />;"
+              <a href={it && it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font-medium text-blue-600 dark: text-cyan-400\" />{it && it.nam;}
+}</a>;"
+              {it && it.description && <div className=\"text-sm text-gray-600 dark: text-gray-300\" />{it && it.description;}</div
+}
+            </li>;
+          ))}
+        </ul>;
+      </section>;{langs && langs.map((lang) => (<section key={lang} />;"
+          <h2 className=\"font-semibold text-lg mb-3\" />GitHub Trending: {lan;}
+}</h2>;"
+          <ul className=\"grid md:grid-cols-2 gap-3\" />;"
+            {(github[lang] || []).map((it, i) => (<li key={i} className=\"p-4 rounded-lg border border-gray-200 dark:border-gray-800\" />;"
+                <a href={it && it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font-medium text-blue-600 dark: text-cyan-400\" />{it && it.nam;}
+}</a>;"
+                {it && it.description && <div className=\"text-sm text-gray-600 dark: text-gray-300\" />{it && it.description;}</div
+}
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+              </li>;))}
+          </ul>;
+        </section>;
+      ))}
+}export default /**;
+ * TechRadar - Function description;
+ */;
+<<<<<<< HEAD
+function TechRadar() {const langs = Object.keys (github)return (<div className="space-y-8">;
+      <header className="space-y-2">;
+        <h1 className="text-3xl font-bold">Tech Radar</h1>;
+        <p className="text - gray - 600 dark:text-gray-300">Trending packages and projects across ecosystems.</p>;
+      </header>;
+      <section>;
+        <h2 className="font - semibold text-lg mb-3">PyPI (30 days)</h2>;
+        <ul className="grid md:grid - cols-2 gap-3">;
+          {pypi.map ((it, i) => (<li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800">;
+              <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark:text-cyan-400">{it.name}</a>;
+              {typeof it.downloads === 'number' && (<div className="text - xs text-gray-500">Downloads: {it.downloads.toLocaleString ()}</div>)}
+            </li>))}
+        </ul>;
+      </section>;
+      <section>;
+        <h2 className="font - semibold text-lg mb-3">crates.io</h2>;
+        <ul className="grid md:grid - cols-2 gap-3">;
+          {crates.map ((it, i) => (<li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800">;
+              <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark:text-cyan-400">{it.name}</a>;
+              {it.description && <div className="text - sm text - gray - 600 dark:text-gray-300">{it.description}</div>}
+=======
+        </ul>
+      </section>
+      </header>
+      <section    />;"
+        <h2 className=\"font - semibold text-lg mb-3\"    />PyPI (30 days)</h2>;}"
+        <ul className=\"grid md:grid - cols-2 gap-3\"    />;}"
+          {pypi.map ((it, i) => (<li key={i} className=\"p - 4 rounded - lg border border - gray - 200 dark:border-gray-800\"    />;"
+              <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font - medium text - blue - 600 dark: text-cyan-400\"    />{it.nam}
+}</a>;"
+              {typeof it.downloads === 'number' && (<div className=\"text - xs text-gray-500\"    />Downloads: {it.downloads.toLocaleString ()}</div>)}
+=======
+function TechRadar() {const langs = Object.keys (github;"
+  return (<div className=\"space-y-8\" />;"
+      <header className=\"space-y-2\" />;"
+        <h1 className=\"text-3xl font-bold\" />Tech Radar</h1>;"
+        <p className=\"text - gray - 600 dark:text-gray-300\" />Trending packages and projects across ecosystems.</p>;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      </header>;
+      <section />;"
+        <h2 className=\"font - semibold text-lg mb-3\" />PyPI (30 days)</h2>;}"
+        <ul className=\"grid md:grid - cols-2 gap-3\" />;}"
+          {pypi.map ((it, i) => (<li key={i} className=\"p - 4 rounded - lg border border - gray - 200 dark:border-gray-800\" />;"
+              <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font - medium text - blue - 600 dark: text-cyan-400\" />{it.nam;}
+}</a>;"
+              {typeof it.downloads === 'number' && (<div className=\"text - xs text-gray-500\" />Downloads: {it.downloads.toLocaleString ();}</div>)}
+            </li>)
+}
+        </ul>;
+      </section>;
+<<<<<<< HEAD
+      <section>;
+        <h2 className="font - semibold text-lg mb-3">crates.io</h2>;
+        <ul className="grid md:grid - cols-2 gap-3">;
+          {crates.map ((it, i) => (
+            <li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800">;
+              <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark:text-cyan-400">{it.name}</a>;
+              {it.description && <div className="text - sm text - gray - 600 dark:text-gray-300">{it.description}</div>}
+=======
+  return ("
+    <div className="space - y-8">;"
+      <header className="space - y-2">;"
+        <h1 className="text - 3xl font - bold">Tech Radar</h1>;"
+        <p className="text - gray - 600 dark:text - gray - 300">Trending packages and projects across ecosystems.</p>;
+      </header>;
+      <section>;"
+        <h2 className="font - semibold text - lg mb - 3">PyPI (30 days)</h2>;"
+        <ul className="grid md:grid - cols - 2 gap - 3">;
+          {pypi.map ((it, i) => ("
+            <li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800">;"
+              <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark:text - cyan - 400">{it.name}</a>;'
+              {typeof it.downloads === 'number' && ("
+                <div className="text - xs text - gray - 500">Downloads: {it.downloads.toLocaleString ()}</div>)}
+            </li>))}
+        </ul>;
+      </section>;
+      <section>;"
+        <h2 className="font - semibold text - lg mb - 3">crates.io</h2>;"
+        <ul className="grid md:grid - cols - 2 gap - 3">;
+          {crates.map ((it, i) => ("
+            <li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800">;"
+              <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark:text - cyan - 400">{it.name}</a>;"
+              {it.description && <div className="text - sm text - gray - 600 dark:text - gray - 300">{it.description}</div>}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+            </li>))}
+        </ul>;
+      </section>;
+      {langs.map ((lang) => (
+<<<<<<< HEAD
+        <section key={lang}>;
+          <h2 className="font - semibold text-lg mb-3">GitHub Trending: {lang}</h2>;
+          <ul className="grid md:grid - cols-2 gap-3">;
+            {(github[lang] || []).map ((it, i) => (
+              <li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800">;
+                <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark:text-cyan-400">{it.name}</a>;
+                {it.description && <div className="text - sm text - gray - 600 dark:text-gray-300">{it.description}</div>}
+=======
+        <section key={lang}>;"
+          <h2 className="font - semibold text - lg mb - 3">GitHub Trending: {lang}</h2>;"
+          <ul className="grid md:grid - cols - 2 gap - 3">;
+            {(github[lang] || []).map ((it, i) => ("
+              <li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border - gray - 800">;"
+                <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark:text - cyan - 400">{it.name}</a>;"
+                {it.description && <div className="text - sm text - gray - 600 dark:text - gray - 300">{it.description}</div>}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+              </li>))}
+=======
+      <section />;"
+        <h2 className=\"font - semibold text-lg mb-3\" />crates.io</h2>;"
+        <ul className=\"grid md:grid - cols-2 gap-3\" />;"
+          {crates.map ((it, i) => (<li key={i} className=\"p - 4 rounded - lg border border - gray - 200 dark:border-gray-800\" />;"
+              <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font - medium text - blue - 600 dark: text-cyan-400\" />{it.nam;}
+}</a>;"
+              {it.description && <div className=\"text - sm text - gray - 600 dark: text-gray-300\" />{it.description;}</div>}
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+            </li>)
+
+        </ul>
+      </section>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+            </li>))}
+        </ul>;
+      </section>;
+<<<<<<< HEAD
+      {langs.map ((lang) => (<section key={lang}>;
+          <h2 className="font - semibold text-lg mb-3">GitHub Trending: {lang}</h2>;
+          <ul className="grid md:grid - cols-2 gap-3">;
+            {(github[lang] || []).map ((it, i) => (<li key={i} className="p - 4 rounded - lg border border - gray - 200 dark:border-gray-800">;
+                <a href={it.url} target="_blank" rel="noreferrer" className="font - medium text - blue - 600 dark:text-cyan-400">{it.name}</a>;
+                {it.description && <div className="text - sm text - gray - 600 dark:text-gray-300">{it.description}</div>}
+              </li>))}
+<<<<<<< HEAD
+=======
+      {langs.map ((lang) => (<section key={lang} />;"
+          <h2 className=\"font - semibold text-lg mb-3\" />GitHub Trending: {lan;}
+}</h2>;"
+          <ul className=\"grid md:grid - cols-2 gap-3\" />;"
+            {(github[lang] || []).map ((it, i) => (<li key={i} className=\"p - 4 rounded - lg border border - gray - 200 dark:border-gray-800\" />;"
+                <a href={it.url} target=\"_blank\" rel=\"noreferrer\" className=\"font - medium text - blue - 600 dark: text-cyan-400\" />{it.nam;}
+}</a>;"
+                {it.description && <div className=\"text - sm text - gray - 600 dark: text-gray-300\" />{it.description;}</div>}
+              </li>)
+}
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+          </ul>;
+        </section>))}
+    </div>)</div>;
+)})}
+  );
+}
+
+    </div>)</div>;
+)})}
       <section>
         <h2 className="font-semibold text-lg mb-3">crates.io</h2>
         <ul className="grid md:grid-cols-2 gap-3">
@@ -72,3 +451,48 @@ export default function TechRadar({ pypi, crates, github }: Props) {
     </div>
   )
 }
+=======
+
+          </ul>
+        </section>))}
+
+    </div>)
+    </div>
+);
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+"
+=======
+}
+}
+return (<div className="space-y-8" > <header className="space-y-2" > <h1 className="text-3xl font-bold" >Tech Radar</h1> <p className="text-gray-600 dark:text-gray-300" >Trending packages and projects across ecosystems.</p> </header> <section>) 
+}</li>) ) 
+}</ul> </section> <section> </li>) ) 
+}</ul> </section> {
+  langs.map ( (lang) => (<section key= {
+  lang 
+}> </li>) ) 
+}</ul> </section>) ) 
+}</div>) 
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+=======
+>>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+  );
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

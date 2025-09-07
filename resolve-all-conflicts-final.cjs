@@ -7,6 +7,58 @@ console.log('🚀 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
+    // Remove all merge conflict markers and keep the main branch version (after )
+    content = content.replace(/[\s\S]*?([\s\S]*?)
+    content = content.replace(/[\s\S]*?([\s\S]*?)
+    
+    // Handle incomplete conflicts (missing closing markers)
+    content = content.replace(/[\s\S]*?([\s\S]*?)(?=\n|$)/g, '$1');
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    
+    // Remove any remaining conflict markers
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    
+    // Clean up multiple consecutive newlines
+    content = content.replace(/\n{3,}/g, '\n\n');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Resolved conflicts in ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to find all files with merge conflicts
+function findConflictedFiles() {
+  try {
+    const statusOutput = execSync('git status --porcelain', { encoding: 'utf8' });
+    const conflictedFiles = statusOutput
+      .split('\n')
+      .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
+      .map(line => line.split(' ').pop())
+      .filter(file => file && !file.includes('temp_conflicts/'));
+    
+    return conflictedFiles;
+  } catch (error) {
+    console.error('Error finding conflicted files:', error.message);
+    return [];
+  }
+}
+
+// Function to resolve yarn.lock conflicts by regenerating it
+function resolveYarnLockConflicts() {
+  if (fs.existsSync('yarn.lock')) {
+    console.log('🔄 Resolving yarn.lock conflicts by regenerating...');
     try {
         console.log(`🔧 Processing: ${filePath}`);
         let content = fs.readFileSync(filePath, 'utf8');

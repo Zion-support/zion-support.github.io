@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
@@ -61,8 +62,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
   }
+<<<<<<< HEAD
 }
 res.status(405).json({ error: "Method not allowed" });
 }
@@ -132,3 +141,8 @@ if ( {) {
   res.status (405).json ({ error: "Method not allowed" });
 }
 
+=======
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

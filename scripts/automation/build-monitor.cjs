@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync } = require("child_process");
@@ -8,10 +12,15 @@ const path = require("path");
 const fs = require('fs');
 const path = require('path');
 const { exec, execSync } = require('child_process');
+
+const fs = require('fs');
+const path = require('path');
+const { exec, execSync } = require('child_process');
+
 class BuildMonitor {}
   constructor() {}
     this.projectRoot = '/workspace';
-    this.logDir = path.join(this.projectRoot, 'logs');
+
     this.checkInterval = 10 * 60 * 1000; // 10 minutes;
     this.isRunning = false;
     this.fixesApplied = [];
@@ -23,27 +32,78 @@ class BuildMonitor {}
   ensureDirectories() {}
     if (!fs.existsSync(this.logDir)) {}
       fs.mkdirSync(this.logDir, { "recursive": true })};"
-  }
+  };
+;
   async checkBuildHealth() {}"
-  this.log("Checking build health...")
+  this.log("Checking build health...");
     const result = await this.runCommand("npm run build");"
-  if($2) {}"
-  this.log("Build completed successfully", "success")
+    if (result.success) {}"
+  this.log("Build completed successfully", "success");
       return true} else {this.log(`Build "failed": ${result.output}, "error");this.errorsFound.push(`Build "failed": ${result.output});"
       return false};
+<<<<<<< HEAD
 
+=======
+  };
+;
+  async fixBuildIssues(buildError) {}
+  this.log("Attempting to fix build issues...");
+    // Try to install dependencies first;
+    const installResult = await this.runCommand("npm install");
+    if (installResult.success) {}
+  this.fixesApplied.push("Installed missing dependencies")};
+    ;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 setupSignalHandlers() {}
     process.on('SIGTERM', () => this.shutdown());
     process.on('SIGINT', () => this.shutdown())};
   log(level, ...args) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
     
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
     console.log(message);
     
+<<<<<<< HEAD
+
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   async fixBuildIssues(buildError) {}"
   this.log("Attempting to fix build issues...");"
     // Try to install dependencies first;"
@@ -52,60 +112,57 @@ setupSignalHandlers() {}
   this.fixesApplied.push("Installed missing dependencies")};"
 
 setupSignalHandlers() {}"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
-  this.log("Attempting to fix build issues...")
-    // Try to install dependencies first
-    const installResult = await this.runCommand("npm install")
-  if($2) {}
-  this.fixesApplied.push("Installed missing dependencies")}
-  setupSignalHandlers($2) {}
-    process.on('SIGTERM', () => this.shutdown())
-    process.on('SIGINT', () => this.shutdown())}
-  log($2) {}
-    const timestamp = new Date().toISOString()
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message)
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message)
-  async fixBuildIssues(buildError) {}"
-  this.log("Attempting to fix build issues...");"
-    // Try to install dependencies first;"
-    const installResult = await this.runCommand("npm install");"
-  if($2) {}"
-  this.fixesApplied.push("Installed missing dependencies")};"
-  setupSignalHandlers($2) {}"
-
-    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
-    console.log(message)
-    const logFile = path.join(this.logDir, 'build-monitor.log')
-    fs.appendFileSync(logFile, message + '\n')}
   async runCommand(command, options = {}) {}
     try {}
       const result = execSync(command, { })
+<<<<<<< HEAD
         "encoding": 'utf8', 
+=======
+        "encoding": 'utf8',
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "cwd": this.projectRoot,""
         "stdio": 'pipe',
-        ...options
-})
+        ...options;
+      }
+});
       return { "success": true, "output": result }} catch (error) {}""
 
       return { "success": false, "output": error.message, "code": error.status }};"
   async runBuild() {}
     return new Promise((resolve) => {}
       const startTime = Date.now();
+<<<<<<< HEAD
       
       exec('npm run build', { })
         "cwd": this.projectRoot, 
+=======
+      exec('npm run build', { })
+        "cwd": this.projectRoot,
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         "timeout": 300000, // 5 minutes timeout;
         "maxBuffer": 1024 * 1024 * 10 // 10MB buffer;
       }, (error, stdout, stderr) => {}
         const endTime = Date.now();
         const duration = Math.round((endTime - startTime) / 1000);
+<<<<<<< HEAD
         
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         resolve({})
           "success": error === null,
           duration,
@@ -113,20 +170,23 @@ setupSignalHandlers() {}"
 
         "maxBuffer": 1024 * 1024 * 10 // 10MB buffer;"
       }, (error, stdout, stderr) => {}
-        const endTime = Date.now()
-        const duration = Math.round((endTime - startTime) / 1000)
+        const endTime = Date.now();
+        const duration = Math.round((endTime - startTime) / 1000);
         resolve({})"
           "success": error === null,"
           duration,"
           "output": stdout,
           "error": stderr,
           "errorMessage": error ? error.message : null;"
-        })})})}
+        })})})};
   async runTypeCheck() {}
     return new Promise((resolve) => {}"
       exec('npm run type-check, { "cwd": this.projectRoot }, (error, stdout, stderr) => {}"
         const errorCount = stderr ? (stderr.match(/error TS/g) || []).length : 0;
+<<<<<<< HEAD
         
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         resolve({})
           "success": error === null,
           errorCount,
@@ -141,35 +201,50 @@ setupSignalHandlers() {}"
         const output = stdout + stderr;
         const errorCount = output ? (output.match(/error/g) || []).length : 0;
         const warningCount = output ? (output.match(/warning/g) || []).length : 0;
+<<<<<<< HEAD
         
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         resolve({})
           "success": error === null,
           errorCount,
           warningCount,
-          output
+          output;
   async checkDiskSpace() {}
 
           return};"
-        const lines = stdout.trim().split('\n')
-  if($2) {}
-          const parts = lines[1].split(/\s+/)
-          const total = parseInt(parts[1])
-          const used = parseInt(parts[2])
-          const percentage = Math.round((used / total) * 100)
+        const lines = stdout.trim().split('\n');
+        if (lines.length > 1) {}
+          const parts = lines[1].split(/\s+/);
+
+          const total = parseInt(parts[1]);
+          const used = parseInt(parts[2]);
+          const percentage = Math.round((used / total) * 100);
           resolve({ used, total, percentage })} else {}
+<<<<<<< HEAD
     
     const result = await this.runBuild();
     
+=======
+          resolve({ "used": 0, "total": 0, "percentage": 0 })};
+      })})};
+  async checkBuildHealth() {}
+    this.log('info', 'Checking build health...');
+    const result = await this.runBuild();
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     if (result.success) {}
       this.log('info', 'Build completed successfully');
       return true} else {}
-      this.log('error', `Build "failed": ${result.errorMessage}`)
-      this.errorsFound.push(`Build "failed": ${result.errorMessage}`)
-      return false}
-  }
+      this.log('error', `Build "failed": ${result.errorMessage}`);
+      this.errorsFound.push(`Build "failed": ${result.errorMessage}`);
+      return false};
+  };
   async fixBuildIssues() {}
     this.log('info', 'Attempting to fix build issues...');
+<<<<<<< HEAD
     
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
           resolve({ "used": 0, "total": 0, "percentage": 0 })};"
 
     // Try to install dependencies first;
@@ -182,7 +257,16 @@ setupSignalHandlers() {}"
       this.fixesApplied.push('TypeScript compilation successful')} else {}
       this.fixesApplied.push('TypeScript errors detected - manual review needed')};
     // Try to fix linting errors;
+<<<<<<< HEAD
     
+=======
+    const lintResult = await this.runCommand('npx eslint --fix src/');
+    if (lintResult.success) {}
+      this.fixesApplied.push('Auto-fixed linting errors')};
+  };
+  async fixMissingModules() {}
+    this.log('info', 'Checking for missing modules...');
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const result = await this.runCommand('npm ls --depth=0');
     if (!result.success) {}
       this.log('warn', 'Missing modules detected, attempting to install...');
@@ -193,7 +277,10 @@ setupSignalHandlers() {}"
   };
   async fixSyntaxErrors() {}
     this.log('info', 'Checking for syntax errors...');
+<<<<<<< HEAD
     
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     // This would typically involve parsing files and checking syntax;
     // For now, we'll just run a basic check;
     const result = await this.runCommand('node -c src/main.jsx 2>&1 || true');
@@ -202,16 +289,22 @@ setupSignalHandlers() {}"
   };
   async fixTypeErrors() {}
     this.log('info', 'Checking for TypeScript type errors...');
+<<<<<<< HEAD
     
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const result = await this.runCommand('npx tsc --noEmit');
     if (result.success) {}
       this.log('info', 'No TypeScript type errors detected')} else {}
-      this.log('warn', 'TypeScript type errors detected')
-      this.errorsFound.push(`TypeScript "errors": ${result.output}`)}
-  }
+      this.log('warn', 'TypeScript type errors detected');
+      this.errorsFound.push(`TypeScript "errors": ${result.output}`)};
+  };
   async generateReport() {}
     this.log('info', 'Generating build monitor report...');
+<<<<<<< HEAD
     
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     const report = {}
       "timestamp": new Date().toISOString(),
       "duration": Date.now() - this.startTime,
@@ -223,14 +316,20 @@ setupSignalHandlers() {}"
         "totalFixes": this.fixesApplied.length;
       };
     };
+<<<<<<< HEAD
 
     const reportFile = path.join(this.logDir, 'build-monitor-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
+=======
+    const reportFile = path.join(this.logDir, 'build-monitor-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     this.log('info', `Build monitor report "generated": ${reportFile}`)};
   async start() {}
     this.log('info', 'Build Monitor starting...');
     this.isRunning = true;
+<<<<<<< HEAD
     
     while (this.isRunning) {}
       try {}
@@ -238,6 +337,12 @@ setupSignalHandlers() {}"
         
         const buildHealthy = await this.checkBuildHealth();
         
+=======
+    while (this.isRunning) {}
+      try {}
+        this.log('info', 'Starting build monitoring cycle...');
+        const buildHealthy = await this.checkBuildHealth();
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
       "summary": {}"
         buildSuccessful: this.errorsFound.length === 0,"
@@ -251,15 +356,22 @@ setupSignalHandlers() {}"
           await this.fixSyntaxErrors();
           await this.fixTypeErrors()};
         await this.generateReport();
+<<<<<<< HEAD
         
         this.log('info', 'Build monitoring cycle completed');
         
+=======
+        this.log('info', 'Build monitoring cycle completed');
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
         // Wait for next cycle;
         await new Promise(resolve => setTimeout(resolve, this.checkInterval))} catch (error) {}
         this.log('error', `Error during build "monitoring": ${error.message}`);
         this.errorsFound.push(`Process "error": ${error.message}`);
         await this.generateReport();
+<<<<<<< HEAD
         
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
         // Wait before retrying;
         await new Promise(resolve => setTimeout(resolve, 60000)); // 1 minute;
@@ -267,12 +379,53 @@ setupSignalHandlers() {}"
   shutdown() {}"
 
     process.exit(0)};
+<<<<<<< HEAD
+=======
+};
+;
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 
 // Start the build monitor;
 const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
 
   process.exit(1)}
+<<<<<<< HEAD
 });
+
+});
+});
+});
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+});
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+});
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+});
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 });
 

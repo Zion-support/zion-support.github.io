@@ -1,7 +1,286 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { GetServerSideProps } from 'next';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+<<<<<<< HEAD
+import { 
+  Home, 
+  Brain, 
+  Network, 
+  Target, 
+  Users, 
+  Shield, 
+  Cloud, 
+  BarChart3, 
+  Settings, 
+  Globe, 
+import {
+  Home,
+  Brain,
+  Network,
+  Target,
+  Users,
+  Shield,
+  Cloud,
+  BarChart3,
+  Settings,
+  Globe,
+  ArrowRight;
+} from 'lucide-react';
+;
+const sitemap_data = [;
+  {
+    category: 'Main Pages',
+    pages: [;
+      { name: 'Home', url: '/', icon: Home },
+      { name: 'About', url: '/about', icon: Users },
+      { name: 'Contact', url: '/contact', icon: Globe },
+      { name: 'Services', url: '/services', icon: Settings }
+    ];
+  },
+  {
+    category: 'Services',
+    pages: [;
+      { name: 'AI Services', url: '/ai - services', icon: Brain },
+      { name: 'IT Services', url: '/it - services', icon: Network },
+      { name: 'Micro SaaS', url: '/micro - saas', icon: Target },
+      { name: 'Cloud Services', url: '/services / cloud', icon: Cloud },
+      { name: 'Cybersecurity', url: '/services / cybersecurity', icon: Shield },
+      { name: 'Data Analytics', url: '/services / data - analytics', icon: BarChart3 }
+    ];
+  },
+  {
+    category: 'Solutions',
+    pages: [;
+      { name: 'Cloud Migration', url: '/solutions / cloud - migration', icon: Cloud },
+      { name: 'Digital Transformation', url: '/solutions / digital - transformation', icon: Settings },
+      { name: 'Custom Solutions', url: '/solutions / custom', icon: Target }
+    ];
+  },
+  {
+    category: 'Resources',
+    pages: [;
+      { name: 'Documentation', url: '/docs', icon: Globe },
+      { name: 'API Documentation', url: '/api - docs', icon: Settings },
+      { name: 'Guides', url: '/guides', icon: Globe },
+      { name: 'FAQ', url: '/faq', icon: Users }
+    ];
+  }
+];
+
+export default function SitemapPage() {
+=======
+function generateSiteMap() {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+     ${sitemap_data
+       .flatMap(category => category.pages)
+       .map(page => {
+         return `
+       <url>
+           <loc>https://ziontechgroup.com${page.url}</loc>
+           <lastmod>${new Date().toISOString()}</lastmod>
+           <changefreq>weekly</changefreq>
+           <priority>0.8</priority>
+       </url>
+     `;
+       })
+       .join('')}
+   </urlset>
+ `;
+}
+
+function SiteMap() {
+  // getServerSideProps will do the heavy lifting
+}
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  // We generate the XML sitemap with the posts data
+  const sitemap = generateSiteMap();
+
+  res.setHeader('Content-Type', 'text/xml');
+  // we send the XML to the browser
+  res.write(sitemap);
+  res.end();
+
+  return {
+    props: {},
+  };
+};
+
+export default SiteMap;
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function sitemap() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+  return (
+    <Layout>
+      <Head>
+        <title>Sitemap - Zion Tech Group</title>
+        <meta name="description" content="Sitemap solutions and services." />
+      </Head>
+      
+      <div className="min-h-screen bg-gray-50">
+<<<<<<< HEAD
+
+export default function SitemapPage() {;
+  return (
+    <>;
+      <Head>;
+        <title>Sitemap - Zion Tech Group</title>;
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />;
+      </Head>;
+
+      <div className="min-h-screen bg-gray-50">;
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
+          <div className="max-w-7xl mx-auto px-4">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+        {/* Sitemap Content */}
+        <section className="py-16">;
+          <div className="max-w-7xl mx-auto px-4">;
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">;
+              {sitemapData && sitemapData.map((section, sectionIndex) => (;
+                <motion&& motion.div
+                  key={section && section.category}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: sectionIndex * 0 && 0.1 }}
+                  className="bg-white rounded-lg shadow-lg p-6">;
+                  <h3 className="text-xl font-bold mb-4 text-gray-800">;
+                    {section && section.category}
+                  </h3>;
+                  <div className="space-y-3">;
+                    {section && section.pages.map((page, pageIndex) => (;
+                      <Link
+                        key={page && page.name}
+                        href={page && page.url}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group">;
+                        <page && page.icon className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />;
+                        <div>;
+                          <div className="font-medium text-gray-800 group-hover:text-blue-600">;
+                            {page && page.name}
+                          </div>;
+                        </div>;
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-auto" />;
+                      </Link>;
+                    ))}
+                  </div>;
+                </motion && motion.div>;
+              ))}
+;
+export default /**
+ * SitemapPage - Function description
+ */
+function SitemapPage() {
+  return (
+    <>;
+      <Head>;
+        <title > Sitemap - Zion Tech Group</title>;
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />;
+      </Head>;
+      <div className="min - h-screen bg - gray - 50">;
+        {/* Hero Section */}
+        <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
+          <div className="max - w-7xl mx - auto px - 4">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text - center";
+            >;
+              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+                Site <span className="text - yellow - 400">Map</span>;
+              </h1>;
+              <p className="text - xl mb - 8 max - w-3xl mx - auto">;
+                Navigate through all our pages, services, and resources;
+              </p>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Sitemap Content */}
+        <section className="py - 16">;
+          <div className="max - w-7xl mx - auto px - 4">;
+            <div className="grid gap - 8 md:grid - cols - 2 lg:grid - cols - 3">;
+              {sitemap_data.map ((section, section_index) => (
+                <motion.div;
+                  key={section.category}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: section_index * 0.1 }}
+                  className="bg - white rounded - lg shadow - lg p - 6";
+                >;
+                  <h3 className="text - xl font - bold mb - 4 text - gray - 800">;
+                    {section.category}
+                  </h3>;
+                  <div className="space - y-3">;
+                    {section.pages.map ((page, page_index) => (
+                      <Link;
+                        key={page.name}
+                        href={page.url}
+                        className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - gray - 50 transition - colors group";
+                      >;
+                        <page.icon className="w - 5 h - 5 text - blue - 600 group - hover:text - blue - 700" />;
+                        <div>;
+                          <div className="font - medium text - gray - 800 group - hover:text - blue - 600">;
+                            {page.name}
+    </>
+  );
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+import {
+  Home
+  Search
+  Rocket
+  FileText
+  Users
+  Mail
+  Map
+  ArrowRight
+  ExternalLink
+  ChevronRight
+  Globe
+  Building;
+    </>;
+  );
+}
+
+import {
+                          </div>;
+                        </div>;
+                        <ArrowRight className="w - 4 h - 4 text - gray - 400 group - hover:text - blue - 600 ml - auto" />;
+                      </Link>))}
+                  </div>;
+                </motion.div>))}
+
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+
+}
+
+}
+
+import {
+
+>>>>>>> origin/main
 import { 
   Home, Search, Rocket, FileText, Users, Mail, Map, 
   ArrowRight, ExternalLink, ChevronRight, Globe, Building
@@ -421,3 +700,339 @@ export default function SitemapPage() {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+
+  )
+          >;
+            <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
+              Site Map;
+            </h1>;
+            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed mb - 8'>;
+              Navigate our comprehensive website and discover all the AI - powered;
+              technology solutions, resources, and information available at Zion;
+              Tech Group.;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <a;
+                href='#main - pages';
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105';
+              >;
+                Explore Site;
+                <ArrowRight className='w - 5 h - 5 ml - 2' />;
+              </a>;
+              <a;
+                href='/search';
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
+              >;
+                Search Site;
+                <Search className='w - 5 h - 5 ml - 2' />              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Main Pages */}
+      <section id='main - pages' className='py - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Main Pages;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Core pages that provide essential information about our company;
+              and services;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {main_pages.map ((page, index) => (
+              <motion.div;
+                key={page.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={page.href}
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;
+                  <div className='flex items - center justify - between mb - 4'>;
+                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {page.label}
+                    </h3>;
+                    <ChevronRight className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {page.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Service Categories */}
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Service Categories;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Browse our comprehensive range of technology solutions organized;
+              by category;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {service_categories.map ((category, index) => (
+              <motion.div;
+                key={category.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={category.href}
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;
+                  <div className='flex items - center justify - between mb - 4'>;
+                    <h3 className='text - lg font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {category.label}
+                    </h3>;
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {category.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Featured Services */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Featured Services;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Our most popular and innovative technology solutions;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {featured_services.map ((service, index) => (
+              <motion.div;
+                key={service.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={service.href}
+                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
+                >;
+                  <div className='flex items - center justify - between mb - 3'>;
+                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300 truncate'>;
+                      {service.label}
+                    </h3>;
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300 flex - shrink - 0' />;
+                  </div>;
+                  <p className='text - white / 60 text - xs'>{service.category}</p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Resources & Tools */}
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Resources & Tools;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources, tools, and information to help you succeed;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {resources.map ((resource, index) => (
+              <motion.div;
+                key={resource.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <Link;
+                  href={resource.href}
+                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
+                >;
+                  <div className='flex items - center justify - between mb - 3'>;
+                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {resource.label}
+                    </h3>;
+                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 60 text - xs leading - relaxed'>;
+                    {resource.description}
+                  </p>                </Link>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* External Resources */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              External Resources;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources and tools hosted on external platforms;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {external_links.map ((link, index) => (
+              <motion.div;
+                key={link.href}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <a;
+                  href={link.href}
+                  target='_blank';
+                  rel='noopener noreferrer';
+                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;
+                  <div className='flex items - center justify - between mb - 4'>;
+                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
+                      {link.label}
+                    </h3>;
+                    <ExternalLink className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
+                  </div>;
+                  <p className='text - white / 70 text - sm leading - relaxed'>;
+                    {link.description}
+                  </p>                </a>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact Information */}
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
+        <div className='max - w-4xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='mb - 16';
+          >;
+            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
+              Contact Information;
+            </h2>;
+            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
+              Get in touch with us for consultations, support, or to start your;
+              project;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {contact_info.map ((contact, index) => (
+              <motion.div;
+                key={contact.type}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='text - center p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl';
+              >;
+                <h3 className='text - lg font - bold text - white mb - 3'>;
+                  {contact.type}
+                </h3>;
+                <a;
+                  href={contact.action}
+                  target={
+                    contact.action.starts_with ('http') ? '_blank' : '_self';
+                  }
+                  rel={
+                    contact.action.starts_with ('http');
+                      ? 'noopener noreferrer';
+                      : '';
+                  }
+                  className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 font - medium'                >;
+                  {contact.value}
+                </a>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Quick Navigation */}
+      <section className='py - 20 px - 6'>;
+        <div className='max - w-4xl mx - auto text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
+              Need Help Finding Something?;
+            </h2>;
+            <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;
+              Use our search functionality or contact us directly for assistance;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <Link;
+                href='/search';
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+              >;
+                Search Site;
+                <Search className='w - 5 h - 5 ml - 2' />;
+              </Link>;
+              <Link;
+                href='/contact';
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
+              >;
+                Contact Support;
+                <Mail className='w - 5 h - 5 ml - 2' />              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <SmartFooter />;
+}
+}
+
+=======
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Sitemap</h1>
+          <p className="text-lg text-gray-600">
+            Professional sitemap solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main

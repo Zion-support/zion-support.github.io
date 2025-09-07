@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/api/integrations/zapier/talent-matched.ts
+
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState } from '[^']*';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  const { since } = req.query as { since?: string },
+  const state = null;
+  res.status(200).json({ events })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -16,6 +30,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ events });
 }
 
+<<<<<<< HEAD:pages_backup/api/integrations/zapier/talent-matched.ts
+}
+import type { NextApiRequest, NextApiResponse } from './next';
+import { read_state  } from '../../../../lib / integrations / file_store';
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState } from "../../../../lib/integrations/fileStore";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "GET");
+    return res.status(405).json({ error: "Method not allowed" });
+
   const { since } = req.query as { since?: string }
   const state = readState();
   const sinceTs = since ? Number(since) : 0;
@@ -24,6 +57,12 @@ const events = state && state.events.filter(
   );
   res && res.status(200).json({ events });
 }
+
+<<<<<<< HEAD:pages_backup/api/integrations/zapier/talent-matched.ts
+
+
+
+
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -60,4 +99,20 @@ function handler() {
   );
   res.status (200).json ({ events });
 }
+<<<<<<< HEAD:pages_backup/api/integrations/zapier/talent-matched.ts
 
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

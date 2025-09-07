@@ -1,14 +1,26 @@
+<<<<<<< HEAD
 
+
+
+
+
+
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
+ursor/fix-website-loading-errors-and-merge-6662
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
 
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
+
   }
   const invoices = store && store.listInvoices(companyId);
   return res && res.status(200).json(invoices);
 }
+
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../../utils / data / enterprise_store';
@@ -26,6 +38,9 @@ if ( {) {
   const invoices = store.list_invoices (company_id);
   return res.status (200).json (invoices);
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 
   } catch (error) {
     console.error("Error:", error);
@@ -34,6 +49,8 @@ if ( {) {
 }
   const invoices = store.listInvoices(companyId);
   return res.status(200).json(invoices);
+
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
 
   } catch (error) {
     console.error("Error:", error);
@@ -48,4 +65,28 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/billing/invoices.ts
+ursor/fix-website-loading-errors-and-merge-6662
 
+
+
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'companyId required' })
+  }
+  const invoices = null;
+  return res.status(200).json(invoices)
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

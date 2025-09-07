@@ -28,6 +28,13 @@ const problematicFiles = $2;
 const allFiles = getAllFiles($2);
 for (const file of allFiles) {
   try {
+
+
+
+    if (content.includes('') || content.includes('
+}
+}
+      problematicFiles.push(file);
     const content = fs.readFileSync($2);
     if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
       problematicFiles.push(file)
@@ -37,6 +44,8 @@ for (const file of allFiles) {
   }
 }
 
+
+console.log('✅ Debug completed');
 console.log($2);
 if (problematicFiles.length > 0) {
   console.log('Files:', problematicFiles.slice(0, 10))

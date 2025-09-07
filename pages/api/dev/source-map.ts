@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Source map endpoint' });
+}
+
+
+<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+
+main
+
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -18,6 +31,8 @@ export default function handler(req: any, res: any) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap"
 import { getGitStatus, requireRoles } from "../../../utils/devAccess"
+<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"])
@@ -38,6 +53,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json($2);
     return
   }
+
+<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
@@ -69,6 +86,8 @@ if ( {) {
     const { path: repoRelativePath } = req.body || {}
 
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
+<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+      res.status(400).json({ error: "Invalid path" })
 
       return;
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -132,6 +151,9 @@ export default function handler(req, res) {
   }
 }
   res.setHeader("Allow", "GET, POST")
+<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+  const identity = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(405).end("Method Not Allowed")
 ;
   res.setHeader("Allow", "GET, POST");
@@ -150,4 +172,25 @@ export default function handler(req, res) {
   }
 }
 }
+<<<<<<< HEAD:pages_backup/api/dev/source-map.ts
+}
+}
 
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ sourceMap: 'available' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

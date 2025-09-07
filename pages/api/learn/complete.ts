@@ -1,18 +1,15 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
 
 import fs from 'fs',;
 import path from 'path',;
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 
-const usersPath = path.join(process.cwd(), 'datalearnusers.json')
-const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
-function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8'))
-}
-function writeJson(p: string, data: any) {
-  fs.writeFileSync(p, JSON.stringify(data, null, 2))
-}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
     return res.status(405).end('Method Not Allowed')
@@ -43,3 +40,12 @@ if ( {) {
   $2
 }
 
+=======
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+  
+  res.status(200).json({ message: 'Endpoint working' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
