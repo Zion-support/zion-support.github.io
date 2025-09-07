@@ -16,6 +16,7 @@ import {
 import { Helmet } from 'react-helmet-async';
 import { 
   Handshake, 
+  Building2, 
   Users, 
   Globe, 
   Award, 

@@ -25,6 +25,8 @@ const LoadingFallback = () => (
   </div>
 );
 
+const Partners = React.lazy(() => import('./pages/Partners'));
+
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
