@@ -139,7 +139,7 @@ const QuantumAITradingPlatform = () => {
     }
   ];
 
-  const tradingFeatures = [
+  const benefits = [
     {
       title: 'Multi-Asset Trading',
       description: 'Trade stocks, bonds, forex, commodities, and cryptocurrencies',
@@ -345,6 +345,82 @@ const QuantumAITradingPlatform = () => {
                     </ul>
                   </div>
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-zion-slate-light">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trading Instruments Section */}
+      <section className="py-20 bg-zion-blue-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Comprehensive Trading Instruments
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Trade across all major asset classes with quantum precision
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {tradingInstruments.map((instrument, index) => (
+              <motion.div
+                key={instrument.category}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-blue border border-zion-purple/30 rounded-xl p-6"
+              >
+                <h3 className="text-xl font-semibold text-purple-400 mb-4">{instrument.category}</h3>
+                <ul className="space-y-2">
+                  {instrument.examples.map((example, exampleIndex) => (
+                    <li key={exampleIndex} className="text-zion-slate-light text-sm flex items-center">
+                      <ArrowRight className="w-3 h-3 text-purple-400 mr-2 flex-shrink-0" />
+                      {example}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quantum Algorithms Section */}
+      <section className="py-20 bg-zion-blue">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Advanced Quantum Algorithms
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Revolutionary algorithms that give you the quantum advantage
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {quantumAlgorithms.map((algorithm, index) => (
+              <motion.div
+                key={algorithm.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-blue-dark border border-zion-purple/30 rounded-xl p-8"
+              >
+                <h3 className="text-2xl font-semibold text-purple-400 mb-4">{algorithm.name}</h3>
+                <p className="text-zion-slate-light mb-6">{algorithm.description}</p>
+                <h4 className="text-lg font-semibold text-white mb-3">Applications:</h4>
+                <ul className="space-y-2">
+                  {algorithm.applications.map((application, appIndex) => (
+                    <li key={appIndex} className="text-zion-slate-light text-sm flex items-center">
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-3 flex-shrink-0" />
+                      {application}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -412,7 +488,7 @@ const QuantumAITradingPlatform = () => {
                   }`}
                 >
                   {plan.cta}
-                </Link>
+                </button>
               </motion.div>
             ))}
           </div>

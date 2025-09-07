@@ -22,8 +22,9 @@ import {
   Smartphone,
   Monitor,
   Server,
-  Chip,
-  Wifi,
+  Cloud,
+  Smartphone,
+  Monitor,
   ShieldCheck,
   Eye,
   Sparkles,
@@ -665,7 +666,7 @@ export default function ComprehensiveServicesShowcase2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+            {serviceCategories.map((category, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
