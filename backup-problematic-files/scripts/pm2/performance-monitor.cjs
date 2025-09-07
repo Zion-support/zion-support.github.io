@@ -147,5 +147,4 @@ main().catch(error => {})
   log(`Performance Monitor Process failed: ${error.message}`);
   process.exit(1);
 }
-});
-});
+

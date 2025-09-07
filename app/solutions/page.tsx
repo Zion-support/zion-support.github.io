@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const metadata = {
   title: "Solutions | Zion Tech Group",
   description: "Comprehensive AI and technology solutions designed to transform your business operations.",

@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -17,5 +19,4 @@ console.log('====')
       const result = await this.runCommand(cmd, desc, { "stdio"})
       "recommendations"
     this.log(`Report saved "to"`)
-      this.log(` Enhanced automation suite "failed"`)
       this.log(` Enhanced automation suite "failed"`)

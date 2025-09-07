@@ -52,5 +52,4 @@ const { spawn } = require("child_process")
 process.on("SIGINT")
   console.log(`� Received SIGINT, shutting down gracefully...``)
 process.on("SIGTERM")
-  console.log(")
-  console.log(")
+

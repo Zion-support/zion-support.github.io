@@ -17,23 +17,11 @@ function resolveMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      console.log(`✅ No conflicts in: ${filePath}`);
-      return true;
-    }
-
-    console.log(`🔧 Resolving conflicts in: ${filePath}`);
-
-    // Simple strategy: keep our changes (HEAD) for all files
-    let resolvedContent = content;
-    
-    // Replace all conflict markers with HEAD content
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    if (!content.includes('
     
     // Clean up any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    resolvedContent = resolvedContent.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
+    resolvedContent = resolvedContent.replace(/
+    resolvedContent = resolvedContent.replace(//g, '');
 
     // Write the resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');

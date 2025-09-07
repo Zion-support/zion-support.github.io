@@ -1,158 +1,98 @@
-<<<<<<< HEAD
-import { Trash2 } from 'lucide-react'
-
-import { SkillItemProps } from './types'
-export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
-export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
-  return (
-
-
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Trash2 } from 'lucide-react';
-import { SkillItemProps } from './types';
-export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
-
-
-
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Trash2 } from 'lucide-react';
-import { SkillItemProps } from './types';
-export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
-  return (
-    <Badge
-      key = {skill && skill.id,}
-      variant="secondary"
-<<<<<<< HEAD
+import { Trash2  } from 'lucide-react';
+import { SkillItemProps  } from './types';
+export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {return (import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+export const SkillItem  = ({ skill, category, onDelete }: SkillItemProps) => {export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {return (<Badge;
+      key = {skill && skill.id}
+      variant="secondary";
+export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {return (<Badge;
+      key = {skill && skill.id}
+      variant="secondary";
       className="flex items-center gap-1 py-1 && 1.5 px-3">;
       {skill && skill.name}
-      {skill && skill.proficiency && (;
-        <span className="ml-1 text-xs opacity-60">({skill && skill.proficiency}/5)</span>;
-=======
-      className="flex items-center gap-1 py-1.5 px-3"
-    >
+      {skill && skill.proficiency && (<span className="ml-1 text-xs opacity-60">({skill && skill.proficiency}/5)</span>;
+      className="flex items-center gap-1 py-1.5 px-3";
+    >;
       {skill.name}
-      {skill.proficiency && (
-        <span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      {skill.proficiency && (<span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>;
       )}
-      <Button
-        variant="ghost"
-        size="icon"
-        className="h-5 w-5 p-0 ml-1"
-
-        onClick = {() => onDelete(skill && skill.id!, category),}
+      <Button;
+        variant="ghost";
+        size="icon";
+        className="h-5 w-5 p-0 ml-1";
+        onClick = {() => onDelete(skill && skill.id!, category)}
+        onClick = {() => onDelete(skill && skill.id!, category)}
         aria-label="Delete skill";
       >;
         <Trash2 className="h-3 w-3" />;
       </Button>;
     </Badge>;
-  );
-};
-";
-
-import {Badge} from '@/components/ui/badge';
-import {Button} from '@/components/ui/button';
-import {Trash2} from 'lucide-react';
-import {SkillItemProps} from './types';
-export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
-  return (
-    <Badge
-      key={skill && skill.id} 
-
-      variant="secondary"
-      className="flex items-center gap-1 py-1.5 px-3"
-    >
+  )}";import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Trash2 } from 'lucide-react';
+import { SkillItemProps } from './types';
+export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {return (<Badge;
+      key={skill && skill.id}variant="secondary";
+      className="flex items-center gap-1 py-1.5 px-3";
+    >;
       {skill.name}
-      {skill.proficiency && (
-        <span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>
+      {skill.proficiency && (<span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>;
       )}
-      <Button
-        variant="ghost"
-        size="icon"
-        className="h-5 w-5 p-0 ml-1"
-
+      <Button;
+        variant="ghost";
+        size="icon";
+        className="h-5 w-5 p-0 ml-1";
         onClick={() => onDelete(skill && skill.id!, category)}
         aria-label="Delete skill";
       >;
         <Trash2 className="h-3 w-3" />;
-      </Button>;
-
-    <Badge 
-      key={skill.id} 
-
-      variant="secondary"
-      className="flex items-center gap-1 py-1.5 px-3"
-    >
+      </Button>;<Badge;
+      key={skill.id}variant="secondary";
+      className="flex items-center gap-1 py-1.5 px-3";
+    >;
       {skill.name}
-      {skill.proficiency && (
-        <span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>
+      {skill.proficiency && (<span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>;
       )}
-      <Button
-        variant="ghost"
-        size="icon"
-        className="h-5 w-5 p-0 ml-1"
+      <Button;
+        variant="ghost";
+        size="icon";
+        className="h-5 w-5 p-0 ml-1";
         onClick={() => onDelete(skill.id!, category)}
-        aria-label="Delete skill"
-      >
-        <Trash2 className="h-3 w-3" />
-      </Button>
-<<<<<<< HEAD
-    </Badge>
-  )
-
-},
-
-
+        aria-label="Delete skill";
+      >;
+        <Trash2 className="h-3 w-3" />;
+      </Button>;
     </Badge>;
-  );
-};},;
-
-};
-
-
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Trash2 } from 'lucide-react';
-import { SkillItemProps } from './types';
-export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: any {
-export const SkillItem = ({ skill, category, on_delete }: SkillItemProps, ) =>: any {
-  return (
-    <Badge;
-      key = {skill.id, }
+  )},</Badge>;
+  )}}}import { Badge  } from '@/components / ui / badge';
+import { Button  } from '@/components / ui / button';
+export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: any {export const SkillItem = ({ skill, category, on_delete }: SkillItemProps, ) =>: any {return (<Badge;
+      key = {skill.id }
       variant="secondary";
       className="flex items - center gap - 1 py - 1.5 px - 3";
     >;
       {skill.name}
-      {skill.proficiency && (
-        <span className="ml - 1 text - xs opacity - 60">({skill.proficiency}/5)</span>)}
+      {skill.proficiency && (<span className="ml - 1 text - xs opacity - 60">({skill.proficiency}/5)</span>)}
       <Button;
         variant="ghost";
         size="icon";
         className="h - 5 w - 5 p - 0 ml - 1";
-        on_click = {() => on_delete (skill.id!, category), }
+        on_click = {() => on_delete (skill.id!, category) }
         aria - label="Delete skill";
       >;
         <Trash2 className="h - 3 w - 3" />;
       </Button>;
-    </Badge>);
-}
+    </Badge>)}
 ";
-import {Badge} from '@/components / ui / badge';
-import {Button} from '@/components / ui / button';
-import {Trash2} from 'lucide-react';
-import {SkillItemProps} from './types';
-export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: any {
-  return (
-    <Badge;
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: any {return (<Badge;
       key={skill.id}
       variant="secondary";
       className="flex items - center gap - 1 py - 1.5 px - 3";
     >;
       {skill.name}
-      {skill.proficiency && (
-        <span className="ml - 1 text - xs opacity - 60">({skill.proficiency}/5)</span>)}
+      {skill.proficiency && (<span className="ml - 1 text - xs opacity - 60">({skill.proficiency}/5)</span>)}
       <Button;
         variant="ghost";
         size="icon";
@@ -162,18 +102,6 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: an
       >;
         <Trash2 className="h - 3 w - 3" />;
       </Button>;
-    </Badge>);
-} },
-}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Trash2 } from 'lucide-react';
-import { SkillItemProps } from './types';
-
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Trash2 } from 'lucide-react'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    </Badge>)} }
+}import { Badge   } from '@/components/ui/badge';
+import { Button   } from '@/components/ui/button';

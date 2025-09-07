@@ -1,37 +1,21 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Project Management Suite | Zion Tech Group',
-  description: 'Intelligent project management with AI-powered task automation, resource optimization, risk prediction, and smart scheduling for enhanced team productivity.',
-  keywords: 'AI project management, task automation, resource optimization, risk prediction, team productivity, project planning AI',
+  title: "AI Project Management Suite | Zion Tech Group",
+  description: "Professional AI project management suite services for your business needs.",
+  keywords: "ai-project-management-suite, services, business, technology"
 };
 
-interface FeatureProps {
-  title: string;
-  description: string;
-  icon: string;
-}
-
-function Feature({ title, description, icon }: FeatureProps) {
+function Feature({ icon, title, description }: { icon: string; title: string; description: string }) {
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
-      <div className="text-3xl mb-4">{icon}</div>
+    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );
 }
 
-interface PricingTierProps {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  cta: string;
-}
 
 function PricingTier({
   name,
@@ -215,7 +199,7 @@ export default function AIProjectManagementSuitePage() {
               2
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Learning</h3>
-            <p className="text-gray-600">AI analyzes your team's work patterns and project history to optimize recommendations</p>
+            <p className="text-gray-600">AI analyzes your team&apos;s work patterns and project history to optimize recommendations</p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">

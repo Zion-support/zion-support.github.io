@@ -1,8 +1,8 @@
+
+;
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}export default Test;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}export default Test;"";
+ursor/automate-test-improve-and-merge-code-646c;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}export default Test;""import type { NextPage } from 'next'; const "Test": NextPage = () => {}}export default Test;""import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}export default Test;
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
-import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
-import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
-import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

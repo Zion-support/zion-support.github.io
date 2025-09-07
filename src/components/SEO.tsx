@@ -1,12 +1,49 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
+interface SEOProps  {title: string;
+  description: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+}const SEO: React.FC<SEOProps> = ({title,description,keywords = '',image = '/og-image.jpg',url = 'https://ziontechgroup.com',type = 'website';
+}) => {const siteName = 'Zion Tech Group';
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
+  const fullImage  = image || 'https://ziontechgroup.com/og-image.jpg';return (<Helmet>;
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>;
+      <meta name="description" content={description} />;
+      <meta name="keywords" content={keywords} />;
+      <meta name="viewport" content="width=device-width, initial-scale=1" />;
+      <meta name="robots" content="index, follow" />;
+      <link rel="canonical" href={fullUrl} />;
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />;
+      <meta property="og:description" content={description} />;
+      <meta property="og:image" content={fullImage} />;
+      <meta property="og:url" content={fullUrl} />;
+      <meta property="og:type" content={type} />;
+      <meta property="og:site_name" content="Zion Tech Group" />;
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />;
+      <meta name="twitter:title" content={fullTitle} />;
+      <meta name="twitter:description" content={description} />;
+      <meta name="twitter:image" content={fullImage} />;
+      {/* Additional SEO */}
+      <meta name="author" content="Zion Tech Group" />;
+      <meta name="theme-color" content="#000000" />;
+    </Helmet>;
+  )}export default SEO;
+import Head from 'next/head';
 
 interface SEOProps {
   title: string;
-  description: string;
+  description?: string;
   keywords?: string;
+  image?: string;
   url?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -18,19 +55,20 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords, url }) => {
 
 <<<<<<< HEAD
 export const SEO = ({
-  title,
-  description,
-  keywords,
-  image,
-  url,
-  type = 'website',
-}: SEOProps) => {
-  const fullTitle = `${title} | Zion Tech Group`;
-  const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
-  const fullImage = image || 'https://ziontechgroup.com/og-image.jpg';
+=======
+}
 
+export const SEO: React.FC<SEOProps> = ({
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
+  title,
+  description = 'Zion Tech Group - Leading provider of AI-powered solutions, automation tools, and digital transformation services.',
+  keywords = 'AI solutions, automation, digital transformation, software development, technology consulting',
+  image = '/og-image.jpg',
+  url = 'https://ziontechgroup.com'
+}) => {
   return (
     <Head>
+<<<<<<< HEAD
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -342,151 +380,28 @@ export const SEO: React.FC<SEOProps> = ({
       {/* Open Graph */}
       <meta property="og:title" content={title} />
 =======
-      <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
-      <link rel="canonical" href={fullUrl} />
-
-      {/* Open Graph / Facebook */}
-<<<<<<< HEAD
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:title" content={fullTitle} />
 =======
-      <meta property="og: type" content={type} />
-      <meta property="og:url" content={url} />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
+      <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 6199d33325d356a811744dafd75451003f1abecd
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-e77d
       <meta property="og:description" content={description} />
-      {url && <meta property="og:url" content={url} />}
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
-      
-      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-    </Helmet>
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={url} />
+    </Head>
   );
 };
-<<<<<<< HEAD
 
 export default SEO;
-=======
-      <meta name="author" content={author} />
-      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
-      
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:title" content={fullTitle} />
-=======
-  title = 'Zion Tech Group - Advanced AI Solutions', description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',
-  keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation', image = '/og-image.jpg',
-  url = 'https: //ziontechgroup.com', type = 'website'
-}) => {
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Open Graph */}
-      <meta property="og: title" content={title} />
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <meta name="theme-color" content="#0ea5e9" />
-      <meta name="msapplication-TileColor" content="#0ea5e9" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (
-        <>
-          <meta property="article:published_time" content={publishedTime} />
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-          {section && <meta property="article:section" content={section} />}
-          {tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
-          ))}
-        </>
-      )}
-      
-      {/* Favicon and App Icons */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Structured Data */}
-      {combinedStructuredData.map((data, index) => (
-        <script key={index} type="application/ld+json">
-          {JSON.stringify(data)}
-        </script>
-      ))}
-      
-      {/* Performance and Security Headers */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="referrer" content="strict-origin-when-cross-origin" />
-      
-      {/* Social Media Verification */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="format-detection" content="telephone=no" />
-      
-      {/* Language and Region */}
-      <meta name="language" content="English" />
-      <meta name="geo.region" content="US" />
-      <meta name="geo.placename" content="United States" />
-      
-      {/* Business Information */}
-      <meta name="business:contact_data:street_address" content="Your Street Address" />
-      <meta name="business:contact_data:locality" content="Your City" />
-      <meta name="business:contact_data:region" content="Your State" />
-      <meta name="business:contact_data:postal_code" content="Your ZIP Code" />
-      <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content="+1-XXX-XXX-XXXX" />
-      
-      {/* Custom CSS for critical rendering */}
-      <style>{`
-        /* Critical CSS for above-the-fold content */
-        .hero-section {
-          opacity: 1;
-          transform: translateY(0);
-          transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        
-        .loading .hero-section {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-      `}</style>
-    </Helmet>
-  );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
