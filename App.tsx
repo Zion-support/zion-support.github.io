@@ -4,6 +4,7 @@ import ErrorBoundary from './src/components/ErrorBoundary';
 import { Header } from './src/components/Header';
 import Sidebar from './src/components/layout/Sidebar';
 import Footer from './src/components/Footer';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
 import HomePage from './src/pages/Home';
 import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
@@ -18,6 +19,24 @@ export default function App() {
   };
 
   return (
-
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen flex flex-col">
+          <Header onMenuClick={handleMenuClick} />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </main>
+          <Footer />
+          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+          <PerformanceMonitor />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }

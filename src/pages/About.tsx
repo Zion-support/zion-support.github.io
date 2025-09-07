@@ -1,8 +1,15 @@
 import React from 'react';
+import SEOHead from '../components/SEOHead';
 
 const About: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <SEOHead 
+        title="About Zion Tech Group - Leading Technology Solutions Provider"
+        description="Learn about Zion Tech Group's mission to transform businesses through cutting-edge AI, blockchain, and cloud technologies. Industry-leading expertise and proven success."
+        keywords="about zion tech, technology company, AI experts, digital transformation, business solutions, technology consulting"
+      />
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,7 +86,8 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

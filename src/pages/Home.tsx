@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
+import LoadingSpinner from '../components/LoadingSpinner';
+import SEOHead from '../components/SEOHead';
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <SEOHead 
+        title="Zion Tech Group - AI-Powered Technology Solutions"
+        description="Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation in AI, micro SaaS, and enterprise solutions."
+        keywords="AI services, micro SaaS, technology solutions, digital transformation, cloud services, cybersecurity, IT consulting, business automation"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -111,7 +119,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

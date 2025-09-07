@@ -1,45 +1,68 @@
 import React, { useEffect, useState } from 'react';
-import { Activity } from 'lucide-react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage?: number;
+  isSlowConnection: boolean;
+}
 
 const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only show in development mode
-    if (import.meta.env.DEV) {
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      const renderTime = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      
+      // Check connection speed
+      const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+      const isSlowConnection = connection ? connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false;
+      
+      // Memory usage (if available)
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize;
+
+      setMetrics({
+        loadTime,
+        renderTime,
+        memoryUsage,
+        isSlowConnection
+      });
+    };
+
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    // Show performance monitor in development
+    if (process.env.NODE_ENV === 'development') {
       setIsVisible(true);
     }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
   }, []);
 
-  if (!isVisible) return null;
+  if (!isVisible || !metrics) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl z-50">
-      <div className="p-4 border-b border-gray-700">
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-white flex items-center">
-            <Activity className="w-5 h-5 mr-2 text-cyan-400" />
-            Performance Monitor
-          </h3>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            ×
-          </button>
-        </div>
-      </div>
-      <div className="p-4">
-        <div className="space-y-3">
-          <div className="flex justify-between text-sm">
-            <span className="text-gray-300">Status:</span>
-            <span className="text-green-400">Active</span>
-          </div>
-          <div className="flex justify-between text-sm">
-            <span className="text-gray-300">Mode:</span>
-            <span className="text-blue-400">Development</span>
-          </div>
-        </div>
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-3 rounded-lg text-xs font-mono z-50">
+      <div className="mb-2 font-bold">Performance Monitor</div>
+      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
+      {metrics.memoryUsage && (
+        <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+      )}
+      <div className={metrics.isSlowConnection ? 'text-yellow-400' : 'text-green-400'}>
+        {metrics.isSlowConnection ? 'Slow Connection' : 'Fast Connection'}
       </div>
     </div>
   );

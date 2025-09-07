@@ -35,11 +35,26 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+            // Group vendor chunks for better caching
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('framer-motion')) {
+              return 'animation-vendor';
+            }
+            if (id.includes('lucide-react')) {
+              return 'icons-vendor';
+            }
+            if (id.includes('react-router')) {
+              return 'router-vendor';
+            }
+            return 'vendor';
           }
         }
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000,
+    assetsInlineLimit: 4096
   },
   server: {
     port: 3000,

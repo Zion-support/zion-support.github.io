@@ -10,6 +10,8 @@ interface ButtonProps {
   disabled?: boolean;
   loading?: boolean;
   className?: string;
+  'aria-label'?: string;
+  'aria-describedby'?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -21,6 +23,8 @@ const Button: React.FC<ButtonProps> = ({
   disabled = false,
   loading = false,
   className = '',
+  'aria-label': ariaLabel,
+  'aria-describedby': ariaDescribedBy,
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
@@ -46,6 +50,9 @@ const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       disabled={disabled || loading}
       className={classes}
+      aria-label={ariaLabel}
+      aria-describedby={ariaDescribedBy}
+      aria-disabled={disabled || loading}
     >
       {loading && <LoadingSpinner size="sm" className="mr-2" />}
       {children}
