@@ -11,11 +11,49 @@ import { useIsMounted } from '@/hooks/useIsMounted';
 import { z } from 'zod';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-origin/cursor/automate-test-improve-and-merge-code-2533
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
   category: z.string(),
+
+}
+
+export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
+  const [searchQuery, setSearchQuery] = useState(""),
+  const debouncedQuery = useDebounce(searchQuery, 300),
+  const [listings, setListings] = useState<ListingItem[]>([]),
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const isMounted = useIsMounted(),
+
+  // Fetch services when the service type or query changes
+  useEffect(() => {
+    if (!formData.serviceType) {
+      setListings([]),
+      return
+import { useEffect, useState } from "react",;
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
+import { Input } from "@/components/ui/input",;
+import { Card } from "@/components/ui/card",;
+import { Search } from 'lucide-react';
+import { ListingScoreCard } from "@/components/ListingScoreCard",;
+import { captureException } from "@/utils/sentry",;
+import Skeleton from "@/components/ui/skeleton",;
+import { useDebounce } from "@/hooks/useDebounce",;
+import { useIsMounted } from "@/hooks/useIsMounted",;
+import { z } from "zod",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+const listingSchema = z.object({;
+  id: z.string(),;
+  title: z.string(),;
+  category: z.string(),;
+  image: z.string().optional()}),;
+const listingsSchema = z.array(listingSchema),;
+interface ServiceTypeStepProps {;
+  formData: QuoteFormData,;
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+}
+
   image: z.string().optional(),
 });
 
@@ -40,6 +78,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   // Fetch services when the service type or query changes
   useEffect(() => {
     if (!formData.serviceType) {
+
+;
+export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const debouncedQuery = useDebounce(searchQuery, 300),;
+  const [listings, setListings] = useState<ListingItem[]>([]),;
+  const [loading, setLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const isMounted = useIsMounted(),;
+  // Fetch services when the service type or query changes;
+  useEffect(() => {;
+    if (!formData.serviceType) {;
+      setListings([]),;
+      return;
+
       setListings([]);
       return;
     }
@@ -155,23 +208,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
             onClick={() => handleTypeSelect("equipment")}
-}
-
-
-  )
-}
-
-
-const listing_schema = z.object ({
-  id: z.string (),
-  title: z.string (),
-  category: z.string (),
-  image: z.string ().optional ()}),
-      const max_retries = 3;
-  const source_listings = listings;
-}
-  );
-}
 
     },;
     fetchServices();
@@ -247,6 +283,10 @@ const listing_schema = z.object ({
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+
+    }
+;
+
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
             />
           </div>
@@ -284,4 +324,3 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
 }"
   )
 }
-origin/cursor/automate-test-improve-and-merge-code-2533

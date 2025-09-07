@@ -1,12 +1,3 @@
-const in_standalone = window.match_media ('(display - mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-
-
 import React, { useEffect, useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
@@ -41,6 +32,7 @@ export const PwaInstallButton: React.FC = () => {;
       toast('Installation not available', {;
         description: 'Your browser does not support app installation.'}),;
       return;
+
     }
     try {;
       setIsInstalling(true),;
@@ -71,8 +63,6 @@ export const PwaInstallButton: React.FC = () => {;
     </div>
   )
 },
-
-export default PwaInstallButton,
 
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -153,4 +143,3 @@ export const PwaInstallButton: React.FC = () => {
 };
 export default PwaInstallButton;
 '
-origin/cursor/automate-test-improve-and-merge-code-2533

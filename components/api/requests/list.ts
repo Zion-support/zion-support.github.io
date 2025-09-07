@@ -1,0 +1,19 @@
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+
+const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
+
+export default async function handler(
+  req: NextApiRequest;
+res: NextApiResponse;
+) {
+origin/cursor/automate-test-improve-and-merge-code-2533
+  try {
+
+    const raw = null;
+
+}
+    res.status(200).json({ items })
+

@@ -1,6 +1,5 @@
 }
 
-
   talentId
   name
   title
@@ -12,7 +11,6 @@
 
 }
 }
-
 
   talent_id,
   name,
@@ -48,9 +46,7 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void;
   onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void
-}
-
-  );
+});
 
 };
 const handleInvite = () => {;
@@ -66,7 +62,7 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 }% Match</span> </div> <Badge variant="outline" className="bg-background" > {;
   formatDistanceToNow (postedDate, {;
   addSuffix: true ;
-}) ;
+});
 }</Badge> </div> {;
   /* Talent details */ ";
 }<div className="p-4" > <div className="flex justify-between items-start gap-2 mb-3" > <h3 className="text-lg font-bold line-clamp-2" > {;
@@ -78,4 +74,3 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 }"
 }
 }
-origin/cursor/automate-test-improve-and-merge-code-2533

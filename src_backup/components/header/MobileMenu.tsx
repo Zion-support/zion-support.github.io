@@ -1,6 +1,5 @@
-}
+onClose(), // Close mobile menu on any click
 
-              onClose(), // Close mobile menu on any click
             }}
           >
             <div className="relative mr-4">
@@ -18,7 +17,9 @@
       <div className="mt-6 px-6">
         <ModeToggle />
       </div>
+
     </div>
+
 ;
 
   );
@@ -31,4 +32,3 @@
 }</Link>) ) ";
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
 }'"
-origin/cursor/automate-test-improve-and-merge-code-2533
